@@ -3,14 +3,14 @@
 
 ## Use case
 
-Let's assume you need to implement the "counter" logic using ThingsBoard Rule Engine.
+Let's assume you need to implement the "counter" logic using SENTIENT Rule Engine.
 Basically, message processing is executed asynchronously inside the rule nodes. Due to this fact, in most cases, the logic "get present counter value -> add new counter value -> save counter value" 
 leads to the incorrect final result (unlike your expectations) due to the race condition issue. 
 It is a well-known problem for all who dealt with multi-threading programming.
 You can refer to this [article](https://opensourceforgeeks.blogspot.com/2014/01/race-condition-synchronization-atomic.html) which nicely describes the problem and the existed solutions.
-Starting the ThingsBoard v2.5 this processing issue could be solved using special configurable queues.
+Starting the SENTIENT v2.5 this processing issue could be solved using special configurable queues.
 
-In this tutorial, we will configure ThingsBoard Rule Engine to use queue with sequential by originator message submit strategy.
+In this tutorial, we will configure SENTIENT Rule Engine to use queue with sequential by originator message submit strategy.
 Although this scenario is fictional, you will learn how to work with the queue to allow processing messages in sequential order
 and use this knowledge in real-life applications.
 

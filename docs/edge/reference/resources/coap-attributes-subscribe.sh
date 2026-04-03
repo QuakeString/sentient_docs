@@ -1,1 +1,1 @@
-coap get -o coap://$THINGSBOARD_EDGE_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
+coap get -o coap://$SENTIENT_EDGE_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes

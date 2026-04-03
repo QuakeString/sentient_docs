@@ -2,41 +2,41 @@
 layout: common
 title: Media Kit
 notitle: "true"
-description: ThingsBoard Media Kit
+description: SENTIENT Media Kit
 
 ---
 
-<h1 class="media-kit-title">ThingsBoard Media Kit</h1>
+<h1 class="media-kit-title">SENTIENT Media Kit</h1>
 <p class="media-kit-subtitle">Company overview and official visuals — all in one place</p>
 <h2 class="media-kit-assets-title">Media assets</h2>
-<div class="thingsboard-logos">
-    <h3>The ThingsBoard logo</h3>
-    <p>The ThingsBoard logo is available in three colors. Use black and deep blue on light backgrounds,</p>
+<div class="sentient-logos">
+    <h3>The SENTIENT logo</h3>
+    <p>The SENTIENT logo is available in three colors. Use black and deep blue on light backgrounds,</p>
     <p>and white on dark backgrounds.</p>
-    <p>Do not modify the logo colors and use only the logos provided you by ThingsBoard.</p>
-    <p class="mb">Official ThingsBoard logos are trademarks of ThingsBoard, inc.</p>
+    <p>Do not modify the logo colors and use only the logos provided you by SENTIENT.</p>
+    <p class="mb">Official SENTIENT logos are trademarks of SENTIENT, inc.</p>
     <div class="logos-images">
-        <div><img src="/images/thingsboard_logo_white.svg" alt="White Thingsboard logo"></div>
-        <div><img src="/images/thingsboard_logo_blue_media.svg" alt="Blue Thingsboard logo"></div>
-        <div><img src="/images/thingsboard_logo_black.svg" alt="Black Thingsboard logo"></div>
+        <div><img src="/images/sentient_logo_white.svg" alt="White Sentient logo"></div>
+        <div><img src="/images/sentient_logo_blue_media.svg" alt="Blue Sentient logo"></div>
+        <div><img src="/images/sentient_logo_black.svg" alt="Black Sentient logo"></div>
     </div>
     <div class="logos-images">
-        <div><img src="/images/thingsboard_logo_white_l.svg" alt="White Thingsboard logo"></div>
-        <div><img src="/images/thingsboard_logo_blue_l.svg" alt="Blue Thingsboard logo"></div>
-        <div><img src="/images/thingsboard_logo_black_l.svg" alt="Black Thingsboard logo"></div>
+        <div><img src="/images/sentient_logo_white_l.svg" alt="White Sentient logo"></div>
+        <div><img src="/images/sentient_logo_blue_l.svg" alt="Blue Sentient logo"></div>
+        <div><img src="/images/sentient_logo_black_l.svg" alt="Black Sentient logo"></div>
     </div>
     <h4>How to use our logo</h4>
     <p>Always provide a protected area of isolation around the logo, as illustrated in the diagram. </p>
     <p class="mb">This ensures the logo remains prominent and legible without interference from other design elements.</p>
     <div class="logos-examples">
-        <div><img src="/images/thingsboard_logo_example.svg" alt="Thingsboard logo padding example"></div>
-        <div><img src="/images/thingsboard_logo_example_sm.svg" alt="Small Thingsboard logo padding example"></div>
+        <div><img src="/images/sentient_logo_example.svg" alt="Sentient logo padding example"></div>
+        <div><img src="/images/sentient_logo_example_sm.svg" alt="Small Sentient logo padding example"></div>
     </div>
-    <a class="download" href="ThingsBoard_Logos.zip">Download logo kit <img src="/images/download-icon.svg" alt=""></a>
+    <a class="download" href="SENTIENT_Logos.zip">Download logo kit <img src="/images/download-icon.svg" alt=""></a>
 </div>
-<div class="thingsboard-colors">
+<div class="sentient-colors">
     <h3>Brand colors</h3>
-    <p>Our brand palette reflects the versatility and clarity of the ThingsBoard platform.</p>
+    <p>Our brand palette reflects the versatility and clarity of the SENTIENT platform.</p>
     <p>Please use these colors consistently when referencing our products or visual identity.</p>
     <p class="mb">Deep blue color used for our Community Edition, Green color represents our Professional Edition.</p>
     <div>
@@ -59,44 +59,44 @@ description: ThingsBoard Media Kit
     </div>
 </div>
 <div class="trademarks">
-    <h3>Using the ThingsBoard trademarks</h3>
+    <h3>Using the SENTIENT trademarks</h3>
     <div class="block">
         <div class="text">
-            <h4>To identify ThingsBoard platform and link to website</h4>
-            <p>You needn't ask us for permission to use the ThingsBoard logo on your own website solely as a hyperlink to <a target="_blank" href="https://thingsboard.io">thingsboard.io</a>  or to an appropriate ThingsBoard project, or in other materials, such as presentations and slides, solely as a means to refer to the ThingsBoard itself. All other uses of the ThingsBoard logo must be <a href="https://www.apache.org/foundation/marks/contact#other">approved in writing</a> by the ThingsBoard, inc.</p>
+            <h4>To identify SENTIENT platform and link to website</h4>
+            <p>You needn't ask us for permission to use the SENTIENT logo on your own website solely as a hyperlink to <a target="_blank" href="https://docs.sentient.invenia.in">docs.sentient.invenia.in</a>  or to an appropriate SENTIENT project, or in other materials, such as presentations and slides, solely as a means to refer to the SENTIENT itself. All other uses of the SENTIENT logo must be <a href="https://www.apache.org/foundation/marks/contact#other">approved in writing</a> by the SENTIENT, inc.</p>
         </div>
-        <img src="/images/tb-trademarks-1.webp" title="To identify ThingsBoard platform and link to website" alt="To identify ThingsBoard platform and link to website" width="450" height="241">
+        <img src="/images/tb-trademarks-1.webp" title="To identify SENTIENT platform and link to website" alt="To identify SENTIENT platform and link to website" width="450" height="241">
     </div>
     <div class="block">
         <div class="text">
             <h4>In software product branding</h4>
-            <p>In general, you may not use ThingsBoard trademarks in any software product branding for software products except "Powered By ThingsBoard" in the dashboard footer. For example, it is not permitted to name a product either "MyCompany distribution of ThingsBoard", "ThingsBoard MyCompany Edition", or any similar kind of name. You may contact us to get a written permission to use ThingsBoard trademarks in your software product branding.</p>
+            <p>In general, you may not use SENTIENT trademarks in any software product branding for software products except "Powered By SENTIENT" in the dashboard footer. For example, it is not permitted to name a product either "MyCompany distribution of SENTIENT", "SENTIENT MyCompany Edition", or any similar kind of name. You may contact us to get a written permission to use SENTIENT trademarks in your software product branding.</p>
         </div>
         <img src="/images/tb-trademarks-2.webp" title="In software product branding" alt="In software product branding" width="450" height="241">
     </div>
     <div class="block">
         <div class="text">
-            <h4>The following uses of ThingsBoard trademarks are probably infringing:</h4>
+            <h4>The following uses of SENTIENT trademarks are probably infringing:</h4>
             <ul>
                 <li><p>Confusingly similar software product names.</p></li>
-                <li><p>Software service offerings that are for anything other than official ThingsBoard-distributed software.</p></li>
-                <li><p>Company names that may be associated in customer's minds with ThingsBoard or its trademarked project software.</p></li>
+                <li><p>Software service offerings that are for anything other than official SENTIENT-distributed software.</p></li>
+                <li><p>Company names that may be associated in customer's minds with SENTIENT or its trademarked project software.</p></li>
             </ul>
         </div>
-        <img src="/images/tb-trademarks-3.webp" title="Uses of ThingsBoard trademarks" alt="Uses of ThingsBoard trademarks" width="450" height="241">
+        <img src="/images/tb-trademarks-3.webp" title="Uses of SENTIENT trademarks" alt="Uses of SENTIENT trademarks" width="450" height="241">
     </div>
 </div>
 <div class="contact-us-banner">
     <div class="contact-us-banner-content">
-        <h2>Read more about ThingsBoard</h2>
-        <p>ThingsBoard is continuously evolving to deliver more scalable, efficient, and future-proof solutions. Learn more about us and explore how we're helping companies solve real-world challenges and accelerate their IoT transformation.</p>
+        <h2>Read more about SENTIENT</h2>
+        <p>SENTIENT is continuously evolving to deliver more scalable, efficient, and future-proof solutions. Learn more about us and explore how we're helping companies solve real-world challenges and accelerate their IoT transformation.</p>
         <div class="contact-us-banner-buttons">
             <a class="gtm_button" href="/company/">About company</a>
             <a class="gtm_button" href="/iot-use-cases/">Use cases</a>
             <a class="gtm_button" href="/case-studies/">Case studies</a>
         </div>
     </div>
-    <img src="/images/logo-fade.svg" width="380" height="267" alt="Thingsboard icon">
+    <img src="/images/logo-fade.svg" width="380" height="267" alt="Sentient icon">
 </div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {

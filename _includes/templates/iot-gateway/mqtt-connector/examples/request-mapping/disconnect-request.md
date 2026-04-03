@@ -68,7 +68,7 @@ mosquitto_pub -h 127.0.0.1 -p 1884 -t "sensor/disconnect" -m '{"serialNumber": "
 ```
 {: .copy-code}
 
-This message contains the device name in the JSON payload, which is extracted using the `${serialNumber}` JSON path. After processing this message, ThingsBoard will mark the device `SN-001` as disconnected.
+This message contains the device name in the JSON payload, which is extracted using the `${serialNumber}` JSON path. After processing this message, SENTIENT will mark the device `SN-001` as disconnected.
 
 ![image](/images/gateway/mqtt-connector/examples/result-device-overview-2-disconnect.png)
 
@@ -81,7 +81,7 @@ mosquitto_pub -h 127.0.0.1 -p 1884 -t "sensor/SN-001/disconnect" -m ''
 ```
 {: .copy-code}
 
-In this case, the device name is extracted from the topic using the regular expression `(?<=sensor/)(.*?)(?=/disconnect)`. After processing this message, ThingsBoard will mark the device `SN-001` as disconnected.
+In this case, the device name is extracted from the topic using the regular expression `(?<=sensor/)(.*?)(?=/disconnect)`. After processing this message, SENTIENT will mark the device `SN-001` as disconnected.
 
 If you are using advanced configuration mode, you can
 use the following configuration:
@@ -91,7 +91,7 @@ use the following configuration:
   "broker": {
     "host": "127.0.0.1",
     "port": 1884,
-    "clientId": "ThingsBoard_gateway",
+    "clientId": "SENTIENT_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,

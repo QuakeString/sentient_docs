@@ -1,7 +1,7 @@
 ---
 layout: use-case
-title: "Smart Farming with ThingsBoard: Scalable IoT for Agriculture"
-description: Smart farming IoT solution powered by ThingsBoard. Real-time monitoring, automation, and analytics for crops, silos, and climate control. Ideal for agriculture, logistics, and agritech businesses.
+title: "Smart Farming with SENTIENT: Scalable IoT for Agriculture"
+description: Smart farming IoT solution powered by SENTIENT. Real-time monitoring, automation, and analytics for crops, silos, and climate control. Ideal for agriculture, logistics, and agritech businesses.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -16,15 +16,15 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">Modern agriculture is undergoing a digital transformation driven by the need for sustainability, efficiency, and resilience. Farmers and agricultural enterprises face increasing pressure to optimize yield, reduce resource consumption, and mitigate risks related to climate and storage. ThingsBoard easily handles this task by providing real-time data collection, automation, and intuitive visualization tailored for smart farming needs.</p>
+                <p class="text">Modern agriculture is undergoing a digital transformation driven by the need for sustainability, efficiency, and resilience. Farmers and agricultural enterprises face increasing pressure to optimize yield, reduce resource consumption, and mitigate risks related to climate and storage. SENTIENT easily handles this task by providing real-time data collection, automation, and intuitive visualization tailored for smart farming needs.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_SmartFarming_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>     
+                <a id="UseCases_SmartFarming_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>     
             </div>
         </div>
         <div class="long">
-            <p>ThingsBoard IoT platform empowers agricultural stakeholders with a robust, scalable solution to collect, process, and visualize environmental and operational data. Its support for multiple communication protocols and seamless device integration makes it ideal for diverse farming environments, whether remote fields, greenhouses, or storage facilities.</p>
-            <p>By leveraging ThingsBoard, agribusinesses gain full control over assets and infrastructure — from temperature and humidity sensors to automated aeration systems. With real-time dashboards, rule-based alerts, and remote control features, the platform helps reduce waste, improve crop quality, and lower operational costs.</p>
+            <p>SENTIENT IoT platform empowers agricultural stakeholders with a robust, scalable solution to collect, process, and visualize environmental and operational data. Its support for multiple communication protocols and seamless device integration makes it ideal for diverse farming environments, whether remote fields, greenhouses, or storage facilities.</p>
+            <p>By leveraging SENTIENT, agribusinesses gain full control over assets and infrastructure — from temperature and humidity sensors to automated aeration systems. With real-time dashboards, rule-based alerts, and remote control features, the platform helps reduce waste, improve crop quality, and lower operational costs.</p>
         </div>
     </div>
 </section>
@@ -32,10 +32,10 @@ contactUsModal: "true"
 <section class="smart-farming-overview">
     <div class="img-comp-container">
         <div class="img-comp-img">
-            <img class="traditional-background" src="/images/usecases/smart-farming/smart-farming-2.webp" alt="Silos monitoring dashboard in dark mode with temperature graphs, crop levels, and alarm logs in ThingsBoard" title="Silo monitoring (dark mode) – live telemetry, graphs, and alerts via ThingsBoard IoT platform">
+            <img class="traditional-background" src="/images/usecases/smart-farming/smart-farming-2.webp" alt="Silos monitoring dashboard in dark mode with temperature graphs, crop levels, and alarm logs in SENTIENT" title="Silo monitoring (dark mode) – live telemetry, graphs, and alerts via SENTIENT IoT platform">
         </div>
         <div class="img-comp-img img-comp-overlay">
-            <img class="traditional-background" src="/images/usecases/smart-farming/smart-farming-1.webp" alt="Silos monitoring dashboard in light mode showing crop level, temperature, moisture, and alarms using ThingsBoard" title="Silo monitoring (light mode) – real-time crop level, temperature, and alarm tracking in ThingsBoard">
+            <img class="traditional-background" src="/images/usecases/smart-farming/smart-farming-1.webp" alt="Silos monitoring dashboard in light mode showing crop level, temperature, moisture, and alarms using SENTIENT" title="Silo monitoring (light mode) – real-time crop level, temperature, and alarm tracking in SENTIENT">
         </div>
     </div>
 </section>
@@ -47,11 +47,11 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">The smart farming solution powered by ThingsBoard connects IoT sensors across silos, greenhouses, and fields to gather key data like temperature, humidity, soil moisture, and crop levels. Using protocols such as MQTT, CoAP, HTTP, and Modbus, the system ensures smooth, real-time data transmission and integration with existing equipment.</p>
+                <p class="text">The smart farming solution powered by SENTIENT connects IoT sensors across silos, greenhouses, and fields to gather key data like temperature, humidity, soil moisture, and crop levels. Using protocols such as MQTT, CoAP, HTTP, and Modbus, the system ensures smooth, real-time data transmission and integration with existing equipment.</p>
             </div>
         </div>
         <div class="long">
-            <p>ThingsBoard processes incoming telemetry with automated rule chains that trigger alerts or control actions. Custom dashboards visualize the data through maps and charts, enabling users to monitor operations, identify issues, and respond quickly. The solution is fully scalable—from small farms to large agricultural enterprises.</p>
+            <p>SENTIENT processes incoming telemetry with automated rule chains that trigger alerts or control actions. Custom dashboards visualize the data through maps and charts, enabling users to monitor operations, identify issues, and respond quickly. The solution is fully scalable—from small farms to large agricultural enterprises.</p>
         </div>
     </div>
     <div class="scheme">
@@ -63,7 +63,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>Smart farming dashboard structure</h2>
         <p>
-            Effective data visualization is critical for smart farming. ThingsBoard dashboards are designed to be intuitive, modular, and informative, helping users quickly identify anomalies and make informed decisions.
+            Effective data visualization is critical for smart farming. SENTIENT dashboards are designed to be intuitive, modular, and informative, helping users quickly identify anomalies and make informed decisions.
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -125,7 +125,7 @@ contactUsModal: "true"
 <section class="applications applications-additional summary-margin section-padding">
     <div class="section-header">
         <h2>Applications of smart farming & IoT agriculture solution</h2>
-        <p>The Smart Farming solution built on the ThingsBoard platform is highly adaptable and addresses specific needs across various sectors of agriculture and agritech. Its powerful features — real-time telemetry, rule-based automation, multi-protocol support, customizable dashboards, and scalable architecture — make it ideal for a wide range of applications:</p>
+        <p>The Smart Farming solution built on the SENTIENT platform is highly adaptable and addresses specific needs across various sectors of agriculture and agritech. Its powerful features — real-time telemetry, rule-based automation, multi-protocol support, customizable dashboards, and scalable architecture — make it ideal for a wide range of applications:</p>
     </div>
     <div class="applications-container-large">
         <div class="text-row-top">
@@ -202,7 +202,7 @@ contactUsModal: "true"
 <section class="summary">
     <div class="summary-text">
         <h2>Summary of smart farming</h2>
-        <p>Smart farming with ThingsBoard offers a complete end-to-end IoT solution for agricultural operations. From field to storage, it unifies device connectivity, real-time analytics, control systems, and user-friendly dashboards. By adopting this solution, agri-businesses can boost productivity, ensure compliance, minimize losses, and gain full transparency over their entire value chain.</p>
+        <p>Smart farming with SENTIENT offers a complete end-to-end IoT solution for agricultural operations. From field to storage, it unifies device connectivity, real-time analytics, control systems, and user-friendly dashboards. By adopting this solution, agri-businesses can boost productivity, ensure compliance, minimize losses, and gain full transparency over their entire value chain.</p>
     </div>
     <div class="summary-icon">
         <img src="/images/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
@@ -306,7 +306,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_SmartFarming_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>     
+                <a id="UseCases_SmartFarming_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>     
                 <a id="UseCases_SmartFarming_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
     
@@ -326,11 +326,11 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='/images/usecases/smart-farming/smart-farming-1.webp' alt='Silos monitoring dashboard in light mode showing crop level, temperature, moisture, and alarms using ThingsBoard' title='Silo monitoring (light mode) – real-time crop level, temperature, and alarm tracking in ThingsBoard'/>",
-                "<img src='/images/usecases/smart-farming/smart-farming-2.webp' data-bg='#092035' alt='Silos monitoring dashboard in dark mode with temperature graphs, crop levels, and alarm logs in ThingsBoard' title='Silo monitoring (dark mode) – live telemetry, graphs, and alerts via ThingsBoard IoT platform'/>",
-                "<img src='/images/usecases/smart-farming/smart-farming-3.webp' alt='Silo A dashboard with real-time charts for moisture, temperature, crop level, and alarm log in ThingsBoard' title='Monitor Silo A – live temperature, crop fill level, moisture, and alerts'/>",
-                "<img src='/images/usecases/smart-farming/smart-farming-4.webp' alt='Silo B dashboard showing moisture, crop level, temperature graph, and active critical alarms in ThingsBoard' title='Silo B status – high temperature warnings, real-time monitoring of environmental and crop data'/>",
-                "<img src='/images/usecases/smart-farming/smart-farming-5.webp' alt='Silo C dashboard with temperature and moisture tracking, crop level chart, and no current alarms in ThingsBoard' title='Silo C live monitoring – stable environmental conditions, no alarms'/>"
+                "<img src='/images/usecases/smart-farming/smart-farming-1.webp' alt='Silos monitoring dashboard in light mode showing crop level, temperature, moisture, and alarms using SENTIENT' title='Silo monitoring (light mode) – real-time crop level, temperature, and alarm tracking in SENTIENT'/>",
+                "<img src='/images/usecases/smart-farming/smart-farming-2.webp' data-bg='#092035' alt='Silos monitoring dashboard in dark mode with temperature graphs, crop levels, and alarm logs in SENTIENT' title='Silo monitoring (dark mode) – live telemetry, graphs, and alerts via SENTIENT IoT platform'/>",
+                "<img src='/images/usecases/smart-farming/smart-farming-3.webp' alt='Silo A dashboard with real-time charts for moisture, temperature, crop level, and alarm log in SENTIENT' title='Monitor Silo A – live temperature, crop fill level, moisture, and alerts'/>",
+                "<img src='/images/usecases/smart-farming/smart-farming-4.webp' alt='Silo B dashboard showing moisture, crop level, temperature graph, and active critical alarms in SENTIENT' title='Silo B status – high temperature warnings, real-time monitoring of environmental and crop data'/>",
+                "<img src='/images/usecases/smart-farming/smart-farming-5.webp' alt='Silo C dashboard with temperature and moisture tracking, crop level chart, and no current alarms in SENTIENT' title='Silo C live monitoring – stable environmental conditions, no alarms'/>"
             ];
             return images[index];
         }

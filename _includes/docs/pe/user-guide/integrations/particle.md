@@ -6,12 +6,12 @@
 ## Overview
 
 Particle is a cloud platform that connects a range of devices via the IoT.  
-After integrating Particle with the ThingsBoard, you can connect, manage, communicate, process, and visualize data from your devices in the ThingsBoard IoT platform.
+After integrating Particle with the SENTIENT, you can connect, manage, communicate, process, and visualize data from your devices in the SENTIENT IoT platform.
 
 ## Particle Integration Tutorial
 
 In this tutorial, we will use a development board Particle Photon.  
-You can use any other Particle device to connect it to Particle and get the data in ThingsBoard.  
+You can use any other Particle device to connect it to Particle and get the data in SENTIENT.  
 
 ### Prerequisites
 
@@ -33,17 +33,17 @@ To do this, we need to the following steps from [official guide](https://docs.pa
    -  After clicking on NEXT, you should be presented with a file (**photonsetup.html**)
    -  Open the file
 
-After connecting the device, it will become visible on the Particle console. This will allow you to create an integration to receive data on ThingsBoard.  
+After connecting the device, it will become visible on the Particle console. This will allow you to create an integration to receive data on SENTIENT.  
 
 ![Devices list](/images/user-guide/integrations/particle/particle-console-device-list.png)
 
-## ThingsBoard Integration Configuration
+## SENTIENT Integration Configuration
 
-To receive data from Particle Console, we need to create an integration on ThingsBoard and get a URL for Particle Integration.  
+To receive data from Particle Console, we need to create an integration on SENTIENT and get a URL for Particle Integration.  
 
 ### Uplink Converter
 
-Before setting up a **Particle integration**, you need to create an **Uplink Converter**, a script for parsing and transforming the data received by Particle integration to a format that ThingsBoard can consume.
+Before setting up a **Particle integration**, you need to create an **Uplink Converter**, a script for parsing and transforming the data received by Particle integration to a format that SENTIENT can consume.
 
 To create an **Uplink Converter**, go to the **Data Converters** section and click **Add new data converter** -> **Create new converter**, name it **"Uplink data converter for Particle Integration"** and select type **Uplink**. Use debug mode for now.
 
@@ -122,7 +122,7 @@ Save created token, we will need it in the next step.
 '
 %}
 
-Now, we should create an integration in ThingsBoard. To do this, you can follow next steps:  
+Now, we should create an integration in SENTIENT. To do this, you can follow next steps:  
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=createIntegrationUsingWizard %}
 
@@ -177,7 +177,7 @@ Click on **Use this example** and thunder icon to flash it to the device.
 
 #### Configure dashboard
 
-Let's return to ThingsBoard and configure the dashboard to control device.  
+Let's return to SENTIENT and configure the dashboard to control device.  
 To demonstrate how to send a command to the device, we will use a **Switch Control Widget**. To use it, you can follow next steps:  
 - Click on **Edit mode** button to enable edit mode.  
 - Open existing or create a new dashboard.  

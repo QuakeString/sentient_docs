@@ -1,12 +1,12 @@
 {% if docsPrefix == 'pe/edge/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "SENTIENT Professional Edition" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "SENTIENT" %}
 {% endif %}
 
 {% include templates/edge/install/copy-edge-credentials.md %}
 
-Edit the **ThingsBoard Edge** configuration file.
+Edit the **SENTIENT GATEWAY** configuration file.
 
 {% if docsPrefix == 'pe/edge/' %}
 

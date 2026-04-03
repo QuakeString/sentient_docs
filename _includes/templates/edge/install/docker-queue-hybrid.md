@@ -14,7 +14,7 @@ version: '3.8'
 services:
   mytbedge:
     restart: always
-    image: "thingsboard/tb-edge:{{ site.release.edge_full_ver }}"
+    image: "sentient/tb-edge:{{ site.release.edge_full_ver }}"
     ports:
       - "8080:8080"
       - "1883:1883"
@@ -70,7 +70,7 @@ services:
     image: "cassandra:4.0"
     container_name: cassandra
     environment:
-      CASSANDRA_CLUSTER_NAME: "Thingsboard Edge Cluster"
+      CASSANDRA_CLUSTER_NAME: "Sentient Edge Cluster"
       CASSANDRA_KEYSPACE_NAME: "tb_edge"
       CASSANDRA_LOCAL_DATACENTER: "datacenter1"
     ports:

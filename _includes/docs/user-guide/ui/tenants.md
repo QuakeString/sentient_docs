@@ -4,7 +4,7 @@
 
 ## Introduction
 
-ThingsBoard supports [Multitenancy](https://en.wikipedia.org/wiki/Multitenancy) out-of-the-box.
+SENTIENT supports [Multitenancy](https://en.wikipedia.org/wiki/Multitenancy) out-of-the-box.
 
 You can treat Tenant as a separate business-entity: individual or organization who owns or produces devices and assets.
 
@@ -41,7 +41,7 @@ In a tenant details window, the System administrator can use the following actio
 
 3) **Resend activation** resends the account activation email to the user’s email box.
 
-4) **Login as Tenant administrator** opens the Thingsboard platform from the Tenant administrator UI.
+4) **Login as Tenant administrator** opens the Sentient platform from the Tenant administrator UI.
 
 5) The System Administrator can also **Delete user** from both the user details page and tenant admins list.
 

@@ -3,12 +3,12 @@
 
 ## Python REST Client
 
-The ThingsBoard Python REST API Client helps you interact with ThingsBoard REST API from your Python script.
-With Python Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in ThingsBoard.
+The SENTIENT Python REST API Client helps you interact with SENTIENT REST API from your Python script.
+With Python Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in SENTIENT.
 
-Source code of the Python REST API Client you can find [here](https://github.com/thingsboard/python_tb_rest_client).
+Source code of the Python REST API Client you can find [here](https://github.com/sentient/python_tb_rest_client).
 
-In order to install the ThingsBoard Python REST client, you should use the following command:
+In order to install the SENTIENT Python REST client, you should use the following command:
 
 ```bash
 pip3 install tb-rest-client
@@ -18,9 +18,9 @@ pip3 install tb-rest-client
 
 ### Basic usage
 
-You can find the example of the script **[here](https://github.com/thingsboard/python_tb_rest_client/blob/master/examples/example_application_2.py)**.
+You can find the example of the script **[here](https://github.com/sentient/python_tb_rest_client/blob/master/examples/example_application_2.py)**.
 Also, you will have to download the dashboard JSON file ("*watermeters.json*") for this example and put it in the folder with a script.
-JSON file is **[here](https://github.com/thingsboard/python_tb_rest_client/blob/master/examples/watermeters.json)**.
+JSON file is **[here](https://github.com/sentient/python_tb_rest_client/blob/master/examples/watermeters.json)**.
 
 The example listening below shows more advanced usage of REST client, namely: creating shared dashboard group,
 loading dashboard from the config JSON file and adding this dashboard to the group that was created previously, also
@@ -39,11 +39,11 @@ logging.basicConfig(level=logging.DEBUG,
                     datefmt='%Y-%m-%d %H:%M:%S')
 
 
-# ThingsBoard REST API URL
+# SENTIENT REST API URL
 url = "http://localhost:8080"
 
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@sentient.org"
 password = "tenant"
 
 
@@ -105,7 +105,7 @@ def main():
             logging.info('Group permission created:\n%r\n', group_permission)
 
             # Creating User for Customer 1 with default dashboard from Tenant "Shared Dashboards" group.
-            user_email = "user@thingsboard.org"
+            user_email = "user@sentient.org"
             user_password = "secret"
             additional_info = {
                 "defaultDashboardId": dashboard.id.id,
@@ -127,11 +127,11 @@ if __name__ == '__main__':
     main()
 ```
 
-### API key authentication (from ThingsBoard 4.3+)
+### API key authentication (from SENTIENT 4.3+)
 
-The following code sample demonstrates how to use API key authentication with ThingsBoard REST API.
+The following code sample demonstrates how to use API key authentication with SENTIENT REST API.
 Make sure you have created an API key for your user before running the example. Also, ensure to replace 
-`"YOUR_API_KEY_HERE"` with your actual API key value and the `url` variable with your ThingsBoard instance URL.
+`"YOUR_API_KEY_HERE"` with your actual API key value and the `url` variable with your SENTIENT instance URL.
 
 ```python
 import logging
@@ -143,7 +143,7 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(module)s - %(lineno)d - %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S')
 
-# ThingsBoard REST API URL
+# SENTIENT REST API URL
 url = "http://127.0.0.1:8080"
 
 # Your API Key
@@ -196,11 +196,11 @@ logging.basicConfig(level=logging.DEBUG,
                     datefmt='%Y-%m-%d %H:%M:%S')
 
 
-# ThingsBoard REST API URL
+# SENTIENT REST API URL
 url = "http://localhost:8080"
 
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@sentient.org"
 password = "tenant"
 
 
@@ -238,11 +238,11 @@ logging.basicConfig(level=logging.DEBUG,
                     datefmt='%Y-%m-%d %H:%M:%S')
 
 
-# ThingsBoard REST API URL
+# SENTIENT REST API URL
 url = "http://localhost:8080"
 
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@sentient.org"
 password = "tenant"
 
 
@@ -277,11 +277,11 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(module)s - %(lineno)d - %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S')
 
-# ThingsBoard REST API URL
-url = "https://thingsboard.cloud"
+# SENTIENT REST API URL
+url = "https://sentient.cloud"
 
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@sentient.org"
 password = "tenant"
 
 
@@ -306,7 +306,7 @@ def main():
                                               "asId": "",
                                               "asIdNew": "",
                                               "asKey": "",
-                                              "baseUrl": "https://thingsboard.cloud",
+                                              "baseUrl": "https://sentient.cloud",
                                               "clientIdNew": "",
                                               "clientSecret": "",
                                               "createLoriotOutput": False,
@@ -320,7 +320,7 @@ def main():
                                               "enableSecurity": False,
                                               "enableSecurityNew": False,
                                               "headersFilter": {},
-                                              "httpEndpoint": "https://thingsboard.cloud/api/v1/integrations/http/c5d29c90-75d3-6ae6-606a-589a28803e89",
+                                              "httpEndpoint": "https://sentient.cloud/api/v1/integrations/http/c5d29c90-75d3-6ae6-606a-589a28803e89",
                                               "loriotDownlinkUrl": "https://eu1.loriot.io/1/rest",
                                               "maxTimeDiffInSeconds": 60,
                                               "metadata": {},
@@ -361,10 +361,10 @@ logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s - %(levelname)s - %(module)s - %(lineno)d - %(message)s',
                     datefmt='%Y-%m-%d %H:%M:%S')
 
-# ThingsBoard REST API URL
+# SENTIENT REST API URL
 url = "http://localhost:8080"
 # Default Tenant Administrator credentials
-username = "tenant@thingsboard.org"
+username = "tenant@sentient.org"
 password = "tenant"
 
 
@@ -415,10 +415,10 @@ if __name__ == '__main__':
 
 ### Configure version control feature from console
 
-This feature is available in ThingsBoard 3.4+. 
-We have designed script, based on tb-rest-client library to make example how to use ability to configure ThingsBoard from your code.  
-The latest source code of the script is available [here](https://github.com/thingsboard/thingsboard-python-rest-client/blob/master/examples/configure_vcs_access.py).
-In this example we configure [version control feature](/docs/user-guide/version-control) on ThingsBoard.  
+This feature is available in SENTIENT 3.4+. 
+We have designed script, based on tb-rest-client library to make example how to use ability to configure SENTIENT from your code.  
+The latest source code of the script is available [here](https://github.com/sentient/sentient-python-rest-client/blob/master/examples/configure_vcs_access.py).
+In this example we configure [version control feature](/docs/user-guide/version-control) on SENTIENT.  
 
 There are 2 possible ways to configure version control system (VCS):   
 1. Using access token/password of your VCS account.  
@@ -430,10 +430,10 @@ To configure this feature we will need the command line arguments and data:
 
 | Command line argument | Description                                                                                          |
 |-----------------------|------------------------------------------------------------------------------------------------------|
-| -H                    | **ThingsBoard host (Default: localhost)**                                                            |
-| -p                    | **ThingsBoard port (Default: 80)**                                                                   |
-| -U                    | **ThingsBoard user (email for login)**                                                               |
-| -P                    | **ThingsBoard user password**                                                                        |
+| -H                    | **SENTIENT host (Default: localhost)**                                                            |
+| -p                    | **SENTIENT port (Default: 80)**                                                                   |
+| -U                    | **SENTIENT user (email for login)**                                                               |
+| -P                    | **SENTIENT user password**                                                                        |
 | -r                    | **Repository uri, link to your repository**                                                          |
 | -b                    | **Default branch (Default: main)**                                                                   |
 | -gu                   | **VCS username** (This parameter named GITHUB_USERNAME, but it can work with any VCS)                |
@@ -445,14 +445,14 @@ To configure this feature we will need the command line arguments and data:
 To configure the version control feature we should have installed [tb-rest-client](#python-rest-client) python package and download the script:
 
 ```bash
-wget https://github.com/thingsboard/thingsboard-python-rest-client/blob/master/examples/configure_vcs_access.py
+wget https://github.com/sentient/sentient-python-rest-client/blob/master/examples/configure_vcs_access.py
 ```
 {:.copy-code}
 
 Now we can run the script and configure version control feature (Do not forget to put your values).  
 
 ```bash
-python3 configure_vcs_access.py -H YOUR_THINGSBOARD_HOST -p YOUR_THINGSBOARD_PORT -U YOUR_THINGSBOARD_USER_EMAIL -P YOUR_THINGSBOARD_USER_PASSWORD -r YOUR_REPOSITORY_URL -b DEFAULT_BRANCH -gu YOUR_VCS_USERNAME -gp YOUR_VCS_ACCESSTOKEN_OR_PASSWORD
+python3 configure_vcs_access.py -H YOUR_SENTIENT_HOST -p YOUR_SENTIENT_PORT -U YOUR_SENTIENT_USER_EMAIL -P YOUR_SENTIENT_USER_PASSWORD -r YOUR_REPOSITORY_URL -b DEFAULT_BRANCH -gu YOUR_VCS_USERNAME -gp YOUR_VCS_ACCESSTOKEN_OR_PASSWORD
 ```
 {:.copy-code}
 
@@ -462,10 +462,10 @@ To configure this feature we will need next command line arguments and data:
 
 | Command line argument   | Description                                                                             |
 |-------------------------|-----------------------------------------------------------------------------------------|
-| -H                      | **ThingsBoard host (Default: localhost)**                                               |
-| -p                      | **ThingsBoard port (Default: 80)**                                                      |
-| -U                      | **ThingsBoard user (email for login)**                                                  |
-| -P                      | **ThingsBoard user password**                                                           |
+| -H                      | **SENTIENT host (Default: localhost)**                                               |
+| -p                      | **SENTIENT port (Default: 80)**                                                      |
+| -U                      | **SENTIENT user (email for login)**                                                  |
+| -P                      | **SENTIENT user password**                                                           |
 | -r                      | **Repository uri, link to your repository**                                             |
 | -b                      | **Default branch (Default: main)**                                                      |
 | -gu                     | **VCS username** (This parameter named GITHUB_USERNAME, but it can work with any VCS)   |
@@ -478,14 +478,14 @@ To configure this feature we will need next command line arguments and data:
 To configure the version control feature we should have installed [tb-rest-client](#python-rest-client) python package and download the script:
 
 ```bash
-wget https://raw.githubusercontent.com/thingsboard/thingsboard-python-rest-client/master/examples/configure_vcs_access.py
+wget https://raw.githubusercontent.com/sentient/sentient-python-rest-client/master/examples/configure_vcs_access.py
 ```
 {:.copy-code}
 
 Now we can run the script and configure version control feature (Do not forget to put your values).  
 
 ```bash
-python3 configure_vcs_access.py -H YOUR_THINGSBOARD_HOST -p YOUR_THINGSBOARD_PORT -U YOUR_THINGSBOARD_USER_EMAIL -P YOUR_THINGSBOARD_USER_PASSWORD -r YOUR_REPOSITORY_URL -b DEFAULT_BRACH -gu YOUR_VCS_USERNAME -pk PATH_TO_YOUR_PRIVATE_KEY -pkp YOUR_PRIVATE_KEY_PASSWORD
+python3 configure_vcs_access.py -H YOUR_SENTIENT_HOST -p YOUR_SENTIENT_PORT -U YOUR_SENTIENT_USER_EMAIL -P YOUR_SENTIENT_USER_PASSWORD -r YOUR_REPOSITORY_URL -b DEFAULT_BRACH -gu YOUR_VCS_USERNAME -pk PATH_TO_YOUR_PRIVATE_KEY -pkp YOUR_PRIVATE_KEY_PASSWORD
 ```
 {:.copy-code}
 
@@ -493,17 +493,17 @@ python3 configure_vcs_access.py -H YOUR_THINGSBOARD_HOST -p YOUR_THINGSBOARD_POR
 
 You can use the following script, based on [tb-rest-client](#python-rest-client) to save current state of your entities to your repository on version control system.
 
-The latest source code you can find [here](https://github.com/thingsboard/thingsboard-python-rest-client/blob/master/examples/load_all_entities_to_vcs_pe.py).
+The latest source code you can find [here](https://github.com/sentient/sentient-python-rest-client/blob/master/examples/load_all_entities_to_vcs_pe.py).
 
 
 To save entities from command line we will use the following arguments and data:  
 
 | Command line argument   | Description                                                                                          |
 |-------------------------|------------------------------------------------------------------------------------------------------|
-| -H                      | **ThingsBoard host (Default: localhost)**                                                            |
-| -p                      | **ThingsBoard port (Default: 80)**                                                                   |
-| -U                      | **ThingsBoard user (email for login)**                                                               |
-| -P                      | **ThingsBoard user password**                                                                        |
+| -H                      | **SENTIENT host (Default: localhost)**                                                            |
+| -p                      | **SENTIENT port (Default: 80)**                                                                   |
+| -U                      | **SENTIENT user (email for login)**                                                               |
+| -P                      | **SENTIENT user password**                                                                        |
 | -b                      | **Default branch (Default: main)**                                                                   |
 | -N                      | **Version name (If not provided will be generated 5 random letters and numbers and used as a name)** |
 | --save_attributes       | **Optional, do we need to save attributes for target entities (Default: True)**                      |
@@ -518,13 +518,13 @@ To save entities from command line we will use the following arguments and data:
 
 Let's download the script:
 ```bash
-wget https://raw.githubusercontent.com/thingsboard/thingsboard-python-rest-client/master/examples/load_all_entities_to_vcs_pe.py
+wget https://raw.githubusercontent.com/sentient/sentient-python-rest-client/master/examples/load_all_entities_to_vcs_pe.py
 ```
 
 Now we can run our script and save our entities to the repository on version control system, we will publish to default branch with default settings to show minimal required configuration:
 
 ```bash
-python3 load_all_entities_to_vcs_pe.py -H YOUR_THINGSBOARD_HOST -p YOUR_THINGSBOARD_PORT -U YOUR_THINGSBOARD_USER_EMAIL -P YOUR_THINGSBOARD_USER_PASSWORD
+python3 load_all_entities_to_vcs_pe.py -H YOUR_SENTIENT_HOST -p YOUR_SENTIENT_PORT -U YOUR_SENTIENT_USER_EMAIL -P YOUR_SENTIENT_USER_PASSWORD
 ```
 
 In output message you will receive information about how many entities were saved.
@@ -533,17 +533,17 @@ In output message you will receive information about how many entities were save
 
 You can use the following script, based on [tb-rest-client](#python-rest-client) to save current state of your entities to your repository on version control system.
 
-The latest source code you can find [here](https://github.com/thingsboard/thingsboard-python-rest-client/blob/master/examples/load_all_entities_from_vcs_pe.py).
+The latest source code you can find [here](https://github.com/sentient/sentient-python-rest-client/blob/master/examples/load_all_entities_from_vcs_pe.py).
 
 
 To load entities from command line we will use the following arguments and data:  
 
 | Command line argument          | Description                                                                                                                            |
 |--------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|  
-| -H                             | **ThingsBoard host (Default: localhost)**                                                                                              |
-| -p                             | **ThingsBoard port (Default: 80)**                                                                                                     |
-| -U                             | **ThingsBoard user (email for login)**                                                                                                 |
-| -P                             | **ThingsBoard user password**                                                                                                          |
+| -H                             | **SENTIENT host (Default: localhost)**                                                                                              |
+| -p                             | **SENTIENT port (Default: 80)**                                                                                                     |
+| -U                             | **SENTIENT user (email for login)**                                                                                                 |
+| -P                             | **SENTIENT user password**                                                                                                          |
 | -b                             | **Default branch (Default: main)**                                                                                                     |
 | -N                             | **Version name (You can provide a part of the version name and script will propose you all find versions that include provided name)** |
 | --find_existing_entity_by_name | **Optional, do we need to looking for existing entities by their names instead of using ids(Default: True)**                           |
@@ -559,13 +559,13 @@ To load entities from command line we will use the following arguments and data:
 
 Let's download the script:
 ```bash
-wget https://raw.githubusercontent.com/thingsboard/thingsboard-python-rest-client/master/examples/load_all_entities_from_vcs_pe.py
+wget https://raw.githubusercontent.com/sentient/sentient-python-rest-client/master/examples/load_all_entities_from_vcs_pe.py
 ```
 
 Now we can run our script and restore entities version and state from the repository on version control system:
 
 ```bash
-python3 load_all_entities_from_vcs_pe.py -H YOUR_THINGSBOARD_HOST -p YOUR_THINGSBOARD_PORT -U YOUR_THINGSBOARD_USER_EMAIL -P YOUR_THINGSBOARD_USER_PASSWORD -N YOUR_VERSION_NAME 
+python3 load_all_entities_from_vcs_pe.py -H YOUR_SENTIENT_HOST -p YOUR_SENTIENT_PORT -U YOUR_SENTIENT_USER_EMAIL -P YOUR_SENTIENT_USER_PASSWORD -N YOUR_VERSION_NAME 
 ```
 
 In output you will receive information about how many entities were loaded.

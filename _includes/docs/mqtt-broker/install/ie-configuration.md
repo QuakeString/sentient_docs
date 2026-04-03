@@ -1,8 +1,8 @@
 * TOC
 {:toc}
 
-This guide will help you become familiar with TBMQ {{tbmqSuffix}} Integration Executor (IE) configuration files and parameters. 
-We **strongly recommend** configuring TBMQ IE using environment variables. 
+This guide will help you become familiar with ST-RMQTT {{st-rmqttSuffix}} Integration Executor (IE) configuration files and parameters. 
+We **strongly recommend** configuring ST-RMQTT IE using environment variables. 
 This way, you won't need to merge the configuration files when a new platform release arrives. 
 
 The list of available configuration parameters and corresponding environment variables can be found [here](#configuration-parameters).
@@ -11,12 +11,12 @@ The list of available configuration parameters and corresponding environment var
 
 ### Docker-Based deployment
 
-If TBMQ IE is installed in a Docker Compose environment, you can edit the scripts and add environment variables for 
+If ST-RMQTT IE is installed in a Docker Compose environment, you can edit the scripts and add environment variables for 
 the corresponding containers. For more details, refer to the [Docker documentation](https://docs.docker.com/compose/environment-variables/#/the-envfile-configuration-option).
 
 ### K8S-Based deployment
 
-If TBMQ IE is installed in a K8S environment, you can edit the scripts and add environment variables for the 
+If ST-RMQTT IE is installed in a K8S environment, you can edit the scripts and add environment variables for the 
 corresponding deployments/stateful sets. For more details, refer to the [K8S documentation](https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/).
 
 ## Configuration parameters
@@ -38,7 +38,7 @@ You can use the simple example below to add a new environment variable 'HTTP_BIN
 export HTTP_BIND_PORT=8084
 ```
 
-The parameters are grouped by system components. The list contains the name (address in **tbmq-integration-executor.yml** file), 
+The parameters are grouped by system components. The list contains the name (address in **st-rmqtt-integration-executor.yml** file), 
 environment variable, default value, and description.
 
 {% if docsPrefix == "pe/" %}

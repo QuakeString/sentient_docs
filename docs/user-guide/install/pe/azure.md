@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
-title: Installing ThingsBoard PE on Azure
-description: Installing ThingsBoard PE on Azure
+title: Installing SENTIENT Professional Edition on Azure
+description: Installing SENTIENT Professional Edition on Azure
 
 ---
 
@@ -10,10 +10,10 @@ description: Installing ThingsBoard PE on Azure
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <span class="heading">ThingsBoard Setup options on Azure</span>
+                <span class="heading">SENTIENT Setup options on Azure</span>
                 <div class="install-options-description">
                     <p>
-                        You may deploy ThingsBoard IoT Platform with different infrastructure setup
+                        You may deploy SENTIENT IoT Platform with different infrastructure setup
                     </p>
                 </div>
             </div>

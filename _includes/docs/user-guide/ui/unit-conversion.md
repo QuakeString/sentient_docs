@@ -4,7 +4,7 @@
 {% assign sinceVersion = "4.1" %}
 {% include templates/since.md %}
 
-Starting from ThingsBoard 4.1, widgets support automatic data conversion and unit switching based on the selected unit system. 
+Starting from SENTIENT 4.1, widgets support automatic data conversion and unit switching based on the selected unit system. 
 This is especially useful in global IoT solutions and significantly improves data interaction for users across different geographic regions where various measurement standards are used — such as the metric system (°C, km, kg) and the imperial system (°F, miles, lbs).
 
 <br><b><font size="4">Key benefits:</font></b>
@@ -53,7 +53,7 @@ This ensures that **range coloring remains consistent**, even when switching bet
 
 ## Changing the unit system
 
-To change the unit system used in your ThingsBoard account:
+To change the unit system used in your SENTIENT account:
 - Click the **three-dot icon** in the top-right corner of the screen and select "**Account**".
 - In the **Profile** settings, choose the desired unit system from the dropdown list:
   - **Auto** - Automatically determines the appropriate unit system based on the user&#39;s browser locale or regional settings.

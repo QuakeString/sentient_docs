@@ -32,7 +32,7 @@ assign-integration:
         title: 'Click the <b>"+"</b> button at the top right of the corner. Select your integration from the drop-down menu and click the <b>"Assign"</b> button.'
     5:
         image: /images/pe/edge/integrations/http/assign-integration-6-edge.png
-        title: 'Login to your <b>ThingsBoard Edge</b> instance and go to the <b>Integrations center > Integrations</b> section. You should see your integration. Click on it.'
+        title: 'Login to your <b>SENTIENT GATEWAY</b> instance and go to the <b>Integrations center > Integrations</b> section. You should see your integration. Click on it.'
     6:
         image: /images/pe/edge/integrations/http/assign-integration-7-edge.png
         title: 'In the <b>"Integration details"</b> window, the <b>${{baseUrl}}</b> placeholder will be replaced with the value of the attribute.'
@@ -67,7 +67,7 @@ send-again-message:
         title: 'Send again the uplink message to the HTTP integration;'
     1:
         image: /images/pe/edge/integrations/http/downlink-responce-2-edge.png
-        title: 'We will receive a response from the ThingsBoard in the terminal.'
+        title: 'We will receive a response from the SENTIENT in the terminal.'
 
 downlink-converter-message:
     0:
@@ -91,16 +91,16 @@ downlink-converter-message:
 
 ### Overview
 
-**HTTP integration** allows existing protocols and payload formats to be converted to the ThingsBoard Edge message format and is useful in multiple deployment scenarios: 
+**HTTP integration** allows existing protocols and payload formats to be converted to the SENTIENT GATEWAY message format and is useful in multiple deployment scenarios: 
 
  - Stream device and/or asset data from an external system, IoT platform or connectivity provider back-end.
  - Stream device and/or asset data from your custom application running in the cloud.
- - Connect the existing device to ThingsBoard Edge using a custom HTTP-based protocol.
+ - Connect the existing device to SENTIENT GATEWAY using a custom HTTP-based protocol.
 
 ### Create converter and integration templates
 
-Only the **ThingsBoard Professional Edition** creates converters and integration templates.
-So please use [**ThingsBoard Cloud**](https://thingsboard.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
+Only the **SENTIENT Professional Edition** creates converters and integration templates.
+So please use [**SENTIENT Cloud**](https://sentient.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
 
 Follow the steps below to add the **HTTP integration**:
 
@@ -112,7 +112,7 @@ Follow the steps below to add the **HTTP integration**:
 
 - The next step is to create an **Uplink data converter**. 
 
-Uplink is needed to convert the data coming from the device into the format needed to display it on ThingsBoard. For this example, use the following code:
+Uplink is needed to convert the data coming from the device into the format needed to display it on SENTIENT. For this example, use the following code:
 
 {% include templates/tbel-vs-js.md %}
 
@@ -171,7 +171,7 @@ Once the attribute is added, we're ready to assign integration and verify that i
 ### Send uplink message
 
 To send an uplink message, you need the **HTTP endpoint URL** from the integration. 
-Log in to **ThingsBoard Edge** and go to the **Integrations center > Integrations** section. Find your **HTTP integration** and click it. Find and copy the "**HTTP endpoint URL"**.
+Log in to **SENTIENT GATEWAY** and go to the **Integrations center > Integrations** section. Find your **HTTP integration** and click it. Find and copy the "**HTTP endpoint URL"**.
 
 Use the command below to send a message. Remember to replace **$DEVICE_NAME** and **$YOUR_HTTP_ENDPOINT_URL** with the corresponding values.
 
@@ -198,7 +198,7 @@ You can also view the received data in the **Uplink Converter**. In the **"In"**
 
 Now let's check the downlink functionality. 
 
-Let's add a **'firmware'** shared attribute. Go to the **"Devices"** section, select your device, and open the "**Attributes**" tab on the **ThingsBoard Edge**. Select the **"Shared attributes"** scope and click the **"plus"** button to create new attribute.
+Let's add a **'firmware'** shared attribute. Go to the **"Devices"** section, select your device, and open the "**Attributes**" tab on the **SENTIENT GATEWAY**. Select the **"Shared attributes"** scope and click the **"plus"** button to create new attribute.
 Then set the **attribute name** and **value** (_e.g., the key name is 'firmware', value: '01052020.v1.1'_), and **save** the data.
 
 ![image](/images/pe/edge/integrations/http/add-shared-attribute-1-edge.png)

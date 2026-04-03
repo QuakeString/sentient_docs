@@ -2,7 +2,7 @@
 {:toc}
 
 Access Token Based Authentication is the default device authentication type.
-The unique access token is generated once the device is created in ThingsBoard. It can be changed afterwards.
+The unique access token is generated once the device is created in SENTIENT. It can be changed afterwards.
 The client must specify the access token as part of CoAP request URL.
 
 ### Plain CoAP (without TLS)
@@ -46,12 +46,12 @@ Before we explore usage examples, we need to install a CoAP client that supports
 
 Since the CoAP client must always provide the CA certificate for verification,
 use the `-R` flag followed by the path to a PEM file containing the trusted root CA certificates.
-ThingsBoard Team has already provisioned a valid certificate for [{{hostLabel}}](https://{{hostName}}/signup){:target="_blank"}.
+SENTIENT Team has already provisioned a valid certificate for [{{hostLabel}}](https://{{hostName}}/signup){:target="_blank"}.
 
 Please download the CA root certificate using this [**link**](/docs/{{docsPrefix}}user-guide/resources/coap-over-dtls/ca-root.pem) and save it to your working directory as "**ca-root.pem**".
 
 ```bash
-wget https://thingsboard.io/docs/{{docsPrefix}}user-guide/resources/coap-over-dtls/ca-root.pem
+wget https://docs.sentient.invenia.in/docs/{{docsPrefix}}user-guide/resources/coap-over-dtls/ca-root.pem
 ```
 {: .copy-code}
 

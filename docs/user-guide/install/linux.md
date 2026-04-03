@@ -2,8 +2,8 @@
 layout: docwithnav
 assignees:
 - ashvayka
-title: Installing ThingsBoard on Linux
-description: Installing ThingsBoard on Linux
+title: Installing SENTIENT on Linux
+description: Installing SENTIENT on Linux
 redirect_to: "/docs/user-guide/install/ubuntu"
 
 ---
@@ -13,19 +13,19 @@ redirect_to: "/docs/user-guide/install/ubuntu"
 * TOC
 {:toc}
 
-This guide describes how to install ThingsBoard on a Linux based server machine.
+This guide describes how to install SENTIENT on a Linux based server machine.
 Instructions below are provided for Ubuntu 16.04 and CentOS 7. 
 These instructions can be easily adapted to other similar operating	 systems. 
 
 ### Hardware requirements
 
-To run ThingsBoard and third-party components on a single machine you will need at least 1Gb of RAM.
+To run SENTIENT and third-party components on a single machine you will need at least 1Gb of RAM.
 
 ### Third-party components installation
 
 #### Java
 
-ThingsBoard service is running on Java 11. 
+SENTIENT service is running on Java 11. 
 The solution is actively tested on both [OpenJDK](http://openjdk.java.net/) and [Oracle JDK](http://www.oracle.com/technetwork/java/javase/overview/index.html).
 
 Follow this instructions to install OpenJDK 11:
@@ -73,28 +73,28 @@ A,Ubuntu,shell,resources/cassandra-ubuntu-installation.sh,/docs/user-guide/insta
 B,CentOS,shell,resources/cassandra-centos-installation.sh,/docs/user-guide/install/resources/cassandra-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-### ThingsBoard service installation
+### SENTIENT service installation
 
 Download installation package or [build it from source](/docs/user-guide/install/building-from-source).
 
-{% capture tabspec %}thingsboard-download
-A,Ubuntu,shell,resources/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/thingsboard-ubuntu-download.sh
-B,CentOS,shell,resources/thingsboard-centos-download.sh,/docs/user-guide/install/resources/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download
+A,Ubuntu,shell,resources/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/sentient-ubuntu-download.sh
+B,CentOS,shell,resources/sentient-centos-download.sh,/docs/user-guide/install/resources/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-Install ThingsBoard as a service
+Install SENTIENT as a service
 
-{% capture tabspec %}thingsboard-installation
-A,Ubuntu,shell,resources/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/thingsboard-ubuntu-installation.sh
-B,CentOS,shell,resources/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation
+A,Ubuntu,shell,resources/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/sentient-ubuntu-installation.sh
+B,CentOS,shell,resources/sentient-centos-installation.sh,/docs/user-guide/install/resources/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-### Configure ThingsBoard to use the external database
+### Configure SENTIENT to use the external database
   
-Edit ThingsBoard configuration file 
+Edit SENTIENT configuration file 
 
 ```bash 
-sudo nano /etc/thingsboard/conf/thingsboard.yml
+sudo nano /etc/sentient/conf/sentient.yml
 ```
 
 {% include templates/disable-hsqldb.md %} 
@@ -115,10 +115,10 @@ database:
 
 {% include templates/memory-update-for-slow-machines.md %} 
 
-For ThingsBoard service:
+For SENTIENT service:
 
 ```bash
-# Update ThingsBoard memory usage and restrict it to 256MB in /etc/thingsboard/conf/thingsboard.conf
+# Update SENTIENT memory usage and restrict it to 256MB in /etc/sentient/conf/sentient.conf
 export JAVA_OPTS="$JAVA_OPTS -Xms256M -Xmx256M"
 ```
 
@@ -130,16 +130,16 @@ export JAVA_OPTS="$JAVA_OPTS -Xms256M -Xmx256M"
 
 ### Troubleshooting
 
-ThingsBoard logs are stored in the following directory:
+SENTIENT logs are stored in the following directory:
  
 ```bash
-/var/log/thingsboard
+/var/log/sentient
 ```
 
 You can issue the following command in order to check if there are any errors on the backend side:
  
 ```bash
-cat /var/log/thingsboard/thingsboard.log | grep ERROR
+cat /var/log/sentient/sentient.log | grep ERROR
 ```
 
 ## Next steps

@@ -241,8 +241,8 @@ def mark_vulnerable_in_yml_lines(yml_lines: List[str], target_version: str) -> b
 def render_upgrade_md_ce(fam: str, os_key: str, os_title: str) -> str:
     return f"""---
 layout: {CE_UPG_LAYOUT}
-title: ThingsBoard CE v{fam}.x upgrade instructions for {os_title}
-description: ThingsBoard CE v{fam}.x upgrade guide for {os_title}
+title: SENTIENT v{fam}.x upgrade instructions for {os_title}
+description: SENTIENT v{fam}.x upgrade guide for {os_title}
 active-menu-item-click: "true"
 breadcrumbs: true
 breadcrumbs-steps: 2
@@ -260,8 +260,8 @@ effective-url: '{CE_UPG_EFFECTIVE_URL}'
 def render_upgrade_md_pe(fam: str, os_key: str, os_title: str) -> str:
     return f"""---
 layout: {PE_UPG_LAYOUT}
-title: ThingsBoard PE v{fam}.x upgrade instructions for {os_title}
-description: ThingsBoard PE v{fam}.x upgrade guide for {os_title}
+title: SENTIENT Professional Edition v{fam}.x upgrade instructions for {os_title}
+description: SENTIENT Professional Edition v{fam}.x upgrade guide for {os_title}
 active-menu-item-click: "true"
 breadcrumbs: true
 breadcrumbs-steps: 2
@@ -279,12 +279,12 @@ effective-url: '{PE_UPG_EFFECTIVE_URL}'
 
 def render_release_include_ce(version: str, release_dt: datetime) -> str:
     date_str = fmt_release_date_for_includes(release_dt)
-    return f"### ThingsBoard CE v{version} ({date_str})\n"
+    return f"### SENTIENT v{version} ({date_str})\n"
 
 
 def render_release_include_pe(version: str, release_dt: datetime) -> str:
     date_str = fmt_release_date_for_includes(release_dt)
-    return f"### ThingsBoard PE v{version} ({date_str})\n"
+    return f"### SENTIENT Professional Edition v{version} ({date_str})\n"
 
 
 def extract_frontmatter(text: str) -> Tuple[str, str, str]:
@@ -368,8 +368,8 @@ def render_release_family_ce(
 
     return f"""---
 layout: {CE_REL_LAYOUT}
-title: Thingsboard v{fam}.x release notes
-description: Discover Thingsboard v{fam}.x release notes
+title: Sentient v{fam}.x release notes
+description: Discover Sentient v{fam}.x release notes
 breadcrumbs: 'true'
 breadcrumbs-steps: '1'
 {lts_line}release-date: {release_date_str}
@@ -400,8 +400,8 @@ def render_release_family_pe(
 
     return f"""---
 layout: {PE_REL_LAYOUT}
-title: Thingsboard PE v{fam}.x release notes
-description: Discover Thingsboard PE v{fam}.x release notes
+title: Sentient PE v{fam}.x release notes
+description: Discover Sentient PE v{fam}.x release notes
 breadcrumbs: 'true'
 breadcrumbs-steps: '1'
 {lts_line}release-date: {release_date_str}

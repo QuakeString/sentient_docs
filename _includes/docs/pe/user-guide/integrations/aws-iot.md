@@ -5,8 +5,8 @@
 
 ## Overview
 
-AWS IoT Integration allows to stream data from AWS IoT Backend to ThingsBoard and converts device payloads 
-to the ThingsBoard format. AWS IoT will be primarily responsible for receiving all messages (as a broker - 
+AWS IoT Integration allows to stream data from AWS IoT Backend to SENTIENT and converts device payloads 
+to the SENTIENT format. AWS IoT will be primarily responsible for receiving all messages (as a broker - 
 messaging server), filtering them, deciding who is interested, and then sending the message to all 
 subscribers, in our case of integration.
 
@@ -15,7 +15,7 @@ subscribers, in our case of integration.
 ## AWS IOT
 
 You should already have an [AWS account](https://aws.amazon.com/iot/) prepared, on which 
-perform a few settings. To establish a correct and secure connection between the service and ThingsBoard, you need to create Policies, devices, and certificates for them.
+perform a few settings. To establish a correct and secure connection between the service and SENTIENT, you need to create Policies, devices, and certificates for them.
 
 ### Create Policy
 
@@ -129,13 +129,13 @@ After saving the required, click the **Done**.
 
 {% include images-gallery.html imageCollection="save_certificates" %}
 
-## ThingsBoard setup
+## SENTIENT setup
 
 ### Create Uplink Converter
 
 Before creating the integration, you need to create an Uplink converter in Data converters. Uplink is
 necessary in order to convert the incoming data from the device into the required format for displaying
-them in ThingsBoard. Click on the “plus” and on “Create new converter”. To view the events, enable Debug.
+them in SENTIENT. Click on the “plus” and on “Create new converter”. To view the events, enable Debug.
 In the function decoder field, specify a script, for it copy the example Uplink converter, or
 use own configuration to parse and transform data.
 
@@ -160,7 +160,7 @@ has already been created, then click on the “pencil” icon to edit it.
 ![image](/images/user-guide/integrations/aws-iot/aws-iot-add-integration-1-pe.png)
 
 {% capture allowCreateDevice %}
-Note that if the “Allow create devices or assets” checkbox is unchecked, when sending a message to thingsboard
+Note that if the “Allow create devices or assets” checkbox is unchecked, when sending a message to sentient
 with any parameters of the device (or asset), if such a device (asset) does not exist, then device (asset) will not be created.
 {% endcapture %}
 {% include templates/info-banner.md content=allowCreateDevice %}
@@ -229,11 +229,11 @@ JavaScript<small></small>%,%anonymous%,%templates/integration/aws-iot/aws-iot-do
 {% include content-toggle.liquid content-toggle-id="awsiotdownlinkconverterconfig" toggle-spec=awsiotdownlinkconverterconfig %}
 
 Next, configure the conditions under which a message will be sent through the AWS IoT Downlink integration.
-To do this, you need to open the Rule Chain used for the device (in our case, the default Root Rule Chain), then add an [integration downlink node](https://thingsboard.io/docs/user-guide/rule-engine-2-0/nodes/action/integration-downlink/), for link condition set the Attributes Updated.
+To do this, you need to open the Rule Chain used for the device (in our case, the default Root Rule Chain), then add an [integration downlink node](https://docs.sentient.invenia.in/docs/user-guide/rule-engine-2-0/nodes/action/integration-downlink/), for link condition set the Attributes Updated.
 
 {% include images-gallery.html imageCollection="downlink_2-3" %}
 
-To subscribe to a topic for receive messages from Thingsboard, use the **AWS MQTT test client**.
+To subscribe to a topic for receive messages from Sentient, use the **AWS MQTT test client**.
 
 {% include images-gallery.html imageCollection="downlink_4" %}
 

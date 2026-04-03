@@ -1,94 +1,85 @@
-- title: Community Edition
-  fulltitle: ThingsBoard Community Edition
-  description: ThingsBoard Documentation
-  tag: ce
-  icon: /images/thingsboard-cm-icon.svg
-  path: /docs/
-  guides: /docs/guides/
-  getStarted: /docs/getting-started-guides/helloworld/
-  docsPrefix: /docs/
 - title: Professional Edition
-  fulltitle: ThingsBoard Professional Edition
-  description: ThingsBoard Documentation
+  fulltitle: SENTIENT Professional Edition
+  description: SENTIENT Documentation
   tag: pe
-  icon: /images/thingsboard-p-icon.svg
+  icon: /images/sentient-p-icon.svg
   path: /docs/pe/
   guides: /docs/pe/guides/
   getStarted: /docs/pe/getting-started-guides/helloworld/
   docsPrefix: /docs/pe/
 - title: Cloud
-  fulltitle: ThingsBoard Cloud
-  description: ThingsBoard Documentation
+  fulltitle: SENTIENT Cloud
+  description: SENTIENT Documentation
   tag: paas
-  icon: /images/thingsboard-c-icon.svg
+  icon: /images/sentient-c-icon.svg
   path: /docs/paas/
   guides: /docs/paas/guides/
   getStarted: /docs/paas/getting-started-guides/helloworld/
   docsPrefix: /docs/paas/
-- title: Edge
-  fulltitle: ThingsBoard Edge
-  description: ThingsBoard Edge Documentation
+- title: SENTIENT GATEWAY
+  fulltitle: SENTIENT GATEWAY
+  description: SENTIENT GATEWAY Documentation
   tag: edge
-  icon: /images/thingsboard-e-icon.svg
+  icon: /images/sentient-gw-icon.svg
   path: /docs/edge/
   docsPrefix: /docs/edge/
-- title: PE Edge
-  fulltitle: ThingsBoard PE Edge
-  description: ThingsBoard PE Edge Documentation
+- title: PE SENTIENT GATEWAY
+  fulltitle: SENTIENT PE GATEWAY
+  description: SENTIENT PE GATEWAY Documentation
   tag: edge-pe
-  icon: /images/thingsboard-e-icon.svg
+  icon: /images/sentient-gw-icon.svg
   path: /docs/pe/edge/
   docsPrefix: /docs/pe/edge/
 - title: IoT Gateway
-  fulltitle: ThingsBoard IoT Gateway
-  description: ThingsBoard Documentation
+  fulltitle: SENTIENT IoT Gateway
+  description: SENTIENT Documentation
   tag: gw
   icon: /images/gateway-icon.svg
   path: /docs/iot-gateway/
   docsPrefix: /docs/iot-gateway/
   getStarted: /docs/iot-gateway/getting-started/
 - title: License Server
-  fulltitle: ThingsBoard License Server
-  description: ThingsBoard Documentation
+  fulltitle: SENTIENT License Server
+  description: SENTIENT Documentation
   tag: license
   icon: /images/license-icon.svg
   path: /products/license-server/
-- title: Trendz Analytics
-  fulltitle: Trendz Analytics
-  description: Trendz Documentation
-  tag: trendz
-  icon: /images/trendz-icon.svg
-  path: /docs/trendz/
-  docsPrefix: /docs/trendz/
-  getStarted: /docs/trendz/getting-started/
+- title: SENTIENT ANALYTICS
+  fulltitle: SENTIENT ANALYTICS
+  description: SENTIENT ANALYTICS Documentation
+  tag: sentient-analytics
+  icon: /images/sentient-analytics-icon.svg
+  path: /docs/sentient-analytics/
+  docsPrefix: /docs/sentient-analytics/
+  getStarted: /docs/sentient-analytics/getting-started/
 - title: Mobile Application
-  fulltitle: ThingsBoard Mobile Application
+  fulltitle: SENTIENT Mobile Application
   description: Mobile Application Documentation
   tag: mobile
-  icon: /images/tb-mobile-icon.svg
+  icon: /images/sentient-mobile-icon.svg
   path: /docs/mobile/
   docsPrefix: /docs/mobile/
   getStarted: /docs/mobile/getting-started/
 - title: PE Mobile Application
-  fulltitle: ThingsBoard PE Mobile Application
+  fulltitle: SENTIENT PE Mobile Application
   description: PE Mobile Application Documentation
   tag: mobile-pe
-  icon: /images/tb-pe-mobile-icon.svg
+  icon: /images/sentient-pe-mobile-icon.svg
   path: /docs/pe/mobile/
   docsPrefix: /docs/pe/mobile/
   getStarted: /docs/pe/mobile/getting-started/
-- title: MQTT Broker
-  fulltitle: MQTT Broker
-  description: MQTT Broker Documentation
+- title: ST-RMQTT
+  fulltitle: ST-RMQTT
+  description: ST-RMQTT Documentation
   tag: mqtt-broker
-  icon: /images/tbmq-icon.svg
+  icon: /images/st-rmqtt-icon.svg
   path: /docs/mqtt-broker/
   docsPrefix: /docs/mqtt-broker/
   getStarted: /docs/mqtt-broker/getting-started/
-- title: PE MQTT Broker
-  fulltitle: PE MQTT Broker
-  description: PE MQTT Broker Documentation
+- title: PE ST-RMQTT
+  fulltitle: PE ST-RMQTT
+  description: PE ST-RMQTT Documentation
   tag: mqtt-broker-pe
-  icon: /images/tbmq-icon.svg
+  icon: /images/st-rmqtt-icon.svg
   path: /docs/pe/mqtt-broker/
   docsPrefix: /docs/pe/mqtt-broker/

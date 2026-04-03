@@ -10,10 +10,10 @@ notitle: "true"
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <h1>ThingsBoard IoT Gateway installation options</h1>
+                <h1>SENTIENT IoT Gateway installation options</h1>
                 <div class="install-options-description">
                     <p>
-                        ThingsBoard IoT Gateway is designed to run and utilize on majority of hardware, from single-board computers like Raspberry Pi to powerful Edge Gateways for IoT
+                        SENTIENT IoT Gateway is designed to run and utilize on majority of hardware, from single-board computers like Raspberry Pi to powerful Edge Gateways for IoT
                     </p>
                 </div>
             </div>

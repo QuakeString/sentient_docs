@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: How T-Mobile uses ThingsBoard for agile IoT prototyping
+title: How T-Mobile uses SENTIENT for agile IoT prototyping
 notitle: "true"
 customTitle: "true"
-description: Learn how T-Mobile Czech Republic leverages ThingsBoard to streamline development and visualization of IoT solutions.
+description: Learn how T-Mobile Czech Republic leverages SENTIENT to streamline development and visualization of IoT solutions.
 ---
 
 <div class="case-study-page-wrapper">
@@ -11,7 +11,7 @@ description: Learn how T-Mobile Czech Republic leverages ThingsBoard to streamli
         <div class="card">
             <div class="text">
                 <p class="category">TELECOM</p>
-                <h1>Scaling IoT prototyping at T-Mobile CZ with ThingsBoard</h1>
+                <h1>Scaling IoT prototyping at T-Mobile CZ with SENTIENT</h1>
                 <div class="image inner" style="background-image: url('/images/case-studies/t-mobile-cz.webp')">
                     <img src="/images/case-studies/t-mobile-cz.svg" title="T-Mobile CZ" alt="T-Mobile CZ logo" width="126" height="56">
                 </div>
@@ -40,7 +40,7 @@ description: Learn how T-Mobile Czech Republic leverages ThingsBoard to streamli
     <section class="quote-with-mark fill-background">
         <img src="/images/case-studies/quote.svg" title="Quote mark" alt="Quote mark" width="96" height="90">
         <div class="quote-text">
-            <p>We have choose to use ThingsBoard to be able easily and quickly deliver various proof-of-concepts, product prototypes and to test new devices with comes usually “app-less”. With ThingsBoard we are able finish such tasks with visually attractive result with sleek user interface and done in nearly no time. In comparison to other IoT platforms and tools we value the mo...<a target="_blank" href="/industries/telecom/?company=tmobile">read more</a></p>
+            <p>We have choose to use SENTIENT to be able easily and quickly deliver various proof-of-concepts, product prototypes and to test new devices with comes usually “app-less”. With SENTIENT we are able finish such tasks with visually attractive result with sleek user interface and done in nearly no time. In comparison to other IoT platforms and tools we value the mo...<a target="_blank" href="/industries/telecom/?company=tmobile">read more</a></p>
             <h2>David Týr, Innovation Manager at T-Mobile Czech Republic</h2>
         </div>
     </section>
@@ -103,18 +103,18 @@ description: Learn how T-Mobile Czech Republic leverages ThingsBoard to streamli
         </div>
     </section>
     <section class="tb-power mb">
-        <h2>How ThingsBoard powers T-Mobile Czech Republic?</h2>
+        <h2>How SENTIENT powers T-Mobile Czech Republic?</h2>
         <div class="block">
             <div class="text">
                 <h3>Rapid prototyping and PoC delivery</h3>
-                <p>ThingsBoard enabled T-Mobile to quickly create and present fully functional PoCs and MVPs. Thanks to its visual dashboards and powerful Rule Engine, development timelines were dramatically shortened.</p>
+                <p>SENTIENT enabled T-Mobile to quickly create and present fully functional PoCs and MVPs. Thanks to its visual dashboards and powerful Rule Engine, development timelines were dramatically shortened.</p>
             </div>
             <img src="/images/case-studies/t-mobile-cz-1.webp" title="Rapid prototyping and PoC delivery" alt="Rapid prototyping and PoC delivery" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Seamless handling of “App-less” devices</h3>
-                <p>Many IoT devices under evaluation had no user-facing applications. With ThingsBoard, T-Mobile could easily connect these devices and provide real-time data visualization through flexible and customizable dashboards.</p>
+                <p>Many IoT devices under evaluation had no user-facing applications. With SENTIENT, T-Mobile could easily connect these devices and provide real-time data visualization through flexible and customizable dashboards.</p>
             </div>
             <img src="/images/case-studies/t-mobile-cz-2.webp" title="Seamless handling of “App-less” devices" alt="Seamless handling of “App-less” devices" width="450" height="240">
         </div>
@@ -128,50 +128,50 @@ description: Learn how T-Mobile Czech Republic leverages ThingsBoard to streamli
         <div class="block">
             <div class="text">
                 <h3>Reliable innovation infrastructure</h3>
-                <p>ThingsBoard became a core tool in the innovation workflow at T-Mobile, powering quick experiments and helping deliver market-ready solutions based on NB-IoT and Sigfox without unnecessary overhead.</p>
+                <p>SENTIENT became a core tool in the innovation workflow at T-Mobile, powering quick experiments and helping deliver market-ready solutions based on NB-IoT and Sigfox without unnecessary overhead.</p>
             </div>
             <img src="/images/case-studies/t-mobile-cz-4.webp" title="Reliable innovation infrastructure" alt="Reliable innovation infrastructure" width="450" height="240">
         </div>
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard helps telecom improve operations with IoT?</h2>
+        <h2>How SENTIENT helps telecom improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Remote monitoring of telecom infrastructure</h3>
-                <p>With networks distributed across wide geographies, telecom providers require real-time monitoring of thousands of remote assets such as base stations, towers, and data centers. ThingsBoard enables centralized visibility and automated alerts across the entire infrastructure.</p>
+                <p>With networks distributed across wide geographies, telecom providers require real-time monitoring of thousands of remote assets such as base stations, towers, and data centers. SENTIENT enables centralized visibility and automated alerts across the entire infrastructure.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>IoT gateways and sensors are connected to telecom towers, power systems, UPS, HVAC, and access doors.</p></li>
-                    <li><p>ThingsBoard collects data from all sites and presents it on custom dashboards.</p></li>
+                    <li><p>SENTIENT collects data from all sites and presents it on custom dashboards.</p></li>
                     <li><p>Rule Engine triggers real-time alarms when anomalies or failures occur.</p></li>
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/maps-widgets.webp" title="Thingsboard maps widgets widget" alt="Thingsboard maps widgets widget" width="776" height="776">
-                <img src="/images/case-studies/entities-table.webp" title="Thingsboard entities table widget" alt="Thingsboard entities table widget" width="776" height="776">
+                <img src="/images/case-studies/maps-widgets.webp" title="Sentient maps widgets widget" alt="Sentient maps widgets widget" width="776" height="776">
+                <img src="/images/case-studies/entities-table.webp" title="Sentient entities table widget" alt="Sentient entities table widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Energy management for remote sites</h3>
-                <p>Telecom infrastructure is highly energy-intensive, especially in remote or off-grid locations. ThingsBoard enables smart energy monitoring and optimization, helping operators lower fuel usage, reduce emissions, and cut costs.</p>
+                <p>Telecom infrastructure is highly energy-intensive, especially in remote or off-grid locations. SENTIENT enables smart energy monitoring and optimization, helping operators lower fuel usage, reduce emissions, and cut costs.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Smart meters, solar panels, diesel generators, and battery banks are connected via IoT.</p></li>
-                    <li><p>ThingsBoard visualizes energy consumption, generator runtime, fuel levels, and battery health.</p></li>
+                    <li><p>SENTIENT visualizes energy consumption, generator runtime, fuel levels, and battery health.</p></li>
                     <li><p>Automatic alerts warn of power failures, overloads, or low battery voltage.</p></li>
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/digital_gauges.webp" title="Thingsboard digital gauges widgets" alt="Thingsboard digital gauges widgets" width="776" height="776">
-                <img src="/images/case-studies/hp-scada-energy.webp" title="Thingsboard HP SCADA energy widgets" alt="Thingsboard HP SCADA energy widgets" width="388" height="388">
+                <img src="/images/case-studies/digital_gauges.webp" title="Sentient digital gauges widgets" alt="Sentient digital gauges widgets" width="776" height="776">
+                <img src="/images/case-studies/hp-scada-energy.webp" title="Sentient HP SCADA energy widgets" alt="Sentient HP SCADA energy widgets" width="388" height="388">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Predictive maintenance of network equipment</h3>
-                <p>Network outages and equipment failure can lead to major revenue loss and customer churn. ThingsBoard supports predictive maintenance for telecom gear—helping teams resolve issues before downtime occurs.</p>
+                <p>Network outages and equipment failure can lead to major revenue loss and customer churn. SENTIENT supports predictive maintenance for telecom gear—helping teams resolve issues before downtime occurs.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Sensors track equipment temperature, vibration, runtime, and fault codes from BTS, routers, UPS, etc.</p></li>
@@ -179,14 +179,14 @@ description: Learn how T-Mobile Czech Republic leverages ThingsBoard to streamli
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/notification-widget.webp" title="Thingsboard notification widget" alt="Thingsboard notification widget" width="776" height="776">
-                <img src="/images/case-studies/time-series-chart.webp" title="Thingsboard time series chart widget" alt="Thingsboard time series chart widget" width="776" height="776">
+                <img src="/images/case-studies/notification-widget.webp" title="Sentient notification widget" alt="Sentient notification widget" width="776" height="776">
+                <img src="/images/case-studies/time-series-chart.webp" title="Sentient time series chart widget" alt="Sentient time series chart widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Site access control & security</h3>
-                <p>Many telecom sites use legacy PLCs and SCADA systems for managing HVAC, power, and environmental control. ThingsBoard provides SCADA-style capabilities for modern visualization and automation.</p>
+                <p>Many telecom sites use legacy PLCs and SCADA systems for managing HVAC, power, and environmental control. SENTIENT provides SCADA-style capabilities for modern visualization and automation.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Supports SCADA symbols and layout editors to create interactive site dashboards.</p></li>
@@ -195,8 +195,8 @@ description: Learn how T-Mobile Czech Republic leverages ThingsBoard to streamli
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/hp-curcuit-breaker.webp" title="Thingsboard HP curcuit breaker widget" alt="Thingsboard HP curcuit breaker widget" width="582" height="582">
-                <img src="/images/case-studies/value-stepper-widget.webp" title="Thingsboard value stepper widget" alt="Thingsboard value stepper widget" width="776" height="776">
+                <img src="/images/case-studies/hp-curcuit-breaker.webp" title="Sentient HP curcuit breaker widget" alt="Sentient HP curcuit breaker widget" width="582" height="582">
+                <img src="/images/case-studies/value-stepper-widget.webp" title="Sentient value stepper widget" alt="Sentient value stepper widget" width="776" height="776">
             </div>
         </div>
         {% include services-banner.liquid %}
@@ -205,12 +205,12 @@ description: Learn how T-Mobile Czech Republic leverages ThingsBoard to streamli
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img style="width: 25%" src="/images/case-studies/t-mobile-cz.svg" title="T-Mobile CZ" alt="T-Mobile CZ logo" width="126" height="56">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_T_Mobile_CZ_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us</a>
     </section>
 </div>

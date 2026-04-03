@@ -9,7 +9,7 @@ Here are the fields you can change depending on your needs:
 
 {% capture aws-eks-vpc %}
 
-The following command will create new VPC for your ThingsBoard cluster. This guide assumes you will create new VPC.
+The following command will create new VPC for your SENTIENT cluster. This guide assumes you will create new VPC.
 Although it is fine to use existing VPC and subnets as well.
 You can find more information about configuring VPC for `eksctl` [here](https://eksctl.io/usage/vpc-networking/).
 

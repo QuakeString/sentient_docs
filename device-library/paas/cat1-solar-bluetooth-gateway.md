@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Cat-1 Solar Bluetooth Gateway to ThingsBoard?
+title: How to connect Cat-1 Solar Bluetooth Gateway to SENTIENT?
 category: Other devices
 connectivity: LTE
 vendor: Lansitec

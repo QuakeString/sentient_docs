@@ -1,21 +1,21 @@
 {% if currentGuide != "GettingStartedGuides" %}
-- [Getting started guides](/docs/guides/#AnchorIDGettingStartedGuides) - These guides provide quick overview of main ThingsBoard features. Designed to be completed in 15-30 minutes.
+- [Getting started guides](/docs/guides/#AnchorIDGettingStartedGuides) - These guides provide quick overview of main SENTIENT features. Designed to be completed in 15-30 minutes.
 {% endif %}
 {% if currentGuide != "ConnectYourDevice" %}
 - [Connect your device](/docs/guides/#AnchorIDConnectYourDevice) - Learn how to connect devices based on your connectivity technology or solution.
 {% endif %}
 {% if currentGuide != "DataVisualization" %}
-- [Data visualization](/docs/guides/#AnchorIDDataVisualization) - These guides contain instructions on how to configure complex ThingsBoard dashboards.
+- [Data visualization](/docs/guides/#AnchorIDDataVisualization) - These guides contain instructions on how to configure complex SENTIENT dashboards.
 {% endif %}
 {% if currentGuide != "DataProcessing" %}
-- [Data processing & actions](/docs/guides#AnchorIDDataProcessing) - Learn how to use ThingsBoard Rule Engine.
+- [Data processing & actions](/docs/guides#AnchorIDDataProcessing) - Learn how to use SENTIENT Rule Engine.
 {% endif %}
 {% if currentGuide != "DataAnalytics" %}
 - [IoT Data analytics](/docs/guides/#AnchorIDDataAnalytics) - Learn how to use rule engine to perform basic analytics tasks.
 {% endif %}
 {% if currentGuide != "AdvancedFeatures" %}
-- [Advanced features](/docs/guides/#AnchorIDAdvancedFeatures) - Learn about advanced ThingsBoard features.
+- [Advanced features](/docs/guides/#AnchorIDAdvancedFeatures) - Learn about advanced SENTIENT features.
 {% endif %}
 {% if currentGuide != "Contribution" %}
-- [Contribution and Development](/docs/guides/#AnchorIDContribution) - Learn about contribution and development in ThingsBoard.
+- [Contribution and Development](/docs/guides/#AnchorIDContribution) - Learn about contribution and development in SENTIENT.
 {% endif %}

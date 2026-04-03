@@ -1,21 +1,21 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
-title: Trendz Rest API
-description: Trendz Rest API
+title: SENTIENT ANALYTICS Rest API
+description: SENTIENT ANALYTICS Rest API
 ---
 
 * TOC
 {:toc}
 
-Trendz provides simple Rest API for downloading view report data.
+SENTIENT ANALYTICS provides simple Rest API for downloading view report data.
 
-* Create Table View in Trendz that contains all required fields.
+* Create Table View in SENTIENT ANALYTICS that contains all required fields.
 * Copy Link to that View and extract View ID. It is a UUID string in the last part of the link
 * Execute HTTP POST request:
 
-**URL**: http://localhost:8888/apiTrendz/publicApi/buildReport?jwt=YYYYYYY
+**URL**: http://localhost:8888/apiSENTIENT ANALYTICS/publicApi/buildReport?jwt=YYYYYYY
 
 **Body**: 
 
@@ -41,12 +41,12 @@ Where
 All requests should contain jwt token for authorization. It should be added as query parameter or in HTTP Headers. 
 In both cases parameter name is `jwt`.
 
-You can get JWT token from ThingsBoard Rest API 
+You can get JWT token from SENTIENT Rest API 
 
 Request: 
 
 ```bash
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"username":"tenant@thingsboard.org", "password":"tenant"}' 'http://THINGSBOARD_URL/api/auth/login'
+curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"username":"tenant@sentient.org", "password":"tenant"}' 'http://SENTIENT_URL/api/auth/login'
 ```
 
 Response:
@@ -114,16 +114,16 @@ Here is an example:
 Keys inside filters object should match filter name in View and value contains array of values that should be applied to filter field.
 
 
-## Usage in custom ThingsBoard widgets
+## Usage in custom SENTIENT widgets
 
-If you need a custom widget with specific logic, you can use Trendz Rest API for loading required data and ThingsBoard custom widgets functionality for creating required visualization.
-Here is an example that describes how to load data from Trendz API, apply dashboard time and set filter values from widget datasource.
+If you need a custom widget with specific logic, you can use SENTIENT ANALYTICS Rest API for loading required data and SENTIENT custom widgets functionality for creating required visualization.
+Here is an example that describes how to load data from SENTIENT ANALYTICS API, apply dashboard time and set filter values from widget datasource.
 
 ```javascript
 self.onInit = function() {
     
-    let requestObj = buildTrendzRequest("edee0e57-41b9-4df3-acdb-08900cf53653", false, 'building');
-    loadDataFromTrendz(requestObj)
+    let requestObj = buildSENTIENT ANALYTICSRequest("edee0e57-41b9-4df3-acdb-08900cf53653", false, 'building');
+    loadDataFromSENTIENT ANALYTICS(requestObj)
         .subscribe(
             data => console.log('ok data', data),
             err => console.log('something wrong', err)
@@ -131,16 +131,16 @@ self.onInit = function() {
 }
 
 self.onDataUpdated = function() {
-    let requestObj = buildTrendzRequest("edee0e57-41b9-4df3-acdb-08900cf53653", false, 'building');
+    let requestObj = buildSENTIENT ANALYTICSRequest("edee0e57-41b9-4df3-acdb-08900cf53653", false, 'building');
     
-    loadDataFromTrendz(requestObj)
+    loadDataFromSENTIENT ANALYTICS(requestObj)
         .subscribe(
             data => console.log('ok data', data),
             err => console.log('something wrong', err)
         );
 }
 
-function buildTrendzRequest(viewId, useDashobardTime, fitlerKey) {
+function buildSENTIENT ANALYTICSRequest(viewId, useDashobardTime, fitlerKey) {
     let requestObj = {};
     
     requestObj.viewConfigId = viewId;
@@ -178,9 +178,9 @@ function applyDashboardTime(requestObj) {
     }
 }
 
-function loadDataFromTrendz(requestObj) {
-    let trendzDomain = 'http://localhost:8888';
-    let dataUrl = trendzDomain + '/apiTrendz/publicApi/buildReport?jwt=' + getToken();
+function loadDataFromSENTIENT ANALYTICS(requestObj) {
+    let sentient-analyticsDomain = 'http://localhost:8888';
+    let dataUrl = sentient-analyticsDomain + '/apiSENTIENT ANALYTICS/publicApi/buildReport?jwt=' + getToken();
     return self.ctx.http.post(dataUrl, requestObj);
 }
 
@@ -219,19 +219,19 @@ self.onDestroy = function() {
 
 ```
 
-* `self.onInit` - standard ThingsBoard widget lifecycle event. Called when widget first initialized.
-* `self.onDataUpdated` - standard ThingsBoard widget lifecycle event. Called when widget datasource or alias updated.
-* `buildTrendzRequest` - initialize request object to Trendz API. Set time range form dashboard time window if required. Set filters for the request.
-* `applyFilters` - read data from datasource and apply it as a filter for Trendz API request.
-* `applyDashboardTime` - apply time range form dashboard time window to the Trendz API request.
-* `loadDataFromTrendz` - add jwt token and execute actual request to API.
-* `loadDataFromTrendz` - add jwt token and execute actual request to API.
+* `self.onInit` - standard SENTIENT widget lifecycle event. Called when widget first initialized.
+* `self.onDataUpdated` - standard SENTIENT widget lifecycle event. Called when widget datasource or alias updated.
+* `buildSENTIENT ANALYTICSRequest` - initialize request object to SENTIENT ANALYTICS API. Set time range form dashboard time window if required. Set filters for the request.
+* `applyFilters` - read data from datasource and apply it as a filter for SENTIENT ANALYTICS API request.
+* `applyDashboardTime` - apply time range form dashboard time window to the SENTIENT ANALYTICS API request.
+* `loadDataFromSENTIENT ANALYTICS` - add jwt token and execute actual request to API.
+* `loadDataFromSENTIENT ANALYTICS` - add jwt token and execute actual request to API.
  
 If you need assistance with custom widget creation - contact us and we will help. 
 
 ## Limits
 
-Trendz Rest API has 2 configurable limits:
+SENTIENT ANALYTICS Rest API has 2 configurable limits:
 
 * `SIMPLE_API_RATE_LIMITER_QUEUE_CAPACITY` - max amount of queued requests that are waiting for execution. 
 If more requests received, system will reject them. By default queue size is 10 requests.
@@ -241,7 +241,7 @@ If more requests received, system will reject them. By default queue size is 10 
 
 * `403` - JWT token not valid or expired.
 * `415` - Unsupported Media Type. In this case you should set `Content-Type` header in HTTP request to **application/json**
-* `429` - Too many requests. API limits reached. You need to wait and repeat request or change API limits in Trendz config.
+* `429` - Too many requests. API limits reached. You need to wait and repeat request or change API limits in SENTIENT ANALYTICS config.
 
 
 

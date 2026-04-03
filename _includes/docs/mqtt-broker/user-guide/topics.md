@@ -8,7 +8,7 @@ This guide explains how MQTT topics work, how to use wildcards in topic strings,
 
 In MQTT, topics are fundamental to the communication model. They act as addressing mechanisms that enable publishers and subscribers to exchange messages.
 There are two types of topics:
-* **Topic Names**. Used by publishers to send messages. **Must not contain** wildcards or start with `$` (such topic reserved for TBMQ system purposes).
+* **Topic Names**. Used by publishers to send messages. **Must not contain** wildcards or start with `$` (such topic reserved for ST-RMQTT system purposes).
 * **Topic Filters**. Used by subscribers to receive messages and **can include** wildcard characters such as `#` and `+`.
 
 Remember that the length of any MQTT topic must not exceed 65535 bytes.
@@ -186,12 +186,12 @@ Consider a client that subscribes to the following topics:
 
 If a message is published to the topic `sensors/room1/temperature`, **both subscriptions match** this topic. 
 
-In this case, TBMQ will not send the message to each matching subscription. 
+In this case, ST-RMQTT will not send the message to each matching subscription. 
 Instead, it will deliver the message to the **subscription with the highest QoS**, or to the first matching subscription if multiple have the same QoS.
 
 ## Configuring maximum topic segments
 
-In TBMQ configuration, you can define the maximum number of forward slashes (`/`) that can be used in a topic.
+In ST-RMQTT configuration, you can define the maximum number of forward slashes (`/`) that can be used in a topic.
 
 By default, there is no restriction because the environment variable `MQTT_TOPIC_MAX_SEGMENTS_COUNT` is set to `0` (disabled).
 

@@ -1,7 +1,7 @@
 ---
 layout: plain
-title: ThingsBoard License Portal Privacy Policy 
-description: ThingsBoard License Portal (web-portal)
+title: SENTIENT License Portal Privacy Policy 
+description: SENTIENT License Portal (web-portal)
 
 ---
 
@@ -14,7 +14,7 @@ description: ThingsBoard License Portal (web-portal)
 
 **1. Introduction**
 
-This Privacy Policy explains how we collect, use, and protect your information when you use the ThingsBoard Licensing Portal (the "Portal"). By using the Portal, you agree to the collection and use of information in accordance with this policy.
+This Privacy Policy explains how we collect, use, and protect your information when you use the SENTIENT Licensing Portal (the "Portal"). By using the Portal, you agree to the collection and use of information in accordance with this policy.
 
 <br>
 
@@ -58,4 +58,4 @@ We implement reasonable security measures to protect your account information. A
 
 **7. Contact Us**
 
-If you have any questions about this Privacy Policy or your data, please contact us at sales@thingsboard.io.
+If you have any questions about this Privacy Policy or your data, please contact us at sales@docs.sentient.invenia.in.

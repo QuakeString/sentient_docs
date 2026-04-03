@@ -1,10 +1,10 @@
 The device name and profile can be extracted from the message source and bytes payload. In this example, we will use  
 [slices](/docs/iot-gateway/config/mqtt/#slices) to specify the device name and constant for profile.
 
-As an example, we will use ThingsBoard MQTT Demo Broker, which can be run using Docker and the following command:
+As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 thingsboard/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
 ```
 {:.copy-code}
 
@@ -61,7 +61,7 @@ use the following configuration:
   "broker": {
     "host": "127.0.0.1",
     "port": 1884,
-    "clientId": "ThingsBoard_gateway",
+    "clientId": "SENTIENT_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,

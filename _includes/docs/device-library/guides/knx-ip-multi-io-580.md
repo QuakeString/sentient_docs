@@ -1,7 +1,7 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: " to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: " to SENTIENT?" %}
 {% assign deviceVendorLink = "https://weinzierl.de/en/products/knx-ip-multi-io-580/" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
   '
@@ -17,8 +17,8 @@ To continue with this guide we will need the following:
 - [Multi IO Extension Shutter 592](https://weinzierl.de/en/products/multi-io-extension-shutter-592/){: target="_blank"}
 - Coupling relay for Multi IO
 - [ETS software](https://support.knx.org/hc/en-us/articles/4409114300178-ETS-v5-7-7){: target="_blank"} installed
-- [ThingsBoard IoT Gateway](https://thingsboard.io/docs/iot-gateway/installation/){: target="_blank"} installed
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT IoT Gateway](https://docs.sentient.invenia.in/docs/iot-gateway/installation/){: target="_blank"} installed
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 
 ## Devices connection
@@ -155,12 +155,12 @@ The last thing that we need to do is set group objects ability to read and write
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=KnxIpMultiScreenshot5_2 %}
 
-## Creating and configuring ThingsBoard IoT Gateway
+## Creating and configuring SENTIENT IoT Gateway
 
 {% assign creatingGatewayCE = '
     ===
         image: /images/devices-library/ready-to-go-devices/temco-tstat10/temco-tstat10-gateway-configuring-1-ce.png,
-        title: Open the ThingsBoard in your browser and log in. Go to "**Entities**" > "**Gateways**" tab in the sidebar and click on "**+**" button. Fill in "**Name**" and "**Device profile**" fields and click "**Create**" button;
+        title: Open the SENTIENT in your browser and log in. Go to "**Entities**" > "**Gateways**" tab in the sidebar and click on "**+**" button. Fill in "**Name**" and "**Device profile**" fields and click "**Create**" button;
     ===
         image: /images/devices-library/ready-to-go-devices/temco-tstat10/temco-tstat10-gateway-configuring-2-ce.png,
         title: Start gateway using launch command;
@@ -182,7 +182,7 @@ The last thing that we need to do is set group objects ability to read and write
 {% assign creatingGatewayPE = '
     ===
         image: /images/devices-library/ready-to-go-devices/temco-tstat10/temco-tstat10-gateway-configuring-1-pe.png,
-        title: Open the ThingsBoard in your browser and log in. Go to "**Entities**" > "**Gateways**" tab in the sidebar and click on "**+**" button. Fill in "**Name**" and "**Device profile**" fields and click "**Create**" button;
+        title: Open the SENTIENT in your browser and log in. Go to "**Entities**" > "**Gateways**" tab in the sidebar and click on "**+**" button. Fill in "**Name**" and "**Device profile**" fields and click "**Create**" button;
     ===
         image: /images/devices-library/ready-to-go-devices/temco-tstat10/temco-tstat10-gateway-configuring-2-pe.png,
         title: Start gateway using launch command;
@@ -287,7 +287,7 @@ The last thing that we need to do is set group objects ability to read and write
 ```
 {:.copy-code.expandable-10}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
 Once you have successfully done all the steps above and Gateway sent data, you can see it in the device telemetry tab:
 
@@ -311,7 +311,7 @@ For this purpose, you can create your own dashboard with your custom widgets or 
 
 ## Conclusion
 
-With the knowledge in this guide, you can easily connect your KNX IP Multi IO 580 controller with switch, shutter, and relay to ThingsBoard. After connecting the devices to the gateway, you will be able to see and process the data coming from the devices on the ThingsBoard.
+With the knowledge in this guide, you can easily connect your KNX IP Multi IO 580 controller with switch, shutter, and relay to SENTIENT. After connecting the devices to the gateway, you will be able to see and process the data coming from the devices on the SENTIENT.
 
-Explore the platform [documentation](https://thingsboard.io/docs/){: target="_blank"} to learn more about key concepts and features.
+Explore the platform [documentation](https://docs.sentient.invenia.in/docs/){: target="_blank"} to learn more about key concepts and features.
 {% include add-device-banner.liquid %}

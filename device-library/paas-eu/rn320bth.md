@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect RN-320 BTH LoRaWAN Temperature and Humidity sensor to ThingsBoard?
+title: How to connect RN-320 BTH LoRaWAN Temperature and Humidity sensor to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: Radionode

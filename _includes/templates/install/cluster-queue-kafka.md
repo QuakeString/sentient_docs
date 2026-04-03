@@ -1,6 +1,6 @@
 [Apache Kafka](https://kafka.apache.org/) is an open-source stream-processing software platform.
 
-Configure ThingsBoard environment file:
+Configure SENTIENT environment file:
 
 ```text
 nano .env

@@ -20,7 +20,7 @@ notitle: "true"
                         <img src="/images/partners/silver-partner.svg" alt="silver partner">
                     </div>
                     <div class="cloud-provider-desc">
-                        <p>Silver Partnership does not require any fees but assumes you have basic ThingsBoard knowledge and will prepare the online tutorial and demo dashboard on your own.</p>
+                        <p>Silver Partnership does not require any fees but assumes you have basic SENTIENT knowledge and will prepare the online tutorial and demo dashboard on your own.</p>
                     </div>
                 </div>
                 <p>Please fill this form to get further instructions.</p>

@@ -16,5 +16,5 @@ Once provisioned, you should see the similar output:
 
 ```text
 NAME                     CLASS    HOSTS   ADDRESS         PORTS   AGE
-tbmq-http-loadbalancer   <none>   *       34.111.24.134   80      7m25s
+st-rmqtt-http-loadbalancer   <none>   *       34.111.24.134   80      7m25s
 ```

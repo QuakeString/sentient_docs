@@ -2,7 +2,7 @@
 layout: iot-article
 title: ᐉ IoT Device Management Platform
 notitle: "true"
-description: "IoT Device Management ✔ IoT Device Control ⚫ ThingsBoard ➤ Help organizations to have better control and fetch for all types of device data using REST APIs or Web UI"
+description: "IoT Device Management ✔ IoT Device Control ⚫ SENTIENT ➤ Help organizations to have better control and fetch for all types of device data using REST APIs or Web UI"
 redirect_from: "/docs/services/device-management/"
 ---
 <section class="hero light-text"></section>
@@ -41,7 +41,7 @@ redirect_from: "/docs/services/device-management/"
                 <li><span class="bold-text">Low power wide area networks (LPWAN): </span> good choice for cases when data should be transmitted for big ranges with minimal amount of energy to prolong battery life. NB-IOT, LoRAWAN and Sigfox are connectivity protocols that shows excellent results. Usually, you select LoRaWAN when your devices are stationary or located inside well known areas (industrial plant, construction site, city with already available LoRa coverage). In case when your devices will move across the country, or you do not want to manage gateways or even think about network coverage, then NB-IoT is your choice because this type of connectivity is managed by telecom providers.</li>
             </ul>
             <div class="text-content medium-margin">For sure there are other popular protocols like HTTP, AMQP, Websockets, BLE and there are a lot of IoT applications that use them as a communication channel between devices and IoT application. They might require slightly more resources from the IoT device (battery, CPU, memory) but in the same time many developers already have experience working with them and software ecosystem provides a lot of libraries, systems and best practices how to utilize and manage them.</div>
-            <div class="text-content medium-margin">ThingsBoard IoT device management app supports a variety of direct communication <a class="article-link" href="/docs/pe/api/">protocols</a> for interaction between devices and the IoT platform — MQTT, CoAP, HTTP, LWM2M, OPC-UA, Modbus, etc. Those protocols are already industry standards. However, we do support other options — SNMP, Kafka, TCP/UDP.</div>
+            <div class="text-content medium-margin">SENTIENT IoT device management app supports a variety of direct communication <a class="article-link" href="/docs/pe/api/">protocols</a> for interaction between devices and the IoT platform — MQTT, CoAP, HTTP, LWM2M, OPC-UA, Modbus, etc. Those protocols are already industry standards. However, we do support other options — SNMP, Kafka, TCP/UDP.</div>
             <div class="text-content">We also <a class="article-link" href="/docs/user-guide/integrations/">accept devices</a> from external connectivity IoT device connectivity providers like LoRaWAN, Sigfox, NB-IoT, AWS IoT, Azure IoT, Actility ThingPark, TheThingsStack, OceanConnect, etc.</div>
             <h3 class="line-height-small">Role of Gateway & Edge Computing</h3>
             <div class="text-content medium-margin">IoT gateway acts like a bridge between IoT devices and the cloud and performs 3 main functions:</div>
@@ -50,7 +50,7 @@ redirect_from: "/docs/services/device-management/"
                 <li><span class="bold-text">On-site data storage and preprocessing:</span> data from local sensors and devices collected and persisted on the gateway, then preprocessed and finally sent to the cloud. This function gives 2 benefits. First is that data can be persisted locally on site gateway in case of any connectivity issue between site and cloud, so no data is lost if cloud services are not available. Once connection restored, data streams are synchronized between cloud and gateway. Second benefit is that we can pre-aggregate data locally on the gateway and only valuable portion of data will go to the cloud. It allows to reduce network bandwidth, amount of CPU/RAM/Disk resources on the cloud and total cost of ownership of IoT device management app.</li>
                 <li><span class="bold-text">Edge-computing:</span> data locality principle says that we can have a more efficient data processing pipeline if our algorithms are closer to the data sources. By deploying processing logic from the cloud to the edge we can receive a lot of benefits of edge computing including improved response time and latency which is critical for real-time use cases with very large data streams. For example, when we work with vibration data for predictive maintenance use case, ability to process data on the edge dramastically reduce networking cost and increate speed of analysis. Once data processed on the edge, only a valuable portion of it would be transferred to the cloud.</li>
             </ul>
-            <div class="text-content medium-margin">For more details, explore the <a href="/docs/iot-gateway/what-is-iot-gateway/">IoT Gateway</a> and <a href="https://thingsboard.io/products/thingsboard-edge/">edge computing with ThingsBoard</a>.</div>
+            <div class="text-content medium-margin">For more details, explore the <a href="/docs/iot-gateway/what-is-iot-gateway/">IoT Gateway</a> and <a href="https://docs.sentient.invenia.in/products/sentient-gateway/">edge computing with SENTIENT</a>.</div>
             <h2 class="line-height-small">7 Key Steps to Smooth IoT Devices Management</h2>
             <div class="text-content">IoT device management involves several key steps to ensure the smooth operation of your IoT devices.</div>
         </div>
@@ -143,7 +143,7 @@ redirect_from: "/docs/services/device-management/"
                 <li>Configure realtime monitoring stack to track performance and health of the system.</li>
             </ul>
             <h2>Our Products for Comprehensive Device Management</h2>
-            <div class="text-content">At ThingsBoard, we offer comprehensive IoT device management features for managing your IoT devices. Our device management platform supports various aspects of a distributed infrastructure for managing, controlling, and monitoring software, hardware, and communication components as well as data flows and data quality.</div>
+            <div class="text-content">At SENTIENT, we offer comprehensive IoT device management features for managing your IoT devices. Our device management platform supports various aspects of a distributed infrastructure for managing, controlling, and monitoring software, hardware, and communication components as well as data flows and data quality.</div>
             <h3 class="small-padding">Our solutions include:</h3>
             <ul class="list">
                 <li>Easily add new devices to the system with unique identifiers and credentials.</li>
@@ -159,7 +159,7 @@ redirect_from: "/docs/services/device-management/"
         <img class="image" srcset="/images/iot-articles/device_settings_1_1090x658.webp 1090w, /images/iot-articles/device_settings_1_2180x1316.webp 2180w" sizes="(max-width: 1920px) 1090px, (min-width: 1921px) 2180px" src="/images/iot-articles/device_settings_1_1090x658.webp" alt="IoT solutions dashboard with widgets dark"/>
         <div class="text-wrapper">
             <h2 class="center-text">Our Cases</h2>
-            <div class="text-content">At ThingsBoard, we have successfully implemented IoT device monitoring and management solutions in various scenarios.</div>
+            <div class="text-content">At SENTIENT, we have successfully implemented IoT device monitoring and management solutions in various scenarios.</div>
         </div>
         <div class="definitions-block">
             <div class="definitions-list side-paddings">

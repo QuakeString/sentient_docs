@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-edge
-title: ThingsBoard Edge Releases
+title: SENTIENT GATEWAY Releases
 description: Edge architecture
 table-of-contents: "false"
 effective-url: '/docs/edge/releases/releases-table/'

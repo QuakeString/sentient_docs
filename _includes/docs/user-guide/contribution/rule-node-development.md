@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this tutorial, you will learn how to create custom rule nodes and add them to your ThingsBoard server instance.
+In this tutorial, you will learn how to create custom rule nodes and add them to your SENTIENT server instance.
 We will review rule nodes of three different types: Filter, Enrichment and Transformation.
 
 ## Prerequisites
@@ -27,16 +27,16 @@ We also assume you have the following third-party installed:
 Clone the repository and navigate to the repo folder:
 
 ```bash
-git clone -b {{ site.release.branch }} https://github.com/thingsboard/rule-node-examples
+git clone -b {{ site.release.branch }} https://github.com/sentient/rule-node-examples
 cd rule-node-examples
 ```
 {: .copy-code}
 
-By default, sample project is configured to use APIs of the ThingsBoard Community Edition. 
+By default, sample project is configured to use APIs of the SENTIENT. 
 This makes your rule nodes compatible with both Community and Professional editions of the platform.
 
 In case you would like to use some of the exclusive Professional Edition APIs (like working with Entity Groups, etc), 
-you should change the "thingsboard.version" parameter in thingsboard.yml:
+you should change the "sentient.version" parameter in sentient.yml:
 
 ```bash
 nano pom.xml
@@ -49,7 +49,7 @@ For example, the property below is set to {{ site.release.pe_full_ver }} Profess
 ...
     <properties>
         ...
-        <thingsboard.version>{{ site.release.pe_full_ver }}</thingsboard.version>
+        <sentient.version>{{ site.release.pe_full_ver }}</sentient.version>
         ...
     </properties>
 ...
@@ -82,8 +82,8 @@ Make sure the [Lombok](https://projectlombok.org/) plugin is installed to your f
 ## Step 3. Create your rule node
 
 In order to create new rule node, you should implement the
-[TbNode](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/TbNode.java) interface and annotate it with the
-[RuleNode](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/RuleNode.java) annotation.
+[TbNode](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/TbNode.java) interface and annotate it with the
+[RuleNode](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/RuleNode.java) annotation.
 
 As an example, you may review a very simple Rule Node that filters incoming message based on the existence of the key in the message payload.
 This rule node is part of the project you have downloaded on the previous step.
@@ -142,8 +142,8 @@ Let's walk through available parameters:
 * *nodeDetails* - full description of your node with html tags support. Visible in the Rule Chain Editor;
 * *configClazz* - full class name of the class that describes the configuration json.  
 * *relationTypes* - array of strings with pre-defined [relation types](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-node-connection);
-This values should correspond to the ones that are used in [TbContext.tellNext](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/TbContext.java#L76) method;
-* *customRelations* - boolean value that indicates you are going to use any custom relations in [TbContext.tellNext](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/TbContext.java#L76) method;
+This values should correspond to the ones that are used in [TbContext.tellNext](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/TbContext.java#L76) method;
+* *customRelations* - boolean value that indicates you are going to use any custom relations in [TbContext.tellNext](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/TbContext.java#L76) method;
 * *configDirective* - name of the Angular based UI directive that will allow user to edit the configuration of the rule node. This is optional and may be empty. In such case, the user will see raw JSON editor;
 * *uiResources* - path to your Angular UI file that contains the configuration directive. This is optional and may be empty. In such case, the user will see raw JSON editor;
 * *icon* - icon name from the angular material package;
@@ -155,7 +155,7 @@ This values should correspond to the ones that are used in [TbContext.tellNext](
 
 The **"init"** method is called by the rule engine when the new rule node is created. 
 This may happen if someone adds the rule node to the rule chain or system is stopped.
-This method is mostly used to parse the configuration which is a JSON object or to obtain a local copy of [TbContext](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/TbContext.java).
+This method is mostly used to parse the configuration which is a JSON object or to obtain a local copy of [TbContext](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/TbContext.java).
 The "TbNodeUtils.convert" is parsing the raw configuration to the java object of a specified class.
 
 The **"destroy"** method is called by the rule engine when the rule node is destroyed. 
@@ -215,9 +215,9 @@ void tellFailure(TbMsg msg, Throwable th);
 If the Rule Node implementation will not call any of the methods listed above, the Rule Engine will wait for a configurable timeout and **block** processing of the other messages
 and eventually mark current message as failed.
 
-### Using ThingsBoard services
+### Using SENTIENT services
 
-The [TbContext](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/TbContext.java) contains "getters" for a lot of useful services.
+The [TbContext](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/TbContext.java) contains "getters" for a lot of useful services.
 Please don't forget to press "Download Sources" in your favorite IDE to simplify browsing of the interfaces of those services;
 A short list of available services getters is listed below:
 
@@ -262,7 +262,7 @@ TimeseriesService getTimeseriesService();
 RelationService getRelationService();
 ```
 
-ThingsBoard PE users may get access to additional services using *TbContext.getPeContext()* method. TbPeContext provides access to the following services:
+SENTIENT Professional Edition users may get access to additional services using *TbContext.getPeContext()* method. TbPeContext provides access to the following services:
 
 ```java
 // Allows to programmatically create and manage integrations;
@@ -293,19 +293,19 @@ void clearOwners(EntityId entityId);
 Set<EntityId> getChildOwners(TenantId tenantId, EntityId parentOwnerId);
 
 // Allows to change entity owner. Expects TenantId or CustomerId as targetOwnerId
-void changeDashboardOwner(TenantId tenantId, EntityId targetOwnerId, Dashboard dashboard) throws ThingsboardException;
+void changeDashboardOwner(TenantId tenantId, EntityId targetOwnerId, Dashboard dashboard) throws SentientException;
 
-void changeUserOwner(TenantId tenantId, EntityId targetOwnerId, User user) throws ThingsboardException;
+void changeUserOwner(TenantId tenantId, EntityId targetOwnerId, User user) throws SentientException;
 
-void changeCustomerOwner(TenantId tenantId, EntityId targetOwnerId, Customer customer) throws ThingsboardException;
+void changeCustomerOwner(TenantId tenantId, EntityId targetOwnerId, Customer customer) throws SentientException;
 
-void changeEntityViewOwner(TenantId tenantId, EntityId targetOwnerId, EntityView entityView) throws ThingsboardException;
+void changeEntityViewOwner(TenantId tenantId, EntityId targetOwnerId, EntityView entityView) throws SentientException;
 
-void changeAssetOwner(TenantId tenantId, EntityId targetOwnerId, Asset asset) throws ThingsboardException;
+void changeAssetOwner(TenantId tenantId, EntityId targetOwnerId, Asset asset) throws SentientException;
 
-void changeDeviceOwner(TenantId tenantId, EntityId targetOwnerId, Device device) throws ThingsboardException;
+void changeDeviceOwner(TenantId tenantId, EntityId targetOwnerId, Device device) throws SentientException;
 
-void changeEntityOwner(TenantId tenantId, EntityId targetOwnerId, EntityId entityId, EntityType entityType) throws ThingsboardException;
+void changeEntityOwner(TenantId tenantId, EntityId targetOwnerId, EntityId entityId, EntityType entityType) throws SentientException;
 
 // Allows to push custom downlink message to the integration
 void pushToIntegration(IntegrationId integrationId, TbMsg tbMsg, FutureCallback<Void> callback);
@@ -349,7 +349,7 @@ public void onMsg(TbContext ctx, TbMsg msg) {
 
 ```
 
-You may notice that we have used [TbContext.enqueueForTellNext](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/TbContext.java#L119) method to push new message to the Rule Engine.
+You may notice that we have used [TbContext.enqueueForTellNext](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/TbContext.java#L119) method to push new message to the Rule Engine.
 The message will be pushed to the related rule nodes, based on the relation type. The alternative option is to put the message to the beginning of the processing, basically to the root rule chain.
 
 ```java
@@ -369,7 +369,7 @@ void enqueueForTellNext(TbMsg msg, String queueName, String relationType, Runnab
 ### Multithreading
 
 The Rule Engine is an implementation of an [actor model](https://en.wikipedia.org/wiki/Actor_model) which invokes 
-[TbNode.onMsg](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/TbNode.java#L30) method sequentially
+[TbNode.onMsg](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/TbNode.java#L30) method sequentially
 for every new message in the rule node mailbox. Thus, if you process the message in the same thread, your implementation is thread safe. 
 
 However, for performance reasons, most of the API calls are executed in a separate threads. 
@@ -418,30 +418,30 @@ The Rule Engine [messages](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overvi
 So, messages from one device will always go to the same rule node instance on a specific rule engine microservice. 
 The only corner case is when the rule nodes are added or removed. In such a case, the "repartition" event occur.
 
-As a rule node developer, you may override default method [TbNode.onPartitionChangeMsg](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/TbNode.java#L34)
+As a rule node developer, you may override default method [TbNode.onPartitionChangeMsg](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/TbNode.java#L34)
 to react on the changes of cluster topology. This is useful for stateful nodes that decide to cache information based on the originator (device/asset) id of the message.
-In order to determine that the current entity id belongs to current list of assigned partitions, one may use [TbContext.isLocalEntity](https://github.com/thingsboard/thingsboard/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/thingsboard/rule/engine/api/TbContext.java#L152).
+In order to determine that the current entity id belongs to current list of assigned partitions, one may use [TbContext.isLocalEntity](https://github.com/sentient/sentient/blob/{{ site.release.branch }}/rule-engine/rule-engine-api/src/main/java/org/sentient/rule/engine/api/TbContext.java#L152).
 See complete example below:
 
 ```java
-package org.thingsboard.rule.engine.node.filter;
+package org.sentient.rule.engine.node.filter;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import lombok.extern.slf4j.Slf4j;
-import org.thingsboard.rule.engine.api.EmptyNodeConfiguration;
-import org.thingsboard.rule.engine.api.RuleNode;
-import org.thingsboard.rule.engine.api.TbContext;
-import org.thingsboard.rule.engine.api.TbNode;
-import org.thingsboard.rule.engine.api.TbNodeConfiguration;
-import org.thingsboard.rule.engine.api.TbNodeException;
-import org.thingsboard.server.common.data.DataConstants;
-import org.thingsboard.server.common.data.id.EntityId;
-import org.thingsboard.server.common.data.kv.AttributeKvEntry;
-import org.thingsboard.server.common.data.plugin.ComponentType;
-import org.thingsboard.server.common.msg.TbMsg;
-import org.thingsboard.server.common.msg.queue.PartitionChangeMsg;
+import org.sentient.rule.engine.api.EmptyNodeConfiguration;
+import org.sentient.rule.engine.api.RuleNode;
+import org.sentient.rule.engine.api.TbContext;
+import org.sentient.rule.engine.api.TbNode;
+import org.sentient.rule.engine.api.TbNodeConfiguration;
+import org.sentient.rule.engine.api.TbNodeException;
+import org.sentient.server.common.data.DataConstants;
+import org.sentient.server.common.data.id.EntityId;
+import org.sentient.server.common.data.kv.AttributeKvEntry;
+import org.sentient.server.common.data.plugin.ComponentType;
+import org.sentient.server.common.msg.TbMsg;
+import org.sentient.server.common.msg.queue.PartitionChangeMsg;
 
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
@@ -517,7 +517,7 @@ public class TbCacheExampleNode implements TbNode {
 ```
 
 
-## Step 4. Import custom rule nodes to your ThingsBoard instance
+## Step 4. Import custom rule nodes to your SENTIENT instance
 
 Once you have finished coding of the rule node, execute the build command again:
 
@@ -525,60 +525,60 @@ Once you have finished coding of the rule node, execute the build command again:
 mvn clean install
 ```
 
-Then, locate the jar-file to your ThingsBoard project as dependency library. The result of the build is located here:
+Then, locate the jar-file to your SENTIENT project as dependency library. The result of the build is located here:
 
 ```bash
 target/rule-engine-1.0.0-custom-nodes.jar
 ```
 
-Now you are ready to add the jar-file with your rule nodes to your ThingsBoard instance:
+Now you are ready to add the jar-file with your rule nodes to your SENTIENT instance:
 {% unless docsPrefix %}
-* Use Step 4.1 if your ThingsBoard is installed as a service. 
-* Use Step 4.2 if your ThingsBoard is built from sources and launched locally from your IDE
+* Use Step 4.1 if your SENTIENT is installed as a service. 
+* Use Step 4.2 if your SENTIENT is built from sources and launched locally from your IDE
 
-### Step 4.1 Add JAR file to ThingsBoard installed as a service
+### Step 4.1 Add JAR file to SENTIENT installed as a service
 {% endunless %}
 
- - first, you need to execute the following command to copy jar-file to ThingsBoard extensions:
+ - first, you need to execute the following command to copy jar-file to SENTIENT extensions:
 
 ```bash
-sudo cp rule-engine-1.0.0-custom-nodes.jar /usr/share/thingsboard/extensions/
+sudo cp rule-engine-1.0.0-custom-nodes.jar /usr/share/sentient/extensions/
 ```
 
- - next, execute the following to change the owner to ThingsBoard:
+ - next, execute the following to change the owner to SENTIENT:
 
 ```bash
-sudo chown thingsboard:thingsboard /usr/share/thingsboard/extensions/*
+sudo chown sentient:sentient /usr/share/sentient/extensions/*
 ```
 
-Restart Thingsboard service:
+Restart Sentient service:
 
 ```bash
-sudo service thingsboard restart
+sudo service sentient restart
 ```
 
-**Once ThingsBoard was restarted you need to clear browser cache and refresh the web page to reload UI of Rule Nodes**
+**Once SENTIENT was restarted you need to clear browser cache and refresh the web page to reload UI of Rule Nodes**
 
 {% unless docsPrefix %}
-### Step 4.2 Add JAR file to local ThingsBoard launched using IDE
+### Step 4.2 Add JAR file to local SENTIENT launched using IDE
 
  - See separate instructions for [IDEA](https://www.jetbrains.com/help/idea/library.html#add-library-to-module-dependencies) and [Eclipse](https://help.eclipse.org/luna/index.jsp?topic=%2Forg.eclipse.jst.j2ee.doc.user%2Ftopics%2Ftjimpapp.html).
  
-Restart ThingsBoard server-side container. Please, refer to the following link to see how to do this: [Running server-side container](/docs/{{docsPrefix}}user-guide/contribution/how-to-contribute/#running-server-side-container). 
+Restart SENTIENT server-side container. Please, refer to the following link to see how to do this: [Running server-side container](/docs/{{docsPrefix}}user-guide/contribution/how-to-contribute/#running-server-side-container). 
  
-**Once ThingsBoard was restarted you need to clear browser cache and refresh the web page to reload UI of Rule Nodes**
+**Once SENTIENT was restarted you need to clear browser cache and refresh the web page to reload UI of Rule Nodes**
 {% endunless %}
 
-## Step 5. Add your custom package name to thingsboard.yml
+## Step 5. Add your custom package name to sentient.yml
 
-**NOTE** if you have changed the package name from **org.thingsboard.rule.engine** to your company package name, e.g. **com.example.rule.engine**, 
-you need also to add your package name in **thingsboard.yml** file in plugins section:
+**NOTE** if you have changed the package name from **org.sentient.rule.engine** to your company package name, e.g. **com.example.rule.engine**, 
+you need also to add your package name in **sentient.yml** file in plugins section:
 
 ```yaml
 # Plugins configuration parameters
 plugins:
   # Comma separated package list used during classpath scanning for plugins
-  scan_packages: "${PLUGINS_SCAN_PACKAGES:org.thingsboard.server.extensions,org.thingsboard.rule.engine,com.example.rule.engine}"
+  scan_packages: "${PLUGINS_SCAN_PACKAGES:org.sentient.server.extensions,org.sentient.rule.engine,com.example.rule.engine}"
 
 ```
 
@@ -591,7 +591,7 @@ Once this is done, you should enable [debug](/docs/{{docsPrefix}}user-guide/rule
 {% unless docsPrefix %}
 ## Step 7. Rule Node UI customization (optional)
 
-The ThingsBoard rule nodes UI is configured with another project in the official [github repo](https://github.com/thingsboard/rule-node-examples-ui-ngx). Please, refer to the following [link](https://github.com/thingsboard/rule-node-examples-ui-ngx#rule-node-examples-ui-ngx) to see build instructions.
+The SENTIENT rule nodes UI is configured with another project in the official [github repo](https://github.com/sentient/rule-node-examples-ui-ngx). Please, refer to the following [link](https://github.com/sentient/rule-node-examples-ui-ngx#rule-node-examples-ui-ngx) to see build instructions.
 
 To run Rule Node UI container in hot redeploy mode:
 

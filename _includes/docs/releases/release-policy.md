@@ -1,15 +1,15 @@
 * TOC
 {:toc}
 
-This guide explains how ThingsBoard versions are numbered, how long each version is supported, what kind of upgrade requires downtime, and which Docker tags to use in different environments. 
-It’s written for platform administrators, SREs, DevOps engineers, and technical users who deploy and maintain ThingsBoard.
+This guide explains how SENTIENT versions are numbered, how long each version is supported, what kind of upgrade requires downtime, and which Docker tags to use in different environments. 
+It’s written for platform administrators, SREs, DevOps engineers, and technical users who deploy and maintain SENTIENT.
 
 ---
 
-## ThingsBoard versioning
+## SENTIENT versioning
 
-ThingsBoard version numbers reflect the scope of changes introduced in each release. This follows semantic versioning principles, helping you gauge the potential impact of upgrading.
-ThingsBoard version numbers have four parts: <span class="code-light">MAJOR.MINOR.MAINTENANCE.PATCH</span>. For example, version <span class="code-light">4.2.1.0</span> indicates major version 4, minor version 2, maintenance 1 and patch level 0.
+SENTIENT version numbers reflect the scope of changes introduced in each release. This follows semantic versioning principles, helping you gauge the potential impact of upgrading.
+SENTIENT version numbers have four parts: <span class="code-light">MAJOR.MINOR.MAINTENANCE.PATCH</span>. For example, version <span class="code-light">4.2.1.0</span> indicates major version 4, minor version 2, maintenance 1 and patch level 0.
 
 The version number is incremented based on the level of change included in the release.
 
@@ -59,7 +59,7 @@ The version number is incremented based on the level of change included in the r
 
 ## Lifecycle & Support (How long versions are supported?)
 
-ThingsBoard maintains **Long‑Term Support (LTS)** lines for production users. Customers using LTS releases can be confident that their critical systems will be protected and operate reliably.
+SENTIENT maintains **Long‑Term Support (LTS)** lines for production users. Customers using LTS releases can be confident that their critical systems will be protected and operate reliably.
 
 <table style="width:75%">
   <thead>

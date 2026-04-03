@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-This guide outlines steps to secure connections between ThingsBoard and Edge instances using gRPC connections over TLS/SSL.
+This guide outlines steps to secure connections between SENTIENT and Edge instances using gRPC connections over TLS/SSL.
 
 You can configure SSL termination in two ways: by utilizing the built-in SSL capabilities of the platform for gRPC traffic or by employing an external load balancer as the termination point.
 
@@ -51,7 +51,7 @@ sudo systemctl restart tb-edge
 In Docker setups, make sure the **CLOUD_RPC_SSL_ENABLED** variable in the `docker-compose.yml` file is set to 'true'. 
 If using self-signed certificates, also set **CLOUD_RPC_SSL_CERT** accordingly.
 
-After making these changes, restart the ThingsBoard Edge docker container with the command:
+After making these changes, restart the SENTIENT GATEWAY docker container with the command:
 
 ```bash
 docker compose restart mytbedge

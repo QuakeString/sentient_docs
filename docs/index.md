@@ -1,16 +1,16 @@
 ---
 layout: docwithnav
-title: ThingsBoard Community Edition
-description: ThingsBoard documentation - learn about the platform and get your IoT projects running on ThingsBoard
+title: SENTIENT
+description: SENTIENT documentation - learn about the platform and get your IoT projects running on SENTIENT
 ---
 
-<p>The ThingsBoard documentation can help you set up ThingsBoard, learn about the platform and get your IoT projects running on ThingsBoard.</p>
+<p>The SENTIENT documentation can help you set up SENTIENT, learn about the platform and get your IoT projects running on SENTIENT.</p>
 
 <div class="doc-features row mt-4">
     <div class="col-12 col-sm-6 col-lg col-xxl-6 col-4xl mb-4">
-        <a class="feature-card" href="/docs/getting-started-guides/what-is-thingsboard/">
-            <img class="feature-logo" src="/images/feature-logo/thingsboard-logo.svg" alt="Thingsboard logo">
-            <div class="feature-title">What is ThingsBoard?</div>
+        <a class="feature-card" href="/docs/getting-started-guides/what-is-sentient/">
+            <img class="feature-logo" src="/images/feature-logo/sentient-logo.svg" alt="Sentient logo">
+            <div class="feature-title">What is SENTIENT?</div>
             <div class="feature-text">
                 <ul>
                     <li>Features</li>
@@ -24,7 +24,7 @@ description: ThingsBoard documentation - learn about the platform and get your I
             <img class="feature-logo" src="/images/feature-logo/getting-started.svg" alt="Getting started icon">
             <div class="feature-title">Getting started</div>
             <div class="feature-text">
-                Learn how to use ThingsBoard platform.
+                Learn how to use SENTIENT platform.
             </div>
         </a>
     </div>
@@ -61,7 +61,7 @@ description: ThingsBoard documentation - learn about the platform and get your I
             <img class="feature-logo" src="/images/feature-logo/devices-library.svg" alt="Guides icon">
             <div class="feature-title">Device Library</div>
             <div class="feature-text">
-                Learn how to connect different devices to ThingsBoard.
+                Learn how to connect different devices to SENTIENT.
             </div>
         </a>
     </div>
@@ -70,7 +70,7 @@ description: ThingsBoard documentation - learn about the platform and get your I
             <img class="feature-logo" src="/images/feature-logo/guides.svg" alt="Guides icon">
             <div class="feature-title">Guides</div>
             <div class="feature-text">
-                Learn main ThingsBoard features.
+                Learn main SENTIENT features.
             </div>
         </a>
     </div>

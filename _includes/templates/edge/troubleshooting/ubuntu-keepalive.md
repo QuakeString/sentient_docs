@@ -1,8 +1,8 @@
 #### Server
 
-Edit the **ThingsBoard configuration file:**
+Edit the **SENTIENT configuration file:**
 ```bash
-sudo nano /etc/thingsboard/conf/thingsboard.conf
+sudo nano /etc/sentient/conf/sentient.conf
 ```
 {: .copy-code}
 
@@ -16,7 +16,7 @@ export EDGES_RPC_KEEP_ALIVE_TIMEOUT_SEC=25
 
 #### Edge
 
-Then, edit the **ThingsBoard Edge configuration file:**
+Then, edit the **SENTIENT GATEWAY configuration file:**
 ```bash
 sudo nano /etc/tb-edge/conf/tb-edge.conf
 ```
@@ -29,4 +29,4 @@ export CLOUD_RPC_KEEP_ALIVE_TIMEOUT_SEC=25
 ```
 {: .copy-code}
 
-Once all the changes have been made, restart the **ThingsBoard** and **TB Edge services**.
+Once all the changes have been made, restart the **SENTIENT** and **TB Edge services**.

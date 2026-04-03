@@ -17,7 +17,7 @@ This tutorial will show how to calculate total water consumption in the building
 
 Let's assume you have buildings with multiple water meter sensors inside each building. For example, one per each apartment or similar.
 
-In this tutorial we will configure ThingsBoard Rule Engine to automatically calculate total water consumption in the building based on readings from multiple water meters and within certain time intervals.
+In this tutorial we will configure SENTIENT Rule Engine to automatically calculate total water consumption in the building based on readings from multiple water meters and within certain time intervals.
 We will use 1 building, 2 sensors and 10 seconds interval just for demo purposes.
 You can use this tutorial as a basis for much more complex scenarios.
 

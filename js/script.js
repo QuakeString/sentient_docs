@@ -65,7 +65,7 @@ var tb = (function () {
                 break;
             }
 			case 'home':
-			case 'thingsboard-pe':
+			case 'sentient-pe':
             case 'mobile-app':
 			case 'edge':
             case 'pe-aws':
@@ -251,13 +251,13 @@ var tb = (function () {
 
 				if (typeof currentFaqContainer !== 'undefined' && containerId !== currentFaqContainer) {
 					const productIdMap = {
-						'thingsboard-ce': 'thingsboard-ce',
-						'thingsboard-cloud': 'thingsboard-cloud',
-						'thingsboard-private-cloud': 'thingsboard-private-cloud',
-						'pe-pay-as-you-go': 'thingsboard-pe',
-						'tbmq-ce': 'tbmq-ce',
-						'tbmq-private-cloud': 'tbmq-private-cloud',
-						'tbmq-pe-pay-as-you-go': 'tbmq-pe'
+						'sentient-ce': 'sentient-ce',
+						'sentient-cloud': 'sentient-cloud',
+						'sentient-private-cloud': 'sentient-private-cloud',
+						'pe-pay-as-you-go': 'sentient-pe',
+						'st-rmqtt-ce': 'st-rmqtt-ce',
+						'st-rmqtt-private-cloud': 'st-rmqtt-private-cloud',
+						'st-rmqtt-pe-pay-as-you-go': 'st-rmqtt-pe'
 					};
 
 					const productId = productIdMap[containerId];

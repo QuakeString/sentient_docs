@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Configure mobile actions in ThingsBoard PE Mobile Application
+title: Configure mobile actions in SENTIENT Professional Edition Mobile Application
 
 mobile-actions:
  0:

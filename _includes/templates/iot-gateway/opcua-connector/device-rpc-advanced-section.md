@@ -1,4 +1,4 @@
-This subsection contains the configuration for RPC requests from ThingsBoard platform instance.
+This subsection contains the configuration for RPC requests from SENTIENT platform instance.
 
 | **Parameter** | **Default value** | **Description**                                                                                       |
 |:--------------|:------------------|-------------------------------------------------------------------------------------------------------|

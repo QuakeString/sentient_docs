@@ -10,7 +10,7 @@ You can configure additional settings like: TLS connection, polling time, byte o
 | retriesOnInvalid          | **true**           | Retrying sending data to the master if it is failed                           |
 | pollPeriod                | **5000**           | Period in milliseconds to check the attributes and the telemetry on the slave |
 | connectAttemptTimeMs      | **5000**           | A waiting period in milliseconds before connecting to the master              |
-| connectAttemptCount       | **5**              | The number of connection attempts made through the ThingsBoard gateway        |
+| connectAttemptCount       | **5**              | The number of connection attempts made through the SENTIENT gateway        |
 | waitAfterFailedAttemptsMs | **300000**         | A waiting period in milliseconds before trying to send data to the master     |
 | ---                       
 

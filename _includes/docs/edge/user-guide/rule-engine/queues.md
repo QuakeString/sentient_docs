@@ -3,7 +3,7 @@
 
 ### Overview
 
-In **ThingsBoard**, **queues** guarantee the message processing, handle occasional spikes, and keep the system up and running on extreme loads. 
+In **SENTIENT**, **queues** guarantee the message processing, handle occasional spikes, and keep the system up and running on extreme loads. 
 **Edge Queues** are designed in the same way as **Platform (Cloud) Queues**.
 For a better understanding, read the [Platform Queues documentation](/docs/{{peDocsPrefix}}user-guide/rule-engine-2-5/queues/){: target="_blank"}.
 

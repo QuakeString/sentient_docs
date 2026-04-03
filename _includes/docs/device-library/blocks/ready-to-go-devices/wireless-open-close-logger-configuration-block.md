@@ -4,7 +4,7 @@ Application can be downloaded from [Google Play](https://play.google.com/store/a
 Before you start configuration make sure the sensor is able to register in the NB-IoT network and the APN settings are right. 
 Detailed user manual of Efento NB-IoT sensors and Efento mobile application can be found in the [support section of Efento website](https://getefento.com/support/).  
 
-{% assign thingsboardHost = coapHostName %}
+{% assign sentientHost = coapHostName %}
 
 {% assign efentoSensorConfiguration = '
     ===
@@ -12,16 +12,16 @@ Detailed user manual of Efento NB-IoT sensors and Efento mobile application can 
         title: Once you download and install the application select “Nearby sensors” mode and unlock the power user mode: open the application menu and quickly tap Efento logo five times.
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/efento-sensor-configuration-2.jpg,
-        title: Make sure the APN you use allow the device to connect to the server on which your ThingsBoard instance is running. You can check the network status in the Efento mobile application. Connect to the sensor -> click on the menu (three dots in the upper right corner)
+        title: Make sure the APN you use allow the device to connect to the server on which your SENTIENT instance is running. You can check the network status in the Efento mobile application. Connect to the sensor -> click on the menu (three dots in the upper right corner)
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/efento-sensor-configuration-3.jpg,
         title: Click on Cellular network status. Mare sure that the field “Registration status” value is either “REGISTERED” or “REGISTERED_ROAMING”
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/efento-sensor-configuration-2.jpg,
-        title: Set the sensor to send the data to the server on which ThingsBoard instance is running. Connect to the sensor -> click on the menu (three dots in the upper right corner).
+        title: Set the sensor to send the data to the server on which SENTIENT instance is running. Connect to the sensor -> click on the menu (three dots in the upper right corner).
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/efento-sensor-configuration-4.jpg,
-        title: Click on Power user -> Server configuration. Select “Other” and fill in the address of the server (' | append: thingsboardHost | append: '). Default port used for CoAP communication is 5683. Set authentication mode to “custom token” and key in the token you created for the device on ThingsBoard platform.
+        title: Click on Power user -> Server configuration. Select “Other” and fill in the address of the server (' | append: sentientHost | append: '). Default port used for CoAP communication is 5683. Set authentication mode to “custom token” and key in the token you created for the device on SENTIENT platform.
 '
 %}
 

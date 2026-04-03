@@ -1,5 +1,5 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://getefento.com/product/wireless-open-close-logger-nb-iot/" %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
@@ -30,17 +30,17 @@ Efento NB-IoT sensors can be integrated with any cloud platform.
 To continue with this guide we will need the following:  
 {{ prerequisites }}
 
-- [ThingsBoard account](https://{{hostName}})
+- [SENTIENT account](https://{{hostName}})
 
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
-{% include /docs/device-library/blocks/ready-to-go-devices/thingsboard-create-device-efento-transport-block.md %}
+{% include /docs/device-library/blocks/ready-to-go-devices/sentient-create-device-efento-transport-block.md %}
 
-## Connect device to ThingsBoard 
+## Connect device to SENTIENT 
 
 {% include /docs/device-library/blocks/ready-to-go-devices/wireless-open-close-logger-configuration-block.md %}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
 {% include /docs/device-library/blocks/ready-to-go-devices/wireless-open-close-logger-check-data-block.md %}
 

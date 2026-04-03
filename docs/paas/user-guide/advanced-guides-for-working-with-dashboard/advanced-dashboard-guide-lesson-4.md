@@ -182,7 +182,7 @@ alarm-send-telemetry-1:
         title: 'In the opened window choose the desired messaging protocol and select your operating system. Install the required client tools, if necessary. Next, copy the provided command, which includes telemetry data;'
     2:
         image: /images/user-guide/advanced-guides-for-working-with-dashboard/lesson-4/send-telemetry-3-pe.png
-        title: 'Open the <b>Terminal</b> and paste the copied command. This command will send a POST request to the ThingsBoard server with the {"temperature":25} data. Execute this command. After successful execution, the "temperature" reading will be published. Then, close the connectivity window.'
+        title: 'Open the <b>Terminal</b> and paste the copied command. This command will send a POST request to the SENTIENT server with the {"temperature":25} data. Execute this command. After successful execution, the "temperature" reading will be published. Then, close the connectivity window.'
 
 alarm-send-telemetry-2:
     0:

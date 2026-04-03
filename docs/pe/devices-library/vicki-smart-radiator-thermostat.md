@@ -1,5 +1,5 @@
 ---
 layout: docwithnav-pe
-title: "How to connect Vicki Smart Radiator Thermostat to ThingsBoard?"
+title: "How to connect Vicki Smart Radiator Thermostat to SENTIENT?"
 redirect_to: "/device-library/pe/vicki-smart-radiator-thermostat/"
 ---

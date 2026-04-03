@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect ESP32 Dev Kit V1 to ThingsBoard?
+title: How to connect ESP32 Dev Kit V1 to SENTIENT?
 category: Microcontrollers
 chip: ESP32
 connectivity: [HTTP, MQTT, WIFI, Bluetooth]

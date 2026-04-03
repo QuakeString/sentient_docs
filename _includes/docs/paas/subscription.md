@@ -2,7 +2,7 @@
 {:toc}
 
 ThingsBoars {{cloudPrefix}} Cloud provides subscription plans based on the flexible **pay-as-you-go** model.
-Designed for scalability, these plans allow you to [top-up](#top-ups) entity and API limits on demand and enable **ThingsBoard Edge** and **Trendz Analytics** as add-ons—empowering you to manage your entire IoT infrastructure in one place.
+Designed for scalability, these plans allow you to [top-up](#top-ups) entity and API limits on demand and enable **SENTIENT GATEWAY** and **SENTIENT ANALYTICS** as add-ons—empowering you to manage your entire IoT infrastructure in one place.
 
 Main characteristics of the subscription plan are: [entity limits](/docs/{{docsPrefix}}user-guide/tenant-profiles/#entity-limits), [api limits](/docs/{{docsPrefix}}user-guide/tenant-profiles/#api-limits--usage), [calculated fields limits](#calculated-fields-limits), [white labeling](#white-labeling) and the level of support you get.
 
@@ -681,8 +681,8 @@ These packs allow you to extend the operational capacity of your solution, ensur
 
 ### White labeling
 
-ThingsBoard web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required.
-See feature [documentation](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} for more details. ThingsBoard Cloud extends white-labeling feature with ability to configure own domain name easily.
+SENTIENT web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required.
+See feature [documentation](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} for more details. SENTIENT Cloud extends white-labeling feature with ability to configure own domain name easily.
 See [managing domain](/products/{{docsPrefix}}domains/){:target="_blank"} for more details.
 
 The white-labeling add-on is automatically enabled starting from the **Pilot** plan.
@@ -691,13 +691,13 @@ The white-labeling add-on is automatically enabled starting from the **Pilot** p
 
 The **Edge Computing** add-on brings intelligence and data processing capabilities directly to the field. 
 It allows you to run a local instance of the platform on-premises, ensuring that your critical operations continue even during a total loss of internet connectivity to the cloud.
-See product [homepage](/products/thingsboard-edge/){:target="_blank"} for more details.
+See product [homepage](/products/sentient-gateway/){:target="_blank"} for more details.
 
-### Trendz Analytics
+### SENTIENT ANALYTICS
 
-The **Trendz Analytics** add-on is a powerful business intelligence tool designed to convert your raw IoT data into actionable insights. 
+The **SENTIENT ANALYTICS** add-on is a powerful business intelligence tool designed to convert your raw IoT data into actionable insights. 
 It goes beyond basic visualization, allowing you to perform complex calculations, identify patterns, and predict future trends using advanced statistical models.
-See product [homepage](/products/trendz/){:target="_blank"} for more details.
+See product [homepage](/products/sentient-analytics/){:target="_blank"} for more details.
 
 ## How to cancel my subscription?
 

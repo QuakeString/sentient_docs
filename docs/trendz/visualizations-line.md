@@ -1,9 +1,9 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Line Chart
-description: Trendz Line Chart 
+description: SENTIENT ANALYTICS Line Chart 
 ---
 
 * TOC
@@ -30,7 +30,7 @@ but it can be any field from your Topology or combination of fields.
 
 Add Date field on **X-axis** and numeric telemetry to the **Y-axis** 
 
-![image](/images/trendz/simple-line.png)
+![image](/images/sentient-analytics/simple-line.png)
 
 ## Line Chart with series
 
@@ -38,17 +38,17 @@ Add Date field on **X-axis** and numeric telemetry to the **Y-axis**
 When you want to show multiple telemetry fields for selected device/asset you have to add required fields into 
 **Y-asix** and leave **Series** section blank. To focus in interested device you can use **Filter**. 
 
-![image](/images/trendz/line-multi-telemetry.png)
+![image](/images/sentient-analytics/line-multi-telemetry.png)
 
 ### Group as series
 In this case you want to see how same telemetry looks like for different assets/devices or categories. Add required grouping field inti **Series** section:
 
-![image](/images/trendz/basic-line.png)
+![image](/images/sentient-analytics/basic-line.png)
 
 Another example shows how to combine multiple fields in 1 section. This concrete example show what was overall building 
 energy consumption for different quarters split by day of the week.
 
-![image](/images/trendz/multiple-bar.png)
+![image](/images/sentient-analytics/multiple-bar.png)
 
 ## Vertical Lines
 Any machine message can be translated into the event and present on the line chart for the investigation. 
@@ -57,11 +57,11 @@ Such events can be represented as vertical lines on the chart and value of the t
 * Add required telemetry field in **Y-axis** section
 * Choose the aggregation type **None** on the telemetry card
 
-![image](/images/trendz/line-vertical-annotation.png)
+![image](/images/sentient-analytics/line-vertical-annotation.png)
 
 ## Color Zones
 
-![image](/images/trendz/line-background-example.png)
+![image](/images/sentient-analytics/line-background-example.png)
 
 The color zones can be added to the bar and line charts to visually identify certain thresholds.
 
@@ -72,21 +72,21 @@ The color zones can be added to the bar and line charts to visually identify cer
 Multiple color zones can be added to one visualization.
 
 
-![image](/images/trendz/line-background-config.png)
+![image](/images/sentient-analytics/line-background-config.png)
 
 ## Mixed Charts
 
-![image](/images/trendz/line-mixed.png)
+![image](/images/sentient-analytics/line-mixed.png)
 
 Mixed charts overlay different charts with a shared horizontal axis, but different vertical axis scales (one for each component chart).
 It is common to use different base chart types, like the bar and line combination, to reduce confusion of the different axis scales for each component chart.
 
-Trendz supports the combination of the columns, lines, and areas in case the 'Series' section is empty. 
+SENTIENT ANALYTICS supports the combination of the columns, lines, and areas in case the 'Series' section is empty. 
 
 * Navigate to the card with the chosen telemetry 
 * Choose required chart type - **Area**, **Line**, **Bar**
 
-![image](/images/trendz/line-mixed-config.png)
+![image](/images/sentient-analytics/line-mixed-config.png)
 
 ## Control Y-axis
 
@@ -97,5 +97,5 @@ However if measured unit is the same for all fields - you can join them and show
 * Open View Settings
 * Select **Enable single axis**
 
-![image](/images/trendz/line-single-axis.png)
+![image](/images/sentient-analytics/line-single-axis.png)
 

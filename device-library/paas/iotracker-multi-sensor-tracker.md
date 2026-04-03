@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect ioTracker Multi-sensor tracker to ThingsBoard?
+title: How to connect ioTracker Multi-sensor tracker to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: ioThings

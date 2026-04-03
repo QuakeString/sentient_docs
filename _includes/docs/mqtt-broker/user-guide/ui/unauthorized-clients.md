@@ -32,12 +32,12 @@ The table contains the following information about each unauthorized client:
 
 ## Reasons
 
-Each unauthorized client connection attempt has a specific reason for access denial that TBMQ identifies and notifies users about. 
+Each unauthorized client connection attempt has a specific reason for access denial that ST-RMQTT identifies and notifies users about. 
 These reasons, whether related to Basic authentication, SSL/TLS or SCRAM issues, are clearly listed in the table for easy reference.
 
 ### Basic credentials
 
-Below are the reasons related to TBMQ Basic Credentials for why a client could not be authorized, along with generalized examples and possible solutions:
+Below are the reasons related to ST-RMQTT Basic Credentials for why a client could not be authorized, along with generalized examples and possible solutions:
 
 1. **No Credentials Found**. No credentials found matching the given client ID and username.
   * **Example**. The client submits a client ID and username that do not match any stored credentials.

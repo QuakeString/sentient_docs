@@ -1,19 +1,19 @@
 ---
 layout: docwithnav-gw
 title: Device Provisioning
-description: Learn how to use ThingsBoard IoT Gateway's device provisioning feature to automatically register and obtain credentials from the platform.
+description: Learn how to use SENTIENT IoT Gateway's device provisioning feature to automatically register and obtain credentials from the platform.
 ---
 
 * TOC
 {:toc}
 
-The **ThingsBoard IoT Gateway** supports the [device provisioning](https://thingsboard.io/docs/user-guide/device-provisioning/){:target="_blank"} feature, allowing it to **automatically register itself** on the ThingsBoard platform and obtain credentials without manual setup.
+The **SENTIENT IoT Gateway** supports the [device provisioning](https://docs.sentient.invenia.in/docs/user-guide/device-provisioning/){:target="_blank"} feature, allowing it to **automatically register itself** on the SENTIENT platform and obtain credentials without manual setup.
 
 This is especially useful for:  
 - **Device manufacturers** — enabling mass deployment with minimal configuration.
 - **System integrators** — simplifying field installation and avoiding per‑device manual setup.
 
-Once provisioned, the gateway uses the received credentials to connect to the platform and operate as a standard ThingsBoard device.  
+Once provisioned, the gateway uses the received credentials to connect to the platform and operate as a standard SENTIENT device.  
 
 ---
 
@@ -41,7 +41,7 @@ You can define them in your `docker-compose.yml` or set them manually in your en
 |---------------------------------------------|----------|-------------|
 | **`TB_GW_PROVISIONING_DEVICE_KEY`**         | Yes      | Provisioning device key (provided by platform administrator). |
 | **`TB_GW_PROVISIONING_DEVICE_SECRET`**      | Yes      | Provisioning device secret (provided by platform administrator). |
-| **`TB_GW_PROVISIONING_DEVICE_NAME`**        | No       | Name of the provisioned device in ThingsBoard. If not set, a random name will be generated. |
+| **`TB_GW_PROVISIONING_DEVICE_NAME`**        | No       | Name of the provisioned device in SENTIENT. If not set, a random name will be generated. |
 | **`TB_GW_PROVISIONING_DEVICE_ACCESS_TOKEN`**| No       | If set, the platform will assign this token to the device and use **Access Token** authentication. |
 | **`TB_GW_PROVISIONING_DEVICE_USERNAME`**    | No       | MQTT Basic authentication username. Must be used together with password/client ID (credentials type will be **MQTT Basic**). |
 | **`TB_GW_PROVISIONING_DEVICE_PASSWORD`**    | No       | MQTT Basic authentication password. Used together with username/client ID. |
@@ -63,7 +63,7 @@ For example:
 2. The gateway sends a **provision request** with the device key and secret.
 3. The platform responds with generated credentials according to the provided configuration.
 4. Credentials are **saved locally** in the gateway’s config directory.
-5. The gateway connects to ThingsBoard using these credentials.
+5. The gateway connects to SENTIENT using these credentials.
 
 ---
 
@@ -120,8 +120,8 @@ To use the provisioning feature you need to follow next steps:
 ```yaml
 ...
   environment:
-    - host=THINGSBOARD_HOST
-    - port=THINGSBOARD_PORT
+    - host=SENTIENT_HOST
+    - port=SENTIENT_PORT
     - TB_GW_PROVISIONING_DEVICE_KEY=YOUR_PROVISION_KEY
     - TB_GW_PROVISIONING_DEVICE_SECRET=YOUR_PROVISION_SECRET
     - TB_GW_PROVISIONING_DEVICE_NAME=Factory-Gateway-01
@@ -129,7 +129,7 @@ To use the provisioning feature you need to follow next steps:
 ```
 {: .copy-code}
 
-&#42; Replace `THINGSBOARD_HOST` and `THINGSBOARD_PORT` with the **host** and **port** of your ThingsBoard instance.<br>
+&#42; Replace `SENTIENT_HOST` and `SENTIENT_PORT` with the **host** and **port** of your SENTIENT instance.<br>
 &#42; Replace `YOUR_PROVISION_KEY` and `YOUR_PROVISION_SECRET` with the ** values from the device profile**.
 
 {% assign gatewayDeviceProvisioning2 = '
@@ -138,7 +138,7 @@ To use the provisioning feature you need to follow next steps:
         title: Open the downloaded `docker-compose.yml` and set the provisioning variables.
     ===
         image: /images/gateway/device-provisioning/gateway-device-provisioning-6-ce.png,
-        title: Replace `THINGSBOARD_HOST` and `THINGSBOARD_PORT` with the host and port of your ThingsBoard instance.<br>Replace `YOUR_PROVISION_KEY` and `YOUR_PROVISION_SECRET` with the values from the device profile.
+        title: Replace `SENTIENT_HOST` and `SENTIENT_PORT` with the host and port of your SENTIENT instance.<br>Replace `YOUR_PROVISION_KEY` and `YOUR_PROVISION_SECRET` with the values from the device profile.
 '
 %}
 
@@ -175,12 +175,12 @@ The Gateway **auto‑registers**, obtains credentials, and connects using them.
 
 {% include images-gallery.liquid imageCollection=gatewayDeviceProvisioning4 %}
 
-In the ThingsBoard UI, check status on the "**Gateways**" page or in the device details.
+In the SENTIENT UI, check status on the "**Gateways**" page or in the device details.
 
 {% assign gatewayDeviceProvisioning5 = '
     ===
         image: /images/gateway/device-provisioning/gateway-device-provisioning-9-ce.png,
-        title: In the ThingsBoard UI, check status on the "**Gateways**" page or in the device details.
+        title: In the SENTIENT UI, check status on the "**Gateways**" page or in the device details.
 '
 %}
 

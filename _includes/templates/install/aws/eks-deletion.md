@@ -1,13 +1,13 @@
 ## Cluster deletion
 
-Execute the following command to delete all ThingsBoard pods:
+Execute the following command to delete all SENTIENT pods:
 
 ```bash
 ./k8s-delete-resources.sh
 ```
 {: .copy-code}
 
-Execute the following command to delete all ThingsBoard pods and configmaps:
+Execute the following command to delete all SENTIENT pods and configmaps:
 
 ```bash
 ./k8s-delete-all.sh
@@ -17,6 +17,6 @@ Execute the following command to delete all ThingsBoard pods and configmaps:
 Execute the following command to delete EKS cluster (you should change the name of the cluster and zone):
 
 ```bash
-eksctl delete cluster -r us-east-1 -n thingsboard -w
+eksctl delete cluster -r us-east-1 -n sentient -w
 ```
 {: .copy-code}

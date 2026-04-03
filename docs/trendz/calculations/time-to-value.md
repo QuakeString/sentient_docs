@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Calculate time to value
@@ -7,29 +7,29 @@ description: Calculate time to value based on predicted telemetry
 
 calc-time-to-value-chart:
   0:
-    image: /images/trendz/calculations/calc-time-to-value-1.png
+    image: /images/sentient-analytics/calculations/calc-time-to-value-1.png
 
 calc-time-to-value-script:
   0:
-    image: /images/trendz/calculations/calc-time-to-value-2.png
+    image: /images/sentient-analytics/calculations/calc-time-to-value-2.png
 
 calc-time-to-value-output:
   0: 
-    image: /images/trendz/calculations/calc-time-to-value-3.png
+    image: /images/sentient-analytics/calculations/calc-time-to-value-3.png
 
 calc-time-to-value-job:
   0:
-    image: /images/trendz/calculations/calc-time-to-value-4.png
+    image: /images/sentient-analytics/calculations/calc-time-to-value-4.png
 
 calc-time-to-value-table:
   0:
-    image: /images/trendz/calculations/calc-time-to-value-5.png
+    image: /images/sentient-analytics/calculations/calc-time-to-value-5.png
 
 calc-time-to-value-alarm:
   0:
-    image: /images/trendz/calculations/calc-time-to-value-6.png
+    image: /images/sentient-analytics/calculations/calc-time-to-value-6.png
   1:
-    image: /images/trendz/calculations/calc-time-to-value-7.png
+    image: /images/sentient-analytics/calculations/calc-time-to-value-7.png
 ---
 
 * TOC
@@ -59,7 +59,7 @@ Start with creating a prediction model with the following parameters:
 
   * **Name:** Energy Consumption Prediction
   * **Business entity:** Energy Meter
-  * **ThingsBoard key:** energy_consumption_prediction
+  * **SENTIENT key:** energy_consumption_prediction
   * **Training range:** 01/01/2024 - 31/12/2024
   * **Prediction range:** 30 days
 
@@ -75,7 +75,7 @@ You know that energy consumption higher than 15 kWh is too much for the meter (f
 
 Next, you need to create a **Calculated Field**:
   * **Name:** Energy Consumption Prediction Countdown
-  * **ThingsBoard key:** energy_consumption_prediction_countdown
+  * **SENTIENT key:** energy_consumption_prediction_countdown
 
 In this Calculated Field, you will load all predicted telemetry points and find the first point that meets your threshold condition. Use the following settings:
 * **Field type:** BATCH
@@ -198,7 +198,7 @@ Also, you can use the test feature of the calculation field and see the result
 
 {% include images-gallery.html imageCollection="calc-time-to-value-output" %}
 
-Now you need to enable the calculation field to make the countdown telemetry available in the ThingsBoard and keep it actual for each new day.
+Now you need to enable the calculation field to make the countdown telemetry available in the SENTIENT and keep it actual for each new day.
 
 {% include images-gallery.html imageCollection="calc-time-to-value-job" %}
 
@@ -210,7 +210,7 @@ Now you can return to your visualization and add the new telemetry with the pred
 
 ## Configure alert generation 
 
-Now when we have countdown telemetry, and it is available on the ThingsBoard we can create an alarm rule to ask the system to notify us about the problem in the future. For this purpose, we need to find the device/asset profile of the needed device.
+Now when we have countdown telemetry, and it is available on the SENTIENT we can create an alarm rule to ask the system to notify us about the problem in the future. For this purpose, we need to find the device/asset profile of the needed device.
 
 After that, we need to go to the Edit mode, go to the “Alarm Rules” tab, and click the “Add alarm rule” button, and you will see a template of the new alarm rule.
 

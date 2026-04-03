@@ -1,4 +1,4 @@
-Before performing initial installation you can configure the type of database to be used with ThingsBoard.
+Before performing initial installation you can configure the type of database to be used with SENTIENT.
 In order to set database type change the value of `DATABASE` variable in `.env` file: 
 
 ```bash

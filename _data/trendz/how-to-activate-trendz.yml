@@ -1,11 +1,11 @@
-bigheader: "How to Activate Trendz"
-abstract: "Guide how to activate Trendz Analytics"
+bigheader: "How to Activate SENTIENT ANALYTICS"
+abstract: "Guide how to activate SENTIENT ANALYTICS"
 toc:
-- title: How to Activate Trendz
-  path: /docs/trendz/activation/how-to/
-- title: ThingsBoard Public Cloud
-  path: /docs/trendz/activation/public-cloud/
-- title: ThingsBoard Private Cloud
-  path: /docs/trendz/activation/private-cloud/
-- title: Self-Managed ThingsBoard (PE)
-  path: /docs/trendz/activation/self-managed/
+- title: How to Activate SENTIENT ANALYTICS
+  path: /docs/sentient-analytics/activation/how-to/
+- title: SENTIENT Public Cloud
+  path: /docs/sentient-analytics/activation/public-cloud/
+- title: SENTIENT Private Cloud
+  path: /docs/sentient-analytics/activation/private-cloud/
+- title: Self-Managed SENTIENT (PE)
+  path: /docs/sentient-analytics/activation/self-managed/

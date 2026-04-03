@@ -7,7 +7,7 @@ This encompasses both the existing online sessions, representing clients current
 By accessing this page, users can gain a comprehensive overview of all stored sessions, enabling them to monitor and 
 manage both the active and historical records of client interactions with the broker.
 
-To access the detailed information of the current TBMQ sessions, please follow these steps:
+To access the detailed information of the current ST-RMQTT sessions, please follow these steps:
 
 1. Open the 'Sessions' page in the left-hand menu.
 2. Click on the Session table row to open a window with session details.

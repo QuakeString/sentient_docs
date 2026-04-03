@@ -25,7 +25,7 @@ Each zone group maintains its own INSIDE/OUTSIDE state. This enables simultaneou
 When zones are discovered dynamically, multiple physical polygons can be treated as one logical group. If an entity moves between adjacent zones within the same group, the field preserves a continuous INSIDE status and does not generate false ENTERED/LEFT events.
 
 <b><font size="3">Standardized outputs for alarms and dashboards</font></b>   
-For each zone group, the field produces consistent output keys (&lt;zoneGroupName&gt;Status and &lt;zoneGroupName&gt;Event) that can be used directly in [alarm rules](https://thingsboard.io/docs/pe/user-guide/alarm-rules/){:target="_blank"}, dashboards, automation, or analytics.
+For each zone group, the field produces consistent output keys (&lt;zoneGroupName&gt;Status and &lt;zoneGroupName&gt;Event) that can be used directly in [alarm rules](https://docs.sentient.invenia.in/docs/pe/user-guide/alarm-rules/){:target="_blank"}, dashboards, automation, or analytics.
 
 <hr>
 
@@ -311,7 +311,7 @@ List which entities are currently inside a specific zone.
    </thead>
 </table> 
 
-Controls how often ThingsBoard refreshes the cached list of discovered zones:
+Controls how often SENTIENT refreshes the cached list of discovered zones:
 - **Disabled:** Zone relations are fetched once and never refreshed. Use this only when entity relations are permanent and will not change at runtime (for example, static infrastructure).
 - **Enabled:** Zone relations are refreshed periodically based on the configured interval (in seconds).
 
@@ -323,7 +323,7 @@ Controls how often ThingsBoard refreshes the cached list of discovered zones:
 {% assign geofencingOutput = '
     ===
         image: /images/user-guide/calculated-fields/geofencing/geofencing-zone-groups-refresh-interval-1-ce.png
-        title: Controls how often ThingsBoard refreshes the cached list of discovered zones.
+        title: Controls how often SENTIENT refreshes the cached list of discovered zones.
 '
 %}
 
@@ -333,7 +333,7 @@ Controls how often ThingsBoard refreshes the cached list of discovered zones:
 
 ### Output
 
-For each zone group, ThingsBoard generates internal variables:
+For each zone group, SENTIENT generates internal variables:
 - <span class="code-light">&lt;zoneGroupName&gt;Status</span> -> **INSIDE / OUTSIDE**
 - <span class="code-light">&lt;zoneGroupName&gt;Event</span> -> **ENTERED / LEFT**
 
@@ -539,7 +539,7 @@ Import **two devices** — each device represents a tracker installed in a forkl
 <br><b><font size="3">2. Import demo asset</font></b>   
 
 - Download the CSV file: [warehouse-equipment-example-asset-data.csv](/docs/user-guide/resources/calculated-fields/geofencing/warehouse-equipment-example-asset-data.csv){:target="_blank" download="warehouse-equipment-example-asset-data.csv"}
-- Go to the **Assets** page and [import](/docs/user-guide/bulk-provisioning/){:target="_blank"} the CSV file into your ThingsBoard instance:
+- Go to the **Assets** page and [import](/docs/user-guide/bulk-provisioning/){:target="_blank"} the CSV file into your SENTIENT instance:
 
 **CSV includes:**
 - **Name:** Warehouse A
@@ -711,7 +711,7 @@ Import **two devices** — each represents a tracker installed in a truck. Devic
 <br><b><font size="3">2. Import demo asset</font></b>   
 Import assets representing the fleet and zones.
 - Download the CSV file: [complex-fleet-management-example-assets-data.csv](/docs/user-guide/resources/calculated-fields/geofencing/complex-fleet-management-example-assets-data.csv){:target="_blank" download="complex-fleet-management-example-assets-data.csv"}
-- Go to the "Assets" page and [import](/docs/user-guide/bulk-provisioning/){:target="_blank"} the CSV file into your ThingsBoard instance:
+- Go to the "Assets" page and [import](/docs/user-guide/bulk-provisioning/){:target="_blank"} the CSV file into your SENTIENT instance:
 
 **CSV includes:**
 - **Name:** No-Go Zone A, Service Zone A, North East Fleet
@@ -843,5 +843,5 @@ As you move truck markers across zone boundaries:
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

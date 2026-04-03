@@ -12,7 +12,7 @@ var payloadJson = decodeToJson(payload);
 var deviceName = payloadJson.EUI;
 // Specify the device type. Use one data converter per device type or application.
 var deviceType = 'temperature-sensor';
-// Optionally, add the customer name and device group to automatically create them in ThingsBoard and assign new device to it.
+// Optionally, add the customer name and device group to automatically create them in SENTIENT and assign new device to it.
 // var customerName = 'customer';
 // var groupName = 'thermostat devices';
 // Result object with device/asset attributes/telemetry data

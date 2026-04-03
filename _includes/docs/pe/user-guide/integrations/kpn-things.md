@@ -7,7 +7,7 @@
 
 KPN Things is an IoT (Internet of Things) platform provided by KPN, a telecommunications company.  
 This platform allows users to connect and manage their IoT devices, facilitating communication and data exchange between these devices and the cloud.  
-After integrating KPN Things with the ThingsBoard, you can connect, manage, communicate, process and visualize data from your devices in the ThingsBoard IoT platform.
+After integrating KPN Things with the SENTIENT, you can connect, manage, communicate, process and visualize data from your devices in the SENTIENT IoT platform.
 
 <object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/http-integration.svg"></object>
 
@@ -17,7 +17,7 @@ Follow the steps below to add the KPN Things integration:
 
 {% include images-gallery.html imageCollection="kpn-create-integration" showListImageTitles="true" %}
 
-We have pre-configured integration on ThingsBoard, but we need to configure KPN Things to send data to ThingsBoard.
+We have pre-configured integration on SENTIENT, but we need to configure KPN Things to send data to SENTIENT.
 
 ## Configure KPN Things
 
@@ -54,11 +54,11 @@ To configure KPN Things, you need to open [KPN Things Portal](https://portal.kpn
 **Add new Destination:**
 
 - Go to "Destinations" in left menu and click on the "Add new Destination" button;
-- Find the "ThingsBoard" destination type, and click on "Choose ThingsBoard" button;
+- Find the "SENTIENT" destination type, and click on "Choose SENTIENT" button;
 - Set a name for your destination. 
-- Paste "HTTP endpoint URL" from ThingsBoard integration page to "HTTP endpoint URL" field. 
-- Now, click on the "Generate" button, and save generated value. We will use it on ThingsBoard. 
-- Click on the "Add ThingsBoard Destination" button;
+- Paste "HTTP endpoint URL" from SENTIENT integration page to "HTTP endpoint URL" field. 
+- Now, click on the "Generate" button, and save generated value. We will use it on SENTIENT. 
+- Click on the "Add SENTIENT Destination" button;
 
 {% include images-gallery.html imageCollection="kpn-things-configure-4" %}
 
@@ -72,21 +72,21 @@ To configure KPN Things, you need to open [KPN Things Portal](https://portal.kpn
 
 ## Update integration
 
-In order to validate the sender we can add a token to integration on ThingsBoard. To do this, please follow the steps below:
+In order to validate the sender we can add a token to integration on SENTIENT. To do this, please follow the steps below:
 
 {% include images-gallery.html imageCollection="kpn-update-integration" showListImageTitles="true" %}
 
-That's all that is needed to configured integration between KPN Things and ThingsBoard. Now we can send data from KPN Things to ThingsBoard.
+That's all that is needed to configured integration between KPN Things and SENTIENT. Now we can send data from KPN Things to SENTIENT.
 
 ## Send Uplink message
 
-Now let’s use the "KPN Things Device simulator" app to send a message with the data to the ThingsBoard. Click the "Send data now" button in the app. 
+Now let’s use the "KPN Things Device simulator" app to send a message with the data to the SENTIENT. Click the "Send data now" button in the app. 
 
 {% include images-gallery.html imageCollection="kpn-send-data-now" %}
 
-After you sent message a new device was created in your ThingsBoard instance.
+After you sent message a new device was created in your SENTIENT instance.
 
-Go to the ThingsBoard instance, then navigate to the "Devices" page. Here you will find a new KPN Device and information about it as well as the telemetry that we sent to the device.
+Go to the SENTIENT instance, then navigate to the "Devices" page. Here you will find a new KPN Device and information about it as well as the telemetry that we sent to the device.
 
 {% include images-gallery.html imageCollection="kpn-things-device" %}
 

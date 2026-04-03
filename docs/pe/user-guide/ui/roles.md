@@ -3,6 +3,6 @@ layout: docwithnav-pe
 assignees:
 - vparomskiy
 title: Roles
-description: ThingsBoard RBAC
+description: SENTIENT RBAC
 redirect_to: "/docs/user-guide/rbac#roles"
 ---

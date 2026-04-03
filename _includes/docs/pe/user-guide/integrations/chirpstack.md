@@ -3,7 +3,7 @@
 * TOC 
 {:toc}
 
-The ChirpStack open-source LoRaWAN Network Server stack provides open-source components for LoRaWAN networks. After integrating ChirpStack with ThingsBoard, you can connect, communicate, process and visualize data from devices in the ThingsBoard IoT platform.
+The ChirpStack open-source LoRaWAN Network Server stack provides open-source components for LoRaWAN networks. After integrating ChirpStack with SENTIENT, you can connect, communicate, process and visualize data from devices in the SENTIENT IoT platform.
 
 ## Prerequisites
 
@@ -14,15 +14,15 @@ Additionally, you must connect your device to the network. You can find detailed
 
 ## Create ChirpStack integration
 
-You will need to have access to ThingsBoard Professional Edition. The easiest way is to use [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} server.
-The alternative option is to install ThingsBoard using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
+The alternative option is to install SENTIENT using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 <br>
-Let's move on to setting up the integration between the ThingsBoard platform and ChirpStack.
+Let's move on to setting up the integration between the SENTIENT platform and ChirpStack.
 
 **1. Basic settings**.
 
-- Sign in to your ThingsBoard account.
+- Sign in to your SENTIENT account.
 - Navigate to the "**Integrations**" page under the "**Integrations center**" section. Click "**plus**" button to add a new integration.
 - From the list, select the integration type "**ChirpStack**".
 - If you'd like to monitor events and troubleshoot, enable [debug mode](/docs/user-guide/integrations/#debug-mode){:target="_blank"}.
@@ -37,11 +37,11 @@ Let's move on to setting up the integration between the ThingsBoard platform and
 
 **2. Uplink data converter**. 
 
-Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in ThingsBoard.
+Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in SENTIENT.
 
-Starting from **ThingsBoard 4.0**, we have simplified the process of writing converters for Loriot integration. You can now easily choose where the message fields from the integration should go (attributes or telemetry) without manually defining this in the decoder function.
+Starting from **SENTIENT 4.0**, we have simplified the process of writing converters for Loriot integration. You can now easily choose where the message fields from the integration should go (attributes or telemetry) without manually defining this in the decoder function.
 
-> **Note**: Converters created before the release of ThingsBoard 4.0 will still be available and will continue to function properly.
+> **Note**: Converters created before the release of SENTIENT 4.0 will still be available and will continue to function properly.
 
 - Enter a name for the converter. It must be unique.
 - To view the events, enable [debug mode](/docs/user-guide/integrations/#debug-mode){:target="_blank"}.
@@ -50,7 +50,7 @@ Starting from **ThingsBoard 4.0**, we have simplified the process of writing con
     - Use the existing script for parsing and transforming data, or provide your own custom script.
 
 {% capture difference %}
-**Note:** The converter shown below will work **only with ThingsBoard versions 3.9 and earlier**.
+**Note:** The converter shown below will work **only with SENTIENT versions 3.9 and earlier**.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -97,7 +97,7 @@ Finally, click "Add" button to complete adding the ChirpStack integration.
 
 ## Configure integration on your ChirpStack application
 
-In order for data to be transferred from ChirpStack to ThingsBoard, you need to configure an integration in your ChirpStack application.
+In order for data to be transferred from ChirpStack to SENTIENT, you need to configure an integration in your ChirpStack application.
 
 To create integration on ChirpStack Network server stack, we need to do the following steps:
 
@@ -105,7 +105,7 @@ To create integration on ChirpStack Network server stack, we need to do the foll
 - Named it and click "Submit" button;
 - Application created. Now, navigate to the "Integrations" tab;
 - Find and add a HTTP integration by clicking "+" icon;
-- Fill in the field with the "HTTP endpoint URL" previously copied from the ChirpStack integration in the ThingsBoard. Then, click "Submit" button.
+- Fill in the field with the "HTTP endpoint URL" previously copied from the ChirpStack integration in the SENTIENT. Then, click "Submit" button.
 
 HTTP integration created.
 
@@ -113,7 +113,7 @@ HTTP integration created.
 
 ## Processing uplink message
 
-When your device sends an uplink message, a new device will appear in the ThingsBoard user interface.
+When your device sends an uplink message, a new device will appear in the SENTIENT user interface.
 
 {% include images-gallery.html imageCollection="device" %}
 
@@ -127,13 +127,13 @@ Received data can be viewed in the uplink converter. In the "In" and "Out" block
 
 <br>
 Use the [Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/) to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.  
-ThingsBoard has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/{{docsPrefix}}solution-templates/overview/).
+SENTIENT has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/{{docsPrefix}}solution-templates/overview/).
 
 {% include images-gallery.html imageCollection="solution-templates" %}
 
 ## Advanced usage: downlink
 
-For sending downlink messages from the Thingsboard to the device, we need to define a downlink converter. You can customize the downlink according to your configuration.  
+For sending downlink messages from the Sentient to the device, we need to define a downlink converter. You can customize the downlink according to your configuration.  
 
 ### Add downlink converter
 

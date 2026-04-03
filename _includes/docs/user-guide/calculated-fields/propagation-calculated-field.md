@@ -114,7 +114,7 @@ To help you get started, here are three common configuration patterns applied to
 ### Example 1: Propagate device battery level to the parent Asset
 
 <b><font size="4">Use case</font></b>   
-The Tracker A device sends its battery charge level (<span class="code-light">batteryLevel</span>) to ThingsBoard as telemetry.
+The Tracker A device sends its battery charge level (<span class="code-light">batteryLevel</span>) to SENTIENT as telemetry.
 
 <b><font size="4">Goal</font></b>   
 Automatically propagate the device battery level to the related Truck 1 asset and store it as a server-side attribute under a new key: <span class="code-light">deviceBatteryLevel</span>.
@@ -228,7 +228,7 @@ The <span class="code-light">deviceBatteryLevel</span> attribute is propagated a
 ### Example 2: Dew point calculation and propagation to a parent Asset
 
 <b><font size="4">Scenario</font></b>   
-A Smart Device sends <span class="code-light">temperature</span> and <span class="code-light">humidity</span> telemetry to ThingsBoard and is linked to the Greenhouse A asset via the _Contains_ relation.
+A Smart Device sends <span class="code-light">temperature</span> and <span class="code-light">humidity</span> telemetry to SENTIENT and is linked to the Greenhouse A asset via the _Contains_ relation.
 
 <b><font size="4">Goal</font></b>   
 Calculate the **dew point**, propagate the result to the related asset (**Greenhouse A**), and store it as a **telemetry**.
@@ -477,5 +477,5 @@ Choose one of the following safe methods:
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

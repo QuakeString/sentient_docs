@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: mdeg Scales Secure Medical IoT with ThingsBoard
+title: mdeg Scales Secure Medical IoT with SENTIENT
 notitle: "true"
 customTitle: "true"
-description: Discover how mdeg GmbH used ThingsBoard to build a secure, scalable IoT platform for connecting medical devices in compliance with EU healthcare standards.
+description: Discover how mdeg GmbH used SENTIENT to build a secure, scalable IoT platform for connecting medical devices in compliance with EU healthcare standards.
 ---
 
 <div class="case-study-page-wrapper">
@@ -11,7 +11,7 @@ description: Discover how mdeg GmbH used ThingsBoard to build a secure, scalable
         <div class="card">
             <div class="text">
                 <p class="category">SMART IOT SOLUTIONS</p>
-                <h1>How mdeg scaled secure medical device connectivity with ThingsBoard</h1>
+                <h1>How mdeg scaled secure medical device connectivity with SENTIENT</h1>
                 <div class="image inner" style="background-image: url('/images/case-studies/mdeg.webp')">
                     <img src="/images/case-studies/mdeg.svg" title="mdeg" alt="mdeg logo" width="500" height="126">
                 </div>
@@ -71,11 +71,11 @@ description: Discover how mdeg GmbH used ThingsBoard to build a secure, scalable
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>Enhanced reliability and flexibility achieved through ThingsBoard’s Rule Engine</p>
+                        <p>Enhanced reliability and flexibility achieved through SENTIENT’s Rule Engine</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>Accelerated development and deployment thanks to support from the ThingsBoard team</p>
+                        <p>Accelerated development and deployment thanks to support from the SENTIENT team</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
@@ -90,36 +90,36 @@ description: Discover how mdeg GmbH used ThingsBoard to build a secure, scalable
         </div>
     </section>
     <section class="tb-power mb">
-        <h2>How ThingsBoard powers mdeg GmbH?</h2>
+        <h2>How SENTIENT powers mdeg GmbH?</h2>
         <div class="block">
             <div class="text">
                 <h3>Reliable architecture for healthcare</h3>
-                <p>ThingsBoard became the foundation of the mdeg Medical Device Cloud thanks to its stable and fault-tolerant architecture. This ensured secure and uninterrupted real-time data transmission from medical devices — a critical requirement in healthcare.</p>
+                <p>SENTIENT became the foundation of the mdeg Medical Device Cloud thanks to its stable and fault-tolerant architecture. This ensured secure and uninterrupted real-time data transmission from medical devices — a critical requirement in healthcare.</p>
             </div>
             <img src="/images/case-studies/mdeg-1.webp" title="Reliable architecture for healthcare" alt="Reliable architecture for healthcare" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Rule Engine for flexible business logic</h3>
-                <p>A key advantage of ThingsBoard for mdeg was the ability to implement business logic flexibly using the Rule Engine. This allowed the platform to be easily adapted to meet the specific needs of different clients without the need for deep custom development.</p>
+                <p>A key advantage of SENTIENT for mdeg was the ability to implement business logic flexibly using the Rule Engine. This allowed the platform to be easily adapted to meet the specific needs of different clients without the need for deep custom development.</p>
             </div>
             <img src="/images/case-studies/mdeg-2.webp" title="Rule Engine for flexible business logic" alt="Rule Engine for flexible business logic" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Industry-grade compliance</h3>
-                <p>The ThingsBoard team provided high-quality support at every stage — from prototype to full-scale deployment. This accelerated the time-to-market and reduced technical risks throughout the development process.</p>
+                <p>The SENTIENT team provided high-quality support at every stage — from prototype to full-scale deployment. This accelerated the time-to-market and reduced technical risks throughout the development process.</p>
             </div>
             <img src="/images/case-studies/mdeg-3.webp" title="Industry-grade compliance" alt="Industry-grade compliance" width="450" height="240">
         </div>
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard helps smart IoT solutions improve operations with IoT?</h2>
+        <h2>How SENTIENT helps smart IoT solutions improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Scalable device connectivity and data management</h3>
-                <p>ThingsBoard simplifies the integration of millions of devices and sensors, regardless of vendor or protocol.</p>
+                <p>SENTIENT simplifies the integration of millions of devices and sensors, regardless of vendor or protocol.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Supports MQTT, HTTP, CoAP, LwM2M, and OPC-UA for seamless connectivity.</p></li>
@@ -128,14 +128,14 @@ description: Discover how mdeg GmbH used ThingsBoard to build a secure, scalable
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/time-series-chart.webp" title="Thingsboard time series chart widget" alt="Thingsboard time series chart widget" width="776" height="776">
-                <img src="/images/case-studies/alarms-table.webp" title="Thingsboard alarms table widget" alt="Thingsboard alarms table widget" width="776" height="776">
+                <img src="/images/case-studies/time-series-chart.webp" title="Sentient time series chart widget" alt="Sentient time series chart widget" width="776" height="776">
+                <img src="/images/case-studies/alarms-table.webp" title="Sentient alarms table widget" alt="Sentient alarms table widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Custom dashboards for real-time visualization</h3>
-                <p>A good IoT solution isn't complete without real-time insights and actionable data. ThingsBoard offers powerful dashboarding tools tailored to specific use cases.</p>
+                <p>A good IoT solution isn't complete without real-time insights and actionable data. SENTIENT offers powerful dashboarding tools tailored to specific use cases.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Drag-and-drop widgets for charts, gauges, maps, tables, and SCADA elements.</p></li>
@@ -144,14 +144,14 @@ description: Discover how mdeg GmbH used ThingsBoard to build a secure, scalable
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/line-chart.webp" title="Thingsboard line chart widget" alt="Thingsboard line chart widget" width="776" height="776">
-                <img src="/images/case-studies/maps-widgets.webp" title="Thingsboard maps widgets widget" alt="Thingsboard maps widgets widget" width="776" height="776">
+                <img src="/images/case-studies/line-chart.webp" title="Sentient line chart widget" alt="Sentient line chart widget" width="776" height="776">
+                <img src="/images/case-studies/maps-widgets.webp" title="Sentient maps widgets widget" alt="Sentient maps widgets widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Powerful rule engine for smart automation</h3>
-                <p>ThingsBoard's Rule Engine enables real-time decision-making and system automation without writing complex backend code.</p>
+                <p>SENTIENT's Rule Engine enables real-time decision-making and system automation without writing complex backend code.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Define logic to process incoming telemetry, trigger alerts, store data, or control devices.</p></li>
@@ -160,14 +160,14 @@ description: Discover how mdeg GmbH used ThingsBoard to build a secure, scalable
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/single-switch-widget.webp" title="Thingsboard single switch widget" alt="Thingsboard single switch widget" width="776" height="776">
-                <img src="/images/case-studies/notification-widget.webp" title="Thingsboard notification widget" alt="Thingsboard notification widget" width="776" height="776">
+                <img src="/images/case-studies/single-switch-widget.webp" title="Sentient single switch widget" alt="Sentient single switch widget" width="776" height="776">
+                <img src="/images/case-studies/notification-widget.webp" title="Sentient notification widget" alt="Sentient notification widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Multi-tenancy & white-labeling for IoT-as-a-Service</h3>
-                <p>If you’re building an IoT platform for clients, partners, or internal teams, ThingsBoard provides a multi-tenant architecture that separates data and access by organization or user role.</p>
+                <p>If you’re building an IoT platform for clients, partners, or internal teams, SENTIENT provides a multi-tenant architecture that separates data and access by organization or user role.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Each tenant has its own isolated dashboards, devices, and users.</p></li>
@@ -176,8 +176,8 @@ description: Discover how mdeg GmbH used ThingsBoard to build a secure, scalable
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/dashboards-widget.webp" title="Thingsboard dashboards widget" alt="Thingsboard dashboards widget" width="582" height="582">
-                <img src="/images/case-studies/entities-table.webp" title="Thingsboard entities table widget" alt="Thingsboard entities table widget" width="776" height="776">
+                <img src="/images/case-studies/dashboards-widget.webp" title="Sentient dashboards widget" alt="Sentient dashboards widget" width="582" height="582">
+                <img src="/images/case-studies/entities-table.webp" title="Sentient entities table widget" alt="Sentient entities table widget" width="776" height="776">
             </div>
         </div>
         {% include services-banner.liquid %}
@@ -186,12 +186,12 @@ description: Discover how mdeg GmbH used ThingsBoard to build a secure, scalable
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img src="/images/case-studies/mdeg.svg" title="mdeg" alt="mdeg logo" width="500" height="126">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_mdeg_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us <span class="visually-hidden">to discuss your case</span></a>
     </section>
 </div>

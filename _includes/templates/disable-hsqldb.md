@@ -13,7 +13,7 @@ Comment '# HSQLDB DAO Configuration' block.
 #    database-platform: "org.hibernate.dialect.HSQLDialect"
 #  datasource:
 #    driverClassName: "${SPRING_DRIVER_CLASS_NAME:org.hsqldb.jdbc.JDBCDriver}"
-#    url: "${SPRING_DATASOURCE_URL:jdbc:hsqldb:file:${SQL_DATA_FOLDER:/tmp}/thingsboardDb;sql.enforce_size=false}"
+#    url: "${SPRING_DATASOURCE_URL:jdbc:hsqldb:file:${SQL_DATA_FOLDER:/tmp}/sentientDb;sql.enforce_size=false}"
 #    username: "${SPRING_DATASOURCE_USERNAME:sa}"
 #    password: "${SPRING_DATASOURCE_PASSWORD:}"
 ```

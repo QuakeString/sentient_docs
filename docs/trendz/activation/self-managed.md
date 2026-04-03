@@ -1,65 +1,65 @@
 ---
-layout: docwithnav-trendz
-title: How To Activate Self-Hosted Trendz
-description: How To Activate Self-Hosted Trendz
+layout: docwithnav-sentient-analytics
+title: How To Activate Self-Hosted SENTIENT ANALYTICS
+description: How To Activate Self-Hosted SENTIENT ANALYTICS
 
 login:
   0:
-    image: /images/trendz/activation/self-hosted/login-1.png
-    title: 'Open the <b>ThingsBoard License Portal</b> and sign in with your ThingsBoard account as a sysadmin.'
+    image: /images/sentient-analytics/activation/self-hosted/login-1.png
+    title: 'Open the <b>SENTIENT License Portal</b> and sign in with your SENTIENT account as a sysadmin.'
   1:
-    image: /images/trendz/activation/self-hosted/login-2.png
+    image: /images/sentient-analytics/activation/self-hosted/login-2.png
     title: 'Go to the <b>Subscriptions</b> tab or <b>Perpetual licenses</b> tab (depends on your subscription type).'
 
 enable:
   0:
-    image: /images/trendz/activation/self-hosted/enable-1.png
-    title: 'In the list of licensed installations, select the ThingsBoard instance for which you want to enable Trendz and click on it to open the instance profile'
+    image: /images/sentient-analytics/activation/self-hosted/enable-1.png
+    title: 'In the list of licensed installations, select the SENTIENT instance for which you want to enable SENTIENT ANALYTICS and click on it to open the instance profile'
   1:
-    image: /images/trendz/activation/self-hosted/enable-2.png
+    image: /images/sentient-analytics/activation/self-hosted/enable-2.png
     title: 'Click <b>Manage Add-ons</b>.'
   2:
-    image: /images/trendz/activation/self-hosted/enable-3.png
-    title: 'Scroll down and enable the <b>Trendz Analytics</b> checkbox.'
+    image: /images/sentient-analytics/activation/self-hosted/enable-3.png
+    title: 'Scroll down and enable the <b>SENTIENT ANALYTICS</b> checkbox.'
   3:
-    image: /images/trendz/activation/self-hosted/enable-4.png
+    image: /images/sentient-analytics/activation/self-hosted/enable-4.png
     title: 'Click <b>Next</b> in the lower right corner.'
 
 complete-payment:
   0:
-    image: /images/trendz/activation/self-hosted/complete-payment.png
+    image: /images/sentient-analytics/activation/self-hosted/complete-payment.png
     title: 'On the Summary screen, verify the selected plan and full price. If everything is correct, click <b>Update</b> and complete the payment.'
 
 pricing:
   0:
-    image: /images/trendz/activation/self-hosted/self-managed-1.png
-    title: 'You can find out up-to-date prices on Trendz add-on in the <b>pricing page</b>.'
+    image: /images/sentient-analytics/activation/self-hosted/self-managed-1.png
+    title: 'You can find out up-to-date prices on SENTIENT ANALYTICS add-on in the <b>pricing page</b>.'
   1:
-    image: /images/trendz/activation/self-hosted/self-managed-2.png
-    title: 'Calculate your pricing, based on your ThingsBoard self-managed setup.'
+    image: /images/sentient-analytics/activation/self-hosted/self-managed-2.png
+    title: 'Calculate your pricing, based on your SENTIENT self-managed setup.'
 ---
 
 * TOC
 {:toc}
 
-This section describes how to activate Trendz for a ThingsBoard self-hosted environment via the License Portal.
+This section describes how to activate SENTIENT ANALYTICS for a SENTIENT self-hosted environment via the License Portal.
 
 ## Activation Steps
 
 ### Step 1. Log in to the License Portal
 
-* Open the [ThingsBoard License Portal](https://license.thingsboard.io/login).
-* Sign in with your ThingsBoard account as a sysadmin.
+* Open the [SENTIENT License Portal](https://license.docs.sentient.invenia.in/login).
+* Sign in with your SENTIENT account as a sysadmin.
 * Go to the **Subscriptions** tab or **Perpetual licenses** tab (depends on your subscription type).
 
 {% include images-gallery.html imageCollection="login" %}
 
-### Step 2. Select Instance and Enable Trendz Add-on
+### Step 2. Select Instance and Enable SENTIENT ANALYTICS Add-on
 
-* In the list of licensed installations, select the ThingsBoard instance for which you want to enable Trendz.
+* In the list of licensed installations, select the SENTIENT instance for which you want to enable SENTIENT ANALYTICS.
 * Click on it to open the instance profile.
 * Click **Manage Add-ons**.
-* Scroll down and enable the **Trendz Analytics** checkbox.
+* Scroll down and enable the **SENTIENT ANALYTICS** checkbox.
 * Click **Next** in the lower right corner.
 
 {% include images-gallery.html imageCollection="enable" %}
@@ -71,13 +71,13 @@ This section describes how to activate Trendz for a ThingsBoard self-hosted envi
 
 {% include images-gallery.html imageCollection="complete-payment" %}
 
-### Step 4. Restart ThingsBoard
+### Step 4. Restart SENTIENT
 
-Finally, it's necessary to restart ThingsBoard service, to fetch the newest subscription information.
+Finally, it's necessary to restart SENTIENT service, to fetch the newest subscription information.
 
 ## Pricing
 
-You can find out up-to-date prices on Trendz add-on in the [pricing page](/pricing/?section=thingsboard-pe-options&product=thingsboard-pe).
+You can find out up-to-date prices on SENTIENT ANALYTICS add-on in the [pricing page](/pricing/?section=sentient-pe-options&product=sentient-pe).
 
 {% include images-gallery.html imageCollection="pricing" %}
 
@@ -85,6 +85,6 @@ If you have any questions about anything, just **[contact us](/docs/contact-us)*
 
 ## Next Steps
 
-* Follow our [Installation guide](/docs/trendz/install/installation-options) to install Trendz on your environment.
-* Follow our [Getting Started guide](/docs/trendz/getting-started) to explore all Trendz capabilities.
-* Visit our [Documentation](/docs/trendz) to explore all Trendz capabilities and features.
+* Follow our [Installation guide](/docs/sentient-analytics/install/installation-options) to install SENTIENT ANALYTICS on your environment.
+* Follow our [Getting Started guide](/docs/sentient-analytics/getting-started) to explore all SENTIENT ANALYTICS capabilities.
+* Visit our [Documentation](/docs/sentient-analytics) to explore all SENTIENT ANALYTICS capabilities and features.

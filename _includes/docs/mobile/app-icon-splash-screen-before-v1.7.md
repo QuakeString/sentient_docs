@@ -24,7 +24,7 @@ flutter pub add dev:flutter_launcher_icons
 {: .copy-code}
 #### Step 2: Replace Default Icon
 
-Replace `thingsboard.png` in the `assets/images` folder with your custom icon. We recommend using a 432×432 pixel image of your logo centered within the canvas.
+Replace `sentient.png` in the `assets/images` folder with your custom icon. We recommend using a 432×432 pixel image of your logo centered within the canvas.
 
 #### Step 3: Run the Generator
 
@@ -42,7 +42,7 @@ If you have configured push notifications (see [push notifications setup guide](
 1. Go to [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/icons-notification.html)
 2. Press "Image" and choose your logo
 3. Configure padding if needed
-4. Change the file name to "thingsboard"
+4. Change the file name to "sentient"
 5. Press the download button to get an archive of the "res" folder
 6. Paste the contents to `android/app/src/main` and click "Replace" when prompted
 

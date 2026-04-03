@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-Script calculated fields use [TBEL](/docs/{{docsPrefix}}user-guide/tbel/){:target="_blank"} (ThingsBoard Expression Language) to perform advanced, real-time computations on telemetry and attributes. Unlike Simple fields, Script fields support conditional logic, iteration over rolling time-series values, working with historical windows, and returning multiple results in a single execution.
+Script calculated fields use [TBEL](/docs/{{docsPrefix}}user-guide/tbel/){:target="_blank"} (SENTIENT Expression Language) to perform advanced, real-time computations on telemetry and attributes. Unlike Simple fields, Script fields support conditional logic, iteration over rolling time-series values, working with historical windows, and returning multiple results in a single execution.
 
 Use "Script" calculated fields when you need logic that goes beyond a single math expression, such as:
 - Multi-step calculations (e.g., dew point, air density, efficiency metrics)
@@ -416,5 +416,5 @@ This indicates the freezer is in a potentially critical state and may require at
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

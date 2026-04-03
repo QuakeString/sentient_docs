@@ -7,8 +7,8 @@
         "eur": "€9/month"
       }
     },
-    "trendz": {
-      "faq": "trendz-what-is",
+    "sentient-analytics": {
+      "faq": "sentient-analytics-what-is",
       "price": {
         "usd": "$29/month",
         "eur": "€28/month"
@@ -27,8 +27,8 @@
       "faq": "tb-private-cloud-edge-addon-cloud-what-is",
       "price": "$249/month"
     },
-    "trendz": {
-      "faq": "tb-private-cloud-trendz-what-is",
+    "sentient-analytics": {
+      "faq": "tb-private-cloud-sentient-analytics-what-is",
       "price": "$449/month"
     },
     "wl": {
@@ -41,8 +41,8 @@
       "faq": "edge-addon-payg-what-is",
       "price": "$7/month"
     },
-    "trendz": {
-      "faq": "trendz-payg-what-is",
+    "sentient-analytics": {
+      "faq": "sentient-analytics-payg-what-is",
       "price": "$12/month"
     },
     "wl": {

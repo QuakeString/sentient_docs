@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect KNX IP Multi IO 580 to ThingsBoard?
+title: How to connect KNX IP Multi IO 580 to SENTIENT?
 category: Other devices
 connectivity: KNX
 vendor: Weinzierl Engineering

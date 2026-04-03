@@ -6,7 +6,7 @@ created gateway.
 As a demo simulation server, we will use docker image, that can be installed and run using the following command:
 
 ```shell
-docker run -it -p 4840:4840 thingsboard/tb-gw-opcua-server:latest
+docker run -it -p 4840:4840 sentient/tb-gw-opcua-server:latest
 ```
 {:.copy-code}
 
@@ -88,7 +88,7 @@ Let&#39;s add new node using the following steps:
 
 {% include images-gallery.liquid imageCollection=dataMappingConfiguration1 %}
 
-Let&#39;s move to "**Attributes**" section to add "frequency" and "power" attributes. The configuration in this unit provides settings for processing data from OPC-UA server. These settings will be interpreted in ThingsBoard platform instance as attributes of the device. Also we will use path for finding corresponding node.
+Let&#39;s move to "**Attributes**" section to add "frequency" and "power" attributes. The configuration in this unit provides settings for processing data from OPC-UA server. These settings will be interpreted in SENTIENT platform instance as attributes of the device. Also we will use path for finding corresponding node.
 
 {% capture difference %}
 A **Path** type refers to the hierarchical address within the OPC-UA server's namespace. It is used to navigate to specific nodes in the server. The path for the attribute/time series value can be absolute or relative (relative in our case).
@@ -139,7 +139,7 @@ Click the "**Apply**" button after you&#39;ve completed the configuration.
 
 {% include images-gallery.liquid imageCollection=dataMappingConfiguration3 %}
 
-We finish with the "**Attributes**" section, so let&#39;s move to the "**Time series**" section. The configuration in this unit provides settings for processing data from the OPC-UA server. These settings will be interpreted in ThingsBoard platform instance as time series of the device.
+We finish with the "**Attributes**" section, so let&#39;s move to the "**Time series**" section. The configuration in this unit provides settings for processing data from the OPC-UA server. These settings will be interpreted in SENTIENT platform instance as time series of the device.
 
 Let&#39;s configure time series section using the following steps:
 

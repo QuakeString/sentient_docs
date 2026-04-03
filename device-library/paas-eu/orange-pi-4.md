@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Orange Pi 4 to ThingsBoard?
+title: How to connect Orange Pi 4 to SENTIENT?
 category: Single-board computers
 chip: Rockchip RK3399
 connectivity: [Ethernet, WIFI, Bluetooth]

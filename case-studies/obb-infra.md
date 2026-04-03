@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: How ÖBB-Infrastruktur AG Transformed Railway Operations with ThingsBoard
+title: How ÖBB-Infrastruktur AG Transformed Railway Operations with SENTIENT
 notitle: "true"
 customTitle: "true"
-description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and safety by integrating ThingsBoard's IoT platform—achieving real-time monitoring, predictive maintenance, and secure data flow without public internet exposure.
+description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and safety by integrating SENTIENT's IoT platform—achieving real-time monitoring, predictive maintenance, and secure data flow without public internet exposure.
 ---
 
 <div class="case-study-page-wrapper">
@@ -48,7 +48,7 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
         <img class="h-auto" src="/images/case-studies/Dominic_Winkler.webp" title="ÖBB-Infrastruktur AG IT Enterprise Architect Dominic Winkler" alt="Dominic Winkler" width="1316" height="848">
         <div class="text">
             <h2>ÖBB-Infrastruktur AG</h2>
-            <p class="quote">“Thingsboard Edge gives us the invaluable ability to allow data to flow within our IT network without the need to bridge Firewalls and Public Internet.”</p>
+            <p class="quote">“Sentient Edge gives us the invaluable ability to allow data to flow within our IT network without the need to bridge Firewalls and Public Internet.”</p>
             <p class="author">Dominic Winkler</p>
             <p class="title">IT Enterprise Architect</p>
         </div>
@@ -81,31 +81,31 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
                 <ul>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>By leveraging the country-wide private fiber network and ThingsBoard Edge, ÖBB-Infrastruktur AG has created a secure internal communications channel that keeps data within its IT network, minimizes security risks, and enables local systems to connect securely without bridging firewalls or using the public Internet.</p>
+                        <p>By leveraging the country-wide private fiber network and SENTIENT GATEWAY, ÖBB-Infrastruktur AG has created a secure internal communications channel that keeps data within its IT network, minimizes security risks, and enables local systems to connect securely without bridging firewalls or using the public Internet.</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>Thingsboard played a key role in the Austrian Railways initiative to create a Digital Twin of the railway assets by providing real-time asset condition data and recording time-series data. By leveraging the Digital Twin concept with ThingsBoard, ÖBB-Infrastruktur AG could predict potential issues, simulate scenarios, and make informed decisions proactively.</p>
+                        <p>Sentient played a key role in the Austrian Railways initiative to create a Digital Twin of the railway assets by providing real-time asset condition data and recording time-series data. By leveraging the Digital Twin concept with SENTIENT, ÖBB-Infrastruktur AG could predict potential issues, simulate scenarios, and make informed decisions proactively.</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>The main UI provided by the ThingsBoard PE instance in the ÖBB Azure Cloud Tenant allowed all internal stakeholders to access customized dashboards and insights tailored to their use cases.</p>
+                        <p>The main UI provided by the SENTIENT Professional Edition instance in the ÖBB Azure Cloud Tenant allowed all internal stakeholders to access customized dashboards and insights tailored to their use cases.</p>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
     <section class="tb-power">
-        <h2>How ThingsBoard and ThingsBoard Edge power ÖBB-Infrastruktur AG?</h2>
+        <h2>How SENTIENT and SENTIENT GATEWAY power ÖBB-Infrastruktur AG?</h2>
         <div class="block">
             <div class="text">
                 <h3>Digital Twin initiative</h3>
-                <p>ÖBB-Infrastruktur AG uses a Digital Twin to evaluate current conditions, make predictions, and simulate possible situations. Digital Twin is a digital representation of a physical system, in this case, the railway infrastructure. The approach requires accessing real-time asset condition data as well as time-series records. ThingsBoard acts as one major enabling technology of this initiative, offering a unified platform for IoT data ingestion, processing, visualization, and analysis:</p>
+                <p>ÖBB-Infrastruktur AG uses a Digital Twin to evaluate current conditions, make predictions, and simulate possible situations. Digital Twin is a digital representation of a physical system, in this case, the railway infrastructure. The approach requires accessing real-time asset condition data as well as time-series records. SENTIENT acts as one major enabling technology of this initiative, offering a unified platform for IoT data ingestion, processing, visualization, and analysis:</p>
                 <ul>
-                    <li><p>ThingsBoard enables seamless integration of diverse IoT devices deployed via communication protocols (e.g., MQTT, CoAP, HTTP) across the rail infrastructure for real-time data collection.</p></li>
-                    <li><p>ThingsBoard Edge allows on-premise data processing, keeping critical data within ÖBB’s private network and facilitates secure integration with internal systems without exposing them to the public internet as well as prevent data loss in situations of network separation between cloud and on-premise.</p></li>
-                    <li><p>ThingsBoard Cloud provides powerful visualization tools through customizable dashboards, enabling internal stakeholders to monitor assets, track performance, and analyze trends.</p></li>
-                    <li><p>ThingsBoard enables condition monitoring and predictive maintenance through the analysis of sensor data and environmental parameters, reducing unplanned downtime by generating alerts based on predefined thresholds and conditions.</p></li>
+                    <li><p>SENTIENT enables seamless integration of diverse IoT devices deployed via communication protocols (e.g., MQTT, CoAP, HTTP) across the rail infrastructure for real-time data collection.</p></li>
+                    <li><p>SENTIENT GATEWAY allows on-premise data processing, keeping critical data within ÖBB’s private network and facilitates secure integration with internal systems without exposing them to the public internet as well as prevent data loss in situations of network separation between cloud and on-premise.</p></li>
+                    <li><p>SENTIENT Cloud provides powerful visualization tools through customizable dashboards, enabling internal stakeholders to monitor assets, track performance, and analyze trends.</p></li>
+                    <li><p>SENTIENT enables condition monitoring and predictive maintenance through the analysis of sensor data and environmental parameters, reducing unplanned downtime by generating alerts based on predefined thresholds and conditions.</p></li>
                     <li><p>Assessing current asset conditions ("What now?") and forecasting future developments ("What next?") based on data processed in the Digital Twin.</p></li>
                 </ul>
             </div>
@@ -114,7 +114,7 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
         <div class="block">
             <div class="text">
                 <h3>Secure and resilient data flow for ÖBB-Infrastruktur AG</h3>
-                <p>ThingsBoard Edge instances, strategically deployed  on-premises within ÖBB-Infrastruktur AG's infrastructure, ensure secure data flow entirely within the internal IT network, avoiding exposure to the public Internet and firewall bridging. By caching IoT data locally until a successful transmission to the ThingsBoard PE instance in the ÖBB Azure Cloud Tenant, this setup achieves:</p>
+                <p>SENTIENT GATEWAY instances, strategically deployed  on-premises within ÖBB-Infrastruktur AG's infrastructure, ensure secure data flow entirely within the internal IT network, avoiding exposure to the public Internet and firewall bridging. By caching IoT data locally until a successful transmission to the SENTIENT Professional Edition instance in the ÖBB Azure Cloud Tenant, this setup achieves:</p>
                 <ul>
                     <li><p>Network Decoupling: Efficiently separates on-premises and cloud environments, reducing dependencies and potential disruptions.</p></li>
                     <li><p>Resilience to Network Issues: Maintains data integrity and operational continuity during Internet slowdowns, VPN issues, or cloud connectivity problems.</p></li>
@@ -130,15 +130,15 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard Edge helps smart rail infrastructure management improve operations with IoT?</h2>
+        <h2>How SENTIENT GATEWAY helps smart rail infrastructure management improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Smart railway infrastructure management</h3>
-                <p>ThingsBoard Edge can play a crucial role in smart railway infrastructure management. Due to specifics of edge computing, the data remains within the network, enhancing security by eliminating the need to expose internal systems to the public internet. By caching IoT data locally until a successful connection with the ThingsBoard PE instance, ThingsBoard Edge ensures both data integrity and operational continuity.</p>
+                <p>SENTIENT GATEWAY can play a crucial role in smart railway infrastructure management. Due to specifics of edge computing, the data remains within the network, enhancing security by eliminating the need to expose internal systems to the public internet. By caching IoT data locally until a successful connection with the SENTIENT Professional Edition instance, SENTIENT GATEWAY ensures both data integrity and operational continuity.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/status-widget.webp" title="Thingsboard status widget" alt="Thingsboard status widget" width="776" height="776">
-                <img src="/images/case-studies/notification-widget.webp" title="Thingsboard notification widget" alt="Thingsboard notification widget" width="776" height="776">
+                <img src="/images/case-studies/status-widget.webp" title="Sentient status widget" alt="Sentient status widget" width="776" height="776">
+                <img src="/images/case-studies/notification-widget.webp" title="Sentient notification widget" alt="Sentient notification widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
@@ -147,28 +147,28 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
                 <p>The platform offers real-time data and time-series records allowing organizations to evaluate asset current conditions, anticipate future issues, and test different operational scenarios proactively. This capability is essential for informed decision-making and enhancing the safety, efficiency, and sustainability of railway operations.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/alarms-table-2.webp" title="Thingsboard alarms table widget" alt="Thingsboard alarms table widget" width="776" height="776">
-                <img src="/images/case-studies/line-chart.webp" title="Thingsboard line chart widget" alt="Thingsboard line chart widget" width="776" height="776">
+                <img src="/images/case-studies/alarms-table-2.webp" title="Sentient alarms table widget" alt="Sentient alarms table widget" width="776" height="776">
+                <img src="/images/case-studies/line-chart.webp" title="Sentient line chart widget" alt="Sentient line chart widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Enabling predictive maintenance and operational efficiency</h3>
-                <p>Additionally, by analyzing collected sensor data from railway assets, ThingsBoard Edge enables support for the predictive maintenance strategies, helping to reduce unplanned downtime and improve the overall efficiency of operations.</p>
+                <p>Additionally, by analyzing collected sensor data from railway assets, SENTIENT GATEWAY enables support for the predictive maintenance strategies, helping to reduce unplanned downtime and improve the overall efficiency of operations.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/value-card.webp" title="Thingsboard value card widget" alt="Thingsboard value card widget" width="776" height="776">
-                <img src="/images/case-studies/entities-table-4.webp" title="Thingsboard entities table widget" alt="Thingsboard entities table widget" width="776" height="776">
+                <img src="/images/case-studies/value-card.webp" title="Sentient value card widget" alt="Sentient value card widget" width="776" height="776">
+                <img src="/images/case-studies/entities-table-4.webp" title="Sentient entities table widget" alt="Sentient entities table widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Centralized visualization and enhanced operational management</h3>
-                <p>The ThingsBoard PE instance provides a centralized user interface in the cloud, offering customizable dashboards that enable stakeholders to visualize IoT data relevant to their specific use cases. This unified visualization capability helps improve train scheduling, capacity management, and asset utilization, directly contributing to optimized railway operations.</p>
+                <p>The SENTIENT Professional Edition instance provides a centralized user interface in the cloud, offering customizable dashboards that enable stakeholders to visualize IoT data relevant to their specific use cases. This unified visualization capability helps improve train scheduling, capacity management, and asset utilization, directly contributing to optimized railway operations.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/maps-widgets.webp" title="Thingsboard maps widgets widget" alt="Thingsboard maps widgets widget" width="776" height="776">
-                <img src="/images/case-studies/bar-chart.webp" title="Thingsboard bar chart widget" alt="Thingsboard bar chart widget" width="776" height="776">
+                <img src="/images/case-studies/maps-widgets.webp" title="Sentient maps widgets widget" alt="Sentient maps widgets widget" width="776" height="776">
+                <img src="/images/case-studies/bar-chart.webp" title="Sentient bar chart widget" alt="Sentient bar chart widget" width="776" height="776">
             </div>
         </div>
         {% include services-banner.liquid %}
@@ -177,12 +177,12 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img src="/images/case-studies/obb.svg" title="ÖBB-Infrastruktur AG" alt="ÖBB-Infrastruktur AG logo" width="91" height="56">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_OXI_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us</a>
     </section>
 </div>

@@ -1,11 +1,11 @@
-By default, the Helm chart deploys a standard NGINX Ingress Controller for HTTP and MQTT traffic when installing TBMQ on Kubernetes.
+By default, the Helm chart deploys a standard NGINX Ingress Controller for HTTP and MQTT traffic when installing ST-RMQTT on Kubernetes.
 
 ```yaml
 loadbalancer:
   type: "nginx"
 ```
 
-Since you are deploying TBMQ Cluster on Azure AKS, you need to change this value to:
+Since you are deploying ST-RMQTT Cluster on Azure AKS, you need to change this value to:
 
 ```yaml
 loadbalancer:
@@ -39,5 +39,5 @@ loadbalancer:
 
 Azure Load Balancer does not support TLS termination for MQTT traffic.
 If you want to secure MQTT communication,
-you must configure Two-Way TLS (Mutual TLS or mTLS) directly on the application level (TBMQ side).
-Please refer to the TBMQ Helm chart documentation for [details](https://artifacthub.io/packages/helm/tbmq-helm-chart/tbmq-cluster#configuring-mutual-tls-mtls-for-mqtt) on configuring Two-Way TLS.
+you must configure Two-Way TLS (Mutual TLS or mTLS) directly on the application level (ST-RMQTT side).
+Please refer to the ST-RMQTT Helm chart documentation for [details](https://artifacthub.io/packages/helm/st-rmqtt-helm-chart/st-rmqtt-cluster#configuring-mutual-tls-mtls-for-mqtt) on configuring Two-Way TLS.

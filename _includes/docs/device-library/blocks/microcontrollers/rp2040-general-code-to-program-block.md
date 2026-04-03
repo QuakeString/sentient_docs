@@ -1,10 +1,10 @@
 
-Now it’s time to program the board to connect to ThingsBoard.  
+Now it’s time to program the board to connect to SENTIENT.  
 To do this, you can use the code below. It contains all required functionality for this guide.    
 
 
 ```cpp
-#include <ThingsBoard.h>
+#include <SENTIENT.h>
 #if defined(ARDUINO_RASPBERRY_PI_PICO_W)
 #include <WiFi.h>
 #else 
@@ -15,14 +15,14 @@ To do this, you can use the code below. It contains all required functionality f
 constexpr char WIFI_SSID[] = "YOUR_WIFI_SSID";
 constexpr char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";
 
-// See https://thingsboard.io/docs/{{page.docsPrefix}}getting-started-guides/helloworld/
+// See https://docs.sentient.invenia.in/docs/{{page.docsPrefix}}getting-started-guides/helloworld/
 // to understand how to obtain an access token
 constexpr char TOKEN[] = "YOUR_ACCESS_TOKEN";
 
-// Thingsboard we want to establish a connection too
-constexpr char THINGSBOARD_SERVER[] = "{{hostName}}";
+// Sentient we want to establish a connection too
+constexpr char SENTIENT_SERVER[] = "{{hostName}}";
 // MQTT port used to communicate with the server, 1883 is the default unencrypted MQTT port.
-constexpr uint16_t THINGSBOARD_PORT = 1883U;
+constexpr uint16_t SENTIENT_PORT = 1883U;
 
 // Maximum size packets will ever be sent or received by the underlying MQTT client,
 // if the size is to small messages might not be sent or received messages will be discarded
@@ -35,8 +35,8 @@ constexpr uint32_t SERIAL_DEBUG_BAUD = 115200U;
 
 // Initialize underlying client, used to establish a connection
 WiFiClient wifiClient;
-// Initialize ThingsBoard instance with the maximum needed buffer size
-ThingsBoard tb(wifiClient, MAX_MESSAGE_SIZE);
+// Initialize SENTIENT instance with the maximum needed buffer size
+SENTIENT tb(wifiClient, MAX_MESSAGE_SIZE);
 
 // Attribute names for attribute request and attribute updates functionality
 
@@ -286,12 +286,12 @@ void loop() {
 
   if (!tb.connected()) {
     subscribed = false;
-    // Connect to the ThingsBoard
+    // Connect to the SENTIENT
     Serial.print("Connecting to: ");
-    Serial.print(THINGSBOARD_SERVER);
+    Serial.print(SENTIENT_SERVER);
     Serial.print(" with token ");
     Serial.println(TOKEN);
-    if (!tb.connect(THINGSBOARD_SERVER, TOKEN, THINGSBOARD_PORT)) {
+    if (!tb.connect(SENTIENT_SERVER, TOKEN, SENTIENT_PORT)) {
       Serial.println("Failed to connect");
       return;
     }
@@ -367,7 +367,7 @@ void loop() {
 
 
 {% capture replacePlaceholders %}
-Don’t forget to replace placeholders with your real WiFi network SSID, password, ThingsBoard device access token.
+Don’t forget to replace placeholders with your real WiFi network SSID, password, SENTIENT device access token.
 {% endcapture %}
 
 {% include templates/info-banner.md content=replacePlaceholders %}
@@ -378,9 +378,9 @@ Necessary variables for connection:
 |-|------------------------------|-|
 | WIFI_SSID | **YOUR_WIFI_SSID**           | Your WiFi network name. | 
 | WIFI_PASSWORD | **YOUR_WIFI_PASSWORD**       | Your WiFi network password. |
-| TOKEN | **YOUR_DEVICE_ACCESS_TOKEN** | Access token from device. Obtaining process described in #connect-device-to-thingsboard | 
-| THINGSBOARD_SERVER | **{{hostName}}**             | Your ThingsBoard host or ip address. |
-| THINGSBOARD_PORT | **1883U**                    | ThingsBoard server MQTT port. Can be default for this guide. |
+| TOKEN | **YOUR_DEVICE_ACCESS_TOKEN** | Access token from device. Obtaining process described in #connect-device-to-sentient | 
+| SENTIENT_SERVER | **{{hostName}}**             | Your SENTIENT host or ip address. |
+| SENTIENT_PORT | **1883U**                    | SENTIENT server MQTT port. Can be default for this guide. |
 | MAX_MESSAGE_SIZE | **512U**                     | Maximal size of MQTT messages. Can be default for this guide. |
 | SERIAL_DEBUG_BAUD | **1883U**                    | Baud rate for serial port. Can be default for this guide. |  
 
@@ -392,8 +392,8 @@ constexpr char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";
 
 constexpr char TOKEN[] = "YOUR_ACCESS_TOKEN";
 
-constexpr char THINGSBOARD_SERVER[] = "{{hostName}}";
-constexpr uint16_t THINGSBOARD_PORT = 1883U;
+constexpr char SENTIENT_SERVER[] = "{{hostName}}";
+constexpr uint16_t SENTIENT_PORT = 1883U;
 
 constexpr uint32_t MAX_MESSAGE_SIZE = 512U;
 constexpr uint32_t SERIAL_DEBUG_BAUD = 115200U;

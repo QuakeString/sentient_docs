@@ -1,9 +1,9 @@
 * TOC
 {:toc}
 
-TBMQ supports **health checks** through the Spring Boot Actuator framework. 
-Health checks allow monitoring systems to assess the state of TBMQ and its dependencies. 
-TBMQ health checks are available through the `/actuator/health` endpoint on **8083** port, 
+ST-RMQTT supports **health checks** through the Spring Boot Actuator framework. 
+Health checks allow monitoring systems to assess the state of ST-RMQTT and its dependencies. 
+ST-RMQTT health checks are available through the `/actuator/health` endpoint on **8083** port, 
 which can be customized to include specific details about the connection health to critical services such as **PostgreSQL**, **Kafka**, and **Redis**.
 
 ## Health Endpoint Response Status Codes
@@ -23,7 +23,7 @@ management:
          enabled: "${HEALTH_DISKSPACE_ENABLED:false}"
    endpoint:
       health:
-         # Controls whether health endpoint shows full component details (e.g., Redis, DB, TBMQ).
+         # Controls whether health endpoint shows full component details (e.g., Redis, DB, ST-RMQTT).
          # Options:
          # - 'never': always hide details (default if security is enabled).
          # - 'when-authorized': show details only to authenticated users.
@@ -65,7 +65,7 @@ management:
 ### Example Health Check Endpoint Output
 
 The `/actuator/health` endpoint provides JSON data that reflects both the overall system status and the status of individual components, 
-including custom checks such as **TBMQ** and **Kafka**. 
+including custom checks such as **ST-RMQTT** and **Kafka**. 
 This detailed information is included when the `show-details` setting is not configured to `never`. 
 If `show-details` is set to `never`, the endpoint will only return the overall status without component details.
 
@@ -97,7 +97,7 @@ If `show-details` is set to `never`, the endpoint will only return the overall s
             "version":"7.0.15"
          }
       },
-      "tbmq":{
+      "st-rmqtt":{
          "status":"UP"
       }
    }
@@ -132,7 +132,7 @@ If `show-details` is set to `never`, the endpoint will only return the overall s
             "error":"org.springframework.dao.QueryTimeoutException: Redis command timed out"
          }
       },
-      "tbmq":{
+      "st-rmqtt":{
          "status":"UP"
       }
    }
@@ -141,11 +141,11 @@ If `show-details` is set to `never`, the endpoint will only return the overall s
 
 In the example above:
 
-* If the system is **UP**, the health check will return a status of `UP` for individual components (e.g., `db`, `redis`, `tbmq`, `kafka`). 
-This means the TBMQ is running smoothly and all dependencies are healthy.
+* If the system is **UP**, the health check will return a status of `UP` for individual components (e.g., `db`, `redis`, `st-rmqtt`, `kafka`). 
+This means the ST-RMQTT is running smoothly and all dependencies are healthy.
 * If any individual component fails (e.g., `redis`, `kafka`), the health check will return `DOWN` for that specific service 
 and provide an error message explaining why the service is unavailable (e.g., "Redis connection failed" or "Kafka broker not reachable").
-* If **any** of the services (e.g., `db`, `redis`, `tbmq`, `kafka`) is down, the **overall status** of the health check will be `DOWN`. 
+* If **any** of the services (e.g., `db`, `redis`, `st-rmqtt`, `kafka`) is down, the **overall status** of the health check will be `DOWN`. 
 This means that even if one of the components is unavailable, the entire system is considered unhealthy.
 
 ### Timeouts Configuration
@@ -172,7 +172,7 @@ spring.connectionTimeout: "${SPRING_DATASOURCE_CONNECTION_TIMEOUT_MS:30000}"
 
 ## Integration Executor Microservice
 
-The **TBMQ Integration Executor (IE)** also has a health check exposed through Spring Boot Actuator. 
+The **ST-RMQTT Integration Executor (IE)** also has a health check exposed through Spring Boot Actuator. 
 This health check monitors the health of the Integration Executor, ensuring it can connect to Kafka.
 
 * **Endpoint**: The health check is available at `/actuator/health`.
@@ -199,11 +199,11 @@ This health check monitors the health of the Integration Executor, ensuring it c
 
 ## Conclusion
 
-* **Health Checks**: TBMQ uses Spring Boot Actuator’s health check mechanism to monitor its own state and dependencies like **PostgreSQL**, **Kafka**, and **Redis**.
+* **Health Checks**: ST-RMQTT uses Spring Boot Actuator’s health check mechanism to monitor its own state and dependencies like **PostgreSQL**, **Kafka**, and **Redis**.
 * **Configurable Health Details**: You can customize the level of detail shown in health check responses, whether always, based on authorization, or hidden.
 
 By configuring health checks and exposing detailed health information, 
-you can ensure that TBMQ's operational state is properly monitored and alerting systems can be set up based on this data.
+you can ensure that ST-RMQTT's operational state is properly monitored and alerting systems can be set up based on this data.
 
 **Docker Compose Configuration Example**:
 

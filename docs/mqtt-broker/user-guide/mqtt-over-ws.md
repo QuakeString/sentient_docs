@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
 title: MQTT over WebSocket
-description: TBMQ MQTT Over WebSocket guide
+description: ST-RMQTT MQTT Over WebSocket guide
 
 ---
 

@@ -9,7 +9,7 @@
 
 ## Overview
 
-**Integrations** in TBMQ are the data bridges that allow you to forward MQTT messages from connected clients to external systems such as HTTP endpoints, Kafka brokers, or other MQTT brokers. 
+**Integrations** in ST-RMQTT are the data bridges that allow you to forward MQTT messages from connected clients to external systems such as HTTP endpoints, Kafka brokers, or other MQTT brokers. 
 This enables seamless data flow between IoT devices and the broader data infrastructure, allowing the MQTT broker to act as a central integration point in your architecture.
 
 ### Why Use Integrations?
@@ -23,53 +23,53 @@ Integrations make MQTT data useful outside the broker. They help you:
 
 ### High-Level Design
 
-At a high level, the integration flow in TBMQ works like this:
+At a high level, the integration flow in ST-RMQTT works like this:
 
-1. **MQTT clients** connect to the **TBMQ** broker using **MQTT** or **MQTTS** and publish messages.
-2. When a message matches an integration [topic filter](#integration-entity) (MQTT subscription), **TBMQ** sends the message to the [TBMQ Integration Executor](#new-microservice) using **Kafka**.
+1. **MQTT clients** connect to the **ST-RMQTT** broker using **MQTT** or **MQTTS** and publish messages.
+2. When a message matches an integration [topic filter](#integration-entity) (MQTT subscription), **ST-RMQTT** sends the message to the [ST-RMQTT Integration Executor](#new-microservice) using **Kafka**.
 3. The **Integration Executor** receives the message, processes it, and forwards it to the correct external system, such as:
 - An **HTTP endpoint** over **HTTP or HTTPS**.
 - Another **MQTT broker** over **MQTT or MQTTS**.
 - A **Kafka broker** using the **Kafka binary protocol over TCP or TLS**.
 
-![image](/images/mqtt-broker/integrations/tbmq-ie-main.png)
+![image](/images/mqtt-broker/integrations/st-rmqtt-ie-main.png)
 
 ### New microservice
 
-TBMQ uses a dedicated microservice called **TBMQ Integration Executor** (shortened as "TBMQ IE") to manage and run integrations.
+ST-RMQTT uses a dedicated microservice called **ST-RMQTT Integration Executor** (shortened as "ST-RMQTT IE") to manage and run integrations.
 
-With this feature, TBMQ supports two service types defined by the `TB_SERVICE_TYPE` environment variable:
+With this feature, ST-RMQTT supports two service types defined by the `TB_SERVICE_TYPE` environment variable:
 
-* **tbmq** – the core MQTT broker service;
-* **tbmq-integration-executor** – the integration execution service (tbmq-ie).
+* **st-rmqtt** – the core MQTT broker service;
+* **st-rmqtt-integration-executor** – the integration execution service (st-rmqtt-ie).
 
-The Integration Executor service listens for integration events and messages from TBMQ (via Kafka), processes them based on the integration configuration, 
-and forwards the data to the external system. You can deploy multiple Integration Executor microservices within your TBMQ cluster to ensure scalability and fault isolation.
+The Integration Executor service listens for integration events and messages from ST-RMQTT (via Kafka), processes them based on the integration configuration, 
+and forwards the data to the external system. You can deploy multiple Integration Executor microservices within your ST-RMQTT cluster to ensure scalability and fault isolation.
 
 > This architecture ensures clear separation of concerns, high availability, and improves scalability and system performance.
 
 ### Deployment Options
 
-In TBMQ, integrations can only be deployed using Integration Executor microservice.
+In ST-RMQTT, integrations can only be deployed using Integration Executor microservice.
 
-> Why Not Embedded in the TBMQ?
+> Why Not Embedded in the ST-RMQTT?
 
-We **intentionally do not embed integration logic** inside the TBMQ broker. This decision provides several key benefits:
+We **intentionally do not embed integration logic** inside the ST-RMQTT broker. This decision provides several key benefits:
 
 - **Isolation**: Failures or slow responses from external systems (e.g., HTTP endpoints) do not affect MQTT message processing in the broker.
-- **Scalability**: `tbmq-ie` instances can be scaled independently based on load, without impacting the performance of the broker.
+- **Scalability**: `st-rmqtt-ie` instances can be scaled independently based on load, without impacting the performance of the broker.
 - **Resilience**: Each Integration Executor can restart or fail independently without interrupting the core MQTT services.
 - **Extensibility**: New integration types or improvements can be added to the Integration Executor without changing the broker itself.
 - **Clear separation of responsibilities**: The broker handles MQTT protocol logic, while the Integration Executor focuses on data delivery to external systems.
 
 ## Architecture
 
-In this section, you'll learn how TBMQ and the Integration Executor communicate internally, how data flows between components, and how the system remains scalable and fault-tolerant under load.
+In this section, you'll learn how ST-RMQTT and the Integration Executor communicate internally, how data flows between components, and how the system remains scalable and fault-tolerant under load.
 
 ### Integration Entity
 
-Integration objects have corresponding entities that are stored in the TBMQ’s PostgreSQL database. 
-They are mainly used for the TBMQ Web UI - to view and manage the integrations. Each integration entity includes basic fields like:
+Integration objects have corresponding entities that are stored in the ST-RMQTT’s PostgreSQL database. 
+They are mainly used for the ST-RMQTT Web UI - to view and manage the integrations. Each integration entity includes basic fields like:
 
 - **Type** – HTTP, Kafka, or MQTT.
 - **Name** – a human-readable name.
@@ -94,7 +94,7 @@ An example of MQTT integration (partial configuration):
   "enabled":true,
   "configuration":{
     "topicFilters":[
-      "tbmq/#"
+      "st-rmqtt/#"
     ],
     "clientConfiguration":{
       "host":"10.7.3.148",
@@ -107,75 +107,75 @@ An example of MQTT integration (partial configuration):
 }
 ```
 
-### TBMQ (MQTT Broker) Component
+### ST-RMQTT (MQTT Broker) Component
 
-The core TBMQ service (`TB_SERVICE_TYPE=tbmq`) is responsible for handling MQTT protocol logic, including client connections, subscriptions, and message routing. 
+The core ST-RMQTT service (`TB_SERVICE_TYPE=st-rmqtt`) is responsible for handling MQTT protocol logic, including client connections, subscriptions, and message routing. 
 It also manages integration entities by processing create, update, and delete requests and storing them in the database. 
-Additionally, it sends integration validation requests (for validating configuration or connection checks) to TBMQ IE and publishes integration configuration events to TBMQ IE. 
-Finally, it matches incoming MQTT messages against integration subscriptions and forwards them to TBMQ IE when applicable.
+Additionally, it sends integration validation requests (for validating configuration or connection checks) to ST-RMQTT IE and publishes integration configuration events to ST-RMQTT IE. 
+Finally, it matches incoming MQTT messages against integration subscriptions and forwards them to ST-RMQTT IE when applicable.
 
 The broker is stateless with respect to Integration Executor and can be scaled horizontally to handle increasing MQTT traffic.
 
-### TBMQ Integration Executor Component
+### ST-RMQTT Integration Executor Component
 
-The Integration Executor (`TB_SERVICE_TYPE=tbmq-integration-executor`) is a standalone microservice responsible for receiving and processing validation requests from TBMQ, then sending back responses. 
+The Integration Executor (`TB_SERVICE_TYPE=st-rmqtt-integration-executor`) is a standalone microservice responsible for receiving and processing validation requests from ST-RMQTT, then sending back responses. 
 It also manages the full integration lifecycle based on configuration events (create, update, or delete). 
 Additionally, it executes integration logic, including retry mechanisms, timeout handling, and backpressure control. 
 It delivers MQTT messages to the configured external system, such as HTTP, Kafka, or MQTT. 
-It also sends lifecycle, error, and statistics integration events back to TBMQ.
+It also sends lifecycle, error, and statistics integration events back to ST-RMQTT.
 
 This component operates independently of the broker and can be scaled separately. 
 It ensures that delays or failures in external systems do not affect the broker’s ability to process MQTT traffic.
 
 ### Kafka (Internal Communication Layer)
 
-Kafka acts as the **bridge** between the TBMQ brokers and Integration Executors.
+Kafka acts as the **bridge** between the ST-RMQTT brokers and Integration Executors.
 It enables reliable delivery of integration-related events between services. 
 It also provides buffering of messages in case of component downtime, processing delays, or spikes in load. 
 Additionally, it supports scalable and parallel processing by allowing multiple broker and executor instances to work concurrently.
 
-![image](/images/mqtt-broker/integrations/tbmq-ie-communication.png)
+![image](/images/mqtt-broker/integrations/st-rmqtt-ie-communication.png)
 
-TBMQ and its Integration Executor microservices communicate asynchronously over Kafka using multiple **dedicated** topics.
+ST-RMQTT and its Integration Executor microservices communicate asynchronously over Kafka using multiple **dedicated** topics.
 Each topic serves a specific purpose and allows for decoupled, reliable, and scalable data flow between the components.
 
-* **tbmq.ie.downlink.$integrationType** — [Compact](https://docs.confluent.io/kafka/design/log_compaction.html) topic used to send integration configurations and validation requests from TBMQ to IE ($integrationType can be 'http', 'mqtt', or 'kafka').
-* **tbmq.ie.uplink** — Topic for sending lifecycle events, statistics, and errors from IE back to TBMQ.
-* **tbmq.ie.uplink.notifications.$serviceId** — Topic used for sending validation responses and other one-off replies to the correct TBMQ node (identified by $serviceId).
-* **tbmq.msg.ie.$integrationId** — Per-integration message processing topic used to forward MQTT messages from TBMQ to the IE ($integrationId is the UUID of the integration entity).
+* **st-rmqtt.ie.downlink.$integrationType** — [Compact](https://docs.confluent.io/kafka/design/log_compaction.html) topic used to send integration configurations and validation requests from ST-RMQTT to IE ($integrationType can be 'http', 'mqtt', or 'kafka').
+* **st-rmqtt.ie.uplink** — Topic for sending lifecycle events, statistics, and errors from IE back to ST-RMQTT.
+* **st-rmqtt.ie.uplink.notifications.$serviceId** — Topic used for sending validation responses and other one-off replies to the correct ST-RMQTT node (identified by $serviceId).
+* **st-rmqtt.msg.ie.$integrationId** — Per-integration message processing topic used to forward MQTT messages from ST-RMQTT to the IE ($integrationId is the UUID of the integration entity).
 
 ### Downlink topic
 
-TBMQ uses **Kafka compact topics** for downlink communication. Each integration type has its own dedicated topic:
+ST-RMQTT uses **Kafka compact topics** for downlink communication. Each integration type has its own dedicated topic:
 
-- `tbmq.ie.downlink.http`
-- `tbmq.ie.downlink.mqtt`
-- `tbmq.ie.downlink.kafka`
+- `st-rmqtt.ie.downlink.http`
+- `st-rmqtt.ie.downlink.mqtt`
+- `st-rmqtt.ie.downlink.kafka`
 
 These topics are used to deliver integration configuration data when an integration is **created, updated, or deleted**. 
 They are also used to trigger **connection and validation requests** to test the connectivity to the external system and validate the configuration before activation.
 
 #### How It Works
 
-- Integration lifecycle events (create, update, delete) are published to the relevant **downlink compact topic**, based on integration type (e.g., `tbmq.ie.downlink.http` for HTTP integration).
+- Integration lifecycle events (create, update, delete) are published to the relevant **downlink compact topic**, based on integration type (e.g., `st-rmqtt.ie.downlink.http` for HTTP integration).
 - Kafka’s **log compaction** mechanism keeps only the most recent configuration per integration ID, discarding outdated messages.
-- On startup or partitions reassignment, the `tbmq-ie` instance enters **restoration mode**:
+- On startup or partitions reassignment, the `st-rmqtt-ie` instance enters **restoration mode**:
   1. **Seeks to the beginning** of the assigned topic partitions.
   2. **Restores the latest state** of all relevant integrations from the compacted records.
   3. **Skips all validation requests** since they were already processed in the past.
   4. Once the **end of the partition is reached** the restoration is complete, it transitions to **real-time mode** and begins normal operation.
 - Integrations are only initialized after their latest configurations are fully restored from Kafka.
 - In real-time mode, new integration events are handled immediately. Validation requests are processed on the fly.
-- On shutdown or partitions revocation, the `tbmq-ie` instance stops the affected integrations and cleans up underlying resources such as protocol clients and connections.
+- On shutdown or partitions revocation, the `st-rmqtt-ie` instance stops the affected integrations and cleans up underlying resources such as protocol clients and connections.
 
 #### Benefits of This Approach
 
-**Resilience** ensures that TBMQ IE can fully recover after restarts without requiring external configuration stores. 
+**Resilience** ensures that ST-RMQTT IE can fully recover after restarts without requiring external configuration stores. 
 **Consistency** guarantees that it always works with the latest valid configuration, avoiding stale or conflicting states. 
 **Scalability** is achieved through a stateless service design, with all configuration state persisted in Kafka. 
 **Reduced Load** means that only changed configurations are written, eliminating the need to resend the full configuration set repeatedly.
 
-This pattern provides a **durable, distributed configuration source** backed by Kafka, enabling reliable and scalable integration execution across multiple TBMQ IE instances.
+This pattern provides a **durable, distributed configuration source** backed by Kafka, enabling reliable and scalable integration execution across multiple ST-RMQTT IE instances.
 
 #### Why Separate Topics?
 
@@ -191,29 +191,29 @@ This design empowers admins to deploy **specialized executor instances** — for
 
 ### Uplink Topic
 
-This topic is used by Integration Executors to send important events back to the TBMQ broker. This includes:
+This topic is used by Integration Executors to send important events back to the ST-RMQTT broker. This includes:
 
 - **Lifecycle events** (e.g., integration started or stopped).
 - **Errors** (to report failed message deliveries to external systems).
 - **Statistics** (such as success/failure processing counts).
 
-All messages received on this topic are stored in the TBMQ database as Event entities and used for internal tracking, diagnostics, and administrative visibility.
+All messages received on this topic are stored in the ST-RMQTT database as Event entities and used for internal tracking, diagnostics, and administrative visibility.
 
 ### Uplink Notifications Topic
 
-These node-specific topics are used by Integration Executors to **send direct replies to specific TBMQ nodes**, 
+These node-specific topics are used by Integration Executors to **send direct replies to specific ST-RMQTT nodes**, 
 typically in response to one-time operations. 
 The topic is dynamically constructed using the target node's service ID.
-For example, they are used to reply to **“Check Connection”** requests and to send **validation results or error details** back to the initiating TBMQ node.
+For example, they are used to reply to **“Check Connection”** requests and to send **validation results or error details** back to the initiating ST-RMQTT node.
 
 This mechanism ensures that responses are routed to the correct instance in clustered environments and maintains accurate request-response correlation.
 
 ### Integration Lifecycle
 
-The lifecycle of an integration in TBMQ includes its **creation, update, deletion, execution, monitoring**, and **error handling**.  
-Integrations can be managed either through the **TBMQ Web UI** or via the **REST API**.
+The lifecycle of an integration in ST-RMQTT includes its **creation, update, deletion, execution, monitoring**, and **error handling**.  
+Integrations can be managed either through the **ST-RMQTT Web UI** or via the **REST API**.
 
-When a create or update request is received, TBMQ sends a **validation request** to the Integration Executor. 
+When a create or update request is received, ST-RMQTT sends a **validation request** to the Integration Executor. 
 The IE then validates the configuration based on the integration type and responds with the result.
 
 This validation process ensures the configuration of the integration is correct before the integration is saved and activated.
@@ -223,21 +223,21 @@ You can also manually test the integration connectivity with the external system
 
 **Scenario 1: Integration Executor not running — Timeout**
 
-![image](/images/mqtt-broker/integrations/tbmq-ie-admin-timeout.png)
+![image](/images/mqtt-broker/integrations/st-rmqtt-ie-admin-timeout.png)
 
 The Integration Executor is not running, so the broker waits for a response until a timeout occurs. Result: **Timeout exception**.
 The integration will not be saved.
 
 **Scenario 2: Integration Executor running — Configuration Error**
 
-![image](/images/mqtt-broker/integrations/tbmq-ie-admin-error.png)
+![image](/images/mqtt-broker/integrations/st-rmqtt-ie-admin-error.png)
 
 The Integration Executor is running, but the integration configuration is invalid. Result: **Failure**.
 The integration will not be saved.
 
 **Scenario 3: Integration Executor running — Success**
 
-![image](/images/mqtt-broker/integrations/tbmq-ie-admin-ok.png)
+![image](/images/mqtt-broker/integrations/st-rmqtt-ie-admin-ok.png)
 
 The Integration Executor is running and the configuration is valid. Result: **Success**.
 Once validation succeeds, the integration entity is saved in the database, the integration subscriptions are persisted in the [Subscription Trie](/docs/{{docsPrefix}}mqtt-broker/architecture/#subscriptions-trie),
@@ -245,23 +245,23 @@ and integration configuration event is sent to the Integration Executor for proc
 
 ### Integration Message Processing Topic
 
-![image](/images/mqtt-broker/integrations/tbmq-ie-msg-processing.png)
+![image](/images/mqtt-broker/integrations/st-rmqtt-ie-msg-processing.png)
 
-TBMQ uses a **dedicated Kafka topic for each integration** to deliver MQTT messages to the Integration Executor (`tbmq-ie`).
+ST-RMQTT uses a **dedicated Kafka topic for each integration** to deliver MQTT messages to the Integration Executor (`st-rmqtt-ie`).
 
-When an MQTT client publishes a message, the TBMQ broker first checks if any integration has a topic filter in Subscription Trie matching the message topic. 
-If a match is found, TBMQ creates an integration event by serializing the message and publishes it to that integration’s own Kafka topic 
-(`tbmq.msg.ie.$integrationId`). The Integration Executor, that is managing that integration and subscribed to that Kafka topic, 
+When an MQTT client publishes a message, the ST-RMQTT broker first checks if any integration has a topic filter in Subscription Trie matching the message topic. 
+If a match is found, ST-RMQTT creates an integration event by serializing the message and publishes it to that integration’s own Kafka topic 
+(`st-rmqtt.msg.ie.$integrationId`). The Integration Executor, that is managing that integration and subscribed to that Kafka topic, 
 consumes the message, processes it, and forwards it to the configured external system. 
-The executor may also log the result or report back to TBMQ for monitoring purposes.
+The executor may also log the result or report back to ST-RMQTT for monitoring purposes.
 
-This decoupled, event-driven flow allows TBMQ to offload integration message handling entirely to the executor service. 
+This decoupled, event-driven flow allows ST-RMQTT to offload integration message handling entirely to the executor service. 
 As a result, the broker never waits for external responses, preserving low-latency MQTT performance even when external systems are slow or unavailable.
 
 Each integration has its own Kafka topic, which enables full isolation of message flow. 
 Messages for different integrations are processed independently, in separate threads (Kafka consumers), allowing parallel execution and fine-grained error control.
 
-Even when an integration is disabled, TBMQ continues publishing matching messages to its Kafka topic. 
+Even when an integration is disabled, ST-RMQTT continues publishing matching messages to its Kafka topic. 
 This ensures no message loss, as the executor will resume processing once the integration is re-enabled. 
 Kafka’s retention policies and buffering capabilities provide additional resilience in high-load or temporary-failure scenarios.
 
@@ -274,13 +274,13 @@ Several key benefits:
 
 #### What Happens If an Integration Stays Disabled for a Long Time?
 
-To avoid unused topics consuming storage indefinitely, TBMQ includes an automatic **cleanup mechanism**.
+To avoid unused topics consuming storage indefinitely, ST-RMQTT includes an automatic **cleanup mechanism**.
 
 If an integration remains **disabled** for an extended period, its dedicated Kafka message topic will be **deleted automatically**, 
 along with any undelivered messages it contains.
 
 However, there’s no need to take manual action — when the integration is **re-enabled**, 
-TBMQ will **recreate the topic automatically** and resume normal message processing.
+ST-RMQTT will **recreate the topic automatically** and resume normal message processing.
 
 You can control the cleanup behavior using the following environment variables.
 By default, the cleanup task runs every 3 hours and removes topics associated with integrations that have been inactive for more than 1 week.
@@ -301,18 +301,18 @@ Additionally, Kafka topic retention settings can be customized to fine-tune stor
 ### Message Delivery Error Handling & Retry Mechanism
 
 When an integration message fails to be processed (e.g., due to a timeout, unreachable external system, or malformed request), 
-the Integration Executor handles the error based on the configured **acknowledgment and retry strategy** for the `tbmq.msg.ie.$integrationId` topic.
+the Integration Executor handles the error based on the configured **acknowledgment and retry strategy** for the `st-rmqtt.msg.ie.$integrationId` topic.
 
 These behaviors are controlled via the following configuration block:
 
 ```yaml
 integration-msg:
-  # Interval in milliseconds to poll messages from 'tbmq.msg.ie' topics
+  # Interval in milliseconds to poll messages from 'st-rmqtt.msg.ie' topics
   poll-interval: "${TB_IE_MSG_POLL_INTERVAL:1000}"
   # Timeout in milliseconds for processing the pack of messages
   pack-processing-timeout: "${TB_IE_MSG_PACK_PROCESSING_TIMEOUT:30000}"
   ack-strategy:
-    # Processing strategy for 'tbmq.msg.ie' topics. Can be: SKIP_ALL, RETRY_ALL
+    # Processing strategy for 'st-rmqtt.msg.ie' topics. Can be: SKIP_ALL, RETRY_ALL
     type: "${TB_IE_MSG_ACK_STRATEGY_TYPE:SKIP_ALL}"
     # Number of retries, 0 is unlimited. Use for RETRY_ALL processing strategy
     retries: "${TB_IE_MSG_ACK_STRATEGY_RETRIES:5}"
@@ -340,7 +340,7 @@ This approach provides a flexible balance between performance and delivery guara
 
 ### Hot Reinitialization of Failed Integrations
 
-In addition to message-level retries, TBMQ supports **automatic reinitialization** of failed integrations through a periodic background check.
+In addition to message-level retries, ST-RMQTT supports **automatic reinitialization** of failed integrations through a periodic background check.
 
 ```yaml
 reinit:
@@ -358,7 +358,7 @@ This feature ensures long-running integrations remain self-healing and robust in
 
 ### Integration Metrics Overview
 
-The **Integration Executor** (`tbmq-ie`) collects and reports detailed metrics that give visibility into the health, performance, and behavior of all configured integrations.  
+The **Integration Executor** (`st-rmqtt-ie`) collects and reports detailed metrics that give visibility into the health, performance, and behavior of all configured integrations.  
 These metrics are logged periodically and can be exported to external monitoring systems like **Prometheus** or **Grafana** for alerting, dashboards, and historical analysis.
 
 Below is a breakdown of the main metric categories recorded in the logs:
@@ -405,7 +405,7 @@ These values are updated whenever any integration changes state. They help admin
 
 **3. Integration Uplink Queue Stats**
 
-These metrics summarize the state of the **uplink Kafka topic**, which is used by the executor to send error, statistics and lifecycle events back to TBMQ.
+These metrics summarize the state of the **uplink Kafka topic**, which is used by the executor to send error, statistics and lifecycle events back to ST-RMQTT.
 
 Example:
 ```
@@ -455,16 +455,16 @@ These metrics are essential for monitoring **message-level reliability**, troubl
 
 ## Scalability and Fault Tolerance
 
-- **Executor Scaling**: You can run multiple instances of the `tbmq-ie` service in parallel. Kafka handles partitioning and distributes integration messages across executors automatically, enabling horizontal scaling.
-- **Fault Isolation**: Issues in external systems (e.g., a slow or unreachable HTTP endpoint) affect only the Integration Executor. The TBMQ broker continues operating normally without delay or message loss.
+- **Executor Scaling**: You can run multiple instances of the `st-rmqtt-ie` service in parallel. Kafka handles partitioning and distributes integration messages across executors automatically, enabling horizontal scaling.
+- **Fault Isolation**: Issues in external systems (e.g., a slow or unreachable HTTP endpoint) affect only the Integration Executor. The ST-RMQTT broker continues operating normally without delay or message loss.
 - **Backpressure Management**: Kafka acts as a message buffer. If executors become slow or temporarily overloaded, Kafka retains messages based on its configured retention policies until the executors are ready to process them.
 - **Resilience**: Executor instances can restart or fail independently. Integrations are restored automatically using compacted configuration topics, without manual intervention.
 
-This architecture supports modern cloud-native deployment models and ensures that TBMQ remains robust and responsive, even under heavy load or partial system failures.
+This architecture supports modern cloud-native deployment models and ensures that ST-RMQTT remains robust and responsive, even under heavy load or partial system failures.
 
 ## Supported Integration Types
 
-TBMQ currently supports three outbound integration types, each designed for specific use cases:
+ST-RMQTT currently supports three outbound integration types, each designed for specific use cases:
 
 - [**HTTP Integration**](/docs/{{docsPrefix}}mqtt-broker/integrations/http/) – Send MQTT messages to REST APIs or Webhooks via HTTP(S).
 - [**MQTT Integration**](/docs/{{docsPrefix}}mqtt-broker/integrations/mqtt/) – Forward messages to external MQTT brokers for cross-broker communication via MQTT(S).
@@ -472,10 +472,10 @@ TBMQ currently supports three outbound integration types, each designed for spec
 
 ## Roadmap
 
-We’re actively working on expanding integration capabilities in TBMQ. Upcoming plans include:
+We’re actively working on expanding integration capabilities in ST-RMQTT. Upcoming plans include:
 
 - **New outbound integration types**, such as Redis, PostgreSQL, RabbitMQ, and more.
-- **Inbound (source) integrations**, which will allow TBMQ to receive messages from external systems — for example, Kafka integrations (acting as consumers) or MQTT integrations (acting as subscribers).
+- **Inbound (source) integrations**, which will allow ST-RMQTT to receive messages from external systems — for example, Kafka integrations (acting as consumers) or MQTT integrations (acting as subscribers).
 - **Message transformation and filtering**, enabling dynamic processing before forwarding data to external targets.
 
 These enhancements will enable even greater flexibility in building event-driven and bi-directional IoT architectures.

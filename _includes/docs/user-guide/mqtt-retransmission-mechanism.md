@@ -1,4 +1,4 @@
-ThingsBoard's internal MQTT client includes a retransmission mechanism designed to improve reliability for message types that require acknowledgment.  
+SENTIENT's internal MQTT client includes a retransmission mechanism designed to improve reliability for message types that require acknowledgment.  
 This mechanism applies specifically to the following MQTT message types:
 - **PUBLISH** (only for QoS 1 or 2)
 - **SUBSCRIBE**
@@ -13,7 +13,7 @@ For example, if the retransmission configuration is set to **three attempts**, w
 If no acknowledgment is received after the final attempt, the system waits through the next scheduled delay—based on exponential backoff with jitter—before finally considering the message **undeliverable and dropping it**.
 
 {% if include.show-yml-config == true %}
-You can configure retransmission parameters globally in the `thingsboard.yml` file. These settings affect **all MQTT clients** on the platform:
+You can configure retransmission parameters globally in the `sentient.yml` file. These settings affect **all MQTT clients** on the platform:
 
 ```yaml
 mqtt:

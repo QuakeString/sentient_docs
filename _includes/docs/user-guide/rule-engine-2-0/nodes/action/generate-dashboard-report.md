@@ -12,7 +12,7 @@ The typical workflow for generating dashboard reports follows these steps:
 2. The node requests the reports server (either the system default or a custom endpoint) to generate the dashboard report. The reports server opens the dashboard in a headless
    browser and captures a screenshot.
 
-3. The generated report is saved as a blob entity in ThingsBoard, and its ID is appended to the `attachments` metadata field of the message.
+3. The generated report is saved as a blob entity in SENTIENT, and its ID is appended to the `attachments` metadata field of the message.
 
 4. If the report is successfully generated and saved, the message is routed via the `Success` connection. If an error occurs during generation, it's routed via the `Failure`
    connection.
@@ -27,7 +27,7 @@ the `REPORTS_SERVER_ENDPOINT_URL` environment variable (default: `http://localho
 
 The configuration specifies how the report should be generated and which reports server to use.
 
-- **Use system reports server** - When enabled, uses the default reports server configured in ThingsBoard. When disabled, requires a custom reports server endpoint URL.
+- **Use system reports server** - When enabled, uses the default reports server configured in SENTIENT. When disabled, requires a custom reports server endpoint URL.
 - **Reports server endpoint URL** - The URL of the custom reports server to use (only applicable when **Use system reports server** is disabled).
 - **Use report config from message** - When enabled, reads the report configuration from the incoming message data `reportConfig` field. When disabled, uses the report
   configuration specified in this node.
@@ -38,7 +38,7 @@ The configuration specifies how the report should be generated and which reports
 
 When providing report configuration (either in the node or message), the following fields are used:
 
-- `baseUrl` (required) - Base URL of ThingsBoard UI that should be accessible by the reports server (e.g., "https://thingsboard.cloud")
+- `baseUrl` (required) - Base URL of SENTIENT UI that should be accessible by the reports server (e.g., "https://sentient.cloud")
 - `dashboardId` (required) - UUID of the dashboard to capture
 - `state` - Target dashboard state to open during report generation
 - `timezone` (required) - Timezone in which the dashboard will be presented (e.g., "America/New_York")
@@ -81,7 +81,7 @@ When providing report configuration (either in the node or message), the followi
         "baseUrl": {
           "type": "string",
           "format": "uri",
-          "description": "Base URL of ThingsBoard UI accessible by the reports server."
+          "description": "Base URL of SENTIENT UI accessible by the reports server."
         },
         "dashboardId": {
           "type": "string",

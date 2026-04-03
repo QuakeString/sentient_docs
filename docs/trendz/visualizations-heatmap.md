@@ -1,9 +1,9 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Heat Maps
-description: Trendz Heat Maps 
+description: SENTIENT ANALYTICS Heat Maps 
 ---
 
 * TOC
@@ -34,7 +34,7 @@ There are few predefined templates available for heat map in **By** field near t
 
 In this example, we can see the pattern of weekly energy consumption. And now we know, on what day and time most energy is consumed.
 
-![image](/images/trendz/heat-week-pattern.png) 
+![image](/images/sentient-analytics/heat-week-pattern.png) 
 
 ## Custom Axis 
 
@@ -47,4 +47,4 @@ Here is example that shows
  
 Now it is easy to identify outliers and their dynamic. 
 
-![image](/images/trendz/complex-heatmap.png) 
+![image](/images/sentient-analytics/complex-heatmap.png) 

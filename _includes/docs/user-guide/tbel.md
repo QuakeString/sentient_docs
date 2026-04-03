@@ -2,17 +2,17 @@
 {:toc}
 
 
-ThingsBoard supports user-defined functions (UDF) for data processing in the [Rule Engine]() and [Data Converters](). 
+SENTIENT supports user-defined functions (UDF) for data processing in the [Rule Engine]() and [Data Converters](). 
 The original programming language for the UDF is JavaScript. It is popular, well-known, and simple. We plan to support JavaScript forever.
 Nevertheless, we have decided to provide an alternative to JavaScript. You may find our motivation below.
 
 ## Motivation
 
-ThingsBoard is written in Java and currently uses Java 17. There are two ways to execute the JS function in ThingsBoard:  
+SENTIENT is written in Java and currently uses Java 17. There are two ways to execute the JS function in SENTIENT:  
 
-A) use remote JS Executor microservice written in Node.js. It is the default way for ThingsBoard to run in a cluster/microservices mode;
+A) use remote JS Executor microservice written in Node.js. It is the default way for SENTIENT to run in a cluster/microservices mode;
 
-B) use local JS Executor powered by Nashorn JS engine that runs inside the JVM. It is the default way for ThingsBoard while deployed in monolithic mode.
+B) use local JS Executor powered by Nashorn JS engine that runs inside the JVM. It is the default way for SENTIENT while deployed in monolithic mode.
 
 The Nashorn JS engine is now deprecated and is removed from Java 16. It is also relatively slow. Some users already called Nashorn to be the platform's kryptonite.
 That is why it was absolutely clear that we need a replacement to Nashorn. 
@@ -21,8 +21,8 @@ The most important reason is security and the ability to control every aspect of
 Besides, most UDFs are relatively simple functions that transform or filter data, and we want to find a more effective way to execute them.   
 
 Our search for existing Script/Expression Language (EL) implementations led us to the [MVEL](https://github.com/mvel/mvel).
-The ThingsBoard Expression Language (TBEL) is basically a [fork](https://github.com/thingsboard/tbel) of MVEL with some important security constraints, 
-built-in memory management, and frequently used helper functions that are specific to ThingsBoard.
+The SENTIENT Expression Language (TBEL) is basically a [fork](https://github.com/sentient/tbel) of MVEL with some important security constraints, 
+built-in memory management, and frequently used helper functions that are specific to SENTIENT.
  
 ### TBEL vs Nashorn
 
@@ -61,7 +61,7 @@ The TBEL expression can be as simple as a single identifier, or as complicated a
 
 ### Syntax Constraints for Loops and Conditions
 
-In TBEL (ThingsBoard Expression Language), certain syntax restrictions are enforced to ensure compatibility and reliability within the scripting environment. Use <code style="color: sienna;">foreach</code> instead of traditional <code style="color: sienna;">for</code> loops, and always wrap <code style="color: sienna;">ternary (? :) expressions</code> in parentheses when used without an explicit <code style="color: sienna;">if</code> statement.
+In TBEL (SENTIENT Expression Language), certain syntax restrictions are enforced to ensure compatibility and reliability within the scripting environment. Use <code style="color: sienna;">foreach</code> instead of traditional <code style="color: sienna;">for</code> loops, and always wrap <code style="color: sienna;">ternary (? :) expressions</code> in parentheses when used without an explicit <code style="color: sienna;">if</code> statement.
 
 ✅ Allowed:
 
@@ -110,7 +110,7 @@ In this expression, we simply have a single identifier (msg.temperature), which 
 in that the only purpose of the expression is to extract a property out of a variable or context object.
 
 TBEL can even be used for evaluating a boolean expression. 
-Assuming you are using TBEL in the Rule Engine to define a simple script [filter node](https://thingsboard.io/docs/user-guide/rule-engine-2-0/nodes/filter/script/):
+Assuming you are using TBEL in the Rule Engine to define a simple script [filter node](https://docs.sentient.invenia.in/docs/user-guide/rule-engine-2-0/nodes/filter/script/):
 
 ```java
 return msg.temperature > 10;
@@ -2225,7 +2225,7 @@ return parseDouble("4.2"); // Returns 4.2d
 
 ### Bitwise Operations
 
-Bitwise operations in ThingsBoard allow manipulation of individual bits within integer, long, and boolean values. These operations support mixed-type operands (Integer, Long, Boolean) without implicit type conversions, and the result type depends on the operation's outcome: either Integer or Long.
+Bitwise operations in SENTIENT allow manipulation of individual bits within integer, long, and boolean values. These operations support mixed-type operands (Integer, Long, Boolean) without implicit type conversions, and the result type depends on the operation's outcome: either Integer or Long.
 
 **Supported operators:**
 

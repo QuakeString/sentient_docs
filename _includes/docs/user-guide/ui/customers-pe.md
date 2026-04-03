@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-A **Customer** in ThingsBoard represents a distinct business entity — an individual or an organization — that purchases or uses a tenant&#39;s devices and/or assets. A customer may also represent a department or subdivision within the tenant&#39;s organization.
+A **Customer** in SENTIENT represents a distinct business entity — an individual or an organization — that purchases or uses a tenant&#39;s devices and/or assets. A customer may also represent a department or subdivision within the tenant&#39;s organization.
 
 Customers can scale from small units to large ecosystems with many users, sub‑customers, and large numbers of devices and assets.
 
@@ -133,5 +133,5 @@ Allows exporting and restoring customer-related entities using the Git-based [ve
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

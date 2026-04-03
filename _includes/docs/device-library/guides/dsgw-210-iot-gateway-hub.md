@@ -1,7 +1,7 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://www.dusuniot.com/product/dsgw-210-rk3328-iot-gateway-hub-controller-bridge-hardware/" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign officialManualLink = "https://manuals.plus/dusun/dsgw-210-home-assistant-gateway-manual/" %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
@@ -18,7 +18,7 @@
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 
 ## Product Summary
@@ -45,16 +45,16 @@ To continue with this guide we will need the following:
 
 <img src="/images/samples/dusun/1.png" alt="Block-diagram for Cortex">
 
-## Integration with ThingsBoard
+## Integration with SENTIENT
 
-### ThingsBoard configuration
+### SENTIENT configuration
 
-The configuration steps in ThingsBoard are shown below, we will demonstrate on the {{hostName}} server.
-You can use [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"} or [install](https://thingsboard.io/docs/user-guide/install/pe/installation-options/){:target="_blank"} your own platform instance.
+The configuration steps in SENTIENT are shown below, we will demonstrate on the {{hostName}} server.
+You can use [SENTIENT Cloud](https://{{hostName}}/signup){:target="_blank"} or [install](https://docs.sentient.invenia.in/docs/user-guide/install/pe/installation-options/){:target="_blank"} your own platform instance.
 
-* [Step 1.1] Register and log in [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"};
+* [Step 1.1] Register and log in [SENTIENT Cloud](https://{{hostName}}/signup){:target="_blank"};
 
-<img src="/images/samples/dusun/dsgw-210-gateways-1.png" alt="Thingsboard login screen">
+<img src="/images/samples/dusun/dsgw-210-gateways-1.png" alt="Sentient login screen">
 
 * [Step 1.2] Go to the "Devices" page of the "Entities" section;
 
@@ -64,7 +64,7 @@ You can use [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"} o
 
 <img src="/images/samples/dusun/dsgw-210-gateways-3.png" alt="Press plus sign to add new device">
 
-* [Step 1.4] Copy the access token, record it for gateway to connect to the ThingsBoard Cloud.
+* [Step 1.4] Copy the access token, record it for gateway to connect to the SENTIENT Cloud.
 
 <img src="/images/samples/dusun/dsgw-210-gateways-4.png" alt="Press plus sign to add new device">
 
@@ -80,8 +80,8 @@ You can use [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"} o
 
 <img src="/images/samples/dusun/8.png" alt="Choosing cloud config item from IoT Servicees menu item">
 
-* [Step 2.3] Fill in the credentials from the ThingsBoard Cloud:
-  * ThingsBoard Server: **{{hostName}}**
+* [Step 2.3] Fill in the credentials from the SENTIENT Cloud:
+  * SENTIENT Server: **{{hostName}}**
   * Server Port: **1883**
   * Insert the access token obtained in step 1.4
 
@@ -89,7 +89,7 @@ You can use [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"} o
 
 ### Additional information
 
-* [Step 3.1] Check connection in the ThingsBoard Cloud;
+* [Step 3.1] Check connection in the SENTIENT Cloud;
 * [Step 3.1.1] seen from the latest telemetry of the gateway, the information of connection is received correctly in the server;
 
 <img src="/images/samples/dusun/dsgw-210-gateways-10.png" alt="Latest telemetry screen">
@@ -98,7 +98,7 @@ You can use [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"} o
 
 <img src="/images/samples/dusun/11.png" alt="Bluetooth device screen">
 
-* [Step 3.1.3] Device is correctly registered to the ThingsBoard server, and the oximeter data is received in the cloud;
+* [Step 3.1.3] Device is correctly registered to the SENTIENT server, and the oximeter data is received in the cloud;
 
 <img src="/images/samples/dusun/12.png" alt="Timeseries table example">
 

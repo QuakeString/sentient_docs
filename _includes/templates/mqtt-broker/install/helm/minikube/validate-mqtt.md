@@ -6,13 +6,13 @@ Status:
 	pid: 35528
 	route: 10.96.0.0/12 -> 192.168.49.2
 	minikube: Running
-	services: [nginx-ingress-ingress-nginx-controller, my-tbmq-cluster-mqtt-lb]
+	services: [nginx-ingress-ingress-nginx-controller, my-st-rmqtt-cluster-mqtt-lb]
 ```
 
-The service `my-tbmq-cluster-mqtt-lb` is the LoadBalancer used for MQTT communication. You can retrieve its `EXTERNAL-IP` with:
+The service `my-st-rmqtt-cluster-mqtt-lb` is the LoadBalancer used for MQTT communication. You can retrieve its `EXTERNAL-IP` with:
 
 ```bash
-kubectl get svc my-tbmq-cluster-mqtt-lb
+kubectl get svc my-st-rmqtt-cluster-mqtt-lb
 ```
 {: .copy-code}
 
@@ -20,7 +20,7 @@ You should see the similar picture:
 
 ```text
 NAME                      TYPE           CLUSTER-IP     EXTERNAL-IP    PORT(S)                                                       AGE
-my-tbmq-cluster-mqtt-lb   LoadBalancer   10.101.27.40   *******        1883:31041/TCP,8084:30151/TCP,8883:30188/TCP,8085:32706/TCP   41m
+my-st-rmqtt-cluster-mqtt-lb   LoadBalancer   10.101.27.40   *******        1883:31041/TCP,8084:30151/TCP,8883:30188/TCP,8085:32706/TCP   41m
 ```
 {: .copy-code}
 

@@ -1,23 +1,23 @@
 
-Start the **ThingsBoard Edge** service:
+Start the **SENTIENT GATEWAY** service:
 ```bash
 sudo service tb-edge start
 ```
 {: .copy-code}
 
-Stop the **ThingsBoard Edge** service:
+Stop the **SENTIENT GATEWAY** service:
 ```bash
 sudo service tb-edge stop
 ```
 {: .copy-code}
 
-Restart the **ThingsBoard Edge** service:
+Restart the **SENTIENT GATEWAY** service:
 ```bash
 sudo service tb-edge restart
 ```
 {: .copy-code}
 
-Check the status of the **ThingsBoard Edge** service:
+Check the status of the **SENTIENT GATEWAY** service:
 ```bash
 sudo service tb-edge status
 ```

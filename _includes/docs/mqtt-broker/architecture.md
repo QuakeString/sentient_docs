@@ -3,8 +3,8 @@
 
 ## Introduction
 
-This article explains the architectural structure of TBMQ, breaking down how data moves between different components and outlining the core architectural choices.
-TBMQ is designed with great care to implement the following attributes:
+This article explains the architectural structure of ST-RMQTT, breaking down how data moves between different components and outlining the core architectural choices.
+ST-RMQTT is designed with great care to implement the following attributes:
 
 * **Scalability**: it is a horizontally scalable platform constructed using cutting-edge open-source technologies;
 * **Fault tolerance**: no single point of failure; each broker (node) within the cluster is identical in terms of functionality;
@@ -15,11 +15,11 @@ TBMQ is designed with great care to implement the following attributes:
 
 The following diagram shows the pivotal parts of the broker and the route of message transmission.
 
-![image](/images/mqtt-broker/architecture/tbmq-architecture.png)
+![image](/images/mqtt-broker/architecture/st-rmqtt-architecture.png)
 
 ## Motivation
 
-At ThingsBoard, we've gained a lot of experience in building scalable IoT applications, which has helped us identify three main scenarios for MQTT-based solutions.
+At SENTIENT, we've gained a lot of experience in building scalable IoT applications, which has helped us identify three main scenarios for MQTT-based solutions.
 
 * In the first scenario, numerous devices generate a large volume of messages that are consumed by specific applications, resulting in a **fan-in** pattern. 
 Normally, a few applications are set up to handle these lots of incoming data. It must be ensured that they do not miss any single message. 
@@ -34,7 +34,7 @@ Ideal for use cases such as private messaging or command-based interactions wher
 > In all scenarios, persistent clients with a Quality of Service (QoS) level set to 1 or 2 are often utilized to ensure
 > reliable message delivery, even when they're temporarily offline due to restarts or upgrades.
 
-Acknowledging these scenarios, we intentionally designed TBMQ to be exceptionally well-suited for all three.
+Acknowledging these scenarios, we intentionally designed ST-RMQTT to be exceptionally well-suited for all three.
 
 Our design principles focused on ensuring the broker’s fault tolerance and high availability. 
 Thus, we deliberately avoided reliance on master or coordinated processes. 
@@ -46,23 +46,23 @@ Ensuring data durability and replication was crucial in our design.
 We aimed for a system where once the broker acknowledges receiving a message, it remains safe and won’t be lost.
 
 To ensure the fulfillment of the above requirements and prevent message loss in the case of clients or some of the broker instances failures, 
-TBMQ uses the powerful capabilities of [Kafka](https://kafka.apache.org/) as its underlying infrastructure.
+ST-RMQTT uses the powerful capabilities of [Kafka](https://kafka.apache.org/) as its underlying infrastructure.
 
-## How does TBMQ work in a nutshell?
+## How does ST-RMQTT work in a nutshell?
 
 Kafka plays a crucial role in various stages of the MQTT message processing. 
 All unprocessed published messages, client sessions, and subscriptions are stored within dedicated Kafka topics. 
-A comprehensive list of Kafka topics used within TBMQ is available [here](#kafka-topics). 
+A comprehensive list of Kafka topics used within ST-RMQTT is available [here](#kafka-topics). 
 All broker nodes can readily access the most up-to-date state of client sessions and subscriptions by utilizing these topics. 
 They maintain local copies of sessions and subscriptions for efficient message processing and delivery. 
 When a client loses connection to a specific broker node, other nodes can seamlessly continue operations based on the latest state. 
 Additionally, newly added broker nodes to the cluster get this vital information upon their activation.
 
 Client subscriptions hold significant importance within the MQTT publish/subscribe pattern. 
-TBMQ employs the [Trie](#subscriptions-trie) data structure to optimize performance, 
+ST-RMQTT employs the [Trie](#subscriptions-trie) data structure to optimize performance, 
 enabling efficient persistence of client subscriptions in memory and facilitating swift access to relevant topic patterns.
 
-Upon a publisher client sending a _PUBLISH_ message, it is stored in the initial Kafka topic, **tbmq.msg.all**. 
+Upon a publisher client sending a _PUBLISH_ message, it is stored in the initial Kafka topic, **st-rmqtt.msg.all**. 
 Once Kafka acknowledges the message’s persistence, 
 the broker promptly responds to the publisher with either a _PUBACK/PUBREC_ message or no response at all, depending on the chosen QoS level.
 
@@ -73,7 +73,7 @@ the broker either redirects the message to another specific Kafka topic or direc
 
 ### Non-persistent client
 
-![image](/images/mqtt-broker/architecture/tbmq-non-persistent-dev.png)
+![image](/images/mqtt-broker/architecture/st-rmqtt-non-persistent-dev.png)
 
 A client is classified as a non-persistent one when the following conditions are met in the _CONNECT_ packet:
 
@@ -88,12 +88,12 @@ It is important to note that non-persistent clients can only be of type **DEVICE
 
 **Non-persistent DEVICE processing in cluster mode**
 
-![image](/images/mqtt-broker/architecture/tbmq-non-persist-dev-cluster.png)
+![image](/images/mqtt-broker/architecture/st-rmqtt-non-persist-dev-cluster.png)
 
-In cluster mode, multiple TBMQ nodes can operate together, each running Kafka consumers in the same consumer group for the **tbmq.msg.all** topic. 
+In cluster mode, multiple ST-RMQTT nodes can operate together, each running Kafka consumers in the same consumer group for the **st-rmqtt.msg.all** topic. 
 This approach ensures efficient load balancing and message distribution across nodes. 
-However, it can result in scenarios where a published message is processed by one TBMQ node while the intended subscriber is connected to another.
-To handle this, **downlink.basic** Kafka topic is used for communication between TBMQ nodes. 
+However, it can result in scenarios where a published message is processed by one ST-RMQTT node while the intended subscriber is connected to another.
+To handle this, **downlink.basic** Kafka topic is used for communication between ST-RMQTT nodes. 
 This ensures that the node processing the message forwards it to the target node, which then delivers it to the subscriber via the established connection.
 
 ### Persistent client
@@ -121,9 +121,9 @@ Consequently, we made a strategic decision to optimize performance by separating
 
 #### Persistent DEVICE client
 
-![image](/images/mqtt-broker/architecture/tbmq-persistent-dev.png)
+![image](/images/mqtt-broker/architecture/st-rmqtt-persistent-dev.png)
 
-For DEVICE persistent clients, we use the **tbmq.msg.persisted** Kafka topic as a means of processing published messages that are extracted from the **tbmq.msg.all** topic. 
+For DEVICE persistent clients, we use the **st-rmqtt.msg.persisted** Kafka topic as a means of processing published messages that are extracted from the **st-rmqtt.msg.all** topic. 
 This design separates the handling of persistent messages from other message types, ensuring a clear and efficient workflow.
 Dedicated threads, functioning as Kafka consumers, retrieve these messages and store them in a [Redis](#redis) database utilized for persistence storage. 
 This method is particularly suitable for DEVICE clients, as they typically do not require extensive message reception. 
@@ -133,20 +133,20 @@ A detailed breakdown of how we use Redis as persistent message storage for DEVIC
 
 **Persistent DEVICE processing in cluster mode**
 
-![image](/images/mqtt-broker/architecture/tbmq-persist-dev-cluster.png)
+![image](/images/mqtt-broker/architecture/st-rmqtt-persist-dev-cluster.png)
 
-Similarly to non-persistent clients, TBMQ nodes in cluster mode operate together, running Kafka consumers in the same group for the **tbmq.msg.persisted** topic.
+Similarly to non-persistent clients, ST-RMQTT nodes in cluster mode operate together, running Kafka consumers in the same group for the **st-rmqtt.msg.persisted** topic.
 To handle cases where a message is processed by one node but the subscriber is connected to another, **downlink.persisted** Kafka topic is used to forward the message to the appropriate node.
 This ensures seamless delivery to the subscriber via its established connection.
 
 #### Persistent APPLICATION client
 
-![image](/images/mqtt-broker/architecture/tbmq-app.png)
+![image](/images/mqtt-broker/architecture/st-rmqtt-app.png)
 
 The number of APPLICATION clients corresponds to the number of Kafka topics used. 
 The latest version of Kafka can handle millions of topics, making this design suitable even for the largest enterprise use cases.
 
-Any message read from the **tbmq.msg.all** topic meant for a specific APPLICATION client is then stored in the corresponding Kafka topic. 
+Any message read from the **st-rmqtt.msg.all** topic meant for a specific APPLICATION client is then stored in the corresponding Kafka topic. 
 A separate thread (Kafka consumer) is assigned to each APPLICATION. 
 These threads retrieve messages from the corresponding Kafka topics and deliver them to the respective clients. 
 This approach significantly improves performance by ensuring efficient message delivery.
@@ -165,7 +165,7 @@ It is important to note that APPLICATION clients can only be classified as [pers
 
 **Persistent APPLICATION processing in cluster mode**
 
-![image](/images/mqtt-broker/architecture/tbmq-app-cluster.png)
+![image](/images/mqtt-broker/architecture/st-rmqtt-app-cluster.png)
 
 APPLICATION clients function the same way in cluster mode as in standalone setup, eliminating the need for internode communication. 
 The processing of the message occurs directly on the target node, as a dedicated consumer for the APPLICATION client is created there once the client connects.
@@ -174,55 +174,55 @@ By avoiding additional message transmission steps, this approach ensures signifi
 
 ### Kafka topics
 
-Below is a comprehensive list of Kafka topics used within TBMQ, along with their respective descriptions.
+Below is a comprehensive list of Kafka topics used within ST-RMQTT, along with their respective descriptions.
 
-* **tbmq.msg.all** - topic to store all published messages to the broker from MQTT clients.
-* **tbmq.msg.app. + ${client_id}** - topic to store messages the APPLICATION client should receive based on its subscriptions.
-* **tbmq.msg.app.shared. + ${topic_filter}** - topic to store messages the APPLICATION clients should receive based on their common shared subscription.
-* **tbmq.msg.persisted** - topic to store messages the DEVICE persistent clients should receive based on their subscriptions.
-* **tbmq.msg.retained** - topic to store all retained messages. Related to MQTT Retain messages feature.
-* **tbmq.client.session** - topic to store sessions of all clients.
-* **tbmq.client.subscriptions** - topic to store subscriptions of all clients.
-* **tbmq.client.session.event.request** - topic to store events like _CONNECTION_REQUEST_, _DISCONNECTION_REQUEST_, _CLEAR_SESSION_REQUEST_, etc. for sessions of all clients. 
-* **tbmq.client.session.event.response. + ${service_id}** - topic to store responses to events of the previous topic sent to specific broker node where target client is connected.
-* **tbmq.client.disconnect. + ${service_id}** - topic to store force client disconnection events (by admin request from UI/API or on sessions conflicts).
-* **tbmq.msg.downlink.basic. + ${service_id}** - topic used to send messages from one broker node to another to which the DEVICE subscriber is currently connected.
-* **tbmq.msg.downlink.persisted. + ${service_id}** - topic used to send messages from one broker node to another to which the DEVICE persistent subscriber is currently connected.
-* **tbmq.sys.app.removed** - topic for events to process removal of APPLICATION client topic. Used when the client changes its type from APPLICATION to DEVICE.
-* **tbmq.sys.historical.data** - topic for historical data statistics (e.g., number of incoming messages, outgoing messages, etc.) published from each broker node in the cluster to calculate the total values per cluster.
-* **tbmq.client.blocked** - topic used to distribute and store the list of blocked clients, preventing them from establishing connections to the broker.
-* **tbmq.sys.internode.notifications + ${service_id}** - topic for system-level notifications sent between broker nodes to synchronize authentication provider settings, authentication admin settings, and to trigger local client session cache cleanup.
+* **st-rmqtt.msg.all** - topic to store all published messages to the broker from MQTT clients.
+* **st-rmqtt.msg.app. + ${client_id}** - topic to store messages the APPLICATION client should receive based on its subscriptions.
+* **st-rmqtt.msg.app.shared. + ${topic_filter}** - topic to store messages the APPLICATION clients should receive based on their common shared subscription.
+* **st-rmqtt.msg.persisted** - topic to store messages the DEVICE persistent clients should receive based on their subscriptions.
+* **st-rmqtt.msg.retained** - topic to store all retained messages. Related to MQTT Retain messages feature.
+* **st-rmqtt.client.session** - topic to store sessions of all clients.
+* **st-rmqtt.client.subscriptions** - topic to store subscriptions of all clients.
+* **st-rmqtt.client.session.event.request** - topic to store events like _CONNECTION_REQUEST_, _DISCONNECTION_REQUEST_, _CLEAR_SESSION_REQUEST_, etc. for sessions of all clients. 
+* **st-rmqtt.client.session.event.response. + ${service_id}** - topic to store responses to events of the previous topic sent to specific broker node where target client is connected.
+* **st-rmqtt.client.disconnect. + ${service_id}** - topic to store force client disconnection events (by admin request from UI/API or on sessions conflicts).
+* **st-rmqtt.msg.downlink.basic. + ${service_id}** - topic used to send messages from one broker node to another to which the DEVICE subscriber is currently connected.
+* **st-rmqtt.msg.downlink.persisted. + ${service_id}** - topic used to send messages from one broker node to another to which the DEVICE persistent subscriber is currently connected.
+* **st-rmqtt.sys.app.removed** - topic for events to process removal of APPLICATION client topic. Used when the client changes its type from APPLICATION to DEVICE.
+* **st-rmqtt.sys.historical.data** - topic for historical data statistics (e.g., number of incoming messages, outgoing messages, etc.) published from each broker node in the cluster to calculate the total values per cluster.
+* **st-rmqtt.client.blocked** - topic used to distribute and store the list of blocked clients, preventing them from establishing connections to the broker.
+* **st-rmqtt.sys.internode.notifications + ${service_id}** - topic for system-level notifications sent between broker nodes to synchronize authentication provider settings, authentication admin settings, and to trigger local client session cache cleanup.
 
 ### Redis
 
 [Redis](https://redis.io/) is a powerful, in-memory data store that excels in scenarios requiring low-latency and high-throughput data access, making it an ideal choice for storing real-time data. 
 
-In TBMQ, we utilize Redis to store messages for DEVICE persistent clients, allowing us to achieve high performance when handling the message persistence and delivery for these clients.
+In ST-RMQTT, we utilize Redis to store messages for DEVICE persistent clients, allowing us to achieve high performance when handling the message persistence and delivery for these clients.
 Redis's ability to manage large datasets in memory with lightning-fast read and write operations, combined with the scalability of Redis Cluster, 
 ensures that persistent messages can be retrieved and delivered efficiently, even as the volume of stored messages grows and system demands increase. 
 This scalability allows Redis to seamlessly handle larger workloads by distributing data across multiple nodes, maintaining high performance and reliability.
 
-{% capture tbmq-redis-postgresql %}
-Before TBMQ v2.0, PostgreSQL was used for saving messages for DEVICE persistent clients.
+{% capture st-rmqtt-redis-postgresql %}
+Before ST-RMQTT v2.0, PostgreSQL was used for saving messages for DEVICE persistent clients.
 We migrated to Redis in v2.0 to provide a more scalable and performant solution for message persistence due to PostgreSQL limitations in terms of handling a high volume of write operations.
 This migration to Redis enables us to handle much higher throughput while ensuring fast, reliable message storage and delivery for DEVICE persistent clients.
 {% endcapture %}
-{% include templates/info-banner.md content=tbmq-redis-postgresql %}
+{% include templates/info-banner.md content=st-rmqtt-redis-postgresql %}
 
 ### PostgreSQL database
 
-TBMQ uses a [PostgreSQL](https://www.postgresql.org/) database to store different entities such as users, user credentials, MQTT client credentials, statistics, 
+ST-RMQTT uses a [PostgreSQL](https://www.postgresql.org/) database to store different entities such as users, user credentials, MQTT client credentials, statistics, 
 WebSocket connections, WebSocket subscriptions, and others.
 
 PostgreSQL, known for its reliability, robustness, and flexibility, is a powerful open-source relational database management system that ensures data integrity while supporting high transaction throughput.
-In TBMQ, PostgreSQL serves as the primary storage layer for persisting critical metadata about the system.
+In ST-RMQTT, PostgreSQL serves as the primary storage layer for persisting critical metadata about the system.
 Given the nature of MQTT applications, which involve high message volumes and frequent read/write operations, 
 PostgreSQL's transaction management and ACID compliance provide strong consistency guarantees, 
 ensuring that important data is safely stored and retrievable in any scenarios.
 
 ### Web UI
 
-TBMQ offers a user-friendly and lightweight graphical user interface (GUI) 
+ST-RMQTT offers a user-friendly and lightweight graphical user interface (GUI) 
 that simplifies the administration of the broker in an intuitive and efficient manner. 
 This GUI provides several key features to facilitate broker management:
 
@@ -233,34 +233,34 @@ This GUI provides several key features to facilitate broker management:
   Administrators can create and manage Application shared subscription entities, facilitating efficient message distribution to multiple subscribed clients of type APPLICATION.
 * Retained Message Management: the GUI allows administrators to manage retained messages, which are messages that are saved by the broker and delivered to new subscribers.
 * WebSocket Client: The GUI provides support for WebSocket client, allowing administrators to establish, monitor, and manage WebSocket connections.
-  This feature allows users to interact with TBMQ via MQTT over WebSocket, enabling them to efficiently debug and test their connections and message flows in real-time.
+  This feature allows users to interact with ST-RMQTT via MQTT over WebSocket, enabling them to efficiently debug and test their connections and message flows in real-time.
 
 In addition to these administrative features, the GUI provides monitoring dashboards that offer comprehensive statistics and insights into the broker's performance. 
 These dashboards provide key metrics and visualizations to facilitate real-time monitoring of essential broker statistics, 
 enabling administrators to gain a better understanding of the system's health and performance.
 
-The combination of these features makes the GUI an invaluable tool for managing, configuring, and monitoring TBMQ in a user-friendly and efficient manner.
+The combination of these features makes the GUI an invaluable tool for managing, configuring, and monitoring ST-RMQTT in a user-friendly and efficient manner.
 
 ### Netty
 
 In our pursuit of leveraging cutting-edge technologies, we selected [Netty](https://netty.io/) for implementing the TCP server that facilitates the MQTT protocol, owing to its proven performance and flexibility.
 
-Netty is a high-performance, asynchronous event-driven network framework well-suited for building scalable and robust network applications, making it an excellent fit for handling MQTT traffic in TBMQ.
+Netty is a high-performance, asynchronous event-driven network framework well-suited for building scalable and robust network applications, making it an excellent fit for handling MQTT traffic in ST-RMQTT.
 One of the primary reasons for choosing Netty is its efficient handling of large numbers of simultaneous connections. 
 In IoT environments, where thousands or even millions of devices are constantly connected and exchanging data, Netty's ability to handle concurrent connections with low resource consumption is invaluable.
 
 Netty uses non-blocking I/O (NIO), allowing it to efficiently manage resources without needing a dedicated thread for each connection, greatly reducing overhead. 
-This approach ensures high throughput and low-latency communication, even under heavy loads, making it ideal for the high demands of an MQTT broker like TBMQ.
+This approach ensures high throughput and low-latency communication, even under heavy loads, making it ideal for the high demands of an MQTT broker like ST-RMQTT.
 
 Netty is highly flexible, allowing developers to customize the networking stack to meet specific protocol requirements.
 With its modular design, Netty provides the building blocks to easily implement protocol handling, message parsing, and connection management, while offering TLS encryption options, making it secure and extensible for future needs.
 
 ### Actor system
 
-TBMQ utilizes an Actor System as the underlying mechanism for implementing actors responsible for handling MQTT clients.
+ST-RMQTT utilizes an Actor System as the underlying mechanism for implementing actors responsible for handling MQTT clients.
 The adoption of the Actor model enables efficient and concurrent processing of messages received from clients, thereby ensuring high-performance operation.
 
-The broker uses its own custom implementation of an Actor System, specifically designed to meet the requirements of TBMQ.
+The broker uses its own custom implementation of an Actor System, specifically designed to meet the requirements of ST-RMQTT.
 Within this system, two distinct types of actors are present:
 
 * **Client Actors**: for every connected MQTT client, a corresponding Client actor is created.
@@ -269,13 +269,13 @@ Within this system, two distinct types of actors are present:
 * **Persisted Device Actors**: in addition to the Client actors, an extra Persisted Device actor is created for all DEVICE clients that are categorized as persistent.
   These actors are specifically designated to manage the persistence-related operations and handle the storage and retrieval of messages for persistent DEVICE clients.
 
-With the Actor System and various actor types, TBMQ efficiently processes messages concurrently, ensuring optimal performance and quick responses when dealing with client interactions.
+With the Actor System and various actor types, ST-RMQTT efficiently processes messages concurrently, ensuring optimal performance and quick responses when dealing with client interactions.
 
 For further insights into the Actor model, you can refer to the provided [link](https://en.wikipedia.org/wiki/Actor_model).
 
 ### Message dispatcher service
 
-The Message dispatcher service is another core component of TBMQ's architecture, responsible for managing the flow of messages between publisher clients and Kafka, 
+The Message dispatcher service is another core component of ST-RMQTT's architecture, responsible for managing the flow of messages between publisher clients and Kafka, 
 ensuring safe processing, persistence, and efficient delivery to the appropriate subscribers.
 
 The primary role of the Message dispatcher service begins once the message from the publisher is received via the Actor system. 
@@ -298,7 +298,7 @@ The Trie data structure is highly efficient for fast lookups due to its hierarch
 It allows for quick identification of matching topics by storing common prefixes only once, which minimizes search space and reduces memory usage.
 Its predictable time complexity, which depends on the length of the topic rather than the number of topics, ensures consistent and fast lookups even in large-scale environments with millions of subscriptions.
 
-Within TBMQ, all client subscriptions are consumed from a Kafka topic and stored in a Trie data structure in the memory. 
+Within ST-RMQTT, all client subscriptions are consumed from a Kafka topic and stored in a Trie data structure in the memory. 
 The Trie organizes the topic filters hierarchically, with each node representing a level in the topic filter.
 
 When a _PUBLISH_ message is read from Kafka, the broker needs to identify all clients with relevant subscriptions for the topic name of the published message to ensure they receive the message. 
@@ -312,14 +312,14 @@ For more detailed information on the Trie data structure, you can refer to the p
 
 ## Standalone vs cluster mode
 
-TBMQ is designed to be horizontally scalable, allowing for the addition of new broker nodes to the cluster automatically. 
+ST-RMQTT is designed to be horizontally scalable, allowing for the addition of new broker nodes to the cluster automatically. 
 All nodes within the cluster are identical and share the overall load, ensuring a balanced distribution of client connections and message processing.
 
 The design of the broker eliminates the need for "master" or "coordinator" processes, as there is no hierarchy or central node responsible for managing the others. 
 This decentralized approach removes the presence of a single point of failure, enhancing the system's overall robustness and fault tolerance.
 
 To handle client connection requests, a load balancer of your choice can be used. 
-The load balancer distributes incoming client connections across all available TBMQ nodes, 
+The load balancer distributes incoming client connections across all available ST-RMQTT nodes, 
 evenly distributing the workload and maximizing resource utilization.
 
 In the event that a client loses its connection with a specific broker node (e.g., due to node shutdown, removal, or network failure), 
@@ -328,8 +328,8 @@ This seamless reconnection capability ensures continuous operation and uninterru
 as they can establish connections with any available node in the cluster.
 
 By leveraging horizontal scalability, load balancing, and automatic discovery of new nodes, 
-TBMQ provides a highly scalable and resilient architecture for handling MQTT communication in large-scale deployments.
+ST-RMQTT provides a highly scalable and resilient architecture for handling MQTT communication in large-scale deployments.
 
 ## Programming languages
 
-The back end of TBMQ is implemented in Java 17. The front end of TBMQ is developed as a SPA using the Angular 19 framework.
+The back end of ST-RMQTT is implemented in Java 17. The front end of ST-RMQTT is developed as a SPA using the Angular 19 framework.

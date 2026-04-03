@@ -2,7 +2,7 @@
 
 ## Overview
 
-IBM Watson IoT Integration allows to stream data from IBM Watson IoT to ThingsBoard and converts device payloads to the ThingsBoard format.
+IBM Watson IoT Integration allows to stream data from IBM Watson IoT to SENTIENT and converts device payloads to the SENTIENT format.
 
  ![image](/images/user-guide/integrations/ibm-watson-integration.svg)
  

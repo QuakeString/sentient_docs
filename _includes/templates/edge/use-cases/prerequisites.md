@@ -5,10 +5,10 @@ We assume you have completed the following guides and reviewed the articles list
 {% if docsPrefix == 'edge/' %}
 * [Getting Started](/docs/getting-started-guides/helloworld/) guide.{% endif %}
 * [Rule Engine Overview](/docs/{{cloudDocsPrefix}}user-guide/rule-engine-2-0/overview/) article.
-* [ThingsBoard Edge Getting Started](/docs/{{docsPrefix}}getting-started/) article.
+* [SENTIENT GATEWAY Getting Started](/docs/{{docsPrefix}}getting-started/) article.
 * [Edge Rule Chain Templates](/docs/{{docsPrefix}}rule-engine/rule-chain-templates/) guide.
 
-Please make sure that you have **{{appPrefix}}** server up and running. Additionally, ThingsBoard **Edge** must be up, running and connected to the cloud.
+Please make sure that you have **{{appPrefix}}** server up and running. Additionally, SENTIENT **Edge** must be up, running and connected to the cloud.
 
 If you have these prerequisites in place let's go to next steps.
 

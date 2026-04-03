@@ -1,147 +1,147 @@
-bigheader: "Trendz Documentation"
+bigheader: "SENTIENT ANALYTICS Documentation"
 abstract: "Analytics Platform that converts the IoT dataset into insights and simplifies the decision-making process."
 toc:
-- title: Trendz Analytics
-  path: /docs/trendz/
-- title: What is Trendz Analytics?
-  path: /docs/trendz/what-is-trendz/
+- title: SENTIENT ANALYTICS
+  path: /docs/sentient-analytics/
+- title: What is SENTIENT ANALYTICS?
+  path: /docs/sentient-analytics/what-is-sentient-analytics/
 - title: Key concepts
   section:
     - title: Business entities
-      path: /docs/trendz/business-entities/
+      path: /docs/sentient-analytics/business-entities/
     - title: Aggregate telemetry and delta
-      path: /docs/trendz/telemetry-aggregation/
+      path: /docs/sentient-analytics/telemetry-aggregation/
     - title: Group by time
-      path: /docs/trendz/group-by-time/
+      path: /docs/sentient-analytics/group-by-time/
     - title: Group by category
-      path: /docs/trendz/group-by-category/
+      path: /docs/sentient-analytics/group-by-category/
     - title: Filtering
-      path: /docs/trendz/data-filtering/
+      path: /docs/sentient-analytics/data-filtering/
 - title: Data visualization
   section:
     - title: Overview
-      path: /docs/trendz/visualizations-overview/
+      path: /docs/sentient-analytics/visualizations-overview/
     - title: View Types
       section:
         - title: Tables
-          path: /docs/trendz/visualizations-tables/
+          path: /docs/sentient-analytics/visualizations-tables/
         - title: Line Chart
-          path: /docs/trendz/visualizations-line/
+          path: /docs/sentient-analytics/visualizations-line/
         - title: Bar & Histogram
-          path: /docs/trendz/visualizations-bar/
+          path: /docs/sentient-analytics/visualizations-bar/
         - title: Pie Chart
-          path: /docs/trendz/visualizations-pie/
+          path: /docs/sentient-analytics/visualizations-pie/
         - title: Scatter Plot
-          path: /docs/trendz/visualizations-scatter/
+          path: /docs/sentient-analytics/visualizations-scatter/
         - title: Heat Map
-          path: /docs/trendz/visualizations-heatmap/
+          path: /docs/sentient-analytics/visualizations-heatmap/
         - title: Calendar
-          path: /docs/trendz/visualizations-calendar/
+          path: /docs/sentient-analytics/visualizations-calendar/
         - title: Cards
-          path: /docs/trendz/visualizations-card/
+          path: /docs/sentient-analytics/visualizations-card/
         - title: Cards with line chart
-          path: /docs/trendz/visualizations-card-with-line/
+          path: /docs/sentient-analytics/visualizations-card-with-line/
         - title: AI Cards
           new: true
-          path: /docs/trendz/visualizations-ai-card/
+          path: /docs/sentient-analytics/visualizations-ai-card/
     - title: View settings
-      path: /docs/trendz/view-settings/
+      path: /docs/sentient-analytics/view-settings/
     - title: View collections
-      path: /docs/trendz/view-collections/
+      path: /docs/sentient-analytics/view-collections/
 - title: Metric exploration
   new: true
   section:
     - title: Overview
-      path: /docs/trendz/metric/overview/
+      path: /docs/sentient-analytics/metric/overview/
     - title: Generate New Metrics
-      path: /docs/trendz/metric/generate-new-metric/
-    - title: Use New Metrics in ThingsBoard
-      path: /docs/trendz/metric/use-in-thingsboard/
+      path: /docs/sentient-analytics/metric/generate-new-metric/
+    - title: Use New Metrics in SENTIENT
+      path: /docs/sentient-analytics/metric/use-in-sentient/
 - title: Anomaly detection
   section:
     - title: Overview
-      path: /docs/trendz/anomaly/overview/
+      path: /docs/sentient-analytics/anomaly/overview/
     - title: Anomaly Model Properties
-      path: /docs/trendz/anomaly/build/
+      path: /docs/sentient-analytics/anomaly/build/
     - title: Anomaly Refresh & Reprocess
-      path: /docs/trendz/anomaly/refresh-reprocess/
-    - title: Saving Telemetry to ThingsBoard
-      path: /docs/trendz/anomaly/save-to-tb/
+      path: /docs/sentient-analytics/anomaly/refresh-reprocess/
+    - title: Saving Telemetry to SENTIENT
+      path: /docs/sentient-analytics/anomaly/save-to-tb/
     - title: Anomaly Visualization
-      path: /docs/trendz/anomaly/visualization/
+      path: /docs/sentient-analytics/anomaly/visualization/
     - title: Anomaly-Driven Alarm Creation
-      path: /docs/trendz/anomaly/alarms/
+      path: /docs/sentient-analytics/anomaly/alarms/
 - title: Calculated Fields
   new: true
   section:
     - title: Overview
-      path: /docs/trendz/calculations/overview/
+      path: /docs/sentient-analytics/calculations/overview/
     - title: Batch calculations
-      path: /docs/trendz/calculations/batch/
+      path: /docs/sentient-analytics/calculations/batch/
     - title: Native calculations
       new: true
-      path: /docs/trendz/calculations/native/
-    - title: Save metric to ThingsBoard
-      path: /docs/trendz/calculations/save-to-thingsboard/
+      path: /docs/sentient-analytics/calculations/native/
+    - title: Save metric to SENTIENT
+      path: /docs/sentient-analytics/calculations/save-to-sentient/
     - title: Calculate time to value
-      path: /docs/trendz/calculations/time-to-value/
+      path: /docs/sentient-analytics/calculations/time-to-value/
 - title: Prediction
   section:
     - title: Overview
-      path: /docs/trendz/prediction/
+      path: /docs/sentient-analytics/prediction/
     - title: Custom Python models
-      path: /docs/trendz/predict-with-python-models/
+      path: /docs/sentient-analytics/predict-with-python-models/
     - title: Predict remaining time
-      path: /docs/trendz/predict-remaining-time/
-    - title: Save predictions into ThingsBoard
-      path: /docs/trendz/prediction-save-to-tb/
+      path: /docs/sentient-analytics/predict-remaining-time/
+    - title: Save predictions into SENTIENT
+      path: /docs/sentient-analytics/prediction-save-to-tb/
 - title: AI Features
   section:
-    - title: Trendz AI Assistant
-      path: /docs/trendz/ai-assistance-overview/
+    - title: SENTIENT ANALYTICS AI Assistant
+      path: /docs/sentient-analytics/ai-assistance-overview/
     - title: Advanced analytics Chat Assistant widget
-      path: /docs/trendz/ai-assistance-widget/
+      path: /docs/sentient-analytics/ai-assistance-widget/
     - title: AI Widget Summary
-      path: /docs/trendz/ai-widget-summary/
-    - title: Trendz Prompts
-      path: /docs/trendz/ai-assistance-prompts/
+      path: /docs/sentient-analytics/ai-widget-summary/
+    - title: SENTIENT ANALYTICS Prompts
+      path: /docs/sentient-analytics/ai-assistance-prompts/
     - title: Enable AI Features
-      path: /docs/trendz/custom-ai-model-configuration/
+      path: /docs/sentient-analytics/custom-ai-model-configuration/
 - title: Share views
   section:
     - title: Advanced analytics Bundle
-      path: /docs/trendz/trendz-bundle/
+      path: /docs/sentient-analytics/sentient-analytics-bundle/
     - title: Add on dashboard
-      path: /docs/trendz/embed-visuals/
+      path: /docs/sentient-analytics/embed-visuals/
     - title: Filter by dashboard alias
-      path: /docs/trendz/widget-filter-by-alias/
+      path: /docs/sentient-analytics/widget-filter-by-alias/
     - title: Widget actions
-      path: /docs/trendz/widget-actions/
+      path: /docs/sentient-analytics/widget-actions/
     - title: Widget settings
-      path: /docs/trendz/widget-settings/
+      path: /docs/sentient-analytics/widget-settings/
 - title: White labeling
   section:
     - title: Overview
-      path: /docs/trendz/white-labeling/
+      path: /docs/sentient-analytics/white-labeling/
     - title: Custom translation
-      path: /docs/trendz/custom-translation/
+      path: /docs/sentient-analytics/custom-translation/
 - title: External datasources
-  path: /docs/trendz/mix-sql-datasource/
+  path: /docs/sentient-analytics/mix-sql-datasource/
 - title: States
-  path: /docs/trendz/states/
+  path: /docs/sentient-analytics/states/
 - title: Caching
-  path: /docs/trendz/cache-settings/
+  path: /docs/sentient-analytics/cache-settings/
 - title: Processing jobs
-  path: /docs/trendz/background-jobs/
+  path: /docs/sentient-analytics/background-jobs/
 - title: Tasks
-  path: /docs/trendz/tasks-service/
+  path: /docs/sentient-analytics/tasks-service/
 - title: Settings
-  path: /docs/trendz/settings/
-- title: Trendz REST API
-  path: /docs/trendz/rest-api/
+  path: /docs/sentient-analytics/settings/
+- title: SENTIENT ANALYTICS REST API
+  path: /docs/sentient-analytics/rest-api/
 - title: Versions & Support
   section:
     - title: Releases
-      path: /docs/trendz/releases/releases-table/
+      path: /docs/sentient-analytics/releases/releases-table/
     - title: Release & Support Policy
-      path: /docs/trendz/releases/release-policy/
+      path: /docs/sentient-analytics/releases/release-policy/

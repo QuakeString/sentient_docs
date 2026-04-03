@@ -1,5 +1,5 @@
 ---
 layout: docwithnav-pe
-title: "How to connect Industrial Raspberry Pi EG500 to ThingsBoard?"
+title: "How to connect Industrial Raspberry Pi EG500 to SENTIENT?"
 redirect_to: "/device-library/pe/raspberry-pi-cm4/"
 ---

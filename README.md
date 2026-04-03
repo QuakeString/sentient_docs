@@ -30,13 +30,13 @@ sudo gem install bundler
 Clone our site:
 
 ```bash
-git clone https://github.com/thingsboard/thingsboard.github.io.git
+git clone https://github.com/sentient/sentient.github.io.git
 ```
 
 Make any changes you want. Then, to see your changes locally:  
 
 ```bash
-cd thingsboard.github.io
+cd sentient.github.io
 sudo bundle install
 bundle exec jekyll serve --host 0.0.0.0
 ```
@@ -64,33 +64,33 @@ Your copy of the site will then be viewable at: [http://localhost:4000](http://l
 
 ## Deploy the site in Docker (RECOMMENDED)
 
-These instructions will help to run the thingsboard/thingsboard.github.io project in the docker. You do not need to install additional dependencies and packages, everything is already built into the docker image.
+These instructions will help to run the sentient/sentient.github.io project in the docker. You do not need to install additional dependencies and packages, everything is already built into the docker image.
 
 If you do not have docker installed, you need to install it. You can do this by following the installation instructions: [Docker Engine installation overview](https://docs.docker.com/engine/install/)
 
-If you do not have a local thingsboard.github.io repository, you need to clone project into the "website" directory.
+If you do not have a local sentient.github.io repository, you need to clone project into the "website" directory.
 
 ```bash
-git clone https://github.com/thingsboard/thingsboard.github.io.git website
+git clone https://github.com/sentient/sentient.github.io.git website
 ```
 
 ### Build and run the site using the Docker
 
-Please replace the `THINGSBOARD_WEBSITE_DIR` with the full path to your local thingsboard.github.io repository.
+Please replace the `SENTIENT_WEBSITE_DIR` with the full path to your local sentient.github.io repository.
 >To deploy a fork, you need to replace the environment variable PAGES_REPO_NWO with the name of your repository.
 As example: \
-`PAGES_REPO_NWO="your_github_nickname/thingsboard.github.io"`
+`PAGES_REPO_NWO="your_github_nickname/sentient.github.io"`
 
 ```bash
-docker pull thingsboard/website
-docker run --rm -p 4000:4000 --name thingsboard_website -e PAGES_REPO_NWO="thingsboard/thingsboard.github.io" --volume="THINGSBOARD_WEBSITE_DIR:/website" thingsboard/website
+docker pull sentient/website
+docker run --rm -p 4000:4000 --name sentient_website -e PAGES_REPO_NWO="sentient/sentient.github.io" --volume="SENTIENT_WEBSITE_DIR:/website" sentient/website
 ```
 
 ### Deploy the site using the docker-compose file
 
 >To deploy a fork, you need to replace the environment variable PAGES_REPO_NWO (in `docker-compose.yaml`) with the name of your repository.
 As example:\
-`PAGES_REPO_NWO: "your_github_nickname/thingsboard.github.io"`
+`PAGES_REPO_NWO: "your_github_nickname/sentient.github.io"`
 
 To start the docker container with docker-compose, run the command:
 
@@ -129,13 +129,13 @@ Example:
 
 Usage:
 ```bash
-docker exec thingsboard_website bash -c "./generate-previews.sh path file_mask*.png"
+docker exec sentient_website bash -c "./generate-previews.sh path file_mask*.png"
 
 ```
 
 Example:
 ```bash
-docker exec thingsboard_website bash -c "./generate-previews.sh images/solution-templates *.png"
+docker exec sentient_website bash -c "./generate-previews.sh images/solution-templates *.png"
 
 ```
 > **_NOTE:_** This command must be executed with the running container
@@ -148,8 +148,8 @@ Use the following command to check the broken links.
 docker run -it --rm --network=host ghcr.io/linkchecker/linkchecker --check-extern http://0.0.0.0:4000/
 ```
 
-## Update pages in _includes/docs/pe/user-guide/install directory in accordance with thingsboard/thingsborad-pe repositories: 
+## Update pages in _includes/docs/pe/user-guide/install directory in accordance with sentient/thingsborad-pe repositories: 
 
 Use the following command from the project root directory to regenerate configuration pages (first script parameter is TB version: 'ce' or 'pe', second parameter is relative path to TB repository):
     
-    python3 generate_config_pages.py ce ../thingsboard
+    python3 generate_config_pages.py ce ../sentient

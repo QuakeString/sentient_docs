@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Configure device details dashboards in ThingsBoard Mobile Application
+title: Configure device details dashboards in SENTIENT Mobile Application
 
 device-dashboard:
  0:

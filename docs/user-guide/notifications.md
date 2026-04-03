@@ -28,7 +28,7 @@ notification-center-send-notification-1:
 notification-center-send-notification-2:
     0:
         image: /images/user-guide/notifications/notification-center-send-notification-7-ce.png
-        title: 'The recipient will receive the notification in the ThingsBoard interface and can view it on the Notification center page or by clicking the bell icon in the top-right corner of the screen.'
+        title: 'The recipient will receive the notification in the SENTIENT interface and can view it on the Notification center page or by clicking the bell icon in the top-right corner of the screen.'
     1:
         image: /images/user-guide/notifications/notification-center-send-notification-8-ce.png
         title: 'Clicking the "Open this dashboard" button in the notification will open the corresponding dashboard.'

@@ -1,7 +1,7 @@
 Execute the following command to run the installation:
 
 ```bash
-./k8s-install-tbmq.sh
+./k8s-install-st-rmqtt.sh
 ```
 {: .copy-code}
 

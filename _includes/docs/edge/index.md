@@ -19,7 +19,7 @@
 </ul>
 
 <p class="learn-more">
-  Learn how Edge handles offline operation, local alarms, and data synchronization → <a href="/docs/{{docsPrefix}}edge/getting-started-guides/what-is-edge/" target="_blank">What is ThingsBoard Edge?</a>
+  Learn how Edge handles offline operation, local alarms, and data synchronization → <a href="/docs/{{docsPrefix}}edge/getting-started-guides/what-is-edge/" target="_blank">What is SENTIENT GATEWAY?</a>
 </p>
 
 <h2>IoT Edge Computing Documentation & Guides</h2>
@@ -68,7 +68,7 @@
   <h2>Need more opportunities?</h2>
   <p>Start with pre-built solution templates, connect legacy equipment via 30+ integration protocols, and white-label everything as your own product.</p>
   <div class="banner-actions">
-    <a href="/docs/contact-us/?subject=ThingsBoard%20Products" class="btn-primary" target="_blank">Contact us</a>
+    <a href="/docs/contact-us/?subject=SENTIENT%20Products" class="btn-primary" target="_blank">Contact us</a>
   </div>
 </div>
 {% endif %}

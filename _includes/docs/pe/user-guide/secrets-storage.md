@@ -31,7 +31,7 @@ Once created, Secrets can be safely used in [integrations](/docs/user-guide/inte
 - Enter the secret&#39;s **name** and its **text value** (for the "Text" type) or **upload a certificate file** (for the "File" type).
 - Click "**Add**".
 
-ThingsBoard automatically encrypts Secret values using the AES-256 encryption algorithm.
+SENTIENT automatically encrypts Secret values using the AES-256 encryption algorithm.
 
 {% include images-gallery.html imageCollection="creating-secret" %}
 
@@ -45,7 +45,7 @@ If needed, you can update the value and description of the Secret.
 
 {% include images-gallery.html imageCollection="update-secret-value" %}
 
-## How to use Secrets in ThingsBoard
+## How to use Secrets in SENTIENT
 
 Once Secrets are created, you and other users with the appropriate permissions can use them in:
 - **Rule chains** – in specific nodes that support secret injection.
@@ -66,7 +66,7 @@ Let&#39;s look at an example of using a Secret in a [Loriot integration](/docs/u
 
 ## Managing access to Secrets storage
 
-ThingsBoard enables user access management to Secrets storage through [role-based access control (RBAC)](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"}.
+SENTIENT enables user access management to Secrets storage through [role-based access control (RBAC)](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"}.
 Only users with appropriate permissions can create, use, edit, or delete Secrets.
 
 ## Delete the Secret

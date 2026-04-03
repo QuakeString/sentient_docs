@@ -13,7 +13,7 @@ Host refers to the hostname or IP address the server binds to. The **default hos
 | **WS**    | `8084`       | `LISTENER_WS_BIND_PORT`    | `LISTENER_WS_BIND_ADDRESS`   |
 | **WSS**   | `8085`       | `LISTENER_WSS_BIND_PORT`   | `LISTENER_WSS_BIND_ADDRESS`  |
 
-These custom values will be used in various parts of the TBMQ application where protocol-specific connectivity is required. Here are two key examples:
+These custom values will be used in various parts of the ST-RMQTT application where protocol-specific connectivity is required. Here are two key examples:
 
 * **Check connectivity** window. Uses the **MQTT** connectivity settings to generate commands with custom host and port.
 * **Add WebSocket Connection** window. Uses the **WS** connectivity settings to auto-generate a WebSocket connection URL address with a custom host and port.

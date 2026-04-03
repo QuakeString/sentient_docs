@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Teltonika RUT955 to ThingsBoard?
+title: How to connect Teltonika RUT955 to SENTIENT?
 category: Other devices
 connectivity: [HTTP, MQTT, Ethernet, WIFI]
 vendor: Teltonika

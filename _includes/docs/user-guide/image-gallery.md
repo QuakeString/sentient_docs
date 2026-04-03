@@ -106,7 +106,7 @@ The image in JSON format will be saved to your PC.
 After you've added an image to the Image gallery, you can embed this image into HTML card widgets, in HTML section in the widget editor, in cell content functions, in custom actions, etc.
 
 Images provided at the system level are available to all users using the platform, while tenant images may only be available to specific tenants.
-Each image on the ThingsBoard platform has a unique URL that allows you to download the image both with and without authentication.
+Each image on the SENTIENT platform has a unique URL that allows you to download the image both with and without authentication.
 
 Using the code snippet provided below, you can embed the image into components that operate based on plain HTML, without authentication. For example, in *HTML Card* widget, cell content functions, etc.
 

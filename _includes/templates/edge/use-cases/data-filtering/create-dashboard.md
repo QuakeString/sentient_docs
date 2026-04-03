@@ -1,6 +1,6 @@
 In the following steps, we will create a dashboard that displays both the total miles traveled and the remaining miles until the next oil change for the vehicle.
 
-Please open **ThingsBoard** to create a new dashboard:
+Please open **SENTIENT** to create a new dashboard:
 
 {% include images-gallery.html imageCollection="createDashboard" showListImageTitles="true" %}
 

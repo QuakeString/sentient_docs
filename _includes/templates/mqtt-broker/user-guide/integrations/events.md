@@ -1,4 +1,4 @@
-TBMQ provides logging for integration-related events, allowing users to **debug and troubleshoot** integration behavior.
+ST-RMQTT provides logging for integration-related events, allowing users to **debug and troubleshoot** integration behavior.
 Below are three 'Event' types:
 
 {% assign integrationEvents = '

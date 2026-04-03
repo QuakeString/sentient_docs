@@ -1,17 +1,17 @@
 * TOC
 {:toc}
 
-This guide will help you to set up TBMQ in AWS EKS.
+This guide will help you to set up ST-RMQTT in AWS EKS.
 
 ## Prerequisites
 
 {% include templates/mqtt-broker/install/aws/eks-prerequisites.md %}
 
-## Step 1. Open TBMQ K8S scripts repository
+## Step 1. Open ST-RMQTT K8S scripts repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq.git
-cd tbmq/k8s/aws
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt.git
+cd st-rmqtt/k8s/aws
 ```
 {: .copy-code}
 
@@ -22,14 +22,14 @@ Here are the fields you can change depending on your needs:
 - `region` - should be the AWS region where you want your cluster to be located (the default value is `us-east-1`)
 - `availabilityZones` - should specify the exact IDs of the region's availability zones
   (the default value is `[us-east-1a,us-east-1b,us-east-1c]`)
-- `instanceType` - the type of the instance with TBMQ node (the default value is `m7a.large`)
+- `instanceType` - the type of the instance with ST-RMQTT node (the default value is `m7a.large`)
 
 **Note**: If you don't make any changes to `instanceType` and `desiredCapacity` fields, the EKS will deploy 2 nodes of type m7a.large.
 
 {% capture aws-eks-security %}
 In case you want to secure access to the PostgreSQL and MSK, you'll need to configure the existing VPC or create a new one,
-set it as the VPC for TBMQ cluster, create security groups for PostgreSQL and MSK,
-set them for `managed` node-group in TBMQ cluster and configure the access from TBMQ cluster nodes to PostgreSQL/MSK using another security group.
+set it as the VPC for ST-RMQTT cluster, create security groups for PostgreSQL and MSK,
+set them for `managed` node-group in ST-RMQTT cluster and configure the access from ST-RMQTT cluster nodes to PostgreSQL/MSK using another security group.
 
 You can find more information about configuring VPC for `eksctl` [here](https://eksctl.io/usage/vpc-networking/).
 {% endcapture %}
@@ -67,10 +67,10 @@ One of the ways to do it is by following [this](https://docs.aws.amazon.com/Amaz
 * You may also change `username` field and set or auto-generate `password` field (keep your postgresql password in a safe place).
 
 **Note**: Make sure your database is accessible from the cluster, one of the way to achieve this is to create
-the database in the same VPC and subnets as TBMQ cluster and use
-`eksctl-tbmq-cluster-ClusterSharedNodeSecurityGroup-*` security group. See screenshots below.
+the database in the same VPC and subnets as ST-RMQTT cluster and use
+`eksctl-st-rmqtt-cluster-ClusterSharedNodeSecurityGroup-*` security group. See screenshots below.
 
-{% include images-gallery.html imageCollection="tbmq-rds-set-up" %}
+{% include images-gallery.html imageCollection="st-rmqtt-rds-set-up" %}
 
 ## Step 5. Amazon MSK Configuration
 
@@ -78,29 +78,29 @@ You'll need to set up Amazon MSK.
 To do so you need to open AWS console, MSK submenu, press `Create cluster` button and choose `Custom create` mode.
 You should see the similar image:
 
-{% include images-gallery.html imageCollection="tbmq-msk-set-up" %}
+{% include images-gallery.html imageCollection="st-rmqtt-msk-set-up" %}
 
 **Note**: Some recommendations:
 
-* Apache Kafka version can be safely set to the 3.7.0 version as TBMQ is fully tested on it;
+* Apache Kafka version can be safely set to the 3.7.0 version as ST-RMQTT is fully tested on it;
 * Use m5.large or similar instance types;
 * Consider creation of custom cluster configuration for your MSK. It will make change of Kafka parameters easier;
 * Use default 'Monitoring' settings or enable 'Enhanced topic-level monitoring'.
 
-**Note**: Make sure your MSK instance is accessible from TBMQ cluster.
+**Note**: Make sure your MSK instance is accessible from ST-RMQTT cluster.
 The easiest way to achieve this is to deploy the MSK instance in the same VPC.
 We also recommend to use private subnets. This way it will be nearly impossible to accidentally expose it to the internet;
 
-{% include images-gallery.html imageCollection="tbmq-msk-configuration" %}
+{% include images-gallery.html imageCollection="st-rmqtt-msk-configuration" %}
 
 At the end, carefully review the whole configuration of the MSK and then finish the cluster creation.
 
 ## Step 6. Amazon ElastiCache (Redis) Configuration
 
-You need to set up [ElastiCache](https://aws.amazon.com/elasticache/redis/) for Redis. TBMQ uses cache to store messages for [DEVICE persistent clients](/docs/mqtt-broker/architecture/#persistent-device-client),
+You need to set up [ElastiCache](https://aws.amazon.com/elasticache/redis/) for Redis. ST-RMQTT uses cache to store messages for [DEVICE persistent clients](/docs/mqtt-broker/architecture/#persistent-device-client),
 to improve performance and avoid frequent DB reads (see below for more details).
 
-It is useful when clients connect to TBMQ with the authentication enabled.
+It is useful when clients connect to ST-RMQTT with the authentication enabled.
 For every connection, the request is made to find MQTT client credentials that can authenticate the client.
 Thus, there could be an excessive amount of requests to be processed for a large number of connecting clients at once.
 
@@ -109,12 +109,12 @@ Please open AWS console and navigate to ElastiCache->Redis clusters->Create Redi
 **Note**: Some recommendations:
 
 * Specify Redis Engine version 7.x and node type with at least 1 GB of RAM;
-* Make sure your Redis cluster is accessible from the TBMQ cluster.
+* Make sure your Redis cluster is accessible from the ST-RMQTT cluster.
   The easiest way to achieve this is to deploy the Redis cluster in the same VPC.
-  We also recommend to use private subnets. Use `eksctl-tbmq-cluster-ClusterSharedNodeSecurityGroup-*` security group;
+  We also recommend to use private subnets. Use `eksctl-st-rmqtt-cluster-ClusterSharedNodeSecurityGroup-*` security group;
 * Disable automatic backups.
 
-{% include images-gallery.html imageCollection="tbmq-redis-set-up" %}
+{% include images-gallery.html imageCollection="st-rmqtt-redis-set-up" %}
 
 ## Step 7. Configure links to the Kafka/Postgres/Redis
 
@@ -123,7 +123,7 @@ Please open AWS console and navigate to ElastiCache->Redis clusters->Create Redi
 Once the database switch to the ‘Available’ state, on AWS Console get the `Endpoint` of the RDS PostgreSQL and paste it to
 `SPRING_DATASOURCE_URL` in the `tb-broker-db-configmap.yml` instead of `RDS_URL_HERE` part.
 
-{% include images-gallery.html imageCollection="tbmq-rds-link-configure" %}
+{% include images-gallery.html imageCollection="st-rmqtt-rds-link-configure" %}
 
 Also, you'll need to set `SPRING_DATASOURCE_USERNAME` and `SPRING_DATASOURCE_PASSWORD` with PostgreSQL `username` and `password` corresponding.
 
@@ -136,7 +136,7 @@ aws kafka get-bootstrap-brokers --region us-east-1 --cluster-arn $CLUSTER_ARN
 {: .copy-code}
 Where **$CLUSTER_ARN** is the Amazon Resource Name (ARN) of the MSK cluster:
 
-{% include images-gallery.html imageCollection="tbmq-msk-link-configure" %}
+{% include images-gallery.html imageCollection="st-rmqtt-msk-link-configure" %}
 
 You'll need to paste data from the `BootstrapBrokerString` to the `TB_KAFKA_SERVERS` environment variable in the `tb-broker.yml` file.
 
@@ -146,7 +146,7 @@ Otherwise, click `View client information` seen on the screenshot above. Copy bo
 
 Once the Redis cluster switch to the ‘Available’ state, open the ‘Cluster details’ and copy `Primary endpoint` without ":6379" port suffix, it`s **YOUR_REDIS_ENDPOINT_URL_WITHOUT_PORT**.
 
-{% include images-gallery.html imageCollection="tbmq-redis-link-configure" %}
+{% include images-gallery.html imageCollection="st-rmqtt-redis-link-configure" %}
 
 Edit `tb-broker-cache-configmap.yml` and replace **YOUR_REDIS_ENDPOINT_URL_WITHOUT_PORT**.
 
@@ -154,14 +154,14 @@ Edit `tb-broker-cache-configmap.yml` and replace **YOUR_REDIS_ENDPOINT_URL_WITHO
 
 Execute the following command to run installation:
 ```bash
-./k8s-install-tbmq.sh
+./k8s-install-st-rmqtt.sh
 ```
 {: .copy-code}
 
 After this command finish you should see the next line in the console:
 
 ```
-INFO  o.t.m.b.i.ThingsboardMqttBrokerInstallService - Installation finished successfully!
+INFO  o.t.m.b.i.SentientMqttBrokerInstallService - Installation finished successfully!
 ```
 
 {% capture aws-rds %}
@@ -176,7 +176,7 @@ Otherwise, please check if you set the PostgreSQL URL and PostgreSQL password in
 Execute the following command to deploy the broker:
 
 ```bash
-./k8s-deploy-tbmq.sh
+./k8s-deploy-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -193,7 +193,7 @@ If everything went fine, you should be able to see `tb-broker-0` and `tb-broker-
 
 ### 10.1 Configure HTTP(S) Load Balancer
 
-Configure HTTP(S) Load Balancer to access web interface of your TBMQ instance. Basically you have 2 possible options of configuration:
+Configure HTTP(S) Load Balancer to access web interface of your ST-RMQTT instance. Basically you have 2 possible options of configuration:
 
 * http - Load Balancer without HTTPS support. Recommended for **development**. The only advantage is simple configuration and minimum costs. May be good option for development server but definitely not suitable for production.
 * https - Load Balancer with HTTPS support. Recommended for **production**. Acts as an SSL termination point. You may easily configure it to issue and maintain a valid SSL certificate. Automatically redirects all non-secure (HTTP) traffic to secure (HTTPS) port.
@@ -257,10 +257,10 @@ The load balancer will forward all TCP traffic for ports 1883 and 8883.
 #### One-way TLS
 
 The simplest way to configure MQTTS is to make your MQTT load balancer (AWS NLB) to act as a TLS termination point.
-This way we set up the one-way TLS connection, where the traffic between your devices and load balancers is encrypted, and the traffic between your load balancer and TBMQ is not encrypted.
+This way we set up the one-way TLS connection, where the traffic between your devices and load balancers is encrypted, and the traffic between your load balancer and ST-RMQTT is not encrypted.
 There should be no security issues, since the ALB/NLB is running in your VPC.
 The only major disadvantage of this option is that you can’t use “X.509 certificate” MQTT client credentials,
-since information about client certificate is not transferred from the load balancer to the TBMQ.
+since information about client certificate is not transferred from the load balancer to the ST-RMQTT.
 
 To enable the one-way TLS:
 
@@ -282,17 +282,17 @@ kubectl apply -f receipts/mqtts-load-balancer.yml
 
 #### Two-way TLS
 
-The more complex way to enable MQTTS is to obtain valid (signed) TLS certificate and configure it in the TBMQ.
+The more complex way to enable MQTTS is to obtain valid (signed) TLS certificate and configure it in the ST-RMQTT.
 The main advantage of this option is that you may use it in combination with “X.509 certificate” MQTT client credentials.
 
 To enable the two-way TLS:
 
-Follow [this guide](https://thingsboard.io/docs/user-guide/mqtt-over-ssl/) to create a .pem file with the SSL certificate. Store the file as _server.pem_ in the working directory.
+Follow [this guide](https://docs.sentient.invenia.in/docs/user-guide/mqtt-over-ssl/) to create a .pem file with the SSL certificate. Store the file as _server.pem_ in the working directory.
 
 You’ll need to create a config-map with your PEM file, you can do it by calling command:
 
 ```bash
-kubectl create configmap tbmq-mqtts-config \
+kubectl create configmap st-rmqtt-mqtts-config \
  --from-file=server.pem=YOUR_PEM_FILENAME \
  --from-file=mqttserver_key.pem=YOUR_PEM_KEY_FILENAME \
  -o yaml --dry-run=client | kubectl apply -f -
@@ -320,7 +320,7 @@ kubectl apply -f receipts/mqtt-load-balancer.yml
 
 ## Step 11. Validate the setup
 
-Now you can open TBMQ web interface in your browser using DNS name of the load balancer.
+Now you can open ST-RMQTT web interface in your browser using DNS name of the load balancer.
 
 You can get DNS name of the load-balancers using the next command:
 
@@ -360,7 +360,7 @@ Use `EXTERNAL-IP` field of the load-balancer to connect to the cluster via MQTT 
 
 ### Troubleshooting
 
-In case of any issues you can examine service logs for errors. For example to see TBMQ logs execute the following command:
+In case of any issues you can examine service logs for errors. For example to see ST-RMQTT logs execute the following command:
 
 ```bash
 kubectl logs -f tb-broker-0
@@ -387,7 +387,7 @@ For further guidance, follow the [next instructions](https://docs.aws.amazon.com
 ### Upgrade to 2.2.0
 
 In this release, the MQTT authentication mechanism was migrated from YAML/env configuration into the database.
-During upgrade, TBMQ needs to know which authentication providers are enabled in your deployment.
+During upgrade, ST-RMQTT needs to know which authentication providers are enabled in your deployment.
 This information is provided through environment variables passed to the **upgrade pod**.
 
 The upgrade script requires a file named **`database-setup.yml`** that explicitly defines these variables.
@@ -411,7 +411,7 @@ Once the file is prepared and the values verified, proceed with the [upgrade pro
 
 ### Upgrade to 2.0.0
 
-For the TBMQ v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 6](#step-6-amazon-elasticache-redis-configuration) to complete the installation.
+For the ST-RMQTT v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 6](#step-6-amazon-elasticache-redis-configuration) to complete the installation.
 Only then you can proceed with the [upgrade](#run-upgrade).
 
 ### Run upgrade
@@ -431,23 +431,23 @@ git pull origin {{ site.release.broker_branch }}
 
 After that, execute the following command:
 
-{% capture tabspec %}tbmq-upgrade
-tbmq-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh
-tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md{% endcapture %}
+{% capture tabspec %}st-rmqtt-upgrade
+st-rmqtt-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh
+st-rmqtt-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md{% endcapture %}
 {% include tabs.html %}
 
-{% include templates/mqtt-broker/upgrade/stop-tbmq-pods-before-upgrade.md %}
+{% include templates/mqtt-broker/upgrade/stop-st-rmqtt-pods-before-upgrade.md %}
 
 ## Cluster deletion
 
-Execute the following command to delete TBMQ nodes:
+Execute the following command to delete ST-RMQTT nodes:
 
 ```bash
-./k8s-delete-tbmq.sh
+./k8s-delete-st-rmqtt.sh
 ```
 {: .copy-code}
 
-Execute the following command to delete all TBMQ nodes and configmaps:
+Execute the following command to delete all ST-RMQTT nodes and configmaps:
 
 ```bash
 ./k8s-delete-all.sh
@@ -456,7 +456,7 @@ Execute the following command to delete all TBMQ nodes and configmaps:
 
 Execute the following command to delete the EKS cluster (you should change the name of the cluster and the region if those differ):
 ```bash
-eksctl delete cluster -r us-east-1 -n tbmq -w
+eksctl delete cluster -r us-east-1 -n st-rmqtt -w
 ```
 {: .copy-code}
 

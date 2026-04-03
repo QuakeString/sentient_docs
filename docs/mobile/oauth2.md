@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Configure OAuth 2.0 in ThingsBoard Mobile Application
+title: Configure OAuth 2.0 in SENTIENT Mobile Application
 
 oauth2:
  0:

@@ -1,5 +1,5 @@
 ---
 layout: docwithnav-pe
-title: "How to connect HiLetgo ESP32 Development Board to ThingsBoard?"
+title: "How to connect HiLetgo ESP32 Development Board to SENTIENT?"
 redirect_to: "/device-library/pe/hiletgo-esp32-dev-kit/"
 ---

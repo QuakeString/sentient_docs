@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
 title: Report service
-description: ThingsBoard configuration parameters and environment variables
+description: SENTIENT configuration parameters and environment variables
 
 ---
 

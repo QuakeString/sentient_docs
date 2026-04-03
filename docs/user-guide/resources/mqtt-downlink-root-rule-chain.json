@@ -15,7 +15,7 @@
           "layoutX": 954,
           "layoutY": 115
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save Timeseries",
         "debugMode": true,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 955,
           "layoutY": 11
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgAttributesNode",
         "name": "Save Attributes",
         "debugMode": false,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 566,
           "layoutY": 302
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeSwitchNode",
         "name": "Message Type Switch",
         "debugMode": true,
         "configuration": {
@@ -51,7 +51,7 @@
           "layoutX": 955,
           "layoutY": 225
         },
-        "type": "org.thingsboard.rule.engine.action.TbLogNode",
+        "type": "org.sentient.rule.engine.action.TbLogNode",
         "name": "Log RPC from Device",
         "debugMode": false,
         "configuration": {
@@ -63,7 +63,7 @@
           "layoutX": 955,
           "layoutY": 338
         },
-        "type": "org.thingsboard.rule.engine.action.TbLogNode",
+        "type": "org.sentient.rule.engine.action.TbLogNode",
         "name": "Log Other",
         "debugMode": false,
         "configuration": {
@@ -75,7 +75,7 @@
           "layoutX": 255,
           "layoutY": 301
         },
-        "type": "org.thingsboard.rule.engine.filter.TbOriginatorTypeFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbOriginatorTypeFilterNode",
         "name": "Is Entity Group",
         "debugMode": true,
         "configuration": {
@@ -89,7 +89,7 @@
           "layoutX": 319,
           "layoutY": 109
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeFilterNode",
         "name": "Post attributes or RPC request",
         "debugMode": true,
         "configuration": {
@@ -104,7 +104,7 @@
           "layoutX": 627,
           "layoutY": 108
         },
-        "type": "org.thingsboard.rule.engine.transform.TbDuplicateMsgToGroupNode",
+        "type": "org.sentient.rule.engine.transform.TbDuplicateMsgToGroupNode",
         "name": "Duplicate To Group Entities",
         "debugMode": true,
         "configuration": {
@@ -117,7 +117,7 @@
           "layoutX": 954,
           "layoutY": 590
         },
-        "type": "org.thingsboard.rule.engine.integration.TbIntegrationDownlinkNode",
+        "type": "org.sentient.rule.engine.integration.TbIntegrationDownlinkNode",
         "name": "Push to Integration",
         "debugMode": true,
         "configuration": {
@@ -129,7 +129,7 @@
           "layoutX": 256,
           "layoutY": 390
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetAttributesNode",
         "name": "Getting Atributes to Metadata",
         "debugMode": true,
         "configuration": {
@@ -146,7 +146,7 @@
           "layoutX": 568,
           "layoutY": 472
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Name from Metadata to Message",
         "debugMode": true,
         "configuration": {

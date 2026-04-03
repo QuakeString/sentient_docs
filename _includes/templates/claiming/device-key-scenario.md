@@ -6,10 +6,10 @@ The device sends Claiming Information to the server which contains both the Secr
 
 {% capture cache-living-time %}
 By default, you can set the expiration date as the date and time the request was received plus 1 day as the maximum value.  
-To add more time, you should increase the value of the parameter **caffeine.specs.claimDevices.timeToLiveInMinutes** in thingsboard.yaml file.{% endcapture %}
+To add more time, you should increase the value of the parameter **caffeine.specs.claimDevices.timeToLiveInMinutes** in sentient.yaml file.{% endcapture %}
 {% include templates/info-banner.md content=cache-living-time %}
 
-ThingsBoard server stores Claiming Information for the duration of the validity of the key. See diagram below.
+SENTIENT server stores Claiming Information for the duration of the validity of the key. See diagram below.
 
 ![image](/images/user-guide/claiming-devices/device-side-key-diagram.png)
 
@@ -17,7 +17,7 @@ Device may send Claiming Information to TB using all supported transport protoco
 The **secretKey** parameter adds security to the claiming process.
 The **durationMs** parameter determines the expiration of claiming time.
 In case the **secretKey** is not specified, the empty string as a default value is used.
-In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/thingsboard/conf/thingsboard.yml**).
+In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/sentient/conf/sentient.yml**).
 
 {% unless docsPrefix contains "paas/" %}
 In order to enable claiming devices feature a system parameter **security.claim.allowClaimingByDefault** (see [configuration guide](/docs/user-guide/install/{{docsPrefix}}config/)) 

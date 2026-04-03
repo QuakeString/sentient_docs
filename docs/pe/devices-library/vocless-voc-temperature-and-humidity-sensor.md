@@ -1,5 +1,5 @@
 ---
 layout: docwithnav-pe
-title: "How to connect Vocless VOC temperature and humidity Sensor to ThingsBoard?"
+title: "How to connect Vocless VOC temperature and humidity Sensor to SENTIENT?"
 redirect_to: "/device-library/pe/vocless-voc-temperature-and-humidity-sensor/"
 ---

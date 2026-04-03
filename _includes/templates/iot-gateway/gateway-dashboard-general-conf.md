@@ -8,7 +8,7 @@ General - this tab contains the main settings, namely:
   - TLS + Access Token.
   - Username and Password.
   - TLS + Private Key (**unsupported yet**).
-- Report strategy (you can read more [here](/docs/iot-gateway/features-overview/report-strategy/)) - strategy for sending gateway status to ThingsBoard:
+- Report strategy (you can read more [here](/docs/iot-gateway/features-overview/report-strategy/)) - strategy for sending gateway status to SENTIENT:
   - On report period - sends gateway status after the report period.
   - On value change - sends gateway status when the value changes.
   - On value change or report period - sends gateway status when the value changes or report period.

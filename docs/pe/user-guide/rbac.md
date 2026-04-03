@@ -177,7 +177,7 @@ supervisors-add-new-user:
         title: 'Navigate to the "Groups" tab and click on the "Customer Administrators" user group.'
     3:
         image: /images/user-guide/security/rbac/supervisors-add-new-user-5-pe.png
-        title: 'Click on the "+" sign at the top right of the screen. Input email address, for instance, we can use janesmith@thingsboard.io, and click "Add".'
+        title: 'Click on the "+" sign at the top right of the screen. Input email address, for instance, we can use janesmith@docs.sentient.invenia.in, and click "Add".'
     4:
         image: /images/user-guide/security/rbac/supervisors-add-new-user-6-pe.png
         title: 'In the opened window you can see the user activation link, click "OK".'
@@ -217,7 +217,7 @@ supervisors-create-read-only-user:
         title: 'Select "Customer Users" on the "Groups" tab on the "Users" page of the user Jane.'
     1:
         image: /images/user-guide/security/rbac/supervisors-create-read-only-user-2-pe.png
-        title: 'Click "+" at the top right of the screen to add new user. Input email address, for example, we will use bob@thingsboard.io, then click "Add".'
+        title: 'Click "+" at the top right of the screen to add new user. Input email address, for example, we will use bob@docs.sentient.invenia.in, then click "Add".'
     2:
         image: /images/user-guide/security/rbac/supervisors-create-read-only-user-3-pe.png
         title: 'In the opened window you can see the user activation link, click "OK".'

@@ -6,7 +6,7 @@ blank"}.
 ### Template
 
 The notification template that defines the content, format, and delivery channels (Web, Email, SMS, Slack, etc.) of the notification. Select an
-existing [notification template](/docs/{{docsPrefix}}user-guide/notifications/#templates){:target="_blank"} from your ThingsBoard instance.
+existing [notification template](/docs/{{docsPrefix}}user-guide/notifications/#templates){:target="_blank"} from your SENTIENT instance.
 
 {% capture template_type_note %}
 **Note**: Only notification templates with type **Rule node** can be used in this rule node.

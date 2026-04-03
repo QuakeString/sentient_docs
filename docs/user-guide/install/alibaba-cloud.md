@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: Installing ThingsBoard CE on Alibaba Cloud
-description: Installing ThingsBoard CE on Alibaba Cloud
+title: Installing SENTIENT on Alibaba Cloud
+description: Installing SENTIENT on Alibaba Cloud
 
 ---
 

@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: Search Results
 hidetoc: "true"
 ---

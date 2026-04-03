@@ -2,7 +2,7 @@
 layout: docwithnav-paas-eu
 assignees:
 - ashvayka
-title: ThingsBoard EU Cloud Subscription plans definition
+title: SENTIENT EU Cloud Subscription plans definition
 description: Features and advantages of subscription payment model
 redirect_from:
   - "/products/paas/eu/subscription/"
@@ -11,7 +11,7 @@ redirect_from:
 cancel-my-subscription:
     0:
         image: /images/subscriptions/cancel-my-subscription-1-paas-eu.png
-        title: 'Log in to ThingsBoard EU Cloud as a Tenant Administrator. After logging in, go to account settings by clicking the three-dot icon in the upper-right corner of the screen and selecting "Account" from the dropdown menu;'
+        title: 'Log in to SENTIENT EU Cloud as a Tenant Administrator. After logging in, go to account settings by clicking the three-dot icon in the upper-right corner of the screen and selecting "Account" from the dropdown menu;'
     1:
         image: /images/subscriptions/cancel-my-subscription-2-paas-eu.png
         title: 'Under the "Profile" tab, click the orange "Delete account" button;'

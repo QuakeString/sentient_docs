@@ -1,7 +1,7 @@
 ---
 layout: pricing
 title: Support plans
-description: ThingsBoard professional support plans for IoT projects, cloud infrastructure support
+description: SENTIENT professional support plans for IoT projects, cloud infrastructure support
 defaultActivePricingSection: professional-support
 redirect_from: "docs/services/support/"
 ---
@@ -10,7 +10,7 @@ redirect_from: "docs/services/support/"
     <div class="pricing-header">
        <div class="pricing-hero">
         <div class="pricing-hero-content">
-            <h1>ThingsBoard support options</h1>
+            <h1>SENTIENT support options</h1>
         </div>
        </div>
        <nav id="inner-navigation" class="inner-navigation">
@@ -40,7 +40,7 @@ redirect_from: "docs/services/support/"
                             <h2>Community support</h2>
                             <div class="community-support-card">
                                 <p>
-                                    Community support is free-of-charge option. It is a volunteering initiative, provided by our team. Please, be aware that support is one of ThingsBoard Inc. business fields. Although our engineers (as many of our customers know) successfully handle user's requests in their free time. Community support doesn't mean any obligation for ThingsBoard Inc. We encourage you to:
+                                    Community support is free-of-charge option. It is a volunteering initiative, provided by our team. Please, be aware that support is one of SENTIENT Inc. business fields. Although our engineers (as many of our customers know) successfully handle user's requests in their free time. Community support doesn't mean any obligation for SENTIENT Inc. We encourage you to:
                                 </p>
                                 <ul>
                                     <li>
@@ -49,7 +49,7 @@ redirect_from: "docs/services/support/"
                                     </li>
                                     <li>
                                         <img src="/images/pricing/yootube-icon.svg" alt="YouTube icon">
-                                        <span>Subscribe to our <a href="https://www.youtube.com/c/thingsboard">YouTube channel</a></span>
+                                        <span>Subscribe to our <a href="https://www.youtube.com/c/sentient">YouTube channel</a></span>
                                     </li>
                                     <li>
                                         <img src="/images/pricing/education-icon.svg" alt="Education icon">
@@ -58,7 +58,7 @@ redirect_from: "docs/services/support/"
                                 </ul>
                                 <p>So, most demanded tutorials, samples and guides are available 24/7.</p>
                                 <p>
-                                    Customer may also rely on answers from ThingsBoard <a href="https://github.com/thingsboard/thingsboard/issues">community on GitHub</a> (issues page), start <a href="https://stackoverflow.com/questions/tagged/thingsboard">Stack Overflow</a> themes.
+                                    Customer may also rely on answers from SENTIENT <a href="https://github.com/sentient/sentient/issues">community on GitHub</a> (issues page), start <a href="https://stackoverflow.com/questions/tagged/sentient">Stack Overflow</a> themes.
                                 </p>
                                 <div class="row justify-content-center mt-4">
                                     <a id="Serv_Support_CS_HelpMe" class="btn-blue btn-pricing gtm_button" href="/docs/contact-us/?subject=Technical%20Support">

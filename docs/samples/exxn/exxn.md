@@ -12,16 +12,16 @@ description: EXXN IoT Gateway Integration guide
 
 The EXXN IoT Gateway is a versatile device with an ARM processor that can be adapted to a variety of use cases, including monitoring environmental sensors, energy consumption, radon gas levels, marine environments, and edge computing.
 
-This guide outlines the process for integrating an EXXN IoT Gateway with the ThingsBoard platform to enable remote monitoring and management of devices.
+This guide outlines the process for integrating an EXXN IoT Gateway with the SENTIENT platform to enable remote monitoring and management of devices.
 
 <br>
-An example of a dashboard developed with ThingsBoard that displays metrics captured by an EXXN IoT Gateway.
+An example of a dashboard developed with SENTIENT that displays metrics captured by an EXXN IoT Gateway.
 
 ![image](/images/samples/exxn/ennx-dashboard.png)
 
 ## Prerequisites
 
-In this tutorial, we will configure an EXXN IoT Gateway to integrate it with ThingsBoard via the MQTT API. In order to do this we will use:
+In this tutorial, we will configure an EXXN IoT Gateway to integrate it with SENTIENT via the MQTT API. In order to do this we will use:
 
  - EXXN IoT Gateway 'Cell 1024';
  - We must have connection to the device and the Device have to be connected to the Internet via Ethernet, Modem or Wifi.
@@ -42,17 +42,17 @@ The technical specifications of the EXXN IoT Gateway 'Cell 1024' used in this gu
    <img src="/images/samples/exxn/cell_1024.jpg" alt="cell 1024">
 </p>
 
-## Provisioning the device for Thingsboard
+## Provisioning the device for Sentient
 
-Contains instructions that are necessary to connect your device to ThingsBoard.
+Contains instructions that are necessary to connect your device to SENTIENT.
 
 ### Create device
 
-Open your platform instance or ThingsBoard [cloud](https://thingsboard.cloud/) in browser and login as tenant administrator.
+Open your platform instance or SENTIENT [cloud](https://sentient.cloud/) in browser and login as tenant administrator.
 
 Go to "**Device groups**" tab -> "**All**" and click "plus" button to add a new device.
 
-Enter device name, select existing or create a new [device profile](https://thingsboard.io/docs/user-guide/device-profiles/) and click on "Add" button.
+Enter device name, select existing or create a new [device profile](https://docs.sentient.invenia.in/docs/user-guide/device-profiles/) and click on "Add" button.
 
 ![image](/images/samples/exxn/exxn-create-device-cell-1.png)
 
@@ -67,17 +67,17 @@ Open a Browser to the administration web of Cell 1024 using this URL: https://[I
 <br>
   <img src="/images/samples/exxn/conn1.png" alt="conn1">
 
-Activate the Cloud control and configure all the parameters to connect the device to the specific ThingsBoard platform via MQTT:
+Activate the Cloud control and configure all the parameters to connect the device to the specific SENTIENT platform via MQTT:
 
 <img src="/images/samples/exxn/conn2.png" alt="conn2">
 
 Configuration parameters:
-- **Cloud Platform**: Select ThingsBoard.
+- **Cloud Platform**: Select SENTIENT.
 - **MQTT broker URL**: URL to de Broker of the server we want to integrate to.
 - **MQTT broker port**: Number of the port used by the server.
 - **TLS**: Select true if the server use the Transport Layer Security protocol.
-- **Connection Type**: Select 'Access Token' option. We will use an Access token previously created in ThingsBoard.
-- **Access Token**: Indicate the Access token previously copyed in ThingsBoard.
+- **Connection Type**: Select 'Access Token' option. We will use an Access token previously created in SENTIENT.
+- **Access Token**: Indicate the Access token previously copyed in SENTIENT.
 
 {% capture domain_owner_note %}
 **Note**
@@ -92,16 +92,16 @@ Click "Save configuration" button.
 <img src="/images/samples/exxn/conn3.png" alt="conn3">
 
 <br>
-To verify that the device is connected correctly to ThingsBoard, go to the **Device groups** menu -> **All** devices, select your device. In the **device details** select **client attributes** tab and check if the client attributes have been communicated to the device.
+To verify that the device is connected correctly to SENTIENT, go to the **Device groups** menu -> **All** devices, select your device. In the **device details** select **client attributes** tab and check if the client attributes have been communicated to the device.
 
 If you did everything is correct, we will see client attributes like the *serial_number*, *last_rebbot*, *device_model*, etc.
 
 ![image](/images/samples/exxn/exxn-client-attributes-device-1.png)
 
-## ThingsBoard configuration
+## SENTIENT configuration
 
-The EXXN IoT Gateway will connect to ThingsBoard using the MQTT API. <br>
-We have previously covered how to configure the device to connect to ThingsBoard. Now, we will show the steps to configure the device in ThingsBoard in order to monitor data and manage the device.
+The EXXN IoT Gateway will connect to SENTIENT using the MQTT API. <br>
+We have previously covered how to configure the device to connect to SENTIENT. Now, we will show the steps to configure the device in SENTIENT in order to monitor data and manage the device.
 
 In order to configurate the datalogger options of the EXXN IoT Gateway, we must to create a new JSON 'Shared' Attribute for the Device with de key 'config'.
 
@@ -123,13 +123,13 @@ All the information to configure the device correctly through this JSON File can
 
 ### Data Visualization
 
-Create a [dashboard](https://thingsboard.io/docs/pe/user-guide/dashboards/) to visualize telemetry values in widgets.
+Create a [dashboard](https://docs.sentient.invenia.in/docs/pe/user-guide/dashboards/) to visualize telemetry values in widgets.
 
  - Go to the **Dashboard groups** tab -> **All**. Creat new dashboard by clicking the "plus" button in the upper right corner of the dashboards page. Enter dashboard name and click on "Add" button.
 
 ![image](/images/samples/exxn/exxn-create-dashboard-1.png)
 
- - Create **Radial gauge** widget from the **Analohue gauges** bundle. Read more about widgets and their creation in [this guide](https://thingsboard.io/docs/pe/user-guide/dashboards/#widgets).
+ - Create **Radial gauge** widget from the **Analohue gauges** bundle. Read more about widgets and their creation in [this guide](https://docs.sentient.invenia.in/docs/pe/user-guide/dashboards/#widgets).
 
 All the measures that are 'enabled' in the device's JSON configuration file will be found as metrics with the name specified in the same file.
 
@@ -149,8 +149,8 @@ All the commands that can be sent to the device are explained in the EXXN IoT Ga
 ## Additional information
 
 ### Troubleshooting
- - The most common problem in the integration process is not having a connection with the MQTT Broker. Make sure the device is connected to the internet and is able to communicate with the ThingsBoard Broker.
- - Another common problem is not setting the correct Access Token. Check that the provided Access token is configured in ThingsBoard for the device.
+ - The most common problem in the integration process is not having a connection with the MQTT Broker. Make sure the device is connected to the internet and is able to communicate with the SENTIENT Broker.
+ - Another common problem is not setting the correct Access Token. Check that the provided Access token is configured in SENTIENT for the device.
 
 <br>
 

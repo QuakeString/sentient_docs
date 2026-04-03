@@ -2,14 +2,14 @@
 * TOC
 {:toc}
 
-This guide explains how to configure ThingsBoard to automatically send email notifications to users when an alarm is created.   
+This guide explains how to configure SENTIENT to automatically send email notifications to users when an alarm is created.   
 It extends the [Create and Clear Alarms](/docs/{{docsPrefix}}tutorials/create-clear-alarms){:target="_blank"} use case by using the Notification Center to deliver alarm-based email notifications.
 
 <hr>
 
 ## Use case
 
-Assume your refrigeration equipment periodically reports temperature telemetry to ThingsBoard.
+Assume your refrigeration equipment periodically reports temperature telemetry to SENTIENT.
 - Normal operating temperature range: 2 °C to 5 °C
 - Any value outside this range is considered an abnormal condition.
 
@@ -28,7 +28,7 @@ Before proceeding, make sure that you have completed the following steps:
 2. Added at least one [Customer User](/docs/{{docsPrefix}}user-guide/ui/customers/#create-customer-user){:target="_blank"} who will receive alarm notifications.
 3. [Configured a mail server](/docs/{{docsPrefix}}user-guide/ui/mail-settings/){:target="_blank"}, which is required for delivering email notifications.
 
-It is also recommended to review the following ThingsBoard documentation:
+It is also recommended to review the following SENTIENT documentation:
 - [Notification center](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"} - learn how to configure notification delivery and recipients
 - [Alarm rules](/docs/{{docsPrefix}}user-guide/alarm-rules){:target="_blank"} - learn how to define alarm trigger conditions
 
@@ -128,25 +128,25 @@ To verify the configuration, publish telemetry that exceeds the defined temperat
 Example: publish a temperature value of **7 °C**, which should trigger a high temperature alarm.
 {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
+curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
    ```
 {: .copy-code}
 {% endif %}
 {% if docsPrefix == "paas/" %}
    ```bash
-curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
+curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
    ```
 {: .copy-code}
 {% endif %}
 {% if docsPrefix == "paas/eu/" %}
    ```bash
-curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
+curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
    ```
 {: .copy-code}
 {% endif %}
 
 ⚠️ Replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;**$THINGSBOARD_HOST_NAME** with your ThingsBoard hostname or IP address.   
+&#8194;&#8226;&#8194;**$SENTIENT_HOST_NAME** with your SENTIENT hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}**$ACCESS_TOKEN** with the device access token.
 
 **Expected result**

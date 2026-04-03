@@ -17,7 +17,7 @@ coap://{{coapHostName}}/api/v1/$ACCESS_TOKEN/rpc
 {% endif %}
 
 > Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is your device&#39;s access token.
 
 Once subscribed, a client may receive RPC requests. An example of RPC request body is shown below:
@@ -60,7 +60,7 @@ coap://{{coapHostName}}/api/v1/$ACCESS_TOKEN/rpc/{$id}
 
 **Example**
 
-- Use **RPC debug terminal** widget in your ThingsBoard instance.
+- Use **RPC debug terminal** widget in your SENTIENT instance.
 - Subscribe to RPC commands from the server using the command below. To do this, in the first terminal window send GET request with observe flag:
 
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
@@ -109,7 +109,7 @@ cat rpc-response.json | coap post coap://{{coapHostName}}/api/v1/$ACCESS_TOKEN/r
 {% endif %}
 
 > ⚠️ Replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> with your device&#39;s access token.
 
 You should receive a response from the device:

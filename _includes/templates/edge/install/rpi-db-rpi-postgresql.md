@@ -1,10 +1,10 @@
 {% capture postgresql-info %}
-The ThingsBoard team recommends using **PostgreSQL** for development and production environments with **moderate load (less than 5000 msg/sec)**.
-Many cloud providers offer managed **PostgreSQL** services, making it a cost-effective solution for most ThingsBoard deployments.
+The SENTIENT team recommends using **PostgreSQL** for development and production environments with **moderate load (less than 5000 msg/sec)**.
+Many cloud providers offer managed **PostgreSQL** services, making it a cost-effective solution for most SENTIENT deployments.
 {% endcapture %}
 {% include templates/info-banner.md content=postgresql-info %}
 
-**ThingsBoard Edge** uses **PostgreSQL** database as a local storage.
+**SENTIENT GATEWAY** uses **PostgreSQL** database as a local storage.
 
 {% include templates/install/postgres-install-rpi.md %}
 
@@ -15,13 +15,13 @@ echo "CREATE DATABASE tb_edge;" | psql -U postgres -d postgres -h 127.0.0.1 -W
 ```
 {: .copy-code}
 
-### ThingsBoard Configuration
+### SENTIENT Configuration
 
-Edit **ThingsBoard Edge** configuration file: 
+Edit **SENTIENT GATEWAY** configuration file: 
 
 ```bash 
 sudo bash -c 'echo "export DATABASE_TS_TYPE=sql
-export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/thingsboard
+export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/sentient
 export SPRING_DATASOURCE_USERNAME=postgres
 export SPRING_DATASOURCE_PASSWORD=PUT_YOUR_POSTGRESQL_PASSWORD_HERE
 export SQL_POSTGRES_TS_KV_PARTITIONING=MONTHS" >> /etc/tb-edge/conf/tb-edge.conf'

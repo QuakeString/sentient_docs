@@ -1,13 +1,13 @@
 * TOC
 {:toc}
 
-After installing **TBMQ PE**, as described in the [Installation Options guide](/docs/pe/mqtt-broker/install/installation-options/), 
+After installing **ST-RMQTT PE**, as described in the [Installation Options guide](/docs/pe/mqtt-broker/install/installation-options/), 
 your instance is accessible by default via its public **IP address** or the **DNS record of the cloud Load Balancer**.
 However, configuring a **custom domain name** provides several important advantages:
 
 * **Simplified access** - users can log in using an easy-to-remember hostname instead of an IP or Load Balancer DNS name.
 * **Secure SSL connections** - domains enable the use of trusted SSL/TLS certificates.
-* **White labeling** - TBMQ uses the domain to apply custom branding to the login page (logos, titles, and colors). The domain simplifies configuration management, as each TBMQ deployment supports only one login page branding configuration.
+* **White labeling** - ST-RMQTT uses the domain to apply custom branding to the login page (logos, titles, and colors). The domain simplifies configuration management, as each ST-RMQTT deployment supports only one login page branding configuration.
 * **OAuth 2.0 / SSO integration** - multiple domains allow separate login configurations for each authentication provider.
 
 ## Domain Registration
@@ -17,29 +17,29 @@ However, configuring a **custom domain name** provides several important advanta
 {% endcapture %}
 {% include templates/info-banner.md content=domain_owner_note %}
 
-To use your own hostname with TBMQ, you must first configure DNS and then register the domain inside TBMQ.
+To use your own hostname with ST-RMQTT, you must first configure DNS and then register the domain inside ST-RMQTT.
 
 ### Step 1. Configure DNS
 
 On your DNS provider’s website:
 
-* Add an **A record** (or **CNAME record**) to map your domain to the IP or hostname where TBMQ is hosted.
+* Add an **A record** (or **CNAME record**) to map your domain to the IP or hostname where ST-RMQTT is hosted.
 
     * See [How to Create an A Record](#how-to-create-an-a-record-for-your-domain)
     * Or [How to Create a CNAME Record](#how-to-create-a-cname-record-for-your-domain)
 
 * Add a valid **SSL certificate** for the chosen domain.
 
-### Step 2. Register Domain in TBMQ
+### Step 2. Register Domain in ST-RMQTT
 
-* Log in to your **TBMQ PE** account.
+* Log in to your **ST-RMQTT PE** account.
 
 {% include images-gallery.html imageCollection="register-domain" showListImageTitles="true" %}
 
 ## Logging in with Your Domain
 
-After successful registration, you can access your TBMQ instance using the configured domain name.
-Open a web browser and enter the domain in the address bar - you should see the TBMQ login page.
+After successful registration, you can access your ST-RMQTT instance using the configured domain name.
+Open a web browser and enter the domain in the address bar - you should see the ST-RMQTT login page.
 
 {% include images-gallery.html imageCollection="login-with-domain" %}
 
@@ -70,7 +70,7 @@ mqtt.mycompany.com → 203.0.113.45
 
 ### When to Use an A Record
 
-Use an **A record** when your TBMQ instance has a **fixed public IP address** - for example, a VM, Kubernetes service, or on-premise server.
+Use an **A record** when your ST-RMQTT instance has a **fixed public IP address** - for example, a VM, Kubernetes service, or on-premise server.
 
 ### How to Create an A Record
 
@@ -132,7 +132,7 @@ If your provider is not listed, check their documentation or contact their suppo
 
 ## Troubleshooting
 
-If your domain does not resolve or TBMQ is not accessible, verify the DNS configuration.
+If your domain does not resolve or ST-RMQTT is not accessible, verify the DNS configuration.
 
 ### Check DNS Record
 
@@ -177,4 +177,4 @@ mqtt.mycompany.com. 3600 IN A 203.0.113.45
 
 ### Contact Support
 
-If the configuration appears correct but the issue persists, please [contact us](https://thingsboard.io/docs/pe/mqtt-broker/help/){:target="_blank"} for further assistance.
+If the configuration appears correct but the issue persists, please [contact us](https://docs.sentient.invenia.in/docs/pe/mqtt-broker/help/){:target="_blank"} for further assistance.

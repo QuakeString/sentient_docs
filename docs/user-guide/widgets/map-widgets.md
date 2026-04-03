@@ -22,7 +22,7 @@ adding-map-widget:
 map-type:
     0:
         image: /images/user-guide/widgets/maps/map-type-1-ce.png
-        title: 'The first step in configuring the map widget is selecting the map type. ThingsBoard offers several map widgets, including Image Map, which allows you to use a custom background image as the map. You can also configure map layers, enabling flexible switching between different map styles — such as satellite, hybrid, or custom layers — directly within the widget, with just a few clicks.'
+        title: 'The first step in configuring the map widget is selecting the map type. SENTIENT offers several map widgets, including Image Map, which allows you to use a custom background image as the map. You can also configure map layers, enabling flexible switching between different map styles — such as satellite, hybrid, or custom layers — directly within the widget, with just a few clicks.'
 
 map-type-adding-layer-1:
     0:
@@ -60,7 +60,7 @@ add-marker:
         title: 'Enter widget edit mode and go to the "Overlays" section. Make sure you&#39;re on the "Marker" tab and click "Add marker".'
     1:
         image: /images/user-guide/widgets/maps/add-marker-2-ce.png
-        title: 'Select the data source - it can be a device, an entity alias, or a function. Define the coordinate keys. By default, ThingsBoard uses *latitude* and *longitude* attributes as the coordinate keys for the marker. If your entity uses different key names, update them here. Apply the changes.'
+        title: 'Select the data source - it can be a device, an entity alias, or a function. Define the coordinate keys. By default, SENTIENT uses *latitude* and *longitude* attributes as the coordinate keys for the marker. If your entity uses different key names, update them here. Apply the changes.'
     2:
         image: /images/user-guide/widgets/maps/add-marker-3-ce.png
         title: 'The marker will appear on the map based on the specified coordinates.'
@@ -78,7 +78,7 @@ marker-configuration-datasource:
 marker-configuration-keys:
     0:
         image: /images/user-guide/widgets/maps/marker-configuration-keys-1-ce.png
-        title: 'Define the coordinate keys. ThingsBoard automatically sets the coordinate keys as latitude and longitude. If your entity uses custom coordinate key names, update them here. Additional data keys can be used for labels, tooltips, and displaying extra information directly on the map.'
+        title: 'Define the coordinate keys. SENTIENT automatically sets the coordinate keys as latitude and longitude. If your entity uses custom coordinate key names, update them here. Additional data keys can be used for labels, tooltips, and displaying extra information directly on the map.'
 
 marker-icon-color-1:
     0:
@@ -221,7 +221,7 @@ add-polygon:
         title: 'Enter widget edit mode and go to the "Overlays" section. Switch to the "Polygons" tab and click "Add polygon".'
     1:
         image: /images/user-guide/widgets/maps/add-polygon-2-ce.png
-        title: 'Select the entity that will be represented as a polygon. This can be a device, entity alias, or function. Define the key with the coordinates of the polygon. ThingsBoard will use the "perimeter" key by default to read the polygon coordinates from the entity&#39;s attributes. If you use a different key, update it accordingly. Click "Apply".'
+        title: 'Select the entity that will be represented as a polygon. This can be a device, entity alias, or function. Define the key with the coordinates of the polygon. SENTIENT will use the "perimeter" key by default to read the polygon coordinates from the entity&#39;s attributes. If you use a different key, update it accordingly. Click "Apply".'
     2:
         image: /images/user-guide/widgets/maps/add-polygon-3-ce.png
         title: 'The polygon will appear on the map based on the entity&#39;s data.'
@@ -239,7 +239,7 @@ polygon-configuration-datasource:
 polygon-configuration-keys:
     0:
         image: /images/user-guide/widgets/maps/polygon-configuration-keys-1-ce.png
-        title: 'Define the key that contains the polygon coordinates. By default, ThingsBoard uses "perimeter" as the polygon key. If your entity uses a different key name, make sure to update it here. Additional data keys can be used for labels, tooltips, or to display extra information directly on the map.'
+        title: 'Define the key that contains the polygon coordinates. By default, SENTIENT uses "perimeter" as the polygon key. If your entity uses a different key name, make sure to update it here. Additional data keys can be used for labels, tooltips, or to display extra information directly on the map.'
 
 polygon-color:
     0:
@@ -376,7 +376,7 @@ add-circle:
         title: 'Enter widget edit mode and go to the "Overlays" section. Switch to the "Circles" tab and click "Add circle".'
     1:
         image: /images/user-guide/widgets/maps/add-circle-2-ce.png
-        title: 'Select the entity that will be represented as a circle. This can be a device, entity alias, or function. Define the key with the coordinates of the circle. ThingsBoard will use the "perimeter" key by default to read the circle coordinates from the entity&#39;s attribute. If your entity uses a different key name, update it here. Click "Apply" — the circle will appear on the map based on the entity&#39;s data.'
+        title: 'Select the entity that will be represented as a circle. This can be a device, entity alias, or function. Define the key with the coordinates of the circle. SENTIENT will use the "perimeter" key by default to read the circle coordinates from the entity&#39;s attribute. If your entity uses a different key name, update it here. Click "Apply" — the circle will appear on the map based on the entity&#39;s data.'
     2:
         image: /images/user-guide/widgets/maps/add-circle-3-ce.png
         title: 'The circle has been successfully added to the map.'
@@ -394,7 +394,7 @@ circle-configuration-datasource:
 circle-configuration-keys:
     0:
         image: /images/user-guide/widgets/maps/circle-configuration-keys-1-ce.png
-        title: 'Define the key that contains the circle coordinates. By default, ThingsBoard uses "perimeter" as the circle key. If your entity uses a different key name, make sure to update it here. Additional data keys can be used for labels, tooltips, or to display extra information directly on the map.'
+        title: 'Define the key that contains the circle coordinates. By default, SENTIENT uses "perimeter" as the circle key. If your entity uses a different key name, make sure to update it here. Additional data keys can be used for labels, tooltips, or to display extra information directly on the map.'
     
 circle-color:
     0:
@@ -551,7 +551,7 @@ map-action-buttons-4:
 common-map-settings:
     0:
         image: /images/user-guide/widgets/maps/common-map-settings-1-ce.png
-        title: 'Common map settings are the basic global settings for the Map widget in ThingsBoard. They define how the map behaves on load and what is displayed initially.'
+        title: 'Common map settings are the basic global settings for the Map widget in SENTIENT. They define how the map behaves on load and what is displayed initially.'
 
 appearance:
     0:

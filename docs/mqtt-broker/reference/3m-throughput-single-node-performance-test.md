@@ -1,23 +1,23 @@
 ---
 layout: docwithnav-mqtt-broker
-title: 3M Msg/sec Throughput with a Single TBMQ Node
-description: TBMQ 3M msg/s throughput single node performance test
+title: 3M Msg/sec Throughput with a Single ST-RMQTT Node
+description: ST-RMQTT 3M msg/s throughput single node performance test
 
-tbmq-3m-single-node-test-aws-instances:
+st-rmqtt-3m-single-node-test-aws-instances:
   0:
     image: /images/mqtt-broker/reference/single-node-test/aws-instances.png
     title: 'AWS EC2 instances deployed'
 
-tbmq-3m-single-node-test-monitoring:
+st-rmqtt-3m-single-node-test-monitoring:
   0:
-    image: /images/mqtt-broker/reference/single-node-test/tbmq-aws.png
-    title: 'AWS EC2 TBMQ monitoring'
+    image: /images/mqtt-broker/reference/single-node-test/st-rmqtt-aws.png
+    title: 'AWS EC2 ST-RMQTT monitoring'
   1:
-    image: /images/mqtt-broker/reference/single-node-test/tbmq-jmx.png
-    title: 'JMX TBMQ monitoring'
+    image: /images/mqtt-broker/reference/single-node-test/st-rmqtt-jmx.png
+    title: 'JMX ST-RMQTT monitoring'
   2:
-    image: /images/mqtt-broker/reference/single-node-test/tbmq-monitoring.png
-    title: 'TBMQ graphs monitoring'
+    image: /images/mqtt-broker/reference/single-node-test/st-rmqtt-monitoring.png
+    title: 'ST-RMQTT graphs monitoring'
 
 ---
 

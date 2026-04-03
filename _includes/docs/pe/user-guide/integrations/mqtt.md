@@ -3,14 +3,14 @@
 * TOC
 {:toc}
 
-MQTT Integration allows to connect to external MQTT brokers, subscribe to data streams from those brokers and convert any type of payload from your devices to ThingsBoard message format. Its typical use is whenever your devices are already connected to external MQTT broker or any other IoT platform or connectivity provider with MQTT based back-end. 
+MQTT Integration allows to connect to external MQTT brokers, subscribe to data streams from those brokers and convert any type of payload from your devices to SENTIENT message format. Its typical use is whenever your devices are already connected to external MQTT broker or any other IoT platform or connectivity provider with MQTT based back-end. 
 
 Please review the integration diagram to learn more. 
 
 <object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/mqtt-integration.svg"></object>
 
-ThingsBoard MQTT Integration acts as an MQTT client. It subscribes to topics and converts the data into telemetry and attribute updates. In case of downlink message, MQTT integration converts it to the device-suitable format and pushes to external MQTT broker. 
-Pay attention: MQTT broker should be either co-located with ThingsBoard instance or deployed in the cloud and have a valid DNS name or static IP address. ThingsBoard instance that is running in the cloud can’t connect to the MQTT broker deployed in local area network.
+SENTIENT MQTT Integration acts as an MQTT client. It subscribes to topics and converts the data into telemetry and attribute updates. In case of downlink message, MQTT integration converts it to the device-suitable format and pushes to external MQTT broker. 
+Pay attention: MQTT broker should be either co-located with SENTIENT instance or deployed in the cloud and have a valid DNS name or static IP address. SENTIENT instance that is running in the cloud can’t connect to the MQTT broker deployed in local area network.
 
 ## MQTT Integration Configuration
 
@@ -21,29 +21,29 @@ In this tutorial, we will configure MQTT Integration to provide devices connecti
 In this tutorial, we will use:
 
 {% if docsPrefix == "pe/" %}
-- The instance of [ThingsBoard Professional Edition](https://thingsboard.io/docs/user-guide/install/pe/installation-options/) installed locally;
+- The instance of [SENTIENT Professional Edition](https://docs.sentient.invenia.in/docs/user-guide/install/pe/installation-options/) installed locally;
   {% endif %}
   {% if docsPrefix contains "paas/" %}
-- ThingsBoard Professional Edition instance — [{{hostName}}](https://{{hostName}});
+- SENTIENT Professional Edition instance — [{{hostName}}](https://{{hostName}});
   {% endif %}
- - MQTT broker, accessible by ThingsBoard PE instance — broker.hivemq.com (port 1883);
+ - MQTT broker, accessible by SENTIENT Professional Edition instance — broker.hivemq.com (port 1883);
  - mosquitto_pub and mosquitto_sub MQTT clients to send and receive messages;   
  - an advanced [device simulator](/docs/user-guide/integrations/resources/mqtt-client.py) for RPC simulation example.
 
 Let's assume that we have a sensor which is sending current temperature readings.
 Our sensor device *SN-001* publishes it's temperature readings to '**tb/mqtt-integration-tutorial/sensors/SN-001/temperature**' and it is subscribed to '**tb/mqtt-integration-tutorial/sensors/SN-001/rx**' to receive RPC calls.
 
-### ThingsBoard setup
+### SENTIENT setup
 
 Before setting up an MQTT integration, you need to create uplink and downlink converters.
 
 Uplink converter is a script for parsing and transforming the data received by MQTT integration.
 
-Downlink converter parses and transforms the data sent from ThingsBoard to the format that is consumed by existing device(s).
+Downlink converter parses and transforms the data sent from SENTIENT to the format that is consumed by existing device(s).
 
 #### Uplink Converter
 
-The purpose of the decoder function is to parse the incoming data and metadata to a format that ThingsBoard can consume.
+The purpose of the decoder function is to parse the incoming data and metadata to a format that SENTIENT can consume.
 *deviceName* and *deviceType* are required, while *attributes* and *telemetry* are optional.
 *Attributes* and *telemetry* are flat key-value objects. Nested objects are not supported.
 
@@ -335,7 +335,7 @@ Go to the **Devices** page and find *rpcReceived* telemetry value is "*OK*" on t
 
 ### MQTT retransmission mechanism
 
-The MQTT integration uses ThingsBoard's internal MQTT client.
+The MQTT integration uses SENTIENT's internal MQTT client.
 
 {% if docsPrefix contains "paas" %}
 {% include docs/user-guide/mqtt-retransmission-mechanism.md show-yml-config=false %}

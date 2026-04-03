@@ -1,18 +1,18 @@
 * TOC
 {:toc}
 
-This guide explains how to calculate the difference (delta) between telemetry values in ThingsBoard and use this calculated value to automatically trigger and clear alarms.
+This guide explains how to calculate the difference (delta) between telemetry values in SENTIENT and use this calculated value to automatically trigger and clear alarms.
 
 The guide is introductory and focuses on demonstrating the core capabilities of the platform rather than building configurations from scratch.   
 For this reason, predefined configurations for calculated fields and alarm rules are provided and imported during the setup.
 
-After importing these configurations into your ThingsBoard instance, you can explore their structure, logic, and behavior, and later adapt them for your own use cases.
+After importing these configurations into your SENTIENT instance, you can explore their structure, logic, and behavior, and later adapt them for your own use cases.
 
 <hr>
 
 ## Use case
 
-Assume you have a device equipped with a temperature sensor that periodically sends telemetry data to ThingsBoard.
+Assume you have a device equipped with a temperature sensor that periodically sends telemetry data to SENTIENT.
 
 You need to:
 - Monitor temperature changes over a fixed time window (for example, 15 minutes).
@@ -25,7 +25,7 @@ This workflow represents a common real-time monitoring and anomaly detection sce
 
 ## Prerequisites
 
-Before proceeding, it is recommended to review the following ThingsBoard documentation:
+Before proceeding, it is recommended to review the following SENTIENT documentation:
 - [Calculated fields](/docs/{{docsPrefix}}user-guide/calculated-fields/){:target="_blank"} - learn how to compute new telemetry values based on incoming data.
 - [Alarm rules](/docs/{{docsPrefix}}user-guide/alarm-rules){:target="_blank"} - learn how to define alarm trigger conditions to promptly respond to abnormal conditions.
 
@@ -46,7 +46,7 @@ The device serves as the source of telemetry data used by the calculated field a
 &#8194;&#8226;&#8194;**Device name**: Thermometer   
 &#8194;&#8226;&#8194;**Device profile**: thermostat
 
-The device is registered in ThingsBoard and ready to publish telemetry data.
+The device is registered in SENTIENT and ready to publish telemetry data.
 
 <hr>
 
@@ -112,7 +112,7 @@ Configure the [alarm rule](/docs/{{docsPrefix}}user-guide/alarm-rules){:target="
 4. Configure the alarm rule for a <span class="code-light">thermostat</span> [device profile](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} to ensure it is applied consistently to all devices that use this profile.
 5. Click **Add**.
 
-Once imported, the alarm lifecycle is managed automatically by ThingsBoard.
+Once imported, the alarm lifecycle is managed automatically by SENTIENT.
 
 <hr>
 
@@ -125,24 +125,24 @@ To confirm that everything works as expected, publish two temperature values wit
 1. Publish an initial temperature value (for example, 25).   
    The easiest way is to use the [check connectivity](/docs/{{docsPrefix}}user-guide/ui/devices/#check-connectivity){:target="_blank"} feature. Alternatively, execute the command below:   
    > **Don&#39;t forget to replace:**   
-   &#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+   &#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
    &#8194;&#8226;&#8194;<code>$ACCESS_TOKEN</code> with your device&#39;s access token.
 
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
    ```
    {: .copy-code}
    {% endif %} 
@@ -155,19 +155,19 @@ To confirm that everything works as expected, publish two temperature values wit
 3. Publish a second temperature value within 15 minutes (for example, 32).   
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:32}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:32}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:32}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:32}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:32}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:32}"
    ```
    {: .copy-code}
    {% endif %}

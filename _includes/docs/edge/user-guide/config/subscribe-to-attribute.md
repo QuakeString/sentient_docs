@@ -3,7 +3,7 @@
 
 ## Overview
 
-In ThingsBoard, **device attributes** are key-value pairs associated with devices. They are used to store configuration settings, metadata, or other relevant information. 
+In SENTIENT, **device attributes** are key-value pairs associated with devices. They are used to store configuration settings, metadata, or other relevant information. 
 
 Subscribing to device attributes enables clients to receive updates when these attributes change. The subscription methods vary based on the attribute type and the communication protocol used.
 
@@ -12,19 +12,19 @@ Attributes are categorized into three types:
 * **Shared Attributes:** Devices can subscribe to updates to receive real-time notifications when the server modifies them. Can be configured via UI or REST API.
 * **Client-side Attributes:** Set by the device and stored on the server. Can only be read via UI or REST API.
 
-For more detailed information and examples, please refer to the ThingsBoard documentation on [Working with IoT Device Attributes](/docs/{{peDocsPrefix}}user-guide/attributes/){: target="_blank"}.
+For more detailed information and examples, please refer to the SENTIENT documentation on [Working with IoT Device Attributes](/docs/{{peDocsPrefix}}user-guide/attributes/){: target="_blank"}.
 
-The following guide explains real-time, bidirectional communication between your device and the **ThingsBoard Cloud** via **ThingsBoard Edge**.
+The following guide explains real-time, bidirectional communication between your device and the **SENTIENT Cloud** via **SENTIENT GATEWAY**.
 
 ## Prerequisites
 
-* The **ThingsBoard Cloud** or locally hosted [Server](/docs/{{peDocsPrefix}}user-guide/install/installation-options/){: target="_blank"}.
-* The installed **ThingsBoard Edge** with network access.
-* A **Device** capable of connecting to **ThingsBoard Edge** via [MQTT](/docs/{{peDocsPrefix}}reference/mqtt-api/){: target="_blank"}, [HTTP](/docs/{{peDocsPrefix}}reference/http-api/){: target="_blank"}, or [CoAP](/docs/{{peDocsPrefix}}reference/coap-api/){: target="_blank"}.
+* The **SENTIENT Cloud** or locally hosted [Server](/docs/{{peDocsPrefix}}user-guide/install/installation-options/){: target="_blank"}.
+* The installed **SENTIENT GATEWAY** with network access.
+* A **Device** capable of connecting to **SENTIENT GATEWAY** via [MQTT](/docs/{{peDocsPrefix}}reference/mqtt-api/){: target="_blank"}, [HTTP](/docs/{{peDocsPrefix}}reference/http-api/){: target="_blank"}, or [CoAP](/docs/{{peDocsPrefix}}reference/coap-api/){: target="_blank"}.
 
 ## Step 1. Configure a Rule Chain for the Edge
 
-To automatically route messages (data or attributes) from the device to the **ThingsBoard Cloud**, configure the rule chain for the **ThingsBoard Edge**:
+To automatically route messages (data or attributes) from the device to the **SENTIENT Cloud**, configure the rule chain for the **SENTIENT GATEWAY**:
 
 {% include images-gallery.html imageCollection="routeMessagesToCloud" showListImageTitles="true" %}
 

@@ -1,4 +1,4 @@
-{% assign deviceName = page.title | remove: "How to connect " | remove: " to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: " to SENTIENT?" %}
 {% assign deviceVendorLink = "https://temcocontrols.com/shop/tstat10-bacnet-thermostat/" %}
 {% assign sensorName = "Temco HUM-W1" %}
 {% assign sensorVendorLink = "https://temcocontrols.com/shop/humidity-and-temp-transmitters-with-waterproof-connector/" %}
@@ -6,7 +6,7 @@
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - Humidity and Temp Transmitter (in our case <a href="' | append: sensorVendorLink | append: '" target="_blank">' | append: sensorName | append: '</a>) '
  %}
-{% assign thingsboardInstanceLink = "https://" | append: hostName %}
+{% assign sentientInstanceLink = "https://" | append: hostName %}
 
 ## Introduction
 
@@ -24,8 +24,8 @@ Wi-Fi version supports Bacnet IP and Modbus IP.
 
 To continue with this guide, we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard IoT Gateway](/docs/iot-gateway/installation/){: target="_blank"} installed
-- [ThingsBoard account]({{thingsboardInstanceLink}}){: target="_blank"}
+- [SENTIENT IoT Gateway](/docs/iot-gateway/installation/){: target="_blank"} installed
+- [SENTIENT account]({{sentientInstanceLink}}){: target="_blank"}
 
 
 ## Devices connection
@@ -54,7 +54,7 @@ over Wi-Fi or Ethernet. For this purpose, use the following steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=configuringDevice %}
 
-## Creating and configuring ThingsBoard IoT Gateway
+## Creating and configuring SENTIENT IoT Gateway
 
 {% capture configuringgatewaytogglespec %}
 Basic%,%basicConfig%,%templates/device-library/ready-to-go-devices/temco-controls-tstat10-configuring-gateway-basic.md%br%
@@ -62,7 +62,7 @@ Advanced%,%advancedConfig%,%templates/device-library/ready-to-go-devices/temco-c
 
 {% include content-toggle.liquid content-toggle-id="creatingAndConfiguringGateway" toggle-spec=configuringgatewaytogglespec %}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
 Once you have successfully done all the steps above and Gateway sent data, you can see it in the device telemetry tab:
 
@@ -87,8 +87,8 @@ New Dashboard%,%newDashboard%,%templates/device-library/ready-to-go-devices/gate
 ## Conclusion
 
 With the knowledge in this guide, you can easily connect your Temco Tstat10 controller with Temperature and humidity 
-sensor to ThingsBoard. After connecting the devices to the gateway, you will be able to see and process the data coming 
-from the devices on the ThingsBoard.
+sensor to SENTIENT. After connecting the devices to the gateway, you will be able to see and process the data coming 
+from the devices on the SENTIENT.
 
 Explore the platform [documentation](/docs/{{page.docsPrefix}}){: target="_blank"} to learn more about key concepts and features.
 {% include add-device-banner.liquid %}

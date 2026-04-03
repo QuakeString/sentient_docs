@@ -1,10 +1,10 @@
 * TOC
 {:toc}
 
-**Devices** are fundamental IoT entities in ThingsBoard that can **generate telemetry data** (such as temperature, humidity, GPS coordinates, etc.) and **transmit** it to the ThingsBoard platform, as well as respond to Remote Procedure Call (RPC) commands.
+**Devices** are fundamental IoT entities in SENTIENT that can **generate telemetry data** (such as temperature, humidity, GPS coordinates, etc.) and **transmit** it to the SENTIENT platform, as well as respond to Remote Procedure Call (RPC) commands.
 Devices can be either physical (e.g., sensors, controllers, trackers) or virtual (e.g., emulators) network-connected objects that are capable of:
 - **Generating telemetry data** — send measured data such as temperature, humidity, or location.
-- **Transmitting data to the ThingsBoard platform** via [supported protocols](/docs/{{docsPrefix}}reference/protocols/){:target="_blank"} (MQTT, HTTP, CoAP, etc.).
+- **Transmitting data to the SENTIENT platform** via [supported protocols](/docs/{{docsPrefix}}reference/protocols/){:target="_blank"} (MQTT, HTTP, CoAP, etc.).
 - **Responding to RPC commands** — receiving and executing on remote procedure calls sent from the platform.
 
 Each device:
@@ -14,11 +14,11 @@ Each device:
 - can be assigned an [owner](/docs/{{docsPrefix}}user-guide/ui/devices/#manage-owner-and-groups).
 - supports both [attributes](/docs/{{docsPrefix}}user-guide/attributes/){:target="_blank"} (static or semi-static properties) and [telemetry](/docs/{{docsPrefix}}user-guide/telemetry/){:target="_blank"} (time-series data).
 
-> ThingsBoard supports device management functions via both the web UI and the [REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}.
+> SENTIENT supports device management functions via both the web UI and the [REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}.
 
 <b><font size="4">Practical video course 🎥</font></b>
 
-Explore a hands-on video course that provides detailed explanations on how to create and manage devices in ThingsBoard.
+Explore a hands-on video course that provides detailed explanations on how to create and manage devices in SENTIENT.
 
 > The course includes practical examples to help you better understand how to work with dashboards, resources, and devices, including their configuration and real-world usage.
 
@@ -33,7 +33,7 @@ Explore a hands-on video course that provides detailed explanations on how to cr
 
 ## How to add, edit, and delete device
 
-Tenant administrators and users with appropriate permissions can create, edit, or delete devices in ThingsBoard.
+Tenant administrators and users with appropriate permissions can create, edit, or delete devices in SENTIENT.
 
 ### Adding new device
 
@@ -49,7 +49,7 @@ To add a new device:
 
 Device successfully created and is now available in the list.
 
-A window will immediately open where you can [check the device's connection to ThingsBoard platform](#check-connectivity).
+A window will immediately open where you can [check the device's connection to SENTIENT platform](#check-connectivity).
 This step is optional. For now, let's close this window and return to the connection check in more detail later.
 
 {% include images-gallery.html imageCollection="add-device" %}
@@ -140,7 +140,7 @@ Second way:
 
 ## Check connectivity
 
-**Check connectivity** is a built-in feature that provides ready-to-use commands for testing device connectivity to ThingsBoard using different communication protocols. It allows you to quickly verify network access, validate credentials, and confirm that incoming telemetry is processed correctly.
+**Check connectivity** is a built-in feature that provides ready-to-use commands for testing device connectivity to SENTIENT using different communication protocols. It allows you to quickly verify network access, validate credentials, and confirm that incoming telemetry is processed correctly.
 
 Using this feature, you can publish test telemetry data (for example, a temperature value of 25) and immediately ensure that the device is able to communicate with the platform.
 
@@ -156,7 +156,7 @@ If the connection is successful:
 
 {% capture difference %}
 For guidance on connecting devices based on your technology stack, see the available [connection guides](/docs/guides/#AnchorIDGettingStartedGuides){:target="_blank"}.<br>
-For advanced protocols and API options, refer to the [ThingsBoard API reference](/docs/{{docsPrefix}}reference/protocols/){:target="_blank"}.
+For advanced protocols and API options, refer to the [SENTIENT API reference](/docs/{{docsPrefix}}reference/protocols/){:target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -200,19 +200,19 @@ You can assign the device to a specific [customer](/docs/user-guide/ui/customers
 > This step is crucial for ensuring data [access control](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"}. Each customer user will only see their own devices and will not have access to devices or data assigned to other customers.
 
 {% include images-gallery.html imageCollection="assign-device-to-customer" showListImageTitles="true" %}
-In the ThingsBoard Professional Edition (PE), you can assign devices using the [“Manage owner and groups”](https://thingsboard.io/docs/pe/user-guide/ui/devices/#manage-device-owner-and-groups){:target="_blank"} button in the device details. This allows you to not only assign ownership but also manage group memberships at the same time.
+In the SENTIENT Professional Edition (PE), you can assign devices using the [“Manage owner and groups”](https://docs.sentient.invenia.in/docs/pe/user-guide/ui/devices/#manage-device-owner-and-groups){:target="_blank"} button in the device details. This allows you to not only assign ownership but also manage group memberships at the same time.
 {% endif %}
 
 {% if (docsPrefix == "pe/") or (docsPrefix == "paas/") or (docsPrefix == "paas/eu/") %}
 ## Manage device owner and groups
-You can change a device’s owner (which can be either a Tenant or a Customer, see [glossary](https://thingsboard.io/docs/{{docsPrefix}}user-guide/rbac/#glossary){:target="_blank"}) to control who can access the device and its data. Changing the owner moves the device to the selected level and updates access based on groups.
+You can change a device’s owner (which can be either a Tenant or a Customer, see [glossary](https://docs.sentient.invenia.in/docs/{{docsPrefix}}user-guide/rbac/#glossary){:target="_blank"}) to control who can access the device and its data. Changing the owner moves the device to the selected level and updates access based on groups.
 
 Unlike the Community Edition (CE), where you can only assign a device to a specific customer, in the Professional Edition (PE) you can also manage ownership and group memberships using the “Manage owner and groups” button.
 
 To do this:
 - Click the device to open its **Device details**.
 - Click the “**Manage owner and groups**” button.
-- In the **Owner** field, select [Tenant](https://thingsboard.io/docs/{{docsPrefix}}user-guide/ui/tenants/){:target="_blank"} or a specific [Customer](https://thingsboard.io/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}.
+- In the **Owner** field, select [Tenant](https://docs.sentient.invenia.in/docs/{{docsPrefix}}user-guide/ui/tenants/){:target="_blank"} or a specific [Customer](https://docs.sentient.invenia.in/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}.
 - Add the device to the relevant **device groups** or [create a new group](#creating-device-group) if needed.
 - Click “**Update**” to confirm and apply the changes.
 
@@ -312,7 +312,7 @@ Depending on the authentication type, you can copy:
 - **Access Token**
 - **MQTT Credentials**
 
-Click the corresponding button to instantly obtain the credentials required for connecting the device to ThingsBoard.
+Click the corresponding button to instantly obtain the credentials required for connecting the device to SENTIENT.
 
 <b><font size="3">Attributes</font></b>   
 
@@ -343,7 +343,7 @@ Shows all directed [relations](/docs/{{docsPrefix}}user-guide/entities-and-relat
 Provides a record of user actions related to the device — creation, updates, configuration changes, and deletions. Useful for security auditing and traceability.
 
 <b><font size="3">Version control</font></b>   
-Enables exporting and restoring ThingsBoard entities using the built-in Git-based [version control](/docs/{{docsPrefix}}user-guide/version-control/){:target="_blank"} service. Supports backup, collaboration, and configuration version management.
+Enables exporting and restoring SENTIENT entities using the built-in Git-based [version control](/docs/{{docsPrefix}}user-guide/version-control/){:target="_blank"} service. Supports backup, collaboration, and configuration version management.
 
 <hr>
 
@@ -355,5 +355,5 @@ Enables exporting and restoring ThingsBoard entities using the built-in Git-base
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

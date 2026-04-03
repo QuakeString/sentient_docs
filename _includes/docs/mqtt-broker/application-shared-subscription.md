@@ -25,7 +25,7 @@ curl --location --request POST 'http://localhost:8083/api/app/shared/subs' \
 ```
 {: .copy-code}
 
-Upon executing the aforementioned request, an entity will be created within the PostgreSQL database, and a Kafka topic named `tbmq.msg.app.shared.test.topic` will be added. 
+Upon executing the aforementioned request, an entity will be created within the PostgreSQL database, and a Kafka topic named `st-rmqtt.msg.app.shared.test.topic` will be added. 
 The Kafka topic will consist of a single partition.
 {% include templates/mqtt-broker/application-shared-subscriptions.md %}
 

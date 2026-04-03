@@ -34,29 +34,29 @@ To add a device, you can follow next steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=AddDeviceOnChirpstack %}
 
-### Configure application integration with ThingsBoard
+### Configure application integration with SENTIENT
 
-{% assign configureApplicationIntegrationWithThingsBoard = '
+{% assign configureApplicationIntegrationWithSENTIENT = '
     ===
         image: /images/devices-library/ready-to-go-devices/lw001-bg-pro/9.png,
-        title: Go to the "**Integrations**" page, find and select the **ThingsBoard**.  
+        title: Go to the "**Integrations**" page, find and select the **SENTIENT**.  
     ===
         image: /images/devices-library/ready-to-go-devices/lw001-bg-pro/10.png,
-        title: Enter the URL of your **ThingsBoard** server and click **Submit** button.
+        title: Enter the URL of your **SENTIENT** server and click **Submit** button.
 '
 %}
 
-{% include images-gallery.liquid showListImageTitles="true" imageCollection=configureApplicationIntegrationWithThingsBoard %}
+{% include images-gallery.liquid showListImageTitles="true" imageCollection=configureApplicationIntegrationWithSENTIENT %}
 
 
-### Create device on ThingsBoard
+### Create device on SENTIENT
 
-To create device on ThingsBoard, follow the next steps:  
+To create device on SENTIENT, follow the next steps:  
 
-{% assign createDeviceOnThingsBoard = '
+{% assign createDeviceOnSENTIENT = '
     ===
         image: /images/devices-library/ready-to-go-devices/lw001-bg-pro/11.png,
-        title: **Log in** to your **ThingsBoard** account. Navigate to the **Devices** page and click the "**+**" button to add a new device.
+        title: **Log in** to your **SENTIENT** account. Navigate to the **Devices** page and click the "**+**" button to add a new device.
     ===
         image: /images/devices-library/ready-to-go-devices/lw001-bg-pro/12.png,
         title: Enter the **device name** and click **Next: Credentials**. 
@@ -69,4 +69,4 @@ To create device on ThingsBoard, follow the next steps:
 '
 %}
 
-{% include images-gallery.liquid showListImageTitles="true" imageCollection=createDeviceOnThingsBoard %}
+{% include images-gallery.liquid showListImageTitles="true" imageCollection=createDeviceOnSENTIENT %}

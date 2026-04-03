@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
-title: Installing ThingsBoard PE from Alibaba Cloud Marketplace
-description: Installing ThingsBoard PE from Alibaba Cloud Marketplace
+title: Installing SENTIENT Professional Edition from Alibaba Cloud Marketplace
+description: Installing SENTIENT Professional Edition from Alibaba Cloud Marketplace
 
 ---
 

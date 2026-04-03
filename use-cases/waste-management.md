@@ -1,7 +1,7 @@
 ---
 layout: use-case
-title: Smart Waste Management with ThingsBoard for Cities & Industry
-description: Optimize waste collection across cities, industries, and campuses with ThingsBoard’s IoT platform — featuring real-time monitoring, smart alarms, and interactive dashboards for data-driven efficiency and sustainability.
+title: Smart Waste Management with SENTIENT for Cities & Industry
+description: Optimize waste collection across cities, industries, and campuses with SENTIENT’s IoT platform — featuring real-time monitoring, smart alarms, and interactive dashboards for data-driven efficiency and sustainability.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -17,15 +17,15 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">As urban populations grow and sustainability standards tighten, waste management systems must evolve to be more efficient, scalable, and data-driven. Traditional methods — based on fixed collection schedules and manual checks —often result in overflows, resource waste, and high operational costs. ThingsBoard IoT Platform effectively addresses these challenges, offering powerful tools for real-time monitoring, automation, and optimization of waste operations.</p>
+                <p class="text">As urban populations grow and sustainability standards tighten, waste management systems must evolve to be more efficient, scalable, and data-driven. Traditional methods — based on fixed collection schedules and manual checks —often result in overflows, resource waste, and high operational costs. SENTIENT IoT Platform effectively addresses these challenges, offering powerful tools for real-time monitoring, automation, and optimization of waste operations.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_WasteManagement_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_WasteManagement_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
             </div>
         </div>
         <div class="long">
-            <p>ThingsBoard IoT platform transforms waste collection logistics for cities, campuses, and enterprises by enabling real-time monitoring through sensor-equipped bins. As these sensors transmit live data on fill levels, battery status, and connectivity, ThingsBoard processes the telemetry instantly, allowing operators to reduce unnecessary pickups, lower emissions, and respond proactively to service needs. With its flexible device integration, rule-based automation, and customizable dashboards, ThingsBoard empowers waste management teams to deploy quickly, scale easily, and make smarter decisions based on actionable insights.</p>
-            <p>Supporting industry-standard protocols like MQTT, CoAP, and HTTP, ThingsBoard enables seamless sensor connectivity at scale. Its Rule Engine allows for complex event processing and alarming, while multi-tenant architecture supports parallel use by multiple stakeholders — from city departments to private contractors. Combined with powerful analytics and visualization tools, ThingsBoard delivers a complete, future-ready solution for intelligent waste management.</p>
+            <p>SENTIENT IoT platform transforms waste collection logistics for cities, campuses, and enterprises by enabling real-time monitoring through sensor-equipped bins. As these sensors transmit live data on fill levels, battery status, and connectivity, SENTIENT processes the telemetry instantly, allowing operators to reduce unnecessary pickups, lower emissions, and respond proactively to service needs. With its flexible device integration, rule-based automation, and customizable dashboards, SENTIENT empowers waste management teams to deploy quickly, scale easily, and make smarter decisions based on actionable insights.</p>
+            <p>Supporting industry-standard protocols like MQTT, CoAP, and HTTP, SENTIENT enables seamless sensor connectivity at scale. Its Rule Engine allows for complex event processing and alarming, while multi-tenant architecture supports parallel use by multiple stakeholders — from city departments to private contractors. Combined with powerful analytics and visualization tools, SENTIENT delivers a complete, future-ready solution for intelligent waste management.</p>
         </div>
     </div>
 </section>
@@ -41,7 +41,7 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">The ThingsBoard-powered <a href="/docs/pe/solution-templates/waste-management/">waste management solution</a> begins at the edge — where IoT sensors installed in bins monitor fill levels and battery status in real time. These devices send telemetry data to ThingsBoard using supported protocols such as MQTT, CoAP, or HTTP. Thanks to ThingsBoard gateway and built-in integration capabilities, even legacy systems and non-IP sensors can be seamlessly connected.</p>
+                <p class="text">The SENTIENT-powered <a href="/docs/pe/solution-templates/waste-management/">waste management solution</a> begins at the edge — where IoT sensors installed in bins monitor fill levels and battery status in real time. These devices send telemetry data to SENTIENT using supported protocols such as MQTT, CoAP, or HTTP. Thanks to SENTIENT gateway and built-in integration capabilities, even legacy systems and non-IP sensors can be seamlessly connected.</p>
             </div>
         </div>
         <div class="long">
@@ -57,7 +57,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>Waste management dashboard structure</h2>
         <p>
-            The dashboard structure in the ThingsBoard waste management solution is modular and intuitive, combining high-level overviews with detailed sensor-level insights. It includes map-based bin tracking, alarm configuration panels, device management interfaces, and historical analytics — ensuring full operational visibility and control from a single interface.        
+            The dashboard structure in the SENTIENT waste management solution is modular and intuitive, combining high-level overviews with detailed sensor-level insights. It includes map-based bin tracking, alarm configuration panels, device management interfaces, and historical analytics — ensuring full operational visibility and control from a single interface.        
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -119,13 +119,13 @@ contactUsModal: "true"
 <section class="applications applications-additional summary-margin section-padding">
     <div class="section-header">
         <h2>Applications of waste management solution</h2>
-        <p>This solution, built on ThingsBoard IoT platform, is highly adaptable and can meet the operational needs of multiple industries—offering real-time monitoring, flexible device integration, smart alarming, and powerful analytics. Here are five key sectors where it delivers value:</p>
+        <p>This solution, built on SENTIENT IoT platform, is highly adaptable and can meet the operational needs of multiple industries—offering real-time monitoring, flexible device integration, smart alarming, and powerful analytics. Here are five key sectors where it delivers value:</p>
     </div>
     <div class="applications-container-large">
         <div class="text-row-top">
             <div class="text-block">
                 <h3>Municipal services</h3>
-                <p>Enables city authorities to optimize waste collection routes and respond faster to bin overflow alarms using ThingsBoard’s real-time telemetry, automated rules, and geospatial dashboards.</p>
+                <p>Enables city authorities to optimize waste collection routes and respond faster to bin overflow alarms using SENTIENT’s real-time telemetry, automated rules, and geospatial dashboards.</p>
             </div>
             <div class="text-block">
                 <h3>University and corporate campuses</h3>
@@ -150,7 +150,7 @@ contactUsModal: "true"
             </div>
             <div class="text-block">
                 <h3>Transportation hubs (airports, ports, stations)</h3>
-                <p>Maintains hygiene and safety in high-traffic zones by enabling dynamic monitoring and maintenance scheduling via ThingsBoard’s event-driven automation.</p>
+                <p>Maintains hygiene and safety in high-traffic zones by enabling dynamic monitoring and maintenance scheduling via SENTIENT’s event-driven automation.</p>
             </div>
         </div>
     </div>
@@ -159,7 +159,7 @@ contactUsModal: "true"
             <div class="image"><img src="/images/usecases/waste-monitoring/municipal-2.svg" alt="Municipal services" title="Municipal services"></div>
             <div class="text-block">
                 <h3>Municipal services</h3>
-                <p>Enables city authorities to optimize waste collection routes and respond faster to bin overflow alarms using ThingsBoard’s real-time telemetry, automated rules, and geospatial dashboards.</p>
+                <p>Enables city authorities to optimize waste collection routes and respond faster to bin overflow alarms using SENTIENT’s real-time telemetry, automated rules, and geospatial dashboards.</p>
             </div>
         </div>
         <div class="application-block">
@@ -179,7 +179,7 @@ contactUsModal: "true"
         <div class="application-block">
             <div class="text-block">
                 <h3>Transportation hubs (airports, ports, stations)</h3>
-                <p>Maintains hygiene and safety in high-traffic zones by enabling dynamic monitoring and maintenance scheduling via ThingsBoard’s event-driven automation.</p>
+                <p>Maintains hygiene and safety in high-traffic zones by enabling dynamic monitoring and maintenance scheduling via SENTIENT’s event-driven automation.</p>
             </div>
             <div class="image"><img src="/images/usecases/waste-monitoring/transportation-2.svg" alt="Transportation hubs (airports, ports, stations)" title="Transportation hubs (airports, ports, stations)"></div>
         </div>
@@ -196,7 +196,7 @@ contactUsModal: "true"
 <section class="summary">
     <div class="summary-text">
         <h2>Summary of waste management</h2>
-        <p>ThingsBoard’s waste management solution addresses a critical urban and industrial challenge with precision, scalability, and real-time intelligence. From seamless sensor integration to customizable dashboards and proactive alarming, it empowers stakeholders to manage waste efficiently and sustainably. With IoT at its core, this solution lays the foundation for smarter, cleaner cities and optimized resource management.</p>
+        <p>SENTIENT’s waste management solution addresses a critical urban and industrial challenge with precision, scalability, and real-time intelligence. From seamless sensor integration to customizable dashboards and proactive alarming, it empowers stakeholders to manage waste efficiently and sustainably. With IoT at its core, this solution lays the foundation for smarter, cleaner cities and optimized resource management.</p>
     </div>
     <div class="summary-icon">
         <img src="/images/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
@@ -300,7 +300,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_WasteManagement_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_WasteManagement_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
                 <a id="UseCases_WasteManagement_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 
@@ -320,11 +320,11 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='/images/usecases/waste-monitoring/waste-1.webp' data-bg='#F9F9FB' alt='Smart waste management dashboard with bin status, battery levels, and interactive map in ThingsBoard' title='Live overview of smart waste bins, battery alerts, and location tracking via ThingsBoard IoT'/>",
-                "<img src='/images/usecases/waste-monitoring/waste-2.webp' data-bg='#A4A4A4' alt='Sensor registration dialog for uploading CSV file with bin data in ThingsBoard' title='Register multiple smart bin sensors by importing CSV in ThingsBoard'/>",
-                "<img src='/images/usecases/waste-monitoring/waste-3.webp' data-bg='#A4A4A4' alt='Alarm rule configuration for bin fullness and battery level in ThingsBoard' title='Define alarm rules – fullness over 90%, battery below 30% (ThingsBoard IoT)'/>",
-                "<img src='/images/usecases/waste-monitoring/waste-4.webp' data-bg='#A4A4A4' alt='Edit bin sensor data including location and address in ThingsBoard' title='Modify sensor details – serial number, address, GPS coordinates'/>",
-                "<img src='/images/usecases/waste-monitoring/waste-5.webp' data-bg='#F9F9FB' alt='Smart bin sensor detail view with charts for fullness and battery history in ThingsBoard' title='Sensor data trends – fullness and battery level monitoring over time'/>"
+                "<img src='/images/usecases/waste-monitoring/waste-1.webp' data-bg='#F9F9FB' alt='Smart waste management dashboard with bin status, battery levels, and interactive map in SENTIENT' title='Live overview of smart waste bins, battery alerts, and location tracking via SENTIENT IoT'/>",
+                "<img src='/images/usecases/waste-monitoring/waste-2.webp' data-bg='#A4A4A4' alt='Sensor registration dialog for uploading CSV file with bin data in SENTIENT' title='Register multiple smart bin sensors by importing CSV in SENTIENT'/>",
+                "<img src='/images/usecases/waste-monitoring/waste-3.webp' data-bg='#A4A4A4' alt='Alarm rule configuration for bin fullness and battery level in SENTIENT' title='Define alarm rules – fullness over 90%, battery below 30% (SENTIENT IoT)'/>",
+                "<img src='/images/usecases/waste-monitoring/waste-4.webp' data-bg='#A4A4A4' alt='Edit bin sensor data including location and address in SENTIENT' title='Modify sensor details – serial number, address, GPS coordinates'/>",
+                "<img src='/images/usecases/waste-monitoring/waste-5.webp' data-bg='#F9F9FB' alt='Smart bin sensor detail view with charts for fullness and battery history in SENTIENT' title='Sensor data trends – fullness and battery level monitoring over time'/>"
             ];
             return images[index];
         }

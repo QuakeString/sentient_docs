@@ -8,7 +8,7 @@
 * TOC
 {:toc}
 
-UDP Integration allows to stream data from devices which use a UDP protocol to ThingsBoard and converts payloads of these devices into the ThingsBoard format.
+UDP Integration allows to stream data from devices which use a UDP protocol to SENTIENT and converts payloads of these devices into the SENTIENT format.
 
 {% capture difference %}
 **Please note** UDP Integration can be started only as [remote integration](/docs/{{peDocsPrefix}}user-guide/integrations/remote-integrations){:target="_blank"}. It could be started on the same machine, where TB instance is running, or you can start in on another machine, that has access over the network to the TB instance.
@@ -24,12 +24,12 @@ Please review the integration diagram to learn more.
 In this tutorial, we will use:
 
 {% if docsPrefix == "pe/" %}
-- The instance of the [ThingsBoard Professional Edition](https://thingsboard.io/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
-- UDP integration, running externally and connected to the ThingsBoard PE instance;
+- The instance of the [SENTIENT Professional Edition](https://docs.sentient.invenia.in/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
+- UDP integration, running externally and connected to the SENTIENT Professional Edition instance;
 {% endif %}
 {% if docsPrefix contains "paas/" %}
-- ThingsBoard Professional Edition instance — [{{hostName}}](https://{{hostName}}){:target="_blank"};
-- UDP integration, running externally and connected to the ThingsBoard Cloud;
+- SENTIENT Professional Edition instance — [{{hostName}}](https://{{hostName}}){:target="_blank"};
+- UDP integration, running externally and connected to the SENTIENT Cloud;
 {% endif %}
 - **echo** command which intended to display a line of text, and will redirect it's output to **netcat** (**nc**) utility;
 - **netcat** (**nc**) utility to establish UDP connections, receive data from there and transfer them;
@@ -66,7 +66,7 @@ Go to the "**Integrations**" page of the "**Integrations center**" section. Clic
 <br>
 **2. Uplink data converter**. 
 
-An uplink converter that is a script for parsing and transforming the data received by UDP integration to format that ThingsBoard uses. 
+An uplink converter that is a script for parsing and transforming the data received by UDP integration to format that SENTIENT uses. 
 **deviceName** and **deviceType** are required, while attributes and telemetry are optional. attributes and telemetry are flat key-value objects. Nested objects are not supported.
 
 **Choose device payload type to for decoder configuration:**
@@ -115,7 +115,7 @@ Use **Integration key** and **Integration secret** from the above section for yo
 
 ## Send uplink message
 
-Once ThingsBoard UDP integration has been created, the UDP server starts, and then it waits for data from the devices.
+Once SENTIENT UDP integration has been created, the UDP server starts, and then it waits for data from the devices.
 
 Choose device payload type to send uplink message:
 
@@ -134,7 +134,7 @@ Click the device, navigate to the "**Latest telemetry**" tab to see the "tempera
 
 ## Advanced usage: downlink
 
-For sending Downlink messages from Thingsboard to the device, we need to define a downlink converter. 
+For sending Downlink messages from Sentient to the device, we need to define a downlink converter. 
 
 ### Add downlink converter
 
@@ -217,7 +217,7 @@ echo -e 'SN-001,default,temperature,25.7,humidity,69' | nc -w10 -u 127.0.0.1 115
 ```
 {: .copy-code}
 
-You should get the following response from the ThingsBoard in the terminal:
+You should get the following response from the SENTIENT in the terminal:
 
 ![image](/images/user-guide/integrations/udp/terminal-add-attribute.png)
 

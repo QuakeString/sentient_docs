@@ -1,15 +1,15 @@
-### Prepare for upgrading ThingsBoard 
+### Prepare for upgrading SENTIENT 
 
-**Stop ThingsBoard**
-Check if ThingsBoard and database services are running
-Initially ThingsBoard, check status to ensure it is stopped and then databases.
+**Stop SENTIENT**
+Check if SENTIENT and database services are running
+Initially SENTIENT, check status to ensure it is stopped and then databases.
 ```bash
-sudo systemctl stop thingsboard
+sudo systemctl stop sentient
 ```
 {: .copy-code}
 
 ```bash
-sudo systemctl status thingsboard
+sudo systemctl status sentient
 ```
 {: .copy-code}
 
@@ -25,7 +25,7 @@ sudo systemctl status postgresql
 ***Make sure you have enough space to place a backup of the database***
 Check database size
 ```bash
-sudo -u postgres psql -c "SELECT pg_size_pretty( pg_database_size('thingsboard') );"
+sudo -u postgres psql -c "SELECT pg_size_pretty( pg_database_size('sentient') );"
 ```
 {: .copy-code}
 Check free space
@@ -37,7 +37,7 @@ df -h /
 
 If there is enough free space - make a backup.
 ```bash
-sudo -Hiu postgres pg_dump thingsboard > thingsboard.sql.bak
+sudo -Hiu postgres pg_dump sentient > sentient.sql.bak
 ```
 {: .copy-code}
 

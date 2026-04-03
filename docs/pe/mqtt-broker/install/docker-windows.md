@@ -1,10 +1,10 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: Install TBMQ PE with Docker (Windows)
-description: Install TBMQ PE with Docker (Windows)
+title: Install ST-RMQTT PE with Docker (Windows)
+description: Install ST-RMQTT PE with Docker (Windows)
 
 ---
 
 {% assign docsPrefix = "pe/" %}
-{% assign tbmqSuffix = "PE" %}
+{% assign st-rmqttSuffix = "PE" %}
 {% include docs/mqtt-broker/install/docker-windows.md %}

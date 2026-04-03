@@ -36,7 +36,7 @@ assign-integration:
         title: 'Click the <b>"+"</b> button in the top right of the corner. Specify your integration and click the <b>"Assign"</b> button to assign it to the Edge.'
     2:
         image: /images/pe/edge/integrations/coap/assign-coap-integration-6-edge.webp
-        title: 'Login to your <b>ThingsBoard Edge</b> instance and go to the <b>Integrations center > Integrations</b> section. You should see your integration. To open the <b>"Integration details"</b> window, click on it.'
+        title: 'Login to your <b>SENTIENT GATEWAY</b> instance and go to the <b>Integrations center > Integrations</b> section. You should see your integration. To open the <b>"Integration details"</b> window, click on it.'
     3:
         image: /images/pe/edge/integrations/coap/assign-coap-integration-7-edge.webp
         title: 'In the <b>"Integration details"</b>" window, the <b>${{edgeIP}}</b> placeholder will be replaced with the value of the attribute.'
@@ -118,7 +118,7 @@ events-binary:
 {% assign integrationUrl = "coap" %}
 {% include templates/edge/integrations/edge-pe-reference.md %}
 
-**CoAP Integration** allows streaming data from devices that use a **CoAP** protocol to connect to **ThingsBoard Edge** and converts payloads of these devices into the **ThingsBoard Edge** format.
+**CoAP Integration** allows streaming data from devices that use a **CoAP** protocol to connect to **SENTIENT GATEWAY** and converts payloads of these devices into the **SENTIENT GATEWAY** format.
 
 To learn more, please review the integration diagram.
 
@@ -146,7 +146,7 @@ coap-client --version
 
 * For example, consider a sensor that transmits temperature and humidity values periodically.
 The sensor device **SN-001** publishes its temperature and humidity readings to the CoAP Integration at **[coap://10.7.3.0](coap://10.7.3.0){: target="_blank"}**.
-Here, 10.7.3.0 represents the **IP address** of the **ThingsBoard Edge** within the local network. 
+Here, 10.7.3.0 represents the **IP address** of the **SENTIENT GATEWAY** within the local network. 
 Replace this address with the **actual IP** of the relevant **Edge** instance in the target environment.
 
 For demonstration purposes, it is assumed that the device can transmit data using three different payload types:
@@ -182,9 +182,9 @@ The payload type selection should be based on the device's capabilities and the 
 
 ### Create the integration and the converter templates
 
-Only the **ThingsBoard Professional Edition** creates converters and integration templates.
+Only the **SENTIENT Professional Edition** creates converters and integration templates.
 
-So please use [**ThingsBoard Cloud**](https://thingsboard.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
+So please use [**SENTIENT Cloud**](https://sentient.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
 
 #### Basic settings
 
@@ -196,7 +196,7 @@ To add the **CoAP integration**:
 
 #### Uplink data converter
 
-The purpose of the decoder function is to parse the incoming data and metadata to a format that ThingsBoard can consume.
+The purpose of the decoder function is to parse the incoming data and metadata to a format that SENTIENT can consume.
 **deviceName** and **deviceType** are required, while **attributes** and **telemetry** are optional.
 **Attributes** and **telemetry** are flat key-value objects. Nested objects are not supported.
 
@@ -242,7 +242,7 @@ To assign the integration to the Edge, on the **Edge management > Instances** se
 Once the CoAP Integration has been created, the CoAP server registers appropriate resources, and then it waits for data from the devices.
 
 To send the uplink message:
-* Log in to **ThingsBoard Edge** and go to the **Integrations center > Integrations** section.
+* Log in to **SENTIENT GATEWAY** and go to the **Integrations center > Integrations** section.
 * Click on the **CoAP integration**. 
 * Copy the **CoAP endpoint URL** and insert it into the uplink message.
 

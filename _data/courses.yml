@@ -1,17 +1,17 @@
 0:
   courseName: "Data visualization"
   id: "data-visualization"
-  courseDescription: "Learn how to effectively model and visualize data using the ThingsBoard platform. This training block covers the essentials of ThingsBoard's Web UI, entity management, and advanced data visualization techniques. You will gain hands-on experience with creating and customizing widgets, as well as building comprehensive dashboards that provide insightful data representations for your IoT projects."
+  courseDescription: "Learn how to effectively model and visualize data using the SENTIENT platform. This training block covers the essentials of SENTIENT's Web UI, entity management, and advanced data visualization techniques. You will gain hands-on experience with creating and customizing widgets, as well as building comprehensive dashboards that provide insightful data representations for your IoT projects."
   carouselCourseDescription: "Clear and simple introduction to data visualization tools and how to create custom widgets"
   courseSessions:
     0:
-      sessionName: "ThingsBoard UI fundamentals: data modeling and visual representation"
+      sessionName: "SENTIENT UI fundamentals: data modeling and visual representation"
       sessionLengthInHours: 2
       sessionTopics:
         0:
-          textContent: "Learn how to navigate the ThingsBoard UI confidently, understanding its layout, navigation, and key features."
+          textContent: "Learn how to navigate the SENTIENT UI confidently, understanding its layout, navigation, and key features."
         1:
-          textContent: "Explore the ThingsBoard hierarchy: SysAdmin, Tenants, Customers, and Users, along with roles and permissions."
+          textContent: "Explore the SENTIENT hierarchy: SysAdmin, Tenants, Customers, and Users, along with roles and permissions."
         2:
           textContent: "Learn how to configure Tenant Profiles."
         3:
@@ -23,19 +23,19 @@
         6:
           textContent: "Understand entity relations, different relationship types, and how they define connections between entities."
         7:
-          textContent: "Explore real-world use cases of entity relations in ThingsBoard."
+          textContent: "Explore real-world use cases of entity relations in SENTIENT."
         8:
           textContent: "Identify common limitations and best practices to avoid performance bottlenecks."
         9:
           textContent: "Apply knowledge through real-world scenarios."
         10:
-          textContent: "Discuss best practices for ThingsBoard UI and data management."
+          textContent: "Discuss best practices for SENTIENT UI and data management."
     1:
-      sessionName: "ThingsBoard dashboard & widget mastery"
+      sessionName: "SENTIENT dashboard & widget mastery"
       sessionLengthInHours: 2
       sessionTopics:
         0:
-          textContent: "Deep Dive into ThingsBoard Dashboards to understand Entity Aliases, Time Window selection, General Settings, and Dashboard States."
+          textContent: "Deep Dive into SENTIENT Dashboards to understand Entity Aliases, Time Window selection, General Settings, and Dashboard States."
         1:
           textContent: "Explore state transitions and how to enhance user experience."
         2:
@@ -51,14 +51,14 @@
         7:
           textContent: "Gain hands-on experience with dashboard configurations."
     2:
-      sessionName: "ThingsBoard custom widget development (session 1)"
+      sessionName: "SENTIENT custom widget development (session 1)"
       sessionLengthInHours: 2
       sessionTopics:
         0:
           textContent: "Recommended for users with JavaScript and Angular experience"
           warning: "true"
         1:
-          textContent: "Learn how to use the ThingsBoard Widget Editor, its layout, and key features."
+          textContent: "Learn how to use the SENTIENT Widget Editor, its layout, and key features."
         2:
           textContent: "Explore how to navigate, create, and configure widget bundles."
         3:
@@ -76,7 +76,7 @@
         9:
           textContent: "Gain hands-on experience in custom widget creation."
     3:
-      sessionName: "ThingsBoard custom widget development (session 2)"
+      sessionName: "SENTIENT custom widget development (session 2)"
       sessionLengthInHours: 2
       sessionTopics:
         0:
@@ -101,27 +101,27 @@
         9:
           textContent: "Learn best practices for scalable and maintainable widget development."
 1:
-  courseName: "ThingsBoard administration"
+  courseName: "SENTIENT administration"
   id: "administration"
-  courseDescription: "This training provides administrators with the skills needed to successfully deploy, configure, and manage ThingsBoard in various environments. You will learn monolithic and cluster-based deployment strategies, understand architecture components. This training covers hands-on AWS deployment, troubleshooting common issues using logs and diagnostic tools, and improving ThingsBoard’s performance and stability."
+  courseDescription: "This training provides administrators with the skills needed to successfully deploy, configure, and manage SENTIENT in various environments. You will learn monolithic and cluster-based deployment strategies, understand architecture components. This training covers hands-on AWS deployment, troubleshooting common issues using logs and diagnostic tools, and improving SENTIENT’s performance and stability."
   carouselCourseDescription: "Basic understanding of installation, configuration, and maintenance for effective platform administration."
   courseSessions:
     0:
-      sessionName: "ThingsBoard administration"
+      sessionName: "SENTIENT administration"
       sessionLengthInHours: 2
       sessionTopics:
         0:
-          textContent: "Learn how to install and configure ThingsBoard in both monolithic and cluster deployments."
+          textContent: "Learn how to install and configure SENTIENT in both monolithic and cluster deployments."
         1:
           textContent: "Understand the limitations and load capacity of each deployment option, and for which use cases they suit the best."
         2:
-          textContent: "Explore ThingsBoard architecture and understand the role of key services and third-party applications."
+          textContent: "Explore SENTIENT architecture and understand the role of key services and third-party applications."
         3:
-          textContent: "Develop hands-on skills in deploying ThingsBoard on AWS including both basic monolithic and Docker-based microservice platforms."
+          textContent: "Develop hands-on skills in deploying SENTIENT on AWS including both basic monolithic and Docker-based microservice platforms."
         4:
           textContent: "Understand the advantages and limitations of different deployment types, including monolith and cluster setups."
         5:
-          textContent: "Discuss best practices for configuring ThingsBoard for optimal performance in different environments."
+          textContent: "Discuss best practices for configuring SENTIENT for optimal performance in different environments."
         6:
           textContent: "Identify and troubleshoot common issues using logs and diagnostic tools."
         7:
@@ -134,17 +134,17 @@
   warningMessage: 'Recommended for users with knowledge of the platform or after completing the "Data Visualization" training'
   courseSessions:
     0:
-      sessionName: "ThingsBoard and IoT gateway essentials – from connectivity to SCADA visualisation"
+      sessionName: "SENTIENT and IoT gateway essentials – from connectivity to SCADA visualisation"
       sessionLengthInHours: 2
       sessionTopics:
         0:
-          textContent: "Learn the main device connectivity possibilities and fundamentals of the ThingsBoard IoT Gateway option."
+          textContent: "Learn the main device connectivity possibilities and fundamentals of the SENTIENT IoT Gateway option."
         1:
-          textContent: "Understand what ThingsBoard IoT Gateway is and explore the variety of capabilities and protocols it provides."
+          textContent: "Understand what SENTIENT IoT Gateway is and explore the variety of capabilities and protocols it provides."
         2:
           textContent: "Learn about rule chains – what they are, how they work, and how to set them up with practical examples such as processing data with default rule chains, editing them, and assigning custom rule chains to devices."
         3:
-          textContent: "Dive into a quick overview of ThingsBoard IoT data visualisation."
+          textContent: "Dive into a quick overview of SENTIENT IoT data visualisation."
         4:
           textContent: "Learning how to set up a dashboard with an example of SCADA systems in traditional and high-performance modes."
         5:
@@ -206,11 +206,11 @@
 3:
   courseName: "Platform management and security"
   id: "management"
-  courseDescription: "This training program helps participants gain a strong understanding of ThingsBoard’s main features through hands-on practice. It covers data automation using the Rule Engine, user access control with RBAC, alarm management, and API interaction. Advanced users will also learn custom rule node development to extend the system capabilities. This program is perfect for professionals who want to build scalable, secure, high-performing IoT solutions using ThingsBoard."
+  courseDescription: "This training program helps participants gain a strong understanding of SENTIENT’s main features through hands-on practice. It covers data automation using the Rule Engine, user access control with RBAC, alarm management, and API interaction. Advanced users will also learn custom rule node development to extend the system capabilities. This program is perfect for professionals who want to build scalable, secure, high-performing IoT solutions using SENTIENT."
   carouselCourseDescription: "Comprehensive overview of rule engine, alarm management, security model, and API usage."
   courseSessions:
     0:
-      sessionName: "Rule engine deep dive: data processing & automation in ThingsBoard"
+      sessionName: "Rule engine deep dive: data processing & automation in SENTIENT"
       sessionLengthInHours: 2
       sessionTopics:
         0:
@@ -274,7 +274,7 @@
       sessionLengthInHours: 2
       sessionTopics:
         0:
-          textContent: "Understand what an alarm is in ThingsBoard and how it models real-life abnormal conditions."
+          textContent: "Understand what an alarm is in SENTIENT and how it models real-life abnormal conditions."
         1:
           textContent: "Learn about alarm types and their intended usage(e.g. threshold-exceeded alarm)."
         2:
@@ -304,11 +304,11 @@
         14:
           textContent: "Manage alarms using the REST API, including creating, acknowledging, and clearing alarms programmatically."
     3:
-      sessionName: "ThingsBoard platform API fundamentals (session 1)"
+      sessionName: "SENTIENT platform API fundamentals (session 1)"
       sessionLengthInHours: 2
       sessionTopics:
         0:
-          textContent: "Understand how to interact with ThingsBoard using the REST API."
+          textContent: "Understand how to interact with SENTIENT using the REST API."
         1:
           textContent: "Learn how to use Swagger UI for testing, developing, and exploring APIs."
         2:
@@ -330,7 +330,7 @@
         10:
           textContent: "Work with Time Series API for fetching and uploading telemetry data."
     4:
-      sessionName: "ThingsBoard platform API fundamentals (session 2)"
+      sessionName: "SENTIENT platform API fundamentals (session 2)"
       sessionLengthInHours: 2
       sessionTopics:
         0:
@@ -338,11 +338,11 @@
         1:
           textContent: "Learn how to send and receive data using MQTT, HTTP, and CoAP protocols."
         2:
-          textContent: "Understand how Remote Procedure Calls (RPC) work in ThingsBoard."
+          textContent: "Understand how Remote Procedure Calls (RPC) work in SENTIENT."
         3:
           textContent: "Learn different ways to send RPC commands from server to device and vice versa."
         4:
-          textContent: "Discover how to use WebSockets for real-time communication with ThingsBoard."
+          textContent: "Discover how to use WebSockets for real-time communication with SENTIENT."
         5:
           textContent: "Learn how to subscribe to WebSocket updates and integrate them into applications."
     5:
@@ -353,19 +353,19 @@
           textContent: "Recommended for users with Java development experience."
           warning: "true"
         1:
-          textContent: "Learn how to write a custom rule node from scratch and integrate it into ThingsBoard."
+          textContent: "Learn how to write a custom rule node from scratch and integrate it into SENTIENT."
         2:
           textContent: "Explore a prepared project template that includes a basic skeleton and sample custom nodes."
         3:
-          textContent: "Use internal ThingsBoard APIs to manipulate and execute various operations within the system."
+          textContent: "Use internal SENTIENT APIs to manipulate and execute various operations within the system."
         4:
           textContent: "Manage entity data, update records, store information, and send data using custom nodes."
         5:
-          textContent: "Learn how to deploy a custom node to a self-hosted ThingsBoard instance."
+          textContent: "Learn how to deploy a custom node to a self-hosted SENTIENT instance."
         6:
           textContent: "Explore rule node versioning and upgrade mechanisms."
         7:
-          textContent: "Work with the @RuleNode annotation and understand its role in ThingsBoard."
+          textContent: "Work with the @RuleNode annotation and understand its role in SENTIENT."
         8:
           textContent: "Use the TbNode interface to define custom logic within a rule node."
         9:

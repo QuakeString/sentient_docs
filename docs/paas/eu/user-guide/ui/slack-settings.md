@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Slack Settings
-description: ThingsBoard IoT platform Slack settings
+description: SENTIENT IoT platform Slack settings
 slackProviderSettings:
     0:
         image: /images/user-guide/ui/slack/create-slack-api-token-1.png
@@ -33,15 +33,15 @@ slackProviderSettings:
         image: /images/user-guide/ui/slack/create-slack-api-token-9.png
         title: 'Copy "Bot User OAuth Token". This is the "Slack API token" we need.'
 
-thingsboardSystemAdminSettings:
+sentientSystemAdminSettings:
     0:
         image: /images/user-guide/ui/slack/add-slack-api-token-sysadmin-1-pe.png
-        title: 'Login to your ThingsBoard UI as a system administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".'
+        title: 'Login to your SENTIENT UI as a system administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".'
 
-thingsboardTenantAdminSettings:
+sentientTenantAdminSettings:
     0:
         image: /images/user-guide/ui/slack/add-slack-api-token-tenant-admin-1-pe.png
-        title: 'Login to your ThingsBoard UI as a tenant administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".'
+        title: 'Login to your SENTIENT UI as a tenant administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".'
 
 ---
 

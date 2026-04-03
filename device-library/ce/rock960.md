@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Rock960 to ThingsBoard?
+title: How to connect Rock960 to SENTIENT?
 category: Single-board computers
 chip: Rockchip RK3399
 connectivity: [Ethernet, WIFI, Bluetooth]

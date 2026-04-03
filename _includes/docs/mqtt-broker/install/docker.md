@@ -7,12 +7,12 @@
 * TOC
 {:toc}
 
-This guide will help you install and start standalone TBMQ {{tbmqSuffix}} using Docker on Linux or macOS.
+This guide will help you install and start standalone ST-RMQTT {{st-rmqttSuffix}} using Docker on Linux or macOS.
 If you are looking for a cluster installation instruction, please visit [cluster setup page](/docs/{{docsPrefix}}mqtt-broker/install/cluster/docker-compose-setup/).
 
 ## Prerequisites
 
-To run TBMQ {{tbmqSuffix}} on a single machine, you will need at least 2Gb of RAM.
+To run ST-RMQTT {{st-rmqttSuffix}} on a single machine, you will need at least 2Gb of RAM.
 
 - [Install Docker](https://docs.docker.com/engine/installation/)
 
@@ -22,7 +22,7 @@ To run TBMQ {{tbmqSuffix}} on a single machine, you will need at least 2Gb of RA
 ## Get the license key
 
 Before proceeding, make sure you’ve selected your subscription plan or chosen to purchase a perpetual license.
-If you haven’t done this yet, please visit the [Pricing page](/pricing/?section=tbmq-options){: target="_blank"} to compare available options 
+If you haven’t done this yet, please visit the [Pricing page](/pricing/?section=st-rmqtt-options){: target="_blank"} to compare available options 
 and obtain your license key.
 
 > **Note:** Throughout this guide, we’ll refer to your license key as **YOUR_LICENSE_KEY_HERE**.
@@ -31,77 +31,77 @@ and obtain your license key.
 
 ## Installation
 
-Execute the following commands to download the script that will install and start TBMQ {{tbmqSuffix}}:
+Execute the following commands to download the script that will install and start ST-RMQTT {{st-rmqttSuffix}}:
 
 {% include templates/mqtt-broker/install/linux-macos/linux-macos-install.md %}
 
-The script downloads the _docker-compose.yml_ file, creates necessary docker volumes, installs the database for TBMQ, and starts TBMQ.
-Key configuration points for TBMQ in the docker-compose file:
+The script downloads the _docker-compose.yml_ file, creates necessary docker volumes, installs the database for ST-RMQTT, and starts ST-RMQTT.
+Key configuration points for ST-RMQTT in the docker-compose file:
 
 {% if docsPrefix == "pe/" %}
-- `TBMQ_LICENSE_SECRET: YOUR_LICENSE_KEY_HERE` - placeholder for your license secret obtained earlier;
+- `ST-RMQTT_LICENSE_SECRET: YOUR_LICENSE_KEY_HERE` - placeholder for your license secret obtained earlier;
 {% endif %}
 - `8083:8083` - connect local port 8083 to exposed internal HTTP port 8083;
 - `1883:1883` - connect local port 1883 to exposed internal MQTT port 1883;
 - `8084:8084` - connect local port 8084 to exposed internal MQTT over WebSockets port 8084;
 {% if docsPrefix == null %}
-- `tbmq-redis-data:/bitnami/redis/data` - maps the `tbmq-redis-data` volume to TBMQ Redis database data directory;
+- `st-rmqtt-redis-data:/bitnami/redis/data` - maps the `st-rmqtt-redis-data` volume to ST-RMQTT Redis database data directory;
 {% else %}
-- `tbmq-valkey-data:/data` - maps the `tbmq-valkey-data` volume to TBMQ Valkey database data directory;
+- `st-rmqtt-valkey-data:/data` - maps the `st-rmqtt-valkey-data` volume to ST-RMQTT Valkey database data directory;
 {% endif %}
-- `tbmq-postgres-data:/var/lib/postgresql/data` - maps the `tbmq-postgres-data` volume to TBMQ Postgres database data directory;
+- `st-rmqtt-postgres-data:/var/lib/postgresql/data` - maps the `st-rmqtt-postgres-data` volume to ST-RMQTT Postgres database data directory;
 {% if docsPrefix == null %}
-- `tbmq-kafka-data:/bitnami/kafka` - maps the `tbmq-kafka-data` volume to Kafka data directory;
+- `st-rmqtt-kafka-data:/bitnami/kafka` - maps the `st-rmqtt-kafka-data` volume to Kafka data directory;
 {% else %}
-- `tbmq-kafka-data:/var/lib/kafka/data` - maps the `tbmq-kafka-data` volume to Kafka data directory;
+- `st-rmqtt-kafka-data:/var/lib/kafka/data` - maps the `st-rmqtt-kafka-data` volume to Kafka data directory;
 {% endif %}
-- `tbmq-logs:/var/log/thingsboard-mqtt-broker` - maps the `tbmq-logs` volume to TBMQ logs directory;
-- `tbmq-data:/data` - maps the `tbmq-data` volume to TBMQ data directory that contains _.firstlaunch_ file after the DB is installed;
-- `tbmq` - friendly local name of this machine;
-- `restart: always` - automatically start TBMQ in case of system reboot and restart in case of failure.
+- `st-rmqtt-logs:/var/log/sentient-mqtt-broker` - maps the `st-rmqtt-logs` volume to ST-RMQTT logs directory;
+- `st-rmqtt-data:/data` - maps the `st-rmqtt-data` volume to ST-RMQTT data directory that contains _.firstlaunch_ file after the DB is installed;
+- `st-rmqtt` - friendly local name of this machine;
+- `restart: always` - automatically start ST-RMQTT in case of system reboot and restart in case of failure.
 
 {% if docsPrefix == "pe/" %}
 
-{% capture replace_tbmq_license_secret %}
+{% capture replace_st-rmqtt_license_secret %}
 Update your `docker-compose.yml` file with the license secret you obtained earlier.
-Open the file, find the **TBMQ_LICENSE_SECRET** environment variable, 
+Open the file, find the **ST-RMQTT_LICENSE_SECRET** environment variable, 
 and replace **YOUR_LICENSE_KEY_HERE** with your actual license secret.
-After updating the file, restart TBMQ by running the following command.
+After updating the file, restart ST-RMQTT by running the following command.
 {% endcapture %}
-{% include templates/warn-banner.md content=replace_tbmq_license_secret %}
+{% include templates/warn-banner.md content=replace_st-rmqtt_license_secret %}
 
 ```shell
-./tbmq-install-and-run.sh
+./st-rmqtt-install-and-run.sh
 ```
 {: .copy-code}
 
 {% endif %}
 
-**Note**: In case the TBMQ is being installed on the same host where ThingsBoard is already running, the following issue can be seen:
+**Note**: In case the ST-RMQTT is being installed on the same host where SENTIENT is already running, the following issue can be seen:
 
 ```
 Error response from daemon: ... Bind for 0.0.0.0:1883 failed: port is already allocated
 ```
 
-In order to fix this, you need to expose another host's port for the TBMQ container,
+In order to fix this, you need to expose another host's port for the ST-RMQTT container,
 i.e. change the `1883:1883` line in the downloaded docker-compose.yml file with, for example, `1889:1883`. After that re-run the script.
 
 ```shell
-./tbmq-install-and-run.sh
+./st-rmqtt-install-and-run.sh
 ```
 {: .copy-code}
 
-Once the installation process is complete you can access TBMQ UI by visiting the following URL `http://{your-host-ip}:8083` in your browser (e.g. **http://localhost:8083**).
+Once the installation process is complete you can access ST-RMQTT UI by visiting the following URL `http://{your-host-ip}:8083` in your browser (e.g. **http://localhost:8083**).
 
 {% include templates/mqtt-broker/login.md %}
 
 ## Logs, stop and start commands
 
 In case of any issues you can examine service logs for errors.
-For example to see TBMQ logs execute the following command:
+For example to see ST-RMQTT logs execute the following command:
 
 ```
-docker compose logs -f tbmq
+docker compose logs -f st-rmqtt
 ```
 {: .copy-code}
 
@@ -126,27 +126,27 @@ docker compose start
 ### Backup and restore (Optional)
 
 While backing up your PostgreSQL database is highly recommended, it is optional before proceeding with the upgrade. 
-{% if docsPrefix == null %} For further guidance, follow the [next instructions](https://github.com/thingsboard/tbmq/blob/main/msa/tbmq/configs/README.md).
-{% else %} For further guidance, follow the [next instructions](https://github.com/thingsboard/tbmq-pe-docker-compose/blob/master/basic/README.md).
+{% if docsPrefix == null %} For further guidance, follow the [next instructions](https://github.com/sentient/st-rmqtt/blob/main/msa/st-rmqtt/configs/README.md).
+{% else %} For further guidance, follow the [next instructions](https://github.com/sentient/st-rmqtt-pe-docker-compose/blob/master/basic/README.md).
 {% endif %}
 
 {% if docsPrefix == null %}
 ### Upgrade to 2.2.0
 
 In this release, the MQTT authentication mechanism was migrated from YAML/env configuration into the database.
-During upgrade, TBMQ needs to know which authentication providers are enabled in your deployment. 
+During upgrade, ST-RMQTT needs to know which authentication providers are enabled in your deployment. 
 This is done using environment variables passed to the **upgrade container**.
 
-The upgrade script therefore requires a file named **`.tbmq-upgrade.env`** in the same directory as `docker-compose.yml`.
+The upgrade script therefore requires a file named **`.st-rmqtt-upgrade.env`** in the same directory as `docker-compose.yml`.
 This file is **used only during upgrade** to create the default auth providers. 
-Make sure the values match what you already run in your `tbmq` service (`docker-compose.yml → environment:`).
+Make sure the values match what you already run in your `st-rmqtt` service (`docker-compose.yml → environment:`).
 
 **Create the env file**
 
 From the directory containing `docker-compose.yml`:
 
 ```bash
-cat > .tbmq-upgrade.env <<'EOF'
+cat > .st-rmqtt-upgrade.env <<'EOF'
 SECURITY_MQTT_BASIC_ENABLED=true
 SECURITY_MQTT_SSL_ENABLED=true
 SECURITY_MQTT_SSL_SKIP_VALIDITY_CHECK_FOR_CLIENT_CERT=false
@@ -160,7 +160,7 @@ EOF
 
 **Notes**
 
-* **Required**: If `.tbmq-upgrade.env` is missing, the upgrade script will fail.
+* **Required**: If `.st-rmqtt-upgrade.env` is missing, the upgrade script will fail.
 * Supported variables:
 
   * `SECURITY_MQTT_BASIC_ENABLED` (`true|false`)
@@ -175,10 +175,10 @@ Once the file is created, continue with the [upgrade process](#run-upgrade).
 
 ### Upgrade to 2.0.0
 
-For the TBMQ 2.0.0 release, the installation scripts have been updated to include Redis configuration.
+For the ST-RMQTT 2.0.0 release, the installation scripts have been updated to include Redis configuration.
 
 Please update your `docker-compose.yml` file to incorporate the Redis settings. 
-You can review the necessary changes by visiting the following [link](https://github.com/thingsboard/tbmq/pull/142/files#diff-18a10097b03fb393429353a8f84ba29498e9b72a21326deb9809865d384e2800).
+You can review the necessary changes by visiting the following [link](https://github.com/sentient/st-rmqtt/pull/142/files#diff-18a10097b03fb393429353a8f84ba29498e9b72a21326deb9809865d384e2800).
 
 <br>
 <details markdown="1">
@@ -188,7 +188,7 @@ Here is the complete docker compose file with the Redis configuration prior to t
 
 ```yaml
 #
-# Copyright © 2016-2024 The Thingsboard Authors
+# Copyright © 2016-2024 The Sentient Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -210,10 +210,10 @@ services:
     ports:
       - "5432"
     environment:
-      POSTGRES_DB: thingsboard_mqtt_broker
+      POSTGRES_DB: sentient_mqtt_broker
       POSTGRES_PASSWORD: postgres
     volumes:
-      - tbmq-postgres-data:/var/lib/postgresql/data
+      - st-rmqtt-postgres-data:/var/lib/postgresql/data
   kafka:
     restart: always
     image: "bitnamilegacy/kafka:3.5.1"
@@ -229,7 +229,7 @@ services:
       KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_CFG_INTER_BROKER_LISTENER_NAME: PLAINTEXT
     volumes:
-      - tbmq-kafka-data:/bitnami/kafka
+      - st-rmqtt-kafka-data:/bitnami/kafka
   redis:
     restart: always
     image: "bitnamilegacy/redis:7.0"
@@ -239,10 +239,10 @@ services:
     ports:
       - "6379"
     volumes:
-      - tbmq-redis-data:/bitnami/redis/data
-  tbmq:
+      - st-rmqtt-redis-data:/bitnami/redis/data
+  st-rmqtt:
     restart: always
-    image: "thingsboard/tbmq:1.4.0"
+    image: "sentient/st-rmqtt:1.4.0"
     depends_on:
       - postgres
       - kafka
@@ -252,8 +252,8 @@ services:
       - "1883:1883"
       - "8084:8084"
     environment:
-      TB_SERVICE_ID: tbmq
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/thingsboard_mqtt_broker
+      TB_SERVICE_ID: st-rmqtt
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sentient_mqtt_broker
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
       TB_KAFKA_SERVERS: kafka:9092
@@ -261,19 +261,19 @@ services:
       SECURITY_MQTT_BASIC_ENABLED: "true"
       #JAVA_OPTS: "-Xmx2048M -Xms2048M -Xss384k -XX:+AlwaysPreTouch"
     volumes:
-      - tbmq-logs:/var/log/thingsboard-mqtt-broker
-      - tbmq-data:/data
+      - st-rmqtt-logs:/var/log/sentient-mqtt-broker
+      - st-rmqtt-data:/data
 
 volumes:
-  tbmq-postgres-data:
+  st-rmqtt-postgres-data:
     external: true
-  tbmq-kafka-data:
+  st-rmqtt-kafka-data:
     external: true
-  tbmq-redis-data:
+  st-rmqtt-redis-data:
     external: true
-  tbmq-logs:
+  st-rmqtt-logs:
     external: true
-  tbmq-data:
+  st-rmqtt-data:
     external: true
 ```
 {: .copy-code}
@@ -281,46 +281,46 @@ volumes:
 </details>
 <br>
 
-Additionally, add the following line to your `tbmq-install-and-run.sh` script (locate `create_volume_if_not_exists` lines) to create a volume for Redis data:
+Additionally, add the following line to your `st-rmqtt-install-and-run.sh` script (locate `create_volume_if_not_exists` lines) to create a volume for Redis data:
 
 ```bash
-create_volume_if_not_exists tbmq-redis-data
+create_volume_if_not_exists st-rmqtt-redis-data
 ```
 {: .copy-code}
 
 Or simply create it with the following command:
 
 ```bash
-docker volume create tbmq-redis-data
+docker volume create st-rmqtt-redis-data
 ```
 {: .copy-code}
 
 Once this is done, run the script to apply the changes:
 
 ```bash
-./tbmq-install-and-run.sh
+./st-rmqtt-install-and-run.sh
 ```
 {: .copy-code}
 
-This will restart TBMQ with Redis enabled. Afterward, you can proceed with the [upgrade process](#run-upgrade).
-Please [contact us](https://github.com/thingsboard/tbmq/issues), so we can answer any questions and provide our help if needed.
+This will restart ST-RMQTT with Redis enabled. Afterward, you can proceed with the [upgrade process](#run-upgrade).
+Please [contact us](https://github.com/sentient/st-rmqtt/issues), so we can answer any questions and provide our help if needed.
 
 {% else %}
 
-### Upgrade from TBMQ CE to TBMQ PE (v2.2.0)
+### Upgrade from ST-RMQTT CE to ST-RMQTT PE (v2.2.0)
 
-To upgrade your existing **TBMQ Community Edition (CE)** to **TBMQ Professional Edition (PE)**, ensure you are running the latest **TBMQ CE {{site.release.broker_full_ver}}** version before starting the process.
+To upgrade your existing **ST-RMQTT Community Edition (CE)** to **ST-RMQTT Professional Edition (PE)**, ensure you are running the latest **ST-RMQTT CE {{site.release.broker_full_ver}}** version before starting the process.
 Do not forget to [configure the license key](#get-the-license-key).
 
-The upgrade procedure requires a file named **`.tbmq-upgrade.env`** located in the same directory as your `docker-compose.yml`.
+The upgrade procedure requires a file named **`.st-rmqtt-upgrade.env`** located in the same directory as your `docker-compose.yml`.
 This file is **only used during the upgrade**.
 
-**Create the `.tbmq-upgrade.env` file**
+**Create the `.st-rmqtt-upgrade.env` file**
 
 From the directory containing `docker-compose.yml`, run:
 
 ```bash
-cat > .tbmq-upgrade.env <<'EOF'
+cat > .st-rmqtt-upgrade.env <<'EOF'
 JAVA_TOOL_OPTIONS=-Dinstall.upgrade.from_version=ce
 EOF
 ```
@@ -328,7 +328,7 @@ EOF
 
 **Important Notes**
 
-* **Required:** The upgrade script will fail if `.tbmq-upgrade.env` is missing.
+* **Required:** The upgrade script will fail if `.st-rmqtt-upgrade.env` is missing.
 * After creating the file, proceed with the [upgrade process](#run-upgrade).
 
 {% endif %}
@@ -339,14 +339,14 @@ In order to update to the latest version, execute the following commands:
 
 {% if docsPrefix == null %}
 ```shell
-wget -O tbmq-upgrade.sh https://raw.githubusercontent.com/thingsboard/tbmq/{{ site.release.broker_branch }}/msa/tbmq/configs/tbmq-upgrade.sh &&
-sudo chmod +x tbmq-upgrade.sh && ./tbmq-upgrade.sh
+wget -O st-rmqtt-upgrade.sh https://raw.githubusercontent.com/sentient/st-rmqtt/{{ site.release.broker_branch }}/msa/st-rmqtt/configs/st-rmqtt-upgrade.sh &&
+sudo chmod +x st-rmqtt-upgrade.sh && ./st-rmqtt-upgrade.sh
 ```
 {: .copy-code}
 {% else %}
 ```shell
-wget -O tbmq-upgrade.sh https://raw.githubusercontent.com/thingsboard/tbmq-pe-docker-compose/{{ site.release.broker_branch }}/basic/tbmq-upgrade.sh &&
-sudo chmod +x tbmq-upgrade.sh && ./tbmq-upgrade.sh
+wget -O st-rmqtt-upgrade.sh https://raw.githubusercontent.com/sentient/st-rmqtt-pe-docker-compose/{{ site.release.broker_branch }}/basic/st-rmqtt-upgrade.sh &&
+sudo chmod +x st-rmqtt-upgrade.sh && ./st-rmqtt-upgrade.sh
 ```
 {: .copy-code}
 {% endif %}

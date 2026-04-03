@@ -1,39 +1,39 @@
 * TOC
 {:toc}
 
-ThingsBoard supports OAuth 2.0–based authentication to provide **Single Sign-On** (**SSO**) for your customers and integrate with external identity providers.
+SENTIENT supports OAuth 2.0–based authentication to provide **Single Sign-On** (**SSO**) for your customers and integrate with external identity providers.
 
 Using OAuth 2.0, you can allow users to log in using their existing accounts from external platforms and automatically provision tenants, customers, or sub-customers.
 
-ThingsBoard is compatible with most OAuth 2.0 providers, including [Google](#login-with-google), [Facebook](https://developers.facebook.com/docs/facebook-login/web#logindialog){:target="_blank"}, [Github](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app){:target="_blank"}, [Auth0](#login-with-auth0), [Keycloak](#login-with-keycloak), [Okta](#login-with-okta), [Azure](#login-with-azure), etc.
+SENTIENT is compatible with most OAuth 2.0 providers, including [Google](#login-with-google), [Facebook](https://developers.facebook.com/docs/facebook-login/web#logindialog){:target="_blank"}, [Github](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app){:target="_blank"}, [Auth0](#login-with-auth0), [Keycloak](#login-with-keycloak), [Okta](#login-with-okta), [Azure](#login-with-azure), etc.
 
 ## OAuth 2.0 authentication flow
 
-ThingsBoard supports the Authorization Code grant type for OAuth 2.0 authentication. The authentication flow works as follows:
-1. A user opens the ThingsBoard login page and selects an external provider (for example, Google or Keycloak). 
+SENTIENT supports the Authorization Code grant type for OAuth 2.0 authentication. The authentication flow works as follows:
+1. A user opens the SENTIENT login page and selects an external provider (for example, Google or Keycloak). 
 2. The user is redirected to the provider’s login page to authenticate. 
-3. After successful login, the provider redirects the user back to ThingsBoard using the configured redirect URI. 
-4. ThingsBoard extracts the authorization code from the redirect URL and exchanges it for an access token. 
-5. ThingsBoard retrieves the external user information and converts it into a ThingsBoard user using the configured mapper ([Basic](#basic-mapper){:target="_blank"} or [Custom](#custom-mapper){:target="_blank"}). 
-6. After the mapping step is completed, the standard ThingsBoard authorization flow is applied.
+3. After successful login, the provider redirects the user back to SENTIENT using the configured redirect URI. 
+4. SENTIENT extracts the authorization code from the redirect URL and exchanges it for an access token. 
+5. SENTIENT retrieves the external user information and converts it into a SENTIENT user using the configured mapper ([Basic](#basic-mapper){:target="_blank"} or [Custom](#custom-mapper){:target="_blank"}). 
+6. After the mapping step is completed, the standard SENTIENT authorization flow is applied.
 
-This process allows ThingsBoard to automatically determine the correct tenant, customer, and user permissions based on identity provider attributes.
+This process allows SENTIENT to automatically determine the correct tenant, customer, and user permissions based on identity provider attributes.
 
 ## Setting up authentication via an external provider
 
 To enable OAuth 2.0 authentication through an external provider, you must configure two components:
 - **OAuth 2.0 client** – stores provider credentials, endpoints, scopes, and mapping rules.
-- **Domain configuration** – defines which OAuth clients are available for a specific ThingsBoard domain.
+- **Domain configuration** – defines which OAuth clients are available for a specific SENTIENT domain.
 
 The general setup process includes:
 1. Create an OAuth 2.0 client in the external provider and obtain the **Client ID** and **Client Secret**. 
-2. Add a corresponding OAuth 2.0 client in ThingsBoard and configure all required endpoints, scopes, and mapper settings. 
-3. Assign the OAuth 2.0 client to a domain in ThingsBoard. 
-4. Verify the login flow using the new **Login with ...** option on the ThingsBoard login page.
+2. Add a corresponding OAuth 2.0 client in SENTIENT and configure all required endpoints, scopes, and mapper settings. 
+3. Assign the OAuth 2.0 client to a domain in SENTIENT. 
+4. Verify the login flow using the new **Login with ...** option on the SENTIENT login page.
 
 ### Add OAuth 2.0 client
 
-ThingsBoard allows you to configure OAuth 2.0 clients that can be used to authenticate users via external identity providers such as Google, GitHub, Apple, Facebook, Keycloak, Auth0, Okta, Azure AD, and others.
+SENTIENT allows you to configure OAuth 2.0 clients that can be used to authenticate users via external identity providers such as Google, GitHub, Apple, Facebook, Keycloak, Auth0, Okta, Azure AD, and others.
 
 An OAuth 2.0 client stores all required information for authentication, including:
 - client credentials (Client ID / Client Secret)
@@ -44,7 +44,7 @@ An OAuth 2.0 client stores all required information for authentication, includin
 Once an OAuth 2.0 client is created, it can be assigned to one or more domains.
 
 <b><font size="4">To add a new OAuth 2.0 client:</font></b>
-- Log in to ThingsBoard.
+- Log in to SENTIENT.
 - Navigate to **Security &#8702; OAuth 2.0**.
 - Open the **OAuth 2.0 clients** tab.
 - Click the **+** (**plus**) icon.
@@ -61,7 +61,7 @@ In the upper part of the dialog, configure the basic parameters:
   The provider selection defines default endpoint templates and mapping behavior.   
   > Tip: Select Custom if your provider is not listed (for example, Keycloak, Okta, Azure AD, Auth0, etc.).
 - **Allowed platforms**   
-  Select which ThingsBoard platform is allowed to use this OAuth client. For example: Web UI only, Mobile app only, or All platforms (default).   
+  Select which SENTIENT platform is allowed to use this OAuth client. For example: Web UI only, Mobile app only, or All platforms (default).   
   This option is useful if you want to restrict authentication methods for specific clients.
 - **Client ID and Client secret**    
   Enter the OAuth 2.0 credentials obtained from your identity provider:
@@ -72,47 +72,47 @@ In the upper part of the dialog, configure the basic parameters:
 
 Expand the **Advanced settings** section and open the **General** tab. This section defines the OAuth 2.0 endpoints used during authentication.
 - **Access token URI**   
-  Defines the provider endpoint used by ThingsBoard to exchange the authorization code for an access token. Example (Google): https://oauth2.googleapis.com/token
+  Defines the provider endpoint used by SENTIENT to exchange the authorization code for an access token. Example (Google): https://oauth2.googleapis.com/token
 - **Authorization URI**    
   Defines the endpoint where the user is redirected to authenticate. Example (Google): https://accounts.google.com/o/oauth2/v2/auth
 - **JSON Web Key URI**   
   Defines the JWKS endpoint that provides the public keys required to validate JWT tokens. Example (Google): https://www.googleapis.com/oauth2/v3/certs
 - **User info URI**   
-  Defines the endpoint used by ThingsBoard to request user details. Example (Google): https://openidconnect.googleapis.com/v1/userinfo
+  Defines the endpoint used by SENTIENT to request user details. Example (Google): https://openidconnect.googleapis.com/v1/userinfo
 - **Client authentication method**   
-  Defines how ThingsBoard sends **client credentials** (**Client ID** and **Client Secret**) when requesting an access token from the OAuth 2.0 provider (during the _authorization code &#8702; access token_ exchange).   
+  Defines how SENTIENT sends **client credentials** (**Client ID** and **Client Secret**) when requesting an access token from the OAuth 2.0 provider (during the _authorization code &#8702; access token_ exchange).   
   This parameter must match the method supported (or required) by your identity provider.   
   According to the UI, the following authentication methods are available:
-  - **NONE**. ThingsBoard does not send client credentials when requesting the access token.   
+  - **NONE**. SENTIENT does not send client credentials when requesting the access token.   
   This option is rarely used and is applicable only for providers that do not require client authentication (typically public clients). 
-  - **BASIC** (_recommended for most providers_). ThingsBoard sends the client credentials using **HTTP Basic Authentication** header: Authorization: Basic <base64(client_id:client_secret)>   
+  - **BASIC** (_recommended for most providers_). SENTIENT sends the client credentials using **HTTP Basic Authentication** header: Authorization: Basic <base64(client_id:client_secret)>   
   This is the most common and widely supported option (for example, Google, Keycloak, Auth0, Okta).
-  - **POST**. ThingsBoard sends the client credentials in the **POST request body** together with the token request parameters.   
+  - **POST**. SENTIENT sends the client credentials in the **POST request body** together with the token request parameters.   
   This method is required by some OAuth providers depending on their configuration.   
   > **Tip**: If authentication fails during token exchange (for example, due to `invalid_client`), verify that the selected **Client authentication method** matches the identity provider configuration.
 - **Allow user creation**   
-  If enabled, ThingsBoard will automatically create a new user account during the first login attempt (if the user does not already exist).   
+  If enabled, SENTIENT will automatically create a new user account during the first login attempt (if the user does not already exist).   
   This option is useful for fully automated SSO onboarding.   
 - **Activate user**   
-  If enabled, ThingsBoard automatically activates the created user account.   
+  If enabled, SENTIENT automatically activates the created user account.   
   If disabled, the user will be created but remain inactive until manually activated by an administrator.
 - **Scope**   
-  Scopes define which information ThingsBoard requests from the identity provider. Example: <span class="code-light">email</span> <span class="code-light">openid</span> <span class="code-light">profile</span>.   
+  Scopes define which information SENTIENT requests from the identity provider. Example: <span class="code-light">email</span> <span class="code-light">openid</span> <span class="code-light">profile</span>.   
   Scopes directly affect which attributes are available for user mapping (email, name, etc.).
 
 <b><font size="4">Step 3. Configure Advanced settings (Mapper)</font></b>   
 
-Switch to the Mapper tab. This section defines how ThingsBoard converts the external user info object into an internal ThingsBoard user and decides:
+Switch to the Mapper tab. This section defines how SENTIENT converts the external user info object into an internal SENTIENT user and decides:
 - tenant name 
 - customer name 
 - user authority (Tenant Admin / Customer User)
 - optional user groups (PE only)
 - default dashboard navigation settings
 
-ThingsBoard supports different mapper types: Basic, Custom, GitHub, Apple
+SENTIENT supports different mapper types: Basic, Custom, GitHub, Apple
 
 > The mapper configuration is a critical part of OAuth setup because it controls automatic tenant/customer provisioning logic. 
-> For more details on mapping external user information to a ThingsBoard user, see [here](#mapping-external-user-info-into-a-thingsboard-oauth-20-user).
+> For more details on mapping external user information to a SENTIENT user, see [here](#mapping-external-user-info-into-a-sentient-oauth-20-user).
 
 <b><font size="4">Step 4. Save the OAuth 2.0 client</font></b>
 
@@ -123,14 +123,14 @@ Once created, the OAuth client becomes available for domain assignment.
 ### Assign OAuth 2.0 client to a domain
 
 After creating an OAuth 2.0 client, you must assign it to a domain.
-This step defines **which authentication providers will be available on the login page** for users accessing ThingsBoard via a specific domain.
+This step defines **which authentication providers will be available on the login page** for users accessing SENTIENT via a specific domain.
 
-In ThingsBoard, the domain configuration acts as a routing layer: when a user opens the login page, ThingsBoard determines the domain and shows the OAuth 2.0 login options assigned to it.
+In SENTIENT, the domain configuration acts as a routing layer: when a user opens the login page, SENTIENT determines the domain and shows the OAuth 2.0 login options assigned to it.
 
 <b><font size="4">Open domain configuration</font></b>
 
 To assign an OAuth 2.0 client to a domain:
-- Log in to your ThingsBoard instance.
+- Log in to your SENTIENT instance.
 - Navigate to **Security &#8702; OAuth 2.0**.
 - On the **Domains** tab, click the **+** (**plus**) icon.
 
@@ -138,12 +138,12 @@ This opens the **Add domain** dialog window.
 
 <b><font size="4">Step 1. Configure domain name</font></b>
 
-In the **Domain name** field, enter the domain that users will use to access ThingsBoard. Example: `my.thingsboard.instance`.   
+In the **Domain name** field, enter the domain that users will use to access SENTIENT. Example: `my.sentient.instance`.   
 This value must match the actual domain configured in your DNS and used in the browser.
 
 <b><font size="4">Step 2. Verify Redirect URI template</font></b>
 
-ThingsBoard automatically generates the Redirect URI template based on the entered domain. Example: https://my.thingsboard.instance/login/oauth2/code/
+SENTIENT automatically generates the Redirect URI template based on the entered domain. Example: https://my.sentient.instance/login/oauth2/code/
 
 This redirect URI must be added to your OAuth provider configuration (Google, Auth0, Keycloak, etc.) as the allowed callback/redirect URL.
 
@@ -172,7 +172,7 @@ There are two available options:
 - **Enable OAuth 2.0**.   
   If this option is disabled, OAuth login will not be available for this domain even if OAuth clients are assigned.
 - **Propagate to Edge**.   
-  If you are using [ThingsBoard Edge](/docs/edge/){:target="_blank"} and want OAuth settings to be applied on the Edge side, enable **Propagate to Edge** toggle.   
+  If you are using [SENTIENT GATEWAY](/docs/edge/){:target="_blank"} and want OAuth settings to be applied on the Edge side, enable **Propagate to Edge** toggle.   
   This allows the OAuth domain configuration to be synchronized to connected Edge instances.   
 
 <b><font size="4">Step 4. Save the domain</font></b>
@@ -182,18 +182,18 @@ Click **Add** to create the domain configuration.
 <b><font size="4">Result</font></b>
 
 Once the domain is created and OAuth 2.0 settings are enabled:
-- ThingsBoard will show the assigned OAuth providers on the login page. 
-- Users accessing ThingsBoard via this domain will be able to authenticate using the configured OAuth 2.0 clients. 
+- SENTIENT will show the assigned OAuth providers on the login page. 
+- Users accessing SENTIENT via this domain will be able to authenticate using the configured OAuth 2.0 clients. 
 - User provisioning and role mapping will follow the mapper settings configured in the assigned OAuth client(s).
 
 ## Mapper section
 
-The **Mapper** section defines how ThingsBoard converts the external identity provider user information into a ThingsBoard user.
+The **Mapper** section defines how SENTIENT converts the external identity provider user information into a SENTIENT user.
 
-After a user successfully authenticates with an OAuth 2.0 provider, ThingsBoard receives an external **user info object** (or ID token claims).
-The mapper is responsible for extracting the required attributes (email, first name, last name) and defining the user representation in ThingsBoard.
+After a user successfully authenticates with an OAuth 2.0 provider, SENTIENT receives an external **user info object** (or ID token claims).
+The mapper is responsible for extracting the required attributes (email, first name, last name) and defining the user representation in SENTIENT.
 
-Using mapper settings, ThingsBoard can automatically:
+Using mapper settings, SENTIENT can automatically:
 - create users;
 - assign them to a tenant and/or customer;
 - create a tenant/customer if it does not exist;
@@ -206,8 +206,8 @@ The mapper configuration is located in the **Advanced settings → Mapper** tab 
 - **User name attribute key**   
   Most OAuth providers return the email address as the most stable identifier, therefore the recommended value is: <span class="code-light">email</span>
 - **Mapper type**
-  ThingsBoard supports multiple mapper types. The available options depend on the selected provider and ThingsBoard version. The following mapper types are supported: **BASIC**, **CUSTOM**, **GITHUB**, **APPLE**.   
-  Each mapper defines a different approach for mapping external identity data into ThingsBoard entities.
+  SENTIENT supports multiple mapper types. The available options depend on the selected provider and SENTIENT version. The following mapper types are supported: **BASIC**, **CUSTOM**, **GITHUB**, **APPLE**.   
+  Each mapper defines a different approach for mapping external identity data into SENTIENT entities.
 
 ### Basic mapper
 
@@ -217,9 +217,9 @@ This mapper supports automatic tenant/customer provisioning using configurable s
 
 <b><font size="3">What you can configure</font></b>   
 The Basic mapper gives you a set of predictable controls:
-- **Email attribute key**. This field is required because email is typically used as a unique identifier in ThingsBoard. Default value: <span class="code-light">email</span>
-- **First name / Last name attribute keys** – tells ThingsBoard which external fields to use.
-- **Tenant name strategy**. The Tenant name strategy defines how ThingsBoard determines the tenant name for the authenticated user. Available strategies:
+- **Email attribute key**. This field is required because email is typically used as a unique identifier in SENTIENT. Default value: <span class="code-light">email</span>
+- **First name / Last name attribute keys** – tells SENTIENT which external fields to use.
+- **Tenant name strategy**. The Tenant name strategy defines how SENTIENT determines the tenant name for the authenticated user. Available strategies:
   - **DOMAIN** - The tenant name is derived from the email domain. This is the best option for SaaS environments where each company uses its own email domain.   
     Example: If the user email is: _john.doe@company.com_ &#8702; then the tenant name will be: _company.com_
   - **EMAIL** - The tenant name is equal to the full email address. This strategy is usually used for testing or cases where each user should have an isolated tenant.   
@@ -235,7 +235,7 @@ The Basic mapper gives you a set of predictable controls:
   - **Demo Tenant %{email}**  *# if the user's email is "test@demo.com", the Tenant's name will be the "Demo Tenant test@demo.com"*;
   - **%{givenName}**          *# if the user's givenName attribute is "Demo User", the Tenant name will be "Demo User"*.
 
-- The **Customer name pattern** defines the customer name that ThingsBoard should assign for the new user.   
+- The **Customer name pattern** defines the customer name that SENTIENT should assign for the new user.   
   You can use attributes from the external user info object to put them into the Customer name. Please use %{attribute_key} as placeholder for the attribute value.
 
   Customer pattern examples:
@@ -257,7 +257,7 @@ The Basic mapper gives you a set of predictable controls:
   - **Demo Parent Customer %{email}**  *# If user's "email" attribute is "test@demo.com", Parent Customer name is going to be "Demo Parent Customer test@demo.com"*;
   - **%{country}**                     *# If user's "country" attribute is "Top Customer", Parent Customer name is going to be "Parent Customer"*.
 
-- **User groups name pattern** allows ThingsBoard to automatically add the created user to one or more user groups. By default, the newly created user is assigned only to the **All** user&#39;s group.   
+- **User groups name pattern** allows SENTIENT to automatically add the created user to one or more user groups. By default, the newly created user is assigned only to the **All** user&#39;s group.   
   You can use attributes from the external user info object to put them into user group names. Please use %{attribute_key} as placeholder for attribute value.
   If groups don't exist, this group will be created automatically.
 
@@ -270,7 +270,7 @@ The Basic mapper gives you a set of predictable controls:
 ### Custom mapper
 
 The Custom mapper is used when the Basic mapper is not enough and you need advanced provisioning logic.   
-With the Custom mapper, ThingsBoard delegates mapping logic to an external service.
+With the Custom mapper, SENTIENT delegates mapping logic to an external service.
 
 This allows you to implement:
 - role mapping based on IdP groups/roles;
@@ -279,10 +279,10 @@ This allows you to implement:
 - allow-listing, validation, or license checks.
 
 How it works
-1. ThingsBoard receives the external user info object from the provider.
-2. ThingsBoard sends this object to your custom mapping endpoint.
-3. Your service returns a ThingsBoard-compatible user mapping response.
-4. ThingsBoard creates or updates the user according to the response.
+1. SENTIENT receives the external user info object from the provider.
+2. SENTIENT sends this object to your custom mapping endpoint.
+3. Your service returns a SENTIENT-compatible user mapping response.
+4. SENTIENT creates or updates the user according to the response.
 
 The Custom mapper is the best choice for enterprise deployments with strict user provisioning requirements.
 
@@ -294,7 +294,7 @@ This example demonstrates how to configure OAuth 2.0 authentication using [Googl
 
 After configuration:
 - users can log in using their Google account;
-- ThingsBoard automatically creates a tenant if it does not exist;
+- SENTIENT automatically creates a tenant if it does not exist;
 - the tenant name is derived from the user’s email address;
 - the user is logged in as a **Tenant Administrator**.
 
@@ -307,8 +307,8 @@ To use Google OAuth 2.0 authentication, create a project in the [Google API Cons
 Follow the official instructions on the [OpenID Connect documentation page](https://developers.google.com/identity/protocols/oauth2/openid-connect){:target="_blank"}, or follow the steps below:
 - Navigate to the **Credentials**. 
 - Click **Create credentials &#8702; OAuth client ID**. 
-- Specify a client name (for example, ThingsBoard). 
-- Add the [ThingsBoard redirect URI](#-redirect-uri) to the **Authorized Redirect URIs** field:
+- Specify a client name (for example, SENTIENT). 
+- Add the [SENTIENT redirect URI](#-redirect-uri) to the **Authorized Redirect URIs** field:
 
 ```bash
 http(s)://$DOMAIN:$PORT/login/oauth2/code/
@@ -316,12 +316,12 @@ http(s)://$DOMAIN:$PORT/login/oauth2/code/
 {: .copy-code}
 
 Where:   
-&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the ThingsBoard hostname (or IP address)   
-&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the ThingsBoard instance
+&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the SENTIENT hostname (or IP address)   
+&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the SENTIENT instance
 
 Example:
 ```text
-https://my.thingsboard.instance/login/oauth2/code/
+https://my.sentient.instance/login/oauth2/code/
 ```
 
 - Click **Create**.
@@ -334,16 +334,16 @@ You will need them in the next step.
 
 {% include images-gallery.html imageCollection="google-credentials-for-oauth-1" %}
 
-<b><font size="4">Step 2. Add an OAuth 2.0 client in ThingsBoard</font></b>
+<b><font size="4">Step 2. Add an OAuth 2.0 client in SENTIENT</font></b>
 
-Now configure OAuth 2.0 authentication via Google in ThingsBoard:
-- Log in to your ThingsBoard instance.
+Now configure OAuth 2.0 authentication via Google in SENTIENT:
+- Log in to your SENTIENT instance.
 - Navigate to **Security &#8702; OAuth 2.0**.
 - On the Domains tab, click the &#43; (**plus**) icon.
 - Enter your domain name (or IP address).
 - In the O**Auth 2.0 clients** section, click **Create new**.
 
-{% include images-gallery.html imageCollection="google-configuration-of-thingsboard-google-1" %}
+{% include images-gallery.html imageCollection="google-configuration-of-sentient-google-1" %}
 
 In the **OAuth 2.0 client** configuration window:
 - Set the title to **Google**. 
@@ -357,7 +357,7 @@ Now expand **Advanced settings** and configure the following parameters:
 - Enable **Allow user creation**.
 - Set scope to: <span class="code-light">email</span> <span class="code-light">openid</span> <span class="code-light">profile</span>.
 
-{% include images-gallery.html imageCollection="google-configuration-of-thingsboard-google-2" %}
+{% include images-gallery.html imageCollection="google-configuration-of-sentient-google-2" %}
 
 Switch to the **Mapper** section and configure:
 - Mapper type: **BASIC**.
@@ -368,17 +368,17 @@ Switch to the **Mapper** section and configure:
 {% endif %}
 - Click **Add** to create the OAuth 2.0 client.
 
-{% include images-gallery.html imageCollection="google-configuration-of-thingsboard-google-3" %}
+{% include images-gallery.html imageCollection="google-configuration-of-sentient-google-3" %}
 
 - Click **Add** again to confirm the domain creation.
 
-{% include images-gallery.html imageCollection="google-configuration-of-thingsboard-google-4" %}
+{% include images-gallery.html imageCollection="google-configuration-of-sentient-google-4" %}
 
 <b><font size="4">Verify login</font></b>
 
-Now open the ThingsBoard login page. You will see the **Login with Google button**. Click it and select your Google account.
+Now open the SENTIENT login page. You will see the **Login with Google button**. Click it and select your Google account.
 
-After successful authentication, you will be logged in to ThingsBoard as a **Tenant Administrator**.
+After successful authentication, you will be logged in to SENTIENT as a **Tenant Administrator**.
 
 {% include images-gallery.html imageCollection="login-with-google-1" %}
 
@@ -395,20 +395,20 @@ This example demonstrates how to configure OAuth 2.0 authentication using [Auth0
 
 After configuration:
 - users can log in using their Auth0 credentials; 
-- ThingsBoard creates or selects a tenant based on the user’s email domain; 
-- for each user, ThingsBoard also creates a customer whose name matches the user’s email address; 
+- SENTIENT creates or selects a tenant based on the user’s email domain; 
+- for each user, SENTIENT also creates a customer whose name matches the user’s email address; 
 - the user is logged in as a **Customer User**.
 
 User mapping is performed using the built-in [Basic mapper](#basic-mapper), but a [Custom mapper](#custom-mapper) can be used to implement more advanced tenant/customer provisioning rules.
 
 <b><font size="4">Step 1. Create an Auth0 application in OAuth0 Management Console</font></b>
 
-Before configuring ThingsBoard, you need to create an [Auth0](https://auth0.com/){:target="_blank"} application and obtain the **Client ID** and **Client Secret**.
+Before configuring SENTIENT, you need to create an [Auth0](https://auth0.com/){:target="_blank"} application and obtain the **Client ID** and **Client Secret**.
 
 To do this:
 - Open the [OAuth0 Management Console](https://manage.auth0.com/){:target="_blank"}. 
 - Navigate to **Applications** and click **Create Application**. 
-- Name the application **ThingsBoard**. 
+- Name the application **SENTIENT**. 
 - Select **Regular Web Application**. 
 - Select the technology **Java Spring Boot**. 
 - Open the created application and navigate to the **Settings** tab. 
@@ -416,7 +416,7 @@ To do this:
   - **Client ID**
   - **Client Secret**.
 
-In the **Allowed Callback URLs** field, add the [ThingsBoard redirect URI](#redirect-uri):
+In the **Allowed Callback URLs** field, add the [SENTIENT redirect URI](#redirect-uri):
 
 ```bash
 http(s)://$DOMAIN:$PORT/login/oauth2/code/
@@ -424,12 +424,12 @@ http(s)://$DOMAIN:$PORT/login/oauth2/code/
 {: .copy-code}
 
 Where:   
-&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the ThingsBoard hostname (or IP address)   
-&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the ThingsBoard instance
+&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the SENTIENT hostname (or IP address)   
+&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the SENTIENT instance
 
 Example:
 ```text
-https://my.thingsboard.instance/login/oauth2/code/
+https://my.sentient.instance/login/oauth2/code/
 ```
 
 {% capture difference %}
@@ -442,16 +442,16 @@ Please note that it is not necessary to configure the Application Login URI.
 
 {% include images-gallery.html imageCollection="auth0-credentials-1" %}
 
-<b><font size="4">Step 2. Add an OAuth 2.0 client in ThingsBoard</font></b>
+<b><font size="4">Step 2. Add an OAuth 2.0 client in SENTIENT</font></b>
 
-To configure OAuth 2.0 authentication via Auth0 in ThingsBoard:
-- Log in to your ThingsBoard instance.
+To configure OAuth 2.0 authentication via Auth0 in SENTIENT:
+- Log in to your SENTIENT instance.
 - Navigate to **Security &#8702; OAuth 2.0**.
 - On the Domains tab, click the &#43; (**plus**) icon.
 - Enter your domain name (or IP address).
 - Click **Create new** in the **OAuth 2.0 clients** section.
 
-{% include images-gallery.html imageCollection="oauth0-configuration-of-thingsboard-1" %}
+{% include images-gallery.html imageCollection="oauth0-configuration-of-sentient-1" %}
 
 In the **OAuth 2.0 client** configuration window:
 - Set title to **Auth0**.
@@ -465,7 +465,7 @@ Now expand **Advanced settings** and configure:
 - Set provider label to **Auth0**.
 - Set scope to: <span class="code-light">email</span> <span class="code-light">openid</span> <span class="code-light">profile</span>.
 
-{% include images-gallery.html imageCollection="oauth0-configuration-of-thingsboard-2" %}
+{% include images-gallery.html imageCollection="oauth0-configuration-of-sentient-2" %}
 
 Proceed to the **Mapper** block and configure:
 - Mapper type: **BASIC**.
@@ -476,17 +476,17 @@ Proceed to the **Mapper** block and configure:
 {% endif %} 
 - Click **Add** to create the OAuth 2.0 client.
 
-{% include images-gallery.html imageCollection="oauth0-configuration-of-thingsboard-3" %}
+{% include images-gallery.html imageCollection="oauth0-configuration-of-sentient-3" %}
 
 - Finally, click **Add** again to confirm domain creation.
 
-{% include images-gallery.html imageCollection="oauth0-configuration-of-thingsboard-4" %}
+{% include images-gallery.html imageCollection="oauth0-configuration-of-sentient-4" %}
 
 <b><font size="4">Step 3. Verify login</font></b>
 
-Now open the ThingsBoard login page. You will see the **Login with Auth0** button. Click it and authenticate using your Auth0 credentials.
+Now open the SENTIENT login page. You will see the **Login with Auth0** button. Click it and authenticate using your Auth0 credentials.
 
-After successful authentication, you will be logged in to ThingsBoard as a **Customer User**.
+After successful authentication, you will be logged in to SENTIENT as a **Customer User**.
 
 {% include images-gallery.html imageCollection="login-with-oauth0-1" %}
 
@@ -503,7 +503,7 @@ This example demonstrates how to configure OAuth 2.0 authentication using [Keycl
 
 After configuration:
 - users can log in using their Keycloak credentials; 
-- ThingsBoard logs the user in as a Tenant Administrator; 
+- SENTIENT logs the user in as a Tenant Administrator; 
 - the tenant name is derived from the user’s email address; 
 - if the tenant does not exist, it can be created automatically depending on mapper settings.
 
@@ -511,7 +511,7 @@ User mapping is performed using the built-in [Basic mapper](#basic-mapper), but 
 
 <b><font size="4">Step 1. Create a Keycloak realm and an OpenID Connect client</font></b>
 
-Before configuring ThingsBoard, you need to create a [Keycloak](https://www.keycloak.org/){:target="_blank"} realm and an OpenID Connect client, then obtain the required OAuth 2.0 credentials (**Client ID** and **Client Secret**).
+Before configuring SENTIENT, you need to create a [Keycloak](https://www.keycloak.org/){:target="_blank"} realm and an OpenID Connect client, then obtain the required OAuth 2.0 credentials (**Client ID** and **Client Secret**).
 
 You can follow the [official Keycloak documentation](https://www.keycloak.org/guides){:target="_blank"}, or use the step-by-step instructions below.
 
@@ -541,21 +541,21 @@ docker run -p 8081:8080 -e KC_BOOTSTRAP_ADMIN_USERNAME=admin -e KC_BOOTSTRAP_ADM
 A realm is a Keycloak "workspace" where you manage applications and users.
 - Click the realm selector (default: **master**).
 - Click **Create realm**.
-- Set realm name to **ThingsBoard**.
+- Set realm name to **SENTIENT**.
 - Click **Create**.
 
 {% include images-gallery.html imageCollection="create-new-realm" %}
 
 <br><b><font size="3">Create a new client</font></b>   
-A client represents ThingsBoard as an application that uses Keycloak for authentication.
+A client represents SENTIENT as an application that uses Keycloak for authentication.
 - Navigate to **Clients** and click **Create client**.
-- Set client ID to **thingsboard**.
+- Set client ID to **sentient**.
 - Client type: **OpenID Connect**.
 - Click **Next**.
 - Enable **Client authentication**.
 - Ensure **Standard flow** is enabled.
 - Click **Next**.
-- In **Login settings**, add the ThingsBoard redirect URI:
+- In **Login settings**, add the SENTIENT redirect URI:
 
 ```bash
 http(s)://$DOMAIN:$PORT/login/oauth2/code/
@@ -563,12 +563,12 @@ http(s)://$DOMAIN:$PORT/login/oauth2/code/
 {: .copy-code}
 
 Where:   
-&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the ThingsBoard hostname (or IP address)   
-&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the ThingsBoard instance
+&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the SENTIENT hostname (or IP address)   
+&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the SENTIENT instance
 
 Example:
 ```text
-https://my.thingsboard.instance/login/oauth2/code/
+https://my.sentient.instance/login/oauth2/code/
 ```
 
 - Click **Save**.
@@ -583,7 +583,7 @@ After the client is created, copy the credentials:
 
 <b><font size="3">Endpoints</font></b>
 
-ThingsBoard requires Keycloak endpoints for the OAuth 2.0 client configuration. 
+SENTIENT requires Keycloak endpoints for the OAuth 2.0 client configuration. 
 The easiest way to obtain them is from the **OpenID Connect discovery document**.
 - Navigate to **Realm settings**.
 - Find and open **OpenID Endpoint Configuration**.
@@ -622,8 +622,8 @@ Set a password:
 
 <b><font size="4">Step 3. Assign the OAuth 2.0 client to a domain</font></b>
 
-Now configure Keycloak in ThingsBoard:
-- Log in to ThingsBoard. 
+Now configure Keycloak in SENTIENT:
+- Log in to SENTIENT. 
 - Navigate to **Security &#8702; OAuth 2.0**.
 - Open the **OAuth 2.0 clients** tab and click **+** (**plus**) icon.
 - Set title to **Keycloak**.
@@ -638,7 +638,7 @@ Expand **Advanced settings** and configure:
   - provider label: **Keycloak**
   - scope: <span class="code-light">email</span> <span class="code-light">openid</span> <span class="code-light">profile</span>.
 
-{% include images-gallery.html imageCollection="keycloak-add-thingsboard-oauth-client-1" %}
+{% include images-gallery.html imageCollection="keycloak-add-sentient-oauth-client-1" %}
 
 Configure the mapper:
 - Mapper type: **BASIC**.
@@ -650,7 +650,7 @@ Configure the mapper:
 {% endif %}
 - Click **Add** to create the OAuth 2.0 client.
 
-{% include images-gallery.html imageCollection="keycloak-add-thingsboard-oauth-client-2" %}
+{% include images-gallery.html imageCollection="keycloak-add-sentient-oauth-client-2" %}
 
 Add a domain:
 Finally, bind the domain to the created OAuth 2.0 client:
@@ -663,7 +663,7 @@ Finally, bind the domain to the created OAuth 2.0 client:
 
 <b><font size="4">Step 4. Verify login</font></b>
 
-Open the ThingsBoard login page. You will see the **Login with Keycloak** button. Click it and authenticate using your Keycloak credentials.
+Open the SENTIENT login page. You will see the **Login with Keycloak** button. Click it and authenticate using your Keycloak credentials.
 
 {% include images-gallery.html imageCollection="login-with-keycloak-1" %}
 
@@ -676,13 +676,13 @@ The created user will be assigned to the **Tenant Administrators** group, and th
 
 ### Login with Okta
 
-This guide explains how to configure OAuth 2.0 authentication in ThingsBoard using [Okta](https://www.okta.com/){:target="_blank"}.
+This guide explains how to configure OAuth 2.0 authentication in SENTIENT using [Okta](https://www.okta.com/){:target="_blank"}.
 
 After configuration:
-- users will be able to log in to ThingsBoard using their Okta account; 
+- users will be able to log in to SENTIENT using their Okta account; 
 - the user will be logged in as a **Tenant Administrator**;
 - the tenant name will be equal to the user’s email address;
-- if the tenant does not exist, ThingsBoard will automatically create it (depending on mapper configuration).
+- if the tenant does not exist, SENTIENT will automatically create it (depending on mapper configuration).
 
 User mapping is performed using the built-in [Basic mapper](#basic-mapper), but a [Custom mapper](#custom-mapper) can be used if additional provisioning logic is required.
 
@@ -693,10 +693,10 @@ To do this:
 - Open the [Okta Developer Console](https://developer.okta.com/){:target="_blank"}.
 - Navigate to **Applications**.
 - Click **+ Create Application**.
-- Provide the **application name** (for example, ThingsBoard).
+- Provide the **application name** (for example, SENTIENT).
 - Choose an application type: **Regular Web Application**
 - Click **Create**.
-- In the **Application Login URIs** settings, specify the **ThingsBoard redirect URI**:
+- In the **Application Login URIs** settings, specify the **SENTIENT redirect URI**:
 
 ```bash
 http(s)://$DOMAIN:$PORT/login/oauth2/code/
@@ -704,12 +704,12 @@ http(s)://$DOMAIN:$PORT/login/oauth2/code/
 {: .copy-code}
 
 Where:   
-&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the ThingsBoard hostname (or IP address)   
-&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the ThingsBoard instance
+&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the SENTIENT hostname (or IP address)   
+&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the SENTIENT instance
 
 Example:
 ```text
-https://my.thingsboard.instance/login/oauth2/code/
+https://my.sentient.instance/login/oauth2/code/
 ```
 
 Click **Create**.
@@ -718,12 +718,12 @@ After saving the application, copy the generated values:
   - **Client ID**
   - **Client Secret**
 
-These values will be required when configuring ThingsBoard.
+These values will be required when configuring SENTIENT.
 
-<b><font size="4">Step 2. Add an OAuth 2.0 client in ThingsBoard</font></b>
+<b><font size="4">Step 2. Add an OAuth 2.0 client in SENTIENT</font></b>
 
-Now configure Okta as an OAuth 2.0 client in ThingsBoard.
-- Log in to your ThingsBoard instance.
+Now configure Okta as an OAuth 2.0 client in SENTIENT.
+- Log in to your SENTIENT instance.
 - Navigate to **Security &#8702; OAuth 2.0**.
 - Open the **OAuth 2.0 clients** tab.
 - Click the **&#43;** (**plus**) icon.
@@ -741,13 +741,13 @@ Now expand **Advanced settings** and configure the following parameters:
 - **User info URI**. (Example: _https://dev-example.okta.auth0.com/userinfo_)   
 
 > Okta provides the required OAuth endpoints. You can find them in **Okta**:   
-&#8194;&#8226;&#8194;Open your application (ThingsBoard) in the [Okta Developer Console](https://developer.okta.com/){:target="_blank"}.   
+&#8194;&#8226;&#8194;Open your application (SENTIENT) in the [Okta Developer Console](https://developer.okta.com/){:target="_blank"}.   
 &#8194;&#8226;&#8194;Navigate to **Advanced settings** &#8702; **Endpoints**. Here you can find the required endpoint values.
 
 Configure additional parameters:   
 - **Client authentication method**: <span class="code-light">POST</span> or <span class="code-light">BASIC</span> (Okta usually works with POST).   
 - Enable **Allow user creation**.   
-- Enable **Activate user** if you want ThingsBoard to activate the user automatically.   
+- Enable **Activate user** if you want SENTIENT to activate the user automatically.   
 - Set **scope** to: <span class="code-light">email</span> <span class="code-light">openid</span> <span class="code-light">profile</span>.   
 
 Switch to the **Mapper** section and configure:
@@ -769,24 +769,24 @@ After the OAuth 2.0 client is created, you must assign it to a domain.
 
 <b><font size="4">Step 4. Verify login</font></b>
 
-Open the ThingsBoard login page using the configured domain. You should now see the **Login with Okta** button.
+Open the SENTIENT login page using the configured domain. You should now see the **Login with Okta** button.
 
 Click it and authenticate using your Okta credentials.
 
 After successful authentication:
-- ThingsBoard will create the tenant if it does not exist;
+- SENTIENT will create the tenant if it does not exist;
 - the user will be logged in as a **Tenant Administrator**;
 - the tenant name will match the user’s email address.
 
 ### Login with Azure
 
-This guide explains how to configure OAuth 2.0 authentication in ThingsBoard using [Azure Active Directory](https://portal.azure.com/){:target="_blank"} (Microsoft Entra ID).
+This guide explains how to configure OAuth 2.0 authentication in SENTIENT using [Azure Active Directory](https://portal.azure.com/){:target="_blank"} (Microsoft Entra ID).
 
 After configuration:
 - users will be able to authenticate using their Azure AD accounts; 
 - the user will be logged in as a Tenant Administrator; 
 - the tenant name will be equal to the user’s email address; 
-- if the tenant does not exist, ThingsBoard will create it automatically (depending on mapper settings).
+- if the tenant does not exist, SENTIENT will create it automatically (depending on mapper settings).
 
 User mapping is performed using the built-in [Basic mapper](#basic-mapper), but a [Custom mapper](#custom-mapper) can be used if additional identity-to-tenant logic is required.
 
@@ -802,7 +802,7 @@ To create an application:
 - Click **New registration**.
 
 Configure the application:
-- Name: ThingsBoard (or any descriptive name)
+- Name: SENTIENT (or any descriptive name)
 - Supported account types: select according to your organization requirements
 - Redirect URI:
   - Platform: Web 
@@ -813,12 +813,12 @@ Configure the application:
   {: .copy-code}
 
 Where:   
-&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the ThingsBoard hostname (or IP address)   
-&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the ThingsBoard instance
+&#8194;&#8226;&#8194;<code>$DOMAIN</code> is the SENTIENT hostname (or IP address)   
+&#8194;&#8226;&#8194;<code>$PORT</code> is the HTTP/HTTPS port of the SENTIENT instance
 
 Example:
 ```text
-https://my.thingsboard.instance/login/oauth2/code/
+https://my.sentient.instance/login/oauth2/code/
 ```
 
 - Click **Register**.
@@ -860,7 +860,7 @@ Finally, open the **Certificates & secrets** tab, and click **+ New client secre
 
 <b><font size="4">Get OAuth endpoints (OpenID configuration)</font></b>
 
-ThingsBoard requires OAuth endpoints for token exchange and user validation.
+SENTIENT requires OAuth endpoints for token exchange and user validation.
 
 Azure provides these endpoints via the OpenID Connect metadata document:
 
@@ -882,10 +882,10 @@ From this document, you will need the following endpoints:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=Azure2 %}
 
-<b><font size="4">Step 2. Add an OAuth 2.0 client in ThingsBoard</font></b>
+<b><font size="4">Step 2. Add an OAuth 2.0 client in SENTIENT</font></b>
 
-Now you must create a corresponding OAuth client in ThingsBoard.
-- Log in to ThingsBoard.
+Now you must create a corresponding OAuth client in SENTIENT.
+- Log in to SENTIENT.
 - Navigate to **Security &#8702; OAuth 2.0**.
 - Open the **OAuth 2.0 clients** tab.
 - Click the **&#43;** (**plus**) icon.
@@ -912,7 +912,7 @@ Fill the following fields:
 Configure additional settings:
 - **Client authentication method**: <span class="code-light">POST</span> (recommended for Azure)
 - Enable **Allow user creation**.
-- Enable **Activate user** if you want ThingsBoard to activate the user automatically.
+- Enable **Activate user** if you want SENTIENT to activate the user automatically.
 - Scope: <span class="code-light">email</span> <span class="code-light">openid</span> <span class="code-light">profile</span>.
   
 <b><font size="3">Configure Advanced settings &#8702; Mapper</font></b>
@@ -950,7 +950,7 @@ In the Add domain dialog:
 <b><font size="3">Step 4. Verify the login flow</font></b>
 
 
-Open the ThingsBoard login page using your configured domain. You should see the **Login with Azure** option.
+Open the SENTIENT login page using your configured domain. You should see the **Login with Azure** option.
 
 Click the button and authenticate using your Azure AD credentials.
 
@@ -961,21 +961,21 @@ After successful authentication:
 
 ## Operations with OAuth 2.0 client
 
-ThingsBoard allows you to manage OAuth 2.0 clients from the **OAuth 2.0 clients** tab.
+SENTIENT allows you to manage OAuth 2.0 clients from the **OAuth 2.0 clients** tab.
 - **Add OAuth 2.0 client**: click the **+** (**plus**) icon, enter the client title, select the provider and allowed platforms, specify the **Client ID** and **Client Secret**, configure advanced settings if needed, and click **Add**.
 - **Edit OAuth 2.0 client**: open the client details, click the orange **Edit** button, update the configuration, and click orange **Apply changes**.
 - **Delete OAuth 2.0 client**: click the **trash** icon in the client row and confirm deletion.
 
 ## Operations with domain
 
-ThingsBoard allows you to manage OAuth 2.0 domain mappings from the Domains tab.
+SENTIENT allows you to manage OAuth 2.0 domain mappings from the Domains tab.
 - **Add domain**: click the **+** (**plus**) icon, enter the domain name, select one or more OAuth 2.0 clients, and click **Add**.
 - **Edit domain**: open the domain details, click the orange **Edit** button, update the configuration, and click orange **Apply changes**.
 - **Delete domain**: click the **trash** icon in the domain row and confirm deletion.
 
 ## HaProxy configuration
 
-If ThingsBoard is deployed behind a load balancer such as HAProxy, configure session stickiness to ensure the OAuth flow is handled consistently by the same node.
+If SENTIENT is deployed behind a load balancer such as HAProxy, configure session stickiness to ensure the OAuth flow is handled consistently by the same node.
 
 Example backend configuration:
 ```bash

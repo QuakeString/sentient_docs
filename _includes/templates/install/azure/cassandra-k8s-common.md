@@ -1,10 +1,10 @@
 #### Deploy Cassandra stateful set
 
-Create ThingsBoard namespace:
+Create SENTIENT namespace:
 
 ```bash
 kubectl apply -f tb-namespace.yml
-kubectl config set-context $(kubectl config current-context) --namespace=thingsboard
+kubectl config set-context $(kubectl config current-context) --namespace=sentient
 ```
 
 Deploy Cassandra to new node groups:
@@ -23,7 +23,7 @@ kubectl get pods
 
 #### Update DB settings
 
-Edit the ThingsBoard DB settings file and add Cassandra settings:
+Edit the SENTIENT DB settings file and add Cassandra settings:
 
 
 ```bash
@@ -48,11 +48,11 @@ Expected output:
 
 #### Create keyspace
 
-Create *thingsboard* keyspace using following command:
+Create *sentient* keyspace using following command:
 
 ```bash
     kubectl exec -it cassandra-0 -- bash -c "cqlsh -e \
-                    \"CREATE KEYSPACE IF NOT EXISTS thingsboard \
+                    \"CREATE KEYSPACE IF NOT EXISTS sentient \
                     WITH replication = { \
                         'class' : 'NetworkTopologyStrategy', \
                         '{{tbCassandraRegion}}' : '3' \

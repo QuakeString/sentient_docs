@@ -1,35 +1,35 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
   - ashvayka
-title: Installing ThingsBoard Trendz Analytics using Docker (Windows)
-description: Installing ThingsBoard Trendz Analytics using Docker (Windows)
+title: Installing SENTIENT SENTIENT ANALYTICS using Docker (Windows)
+description: Installing SENTIENT SENTIENT ANALYTICS using Docker (Windows)
 
-trendz-settings:
+sentient-analytics-settings:
   0:
-    image: /images/trendz/install/sync/trendz-settings-1.png
-    title: "Log in to <b>ThingsBoard</b> as a <b>Sysadmin</b>."
+    image: /images/sentient-analytics/install/sync/sentient-analytics-settings-1.png
+    title: "Log in to <b>SENTIENT</b> as a <b>Sysadmin</b>."
   1:
-    image: /images/trendz/install/sync/trendz-settings-2.png
-    title: "Open the <b>Trendz Settings</b> page."
+    image: /images/sentient-analytics/install/sync/sentient-analytics-settings-2.png
+    title: "Open the <b>SENTIENT ANALYTICS Settings</b> page."
   2:
-    image: /images/trendz/install/sync/trendz-settings-3.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-settings-3.png
     title: "If you see the message <b>\"Synchronization completed successfully\"</b>, the synchronization has been completed automatically and no further action is required."
-trendz-sync:
+sentient-analytics-sync:
   0:
-    image: /images/trendz/install/sync/trendz-sync-1.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-1.png
     title: "If you see an error message, follow these steps."
   1:
-    image: /images/trendz/install/sync/trendz-sync-2.png
-    title: "Enter the correct <b>Trendz internal URL</b> and <b>ThingsBoard internal URL</b>."
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-2.png
+    title: "Enter the correct <b>SENTIENT ANALYTICS internal URL</b> and <b>SENTIENT internal URL</b>."
   2:
-    image: /images/trendz/install/sync/trendz-sync-3.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-3.png
     title: "Click <b>Save configuration</b>."
   3:
-    image: /images/trendz/install/sync/trendz-sync-4.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-4.png
     title: "Click <b>Retry discovery</b>."
   4:
-    image: /images/trendz/install/sync/trendz-sync-5.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-5.png
     title: "Once the message <b>\"Synchronization completed successfully\"</b> appears, the synchronization is complete."
 
 ---
@@ -37,73 +37,73 @@ trendz-sync:
 * TOC 
 {:toc}
 
-This guide will help you to install and start Trendz Analytics using Docker on Windows.
+This guide will help you to install and start SENTIENT ANALYTICS using Docker on Windows.
 
 ## Prerequisites
 
-{% include templates/trendz/install/docker-requirements-windows.md %}
-{% include templates/trendz/install/thingsboard-requirements.md %}
+{% include templates/sentient-analytics/install/docker-requirements-windows.md %}
+{% include templates/sentient-analytics/install/sentient-requirements.md %}
 
 ## Installation Steps
 
 ### Step 1. Docker Compose setup
 
-Trendz can be run either in the same Docker Compose file as ThingsBoard or in a separate Docker Compose file.
+SENTIENT ANALYTICS can be run either in the same Docker Compose file as SENTIENT or in a separate Docker Compose file.
 
-For small and medium installations, we recommend installing Trendz in the same Docker Compose file as ThingsBoard.
+For small and medium installations, we recommend installing SENTIENT ANALYTICS in the same Docker Compose file as SENTIENT.
 
 {% capture contenttogglespec %}
-The same Docker Compose file with ThingsBoard%,%theSameFile%,%templates/trendz/install/docker-compose-the-same-file-windows.md%br%
-Separate Docker Compose file%,%separateFile%,%templates/trendz/install/docker-compose-separate-file-windows.md{% endcapture %}
+The same Docker Compose file with SENTIENT%,%theSameFile%,%templates/sentient-analytics/install/docker-compose-the-same-file-windows.md%br%
+Separate Docker Compose file%,%separateFile%,%templates/sentient-analytics/install/docker-compose-separate-file-windows.md{% endcapture %}
 {% include content-toggle.liquid content-toggle-id="runOption" toggle-spec=contenttogglespec %}
 
-### Step 2. Start Trendz service
+### Step 2. Start SENTIENT ANALYTICS service
 
-{% include templates/trendz/install/docker-start-trendz-service.md %}
+{% include templates/sentient-analytics/install/docker-start-sentient-analytics-service.md %}
 
-### Step 3. Sync ThingsBoard With Trendz
+### Step 3. Sync SENTIENT With SENTIENT ANALYTICS
 
-{% include templates/trendz/install/sync-with-tb.md %}
+{% include templates/sentient-analytics/install/sync-with-tb.md %}
 
 ## Authentication
 
-{% include templates/trendz/install/authentication.md %}
+{% include templates/sentient-analytics/install/authentication.md %}
 
 ## Detaching, stop and start commands
 
-{% include templates/trendz/install/docker-detach-stop-start-commands.md %}
+{% include templates/sentient-analytics/install/docker-detach-stop-start-commands.md %}
 
-## Upgrade Trendz Service
+## Upgrade SENTIENT ANALYTICS Service
 
 {% capture upgrade_version_by_version%}
-**Note, that you can upgrade Trendz from any version to the latest at once (for example, 1.2.0 -> {{ site.release.trendz_ver }} ,etc).**
+**Note, that you can upgrade SENTIENT ANALYTICS from any version to the latest at once (for example, 1.2.0 -> {{ site.release.sentient-analytics_ver }} ,etc).**
 {% endcapture %}
 {% include templates/info-banner.md content=upgrade_version_by_version %}
 
-Below is an example of how to upgrade from any Trendz version to {{ site.release.trendz_ver }}
+Below is an example of how to upgrade from any SENTIENT ANALYTICS version to {{ site.release.sentient-analytics_ver }}
 
 * Create a dump of your database:
 
 ```bash
-docker compose exec trendz-postgres sh -c "pg_dump -U postgres trendz > /var/lib/postgresql/data/trendz_dump"
+docker compose exec sentient-analytics-postgres sh -c "pg_dump -U postgres sentient-analytics > /var/lib/postgresql/data/sentient-analytics_dump"
 ```
 {: .copy-code}
 
-When a new Trendz release is available, follow these steps to update your installation without losing data:
+When a new SENTIENT ANALYTICS release is available, follow these steps to update your installation without losing data:
 
 {% capture old_manifests_info %}
-**If you are upgrading using previous version of deployment files, make sure to follow steps described in this [instruction](/docs/trendz/install/old-docker-migrate/) first.**
+**If you are upgrading using previous version of deployment files, make sure to follow steps described in this [instruction](/docs/sentient-analytics/install/old-docker-migrate/) first.**
 {% endcapture %}
 {% include templates/warn-banner.md content=old_manifests_info %}
 
-1. Change the version of the `thingsboard/trendz` and `thingsboard/trendz-python-executor` in the `docker-compose.yml` file to the {{ site.release.trendz_ver }}.
+1. Change the version of the `sentient/sentient-analytics` and `sentient/sentient-analytics-python-executor` in the `docker-compose.yml` file to the {{ site.release.sentient-analytics_ver }}.
 
 2. Execute the following commands:
 
 ```bash
-docker pull thingsboard/trendz:{{ site.release.trendz_ver }}
-docker compose stop trendz
-docker compose run --rm -e UPGRADE_TRENDZ=true trendz
+docker pull sentient/sentient-analytics:{{ site.release.sentient-analytics_ver }}
+docker compose stop sentient-analytics
+docker compose run --rm -e UPGRADE_TRENDZ=true sentient-analytics
 docker compose up -d
 ```
 {: .copy-code}

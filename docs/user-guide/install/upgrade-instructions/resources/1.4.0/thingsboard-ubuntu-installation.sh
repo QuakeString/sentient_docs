@@ -1,1 +1,1 @@
-sudo dpkg -i thingsboard-1.4.deb
+sudo dpkg -i sentient-1.4.deb

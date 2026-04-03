@@ -4,10 +4,10 @@ docker compose stop mytbedge
 ```
 {: .copy-code}
 
-Modify the main docker compose file (docker-compose.yml) for **ThingsBoard Edge** and update the image version:
+Modify the main docker compose file (docker-compose.yml) for **SENTIENT GATEWAY** and update the image version:
 
 ```text
-sed -i 's|thingsboard/tb-edge-pe:{{previousVersion}}|thingsboard/tb-edge-pe:{{versionName}}|' docker-compose.yml
+sed -i 's|sentient/tb-edge-pe:{{previousVersion}}|sentient/tb-edge-pe:{{versionName}}|' docker-compose.yml
 ```
 {: .copy-code}
 

@@ -3,7 +3,7 @@
 
 - **Launch the UA Admin Dialog** after installation.
 - Make sure the **hostname/IP address** and **port** are configured correctly.   
-You&#39;ll need these details to set up the OPC-UA integration in ThingsBoard.
+You&#39;ll need these details to set up the OPC-UA integration in SENTIENT.
 
 ![image](/images/user-guide/integrations/opc-ua/opc-ua-server-config.png)
 

@@ -2,8 +2,8 @@
 | **Parameter**            | **Default value**                            | **Description**                                                |
 |:-|:-|-
 | type                     | **memory**                                   | Storage type (Saving data to RAM, no save to hard drive).      |
-| read_records_count       | **10**                                       | Count of messages to get from storage and send to ThingsBoard. |
-| max_records_count *      | **100**                                      | Maximum count of data in storage before send to ThingsBoard.   |
+| read_records_count       | **10**                                       | Count of messages to get from storage and send to SENTIENT. |
+| max_records_count *      | **100**                                      | Maximum count of data in storage before send to SENTIENT.   |
 |---
 
 

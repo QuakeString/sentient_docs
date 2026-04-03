@@ -2,7 +2,7 @@
 Download installation package for the [Reports Server](/docs/pe/user-guide/reporting/#reports-server) component:
 
 ```bash
-wget https://dist.thingsboard.io/tb-web-report-{{ site.release.pe_ver }}.rpm
+wget https://dist.docs.sentient.invenia.in/tb-web-report-{{ site.release.pe_ver }}.rpm
 ```
 {: .copy-code}
 

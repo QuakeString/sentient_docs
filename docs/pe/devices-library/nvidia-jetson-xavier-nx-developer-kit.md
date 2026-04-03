@@ -1,5 +1,5 @@
 ---
 layout: docwithnav-pe
-title: "How to connect NVIDIA Jetson Xavier NX Developer Kit to ThingsBoard?"
+title: "How to connect NVIDIA Jetson Xavier NX Developer Kit to SENTIENT?"
 redirect_to: "/device-library/pe/nvidia-jetson-xavier-nx-developer-kit/"
 ---

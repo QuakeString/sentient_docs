@@ -1,4 +1,4 @@
-RPC To Connector allows you to send a command to the connector from the ThingsBoard IoT Gateway UI.
+RPC To Connector allows you to send a command to the connector from the SENTIENT IoT Gateway UI.
 It is important to note that the method you are calling must be defined on the OPC-UA server.
 
 {% capture difference %}
@@ -6,9 +6,9 @@ It is important to note that the method you are calling must be defined on the O
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-As an example, we will use ThingsBoard OPC-UA Demo Server, which can be run using Docker and the following command:
+As an example, we will use SENTIENT OPC-UA Demo Server, which can be run using Docker and the following command:
 ```bash
-docker run -it -p 4840:4840 thingsboard/tb-gw-opcua-server:latest
+docker run -it -p 4840:4840 sentient/tb-gw-opcua-server:latest
 ```
 
 The server has the following endpoint URL: `opc.tcp://0.0.0.0:4840/freeopcua/server/`.

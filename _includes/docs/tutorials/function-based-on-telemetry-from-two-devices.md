@@ -1,14 +1,14 @@
 * TOC
 {:toc}
 
-This guide demonstrates how to calculate a telemetry delta using data from two different devices in ThingsBoard and store the result as asset telemetry.
+This guide demonstrates how to calculate a telemetry delta using data from two different devices in SENTIENT and store the result as asset telemetry.
 
 As an example, we will calculate the temperature difference between indoor and outdoor thermometers installed in a warehouse. The calculated value is stored as a new telemetry key and can be used for monitoring, visualization, or alerting.
 
 This guide is introductory and focuses on demonstrating the core capabilities of the platform, rather than building configurations from scratch.   
 For this reason, predefined calculated field configurations are provided and imported during the setup.
 
-After importing these configurations into your ThingsBoard instance, you can examine their structure, logic, and behavior, and then adapt them to suit your own use cases.
+After importing these configurations into your SENTIENT instance, you can examine their structure, logic, and behavior, and then adapt them to suit your own use cases.
 
 <hr>
 
@@ -30,7 +30,7 @@ This example demonstrates cross-entity data aggregation, where telemetry from mu
 
 ## Prerequisites
 
-Before proceeding, it is recommended to review the ThingsBoard [Calculated fields](/docs/{{docsPrefix}}user-guide/calculated-fields/){:target="_blank"} documentation.
+Before proceeding, it is recommended to review the SENTIENT [Calculated fields](/docs/{{docsPrefix}}user-guide/calculated-fields/){:target="_blank"} documentation.
 
 This topic provides the necessary foundation for understanding entity relationships and data processing mechanisms used in this example.
 
@@ -38,7 +38,7 @@ This topic provides the necessary foundation for understanding entity relationsh
 
 ## 1. Provision asset and devices
 
-In ThingsBoard, an asset is an abstract entity used to represent logical objects such as buildings, warehouses, or production lines.   
+In SENTIENT, an asset is an abstract entity used to represent logical objects such as buildings, warehouses, or production lines.   
 In this example, the asset represents a warehouse and is used to store aggregated telemetry from multiple devices.
 
 **Create the asset:**
@@ -166,7 +166,7 @@ This confirms that:
 
 To monitor temperature differences visually:
 - [Download the prepared Warehouse dashboard JSON file](/docs/user-guide/resources/guides/warehouse_dashboard.json){:target="_blank" download="warehouse_dashboard.json"}.
-- [Import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into ThingsBoard.
+- [Import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into SENTIENT.
 - After the import, update the [entity alias](/docs/{{docsPrefix}}user-guide/ui/aliases/){:target="_blank"} by setting Warehouse A as the target entity to ensure its data is displayed correctly.
 
 The dashboard should display a real-time chart and table showing the temperature difference between the indoor and outdoor thermometers.

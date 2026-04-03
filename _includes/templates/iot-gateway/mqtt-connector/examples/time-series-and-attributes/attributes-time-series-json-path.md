@@ -1,10 +1,10 @@
 Attributes and time series data can be retrieved using [json-path](/docs/iot-gateway/config/mqtt/#json-path)
 in the MQTT Connector. This allows to extract the required field(s) from the `JSON` payload received on the subscribed topic(s).”.
 
-As an example, we will use ThingsBoard MQTT Demo Broker, which can be run using Docker and the following command:
+As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 thingsboard/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
 ```
 {:.copy-code}
 
@@ -73,7 +73,7 @@ use the following configuration:
   "broker": {
     "host": "127.0.0.1",
     "port": 1884,
-    "clientId": "ThingsBoard_gateway",
+    "clientId": "SENTIENT_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,

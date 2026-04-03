@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: Nettra RTU overview
-description: ThingsBoard IoT Platform hardware samples for Nettra RTU devices.
+description: SENTIENT IoT Platform hardware samples for Nettra RTU devices.
 
 ---
 

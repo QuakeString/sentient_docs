@@ -1,20 +1,20 @@
 For an Attribute request, the gateway must know which device name to target and which attribute to request. You can extract the device name either from the `Message` payload using [json-path](/docs/iot-gateway/config/mqtt/#json-path)
 or from the topic using a [regex](/docs/iot-gateway/config/mqtt/#regular-expressions). Choose [json-path](/docs/iot-gateway/config/mqtt/#json-path) when the device name is inside the JSON message; choose [regex](/docs/iot-gateway/config/mqtt/#regular-expressions) when it's encoded in the topic.
 
-Suppose you want to retrieve the current firmware version for device `SN-001` from ThingsBoard to make decisions based on the firmware version.
+Suppose you want to retrieve the current firmware version for device `SN-001` from SENTIENT to make decisions based on the firmware version.
 
 {% capture difference %}
 **Please note:**
-An **Attribute request** allows a device to retrieve attribute values from ThingsBoard. This is useful for:
+An **Attribute request** allows a device to retrieve attribute values from SENTIENT. This is useful for:
 - Getting configuration parameters stored as shared attributes
 - Retrieving client attributes that were previously reported
 - Implementing device configuration management
 
-The gateway acts as a bridge, receiving the attribute request from the device, fetching the attribute from ThingsBoard, and delivering the response back to the device.
+The gateway acts as a bridge, receiving the attribute request from the device, fetching the attribute from SENTIENT, and delivering the response back to the device.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-Let's configure an Attribute request in the MQTT connector to allow devices to request attribute values from ThingsBoard.
+Let's configure an Attribute request in the MQTT connector to allow devices to request attribute values from SENTIENT.
 We'll demonstrate two ways to extract the device name:
 
 - From message (`JSON` payload).
@@ -53,10 +53,10 @@ Let's demonstrate how to use these attribute request configurations with two exa
 
 ### Example 1: Device name and attribute from message payload
 
-Suppose we have a device with an attribute `firmwareVersion` stored as a shared attribute in ThingsBoard and suppose we want to request this attribute
+Suppose we have a device with an attribute `firmwareVersion` stored as a shared attribute in SENTIENT and suppose we want to request this attribute
 for some purposes.
 
-Let's add this attribute to the device `SN-001` in ThingsBoard first:
+Let's add this attribute to the device `SN-001` in SENTIENT first:
 
 1. Go to "**Devices**" → select device `SN-001` - "**Attributes**" tab - select "**Shared attributes**".
 
@@ -64,7 +64,7 @@ Let's add this attribute to the device `SN-001` in ThingsBoard first:
 
 ![image](/images/gateway/mqtt-connector/examples/result-device-overview-attribute-requests-1.png)
 
-This message contains the device name in the JSON payload, which is extracted using the `${serialNumber}` JSON path, and the attribute name using the `${attributeNames}` JSON path. After processing this message, ThingsBoard will retrieve the "firmwareVersion" attribute for device "SN-001" and publish it to the response topic.
+This message contains the device name in the JSON payload, which is extracted using the `${serialNumber}` JSON path, and the attribute name using the `${attributeNames}` JSON path. After processing this message, SENTIENT will retrieve the "firmwareVersion" attribute for device "SN-001" and publish it to the response topic.
 
 The response will be published to the topic `devices/SN-001/attrs` with a payload like: Let's subscribe to the response topic to see the result:
 Open terminal and type the following command and press Enter:
@@ -82,7 +82,7 @@ mosquitto_pub -h 127.0.0.1 -p 1884 -t v1/devices/me/attributes/request -m '{"ser
 {: .copy-code}
 
 This message contains the device name in the JSON payload, which is extracted using the `${serialNumber}` JSON path, 
-and the attribute name using the `${attributeNames}` JSON path. After processing this message, ThingsBoard will retrieve the `firmwareVersion` attribute for device `SN-001` and publish it to the response topic.)
+and the attribute name using the `${attributeNames}` JSON path. After processing this message, SENTIENT will retrieve the `firmwareVersion` attribute for device `SN-001` and publish it to the response topic.)
 
 ![image](/images/gateway/mqtt-connector/examples/result-device-overview-attribute-requests-2.png)
 
@@ -102,7 +102,7 @@ use the following configuration:
   "broker": {
     "host": "127.0.0.1",
     "port": 1884,
-    "clientId": "ThingsBoard_gateway",
+    "clientId": "SENTIENT_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,

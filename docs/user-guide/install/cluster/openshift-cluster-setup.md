@@ -3,18 +3,18 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Cluster setup using OpenShift
-description: ThingsBoard IoT platform cluster setup with Kubernetes and OpenShift guide
+description: SENTIENT IoT platform cluster setup with Kubernetes and OpenShift guide
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in cluster mode using OpenShift. 
+This guide will help you to setup SENTIENT in cluster mode using OpenShift. 
 
 ## Prerequisites
 
-ThingsBoard Microservices run on the Kubernetes cluster. To deploy OpenShift cluster locally you'll need to have Docker CE to run OpenShift containers and OpenShift Origin itself. 
+SENTIENT Microservices run on the Kubernetes cluster. To deploy OpenShift cluster locally you'll need to have Docker CE to run OpenShift containers and OpenShift Origin itself. 
 Please follow [these instructions](https://www.techrepublic.com/article/how-to-install-openshift-origin-on-ubuntu-18-04/) to install all required software.
 
 
@@ -29,31 +29,31 @@ oc login -u developer -p developer
 
 ### Create project
 
-On the first start-up you should create the `thingsboard` project.
+On the first start-up you should create the `sentient` project.
 To create it, please execute next command:
 
 ```
-oc new-project thingsboard
+oc new-project sentient
 ``` 
 {: .copy-code}
 
 
 ## Step 1. Review the architecture page
 
-Starting ThingsBoard v2.2, it is possible to install ThingsBoard cluster using new microservices architecture and docker containers. 
+Starting SENTIENT v2.2, it is possible to install SENTIENT cluster using new microservices architecture and docker containers. 
 See [**microservices**](/docs/reference/msa/) architecture page for more details.
 
-## Step 2. Clone ThingsBoard CE Kubernetes scripts repository
+## Step 2. Clone SENTIENT Kubernetes scripts repository
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-ce-k8s.git --depth 1
-cd thingsboard-ce-k8s/openshift
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-ce-k8s.git --depth 1
+cd sentient-ce-k8s/openshift
 ```
 {: .copy-code}
 
-## Step 3. Configure ThingsBoard database
+## Step 3. Configure SENTIENT database
 
-Before performing initial installation you can configure the type of database to be used with ThingsBoard.
+Before performing initial installation you can configure the type of database to be used with SENTIENT.
 In order to set database type change the value of `DATABASE` variable in `.env` file to one of the following:
 
 - `postgres` - use PostgreSQL database;
@@ -91,32 +91,32 @@ Execute the following command to deploy third-party resources:
 ```
 {: .copy-code}
 
-Type **'yes'** when prompted, if you are running ThingsBoard in `high-availability` `DEPLOYMENT_TYPE` for the first time or don't have configured Redis cluster.
+Type **'yes'** when prompted, if you are running SENTIENT in `high-availability` `DEPLOYMENT_TYPE` for the first time or don't have configured Redis cluster.
 
 
-Execute the following command to deploy ThingsBoard resources:
+Execute the following command to deploy SENTIENT resources:
 
 ```
 ./k8s-deploy-resources.sh
 ```
 {: .copy-code}
 
-To see how to reach your ThingsBoard application on cluster, login as ***developer*** user (default password is ***developer*** too), open `thingsboard` project, then go to `Application -> Routes` menu and you'll see all your configured routes.
-The *root* route should look like `https://tb-route-node-root-thingsboard.127.0.0.1.nip.io/`.
+To see how to reach your SENTIENT application on cluster, login as ***developer*** user (default password is ***developer*** too), open `sentient` project, then go to `Application -> Routes` menu and you'll see all your configured routes.
+The *root* route should look like `https://tb-route-node-root-sentient.127.0.0.1.nip.io/`.
 
-When you open it, you should see ThingsBoard login page.
+When you open it, you should see SENTIENT login page.
 
 Use the following default credentials:
 
-- **System Administrator**: sysadmin@thingsboard.org / sysadmin
+- **System Administrator**: sysadmin@sentient.org / sysadmin
 
 If you installed DataBase with demo data (using `--loadDemo` flag) you can also use the following credentials:
 
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
-- **Customer User**: customer@thingsboard.org / customer
+- **Tenant Administrator**: tenant@sentient.org / tenant
+- **Customer User**: customer@sentient.org / customer
 
 In case of any issues you can examine service logs for errors.
-For example to see ThingsBoard node logs execute the following command:
+For example to see SENTIENT node logs execute the following command:
 
 1) Get the list of the running tb-node pods:
 
@@ -141,7 +141,7 @@ Or use `oc get services` to see the state of all the services.
 Or use `oc get deployments` to see the state of all the deployments.
 See [oc Cheat Sheet](https://design.jboss.org/redhatdeveloper/marketing/openshift_cheatsheet/cheatsheet/images/openshift_cheat_sheet_r1v1.pdf) command reference for details.
 
-Execute the following command to delete all ThingsBoard microservices:
+Execute the following command to delete all SENTIENT microservices:
 
 ```
 ./k8s-delete-resources.sh
@@ -197,13 +197,13 @@ You can also migrate from Community Edition (CE) to Professional Edition (PE) us
 
 1. Upgrade to the latest CE version.
 
-2. Stop the ThingsBoard resources executing the following command:
+2. Stop the SENTIENT resources executing the following command:
     ```bash
     ./k8s-delete-resources.sh
     ```
     {: .copy-code}
 
-3. Merge your configuration with [the latest PE OpenShift scripts](https://github.com/thingsboard/thingsboard-pe-k8s/tree/release-{{ site.release.ce_ver }}/openshift). Do not forget to [configure the license key](/docs/user-guide/install/pe/cluster/minikube-cluster-setup/#step-3-obtain-your-license-key).
+3. Merge your configuration with [the latest PE OpenShift scripts](https://github.com/sentient/sentient-pe-k8s/tree/release-{{ site.release.ce_ver }}/openshift). Do not forget to [configure the license key](/docs/user-guide/install/pe/cluster/minikube-cluster-setup/#step-3-obtain-your-license-key).
 
 4. Run the following upgrade script to migrate database data from CE to PE:
     ```bash
@@ -211,7 +211,7 @@ You can also migrate from Community Edition (CE) to Professional Edition (PE) us
     ```
     {: .copy-code}
 
-5. Execute the following command to deploy ThingsBoard resources:
+5. Execute the following command to deploy SENTIENT resources:
     ```bash
     ./k8s-deploy-resources.sh
     ```

@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Customize device icons in ThingsBoard Mobile Application
+title: Customize device icons in SENTIENT Mobile Application
 
 device-image:
  0:

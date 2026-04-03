@@ -1,4 +1,4 @@
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
 {% assign tbDevice = '
     ===
@@ -9,7 +9,7 @@
         title: Fill in the device information and click the **Next: Credentials** button.
     ===
         image: /images/devices-library/ready-to-go-devices/lansitec-lorawan/tb-device-3.png,
-        title: When adding a device to ThingsBoard, fill in the IMEI number of the device (e.g., 862990061908629) as the access token. This device is directly connected to the ThingsBoard platform through the MQTT protocol and pushes data in JSON format.
+        title: When adding a device to SENTIENT, fill in the IMEI number of the device (e.g., 862990061908629) as the access token. This device is directly connected to the SENTIENT platform through the MQTT protocol and pushes data in JSON format.
     ===
         image: /images/devices-library/ready-to-go-devices/lansitec-lorawan/tb-device-4.png,
         title: Fill in the device **Access token** and click the **Add** button.

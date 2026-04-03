@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Cat-1 Badge Tracker to ThingsBoard?
+title: How to connect Cat-1 Badge Tracker to SENTIENT?
 category: Other devices
 connectivity: LTE
 vendor: Lansitec

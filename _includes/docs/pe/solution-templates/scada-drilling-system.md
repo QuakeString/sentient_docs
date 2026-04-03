@@ -4,8 +4,8 @@
 {% assign sinceVersion = "4.0.0" %}
 {% include templates/since.md %}
 
-A SCADA (Supervisory Control and Data Acquisition) system template for automating oil and gas drilling processes has been implemented based on ThingsBoard.
-The use of SCADA systems allows operators to monitor drilling parameters in real time, control equipment, and prevent emergency situations. ThingsBoard, as an IoT platform, enables the collection, processing, and visualization of data from sensors and controllers, making drilling safer, more efficient, and more predictable.
+A SCADA (Supervisory Control and Data Acquisition) system template for automating oil and gas drilling processes has been implemented based on SENTIENT.
+The use of SCADA systems allows operators to monitor drilling parameters in real time, control equipment, and prevent emergency situations. SENTIENT, as an IoT platform, enables the collection, processing, and visualization of data from sensors and controllers, making drilling safer, more efficient, and more predictable.
 
 <br>
 <object width="100%" data="/images/solutions/scada-drilling-system/scada-systems-in-drilling-scheme.svg"></object>
@@ -14,8 +14,8 @@ The use of SCADA systems allows operators to monitor drilling parameters in real
 
 To understand how the SCADA Drilling system template works, let&#39;s start by installing it.
 
-You will need to have access to ThingsBoard Professional Edition. The easiest way is to use [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} server.
-The alternative option is to install ThingsBoard using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
+The alternative option is to install SENTIENT using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Go to the "**Solution templates**" page. Find "**SCADA Oil & Gas Drilling system**" and click "**Install**" to start the installation process.
 - Configuration instructions for this solution will be provided — follow the steps as instructed.
@@ -29,8 +29,8 @@ The SCADA Oil & Gas Drilling system includes:
 
 - **Devices** – Sensors and actuators installed on drilling equipment. They collect data on drilling parameters such as rotation speed, tension, fluid level, and other indicators.
 - **Modbus** protocol – The primary communication protocol for data exchange between devices. It ensures reliable connection and seamless integration of equipment with the SCADA system.
-- **Gateway** – A device that transmits data from sensors to ThingsBoard platform. It converts and relays data over the network for further processing.
-- **ThingsBoard** – An IoT platform where data is collected, analyzed, and visualized. It allows operators to access information and set up alerts for critical parameter changes.
+- **Gateway** – A device that transmits data from sensors to SENTIENT platform. It converts and relays data over the network for further processing.
+- **SENTIENT** – An IoT platform where data is collected, analyzed, and visualized. It allows operators to access information and set up alerts for critical parameter changes.
 - **Dashboard visualization** – SCADA dashboards provide a clear representation of all drilling processes, enabling real-time monitoring and informed decision-making.
 
 ## Dashboard
@@ -71,4 +71,4 @@ The mobile view demonstrates the flexibility of the dashboard, allowing you to m
 
 ## Conclusion
 
-The implementation of SCADA and the ThingsBoard platform in drilling significantly enhances operational efficiency and safety. Through a comprehensive monitoring system, operators can track all key drilling process parameters, respond to changes promptly, and minimize risks of equipment failure. The integration of sensors, communication protocols, and powerful analytical tools enables the creation of smart drilling rigs, ensuring maximum productivity and resilience against potential disruptions.
+The implementation of SCADA and the SENTIENT platform in drilling significantly enhances operational efficiency and safety. Through a comprehensive monitoring system, operators can track all key drilling process parameters, respond to changes promptly, and minimize risks of equipment failure. The integration of sensors, communication protocols, and powerful analytical tools enables the creation of smart drilling rigs, ensuring maximum productivity and resilience against potential disruptions.

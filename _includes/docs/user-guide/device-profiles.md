@@ -4,7 +4,7 @@
 {% assign sinceVersion = "3.2" %}
 {% include templates/since.md %}
 
-Device profiles in ThingsBoard allows an administrator to define and centrally manage common settings for multiple devices at once.   
+Device profiles in SENTIENT allows an administrator to define and centrally manage common settings for multiple devices at once.   
 This greatly simplifies the management of a large number of similar devices, making it especially valuable in IoT solutions where numerous devices share identical configurations and behaviors.
 
 Typical device profile settings include:
@@ -52,8 +52,8 @@ Separation of the queues also allows you to customize different [submit](/docs/{
 
 ## Transport configuration
 
-The current version of ThingsBoard platform supports the following transport types: 
-- [Default](#default-transport-type){:target="_blank"} - standard HTTP transport suitable for basic device interactions with ThingsBoard. Easy to configure, but less efficient for a large number of devices or frequent updates.
+The current version of SENTIENT platform supports the following transport types: 
+- [Default](#default-transport-type){:target="_blank"} - standard HTTP transport suitable for basic device interactions with SENTIENT. Easy to configure, but less efficient for a large number of devices or frequent updates.
 - [MQTT](#mqtt-transport-type){:target="_blank"} -  lightweight, bidirectional protocol specifically optimized for IoT devices, providing efficient telemetry delivery, high throughput, and resource efficiency.
 - [CoAP](#coap-transport-type){:target="_blank"} - lightweight IoT protocol ideal for resource-constrained devices operating in low-bandwidth networks.
 - [LWM2M](/docs/{{docsPrefix}}reference/lwm2m-api/#step-2-define-lwm2m-device-profile){:target="_blank"} - standardized IoT protocol designed for efficient management of resource-constrained devices, enabling centralized configuration management, firmware updates, and device monitoring.
@@ -64,7 +64,7 @@ The current version of ThingsBoard platform supports the following transport typ
 ### Default transport type
 
 The **Default** transport type is designed to ensure compatibility with earlier versions of the platform.
-Devices using this type can connect through ThingsBoard&#39;s standard APIs: [MQTT](/docs/{{docsPrefix}}reference/mqtt-api/){:target="_blank"}, [HTTP](/docs/{{docsPrefix}}reference/http-api/){:target="_blank"}, and [CoAP](/docs/{{docsPrefix}}reference/coap-api/){:target="_blank"}.
+Devices using this type can connect through SENTIENT&#39;s standard APIs: [MQTT](/docs/{{docsPrefix}}reference/mqtt-api/){:target="_blank"}, [HTTP](/docs/{{docsPrefix}}reference/http-api/){:target="_blank"}, and [CoAP](/docs/{{docsPrefix}}reference/coap-api/){:target="_blank"}.
 It requires no special configuration.
 
 {% include images-gallery.html imageCollection="default-transport-type" %}
@@ -72,7 +72,7 @@ It requires no special configuration.
 ### MQTT transport type
 
 The **MQTT** transport type allows for flexible communication setup with devices using the MQTT protocol.
-You can define custom **MQTT topic filters** for sending telemetry and updating attributes by using ThingsBoard&#39;s [telemetry upload API](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api){:target="_blank"} and [attribute update API](/docs/{{docsPrefix}}reference/mqtt-api/#publish-attribute-update-to-the-server){:target="_blank"}.
+You can define custom **MQTT topic filters** for sending telemetry and updating attributes by using SENTIENT&#39;s [telemetry upload API](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api){:target="_blank"} and [attribute update API](/docs/{{docsPrefix}}reference/mqtt-api/#publish-attribute-update-to-the-server){:target="_blank"}.
 
 The MQTT transport type has the following settings:
 
@@ -96,10 +96,10 @@ Let&#39;s look at an example where we use custom MQTT topic filters to publish t
 Publish time-series data using the following command:
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-> Don&#39;t forget to replace `$THINGSBOARD_HOST_NAME` with your actual host name.
+> Don&#39;t forget to replace `$SENTIENT_HOST_NAME` with your actual host name.
 
 ```bash
-mosquitto_pub -h $THINGSBOARD_HOST_NAME -t /telemetry -i "c1" -u "t1" -P "secret" -m "{humidity:10.3}"
+mosquitto_pub -h $SENTIENT_HOST_NAME -t /telemetry -i "c1" -u "t1" -P "secret" -m "{humidity:10.3}"
 ```
 {: .copy-code}
 {% endif %}
@@ -118,13 +118,13 @@ Transmitted data will be displayed in the "**Latest telemetry**" tab of the devi
 <br>
 If you use the standard MQTT device topic filters configuration, you can publish time series and attributes using the commands below.
 
-{% if (docsPrefix == null) or (docsPrefix == "pe/") %}> Don&#39;t forget to replace `$THINGSBOARD_HOST_NAME` with your actual host name.{% endif %}
+{% if (docsPrefix == null) or (docsPrefix == "pe/") %}> Don&#39;t forget to replace `$SENTIENT_HOST_NAME` with your actual host name.{% endif %}
 
 Command for publish **timeseries data**:
 {% if (docsPrefix == null) or (docsPrefix == "pe/") %}
 
 ```bash
-mosquitto_pub -h $THINGSBOARD_HOST_NAME -t v1/devices/me/telemetry -i "c1" -u "t1" -P "secret" -m "{humidity:10.3}"
+mosquitto_pub -h $SENTIENT_HOST_NAME -t v1/devices/me/telemetry -i "c1" -u "t1" -P "secret" -m "{humidity:10.3}"
 ```
 {: .copy-code}
 {% endif %}
@@ -138,7 +138,7 @@ mosquitto_pub -h {{mqttHostName}} -t v1/devices/me/telemetry -i "c1" -u "t1" -P 
 Command for update **attributes**:
 {% if (docsPrefix == null) or (docsPrefix == "pe/") %}
 ```bash
-mosquitto_pub -h $THINGSBOARD_HOST_NAME -t v1/devices/me/attributes -i "c1" -u "t1" -P "secret" -m "{"firmwareVersion": "1.3"}"
+mosquitto_pub -h $SENTIENT_HOST_NAME -t v1/devices/me/attributes -i "c1" -u "t1" -P "secret" -m "{"firmwareVersion": "1.3"}"
 ```
 {: .copy-code}
 {% endif %}
@@ -151,15 +151,15 @@ mosquitto_pub -h {{mqttHostName}} -t v1/devices/me/attributes -i "c1" -u "t1" -P
 
 <br><b><font size="4">MQTT device payload</font></b>
 
-- **JSON**. By default, ThingsBoard expects devices to send data in JSON format. However, it is also possible to transmit data using [Protocol Buffers](https://developers.google.com/protocol-buffers) (Protobuf).
+- **JSON**. By default, SENTIENT expects devices to send data in JSON format. However, it is also possible to transmit data using [Protocol Buffers](https://developers.google.com/protocol-buffers) (Protobuf).
 - **Protocol Buffers (Protobuf)** is a language- and a platform-neutral way of serializing structured data. It is convenient to minimize the size of transmitted data.   
-The current version of the ThingsBoard platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api) and [attribute upload](/docs/{{docsPrefix}}reference/mqtt-api/#publish-attribute-update-to-the-server) and implemented the ability to define a schema for downlink messages (RPC calls). 
-> ThingsBoard parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
+The current version of the SENTIENT platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/mqtt-api/#telemetry-upload-api) and [attribute upload](/docs/{{docsPrefix}}reference/mqtt-api/#publish-attribute-update-to-the-server) and implemented the ability to define a schema for downlink messages (RPC calls). 
+> SENTIENT parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
 
 {% include images-gallery.html imageCollection="mqtt-device-payload" %}
 
 - **Compatibility with other payload formats** option.   
-When compatibility mode is enabled, ThingsBoard will default to using a Protobuf payload format. If parsing the Protobuf payload fails, ThingsBoard will automatically attempt to use the JSON payload format. This feature is particularly useful for ensuring backward compatibility during firmware updates. For example, an initial firmware release might use JSON, while a new release switches to Protobuf. During firmware updates across multiple devices, supporting both formats simultaneously is essential.   
+When compatibility mode is enabled, SENTIENT will default to using a Protobuf payload format. If parsing the Protobuf payload fails, SENTIENT will automatically attempt to use the JSON payload format. This feature is particularly useful for ensuring backward compatibility during firmware updates. For example, an initial firmware release might use JSON, while a new release switches to Protobuf. During firmware updates across multiple devices, supporting both formats simultaneously is essential.   
 > It is important to note that enabling compatibility mode can introduce slight performance degradation. Therefore, it is recommended to disable compatibility mode once all devices have been successfully updated.
 
 {% include images-gallery.html imageCollection="compatibility-with-other-payload-formats" %}
@@ -174,13 +174,13 @@ When compatibility mode is enabled, ThingsBoard will default to using a Protobuf
 You can also configure devices to transmit data using [Protocol Buffers](https://developers.google.com/protocol-buffers){:target="_blank"} (Protobuf) by changing the **CoAP device payload** setting to **Protobuf**.
 
     - **Protocol Buffers (Protobuf)** is a language- and platform-neutral method of serializing structured data, designed primarily to reduce the size of transmitted data.   
-  The current version of the ThingsBoard platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/coap-api/#telemetry-upload-api){:target="_blank"} and [attribute upload](/docs/{{docsPrefix}}reference/coap-api/#publish-attribute-update-to-the-server){:target="_blank"} and implemented the ability to define a schema for downlink messages (RPC calls).
-  ThingsBoard parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
+  The current version of the SENTIENT platform supports customizable proto schemas for [telemetry upload](/docs/{{docsPrefix}}reference/coap-api/#telemetry-upload-api){:target="_blank"} and [attribute upload](/docs/{{docsPrefix}}reference/coap-api/#publish-attribute-update-to-the-server){:target="_blank"} and implemented the ability to define a schema for downlink messages (RPC calls).
+  SENTIENT parses the protobuf structures dynamically, that is why, it does not support some protobuf features like OneOf, extensions and maps, yet.
 
 {% include images-gallery.html imageCollection="coap-default" %}
 
 - **Efento NB-IoT** devices are wireless sensors that use NB-IoT technology for energy-efficient transmission of telemetry data (e.g., temperature, humidity, pressure, open/close, leakage, and more). 
-You can integrate them with ThingsBoard using the built-in CoAP transport, which receives messages from the devices, decodes them using Protobuf, and stores telemetry data on the platform.
+You can integrate them with SENTIENT using the built-in CoAP transport, which receives messages from the devices, decodes them using Protobuf, and stores telemetry data on the platform.
 This data becomes instantly available for viewing, charting, dashboarding, alarm setup, and automation.
 > Requires Efento devices with FW version: 06.02+. 
 
@@ -202,7 +202,7 @@ The platform supports the following power-saving mechanisms for optimized device
 To configure an **LwM2M device profile**, specify the following parameters:
 - **Define the objects** you want to observe or interact with
 - **Set the observe strategy** to determine how the platform monitors object changes
-- **Configure how ThingsBoard processes LwM2M object data**, including telemetry, attributes, and key parameters
+- **Configure how SENTIENT processes LwM2M object data**, including telemetry, attributes, and key parameters
 
 Learn more about configuring the LwM2M transport at [this link](/docs/{{docsPrefix}}reference/lwm2m-api/){:target="_blank"}.
 
@@ -215,7 +215,7 @@ Learn more about configuring the LwM2M transport at [this link](/docs/{{docsPref
 To configure an **SNMP device profile**, specify the following parameters:
 - **Request timeout** — how long (in milliseconds) the system waits before retrying or marking the request as failed
 - **Retry count** — how many times the system will attempt the request before giving up
-- **Communication configuration** — define how the device communicates with ThingsBoard over SNMP
+- **Communication configuration** — define how the device communicates with SENTIENT over SNMP
 
 Learn more about configuring the SNMP transport at [this link](/docs/{{docsPrefix}}reference/snmp-api/){:target="_blank"}.
 
@@ -283,5 +283,5 @@ Enables exporting, committing, and restoring the device profile configuration vi
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

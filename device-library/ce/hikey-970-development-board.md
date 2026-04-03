@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Hikey 970 Development Board to ThingsBoard?
+title: How to connect Hikey 970 Development Board to SENTIENT?
 category: Single-board computers
 chip: Kirin 970
 connectivity: [Ethernet, WIFI, Bluetooth]

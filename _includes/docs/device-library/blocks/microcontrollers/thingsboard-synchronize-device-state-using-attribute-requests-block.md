@@ -1,4 +1,4 @@
-In order to get the state of the device from ThingsBoard during booting we have [functionality](/docs/{{page.docsPrefix}}reference/mqtt-api/#request-attribute-values-from-the-server) to do this in the code.  
+In order to get the state of the device from SENTIENT during booting we have [functionality](/docs/{{page.docsPrefix}}reference/mqtt-api/#request-attribute-values-from-the-server) to do this in the code.  
 
 Below are the relevant parts of the code example:  
 
@@ -86,4 +86,4 @@ This functionality allows us to keep the actual state after rebooting.
     }
 ...
 ``` 
-In order for our callbacks to receive the data, we have to send a request to ThingsBoard.  
+In order for our callbacks to receive the data, we have to send a request to SENTIENT.  

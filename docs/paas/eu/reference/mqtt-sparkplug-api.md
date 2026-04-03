@@ -65,7 +65,7 @@ sparkplug-update-metrics-using-shared-attributes-5:
         image: /images/reference/sparkplug/sparkplug-edit-attribute-3-pe.png
         title: 'The new attribute values for "Outputs/LEDs/Green" and "Device Control/Scan Rate" have been successfully sent to the device.'
 
-sparkplug-update-metrics-using-the-thingsboard-rpc-command-1:
+sparkplug-update-metrics-using-the-sentient-rpc-command-1:
     0:
         image: /images/reference/sparkplug/sparkplug-create-new-dashboard-1-pe.png
         title: 'Go to the Dashboard page and create a new dashboard named Sparkplug;'
@@ -73,7 +73,7 @@ sparkplug-update-metrics-using-the-thingsboard-rpc-command-1:
         image: /images/reference/sparkplug/sparkplug-create-new-dashboard-2-pe.png
         title: 'Open the dashboard and add an alias by clicking on Entity Aliases icon on the top-right. Name the alias (EoN Node, for example), select filter type “Single Entity”, type “Device” and choose our Node 1. Press Add and then Save.'
 
-sparkplug-update-metrics-using-the-thingsboard-rpc-command-2:
+sparkplug-update-metrics-using-the-sentient-rpc-command-2:
     0:
         image: /images/reference/sparkplug/sparkplug-create-new-dashboard-3-pe.png
         title: 'Click "Add New Widget";'
@@ -93,7 +93,7 @@ sparkplug-update-metrics-using-the-thingsboard-rpc-command-2:
         image: /images/reference/sparkplug/sparkplug-create-new-dashboard-8-pe.png
         title: 'Save changes.'
         
-sparkplug-update-metrics-using-the-thingsboard-rpc-command-3:
+sparkplug-update-metrics-using-the-sentient-rpc-command-3:
     0:
         image: /images/reference/sparkplug/sparkplug-create-new-dashboard-9-pe.png
         title: 'Click "REBOOT NODE" button on the widget. In the Terminal, you will see a message indicating that the RPC command has been sent to the device and the Sparkplug EoN Node 1 has been rebooted.'

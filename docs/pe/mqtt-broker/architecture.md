@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: TBMQ architecture
-description: TBMQ architecture
+title: ST-RMQTT architecture
+description: ST-RMQTT architecture
 
 ---
 

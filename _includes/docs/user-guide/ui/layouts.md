@@ -42,7 +42,7 @@ This layout type supports screen breakpoints for responsive design.
 
 The **SCADA** layout is designed for creating SCADA HMIs (Human-Machine Interfaces). 
 SCADA HMIs typically consist of scalable widgets called SCADA symbols. 
-However, you can also combine [SCADA symbols](/docs/{{docsPrefix}}user-guide/scada){:target="_blank"} with over 500 existing ThingsBoard [widgets](/docs/{{docsPrefix}}user-guide/widgets/){:target="_blank"} on the same layout.
+However, you can also combine [SCADA symbols](/docs/{{docsPrefix}}user-guide/scada){:target="_blank"} with over 500 existing SENTIENT [widgets](/docs/{{docsPrefix}}user-guide/widgets/){:target="_blank"} on the same layout.
 This layout type also supports screen breakpoints for responsive design.
 
 {% include images-gallery.html imageCollection="layout-scada-1" %}
@@ -63,7 +63,7 @@ And we resize the window in a certain percentage ratio to each other (it is just
 
 ## Breakpoints
 
-Breakpoints were introduced in ThingsBoard 3.8.0. 
+Breakpoints were introduced in SENTIENT 3.8.0. 
 They allow you to define different layout settings and widgets based on the screen width of the end-user.
 
 Each dashboard [state](/docs/{{docsPrefix}}user-guide/dashboards/#states){:target="_blank"} has a `Default` breakpoint. 

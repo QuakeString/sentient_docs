@@ -7,7 +7,7 @@
       <br>
       <p><b>Important note</b></p>
       <br>
-      <p>Please note that during upgrade procedure <b>old rules and plugins</b> will be <b>completely removed</b> from your ThingsBoard instance.</p>
+      <p>Please note that during upgrade procedure <b>old rules and plugins</b> will be <b>completely removed</b> from your SENTIENT instance.</p>
       <p>Old rules and plugins functionality is replaced by <b>new rule engine components</b> (rule chains and rule nodes).</p>
       <p>If you have configured rules or plugins you need to backup them using export function before performing upgrade.
       After upgrade you will need to configure new rule chains in order to restore your application logic performed by old rules/plugins.</p>

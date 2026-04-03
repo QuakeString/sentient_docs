@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - stitenko
 title: Aliases
-description: ThingsBoard Aliases
+description: SENTIENT Aliases
 
 create-alias:
     0:

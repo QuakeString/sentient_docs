@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
 title: Installing Edge Behind a Proxy
-description: Detailed instructions on how to connect ThingsBoard Edge to ThingsBoard Cloud behind a proxy.
+description: Detailed instructions on how to connect SENTIENT GATEWAY to SENTIENT Cloud behind a proxy.
 
 configs:
   0:

@@ -1,14 +1,14 @@
 ---
-layout: docwithnav-trendz
-title: How To Activate Trendz on ThingsBoard Private Cloud
-description: How To Activate Trendz on ThingsBoard Private Cloud
+layout: docwithnav-sentient-analytics
+title: How To Activate SENTIENT ANALYTICS on SENTIENT Private Cloud
+description: How To Activate SENTIENT ANALYTICS on SENTIENT Private Cloud
 
 ---
 
 * TOC
 {:toc}
 
-If you need a fully managed, isolated cluster with SLA-backed uptime guarantees, **ThingsBoard Private Cloud** might be the right solution for you.
+If you need a fully managed, isolated cluster with SLA-backed uptime guarantees, **SENTIENT Private Cloud** might be the right solution for you.
 
 ## What are the benefits of Private Cloud?
 
@@ -22,5 +22,5 @@ If you need a fully managed, isolated cluster with SLA-backed uptime guarantees,
 
 Ready to explore Private Cloud options?
 
-- **[Use our calculator](/pricing/?section=thingsboard-pe-options&product=thingsboard-private-cloud)** - Estimate the best plan for your needs
+- **[Use our calculator](/pricing/?section=sentient-pe-options&product=sentient-private-cloud)** - Estimate the best plan for your needs
 - **[Contact us](/docs/contact-us)** - Our team will help you find the best solution tailored to your requirements

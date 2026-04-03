@@ -11,7 +11,7 @@
 
 ## Overview
 **AWS Kinesis** provides easily collect, process, and analyze video and data streams in real time, so you can get timely insights and react quickly to new information.
-After integrating **AWS Kinesis** with the **Thingsboard**, you can process and visualize data from **AWS Kinesis** streams in the **Thingsboard IoT platform**.
+After integrating **AWS Kinesis** with the **Sentient**, you can process and visualize data from **AWS Kinesis** streams in the **Sentient IoT platform**.
 
 Please make sure that you know [AWS Kinesis basics](https://docs.aws.amazon.com/streams/latest/dev/introduction.html){:target="_blank"} and what are the **AWS Kinesis streams** in general before continue with this topic.
 
@@ -29,7 +29,7 @@ Once the **Access Key** is created, please note down **AWS Access Key ID**, **AW
 Additionally, please make sure that you know your default **AWS region** name:
 - **AWS region name**: ZZZZZZZ
 
-We we'll refer to them later as **AWS_ACCESS_KEY_ID**, **AWS_SECRET_ACCESS_KEY** and **AWS_REGION** accordingly during the configuration of **AWS Kinesis** Thingsboard integration.
+We we'll refer to them later as **AWS_ACCESS_KEY_ID**, **AWS_SECRET_ACCESS_KEY** and **AWS_REGION** accordingly during the configuration of **AWS Kinesis** Sentient integration.
 
 The second step is to install and configure **AWS CLI** to be able to create streams, put records into the streams and get records from the streams from the command line.
 Go to [AWS CLI install and configuration](https://docs.aws.amazon.com/streams/latest/dev/kinesis-tutorial-cli-installation.html){:target="_blank"} and install **AWS CLI** onto your machine.
@@ -67,18 +67,18 @@ AVAILABLE COMMANDS
 Please click **q** to close help.
 
 ### Kinesis stream data format
-Kinesis uses **Base64** format for data inside streams. In mean time **Thingsboard AWS Kinesis** integration will automatically convert **Base64** encoding into character payload. 
+Kinesis uses **Base64** format for data inside streams. In mean time **Sentient AWS Kinesis** integration will automatically convert **Base64** encoding into character payload. 
 
-If your application sends data as **CSV**, you will receive the same **CSV** payload on the Thingsboard converter. If your application sends data as **JSON** string, Thingsboard converter will receive **JSON** string in the text payload.
+If your application sends data as **CSV**, you will receive the same **CSV** payload on the Sentient converter. If your application sends data as **JSON** string, Sentient converter will receive **JSON** string in the text payload.
 
-In this tutorial, we will use JSON string to put records into Kinesis data stream. As well we will send data back to Kinesis streams from the Thingsboard in the JSON string.
+In this tutorial, we will use JSON string to put records into Kinesis data stream. As well we will send data back to Kinesis streams from the Sentient in the JSON string.
 In real life scenario, it is up to you what data format to use to decode/encode data.
 
 ### AWS Kinesis demo streams
 
 In this demo we will use two AWS Kinesis streams:
- - **uplink** stream - for the incoming data into the Thingsboard. 
- - **downlink** stream - for the outgoing data from the Thingsboard.
+ - **uplink** stream - for the incoming data into the Sentient. 
+ - **downlink** stream - for the outgoing data from the Sentient.
 
 Let's create uplink stream with the help of AWS CLI:
 ```bash
@@ -164,10 +164,10 @@ The output should be similar to this:
 }
 {% endhighlight %}
 
-## Integration with the Thingsboard
-We have done all necessary steps on the AWS Kinesis side. Now we can start configuring the Thingsboard.
+## Integration with the Sentient
+We have done all necessary steps on the AWS Kinesis side. Now we can start configuring the Sentient.
 
-### Thingsboard Uplink Data Converter
+### Sentient Uplink Data Converter
 
 First, we need to create Uplink Data converter that will be used for converting messages received from the AWS Kinesis. The converter should transform incoming payload into the required message format.
 Message must contains **deviceName** and **deviceType**. Those fields are used for submitting data to the correct device. If a device was not found then new device will be created.
@@ -213,8 +213,8 @@ return result;
 ![image](/images/user-guide/integrations/aws-kinesis/aws-kinesis-add-uplink-converter.png)
 
 
-### Thingsboard Downlink Data Converter
-For sending Downlink messages from the Thingsboard to the Kinesis stream, we need to define downlink Converter.
+### Sentient Downlink Data Converter
+For sending Downlink messages from the Sentient to the Kinesis stream, we need to define downlink Converter.
 In general, output from Downlink converter should have the following structure:
 {% highlight json %}
 {
@@ -257,7 +257,7 @@ This converter will take **version** field from the incoming message and add it 
 
 ### AWS Kinesis Integration
 
-Next we will create Integration with AWS Kinesis inside the Thingsboard. Open **Integrations** section and add new Integration with type
+Next we will create Integration with AWS Kinesis inside the Sentient. Open **Integrations** section and add new Integration with type
 **AWS Kinesis**
 
 - Name: kinesis_integration
@@ -278,7 +278,7 @@ Next we will create Integration with AWS Kinesis inside the Thingsboard. Open **
 ## Validation
 
 ### Validate Uplink Messages
-Lets verify our integration. First, lets put message into uplink stream, so Thingsboard will fetch this message. 
+Lets verify our integration. First, lets put message into uplink stream, so Sentient will fetch this message. 
 Type in the console:
 ```bash
 aws kinesis put-record --stream-name tb-test-uplink --partition-key 123 --data '{"devName": "kitchen_thermostat", "devType": "thermostat", "temperature": 22}'
@@ -286,7 +286,7 @@ aws kinesis put-record --stream-name tb-test-uplink --partition-key 123 --data '
 
 Go to **Device Group** -> **All** -> **kitchen_thermostat** - you can see that 
 
-- new device was registered in the thingsboard
+- new device was registered in the sentient
 - In the **Latest Telemetry** section you will see that last submitted temperature = 22.
 
 ![image](/images/user-guide/integrations/aws-kinesis/aws-kinesis-validate-telemetry.png)

@@ -1,18 +1,18 @@
 * TOC
 {:toc}
 
-TBMQ provides flexible configuration options for its listeners, supporting TCP, SSL/TLS, and MQTT over WebSockets protocols.
+ST-RMQTT provides flexible configuration options for its listeners, supporting TCP, SSL/TLS, and MQTT over WebSockets protocols.
 
 ### TCP Listener
 
-By default, TBMQ has the TCP listener enabled on port `1883`.
+By default, ST-RMQTT has the TCP listener enabled on port `1883`.
 However, if you wish to disable the TCP listener, you can set the `LISTENER_TCP_ENABLED` environment variable to `false`.
 
 Furthermore, if you need to change the host address that the broker is binding to or the port it is listening to, 
 you can modify the `LISTENER_TCP_BIND_ADDRESS` and `LISTENER_TCP_BIND_PORT` variables, respectively. 
 This gives you the flexibility to configure the broker to listen on a specific network interface and port of your choice.
 
-By adjusting these environment variables, you can customize the TCP listening behavior of TBMQ to suit your specific requirements.
+By adjusting these environment variables, you can customize the TCP listening behavior of ST-RMQTT to suit your specific requirements.
 
 ### TLS Listener
 
@@ -37,7 +37,7 @@ For more information about configuration possibilities and certificate generatio
 
 ### WS Listener
 
-By default, TBMQ has the WebSocket listener enabled on port `8084`.
+By default, ST-RMQTT has the WebSocket listener enabled on port `8084`.
 However, in case you want to disable the WS listener, you can set the `LISTENER_WS_ENABLED` environment variable to `false`.
 
 Additionally, if you need to change the host address that the broker is binding to or the port it is listening to,
@@ -69,5 +69,5 @@ WSS listener is set to the same negotiation subprotocols as [WS](#ws-listener) l
 
 ### Next steps
 
-- [**Connectivity settings**](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/settings/#connectivity) - Learn how to configure hosts and ports in the TBMQ UI for use in different protocol-based features.
+- [**Connectivity settings**](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/settings/#connectivity) - Learn how to configure hosts and ports in the ST-RMQTT UI for use in different protocol-based features.
 {% assign currentGuide = "SecurityGuide" %}{% include templates/mqtt-broker-guides-banner.md %}

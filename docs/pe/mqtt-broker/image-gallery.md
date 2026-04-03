@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Image gallery
-description: TBMQ PE Image gallery
+description: ST-RMQTT PE Image gallery
 redirect_from: "/docs/mqtt-broker/image-gallery/"
 
 upload-image-1:

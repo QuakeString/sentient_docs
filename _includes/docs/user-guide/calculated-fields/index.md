@@ -21,7 +21,7 @@ Calculated fields can be applied at two different levels within the system:
 
 This flexibility allows users to either define unique calculations per entity or apply standardized logic across a group of similar entities, optimizing data processing and management.
 
-In addition to real-time processing, ThingsBoard supports calculated field [reprocessing](#data-reprocessing), which allows you to apply the same calculation logic to historical telemetry data and generate missing or updated results for a selected time range.
+In addition to real-time processing, SENTIENT supports calculated field [reprocessing](#data-reprocessing), which allows you to apply the same calculation logic to historical telemetry data and generate missing or updated results for a selected time range.
 
 <hr>
 
@@ -58,7 +58,7 @@ In addition to real-time processing, ThingsBoard supports calculated field [repr
 
 ## Types
 
-ThingsBoard supports several types of calculated fields, each designed for a specific class of tasks:
+SENTIENT supports several types of calculated fields, each designed for a specific class of tasks:
 
 {% include calculated-fields-cards.liquid %}
 
@@ -188,11 +188,11 @@ The result can be stored as:
 
 ## Debug 
 
-ThingsBoard provides built-in tools that help you validate and troubleshoot calculated fields in real time.
+SENTIENT provides built-in tools that help you validate and troubleshoot calculated fields in real time.
 
 <b><font size="3">Enable debug mode</font></b> (_&#42; recommended during development_)
 
-Each calculated field can be switched to Debug mode. When enabled, ThingsBoard records execution details for every run, including the input arguments that triggered the execution (e.g. incoming telemetry or attribute updates) and the calculation result or any execution problems (script errors, missing arguments, invalid values).
+Each calculated field can be switched to Debug mode. When enabled, SENTIENT records execution details for every run, including the input arguments that triggered the execution (e.g. incoming telemetry or attribute updates) and the calculation result or any execution problems (script errors, missing arguments, invalid values).
 
 {% assign enableDebugCE = '
     ===
@@ -260,7 +260,7 @@ Each event includes:
 
 <br><b><font size="4">Testing mode for script-based calculated fields</font></b>
 
-For script-based calculated fields (for example, Script, Propagation (Calculation result mode), ThingsBoard provides a **Test script function (TBEL)** mode that helps you validate execution using real input data before applying changes.
+For script-based calculated fields (for example, Script, Propagation (Calculation result mode), SENTIENT provides a **Test script function (TBEL)** mode that helps you validate execution using real input data before applying changes.
 
 This allows you to:
 - re-run the calculation using the same input data
@@ -342,7 +342,7 @@ Click **Test with this message** in the event row to run the testing function.
 
 ## Rule Engine integration
 
-Calculated fields are integrated with ThingsBoard [Rule Engine](/docs/user-guide/rule-engine-2-0/overview/){:target="_blank"}, the platform&#39;s flexible system for routing and processing messages.
+Calculated fields are integrated with SENTIENT [Rule Engine](/docs/user-guide/rule-engine-2-0/overview/){:target="_blank"}, the platform&#39;s flexible system for routing and processing messages.
 The execution is seamlessly integrated into your data workflow, triggered automatically whenever telemetry or attributes are processed by the following rule nodes:
 - [Save Time Series](/docs/user-guide/rule-engine-2-0/nodes/action/save-timeseries){:target="_blank"}: Triggers calculations when new telemetry is persisted.
 - [Save Attributes](/docs/user-guide/rule-engine-2-0/nodes/action/save-attributes){:target="_blank"}: Triggers calculations when client, shared, or server-side attributes are updated.
@@ -355,7 +355,7 @@ The execution is seamlessly integrated into your data workflow, triggered automa
 <table style="width:auto">
    <thead>
      <tr>
-	 <td style="text-align: center"><strong><em>The <b>telemetry data reprocessing</b> feature is available only in <b>ThingsBoard PE</b> and <b>ThingsBoard Cloud</b> editions.</em></strong></td>
+	 <td style="text-align: center"><strong><em>The <b>telemetry data reprocessing</b> feature is available only in <b>SENTIENT Professional Edition</b> and <b>SENTIENT Cloud</b> editions.</em></strong></td>
      </tr>
    </thead>
 </table> 
@@ -369,7 +369,7 @@ This is especially useful when you modify existing calculations or add new field
 
 - **Recalculation of historical data** — apply updated logic to previously collected telemetry.
 - **Flexible time range selection** — choose a specific time period for reprocessing.
-- **Store results as telemetry** — processed data is saved in ThingsBoard as telemetry, enabling further use in widgets, rules, or analytics.
+- **Store results as telemetry** — processed data is saved in SENTIENT as telemetry, enabling further use in widgets, rules, or analytics.
 
 <b><font size="4">How to configure</font></b>
 
@@ -654,7 +654,7 @@ By aligning timestamps and filling missing values, merging enables:
 
 ## Export / Import calculated field
 
-You can **export** the calculated field to a JSON file and **import** it into the same or another ThingsBoard instance.
+You can **export** the calculated field to a JSON file and **import** it into the same or another SENTIENT instance.
 
 <br><b><font size="4">Export calculated field</font></b>
 
@@ -845,7 +845,7 @@ After making your changes, click the orange **check** button to apply the update
 
 ## Calculated fields overview video
 
-Prefer visual learning? Watch this short video for a quick introduction to **Calculated fields** in ThingsBoard.   
+Prefer visual learning? Watch this short video for a quick introduction to **Calculated fields** in SENTIENT.   
 It covers the core concepts, supported calculation types, and practical examples for processing and transforming data in real time.
 
 &nbsp;
@@ -859,5 +859,5 @@ It covers the core concepts, supported calculation types, and practical examples
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

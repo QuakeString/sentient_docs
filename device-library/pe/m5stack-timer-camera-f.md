@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect M5Stack Timer Camera F to ThingsBoard?
+title: How to connect M5Stack Timer Camera F to SENTIENT?
 category: Microcontrollers
 chip: ESP32
 connectivity: [HTTP, MQTT, WIFI, Bluetooth]

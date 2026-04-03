@@ -2,7 +2,7 @@
 layout: iot-article
 title: ᐉ IoT Monitoring Dashboard
 notitle: "true"
-description: "IoT Monitoring Dashboard ✔ IoT control panel ⚫ ThingsBoard ➤ Provides the ability to create and manage dashboards ✔ with a plenty of widgets"
+description: "IoT Monitoring Dashboard ✔ IoT control panel ⚫ SENTIENT ➤ Provides the ability to create and manage dashboards ✔ with a plenty of widgets"
 redirect_from: "/docs/services/monitoring-dashboard/"
 ---
 
@@ -13,13 +13,13 @@ redirect_from: "/docs/services/monitoring-dashboard/"
             <span class="read-info">11 minutes read</span>
             <h1>IoT Monitoring Dashboard</h1>
             <div class="text-content medium-margin">In the dynamic landscape of digitization and the Internet of Things (IoT), the importance of data management and monitoring is quite reasonable. In this regard, the IoT monitoring dashboard is a tool that not only simplifies the visualization of large amounts of data but also makes it more efficient and informative.</div>
-            <div class="text-content"><span class="bold">In the ThingsBoard platform the dashboards</span> are an integral part of the user interface for IoT apps, offering solutions for the rapid development, management, and scaling of IoT projects.</div>
+            <div class="text-content"><span class="bold">In the SENTIENT platform the dashboards</span> are an integral part of the user interface for IoT apps, offering solutions for the rapid development, management, and scaling of IoT projects.</div>
         </div>
         <img class="image" srcset="/images/iot-articles/monitoring_dashboard_1_1090x742.webp 1090w, /images/iot-articles/monitoring_dashboard_1_2180x1484.webp 2180w" sizes="(max-width: 1920px) 1090px, (min-width: 1921px) 2180px" src="/images/iot-articles/monitoring_dashboard_1_1090x742.webp" alt="IoT energy management office monitoring"/>
         <div class="text-wrapper">
             <h2>How IoT monitoring system works?</h2>
             <div class="text-content small-margin">First step is to select devices that can collect and report required measurements. They selected based on properties of the iot monitoring system or process that should be monitored.</div>
-            <div class="text-content medium-margin">Next step is to connect iot devices to the monitoring application using one of supported protocols - MQTT, HTTP, LoraWAN, OPC-UA, CoAP, LwM2M and others. Full list of supported protocols available in <a class="article-link" href="/docs/pe/api/">ThingsBoard API reference</a> or on our <a class="article-link" href="/docs/pe/guides/#AnchorIDConnectYourDevice">connectivity guides</a>.</div>
+            <div class="text-content medium-margin">Next step is to connect iot devices to the monitoring application using one of supported protocols - MQTT, HTTP, LoraWAN, OPC-UA, CoAP, LwM2M and others. Full list of supported protocols available in <a class="article-link" href="/docs/pe/api/">SENTIENT API reference</a> or on our <a class="article-link" href="/docs/pe/guides/#AnchorIDConnectYourDevice">connectivity guides</a>.</div>
             <div class="text-content medium-margin">Once device connected and reports data to the platform, incoming telemetry saved in the database, we can build real time and historical monitoring dashboards using <a class="article-link" href="/docs/pe/guides/#AnchorIDDataVisualization">IoT dashboard development guide</a>.</div>
             <div class="text-content medium-margin">Dashboard should have drill down navigation to start from the high-level system overview and go to lover levels to understand current system state and analyze historical data</div>
             <h2>What is End-to-End IoT Performance Visibility?</h2>
@@ -41,9 +41,9 @@ redirect_from: "/docs/services/monitoring-dashboard/"
                 <li><span class="bold-text">Option 3:</span> PLCs - controllers installed in various equipment to control and monitor it. They can collect and report required telemetry, status change or notify about events.</li>
             </ul>
             <h3>IoT data visualization and notification</h3>
-            <div class="text-content small-margin">Large IoT solutions, where thousands devices are connected it is not possible to monitor and tack each device individually. Business want to be notified when some devices required attention. For example user want to receive notification when battery level is critical and set a threshold equal to 3.1V. In this case IoT application would compare current battery level with threshold value and send an alert with configured notification channel to responsible user. Thingsboard supports such case with notification center and configurable alarm rules.</div>
+            <div class="text-content small-margin">Large IoT solutions, where thousands devices are connected it is not possible to monitor and tack each device individually. Business want to be notified when some devices required attention. For example user want to receive notification when battery level is critical and set a threshold equal to 3.1V. In this case IoT application would compare current battery level with threshold value and send an alert with configured notification channel to responsible user. Sentient supports such case with notification center and configurable alarm rules.</div>
             <h2>What is edge computing?</h2>
-            <div class="text-content small-margin">Edge computing used to speedup data processing by transferring processing logic from central cloud to the edge closer to the data collection devices. Also, less amount of data transferred from devices to the cloud decrease system costs and pressure on network. ThingsBoard has edge product (https://thingsboard.io/products/thingsboard-edge/) it allows to provision, configure and control multiple edge installations. ThingsBoard cloud act like a central configuration point, where user define processing logic, data retention policy, workflows, visualization dashboards and deploy it on edge systems. On the edge ThingsBoard communicate with local devices/sensors process their data and report required portion of it to the cloud.</div>
+            <div class="text-content small-margin">Edge computing used to speedup data processing by transferring processing logic from central cloud to the edge closer to the data collection devices. Also, less amount of data transferred from devices to the cloud decrease system costs and pressure on network. SENTIENT has edge product (https://docs.sentient.invenia.in/products/sentient-gateway/) it allows to provision, configure and control multiple edge installations. SENTIENT cloud act like a central configuration point, where user define processing logic, data retention policy, workflows, visualization dashboards and deploy it on edge systems. On the edge SENTIENT communicate with local devices/sensors process their data and report required portion of it to the cloud.</div>
             <h2>IoT security monitoring detailed explanation</h2>
             <div class="text-content medium-margin">There are 3 vectors how to secure IoT applications:</div>
             <ul class="list">
@@ -71,16 +71,16 @@ redirect_from: "/docs/services/monitoring-dashboard/"
                 <li>Cost savings. By monitoring energy usage and device performance, businesses can optimize their operations and reduce costs.</li>
             </ul>
             <h2 class="line-height-small">An Indispensable IoT Control Panel: Features You Will Approve</h2>
-            <div class="text-content medium-margin">ThingsBoard solution templates are a powerful feature of the ThingsBoard IoT platform that can significantly reduce the time-to-market for your IoT products. Here, we delve into the key characteristics that make it a cornerstone for IoT deployments:</div>
+            <div class="text-content medium-margin">SENTIENT solution templates are a powerful feature of the SENTIENT IoT platform that can significantly reduce the time-to-market for your IoT products. Here, we delve into the key characteristics that make it a cornerstone for IoT deployments:</div>
             <ul class="list">
-                <li>ThingsBoard's IoT control panel boasts an intuitive, user-friendly interface.</li>
+                <li>SENTIENT's IoT control panel boasts an intuitive, user-friendly interface.</li>
                 <li>Our IoT sensor dashboard empowers users with robust <a class="article-link" href="/device-management/">iot device management</a> functionalities.</li>
-                <li>Tailoring the dashboard to your specific needs is a breeze with ThingsBoard.</li>
-                <li>ThingsBoard's control panel incorporates a powerful rule engine that enables automated actions based on predefined conditions.</li>
+                <li>Tailoring the dashboard to your specific needs is a breeze with SENTIENT.</li>
+                <li>SENTIENT's control panel incorporates a powerful rule engine that enables automated actions based on predefined conditions.</li>
                 <li>Our IoT device dashboard provides comprehensive tools for data analysis and visualization.</li>
                 <li>Security is paramount in IoT deployments, so we offer robust access control features, ensuring that only authorized personnel have access to sensitive information and critical functionalities.</li>
             </ul>
-            <div class="text-content">For a detailed overview of ThingsBoard's Solution Templates, you can refer to the <a class="article-link" href="/docs/pe/solution-templates/overview/">IoT Solution templates overview</a>.</div>
+            <div class="text-content">For a detailed overview of SENTIENT's Solution Templates, you can refer to the <a class="article-link" href="/docs/pe/solution-templates/overview/">IoT Solution templates overview</a>.</div>
             <h2>IoT Monitoring Dashboard Makes Your Business Goals Achievable</h2>
             <div class="text-content medium-margin">Achieving tangible business objectives requires a strategic approach. An IoT dashboard app serves as a linchpin in this endeavor, offering practical solutions to common challenges encountered during IoT implementation:</div>
         </div>
@@ -123,10 +123,10 @@ redirect_from: "/docs/services/monitoring-dashboard/"
         </div>
         <img class="image" srcset="/images/iot-articles/monitoring_dashboard_4_1090x672.webp 1090w, /images/iot-articles/monitoring_dashboard_4_2180x1344.webp 2180w" sizes="(max-width: 1920px) 1090px, (min-width: 1921px) 2180px" src="/images/iot-articles/monitoring_dashboard_4_1090x672.webp" alt="IoT energy management office monitoring"/>
         <div class="text-wrapper">
-            <h2>How to Use the ThingsBoard Dashboard</h2>
-            <div class="sub-title">To use the ThingsBoard IoT dashboard open-source, you can follow these steps:</div>
+            <h2>How to Use the SENTIENT Dashboard</h2>
+            <div class="sub-title">To use the SENTIENT IoT dashboard open-source, you can follow these steps:</div>
             <ul class="list">
-                <li>Login to your ThingsBoard instance and navigate to the “Entities” section.</li>
+                <li>Login to your SENTIENT instance and navigate to the “Entities” section.</li>
                 <li>Click on the “+” icon in the top right corner of the table and then select "Add new dashboard".</li>
                 <li>Input a name for your IoT web dashboard. No other changes are required at this time.</li>
                 <li>After creating the dashboard IoT for free, you can start adding widgets to it.</li>
@@ -134,37 +134,37 @@ redirect_from: "/docs/services/monitoring-dashboard/"
                 <li>Once you have added and configured all your widgets, don’t forget to save your dashboard.</li>
             </ul>
             <div class="text-content">For a more detailed guide on how to use the dashboard for IoT devices, you can refer to our <a class="article-link" href="/docs/pe/user-guide/dashboards/">Working with IoT dashboards</a> guide.</div>
-            <h2>ThingsBoard IoT Dashboard in Action (Case Studies)</h2>
+            <h2>SENTIENT IoT Dashboard in Action (Case Studies)</h2>
         </div>
         <div class="definitions-block">
             <div class="definitions-list">
                 <div class="definitions-list-item one-to-one-and-half align-start">
                     <div class="term bold padding-top">Asset Management</div>
-                    <div class="definition">By implementing ThingsBoard's IoT Dashboard, the facility gained real-time visibility into machine performance and production metrics. Predictive maintenance alerts ensured timely repairs, reducing downtime.</div>
+                    <div class="definition">By implementing SENTIENT's IoT Dashboard, the facility gained real-time visibility into machine performance and production metrics. Predictive maintenance alerts ensured timely repairs, reducing downtime.</div>
                 </div>
                 <div class="definitions-list-item one-to-one-and-half align-start">
                     <div class="term bold">Enhancing Retail Customer Experience</div>
-                    <div class="definition">ThingsBoard's IoT Dashboard tracked foot traffic, analyzed customer behavior, and monitored inventory levels. Insights gained led to strategic product placements and personalized marketing efforts.</div>
+                    <div class="definition">SENTIENT's IoT Dashboard tracked foot traffic, analyzed customer behavior, and monitored inventory levels. Insights gained led to strategic product placements and personalized marketing efforts.</div>
                 </div>
                 <div class="definitions-list-item one-to-one-and-half align-start">
                     <div class="term bold padding-top">Device Connectivity & Data Collection</div>
-                    <div class="definition">With ThingsBoard's IoT Dashboard, the provider gained real-time monitoring of device performance and proactive alerts for potential issues.</div>
+                    <div class="definition">With SENTIENT's IoT Dashboard, the provider gained real-time monitoring of device performance and proactive alerts for potential issues.</div>
                 </div>
                 <div class="definitions-list-item one-to-one-and-half align-start">
                     <div class="term bold">Optimizing Agriculture Practices</div>
-                    <div class="definition">Using ThingsBoard's IoT Dashboard, the farm monitored soil moisture, temperature, and crop health. Data-driven irrigation and fertilization strategies were implemented.</div>
+                    <div class="definition">Using SENTIENT's IoT Dashboard, the farm monitored soil moisture, temperature, and crop health. Data-driven irrigation and fertilization strategies were implemented.</div>
                 </div>
             </div>
         </div>
         <div class="text-wrapper">
             <h2>Mobile app for remote iot visualize data online</h2>
-            <div class="text-content medium-margin">Mobile native app gives fast and intuitive access to the monitored system and allows to quickly find required info or react on potential issues. Mobile monitoring application gives more control by enabling input from mobile camera for scaning qr-codes/bar codes, for example for quick navigation to monitoring page of required device. Also, GPS info from mobile device improve experience for location tracking cases when user can see nearest devices/systems and their state. ThingsBoard has flutter mobile SDK for creating native applications fast. Dashboard layout can be configured differently for PC and mobile devices, ThingsBoard widgets and dashboard are mobile friendly and adaptive, so you can reuse same monitoring dashboard for web-based monitoring and from mobile application.</div>
+            <div class="text-content medium-margin">Mobile native app gives fast and intuitive access to the monitored system and allows to quickly find required info or react on potential issues. Mobile monitoring application gives more control by enabling input from mobile camera for scaning qr-codes/bar codes, for example for quick navigation to monitoring page of required device. Also, GPS info from mobile device improve experience for location tracking cases when user can see nearest devices/systems and their state. SENTIENT has flutter mobile SDK for creating native applications fast. Dashboard layout can be configured differently for PC and mobile devices, SENTIENT widgets and dashboard are mobile friendly and adaptive, so you can reuse same monitoring dashboard for web-based monitoring and from mobile application.</div>
             <h2>IoT Monitoring Software Integration with 3-rd party systems</h2>
             <div class="text-content medium-margin">Integration of IT and OT systems of the company is important aspect operational effectiveness. Metrics and signals collected form IoT sensors can be integrated with other customer systems to improve operational visibility and automated processes. For example monitoring application that collects data from IoT energy meters can be integrated with the company financial systems to automatically generate invoices or build cost reports. In industrial domain data from vibration and ultrasonic sensors used to generate alerts for maintenance team. In that case once alert generated, 3rd party system that is responsible for company incident management automatically notified about alert and maintenance tam can react accordingly. Our platform support bidirectional integration with external systems using different communication channels and API. Most common are Rest API, MQTT and via message broker.</div>
             <h2>Wrapping Up</h2>
-            <div class="text-content medium-margin">When it comes to IoT management, ThingsBoard strives to be a leader among IoT solutions. With a seasoned team at the helm, we have crafted the best IoT dashboard that effortlessly transforms complex challenges into intuitive solutions.</div>
+            <div class="text-content medium-margin">When it comes to IoT management, SENTIENT strives to be a leader among IoT solutions. With a seasoned team at the helm, we have crafted the best IoT dashboard that effortlessly transforms complex challenges into intuitive solutions.</div>
             <div class="text-content medium-margin">Our user-friendly free IoT dashboard software makes it easy to navigate the intricacies of IoT. By offering a range of powerful tools, we help businesses unlock the full potential of their connected ecosystems.</div>
-            <div class="text-content">We offer a refreshing approach that combines cutting-edge technology with user-friendly design. With ThingsBoard, you’re not just choosing an IoT platform; you’re choosing a partner dedicated to helping you achieve your business goals.</div>
+            <div class="text-content">We offer a refreshing approach that combines cutting-edge technology with user-friendly design. With SENTIENT, you’re not just choosing an IoT platform; you’re choosing a partner dedicated to helping you achieve your business goals.</div>
         </div>
     </div>
 </div>

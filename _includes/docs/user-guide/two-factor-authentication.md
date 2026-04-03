@@ -5,7 +5,7 @@ Two-factor authentication (2FA) adds an extra layer of security to user sign-in.
 
 This approach significantly reduces the risk of unauthorized access, even if user credentials are compromised.
 
-ThingsBoard supports multiple 2FA verification methods, which can be enabled and configured by administrators and selectively activated by tenants.
+SENTIENT supports multiple 2FA verification methods, which can be enabled and configured by administrators and selectively activated by tenants.
 
 {% if docsPrefix == null %}
 ![image](/images/user-guide/two-factor-authentication/two-factor-authentication-ce.png)
@@ -28,7 +28,7 @@ ThingsBoard supports multiple 2FA verification methods, which can be enabled and
 {% unless docsPrefix == null %}[Tenant administrators](/docs/{{docsPrefix}}user-guide/ui/tenants/){:target="_blank"} can either use the system administrator&#39;s 2FA configuration or define a custom 2FA configuration for themselves and their users.{% endunless %}
 
 **To configure 2FA:**
-- Log in to ThingsBoard as a {% if docsPrefix == null %}System administrator{% endif %}{% if docsPrefix == 'pe/' %}System administrator or Tenant administrator{% endif %}{% if docsPrefix == 'paas/' or docsPrefix == 'paas/eu/' %}Tenant Administrator{% endif %}.
+- Log in to SENTIENT as a {% if docsPrefix == null %}System administrator{% endif %}{% if docsPrefix == 'pe/' %}System administrator or Tenant administrator{% endif %}{% if docsPrefix == 'paas/' or docsPrefix == 'paas/eu/' %}Tenant Administrator{% endif %}.
 - Navigate to "Security" &#8702; "Two-factor authentication".
 {% unless docsPrefix == null %}- {% endunless %}{% unless docsPrefix == 'paas/' or docsPrefix == 'paas/eu/' or docsPrefix == null %}(Tenant administrator only) {% endunless %}{% unless docsPrefix == null %}Clear "Use system two factor auth settings" to configure tenant-specific settings.{% endunless %}
 - Enable one or more verification methods:
@@ -51,7 +51,7 @@ ThingsBoard supports multiple 2FA verification methods, which can be enabled and
 
 _&#42; Available to system administrators only_
 
-Starting from **ThingsBoard 4.3**, a System administrator can enforce 2FA for one of the following user groups: **all users**, **system administrators**, or selected (or all) **tenant administrators**.   
+Starting from **SENTIENT 4.3**, a System administrator can enforce 2FA for one of the following user groups: **all users**, **system administrators**, or selected (or all) **tenant administrators**.   
 When 2FA is enforced, affected users must configure and use at least one available 2FA method before they can continue using the platform.
 
 ### Configuring enforced 2FA
@@ -83,7 +83,7 @@ If no tenants or tenant profiles are selected, the enforcement applies to all te
 Users can enable 2FA for their own accounts using one or more methods configured by the administrator.
 
 To enable 2FA as a user:
-- Log in to ThingsBoard.
+- Log in to SENTIENT.
 - Open the user menu (three dots) in the top-right corner and select "Account".
 - Navigate to the "Security" tab.
 - Enable one or more available 2FA methods and complete the setup steps.

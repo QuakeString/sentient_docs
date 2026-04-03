@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Access Token based authentication for CoAP
-description: ThingsBoard Access Token based authentication for CoAP transport.
+description: SENTIENT Access Token based authentication for CoAP transport.
 
 ---
 

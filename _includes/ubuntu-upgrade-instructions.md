@@ -1,4 +1,4 @@
-{%- assign platform = "ThingsBoard CE" -%}
+{%- assign platform = "SENTIENT" -%}
 {%- assign current_version = include.version -%}
 {%- assign family = include.family -%}
 {%- assign current_version_with_platform = current_version -%}
@@ -12,7 +12,7 @@
 {%- assign x_status = include.x -%}
 
 {% if docsPrefix == "pe/" %}
-{%- assign platform = "ThingsBoard PE" -%}
+{%- assign platform = "SENTIENT Professional Edition" -%}
 {%- assign current_version_with_platform = current_version | append: "pe" -%}
 {% endif %}
 
@@ -57,9 +57,9 @@
 {%- assign prev_version_label = prev_version_label | append: "PE" -%}
 {% endif %}
 
-{% assign platform_hash = "#upgrading-thingsboard-ce-to-" %}
+{% assign platform_hash = "#upgrading-sentient-ce-to-" %}
 {% if docsPrefix == "pe/" %}
-{%- assign platform_hash = "#upgrading-thingsboard-pe-to-" -%}
+{%- assign platform_hash = "#upgrading-sentient-pe-to-" -%}
 {% endif %}
 
 {%- if use_external_link -%}
@@ -71,15 +71,15 @@
 {% capture difference %}
 **NOTE:**
 {% if curr_major > "4" or (curr_major == "4" and curr_minor >= "2") %}
-{% if include.is_latest_patch == "true" %}{% if prev_version contains ".x" %}{% assign prev_version_plus = prev_version | replace: ".x", "+" %}{% else %}{% assign prev_version_plus = prev_version | append: "+" %}{% endif %}These upgrade steps are applicable for ThingsBoard version {{ prev_version_plus }}.{% else %}These upgrade steps are applicable for ThingsBoard version {{ prev_version }}{% if patch_status == "true" %} or any {{ base_version }} patch{% endif %}.{% endif %}
+{% if include.is_latest_patch == "true" %}{% if prev_version contains ".x" %}{% assign prev_version_plus = prev_version | replace: ".x", "+" %}{% else %}{% assign prev_version_plus = prev_version | append: "+" %}{% endif %}These upgrade steps are applicable for SENTIENT version {{ prev_version_plus }}.{% else %}These upgrade steps are applicable for SENTIENT version {{ prev_version }}{% if patch_status == "true" %} or any {{ base_version }} patch{% endif %}.{% endif %}
 In order to upgrade to {{ current_version_with_platform | upcase }} you need to [**upgrade to {{ prev_version }} first**]({{ prev_version_href }}).
 {% else %}
-These upgrade steps are applicable for ThingsBoard version {{ prev_version_label }}{% if applicable_versions %}{% assign versions = applicable_versions | split: "," %}{% for v in versions %} and ThingsBoard version {{ v | strip }}{% endfor %}{% endif %}.
+These upgrade steps are applicable for SENTIENT version {{ prev_version_label }}{% if applicable_versions %}{% assign versions = applicable_versions | split: "," %}{% for v in versions %} and SENTIENT version {{ v | strip }}{% endfor %}{% endif %}.
 In order to upgrade to {{ current_version_with_platform | upcase }} you need to [**upgrade to {{ prev_version_label }} first**]({{ prev_version_href }}).
 {% endif %}
 {%- if docsPrefix == "pe/" -%}
 <br>
-[**Prepare**](#prepare-for-upgrading-thingsboard) for upgrading ThingsBoard.
+[**Prepare**](#prepare-for-upgrading-sentient) for upgrading SENTIENT.
 {%- endif -%}
 {% endcapture %}
 
@@ -114,42 +114,42 @@ In order to upgrade to {{ current_version_with_platform | upcase }} you need to 
 {% include templates/install/tb-350-update.md %}
 {% endif %}
 
-#### ThingsBoard{% if docsPrefix == "pe/" %} PE{% endif %} package download
+#### SENTIENT{% if docsPrefix == "pe/" %} PE{% endif %} package download
 
 {% if docsPrefix == "pe/" %}
 ```bash
-wget https://dist.thingsboard.io/thingsboard-{{ current_version_with_platform }}.deb
+wget https://dist.docs.sentient.invenia.in/sentient-{{ current_version_with_platform }}.deb
 ```
 {: .copy-code}
 {% else %}
 ```bash
-wget https://github.com/thingsboard/thingsboard/releases/download/v{{ current_version_with_platform }}/thingsboard-{{ current_version_with_platform }}.deb
+wget https://github.com/sentient/sentient/releases/download/v{{ current_version_with_platform }}/sentient-{{ current_version_with_platform }}.deb
 ```
 {: .copy-code}
 {% endif %}
 
-#### ThingsBoard{% if docsPrefix == "pe/" %} PE{% endif %} service upgrade
+#### SENTIENT{% if docsPrefix == "pe/" %} PE{% endif %} service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
 {% if docsPrefix == "pe/" %}
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-9-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-9-install-sentient-webreport-component).
 {% endif %}
 
 ```bash
-sudo dpkg -i thingsboard-{{ current_version_with_platform }}.deb
+sudo dpkg -i sentient-{{ current_version_with_platform }}.deb
 ```
 {: .copy-code}
 
 {% capture difference %}
 **NOTE:**
 <br>
-Package installer may ask you to merge your ThingsBoard configuration. It is preferred to use merge option to make sure that all your previous parameters will not be overwritten.
+Package installer may ask you to merge your SENTIENT configuration. It is preferred to use merge option to make sure that all your previous parameters will not be overwritten.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -167,7 +167,7 @@ If you are upgrading from version {{ previous_version }}, you must run the scrip
 {% capture update_script %}
 
 ```bash
-sudo /usr/share/thingsboard/bin/install/upgrade.sh{% if manual_version_upgrade == "true" %} --fromVersion={% if manual_version_upgrade_label %}{{ manual_version_upgrade_label }}{% else %}{{ previous_version }}{% endif %}{% endif %}
+sudo /usr/share/sentient/bin/install/upgrade.sh{% if manual_version_upgrade == "true" %} --fromVersion={% if manual_version_upgrade_label %}{{ manual_version_upgrade_label }}{% else %}{{ previous_version }}{% endif %}{% endif %}
 ```
 {: .copy-code}
 {% endcapture %}
@@ -178,7 +178,7 @@ sudo /usr/share/thingsboard/bin/install/upgrade.sh{% if manual_version_upgrade =
 {% elsif update_status == "true" %}
 
 ```bash
-sudo /usr/share/thingsboard/bin/install/upgrade.sh{% if manual_version_upgrade == "true" %} --fromVersion={% if manual_version_upgrade_label %}{{ manual_version_upgrade_label }}{% else %}{{ previous_version }}{% endif %}{% endif %}
+sudo /usr/share/sentient/bin/install/upgrade.sh{% if manual_version_upgrade == "true" %} --fromVersion={% if manual_version_upgrade_label %}{{ manual_version_upgrade_label }}{% else %}{{ previous_version }}{% endif %}{% endif %}
 ```
 {: .copy-code}
 {% endif %}
@@ -188,19 +188,19 @@ sudo /usr/share/thingsboard/bin/install/upgrade.sh{% if manual_version_upgrade =
 {% capture cassandra-370 %}
 **In case Cassandra is installed**, ensure that a proper **JAVA_HOME** parameter is set for *cassandra.in.sh* include file. As of 3.7.0 release, latest stable Cassandra version does not support Java 17 yet.
 
-In case action is required, you can refer to *"you will need to install Java..."* section of [**Cassandra installation guide**](/docs/user-guide/install/ubuntu/?ubuntuThingsboardDatabase=hybrid#cassandra-installation).
+In case action is required, you can refer to *"you will need to install Java..."* section of [**Cassandra installation guide**](/docs/user-guide/install/ubuntu/?ubuntuSentientDatabase=hybrid#cassandra-installation).
 {% endcapture %}
 {% include templates/info-banner.md content=cassandra-370 %}
 {% endif %}
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 {% if current_version == "3.4.2" %}
 {% capture default-jwt %}
-Update the JWT signing key if you use the default one "thingsboardDefaultSigningKey" on production environments. See [JWT security settings](/docs/user-guide/ui/security-settings/#jwt-security-settings) for details.
+Update the JWT signing key if you use the default one "sentientDefaultSigningKey" on production environments. See [JWT security settings](/docs/user-guide/ui/security-settings/#jwt-security-settings) for details.
 {% endcapture %}
 {% include templates/info-banner.md content=default-jwt %}
 {% endif %}

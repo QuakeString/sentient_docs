@@ -1,6 +1,6 @@
 ---
-layout: thingsboard-paas
-title: ThingsBoard Cloud
+layout: sentient-paas
+title: SENTIENT Cloud
 description:
 ---
 
@@ -9,9 +9,9 @@ description:
 </div>
 <section id="intro">
 	<main>
-		<h1 class="intro_title"><a href="what-is-thingsboard-cloud/">ThingsBoard Cloud</a> is a fully managed, scalable and fault-tolerant platform for your IoT applications</h1>
+		<h1 class="intro_title"><a href="what-is-sentient-cloud/">SENTIENT Cloud</a> is a fully managed, scalable and fault-tolerant platform for your IoT applications</h1>
 		<div id="labeling">
-      <p>ThingsBoard Cloud is for everyone who would like to use ThingsBoard Professional Edition but don’t want to host their own instance of the platform.</p>
+      <p>SENTIENT Cloud is for everyone who would like to use SENTIENT Professional Edition but don’t want to host their own instance of the platform.</p>
 		</div>
       <div id="cards" class="row">
         <div class="col-lg-6">
@@ -25,7 +25,7 @@ description:
           <div>
             <img src="/images/paas/advanced-features.svg" alt="Advanced features" width="96" height="104">
             <h2>Advanced features</h2>
-            <p>Platform supports all <a href="/products/thingsboard-pe/">Professional Edition</a> features and advanced <a href="/docs/paas/domains/">domain management</a>.</p>
+            <p>Platform supports all <a href="/products/sentient-pe/">Professional Edition</a> features and advanced <a href="/docs/paas/domains/">domain management</a>.</p>
           </div>
         </div>
         <div class="col-lg-6">
@@ -39,7 +39,7 @@ description:
           <div>
             <img src="/images/paas/high-availability.svg" alt="High availability" width="100" height="106">
             <h2>High availability</h2>
-            <p>ThingsBoard Cloud uses microservices architecture and is deployed in multiple availability zones.</p>
+            <p>SENTIENT Cloud uses microservices architecture and is deployed in multiple availability zones.</p>
           </div>
         </div>
         <div class="col-lg-6">
@@ -168,6 +168,6 @@ description:
 <section id="bottom">
   <main>
     <a id="Products_Cloud_GetItNow" href="/pricing/" class="try-paas gtm_button">Get it now</a><br><br><br><br>
-    <a href="/products/paas/privacy-policy/" >ThingsBoard Cloud Privacy policy</a>
+    <a href="/products/paas/privacy-policy/" >SENTIENT Cloud Privacy policy</a>
   </main>
 </section>

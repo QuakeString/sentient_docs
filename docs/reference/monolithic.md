@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: ThingsBoard Monolithic architecture
-description: ThingsBoard architecture
+title: SENTIENT Monolithic architecture
+description: SENTIENT architecture
 
 ---
 

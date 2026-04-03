@@ -2,8 +2,8 @@
 layout: docwithnav
 assignees:
 - stitenko
-title: Energy Meter monitoring with ThingsBoard IoT Platform
-description: Energy Meter monitoring with ThingsBoard IoT Platform
+title: Energy Meter monitoring with SENTIENT IoT Platform
+description: Energy Meter monitoring with SENTIENT IoT Platform
 hidetoc: "true"
 
 ---
@@ -13,27 +13,27 @@ hidetoc: "true"
 
 ![image](/images/samples/digicom/head1.png)
 
-Digicom devices are designed to interoperate with ThingsBoard IoT platforms by providing the necessary settings and functionalities to be easily integrated, allowing you to create dashboards where data and telemetry can be displayed and monitored.
+Digicom devices are designed to interoperate with SENTIENT IoT platforms by providing the necessary settings and functionalities to be easily integrated, allowing you to create dashboards where data and telemetry can be displayed and monitored.
 
-This tutorial is intended to be an integration guide focused on setting up a professional monitoring application, covering the basic aspects of your Digicom device and the corresponding ThingsBoard configuration using the MQTT protocol integration
+This tutorial is intended to be an integration guide focused on setting up a professional monitoring application, covering the basic aspects of your Digicom device and the corresponding SENTIENT configuration using the MQTT protocol integration
 
 ![image](/images/samples/digicom/scenario1.png)
 
-The described scenario includes your Digicom device being connected to an MQTT broker and ThingsBoard being subscribed to those data streams through an MQTT integration, thus converting the payloads into its message format through a specific Data Converter.
+The described scenario includes your Digicom device being connected to an MQTT broker and SENTIENT being subscribed to those data streams through an MQTT integration, thus converting the payloads into its message format through a specific Data Converter.
 
 Before you start: To make this tutorial work, you need:
 - A Digicom device like DRN500 or DRN3000 Multifunction Routers with firmware release 1.10 or newer
-- A ThingsBoard instance on Cloud or Premise with a publicly reachable address
+- A SENTIENT instance on Cloud or Premise with a publicly reachable address
 
-## ThingsBoard setup
+## SENTIENT setup
 
-First of all, activate your ThingsBoard account, whether it is on Cloud or Premise. You can find detailed instructions on how to install and set up your personal ThingsBoard instance in the More References and Guides chapter. 
+First of all, activate your SENTIENT account, whether it is on Cloud or Premise. You can find detailed instructions on how to install and set up your personal SENTIENT instance in the More References and Guides chapter. 
 
 Log in and get ready for your configuration!
 
 ## Create the MQTT integration
 
-We will start by defining the data ingress section. [MQTT Integration](/docs/{{docsPrefix}}user-guide/integrations/mqtt/){:target="_blank"} allows to connect to external MQTT brokers, subscribe to data streams from those brokers and convert any type of payload from your devices to ThingsBoard message format. Its typical use is whenever your devices are already connected to external MQTT broker or any other IoT platform or connectivity provider with MQTT based back-end.
+We will start by defining the data ingress section. [MQTT Integration](/docs/{{docsPrefix}}user-guide/integrations/mqtt/){:target="_blank"} allows to connect to external MQTT brokers, subscribe to data streams from those brokers and convert any type of payload from your devices to SENTIENT message format. Its typical use is whenever your devices are already connected to external MQTT broker or any other IoT platform or connectivity provider with MQTT based back-end.
 
 Go to the "**Integrations center**" section -> "**Integrations**" page and click "**plus**" button to create new integration. Select type "**MQTT**". Click "**Next**";
 
@@ -43,7 +43,7 @@ Go to the "**Integrations center**" section -> "**Integrations**" page and click
 At the next step, give a name to the [Uplink data converter](/docs/{{docsPrefix}}user-guide/integrations/#uplink-data-converter){:target="_blank"}, select "**TBEL**", delete the whole content of the function Decoder.
 
 {% capture difference %}
-**Notes:** [ThingsBoard Expression Language (TBEL)](/docs/{{docsPrefix}}user-guide/tbel/){:target="_blank"} is an optimized and super-efficient alternative to the original programming language for the UDF, which is JavaScript. TBEL is preferred although JavaScript is and will remain supported.
+**Notes:** [SENTIENT Expression Language (TBEL)](/docs/{{docsPrefix}}user-guide/tbel/){:target="_blank"} is an optimized and super-efficient alternative to the original programming language for the UDF, which is JavaScript. TBEL is preferred although JavaScript is and will remain supported.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -130,7 +130,7 @@ If the connection does not succeed, double-check the address, port, and credenti
 
 ## Check and test the data converter
 
-The [Data converter](/docs/{{docsPrefix}}user-guide/integrations/#data-converters){:target="_blank"} is responsible for elaborating and transforming the data structure coming from the device into the telemetry and attribute data format suitable for ThingsBoard.   
+The [Data converter](/docs/{{docsPrefix}}user-guide/integrations/#data-converters){:target="_blank"} is responsible for elaborating and transforming the data structure coming from the device into the telemetry and attribute data format suitable for SENTIENT.   
 From here, we can simulate and test the conversion process even before receiving real data from the device.
 
 Go to the "**Data converters**" page of the "**Integration center**" section. Click on the "**Modbus Data**" conveter, and then enter edit mode.
@@ -237,7 +237,7 @@ Log in into your device. Enter **Username** and **Password**. Then, click "**Log
 ![image](/images/samples/digicom/log1.png)
 
 <br>
-This guide will use the Modbus functionalities to read from an Electric Energy Meter and transmit that data to ThingsBoard through the MQTT protocol.
+This guide will use the Modbus functionalities to read from an Electric Energy Meter and transmit that data to SENTIENT through the MQTT protocol.
 We will concentrate on the Modbus and MQTT setup sections, assuming that the device is already correctly configured for Internet access and that the Modbus physical connections are correctly carried out.   
 Select "**Modbus**" – "**COM Configuration**" from the drop-down menu.
 
@@ -261,7 +261,7 @@ Set the Modbus Master profile to **enabled**, set **Name**, **ID**, **Connection
 ![image](/images/samples/digicom/Immagine-14.png)
 
 <br>
-Now we will define 4 sample sets of data values (Voltage, Current, Frequency and kVA) be read from the Energy Meter and sent to ThingsBoard as timeseries, for later representation and dashboarding.   
+Now we will define 4 sample sets of data values (Voltage, Current, Frequency and kVA) be read from the Energy Meter and sent to SENTIENT as timeseries, for later representation and dashboarding.   
 Click on "**Requests**" button.
 
 ![image](/images/samples/digicom/slave1.png)
@@ -310,12 +310,12 @@ Click on "**Reboot**" and **confirm**.
 
 ![image](/images/samples/digicom/reb2.png)
 
-Wait for the device to become operational again, then go back to ThingsBoard account and check the device appearing in the "**Devices**" page.
+Wait for the device to become operational again, then go back to SENTIENT account and check the device appearing in the "**Devices**" page.
 
 ## Check the device
 
 Go to the "**Devices**" page of the "**Entities**" section from menu bar on the left.
-A new [device](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"} should appear as soon as it has published the first data to the external MQTT broker on which ThingsBoard is connected too.
+A new [device](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"} should appear as soon as it has published the first data to the external MQTT broker on which SENTIENT is connected too.
 
 ![image](/images/samples/digicom/check-device-1.png)
 
@@ -334,7 +334,7 @@ So, with those data in the system we can now proceed and create a simple Dashboa
 
 ## Create a Dashboard
 
-ThingsBoard offers a powerful feature – the ability to create and customize interactive visualizations, also known as [Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"}. These dashboards are instruments for monitoring and managing your data and devices efficiently.
+SENTIENT offers a powerful feature – the ability to create and customize interactive visualizations, also known as [Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"}. These dashboards are instruments for monitoring and managing your data and devices efficiently.
 
 Navigate to the "**Dashboards**" page through the main menu on the left of the screen. Click the "**+**" sign in the upper right corner of the screen, and select "**Create new dashboard**" from the drop-down menu.
 In the opened dialog, it is necessary to enter a dashboard title, description is optional. Click "**Add**".
@@ -381,7 +381,7 @@ Once you have completed the configuration, click "**Save**" to save the dashboar
 
 ## More references and guides
 
-You may find more online documentation and guides on how to work with ThingsBoard, create [customers](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}, [users](/docs/{{docsPrefix}}user-guide/ui/users/){:target="_blank"}, and [assets](/docs/{{docsPrefix}}user-guide/ui/assets/){:target="_blank"}, and make your [dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} even more powerful and professional!
+You may find more online documentation and guides on how to work with SENTIENT, create [customers](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}, [users](/docs/{{docsPrefix}}user-guide/ui/users/){:target="_blank"}, and [assets](/docs/{{docsPrefix}}user-guide/ui/assets/){:target="_blank"}, and make your [dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} even more powerful and professional!
 
 ## Next steps
 

@@ -1,33 +1,33 @@
 * TOC
 {:toc}
 
-TBMQ HTTP Integration provides a simple and efficient way to forward MQTT messages from devices to an external system using the HTTP protocol. 
-It acts as a **bridge** between TBMQ and external applications, ensuring seamless and reliable data exchange. 
+ST-RMQTT HTTP Integration provides a simple and efficient way to forward MQTT messages from devices to an external system using the HTTP protocol. 
+It acts as a **bridge** between ST-RMQTT and external applications, ensuring seamless and reliable data exchange. 
 
 ## Data Flow Overview
 
-TBMQ HTTP Integration enables forwarding MQTT messages to an external HTTP service:  
+ST-RMQTT HTTP Integration enables forwarding MQTT messages to an external HTTP service:  
 
 1. **Device (client) publishes an MQTT message** to a topic that matches the Integration's **Topic Filters**.  
-2. **TBMQ broker receives the message** and forwards to TBMQ Integration Executor.  
-3. **TBMQ Integration Executor processes the message**, formats it as an HTTP request, and forwards it to the external service.  
+2. **ST-RMQTT broker receives the message** and forwards to ST-RMQTT Integration Executor.  
+3. **ST-RMQTT Integration Executor processes the message**, formats it as an HTTP request, and forwards it to the external service.  
 4. **External service receives the request** and processes the data accordingly.  
 
-![image](/images/mqtt-broker/integrations/tbmq-http-integration.png)
+![image](/images/mqtt-broker/integrations/st-rmqtt-http-integration.png)
 
 ## Prerequisites
 
 Before setting up the integration, ensure the following:
 
-- A running **[TBMQ](/docs/{{docsPrefix}}mqtt-broker/install/installation-options/)** instance.  
-- An external service ready to receive HTTP requests (e.g., **[ThingsBoard Cloud](/docs/paas/getting-started-guides/what-is-thingsboard-cloud/)**).  
-- A client capable of publishing MQTT messages (e.g., **[TBMQ WebSocket Client](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/websocket-client/)**).  
+- A running **[ST-RMQTT](/docs/{{docsPrefix}}mqtt-broker/install/installation-options/)** instance.  
+- An external service ready to receive HTTP requests (e.g., **[SENTIENT Cloud](/docs/paas/getting-started-guides/what-is-sentient-cloud/)**).  
+- A client capable of publishing MQTT messages (e.g., **[ST-RMQTT WebSocket Client](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/websocket-client/)**).  
 
-## Create ThingsBoard Integration
+## Create SENTIENT Integration
 
-In this tutorial, we use **ThingsBoard** as the external service receiving HTTP requests from TBMQ. However, any other HTTP-compatible service can be used.
+In this tutorial, we use **SENTIENT** as the external service receiving HTTP requests from ST-RMQTT. However, any other HTTP-compatible service can be used.
 
-Follow the official **[ThingsBoard HTTP Integration Guide](/docs/paas/user-guide/integrations/http/)** to create an integration on ThingsBoard Cloud.
+Follow the official **[SENTIENT HTTP Integration Guide](/docs/paas/user-guide/integrations/http/)** to create an integration on SENTIENT Cloud.
 
 Once the HTTP Integration is created:
 
@@ -36,12 +36,12 @@ Once the HTTP Integration is created:
 
 {% include images-gallery.html imageCollection="tb-endpoint-url" %}
 
-## Create TBMQ HTTP Integration
+## Create ST-RMQTT HTTP Integration
 
 1. Go to the **Integrations** page and click the "+" button to create a new integration.
 2. Select **HTTP** as the integration type and click **Next**.
-3. On the **Topic Filters** page click **Next** to subscribe to the default topic `tbmq/#`.
-4. In the **Configuration** step, paste the **Endpoint URL** from the ThingsBoard Integration.
+3. On the **Topic Filters** page click **Next** to subscribe to the default topic `st-rmqtt/#`.
+4. In the **Configuration** step, paste the **Endpoint URL** from the SENTIENT Integration.
 5. Open **Advanced settings** and set **Payload content type** to `JSON`.
 6. Click **Add** to save the integration.
 
@@ -83,7 +83,7 @@ To send a message, follow these steps:
 
 1. Navigate to the **WebSocket Client** page.
 2. Select 'WebSocket Default Connection' or any other available working connection, then click **Connect**. Make sure the 'Connection status' is shown as `Connected`.
-3. Set the 'Topic' field to `tbmq/http-integration` to match the Integration's 'Topic Filter' `tbmq/#`.
+3. Set the 'Topic' field to `st-rmqtt/http-integration` to match the Integration's 'Topic Filter' `st-rmqtt/#`.
 4. Click the **Send** icon to publish the message. 
 5. If successfull, the message should appear in the 'Messages' table.
 
@@ -91,7 +91,7 @@ To send a message, follow these steps:
 
 Once the message is published:
 
-1. In the **ThingsBoard Cloud** open the HTTP Integration details.
+1. In the **SENTIENT Cloud** open the HTTP Integration details.
 2. Go to the **Events** tab.
 3. If the setup is correct, you should see an event with the status **'OK'** and a message payload similar to:
 
@@ -100,13 +100,13 @@ Once the message is published:
     "payload": {
         "temperature": 25
     },
-    "topicName": "tbmq/http-integration",
-    "clientId": "tbmq_7QUvZzow",
+    "topicName": "st-rmqtt/http-integration",
+    "clientId": "st-rmqtt_7QUvZzow",
     "eventType": "PUBLISH_MSG",
     "qos": 1,
     "retain": false,
-    "tbmqIeNode": "tbmq_ie_node",
-    "tbmqNode": "tbmq_node",
+    "st-rmqttIeNode": "st-rmqtt_ie_node",
+    "st-rmqttNode": "st-rmqtt_node",
     "ts": 1742553324248,
     "props": {},
     "metadata": {
@@ -123,8 +123,8 @@ Message description:
 - **eventType**: Type of MQTT event, here it's a published message (the only supported type for now).
 - **qos**: Quality of Service level used for the incoming message.
 - **retain**: Indicates if the message is a retained MQTT message.
-- **tbmqIeNode**: Node ID of the Integration Executor service that handled the message.
-- **tbmqNode**: Node ID of the TBMQ broker that received the message.
+- **st-rmqttIeNode**: Node ID of the Integration Executor service that handled the message.
+- **st-rmqttNode**: Node ID of the ST-RMQTT broker that received the message.
 - **ts**: Timestamp (in milliseconds) when the message was received.
 - **props**: MQTT 5.0 user properties or other MQTT properties.
 - **metadata**: Additional metadata added from integration configuration, e.g., the name of the integration that handled the message, added by default.

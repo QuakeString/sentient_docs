@@ -2,6 +2,6 @@ With the knowledge in this guide, you can easily connect your {{deviceName}} and
 
 You can find some LoRaWAN devices in our device library and connect them or any other devices through a gateway on a network server.  
 
-After connecting the devices to the gateway, you will be able to see and process the data coming from the devices on the ThingsBoard.  
+After connecting the devices to the gateway, you will be able to see and process the data coming from the devices on the SENTIENT.  
 
 Explore the platform [documentation](/docs/{{page.docsPrefix}}){: target="_blank"} to learn more about key concepts and features. 

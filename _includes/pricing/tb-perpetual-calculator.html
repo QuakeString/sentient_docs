@@ -15,7 +15,7 @@
                             <label for="perp-devices" class="label">
                                 Number of Devices
                                 <span class="tooltip"><img src="/images/pricing/info-icon.svg" alt="Hint icon">
-                                    <span class="tooltip-text">The total number of IoT devices that will connect to ThingsBoard</span>
+                                    <span class="tooltip-text">The total number of IoT devices that will connect to SENTIENT</span>
                                 </span>
                             </label>
                             <input id="perp-devices" type="number" value="1000" min="1000" class="input input-right">
@@ -98,17 +98,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="addon-card" id="perpTrendzCard">
+                            <div class="addon-card" id="perpSENTIENT ANALYTICSCard">
                                 <div class="addon-header">
                                     <span class="addon-title">
-                                        Trendz Analytics
+                                        SENTIENT ANALYTICS
                                         <span class="tooltip">
                                             <img src="/images/pricing/info-icon.svg" alt="Hint icon">
                                             <span class="tooltip-text">Advanced analytics and visualization for your IoT data</span>
                                         </span>
                                     </span>
                                     <label class="toggle-switch">
-                                        <input type="checkbox" id="perpTrendzToggle">
+                                        <input type="checkbox" id="perpSENTIENT ANALYTICSToggle">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -120,7 +120,7 @@
                                         Offline Mode
                                         <span class="tooltip">
                                             <img src="/images/pricing/info-icon.svg" alt="Hint icon">
-                                            <span class="tooltip-text">Operate your ThingsBoard instance without internet connectivity</span>
+                                            <span class="tooltip-text">Operate your SENTIENT instance without internet connectivity</span>
                                         </span>
                                     </span>
                                     <label class="toggle-switch">
@@ -171,7 +171,7 @@
         devInstances: 0,
         addons: {
             edge: { enabled: true, count: 2 },
-            trendz: { enabled: false },
+            sentient-analytics: { enabled: false },
             offline: { enabled: false }
         }
     };
@@ -201,12 +201,12 @@
         },
         toggles: {
             edge: document.getElementById('perpEdgeToggle'),
-            trendz: document.getElementById('perpTrendzToggle'),
+            sentient-analytics: document.getElementById('perpSENTIENT ANALYTICSToggle'),
             offline: document.getElementById('perpOfflineToggle')
         },
         cards: {
             edge: document.getElementById('perpEdgeCard'),
-            trendz: document.getElementById('perpTrendzCard'),
+            sentient-analytics: document.getElementById('perpSENTIENT ANALYTICSCard'),
             offline: document.getElementById('perpOfflineCard')
         }
     };
@@ -267,8 +267,8 @@
             tbSmPUi.desc.edge.textContent = 'Process data where it is collected.';
         }
 
-        tbSmPUi.cards.trendz.classList.toggle('active', tbSmPState.addons.trendz.enabled);
-        tbSmPUi.toggles.trendz.checked = tbSmPState.addons.trendz.enabled;
+        tbSmPUi.cards.sentient-analytics.classList.toggle('active', tbSmPState.addons.sentient-analytics.enabled);
+        tbSmPUi.toggles.sentient-analytics.checked = tbSmPState.addons.sentient-analytics.enabled;
 
         tbSmPUi.cards.offline.classList.toggle('active', tbSmPState.addons.offline.enabled);
         tbSmPUi.toggles.offline.checked = tbSmPState.addons.offline.enabled;
@@ -342,15 +342,15 @@
             };
         }
 
-        if (tbSmPState.addons.trendz.enabled) {
-            const trendzExtraCost = extraDevices > 0 ? extraDevices * plan.trendzExtraDevicePrice : 0;
-            const trendzTotal = plan.trendzMonthPrice + trendzExtraCost;
-            totalPrice += trendzTotal;
-            breakdown.trendz = {
-                base: plan.trendzMonthPrice,
+        if (tbSmPState.addons.sentient-analytics.enabled) {
+            const sentient-analyticsExtraCost = extraDevices > 0 ? extraDevices * plan.sentient-analyticsExtraDevicePrice : 0;
+            const sentient-analyticsTotal = plan.sentient-analyticsMonthPrice + sentient-analyticsExtraCost;
+            totalPrice += sentient-analyticsTotal;
+            breakdown.sentient-analytics = {
+                base: plan.sentient-analyticsMonthPrice,
                 extraDevices: extraDevices,
-                extraCost: trendzExtraCost,
-                cost: trendzTotal
+                extraCost: sentient-analyticsExtraCost,
+                cost: sentient-analyticsTotal
             };
         }
 
@@ -418,7 +418,7 @@
         if (extraProdCost) tooltips.push(`${formatCurrency(extraProdCost)} (extra prod)`);
         if (devCost) tooltips.push(`${formatCurrency(devCost)} (dev)`);
         if (breakdown.edge) tooltips.push(`${formatCurrency(breakdown.edge.cost)} (Edge)`);
-        if (breakdown.trendz) tooltips.push(`${formatCurrency(breakdown.trendz.cost)} (Trendz)`);
+        if (breakdown.sentient-analytics) tooltips.push(`${formatCurrency(breakdown.sentient-analytics.cost)} (SENTIENT ANALYTICS)`);
         if (breakdown.offline) tooltips.push(`${formatCurrency(breakdown.offline.cost)} (Offline)`);
 
         tbSmPUi.results.innerHTML = `
@@ -487,17 +487,17 @@
             html += addButton('edge', 'Edge Computing', plan.edgeMonthPrice);
         }
 
-        if (tbSmPState.addons.trendz.enabled && breakdown.trendz) {
-            const trendz = breakdown.trendz;
-            const hasExtra = trendz.extraDevices > 0;
+        if (tbSmPState.addons.sentient-analytics.enabled && breakdown.sentient-analytics) {
+            const sentient-analytics = breakdown.sentient-analytics;
+            const hasExtra = sentient-analytics.extraDevices > 0;
             const content = hasExtra ? `<div class="section-content">
-                ${tbSmPCreateItem('Add-on Base Price', formatCurrency(trendz.base))}
-                ${tbSmPCreateItem('Extra Devices', trendz.extraDevices)}
-                ${tbSmPCreateItem('Extra Devices Cost', formatCurrency(trendz.extraCost))}
+                ${tbSmPCreateItem('Add-on Base Price', formatCurrency(sentient-analytics.base))}
+                ${tbSmPCreateItem('Extra Devices', sentient-analytics.extraDevices)}
+                ${tbSmPCreateItem('Extra Devices Cost', formatCurrency(sentient-analytics.extraCost))}
             </div>` : '';
-            html += section('trendzAnalytics', 'Trendz Analytics', `<span class="section-value">${formatCurrency(trendz.cost)}<span class="tooltip">${infoIcon}<span class="tooltip-text">Trendz Analytics add-on</span></span></span>`, hasExtra ? 'expandable' : '', content);
+            html += section('sentient-analyticsAnalytics', 'SENTIENT ANALYTICS', `<span class="section-value">${formatCurrency(sentient-analytics.cost)}<span class="tooltip">${infoIcon}<span class="tooltip-text">SENTIENT ANALYTICS add-on</span></span></span>`, hasExtra ? 'expandable' : '', content);
         } else {
-            html += addButton('trendz', 'Trendz Analytics', plan.trendzMonthPrice);
+            html += addButton('sentient-analytics', 'SENTIENT ANALYTICS', plan.sentient-analyticsMonthPrice);
         }
 
         if (tbSmPState.addons.offline.enabled && breakdown.offline) {
@@ -545,7 +545,7 @@
         if (Object.keys(breakdown).length) {
             msg += '\nAdd-ons:\n';
             if (breakdown.edge) msg += `- Edge: ${formatCurrency(breakdown.edge.cost)} (${breakdown.edge.total} instances)\n`;
-            if (breakdown.trendz) msg += `- Trendz: ${formatCurrency(breakdown.trendz.cost)}\n`;
+            if (breakdown.sentient-analytics) msg += `- SENTIENT ANALYTICS: ${formatCurrency(breakdown.sentient-analytics.cost)}\n`;
             if (breakdown.offline) msg += `- Offline Mode: ${formatCurrency(breakdown.offline.cost)}\n`;
         }
         tbSmPState.clipboardMessage = msg + `\nTotal: ${formatCurrency(totalPrice)}`;
@@ -561,7 +561,7 @@
                 perp_calculator_dev: tbSmPState.devInstances,
                 perp_calculator_addon_edge: tbSmPState.addons.edge.enabled,
                 perp_calculator_addon_edge_count: tbSmPState.addons.edge.count,
-                perp_calculator_addon_trendz: tbSmPState.addons.trendz.enabled,
+                perp_calculator_addon_sentient-analytics: tbSmPState.addons.sentient-analytics.enabled,
                 perp_calculator_addon_offline: tbSmPState.addons.offline.enabled
             });
         }, 3000);
@@ -591,7 +591,7 @@
                 devInstances: 0,
                 addons: {
                     edge: { enabled: true, count: 2 },
-                    trendz: { enabled: false },
+                    sentient-analytics: { enabled: false },
                     offline: { enabled: false }
                 }
             };
@@ -601,7 +601,7 @@
             tbSmPUi.inputs.dev.value = 0;
             tbSmPUi.inputs.edge.value = 2;
             tbSmPUi.toggles.edge.checked = true;
-            tbSmPUi.toggles.trendz.checked = false;
+            tbSmPUi.toggles.sentient-analytics.checked = false;
             tbSmPUi.toggles.offline.checked = false;
             sliderProgress(tbSmPUi.inputs.slider);
             tbSmPCalculate();
@@ -666,7 +666,7 @@
             tbSmPSendGTM();
         });
 
-        ['edge', 'trendz', 'offline'].forEach(key => {
+        ['edge', 'sentient-analytics', 'offline'].forEach(key => {
             tbSmPUi.toggles[key].addEventListener('change', e => tbSmPToggleAddon(key, e.target.checked));
         });
 

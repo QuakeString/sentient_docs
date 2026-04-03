@@ -2,14 +2,14 @@
 layout: docwithnav
 assignees:
 - ashvayka
-title: Getting Started with ThingsBoard
-description: Getting started with ThingsBoard open-source IoT platform and simulated IoT devices
+title: Getting Started with SENTIENT
+description: Getting started with SENTIENT open-source IoT platform and simulated IoT devices
 redirect_from: "/docs/samples/"
 
 step1:
     0:
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-1-ce.png 
-        title: 'Log in to ThingsBoard and navigate to the "Devices" page of the "Entities" section.'
+        title: 'Log in to SENTIENT and navigate to the "Devices" page of the "Entities" section.'
     1:
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-2-ce.png 
         title: 'Click on the "+" icon in the top right corner of the table and select "Add new device" from drop-down menu.'
@@ -175,7 +175,7 @@ step5:
 notification-center:
     0:
         image: /images/helloworld/getting-started-ce/notification-center-getting-started-1-ce.png
-        title: 'The ThingsBoard Notification center allows sending personalized notifications to end-users. These can include notifications about device activity, changes in temperature within your environment, or other events detected in your IoT ecosystem.'
+        title: 'The SENTIENT Notification center allows sending personalized notifications to end-users. These can include notifications about device activity, changes in temperature within your environment, or other events detected in your IoT ecosystem.'
 
 step71:
     0:
@@ -304,10 +304,10 @@ mosquitto-windows:
 
 {% include get-hosts-name.html %}
 
-This guide demonstrates basic usage of popular ThingsBoard features. You will learn how to:
+This guide demonstrates basic usage of popular SENTIENT features. You will learn how to:
 
-- Connect devices to ThingsBoard
-- Push data from devices to ThingsBoard
+- Connect devices to SENTIENT
+- Push data from devices to SENTIENT
 - Build real-time dashboards
 - Create a Customer and assign the dashboard with them.
 - Define thresholds and trigger alarms
@@ -319,16 +319,16 @@ For simplicity, we&#39;ll visualize data from a temperature sensor.
 
 ## Prerequisites
 
-You will need a ThingsBoard server up and running:
+You will need a SENTIENT server up and running:
 
-* **ThingsBoard Cloud:** The fastest way to start with zero setup. Click for the [North America](/docs/paas/getting-started-guides/helloworld/) or [Europe](/docs/paas/eu/getting-started-guides/helloworld/) region (these links lead to a separate "Getting Started" guide for our managed service).
-* **Self-Managed Installation:** Alternatively, you can manually install ThingsBoard using our guides for [Windows (Docker)](/docs/user-guide/install/docker-windows/){:target="_blank"} or [Linux and MacOS (Docker)](/docs/user-guide/install/docker/){:target="_blank"}.
+* **SENTIENT Cloud:** The fastest way to start with zero setup. Click for the [North America](/docs/paas/getting-started-guides/helloworld/) or [Europe](/docs/paas/eu/getting-started-guides/helloworld/) region (these links lead to a separate "Getting Started" guide for our managed service).
+* **Self-Managed Installation:** Alternatively, you can manually install SENTIENT using our guides for [Windows (Docker)](/docs/user-guide/install/docker-windows/){:target="_blank"} or [Linux and MacOS (Docker)](/docs/user-guide/install/docker/){:target="_blank"}.
 
 <hr>
 
 ## Step 1. Provision device
 
-Let&#39;s add a device that sends temperature data to ThingsBoard:
+Let&#39;s add a device that sends temperature data to SENTIENT:
 
 {% include images-gallery.html imageCollection="step1" showListImageTitles="true" %}
 
@@ -347,18 +347,18 @@ You will also receive a notification upon adding devices. Click the bell icon (t
 
 ## Step 2. Connect device
 
-Let&#39;s verify your device&#39;s connection to ThingsBoard:
+Let&#39;s verify your device&#39;s connection to SENTIENT:
 
 {% include images-gallery.html imageCollection="step2" showListImageTitles="true" %}
 
 <br>
-Explore [ThingsBoard API reference](/docs/{{docsPrefix}}api){:target="_blank"}. Here you will find more detailed information about all supported protocols for connecting devices.
+Explore [SENTIENT API reference](/docs/{{docsPrefix}}api){:target="_blank"}. Here you will find more detailed information about all supported protocols for connecting devices.
 
 <hr>
 
 ## Step 3. Create dashboard
 
-A dashboard in ThingsBoard allows users to visualize and monitor data collected from IoT devices.
+A dashboard in SENTIENT allows users to visualize and monitor data collected from IoT devices.
 
 Let&#39;s create a dashboard and add three widgets to it in order to display a list of entities and their latest values, as well as show alarm signals related to the specified entity.
 
@@ -503,22 +503,22 @@ Now that the alarm rule is active (see [Step 4](#step-4-configure-alarm-rules)),
 
 ## Step 6. Alarm notifications
 
-The ThingsBoard [Notification center](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"} allows personalized notifications to end-users regarding device activities, environmental changes, or events in your IoT ecosystem, and more. 
+The SENTIENT [Notification center](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"} allows personalized notifications to end-users regarding device activities, environmental changes, or events in your IoT ecosystem, and more. 
 Notifications can be delivered via email, SMS, or integrated third-party systems.
 
 {% include images-gallery.html imageCollection="notification-center" %}
 
-Additionally, [ThingsBoard Mobile Application](/docs/mobile/){:target="_blank"} provides instant push notifications directly to your smartphone, ensuring you&#39;re always informed of critical events wherever you are.
+Additionally, [SENTIENT Mobile Application](/docs/mobile/){:target="_blank"} provides instant push notifications directly to your smartphone, ensuring you&#39;re always informed of critical events wherever you are.
 
-Follow [this guide](/docs/mobile/getting-started/){:target="_blank"} to install the ThingsBoard mobile app and set up notifications. 
+Follow [this guide](/docs/mobile/getting-started/){:target="_blank"} to install the SENTIENT mobile app and set up notifications. 
 
-Enjoy exploring ThingsBoard!
+Enjoy exploring SENTIENT!
 
 <hr>
 
 ## Step 7. Assign device and dashboard to customer
 
-One of the most important ThingsBoard features is the ability to assign Dashboards to Customers. 
+One of the most important SENTIENT features is the ability to assign Dashboards to Customers. 
 You may assign different devices to different customers. Then, you may create a Dashboard(s) and assign it to multiple customers.
 Each customer user will see his own devices and will not be able to see devices or any other data that belongs to a different customer.
 
@@ -560,7 +560,7 @@ You may optionally configure the dashboard to appear just after user logs in to 
 
 ### Step 7.5 Activate customer user
 
-Finally, log in to ThingsBoard as a customer user.
+Finally, log in to SENTIENT as a customer user.
 
 {% include images-gallery.html imageCollection="step75" showListImageTitles="true" %}
 
@@ -574,5 +574,5 @@ Finally, log in to ThingsBoard as a customer user.
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word. 
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word. 
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

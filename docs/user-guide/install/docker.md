@@ -2,8 +2,8 @@
 layout: docwithnav
 assignees:
 - ashvayka
-title: Installing ThingsBoard using Docker (Linux or Mac OS)
-description: Installing ThingsBoard IoT Platform using Docker (Linux or Mac OS)
+title: Installing SENTIENT using Docker (Linux or Mac OS)
+description: Installing SENTIENT IoT Platform using Docker (Linux or Mac OS)
 
 ---
 
@@ -12,7 +12,7 @@ description: Installing ThingsBoard IoT Platform using Docker (Linux or Mac OS)
 * TOC
 {:toc}
 
-This guide will help you to install and start ThingsBoard using Docker on Linux or MacOS.
+This guide will help you to install and start SENTIENT using Docker on Linux or MacOS.
 
 
 ## Prerequisites
@@ -25,7 +25,7 @@ This guide will help you to install and start ThingsBoard using Docker on Linux 
 
 Running this image requires a server with at least 4GB of RAM (8GB is recommended) and minimum load (few messages per second).
 
-## Choose ThingsBoard queue service
+## Choose SENTIENT queue service
 
 {% include templates/install/install-queue.md %}
 
@@ -34,7 +34,7 @@ In Memory <small>(built-in and default)</small>%,%inmemory%,%templates/install/d
 Kafka <small>(recommended for on-prem, production installations)</small>%,%kafka%,%templates/install/docker-queue-kafka.md%br%
 Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confluent-cloud%,%templates/install/docker-queue-confluent-cloud.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="ubuntuThingsboardQueue" toggle-spec=contenttogglespecqueue %} 
+{% include content-toggle.liquid content-toggle-id="ubuntuSentientQueue" toggle-spec=contenttogglespecqueue %} 
 
 Where: 
 
@@ -44,17 +44,17 @@ Where:
 - `7070:7070`            - connect local port 7070 to exposed internal Edge RPC port 7070
 - `5683-5688:5683-5688/udp`            - connect local UDP ports 5683-5688 to exposed internal COAP and LwM2M ports
 - `tb-postgres-data` - name of the docker volume that stores the PostgreSQL's data
-- `thingsboard-ce`             - friendly local name of the ThingsBoard container
-- `restart: always`        - automatically start ThingsBoard in case of system reboot and restart in case of failure.
-- `image: "thingsboard/tb-node:{{ site.release.ce_full_ver }}"`          - ThingsBoard docker image and version.
+- `sentient-ce`             - friendly local name of the SENTIENT container
+- `restart: always`        - automatically start SENTIENT in case of system reboot and restart in case of failure.
+- `image: "sentient/tb-node:{{ site.release.ce_full_ver }}"`          - SENTIENT docker image and version.
 
 
 ## Initialize database schema & system assets
 
-Before you start ThingsBoard, initialize the database schema and load built-in assets by running:   
+Before you start SENTIENT, initialize the database schema and load built-in assets by running:   
 
 ```bash
-docker compose run --rm -e INSTALL_TB=true -e LOAD_DEMO=true thingsboard-ce
+docker compose run --rm -e INSTALL_TB=true -e LOAD_DEMO=true sentient-ce
 ```
 
 Environment variables:
@@ -64,18 +64,18 @@ Environment variables:
 
 ## Start the platform & tail logs
 
-Bring up all containers in detached mode, then follow the ThingsBoard logs:
+Bring up all containers in detached mode, then follow the SENTIENT logs:
 
 ```bash
-docker compose up -d && docker compose logs -f thingsboard-ce
+docker compose up -d && docker compose logs -f sentient-ce
 ```
 
-After executing this command you can open `http://{your-host-ip}:8080` in you browser (for ex. `http://localhost:8080`). You should see ThingsBoard login page.
+After executing this command you can open `http://{your-host-ip}:8080` in you browser (for ex. `http://localhost:8080`). You should see SENTIENT login page.
 Use the following default credentials:
 
-- **System Administrator**: sysadmin@thingsboard.org / sysadmin
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
-- **Customer User**: customer@thingsboard.org / customer
+- **System Administrator**: sysadmin@sentient.org / sysadmin
+- **Tenant Administrator**: tenant@sentient.org / tenant
+- **Customer User**: customer@sentient.org / customer
     
 You can always change passwords for each account in account profile page.
 
@@ -83,10 +83,10 @@ You can safely detach from the log stream (e.g. Ctrl+C); containers will continu
 
 ## Inspect logs & control container lifecycle
 
-If something goes wrong, you can stream the ThingsBoard container logs in real time:
+If something goes wrong, you can stream the SENTIENT container logs in real time:
 
 ```bash
-docker compose logs -f thingsboard-ce
+docker compose logs -f sentient-ce
 ```
 
 Bring down every container defined in your Compose file:
@@ -103,9 +103,9 @@ docker compose up -d
 
 ## Post-installation steps
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
-{% include templates/install/upgrade-thingsboard.md %}
+{% include templates/install/upgrade-sentient.md %}
 
 ## Troubleshooting
 

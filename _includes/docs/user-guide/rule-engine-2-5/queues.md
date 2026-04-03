@@ -3,10 +3,10 @@
 
 ## Introduction
 
-ThingsBoard platform uses queues to guarantee the message processing, handle occasional spikes, and keep the system up and running on extreme loads. 
+SENTIENT platform uses queues to guarantee the message processing, handle occasional spikes, and keep the system up and running on extreme loads. 
 You can review the architecture to find our [more about queues](/docs/{{docsPrefix}}reference/#message-queues-are-awesome).
 
-ThingsBoard supports two types of message queues: **Kafka** and **In-Memory**.
+SENTIENT supports two types of message queues: **Kafka** and **In-Memory**.
 - **Kafka** is a widely used, distributed, and durable message queue system designed to handle large volumes of data. It is well-suited for production environments where high throughput, fault tolerance, and scalability are critical.
 - **In-Memory** queue is a lightweight, fast, and simple message queue implementation designed for smaller-scale or development environments. It stores messages in memory rather than on disk, prioritizing speed over persistence.
 
@@ -21,12 +21,12 @@ The latter automatically acknowledges corresponding messages in the targeted top
 Only a **system administrator** user can configure queues. After
 configuration, new changes will apply immediately.
 There are two configuration profiles for queues: a **Common queue configuration** and a **Queue configuration for isolated tenants**.
-To know more about isolated tenants please read a [tenant profile](/docs/{{docsPrefix}}user-guide/tenant-profiles/#processing-in-isolated-thingsboard-rule-engine-queues) documentation.
+To know more about isolated tenants please read a [tenant profile](/docs/{{docsPrefix}}user-guide/tenant-profiles/#processing-in-isolated-sentient-rule-engine-queues) documentation.
 
 ### Common queue configuration
 
 Out of the box, all messages (like telemetry, connectivity or lifecycle events, etc.) are pushed to **Main** or another topic chosen as default.
-ThingsBoard puts messages for all Tenants to a common topics when isolated processing is disabled (default). Pros: this approach is more
+SENTIENT puts messages for all Tenants to a common topics when isolated processing is disabled (default). Pros: this approach is more
 cost-efficient; no need to manage extra VMs or containers. Cons: a single Rule Engine service is shared between all Tenants.
 
 To create a new queue follow these steps:

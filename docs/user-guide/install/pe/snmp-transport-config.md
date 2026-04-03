@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - vparomskiy
 title: SNMP transport parameters
-description: ThingsBoard configuration parameters and environment variables
+description: SENTIENT configuration parameters and environment variables
 
 ---
 

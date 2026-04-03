@@ -31,12 +31,12 @@ changes-from-edge-to-server:
         title: 'Log in to your <b>Edge Professional Edition</b> instance and go to the <b>Dashboards</b> section. Here you can create, configure, or make any changes to your <b>Dashboards</b>.'
     1:
         image: /images/pe/edge/user-guide/dashboards/7-dashboards-from-edge-to-cloud.png
-        title: 'Log in to your <b>ThingsBoard Server</b> and go to the <b>“Dashboards”</b> section to see that the changes have been applied to the <b>ThingsBoard Server</b>. Make sure you are connected to the internet.'
+        title: 'Log in to your <b>SENTIENT Server</b> and go to the <b>“Dashboards”</b> section to see that the changes have been applied to the <b>SENTIENT Server</b>. Make sure you are connected to the internet.'
 
 assign-customer:
     0:
         image: /images/pe/edge/user-guide/dashboards/11-edge-dashboards.png
-        title: 'Log in to your <b>ThingsBoard Edge</b> instance and go to the <b>“Dashboards”</b> section. Then, click the <b>"Dashboard details"</b> button.'
+        title: 'Log in to your <b>SENTIENT GATEWAY</b> instance and go to the <b>“Dashboards”</b> section. Then, click the <b>"Dashboard details"</b> button.'
     1:
         image: /images/pe/edge/user-guide/dashboards/12-manage-owner-groups.png
         title: 'Click the <b>"Manage owner and groups"</b> button on the Dashboard details page'

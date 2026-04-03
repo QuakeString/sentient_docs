@@ -1,4 +1,4 @@
-After configuring the password, connect to the database to create thingsboard DB:
+After configuring the password, connect to the database to create sentient DB:
 
 ```bash
 psql -U postgres -d postgres -h 127.0.0.1 -W
@@ -8,7 +8,7 @@ psql -U postgres -d postgres -h 127.0.0.1 -W
 Execute create database statement
 
 ```bash
-CREATE DATABASE thingsboard;
+CREATE DATABASE sentient;
 ```
 {: .copy-code}
 

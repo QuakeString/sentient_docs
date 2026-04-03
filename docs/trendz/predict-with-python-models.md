@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Custom python models
@@ -10,11 +10,11 @@ description: Custom python models description
 * TOC
 {:toc}
 
-You can add new prediction models into Trendz by writing a custom Python code. This code will be executed on the server side and will have access to the whole input dataset that includes required telemetries and attributes data. 
+You can add new prediction models into SENTIENT ANALYTICS by writing a custom Python code. This code will be executed on the server side and will have access to the whole input dataset that includes required telemetries and attributes data. 
 You can import required Python libraries and use them in your code to forecast required metric based on input data.
 
 ## Multivariable python model example
-This template demonstrates how to create and implement a custom multivariable prediction model in Trendz using Python. Custom models allow you to extend the platform's built-in prediction capabilities by leveraging specific algorithms, incorporating additional variables, or fine-tuning parameters to meet unique business needs.
+This template demonstrates how to create and implement a custom multivariable prediction model in SENTIENT ANALYTICS using Python. Custom models allow you to extend the platform's built-in prediction capabilities by leveraging specific algorithms, incorporating additional variables, or fine-tuning parameters to meet unique business needs.
 
 ```python
 #####################################################

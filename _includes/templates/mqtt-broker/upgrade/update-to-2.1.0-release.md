@@ -1,4 +1,4 @@
-TBMQ v2.1.0 introduces enhancements, including a new Integration Executor microservice and bumped versions for third-party services.
+ST-RMQTT v2.1.0 introduces enhancements, including a new Integration Executor microservice and bumped versions for third-party services.
 
 #### Add Integration Executor microservice
 
@@ -11,45 +11,45 @@ Add the service definition and volume to your existing docker-compose.yml file
 </summary>
 
 ```yaml
-  tbmq-integration-executor:
+  st-rmqtt-integration-executor:
     restart: always
-    image: "thingsboard/tbmq-integration-executor:2.1.0"
+    image: "sentient/st-rmqtt-integration-executor:2.1.0"
     depends_on:
       - kafka
-      - tbmq
+      - st-rmqtt
     logging:
       driver: "json-file"
       options:
         max-size: "200m"
         max-file: "5"
     environment:
-      TB_SERVICE_ID: tbmq-ie
+      TB_SERVICE_ID: st-rmqtt-ie
       TB_KAFKA_SERVERS: kafka:9092
       #JAVA_OPTS: "-Xmx2048M -Xms2048M -Xss384k -XX:+AlwaysPreTouch"
     volumes:
-      - tbmq-ie-logs:/var/log/tbmq-integration-executor
+      - st-rmqtt-ie-logs:/var/log/st-rmqtt-integration-executor
 
 volumes:
-  tbmq-ie-logs:
+  st-rmqtt-ie-logs:
     external: true
 ```
 {: .copy-code}
 </details>
 <br>
 
-For the complete updated `docker-compose.yml`, see the [official example here](https://github.com/thingsboard/tbmq/blob/release-2.1.0/msa/tbmq/configs/docker-compose.yml).
+For the complete updated `docker-compose.yml`, see the [official example here](https://github.com/sentient/st-rmqtt/blob/release-2.1.0/msa/st-rmqtt/configs/docker-compose.yml).
 
 Run the following command to create a Docker volume for Integration Executor logs:
 
 ```bash
-docker volume create tbmq-ie-logs
+docker volume create st-rmqtt-ie-logs
 ```
 {: .copy-code}
 
 After updating your configuration, start the service with:
 
 ```bash
-docker compose up -d tbmq-integration-executor --no-deps
+docker compose up -d st-rmqtt-integration-executor --no-deps
 ```
 {: .copy-code}
 

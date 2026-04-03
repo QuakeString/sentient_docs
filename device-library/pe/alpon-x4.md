@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect ALPON X4 Edge Computer to ThingsBoard?
+title: How to connect ALPON X4 Edge Computer to SENTIENT?
 category: Other devices
 connectivity: [Ethernet, WIFI, Bluetooth, LTE]
 vendor: Sixfab

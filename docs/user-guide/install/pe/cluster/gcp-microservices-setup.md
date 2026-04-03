@@ -3,31 +3,31 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Microservices setup using GCP infrastructure 
-description: ThingsBoard IoT platform microservices setup with Kubernetes in GKE
+description: SENTIENT IoT platform microservices setup with Kubernetes in GKE
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to set up ThingsBoard in microservices mode in GKE. 
+This guide will help you to set up SENTIENT in microservices mode in GKE. 
 
 ## Prerequisites
 
 {% include templates/install/gcp/gke-prerequisites.md %}
 
-## Pull ThingsBoard PE images from docker hub
+## Pull SENTIENT Professional Edition images from docker hub
 
 {% assign checkoutMode = "microservices" %}
 {% include templates/install/dockerhub/checkout.md %}
 
-## Step 1. Clone ThingsBoard PE K8S scripts repository
+## Step 1. Clone SENTIENT Professional Edition K8S scripts repository
 
 Clone the repository and change the working directory to GCP scripts.
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-pe-k8s.git --depth 1
-cd thingsboard-pe-k8s/gcp/microservices
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-pe-k8s.git --depth 1
+cd sentient-pe-k8s/gcp/microservices
 ```
 {: .copy-code}
 
@@ -49,7 +49,7 @@ cd thingsboard-pe-k8s/gcp/microservices
 
 ### Step 5.1 Google Cloud SQL (PostgreSQL) Instance
 
-{% assign tbDbName = "thingsboard" %}
+{% assign tbDbName = "sentient" %}
 {% include templates/install/gcp/provision-postgresql.md %}
 
 ### Step 5.2 Cassandra (optional)
@@ -93,19 +93,19 @@ cd thingsboard-pe-k8s/gcp/microservices
 
 {% include templates/install/k8s-configure-edge-load-balancer.md %}
 
-## Step 10. Configure Trendz (Optional)
+## Step 10. Configure SENTIENT ANALYTICS (Optional)
 
-### 10.1. Pull Trendz images from docker hub
+### 10.1. Pull SENTIENT ANALYTICS images from docker hub
 
-{% include templates/install/trendz/pull_trendz.md %}
+{% include templates/install/sentient-analytics/pull_sentient-analytics.md %}
 
-### 10.2. Create a Trendz database in the existing Google Cloud SQL (PostgreSQL) Instance
+### 10.2. Create a SENTIENT ANALYTICS database in the existing Google Cloud SQL (PostgreSQL) Instance
 
-{% include templates/install/trendz/gcp/k8s-trendz-db-creating.md %}
+{% include templates/install/sentient-analytics/gcp/k8s-sentient-analytics-db-creating.md %}
 
-### 10.3. Trendz starting
+### 10.3. SENTIENT ANALYTICS starting
 
-{% include templates/install/trendz/k8s-trendz-starting.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-starting.md %}
 
 ## Step 11. Using
 
@@ -113,13 +113,13 @@ cd thingsboard-pe-k8s/gcp/microservices
 
 ## Upgrading
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
 {% include templates/install/gcp/upgrading-msa.md %}
 
-### Upgrading to new Trendz version (Optional)
+### Upgrading to new SENTIENT ANALYTICS version (Optional)
 
-{% include templates/install/trendz/k8s-trendz-upgrading.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-upgrading.md %}
 
 ## Next steps
 

@@ -1,11 +1,11 @@
-By default, the Helm chart deploys a standard NGINX Ingress Controller for HTTP and MQTT traffic when installing TBMQ on Kubernetes.
+By default, the Helm chart deploys a standard NGINX Ingress Controller for HTTP and MQTT traffic when installing ST-RMQTT on Kubernetes.
 
 ```yaml
 loadbalancer:
   type: "nginx"
 ```
 
-However, since you are deploying TBMQ Cluster on GCP GKE, you need to change this value to:
+However, since you are deploying ST-RMQTT Cluster on GCP GKE, you need to change this value to:
 
 ```yaml
 loadbalancer:
@@ -25,14 +25,14 @@ The instructions below are extracted from the official documentation. Make sure 
  - Reserve a static global IP address:
 
 ```bash
-gcloud compute addresses create tbmq-http-lb-address --global
+gcloud compute addresses create st-rmqtt-http-lb-address --global
 ```
 {: .copy-code}
 
  - Get the reserved static IP address:
 
 ```bash
-gcloud compute addresses describe tbmq-http-lb-address --global --format="get(address)"
+gcloud compute addresses describe st-rmqtt-http-lb-address --global --format="get(address)"
 ```
 {: .copy-code}
 
@@ -56,14 +56,14 @@ loadbalancer:
       # Must point to the reserved static IP.
       - <your-domain-name> 
       # Static IP address for the GCP HTTP(S) load balancer.
-      staticIP: "tbmq-http-lb-address"
+      staticIP: "st-rmqtt-http-lb-address"
 ```
 
-This will automatically issue and manage an SSL certificate via the ManagedCertificate resource created by the Helm chart and expose TBMQ securely over HTTPS.
+This will automatically issue and manage an SSL certificate via the ManagedCertificate resource created by the Helm chart and expose ST-RMQTT securely over HTTPS.
 
 #### MQTTS access
 
 GCP Load Balancer does not support TLS termination for MQTT traffic.
 If you want to secure MQTT communication,
-you must configure Two-Way TLS (Mutual TLS or mTLS) directly on the application level (TBMQ side).
-Please refer to the TBMQ Helm chart documentation for [details](https://artifacthub.io/packages/helm/tbmq-helm-chart/tbmq-cluster#configuring-mutual-tls-mtls-for-mqtt) on configuring Two-Way TLS.
+you must configure Two-Way TLS (Mutual TLS or mTLS) directly on the application level (ST-RMQTT side).
+Please refer to the ST-RMQTT Helm chart documentation for [details](https://artifacthub.io/packages/helm/st-rmqtt-helm-chart/st-rmqtt-cluster#configuring-mutual-tls-mtls-for-mqtt) on configuring Two-Way TLS.

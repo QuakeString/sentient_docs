@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Plan and billing
-description: Billing options via ThingsBoard EU Cloud
+description: Billing options via SENTIENT EU Cloud
 
 ---
 
@@ -13,9 +13,9 @@ description: Billing options via ThingsBoard EU Cloud
 * TOC
 {:toc}
 
-The **Plan and billing** section of [ThingsBoard EU Cloud](https://eu.thingsboard.cloud/signup){:target="_blank"} allows tenant administrators to manage subscription plans, monitor usage, configure billing details, and review invoices.
+The **Plan and billing** section of [SENTIENT EU Cloud](https://eu.sentient.cloud/signup){:target="_blank"} allows tenant administrators to manage subscription plans, monitor usage, configure billing details, and review invoices.
 
-All online payments are securely processed by [Stripe](https://stripe.com/){:target="_blank"}. ThingsBoard Inc. does not store or have access to your card data.
+All online payments are securely processed by [Stripe](https://stripe.com/){:target="_blank"}. SENTIENT Inc. does not store or have access to your card data.
 
 {% capture difference %}
 **Notice:** Payments are non‑refundable.
@@ -65,7 +65,7 @@ The **Add to plan (+)** action allows extending limits or enabling additional fe
 To change the current subscription plan, click **Update plan**.
 
 <b><font size="4">Step 1: Choose the Subscription Plan</font></b>   
-At this step, all available ThingsBoard EU Cloud subscription plans are displayed. Your current plan is marked with the **Current plan** label.
+At this step, all available SENTIENT EU Cloud subscription plans are displayed. Your current plan is marked with the **Current plan** label.
 
 To select another plan, click **Select** under the required option.
 
@@ -75,7 +75,7 @@ To update your current plan, click **Customize** under the current plan.
 In this step, you can customize the selected plan by enabling add-ons and purchasing additional resource packs.
 
 <b><font size="3">Add-ons</font></b>   
-Allow enabling optional features, such as: [White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"}, [Edge Computing](/docs/user-guide/edge-computing/){:target="_blank"}, [Trendz Analytics](/docs/trendz/){:target="_blank"}.
+Allow enabling optional features, such as: [White labeling](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"}, [Edge Computing](/docs/user-guide/edge-computing/){:target="_blank"}, [SENTIENT ANALYTICS](/docs/sentient-analytics/){:target="_blank"}.
 
 <b><font size="3">Top-ups</font></b>   
 Allow extending plan limits. You can switch between:
@@ -104,7 +104,7 @@ The **Billing information** tab lets you manage your **payment method** and **bi
 Shows the currently configured payment method. If no card is added, a warning message is displayed.
 
 To add a payment method, click **Add** and provide the card holder name, country, card number, expiry date, and CVC.    
-ThingsBoard Cloud supports both **credit and debit cards**.
+SENTIENT Cloud supports both **credit and debit cards**.
 
 > All payment processing is handled securely by [Stripe](https://stripe.com/){:target="_blank"}.
 

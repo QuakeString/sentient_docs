@@ -37,7 +37,7 @@ You can enable logging of the slowest and most frequently called rule-nodes.
 To do this you need to [update your logging configuration](#enable-certain-logs) with the following <i>logger</i>:
 
 ```bash
-<logger name="org.thingsboard.server.service.queue.TbMsgPackProcessingContext" level="DEBUG" />
+<logger name="org.sentient.server.service.queue.TbMsgPackProcessingContext" level="DEBUG" />
 ```
 
 After this you can find the following messages in your [logs](#logs):
@@ -58,7 +58,7 @@ After this you can find the following messages in your [logs](#logs):
 
 **Note:** This can be used only if Redis or Valkey is selected as a cache.
 
-It is possible that the data inside the cache has become corrupted. Regardless of the reason, it is always safe to clear the cache — ThingsBoard will simply refill it at runtime. To clear the cache, you need to log into the server/container/pod where it is deployed, open the application command-line tool (<code>redis-cli</code> for Redis and <code>valkey-cli</code> for Valkey), and run the <code>FLUSHALL</code>command. To clear the cache in Sentinel mode, access the master container and execute the cache-clearing command.
+It is possible that the data inside the cache has become corrupted. Regardless of the reason, it is always safe to clear the cache — SENTIENT will simply refill it at runtime. To clear the cache, you need to log into the server/container/pod where it is deployed, open the application command-line tool (<code>redis-cli</code> for Redis and <code>valkey-cli</code> for Valkey), and run the <code>FLUSHALL</code>command. To clear the cache in Sentinel mode, access the master container and execute the cache-clearing command.
 
 So if you are struggling with identifying the reason of some problem, you can safely clear cache to make sure it isn't the reason of the issue.
 
@@ -67,10 +67,10 @@ So if you are struggling with identifying the reason of some problem, you can sa
 
 ### Read logs
 
-Regardless of the deployment type, ThingsBoard logs are stored on the same server/container as ThingsBoard Server/Node itself in the following directory:
+Regardless of the deployment type, SENTIENT logs are stored on the same server/container as SENTIENT Server/Node itself in the following directory:
 
 ```bash
-/var/log/thingsboard
+/var/log/sentient
 ```
 
 Different deployment tools provide different ways to view logs:
@@ -85,12 +85,12 @@ Kubernetes Deployment%,%kubernetes%,%templates/troubleshooting/logs/view-logs/ku
 
 ### Enable certain logs
 
-ThingsBoard provides the ability to enable/disable logging for certain parts of the system depending on what information do you need for troubleshooting.
+SENTIENT provides the ability to enable/disable logging for certain parts of the system depending on what information do you need for troubleshooting.
 
-You can do this by modifying <b>logback.xml</b> file. As logs itself, it is stored on the same server/container as ThingsBoard Server/Node in the following directory:
+You can do this by modifying <b>logback.xml</b> file. As logs itself, it is stored on the same server/container as SENTIENT Server/Node in the following directory:
 
 ```bash
-/usr/share/thingsboard/conf
+/usr/share/sentient/conf
 ```
 
 Here's an example of the <b>logback.xml</b> configuration:
@@ -101,10 +101,10 @@ Here's an example of the <b>logback.xml</b> configuration:
 
     <appender name="fileLogAppender"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/var/log/thingsboard/thingsboard.log</file>
+        <file>/var/log/sentient/sentient.log</file>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>/var/log/thingsboard/thingsboard.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>/var/log/sentient/sentient.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <maxFileSize>100MB</maxFileSize>
             <maxHistory>30</maxHistory>
             <totalSizeCap>3GB</totalSizeCap>
@@ -114,8 +114,8 @@ Here's an example of the <b>logback.xml</b> configuration:
         </encoder>
     </appender>
 
-    <logger name="org.thingsboard.server" level="INFO" />
-    <logger name="org.thingsboard.js.api" level="TRACE" />
+    <logger name="org.sentient.server" level="INFO" />
+    <logger name="org.sentient.js.api" level="TRACE" />
     <logger name="com.microsoft.azure.servicebus.primitives.CoreMessageReceiver" level="OFF" />
 
     <root level="INFO">
@@ -126,7 +126,7 @@ Here's an example of the <b>logback.xml</b> configuration:
 
 The most useful for the troubleshooting parts of the config files are <i>loggers</i>.
 They allow you to enable/disable logging for the certain class or group of classes.
-In the example above the default logging level is <b>INFO</b> (it means that logs will contain only general information, warnings and errors), but for the package <code>org.thingsboard.js.api</code> we enabled the most detailed level of logging.
+In the example above the default logging level is <b>INFO</b> (it means that logs will contain only general information, warnings and errors), but for the package <code>org.sentient.js.api</code> we enabled the most detailed level of logging.
 There's also a possibility to completely disable logs for some part of the system, in the example above we did it to <code>com.microsoft.azure.servicebus.primitives.CoreMessageReceiver</code> class using <b>OFF</b> log-level.
 
 To enable/disable logging for some part of the system you need to add proper <code></logger></code> configuration and wait up to 10 seconds.
@@ -144,7 +144,7 @@ Kubernetes Deployment%,%kubernetes%,%templates/troubleshooting/logs/enable-logs/
 ## Metrics
 
 You may enable prometheus metrics by setting environment variables `METRICS_ENABLED` to value `true` and `METRICS_ENDPOINTS_EXPOSE` to value `prometheus` in the configuration file.
-If you are running ThingsBoard as microservices with separate services for MQTT and COAP transport, you also need to set environment variables `WEB_APPLICATION_ENABLE` to value `true`, 
+If you are running SENTIENT as microservices with separate services for MQTT and COAP transport, you also need to set environment variables `WEB_APPLICATION_ENABLE` to value `true`, 
 `WEB_APPLICATION_TYPE` to value `servlet` and `HTTP_BIND_PORT` to value `8081` for MQTT and COAP services in order to enable web-server with Prometheus metrics.
 
 These metrics are exposed at the path: `https://<yourhostname>/actuator/prometheus` which can be scraped by prometheus (No authentication required).
@@ -153,7 +153,7 @@ These metrics are exposed at the path: `https://<yourhostname>/actuator/promethe
 
 Some internal state metrics can be exposed by the Spring Actuator using Prometheus.
 
-Here's the list of metrics ThingsBoard pushes to Prometheus.
+Here's the list of metrics SENTIENT pushes to Prometheus.
 
 ### <b>tb-node</b> metrics
 - <i>attributes_queue_${index_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about writing <b>attributes</b> to the database. 
@@ -214,14 +214,14 @@ Stats descriptions:
 ## Grafana Dashboards
 
 {% if docsPrefix == "pe/" %}
-You can import preconfigured Grafana dashboards from [here](https://github.com/thingsboard/thingsboard-pe-docker-compose/tree/master/basic/monitoring/grafana/provisioning/dashboards){: target="_blank"}.
+You can import preconfigured Grafana dashboards from [here](https://github.com/sentient/sentient-pe-docker-compose/tree/master/basic/monitoring/grafana/provisioning/dashboards){: target="_blank"}.
 {% else %}
-You can import preconfigured Grafana dashboards from [here](https://github.com/thingsboard/thingsboard/tree/master/docker/monitoring/grafana/provisioning/dashboards){: target="_blank"}.
+You can import preconfigured Grafana dashboards from [here](https://github.com/sentient/sentient/tree/master/docker/monitoring/grafana/provisioning/dashboards){: target="_blank"}.
 {% endif %}
 
 > **Note:** Depending on the cluster configuration, you may need to make changes to the dashboards.
 
-You can also view Grafana dashboards after deploying the ThingsBoards docker-compose cluster configuration (for more information, please follow [this guide](/docs/user-guide/install/{{docsPrefix}}cluster/docker-compose-setup/){: target="_blank"}).
+You can also view Grafana dashboards after deploying the SENTIENTs docker-compose cluster configuration (for more information, please follow [this guide](/docs/user-guide/install/{{docsPrefix}}cluster/docker-compose-setup/){: target="_blank"}).
 Make sure that `MONITORING_ENABLED` environment variable is set to `true`. Once deployed, you can access Prometheus at [http://localhost:9090](http://localhost:9090){: target="_blank"} and Grafana at [http://localhost:3000](http://localhost:3000){: target="_blank"} (by default, the username is `admin` and the password is `foobar`).
 
 Here are the screenshots of the default preconfigured Grafana dashboards:
@@ -230,7 +230,7 @@ Here are the screenshots of the default preconfigured Grafana dashboards:
 
 ## OAuth2
 
-Sometimes after configuring OAuth you can not see the button for logging in with OAuth provider. This happens when “Domain name” and “Redirect URI Template” contain faulty values, they need to be the same you use for accessing your ThingsBoard web page.
+Sometimes after configuring OAuth you can not see the button for logging in with OAuth provider. This happens when “Domain name” and “Redirect URI Template” contain faulty values, they need to be the same you use for accessing your SENTIENT web page.
 
 Example:
 
@@ -241,7 +241,7 @@ Example:
 
 Base URL in "HOME" section should not contain "/" or other characters.
 
-> Go to your ThingsBoard as a System Administrator. Check the General
+> Go to your SENTIENT as a System Administrator. Check the General
 > Settings -> Base URL should not contain “/” at the end (e.g. “https://
 > mycompany.com ” instead of “https://mycompany.com/”).
 
@@ -251,17 +251,17 @@ For OAuth2 configuration click [here](/docs/{{docsPrefix}}user-guide/oauth-2-sup
 
 <section id="talkToUs">
     <div id="gettingHelp">
-        <a href="https://github.com/thingsboard/thingsboard">
+        <a href="https://github.com/sentient/sentient">
             <span class="phrase-heading">Github Project</span>
             <p>Check out the project and consider contributing.</p>
         </a>
-        <a href="https://stackoverflow.com/questions/tagged/thingsboard">
+        <a href="https://stackoverflow.com/questions/tagged/sentient">
             <span class="phrase-heading">Stack Overflow</span>
-            <p>The ThingsBoard team will also monitor posts tagged thingsboard. If there aren’t any existing questions that help, please ask a new one!</p>
+            <p>The SENTIENT team will also monitor posts tagged sentient. If there aren’t any existing questions that help, please ask a new one!</p>
         </a>
     </div>
 </section>
 
-If your problem isn't answered by any of the guides above, feel free to contact ThingsBoard team.
+If your problem isn't answered by any of the guides above, feel free to contact SENTIENT team.
 
 <a class="button" href="/docs/contact-us/">Contact us</a>

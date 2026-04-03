@@ -1,17 +1,17 @@
 * TOC
 {:toc}
 
-This guide will help you to set up TBMQ in Azure AKS.
+This guide will help you to set up ST-RMQTT in Azure AKS.
 
 ## Prerequisites
 
 {% include templates/mqtt-broker/install/azure/aks-prerequisites.md %}
 
-## Step 1. Open TBMQ K8S scripts repository
+## Step 1. Open ST-RMQTT K8S scripts repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq.git
-cd tbmq/k8s/azure
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt.git
+cd st-rmqtt/k8s/azure
 ```
 {: .copy-code}
 
@@ -22,12 +22,12 @@ Define environment variables that you will use in various commands later in this
 We assume you are using Linux. Execute the following command:
 
 ```bash
-export AKS_RESOURCE_GROUP=TBMQResources
+export AKS_RESOURCE_GROUP=ST-RMQTTResources
 export AKS_LOCATION=eastus
-export AKS_GATEWAY=tbmq-gateway
-export TB_CLUSTER_NAME=tbmq-cluster
-export TB_DATABASE_NAME=tbmq-db
-export TB_REDIS_NAME=tbmq-redis
+export AKS_GATEWAY=st-rmqtt-gateway
+export TB_CLUSTER_NAME=st-rmqtt-cluster
+export TB_DATABASE_NAME=st-rmqtt-db
+export TB_REDIS_NAME=st-rmqtt-redis
 echo "You variables ready to create resource group $AKS_RESOURCE_GROUP in location $AKS_LOCATION 
 and cluster in it $TB_CLUSTER_NAME with database $TB_DATABASE_NAME"
 ```
@@ -35,11 +35,11 @@ and cluster in it $TB_CLUSTER_NAME with database $TB_DATABASE_NAME"
 
 where:
 
-* TBMQResources - a logical group in which Azure resources are deployed and managed. We will refer to it later in this guide using **AKS_RESOURCE_GROUP**;
+* ST-RMQTTResources - a logical group in which Azure resources are deployed and managed. We will refer to it later in this guide using **AKS_RESOURCE_GROUP**;
 * eastus - is the location where you want to create resource group. We will refer to it later in this guide using **AKS_LOCATION**. You can see all locations list by executing `az account list-locations`;
-* tbmq-gateway - the name of Azure application gateway;
-* tbmq-cluster - cluster name. We will refer to it later in this guide using **TB_CLUSTER_NAME**;
-* tbmq-db is the name of your database server. You may input a different name. We will refer to it later in this guide using **TB_DATABASE_NAME**.
+* st-rmqtt-gateway - the name of Azure application gateway;
+* st-rmqtt-cluster - cluster name. We will refer to it later in this guide using **TB_CLUSTER_NAME**;
+* st-rmqtt-db is the name of your database server. You may input a different name. We will refer to it later in this guide using **TB_DATABASE_NAME**.
 
 ## Step 3. Configure and create AKS cluster
 
@@ -56,8 +56,8 @@ but take into account the following requirements:
 
 * Keep your postgresql password in a safe place. We will refer to it later in this guide using YOUR_AZURE_POSTGRES_PASSWORD;
 * Make sure your Azure Database for PostgreSQL version is 16.x;
-* Make sure your Azure Database for PostgreSQL instance is accessible from the TBMQ cluster;
-* Make sure you use "thingsboard_mqtt_broker" as the initial database name.
+* Make sure your Azure Database for PostgreSQL instance is accessible from the ST-RMQTT cluster;
+* Make sure you use "sentient_mqtt_broker" as the initial database name.
 
 **Note**: Use "High availability" enabled. It enables a lot of useful settings by default.
 
@@ -67,7 +67,7 @@ Another way by which you can create Azure Database for PostgreSQL is using az to
 az postgres flexible-server create --location $AKS_LOCATION --resource-group $AKS_RESOURCE_GROUP \
   --name $TB_DATABASE_NAME --admin-user POSTGRESS_USER --admin-password POSTGRESS_PASS \
   --public-access 0.0.0.0 --storage-size 32 \
-  --version 16 -d thingsboard_mqtt_broker
+  --version 16 -d sentient_mqtt_broker
 ```
 {: .copy-code}
 
@@ -90,21 +90,21 @@ Example of response:
 
 ```text
 {
-  "connectionString": "postgresql://postgres:postgres@$tbmq-db.postgres.database.azure.com/postgres?sslmode=require",
-  "databaseName": "thingsboard_mqtt_broker",
+  "connectionString": "postgresql://postgres:postgres@$st-rmqtt-db.postgres.database.azure.com/postgres?sslmode=require",
+  "databaseName": "sentient_mqtt_broker",
   "firewallName": "AllowAllAzureServicesAndResourcesWithinAzureIps_2021-11-17_15-45-6",
-  "host": "tbmq-db.postgres.database.azure.com",
-  "id": "/subscriptions/daff3288-1d5d-47c7-abf0-bfb7b738a18c/resourceGroups/myResourceGroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/thingsboard_mqtt_broker",
+  "host": "st-rmqtt-db.postgres.database.azure.com",
+  "id": "/subscriptions/daff3288-1d5d-47c7-abf0-bfb7b738a18c/resourceGroups/myResourceGroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/sentient_mqtt_broker",
   "location": "East US",
   "password": "postgres",
-  "resourceGroup": "TBMQResources",
+  "resourceGroup": "ST-RMQTTResources",
   "skuname": "Standard_D2s_v3",
   "username": "postgres",
   "version": "16"
 }
 ```
 
-Note the value of host from the command output (**tbmq-db.postgres.database.azure.com** in our case). Also note username and password (**postgres**) from the command.
+Note the value of host from the command output (**st-rmqtt-db.postgres.database.azure.com** in our case). Also note username and password (**postgres**) from the command.
 
 Edit the database settings file and replace YOUR_AZURE_POSTGRES_ENDPOINT_URL with the host value, YOUR_AZURE_POSTGRES_USER and YOUR_AZURE_POSTGRES_PASSWORD with the correct values:
 
@@ -115,18 +115,18 @@ nano tb-broker-db-configmap.yml
 
 ## Step 6. Azure Cache for Redis
 
-You need to set up Azure Cache for Redis. TBMQ uses cache to store messages for [DEVICE persistent clients](/docs/mqtt-broker/architecture/#persistent-device-client),
+You need to set up Azure Cache for Redis. ST-RMQTT uses cache to store messages for [DEVICE persistent clients](/docs/mqtt-broker/architecture/#persistent-device-client),
 to improve performance and avoid frequent DB reads (see below for more details).
 
-It is useful when clients connect to TBMQ with the authentication enabled.
+It is useful when clients connect to ST-RMQTT with the authentication enabled.
 For every connection, the request is made to find MQTT client credentials that can authenticate the client.
 Thus, there could be an excessive amount of requests to be processed for a large number of connecting clients at once.
 
 {% capture redis-azure-version %}
-**Note:** Starting from **TBMQ v2.1.0**, Redis 7.2.5 is the officially supported version for third-party Redis deployments.
+**Note:** Starting from **ST-RMQTT v2.1.0**, Redis 7.2.5 is the officially supported version for third-party Redis deployments.
 Please be aware that, as of now, only the **Enterprise** and **Enterprise Flash** SKUs of Azure Cache for Redis support Redis 7.2.x.
 The Basic, Standard, and Premium SKUs continue to support only up to **Redis 6.x**. To ensure full compatibility, we recommend using an
-Enterprise-tier SKU to ensure proper alignment with the Redis 7.2.5 features and behavior expected by TBMQ.
+Enterprise-tier SKU to ensure proper alignment with the Redis 7.2.5 features and behavior expected by ST-RMQTT.
 {% endcapture %}
 {% include templates/info-banner.md content=redis-azure-version %}
 
@@ -158,8 +158,8 @@ Example of response:
 {
   "accessKeys": null,
   "enableNonSslPort": true,
-  "hostName": "tbmq-redis.redis.cache.windows.net",
-  "id": "/subscriptions/daff3288-1d5d-47c7-abf0-bfb7b738a18c/resourceGroups/myResourceGroup/providers/Microsoft.Cache/Redis/tbmq-redis",
+  "hostName": "st-rmqtt-redis.redis.cache.windows.net",
+  "id": "/subscriptions/daff3288-1d5d-47c7-abf0-bfb7b738a18c/resourceGroups/myResourceGroup/providers/Microsoft.Cache/Redis/st-rmqtt-redis",
   "instances": [
     {
       "isMaster": false,
@@ -173,7 +173,7 @@ Example of response:
   "linkedServers": [],
   "location": "East US",
   "minimumTlsVersion": null,
-  "name": "tbmq-redis",
+  "name": "st-rmqtt-redis",
   "port": 6379,
   "privateEndpointConnections": null,
   "provisioningState": "Creating",
@@ -220,17 +220,17 @@ For more information, see the following [script](https://learn.microsoft.com/en-
 ## Step 7. Installation
 
 Execute the following command to run the initial setup of the database.
-This command will launch short-living TBMQ pod to provision necessary DB tables, indexes, etc.
+This command will launch short-living ST-RMQTT pod to provision necessary DB tables, indexes, etc.
 
 ```bash
-./k8s-install-tbmq.sh
+./k8s-install-st-rmqtt.sh
 ```
 {: .copy-code}
 
 After this command finish you should see the next line in the console:
 
 ```text
-INFO  o.t.m.b.i.ThingsboardMqttBrokerInstallService - Installation finished successfully!
+INFO  o.t.m.b.i.SentientMqttBrokerInstallService - Installation finished successfully!
 ```
 
 {% capture aws-rds %}
@@ -249,7 +249,7 @@ Otherwise, please check if you set the PostgreSQL URL and PostgreSQL password in
 Execute the following command to deploy the broker:
 
 ```bash
-./k8s-deploy-tbmq.sh
+./k8s-deploy-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -266,7 +266,7 @@ If everything went fine, you should be able to see `tb-broker-0` and `tb-broker-
 
 ### 10.1 Configure HTTP(S) Load Balancer
 
-Configure HTTP(S) Load Balancer to access web interface of your TBMQ instance. Basically you have 2 possible options of configuration:
+Configure HTTP(S) Load Balancer to access web interface of your ST-RMQTT instance. Basically you have 2 possible options of configuration:
 
 * http - Load Balancer without HTTPS support. Recommended for **development**. The only advantage is simple configuration and minimum costs. May be good option for development server but definitely not suitable for production.
 * https - Load Balancer with HTTPS support. Recommended for **production**. Acts as an SSL termination point. You may easily configure it to issue and maintain a valid SSL certificate. Automatically redirects all non-secure (HTTP) traffic to secure (HTTPS) port.
@@ -304,7 +304,7 @@ For using ssl certificates we can add our certificate directly in Azure Applicat
 az network application-gateway ssl-cert create \
    --resource-group $(az aks show --name $TB_CLUSTER_NAME --resource-group $AKS_RESOURCE_GROUP --query nodeResourceGroup | tr -d '"') \
    --gateway-name $AKS_GATEWAY\
-   --name TBMQHTTPSCert \
+   --name ST-RMQTTHTTPSCert \
    --cert-file YOUR_CERT \
    --cert-password YOUR_CERT_PASS
 ```
@@ -332,12 +332,12 @@ The load balancer will forward all TCP traffic for ports 1883 and 8883.
 
 #### MQTT over SSL
 
-Follow [this guide](https://thingsboard.io/docs/user-guide/mqtt-over-ssl/) to create a .pem file with the SSL certificate. Store the file as _server.pem_ in the working directory.
+Follow [this guide](https://docs.sentient.invenia.in/docs/user-guide/mqtt-over-ssl/) to create a .pem file with the SSL certificate. Store the file as _server.pem_ in the working directory.
 
 You’ll need to create a config-map with your PEM file, you can do it by calling command:
 
 ```bash
-kubectl create configmap tbmq-mqtts-config \
+kubectl create configmap st-rmqtt-mqtts-config \
  --from-file=server.pem=YOUR_PEM_FILENAME \
  --from-file=mqttserver_key.pem=YOUR_PEM_KEY_FILENAME \
  -o yaml --dry-run=client | kubectl apply -f -
@@ -358,7 +358,7 @@ kubectl apply -f tb-broker.yml
 
 ## Step 11. Validate the setup
 
-Now you can open TBMQ web interface in your browser using DNS name of the load balancer.
+Now you can open ST-RMQTT web interface in your browser using DNS name of the load balancer.
 
 You can get DNS name of the load-balancers using the next command:
 
@@ -398,7 +398,7 @@ Use `EXTERNAL-IP` field of the load-balancer to connect to the cluster via MQTT 
 
 ### Troubleshooting
 
-In case of any issues you can examine service logs for errors. For example to see TBMQ logs execute the following command:
+In case of any issues you can examine service logs for errors. For example to see ST-RMQTT logs execute the following command:
 
 ```bash
 kubectl logs -f tb-broker-0
@@ -425,7 +425,7 @@ For further guidance, follow the [next instructions](https://learn.microsoft.com
 ### Upgrade to 2.2.0
 
 In this release, the MQTT authentication mechanism was migrated from YAML/env configuration into the database.
-During upgrade, TBMQ needs to know which authentication providers are enabled in your deployment.
+During upgrade, ST-RMQTT needs to know which authentication providers are enabled in your deployment.
 This information is provided through environment variables passed to the **upgrade pod**.
 
 The upgrade script requires a file named **`database-setup.yml`** that explicitly defines these variables.
@@ -449,7 +449,7 @@ Once the file is prepared and the values verified, proceed with the [upgrade pro
 
 ### Upgrade to 2.0.0
 
-For the TBMQ v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 6](#step-6-azure-cache-for-redis) to complete the installation.
+For the ST-RMQTT v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 6](#step-6-azure-cache-for-redis) to complete the installation.
 Only then you can proceed with the [upgrade](#run-upgrade).
 
 ### Run upgrade
@@ -469,23 +469,23 @@ git pull origin {{ site.release.broker_branch }}
 
 After that, execute the following command:
 
-{% capture tabspec %}tbmq-upgrade
-tbmq-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh
-tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md{% endcapture %}
+{% capture tabspec %}st-rmqtt-upgrade
+st-rmqtt-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh
+st-rmqtt-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md{% endcapture %}
 {% include tabs.html %}
 
-{% include templates/mqtt-broker/upgrade/stop-tbmq-pods-before-upgrade.md %}
+{% include templates/mqtt-broker/upgrade/stop-st-rmqtt-pods-before-upgrade.md %}
 
 ## Cluster deletion
 
-Execute the following command to delete TBMQ nodes:
+Execute the following command to delete ST-RMQTT nodes:
 
 ```bash
-./k8s-delete-tbmq.sh
+./k8s-delete-st-rmqtt.sh
 ```
 {: .copy-code}
 
-Execute the following command to delete all TBMQ nodes and configmaps, load balancers, etc.:
+Execute the following command to delete all ST-RMQTT nodes and configmaps, load balancers, etc.:
 
 ```bash
 ./k8s-delete-all.sh

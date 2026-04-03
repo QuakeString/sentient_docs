@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: Cultural IoT - TPS Powers Museums with ThingsBoard
+title: Cultural IoT - TPS Powers Museums with SENTIENT
 notitle: "true"
 customTitle: "true"
-description: Discover how TPS uses ThingsBoard to connect sensors across museums and deliver smart analytics for cultural site management.
+description: Discover how TPS uses SENTIENT to connect sensors across museums and deliver smart analytics for cultural site management.
 ---
 
 <div class="case-study-page-wrapper">
@@ -11,7 +11,7 @@ description: Discover how TPS uses ThingsBoard to connect sensors across museums
         <div class="card">
             <div class="text">
                 <p class="category">SMART INFRASTRUCTURE</p>
-                <h1>Digitalizing cultural heritage: how TPS connects museums with ThingsBoard</h1>
+                <h1>Digitalizing cultural heritage: how TPS connects museums with SENTIENT</h1>
                 <div class="image inner" style="background-image: url('/images/case-studies/tps.webp')">
                     <img src="/images/case-studies/tps.svg" title="TPS" alt="TPS logo" width="126" height="56">
                 </div>
@@ -101,43 +101,43 @@ description: Discover how TPS uses ThingsBoard to connect sensors across museums
         </div>
     </section>
     <section class="tb-power mb">
-        <h2>How ThingsBoard powers TPS?</h2>
+        <h2>How SENTIENT powers TPS?</h2>
         <div class="block">
             <div class="text">
                 <h3>Centralized sensor data collection</h3>
-                <p>TPS used ThingsBoard to integrate all museum sensors into one scalable IoT platform. Thanks to support for multiple protocols (MQTT, REST API), compatibility with existing hardware was seamless.</p>
+                <p>TPS used SENTIENT to integrate all museum sensors into one scalable IoT platform. Thanks to support for multiple protocols (MQTT, REST API), compatibility with existing hardware was seamless.</p>
             </div>
             <img src="/images/case-studies/tps-1.webp" title="Centralized sensor data collection" alt="Centralized sensor data collection" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Customizable dashboards</h3>
-                <p>ThingsBoard’s powerful dashboard engine enabled TPS to build user-specific interfaces for museum administrators, technical teams, and researchers — improving data clarity and accessibility.</p>
+                <p>SENTIENT’s powerful dashboard engine enabled TPS to build user-specific interfaces for museum administrators, technical teams, and researchers — improving data clarity and accessibility.</p>
             </div>
             <img src="/images/case-studies/tps-2.webp" title="Customizable dashboards" alt="Customizable dashboards" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Real-time analytics and alerts</h3>
-                <p>Using ThingsBoard’s Rule Engine, TPS configured real-time alerts, event triggers, and processing logic. This ensured museum staff could react instantly to changes in environmental conditions like temperature and humidity.</p>
+                <p>Using SENTIENT’s Rule Engine, TPS configured real-time alerts, event triggers, and processing logic. This ensured museum staff could react instantly to changes in environmental conditions like temperature and humidity.</p>
             </div>
             <img src="/images/case-studies/tps-3.webp" title="Alert and notification systems" alt="Real-time analytics and alerts" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Scalable deployment across multiple sites</h3>
-                <p>With ThingsBoard, TPS scaled their solution from a single museum to an entire network of cultural sites — maintaining performance and visibility across the entire infrastructure.</p>
+                <p>With SENTIENT, TPS scaled their solution from a single museum to an entire network of cultural sites — maintaining performance and visibility across the entire infrastructure.</p>
             </div>
             <img src="/images/case-studies/tps-4.webp" title="Scalable deployment across multiple sites" alt="Scalable deployment across multiple sites" width="450" height="240">
         </div>
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard helps smart infrastructure improve operations with IoT?</h2>
+        <h2>How SENTIENT helps smart infrastructure improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Centralized monitoring for diverse assets</h3>
-                <p>Whether managing utility systems, building equipment, security devices, or exhibit environments, ThingsBoard consolidates all data into unified dashboards for real-time visibility and management.</p>
+                <p>Whether managing utility systems, building equipment, security devices, or exhibit environments, SENTIENT consolidates all data into unified dashboards for real-time visibility and management.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Integrate devices and sensors for HVAC, lighting, environmental monitoring, and security.</p></li>
@@ -146,14 +146,14 @@ description: Discover how TPS uses ThingsBoard to connect sensors across museums
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/maps-widgets.webp" title="Thingsboard maps widgets widget" alt="Thingsboard maps widgets widget" width="776" height="776">
-                <img src="/images/case-studies/entities-table.webp" title="Thingsboard entities table widget" alt="Thingsboard entities table widget" width="776" height="776">
+                <img src="/images/case-studies/maps-widgets.webp" title="Sentient maps widgets widget" alt="Sentient maps widgets widget" width="776" height="776">
+                <img src="/images/case-studies/entities-table.webp" title="Sentient entities table widget" alt="Sentient entities table widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Predictive maintenance & system health</h3>
-                <p>From HVAC systems in galleries to lift mechanisms or pumps in utility tunnels, infrastructure components require timely servicing. ThingsBoard enables data-based maintenance planning to prevent downtime.</p>
+                <p>From HVAC systems in galleries to lift mechanisms or pumps in utility tunnels, infrastructure components require timely servicing. SENTIENT enables data-based maintenance planning to prevent downtime.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Monitor equipment status in real time via sensors.</p></li>
@@ -162,14 +162,14 @@ description: Discover how TPS uses ThingsBoard to connect sensors across museums
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/time-series-chart.webp" title="Thingsboard time series chart widget" alt="Thingsboard time series chart widget" width="776" height="776">
-                <img src="/images/case-studies/notification-widget.webp" title="Thingsboard notification widget" alt="Thingsboard notification widget" width="776" height="776">
+                <img src="/images/case-studies/time-series-chart.webp" title="Sentient time series chart widget" alt="Sentient time series chart widget" width="776" height="776">
+                <img src="/images/case-studies/notification-widget.webp" title="Sentient notification widget" alt="Sentient notification widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Smart energy use & resource efficiency</h3>
-                <p>For both public and private infrastructure, energy and utility costs are significant. ThingsBoard helps track, analyze, and optimize lighting, climate control, and electricity usage across facilities.</p>
+                <p>For both public and private infrastructure, energy and utility costs are significant. SENTIENT helps track, analyze, and optimize lighting, climate control, and electricity usage across facilities.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Connect smart meters, lighting controllers, HVAC systems.</p></li>
@@ -178,14 +178,14 @@ description: Discover how TPS uses ThingsBoard to connect sensors across museums
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/donut-widget.webp" title="Thingsboard donut chart widget" alt="Thingsboard donut chart widget" width="776" height="776">
-                <img src="/images/case-studies/bar-chart.webp" title="Thingsboard bar chart widget" alt="Thingsboard bar chart widget" width="776" height="776">
+                <img src="/images/case-studies/donut-widget.webp" title="Sentient donut chart widget" alt="Sentient donut chart widget" width="776" height="776">
+                <img src="/images/case-studies/bar-chart.webp" title="Sentient bar chart widget" alt="Sentient bar chart widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Environmental monitoring & indoor comfort</h3>
-                <p>In exhibition spaces, lecture halls, offices, and public areas, maintaining a safe and pleasant indoor climate is essential. ThingsBoard ensures air quality, temperature, and humidity are continuously tracked and optimized.</p>
+                <p>In exhibition spaces, lecture halls, offices, and public areas, maintaining a safe and pleasant indoor climate is essential. SENTIENT ensures air quality, temperature, and humidity are continuously tracked and optimized.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Collect real-time data on CO₂, PM2.5, humidity, and temperature.</p></li>
@@ -194,14 +194,14 @@ description: Discover how TPS uses ThingsBoard to connect sensors across museums
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/indoor-environment.webp" title="Thingsboard indoor environment widget" alt="Thingsboard indoor environment widget" width="582" height="582">
-                <img src="/images/case-studies/indoor-range-chart.webp" title="Thingsboard indoor range chart widget" alt="Thingsboard indoor range chart widget" width="582" height="582">
+                <img src="/images/case-studies/indoor-environment.webp" title="Sentient indoor environment widget" alt="Sentient indoor environment widget" width="582" height="582">
+                <img src="/images/case-studies/indoor-range-chart.webp" title="Sentient indoor range chart widget" alt="Sentient indoor range chart widget" width="582" height="582">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Safety, access & incident response</h3>
-                <p>Infrastructure often requires controlled access and rapid response to incidents. ThingsBoard allows real-time security monitoring with custom alerts, camera feeds, and automation.</p>
+                <p>Infrastructure often requires controlled access and rapid response to incidents. SENTIENT allows real-time security monitoring with custom alerts, camera feeds, and automation.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Connect access control systems, cameras, and motion sensors.</p></li>
@@ -210,8 +210,8 @@ description: Discover how TPS uses ThingsBoard to connect sensors across museums
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/alarms-table-2.webp" title="Thingsboard alarms table widget" alt="Thingsboard alarms table widget" width="776" height="776">
-                <img src="/images/case-studies/power_button.webp" title="Thingsboard power button widget" alt="Thingsboard power button widget" width="776" height="776">
+                <img src="/images/case-studies/alarms-table-2.webp" title="Sentient alarms table widget" alt="Sentient alarms table widget" width="776" height="776">
+                <img src="/images/case-studies/power_button.webp" title="Sentient power button widget" alt="Sentient power button widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
@@ -226,8 +226,8 @@ description: Discover how TPS uses ThingsBoard to connect sensors across museums
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/single-switch-widget.webp" title="Thingsboard single switch widget" alt="Thingsboard single switch widget" width="776" height="776">
-                <img src="/images/case-studies/scheduler-events.webp" title="Thingsboard scheduler events widget" alt="Thingsboard scheduler events widget" width="582" height="582">
+                <img src="/images/case-studies/single-switch-widget.webp" title="Sentient single switch widget" alt="Sentient single switch widget" width="776" height="776">
+                <img src="/images/case-studies/scheduler-events.webp" title="Sentient scheduler events widget" alt="Sentient scheduler events widget" width="582" height="582">
             </div>
         </div>
         {% include services-banner.liquid %}
@@ -236,12 +236,12 @@ description: Discover how TPS uses ThingsBoard to connect sensors across museums
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img style="width: 25%" src="/images/case-studies/tps.svg" title="TPS" alt="TPS logo" width="126" height="56">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_tps_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us</a>
     </section>
 </div>

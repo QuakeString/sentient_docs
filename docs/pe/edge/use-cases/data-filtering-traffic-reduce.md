@@ -1,12 +1,12 @@
 ---
 layout: docwithnav-pe-edge
 title: Data filtering and traffic reduce
-description: ThingsBoard Edge use case #2
+description: SENTIENT GATEWAY use case #2
 
 provisionDevicesEdge:
     0:
         image: /images/pe/edge/use-cases/data-filtering/provision-devices-item-1.png
-        title: 'Log in to your ThingsBoard <b>Edge</b> instance using your credentials. Navigate to the "Devices" page.'
+        title: 'Log in to your SENTIENT <b>Edge</b> instance using your credentials. Navigate to the "Devices" page.'
     1:
         image: /images/pe/edge/use-cases/data-filtering/provision-devices-item-2.png
         title: 'Click on the "Add device" ("+") icon in the top right corner of the table to create a device. Then click "Add new device".'
@@ -19,7 +19,7 @@ provisionDevicesEdge:
 provisionDevices:    
     0:
         image: /images/pe/edge/use-cases/data-filtering/provision-devices-item-6.png
-        title: 'Log in to your <b>ThingsBoard PE</b> instance. Navigate to the "Devices" page.'
+        title: 'Log in to your <b>SENTIENT Professional Edition</b> instance. Navigate to the "Devices" page.'
     1:
         image: /images/pe/edge/use-cases/data-filtering/provision-devices-item-7.png
         title: 'Verify that the <b>"In-vehicle monitoring system"</b> device is listed in the devices list.'
@@ -32,7 +32,7 @@ rootRuleChainPreview:
 updateRootRuleChain:
     0:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-1.png
-        title: 'Log in to your <b>ThingsBoard PE</b> instance and navigate to the "Rule chains" page.'
+        title: 'Log in to your <b>SENTIENT Professional Edition</b> instance and navigate to the "Rule chains" page.'
     1:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-2.png
         title: 'Click on the "Edge Root Rule Chain" to enter edit mode.'
@@ -64,7 +64,7 @@ updateRootRuleChain:
 updateRootRuleChainEdge:
     0:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-11.png
-        title: 'Log in to your ThingsBoard <b>Edge</b> instance and navigate to the "Devices" page.'
+        title: 'Log in to your SENTIENT <b>Edge</b> instance and navigate to the "Devices" page.'
     1:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-12.png
         title: 'Open the "Edge Root Rule Chain" to verify changes.'
@@ -86,7 +86,7 @@ copyAccessTokenDevice:
 verifyDeviceTelemetryEdge:
     0:
         image: /images/pe/edge/use-cases/data-filtering/verify-device-telemetry-item-1.png
-        title: 'Open the "Devices" page in your ThingsBoard <b>Edge</b> instance.'
+        title: 'Open the "Devices" page in your SENTIENT <b>Edge</b> instance.'
     1:
         image: /images/pe/edge/use-cases/data-filtering/verify-device-telemetry-item-2.png
         title: 'Click on the row corresponding to the <b>"In-vehicle monitoring system"</b> device in the table to view its details.'
@@ -98,7 +98,7 @@ verifyDeviceTelemetryEdge:
 verifyDeviceTelemetry:
     0:
         image: /images/pe/edge/use-cases/data-filtering/verify-device-telemetry-item-5.png
-        title: 'Log in to your <b>ThingsBoard PE</b> instance. Then navigate to the "Devices" page.' 
+        title: 'Log in to your <b>SENTIENT Professional Edition</b> instance. Then navigate to the "Devices" page.' 
     1:
         image: /images/pe/edge/use-cases/data-filtering/verify-device-telemetry-item-6.png
         title: 'Click on the <b>"In-vehicle monitoring system"</b> row to open the device details.'
@@ -109,7 +109,7 @@ verifyDeviceTelemetry:
 createDashboard:
   0:
         image: /images/pe/edge/use-cases/data-filtering/configure-dashboards-item-1.png
-        title: 'Log in to your <b>ThingsBoard PE</b> instance. Navigate to "Dashboards" page.'
+        title: 'Log in to your <b>SENTIENT Professional Edition</b> instance. Navigate to "Dashboards" page.'
   1:
         image: /images/pe/edge/use-cases/data-filtering/configure-dashboards-item-2.png
         title: 'Click on the ("+") icon, then select "Create new dashboard"'
@@ -162,7 +162,7 @@ createDashboard:
 
 {% assign cloudDocsPrefix = "pe/" %}
 {% assign docsPrefix = "pe/edge/" %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "SENTIENT Professional Edition" %}
 
 ## Use case
 

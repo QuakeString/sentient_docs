@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Shared Subscriptions
-description: TBMQ Shared Subscriptions feature overview
+description: ST-RMQTT Shared Subscriptions feature overview
 
 shared-subscription-group:
   0:

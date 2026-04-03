@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: How Schwarz Group Unified 500,000+ IoT Devices with ThingsBoard
+title: How Schwarz Group Unified 500,000+ IoT Devices with SENTIENT
 notitle: "true"
 customTitle: "true"
-description: Discover how Schwarz Group, operating over 13,000 stores globally, streamlined its retail operations by integrating 500,000+ devices using ThingsBoard's IoT platform, enhancing efficiency and accelerating digital transformation.
+description: Discover how Schwarz Group, operating over 13,000 stores globally, streamlined its retail operations by integrating 500,000+ devices using SENTIENT's IoT platform, enhancing efficiency and accelerating digital transformation.
 ---
 
 <div class="case-study-page-wrapper">
@@ -11,7 +11,7 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
         <div class="card">
             <div class="text">
                 <p class="category">SMART RETAIL</p>
-                <h1>IoT in retail: how Schwarz Group accelerated digitalization with ThingsBoard</h1>
+                <h1>IoT in retail: how Schwarz Group accelerated digitalization with SENTIENT</h1>
                 <div class="image inner" style="background-image: url('/images/case-studies/schwarz.webp')">
                     <img src="/images/case-studies/schwarz.svg" title="Schwarz" alt="Schwarz logo" width="410" height="208">
                 </div>
@@ -72,7 +72,7 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
                 <ul>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>One System for All Devices – The ThingsBoard IoT platform helped interconnect over 500,000 devices in all supermarkets, even if they used different communication methods like LoRaWAN, SigFox, or MQTT.</p>
+                        <p>One System for All Devices – The SENTIENT IoT platform helped interconnect over 500,000 devices in all supermarkets, even if they used different communication methods like LoRaWAN, SigFox, or MQTT.</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
@@ -87,7 +87,7 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
         </div>
     </section>
     <section class="tb-power">
-        <h2>How ThingsBoard powers Schwarz?</h2>
+        <h2>How SENTIENT powers Schwarz?</h2>
         <div class="block">
             <div class="text">
                 <h3>Challenges in managing a large retail network</h3>
@@ -97,15 +97,15 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
         </div>
         <div class="block">
             <div class="text">
-                <h3>Transforming retail operations with ThingsBoard</h3>
-                <p>By partnering with ThingsBoard, the Schwarz Group achieved significant improvements. The ThingsBoard IoT platform was able to interconnect over 500,000 devices across all its supermarkets. No matter what communication protocols the devices used—LoRaWAN, SigFox, MQTT—ThingsBoard made sure they could all work together seamlessly. Each store now has secure, customized access to its data, facilitating better decision-making and operational efficiency. Moreover, the flexibility of ThingsBoard enabled the Schwarz Group to quickly introduce new digital solutions while keeping everything standardized. These outcomes not only improved current operations but also positioned the Schwarz Group for future growth and innovation.</p>
+                <h3>Transforming retail operations with SENTIENT</h3>
+                <p>By partnering with SENTIENT, the Schwarz Group achieved significant improvements. The SENTIENT IoT platform was able to interconnect over 500,000 devices across all its supermarkets. No matter what communication protocols the devices used—LoRaWAN, SigFox, MQTT—SENTIENT made sure they could all work together seamlessly. Each store now has secure, customized access to its data, facilitating better decision-making and operational efficiency. Moreover, the flexibility of SENTIENT enabled the Schwarz Group to quickly introduce new digital solutions while keeping everything standardized. These outcomes not only improved current operations but also positioned the Schwarz Group for future growth and innovation.</p>
             </div>
             <img src="/images/case-studies/schwarz-2.webp" title="Challenges in managing a large retail network" alt="Retail operations" width="900" height="480">
         </div>
         <div class="block">
             <div class="text">
                 <h3>A scalable and secure IoT solution</h3>
-                <p>ThingsBoard provided a comprehensive IoT platform that addressed the Schwarz Group's challenges through device integration, data visualization, scalability, and security. The platform's ability to connect a wide range of devices using multiple communication protocols ensured seamless integration across all stores. An intuitive IoT portal acted as a crucial visualization layer, presenting all relevant data from connected devices in an accessible format. ThingsBoard's scalable architecture allowed the Schwarz Group to expand its operations without compromising performance or manageability. The platform provided secure data access with customizable permissions tailored to the needs of each store. This partnership is an example of how customized IoT solutions can drive efficiency and innovation in large-scale retail operations.</p>
+                <p>SENTIENT provided a comprehensive IoT platform that addressed the Schwarz Group's challenges through device integration, data visualization, scalability, and security. The platform's ability to connect a wide range of devices using multiple communication protocols ensured seamless integration across all stores. An intuitive IoT portal acted as a crucial visualization layer, presenting all relevant data from connected devices in an accessible format. SENTIENT's scalable architecture allowed the Schwarz Group to expand its operations without compromising performance or manageability. The platform provided secure data access with customizable permissions tailored to the needs of each store. This partnership is an example of how customized IoT solutions can drive efficiency and innovation in large-scale retail operations.</p>
             </div>
             <img src="/images/case-studies/schwarz-3.webp" title="Challenges in managing a large retail network" alt="Scalable and secure IoT solution" width="900" height="480">
         </div>
@@ -116,17 +116,17 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
         </div>
         <div class="text">
             <h3><a href="/blog/top-supplier-retail-2024-2/">An Award-Winning Collaboration</a></h3>
-            <p>By solving these challenges, ThingsBoard has helped the Schwarz Group become more efficient, cost-effective, and digitally advanced. The impact of this transformation was so significant that ThingsBoard received the "TOP SUPPLIER RETAIL 2024" award from the EHI Retail Institute, proving how smart IoT solutions can revolutionize the retail industry.</p>
-            <p>This collaboration goes beyond just fixing technical issues—it represents a step towards the future of retail, where smart, flexible, and secure IoT solutions play a key role. With ThingsBoard, the Schwarz Group has created a more connected, efficient, and technology-driven shopping experience, setting new standards for innovation and digital transformation in the retail industry.</p>
+            <p>By solving these challenges, SENTIENT has helped the Schwarz Group become more efficient, cost-effective, and digitally advanced. The impact of this transformation was so significant that SENTIENT received the "TOP SUPPLIER RETAIL 2024" award from the EHI Retail Institute, proving how smart IoT solutions can revolutionize the retail industry.</p>
+            <p>This collaboration goes beyond just fixing technical issues—it represents a step towards the future of retail, where smart, flexible, and secure IoT solutions play a key role. With SENTIENT, the Schwarz Group has created a more connected, efficient, and technology-driven shopping experience, setting new standards for innovation and digital transformation in the retail industry.</p>
         </div>
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard helps retail businesses improve operations with IoT?</h2>
+        <h2>How SENTIENT helps retail businesses improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Easy device management</h3>
-                <p>Retailers use thousands of smart devices in their stores. Managing them one by one is difficult. ThingsBoard makes it simple by allowing retailers to:</p>
+                <p>Retailers use thousands of smart devices in their stores. Managing them one by one is difficult. SENTIENT makes it simple by allowing retailers to:</p>
                 <ul>
                     <li><p>Monitor all devices from a single dashboard.</p></li>
                     <li><p>Control equipment remotely, such as refrigerators, air conditioners, and smart shelves.</p></li>
@@ -134,14 +134,14 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/entities-table.webp" title="Thingsboard entities table widget" alt="Thingsboard entities table widget" width="776" height="776">
-                <img src="/images/case-studies/control-widgets.webp" title="Thingsboard control widgets" alt="Thingsboard control widgets" width="776" height="776">
+                <img src="/images/case-studies/entities-table.webp" title="Sentient entities table widget" alt="Sentient entities table widget" width="776" height="776">
+                <img src="/images/case-studies/control-widgets.webp" title="Sentient control widgets" alt="Sentient control widgets" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Real-time data and reports</h3>
-                <p>To improve store operations, retailers need real-time data. ThingsBoard provides:</p>
+                <p>To improve store operations, retailers need real-time data. SENTIENT provides:</p>
                 <ul>
                     <li><p>Custom dashboards to track important store data, such as temperature, energy use, and customer movement.</p></li>
                     <li><p>Reports on past data, helping retailers improve store performance.</p></li>
@@ -149,14 +149,14 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/time-series-chart.webp" title="Thingsboard time series chart widget" alt="Thingsboard time series chart widget" width="776" height="776">
-                <img src="/images/case-studies/image-map.webp" title="Thingsboard image map widget" alt="Thingsboard image map widget" width="776" height="776">
+                <img src="/images/case-studies/time-series-chart.webp" title="Sentient time series chart widget" alt="Sentient time series chart widget" width="776" height="776">
+                <img src="/images/case-studies/image-map.webp" title="Sentient image map widget" alt="Sentient image map widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Smart automation with alerts</h3>
-                <p>One of the biggest advantages of IoT is automation. ThingsBoard’s rule engine helps retailers:</p>
+                <p>One of the biggest advantages of IoT is automation. SENTIENT’s rule engine helps retailers:</p>
                 <ul>
                     <li><p>Receive alerts when refrigerators are not working properly, preventing food from spoiling.</p></li>
                     <li><p>Automatically adjust lighting and air conditioning, saving energy and reducing costs.</p></li>
@@ -165,13 +165,13 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
             </div>
             <div class="image-container">
                 <img src="/images/case-studies/supermarkets.webp" title="Supermarkets widget" alt="Supermarkets widget" width="776" height="776">
-                <img src="/images/case-studies/analogue-gauge.webp" title="Thingsboard analogue gauge widget" alt="Thingsboard analogue gauge widget" width="776" height="776">
+                <img src="/images/case-studies/analogue-gauge.webp" title="Sentient analogue gauge widget" alt="Sentient analogue gauge widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Scalable and grows with your business</h3>
-                <p>As retail businesses expand, they need a system that can grow with them. ThingsBoard can handle:</p>
+                <p>As retail businesses expand, they need a system that can grow with them. SENTIENT can handle:</p>
                 <ul>
                     <li><p>Millions of devices without slowing down.</p></li>
                     <li><p>Different communication systems (MQTT, HTTP, CoAP), making it easy to interconnect existing equipment.</p></li>
@@ -179,8 +179,8 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/maps-widgets.webp" title="Thingsboard maps widgets widget" alt="Thingsboard maps widgets widget" width="776" height="776">
-                <img src="/images/case-studies/scalable-2.webp" title="Scalable and grows with your business" alt="Thingsboard widget" width="776" height="776">
+                <img src="/images/case-studies/maps-widgets.webp" title="Sentient maps widgets widget" alt="Sentient maps widgets widget" width="776" height="776">
+                <img src="/images/case-studies/scalable-2.webp" title="Scalable and grows with your business" alt="Sentient widget" width="776" height="776">
             </div>
         </div>
         {% include services-banner.liquid %}
@@ -189,12 +189,12 @@ description: Discover how Schwarz Group, operating over 13,000 stores globally, 
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img src="/images/case-studies/schwarz-logo.svg" title="Schwarz" alt="Schwarz logo" width="407" height="80">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_Schwarz_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us</a>
     </section>
 </div>

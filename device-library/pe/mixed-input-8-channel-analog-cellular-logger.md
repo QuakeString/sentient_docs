@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Mixed Input, 8-Channel Analog Cellular Logger to ThingsBoard?
+title: How to connect Mixed Input, 8-Channel Analog Cellular Logger to SENTIENT?
 category: Other devices
 connectivity: [HTTP, MQTT, LTE, NB-IoT, LTE-M]
 vendor: Fusion DAQ

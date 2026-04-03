@@ -1,7 +1,7 @@
-bigheader: "ThingsBoard API reference"
+bigheader: "SENTIENT API reference"
 abstract: "Device connectivity and server-side APIs."
 toc:
-- title: ThingsBoard API reference
+- title: SENTIENT API reference
   path: /docs/api/
 - title: Device Connectivity Protocols
   path: /docs/reference/protocols/

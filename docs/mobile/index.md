@@ -1,13 +1,13 @@
 ---
 layout: docwithnav-mobile
-title: ThingsBoard Mobile Application Documentation
-description: ThingsBoard Mobile Application - starting point for your IoT mobile product
+title: SENTIENT Mobile Application Documentation
+description: SENTIENT Mobile Application - starting point for your IoT mobile product
 ---
 
 * TOC
 {:toc}
 
-The ThingsBoard Mobile Application is an open-source [project](https://github.com/thingsboard/flutter_thingsboard_app) based on [Flutter](https://flutter.dev/).
+The SENTIENT Mobile Application is an open-source [project](https://github.com/sentient/flutter_sentient_app) based on [Flutter](https://flutter.dev/).
 It allows you to build your own IoT mobile application **with minimum coding efforts**.
 
 This documentation can help you set up and run your first IoT mobile app, learn how to customize the app and publish it to Google Play or App Store.
@@ -44,12 +44,12 @@ This documentation can help you set up and run your first IoT mobile app, learn 
 
 ## Compatibility Table
 
-A compatibility table between the Flutter ThingsBoard mobile application and the version of your ThingsBoard instance.
+A compatibility table between the Flutter SENTIENT mobile application and the version of your SENTIENT instance.
 
 <table id="compatibility-table">
     <thead>
         <tr>
-          <td style="width: 25%"><b>ThingsBoard version</b></td><td style="width: 25%"><b>Flutter ThingsBoard Mobile Application</b></td><td style="width: 25%"><b>Dart ThingsBoard Client</b></td><td style="width: 25%"><b>Flutter version</b></td>
+          <td style="width: 25%"><b>SENTIENT version</b></td><td style="width: 25%"><b>Flutter SENTIENT Mobile Application</b></td><td style="width: 25%"><b>Dart SENTIENT Client</b></td><td style="width: 25%"><b>Flutter version</b></td>
         </tr>
     </thead>
     <tbody>

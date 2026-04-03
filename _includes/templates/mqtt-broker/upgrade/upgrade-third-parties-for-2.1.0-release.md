@@ -1,5 +1,5 @@
-With v2.1.0, TBMQ updates the versions of key third-party dependencies, including Redis, PostgreSQL, and Kafka.
-You can review the changes by visiting the following [link](https://github.com/thingsboard/tbmq/pull/218).
+With v2.1.0, ST-RMQTT updates the versions of key third-party dependencies, including Redis, PostgreSQL, and Kafka.
+You can review the changes by visiting the following [link](https://github.com/sentient/st-rmqtt/pull/218).
 
 | Service        | Previous Version | Updated Version |
 |----------------|------------------|-----------------|

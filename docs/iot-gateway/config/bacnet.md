@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: BACnet Connector Configuration
-description: BACnet protocol support for ThingsBoard IoT Gateway
+description: BACnet protocol support for SENTIENT IoT Gateway
 
 ---
 
@@ -10,13 +10,13 @@ description: BACnet protocol support for ThingsBoard IoT Gateway
 
 ## Overview
 
-This documentation will help you set up the BACnet connector for the ThingsBoard IoT Gateway. We’ll explain the
+This documentation will help you set up the BACnet connector for the SENTIENT IoT Gateway. We’ll explain the
 configuration parameters in simple terms to make it easy for you to understand and follow. The BACnet protocol is
 widely used in building automation and control systems for applications such as heating, ventilation, air conditioning 
 (HVAC), lighting control, access control, and fire detection systems. Use
 [general configuration](/docs/iot-gateway/configuration/){:target="_blank"} to enable this extension.
 
-The BACnet connector allows the ThingsBoard IoT Gateway to communicate with BACnet devices, enabling data exchange and 
+The BACnet connector allows the SENTIENT IoT Gateway to communicate with BACnet devices, enabling data exchange and 
 control capabilities. The connector can be configured via the user interface form, which helps you set up a connection 
 to the BACnet devices, collect data and write data to devices. Let’s look at all the available settings and explain 
 each one clearly. This will help you understand how everything works.
@@ -32,7 +32,7 @@ backward compatibility.
 
 The BACnet connector can be configured in two modes: **Basic** and **Advanced**.
 
-- **Basic** mode is designed for users who are new to ThingsBoard IoT Gateway and want to quickly set up the connector
+- **Basic** mode is designed for users who are new to SENTIENT IoT Gateway and want to quickly set up the connector
   with minimal configuration. It provides a simplified interface with essential settings.
 - **Advanced** mode is intended for experienced users who need more control over the configuration. It offers additional
   options and flexibility for advanced use cases.
@@ -113,13 +113,13 @@ Filtering objects and properties<small>(advanced configuration mode only)</small
 
 ## Requests mapping
 
-The Requests mapping section allows you to configure how the ThingsBoard platform instance will interact with the 
+The Requests mapping section allows you to configure how the SENTIENT platform instance will interact with the 
 devices. That is, how the platform will request data from the devices, how it will update device attributes, and how 
 it will send RPC commands to the devices.
 
 BACnet connector supports the following requests mapping:
 
-- **Attribute updates** - allows update device objects values from ThingsBoard platform instance.
+- **Attribute updates** - allows update device objects values from SENTIENT platform instance.
 - **RPC methods** - allows sending RPC commands to devices. Using RPC methods, you can get or set values of the BACnet
   device objects values. BACnet connector supports different types of RPC methods, such as:
   - **Reserved GET/SET methods** - these methods are automatically created for each attribute and time series parameter. You
@@ -129,14 +129,14 @@ BACnet connector supports the following requests mapping:
 
 ### Attribute updates
 
-This subsection contains configuration for attribute updates request from ThingsBoard platform instance.
+This subsection contains configuration for attribute updates request from SENTIENT platform instance.
 
-ThingsBoard allows the provisioning of device attributes and fetches some of them from the device application. 
+SENTIENT allows the provisioning of device attributes and fetches some of them from the device application. 
 You can treat this as a remote configuration for devices, enabling them to request shared attributes from 
-ThingsBoard. See [user guide](/docs/user-guide/attributes/) for more details.
+SENTIENT. See [user guide](/docs/user-guide/attributes/) for more details.
 
 The following parameters are used to configure attribute updates:
-- **Key** - the key of the shared attribute in ThingsBoard. It can be specified as a static value.
+- **Key** - the key of the shared attribute in SENTIENT. It can be specified as a static value.
 - **Object ID** - the object id in the BACnet device.
 - **Object Type** - the object type in the BACnet device.
 - **Property ID** - the property id in the BACnet device.
@@ -155,7 +155,7 @@ More usage examples can be found in the [Example usage](/docs/iot-gateway/config
 
 ### RPC methods
 
-ThingsBoard allows sending [RPC commands](https://thingsboard.io/docs/user-guide/rpc/) to devices connected directly to ThingsBoard or via Gateway.
+SENTIENT allows sending [RPC commands](https://docs.sentient.invenia.in/docs/user-guide/rpc/) to devices connected directly to SENTIENT or via Gateway.
 The following parameters are used to configure RPC methods:
 - **Method** - the RPC method name.
 - **Request Type** - “**writeProperty**” to write data and “**readProperty**” to read data.
@@ -252,7 +252,7 @@ The application configuration parameters are used to configure the gateway in th
 
 | **Parameter**                                          | **Default value**       | **Description**                                                                                                       |
 |:-------------------------------------------------------|:------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| application.objectName                                 | **ThingsBoard Gateway** | The gateway object name in the BACnet network.                                                                        |
+| application.objectName                                 | **SENTIENT Gateway** | The gateway object name in the BACnet network.                                                                        |
 | application.host                                       |                         | The gateway host in the BACnet network                                                                                |
 | application.port                                       | **47808**               | The gateway port in the BACnet network.                                                                               |
 | application.mask                                       |                         | The gateway mask in the BACnet network.                                                                               |
@@ -270,7 +270,7 @@ The application configuration parameters are used to configure the gateway in th
 {% capture difference %}
 \* -- Feature available from Gateway v.3.8.0 and only in advanced configuration mode. You need to upload your 
 proprietary device extension to the `/extensions/bacnet/proprietary` folder of the IoT Gateway installation directory. 
-You can also find an example of such a proprietary device [here](https://github.com/thingsboard/thingsboard-gateway/blob/master/thingsboard_gateway/extensions/bacnet/proprietary/desigo_cc.py){:target="_blank"}.
+You can also find an example of such a proprietary device [here](https://github.com/sentient/sentient-gateway/blob/master/sentient_gateway/extensions/bacnet/proprietary/desigo_cc.py){:target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -468,7 +468,7 @@ Example of the device RPC methods configuration:
 
 The BACnet connector support the following BACnet object types:
 
-| **BACnet object id** | **ThingsBoard object id** |
+| **BACnet object id** | **SENTIENT object id** |
 |----------------------|---------------------------|
 | **Binary input**     | **binaryInput**           |
 | **Binary Output**    | **binaryOutput**          |
@@ -521,7 +521,7 @@ on Windows. Please use installation from source or other installation methods to
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

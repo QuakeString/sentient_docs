@@ -75,12 +75,12 @@ This means they will display values from the entity you specify as the data sour
 
 <br><b><font size="4">Step 1. Preparation</font></b>
 
-1. **Prepare a device** that sends **temperature and humidity telemetry** to ThingsBoard.   
+1. **Prepare a device** that sends **temperature and humidity telemetry** to SENTIENT.   
    If you don&#39;t have a real device, you can simulate sending telemetry data in real time using the [Rule Engine](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/){:target="_blank"}. [See the guide here.](/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-3/#simulation-of-the-devices-telemetry-data){:target="_blank"}
 
 2. **Prepare the [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"}** you want to embed:
    - [Download the **Environmental Monitor** dashboard in JSON format.](/docs/pe/user-guide/reporting/resources/environmental_monitor.json){:target="_blank" download="environmental_monitor.json"}
-   - [Import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into your ThingsBoard instance.
+   - [Import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into your SENTIENT instance.
    - Or use your own existing dashboard.
 
 <b><font size="4">Step 2. Adding the component</font></b>
@@ -135,5 +135,5 @@ Your report will now include a snapshot of the Environmental Monitor dashboard w
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

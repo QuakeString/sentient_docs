@@ -1,8 +1,8 @@
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-{% assign HOST_NAME = "$THINGSBOARD_HOST_NAME" %}
+{% assign HOST_NAME = "$SENTIENT_HOST_NAME" %}
 {% endif %}
 {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
-{% assign HOST_NAME = "$THINGSBOARD_EDGE_HOST_NAME" %}
+{% assign HOST_NAME = "$SENTIENT_EDGE_HOST_NAME" %}
 {% endif %}
 
 * TOC
@@ -14,7 +14,7 @@ You can find more information about CoAP [here](https://tools.ietf.org/html/rfc7
 
 CoAP Observe [Option](https://tools.ietf.org/html/rfc7641){:target="_blank"} allows subscription to resources and receiving notifications on resource change.
 
-ThingsBoard server nodes act as a CoAP Server that supports both regular and observe requests.
+SENTIENT server nodes act as a CoAP Server that supports both regular and observe requests.
 
 <hr>
 
@@ -52,7 +52,7 @@ npm install coap-cli -g
 
 ## Authentication methods
 
-ThingsBoard supports two authentication mechanisms to secure COAP connections.
+SENTIENT supports two authentication mechanisms to secure COAP connections.
 
 **Supported methods**:
 - [Access token](/docs/{{docsPrefix}}user-guide/ssl/coap-access-token/){:target="_blank"}. Uses a unique device access token included as a path parameter in each CoAP request.
@@ -78,7 +78,7 @@ Using custom binary format or some serialization framework is also possible. See
 
 ## Telemetry upload API
 
-In order to publish telemetry data to ThingsBoard server node, send POST request.
+In order to publish telemetry data to SENTIENT server node, send POST request.
 
 First, select the authentication method:
 
@@ -118,7 +118,7 @@ Where **1451649600512** is a [unix timestamp](https://en.wikipedia.org/wiki/Unix
 Below are examples of commands for publishing different types of telemetry data.
 
 > ⚠️ Don&#39;t forget to replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> with your device&#39;s access token.
 
 **Example 1**.   
@@ -192,7 +192,7 @@ The content of the JSON file:
 
 ## Attributes API
 
-ThingsBoard attributes API allows devices to
+SENTIENT attributes API allows devices to
 
 * Upload [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes to the server.
 * Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes from the server.
@@ -202,7 +202,7 @@ ThingsBoard attributes API allows devices to
 
 ### Publish attribute update to the server
 
-In order to publish client-side device attributes to ThingsBoard server node, send POST request.
+In order to publish client-side device attributes to SENTIENT server node, send POST request.
 
 First, select the authentication method:
 
@@ -215,7 +215,7 @@ X.509 Certificate<small></small>%,%certificate%,%templates/api/coap/publish-attr
 
 ### Request attribute values from the server
 
-In order to request client-side or shared device attributes to ThingsBoard server node, send GET request.
+In order to request client-side or shared device attributes to SENTIENT server node, send GET request.
 
 First, select the authentication method:
 
@@ -295,7 +295,7 @@ X.509 Certificate<small></small>%,%certificate%,%templates/api/coap/client-side-
 
 ## Claiming devices
 
-The Device Claiming feature allows end users to securely associate a device with their account after the device has been deployed and connected to ThingsBoard.
+The Device Claiming feature allows end users to securely associate a device with their account after the device has been deployed and connected to SENTIENT.
 For a detailed explanation of the device claiming workflow and supported scenarios, refer to the {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix contains "paas/" %}[Claiming devices](/docs/{{docsPrefix}}user-guide/claiming-devices){:target="_blank"}{% endif %}{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}[Claiming devices](/docs/user-guide/claiming-devices){:target="_blank"}{% endif %} documentation.
 
 In order to initiate claiming device, send POST request.
@@ -317,7 +317,7 @@ The supported data format is:
 **Please note** 
 <br>
 that the above fields are optional. In case the **secretKey** is not specified, the empty string as a default value is used.
-In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/thingsboard/conf/thingsboard.yml**).
+In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/sentient/conf/sentient.yml**).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -325,7 +325,7 @@ In case the **durationMs** is not specified, the system parameter **device.claim
 
 ## Device provisioning
 
-Device provisioning allows devices to be registered dynamically without manual creation in the ThingsBoard UI.
+Device provisioning allows devices to be registered dynamically without manual creation in the SENTIENT UI.
 For a detailed explanation of the provisioning process and supported scenarios, refer to the {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix contains "paas/" %}[Device provisioning](/docs/{{docsPrefix}}user-guide/device-provisioning){:target="_blank"}{% endif %}{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}[Device provisioning](/docs/user-guide/device-provisioning){:target="_blank"}{% endif %} documentation.
 
 **Provisioning request**   
@@ -337,7 +337,7 @@ coap://{{HOST_NAME}}/api/v1/provision
 ```
 {: .copy-code}
 
-Where **{{HOST_NAME}}** is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
+Where **{{HOST_NAME}}** is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
 
 {% endif %}
 {% if docsPrefix contains "paas/" %}
@@ -362,10 +362,10 @@ The provisioning request must use the following JSON format:
 
 **Payload fields**
 - **deviceName** — the name of the device to be provisioned.
-- **provisionDeviceKey** — the provisioning key configured in ThingsBoard.
+- **provisionDeviceKey** — the provisioning key configured in SENTIENT.
 - **provisionDeviceSecret** — the provisioning secret associated with the provisioning key.
 
-If the provided credentials are valid, ThingsBoard automatically creates the device (if it does not already exist) and returns the device credentials, allowing the device to start communicating with the platform.
+If the provided credentials are valid, SENTIENT automatically creates the device (if it does not already exist) and returns the device credentials, allowing the device to start communicating with the platform.
 
 <hr>
 
@@ -382,7 +382,7 @@ X.509 Certificate<small></small>%,%certificate%,%templates/api/coap/firmware-api
 
 ## Protocol customization
 
-CoAP transport can be fully customized for specific use-case by changing the corresponding [module](https://github.com/thingsboard/thingsboard/tree/master/transport/coap){:target="_blank"}.
+CoAP transport can be fully customized for specific use-case by changing the corresponding [module](https://github.com/sentient/sentient/tree/master/transport/coap){:target="_blank"}.
 
 <hr>
 

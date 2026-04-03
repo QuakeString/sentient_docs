@@ -1,15 +1,15 @@
 ---
 layout: docwithnav-gw
-title: How to enable remote shell feature on ThingsBoard IoT Gateway
-description: How to enable remote shell feature on ThingsBoard IoT Gateway
+title: How to enable remote shell feature on SENTIENT IoT Gateway
+description: How to enable remote shell feature on SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to enable a remote shell feature and control the operating system with ThingsBoard IoT Gateway
-from your ThingsBoard platform instance. With this functionality, you can access the underlying machine, execute
+This guide will help you to enable a remote shell feature and control the operating system with SENTIENT IoT Gateway
+from your SENTIENT platform instance. With this functionality, you can access the underlying machine, execute
 commands, and perform maintenance tasks directly from the platform. It provides a convenient way to monitor system
 health, troubleshoot issues, and automate administrative operations without needing direct physical access. Before
 proceeding, ensure that you have the necessary permissions and have configured your gateway according to the
@@ -27,8 +27,8 @@ prerequisites outlined in this documentation.
 
 ## Prerequisites
 
-1. Ensure that the ThingsBoard server is up and running. The simplest approach is to use [ThingsBoard Cloud](https://thingsboard.io/installations/){:target="_blank"}. Alternatively, you can install ThingsBoard manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
-2. Installed and configured ThingsBoard IoT Gateway ([Installation guide](/docs/iot-gateway/installation/), [Getting Started](/docs/iot-gateway/getting-started/)).
+1. Ensure that the SENTIENT server is up and running. The simplest approach is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){:target="_blank"}. Alternatively, you can install SENTIENT manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
+2. Installed and configured SENTIENT IoT Gateway ([Installation guide](/docs/iot-gateway/installation/), [Getting Started](/docs/iot-gateway/getting-started/)).
 
 ## Step 1. Remote shell activation
 
@@ -70,7 +70,7 @@ For example, we run **ls** command to get the list of files and directories in t
 ![](/images/gateway/remote-shell/remote-shell-6.png)
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

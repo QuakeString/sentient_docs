@@ -169,7 +169,7 @@ Let's start with publishing "temperature" telemetry for **Thermostat A** device.
 - Execute the copied command:
 
 ```shell
-curl -v -X POST https://thingsboard.cloud/api/v1/CF8zr16VZeCk7zRyztZB/telemetry --header Content-Type:application/json --data "{temperature:25}"
+curl -v -X POST https://sentient.cloud/api/v1/CF8zr16VZeCk7zRyztZB/telemetry --header Content-Type:application/json --data "{temperature:25}"
 ```
 {: .copy-code}
 
@@ -184,7 +184,7 @@ After that let's make a few changes to the command to trigger REST RPC API:
 The resulted command should look like:
 
 ```shell
-curl -v -X POST https://thingsboard.cloud/api/v1/ZcHBHbptBqxgV1A6Qrtx/rpc --header Content-Type:application/json --data "{method: "getCurrentTemperature", params:{}}"
+curl -v -X POST https://sentient.cloud/api/v1/ZcHBHbptBqxgV1A6Qrtx/rpc --header Content-Type:application/json --data "{method: "getCurrentTemperature", params:{}}"
 ```
 {: .copy-code}
 
@@ -194,17 +194,17 @@ Response:
 ```
 {: .copy-code}
 
-It is expected result. **Controller A** sends RPC call to the ThingsBoard with method **getCurrentTemperature**. 
+It is expected result. **Controller A** sends RPC call to the SENTIENT with method **getCurrentTemperature**. 
 Message was routed via configured rule chain and latest telemetry of the related thermostat were fetched and returned in the response.
 
 If we try to submit request with unknown method:
 
 ```shell
-curl -v -X POST https://thingsboard.cloud/api/v1/ZcHBHbptBqxgV1A6Qrtx/rpc --header Content-Type:application/json --data "{method: "getCurrentHumidity", params:{}}"
+curl -v -X POST https://sentient.cloud/api/v1/ZcHBHbptBqxgV1A6Qrtx/rpc --header Content-Type:application/json --data "{method: "getCurrentHumidity", params:{}}"
 ```
 {: .copy-code}
 
-we will see message in the ThingsBoard log file:
+we will see message in the SENTIENT log file:
 
 <br>
 
@@ -219,6 +219,6 @@ Incoming metadata:
 
 <br>
 <br>
-For more details how RPC works in the ThingsBoard, please read [RPC capabilities](/docs/{{docsPrefix}}user-guide/rpc/) Article.
+For more details how RPC works in the SENTIENT, please read [RPC capabilities](/docs/{{docsPrefix}}user-guide/rpc/) Article.
 <br>
 <br>

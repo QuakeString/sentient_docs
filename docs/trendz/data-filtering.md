@@ -1,15 +1,15 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Data Filtering
-description: How to filter and clear dataset in Trendz Analytics 
+description: How to filter and clear dataset in SENTIENT ANALYTICS 
 
 date-filtering-example:
   0: 
-    image: /images/trendz/date-filtering-1.png
+    image: /images/sentient-analytics/date-filtering-1.png
   1:
-    image: /images/trendz/date-filtering-2.png
+    image: /images/sentient-analytics/date-filtering-2.png
 ---
 
 * TOC
@@ -21,12 +21,12 @@ Drag-n-drop fields that you want to filter on into **Filter** section and apply 
 You can apply filters even on fields that are not used for actual data visualization. For example, during energy consumption analysis, we want to filter out all 
 empty apartments and focus on apartments located on the second and third floors. Here is how our config will look like:
 
-![image](/images/trendz/filter-example.png)
+![image](/images/sentient-analytics/filter-example.png)
 
 
 ## Filter Options
 
-You can filter by any field that is present in the ThingsBoard:
+You can filter by any field that is present in the SENTIENT:
 * Asset/Device Name 
 * Asset/Device Label 
 * Asset/Device Owner (Customer) 
@@ -44,7 +44,7 @@ Filter support following field types:
 
 To change filter condition - click on the filter field and select the required option:
 
-![image](/images/trendz/filter-dialog.png)
+![image](/images/sentient-analytics/filter-dialog.png)
 
 ## Filter by hierarchy (relation)
 

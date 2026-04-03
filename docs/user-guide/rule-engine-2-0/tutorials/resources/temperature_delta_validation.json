@@ -15,7 +15,7 @@
           "layoutX": 350,
           "layoutY": 150
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetTelemetryNode",
         "name": "Latest five-minute old record",
         "debugMode": false,
         "configuration": {
@@ -34,7 +34,7 @@
           "layoutX": 1116,
           "layoutY": 250
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "Create alarm",
         "debugMode": true,
         "configuration": {
@@ -49,7 +49,7 @@
           "layoutX": 661,
           "layoutY": 150
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Calculate delta",
         "debugMode": false,
         "configuration": {
@@ -61,7 +61,7 @@
           "layoutX": 825,
           "layoutY": 301
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "validate delta",
         "debugMode": false,
         "configuration": {
@@ -73,7 +73,7 @@
           "layoutX": 954,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save Timeseries",
         "debugMode": false,
         "configuration": {
@@ -85,7 +85,7 @@
           "layoutX": 1115,
           "layoutY": 351
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "Clear alarm",
         "debugMode": true,
         "configuration": {

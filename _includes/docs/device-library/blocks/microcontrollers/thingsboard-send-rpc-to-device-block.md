@@ -1,10 +1,10 @@
 
 {% assign changeStateAndMode = '
     ===
-        image: /images/devices-library/basic/microcontrollers/dashboard/thingsboard-example-dashboard-change-blinking-mode-0.png,
+        image: /images/devices-library/basic/microcontrollers/dashboard/sentient-example-dashboard-change-blinking-mode-0.png,
         title: Change LED state using switch widget to continuous lightning.
     ===
-        image: /images/devices-library/basic/microcontrollers/dashboard/thingsboard-example-dashboard-change-blinking-mode-1.png,
+        image: /images/devices-library/basic/microcontrollers/dashboard/sentient-example-dashboard-change-blinking-mode-1.png,
         title: Change LED state using round switch widget to blinking mode.
  '
  %}
@@ -97,8 +97,8 @@ const std::array<RPC_Callback, 1U> callbacks = {
 
 {% assign takePictureRPC = '
     ===
-        image: /images/devices-library/basic/microcontrollers/dashboard/thingsboard-example-dashboard-take-a-picture.png,
-        title: You can take a picture from camera module, by pressing the button on ThingsBoard dashboard. 
+        image: /images/devices-library/basic/microcontrollers/dashboard/sentient-example-dashboard-take-a-picture.png,
+        title: You can take a picture from camera module, by pressing the button on SENTIENT dashboard. 
 '
 %}
 

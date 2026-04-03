@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Mail Server
-description: TBMQ Mail Server
+description: ST-RMQTT Mail Server
 
 ---
 

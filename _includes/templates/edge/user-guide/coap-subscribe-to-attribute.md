@@ -4,11 +4,11 @@
 To subscribe to changes in shared device attributes, send a GET request to the following URL:
 
 ```bash
-coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
+coap://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
-* Replace the **$THINGSBOARD_HOST_NAME** with the actual hostname or IP address of your ThingsBoard Edge instance.
+* Replace the **$SENTIENT_HOST_NAME** with the actual hostname or IP address of your SENTIENT GATEWAY instance.
 
 {% assign accessTokenPE = '
     ===
@@ -32,7 +32,7 @@ coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 
 Execute the command:
 ```bash
-coap get -o coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
+coap get -o coap://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
@@ -40,19 +40,19 @@ Once shared attribute will be changed by one of the server-side components (REST
 
 #### Publish Time-Series or Attribute Message.
 
-To publish client-side device attributes to the **ThingsBoard Edge**, send a POST request to the following URL:
+To publish client-side device attributes to the **SENTIENT GATEWAY**, send a POST request to the following URL:
 
 ```bash
-coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
+coap://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
-* **$THINGSBOARD_HOST_NAME:** The actual hostname or IP address of your ThingsBoard Edge instance
+* **$SENTIENT_HOST_NAME:** The actual hostname or IP address of your SENTIENT GATEWAY instance
 * **$ACCESS_TOKEN:** The actual access token of the device.
 
 Publish client-side attributes update using data from [**new-attributes-values.json**](/docs/reference/resources/new-attributes-values.json){: target="_blank"} file:
 
 ```bash
-cat new-attributes-values.json | coap post coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
+cat new-attributes-values.json | coap post coap://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}

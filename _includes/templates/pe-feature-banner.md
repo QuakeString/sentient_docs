@@ -1,5 +1,5 @@
 {% capture peFeatureContent %}
-Only [**Professional Edition**](/products/thingsboard-pe/){:target="_blank"} supports **{{ feature }}** feature.<br>
-Use [**ThingsBoard Cloud**](/installations/choose-region/){:target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){:target="_blank"} your own platform instance.
+Only [**Professional Edition**](/products/sentient-pe/){:target="_blank"} supports **{{ feature }}** feature.<br>
+Use [**SENTIENT Cloud**](/installations/choose-region/){:target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){:target="_blank"} your own platform instance.
 {% endcapture %}
-{% include templates/info-banner.md title="ThingsBoard PE feature" content=peFeatureContent %}
+{% include templates/info-banner.md title="SENTIENT Professional Edition feature" content=peFeatureContent %}

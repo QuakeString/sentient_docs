@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect WeMos Lolin ESP32 OLED to ThingsBoard?
+title: How to connect WeMos Lolin ESP32 OLED to SENTIENT?
 category: Microcontrollers
 chip: ESP32
 connectivity: [HTTP, MQTT, WIFI, Bluetooth, BLE]

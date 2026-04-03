@@ -1,8 +1,8 @@
 | **Parameter** | **Default value**  | **Description**                                                                                                    |
 |:--------------|:-------------------|--------------------------------------------------------------------------------------------------------------------|
 | addressFilter | *.*                | Used to filter the allowed IP addresses to connect to the connector.                                               |
-| deviceName    | **Device Example** | Name for the device in ThingsBoard.                                                                                |
-| deviceType    | **default**        | Device type for ThingsBoard, by default this parameter is absent, but you can add it.                              |
+| deviceName    | **Device Example** | Name for the device in SENTIENT.                                                                                |
+| deviceType    | **default**        | Device type for SENTIENT, by default this parameter is absent, but you can add it.                              |
 | encoding      | **utf-8**          | Encoding used when writing string data to storage.                                                                 |
 | ---           |                    |                                                                                                                    |
 

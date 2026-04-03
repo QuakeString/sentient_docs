@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Health API
-description: TBMQ Health API description
+description: ST-RMQTT Health API description
 
 ---
 

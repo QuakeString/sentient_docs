@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect PINE A64 to ThingsBoard?
+title: How to connect PINE A64 to SENTIENT?
 category: Single-board computers
 chip: Allwinner A64
 connectivity: [Ethernet, WIFI, Bluetooth]

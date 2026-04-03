@@ -6,34 +6,34 @@
 All widget-related code is located in the [JavaScript section](/docs/{{docsPrefix}}user-guide/contribution/widgets-development/#javascript-section).
 The built-in variable **self** that is a reference to the widget instance is also available.
 Each widget function should be defined as a property of the **self** variable.
-The **self** variable has a property **ctx** of type [WidgetContext](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/models/widget-component.models.ts#L83), which is a reference to the widget context that contains all the necessary API and data used by widget instance.
+The **self** variable has a property **ctx** of type [WidgetContext](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/models/widget-component.models.ts#L83), which is a reference to the widget context that contains all the necessary API and data used by widget instance.
 Below is a brief description of widget context properties:
 
 | **Property**                     | **Type**           | **Description**                                                                                                                                                                                                                                                                                                    |
 |----------------------------------|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | $container                       | jQuery Object      | Container element of the widget. Can be used to dynamically access or modify widget DOM using jQuery API.                                                                                                                                                                                                          |
-| $scope                           | [IDynamicWidgetComponent](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/models/widget-component.models.ts#L274")             | Reference to the current widget component. Can be used to access/modify component properties when widget is built using Angular approach.                                                                                                                                                                          |
+| $scope                           | [IDynamicWidgetComponent](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/models/widget-component.models.ts#L274")             | Reference to the current widget component. Can be used to access/modify component properties when widget is built using Angular approach.                                                                                                                                                                          |
 | width                            | Number             | Current width of widget container in pixels.                                                                                                                                                                                                                                                                       |
 | height                           | Number             | Current height of widget container in pixels.                                                                                                                                                                                                                                                                      |
 | isEdit                           | Boolean            | Indicates whether the dashboard is in in the view or editing state.                                                                                                                                                                                                                                                |
 | isMobile                         | Boolean            | Indicates whether the dashboard view is less then 960px width (default mobile breakpoint).                                                                                                                                                                                                                         |
-| widgetConfig                     | [WidgetConfig](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L341)             | Common widget configuration containing properties such as **color** (text color), **backgroundColor** (widget background color), etc.                                                                                                                                                                              |
+| widgetConfig                     | [WidgetConfig](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L341)             | Common widget configuration containing properties such as **color** (text color), **backgroundColor** (widget background color), etc.                                                                                                                                                                              |
 | settings                         | Object             | Widget settings containing widget specific properties according to the defined [settings json schema](#settings-schema-section).                                                                                                                                                                                   |
-| datasources                      | Array<[Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)>  | Array of resolved widget datasources. See [Subscription object](#subscription-object).                                                                                                                                                                                                                             |
-| data                             | Array<[DatasourceData](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L275)>  | Array of latest datasources data. See [Subscription object](#subscription-object).                                                                                                                                                                                                                                 |
-| timeWindow                       | [WidgetTimewindow](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/time/time.models.ts#L104)   | Current widget timewindow (applicable for timeseries widgets). Holds information about current timewindow bounds. **minTime** - minimum time in UTC milliseconds, **maxTime** - maximum time in UTC milliseconds, **interval** - current aggregation interval in milliseconds.                                     |
+| datasources                      | Array<[Datasource](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)>  | Array of resolved widget datasources. See [Subscription object](#subscription-object).                                                                                                                                                                                                                             |
+| data                             | Array<[DatasourceData](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L275)>  | Array of latest datasources data. See [Subscription object](#subscription-object).                                                                                                                                                                                                                                 |
+| timeWindow                       | [WidgetTimewindow](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/time/time.models.ts#L104)   | Current widget timewindow (applicable for timeseries widgets). Holds information about current timewindow bounds. **minTime** - minimum time in UTC milliseconds, **maxTime** - maximum time in UTC milliseconds, **interval** - current aggregation interval in milliseconds.                                     |
 | units                            | String             | Optional property defining units text of values displayed by widget. Useful for simple widgets like cards or gauges.                                                                                                                                                                                               |
 | decimals                         | Number             | Optional property defining how many positions should be used to display decimal part of the value number.                                                                                                                                                                                                          |
 | hideTitlePanel                   | Boolean            | Manages visibility of widget title panel. Useful for widget with custom title panels or different states. **updateWidgetParams()** function must be called after this property change.                                                                                                                             |
 | widgetTitle                      | String             | If set, will override configured widget title text. **updateWidgetParams()** function must be called after this property change.                                                                                                                                                                                   |
 | detectChanges()                  | Function           | Trigger change detection for current widget. Must be invoked when widget HTML template bindings should be updated due to widget data changes.                                                                                                                                                                      |
 | updateWidgetParams()             | Function           | Updates widget with runtime set properties such as **widgetTitle**, **hideTitlePanel**, etc. Must be invoked for these property changes to take effect.                                                                                                                                                            |
-| pageLink(pageSize, page, textSearch, sortOrder) | [PageLink](https://github.com/thingsboard/thingsboard/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/shared/models/page/page-link.ts#L98) | Is used to create sorting configuration for GET requests. **pageSize** - determines the number of entities displayed on a page, **page** - specifies which page should be displayed, **textSearch** - filters entities based on the included text, **sortOrder** - sets the order in which entities are displayed. |
-| defaultSubscription              | [IWidgetSubscription](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L220")             | Default widget subscription object contains all subscription information, including current data, according to the widget type. See [Subscription object](#subscription-object).                                                                                                                                   |
-| timewindowFunctions              | [TimewindowFunctions](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L45)             | Object with timewindow functions used to manage widget data time frame. Can be used by Time-series or Alarm widgets. See [Timewindow functions](#timewindow-functions).                                                                                                                                            |
-| controlApi                       | [RpcApi](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L58)             | Object that provides API functions for RPC (Control) widgets. See [Control API](#control-api).                                                                                                                                                                                                                     | 
-| actionsApi                       | [WidgetActionsApi](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L67)             | A set of API functions for working with user-defined actions. See [Actions API](#actions-api).                                                                                                                                                                                                                     |
-| stateController                  | [IStateController](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L121)             | Reference to Dashboard state controller, providing API to manage the current dashboard state. See [State Controller](#state-controller).                                                                                                                                                                           |
+| pageLink(pageSize, page, textSearch, sortOrder) | [PageLink](https://github.com/sentient/sentient/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/shared/models/page/page-link.ts#L98) | Is used to create sorting configuration for GET requests. **pageSize** - determines the number of entities displayed on a page, **page** - specifies which page should be displayed, **textSearch** - filters entities based on the included text, **sortOrder** - sets the order in which entities are displayed. |
+| defaultSubscription              | [IWidgetSubscription](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L220")             | Default widget subscription object contains all subscription information, including current data, according to the widget type. See [Subscription object](#subscription-object).                                                                                                                                   |
+| timewindowFunctions              | [TimewindowFunctions](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L45)             | Object with timewindow functions used to manage widget data time frame. Can be used by Time-series or Alarm widgets. See [Timewindow functions](#timewindow-functions).                                                                                                                                            |
+| controlApi                       | [RpcApi](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L58)             | Object that provides API functions for RPC (Control) widgets. See [Control API](#control-api).                                                                                                                                                                                                                     | 
+| actionsApi                       | [WidgetActionsApi](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L67)             | A set of API functions for working with user-defined actions. See [Actions API](#actions-api).                                                                                                                                                                                                                     |
+| stateController                  | [IStateController](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L121)             | Reference to Dashboard state controller, providing API to manage the current dashboard state. See [State Controller](#state-controller).                                                                                                                                                                           |
 
 In order to implement a new widget, the following JavaScript functions should be defined *(Note: each function is optional and can be implemented according to  widget specific behaviour):*
 
@@ -47,17 +47,17 @@ In order to implement a new widget, the following JavaScript functions should be
 | ``` onDestroy() ```                                                | Called when widget element is destroyed. Should be used to cleanup all resources if necessary.                                                                                                                                                                                                               |
 | ``` getSettingsSchema() ```                                        | Optional function returning widget settings schema json as alternative to **Settings tab** of [Settings schema section](#settings-schema-section).                                                                                                                                                           |
 | ``` getDataKeySettingsSchema() ```                                 | Optional function returning particular data key settings schema json as alternative to **Data key settings schema** tab of [Settings schema section](#settings-schema-section).                                                                                                                              |
-| ``` typeParameters() ```                                           | Returns [WidgetTypeParameters](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L146) object describing widget datasource parameters. See [Type parameters object](#type-parameters-object).                           |
-| ``` actionSources() ```                                            | Returns map describing available widget action sources ([WidgetActionSource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L118)) used to define user actions. See [Action sources object](#action-sources-object). |
+| ``` typeParameters() ```                                           | Returns [WidgetTypeParameters](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L146) object describing widget datasource parameters. See [Type parameters object](#type-parameters-object).                           |
+| ``` actionSources() ```                                            | Returns map describing available widget action sources ([WidgetActionSource](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L118)) used to define user actions. See [Action sources object](#action-sources-object). |
 
 
 #### Subscription object
 
-The widget subscription object is instance of [IWidgetSubscription](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L220") and contains all subscription information, including current data, according to the [widget type](/docs/{{docsPrefix}}user-guide/ui/widget-library/#widget-types).
+The widget subscription object is instance of [IWidgetSubscription](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L220") and contains all subscription information, including current data, according to the [widget type](/docs/{{docsPrefix}}user-guide/ui/widget-library/#widget-types).
 Depending on widget type, subscription object provides different data structures.
 For [Latest values](/docs/{{docsPrefix}}user-guide/ui/widget-library/#latest-values) and [Time-series](/docs/{{docsPrefix}}user-guide/ui/widget-library/#time-series) widget types, it provides the following properties:
 
-- **datasources** - array of datasources (Array<[Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)>) used by this subscription, it has the following structure:
+- **datasources** - array of datasources (Array<[Datasource](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)>) used by this subscription, it has the following structure:
 
 ```javascript
     datasources = [
@@ -84,7 +84,7 @@ For [Latest values](/docs/{{docsPrefix}}user-guide/ui/widget-library/#latest-val
     ]
 ```
 
-- **data** - array of latest data (Array<[DatasourceData](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L275)>) received in scope of this subscription, it has the following structure:
+- **data** - array of latest data (Array<[DatasourceData](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L275)>) received in scope of this subscription, it has the following structure:
 
 ```javascript
     data = [
@@ -105,7 +105,7 @@ For [Latest values](/docs/{{docsPrefix}}user-guide/ui/widget-library/#latest-val
 
 For [Alarm widget](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widget) type it provides the following properties:
 
-- **alarmSource** - ([Datasource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)) information about entity for which alarms are fetched, it has the following structure:
+- **alarmSource** - ([Datasource](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L250)) information about entity for which alarms are fetched, it has the following structure:
 
 ```javascript
     alarmSource = {
@@ -128,7 +128,7 @@ For [Alarm widget](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widge
     }
 ```
 
-- **alarms** - array of alarms (Array<[Alarm](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/alarm.models.ts#L88)>) received in scope of this subscription, it has the following structure:
+- **alarms** - array of alarms (Array<[Alarm](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/alarm.models.ts#L88)>) received in scope of this subscription, it has the following structure:
 
 ```javascript
     alarms = [
@@ -163,7 +163,7 @@ For [RPC](/docs/{{docsPrefix}}user-guide/ui/widget-library/#rpc-control-widget) 
 
 #### Timewindow functions
 
-Object with timewindow functions ([TimewindowFunctions](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L45)) used to manage widget data time frame. Can be used by [Time-series](/docs/{{docsPrefix}}user-guide/ui/widget-library/#time-series) or [Alarm](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widget) widgets. Path: **widgetContext.dashboard**.
+Object with timewindow functions ([TimewindowFunctions](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/core/api/widget-api.models.ts#L45)) used to manage widget data time frame. Can be used by [Time-series](/docs/{{docsPrefix}}user-guide/ui/widget-library/#time-series) or [Alarm](/docs/{{docsPrefix}}user-guide/ui/widget-library/#alarm-widget) widgets. Path: **widgetContext.dashboard**.
 
 | **Function**                                        | **Description**                                                                        |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -173,7 +173,7 @@ Object with timewindow functions ([TimewindowFunctions](https://github.com/thing
 
 #### Control API
 
-The Control API ([RpcApi](https://github.com/thingsboard/thingsboard/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/core/api/widget-api.models.ts#L74)) provides API functions for the [Control widgets](/docs/{{docsPrefix}}user-guide/ui/widget-library/#rpc-control-widget). Path: **widgetContext.controlApi**.
+The Control API ([RpcApi](https://github.com/sentient/sentient/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/core/api/widget-api.models.ts#L74)) provides API functions for the [Control widgets](/docs/{{docsPrefix}}user-guide/ui/widget-library/#rpc-control-widget). Path: **widgetContext.controlApi**.
 
 | **Function**                                        | **Description**                                                                        |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------|
@@ -183,7 +183,7 @@ The Control API ([RpcApi](https://github.com/thingsboard/thingsboard/blob/{{ sit
 
 #### Actions API
 
-Set of API functions ([WidgetActionsApi](https://github.com/thingsboard/thingsboard/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/core/api/widget-api.models.ts#L86)) to work with user defined actions. Path: **widgetContext.actionsApi**.
+Set of API functions ([WidgetActionsApi](https://github.com/sentient/sentient/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/core/api/widget-api.models.ts#L86)) to work with user defined actions. Path: **widgetContext.actionsApi**.
 
 | **Function**                                                          | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 |-----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -195,7 +195,7 @@ Set of API functions ([WidgetActionsApi](https://github.com/thingsboard/thingsbo
 
 #### Widget Subscription API
 
-Set of API functions ([WidgetSubscriptionApi](https://github.com/thingsboard/thingsboard/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/core/api/widget-api.models.ts#L66)) to work with custom subscriptions. Path: **widgetContext.subscriptionApi**.
+Set of API functions ([WidgetSubscriptionApi](https://github.com/sentient/sentient/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/core/api/widget-api.models.ts#L66)) to work with custom subscriptions. Path: **widgetContext.subscriptionApi**.
 
 | **Function**                                                          | **Description**                                                                                                                                                                                                                                                                                                                                |
 |-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -206,7 +206,7 @@ Set of API functions ([WidgetSubscriptionApi](https://github.com/thingsboard/thi
 
 #### State Controller
 
-Reference to Dashboard state controller ([IStateController](https://github.com/thingsboard/thingsboard/blob/v3.4/ui-ngx/src/app/core/api/widget-api.models.ts#L151)), providing API to manage current dashboard state. Path: **widgetContext.dashboard.stateController**.
+Reference to Dashboard state controller ([IStateController](https://github.com/sentient/sentient/blob/v3.4/ui-ngx/src/app/core/api/widget-api.models.ts#L151)), providing API to manage current dashboard state. Path: **widgetContext.dashboard.stateController**.
 
 | **Function**                                        | **Description**                                                                                                                                                                                                                                                                                                   |
 |-----------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -226,7 +226,7 @@ Reference to Dashboard state controller ([IStateController](https://github.com/t
 
 #### Broadcast Service
 
-The Broadcast Service ([BroadcastService](https://github.com/thingsboard/thingsboard/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/core/services/broadcast.service.ts#L25)) is used for data exchange between widgets at the UI level.
+The Broadcast Service ([BroadcastService](https://github.com/sentient/sentient/blob/{{ site.release.wd_examples_commit }}/ui-ngx/src/app/core/services/broadcast.service.ts#L25)) is used for data exchange between widgets at the UI level.
 
 | **Function**                                        | **Description**                                                                                                                                                                                                                                    |
 |-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -271,7 +271,7 @@ as a result on Widget 2 you can see your data:
 
 #### Type parameters object
 
-Object [WidgetTypeParameters](https://github.com/thingsboard/thingsboard/blob/5a16da51b5d755e18c5d8088e88336f07e4766ea/ui-ngx/src/app/shared/models/widget.models.ts#L170) describing widget datasource parameters. It has the following properties:
+Object [WidgetTypeParameters](https://github.com/sentient/sentient/blob/5a16da51b5d755e18c5d8088e88336f07e4766ea/ui-ngx/src/app/shared/models/widget.models.ts#L170) describing widget datasource parameters. It has the following properties:
 
 ```javascript
     return {
@@ -291,7 +291,7 @@ Object [WidgetTypeParameters](https://github.com/thingsboard/thingsboard/blob/5a
 
 #### Action sources object
 
-Map describing available widget action sources ([WidgetActionSource](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L118)) to which user actions can be assigned. It has the following structure:
+Map describing available widget action sources ([WidgetActionSource](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/shared/models/widget.models.ts#L118)) to which user actions can be assigned. It has the following structure:
 
 ```javascript
    return {
@@ -305,7 +305,7 @@ Map describing available widget action sources ([WidgetActionSource](https://git
 ### Creating simple widgets
 
 The tutorials below show how to create minimal widgets of each type.
-In order to minimize the amount of code, the Angular framework will be used, on which ThingsBoard UI is actually based.
+In order to minimize the amount of code, the Angular framework will be used, on which SENTIENT UI is actually based.
 By the way, you can always use pure JavaScript or jQuery API in your widget code.
 
 #### Latest Values widget

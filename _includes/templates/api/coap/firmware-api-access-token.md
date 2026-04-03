@@ -7,7 +7,7 @@ coap get coap://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/firmware?title=$TITLE&version
 {: .copy-code}
 
 Where
-- **$THINGSBOARD_HOST_NAME** is your localhost, or the platform address
+- **$SENTIENT_HOST_NAME** is your localhost, or the platform address
 - **$ACCESS_TOKEN** is device access token
 - **$TITLE** is the firmware title
 - **$VERSION** is the version of the target firmware

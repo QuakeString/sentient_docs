@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} to become familiar with ThingsBoard basics. Additionally, it is advisable to explore the [Device profiles](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} documentation.
+> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} to become familiar with SENTIENT basics. Additionally, it is advisable to explore the [Device profiles](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} documentation.
 
 ## Sparkplug basics
 
@@ -10,7 +10,7 @@ to seamlessly integrate data from their applications, sensors, devices, and gate
 
 ### Sparkplug B Edge Node
 
-ThingsBoard acts as an MQTT Server which support the SparkPlug payload and topic structure and allows connections from the 
+SENTIENT acts as an MQTT Server which support the SparkPlug payload and topic structure and allows connections from the 
 MQTT Edge of Network (EoN) Node.
 
 The EoN Node is any v3.1.1 or v5.0 compliant MQTT Client application that manages an MQTT Session and provides the
@@ -25,16 +25,16 @@ defines both MQTT topic and message structure for the EoN Nodes to communicate w
 ### Sparkplug B Device
 
 Single EoN Node may represent multiple physical devices and sensors and upload device metrics for each of those devices.
-ThingsBoard decodes the device metrics from the Sparkplug payload and stores it as a corresponding device 
+SENTIENT decodes the device metrics from the Sparkplug payload and stores it as a corresponding device 
 [attributes](/docs/{{docsPrefix}}user-guide/attributes/) or [time series](/docs/{{docsPrefix}}user-guide/telemetry/) data. 
 You may also issue an update to the Sparkplug device using 
 [shared attributes update](#update-metrics-from-shared-attributes-to-mqtt-eondevice) or 
-[rpc command](#update-metrics--using-the-thingsboard-rpc-command-from-server-to-mqtt-eondevice).
+[rpc command](#update-metrics--using-the-sentient-rpc-command-from-server-to-mqtt-eondevice).
 
 {% capture difference %}
 **NOTE:**
 <br>
-ThingsBoard supports **Sparkplug™ B** payloads only.
+SENTIENT supports **Sparkplug™ B** payloads only.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -47,7 +47,7 @@ structures that can be represented in folder structures with metrics which are o
 spBv1.0/Sparkplug Group 1/NBIRTH /Sparkplug Node 1/Sparkplug Device 1
 ````
 
-#### Sparkplug B Message Type in The Thingsboard
+#### Sparkplug B Message Type in The Sentient
 
 | Type      | Description                                            |
 |:----------|:-------------------------------------------------------|
@@ -135,8 +135,8 @@ MQTT 5.0 → Clean Start = true and Session Expiry Interval = 0
 
 ## Getting started
 
-This guide will teach us how to: connect Sparkplug EoN node to ThingsBoard,
-collect device metrics and store them as ThingsBoard time series data,
+This guide will teach us how to: connect Sparkplug EoN node to SENTIENT,
+collect device metrics and store them as SENTIENT time series data,
 and push commands back to devices.
 
 ### Step 1. Create device profile
@@ -163,15 +163,15 @@ First you need to create MQTT [device profile](/docs/{{docsPrefix}}user-guide/de
 
 ### Step 3. Launch the EoN node emulator
 
-We have prepared sparkplug node [emulator](https://github.com/thingsboard/sparkplug-emulator) for the testing purposes.
+We have prepared sparkplug node [emulator](https://github.com/sentient/sparkplug-emulator) for the testing purposes.
 Let's launch it and connect to our platform instance. We will use access token credentials from the previous step:
 
 ```bash
-docker run -e SPARKPLUG_SERVER_URL='tcp://{{apiHostName}}:1883' -e SPARKPLUG_CLIENT_MQTT_USERNAME='YOUR_THINGSBOARD_DEVICE_TOKEN' thingsboard/tb-sparkplug-emulator:latest
+docker run -e SPARKPLUG_SERVER_URL='tcp://{{apiHostName}}:1883' -e SPARKPLUG_CLIENT_MQTT_USERNAME='YOUR_SENTIENT_DEVICE_TOKEN' sentient/tb-sparkplug-emulator:latest
 ```
 {: .copy-code}
 
-Don't forget to replace <code>YOUR_THINGSBOARD_DEVICE_TOKEN</code> with the actual value of the token.
+Don't forget to replace <code>YOUR_SENTIENT_DEVICE_TOKEN</code> with the actual value of the token.
 You should also replace <code>{{apiHostName}}</code> with your server hostname.
 
 {% capture difference %}
@@ -210,13 +210,13 @@ Additionally, a separate device profile is created for the two new devices with 
 
 {% include images-gallery.html imageCollection="sparkplug-create-two-devices" %}
 
-### Step 5. Push updates to Sparkplug metrics from Thingsboard server to MQTT EON and Device
+### Step 5. Push updates to Sparkplug metrics from Sentient server to MQTT EON and Device
 
-You may push update to Sparkplug node/device metric from ThingsBoard via shared attribute update or RPC command. 
+You may push update to Sparkplug node/device metric from SENTIENT via shared attribute update or RPC command. 
 
 #### Update Metrics using shared attributes
 
-ThingsBoard [Shared Attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes) are used to deliver metric value updates to the device.
+SENTIENT [Shared Attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes) are used to deliver metric value updates to the device.
 You may change the shared attribute in multiple ways - via administration UI, dashboard widget, REST API, or rule engine node.
 
 <br>
@@ -293,9 +293,9 @@ The attribute values for "*Outputs/LEDs/Green*" and "*Device Control/Scan Rate*"
 {"MyFloat":123.345}      // by default if from Device "DCMD"  will be added
 ```
 
-#### Update Metrics  using the ThingsBoard RPC command from server to MQTT EON/Device
+#### Update Metrics  using the SENTIENT RPC command from server to MQTT EON/Device
 
-ThingsBoard supports on-demand update to metrics of the Sparkplug EoN Node or Device using RPC(Remote Procedure Call) feature. We also use term "command" instead of RPC for simplicity.
+SENTIENT supports on-demand update to metrics of the Sparkplug EoN Node or Device using RPC(Remote Procedure Call) feature. We also use term "command" instead of RPC for simplicity.
 You can send the command using REST API, dashboard widget, rule engine, or custom script.
 See the structure of the command is documented [here](/docs/{{docsPrefix}}user-guide/rpc/#server-side-rpc).
 
@@ -332,16 +332,16 @@ In this example, we will use the "*RPC Button*" widget to reboot *Sparkplug EoN 
 Go to the *Dashboards* page and create a new dashboard named *Sparkplug*. Open the dashboard and add new alias by clicking on *Entity aliases* icon.
 Name the alias (*EoN Node*, for example), select filter type "*Single Entity*", type "*Device*" and choose *Node 1*. Press Add and then Save.
 
-{% include images-gallery.html imageCollection="sparkplug-update-metrics-using-the-thingsboard-rpc-command-1" %}
+{% include images-gallery.html imageCollection="sparkplug-update-metrics-using-the-sentient-rpc-command-1" %}
 
 Now create a new widget. Click "Add new widget", select the *Control widgets* bundle from the drop-down menu and select the *RPC Button* widget. On the *Data* field select created alias (EoN Node). 
 Go to *Advanced* tab and enter *button label* - REBOOT NODE. In the *RPC settings* enter *RPC method* - "NCMD" (command to the EoN Node) and *RPC method params* - "*{"metricName": "Node Control/Reboot", "value": true}*". Click Add and save changes.
 
-{% include images-gallery.html imageCollection="sparkplug-update-metrics-using-the-thingsboard-rpc-command-2" %}
+{% include images-gallery.html imageCollection="sparkplug-update-metrics-using-the-sentient-rpc-command-2" %}
 
 Now click "*REBOOT NODE*" button on the widget. RPC command with name "Node Control/Reboot" and value "true" is sent from the server to the node "*Sparkplug Node 1*".
 
-{% include images-gallery.html imageCollection="sparkplug-update-metrics-using-the-thingsboard-rpc-command-3" %}
+{% include images-gallery.html imageCollection="sparkplug-update-metrics-using-the-sentient-rpc-command-3" %}
 
 In the *Terminal* where the emulator is running, you should see the following messages:
 

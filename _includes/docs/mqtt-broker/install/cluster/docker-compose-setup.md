@@ -3,7 +3,7 @@
 {:toc}
 
 
-This guide will help you set up TBMQ {{tbmqSuffix}} in cluster mode using Docker Compose.
+This guide will help you set up ST-RMQTT {{st-rmqttSuffix}} in cluster mode using Docker Compose.
 
 ## Prerequisites
 
@@ -11,38 +11,38 @@ This guide will help you set up TBMQ {{tbmqSuffix}} in cluster mode using Docker
 
 {% include templates/install/docker-install-note.md %}
 
-## Pull TBMQ {{tbmqSuffix}} Image
+## Pull ST-RMQTT {{st-rmqttSuffix}} Image
 
 Make sure you have [logged in](https://docs.docker.com/engine/reference/commandline/login/) to docker hub using the command line.
 
 {% if docsPrefix == null %}
 ```bash
-docker pull thingsboard/tbmq-node:{{ site.release.broker_full_ver }}
-docker pull thingsboard/tbmq-integration-executor:{{ site.release.broker_full_ver }}
+docker pull sentient/st-rmqtt-node:{{ site.release.broker_full_ver }}
+docker pull sentient/st-rmqtt-integration-executor:{{ site.release.broker_full_ver }}
 ```
 {: .copy-code}
 {% else %}
 ```bash
-docker pull thingsboard/tbmq-pe-node:{{ site.release.pe_broker_full_ver }}
-docker pull thingsboard/tbmq-pe-integration-executor:{{ site.release.pe_broker_full_ver }}
+docker pull sentient/st-rmqtt-pe-node:{{ site.release.pe_broker_full_ver }}
+docker pull sentient/st-rmqtt-pe-integration-executor:{{ site.release.pe_broker_full_ver }}
 ```
 {: .copy-code}
 {% endif %}
 
 {% if docsPrefix == null %}
-## Clone TBMQ repository
+## Clone ST-RMQTT repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq.git
-cd tbmq/docker
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt.git
+cd st-rmqtt/docker
 ```
 {: .copy-code}
 {% else %}
-## Clone TBMQ PE Docker Compose repository
+## Clone ST-RMQTT PE Docker Compose repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq-pe-docker-compose.git
-cd tbmq-pe-docker-compose/cluster
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt-pe-docker-compose.git
+cd st-rmqtt-pe-docker-compose/cluster
 ```
 {: .copy-code}
 {% endif %}
@@ -51,7 +51,7 @@ cd tbmq-pe-docker-compose/cluster
 ## Get the license key
 
 Before proceeding, make sure you’ve selected your subscription plan or chosen to purchase a perpetual license.
-If you haven’t done this yet, please visit the [Pricing page](/pricing/?section=tbmq-options){: target="_blank"} to compare available options
+If you haven’t done this yet, please visit the [Pricing page](/pricing/?section=st-rmqtt-options){: target="_blank"} to compare available options
 and obtain your license key.
 
 > **Note:** Throughout this guide, we’ll refer to your license key as **YOUR_LICENSE_KEY_HERE**.
@@ -59,7 +59,7 @@ and obtain your license key.
 ## Configure the license key
 
 ```bash
-nano tbmq.env
+nano st-rmqtt.env
 ```
 {: .copy-code}
 
@@ -67,7 +67,7 @@ and put the license secret parameter instead of "YOUR_LICENSE_KEY_HERE":
 
 ```text
 # License info
-TBMQ_LICENSE_SECRET=YOUR_LICENSE_KEY_HERE
+ST-RMQTT_LICENSE_SECRET=YOUR_LICENSE_KEY_HERE
 ```
 
 {% endif %}
@@ -84,7 +84,7 @@ Execute the following command to create the necessary volumes for all the servic
 Execute the following command to run the installation:
 
 ```bash
-./scripts/docker-install-tbmq.sh
+./scripts/docker-install-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -105,10 +105,10 @@ in you browser (e.g. **http://localhost**) and connect clients using MQTT protoc
 ## Logs, stop and start commands
 
 In case of any issues, you can examine service logs for errors.
-For example, to see TBMQ logs, execute the following command:
+For example, to see ST-RMQTT logs, execute the following command:
 
 ```bash
-docker compose logs -f tbmq1
+docker compose logs -f st-rmqtt1
 ```
 {: .copy-code}
 
@@ -149,7 +149,7 @@ In case you want to remove docker volumes for all the containers, execute the fo
 ```
 {: .copy-code}
 
-It could be useful to update logs (enable DEBUG/TRACE logs) in runtime or change TBMQ or Haproxy configs. In order to do
+It could be useful to update logs (enable DEBUG/TRACE logs) in runtime or change ST-RMQTT or Haproxy configs. In order to do
 this, you need to make changes, for example, to the
 _haproxy.cfg_ or _logback.xml_ file.
 Afterward, execute the next command to apply the changes for the container:
@@ -173,8 +173,8 @@ docker exec -it haproxy-certbot sh -c "kill -HUP 1"
 ### Backup and restore (Optional)
 
 While backing up your PostgreSQL database is highly recommended, it is optional before proceeding with the upgrade.
-{% if docsPrefix == null %} For further guidance, follow the [next instructions](https://github.com/thingsboard/tbmq/blob/main/docker/backup-restore/README.md).
-{% else %} For further guidance, follow the [next instructions](https://github.com/thingsboard/tbmq-pe-docker-compose/blob/master/cluster/backup-restore/README.md).
+{% if docsPrefix == null %} For further guidance, follow the [next instructions](https://github.com/sentient/st-rmqtt/blob/main/docker/backup-restore/README.md).
+{% else %} For further guidance, follow the [next instructions](https://github.com/sentient/st-rmqtt-pe-docker-compose/blob/master/cluster/backup-restore/README.md).
 {% endif %}
 
 {% if docsPrefix == null %}
@@ -182,7 +182,7 @@ While backing up your PostgreSQL database is highly recommended, it is optional 
 ### Upgrade to 2.2.0
 
 In this release, the MQTT authentication mechanism was migrated from YAML/env configuration into the database.
-During upgrade, TBMQ needs to know which authentication providers are enabled in your deployment.
+During upgrade, ST-RMQTT needs to know which authentication providers are enabled in your deployment.
 This information is provided through environment variables passed to the **upgrade container**.
 
 The upgrade script requires a file named **`tb-mqtt-broker.env`** that explicitly defines these variables.
@@ -206,17 +206,17 @@ Once the file is prepared and the values verified, proceed with the [upgrade pro
 
 {% else %}
 
-### Upgrade from TBMQ CE to TBMQ PE (v2.2.0)
+### Upgrade from ST-RMQTT CE to ST-RMQTT PE (v2.2.0)
 
-To upgrade your existing **TBMQ Community Edition (CE)** to **TBMQ Professional Edition (PE)**, ensure you are running the latest **TBMQ CE {{site.release.broker_full_ver}}** version before starting the process.
-Merge your current configuration with the latest [TBMQ PE Docker Compose scripts](https://github.com/thingsboard/tbmq-pe-docker-compose/tree/{{ site.release.broker_branch }}).
+To upgrade your existing **ST-RMQTT Community Edition (CE)** to **ST-RMQTT Professional Edition (PE)**, ensure you are running the latest **ST-RMQTT CE {{site.release.broker_full_ver}}** version before starting the process.
+Merge your current configuration with the latest [ST-RMQTT PE Docker Compose scripts](https://github.com/sentient/st-rmqtt-pe-docker-compose/tree/{{ site.release.broker_branch }}).
 Do not forget to [configure the license key](#configure-the-license-key).
 
 Run the following commands, including the upgrade script to migrate PostgreSQL database data from CE to PE:
 
 ```bash
 ./scripts/docker-stop-services.sh
-./scripts/docker-upgrade-tbmq.sh --fromVersion=ce
+./scripts/docker-upgrade-st-rmqtt.sh --fromVersion=ce
 ./scripts/docker-start-services.sh
 ```
 {: .copy-code}
@@ -237,15 +237,15 @@ git pull origin {{ site.release.broker_branch }}
 {% include templates/mqtt-broker/upgrade/upgrade-to-custom-release.md %}
 
 **Note**: Make sure custom changes of yours if available are not lost during the merge process. 
-Make sure `TBMQ_VERSION` in .env file is set to the target version (e.g., set it to {{ site.release.broker_full_ver }} if you are upgrading to the latest).
+Make sure `ST-RMQTT_VERSION` in .env file is set to the target version (e.g., set it to {{ site.release.broker_full_ver }} if you are upgrading to the latest).
 
 {% include templates/mqtt-broker/install/upgrade-hint.md %}
 
 After that, execute the following commands:
 
-{% capture tabspec %}tbmq-upgrade
-tbmq-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/docker-compose-upgrade-tbmq-without-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-without-from-version.md
-tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/docker-compose-upgrade-tbmq-with-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-with-from-version.md{% endcapture %}
+{% capture tabspec %}st-rmqtt-upgrade
+st-rmqtt-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/docker-compose-upgrade-st-rmqtt-without-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-without-from-version.md
+st-rmqtt-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/docker-compose-upgrade-st-rmqtt-with-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-with-from-version.md{% endcapture %}
 {% include tabs.html %}
 
 {% endif %}
@@ -265,21 +265,21 @@ docker exec haproxy-certbot haproxy-refresh
 
 ## Enable MQTTS (MQTT over SSL/TLS)
 
-**MQTTS** allows clients to connect to TBMQ over an encrypted TLS/SSL channel, ensuring the confidentiality and integrity of MQTT messages in transit.
+**MQTTS** allows clients to connect to ST-RMQTT over an encrypted TLS/SSL channel, ensuring the confidentiality and integrity of MQTT messages in transit.
 There are two common deployment options:
 
-* **Two-way MQTTS (Mutual TLS)** – TBMQ terminates TLS, and clients must present valid certificates for authentication.
-* **One-way MQTTS (TLS termination at Load Balancer)** – HAProxy or another load balancer handles TLS termination, and forwards plain MQTT traffic to TBMQ over a trusted internal network.
+* **Two-way MQTTS (Mutual TLS)** – ST-RMQTT terminates TLS, and clients must present valid certificates for authentication.
+* **One-way MQTTS (TLS termination at Load Balancer)** – HAProxy or another load balancer handles TLS termination, and forwards plain MQTT traffic to ST-RMQTT over a trusted internal network.
 
 Both approaches protect external connections with encryption, but **two-way MQTTS** adds client certificate verification for higher security, 
 while **one-way MQTTS** simplifies broker configuration and can reuse existing HTTPS certificates on the load balancer.
 
 ### Two-way MQTTS
 
-In this configuration, TBMQ itself handles TLS termination and (optionally) client certificate authentication. 
+In this configuration, ST-RMQTT itself handles TLS termination and (optionally) client certificate authentication. 
 This approach is suitable when you want the broker to fully control SSL/TLS and mutual authentication without relying on a load balancer for security.
 
-To enable **MQTT over SSL (MQTTS)**, you need to provide valid SSL certificates and configure TBMQ to use them.
+To enable **MQTT over SSL (MQTTS)**, you need to provide valid SSL certificates and configure ST-RMQTT to use them.
 
 For more information on supported certificate formats and options, refer to the [MQTT over SSL](/docs/{{docsPrefix}}mqtt-broker/security/mqtts/) documentation.
 
@@ -302,11 +302,11 @@ volumes:
 ```
 {: .copy-code}
 
-Replace `PATH_TO_CERTS` with the path to the folder containing your certificate files. Make sure TBMQ can access those file.
+Replace `PATH_TO_CERTS` with the path to the folder containing your certificate files. Make sure ST-RMQTT can access those file.
 
 **Configure Environment Variables**
 
-Edit the `tbmq.env` file and **uncomment/configure** the following lines to enable SSL:
+Edit the `st-rmqtt.env` file and **uncomment/configure** the following lines to enable SSL:
 
 ```yaml
 LISTENER_SSL_ENABLED=true
@@ -320,7 +320,7 @@ LISTENER_SSL_PEM_KEY_PASSWORD=server_key_password
 
 **Restart Services**
 
-Apply the changes by restarting TBMQ services:
+Apply the changes by restarting ST-RMQTT services:
 
 ```bash
 ./scripts/docker-start-services.sh
@@ -332,7 +332,7 @@ Once started, your MQTT clients will be able to securely connect to port **8883*
 ### One-way MQTTS
 
 In this setup, TLS is terminated at the load balancer (HAProxy). 
-Clients connect securely to HAProxy over MQTTS (port 8883), and HAProxy forwards plain MQTT (unencrypted) to TBMQ over the internal network (port 1883).
+Clients connect securely to HAProxy over MQTTS (port 8883), and HAProxy forwards plain MQTT (unencrypted) to ST-RMQTT over the internal network (port 1883).
 You can reuse the same certificate you already use for HTTPS.
 
 Point HAProxy to your certificate bundle (PEM with full chain + private key). If you reuse the HTTPS cert, reference the same bundle.
@@ -347,8 +347,8 @@ Locate and update the _haproxy.cfg_ file:
   timeout server 3h
   option tcplog
   balance leastconn
-  server tbMqtt1 tbmq1:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
-  server tbMqtt2 tbmq2:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
+  server tbMqtt1 st-rmqtt1:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
+  server tbMqtt2 st-rmqtt2:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
 ```
 {: .copy-code}
 

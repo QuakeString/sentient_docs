@@ -9,23 +9,23 @@ title: Contribution Guide
 * TOC
 {:toc}
 
-We are constantly looking for a feedback from our community on how to improve ThingsBoard.
-If you have an idea, or you have some new features in mind, please open an issue at ThingsBoard [**GitHub issue page**](https://github.com/thingsboard/thingsboard/issues).
+We are constantly looking for a feedback from our community on how to improve SENTIENT.
+If you have an idea, or you have some new features in mind, please open an issue at SENTIENT [**GitHub issue page**](https://github.com/sentient/sentient/issues).
 Please make sure that the same ticket is not already opened in the issues list (or something very similar).
 
-Before you start any implementation please wait from the ThingsBoard team to comment on your ticket. We'll try to get back to you ASAP.
+Before you start any implementation please wait from the SENTIENT team to comment on your ticket. We'll try to get back to you ASAP.
 
 ## Required tools
 
-To build and run ThingsBoard instance make sure that you have **Java** and **Maven** installed onto your system.
+To build and run SENTIENT instance make sure that you have **Java** and **Maven** installed onto your system.
 
 Please refer to [**Building from sources**](/docs/user-guide/install/building-from-source) section where [**Java**](/docs/user-guide/install/building-from-source/#java) and [**Maven**](/docs/user-guide/install/building-from-source/#maven) install processes are described.
 
 To run integration and black-box tests **docker** and **docker-compose** required, please, refer to the [Running tests](/docs/user-guide/install/building-from-source/#tips-and-tricks) section.
 
-## Fork and build ThingsBoard repository
+## Fork and build SENTIENT repository
 
-Once you have completed installation of required tools please fork official [**ThingsBoard repository**](https://github.com/thingsboard/thingsboard).
+Once you have completed installation of required tools please fork official [**SENTIENT repository**](https://github.com/sentient/sentient).
 
 Now you can clone source code of the forked project. 
 
@@ -53,7 +53,7 @@ See separate instructions for [**IDEA**](https://www.jetbrains.com/help/idea/201
 
 ## Database
 
-By default ThingsBoard uses PostgreSQL database to store entities and timeseries data.
+By default SENTIENT uses PostgreSQL database to store entities and timeseries data.
 Alternatively, you can configure your platform to use hybrid mode - PostgreSQL for entities data and scalable Cassandra DB cluster for timeseries data. 
 
 ### SQL Database: PostgreSQL
@@ -72,10 +72,10 @@ Please refer to appropriate section where you find instructions on how to instal
  - [Cassandra installation on **Linux**](/docs/user-guide/install/linux/#cassandra)
  - [Cassandra installation on **Windows**](/docs/user-guide/install/windows/#cassandra)
 
-Edit ThingsBoard configuration file: 
+Edit SENTIENT configuration file: 
 
 ```text
-/application/src/main/resources/thingsboard.yml
+/application/src/main/resources/sentient.yml
 ```
 
 Locate and set database type configuration parameters to 'cassandra'.
@@ -86,10 +86,10 @@ database:
     type: "${DATABASE_TS_TYPE:cassandra}" # cassandra OR sql (for hybrid mode, only this value should be cassandra)
 ```
 
-**NOTE:** If your Cassandra server is installed on the remote machine or it is bind to custom interface/port, you need to specify it in thingsboard.yml as well.
-Please, refer to the [**configuration guide**](/docs/user-guide/install/config/) for the detailed description of **thingsboard.yml** file and what properties are used for cassandra connection configuration.
+**NOTE:** If your Cassandra server is installed on the remote machine or it is bind to custom interface/port, you need to specify it in sentient.yml as well.
+Please, refer to the [**configuration guide**](/docs/user-guide/install/config/) for the detailed description of **sentient.yml** file and what properties are used for cassandra connection configuration.
 
-After the thingsboard.yml file was updated, please rebuild the application module so that the updated thingsboard.yml gets populated to the target directory:
+After the sentient.yml file was updated, please rebuild the application module so that the updated sentient.yml gets populated to the target directory:
 
 ```bash
 cd ${TB_WORK_DIR}/application
@@ -119,7 +119,7 @@ install_dev_db.bat
 
 ### Running UI container in hot redeploy mode.
 
-By default, ThingsBoard UI is served at 8080 port. However, you may want to run UI in the hot redeploy mode.
+By default, SENTIENT UI is served at 8080 port. However, you may want to run UI in the hot redeploy mode.
 
 **NOTE:** This step is optional. It is required only if you are going to do changes to UI.
 
@@ -134,20 +134,20 @@ This will launch a special server that will listen on 4200 port. All REST API an
 
 To start server-side container you can use couple options.
 
-As a first option, you can run the main method of **org.thingsboard.server.ThingsboardServerApplication** class that is located in *application* module from your *IDE*.
+As a first option, you can run the main method of **org.sentient.server.SentientServerApplication** class that is located in *application* module from your *IDE*.
 
 As a second option, you can start the server from command line as a regular **Spring boot** application:
 
 ```bash
 cd ${TB_WORK_DIR}
-java -jar application/target/thingsboard-${VERSION}-boot.jar
+java -jar application/target/sentient-${VERSION}-boot.jar
 ```
 
 ### Dry run
 
-Navigate to http://localhost:4200/ or http://localhost:8080/ and login into ThingsBoard using demo data credentials:
+Navigate to http://localhost:4200/ or http://localhost:8080/ and login into SENTIENT using demo data credentials:
 
- - *login* **tenant@thingsboard.org**
+ - *login* **tenant@sentient.org**
  - *password* **tenant**
 
 Make sure that you are able to login and everything has started correctly.
@@ -166,7 +166,7 @@ Before you commit your changes to the remote repository build it locally with te
 mvn clean install
 ```
 
-Make sure that build is fine and all the tests are successful. Try [black-box tests](https://github.com/thingsboard/thingsboard/tree/master/msa/black-box-tests) as well.
+Make sure that build is fine and all the tests are successful. Try [black-box tests](https://github.com/sentient/sentient/tree/master/msa/black-box-tests) as well.
 
 ### Push changes to your fork
 
@@ -181,7 +181,7 @@ git push origin master
 
 Please create pull request into the **master** branch by default (the additional *branch* name will be provided during the initial stage of github issue discussion if needed).
 
-If there are some conflicts because new stuff has arrived into ThingsBoard master branch before your commit, please resolve those conflicts to continue.
+If there are some conflicts because new stuff has arrived into SENTIENT master branch before your commit, please resolve those conflicts to continue.
 
 Sign up contribution license agreement (CLA) and verify that remote build has been successful. The CLA is signed automatically using the github CLA bot.
  

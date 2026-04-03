@@ -41,7 +41,7 @@ rename setAppName --targets android --value "Your Android app name"
 ## Change Package Name
 
 {% capture package_name_notice %}
-**Please note:** Your package names should be identical to the package name you configured in your Mobile Center on the ThingsBoard platform.
+**Please note:** Your package names should be identical to the package name you configured in your Mobile Center on the SENTIENT platform.
 {% endcapture %}
 {% include templates/info-banner.md content=package_name_notice %}
 
@@ -57,7 +57,7 @@ rename setBundleId --targets ios --value "org.yourCompany.app.ios"
 {: .copy-code}
 
 {% capture platform_limitation %}
-**Current ThingsBoard Platform Limitation:** Each app should have a unique package name even if they are for different platforms. That's why we added the `.ios` suffix to the IOS package name in the rename command. You can use any package name you want, as long as your IOS and Android package names are different.
+**Current SENTIENT Platform Limitation:** Each app should have a unique package name even if they are for different platforms. That's why we added the `.ios` suffix to the IOS package name in the rename command. You can use any package name you want, as long as your IOS and Android package names are different.
 {% endcapture %}
 {% include templates/info-banner.md content=platform_limitation %}
 

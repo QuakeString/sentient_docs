@@ -1,1 +1,1 @@
-wget https://dist.thingsboard.io/tb-edge-3.3.4.1pe.deb
+wget https://dist.docs.sentient.invenia.in/tb-edge-3.3.4.1pe.deb

@@ -1,9 +1,9 @@
 ---
 layout: docwithnav-mqtt-broker
 title: Frequently Asked Questions
-description: TBMQ FAQ
+description: ST-RMQTT FAQ
 
 ---
 
-{% assign tbmqName = "Community Edition" %}
+{% assign st-rmqttName = "Community Edition" %}
 {% include docs/mqtt-broker/faq.md %}

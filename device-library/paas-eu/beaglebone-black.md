@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect BeagleBone Black to ThingsBoard?
+title: How to connect BeagleBone Black to SENTIENT?
 category: Single-board computers
 chip: Sitara AM3352B
 connectivity: [HTTP, MQTT, Ethernet]

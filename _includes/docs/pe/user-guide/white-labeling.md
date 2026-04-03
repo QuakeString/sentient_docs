@@ -3,7 +3,7 @@
 * TOC
 {:toc}
 
-White labeling lets you tailor your ThingsBoard instance to match your brand and preferences—especially useful for companies delivering IoT solutions to their customers.
+White labeling lets you tailor your SENTIENT instance to match your brand and preferences—especially useful for companies delivering IoT solutions to their customers.
 
 Set your company or product name, upload your logo, choose color palettes, use a custom menu or translations—all without writing code or restarting the service.
 
@@ -27,7 +27,7 @@ White labeling is configured based on the level you&#39;re signed in under:
 
 **Inheritance flow:** System → Tenant → Customer. Lower levels can override settings within their scope.
 
-## Customize ThingsBoard web interface
+## Customize SENTIENT web interface
 
 {% capture difference %}
 **Please note:** To configure **White labeling**, you need the appropriate [permissions](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"}.
@@ -78,8 +78,8 @@ In the "General" tab you can set or change the following options:
 
     ![image](/images/user-guide/white-labeling/accent-palette.png)
 
- - Advanced CSS - you can stylize any elements of the ThingsBoard user interface as you wish. We will talk more about this functionality [below](#advanced-css);
- - Override Trendz analytics Add-on name - by checking this option, the name of the analytics add-on will be overridden from Trendz to Advanced analytics across the platform.
+ - Advanced CSS - you can stylize any elements of the SENTIENT user interface as you wish. We will talk more about this functionality [below](#advanced-css);
+ - Override SENTIENT ANALYTICS analytics Add-on name - by checking this option, the name of the analytics add-on will be overridden from SENTIENT ANALYTICS to Advanced analytics across the platform.
  - Show/hide platform name and version - by checking this option, the name of the platform and its current version will be displayed in the lower left corner.
 
 ![image](/images/user-guide/white-labeling/show-platform-name-and-version.png)
@@ -90,7 +90,7 @@ The final look of the customized user interface:
 
 ### Advanced CSS
 
-Using CSS, you can stylize any elements of the ThingsBoard user interface as you wish. Such elements can be background, icons, fonts, etc.
+Using CSS, you can stylize any elements of the SENTIENT user interface as you wish. Such elements can be background, icons, fonts, etc.
 
 To use CSS in your UI design, do the following:
 
@@ -142,7 +142,7 @@ An example of CSS code to customize the appearance of the sidebar menu:
 ```
 {: .copy-code}
 
-Using the functionality described in this documentation, you can customize the appearance of the ThingsBoard UI according to your preferences.
+Using the functionality described in this documentation, you can customize the appearance of the SENTIENT UI according to your preferences.
 
 ## Customize the login page
 
@@ -160,7 +160,7 @@ Once done, save the changes.
 {% include images-gallery.html imageCollection="customize-login-page" %}
 
 <br>
-Now, use your custom domain name to access the ThingsBoard web interface login page and verify the result of your configuration.
+Now, use your custom domain name to access the SENTIENT web interface login page and verify the result of your configuration.
 
 {% include images-gallery.html imageCollection="verify-result-customize-login-page" %}
 

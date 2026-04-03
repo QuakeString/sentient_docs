@@ -1,7 +1,7 @@
 ---
 layout: mqtt-broker
-title: TBMQ - Open Source MQTT Broker - Scalable IoT Messaging
-description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-source MQTT broker with clustering and message durability.
+title: ST-RMQTT - Open Source MQTT Broker - Scalable IoT Messaging
+description: Deliver 3M+ MQTT messages/sec with ST-RMQTT — a fault-tolerant open-source MQTT broker with clustering and message durability.
 ---
 
 <section id="top-features">
@@ -22,7 +22,7 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                     <img src="/images/mqtt-broker/product/performance.svg" alt="Performance">
                     <div>
                         <h3 class="title">Performance</h3>
-                        <p>Process <a target="_blank" href="/docs/mqtt-broker/reference/3m-throughput-single-node-performance-test/">millions</a> of messages per second with 1 TBMQ server and single-digit latency</p>
+                        <p>Process <a target="_blank" href="/docs/mqtt-broker/reference/3m-throughput-single-node-performance-test/">millions</a> of messages per second with 1 ST-RMQTT server and single-digit latency</p>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                 <h2>MQTT broker for real-life IoT scenarios</h2>
             </div>
             <div class="scenarios-details">
-                <p>Utilize diverse communication patterns effectively, ensuring comprehensive coverage of your use cases. TBMQ places particular emphasis on mastering fan-in, fan-out, and point-to-point (p2p) messaging.</p>
+                <p>Utilize diverse communication patterns effectively, ensuring comprehensive coverage of your use cases. ST-RMQTT places particular emphasis on mastering fan-in, fan-out, and point-to-point (p2p) messaging.</p>
             </div>
         </div>
         <div class="block">
@@ -126,15 +126,15 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
         <div id="background">
             <div class="main2"></div>
         </div>
-        <h2>TBMQ management & MQTT protocol</h2>
+        <h2>ST-RMQTT management & MQTT protocol</h2>
         <div class="row">
             <div class="col-lg-6">
                 <div class="block">
                     <h3>Diverse installation options</h3>
                     <p>Select the perfect fit for your infrastructure with our Docker-based or K8s-based deployments, crafted for seamless integration in both on-premise and cloud environments.</p>
                     <div class="installation-options-buttons">
-                        <a target="_blank" href="/docs/mqtt-broker/install/installation-options/" class="button arrow-top-right">Install TBMQ CE</a>
-                        <a target="_blank" href="/docs/pe/mqtt-broker/install/installation-options/" class="button arrow-top-right">Install TBMQ PE</a>
+                        <a target="_blank" href="/docs/mqtt-broker/install/installation-options/" class="button arrow-top-right">Install ST-RMQTT CE</a>
+                        <a target="_blank" href="/docs/pe/mqtt-broker/install/installation-options/" class="button arrow-top-right">Install ST-RMQTT PE</a>
                     </div>                    
                 </div>
             </div>
@@ -159,8 +159,8 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                 <div class="block">
                     <h4>Administer client sessions</h4>
                     <p>Gain full visibility over your IoT ecosystem with the user-friendly session management dashboard, enabling you to monitor vital session attributes. Seamlessly administer your device subscriptions for efficient data communication.</p>
-                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/sessions/" target="_blank">TBMQ CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/sessions/" target="_blank">TBMQ PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/sessions/" target="_blank">ST-RMQTT CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/sessions/" target="_blank">ST-RMQTT PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
             </div>
             <div class="col-lg-6 image-container">
@@ -174,8 +174,8 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                 <div class="block">
                     <h4>Administer client subscriptions</h4>
                     <p>Efficiently manage subscriptions with a powerful and intuitive interface, ensuring optimal client communication and data flow across your IoT network.</p>
-                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/subscriptions/" target="_blank">TBMQ CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/subscriptions/" target="_blank">TBMQ PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/subscriptions/" target="_blank">ST-RMQTT CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/subscriptions/" target="_blank">ST-RMQTT PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
             </div>
             <div class="col-lg-6 image-container">
@@ -189,8 +189,8 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                 <div class="block">
                     <h4>MQTT client credentials management</h4>
                     <p>Strengthen your IoT security using the MQTT client credentials management system, crafted to handle both Basic and X.509 Certificate Chain authentication options effortlessly.</p>
-                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/mqtt-client-credentials/" target="_blank">TBMQ CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/mqtt-client-credentials/" target="_blank">TBMQ PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/mqtt-client-credentials/" target="_blank">ST-RMQTT CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/mqtt-client-credentials/" target="_blank">ST-RMQTT PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
             </div>
             <div class="col-lg-6 image-container">
@@ -204,8 +204,8 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                 <div class="block">
                     <h3>MQTT websocket connectivity</h3>
                     <p>Interact with your IoT devices in real-time through the WebSocket client, offering a streamlined and responsive interface for device messaging and monitoring.</p>
-                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/websocket-client/" target="_blank">TBMQ CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/websocket-client/" target="_blank">TBMQ PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/websocket-client/" target="_blank">ST-RMQTT CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/websocket-client/" target="_blank">ST-RMQTT PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
             </div>
             <div class="col-lg-6 image-container">
@@ -219,8 +219,8 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                 <div class="block">
                     <h3>Real-time MQTT monitoring</h3>
                     <p>Keep a pulse on your IoT environment by tracking key metrics in real-time, ensuring your network's health and performance are always at their peak.</p>
-                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/monitoring/" target="_blank">TBMQ CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/monitoring/" target="_blank">TBMQ PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" href="/docs/mqtt-broker/user-guide/ui/monitoring/" target="_blank">ST-RMQTT CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/user-guide/ui/monitoring/" target="_blank">ST-RMQTT PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
             </div>
             <div class="col-lg-6 image-container">
@@ -234,8 +234,8 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                 <div class="block">
                     <h3>External system integrations</h3>
                     <p>Enable smooth data transmission between IoT devices, the broker, and external platforms with a reliable and scalable solution — all without impacting core broker performance.</p>
-                    <a class="read-more-button" href="/docs/mqtt-broker/integrations/" target="_blank">TBMQ CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
-                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/integrations/" target="_blank">TBMQ PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" href="/docs/mqtt-broker/integrations/" target="_blank">ST-RMQTT CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
+                    <a class="read-more-button" style="margin-left: 60px;" href="/docs/pe/mqtt-broker/integrations/" target="_blank">ST-RMQTT PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
             </div>
             <div class="col-lg-6 image-container">
@@ -249,7 +249,7 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                 <div class="block">
                     <h3>White labeling</h3>
                     <span class="pe-only-banner">PE only</span>
-                    <p>Rebrand the TBMQ broker web interface with your company or product logo and color scheme in 2 minutes. No coding or service restart required.</p>
+                    <p>Rebrand the ST-RMQTT broker web interface with your company or product logo and color scheme in 2 minutes. No coding or service restart required.</p>
                     <a class="read-more-button" href="/docs/pe/mqtt-broker/white-labeling/" target="_blank">Read more<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
             </div>
@@ -298,7 +298,7 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
             <div class="main5"></div>
         </div>
         <section class="comparison-table">
-            <h2>TBMQ feature comparison</h2>
+            <h2>ST-RMQTT feature comparison</h2>
             <div class="header">
               <p>Features</p>
               <p><span>Community Edition</span><span>CE</span></p>
@@ -423,12 +423,12 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
               <div class="comparison-row">
                 <p>Deployment Options</p>
               </div>
-              <a href="/pricing/?section=tbmq-options&product=tbmq-pe" target="_blank" class="comparison-row">
+              <a href="/pricing/?section=st-rmqtt-options&product=st-rmqtt-pe" target="_blank" class="comparison-row">
                 <p>Self-Managed (On-premise/Cloud)</p>
                 <div><img src="/images/pe/blue-mark.svg" alt="Blue checkmark"></div>
                 <div><img src="/images/pe/green-mark.svg" alt="Green checkmark"></div>
               </a>
-              <a href="/pricing/?section=tbmq-options&product=tbmq-private-cloud" target="_blank" class="comparison-row">
+              <a href="/pricing/?section=st-rmqtt-options&product=st-rmqtt-private-cloud" target="_blank" class="comparison-row">
                 <p>Managed Private Cloud</p>
                 <div class="hidden-space">&nbsp;</div>
                 <div><img src="/images/pe/green-mark.svg" alt="Green checkmark"></div>
@@ -440,8 +440,8 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
               </div>
               <div class="comparison-row">
                 <p>Support Model</p>
-                <p><a href="/pricing/?section=tbmq-options&product=tbmq-ce" target="_blank">Community</a></p>
-                <p><a href="/pricing/?section=tbmq-options&product=tbmq-pe" target="_blank">Advanced + SLA</a></p>
+                <p><a href="/pricing/?section=st-rmqtt-options&product=st-rmqtt-ce" target="_blank">Community</a></p>
+                <p><a href="/pricing/?section=st-rmqtt-options&product=st-rmqtt-pe" target="_blank">Advanced + SLA</a></p>
               </div>
             </div>
         </section>
@@ -453,11 +453,11 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
         <div id="background">
             <div class="main3"></div>
         </div>
-        <h2>TBMQ features</h2>
+        <h2>ST-RMQTT features</h2>
         <div id="cards">
             <div class="col-lg-6">
                 <div class="block">
-                    <img src="/images/thingsboard-logo.svg" alt="MQTT client type">
+                    <img src="/images/sentient-logo.svg" alt="MQTT client type">
                     <div>
                         <h3 class="title"><a target="_blank" href="/docs/mqtt-broker/user-guide/mqtt-client-type/">MQTT client type management</a></h3>
                         <p>Supports two distinct client types to provide customized messaging solutions for diverse IoT scenarios. One type efficiently handles frequent data transmissions and effectively manages incoming moderate message volumes (fan-out and p2p). The other specializes in high-rate topic subscriptions, perfect for data analytics and processing (fan-in).</p>
@@ -520,7 +520,7 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
                     <img src="/images/mqtt-broker/product/backpressure.svg" alt="MQTT channel backpressure">
                     <div>
                         <h3 class="title"><a target="_blank" href="/docs/mqtt-broker/user-guide/backpressure/">MQTT channel backpressure</a></h3>
-                        <p>Protect broker performance with smart handling of slow subscribers. TBMQ pauses delivery when clients can’t keep up and resumes once they recover, ensuring reliability and stability under load.</p>
+                        <p>Protect broker performance with smart handling of slow subscribers. ST-RMQTT pauses delivery when clients can’t keep up and resumes once they recover, ensuring reliability and stability under load.</p>
                     </div>
                 </div>
             </div>
@@ -536,8 +536,8 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
         <div class="row">
             <div class="container">
                 <div class="block">
-                    <h2>Get started with TBMQ</h2>
-                    <p>Get started with TBMQ today and unlock the full potential of your IoT solutions! With support for millions of concurrent connections, robust message handling, and reliable data persistence, TBMQ empowers you to build, scale, and secure your IoT applications like never before.</p>
+                    <h2>Get started with ST-RMQTT</h2>
+                    <p>Get started with ST-RMQTT today and unlock the full potential of your IoT solutions! With support for millions of concurrent connections, robust message handling, and reliable data persistence, ST-RMQTT empowers you to build, scale, and secure your IoT applications like never before.</p>
                     <a target="_blank" href="/docs/mqtt-broker/getting-started/" class="button arrow-top-right">Get started</a>
                 </div>
             </div>
@@ -547,69 +547,69 @@ description: Deliver 3M+ MQTT messages/sec with TBMQ — a fault-tolerant open-s
 
 <section id="news">
     <main>
-        <h2>TBMQ news</h2>
+        <h2>ST-RMQTT news</h2>
         <div id="cards">
             <div class="col-lg-6">
                 <div class="block">
                     <div class="image-container">
-                        <a target="_blank" href="/blog/tbmq-2-2-strengthening-mqtt-security-with-jwt-and-client-blocking/">
-                            <img src="/images/mqtt-broker/product/news-1.webp" alt="TBMQ 2.2: Strengthening MQTT security with JWT and Client Blocking" loading="lazy">
+                        <a target="_blank" href="/blog/st-rmqtt-2-2-strengthening-mqtt-security-with-jwt-and-client-blocking/">
+                            <img src="/images/mqtt-broker/product/news-1.webp" alt="ST-RMQTT 2.2: Strengthening MQTT security with JWT and Client Blocking" loading="lazy">
                         </a>
                     </div>
                     <div class="content">
                         <div class="tags">
                             <a target="_blank" href="/blog/category/updates/">Updates</a>
                         </div>
-                        <a target="_blank" class="title" href="/blog/tbmq-2-2-strengthening-mqtt-security-with-jwt-and-client-blocking/">TBMQ 2.2: Strengthening MQTT security with JWT and Client Blocking</a>
-                        <p>We’re excited to announce the release of TBMQ 2.2.0! This release brings powerful new features that make TBMQ more secure, resilient, and easier to operate in production at scale.</p>
+                        <a target="_blank" class="title" href="/blog/st-rmqtt-2-2-strengthening-mqtt-security-with-jwt-and-client-blocking/">ST-RMQTT 2.2: Strengthening MQTT security with JWT and Client Blocking</a>
+                        <p>We’re excited to announce the release of ST-RMQTT 2.2.0! This release brings powerful new features that make ST-RMQTT more secure, resilient, and easier to operate in production at scale.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="block">
                     <div class="image-container">
-                        <a target="_blank" href="/blog/tbmq-2-1-new-chapter-in-mqtt-messaging-with-embedded-integrations/">
-                            <img src="/images/mqtt-broker/product/news-4.webp" alt="TBMQ 2.1: New chapter in MQTT messaging with embedded Integrations" loading="lazy">
+                        <a target="_blank" href="/blog/st-rmqtt-2-1-new-chapter-in-mqtt-messaging-with-embedded-integrations/">
+                            <img src="/images/mqtt-broker/product/news-4.webp" alt="ST-RMQTT 2.1: New chapter in MQTT messaging with embedded Integrations" loading="lazy">
                         </a>
                     </div>
                     <div class="content">
                         <div class="tags">
                             <a target="_blank" href="/blog/category/updates/">Updates</a>
                         </div>
-                        <a target="_blank" class="title" href="/blog/tbmq-2-1-new-chapter-in-mqtt-messaging-with-embedded-integrations/">TBMQ 2.1: New chapter in MQTT messaging with embedded Integrations</a>
-                        <p>We're excited to announce the release of TBMQ 2.1.0! This version marks a major milestone by introducing the Integration Executor microservice, responsible for managing integrations. It powers scalable and multi-protocol message delivery to external systems, starting with support for HTTP, Kafka, and MQTT outbound integrations. We've also released the official Helm Chart for TBMQ, simplifying deployment and management of the infrastructure in K8s environments.</p>
+                        <a target="_blank" class="title" href="/blog/st-rmqtt-2-1-new-chapter-in-mqtt-messaging-with-embedded-integrations/">ST-RMQTT 2.1: New chapter in MQTT messaging with embedded Integrations</a>
+                        <p>We're excited to announce the release of ST-RMQTT 2.1.0! This version marks a major milestone by introducing the Integration Executor microservice, responsible for managing integrations. It powers scalable and multi-protocol message delivery to external systems, starting with support for HTTP, Kafka, and MQTT outbound integrations. We've also released the official Helm Chart for ST-RMQTT, simplifying deployment and management of the infrastructure in K8s environments.</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="block">
                     <div class="image-container">
-                        <a target="_blank" href="/blog/1-million-reasons-to-choose-tbmq-as-high-performance-mqtt-broker/">
-                            <img src="/images/mqtt-broker/product/news-3.webp" alt="TBMQ one million messages per second" loading="lazy">
+                        <a target="_blank" href="/blog/1-million-reasons-to-choose-st-rmqtt-as-high-performance-mqtt-broker/">
+                            <img src="/images/mqtt-broker/product/news-3.webp" alt="ST-RMQTT one million messages per second" loading="lazy">
                         </a>
                     </div>
                     <div class="content">
                         <div class="tags">
                             <a target="_blank" href="/blog/category/tech/">Tech</a>
                         </div>
-                        <a target="_blank" class="title" href="/blog/1-million-reasons-to-choose-tbmq-as-high-performance-mqtt-broker/">1 Million reasons to choose TBMQ as a high-performance MQTT broker</a>
-                        <p>Can an open-source MQTT broker handle one million messages per second for persistent sessions? TBMQ 2.x proves it can! Even more importantly, it achieves this with no single point of failure and ensures no data loss, even when hardware fails, making it a robust self-hosted MQTT broker solution for IIoT applications</p>
+                        <a target="_blank" class="title" href="/blog/1-million-reasons-to-choose-st-rmqtt-as-high-performance-mqtt-broker/">1 Million reasons to choose ST-RMQTT as a high-performance MQTT broker</a>
+                        <p>Can an open-source MQTT broker handle one million messages per second for persistent sessions? ST-RMQTT 2.x proves it can! Even more importantly, it achieves this with no single point of failure and ensures no data loss, even when hardware fails, making it a robust self-hosted MQTT broker solution for IIoT applications</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="block">
                     <div class="image-container">
-                        <a target="_blank" href="/blog/tbmq-2-0-migration-to-redis-mqtt-5-0-support-and-more/">
-                            <img src="/images/mqtt-broker/product/news-2.webp" alt="TBMQ 2.0.0 release" loading="lazy">
+                        <a target="_blank" href="/blog/st-rmqtt-2-0-migration-to-redis-mqtt-5-0-support-and-more/">
+                            <img src="/images/mqtt-broker/product/news-2.webp" alt="ST-RMQTT 2.0.0 release" loading="lazy">
                         </a>
                     </div>
                     <div class="content">
                         <div class="tags">
                             <a target="_blank" href="/blog/category/updates/">Updates</a>
                         </div>
-                        <a target="_blank" class="title" href="/blog/tbmq-2-0-migration-to-redis-mqtt-5-0-support-and-more/">TBMQ 2.0.0 release: migration to Redis, MQTT 5.0 support, and more</a>
-                        <p>TBMQ 2.0.0 release brings a major update with data migration of persistent sessions for devices from PostgreSQL to Redis. It also expands TBMQ’s MQTT 5.0 feature set, achieving full compatibility with the MQTT 5.0 standard. Here’s an overview of the features and updates included in this release</p>
+                        <a target="_blank" class="title" href="/blog/st-rmqtt-2-0-migration-to-redis-mqtt-5-0-support-and-more/">ST-RMQTT 2.0.0 release: migration to Redis, MQTT 5.0 support, and more</a>
+                        <p>ST-RMQTT 2.0.0 release brings a major update with data migration of persistent sessions for devices from PostgreSQL to Redis. It also expands ST-RMQTT’s MQTT 5.0 feature set, achieving full compatibility with the MQTT 5.0 standard. Here’s an overview of the features and updates included in this release</p>
                     </div>
                 </div>
             </div>

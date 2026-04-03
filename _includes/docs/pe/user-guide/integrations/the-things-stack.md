@@ -11,7 +11,7 @@
 
 ## Overview
 TheThingsStack is LoRaWAN network designed for connecting your devices using LoRaWAN stack. 
-After integrating TheThingsStack with Thingsboard, you can connect, communicate, process and visualize data from devices in the Thingsboard IoT platform.
+After integrating TheThingsStack with Sentient, you can connect, communicate, process and visualize data from devices in the Sentient IoT platform.
 
 
 ## The Things Stack Community setup
@@ -20,7 +20,7 @@ After integrating TheThingsStack with Thingsboard, you can connect, communicate,
 The first step is to create an **application** in TheThingsStack console. Go to [console](https://console.thethingsnetwork.org/){:target="_blank"}, open 
 **Applications** section, press **add application** button and fill required fields.
 
-- **Application ID** - thingsboard-connection
+- **Application ID** - sentient-connection
 
 Handler registration - used to identify region where application will be registered. In our example it
 will be *eu* region.
@@ -30,10 +30,10 @@ will be *eu* region.
 ### Payload Decoder
 Our device submits data in binary format. We have 2 options where to decode this data:
 
-- **TheThingsStack decoder** - data will be decoded before entering the Thingsboard
-- **Thingsboard converters** - uplink/downlink converters will be used to decode data from binary format into JSON
+- **TheThingsStack decoder** - data will be decoded before entering the Sentient
+- **Sentient converters** - uplink/downlink converters will be used to decode data from binary format into JSON
 
-In this tutorial, we will make an initial transformation into JSON with TTS decoder and then use Thingsboard converters for correct data processing.
+In this tutorial, we will make an initial transformation into JSON with TTS decoder and then use Sentient converters for correct data processing.
 In real life scenario, it is up to you where to decode/encode data, because it is possible to do this on any side.
 
 Decode Function:
@@ -91,10 +91,10 @@ Also, an access key will be needed to configure the integration, it can be gener
 
 {% include images-gallery.html imageCollection="api_key_access" %}
 
-## Integration with Thingsboard
-We made all required configurations in the TheThingsStack (register application, add decoder function and register device). Now we can start configuring Thingsboard.
+## Integration with Sentient
+We made all required configurations in the TheThingsStack (register application, add decoder function and register device). Now we can start configuring Sentient.
 
-### Thingsboard Uplink Data Converter
+### Sentient Uplink Data Converter
 
 First, we need to create an Uplink Data Converter which will be used for receiving messages from the TTS. 
 The converter should transform incoming payload into the required message format. Message must 
@@ -107,7 +107,7 @@ Here is how payload from TheThingsStack will look like:
   "end_device_ids": {
     "device_id": "thermostat-a",
     "application_ids": {
-      "application_id": "thingsboard-connection"
+      "application_id": "sentient-connection"
     },
     "dev_eui": "70B3D57ED00550F2",
     "join_eui": "0000000000000000"
@@ -177,8 +177,8 @@ return result;
 
 ![image](/images/user-guide/integrations/ttn/tb-converter_1.png)
 
-### Thingsboard Downlink Data Converter
-For sending Downlink messages from Thingsboard to the device inside TTS, we need to define a Downlink 
+### Sentient Downlink Data Converter
+For sending Downlink messages from Sentient to the device inside TTS, we need to define a Downlink 
 Converter. In general, the output from the Downlink Converter should have the following structure:
 ```json
 {
@@ -226,7 +226,7 @@ in the outbound message. The destination device is a **thermostat-a** device.
 
 ### TTS Integration
 
-Next we will create the integration with TheThingsStack inside Thingsboard. Open **Integrations** section and add new Integration with type
+Next we will create the integration with TheThingsStack inside Sentient. Open **Integrations** section and add new Integration with type
 **TheThingsStack**
 
 - Name: **TheThingsStack Integration**
@@ -234,13 +234,13 @@ Next we will create the integration with TheThingsStack inside Thingsboard. Open
 - Uplink data converter: **TheThingsStack Uplink**
 - Downlink data converter: **TheThingsStack Downlink**
 - Region: **eu1** (region where your application was registered inside TTS)
-- Application ID: **thingsboard-connection** (use **Application ID** from TTS)
+- Application ID: **sentient-connection** (use **Application ID** from TTS)
 - Access Key: use **Access Key** from TTS
 - Use API v3: Set **Enable**
 
 ![image](/images/user-guide/integrations/ttn/tb-integration_0.png)
 
-When adding the integration, you can test the connection between ThingsBoard and TheThingsStack. For it, 
+When adding the integration, you can test the connection between SENTIENT and TheThingsStack. For it, 
 after all required configurations, click the **Check connection** button.
 
 ![image](/images/user-guide/integrations/ttn/tb-integration_1.png)
@@ -253,9 +253,9 @@ Our device will publish temperature **0F** (15). So enter **0F** into the payloa
 
 ![image](/images/user-guide/integrations/ttn/ttn-send-payload.png)
 
-In Thingsboard go to **Device Group** -> **All** -> **thermostat-a** - here you can see that 
+In Sentient go to **Device Group** -> **All** -> **thermostat-a** - here you can see that 
 
-- a new device was registered in Thingsboard
+- a new device was registered in Sentient
 - in the **Latest Telemetry** section you will see that the last submitted temperature equals 15.
 
 ![image](/images/user-guide/integrations/ttn/tb-device-telemetry.png)

@@ -3,14 +3,14 @@
 
 ## Hello-World example
 
-Let&#39;s assume your device is using DHT22 sensor to collect and push temperature to the ThingsBoard.
+Let&#39;s assume your device is using DHT22 sensor to collect and push temperature to the SENTIENT.
 DHT22 sensor can measure temperature from -40°C to +80°C.
 
-In this tutorial we will configure ThingsBoard Rule Engine to store all temperature within -40 to 80°C range and log all other readings to the system log.
+In this tutorial we will configure SENTIENT Rule Engine to store all temperature within -40 to 80°C range and log all other readings to the system log.
 
 ### Adding temperature validation node
 
-In Thingsboard UI go to **Rule Chains** page and open **Root Rule Chain**.
+In Sentient UI go to **Rule Chains** page and open **Root Rule Chain**.
 
 {% if docsPrefix == null %}
 ![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/initial-root-chain-ce.png)
@@ -80,7 +80,7 @@ Also, we will connect **Script Filter** node with **Log Other** node using **Fal
 Press Save button to apply changes.
 
 ### Validate results
-For validating results we will need to create Device and submit telemetry to the Thingsboard. So go to **Devices** section and create new Device:
+For validating results we will need to create Device and submit telemetry to the Sentient. So go to **Devices** section and create new Device:
 
 {% if docsPrefix == null %}
 ![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/create-device-ce.png)
@@ -160,7 +160,7 @@ We will see that telemetry was saved successfully.
 
 ## See Also
 
-You can use the next links for learning more about Thingsboard Rule Engine:
+You can use the next links for learning more about Sentient Rule Engine:
 
 - [Rule Engine Overview](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/)
 - [Debug Node Execution](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#debugging)

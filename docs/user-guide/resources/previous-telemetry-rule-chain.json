@@ -15,7 +15,7 @@
           "layoutX": 1153,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "SaveTS",
         "debugMode": true,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 285,
           "layoutY": 150
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeSwitchNode",
         "name": "Message Type Switch",
         "debugMode": false,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 582,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetAttributesNode",
         "name": "Fetch Previous Telemetry",
         "debugMode": true,
         "configuration": {
@@ -56,7 +56,7 @@
           "layoutX": 860,
           "layoutY": 150
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Delta Calculation",
         "debugMode": true,
         "configuration": {
@@ -68,7 +68,7 @@
           "layoutX": 769,
           "layoutY": 288
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Default Previous Counter",
         "debugMode": true,
         "configuration": {

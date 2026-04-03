@@ -7,7 +7,7 @@
 {:toc}
 
 This guide provides instructions on how to configure a custom mobile application to launch directly from a [QR code scan](/docs/{{peDocsPrefix}}user-guide/ui/mobile-qr-code/) using your phone's camera. 
-Whether you're looking to customize an existing app with your own source code from {% if docsPrefix == "pe/" %}[GitHub](https://github.com/thingsboard/flutter_thingsboard_pe_app){:target="_blank"}{% endif %}{% if docsPrefix == null %}[GitHub](https://github.com/thingsboard/flutter_thingsboard_app){:target="_blank"}{% endif %} or direct it to a custom host, this document will walk you through the necessary steps.
+Whether you're looking to customize an existing app with your own source code from {% if docsPrefix == "pe/" %}[GitHub](https://github.com/sentient/flutter_sentient_pe_app){:target="_blank"}{% endif %}{% if docsPrefix == null %}[GitHub](https://github.com/sentient/flutter_sentient_app){:target="_blank"}{% endif %} or direct it to a custom host, this document will walk you through the necessary steps.
 
 ## Android app settings
 
@@ -27,14 +27,14 @@ To direct your custom application to your own host, you need to modify `AndroidM
     <category android:name="android.intent.category.BROWSABLE" />
     <data
         android:scheme="https"
-        android:host="thingsboard.cloud"
+        android:host="sentient.cloud"
         android:pathPrefix="/api/noauth/qr" />
 </intent-filter>
 ```
 
 ### Mobile app QR code widget settings for Android
 
-To launch your custom mobile application when scanning a QR code, you need to specify the "[App package name](#app-package-name)" and "[SHA256 certificate fingerprints](#sha256-certificate-fingerprints)" in the [ThingsBoard Mobile app QR code widget settings](/docs/{{peDocsPrefix}}user-guide/ui/mobile-qr-code/#configuring-qr-code-widget-on-home-page){:target="_blank"}.
+To launch your custom mobile application when scanning a QR code, you need to specify the "[App package name](#app-package-name)" and "[SHA256 certificate fingerprints](#sha256-certificate-fingerprints)" in the [SENTIENT Mobile app QR code widget settings](/docs/{{peDocsPrefix}}user-guide/ui/mobile-qr-code/#configuring-qr-code-widget-on-home-page){:target="_blank"}.
 
 #### App package name
 
@@ -43,7 +43,7 @@ Find the app package name **applicationId** in **build.gradle** file located at 
 ```text
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "org.thingsboard.pe.app"
+        applicationId "org.sentient.pe.app"
     }
 ```
 
@@ -75,7 +75,7 @@ To direct your iOS application to your own host, you need to modify `entitlement
 	<string>development</string>
 	<key>com.apple.developer.associated-domains</key>
 	<array>
-		<string>applinks:thingsboard.cloud</string>
+		<string>applinks:sentient.cloud</string>
 	</array>
 </dict>
 </plist>
@@ -83,7 +83,7 @@ To direct your iOS application to your own host, you need to modify `entitlement
 
 ### Mobile app QR code widget settings for iOS
 
-To launch your custom iOS mobile application when scanning a QR code, you need to specify the "[App ID](#app-id)" in the [ThingsBoard Mobile app QR code widget settings](/docs/{{peDocsPrefix}}user-guide/ui/mobile-qr-code/#configuring-qr-code-widget-on-home-page){:target="_blank"}.
+To launch your custom iOS mobile application when scanning a QR code, you need to specify the "[App ID](#app-id)" in the [SENTIENT Mobile app QR code widget settings](/docs/{{peDocsPrefix}}user-guide/ui/mobile-qr-code/#configuring-qr-code-widget-on-home-page){:target="_blank"}.
 
 #### App ID
 

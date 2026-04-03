@@ -15,7 +15,7 @@
           "layoutX": 825,
           "layoutY": 52
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgAttributesNode",
         "name": "save client attributes",
         "debugMode": false,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 347,
           "layoutY": 149
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeSwitchNode",
         "name": "Message Type Switch",
         "debugMode": false,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 826,
           "layoutY": 137
         },
-        "type": "org.thingsboard.rule.engine.action.TbLogNode",
+        "type": "org.sentient.rule.engine.action.TbLogNode",
         "name": "Log RPC",
         "debugMode": false,
         "configuration": {
@@ -51,7 +51,7 @@
           "layoutX": 818,
           "layoutY": 220
         },
-        "type": "org.thingsboard.rule.engine.action.TbLogNode",
+        "type": "org.sentient.rule.engine.action.TbLogNode",
         "name": "Log Other",
         "debugMode": false,
         "configuration": {
@@ -63,7 +63,7 @@
           "layoutX": 263,
           "layoutY": 369
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Temperature check",
         "debugMode": false,
         "configuration": {
@@ -75,7 +75,7 @@
           "layoutX": 57,
           "layoutY": 269
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "save timeseries",
         "debugMode": false,
         "configuration": {
@@ -87,7 +87,7 @@
           "layoutX": 475,
           "layoutY": 449
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetCustomerAttributeNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetCustomerAttributeNode",
         "name": "Get Customer Email",
         "debugMode": false,
         "configuration": {
@@ -102,7 +102,7 @@
           "layoutX": 695,
           "layoutY": 350
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetAttributesNode",
         "name": "Get Device Location",
         "debugMode": false,
         "configuration": {
@@ -119,7 +119,7 @@
           "layoutX": 884,
           "layoutY": 456
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Put temperature in metadata",
         "debugMode": false,
         "configuration": {
@@ -131,7 +131,7 @@
           "layoutX": 1093,
           "layoutY": 347
         },
-        "type": "org.thingsboard.rule.engine.mail.TbMsgToEmailNode",
+        "type": "org.sentient.rule.engine.mail.TbMsgToEmailNode",
         "name": "Temperature Email",
         "debugMode": false,
         "configuration": {
@@ -148,7 +148,7 @@
           "layoutX": 1140,
           "layoutY": 461
         },
-        "type": "org.thingsboard.rule.engine.mail.TbSendEmailNode",
+        "type": "org.sentient.rule.engine.mail.TbSendEmailNode",
         "name": "SendGrid SMTP",
         "debugMode": false,
         "configuration": {

@@ -1,9 +1,9 @@
 ---
 layout: docwithnav-mqtt-broker
-title: Install TBMQ with Docker (Windows)
-description: Install TBMQ with Docker (Windows)
+title: Install ST-RMQTT with Docker (Windows)
+description: Install ST-RMQTT with Docker (Windows)
 
 ---
 
-{% assign tbmqSuffix = "CE" %}
+{% assign st-rmqttSuffix = "CE" %}
 {% include docs/mqtt-broker/install/docker-windows.md %}

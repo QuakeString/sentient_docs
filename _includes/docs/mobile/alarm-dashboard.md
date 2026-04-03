@@ -1,7 +1,7 @@
 {% if docsPrefix == 'pe/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "SENTIENT Professional Edition" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "SENTIENT" %}
 {% endif %}
 
 {{appPrefix}} allows configuring alarm details dashboard to be displayed when tapping on the alarm in the alarms screen.
@@ -34,8 +34,8 @@ To verify your configuration run the mobile app. Then navigate to the alarms lis
         </div>
         <div class="frame-video">
             <video autoplay loop preload="auto" muted playsinline>
-                 <source src="https://video.thingsboard.io/mobile/{{docsPrefix}}alarm-dashboard.mp4" type="video/mp4">
-                 <source src="https://video.thingsboard.io/mobile/{{docsPrefix}}alarm-dashboard.webm" type="video/webm">
+                 <source src="https://video.docs.sentient.invenia.in/mobile/{{docsPrefix}}alarm-dashboard.mp4" type="video/mp4">
+                 <source src="https://video.docs.sentient.invenia.in/mobile/{{docsPrefix}}alarm-dashboard.webm" type="video/webm">
             </video>
         </div>
     </div>

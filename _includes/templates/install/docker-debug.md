@@ -1,7 +1,7 @@
-If something goes wrong, you can stream the ThingsBoard container logs in real time:
+If something goes wrong, you can stream the SENTIENT container logs in real time:
 
 ```bash
-docker compose logs -f thingsboard-pe
+docker compose logs -f sentient-pe
 ```
 {: .copy-code}
 

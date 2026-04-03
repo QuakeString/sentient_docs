@@ -6,7 +6,7 @@ demo broker with a built-in data generator and send data to the gateway.
 As a demo MQTT broker, we will use docker image, that can be installed and run using the following command:
 
 ```shell
-docker run -it -p 1884:1884 thingsboard/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
 ```
 {:.copy-code}
 

@@ -1,6 +1,6 @@
 {% assign deviceName = "VIBit" %}
 {% assign deviceVendorLink = "https://machineastro.com/vibit/" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign officialManualLink = "/docs/devices-library/resources/manuals/vibit.pdf" %}
 {% assign prerequisites = '
 - [Sensor user guide](' | append: officialManualLink | append: '){: target="_blank"}
@@ -15,7 +15,7 @@
 ## Prerequisites
 
 To continue with this guide, we will need the following:  
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 {{ prerequisites }}
 - MachineAstro VIBit Application installed on a smartphone.
 - Wi-Fi network credentials for sensor connectivity.
@@ -25,11 +25,11 @@ To continue with this guide, we will need the following:
   - **Client ID**: VIBit Device BLE MAC (Bluetooth MAC address of the sensor)
 
 
-## Create Device profile on ThingsBoard
+## Create Device profile on SENTIENT
 
-First, create a new device profile in ThingsBoard that uses the **MQTT transport** and the standard MQTT topics for telemetry and attributes.
+First, create a new device profile in SENTIENT that uses the **MQTT transport** and the standard MQTT topics for telemetry and attributes.
 
-- Log in to your ThingsBoard instance.
+- Log in to your SENTIENT instance.
 - Navigate to **Device profiles** page under the **Profiles** section.
 - Click the "**plus**" button, and then select "**Add new device profile**" from drop-down menu.
 - Enter **MQTT** as the device profile name.
@@ -56,7 +56,7 @@ First, create a new device profile in ThingsBoard that uses the **MQTT transport
 
 {% include images-gallery.liquid imageCollection=createDeviceProfile %}
 
-## Create Device on ThingsBoard
+## Create Device on SENTIENT
 
 - Navigate to **Devices** page under the **Entities** section.
 - Click on "**+**" to add a new device, and then select "**Add new device**" from drop-down menu.
@@ -88,17 +88,17 @@ First, create a new device profile in ThingsBoard that uses the **MQTT transport
 
 {% include images-gallery.liquid imageCollection=createDevice %}
 
-## Connect device to ThingsBoard via VIBit Mobile Application
+## Connect device to SENTIENT via VIBit Mobile Application
 
 ### Prerequisites
 
-- A user must be present on Thingsboard platform.
-- VIBit Device must be present on Thingsboard platform.
+- A user must be present on Sentient platform.
+- VIBit Device must be present on Sentient platform.
 <br>
 
 - Power on the VIBit sensor.
 - Open the VIBit Mobile Application on your smartphone.
-- The VIBit mobile application can connect to any ThingsBoard platform by selecting the "**Custom**" option from the drop-down menu and entering either the static public IP address or the HTTPS domain name. Below is one sample image.
+- The VIBit mobile application can connect to any SENTIENT platform by selecting the "**Custom**" option from the drop-down menu and entering either the static public IP address or the HTTPS domain name. Below is one sample image.
 
 ![image](/images/devices-library/ready-to-go-devices/machine-astro/vibit/vibit-mobile-app-1.png)
 
@@ -108,13 +108,13 @@ First, create a new device profile in ThingsBoard that uses the **MQTT transport
 
 ![image](/images/devices-library/ready-to-go-devices/machine-astro/vibit/vibit-mobile-app-3.png)
 
-- Search the respective device and click on the **Connect** button. (Assuming that Device is already exists on the Thingsboard.)
+- Search the respective device and click on the **Connect** button. (Assuming that Device is already exists on the Sentient.)
 
 ![image](/images/devices-library/ready-to-go-devices/machine-astro/vibit/vibit-mobile-app-4.png)
 
 - Configure the sensor&#39;s Wi-Fi settings using the app:
   - Enter the Wi-Fi SSID and password.
-  - Input the ThingsBoard server URL.
+  - Input the SENTIENT server URL.
   - Enter the MQTT **Username** as sensor, **Password** as cimcon, and **Client ID** as the BLE MAC address.
   - Save the settings to apply the configurations.
 
@@ -126,9 +126,9 @@ First, create a new device profile in ThingsBoard that uses the **MQTT transport
 
 ![image](/images/devices-library/ready-to-go-devices/machine-astro/vibit/vibit-mobile-app-7.png)
 
-### Check Data on ThingsBoard
+### Check Data on SENTIENT
 
-- In ThingsBoard, navigate to the "**Devices**" section and select your VIBit device.
+- In SENTIENT, navigate to the "**Devices**" section and select your VIBit device.
 - Access the "**Latest telemetry**" tab to view real-time data such as:
   - 3-axis acceleration and velocity RMS
   - FFT Timeseries Data
@@ -143,5 +143,5 @@ Use the [Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"
 
 ## Conclusion
 
-Integrating VIBit with ThingsBoard using MQTT Basic authentication ensures secure and efficient monitoring of industrial equipment, facilitating predictive maintenance and reducing downtime. The combination of real-time data transmission and comprehensive dashboards empowers maintenance teams to make informed decisions.
+Integrating VIBit with SENTIENT using MQTT Basic authentication ensures secure and efficient monitoring of industrial equipment, facilitating predictive maintenance and reducing downtime. The combination of real-time data transmission and comprehensive dashboards empowers maintenance teams to make informed decisions.
 {% include add-device-banner.liquid %}

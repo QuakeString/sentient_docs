@@ -6,7 +6,7 @@ created gateway.
 As a demo simulation slave, we will use docker image, that can be installed and run using the following command:
 
 ```shell
-docker run -it -p 5021:5021 thingsboard/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
 ```
 {:.copy-code}
 
@@ -70,7 +70,7 @@ This section offers slave adding and detailed connection configuration options t
 
 {% include images-gallery.liquid imageCollection=addNewSlave %}
 
-Now, we are ready to move to the "**Attributes**" section. The configuration in this unit provides settings for processing data on Modbus server. These settings will be interpreted in the ThingsBoard platform instance as attributes of the device.
+Now, we are ready to move to the "**Attributes**" section. The configuration in this unit provides settings for processing data on Modbus server. These settings will be interpreted in the SENTIENT platform instance as attributes of the device.
 
 Let&#39;s configure attribute section using the following steps:
 
@@ -128,7 +128,7 @@ Click the "**Apply**" button after you&#39;ve completed the "**Attributes**" sec
 
 {% include images-gallery.liquid imageCollection=attributeConfiguration2 %}
 
-We finish with the "**Attributes**" section, so let&#39;s move to the "**Time series**" section. The configuration in this unit provides settings for processing data on Modbus server. These settings will be interpreted in ThingsBoard platform instance as time series of the device.
+We finish with the "**Attributes**" section, so let&#39;s move to the "**Time series**" section. The configuration in this unit provides settings for processing data on Modbus server. These settings will be interpreted in SENTIENT platform instance as time series of the device.
 
 Let&#39;s configure time series section using the following steps:
 

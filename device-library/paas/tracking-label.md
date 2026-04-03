@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Tracking Label to ThingsBoard?
+title: How to connect Tracking Label to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: Lansitec

@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Two-factor authentication
-description: Two-factor authentication using ThingsBoard
+description: Two-factor authentication using SENTIENT
 
 2fa-configuration:
     0:
@@ -32,7 +32,7 @@ description: Two-factor authentication using ThingsBoard
 2fa-password-and-authentication:
     0:
         image: /images/user-guide/two-factor-authentication/2fa-password-and-authentication-1-ce.png
-        title: 'Log in to ThingsBoard.<br>Open the user menu (three dots) (1) in the top-right corner and select "Account" (2).'
+        title: 'Log in to SENTIENT.<br>Open the user menu (three dots) (1) in the top-right corner and select "Account" (2).'
     1:
         image: /images/user-guide/two-factor-authentication/2fa-password-and-authentication-2-ce.png
         title: 'Navigate to the "Security" tab (3). Enable one or more available 2FA methods and complete the setup steps (4).'

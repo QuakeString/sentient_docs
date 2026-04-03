@@ -15,7 +15,7 @@
           "layoutX": 678,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save To DB",
         "debugMode": true,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 326,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode",
+        "type": "org.sentient.rule.engine.analytics.latest.telemetry.TbAggLatestTelemetryNode",
         "name": "Avg Warehouse Temperature",
         "debugMode": true,
         "configuration": {

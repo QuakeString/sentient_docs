@@ -3,12 +3,12 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Two-factor authentication
-description: Two-factor authentication using ThingsBoard
+description: Two-factor authentication using SENTIENT
 
 2fa-password-and-authentication:
     0:
         image: /images/user-guide/two-factor-authentication/2fa-password-and-authentication-1-pe.png
-        title: 'Log in to ThingsBoard.<br>Open the user menu (three dots) (1) in the top-right corner and select "Account" (2).'
+        title: 'Log in to SENTIENT.<br>Open the user menu (three dots) (1) in the top-right corner and select "Account" (2).'
     1:
         image: /images/user-guide/two-factor-authentication/2fa-password-and-authentication-2-pe.png
         title: 'Navigate to the "Security" tab (3). Enable one or more available 2FA methods and complete the setup steps (4).'
@@ -16,7 +16,7 @@ description: Two-factor authentication using ThingsBoard
 2fa-configuration:
     0:
         image: /images/user-guide/two-factor-authentication/two-factor-authentication-1-pe.png
-        title: 'Log in to ThingsBoard as the Tenant administrator.<br>- Navigate to <b>Security</b> &#8702; <b>Two-factor authentication</b> (1).<br>- Uncheck the box labeled "Use system two factor auth settings" (2).'
+        title: 'Log in to SENTIENT as the Tenant administrator.<br>- Navigate to <b>Security</b> &#8702; <b>Two-factor authentication</b> (1).<br>- Uncheck the box labeled "Use system two factor auth settings" (2).'
     1:
         image: /images/user-guide/two-factor-authentication/two-factor-authentication-2-pe.png
         title: '- Choose one or more 2FA verification methods (3), and set up details like verification message template, verification code lifetime, total allowed time for verification, etc.<br>- Save changes (4) to apply the configuration.'

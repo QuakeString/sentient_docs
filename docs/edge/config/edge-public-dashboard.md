@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Edge Public Dashboard Configuration Guide
-description: Detailed configuration instructions for the public dashboard on ThingsBoard Edge
+description: Detailed configuration instructions for the public dashboard on SENTIENT GATEWAY
 
 makePublic:
     0:

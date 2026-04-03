@@ -1,12 +1,12 @@
 {% include templates/install/queue-confluent-cloud-config.md %}
 
-##### ThingsBoard Configuration
+##### SENTIENT Configuration
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):
 
 ```text 
-C:\Program Files (x86)\thingsboard\conf\thingsboard.yml
+C:\Program Files (x86)\sentient\conf\sentient.yml
 ``` 
 {: .copy-code}
 
@@ -82,4 +82,4 @@ queue:
     poll_interval: "${TB_QUEUE_TRANSPORT_NOTIFICATIONS_POLL_INTERVAL_MS:1000}"
 ```
 
-You can update default Rule Engine queues configuration using UI. More about ThingsBoard Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).
+You can update default Rule Engine queues configuration using UI. More about SENTIENT Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).

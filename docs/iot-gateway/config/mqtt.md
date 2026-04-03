@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: MQTT Connector Configuration
-description: MQTT protocol support for ThingsBoard IoT Gateway
+description: MQTT protocol support for SENTIENT IoT Gateway
 redirect_from: 
   - "/docs/iot-gateway/mqtt/"  
   - "/docs/iot-gateway/resources/mqtt-gui-extension-configuration.json"
@@ -13,14 +13,14 @@ redirect_from:
 
 ## Overview
 
-This documentation will help you set up the MQTT connector for the ThingsBoard IoT Gateway. We'll explain the configuration 
+This documentation will help you set up the MQTT connector for the SENTIENT IoT Gateway. We'll explain the configuration 
 parameters in simple terms to make it easy for you to understand and follow. The MQTT(Message Queuing Telemetry Transport)
 is a lightweight publish-subscribe, machine-to-machine network protocol that is widely used for connections with remote 
 locations with devices that have resource constraints or network transfer rate.
 Use [general configuration](/docs/iot-gateway/configuration/){:target="_blank"} to enable this connector. 
 
-Also, if you are new to ThingsBoard IoT Gateway, we recommend you to read the [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=mqtt){:target="_blank"} 
-guide to understand the basic concepts of ThingsBoard IoT Gateway and how it works with MQTT protocol.
+Also, if you are new to SENTIENT IoT Gateway, we recommend you to read the [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=mqtt){:target="_blank"} 
+guide to understand the basic concepts of SENTIENT IoT Gateway and how it works with MQTT protocol.
 
 The connector can be configured via the user interface form, which helps you set up a connection to an MQTT broker and
 read/write data by subscribing/publishing to MQTT topics, that can be defined statically or generated on the fly. 
@@ -36,7 +36,7 @@ To access the actual UI for the gateway - you need to a have connected gateway b
 ## Configuration modes 
 
 The MQTT connector can be configured in two modes: **Basic** and **Advanced**.
-- **Basic** mode is designed for users who are new to ThingsBoard IoT Gateway and want to quickly set up the connector with minimal configuration. It provides a simplified interface with essential settings.
+- **Basic** mode is designed for users who are new to SENTIENT IoT Gateway and want to quickly set up the connector with minimal configuration. It provides a simplified interface with essential settings.
 - **Advanced** mode is intended for experienced users who need more control over the configuration. It offers additional options and flexibility for advanced use cases.
 
 {% capture difference %}
@@ -102,19 +102,19 @@ and the reporting strategy:
 - Also MQTT connector supports shared subscriptions to create one you need to add `$share/` as a prefix for **Topic filter** and shared subscription group name (more information how you may use it [Additional information](/docs/iot-gateway/config/mqtt/#shared-subscriptions) section) and problems.
 that may appear while using them [Shared subscriptions limitations](/docs/iot-gateway/config/mqtt/#shared-subscriptions-limitations).
 - **QoS** - *MQTT Quality of Service*  is an agreement between the message sender and receiver that defines the level of delivery guarantee for a specific message. (0-At most once, 1-At least once, 2-Exactly once)
-- **Report strategy** - strategy for sending data to ThingsBoard:
-  - **Report period** - period for sending data to ThingsBoard in milliseconds;
+- **Report strategy** - strategy for sending data to SENTIENT:
+  - **Report period** - period for sending data to SENTIENT in milliseconds;
   - **Type** - type of the report strategy:
-    - **On report period** - sends data to ThingsBoard after the report period;
-    - **On value change** - sends data to ThingsBoard when the value changes;
-    - **On value change or report period** - sends data to ThingsBoard when the value changes or after the report period;
-    - **On received** - sends data to ThingsBoard after receiving data from the device (default strategy).
+    - **On report period** - sends data to SENTIENT after the report period;
+    - **On value change** - sends data to SENTIENT when the value changes;
+    - **On value change or report period** - sends data to SENTIENT when the value changes or after the report period;
+    - **On received** - sends data to SENTIENT after receiving data from the device (default strategy).
 
 ### Data conversion
 
 - **Payload type** - The incoming data type that will be processed as  `JSON`, `Bytes`, `Custom` (more information about supported Payload types see in the [Additional information](/docs/iot-gateway/config/mqtt/#convertor-types) *Convertor types section* ).
-- **Device Name** - The name of the device in ThingsBoard. It can be parsed from `Message`, `Topic`, `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples) section).
-- **Device Profile name** - The device profile in ThingsBoard. It can be parsed from `Message`, `Topic`, `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples) section).
+- **Device Name** - The name of the device in SENTIENT. It can be parsed from `Message`, `Topic`, `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples) section).
+- **Device Profile name** - The device profile in SENTIENT. It can be parsed from `Message`, `Topic`, `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples) section).
 
 To add a new device, use the following steps:
 
@@ -146,10 +146,10 @@ More usage examples can be found in the [Usage examples](/docs/iot-gateway/confi
 ### Attributes and Time series
 
 The configuration in this subsection provides settings for processing data from MQTT topic/topics. These settings will be 
-interpreted in ThingsBoard platform instance as attributes/time series of the device.
+interpreted in SENTIENT platform instance as attributes/time series of the device.
 
 The following parameters are used to configure device attributes and time series:
-- **Key** - the key of the attribute/time series in ThingsBoard. It can be specified as a static value.
+- **Key** - the key of the attribute/time series in SENTIENT. It can be specified as a static value.
 - **Type** - the type of attribute/time series field (It could be one of the following `string`, `boolean`, `integer`, `double` or `Raw` if the **Payload type** `Bytes`.):
 - **Value** - the value of the attribute/time series that will be sent to the platform device. It should be specified depending on the selected **Payload type** (`Bytes`, `JSON`, `CUSTOM`).
 
@@ -185,15 +185,15 @@ Attributes/Time series key name from topic<small>(advanced configuration mode on
 
 ## Requests mapping
 
-The **Requests mapping** section allows you to configure how the ThingsBoard platform instance will interact with the 
+The **Requests mapping** section allows you to configure how the SENTIENT platform instance will interact with the 
 devices. That is, how the platform will request data from the devices, how it will update/request device attributes, and how 
 it will send RPC commands to the devices.
 
 MQTT connector supports the following requests mapping:
-- **Connect requests** - tell the ThingsBoard platform that a device is online on the MQTT broker by publishing a “connect” message the Gateway listens for.
-- **Disconnect requests** - inform ThingsBoard (via the Gateway) that a device is offline by publishing a disconnect message to the configured topic.
-- **Attribute updates** - push shared attributes from ThingsBoard to the device by publishing an update message to the configured topic via the Gateway.
-- **Attribute requests** - the device asks ThingsBoard for attributes by publishing a request to a specific topic; the Gateway replies on the response topic with the values.
+- **Connect requests** - tell the SENTIENT platform that a device is online on the MQTT broker by publishing a “connect” message the Gateway listens for.
+- **Disconnect requests** - inform SENTIENT (via the Gateway) that a device is offline by publishing a disconnect message to the configured topic.
+- **Attribute updates** - push shared attributes from SENTIENT to the device by publishing an update message to the configured topic via the Gateway.
+- **Attribute requests** - the device asks SENTIENT for attributes by publishing a request to a specific topic; the Gateway replies on the response topic with the values.
 - **RPC methods** - allows sending RPC commands to devices.
   MQTT connector supports different types of RPC methods, such as:
 
@@ -203,8 +203,8 @@ MQTT connector supports the following requests mapping:
     - `get` - reads the current value (as the connector can provide/resolve it)
     - `set` - sets/updates the value (the connector applies or forwards it)
 
-    These do not require extra mapping, because they are managed by the connector and the result is returned to ThingsBoard.
-    The command will be processed by the connector, and the result will be sent back to the ThingsBoard platform instance.
+    These do not require extra mapping, because they are managed by the connector and the result is returned to SENTIENT.
+    The command will be processed by the connector, and the result will be sent back to the SENTIENT platform instance.
 
   - **Configurable RPC methods to device** - These methods allow you to configure custom RPC commands in connector configuration that can be sent to the devices.
 
@@ -217,17 +217,17 @@ MQTT connector supports the following requests mapping:
 
 Connect request is used for sending a message to the Gateway indicating that a device has connected, so the device can be marked as online on the platform.
 
-Suppose we have a scenario where the device connects to the MQTT broker but doesn't send any telemetry data. By default, after 10 minutes of inactivity, the device becomes offline for the ThingsBoard platform instance. 
+Suppose we have a scenario where the device connects to the MQTT broker but doesn't send any telemetry data. By default, after 10 minutes of inactivity, the device becomes offline for the SENTIENT platform instance. 
 However, we may want to be able to send RPC/attribute updates to this device even if it does not send any telemetry data.
 In this case, the platform needs to know if the target device is connected and what gateway or session is used to connect the device at the moment. 
-If your device is constantly sending telemetry data, you may skip this section - ThingsBoard already knows how to push notifications.
+If your device is constantly sending telemetry data, you may skip this section - SENTIENT already knows how to push notifications.
 
 The following parameters are used to configure connect requests:
-- **Request type** - the type of the request sent to ThingsBoard (set to "Connect request").
+- **Request type** - the type of the request sent to SENTIENT (set to "Connect request").
 - **Topic filter** - the topic/topics the gateway will subscribe to and wait for device to publish the connect request. The **Topic filter** supports special symbols: ‘#’ and ‘+’
 *wildcards* (more information how you may use them for matching topic patterns [Additional information](/docs/iot-gateway/config/mqtt/#wildcard-usage) section).
-- **Name** - the name of the device in ThingsBoard to which the request will be sent to. It can be parsed from `Message`, `Topic`, `Constant`, (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
-- **Profile name** - the name of the device in ThingsBoard to which the request will be sent to. It can be parsed from `Message`, `Topic`, `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
+- **Name** - the name of the device in SENTIENT to which the request will be sent to. It can be parsed from `Message`, `Topic`, `Constant`, (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
+- **Profile name** - the name of the device in SENTIENT to which the request will be sent to. It can be parsed from `Message`, `Topic`, `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
 
 {% capture difference %}
 All configuration parameters list, and their detailed description can be found in the 
@@ -245,15 +245,15 @@ More usage examples can be found in the [Usage examples](/docs/iot-gateway/confi
 
 Disconnect request is used for sending a message to the Gateway indicating that a device has disconnected, so the device can be marked as offline on the platform.
 
-When a device disconnects from the MQTT broker, ThingsBoard needs to be notified to update the device's status and last disconnect time. 
-The disconnect request allows the gateway to inform ThingsBoard when a device disconnects from the MQTT broker. This information is stored as server attributes and can be used for monitoring device connectivity patterns, troubleshooting connection issues, or triggering workflows based on disconnect events.
-If your device uses a clean disconnect process (rather than just timing out), configuring disconnect requests provides more immediate and accurate status updates in ThingsBoard.
+When a device disconnects from the MQTT broker, SENTIENT needs to be notified to update the device's status and last disconnect time. 
+The disconnect request allows the gateway to inform SENTIENT when a device disconnects from the MQTT broker. This information is stored as server attributes and can be used for monitoring device connectivity patterns, troubleshooting connection issues, or triggering workflows based on disconnect events.
+If your device uses a clean disconnect process (rather than just timing out), configuring disconnect requests provides more immediate and accurate status updates in SENTIENT.
 
 The following parameters are used to configure disconnect requests:
-- **Request type** - the type of the request sent to ThingsBoard (set to "Disconnect request").
+- **Request type** - the type of the request sent to SENTIENT (set to "Disconnect request").
 - **Topic filter** - the topic/topics the gateway will subscribe to and wait for device to publish the disconnect notification. The **Topic filter** supports special symbols: '#' and '+'
 *wildcards* (more information how you may use them for matching topic patterns in the [Additional information](/docs/iot-gateway/config/mqtt/#wildcard-usage) section).
-- **Name** - the name of the device in ThingsBoard to which the disconnect status will be applied. It can be parsed from `Message`, `Topic`, or `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
+- **Name** - the name of the device in SENTIENT to which the disconnect status will be applied. It can be parsed from `Message`, `Topic`, or `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
 
 {% capture difference %}
 All configuration parameters list, and their detailed description can be found in the 
@@ -269,17 +269,17 @@ More usage examples can be found in the [Usage examples](/docs/iot-gateway/confi
 
 ### Attribute requests
 
-Attribute requests are used for requesting the values of its client-side or shared attributes from ThingsBoard via the Gateway.
+Attribute requests are used for requesting the values of its client-side or shared attributes from SENTIENT via the Gateway.
 
-When a device needs to retrieve attribute values from ThingsBoard, it can send an attribute request. This allows devices to request shared or client attributes stored on the ThingsBoard platform.
-When a device publishes a request to a specific topic, the gateway fetches the requested shared/client attributes from ThingsBoard and publishes a response to a response topic.
+When a device needs to retrieve attribute values from SENTIENT, it can send an attribute request. This allows devices to request shared or client attributes stored on the SENTIENT platform.
+When a device publishes a request to a specific topic, the gateway fetches the requested shared/client attributes from SENTIENT and publishes a response to a response topic.
 
 The following parameters are used to configure attribute requests:
-- **Request type** - the type of the request sent to ThingsBoard (set to "Attribute request").
+- **Request type** - the type of the request sent to SENTIENT (set to "Attribute request").
 - **Topic filter** - the topic/topics that the gateway subscribes to for incoming requests. The **Topic filter** supports special symbols: `#` and `+`
 *wildcards* (more information how you may use them for matching topic patterns in the [Additional information](/docs/iot-gateway/config/mqtt/#wildcard-usage) section).
-- **Device name expression** - the name of the device in ThingsBoard from which to request the attributes. It can be parsed from `Message`, `Topic`, or `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
-- **Attribute name expression** - the name of the attribute in ThingsBoard to be requested. It can be parsed from `Message`, `Topic`, or `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
+- **Device name expression** - the name of the device in SENTIENT from which to request the attributes. It can be parsed from `Message`, `Topic`, or `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
+- **Attribute name expression** - the name of the attribute in SENTIENT to be requested. It can be parsed from `Message`, `Topic`, or `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
 - **Response value expression** - the format of the attribute value in the response message. It can be parsed from `Message`, `Topic`, or `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
 - **Response topic expression** - the topic/topics the gateway will publish the attribute response message to. It can be parsed from `Message`, `Topic`, or `Constant` (more information about sources with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
 - **Retain** - whether the attribute response message should be retained by the MQTT broker.
@@ -301,13 +301,13 @@ More usage examples can be found in the [Usage examples](/docs/iot-gateway/confi
 
 ### Attribute updates
 
-Attribute updates are used for provisioning or updating its client-side or shared attributes on ThingsBoard through the Gateway.
+Attribute updates are used for provisioning or updating its client-side or shared attributes on SENTIENT through the Gateway.
 
 You can treat this as a remote configuration for devices, enabling them to request 
-shared attributes from ThingsBoard. See [user guide](/docs/user-guide/attributes/){:target="_blank"} for more details.
+shared attributes from SENTIENT. See [user guide](/docs/user-guide/attributes/){:target="_blank"} for more details.
 
 The following parameters are used to configure attribute updates:
-- **Request type** - the type of the request sent to ThingsBoard (set to "Attribute updates"). 
+- **Request type** - the type of the request sent to SENTIENT (set to "Attribute updates"). 
 - **Device name filter** - regular expression device name filter, used to determine which devices should receive attribute updates see [regex](#regular-expressions) (more information with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section.
 - **Attribute filter** - regular expression attribute name filter, used to determine which attributes should be updated see [regex](#regular-expressions) (more information with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
 - **Response value expression** - the format of the attribute value in the response message. It can be parsed from [json-path](#json-path) (more information with screenshot examples can be found in the [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples-1) section).
@@ -329,9 +329,9 @@ More usage examples can be found in the [Usage examples](/docs/iot-gateway/confi
 
 ### Server side RPC commands
 
-Server side RPC commands are used for delivering remote procedure call (RPC) commands from ThingsBoard to a device connected via the Gateway.
+Server side RPC commands are used for delivering remote procedure call (RPC) commands from SENTIENT to a device connected via the Gateway.
 
-ThingsBoard allows sending [RPC commands](https://thingsboard.io/docs/user-guide/rpc/) to devices connected directly to ThingsBoard or via Gateway.
+SENTIENT allows sending [RPC commands](https://docs.sentient.invenia.in/docs/user-guide/rpc/) to devices connected directly to SENTIENT or via Gateway.
 The following parameters are used to configure RPC methods:
 - **Request type** - set to RPC command. Can be with response (`Two Way`) or without response (`One Way`).
 - **Device name filter** - regular expression device name filter, used to determine which devices should receive RPC commands.
@@ -407,7 +407,7 @@ The broker section defines the target MQTT broker and how the gateway interacts 
 | broker.host                               |                         | Hostname or ip address that will be used for establishing connection to MQTT broker.                                                                                                                                                                                                                                                                                 |
 | broker.port                               | **1883**                | Listening MQTT port on the broker that will accept connection from a client.                                                                                                                                                                                                                                                                                         |
 | broker.version                            | **5**                   | MQTT protocol version (there are three versions currently supported by gateway - **3.1**, **3.11**, **5**).                                                                                                                                                                                                                                                          |
-| broker.clientId **                        | **ThingsBoard_gateway** | Unique identifier for each client’s session on the broker.                                                                                                                                                                                                                                                                                                           |
+| broker.clientId **                        | **SENTIENT_gateway** | Unique identifier for each client’s session on the broker.                                                                                                                                                                                                                                                                                                           |
 | broker.maxMessageNumberPerWorker          | **10**                  | (Optional) Maximum number of MQTT messages a single worker (a background helper that processes queued messages)<br/> handles in one pass before letting other workers run. You may read more about this in the [Workers settings](/docs/iot-gateway/config/mqtt/#workers-settings).                                                                                  |
 | broker.maxNumberOfWorkers                 | **100**                 | (Optional) Maximum number of workers (background helpers that process queued messages)<br/> the gateway can run in parallel to handle MQTT traffic. You may read more about this in the [Workers settings](/docs/iot-gateway/config/mqtt/#workers-settings).                                                                                                         |
 | broker.keepAlive (in seconds)             | **60**                  | (Optional) Seconds between pings; e.g., default is 60s, the broker expects traffic within the given interval * 1.5 or it closes the connection.                                                                                                                                                                                                                      |
@@ -431,7 +431,7 @@ Example of the server configuration:
   "host": "127.0.0.1",
   "port": 1883,
   "version": 5,
-  "clientId": "ThingsBoard_gateway",
+  "clientId": "SENTIENT_gateway",
   "maxMessageNumberPerWorker": 10,
   "maxNumberOfWorkers": 100, 
   "keepAlive": 60,
@@ -504,9 +504,9 @@ The safest authentication mode, setting up use the broker’s TLS port (typicall
 |:---------------------------------|:---------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | broker.security                  |                                              | The broker security object specifies authentication type for establishing connection to MQTT broker.                                                                                                     |
 | broker.security.type             | **certificates**                             | Type of authentication.                                                                                                                                                                                  |
-| broker.security.pathToCACert     | **/etc/thingsboard-gateway/ca.pem**          | Path to the **pathToCACert** your CA certificate your MQTT client uses it to check the broker’s certificate during TLS, ensuring you’re connecting to a trusted server.                                  |
-| broker.security.pathToPrivateKey | **/etc/thingsboard-gateway/privateKey.pem**  | Path to the **pathToPrivateKey** the key that proves the client’s identity and enables secure TLS handshakes.                                                                                            |
-| broker.security.pathToClientCert | **/etc/thingsboard-gateway/certificate.pem** | Path to the **pathToClientCert** your certificate that identifies the gateway to the MQTT broker during TLS handshake. It’s paired with the gateway’s private key and is usually signed by a trusted CA. |
+| broker.security.pathToCACert     | **/etc/sentient-gateway/ca.pem**          | Path to the **pathToCACert** your CA certificate your MQTT client uses it to check the broker’s certificate during TLS, ensuring you’re connecting to a trusted server.                                  |
+| broker.security.pathToPrivateKey | **/etc/sentient-gateway/privateKey.pem**  | Path to the **pathToPrivateKey** the key that proves the client’s identity and enables secure TLS handshakes.                                                                                            |
+| broker.security.pathToClientCert | **/etc/sentient-gateway/certificate.pem** | Path to the **pathToClientCert** your certificate that identifies the gateway to the MQTT broker during TLS handshake. It’s paired with the gateway’s private key and is usually signed by a trusted CA. |
 
 
 Example of the security configuration for **certificates** authentication option: 
@@ -514,9 +514,9 @@ Example of the security configuration for **certificates** authentication option
 ```json
 "security": {
   "type": "certificates",
-  "pathToCACert": "/etc/thingsboard-gateway/ca.pem",
-  "pathToPrivateKey": "/etc/thingsboard-gateway/privateKey.pem",
-  "pathToClientCert": "/etc/thingsboard-gateway/certificate.pem"
+  "pathToCACert": "/etc/sentient-gateway/ca.pem",
+  "pathToPrivateKey": "/etc/sentient-gateway/privateKey.pem",
+  "pathToClientCert": "/etc/sentient-gateway/certificate.pem"
 }
 ```
 {: .copy-code}
@@ -569,15 +569,15 @@ Example of the device mapping configuration:
 
 | **Parameter**                         | **Description**                                                                                                                                                                                                                          |
 |:--------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| mapping[].attributes[]                | List of attributes that will be sent to the ThingsBoard platform instance.                                                                                                                                                               |
+| mapping[].attributes[]                | List of attributes that will be sent to the SENTIENT platform instance.                                                                                                                                                               |
 | mapping[].attributes[].keySource      | (Optional, available since Gateway v.3.8.1) Source for attribute key name. Can be: `message` (default) or `topic`. See [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples) for more information.                             |
-| mapping[].attributes[].key            | Key name of the attribute in ThingsBoard. It can be specified as a static value, JSON path or regular expression.                                                                                                                        |
+| mapping[].attributes[].key            | Key name of the attribute in SENTIENT. It can be specified as a static value, JSON path or regular expression.                                                                                                                        |
 | mapping[].attributes[].type           | The type of attribute field (It could be one of the following `string`, `boolean`, `integer`, `double` or `Raw` if the **Payload type** `Bytes`).                                                                                        |
 | mapping[].attributes[].value          | The value of the attribute that will be sent to the platform device. It should be specified depending on the selected **Payload type** (`Bytes`, `JSON`, `CUSTOM`).                                                                      |
 | mapping[].attributes[].reportStrategy | (Optional) Report strategy for the attributes data. If not specified, the device report strategy will be used.                                                                                                                           |
-| mapping[].timeseries[]                | List of telemetry data that will be sent to the ThingsBoard platform instance.                                                                                                                                                           |
+| mapping[].timeseries[]                | List of telemetry data that will be sent to the SENTIENT platform instance.                                                                                                                                                           |
 | mapping[].timeseries[].keySource      | (Optional, available since Gateway v.3.8.1) Source for time series key name. Can be: `message` (default) or `topic`. See [Usage examples](/docs/iot-gateway/config/mqtt/#usage-examples) for more information.                           |
-| mapping[].timeseries[].key            | Key name of the telemetry data in ThingsBoard. It can be specified as a static value.                                                                                                                                                    |
+| mapping[].timeseries[].key            | Key name of the telemetry data in SENTIENT. It can be specified as a static value.                                                                                                                                                    |
 | mapping[].timeseries[].type           | The type of telemetry field (It could be one of the following `string`, `boolean`, `integer`, `double` or `Raw` if the **Payload type** `Bytes`).                                                                                        |
 | mapping[].timeseries[].value          | Value of the telemetry data that will be sent to the platform. It should be specified depending on the selected type (`json path`, `regular expressions` or `slices`).                                                                   |
 | mapping[].timeseries[].tsField        | (Optional) [json-path](/docs/iot-gateway/config/mqtt/#json-path) expression for field that carries a datetime string. If not present, the `ts` or `timestamp` properties from incoming message will be used as timestamp for data entry. |
@@ -749,7 +749,7 @@ Example of the attribute updates configuration:
 
 #### Device RPC methods
 
-Device RPC (Remote Procedure Call) methods allow you to send commands from ThingsBoard to your devices through the MQTT connector. The gateway acts as an intermediary, translating ThingsBoard RPC calls into MQTT messages that your devices can understand.
+Device RPC (Remote Procedure Call) methods allow you to send commands from SENTIENT to your devices through the MQTT connector. The gateway acts as an intermediary, translating SENTIENT RPC calls into MQTT messages that your devices can understand.
 
 There are two types of RPC requests supported by the MQTT connector:
 
@@ -966,7 +966,7 @@ _Converted data:_
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

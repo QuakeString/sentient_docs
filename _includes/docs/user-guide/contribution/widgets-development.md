@@ -3,7 +3,7 @@
 
 ## Introduction
 
-**ThingsBoard widgets** are additional UI modules that seamlessly integrate into any [IoT Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/).  They provide end-user functions such as data visualization, remote device control, alarms management, and display of static custom HTML content.
+**SENTIENT widgets** are additional UI modules that seamlessly integrate into any [IoT Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/).  They provide end-user functions such as data visualization, remote device control, alarms management, and display of static custom HTML content.
 Each widget definition represents a specific [Widget Type](/docs/{{docsPrefix}}user-guide/ui/widget-library/#widget-types)  based on the provided features.
 
 ## Creating new widget definition
@@ -91,7 +91,7 @@ These settings are accessible from widget JavaScript code.
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-latest-datakey-setting-schema.png)
 
-Starting from v3.4, auto-generated advanced widget settings JSON forms are replaced with [Angular components](https://github.com/thingsboard/thingsboard/pull/6545).
+Starting from v3.4, auto-generated advanced widget settings JSON forms are replaced with [Angular components](https://github.com/sentient/sentient/pull/6545).
 When creating new settings schemas for custom widgets, don't forget to remove components from **Widget Settings** tab.
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-widget-settings-selectors.png)
@@ -269,7 +269,7 @@ The result of applying custom **settings schema** to the widget:
 
 This section is used to preview and test widget definitions.
 It is presented as a mini dashboard containing one widget instantiated from the current widget definition.
-It has most of the functionality provided by a typical ThingsBoard dashboard, with some limitations.
+It has most of the functionality provided by a typical SENTIENT dashboard, with some limitations.
 For example, "Function" can only be selected as datasource type in widget datasources section for debugging purposes.    
 
 ![image](/images/user-guide/contribution/widgets/widget-editor-preview.png)

@@ -1,14 +1,14 @@
 ---
 layout: plain
-title: ThingsBoard Professional Edition EULA
-description: ThingsBoard Professional Edition End User License Agreement
+title: SENTIENT Professional Edition EULA
+description: SENTIENT Professional Edition End User License Agreement
 
 ---
 
 <br>
 <p style="text-align: center; font-size: 1.5em; font-weight: bold;">END USER LICENSE AGREEMENT</p>
 
-PLEASE, READ THIS END USER LICENSE AGREEMENT (“AGREEMENT”) VERY CAREFULLY BEFORE CLICKING AN “I AGREE” BUTTON, DOWNLOADING OR USING THINGSBOARD PROFESSIONAL EDITION IOT PLATFORM. IF YOU DO NOT AGREE TO THIS AGREEMENT, PLEASE DO NOT USE THE SOFTWARE
+PLEASE, READ THIS END USER LICENSE AGREEMENT (“AGREEMENT”) VERY CAREFULLY BEFORE CLICKING AN “I AGREE” BUTTON, DOWNLOADING OR USING SENTIENT PROFESSIONAL EDITION IOT PLATFORM. IF YOU DO NOT AGREE TO THIS AGREEMENT, PLEASE DO NOT USE THE SOFTWARE
 
 
 <br>
@@ -36,7 +36,7 @@ DEFINITIONS
 
 **“License key”** or “License secret” means a Software activation code obtained by the Licensee as a result of licensing;; the secret cyphers the then-current License Scope.
 
-**“License Portal”** means the web application (a website) accessible via https://license.thingsboard.io URL, which is designed for End User license management done by the Licensee, including license secret management, instance management, billing info management, signing/accepting or termination of the License agreement.  
+**“License Portal”** means the web application (a website) accessible via https://license.docs.sentient.invenia.in URL, which is designed for End User license management done by the Licensee, including license secret management, instance management, billing info management, signing/accepting or termination of the License agreement.  
 
 **“License Scope”** means the content of the Software (feature set, modules, add-ons, microservices) and its quantity configurable and payable by the Licensee, including via the License Portal; it consists of the Base Scope, Extensions, Renewals and Add-ons. 
 
@@ -50,19 +50,19 @@ DEFINITIONS
 
 **“Renewal Term”** (or **“Renewal”**) means the period of one year after the Initial Term that extends the license scope to the Initial Term conditions.  
 
-**“Software”** means a ThingsBoard closed-source IoT platform of whatever version with or without Add-ons that enables rapid development, management and scaling of IoT projects as well as to provide a possibility to (i) provision and control devices; (ii) collect and visualize data from devices; (iii) analyze device data and trigger alarms; (iv) transfer device data to other systems; (v) enable use-case specific features using customizable rules, AI and plugins. All specific features regarding the Software functionality can be found by the Licensee at: https://thingsboard.io.
+**“Software”** means a SENTIENT closed-source IoT platform of whatever version with or without Add-ons that enables rapid development, management and scaling of IoT projects as well as to provide a possibility to (i) provision and control devices; (ii) collect and visualize data from devices; (iii) analyze device data and trigger alarms; (iv) transfer device data to other systems; (v) enable use-case specific features using customizable rules, AI and plugins. All specific features regarding the Software functionality can be found by the Licensee at: https://docs.sentient.invenia.in.
 
 **“Software License fee”** means a payment, which must be contributed, starting from the moment of signing of this Agreement and which makes it possible for the Licensee (i) to have the agreed-upont License Scope; (ii) to use the Software in compliance with the terms of the License; (iii) to use the support services within the time frame, over which the License fee was contributed as well as all further payments for the then-current License Scope change if applicable. The Software License Fee is an aggregated value. 
 
 **“Territory”** means worldwide unless otherwise provided in the Offer document.
 
-**“ThingsBoard Cloud”** means a public managed service cluster offering from the Licensor.
+**“SENTIENT Cloud”** means a public managed service cluster offering from the Licensor.
 
 **“Support”** means technical support provided by the Licensor while using the Software by the Licensee within the term of the License (if it is in a Base Scope).  The main purpose of the Support is to eliminate obvious defects and errors (bugs) of the Software. 
 
 **“Update fee”** means a payment for the ability to exercise the Renewal Term.  
 
-**“Website/Company’s website”** means the https://thingsboard.io website that is owned by the Licensor.
+**“Website/Company’s website”** means the https://docs.sentient.invenia.in website that is owned by the Licensor.
 
 <br>
 RECITALS
@@ -74,11 +74,11 @@ and
 
 **WHEREAS**, the Licensor is ready to provide such the License for usage of the Software under the terms and conditions set forth herein, the Parties, in consideration of the foregoing premises and realizing reciprocal obligations, contained in this Agreement, have agreed as follows:
 
-In compliance with the terms and conditions of this End­ User License Agreement (hereinafter referred to as the “License agreement”/“Agreement”), ThingsBoard, Inc. (hereinafter referred to as the “Licensor”/“We”) hereby grants the Licensee a limited, commercial, non-sublicensable, non-transferable, non-exclusive right to use the Software only for Licensee’s commercial use on the Territory in accordance with documentation that accompanies the Software and under the terms set forth herein (hereinafter referred to as the “License”). This Agreement cannot be understood as an agreement for sale in any way.
+In compliance with the terms and conditions of this End­ User License Agreement (hereinafter referred to as the “License agreement”/“Agreement”), SENTIENT, Inc. (hereinafter referred to as the “Licensor”/“We”) hereby grants the Licensee a limited, commercial, non-sublicensable, non-transferable, non-exclusive right to use the Software only for Licensee’s commercial use on the Territory in accordance with documentation that accompanies the Software and under the terms set forth herein (hereinafter referred to as the “License”). This Agreement cannot be understood as an agreement for sale in any way.
 
 Signing this Agreement, the Licensee acknowledges that it shall pay to the Licensor for the usage of the License in a manner and under the terms prescribed by this Agreement.
 
-Using the Software, the Licensee is obliged to adhere to the terms and conditions specified herein. Before the use of the Software on a fee basis, the Licensee may apply for a Testing, examine and evaluate the Software under a free trial on the ThingsBoard Cloud.
+Using the Software, the Licensee is obliged to adhere to the terms and conditions specified herein. Before the use of the Software on a fee basis, the Licensee may apply for a Testing, examine and evaluate the Software under a free trial on the SENTIENT Cloud.
 
 
 <br>
@@ -270,7 +270,7 @@ In a case where any provision of this Agreement becomes or is declared by the co
 
 Parties agreed that the exchange of the information shall take place, among other means, by means of sending electronic letters via the following e-mail:
 
-E-mail of the Licensor: sales@thingsboard.io;
+E-mail of the Licensor: sales@docs.sentient.invenia.in;
 
 Upon this Agreement coming into force, all correspondence, preliminary agreements, protocols of intent and any other written or oral agreements between the Parties on issues, in some manner regarding this Agreement, lose legal effect, but can be taken into consideration in case of interpretation of the terms of this Agreement. 
 

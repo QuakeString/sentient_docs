@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect UG56 LoRaWAN® Gateway to ThingsBoard?
+title: How to connect UG56 LoRaWAN® Gateway to SENTIENT?
 category: Other devices
 connectivity: [LoRaWAN, HTTP, MQTT, LTE, 4G, NB-IoT, LTE-M, UDP]
 vendor: Milesight

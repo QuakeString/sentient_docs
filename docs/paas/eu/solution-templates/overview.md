@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas-eu
 title: IoT Solution templates
-description: ThingsBoard IoT Solution templates overview
+description: SENTIENT IoT Solution templates overview
 
 
 open-solution-templates-page:

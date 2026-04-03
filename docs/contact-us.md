@@ -175,7 +175,7 @@ notitle: "true"
                     <select class="form-control select" name="subject">
                         <option value="" disabled selected>Select Subject</option>
                         <option value="Technical Support">Technical Support</option>
-                        <option value="ThingsBoard Products">ThingsBoard Products</option>
+                        <option value="SENTIENT Products">SENTIENT Products</option>
                         <option value="Private Cloud">Private Cloud</option>
                         <option value="Deployment Options">Deployment Options</option>
                         <option value="Custom Development Service">Custom Development Service</option>
@@ -184,7 +184,7 @@ notitle: "true"
                         <option value="Partnership">Partnership</option>
                         <option value="Press or Analyst Inquiry">Press or Analyst Inquiry</option>
                         <option value="General Feedback">General Feedback</option>
-                        <option value="TBMQ">TBMQ</option>
+                        <option value="ST-RMQTT">ST-RMQTT</option>
                         <option value="Other">Other</option>
                     </select>
                     <p>Subject</p>
@@ -224,7 +224,7 @@ notitle: "true"
             titleEl.style.fontSize = '40px';
             document.querySelector('.select-label').parentElement.style.display = 'none';
         }
-         if (params.has('tbmqorder')) {
+         if (params.has('st-rmqttorder')) {
             const titleEl = document.querySelector('.contact-us-title');
             titleEl.innerText = 'Get Your Private MQTT Broker';
             titleEl.style.fontSize = '40px';

@@ -3,7 +3,7 @@ layout: case-studies
 title: Awake - IoT Rental Operations Dashboard for Global Fleet
 notitle: "true"
 customTitle: "true"
-description: Discover how Awake streamlined global rental operations with ThingsBoard IoT — fleet management, contracts, geofencing, and real-time connectivity.
+description: Discover how Awake streamlined global rental operations with SENTIENT IoT — fleet management, contracts, geofencing, and real-time connectivity.
 ---
 
 <div class="case-study-page-wrapper">
@@ -46,7 +46,7 @@ description: Discover how Awake streamlined global rental operations with Things
     <section class="quote-with-mark fill-background">
         <img src="/images/case-studies/quote.svg" title="Quote mark" alt="Quote mark" width="96" height="90">
         <div class="quote-text">
-            <p>We have reached out to ThingsBoard to build a rental operations dashboard for managing rental stations that offer our products. Additionally, we wanted to provide those stations with a ready-made interface for fleet and contract management. The solution needed to support rental contracts, performance reporting for rental centers, fleet management, geofencing, internal incident reporting, and multi-channel notifications (SMS, email, WhatsAp...<a target="_blank" href="/industries/smart-city/?company=awake">read more</a></p>
+            <p>We have reached out to SENTIENT to build a rental operations dashboard for managing rental stations that offer our products. Additionally, we wanted to provide those stations with a ready-made interface for fleet and contract management. The solution needed to support rental contracts, performance reporting for rental centers, fleet management, geofencing, internal incident reporting, and multi-channel notifications (SMS, email, WhatsAp...<a target="_blank" href="/industries/smart-city/?company=awake">read more</a></p>
             <h2>Klemen Pevec, Head of Software Engineering at Ride Awake</h2>
         </div>
     </section>
@@ -105,7 +105,7 @@ description: Discover how Awake streamlined global rental operations with Things
         </div>
     </section>
     <section class="tb-power mb">
-        <h2>How ThingsBoard powers Awake?</h2>
+        <h2>How SENTIENT powers Awake?</h2>
         <div class="block">
             <div class="text">
                 <h3>One hub for operations</h3>
@@ -130,31 +130,31 @@ description: Discover how Awake streamlined global rental operations with Things
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard helps companies improve rental operations with IoT</h2>
+        <h2>How SENTIENT helps companies improve rental operations with IoT</h2>
         <div class="block">
             <div class="text">
                 <h3>Centralized management system</h3>
-                <p>ThingsBoard allows all operations to be united within a single platform. Instead of using multiple disparate systems, all data, from a global level down to individual devices, can be organized in a single structure. This provides complete control and simplifies managing a large network.</p>
+                <p>SENTIENT allows all operations to be united within a single platform. Instead of using multiple disparate systems, all data, from a global level down to individual devices, can be organized in a single structure. This provides complete control and simplifies managing a large network.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/entities-table.webp" title="Thingsboard entities table widget" alt="Thingsboard entities table widget" width="776" height="776">
-                <img src="/images/case-studies/maps-widgets.webp" title="Thingsboard maps widgets widget" alt="Thingsboard maps widgets widget" width="776" height="776">
+                <img src="/images/case-studies/entities-table.webp" title="Sentient entities table widget" alt="Sentient entities table widget" width="776" height="776">
+                <img src="/images/case-studies/maps-widgets.webp" title="Sentient maps widgets widget" alt="Sentient maps widgets widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Role-based access and custom dashboards</h3>
-                <p>A key advantage of ThingsBoard is its ability to create tailored interfaces for different user roles. This allows administrators to have a full overview of the system, while workers are given only the functionality necessary for their daily tasks, which enhances efficiency and security.</p>
+                <p>A key advantage of SENTIENT is its ability to create tailored interfaces for different user roles. This allows administrators to have a full overview of the system, while workers are given only the functionality necessary for their daily tasks, which enhances efficiency and security.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/roles-table.webp" title="Thingsboard roles table widget" alt="Thingsboard roles table widget" width="776" height="776">
-                <img src="/images/case-studies/hierarchy-widget.webp" title="Thingsboard hierarchy widget" alt="Thingsboard hierarchy widget" width="776" height="776">
+                <img src="/images/case-studies/roles-table.webp" title="Sentient roles table widget" alt="Sentient roles table widget" width="776" height="776">
+                <img src="/images/case-studies/hierarchy-widget.webp" title="Sentient hierarchy widget" alt="Sentient hierarchy widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Advanced rental functionality</h3>
-                <p>ThingsBoard allows for the integration of specific business processes, such as:</p>
+                <p>SENTIENT allows for the integration of specific business processes, such as:</p>
                 <ul>
                     <li><p>Geofencing - defining permitted operational zones.</p></li>
                     <li><p>Contract Management - creating and closing contracts directly in the system.</p></li>
@@ -162,8 +162,8 @@ description: Discover how Awake streamlined global rental operations with Things
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/alarms-table.webp" title="Thingsboard alarms table widget" alt="Thingsboard alarms table widget" width="776" height="776">
-                <img src="/images/case-studies/bar-chart.webp" title="Thingsboard bar chart widget" alt="Thingsboard bar chart widget" width="776" height="776">
+                <img src="/images/case-studies/alarms-table.webp" title="Sentient alarms table widget" alt="Sentient alarms table widget" width="776" height="776">
+                <img src="/images/case-studies/bar-chart.webp" title="Sentient bar chart widget" alt="Sentient bar chart widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
@@ -172,8 +172,8 @@ description: Discover how Awake streamlined global rental operations with Things
                 <p>Built with an experienced <a target="_blank" class="invisible" href="/services/development-services/">IoT development company</a>, the platform ensures stable, real-time connectivity via the MQTT protocol. Multi-channel notifications — SMS, email, and WhatsApp — allow businesses to react instantly to critical events, enhancing operational safety and responsiveness.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/notification-widget.webp" title="Thingsboard notification widget" alt="Thingsboard notification widget" width="776" height="776">
-                <img src="/images/case-studies/time-series-chart.webp" title="Thingsboard time series chart widget" alt="Thingsboard time series chart widget" width="776" height="776">
+                <img src="/images/case-studies/notification-widget.webp" title="Sentient notification widget" alt="Sentient notification widget" width="776" height="776">
+                <img src="/images/case-studies/time-series-chart.webp" title="Sentient time series chart widget" alt="Sentient time series chart widget" width="776" height="776">
             </div>
         </div>
         {% include services-banner.liquid %}
@@ -182,12 +182,12 @@ description: Discover how Awake streamlined global rental operations with Things
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img src="/images/case-studies/awake.svg" title="Awake" alt="Awake logo" width="126" height="56">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_Awake_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us</a>
     </section>
 </div>

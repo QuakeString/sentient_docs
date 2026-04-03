@@ -2,46 +2,46 @@
 * TOC
 {:toc}
 
-TBMQ MQTT Integration enables forwarding messages to **external MQTT brokers**, allowing real-time data delivery to third-party platforms. This is useful in scenarios such as:
+ST-RMQTT MQTT Integration enables forwarding messages to **external MQTT brokers**, allowing real-time data delivery to third-party platforms. This is useful in scenarios such as:
 
-- Data from TBMQ needs to be **forwarded** to an external MQTT broker or IoT platform.
-- TBMQ is used as an **intermediary to route data** between internal sources and external MQTT-based systems.
+- Data from ST-RMQTT needs to be **forwarded** to an external MQTT broker or IoT platform.
+- ST-RMQTT is used as an **intermediary to route data** between internal sources and external MQTT-based systems.
 
 ## Data Flow Overview
 
 MQTT Integration processes messages and forwards them to an external MQTT broker or system in the following steps:
 
 1. **Device (client) publishes an MQTT message** to a topic that matches the Integration's **Topic Filters**.
-2. **TBMQ broker receives the message** and forwards to TBMQ Integration Executor.
-3. **TBMQ Integration Executor processes the message**, formats it accordingly, and forwards it to the external MQTT broker or system.
+2. **ST-RMQTT broker receives the message** and forwards to ST-RMQTT Integration Executor.
+3. **ST-RMQTT Integration Executor processes the message**, formats it accordingly, and forwards it to the external MQTT broker or system.
 4. **External system receives the message** and processes the data as needed.
 
-![image](/images/mqtt-broker/integrations/tbmq-mqtt-integration.png)
+![image](/images/mqtt-broker/integrations/st-rmqtt-mqtt-integration.png)
 
 ## Prerequisites
 
 Before setting up the integration, ensure the following:
 
-- A running **[TBMQ](/docs/{{docsPrefix}}mqtt-broker/install/installation-options/) instance**.
-- A client capable of publishing MQTT messages (e.g., **TBMQ WebSocket Client**).
-- A client capable of receiving MQTT messages (e.g., **TBMQ WebSocket Client**).
+- A running **[ST-RMQTT](/docs/{{docsPrefix}}mqtt-broker/install/installation-options/) instance**.
+- A client capable of publishing MQTT messages (e.g., **ST-RMQTT WebSocket Client**).
+- A client capable of receiving MQTT messages (e.g., **ST-RMQTT WebSocket Client**).
 
-## Create TBMQ MQTT Integration
+## Create ST-RMQTT MQTT Integration
 
 1. Navigate to the **Integrations** page and click the **"+"** button to create a new integration.
 2. Select **MQTT** as the integration type and click **Next**.
-3. On the **Topic Filters** subscribe to the topic `tbmq/mqtt-integration` and click **Next**.
+3. On the **Topic Filters** subscribe to the topic `st-rmqtt/mqtt-integration` and click **Next**.
 4. In the **Configuration** step:
    * Enter the **Host** (`localhost`);
    * Enter the **Port** (`1883`);
    * Set 'Dynamic topic name' to `false` and 'Topic name' to `sensors/mqtt-integration`;
-   * Set 'Credentials' type to `Basic` and 'Username' to `tbmq_websockets_username`;
+   * Set 'Credentials' type to `Basic` and 'Username' to `st-rmqtt_websockets_username`;
 5. Click **Add** to save the integration.
 
 {% include images-gallery.html imageCollection="add-mqtt-integration" %}
 
 {% capture mqtt_integration_localhost_dynamic_topic %}
-**Important: When configuring an integration to publish messages back to TBMQ, make sure to disable "Dynamic topic name" and ensure that the publish topic does not overlap with the integration's topic filter, to prevent creating an infinite message loop**.
+**Important: When configuring an integration to publish messages back to ST-RMQTT, make sure to disable "Dynamic topic name" and ensure that the publish topic does not overlap with the integration's topic filter, to prevent creating an infinite message loop**.
 {% endcapture %}
 {% include templates/warn-banner.md content=mqtt_integration_localhost_dynamic_topic %}
 
@@ -69,7 +69,7 @@ Before setting up the integration, ensure the following:
 | | **Enable SSL** – Enables a secure connection using SSL/TLS. |
 | **Keep alive (seconds)** | Indicates the duration for which the broker and client can remain without communication before the session is closed. |
 | **Connect timeout (seconds)** | Time to wait before a 'CONNACK' is received. |
-| **Reconnect period (seconds)** | Defines how often TBMQ should attempt to reconnect if the connection is lost. |
+| **Reconnect period (seconds)** | Defines how often ST-RMQTT should attempt to reconnect if the connection is lost. |
 | **Dynamic QoS** | If enabled, the message will be forwarded with QoS from the incoming message. |
 | **QoS** | If **Dynamic QoS** is disabled, you can set the desired QoS. |
 | **Dynamic retain** | If enabled, the message will be forwarded with the Retain flag from the incoming message. |
@@ -87,7 +87,7 @@ To send a message, follow these steps:
 
 1. Navigate to the **WebSocket Client** page.
 2. Select 'WebSocket Default Connection' or any other available working connection, then click **Connect**. Make sure the 'Connection status' is shown as `Connected`.
-3. Set the 'Topic' field to `tbmq/mqtt-integration` to match the Integration's 'Topic Filter'. 
+3. Set the 'Topic' field to `st-rmqtt/mqtt-integration` to match the Integration's 'Topic Filter'. 
 4. Click the **Send** icon to publish the message. 
 5. If successful, two new messages should appear in the 'Messages' table:
 
@@ -96,13 +96,13 @@ To send a message, follow these steps:
 ```json
 {
    "payload": "eyJ0ZW1wZXJhdHVyZSI6MjV9",
-   "topicName": "tbmq/mqtt-integration",
-   "clientId": "tbmq_7QUvZzow",
+   "topicName": "st-rmqtt/mqtt-integration",
+   "clientId": "st-rmqtt_7QUvZzow",
    "eventType": "PUBLISH_MSG",
    "qos": 1,
    "retain": false,
-   "tbmqIeNode": "tbmq_ie_node",
-   "tbmqNode": "tbmq_node",
+   "st-rmqttIeNode": "st-rmqtt_ie_node",
+   "st-rmqttNode": "st-rmqtt_node",
    "ts": 1742554969254,
    "props": {},
    "metadata": {
@@ -119,8 +119,8 @@ Message description:
 - **eventType**: Type of MQTT event, here it's a published message (the only supported type for now).
 - **qos**: Quality of Service level used for the incoming message.
 - **retain**: Indicates if the message is a retained MQTT message.
-- **tbmqIeNode**: Node ID of the Integration Executor service that handled the message.
-- **tbmqNode**: Node ID of the TBMQ broker that received the message.
+- **st-rmqttIeNode**: Node ID of the Integration Executor service that handled the message.
+- **st-rmqttNode**: Node ID of the ST-RMQTT broker that received the message.
 - **ts**: Timestamp (in milliseconds) when the message was received.
 - **props**: MQTT 5.0 user properties or other MQTT properties.
 - **metadata**: Additional metadata added from integration configuration, e.g., the name of the integration that handled the message, added by default.

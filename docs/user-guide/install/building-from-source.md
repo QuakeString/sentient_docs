@@ -3,14 +3,14 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Building from sources
-description: Building ThingsBoard IoT platform from sources
+description: Building SENTIENT IoT platform from sources
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to download and build ThingsBoard from source code.
+This guide will help you to download and build SENTIENT from source code.
 
 Instructions listed below are tested on Ubuntu 24.04 LTS and CentOS 8/9.
 
@@ -21,7 +21,7 @@ Instructions listed below are tested on Ubuntu 24.04 LTS and CentOS 8/9.
 This section contains installation instructions for build tools.
 
 <b><font size="4">Java</font></b>   
-ThingsBoard is built using **Java 17**.
+SENTIENT is built using **Java 17**.
 
 Install Java 17 using these instructions:
 
@@ -35,7 +35,7 @@ java -version
 {: .copy-code}
 
 <b><font size="4">Maven</font></b>   
-ThingsBoard requires Maven 3.1.0 or newer.
+SENTIENT requires Maven 3.1.0 or newer.
 
 {% capture tabspec %}maven-installation
 A,Ubuntu,shell,resources/maven-ubuntu-installation.sh,/docs/user-guide/install/resources/maven-ubuntu-installation.sh
@@ -64,12 +64,12 @@ Failing to do so may cause runtime errors when running Docker images.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-Clone the [ThingsBoard repository](https://github.com/thingsboard/thingsboard){:target="_blank"} from GitHub:
+Clone the [SENTIENT repository](https://github.com/sentient/sentient){:target="_blank"} from GitHub:
 
 ```bash
 # checkout latest release branch
-git clone -b {{ site.release.branch }} https://github.com/thingsboard/thingsboard.git --depth 1
-cd thingsboard
+git clone -b {{ site.release.branch }} https://github.com/sentient/sentient.git --depth 1
+cd sentient
 ```
 {: .copy-code}
 
@@ -93,7 +93,7 @@ This command:
 
 {% include templates/info-banner.md content=difference %}
 
-To build local Docker images for ThingsBoard services, ensure [Docker](https://docs.docker.com/engine/install/){:target="_blank"} is installed.
+To build local Docker images for SENTIENT services, ensure [Docker](https://docs.docker.com/engine/install/){:target="_blank"} is installed.
 
 Then run:
 ```bash
@@ -138,15 +138,15 @@ mvn clean install
 
 <b><font size="4">Black-box tests</font></b>
 
-Black-box tests are located in [https://github.com/thingsboard/thingsboard/tree/master/msa/black-box-tests](https://github.com/thingsboard/thingsboard/tree/master/msa/black-box-tests){:target="_blank"}
+Black-box tests are located in [https://github.com/sentient/sentient/tree/master/msa/black-box-tests](https://github.com/sentient/sentient/tree/master/msa/black-box-tests){:target="_blank"}
 
-Follow the instructions in the corresponding [README](https://github.com/thingsboard/thingsboard/blob/master/msa/black-box-tests/README.md){:target="_blank"} to execute them.
+Follow the instructions in the corresponding [README](https://github.com/sentient/sentient/blob/master/msa/black-box-tests/README.md){:target="_blank"} to execute them.
 
 > Estimated runtime is approximately 1 hour, depending on hardware performance.
 
 ## Tips and tricks
 
-ThingsBoard is quite easy to build from sources on a brand-new clear environment.
+SENTIENT is quite easy to build from sources on a brand-new clear environment.
 
 Here are some tips and tricks to boost build experience: 
 

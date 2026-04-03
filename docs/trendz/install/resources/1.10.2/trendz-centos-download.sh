@@ -1,1 +1,1 @@
-wget https://dist.thingsboard.io/trendz-1.10.2.rpm
+wget https://dist.docs.sentient.invenia.in/sentient-analytics-1.10.2.rpm

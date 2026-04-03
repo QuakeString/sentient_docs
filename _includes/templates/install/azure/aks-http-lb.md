@@ -1,4 +1,4 @@
-Configure HTTP(S) Load Balancer to access web interface of your ThingsBoard instance. Basically you have 3 possible options of configuration:
+Configure HTTP(S) Load Balancer to access web interface of your SENTIENT instance. Basically you have 3 possible options of configuration:
 
    - http - Load Balancer without HTTPS support. Recommended for development. The only advantage is simple configuration and minimum costs. May be good option for development server but definitely not suitable for production.
    - https - Load Balancer with HTTPS support. Recommended for production. Acts as an SSL termination point. You may easily configure it to issue and maintain a valid SSL certificate. Automatically redirects all non-secure (HTTP) traffic to secure (HTTPS) port.
@@ -11,9 +11,9 @@ See links/instructions below on how to configure each of the suggested options.
 
 Now, you may use the address (the one you see instead of 34.111.24.134 in the command output) to access HTTP web UI (port 80) and connect your devices via HTTP API Use the following default credentials:
 
-- **System Administrator**: sysadmin@thingsboard.org / sysadmin
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
-- **Customer User**: customer@thingsboard.org / customer
+- **System Administrator**: sysadmin@sentient.org / sysadmin
+- **Tenant Administrator**: tenant@sentient.org / tenant
+- **Customer User**: customer@sentient.org / customer
 
 ### HTTPS Load Balancer
 
@@ -22,7 +22,7 @@ For using ssl certificates we can add our certificate directly in Azure Applicat
 az network application-gateway ssl-cert create \
    --resource-group $(az aks show --name $TB_CLUSTER_NAME --resource-group $AKS_RESOURCE_GROUP --query nodeResourceGroup | tr -d '"') \
    --gateway-name $AKS_GATEWAY\
-   --name ThingsBoardHTTPCert \
+   --name SENTIENTHTTPCert \
    --cert-file YOUR_CERT \
    --cert-password YOUR_CERT_PASS
 ```
@@ -49,7 +49,7 @@ tb-https-loadbalancer   <none>   *       34.111.24.134   80      7m25s
 
 
 {% capture https_lb_device_api_warn %}
-**NOTE**: The load balancer will redirect all HTTP traffic to HTTPS. Devices that do not support HTTPS will not be able to connect to ThingsBoard.
+**NOTE**: The load balancer will redirect all HTTP traffic to HTTPS. Devices that do not support HTTPS will not be able to connect to SENTIENT.
 If you would like to support such devices, you may either deploy separate load balancer for HTTP transport (recommended)
 or disable the redirect behavior by changing the *appgw.ingress.kubernetes.io/ssl-redirect* setting in the *https-load-balancer.yml* file.
 

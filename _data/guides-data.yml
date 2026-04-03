@@ -1,6 +1,6 @@
 - bigheader: Getting started guides
 - title: Getting started guides
-  subtitle: These guides provide quick overview of main ThingsBoard features. Designed to be completed in 15-30 minutes.
+  subtitle: These guides provide quick overview of main SENTIENT features. Designed to be completed in 15-30 minutes.
   id: GettingStartedGuides
   section:
     - path: /docs/getting-started-guides/helloworld/
@@ -17,23 +17,23 @@
       pe: false
     - path: /docs/user-guide/rule-engine-2-0/re-getting-started/
       title: Getting started with Rule Engine
-      subtitle: Learn about ThingsBoard rule engine and typical use cases you can implement. Review Hello World example and learn how-to enable filtering of incoming telemetry messages.
+      subtitle: Learn about SENTIENT rule engine and typical use cases you can implement. Review Hello World example and learn how-to enable filtering of incoming telemetry messages.
       keywords: device management attributes
       video: false
       pe: false
 - title: Data visualization
-  subtitle: These guides contain instructions how to configure complex ThingsBoard dashboards.
+  subtitle: These guides contain instructions how to configure complex SENTIENT dashboards.
   id: DataVisualization
   section:
     - path: https://youtu.be/BNY-kd320sE
-      title: Key concepts for working with the main functions of ThingsBoard
-      subtitle: "In this intro video, we kick off a tutorial series on ThingsBoard. Together, we'll explore key features and build a step-by-step smart dashboard to collect, visualize, and monitor data from office-integrated IoT devices."
+      title: Key concepts for working with the main functions of SENTIENT
+      subtitle: "In this intro video, we kick off a tutorial series on SENTIENT. Together, we'll explore key features and build a step-by-step smart dashboard to collect, visualize, and monitor data from office-integrated IoT devices."
       keywords:
       pe: false
       video: true
     - path: https://youtu.be/65SoFceFDBE
       title: Practical Lesson 1. Adding an entity and visualizing it on the Dashboard
-      subtitle: "We will create your first dashboard in ThingsBoard. Add Office A as an asset, define its contact information as attributes, and visualize it using an Information card widget."
+      subtitle: "We will create your first dashboard in SENTIENT. Add Office A as an asset, define its contact information as attributes, and visualize it using an Information card widget."
       keywords:
       pe: false
       video: true
@@ -44,8 +44,8 @@
       pe: false
       video: true
     - path: https://youtu.be/X26jgF5nX5g
-      title: Practical Lesson 3. Time window in ThingsBoard
-      subtitle: "Learn what a Time window feature is in ThingsBoard and how to set time intervals for working with telemetry data."
+      title: Practical Lesson 3. Time window in SENTIENT
+      subtitle: "Learn what a Time window feature is in SENTIENT and how to set time intervals for working with telemetry data."
       keywords:
       pe: false
       video: true
@@ -57,7 +57,7 @@
       video: true
     - path: https://youtu.be/MuOB13aH--U
       title: Practical Lesson 5. Part 1. States & Multi-Level Dashboard Hierarchy
-      subtitle: "Mastering states in ThingsBoard! In this tutorial, we will create separate states for each sensor, configure actions to navigate between them, and set up the air sensor state to monitor temperature, humidity, and CO₂ levels in the office."
+      subtitle: "Mastering states in SENTIENT! In this tutorial, we will create separate states for each sensor, configure actions to navigate between them, and set up the air sensor state to monitor temperature, humidity, and CO₂ levels in the office."
       keywords:
       pe: false
       video: true
@@ -78,157 +78,157 @@
   id: ConnectYourDevice
   section:
     - path: /docs/reference/http-api/
-      title: Connect devices using ThingsBoard HTTP API
-      subtitle: Learn how to connect your devices using HTTP protocol and ThingsBoard built-in payload format.
+      title: Connect devices using SENTIENT HTTP API
+      subtitle: Learn how to connect your devices using HTTP protocol and SENTIENT built-in payload format.
       keywords: http connect
       pe: false
       video: false
     - path: /docs/reference/mqtt-api/
-      title: Connect devices using ThingsBoard MQTT API
-      subtitle: Learn how to connect your devices using MQTT protocol and ThingsBoard built-in payload format.
+      title: Connect devices using SENTIENT MQTT API
+      subtitle: Learn how to connect your devices using MQTT protocol and SENTIENT built-in payload format.
       keywords: mqtt connect
       pe: false
       video: false
     - path: /docs/reference/mqtt-sparkplug-api/
-      title: Connect devices using  ThingsBoard MQTT Sparkplug API
-      subtitle: Learn how to connect your devices using MQTT Sparkplug protocol and ThingsBoard built-in payload format.
+      title: Connect devices using  SENTIENT MQTT Sparkplug API
+      subtitle: Learn how to connect your devices using MQTT Sparkplug protocol and SENTIENT built-in payload format.
       keywords: sparkplug connect
       pe: false
       video: false
     - path: /docs/reference/lwm2m-api/
-      title: Connect devices using ThingsBoard LwM2M API
-      subtitle: Learn how to connect your devices using LwM2M protocol and ThingsBoard built-in payload format.
+      title: Connect devices using SENTIENT LwM2M API
+      subtitle: Learn how to connect your devices using LwM2M protocol and SENTIENT built-in payload format.
       keywords: lwm2m connect
       pe: false
       video: false
     - path: /docs/reference/coap-api/
-      title: Connect devices using ThingsBoard CoAP API
-      subtitle: Learn how to connect your devices using CoAP protocol and ThingsBoard built-in payload format.
+      title: Connect devices using SENTIENT CoAP API
+      subtitle: Learn how to connect your devices using CoAP protocol and SENTIENT built-in payload format.
       keywords: coap connect
       pe: false
       video: false
     - path: /docs/iot-gateway/getting-started/
-      title: Connect devices through ThingsBoard IoT Gateway
+      title: Connect devices through SENTIENT IoT Gateway
       subtitle: Learn how to deploy IoT Gateway in your local network and route messages from your devices to the cloud.
       keywords: gateway connect
       pe: false
       video: false
     - path: /docs/user-guide/integrations/
-      title: ThingsBoard Integrations basics
-      subtitle: Learn about ThingsBoard Integrations feature and how you can use it to connect devices and apps that use custom payload formats.
+      title: SENTIENT Integrations basics
+      subtitle: Learn about SENTIENT Integrations feature and how you can use it to connect devices and apps that use custom payload formats.
       keywords:
       pe: false
       video: false
     - path: /docs/user-guide/integrations/#platform-integrations-vs-iot-gateway
-      title: ThingsBoard Integrations vs IoT Gateway
+      title: SENTIENT Integrations vs IoT Gateway
       subtitle: Learn the differences between the Platform Integrations and IoT Gateway.
       keywords:
       pe: false
       video: false
     - path: /docs/user-guide/integrations/http/
-      title: Connect devices with custom payload using ThingsBoard HTTP Integration
-      subtitle: Convert existing protocols and payload formats to ThingsBoard message format.
+      title: Connect devices with custom payload using SENTIENT HTTP Integration
+      subtitle: Convert existing protocols and payload formats to SENTIENT message format.
       keywords: http connect
       pe: true
       video: true
     - path: /docs/user-guide/integrations/mqtt/
-      title: Connect devices with custom payload using ThingsBoard MQTT Integration.
+      title: Connect devices with custom payload using SENTIENT MQTT Integration.
       subtitle: Connect to external brokers and consume MQTT data stream
       keywords: mqtt connect
       pe: true
       video: true
     - path: /docs/user-guide/integrations/kafka/
-      title: Connect devices with custom payload using ThingsBoard Kafka Integration.
+      title: Connect devices with custom payload using SENTIENT Kafka Integration.
       subtitle: Connect to external brokers and consume Kafka data stream
       keywords: kafka connect
       pe: true
       video: true
     - path: /docs/user-guide/integrations/sigfox/
       title: Connect SigFox devices using TB PE Integration
-      subtitle: Learn how to route messages from Sigfox backend to ThingsBoard and decode binary device payloads.
+      subtitle: Learn how to route messages from Sigfox backend to SENTIENT and decode binary device payloads.
       keywords: sigfox connect
       pe: true
       video: true
     - path: /docs/user-guide/integrations/ttn/
       title: Connect LoRaWAN devices using TheThingsStack
-      subtitle: Learn how to route messages from TheThingsStack backend to ThingsBoard and vise-versa.
+      subtitle: Learn how to route messages from TheThingsStack backend to SENTIENT and vise-versa.
       keywords: ttn connect
       pe: true
       video: false
     - path: /docs/user-guide/integrations/opc-ua/
-      title: Connect OPC-UA servers to ThingsBoard
-      subtitle: Learn how to connect OPC-UA devices to ThingsBoard.
+      title: Connect OPC-UA servers to SENTIENT
+      subtitle: Learn how to connect OPC-UA devices to SENTIENT.
       keywords: opcua connect
       pe: true
       video: true
     - path: /docs/user-guide/integrations/thingpark/
       title: Connect LoRaWAN devices using Actility ThingPark
-      subtitle: Learn how to route messages from ThingPark to ThingsBoard and vise-versa.
+      subtitle: Learn how to route messages from ThingPark to SENTIENT and vise-versa.
       keywords:
       pe: true
       video: false
     - path: /docs/user-guide/integrations/aws-iot/
       title: Connect devices through AWS IoT
-      subtitle: Learn how to connect to AWS IoT broker, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: Learn how to connect to AWS IoT broker, transform the incoming messages and generate the downlinks using SENTIENT.
       keywords:
       pe: true
       video: true
     - path: /docs/user-guide/integrations/aws-kinesis/
       title: Connect devices through AWS Kinesis
-      subtitle: Learn how to connect to AWS Kinesis stream, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: Learn how to connect to AWS Kinesis stream, transform the incoming messages and generate the downlinks using SENTIENT.
       keywords:
       pe: true
       video: false
     - path: /docs/user-guide/integrations/ibm-watson-iot/
       title: Connect devices through IBM Watson IoT
-      subtitle: Learn how to connect to IBM Watson IoT broker, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: Learn how to connect to IBM Watson IoT broker, transform the incoming messages and generate the downlinks using SENTIENT.
       keywords:
       pe: true
       video: true
     - path: /docs/user-guide/integrations/azure-event-hub/
       title: Connect devices through Azure Event Hub
-      subtitle: Learn how to connect to Azure Event Hub, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: Learn how to connect to Azure Event Hub, transform the incoming messages and generate the downlinks using SENTIENT.
       keywords:
       pe: true
       video: true
     - path: /docs/user-guide/integrations/azure-iot-hub/
       title: Connect devices through Azure IoT Hub
-      subtitle: Learn how to connect to Azure IoT Hub and transform the incoming messages using ThingsBoard.
+      subtitle: Learn how to connect to Azure IoT Hub and transform the incoming messages using SENTIENT.
       keywords:
       pe: true
       video: false
     - path: /docs/user-guide/integrations/tcp/
       title: Devices uses TCP protocol
-      subtitle: How to connect to ThingsBoard TCP-server, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: How to connect to SENTIENT TCP-server, transform the incoming messages and generate the downlinks using SENTIENT.
       keywords: Connect TCP devices
       pe: true
       video: true
     - path: /docs/user-guide/integrations/udp/
       title: Devices uses UDP protocol
-      subtitle: How to connect to ThingsBoard UDP-server, transform the incoming messages and generate the downlinks using ThingsBoard.
+      subtitle: How to connect to SENTIENT UDP-server, transform the incoming messages and generate the downlinks using SENTIENT.
       keywords: Connect UDP devices
       pe: true
       video: true
     - path: /docs/samples/tektelic/
       title: Connect Tektelic LoRaWAN sensors using TEKTELIC KONA Core Network Server
-      subtitle: Learn how to route messages from TEKTELIC KONA Core Network Server to ThingsBoard.
+      subtitle: Learn how to route messages from TEKTELIC KONA Core Network Server to SENTIENT.
       keywords: Tektelic connect
       pe: false
       video: false
     - path: /docs/user-guide/integrations/tuya/
       title: Connect smart devices through Tuya Smart
-      subtitle: Learn how to connect smart devices using Tuya Smart to ThingsBoard.
+      subtitle: Learn how to connect smart devices using Tuya Smart to SENTIENT.
       keywords:
       pe: true
       video: false
     - path: /docs/samples/sia-connect/
       title: Connect OPC-UA devices through SIA Connect
-      subtitle: Learn how to connect OPC-UA devices using the SIA Connect to the ThingsBoard.
+      subtitle: Learn how to connect OPC-UA devices using the SIA Connect to the SENTIENT.
       keywords:
       pe: true
       video: false
 - title: Data processing & actions
-  subtitle: Learn how to process data in ThingsBoard.
+  subtitle: Learn how to process data in SENTIENT.
   id: DataProcessing
   section:
     - path: /docs/tutorials/validate-incoming-telemetry/
@@ -318,7 +318,7 @@
       subtitle: Calculate average temperature in the warehouse based on readings from multiple temperature sensors.
       keywords: average temperature analytics rule engine
       pe: true
-    - path: /docs/trendz/prediction/
+    - path: /docs/sentient-analytics/prediction/
       title: Predict timeseries
       subtitle: Build prediction model based on vibration of water pump
       keywords: analytics forecast prediction
@@ -332,7 +332,7 @@
 #      keywords: key1 key2 key3
 #      pe: false
 - title: Advanced features
-  subtitle: Learn about advanced ThingsBoard features
+  subtitle: Learn about advanced SENTIENT features
   id: AdvancedFeatures
   section:
     - path: /docs/user-guide/device-connectivity-status/
@@ -393,17 +393,17 @@
     subtitle: Learn how to step-by-step setup OAuth with Azure Active Directory.
 
 - title: Contribution and Development
-  subtitle: Learn how to contribute to Thingsboard, customize & develop custom widgets and rule nodes
+  subtitle: Learn how to contribute to Sentient, customize & develop custom widgets and rule nodes
   id: Contribution
   section:
     - path: /docs/user-guide/contribution/how-to-contribute/
       title: How to Contribute
-      subtitle: "Learn how to contribute to Thingsboard"
+      subtitle: "Learn how to contribute to Sentient"
       pe: false
       video: false
     - path: /docs/user-guide/contribution/how-to-contribute-your-device-integration-guide/
       title: How to contribute your device integration guide
-      subtitle: "Learn how to contribute to Thingsboard"
+      subtitle: "Learn how to contribute to Sentient"
       pe: false
       video: false
     - path: /docs/user-guide/contribution/rule-node-development/

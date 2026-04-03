@@ -1,5 +1,5 @@
 {
-  "title": "ThingsBoard IoT Gateways",
+  "title": "SENTIENT IoT Gateways",
   "image": null,
   "mobileHide": false,
   "mobileOrder": null,
@@ -1130,7 +1130,7 @@
                 {
                   "name": "allBytesSentToTB",
                   "type": "timeseries",
-                  "label": "Send To ThingsBoard (bytes)",
+                  "label": "Send To SENTIENT (bytes)",
                   "color": "#4caf50",
                   "settings": {},
                   "_hash": 0.05525630093240763,
@@ -1144,7 +1144,7 @@
                 {
                   "name": "allReсeivedBytesFromTB",
                   "type": "timeseries",
-                  "label": "Received From ThingsBoard (bytes)",
+                  "label": "Received From SENTIENT (bytes)",
                   "color": "#f44336",
                   "settings": {},
                   "_hash": 0.4539040118567914,

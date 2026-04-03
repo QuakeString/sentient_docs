@@ -1,14 +1,14 @@
 * TOC
 {:toc}
 
-TBMQ provides the ability to run HTTP server that hosts Web UI and serves REST API calls over SSL.
+ST-RMQTT provides the ability to run HTTP server that hosts Web UI and serves REST API calls over SSL.
 
-Most of the TBMQ environments use the load balancer as a termination point for the SSL connection between the client and the broker.
+Most of the ST-RMQTT environments use the load balancer as a termination point for the SSL connection between the client and the broker.
 In other words, internet traffic is encrypted between the user browser and the load balancer, but is decrypted between the load balancer and broker services.
 The advantage of such options is a simple configuration.
 Most of the cloud load balancers (AWS, Google Cloud, etc.) have built-in certificate generation tools and rich documentation on how to configure SSL.
 
-Nevertheless, it is possible to configure TBMQ to enable SSL and avoid SSL termination on the Load Balancer.
+Nevertheless, it is possible to configure ST-RMQTT to enable SSL and avoid SSL termination on the Load Balancer.
 We recommend using valid SSL certificates generated using trusted CA authorities and avoid spending time on resolving issues with [self-signed certificates](#self-signed-certificates-generation).
 See the instructions below on how to configure SSL for certificates stored in PEM file format or Java Keystore.
 
@@ -34,7 +34,7 @@ where:
 * SSL_PEM_KEY — Path to the server certificate private key file. Optional by default. Required if the private key is not present in the server certificate file;
 * SSL_PEM_KEY_PASSWORD — Optional server certificate private key password.
 
-After completing the setup, start or restart the TBMQ server.
+After completing the setup, start or restart the ST-RMQTT server.
 
 {% include templates/mqtt-broker/ssl/pem_files_location.md %}
 
@@ -48,8 +48,8 @@ export SSL_ENABLED=true
 export SSL_CREDENTIALS_TYPE=KEYSTORE
 export SSL_KEY_STORE_TYPE=PKCS12
 export SSL_KEY_STORE=keystore.p12
-export SSL_KEY_STORE_PASSWORD=tbmq
-export SSL_KEY_PASSWORD=tbmq
+export SSL_KEY_STORE_PASSWORD=st-rmqtt
+export SSL_KEY_PASSWORD=st-rmqtt
 ...
 ```
 
@@ -62,7 +62,7 @@ where:
 * SSL_KEY_STORE_PASSWORD — Password used to access the key store;
 * SSL_KEY_PASSWORD — Password used to access the server private key.
 
-After completing the setup, start or restart the TBMQ server.
+After completing the setup, start or restart the ST-RMQTT server.
 
 {% include templates/mqtt-broker/ssl/keystore_files_location.md %}
 

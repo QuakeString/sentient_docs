@@ -6,7 +6,7 @@ title: IoT Gateway installation from sources.
 
 ## Installation from sources
 
-To install ThingsBoard Gateway from sources, you should follow steps below:    
+To install SENTIENT Gateway from sources, you should follow steps below:    
   
 **1.** Install required libraries to the system with apt:
 ```bash
@@ -16,13 +16,13 @@ sudo apt install python3-dev python3-pip python3-venv libglib2.0-dev git
 
 **2.** Download repository from GitHub:
 ```bash
-git clone --recurse-submodules https://github.com/thingsboard/thingsboard-gateway.git --depth 1
+git clone --recurse-submodules https://github.com/sentient/sentient-gateway.git --depth 1
 ```
 {: .copy-code}
 
 **3.** Move into downloaded directory:
 ```bash
-cd thingsboard-gateway
+cd sentient-gateway
 ```
 {: .copy-code}
 
@@ -50,18 +50,18 @@ mkdir logs
 ```
 {: .copy-code}
 
-**8.** Configure the gateway to work with your instance of the ThingsBoard platform: change the "host" and "accessToken" to your values in a *tb_gateway.json* configuration file.
+**8.** Configure the gateway to work with your instance of the SENTIENT platform: change the "host" and "accessToken" to your values in a *tb_gateway.json* configuration file.
 You can find a description of this file in the [IoT Gateway Configuration](/docs/iot-gateway/configuration/#general-configuration-file) guide.
 
 The tb_gateway.json file is located in the config folder:
 
 ```bash
-thingsboard-gateway/thingsboard_gateway/config
+sentient-gateway/sentient_gateway/config
 ```
 
 **9.** Run gateway, to check installation result:
 ```bash
-python3 ./thingsboard_gateway/tb_gateway.py
+python3 ./sentient_gateway/tb_gateway.py
 ```
 {: .copy-code}
 
@@ -89,6 +89,6 @@ If you are using Gateway for development, you can enable Hot Reloader to restart
 
 To run Gateway with Hot Reloader, use the following command:
 ```bash
-python3 ./thingsboard_gateway/tb_gateway.py true
+python3 ./sentient_gateway/tb_gateway.py true
 ```
 {: .copy-code}

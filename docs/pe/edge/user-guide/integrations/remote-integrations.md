@@ -75,18 +75,18 @@ device:
 
 ### Introduction
 
-It is possible to run any **ThingsBoard Integration** remotely from the main **ThingsBoard Edge** instance.
-This guide provides step-by-step instructions for launching **ThingsBoard integration remotely**.
+It is possible to run any **SENTIENT Integration** remotely from the main **SENTIENT GATEWAY** instance.
+This guide provides step-by-step instructions for launching **SENTIENT integration remotely**.
 
-We'll demonstrate how to **set up a remote HTTP integration** to push data to **ThingsBoard Edge**.
+We'll demonstrate how to **set up a remote HTTP integration** to push data to **SENTIENT GATEWAY**.
 
 For more general details, see the [deployment options](/docs/pe/edge/user-guide/integrations/#deployment-options){: target="_blank"}.
 
 #### Prerequisites
 
-* A running **ThingsBoard Edge** instance, already connected to the **Server**, with access as a **Tenant administrator**.
+* A running **SENTIENT GATEWAY** instance, already connected to the **Server**, with access as a **Tenant administrator**.
 
-### ThingsBoard Server configuration steps
+### SENTIENT Server configuration steps
 
 To create **Converter** and **Integration templates**, log in to the **Cloud** instance as **Tenant administrator**.
 
@@ -94,7 +94,7 @@ Before creating the **Integration template**, create an **Uplink converter templ
 
 #### Step 1. Create Uplink Converter
 
-The **uplink data converter** is needed to convert the incoming data from the device into the format required for display on **ThingsBoard Edge**.
+The **uplink data converter** is needed to convert the incoming data from the device into the format required for display on **SENTIENT GATEWAY**.
 * Log in to the **Cloud** and go to the **Edge management > Converter templates** section. To create a Converter template, click the **"Add data converter"** button (the **+** icon) and select the **"Create new converter"** option.
 * In the **"Add data converter"** pop-up window:
     * **Name:** Enter the name of the data converter.
@@ -187,7 +187,7 @@ Once the attribute is added, we are ready to assign the integration and verify t
 
 #### Choose your platform and install
 
-You can install the ThingsBoard integration via **Docker**, **Debian** or **RPM packages**. Please use one of the following steps.
+You can install the SENTIENT integration via **Docker**, **Debian** or **RPM packages**. Please use one of the following steps.
 
 {% capture selectPlatform %}
 Docker on Linux or Mac OS%,%docker%,%templates/edge/integrations/resources/docker-on-linux-mac.md%br%
@@ -200,7 +200,7 @@ CentOS/RHEL Server%,%centos%,%templates/edge/integrations/resources/centos-rhel.
 ### Remote HTTP integration validation
 
 To send an uplink message, you need an HTTP endpoint URL from the integration.  
-Let's log in to the **ThingsBoard Edge** and go to the **Integrations** section. 
+Let's log in to the **SENTIENT GATEWAY** and go to the **Integrations** section. 
 Find the HTTP integration and click it. There you can find the HTTP endpoint URL. Click the icon to copy the URL.
 
 {% capture local-deployment %}
@@ -225,7 +225,7 @@ The created device with data can be viewed in the **Device groups > All** on the
 
 ### Remote integration configuration
 
-Configuring remote integrations is done through the **ThingsBoard** interface, with no special steps required.
+Configuring remote integrations is done through the **SENTIENT** interface, with no special steps required.
 Explore the following guides and video tutorials related to the specific integrations:
 
  - [HTTP](/docs/pe/edge/user-guide/integrations/http/){: target="_blank"}

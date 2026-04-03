@@ -65,9 +65,9 @@ Go to the **Payload formatters** page and select **Custom Javascript formatter**
 
 {% include {{ converterFilePath }} %} 
 
-### Create integration in ThingsBoard
+### Create integration in SENTIENT
 
-Next we will create "**The Things Stack**" (TTS) integration inside the ThingsBoard.
+Next we will create "**The Things Stack**" (TTS) integration inside the SENTIENT.
 
 At first, copy the code, we will need it to create the uplink converter:
 
@@ -89,7 +89,7 @@ return result;
 In the "**Connect**"step, you will need the following parameters:
 
 - **Region**: *eu1* (region where your application was registered inside The Things Stack Community)
-- **Username**: *thingsboard-application-2025-06@ttn* (use **Username** from integration on TTS)
+- **Username**: *sentient-application-2025-06@ttn* (use **Username** from integration on TTS)
 - **Password**: use **Password** from integration on The Things Stack Community
 
 Now, navigate to the "**Integrations**" page under the "**Integrations center**" section and follow this steps:

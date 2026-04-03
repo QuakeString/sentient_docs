@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-edge
-title: ThingsBoard Edge installation options
+title: SENTIENT GATEWAY installation options
 notitle: "true"
 
 ---
@@ -10,10 +10,10 @@ notitle: "true"
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <h1>ThingsBoard Edge installation options</h1>
+                <h1>SENTIENT GATEWAY installation options</h1>
                 <div class="install-options-description">
                     <p>
-                        ThingsBoard Edge installation instructions for various operation systems
+                        SENTIENT GATEWAY installation instructions for various operation systems
                     </p>
                 </div>
             </div>

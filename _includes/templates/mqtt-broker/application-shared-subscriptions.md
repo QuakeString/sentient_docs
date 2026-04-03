@@ -3,13 +3,13 @@ The construction of the topic name is determined by mapping the MQTT topic filte
 This mapping is achieved by following a specific naming convention (MQTT topic filter -> Kafka topic).
 
 ```
-test/topic -> tbmq.msg.app.shared.test.topic
-test/# -> tbmq.msg.app.shared.test.mlw
-test/+ -> tbmq.msg.app.shared.test.slw
+test/topic -> st-rmqtt.msg.app.shared.test.topic
+test/# -> st-rmqtt.msg.app.shared.test.mlw
+test/+ -> st-rmqtt.msg.app.shared.test.slw
 ```
 
 where
-* `tbmq.msg.app.shared.` is added as a prefix
+* `st-rmqtt.msg.app.shared.` is added as a prefix
 * `/` is replaced by `.`
 * `#` is replaced by `mlw` (multi-lvl wildcard)
 * `+` is replaced by `slw` (single-lvl wildcard)
@@ -19,7 +19,7 @@ the hash derived from the topic filter will be utilized to create the Kafka topi
 This approach ensures that the resulting Kafka topic remains valid and adheres to the necessary naming conventions.
 
 ```
-tbmq.msg.app.shared.$TOPIC_FILTER_HASH
+st-rmqtt.msg.app.shared.$TOPIC_FILTER_HASH
 ```
 
 The behavior described above can be regulated by the `TB_APP_PERSISTED_MSG_SHARED_TOPIC_VALIDATION` property.

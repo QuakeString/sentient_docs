@@ -15,7 +15,7 @@
           "layoutX": 344,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Under Threshold",
         "debugMode": false,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 615,
           "layoutY": 78
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "Create Alarm",
         "debugMode": false,
         "configuration": {
@@ -42,7 +42,7 @@
           "layoutX": 617,
           "layoutY": 222
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "Clear Alarm",
         "debugMode": false,
         "configuration": {

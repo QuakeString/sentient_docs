@@ -15,7 +15,7 @@
           "layoutX": 243,
           "layoutY": 104
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Indoor Thermometer Emulator",
         "debugMode": true,
         "configuration": {
@@ -31,7 +31,7 @@
           "layoutX": 244,
           "layoutY": 203
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Outdoor Thermometer Emulator",
         "debugMode": true,
         "configuration": {

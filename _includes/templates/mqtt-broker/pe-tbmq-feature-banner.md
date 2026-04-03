@@ -1,4 +1,4 @@
 {% capture peFeatureContent %}
-Only **TBMQ Professional Edition** supports **{{ feature }}** feature.<br>
+Only **ST-RMQTT Professional Edition** supports **{{ feature }}** feature.<br>
 {% endcapture %}
-{% include templates/info-banner.md title="TBMQ PE feature" content=peFeatureContent %}
+{% include templates/info-banner.md title="ST-RMQTT PE feature" content=peFeatureContent %}

@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-To integrate [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software/){:target="_blank"} with the ThingsBoard platform, you first need to configure workflows for channels that you are going to use with ThingsBoard.
+To integrate [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/group-chat-software/){:target="_blank"} with the SENTIENT platform, you first need to configure workflows for channels that you are going to use with SENTIENT.
 
 To do this, follow these steps:
 

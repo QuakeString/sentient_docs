@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: IoT Case Studies | How Businesses Succeed with ThingsBoard
+title: IoT Case Studies | How Businesses Succeed with SENTIENT
 notitle: "true"
 customTitle: "true"
-description: Discover how companies in retail, energy, logistics, and more drive digital transformation with ThingsBoard's IoT platform to boost efficiency, growth, and innovation.
+description: Discover how companies in retail, energy, logistics, and more drive digital transformation with SENTIENT's IoT platform to boost efficiency, growth, and innovation.
 formSubject: "General Feedback"
 modalTitle: "Tell us about your success"
 modalDescription: "Get your brand featured across our global channels — website, social media, and community."
@@ -18,19 +18,19 @@ itemsPerPage: "9"
 <div class="case-studies-wrapper">
     <section class="case-studies-hero">
         <h1>Case studies</h1>
-        <h2>Learn how ThingsBoard helps clients build and improve their businesses</h2>
+        <h2>Learn how SENTIENT helps clients build and improve their businesses</h2>
         <div class="card">
             <div class="image">
                 <a href="/case-studies/schwarz"><img src="/images/case-studies/schwarz.svg" title="Schwarz Group" alt="Schwarz Group logo"></a>
             </div>
             <div class="text">
                 <p class="category">SMART RETAIL</p>
-                <h3>IoT in retail: how Schwarz Group accelerated digitalization with ThingsBoard</h3>
+                <h3>IoT in retail: how Schwarz Group accelerated digitalization with SENTIENT</h3>
                 <div class="image inner">
                     <img src="/images/case-studies/schwarz.svg" alt="Schwarz logo">
                 </div>
                 <p>The Schwarz Group is one of the largest retail companies in the world, based in Neckarsulm, Germany. It operates in 32 countries, managing around 13,900 stores and employing approximately 575,000 people. Millions of people shop at Schwarz Group supermarkets every day.</p>
-                <a href="/case-studies/schwarz" class="button gtm_button">Learn more <span class="visually-hidden">about how Schwarz Group accelerated digitalization with ThingsBoard</span></a>
+                <a href="/case-studies/schwarz" class="button gtm_button">Learn more <span class="visually-hidden">about how Schwarz Group accelerated digitalization with SENTIENT</span></a>
             </div>
         </div>
     </section>
@@ -47,7 +47,7 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/ariot.webp');">
                 <a class="content" href="/case-studies/ariot">
                     <img style="height: 75px" class="logo" src="/images/case-studies/ariot.svg" title="ARIOT IOT TEKNOLOJILERI" alt="ARIOT IOT TEKNOLOJILERI logo">
-                    <p>Smart Healthcare: How Medline Adana Hospital ensured patient safety and JCI compliance with ARIOT IOT TEKNOLOJILERI and ThingsBoard</p>
+                    <p>Smart Healthcare: How Medline Adana Hospital ensured patient safety and JCI compliance with ARIOT IOT TEKNOLOJILERI and SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
                     <span class="visually-hidden">How Medline Adana Hospital ensured patient safety and JCI compliance with ARIOT IOT TEKNOLOJILERI and TB</span>
                 </a>
@@ -57,9 +57,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/super-bock-group.webp');">
                 <a class="content" href="/case-studies/super-bock">
                     <img class="logo" src="/images/case-studies/super-bock-group.svg" title="Super Bock Group" alt="Super Bock Group logo">
-                    <p>Revolutionizing beer distribution: how ThingsBoard empowered Super Bock Group</p>
+                    <p>Revolutionizing beer distribution: how SENTIENT empowered Super Bock Group</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about how ThingsBoard empowered Super Bock Group</span>
+                    <span class="visually-hidden">about how SENTIENT empowered Super Bock Group</span>
                 </a>
             </div>
         </div>
@@ -67,9 +67,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%),url('/images/case-studies/kiotera.webp');">
                 <a class="content" href="/case-studies/kiotera">
                     <img class="logo" src="/images/case-studies/kiotera.svg" title="KIOTERA" alt="KIOTERA logo">
-                    <p>Fast paced IoT-Implementation: How Customers of KIOTERA profit from standardized IoT-solutions based on ThingsBoard</p>
+                    <p>Fast paced IoT-Implementation: How Customers of KIOTERA profit from standardized IoT-solutions based on SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about Fast-Paced IoT Implementation with KIOTERA on ThingsBoard</span>
+                    <span class="visually-hidden">about Fast-Paced IoT Implementation with KIOTERA on SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -79,7 +79,7 @@ itemsPerPage: "9"
                     <img class="logo" src="/images/case-studies/onedata.svg" title="OneData" alt="OneData logo">
                     <p>Visual Transformation: How OneData boosted 60-70% Efficiency at a multi-speciality hospital</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about how OneData boosted hospital efficiency with ThingsBoard</span>
+                    <span class="visually-hidden">about how OneData boosted hospital efficiency with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -87,9 +87,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/x-telia.webp');">
                 <a class="content" href="/case-studies/xtelia">
                     <img style="height: 35px" class="logo" src="/images/case-studies/x-telia.svg" title="X-TELIA" alt="X-TELIA logo">
-                    <p>Smart signage at scale: X-TELIA deploys LoRaWAN™ parking management with ThingsBoard</p>
+                    <p>Smart signage at scale: X-TELIA deploys LoRaWAN™ parking management with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about X-TELIA deploys LoRaWAN™ parking management with ThingsBoard</span>
+                    <span class="visually-hidden">about X-TELIA deploys LoRaWAN™ parking management with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -97,9 +97,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/lumen.webp');">
                 <a class="content" href="/case-studies/lumen">
                     <img class="logo" src="/images/case-studies/lumen.svg" title="Lumen Energy Solutions" alt="Lumen Energy Solutions logo">
-                    <p>Industrial IoT in manufacturing: how Lumen Energy Solutions digitalized large-scale factories with ThingsBoard</p>
+                    <p>Industrial IoT in manufacturing: how Lumen Energy Solutions digitalized large-scale factories with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about Industrial IoT in manufacturing: how lumen energy solutions digitalized large-scale factories with ThingsBoard</span>
+                    <span class="visually-hidden">about Industrial IoT in manufacturing: how lumen energy solutions digitalized large-scale factories with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -107,9 +107,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/tjk-solutions.webp');">
                 <a class="content" href="/case-studies/tjk-solutions">
                     <img class="logo" src="/images/case-studies/tjk-solutions.svg" title="TJK-Solutions" alt="TJK-Solutions logo">
-                    <p>Securing Critical Communication: How TJK-Solutions Uses ThingsBoard to Monitor Meshtastic Infrastructure in Disaster Response</p>
+                    <p>Securing Critical Communication: How TJK-Solutions Uses SENTIENT to Monitor Meshtastic Infrastructure in Disaster Response</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about securing Critical Communication: How TJK-Solutions Uses ThingsBoard to Monitor Meshtastic Infrastructure in Disaster Response</span>
+                    <span class="visually-hidden">about securing Critical Communication: How TJK-Solutions Uses SENTIENT to Monitor Meshtastic Infrastructure in Disaster Response</span>
                 </a>
             </div>
         </div>
@@ -117,9 +117,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/energenix.webp');">
                 <a class="content" href="/case-studies/energenix">
                     <img class="logo" src="/images/case-studies/energenix.svg" title="Energenix" alt="Energenix logo">
-                    <p>Scaling renewable energy intelligence: how Energenix uses ThingsBoard to monitor and optimize 120+ MW of solar power assets</p>
+                    <p>Scaling renewable energy intelligence: how Energenix uses SENTIENT to monitor and optimize 120+ MW of solar power assets</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about how Energenix uses ThingsBoard to monitor and optimize 120+ MW of solar power assets</span>
+                    <span class="visually-hidden">about how Energenix uses SENTIENT to monitor and optimize 120+ MW of solar power assets</span>
                 </a>
             </div>
         </div>
@@ -127,9 +127,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/energroup.webp');">
                 <a class="content" href="/case-studies/energroup">
                     <img style="height: 65px" class="logo" src="/images/case-studies/energroup.svg" title="EnerGroup" alt="EnerGroup logo">
-                    <p>Smart building energy management: how EnerGroup enabled wireless room-level heating control with ThingsBoard</p>
+                    <p>Smart building energy management: how EnerGroup enabled wireless room-level heating control with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about Smart building energy management: how EnerGroup enabled wireless room-level heating control with ThingsBoard</span>
+                    <span class="visually-hidden">about Smart building energy management: how EnerGroup enabled wireless room-level heating control with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -137,9 +137,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%),url('/images/case-studies/oxi.webp');">
                 <a class="content" href="/case-studies/oxi">
                     <img class="logo" src="/images/case-studies/oxi.svg" title="OXI Trade" alt="OXI Trade logo">
-                    <p>Empowering alternative energy: how OXI TRADE streamlined IoT infrastructure with ThingsBoard</p>
+                    <p>Empowering alternative energy: how OXI TRADE streamlined IoT infrastructure with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about how OXI TRADE streamlined IoT infrastructure with ThingsBoard</span>
+                    <span class="visually-hidden">about how OXI TRADE streamlined IoT infrastructure with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -147,9 +147,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/dacor.webp');">
                 <a class="content" href="/case-studies/dacor">
                     <img class="logo" src="/images/case-studies/dacor.svg" title="süc//dacor GmbH" alt="süc//dacor GmbH logo">
-                    <p>Real-Time Production Monitoring for Automotive Supplier by süc//dacor GmbH Using ThingsBoard</p>
+                    <p>Real-Time Production Monitoring for Automotive Supplier by süc//dacor GmbH Using SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about Real-Time Production Monitoring for Automotive Supplier by süc//dacor GmbH Using ThingsBoard</span>
+                    <span class="visually-hidden">about Real-Time Production Monitoring for Automotive Supplier by süc//dacor GmbH Using SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -157,9 +157,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/comet.webp');">
                 <a class="content" href="/case-studies/comet">
                     <img style="height: 42px" class="logo" src="/images/case-studies/comet.svg" title="co.met" alt="comet logo">
-                    <p>Powering the future of utilities: co.met GmbH’s IoT breakthrough with ThingsBoard</p>
+                    <p>Powering the future of utilities: co.met GmbH’s IoT breakthrough with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about Powering the future of utilities: co.met GmbH’s IoT breakthrough with ThingsBoard</span>
+                    <span class="visually-hidden">about Powering the future of utilities: co.met GmbH’s IoT breakthrough with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -167,7 +167,7 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/crai.webp');">
                 <a class="content" href="/case-studies/crai">
                     <img style="height: 65px" class="logo" src="/images/case-studies/crai.svg" title="CRAI Automatización" alt="CRAI Automatización logo">
-                    <p>IoT in industrial automation: how CRAI enables remote control and data acquisition with ThingsBoard</p>
+                    <p>IoT in industrial automation: how CRAI enables remote control and data acquisition with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
                     <span class="visually-hidden">about IoT in industrial automation</span>
                 </a>
@@ -177,9 +177,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/iioote.webp');">
                 <a class="content" href="/case-studies/iioote">
                     <img style="height: 35px" class="logo" src="/images/case-studies/iioote.svg" title="iiOOTE" alt="iiOOTE logo">
-                    <p>From Prototyping to Commercial Services: How iiOOTE Scaled IoT with ThingsBoard</p>
+                    <p>From Prototyping to Commercial Services: How iiOOTE Scaled IoT with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about iiOOTE deploys LoRaWAN™ parking management with ThingsBoard</span>
+                    <span class="visually-hidden">about iiOOTE deploys LoRaWAN™ parking management with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -189,7 +189,7 @@ itemsPerPage: "9"
                     <img class="logo" src="/images/case-studies/obb.svg" title="ÖBB-Infrastruktur AG" alt="ÖBB-Infrastruktur AG logo">
                     <p>Smart railway infrastructure: digital transformation of ÖBB-Infrastruktur AG <br> &nbsp;</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about digital transformation of ÖBB-Infrastruktur AG with ThingsBoard</span>
+                    <span class="visually-hidden">about digital transformation of ÖBB-Infrastruktur AG with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -199,7 +199,7 @@ itemsPerPage: "9"
                     <img class="logo" src="/images/case-studies/senseing.svg" title="SenseING GmbH" alt="SenseING GmbH logo">
                     <p>Transforming food logistics with IoT-powered temperature monitoring <br> &nbsp;</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about transforming food logistics with ThingsBoard-powered temperature monitoring</span>
+                    <span class="visually-hidden">about transforming food logistics with SENTIENT-powered temperature monitoring</span>
                 </a>
             </div>
         </div>
@@ -217,9 +217,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/agrolog.webp');">
                 <a class="content" href="/case-studies/agrolog">
                     <img class="logo" src="/images/case-studies/agrolog.svg" title="Agrolog" alt="ASG-Tech logo">
-                    <p>Revolutionizing Agriculture: How Supertech Agroline Built a Scalable IoT Platform with ThingsBoard</p>
+                    <p>Revolutionizing Agriculture: How Supertech Agroline Built a Scalable IoT Platform with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about Smart Farming Platform by Supertech Agroline and ThingsBoard</span>
+                    <span class="visually-hidden">about Smart Farming Platform by Supertech Agroline and SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -237,9 +237,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/asg-tech.webp');">
                 <a class="content" href="/case-studies/asg-tech">
                     <img class="logo" src="/images/case-studies/asg-tech.svg" title="ASG-Tech" alt="ASG-Tech logo">
-                    <p>From Concept to Launch: ASG Tech’s Rapid IoT Innovation with ThingsBoard<br> &nbsp;</p>
+                    <p>From Concept to Launch: ASG Tech’s Rapid IoT Innovation with SENTIENT<br> &nbsp;</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about ASG Tech’s Rapid IoT Innovation with ThingsBoard</span>
+                    <span class="visually-hidden">about ASG Tech’s Rapid IoT Innovation with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -247,9 +247,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/t-mobile-cz.webp');">
                 <a class="content" href="/case-studies/t-mobile-cz">
                     <img style="height: 87px" class="logo" src="/images/case-studies/t-mobile-cz.svg" title="T-Mobile-CZ" alt="T-Mobile-CZ logo">
-                    <p>Scaling IoT prototyping at T-Mobile CZ with ThingsBoard <br> &nbsp;</p>
+                    <p>Scaling IoT prototyping at T-Mobile CZ with SENTIENT <br> &nbsp;</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about scaling IoT prototyping at T-Mobile CZ with ThingsBoard</span>
+                    <span class="visually-hidden">about scaling IoT prototyping at T-Mobile CZ with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -257,9 +257,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/keners.webp');">
                 <a class="content" href="/case-studies/keners">
                     <img class="logo" src="/images/case-studies/keners.svg" title="Keners" alt="Keners logo">
-                    <p>From Soil to Sensor: How Keners Revolutionized Farming with ThingsBoard<br> &nbsp;</p>
+                    <p>From Soil to Sensor: How Keners Revolutionized Farming with SENTIENT<br> &nbsp;</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about From Soil to Sensor: How Keners Revolutionized Farming with ThingsBoard</span>
+                    <span class="visually-hidden">about From Soil to Sensor: How Keners Revolutionized Farming with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -267,9 +267,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/berliner-energieinstitut.webp');">
                 <a class="content" href="/case-studies/berliner-energieinstitut">
                     <img class="logo" src="/images/case-studies/berliner-energieinstitut.svg" title="Berliner Energieinstitut" alt="Berliner Energieinstitut logo">
-                    <p>From idea to IoT in weeks: how Berliner Energieinstitut scaled fast with ThingsBoard</p>
+                    <p>From idea to IoT in weeks: how Berliner Energieinstitut scaled fast with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about how Berliner Energieinstitut scaled fast with ThingsBoard</span>
+                    <span class="visually-hidden">about how Berliner Energieinstitut scaled fast with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -277,9 +277,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/e2cbms.webp');">
                 <a class="content" href="/case-studies/e2cbms">
                     <img style="height: 87px" class="logo" src="/images/case-studies/e2cbms.svg" title="Environmental Energy Controls" alt="Environmental Energy Controls logo">
-                    <p>Smarter buildings made simple: Environmental Energy Controls chooses ThingsBoard for scalable BMS Solutions</p>
+                    <p>Smarter buildings made simple: Environmental Energy Controls chooses SENTIENT for scalable BMS Solutions</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about how Smarter buildings made simple by Environmental Energy Controls with ThingsBoard</span>
+                    <span class="visually-hidden">about how Smarter buildings made simple by Environmental Energy Controls with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -287,9 +287,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/circutor.webp');">
                 <a class="content" href="/case-studies/circutor">
                     <img style="height: 42px" class="logo" src="/images/case-studies/circutor.svg" title="co.met" alt="circutor logo">
-                    <p>Circutor scales global energy management with ThingsBoard IoT platform</p>
+                    <p>Circutor scales global energy management with SENTIENT IoT platform</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about Circutor scales global energy management with ThingsBoard IoT platform</span>
+                    <span class="visually-hidden">about Circutor scales global energy management with SENTIENT IoT platform</span>
                 </a>
             </div>
         </div>
@@ -297,9 +297,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/oneserve.webp');">
                 <a class="content" href="/case-studies/oneserve">
                     <img class="logo" src="/images/case-studies/oneserve.svg" title="Oneserve" alt="Oneserve logo">
-                    <p>Oneserve builds agile FSM platform using ThingsBoard IoT <br> &nbsp;</p>
+                    <p>Oneserve builds agile FSM platform using SENTIENT IoT <br> &nbsp;</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about how Oneserve builds agile FSM platform using ThingsBoard IoT</span>
+                    <span class="visually-hidden">about how Oneserve builds agile FSM platform using SENTIENT IoT</span>
                 </a>
             </div>
         </div>
@@ -307,9 +307,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/mdeg.webp');">
                 <a class="content" href="/case-studies/mdeg">
                     <img style="height: 87px" class="logo" src="/images/case-studies/mdeg.svg" title="mdeg" alt="mdeg logo">
-                    <p>How mdeg scaled secure medical device connectivity with ThingsBoard <br> &nbsp;</p>
+                    <p>How mdeg scaled secure medical device connectivity with SENTIENT <br> &nbsp;</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about mdeg scaled secure medical device connectivity with ThingsBoard</span>
+                    <span class="visually-hidden">about mdeg scaled secure medical device connectivity with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -317,9 +317,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/tps.webp');">
                 <a class="content" href="/case-studies/tps">
                     <img style="height: 87px" class="logo" src="/images/case-studies/tps.svg" title="TPS" alt="TPS logo">
-                    <p>From Digitalizing cultural heritage: how TPS connects museums with ThingsBoard</p>
+                    <p>From Digitalizing cultural heritage: how TPS connects museums with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about how TPS connects museums with ThingsBoard</span>
+                    <span class="visually-hidden">about how TPS connects museums with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -337,9 +337,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/kalitec.webp');">
                 <a class="content" href="/case-studies/kalitec">
                     <img class="logo" src="/images/case-studies/kalitec.svg" title="Kalitec" alt="Kalitec logo">
-                    <p>How Kalitec and ThingsBoard Redefined Urban Safety with IoT Innovation <br> &nbsp;</p>
+                    <p>How Kalitec and SENTIENT Redefined Urban Safety with IoT Innovation <br> &nbsp;</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about how Kalitec and ThingsBoard Redefined Urban Safety with IoT Innovation</span>
+                    <span class="visually-hidden">about how Kalitec and SENTIENT Redefined Urban Safety with IoT Innovation</span>
                 </a>
             </div>
         </div>
@@ -347,9 +347,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/vypin.webp');">
                 <a class="content" href="/case-studies/vypin">
                     <img class="logo" src="/images/case-studies/vypin.svg" title="Vypin LLC" alt="Vypin LLC logo">
-                    <p>Smart reliable T&H monitoring with WhereView (ThingsBoard) <br> &nbsp;</p>
+                    <p>Smart reliable T&H monitoring with WhereView (SENTIENT) <br> &nbsp;</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about Smart reliable T&H monitoring with WhereView (ThingsBoard)</span>
+                    <span class="visually-hidden">about Smart reliable T&H monitoring with WhereView (SENTIENT)</span>
                 </a>
             </div>
         </div>
@@ -357,9 +357,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/tektelic.webp');">
                 <a class="content" href="/case-studies/tektelic">
                     <img style="height: 56px" class="logo" src="/images/case-studies/tektelic.svg" title="TEKTELIC" alt="TEKTELIC logo">
-                    <p>From sensors to dashboards: <br> TEKTELIC's rapid IoT deployment with ThingsBoard</p>
+                    <p>From sensors to dashboards: <br> TEKTELIC's rapid IoT deployment with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about TEKTELIC's rapid IoT deployment with ThingsBoard</span>
+                    <span class="visually-hidden">about TEKTELIC's rapid IoT deployment with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -367,9 +367,9 @@ itemsPerPage: "9"
             <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url('/images/case-studies/iona.webp');">
                 <a class="content" href="/case-studies/iona">
                     <img class="logo" src="/images/case-studies/iona.svg" title="IONA Tech" alt="IONA Tech logo">
-                    <p>Protecting electronics and workers: IONA Tech’s IoT transformation with ThingsBoard</p>
+                    <p>Protecting electronics and workers: IONA Tech’s IoT transformation with SENTIENT</p>
                     <p class="link">Learn more <i class="fas fa-arrow-right"></i></p>
-                    <span class="visually-hidden">about IONA Tech’s IoT transformation with ThingsBoard</span>
+                    <span class="visually-hidden">about IONA Tech’s IoT transformation with SENTIENT</span>
                 </a>
             </div>
         </div>
@@ -377,7 +377,7 @@ itemsPerPage: "9"
     <div id="successStoryBlock" class="success-story-promo" style="display: none;">
         <div class="content">
             <h2>Got a success story to tell?</h2>
-            <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+            <p>Real stories, real impact — share your experience with SENTIENT!</p>
         </div>
         <button id="caseStudiesContactUs" class="button gtm_button" onclick="openContactUsModal()">Contact Us</button>
     </div>

@@ -3,7 +3,7 @@ The `gp3` EBS volume type is the recommended default for Amazon EKS, offering be
 Please download the storage class configuration file:
 
 ```bash
-curl -o gp3-def-sc.yml https://raw.githubusercontent.com/thingsboard/tbmq/{{ site.release.broker_branch }}/k8s/helm/aws/gp3-def-sc.yml
+curl -o gp3-def-sc.yml https://raw.githubusercontent.com/sentient/st-rmqtt/{{ site.release.broker_branch }}/k8s/helm/aws/gp3-def-sc.yml
 ```
 {: .copy-code}
 

@@ -7,7 +7,7 @@ var images = {
     "tb.example.png": encodedImage
 };
 var metadata = { 
-    userEmail: 'info@thingsboard.org', 
+    userEmail: 'info@sentient.org', 
     images: JSON.stringify(images), 
     isHtml: true 
 };

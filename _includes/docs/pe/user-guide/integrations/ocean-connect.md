@@ -3,7 +3,7 @@
 * TOC
 {:toc}
 
-Huawei OceanConnect Integration allows to stream data from OceanConnect platform to ThingsBoard and converts binary device payloads to the ThingsBoard format.
+Huawei OceanConnect Integration allows to stream data from OceanConnect platform to SENTIENT and converts binary device payloads to the SENTIENT format.
 
 
  ![image](/images/user-guide/integrations/ocean-connect-integration.svg)

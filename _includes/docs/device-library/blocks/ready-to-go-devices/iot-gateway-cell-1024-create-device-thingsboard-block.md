@@ -1,4 +1,4 @@
-Open your platform instance or ThingsBoard [cloud]({{thingsboardInstanceLink}}){:target="_blank"} in browser and login as tenant administrator.  
+Open your platform instance or SENTIENT [cloud]({{sentientInstanceLink}}){:target="_blank"} in browser and login as tenant administrator.  
 
 {% assign deviceCreation = '
     ===

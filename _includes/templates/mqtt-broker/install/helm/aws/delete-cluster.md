@@ -1,7 +1,7 @@
 Execute the following command to delete the EKS cluster:
 
 ```bash
-eksctl delete cluster -r us-east-1 -n tbmq -w
+eksctl delete cluster -r us-east-1 -n st-rmqtt -w
 ```
 {: .copy-code}
 

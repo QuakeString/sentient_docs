@@ -9,9 +9,9 @@
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <h1>Upgrade options for TBMQ cluster setup using Helm</h1>
+                <h1>Upgrade options for ST-RMQTT cluster setup using Helm</h1>
                 <div class="install-options-description">
-                    <p>To proceed, please select your Kubernetes environment below. You’ll then be guided through the complete TBMQ upgrade process tailored to your chosen platform.</p>
+                    <p>To proceed, please select your Kubernetes environment below. You’ll then be guided through the complete ST-RMQTT upgrade process tailored to your chosen platform.</p>
                 </div>
             </div>
             <div class="deployment-container one-line-deployment-container">

@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Widgets Library
-description: ThingsBoard Dashboard Widgets Library
+description: SENTIENT Dashboard Widgets Library
 wl-dashboard-widgets:
     0:
         image: /images/user-guide/ui/widgets/widget-library/wl-dashboard-widgets-pe.png
@@ -110,7 +110,7 @@ wl-digital-bundle:
 wl-edge-widgets-bundle:
     0:
         image: /images/user-guide/ui/widgets/widget-library/wl-edge-bundle-pe.png
-        title: 'For an overview of entities related to the specified ThingsBoard Edge instance.'
+        title: 'For an overview of entities related to the specified SENTIENT GATEWAY instance.'
 
 wl-entity-admin-bundle:
     0:
@@ -170,7 +170,7 @@ wl-maps-bundle:
 wl-gateway-bundle:
     0:
         image: /images/user-guide/ui/widgets/widget-library/wl-gateway-bundle-pe.png
-        title: 'The Gateway widgets bundle is useful to manage ThingsBoard IoT Gateway instances.'
+        title: 'The Gateway widgets bundle is useful to manage SENTIENT IoT Gateway instances.'
 
 wl-indoor-environment-bundle:
     0:

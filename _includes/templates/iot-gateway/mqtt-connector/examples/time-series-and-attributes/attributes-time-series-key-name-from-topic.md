@@ -3,10 +3,10 @@ MQTT topic structure. This can be particularly useful when dealing with dynamic 
 conveys important metadata. In this example, we will demonstrate how to configure the MQTT connector to extract key 
 names for both time-series data directly from the topic using regular expression.
 
-As an example, we will use ThingsBoard MQTT Demo Broker, which can be run using Docker and the following command:
+As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 thingsboard/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
 ```
 {:.copy-code}
 
@@ -25,7 +25,7 @@ Copy and paste the following configuration into the MQTT connector advanced conf
   "broker": {
     "host": "127.0.0.1",
     "port": 1884,
-    "clientId": "ThingsBoard_gateway",
+    "clientId": "SENTIENT_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,

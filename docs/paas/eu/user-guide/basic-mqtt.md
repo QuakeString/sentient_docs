@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Basic MQTT authentication
-description: ThingsBoard MQTT based authentication.
+description: SENTIENT MQTT based authentication.
 
 client-id-only-1:
     0:

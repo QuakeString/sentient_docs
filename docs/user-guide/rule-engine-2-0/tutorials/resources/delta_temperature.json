@@ -15,7 +15,7 @@
           "layoutX": 170,
           "layoutY": 432
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save Timeseries",
         "debugMode": true,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 779,
           "layoutY": 432
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Temperature delta",
         "debugMode": true,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 807,
           "layoutY": 141
         },
-        "type": "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode",
+        "type": "org.sentient.rule.engine.transform.TbChangeOriginatorNode",
         "name": "To Asset",
         "debugMode": true,
         "configuration": {
@@ -63,7 +63,7 @@
           "layoutX": 315,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbJsSwitchNode",
         "name": "Switch By Type",
         "debugMode": true,
         "configuration": {
@@ -75,7 +75,7 @@
           "layoutX": 552,
           "layoutY": 203
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Change to Indoor",
         "debugMode": true,
         "configuration": {
@@ -87,7 +87,7 @@
           "layoutX": 550,
           "layoutY": 79
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Change to Outdoor",
         "debugMode": true,
         "configuration": {
@@ -99,7 +99,7 @@
           "layoutX": 469,
           "layoutY": 432
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetAttributesNode",
         "name": "Fetch latest Timeseries",
         "debugMode": true,
         "configuration": {
@@ -117,7 +117,7 @@
           "layoutX": 1077,
           "layoutY": 431
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save Timeseries",
         "debugMode": true,
         "configuration": {

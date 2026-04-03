@@ -11,7 +11,7 @@
 
 ## Overview
 TheThingsIndustries is LoRaWAN network designed for connecting your devices using LoRaWAN stack. 
-After integrating TheThingsIndustries with the ThingsBoard, you can connect, communicate, process and visualize data from devices in the ThingsBoard IoT platform.
+After integrating TheThingsIndustries with the SENTIENT, you can connect, communicate, process and visualize data from devices in the SENTIENT IoT platform.
 
 
 ## The Things Stack
@@ -20,7 +20,7 @@ After integrating TheThingsIndustries with the ThingsBoard, you can connect, com
 The first step is to create an **application** in TheThingsIndustries console. Go to console by , open 
 **Applications** section, press **add application** button and fill required fields.
 
-- **Application ID** - thingsboard-integration
+- **Application ID** - sentient-integration
 
 ![image](/images/user-guide/integrations/tti/tti-create-app.png)
 
@@ -28,10 +28,10 @@ The first step is to create an **application** in TheThingsIndustries console. G
 ### Payload Decoder
 Our device submits data in binary format. We have 2 options where to decode this data:
 
-- **TheThingsIndustries decoder** - data will be decoded before entering the ThingsBoard
-- **ThingsBoard converters** - uplink/downlink converters will be used to decode data from binary format into JSON
+- **TheThingsIndustries decoder** - data will be decoded before entering the SENTIENT
+- **SENTIENT converters** - uplink/downlink converters will be used to decode data from binary format into JSON
 
-In this tutorial, we will make an initial transformation into JSON with TTI decoder and then use ThingsBoard converters for correct data processing.
+In this tutorial, we will make an initial transformation into JSON with TTI decoder and then use SENTIENT converters for correct data processing.
 In real life scenario, it is up to you where to decode/encode data, because it is possible to do this on any side.
 
 After application registered in TTI, go to **Payload formatters**, **Uplink** select decoder function. We will take the first byte as a temperature value from a device 
@@ -76,16 +76,16 @@ Fill the **AppSKey** by generation button.
 
 Press **Add end device** button.
 
-## Integration with the ThingsBoard
+## Integration with the SENTIENT
 
 We need to create Integration on The Things Industries, to do this open **Integrations** - **MQTT** and press **Generate new API key**. 
 Copy username and password we will need it later.
 
 ![image](/images/user-guide/integrations/tti/tti-integration.png)
 
-Now we can start configuring the ThingsBoard.
+Now we can start configuring the SENTIENT.
 
-### ThingsBoard Uplink Data Converter
+### SENTIENT Uplink Data Converter
 
 First, we need to create Uplink Data converter that will be used for receiving messaged from the TTI. The converter should transform incoming payload into the required message format.
 Message must contains **deviceName** and **deviceType**. Those fields are used for submitting data to the correct device. If a device was not found then new device will be created.
@@ -95,7 +95,7 @@ Here is how payload from TheThingsIndustries will look like:
   "end_device_ids": {
     "device_id": "thermostat1",
     "application_ids": {
-      "application_id": "thingsboard-integration"
+      "application_id": "sentient-integration"
     },
     "dev_eui": "ABABABABABABABAA",
     "join_eui": "0000000000000000",
@@ -158,8 +158,8 @@ return result;
 ![image](/images/user-guide/integrations/tti/tb-uplink.png)
 
 
-### ThingsBoard Downlink Data Converter
-For sending Downlink messages from the ThingsBoard to the device inside TTI, we need to define downlink Converter.
+### SENTIENT Downlink Data Converter
+For sending Downlink messages from the SENTIENT to the device inside TTI, we need to define downlink Converter.
 In general, output from Downlink converter should have the following structure:
 {% highlight json %}
 {
@@ -203,7 +203,7 @@ This converter will take **version** field from the incoming message and add it 
 
 ### TTI Integration
 
-Next we will create Integration with TheThingsIndustries inside the ThingsBoard. Open **Integrations** section and add new Integration with type
+Next we will create Integration with TheThingsIndustries inside the SENTIENT. Open **Integrations** section and add new Integration with type
 **TheThingsIndustries**
 
 - **Name**: *TTI Integration*
@@ -211,7 +211,7 @@ Next we will create Integration with TheThingsIndustries inside the ThingsBoard.
 - **Uplink** data converter: *TTI Uplink*
 - **Downlink** data converter: *TTI Downlink*
 - **Region**: *eu1* (region where your application was registered inside TTI)
-- **Username**: *thingsboard-integration@thingsboard* (use ***Username*** from TTI integration)
+- **Username**: *sentient-integration@sentient* (use ***Username*** from TTI integration)
 - **Password**: use ***Password*** from TTI integration
 
 ![image](/images/user-guide/integrations/tti/tb-integration-1.png)  
@@ -223,11 +223,11 @@ Next we will create Integration with TheThingsIndustries inside the ThingsBoard.
 ### Validate Uplink Messages
 Lets verify our integration. 
 
-When device sends data, we can check it in the ThingsBoard, to do this:
+When device sends data, we can check it in the SENTIENT, to do this:
 
 Go to **Device Group** -> **All** -> **thermostat1** - you can see that 
 
-- new device was registered in the Thingsboard with name "thermostat1"
+- new device was registered in the Sentient with name "thermostat1"
 - In the **Latest Telemetry** section you will see that last submitted temperature = 2.
 
 ![image](/images/user-guide/integrations/tti/tb-device-telemetry.png)
@@ -249,7 +249,7 @@ value **v.0.11**
 ![image](/images/user-guide/integrations/tti/tb-add-version.png)
 
 By making this step, we triggered downlink message to the device **thermostat1** and this message should contains version field value.  
-Open TTI Console, navigate to **thingsboard-integration** application, to the section **Data**.  
+Open TTI Console, navigate to **sentient-integration** application, to the section **Data**.  
 And we see that Downlink message was received (It is displayed as bytes **76 2E 30 2E 31 31**).  
 
 ![image](/images/user-guide/integrations/tti/ttn-downlink-verified.png)

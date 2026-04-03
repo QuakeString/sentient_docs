@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Customers
-description: ThingsBoard Customers management
+description: SENTIENT Customers management
 
 add-new-customer:
     0:

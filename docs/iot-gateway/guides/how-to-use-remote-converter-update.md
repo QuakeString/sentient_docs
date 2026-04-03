@@ -12,8 +12,8 @@ description: How to use remote converter update
 This guide will help you to use this feature for updating your converters configuration remotely.
 
 For the purpose of this tutorial, you need:  
-1. Locally installed instance of ThingsBoard platform (In case you are new with ThingsBoard [use this 'how to install' documentation](/docs/user-guide/install/installation-options/)).
-2. [Installed](/docs/iot-gateway/installation/) and [configured](/docs/iot-gateway/configuration/) ThingsBoard IoT Gateway. 
+1. Locally installed instance of SENTIENT platform (In case you are new with SENTIENT [use this 'how to install' documentation](/docs/user-guide/install/installation-options/)).
+2. [Installed](/docs/iot-gateway/installation/) and [configured](/docs/iot-gateway/configuration/) SENTIENT IoT Gateway. 
 
 ## Step 1 Create shared attribute on the gateway device
 
@@ -38,7 +38,7 @@ If the above steps were well done, you will see the following gateway logs:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

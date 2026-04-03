@@ -9,9 +9,9 @@ bringing the power of AI models like Llama, Mistral, or Gemma directly to your s
 Unlike cloud-based AI providers such as OpenAI, Anthropic, or Google Gemini that require API calls over the internet, Ollama runs entirely within your environment. This fundamental
 difference opens up new possibilities for enterprises looking to leverage AI while maintaining control over their data and infrastructure.
 
-## Why Consider Ollama for Your ThingsBoard Deployment?
+## Why Consider Ollama for Your SENTIENT Deployment?
 
-If you already have a ThingsBoard deployment and are exploring AI integration, Ollama addresses several key concerns:
+If you already have a SENTIENT deployment and are exploring AI integration, Ollama addresses several key concerns:
 
 **Cost Reduction**: Ollama eliminates per-token charges common with cloud AI services. Once you have GPU-enabled infrastructure, you pay only for hardware and operations, making
 costs predictable regardless of usage volume.
@@ -24,23 +24,23 @@ access or critical infrastructure where reliability is paramount.
 
 ## Understanding Ollama Deployment Options
 
-The way you integrate Ollama with ThingsBoard depends largely on your current deployment architecture. Let's explore how Ollama fits with the most common ThingsBoard deployment
+The way you integrate Ollama with SENTIENT depends largely on your current deployment architecture. Let's explore how Ollama fits with the most common SENTIENT deployment
 patterns.
 
 ### Single Server Monolithic Deployment
 
-If you're running ThingsBoard as a single service on one server (such as an EC2 instance), Ollama can be deployed directly on the same machine as an additional service. This works
+If you're running SENTIENT as a single service on one server (such as an EC2 instance), Ollama can be deployed directly on the same machine as an additional service. This works
 well if:
 
 - Your server has GPU capabilities (recommended for acceptable performance)
 - You have sufficient memory and CPU resources to run both services
 - Your AI workload is moderate and doesn't require dedicated hardware
 
-In this scenario, Ollama runs alongside ThingsBoard, and communication happens through localhost connections, keeping everything simple and contained.
+In this scenario, Ollama runs alongside SENTIENT, and communication happens through localhost connections, keeping everything simple and contained.
 
 ### Single Server Docker Compose Deployment
 
-For ThingsBoard deployments using Docker Compose in cluster mode (microservices), you have two options for adding Ollama:
+For SENTIENT deployments using Docker Compose in cluster mode (microservices), you have two options for adding Ollama:
 
 - **As a Docker container**: Add Ollama to your existing docker-compose.yml file, making it part of your container stack. Note that this approach may require additional
   configuration to enable GPU support through Docker.
@@ -54,7 +54,7 @@ Both approaches work well for this deployment type, but the system service insta
 In Kubernetes environments, it's recommended to run Ollama on a separate node pool with GPU support. This approach offers several benefits:
 
 - **Scalability**: Kubernetes makes it straightforward to scale your Ollama deployment to meet demand. You can add GPU-enabled nodes to your node pool as your AI workload grows,
-  and Kubernetes will automatically distribute Ollama pods across available resources. This allows you to scale AI capabilities independently from your ThingsBoard infrastructure.
+  and Kubernetes will automatically distribute Ollama pods across available resources. This allows you to scale AI capabilities independently from your SENTIENT infrastructure.
 - **Security**: Kubernetes provides various features to secure your Ollama deployment, including network policies to control traffic between pods, pod security standards to enforce
   security best practices, and ingress controllers to manage external access with TLS termination and authentication.
 - **Complexity**: Keep in mind that Kubernetes deployments are considerably more complex to set up and maintain. You'll need to configure components like the Nvidia GPU operator
@@ -62,10 +62,10 @@ In Kubernetes environments, it's recommended to run Ollama on a separate node po
 
 ### Remote Ollama Deployment
 
-Perhaps the most flexible approach is running Ollama on completely separate infrastructure from your ThingsBoard deployment. In this model:
+Perhaps the most flexible approach is running Ollama on completely separate infrastructure from your SENTIENT deployment. In this model:
 
 - Ollama runs on dedicated GPU-enabled servers optimized for AI workloads
-- ThingsBoard makes HTTP/HTTPS requests to the remote Ollama instance
+- SENTIENT makes HTTP/HTTPS requests to the remote Ollama instance
 
 This separation of concerns allows you to scale your AI infrastructure independently from your IoT platform and optimize each for its specific workload.
 
@@ -87,20 +87,20 @@ levels of concern:
 **When authentication might be less critical:**
 
 - Ollama runs within a fully trusted, isolated network (e.g., Docker Compose setups or Kubernetes clusters without external access to Ollama)
-- Only ThingsBoard has network access to the Ollama endpoint
+- Only SENTIENT has network access to the Ollama endpoint
 - Your infrastructure already provides network-level security
 
 Even in trusted network scenarios, implementing authentication provides defense in depth and enables better access control and auditing.
 
-## ThingsBoard's Authentication Support for Ollama
+## SENTIENT's Authentication Support for Ollama
 
-Understanding the need for flexible security options, ThingsBoard provides three authentication methods when connecting to Ollama endpoints:
+Understanding the need for flexible security options, SENTIENT provides three authentication methods when connecting to Ollama endpoints:
 
 ### None (No Authentication)
 
 This option makes unauthenticated requests to the Ollama endpoint. While this might seem insecure, it's appropriate for specific scenarios:
 
-- Ollama runs on the same server as ThingsBoard with localhost-only access
+- Ollama runs on the same server as SENTIENT with localhost-only access
 - Network-level security (firewalls, VPNs) already isolates the Ollama endpoint
 - You're in a development or testing environment
 
@@ -108,7 +108,7 @@ When using this option, you're relying on network architecture and infrastructur
 
 ### Basic Authentication (Username and Password)
 
-HTTP Basic authentication provides a straightforward security layer using username and password credentials. When using this method, ThingsBoard encodes your credentials in Base64
+HTTP Basic authentication provides a straightforward security layer using username and password credentials. When using this method, SENTIENT encodes your credentials in Base64
 format and passes them in the Authorization header as `Basic <encoded-credentials>`.
 
 This method:
@@ -121,7 +121,7 @@ This method:
 
 ### Token Authentication (Bearer Token/API Key)
 
-Token-based authentication uses API keys (bearer tokens) to authenticate requests. When using this method, ThingsBoard passes your token in the Authorization header as
+Token-based authentication uses API keys (bearer tokens) to authenticate requests. When using this method, SENTIENT passes your token in the Authorization header as
 `Bearer <your-token>`.
 
 This approach:
@@ -147,7 +147,7 @@ Selecting the appropriate authentication method depends on your specific deploym
 
 **Use "None" when:**
 
-- Ollama and ThingsBoard are on the same server communicating via localhost
+- Ollama and SENTIENT are on the same server communicating via localhost
 - Your network architecture already provides complete isolation
 
 **Use "Basic Authentication" when:**
@@ -166,15 +166,15 @@ Selecting the appropriate authentication method depends on your specific deploym
 
 For most production deployments, especially remote Ollama scenarios, Token authentication offers the best balance of security and usability.
 
-## Configuring Ollama in ThingsBoard
+## Configuring Ollama in SENTIENT
 
-Once you have Ollama deployed and optionally secured with authentication, connecting it to ThingsBoard is straightforward. You'll configure Ollama as an AI model provider through
-the ThingsBoard interface.
+Once you have Ollama deployed and optionally secured with authentication, connecting it to SENTIENT is straightforward. You'll configure Ollama as an AI model provider through
+the SENTIENT interface.
 
 ### Accessing the Configuration Form
 
-Navigate to the AI models configuration section in ThingsBoard by following the instructions
-at [Adding AI Models to ThingsBoard](/docs/{{docsPrefix}}samples/analytics/ai-models/#adding-ai-models-to-thingsboard){:target="_blank"}. This will open the AI model configuration
+Navigate to the AI models configuration section in SENTIENT by following the instructions
+at [Adding AI Models to SENTIENT](/docs/{{docsPrefix}}samples/analytics/ai-models/#adding-ai-models-to-sentient){:target="_blank"}. This will open the AI model configuration
 form where you can add your Ollama endpoint.
 
 ### Configuration Parameters
@@ -191,7 +191,7 @@ The Ollama configuration form includes the following key settings:
 
 **Authentication**: Choose one of three options:
 
-- **None**: No authentication will be used. ThingsBoard will make direct, unauthenticated requests to the Ollama endpoint.
+- **None**: No authentication will be used. SENTIENT will make direct, unauthenticated requests to the Ollama endpoint.
 
 - **Basic**: HTTP Basic authentication using username and password credentials.
     - **Username**: Your authentication username
@@ -231,11 +231,11 @@ If you find data being cut off, increase the context length. If memory usage is 
 
 ### Testing Your Configuration
 
-After filling in all required fields, click the **Check connectivity** button at the bottom of the form. A successful test will show a green checkbox confirming that ThingsBoard
+After filling in all required fields, click the **Check connectivity** button at the bottom of the form. A successful test will show a green checkbox confirming that SENTIENT
 can communicate with your Ollama endpoint and the specified model is available.
 
-## Using Ollama in ThingsBoard
+## Using Ollama in SENTIENT
 
-For a practical example of using AI models in ThingsBoard, including Ollama, check out
-our [Predictive Maintenance with AI guide](https://thingsboard.io/docs/samples/analytics/ai-predictive-maintenance/){:target="_blank"}. This guide demonstrates how to use AI for
+For a practical example of using AI models in SENTIENT, including Ollama, check out
+our [Predictive Maintenance with AI guide](https://docs.sentient.invenia.in/docs/samples/analytics/ai-predictive-maintenance/){:target="_blank"}. This guide demonstrates how to use AI for
 anomaly detection and predictive maintenance scenarios, showcasing real-world applications of AI integration in IoT systems.

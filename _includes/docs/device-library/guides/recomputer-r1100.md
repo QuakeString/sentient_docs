@@ -1,5 +1,5 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceName = "reComputer R1100" %}
 {% assign deviceVendorLink = "https://www.seeedstudio.com/blog/2024/11/20/just-launched-recomputer-r11-a%EF%BC%84179-edge-iot-gateway-controller-could-be-the-most-adapatble-and-cost-effective-edge-iot-gateway-controller-in-your-equipment-cabinets/?srsltid=AfmBOopWn625P_n59sPhbUJavUGYus7l3ah1NTd0-90w51unAIVVTgRp" %}
 
@@ -14,7 +14,7 @@ It features comprehensive industrial interfaces (2x Ethernet, 2xUSB, 2xRS485, 2x
 It has extensive applications in the IoT field. It can be used in aspects such as data acquisition and process monitoring, automation and robot control, intelligent manufacturing, and industrial communication and networking. 
 With its small size, flexibility, low cost, and programmability, it provides strong support for automation & IoT system and more. 
 
-## Integration with ThingsBoard Edge
+## Integration with SENTIENT GATEWAY
 
 {% if page.docsPrefix == "pe/" or page.docsPrefix contains "pe/edge" or page.docsPrefix contains "paas/" or docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 {% include /templates/device-library/ready-to-go-devices/pe-prerequisites-recomuterR.md %}
@@ -24,12 +24,12 @@ With its small size, flexibility, low cost, and programmability, it provides str
 
 ## Configuring the ModBus Connector
 
-The new **IoT Gateway device** will be featured at the top of the **“ThingsBoard IoT Gateways”** dashboard list, allowing us to add a **ModBus Connector**. For example, we can use the ModBus Connector to fetch temperature data from the to fetch temperature data from the [Siemens LOGO!]({{controllerVendorLink}}){: target="_blank"} device:
+The new **IoT Gateway device** will be featured at the top of the **“SENTIENT IoT Gateways”** dashboard list, allowing us to add a **ModBus Connector**. For example, we can use the ModBus Connector to fetch temperature data from the to fetch temperature data from the [Siemens LOGO!]({{controllerVendorLink}}){: target="_blank"} device:
 
 {% assign modbusConnectorPE = '
     ===
         image: /images/devices-library/edge/recomputer-r1100/14-connector-pe.webp,
-        title: On the **“ThingsBoard IoT Gateways”** dashboards page, click the **“Connectors”** button.
+        title: On the **“SENTIENT IoT Gateways”** dashboards page, click the **“Connectors”** button.
     ===
         image: /images/devices-library/edge/recomputer-r1000/6-add-connector-pe.webp,
         title: To add a **Connector**, click the **“+”** button. In the pop-up window, select the **MODBUS** option in the **“Type”** field and enter the  name of the connector in the **“Name”** field. Click the **“Add”** button to proceed.
@@ -42,7 +42,7 @@ The new **IoT Gateway device** will be featured at the top of the **“ThingsBoa
 {% assign modbusConnectorCE = '
     ===
         image: /images/devices-library/edge/recomputer-r1100/10-connector.webp,
-        title: On the **“ThingsBoard IoT Gateways”** dashboards page, click the **“Connectors”** button.
+        title: On the **“SENTIENT IoT Gateways”** dashboards page, click the **“Connectors”** button.
     ===
         image: /images/devices-library/edge/recomputer-r1000/6-add-connector.webp,
         title: To add a **Connector**, click the **“+”** button. In the pop-up window, select the **MODBUS** option in the **“Type”** field and enter the  name of the connector in the **“Name”** field. Click the **“Add”** button to proceed.
@@ -137,14 +137,14 @@ The new **IoT Gateway device** will be featured at the top of the **“ThingsBoa
 ```
 {:.copy-code.expandable-15}
 
-## Installing the ThingsBoard IoT Gateway on the reComputer R1100
+## Installing the SENTIENT IoT Gateway on the reComputer R1100
 
 Start installation of the **IoT Gateway** on the **reComputer R1100**:
 
 {% assign downloadYMLPE = '
     ===
         image: /images/devices-library/edge/recomputer-r1100/15-gw-list-pe.webp,
-        title: Go back to the **“ThingsBoard IoT Gateways”** dashboard page and click on the newly added **Gateway device** (reComputer R1100).
+        title: Go back to the **“SENTIENT IoT Gateways”** dashboard page and click on the newly added **Gateway device** (reComputer R1100).
     ===
         image: /images/devices-library/edge/recomputer-r1100/16-launch-command.webp,
         title: On the **Gateway device** page, click the **“Launch command”** button and download **docker-compose.yml** for your gateway.
@@ -154,7 +154,7 @@ Start installation of the **IoT Gateway** on the **reComputer R1100**:
 {% assign downloadYMLCE = '
     ===
         image: /images/devices-library/edge/recomputer-r1100/11-gw-list.webp,
-        title: Go back to the **“ThingsBoard IoT Gateways”** dashboard page and click on the newly added **Gateway device** (reComputer R1100).
+        title: Go back to the **“SENTIENT IoT Gateways”** dashboard page and click on the newly added **Gateway device** (reComputer R1100).
     ===
         image: /images/devices-library/edge/recomputer-r1100/12-launch-command.webp,
         title: On the **Gateway device** page, click the **“Launch command”** button and download **docker-compose.yml** for your gateway.
@@ -219,7 +219,7 @@ The command must be executed in the same directory in which the docker-compose.y
 
 ## Visualize Incoming Data with the Dashboard
 
-![image](/images/devices-library/edge/recomputer-r1100/r1100-logo.webp){: style="float: left; max-width: 300px; max-height: 300px; margin: 0px 30px 0px 0px"}Once the **ThingsBoard Edge** and **IoT Gateway** are running on the **Computer R1100** and the **ModBus connector** transfers data, you can visualize it on the **Dashboard** on your **Edge instance**:
+![image](/images/devices-library/edge/recomputer-r1100/r1100-logo.webp){: style="float: left; max-width: 300px; max-height: 300px; margin: 0px 30px 0px 0px"}Once the **SENTIENT GATEWAY** and **IoT Gateway** are running on the **Computer R1100** and the **ModBus connector** transfers data, you can visualize it on the **Dashboard** on your **Edge instance**:
 
 {% assign dashboardPE = '
     ===

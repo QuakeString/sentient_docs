@@ -1,1 +1,1 @@
-./k8s-upgrade-tbmq.sh
+./k8s-upgrade-st-rmqtt.sh

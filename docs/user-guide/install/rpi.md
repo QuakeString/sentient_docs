@@ -2,8 +2,8 @@
 layout: docwithnav
 assignees:
 - ashvayka
-title: Installing ThingsBoard on Raspberry Pi
-description: Installing ThingsBoard IoT Platform on Raspberry Pi
+title: Installing SENTIENT on Raspberry Pi
+description: Installing SENTIENT IoT Platform on Raspberry Pi
 
 ---
 
@@ -16,37 +16,37 @@ description: Installing ThingsBoard IoT Platform on Raspberry Pi
 
 ## Prerequisites
 
-This guide describes how to install ThingsBoard on a Raspberry Pi.
+This guide describes how to install SENTIENT on a Raspberry Pi.
 Hardware requirements depend on chosen database and amount of devices connected to the system. 
-To run ThingsBoard and PostgreSQL you will need at least 4Gb of RAM.
-To run ThingsBoard and Cassandra you will need at least 8Gb of RAM.
+To run SENTIENT and PostgreSQL you will need at least 4Gb of RAM.
+To run SENTIENT and Cassandra you will need at least 8Gb of RAM.
 
 
 ## Step 1. Install Java 17 (OpenJDK) 
 {% include templates/install/ubuntu-java-install.md %}
 {: .copy-code}
 
-## Step 2. ThingsBoard service installation
+## Step 2. SENTIENT service installation
 
 Download installation package.
 
 ```bash
-wget https://github.com/thingsboard/thingsboard/releases/download/{{ site.release.ce_tag }}/thingsboard-{{ site.release.ce_ver }}.deb
+wget https://github.com/sentient/sentient/releases/download/{{ site.release.ce_tag }}/sentient-{{ site.release.ce_ver }}.deb
 ```
 {: .copy-code}
 
-Install ThingsBoard as a service
+Install SENTIENT as a service
 
 ```bash
-sudo dpkg -i thingsboard-{{ site.release.ce_ver }}.deb
+sudo dpkg -i sentient-{{ site.release.ce_ver }}.deb
 ```
 {: .copy-code}
 
-## Step 3. Configure ThingsBoard database
+## Step 3. Configure SENTIENT database
 
 {% include templates/install/rpi-db-postgresql.md %}
 
-## Step 4. Choose ThingsBoard queue service
+## Step 4. Choose SENTIENT queue service
 
 {% include templates/install/rpi-install-queue.md %}
 
@@ -54,7 +54,7 @@ sudo dpkg -i thingsboard-{{ site.release.ce_ver }}.deb
 In Memory <small>(built-in and default)</small>%,%inmemory%,%templates/install/queue-in-memory.md%br%
 Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confluent-cloud%,%templates/install/ubuntu-queue-confluent-cloud.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="ubuntuThingsboardQueue" toggle-spec=contenttogglespecqueue %} 
+{% include content-toggle.liquid content-toggle-id="ubuntuSentientQueue" toggle-spec=contenttogglespecqueue %} 
 
 ## Step 5. Memory update for slow machines (4GB of RAM) 
 
@@ -64,7 +64,7 @@ Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confl
 {% include templates/run-install.md %} 
 
 
-## Step 7. Start ThingsBoard service
+## Step 7. Start SENTIENT service
 
 {% include templates/start-service.md %}
 
@@ -74,11 +74,11 @@ Please allow up to 90 seconds for the Web UI to start.{% endcapture %}
 
 ## Post-installation steps
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
 The upgrade procedure for Raspberry Pi is identical to the Ubuntu instructions.
 
-{% include templates/install/upgrade-thingsboard.md %}
+{% include templates/install/upgrade-sentient.md %}
 
 ## Troubleshooting
 

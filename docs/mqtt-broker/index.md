@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
-title: TBMQ
-description: TBMQ - learn about the platform and get your IoT projects running on TBMQ
+title: ST-RMQTT
+description: ST-RMQTT - learn about the platform and get your IoT projects running on ST-RMQTT
 ---
 
 {% include docs/mqtt-broker/index.md %}

@@ -34,7 +34,7 @@ To add a gateway, you can follow next steps:
 
 ### Configure application on the Loriot
 
-Now we need to copy the "**Application ID**" in the Loriot. It is required for configuring the integration in ThingsBoard. 
+Now we need to copy the "**Application ID**" in the Loriot. It is required for configuring the integration in SENTIENT. 
 
 To do this please follow next steps:
 
@@ -50,11 +50,11 @@ To do this please follow next steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=copyLoriotApplicationId %}
 
-Now we can move to ThingsBoard to configure integration.
+Now we can move to SENTIENT to configure integration.
 
-### Create integration in ThingsBoard
+### Create integration in SENTIENT
 
-Next we will create an integration with Loriot inside the ThingsBoard.  
+Next we will create an integration with Loriot inside the SENTIENT.  
 
 At first, copy the code, we will need it to create the uplink converter:
 
@@ -200,7 +200,7 @@ You can configure it manually:
 {% assign loriotTroubleshooting = '
     ===
         image: /images/devices-library/basic/integrations/loriot/loriot-troubleshootin-1-pe.png,
-        title: Go to edit mode ThingsBoard Loriot integration, switch off **"Create Loriot Application output"** slider and copy **"HTTP endpoint URL"**. Then, apply changes;
+        title: Go to edit mode SENTIENT Loriot integration, switch off **"Create Loriot Application output"** slider and copy **"HTTP endpoint URL"**. Then, apply changes;
     ===
         image: /images/devices-library/basic/integrations/loriot/loriot-troubleshootin-2-pe.png,
         title: Now, go to **eu2.loriot.io** than navigate to the **"Output"** page in left panel. Click on **"Add new output"** button;

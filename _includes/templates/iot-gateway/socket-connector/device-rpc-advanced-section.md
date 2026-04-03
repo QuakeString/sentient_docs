@@ -1,9 +1,9 @@
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to the device.
+Configuration, provided in this section is used for sending RPC requests from SENTIENT to the device.
 
 | **Parameter**    | **Default value** | **Description**                                                             |
 |:-----------------|:------------------|-----------------------------------------------------------------------------|
 | methodRPC        | **rpcMethod1**    | RPC method name.                                                            |
-| withResponse     | **true**          | Boolean value that determines whether to send response back to ThingsBoard. |
+| withResponse     | **true**          | Boolean value that determines whether to send response back to SENTIENT. |
 | methodProcessing | **write**         | Type of operation.                                                          |
 | encoding         | **utf-8**         | Encoding used when writing received string data to storage.                 |
 | ---              |                   |                                                                             |

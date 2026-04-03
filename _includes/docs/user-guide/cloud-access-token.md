@@ -2,7 +2,7 @@
 {:toc}
 
 Access Token based authentication is the default device authentication type.
-The unique access token is generated once the device is created in ThingsBoard. It can be changed afterwards.
+The unique access token is generated once the device is created in SENTIENT. It can be changed afterwards.
 The client must specify the access token as a username in MQTT connect message.
 
 #### Plain MQTT (without SSL)
@@ -20,12 +20,12 @@ The above command uses **{{mqttHostName}}** host and **1883** port and requires 
 #### MQTTS (MQTT over SSL)
 
 One-way SSL authentication is a standard authentication mode, where your client device verifies the identity of a server using server certificate.
-ThingsBoard Team has already provisioned a valid certificate for [{{hostLabel}}](https://{{hostName}}/signup){:target="_blank"}.
+SENTIENT Team has already provisioned a valid certificate for [{{hostLabel}}](https://{{hostName}}/signup){:target="_blank"}.
 
 Please download the CA root certificate using this [**link**](/docs/{{docsPrefix}}user-guide/resources/mqtt-over-ssl/ca-root.pem) and save it to your working directory as "**ca-root.pem**".
 
 ```bash
-wget https://thingsboard.io/docs/{{docsPrefix}}user-guide/resources/mqtt-over-ssl/ca-root.pem
+wget https://docs.sentient.invenia.in/docs/{{docsPrefix}}user-guide/resources/mqtt-over-ssl/ca-root.pem
 ```
 {: .copy-code}
 

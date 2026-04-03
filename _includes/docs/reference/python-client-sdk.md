@@ -30,7 +30,7 @@ from tb_device_mqtt import TBDeviceMqttClient, TBPublishInfo
 
 telemetry = {"temperature": 41.9, "enabled": False, "currentFirmwareVersion": "v1.2.2"}
 client = TBDeviceMqttClient("127.0.0.1", username="A1_TEST_TOKEN")
-# Connect to ThingsBoard
+# Connect to SENTIENT
 client.connect()
 # Sending telemetry without checking the delivery status
 client.send_telemetry(telemetry) 
@@ -38,7 +38,7 @@ client.send_telemetry(telemetry)
 result = client.send_telemetry(telemetry)
 # get is a blocking call that awaits delivery status  
 success = result.get() == TBPublishInfo.TB_ERR_SUCCESS
-# Disconnect from ThingsBoard
+# Disconnect from SENTIENT
 client.disconnect()
 
 ```
@@ -46,8 +46,8 @@ client.disconnect()
 
 ### Connection using TLS
 
-TLS connection to localhost. {% unless docsPrefix contains "paas/" %}See [MQTT over SSL](/docs/{{docsPrefix}}user-guide/mqtt-over-ssl/) for more information about client and ThingsBoard configuration.{% endunless %}
-To connect to ThingsBoard with MQTT over SSL, first, you should generate a certificate and have a code like the following one:
+TLS connection to localhost. {% unless docsPrefix contains "paas/" %}See [MQTT over SSL](/docs/{{docsPrefix}}user-guide/mqtt-over-ssl/) for more information about client and SENTIENT configuration.{% endunless %}
+To connect to SENTIENT with MQTT over SSL, first, you should generate a certificate and have a code like the following one:
 
 ```python
 from socket import gethostname
@@ -65,7 +65,7 @@ client.disconnect()
 
 ## Using Device APIs
 
-**TBDeviceMqttClient** provides access to Device MQTT APIs of ThingsBoard platform.  
+**TBDeviceMqttClient** provides access to Device MQTT APIs of SENTIENT platform.  
 It allows publishing telemetry and attributes updates, subscribing to attribute changes, sending and receiving RPC commands, etc.    
 
 ### Subscription to attributes
@@ -93,7 +93,7 @@ while True:
 
 ### Telemetry pack sending
 
-In order to send data to ThingsBoard you can use code like the following one:
+In order to send data to SENTIENT you can use code like the following one:
 
 ```python
 from time import time
@@ -119,7 +119,7 @@ client.disconnect()
 
 ### Request attributes from server
 
-In order to request shared attributes values from ThingsBoard you can use the following example:
+In order to request shared attributes values from SENTIENT you can use the following example:
 
 ```python
 from time import sleep
@@ -146,8 +146,8 @@ while True:
 ### Respond to server RPC call
 
 If you want to send a response for some RPC request, you can use the logic like in the code below.  
-The following example connects to the ThingsBoard local instance and waits for RPC request.  
-When RPC request is received, the client will send the response to ThingsBoard with data from machine with client for device with the name **Test Device A1**.  
+The following example connects to the SENTIENT local instance and waits for RPC request.  
+When RPC request is received, the client will send the response to SENTIENT with data from machine with client for device with the name **Test Device A1**.  
 
 ```python
 import time
@@ -184,7 +184,7 @@ Besides, gateway is able to represent multiple devices connected to it. For exam
 
 ### Telemetry and attributes sending 
 
-In order to send data to ThingsBoard for device with name **Test Device A1** you can use code like the following one:
+In order to send data to SENTIENT for device with name **Test Device A1** you can use code like the following one:
 
 ```python
 from time import time
@@ -206,7 +206,7 @@ gateway.disconnect()
 
 ###  Request attributes from server
 
-In order to request shared attributes values from ThingsBoard for device with name **Test Device A1** you can use the following example:
+In order to request shared attributes values from SENTIENT for device with name **Test Device A1** you can use the following example:
 
 ```python
 from time import sleep
@@ -232,8 +232,8 @@ while True:
 ### Respond to server RPC call
 
 If you want to send response for some RPC request, you can use the logic like in the code below.  
-The following example will connect to the ThingsBoard local instance and wait for RPC request.  
-When RPC request will be received, client will send response to ThingsBoard with data for device with name **Test Device A1**.  
+The following example will connect to the SENTIENT local instance and wait for RPC request.  
+When RPC request will be received, client will send response to SENTIENT with data for device with name **Test Device A1**.  
 
 ```python
 import time
@@ -275,4 +275,4 @@ while True:
 
 ## Other Examples
 
-There are more examples for both [device](https://github.com/thingsboard/thingsboard-python-client-sdk/tree/master/examples/device) and [gateway](https://github.com/thingsboard/thingsboard-python-client-sdk/tree/master/examples/gateway) in corresponding [folders](https://github.com/thingsboard/thingsboard-python-client-sdk/tree/master/examples).
+There are more examples for both [device](https://github.com/sentient/sentient-python-client-sdk/tree/master/examples/device) and [gateway](https://github.com/sentient/sentient-python-client-sdk/tree/master/examples/gateway) in corresponding [folders](https://github.com/sentient/sentient-python-client-sdk/tree/master/examples).

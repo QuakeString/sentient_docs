@@ -2,22 +2,22 @@
 {:toc}
 <!-- This will parse content of HTML tags as markdown when uncomment {::options parse_block_html="true" /} -->
 
-ThingsBoard has been run in production by numerous companies in both [monolithic](/docs/{{docsPrefix}}reference/monolithic/) 
+SENTIENT has been run in production by numerous companies in both [monolithic](/docs/{{docsPrefix}}reference/monolithic/) 
 and [microservices](/docs/{{docsPrefix}}reference/msa/) deployment modes.
-This article describes the performance of a single ThingsBoard server in the most popular usage scenarios. 
-It is helpful to understand how ThingsBoard scales vertically (monolith) before describing how it scales horizontally (cluster mode).   
+This article describes the performance of a single SENTIENT server in the most popular usage scenarios. 
+It is helpful to understand how SENTIENT scales vertically (monolith) before describing how it scales horizontally (cluster mode).   
 
 ## Test methodology
 
-For simplicity, we have deployed a single ThingsBoard instance with all related third-party components in a docker-compose environment on a single EC2 instance.
+For simplicity, we have deployed a single SENTIENT instance with all related third-party components in a docker-compose environment on a single EC2 instance.
 The test agent provisions and connects a configurable number of device emulators that constantly publish time-series data over MQTT.
 
 Various IoT device profiles differ based on the number of messages they produce and the size of each message.
 We have emulated smart-meter devices that send messages as a JSON with three data points: pulse counter, leakage flag, and battery level.
 Each device used a separate MQTT connection to the server.
 
-ThingsBoard stored all the time-series data in the database.
-ThingsBoard also processed the data using the [alarm rules](/docs/{{docsPrefix}}user-guide/device-profiles/#alarm-rules) to create alarms if the battery level is low.
+SENTIENT stored all the time-series data in the database.
+SENTIENT also processed the data using the [alarm rules](/docs/{{docsPrefix}}user-guide/device-profiles/#alarm-rules) to create alarms if the battery level is low.
 We have scaled the test from 5K to 100K devices and message rate from 1K msg/second to 10K messages per second.
 Our team executed the tests for at least 24 hours to ensure no resource leakage or performance degradation over time.
 We have also included instructions to replicate the tests. Links to the instructions are in the details of each test run.
@@ -25,9 +25,9 @@ We have also included instructions to replicate the tests. Links to the instruct
 Additional tool set we use for our tests: 
 [Postgres](/docs/reference/performance/tools/postgres-pgadmin-monitoring/), 
 [Java](/docs/reference/performance/tools/java-jmx-monitoring/) and 
-[ThingsBoard](/docs/reference/performance/tools/thingsboard-performance-charts/) used to visualize the performance.
+[SENTIENT](/docs/reference/performance/tools/sentient-performance-charts/) used to visualize the performance.
 
-As an output we will analyse the ThingsBoard rule engine [statistics](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-statistics) dashboard and fancy API usage stats.
+As an output we will analyse the SENTIENT rule engine [statistics](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-statistics) dashboard and fancy API usage stats.
 
 Note: Each IoT use case is different and may impact the performance numbers. 
 The tests cover the main functionality of data ingestion and alarm generation.  
@@ -97,10 +97,10 @@ Without unlimited mode at the first start you have 0 credits to burst CPU up and
 
 <details markdown="1">
 <summary>
-Setup the ThingsBoard instance on AWS EC2
+Setup the SENTIENT instance on AWS EC2
 </summary>
 
-Use the Docker Compose file listed below to setup the AWS EC2 instance based on the [instruction](https://github.com/thingsboard/performance-tests).  
+Use the Docker Compose file listed below to setup the AWS EC2 instance based on the [instruction](https://github.com/sentient/performance-tests).  
 
 ```bash
 version: '3.0'
@@ -112,17 +112,17 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: "thingsboard"
+      POSTGRES_DB: "sentient"
       POSTGRES_PASSWORD: "postgres"
   tb:
     depends_on:
       - postgres
-    image: "thingsboard/tb"
+    image: "sentient/tb"
     network_mode: "host"
     restart: "always"
     volumes:
-      - thingsboard-data:/data
-      - thingsboard-logs:/var/log/thingsboard
+      - sentient-data:/data
+      - sentient-logs:/var/log/sentient
     environment:
       DATABASE_TS_TYPE: "sql"
       TB_QUEUE_TYPE: "in-memory"
@@ -131,15 +131,15 @@ services:
       TB_QUEUE_RE_MAIN_PACK_PROCESSING_TIMEOUT_MS: "30000"
       TB_QUEUE_RE_MAIN_CONSUMER_PER_PARTITION: "false"
       # Postgres connection
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/thingsboard"
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/sentient"
       SPRING_DATASOURCE_USERNAME: "postgres"
       SPRING_DATASOURCE_PASSWORD: "postgres"
       # Java options for 4G instance and JMX enabled
       JAVA_OPTS: " -Xmx2048M -Xms2048M -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9999 -Dcom.sun.management.jmxremote.rmi.port=9999 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=127.0.0.1"
 volumes: # to persist data between container restarts or being recreated
   postgres:
-  thingsboard-data:
-  thingsboard-logs:
+  sentient-data:
+  sentient-logs:
 ```
 {: .copy-code}
 
@@ -150,10 +150,10 @@ volumes: # to persist data between container restarts or being recreated
 Launch performance test tool
 </summary>
 
-Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/sentient/performance-tests).
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -163,7 +163,7 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=10 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=true \
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
@@ -184,7 +184,7 @@ Instance: AWS t3.medium (2 vCPUs Intel, 4 GiB, EBS GP3)
 
 Estimated cost: 19$ EC2 + x$ CPU burst + 8$ EBS GP3 100GB = 30$/mo
 
-Previous section demonstrates **successful** ThingsBoard deployment designed up to 3000 data points/sec.  
+Previous section demonstrates **successful** SENTIENT deployment designed up to 3000 data points/sec.  
 
 Looks perfect, **but what happen** when we face a peak load on production? Should we worry about?  
 The **cost of failure** may be money loss, reputation or carries issue.  
@@ -192,7 +192,7 @@ The **benefits** of reliable design may bring you to a better life, no stress, s
 
 Let's try to handle a messages flood about x3 of regular rate up to 10000 data point/sec.
 
-ThingsBoard docker compose with no change with the previous section. 
+SENTIENT docker compose with no change with the previous section. 
 Message rate have been increased gradually.  
 
 <details markdown="1">
@@ -200,10 +200,10 @@ Message rate have been increased gradually.
 Performance test was stopped and run with a greater numbers step by step
 </summary>
 
-Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/sentient/performance-tests).
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -213,7 +213,7 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=10 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=false \
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
@@ -251,10 +251,10 @@ Some lag will build up. Let's see what is happening inside the memory and the co
 Launch performance test tool
 </summary>
 
-Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/sentient/performance-tests).
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -264,7 +264,7 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=10 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=false \
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
@@ -321,7 +321,7 @@ Long-running result about 14 hours:
 
 **Lessons learned**
 
-Kafka CPU and disk IO overhead are tiny relative to Postgres and ThingsBoard CPU consumption. 
+Kafka CPU and disk IO overhead are tiny relative to Postgres and SENTIENT CPU consumption. 
 The memory footprint is about 1G in default configuration and can be easily adjusted for smaller instances.
 The persistent queue is essential to survive peak loads.
 
@@ -337,11 +337,11 @@ Note: You definitely need add more CPU to process some custom rule chains, rende
 
 <details markdown="1">
 <summary>
-Setup the ThingsBoard instance on AWS EC2
+Setup the SENTIENT instance on AWS EC2
 </summary>
 
 Take a note that Zookeeper is required to run Kafka these days.
-Here is the docker-compose file to set up _ThingsBoard + Postgresql + Zookeeper + Kafka_ on AWS EC2 instance based on the [instruction](https://github.com/thingsboard/performance-tests).
+Here is the docker-compose file to set up _SENTIENT + Postgresql + Zookeeper + Kafka_ on AWS EC2 instance based on the [instruction](https://github.com/sentient/performance-tests).
 
 ```bash
 version: '3.0'
@@ -374,18 +374,18 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: "thingsboard"
+      POSTGRES_DB: "sentient"
       POSTGRES_PASSWORD: "postgres"
   tb:
     depends_on:
       - postgres
       - kafka
-    image: "thingsboard/tb"
+    image: "sentient/tb"
     network_mode: "host"
     restart: "always"
     volumes:
-      - thingsboard-data:/data
-      - thingsboard-logs:/var/log/thingsboard
+      - sentient-data:/data
+      - sentient-logs:/var/log/sentient
     environment:
       DATABASE_TS_TYPE: "sql"
       TB_QUEUE_TYPE: "kafka"
@@ -396,7 +396,7 @@ services:
       HTTP_BIND_PORT: "8080"
       TB_QUEUE_RE_MAIN_PACK_PROCESSING_TIMEOUT_MS: "30000"
       # Postgres connection
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/thingsboard"
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/sentient"
       SPRING_DATASOURCE_USERNAME: "postgres"
       SPRING_DATASOURCE_PASSWORD: "postgres"
       # Java options for 8G instance and JMX enabled
@@ -405,8 +405,8 @@ volumes: # to persist data between container restarts or being recreated
   kafka:
   zookeeper:
   postgres:
-  thingsboard-data:
-  thingsboard-logs:
+  sentient-data:
+  sentient-logs:
 ```
 {: .copy-code}
 
@@ -417,10 +417,10 @@ volumes: # to persist data between container restarts or being recreated
 Launch performance test tool
 </summary>
 
-Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/sentient/performance-tests).
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -430,7 +430,7 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=50 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=true \  
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
@@ -474,10 +474,10 @@ After a while, we may see that the lag is going down from 2.8M to 1.2M. Eventual
 Launch performance test tool
 </summary>
 
-Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/sentient/performance-tests).
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -487,7 +487,7 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=50 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=false \
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
@@ -495,10 +495,10 @@ docker run -it --rm --network host --name tb-perf-test \
 
 **Lessons learned**
 
-ThingsBoard + Postgres + **Kafka** - is a reliable solution to survive peak loads.
+SENTIENT + Postgres + **Kafka** - is a reliable solution to survive peak loads.
 Despite the maximum performance shown above, we recommend to use m6a.large instance design for up to 3k msg/sec, 10k data points/sec.  
 The logic is quite simple: to be able to process x2 message load in case of any peak load.  
-In a real production, the ThingsBoard may serve all kind of user requests, run custom rule chains and supply the web services for all fancy dashboards.
+In a real production, the SENTIENT may serve all kind of user requests, run custom rule chains and supply the web services for all fancy dashboards.
 When you need more performance, simply upgrade the instance to the next m6a.xlarge or c6i.xlarge instance (restart required).  
 Another way to improve is to customize PostgreSQL config to gain much faster read query performance for dashboards, analytics, etc.
 For even more performance, please consider the **Cassandra** usage.   
@@ -534,7 +534,7 @@ Estimated cost: 167$ EC2 m6a.2xlarge + 24$ EBS GP3 300GB = 191$/month.
 **Test run**
 
 The queue stats looks solid. A small fluctuation on the chart is nominal.  
-All systems have to run maintenance in background, so it is completely fine to have those chart for ThingsBoard monolith deployment.    
+All systems have to run maintenance in background, so it is completely fine to have those chart for SENTIENT monolith deployment.    
 
 The API usage shows about 10 hours and 1.1B data points processed.
 
@@ -559,31 +559,31 @@ It is more than x5 times (152 / 29) cheaper than PostgreSQL disk consumption!
 
 {% include images-gallery.html imageCollection="cassandra-25k-10k-30k-disk" %}
 
-Finally, let's check the JVM state on each Thingsboard, Zookeeper, Kafka and Cassandra
+Finally, let's check the JVM state on each Sentient, Zookeeper, Kafka and Cassandra
 Let's forward JMX port with SSH to connect and monitor all Java applications presented.
 
 ```bash
-ssh -L 9999:127.0.0.1:9999 -L 1099:127.0.0.1:1099 -L 9199:127.0.0.1:9199 -L 7199:127.0.0.1:7199 thingsboard 
+ssh -L 9999:127.0.0.1:9999 -L 1099:127.0.0.1:1099 -L 9199:127.0.0.1:9199 -L 7199:127.0.0.1:7199 sentient 
 ```
 {: .copy-code}
 
 Open [VisualVM](https://visualvm.github.io/), add the local applications, open it and let the data being gathered for a few minutes. 
 
-Here the JMX monitoring for ThingsBoard, Kafka, Zookeeper, Cassandra. The system is stable.
+Here the JMX monitoring for SENTIENT, Kafka, Zookeeper, Cassandra. The system is stable.
 
 {% include images-gallery.html imageCollection="cassandra-25k-10k-30k-jmx" %}
 
 **Lessons learned**
 
-**Cassandra** is essential for massive telemetry flow. Peak load is handled with Kafka queue. Bundling Kafka + PostgreSQL + Cassandra is a **top ThingsBoard deployment**. 
+**Cassandra** is essential for massive telemetry flow. Peak load is handled with Kafka queue. Bundling Kafka + PostgreSQL + Cassandra is a **top SENTIENT deployment**. 
 
 Cassandra requires more CPU resources, but 5 time less disk space. It also dramatically reduces the IOPS load. 
 CPU load is 75% on average. This is a good setup with average load 10k msg/sec, 30k data point/sec.
 
 Cassandra can handle x2-x3 more load (compare to PostgreSQL only) with a single instance deployment and able to scale up horizontally by adding a new nodes to the Cassandra cluster.    
-It is a good idea to start with Cassandra from the very beginning of your ThingsBoard instance and maintain the same stack for the entire project lifetime.
+It is a good idea to start with Cassandra from the very beginning of your SENTIENT instance and maintain the same stack for the entire project lifetime.
 For the lower message rate, you can fit the Cassandra deployment to a much smaller instance adjusting the heap size limits.
-System can be scaled up vertically up to 50-100%. For significant horizontal scaling, please, consider to set up a ThingsBoard cluster.
+System can be scaled up vertically up to 50-100%. For significant horizontal scaling, please, consider to set up a SENTIENT cluster.
 
 <br>
 **How to reproduce the test:**
@@ -592,12 +592,12 @@ System can be scaled up vertically up to 50-100%. For significant horizontal sca
 
 <details markdown="1">
 <summary>
-Setup the ThingsBoard instance on AWS EC2
+Setup the SENTIENT instance on AWS EC2
 </summary>
 
-Use the Docker Compose file listed below to setup the AWS EC2 instance based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker Compose file listed below to setup the AWS EC2 instance based on the [instruction](https://github.com/sentient/performance-tests).
 
-Here the docker-compose with ThingsBoard + Postgresql + Zookeeper + Kafka + **Cassandra**
+Here the docker-compose with SENTIENT + Postgresql + Zookeeper + Kafka + **Cassandra**
 
 ```bash
 version: '3.0'
@@ -609,7 +609,7 @@ services:
     volumes:
       - cassandra:/bitnami
     environment:
-      CASSANDRA_CLUSTER_NAME: "ThingsBoard Cluster"
+      CASSANDRA_CLUSTER_NAME: "SENTIENT Cluster"
       HEAP_NEWSIZE: "1024M"
       MAX_HEAP_SIZE: "2048M"
       JVM_EXTRA_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=7199 -Dcom.sun.management.jmxremote.rmi.port=7199  -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=127.0.0.1"
@@ -643,26 +643,26 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: "thingsboard"
+      POSTGRES_DB: "sentient"
       POSTGRES_PASSWORD: "postgres"
   tb:
     depends_on:
       - postgres
       - kafka
       - cassandra
-    image: "thingsboard/tb"
+    image: "sentient/tb"
     network_mode: "host"
     restart: "always"
     volumes:
-      - thingsboard-data:/data
-      - thingsboard-logs:/var/log/thingsboard
+      - sentient-data:/data
+      - sentient-logs:/var/log/sentient
     environment:
       DATABASE_TS_TYPE: "cassandra"
       DATABASE_TS_LATEST_TYPE: "sql"
       #Cassandra
-      CASSANDRA_CLUSTER_NAME: "ThingsBoard Cluster"
+      CASSANDRA_CLUSTER_NAME: "SENTIENT Cluster"
       CASSANDRA_LOCAL_DATACENTER: "datacenter1"
-      CASSANDRA_KEYSPACE_NAME: "thingsboard"
+      CASSANDRA_KEYSPACE_NAME: "sentient"
       CASSANDRA_URL: "127.0.0.1:9042"
       CASSANDRA_USE_CREDENTIALS: "true"
       CASSANDRA_USERNAME: "cassandra"
@@ -679,7 +679,7 @@ services:
       HTTP_BIND_PORT: "8080"
       TB_QUEUE_RE_MAIN_PACK_PROCESSING_TIMEOUT_MS: "30000"
       # Postgres connection
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/thingsboard"
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/sentient"
       SPRING_DATASOURCE_USERNAME: "postgres"
       SPRING_DATASOURCE_PASSWORD: "postgres"
       # Cache specs
@@ -693,8 +693,8 @@ volumes: # to persist data between container restarts or being recreated
   kafka:
   zookeeper:
   postgres:
-  thingsboard-data:
-  thingsboard-logs:
+  sentient-data:
+  sentient-logs:
 ```
 {: .copy-code}
 
@@ -705,10 +705,10 @@ volumes: # to persist data between container restarts or being recreated
 Launch performance test tool
 </summary>
 
-Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/sentient/performance-tests).
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -718,7 +718,7 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=50 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=true \  
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
@@ -745,7 +745,7 @@ Test runs 24 hour and here the results:
 
 **Lessons learned**
 
-In addition to conclusions we made for [Scenario C](#scenario-c), we observe stability of a single ThingsBoard instance handling 100K parallel MQTT connections.
+In addition to conclusions we made for [Scenario C](#scenario-c), we observe stability of a single SENTIENT instance handling 100K parallel MQTT connections.
 We observe that memory consumption increased from 1.5 GB for 25K devices to 6.5 for 100K devices. We may roughly calculate that one device/connection consumes 66KB of memory. 
 We will work to reduce this number 10 times in the next release.
 
@@ -756,12 +756,12 @@ We will work to reduce this number 10 times in the next release.
 
 <details markdown="1">
 <summary>
-Setup the ThingsBoard instance on AWS EC2
+Setup the SENTIENT instance on AWS EC2
 </summary>
 
-Use the Docker Compose file listed below to setup the AWS EC2 instance based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker Compose file listed below to setup the AWS EC2 instance based on the [instruction](https://github.com/sentient/performance-tests).
 
-Here the docker-compose with ThingsBoard + Postgresql + Zookeeper + Kafka + **Cassandra**
+Here the docker-compose with SENTIENT + Postgresql + Zookeeper + Kafka + **Cassandra**
 
 ```bash
 version: '3.0'
@@ -773,7 +773,7 @@ services:
     volumes:
       - cassandra:/bitnami
     environment:
-      CASSANDRA_CLUSTER_NAME: "ThingsBoard Cluster"
+      CASSANDRA_CLUSTER_NAME: "SENTIENT Cluster"
       HEAP_NEWSIZE: "4096M"
       MAX_HEAP_SIZE: "8192M"
       JVM_EXTRA_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=7199 -Dcom.sun.management.jmxremote.rmi.port=7199  -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=127.0.0.1"
@@ -807,26 +807,26 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: "thingsboard"
+      POSTGRES_DB: "sentient"
       POSTGRES_PASSWORD: "postgres"
   tb:
     depends_on:
       - postgres
       - kafka
       - cassandra
-    image: "thingsboard/tb"
+    image: "sentient/tb"
     network_mode: "host"
     restart: "always"
     volumes:
-      - thingsboard-data:/data
-      - thingsboard-logs:/var/log/thingsboard
+      - sentient-data:/data
+      - sentient-logs:/var/log/sentient
     environment:
       DATABASE_TS_TYPE: "cassandra"
       DATABASE_TS_LATEST_TYPE: "sql"
       #Cassandra
-      CASSANDRA_CLUSTER_NAME: "ThingsBoard Cluster"
+      CASSANDRA_CLUSTER_NAME: "SENTIENT Cluster"
       CASSANDRA_LOCAL_DATACENTER: "datacenter1"
-      CASSANDRA_KEYSPACE_NAME: "thingsboard"
+      CASSANDRA_KEYSPACE_NAME: "sentient"
       CASSANDRA_URL: "127.0.0.1:9042"
       CASSANDRA_USE_CREDENTIALS: "true"
       CASSANDRA_USERNAME: "cassandra"
@@ -843,7 +843,7 @@ services:
       HTTP_BIND_PORT: "8080"
       TB_QUEUE_RE_MAIN_PACK_PROCESSING_TIMEOUT_MS: "30000"
       # Postgres connection
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/thingsboard"
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/sentient"
       SPRING_DATASOURCE_USERNAME: "postgres"
       SPRING_DATASOURCE_PASSWORD: "postgres"
       # Cache specs
@@ -865,8 +865,8 @@ volumes: # to persist data between container restarts or being recreated
   kafka:
   zookeeper:
   postgres:
-  thingsboard-data:
-  thingsboard-logs:
+  sentient-data:
+  sentient-logs:
 ```
 {: .copy-code}
 
@@ -877,7 +877,7 @@ volumes: # to persist data between container restarts or being recreated
 Launch performance test tool on two nodes
 </summary>
 
-Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/sentient/performance-tests).
 
 We need at least two performance-test instances to produce 100k simultaneous connections because each test instance may create up to 65535 simultaneous connections to a particular external server.
 By default, Ubuntu Linux allows you to spin up a 28232 outgoing connection providing a local port range from 32768 to 60999.
@@ -901,7 +901,7 @@ sudo sysctl -w net.netfilter.nf_conntrack_max=1048576
 Here is the run script for the _first node_.
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -912,14 +912,14 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=10 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=true \
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
 Here is the run script for the _second node_. Note the DEVICE_START_IDX and DEVICE_END_IDX values are different from the one we used on the first node.
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -930,7 +930,7 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=10 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=true \
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
@@ -986,12 +986,12 @@ CPU usage is 93%, so there are almost no extra resources left for a peak load an
 
 <details markdown="1">
 <summary>
-Setup the ThingsBoard instance on AWS EC2
+Setup the SENTIENT instance on AWS EC2
 </summary>
 
-Use the Docker Compose file listed below to setup the AWS EC2 instance based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker Compose file listed below to setup the AWS EC2 instance based on the [instruction](https://github.com/sentient/performance-tests).
 
-Here the docker-compose with ThingsBoard + Postgresql + Zookeeper + Kafka + **Cassandra**
+Here the docker-compose with SENTIENT + Postgresql + Zookeeper + Kafka + **Cassandra**
 
 ```bash
 version: '3.0'
@@ -1003,7 +1003,7 @@ services:
     volumes:
       - cassandra:/bitnami
     environment:
-      CASSANDRA_CLUSTER_NAME: "ThingsBoard Cluster"
+      CASSANDRA_CLUSTER_NAME: "SENTIENT Cluster"
       HEAP_NEWSIZE: "4096M"
       MAX_HEAP_SIZE: "8192M"
       JVM_EXTRA_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=7199 -Dcom.sun.management.jmxremote.rmi.port=7199  -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=127.0.0.1"
@@ -1037,26 +1037,26 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: "thingsboard"
+      POSTGRES_DB: "sentient"
       POSTGRES_PASSWORD: "postgres"
   tb:
     depends_on:
       - postgres
       - kafka
       - cassandra
-    image: "thingsboard/tb"
+    image: "sentient/tb"
     network_mode: "host"
     restart: "always"
     volumes:
-      - thingsboard-data:/data
-      - thingsboard-logs:/var/log/thingsboard
+      - sentient-data:/data
+      - sentient-logs:/var/log/sentient
     environment:
       DATABASE_TS_TYPE: "cassandra"
       DATABASE_TS_LATEST_TYPE: "sql"
       #Cassandra
-      CASSANDRA_CLUSTER_NAME: "ThingsBoard Cluster"
+      CASSANDRA_CLUSTER_NAME: "SENTIENT Cluster"
       CASSANDRA_LOCAL_DATACENTER: "datacenter1"
-      CASSANDRA_KEYSPACE_NAME: "thingsboard"
+      CASSANDRA_KEYSPACE_NAME: "sentient"
       CASSANDRA_URL: "127.0.0.1:9042"
       CASSANDRA_USE_CREDENTIALS: "true"
       CASSANDRA_USERNAME: "cassandra"
@@ -1073,7 +1073,7 @@ services:
       HTTP_BIND_PORT: "8080"
       TB_QUEUE_RE_MAIN_PACK_PROCESSING_TIMEOUT_MS: "30000"
       # Postgres connection
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/thingsboard"
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/sentient"
       SPRING_DATASOURCE_USERNAME: "postgres"
       SPRING_DATASOURCE_PASSWORD: "postgres"
       # Cache specs
@@ -1096,8 +1096,8 @@ volumes: # to persist data between container restarts or being recreated
   kafka:
   zookeeper:
   postgres:
-  thingsboard-data:
-  thingsboard-logs:
+  sentient-data:
+  sentient-logs:
 ```
 {: .copy-code}
 
@@ -1108,7 +1108,7 @@ volumes: # to persist data between container restarts or being recreated
 Launch performance test tool on two nodes
 </summary>
 
-Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/thingsboard/performance-tests).
+Use the Docker command listed below to launch the performance test tool based on the [instruction](https://github.com/sentient/performance-tests).
 
 We need at least two performance-test instances to produce 100k simultaneous connections because each test instance may create up to 65535 simultaneous connections to a particular external server.
 By default, Ubuntu Linux allows you to spin up a 28232 outgoing connection providing a local port range from 32768 to 60999.
@@ -1132,7 +1132,7 @@ sudo sysctl -w net.netfilter.nf_conntrack_max=1048576
 Here is the run script for the _first node_.
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -1143,14 +1143,14 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=10 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=true \
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
 Here is the run script for the _second node_. Note the DEVICE_START_IDX and DEVICE_END_IDX values are different from the one we used on the first node.
 
 ```bash
-# Put your ThingsBoard private IP address here, assuming both ThingsBoard and performance tests EC2 instances are in same VPC.
+# Put your SENTIENT private IP address here, assuming both SENTIENT and performance tests EC2 instances are in same VPC.
 export TB_INTERNAL_IP=172.31.16.229 
 docker run -it --rm --network host --name tb-perf-test \
   --env REST_URL=http://$TB_INTERNAL_IP:8080 \
@@ -1161,7 +1161,7 @@ docker run -it --rm --network host --name tb-perf-test \
   --env ALARMS_PER_SECOND=10 \
   --env DURATION_IN_SECONDS=86400 \
   --env DEVICE_CREATE_ON_START=true \
-  thingsboard/tb-ce-performance-test:3.3.3
+  sentient/tb-ce-performance-test:3.3.3
 ```
 {: .copy-code}
 
@@ -1179,9 +1179,9 @@ Here are some pointers on how to ensure that you have a valid test run with all 
 tb_1         | 2022-01-06 16:37:11,716 [TB-Scheduling-3] INFO  o.t.s.c.t.s.DefaultTransportService - Transport Stats: openConnections [100000]
 ```
 
-* All device connected. Java JMX. VisualVM -> ThingsBoard -> MBeans -> java.lang -> OpenFileDescriptorCount -> more than 100000
+* All device connected. Java JMX. VisualVM -> SENTIENT -> MBeans -> java.lang -> OpenFileDescriptorCount -> more than 100000
 
-{% include images-gallery.html imageCollection="thingsboard-100k-devices-connected" %}
+{% include images-gallery.html imageCollection="sentient-100k-devices-connected" %}
 
 
 ## Disk usage
@@ -1235,9 +1235,9 @@ Another benefit is Cassandra does less write operations than Postgres. It is eno
 ## Thank you
 
 Thank you for taking your time to read all this stuff.
-Thanks to the ThingsBoard community that creates issues and shares performance solutions around the time. 
+Thanks to the SENTIENT community that creates issues and shares performance solutions around the time. 
 Thanks to [Sergey](https://github.com/smatvienko-tb) for performing the tests, performance improvements, and contribution to this article.
 
-It was ThingsBoard 3.3.3 version. We will work on performance improvements in 3.4.x
+It was SENTIENT 3.3.3 version. We will work on performance improvements in 3.4.x
 
-Feel free to send us feedback or share your fancy setup on [GitHub](https://github.com/thingsboard/performance-tests/issues)
+Feel free to send us feedback or share your fancy setup on [GitHub](https://github.com/sentient/performance-tests/issues)

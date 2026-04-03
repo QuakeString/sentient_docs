@@ -13,7 +13,7 @@ version: '3.8'
 services:
   mytbedge:
     restart: always
-    image: "thingsboard/tb-edge:{{ site.release.edge_full_ver }}"
+    image: "sentient/tb-edge:{{ site.release.edge_full_ver }}"
     ports:
       - "8080:8080"
       - "1883:1883"

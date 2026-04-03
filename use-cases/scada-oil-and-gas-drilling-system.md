@@ -1,7 +1,7 @@
 ---
 layout: use-case
 title: SCADA Oil and gas drilling system
-description: Drilling system solution with ThingsBoard IoT platform
+description: Drilling system solution with SENTIENT IoT platform
 notitle: "true"
 includeAdvantages: "true"
 contactUsModal: "true"
@@ -15,15 +15,15 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">SCADA (Supervisory Control and Data Acquisition) and the ThingsBoard platform play a crucial role in automating oil and gas drilling processes.</p>
+                <p class="text">SCADA (Supervisory Control and Data Acquisition) and the SENTIENT platform play a crucial role in automating oil and gas drilling processes.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_DrillingSystem_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/febfdb90-3170-11f0-858a-67efd1bc8a87?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
+                <a id="UseCases_DrillingSystem_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/febfdb90-3170-11f0-858a-67efd1bc8a87?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
             </div>
         </div>
         <div class="long">
-            <p>The main advantage of SCADA (Supervisory Control and Data Acquisition) systems is their ability to monitor production processes in real time and respond quickly to deviations. ThingsBoard provides comprehensive tools to collect, process, and visualize data from SCADA components, such as PLCs (Programmable Logic Controllers) and RCUs (Remote Control Units), enabling seamless integration with various industrial processes.</p>
-            <p>To illustrate the flexibility of ThingsBoard's SCADA integration, we have developed the <a href="/docs/pe/solution-templates/scada-drilling-system/">drilling management system template</a>. This solution demonstrates how SCADA symbols—such as drilling rigs, rotors, hoists, pumps, and preventers—can be utilized to create an efficient and automated drilling control system. It enables the entire drilling process to be visualized on a dashboard, allowing for real-time monitoring of drilling parameters, equipment performance, and safety conditions, ensuring timely detection of anomalies and improved operational efficiency.</p>
+            <p>The main advantage of SCADA (Supervisory Control and Data Acquisition) systems is their ability to monitor production processes in real time and respond quickly to deviations. SENTIENT provides comprehensive tools to collect, process, and visualize data from SCADA components, such as PLCs (Programmable Logic Controllers) and RCUs (Remote Control Units), enabling seamless integration with various industrial processes.</p>
+            <p>To illustrate the flexibility of SENTIENT's SCADA integration, we have developed the <a href="/docs/pe/solution-templates/scada-drilling-system/">drilling management system template</a>. This solution demonstrates how SCADA symbols—such as drilling rigs, rotors, hoists, pumps, and preventers—can be utilized to create an efficient and automated drilling control system. It enables the entire drilling process to be visualized on a dashboard, allowing for real-time monitoring of drilling parameters, equipment performance, and safety conditions, ensuring timely detection of anomalies and improved operational efficiency.</p>
         </div>
     </div>
 </section>
@@ -42,27 +42,27 @@ contactUsModal: "true"
     <div class="use-cases-solution-structure-cards">
         <div class="use-cases-solution-structure-card">
             <h3>PLCs and RTUs</h3>
-            <p>Seamlessly integrate your SCADA system with PLCs and RTUs using ThingsBoard integrations and IoT Gateway. Support for Modbus, OPC-UA, BACnet, and other popular protocols ensures reliable real-time data collection and control.</p>
+            <p>Seamlessly integrate your SCADA system with PLCs and RTUs using SENTIENT integrations and IoT Gateway. Support for Modbus, OPC-UA, BACnet, and other popular protocols ensures reliable real-time data collection and control.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>IoT gateway</h3>
-            <p>ThingsBoard’s IoT Gateway bridges the gap between legacy SCADA devices and modern IoT platforms. It ensures data reliability with built-in local data storage during network outages and supports efficient protocol conversion, secure data transmission, and centralized device management.</p>
+            <p>SENTIENT’s IoT Gateway bridges the gap between legacy SCADA devices and modern IoT platforms. It ensures data reliability with built-in local data storage during network outages and supports efficient protocol conversion, secure data transmission, and centralized device management.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>Data processing</h3>
-            <p>Unlock actionable insights with ThingsBoard’s robust data processing tools. Perform real-time transformations, apply complex rules, and automate workflows with built-in rule chains and scriptable integrations.</p>
+            <p>Unlock actionable insights with SENTIENT’s robust data processing tools. Perform real-time transformations, apply complex rules, and automate workflows with built-in rule chains and scriptable integrations.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>Alarm system</h3>
-            <p>Enhance operational awareness with ThingsBoard’s advanced alarm system. Manage incident workflows with features like alarm acknowledgment, clearing, commenting, and configurable escalation rules.</p>
+            <p>Enhance operational awareness with SENTIENT’s advanced alarm system. Manage incident workflows with features like alarm acknowledgment, clearing, commenting, and configurable escalation rules.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>Notification system</h3>
-            <p>Stay informed with ThingsBoard’s flexible notification system, delivering alerts via email, SMS, Slack, or custom webhooks. Automate critical notifications based on configurable conditions and thresholds.</p>
+            <p>Stay informed with SENTIENT’s flexible notification system, delivering alerts via email, SMS, Slack, or custom webhooks. Automate critical notifications based on configurable conditions and thresholds.</p>
         </div>
         <div class="use-cases-solution-structure-card">
             <h3>IoT dashboards</h3>
-            <p>Visualize your SCADA data with ThingsBoard’s real-time IoT dashboards. Design interactive views using SCADA symbols, customizable widgets, and dynamic updates to monitor and control processes seamlessly.</p>
+            <p>Visualize your SCADA data with SENTIENT’s real-time IoT dashboards. Design interactive views using SCADA symbols, customizable widgets, and dynamic updates to monitor and control processes seamlessly.</p>
         </div>
     </div>
 </section>
@@ -406,7 +406,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_ScadaDrilling_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/febfdb90-3170-11f0-858a-67efd1bc8a87?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
+                <a id="UseCases_ScadaDrilling_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/febfdb90-3170-11f0-858a-67efd1bc8a87?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
                 <a id="UseCases_ScadaDrilling_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
     

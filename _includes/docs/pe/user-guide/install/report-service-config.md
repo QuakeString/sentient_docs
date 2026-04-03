@@ -87,7 +87,7 @@
 		<tr>
 			<td>zk.zk_dir</td>
 			<td>ZOOKEEPER_NODES_DIR</td>
-			<td>/thingsboard</td>
+			<td>/sentient</td>
 			<td> Name of the directory in zookeeper 'filesystem'</td>
 		</tr>
 		<tr>
@@ -502,7 +502,7 @@
 			<td>service.tb_core.base_url</td>
 			<td>TB_CORE_BASE_URL</td>
 			<td>http://localhost:8080</td>
-			<td> Base URL of the ThingsBoard Core service</td>
+			<td> Base URL of the SENTIENT Core service</td>
 		</tr>
 		<tr>
 			<td>reports.web_report.base_url</td>

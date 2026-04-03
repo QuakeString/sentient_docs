@@ -1,9 +1,9 @@
 {% if docsPrefix == 'pe/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
-{% assign appProject = "flutter_thingsboard_pe_app" %}
+{% assign appPrefix = "SENTIENT Professional Edition" %}
+{% assign appProject = "flutter_sentient_pe_app" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
-{% assign appProject = "flutter_thingsboard_app" %}
+{% assign appPrefix = "SENTIENT" %}
+{% assign appProject = "flutter_sentient_app" %}
 {% endif %}
 
 {{appPrefix}} Mobile Application provides OAuth 2.0 support. With OAuth 2.0 enabled mobile app will display additional sign-in buttons
@@ -24,16 +24,16 @@ In order to enable OAuth in mobile app you should register it in the **Mobile ap
 Additionally, you should modify your mobile app constants.
 Open **{{appProject}}** project in your editor/IDE. Edit **lib/constants/app_constants.dart**.
 
-Set value of **thingsboardOAuth2AppSecret** constant to value of **Application secret** field.
-Change value of **thingsboardOAuth2CallbackUrlScheme** constant to some unique pkg name, for ex. you can use your application package with **auth** suffix (ex. org.mycompany.myapp.auth):
+Set value of **sentientOAuth2AppSecret** constant to value of **Application secret** field.
+Change value of **sentientOAuth2CallbackUrlScheme** constant to some unique pkg name, for ex. you can use your application package with **auth** suffix (ex. org.mycompany.myapp.auth):
 
 ```dart
-abstract class ThingsboardAppConstants {
+abstract class SentientAppConstants {
   ...
 
-  static final thingsboardOAuth2CallbackUrlScheme = 'Your callback url scheme here';
+  static final sentientOAuth2CallbackUrlScheme = 'Your callback url scheme here';
 
-  static final thingsboardOAuth2AppSecret = 'Your app secret here';
+  static final sentientOAuth2AppSecret = 'Your app secret here';
 }
 
 ```
@@ -43,7 +43,7 @@ abstract class ThingsboardAppConstants {
 {% endcapture %}
 {% include templates/info-banner.md content=oauth_2_domain %}
 
-Edit **android/app/src/main/AndroidManifest.xml**, find and set scheme of **TbWebCallbackActivity** to same value as **thingsboardOAuth2CallbackUrlScheme** constant:
+Edit **android/app/src/main/AndroidManifest.xml**, find and set scheme of **TbWebCallbackActivity** to same value as **sentientOAuth2CallbackUrlScheme** constant:
 
 ```xml
   ...

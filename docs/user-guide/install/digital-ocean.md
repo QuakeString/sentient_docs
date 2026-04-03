@@ -1,11 +1,11 @@
 ---
 layout: docwithnav
-title: Installing ThingsBoard on DigitalOcean 
-description: Installing ThingsBoard on DigitalOcean
+title: Installing SENTIENT on DigitalOcean 
+description: Installing SENTIENT on DigitalOcean
 
 ---
 
-This guide describes how to install ThingsBoard Community Edition on DigitalOcean. 
+This guide describes how to install SENTIENT on DigitalOcean. 
 
 * TOC
 {:toc}
@@ -14,7 +14,7 @@ This guide describes how to install ThingsBoard Community Edition on DigitalOcea
 
 ## Step 4. Use regular installation instruction for Ubuntu
 
-Please navigate to the ThingsBoard [**installation instruction**](/docs/user-guide/install/ubuntu/) 
+Please navigate to the SENTIENT [**installation instruction**](/docs/user-guide/install/ubuntu/) 
 for Ubuntu and complete the installation steps.
 
 **Note:** Use your droplet IP address instead of "localhost" to access the instance WEB UI.
@@ -25,9 +25,9 @@ for Ubuntu and complete the installation steps.
 
 {% include templates/install/ubuntu-haproxy-postinstall.md %}
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
-{% include templates/install/upgrade-thingsboard.md %}
+{% include templates/install/upgrade-sentient.md %}
 
 ## Troubleshooting
 

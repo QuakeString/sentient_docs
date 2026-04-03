@@ -38,7 +38,7 @@ nginx-ingress-ingress-nginx-controller-xxxxx             1/1     Running   0    
 ### Start Minikube Tunnel
 
 Since Minikube doesn’t natively support external LoadBalancer services, you need to create a tunnel to expose them outside the cluster. 
-This is required for accessing services like the NGINX Ingress Controller and TBMQ’s MQTT LoadBalancer.
+This is required for accessing services like the NGINX Ingress Controller and ST-RMQTT’s MQTT LoadBalancer.
 
 Run the following command in a separate terminal:
 

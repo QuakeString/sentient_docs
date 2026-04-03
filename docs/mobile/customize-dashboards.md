@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Customize home screen in ThingsBoard Mobile Application
+title: Customize home screen in SENTIENT Mobile Application
 
 dashboard-image:
  0:

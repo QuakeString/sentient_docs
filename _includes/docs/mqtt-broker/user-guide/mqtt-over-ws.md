@@ -38,9 +38,9 @@ This feature, combined with MQTT's publish/subscribe model, enables dynamic and 
 * **Compatibility with Web Ecosystem**: By using MQTT over WebSocket, the protocol becomes compatible with the web browser security model, facilitating its integration into web applications without additional plugins or special arrangements.
 * **Supports MQTT Features**: The integration does not compromise MQTT's native features like retained messages, last will and testament, and clean session, ensuring robust and feature-rich implementations.
 
-## MQTT over WebSocket in TBMQ
+## MQTT over WebSocket in ST-RMQTT
 
-TBMQ utilizes two listeners, WS (WebSocket) and WSS (WebSocket Secure), to facilitate communication over WebSocket. 
+ST-RMQTT utilizes two listeners, WS (WebSocket) and WSS (WebSocket Secure), to facilitate communication over WebSocket. 
 You can refer to the overview of these listeners provided [here](/docs/{{docsPrefix}}mqtt-broker/security/#ws-listener).
 
 {% capture difference %}
@@ -55,20 +55,20 @@ For detailed WebSocket-related parameters, please refer to the provided [link](/
 
 ## Getting started
 
-In this guide, we present an illustrative example of how to establish MQTT over WebSocket connection to a TBMQ, subscribe to a specific topic, and exchange messages using the [MQTT.js](https://github.com/mqttjs/MQTT.js) library.
+In this guide, we present an illustrative example of how to establish MQTT over WebSocket connection to a ST-RMQTT, subscribe to a specific topic, and exchange messages using the [MQTT.js](https://github.com/mqttjs/MQTT.js) library.
 
-### Installing TBMQ
+### Installing ST-RMQTT
 
-Before we delve in, make sure the TBMQ is successfully installed.
-To obtain detailed instructions on how to install TBMQ on different platforms, we recommend exploring the [Installation options](/docs/{{docsPrefix}}mqtt-broker/install/installation-options/) documentation.
+Before we delve in, make sure the ST-RMQTT is successfully installed.
+To obtain detailed instructions on how to install ST-RMQTT on different platforms, we recommend exploring the [Installation options](/docs/{{docsPrefix}}mqtt-broker/install/installation-options/) documentation.
 
-For this guide, we will follow the below instructions for quick TBMQ installation.
+For this guide, we will follow the below instructions for quick ST-RMQTT installation.
 
 {% capture contenttogglespec %}
 Linux & Mac OS%,%linuxmacos%,%templates/mqtt-broker/install/linux-macos/linux-macos.md%br%
 Windows%,%windows%,%templates/mqtt-broker/install/windows/windows.md{% endcapture %}
 
-{% include content-toggle.html content-toggle-id="tbmqGettingStartedInstallation" toggle-spec=contenttogglespec %}
+{% include content-toggle.html content-toggle-id="st-rmqttGettingStartedInstallation" toggle-spec=contenttogglespec %}
 
 ### Installing MQTT WebSocket client
 
@@ -108,7 +108,7 @@ We suggest consulting the [MQTT.js documentation](https://github.com/mqttjs/MQTT
 subscribing to topics, and publishing messages with this library.
 
 {% capture difference %}
-**Note**: The username 'tbmq_websockets_username' corresponds to the default MQTT client credentials integrated into the system, 
+**Note**: The username 'st-rmqtt_websockets_username' corresponds to the default MQTT client credentials integrated into the system, 
 specifically tailored for WebSocket client functionality.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
@@ -122,8 +122,8 @@ const message = 'Hello World';
 
 const options = {
     clean: true,
-    clientId: 'tbmq_websockets_client_id',
-    username: 'tbmq_websockets_username',
+    clientId: 'st-rmqtt_websockets_client_id',
+    username: 'st-rmqtt_websockets_username',
     password: null
 };
 
@@ -174,7 +174,7 @@ node ws_example.js
 ```
 {: .copy-code}
 
-The provided example establishes a WebSocket client, connecting it to TBMQ. 
+The provided example establishes a WebSocket client, connecting it to ST-RMQTT. 
 Upon successful connection, the client subscribes to the 'sensors/temperature' topic. 
 Following a successful subscription, the client publishes a message to the same topic. 
 Subsequently, upon receiving this message, the client disconnects, effectively closing the connection.
@@ -247,16 +247,16 @@ Moreover, you can utilize the [WebSocket client](/docs/{{docsPrefix}}mqtt-broker
 The URL `ws://localhost:8084/mqtt` is composed of several components, as detailed below:
 
 * **ws://**: This specifies the WebSocket protocol scheme. It can be either **ws** for unencrypted connections or **wss** for encrypted connections.
-* **localhost**: Refers to the hostname of the local machine where the TBMQ is running. This can be replaced with a DNS hostname if applicable.
+* **localhost**: Refers to the hostname of the local machine where the ST-RMQTT is running. This can be replaced with a DNS hostname if applicable.
 * **8084**: Indicates the port number on which the WebSocket server is listening for incoming connections.
-* **/mqtt**: This is the required path used by TBMQ for MQTT over WebSocket. The choice of '/mqtt' for the path is based on the MQTT specification.
+* **/mqtt**: This is the required path used by ST-RMQTT for MQTT over WebSocket. The choice of '/mqtt' for the path is based on the MQTT specification.
 
 ### MQTT over WebSocket Secure (WSS)
 
-Using MQTT over WebSocket Secure (WSS) in TBMQ offers enhanced security for your data. 
+Using MQTT over WebSocket Secure (WSS) in ST-RMQTT offers enhanced security for your data. 
 It encrypts communication, making sure that information sent between devices and the broker is protected from unauthorized access.
 
-When using MQTT over WebSocket Secure in TBMQ, it's crucial to understand the difference between certificates signed by well-known Certificate Authorities (CAs) and self-signed certificates. 
+When using MQTT over WebSocket Secure in ST-RMQTT, it's crucial to understand the difference between certificates signed by well-known Certificate Authorities (CAs) and self-signed certificates. 
 Certificates signed by well-known CAs offer a higher level of trust and are widely recognized by clients and browsers. 
 This makes them ideal for public-facing applications, as they assure users that the connection is secure and the server is authenticated by a trusted authority.
 
@@ -270,7 +270,7 @@ This step is essential for [WebSocket client](/docs/{{docsPrefix}}mqtt-broker/us
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-In summary, for maximum security and user trust in TBMQ, it's best to use certificates signed by well-known CAs for public deployments, 
+In summary, for maximum security and user trust in ST-RMQTT, it's best to use certificates signed by well-known CAs for public deployments, 
 while self-signed certificates are suitable for internal or development environments.
 
 Two-way authentication, also known as mutual TLS/SSL authentication, involves both the client and the server verifying each other's identity through certificate chains. 
@@ -298,7 +298,7 @@ with the client certificate Common Name (CN) specified. Refer to [this guide](/d
 Replace `example.com` with your actual DNS and replace `/path/to/your/client/key/file.pem`, `/path/to/your/client/cert/file.pem`,
 and `/path/to/your/ca/cert/file.pem` with the respective paths to your certificate files.
 
-Alternatively, if you prefer to authenticate via 'Basic' credentials (one-way auth) in the example below, you can set options.username to 'tbmq_websockets_username' instead of 'null'.
+Alternatively, if you prefer to authenticate via 'Basic' credentials (one-way auth) in the example below, you can set options.username to 'st-rmqtt_websockets_username' instead of 'null'.
 Additionally, you'll need to comment out lines where options are set, such as 'options.key', 'options.cert', and any other related to client certificate lines.
 
 ```javascript
@@ -316,7 +316,7 @@ const caFile = '/path/to/your/ca/cert/file.pem';
 
 const options = {
   clean: true,
-  clientId: 'tbmq_websockets_client_id',
+  clientId: 'st-rmqtt_websockets_client_id',
   username: null,
   password: null
 };

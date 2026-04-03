@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
 title: Provisioning devices
-description: IoT device management using ThingsBoard provisioning devices feature
+description: IoT device management using SENTIENT provisioning devices feature
 deviceProfileConfiguration:
     0:
         image: /images/user-guide/device-provisioning/device-provisioning-step-1.png 

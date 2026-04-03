@@ -38,7 +38,7 @@ adding-devices-1:
         title: 'Select CSV delimiter and click "Continue";'
     3:
         image: /images/user-guide/advanced-guides-for-working-with-dashboard/lesson-1/adding-devices-4-pe.png
-        title: 'Map the data between the columns of the uploaded file and the data types in the ThingsBoard platform. Click "Continue";'
+        title: 'Map the data between the columns of the uploaded file and the data types in the SENTIENT platform. Click "Continue";'
     4:
         image: /images/user-guide/advanced-guides-for-working-with-dashboard/lesson-1/adding-devices-5-pe.png
         title: 'Finally, click "OK";'

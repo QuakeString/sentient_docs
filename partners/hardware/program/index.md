@@ -10,7 +10,7 @@ description:
 
 <div id="partner-intro">
   <p>
-    ThingsBoard helps you to sell your devices by enabling interactive visualization and control of your device behavior for specific IoT use case. As a hardware manufacturer, you benefit from marketing exposure to thousands of system integrator companies that use the ThingsBoard platform as a basis for their solutions.
+    SENTIENT helps you to sell your devices by enabling interactive visualization and control of your device behavior for specific IoT use case. As a hardware manufacturer, you benefit from marketing exposure to thousands of system integrator companies that use the SENTIENT platform as a basis for their solutions.
   </p>
 </div>
 
@@ -33,25 +33,25 @@ description:
       </thead>
       <tbody>
         <tr>
-          <th>Partner name and logo on ThingsBoard website</th>
+          <th>Partner name and logo on SENTIENT website</th>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
         </tr>
         <tr>
-          <th>Online tutorial how to connect and use your devices with ThingsBoard prepared by Partner</th>
+          <th>Online tutorial how to connect and use your devices with SENTIENT prepared by Partner</th>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
         </tr>
         <tr>
-          <th>Online tutorial how to connect and use your devices with ThingsBoard prepared by ThingsBoard</th>
+          <th>Online tutorial how to connect and use your devices with SENTIENT prepared by SENTIENT</th>
           <td>optional *</td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
         </tr>
         <tr>
-          <th>Ability to use ThingsBoard Connected logo on partner website</th>
+          <th>Ability to use SENTIENT Connected logo on partner website</th>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
@@ -87,19 +87,19 @@ description:
           <td>optional *</td>
         </tr>
         <tr>
-          <th>ThingsBoard Roadmap and early-access to pre-release features</th>
+          <th>SENTIENT Roadmap and early-access to pre-release features</th>
           <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
           <td><img src="/images/pe/checked.svg" alt="unchecked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
         </tr>      
         <tr>
-          <th>ThingsBoard Trainings</th>
+          <th>SENTIENT Trainings</th>
           <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
         </tr>    
         <tr>
-          <th>ThingsBoard Cluster and Infrastructure planning for production workloads</th>
+          <th>SENTIENT Cluster and Infrastructure planning for production workloads</th>
           <td><img src="/images/pe/unchecked.svg" alt="unchecked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
           <td><img src="/images/pe/checked.svg" alt="checked"></td>
@@ -117,7 +117,7 @@ description:
           <td><img src="/images/pe/checked.svg" alt="checked">***</td>
         </tr>
         <tr>
-          <th>Demo dashboard development by ThingsBoard</th>
+          <th>Demo dashboard development by SENTIENT</th>
           <td>optional*</td>
           <td>5 hours</td>
           <td>20 hours</td>
@@ -139,7 +139,7 @@ description:
 	</main>
   <p class="table-description">
     * - Additional fees may apply
-    <br>** - Tenant administrator account on ThingsBoard PE instance deployed in the cloud and dedicated to PoCs and Sales demos (partner.thingsboard.io)
+    <br>** - Tenant administrator account on SENTIENT Professional Edition instance deployed in the cloud and dedicated to PoCs and Sales demos (partner.docs.sentient.invenia.in)
     <br>*** - Custom logos, color schemes, login pages, translations and domains on a system, tenant and customer levels
   </p>
 </section>
@@ -151,21 +151,21 @@ description:
     <div class="item" data-tag="h4" data-title="Who is eligible to become a Hardware Partner?">
       <div class="container">
         <p>
-          We welcome hardware manufacturers and hardware reseller companies to become ThingsBoard Partners. 
+          We welcome hardware manufacturers and hardware reseller companies to become SENTIENT Partners. 
         </p>
       </div>
     </div>
     <div class="item" data-tag="h4" data-title="Why should I become a Hardware Partner?">
       <div class="container">
         <p>
-          You will be listed on ThingsBoard website and become visible to exisiting and new ThingsBoard users which drives new business opportunities. Becides, you will get access to ThingsBoard Partner Portal where you can connect your device to the cloud and use this portal for demonstration and sales purposes.
+          You will be listed on SENTIENT website and become visible to exisiting and new SENTIENT users which drives new business opportunities. Becides, you will get access to SENTIENT Partner Portal where you can connect your device to the cloud and use this portal for demonstration and sales purposes.
         </p>
       </div>
     </div>
     <div class="item" data-tag="h4" data-title="Are there fees to becoming a Hardware Partner?">
       <div class="container">
         <p>
-          There are three different partnership levels listed above. Silver Partnership does not require any fees but assumes you have basic ThingsBoard knowledge and will prepare the online tutorial and demo dashboard on your own. Gold and Platinum Partnership levels introduce yearly fees and thus include our support services and help with preparing online tutorials and dashboards.
+          There are three different partnership levels listed above. Silver Partnership does not require any fees but assumes you have basic SENTIENT knowledge and will prepare the online tutorial and demo dashboard on your own. Gold and Platinum Partnership levels introduce yearly fees and thus include our support services and help with preparing online tutorials and dashboards.
         </p>
       </div>
     </div>
@@ -187,9 +187,9 @@ description:
     <div class="item" data-tag="h4" data-title="How to connect my LoRaWAN device?">
       <div class="container">
         <p>
-          ThingsBoard supports <a href="/docs/user-guide/integrations/" target="blank">integrations</a> with popular LoRaWAN network servers like <a href="/docs/user-guide/integrations/thingpark/" target="blank">Actility ThingPark</a> and <a href="/docs/user-guide/integrations/ttn/" target="blank">TheThingsNetwork</a>.
+          SENTIENT supports <a href="/docs/user-guide/integrations/" target="blank">integrations</a> with popular LoRaWAN network servers like <a href="/docs/user-guide/integrations/thingpark/" target="blank">Actility ThingPark</a> and <a href="/docs/user-guide/integrations/ttn/" target="blank">TheThingsNetwork</a>.
           You can also use some generic integrations like <a href="/docs/user-guide/integrations/http/" target="blank">HTTP</a> or <a href="/docs/user-guide/integrations/mqtt/" target="blank">MQTT</a>.
-          Once you stream data from your device to ThingsBoard, one will need to create a data converter to parse binary payload and extract meaningful information from the payload.
+          Once you stream data from your device to SENTIENT, one will need to create a data converter to parse binary payload and extract meaningful information from the payload.
           We will be able to assist you and answer possible questions, or even create the converters for you.
         </p>
       </div>
@@ -197,7 +197,7 @@ description:
     <div class="item" data-tag="h4" data-title="How to connect my Sigfox device?">
       <div class="container">
         <p>
-          ThingsBoard supports <a href="/docs/user-guide/integrations/sigfox/" target="blank">Sigfox</a> integration. Once you stream data from your Sigfox backend to ThingsBoard, one will need to create a data converter to parse binary payload and extract meaningful information from the payload. We will be able to assist you and answer possible questions, or even create the converters for you.
+          SENTIENT supports <a href="/docs/user-guide/integrations/sigfox/" target="blank">Sigfox</a> integration. Once you stream data from your Sigfox backend to SENTIENT, one will need to create a data converter to parse binary payload and extract meaningful information from the payload. We will be able to assist you and answer possible questions, or even create the converters for you.
         </p>
       </div>
     </div>

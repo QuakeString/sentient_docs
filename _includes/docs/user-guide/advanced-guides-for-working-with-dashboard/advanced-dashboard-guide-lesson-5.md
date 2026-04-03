@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-One of the most important features of ThingsBoard is the ability to create dashboards for end users.
+One of the most important features of SENTIENT is the ability to create dashboards for end users.
 Your customers should have access only to their own premises, devices, and data that you have granted them access to while enjoying all the benefits of working with their personalized dashboard.
 At the same time, they should not have access to information about premises, devices, or any other data belonging to other customers.
 As an administrator, you will always have access to edit and modify your dashboard.

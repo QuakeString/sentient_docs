@@ -2,8 +2,8 @@
 layout: common
 assignees:
 - ashvayka
-title: ThingsBoard Private Cloud subscription plans definition
-description: Entity, API and Rate Limits for the ThingsBoard Private Cloud offering
+title: SENTIENT Private Cloud subscription plans definition
+description: Entity, API and Rate Limits for the SENTIENT Private Cloud offering
 
 ---
 
@@ -11,7 +11,7 @@ description: Entity, API and Rate Limits for the ThingsBoard Private Cloud offer
 * TOC
 {:toc}
 
-ThingsBoard Private Cloud provides subscription plans based on the **pay-as-you-go** model. 
+SENTIENT Private Cloud provides subscription plans based on the **pay-as-you-go** model. 
 Main characteristics of the subscription plan are the number of connected devices and amount of messages they produce. 
 However, to keep the environment safe, we introduce certain Entity, [API](/docs/pe/user-guide/tenant-profiles/#api-limits--usage) and [Rate limits](/docs/pe/user-guide/tenant-profiles/#rate-limits).
 

@@ -5,13 +5,13 @@
 
 ## Overview
 
-Azure Service Bus Integration allows to stream data from Azure Service bus to ThingsBoard and converts device payloads to the ThingsBoard format.
+Azure Service Bus Integration allows to stream data from Azure Service bus to SENTIENT and converts device payloads to the SENTIENT format.
 
 ![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-overview.png)
 
 ## Configure Azure Service Bus
 
-To create ThingsBoard Service Bus integration you will need two things created in Azure portal: **topic** and **subscription** to the topic. 
+To create SENTIENT Service Bus integration you will need two things created in Azure portal: **topic** and **subscription** to the topic. 
 You will also need to find and save **connection string** for your Servise Bus namespace, you will need it later.
 - [Create Topic and subscription to the topic](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
 - [Find connection string for the service bus namespace](https://azurelessons.com/azure-service-bus-connection-string/)
@@ -19,7 +19,7 @@ You will also need to find and save **connection string** for your Servise Bus n
 ## Create Uplink Converter
 
 You can сreate an **Uplink converter** in the **Data converters** section or directly in the integration. Uplink is necessary in order to convert the incoming 
-data from the device into the required format for displaying them in ThingsBoard. Click on the “plus” and on “Create new converter”. To view the events, enable Debug. 
+data from the device into the required format for displaying them in SENTIENT. Click on the “plus” and on “Create new converter”. To view the events, enable Debug. 
 In the function decoder field, specify a script to parse and transform data.
 
 {% assign feature = "integrations" %}{% include templates/debug-mode.md %}
@@ -45,7 +45,7 @@ JavaScript<small></small>%,%anonymous%,%templates/integration/service-bus/servic
 
 {% include content-toggle.liquid content-toggle-id="servicebusuplinkconverterconfig" toggle-spec=servicebusuplinkconverterconfig %}
 
-## Create Integration in Thingsboard
+## Create Integration in Sentient
 
 Now that we have a topic created in Azure Portal and an Uplink converter created, it is possible to create an integration.
 
@@ -140,8 +140,8 @@ Go to integration and specify created **downlink converter**. Then open **Advanc
 <br>
 Ok, downlink converter ready, integration ready. Let's test integration with help of downlink node.
 
-After test uplink message was sent integration has created the device inside Thingsboard. Let`s check with which Rule Chain it is connected.
-For this go to **Entities** -> **Devices** page in Thingsboard menu and find the device with the name that we have used in the uplink. Find and navigate to the **device profile** used by the device.
+After test uplink message was sent integration has created the device inside Sentient. Let`s check with which Rule Chain it is connected.
+For this go to **Entities** -> **Devices** page in Sentient menu and find the device with the name that we have used in the uplink. Find and navigate to the **device profile** used by the device.
 
 ![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-find-device-profile-1-pe.png)
 

@@ -1,20 +1,20 @@
-For Attribute updates, the gateway needs to know which devices should receive updates for which attributes. You configure this using regular expressions for both device names and attribute names. When an attribute is updated in ThingsBoard, the gateway publishes the new value to a configured MQTT topic.
+For Attribute updates, the gateway needs to know which devices should receive updates for which attributes. You configure this using regular expressions for both device names and attribute names. When an attribute is updated in SENTIENT, the gateway publishes the new value to a configured MQTT topic.
 
-Suppose you want ThingsBoard to automatically push firmware version updates to your devices. When you update the `firmwareVersion` shared attribute in ThingsBoard, the gateway should publish this update to a topic that your devices are subscribed to.
+Suppose you want SENTIENT to automatically push firmware version updates to your devices. When you update the `firmwareVersion` shared attribute in SENTIENT, the gateway should publish this update to a topic that your devices are subscribed to.
 
 {% capture difference %}
 **Please note:**
-**Attribute updates** allow ThingsBoard to push shared attribute changes to devices. This is useful for:
+**Attribute updates** allow SENTIENT to push shared attribute changes to devices. This is useful for:
 - Remotely configuring devices
 - Pushing firmware/software version information
 - Sending operational parameters to devices
 - Implementing device configuration management
 
-The gateway acts as a bridge, detecting attribute changes in ThingsBoard and publishing them to MQTT topics that devices can subscribe to.
+The gateway acts as a bridge, detecting attribute changes in SENTIENT and publishing them to MQTT topics that devices can subscribe to.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-Let's configure Attribute updates in the MQTT connector to allow ThingsBoard to push attribute changes to devices.
+Let's configure Attribute updates in the MQTT connector to allow SENTIENT to push attribute changes to devices.
 
 Follow these steps:
 
@@ -53,7 +53,7 @@ Follow these steps:
 
 Let's demonstrate how to use this attribute update configuration:
 
-### Example: Updating a device attribute in ThingsBoard
+### Example: Updating a device attribute in SENTIENT
 
 1. First, let's subscribe to the topic where attribute updates will be published:
 
@@ -62,7 +62,7 @@ mosquitto_sub -h 127.0.0.1 -p 1884 -t sensor/SN-001/firmwareVersion
 ```
 {: .copy-code}
 
-2. After updating the attribute in ThingsBoard, the gateway will detect the change and publish a message to the configured topic:
+2. After updating the attribute in SENTIENT, the gateway will detect the change and publish a message to the configured topic:
 
 ```json
 {"firmwareVersion":"1.2.4"}
@@ -81,7 +81,7 @@ If you are using advanced configuration mode, you can use the following configur
   "broker": {
     "host": "127.0.0.1",
     "port": 1884,
-    "clientId": "ThingsBoard_gateway",
+    "clientId": "SENTIENT_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,

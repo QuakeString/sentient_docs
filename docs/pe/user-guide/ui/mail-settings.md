@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Mail server configuration
-description: ThingsBoard IoT platform mail settings
+description: SENTIENT IoT platform mail settings
 
 mail-server-configuration-1:
     0:

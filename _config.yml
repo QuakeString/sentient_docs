@@ -1,19 +1,19 @@
-title: ThingsBoard
-name: ThingsBoard
-author: thingsboard
-logo: /images/thingsboard_logo.png
-url: https://thingsboard.io
+title: SENTIENT
+name: SENTIENT
+author: sentient
+logo: /images/sentient_logo.png
+url: https://docs.sentient.invenia.in
 
 twitter:
-  username: thingsboard
+  username: sentient
 
 social:
-  name: ThingsBoard
+  name: SENTIENT
   links:
-    - https://twitter.com/thingsboard
-    - https://github.com/thingsboard/thingsboard
-    - https://www.facebook.com/thingsboard
-    - https://www.youtube.com/channel/thingsboard
+    - https://twitter.com/sentient
+    - https://github.com/quakestring/sentient
+    - https://www.facebook.com/sentient
+    - https://www.youtube.com/channel/sentient
 
 seo:
   type: WebSite
@@ -56,9 +56,9 @@ defaults:
       path: ""
     values:
       image:
-        path: /images/thingsboard_logo.png
-        twitter: /images/thingsboard_logo.png
-        facebook: /images/thingsboard_logo.png
+        path: /images/sentient_logo.png
+        twitter: /images/sentient_logo.png
+        facebook: /images/sentient_logo.png
       version: "v1.0"
       githubbranch: "master"
       docsbranch: "master"
@@ -107,9 +107,9 @@ release:
   pe_flutter_app_ver: 1.8.0
   ce_dart_client_ver: 4.1.0
   pe_dart_client_ver: 4.1.0
-  # >>> TBMQ
+  # >>> ST-RMQTT
   broker_full_ver: 2.2.0
   broker_branch: release-2.2.0
   pe_broker_full_ver: 2.2.0PE
-  # <<< TBMQ
+  # <<< ST-RMQTT
   trendz_ver: 1.15.0.4

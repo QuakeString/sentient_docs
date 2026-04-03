@@ -1,7 +1,7 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: Upgrade instructions
-description: ThingsBoard Trendz Analytics upgrade instructions
+description: SENTIENT SENTIENT ANALYTICS upgrade instructions
 
 ---
 
@@ -193,7 +193,7 @@ description: ThingsBoard Trendz Analytics upgrade instructions
                   <a href="#windows-180" id="markdown-toc-windows-180">Windows</a>        
               </li>
               <li>
-                <a href="#tb_widget_bundle-180" id="markdown-toc-tb_widget_bundle-180">Widget Bundle for ThingsBoard</a>        
+                <a href="#tb_widget_bundle-180" id="markdown-toc-tb_widget_bundle-180">Widget Bundle for SENTIENT</a>        
               </li>
           </ul>
         </li> 
@@ -207,7 +207,7 @@ description: ThingsBoard Trendz Analytics upgrade instructions
               <a href="#windows-170" id="markdown-toc-windows-170">Windows</a>        
           </li>
           <li>
-            <a href="#tb_widget_bundle-170" id="markdown-toc-tb_widget_bundle-170">Widget Bundle for ThingsBoard</a>        
+            <a href="#tb_widget_bundle-170" id="markdown-toc-tb_widget_bundle-170">Widget Bundle for SENTIENT</a>        
           </li>
       </ul>
     </li>  
@@ -243,7 +243,7 @@ description: ThingsBoard Trendz Analytics upgrade instructions
               <a href="#windows-150" id="markdown-toc-windows-150">Windows</a>        
           </li>
           <li>
-            <a href="#tb_widget_bundle-150" id="markdown-toc-tb_widget_bundle-150">Widget Bundle for ThingsBoard</a>        
+            <a href="#tb_widget_bundle-150" id="markdown-toc-tb_widget_bundle-150">Widget Bundle for SENTIENT</a>        
           </li>
       </ul>
   </li>          
@@ -273,709 +273,709 @@ description: ThingsBoard Trendz Analytics upgrade instructions
 
 ## Upgrading to 1.15.0
 
-These steps are applicable for 1.14.0 Trendz Analytics version.
+These steps are applicable for 1.14.0 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-1150}
 
 {% capture tb_3_7_0_upgrade_note %}
-**Important note before upgrading to Trendz 1.15.0**
+**Important note before upgrading to SENTIENT ANALYTICS 1.15.0**
 
-If you are using Trendz behind **HAProxy**, make sure that the paths **`/trendz/`** and **`/apiTrendz/`** are routed to 
-the Trendz backend instead of **`/trendz`** and **`/apiTrendz`**. 
+If you are using SENTIENT ANALYTICS behind **HAProxy**, make sure that the paths **`/sentient-analytics/`** and **`/apiSENTIENT ANALYTICS/`** are routed to 
+the SENTIENT ANALYTICS backend instead of **`/sentient-analytics`** and **`/apiSENTIENT ANALYTICS`**. 
 
-Additionally, we highly recommend adding Trendz to the **ThingsBoard HAProxy configuration** so that Trendz is accessible from the **same domain as ThingsBoard**.
+Additionally, we highly recommend adding SENTIENT ANALYTICS to the **SENTIENT HAProxy configuration** so that SENTIENT ANALYTICS is accessible from the **same domain as SENTIENT**.
 
 {% endcapture %}
 {% include templates/warn-banner.md content=tb_3_7_0_upgrade_note %}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-15-0
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.15.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.15.0/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.15.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.15.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-15-0
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.15.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.15.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.15.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.15.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-15-0
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.15.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.15.0/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.15.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.15.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-15-0
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.15.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.15.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.15.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.15.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
-#### Sync Trendz with ThingsBoard
+#### Sync SENTIENT ANALYTICS with SENTIENT
 
-After upgrade, it's necessary to sync Trendz with ThingsBoard. You can find out how to do it [here](/docs/trendz/install/ubuntu#step-6-sync-thingsboard-with-trendz).
+After upgrade, it's necessary to sync SENTIENT ANALYTICS with SENTIENT. You can find out how to do it [here](/docs/sentient-analytics/install/ubuntu#step-6-sync-sentient-with-sentient-analytics).
 
 ### Windows {#windows-1150}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.15.0.zip](https://dist.thingsboard.io/trendz-windows-1.15.0.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.15.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.15.0.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.14.0
+C:\sentient-analytics>upgrade.bat --fromVersion=1.14.0
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
-#### Sync Trendz with ThingsBoard
+#### Sync SENTIENT ANALYTICS with SENTIENT
 
-After upgrade, it's necessary to sync Trendz with ThingsBoard. You can find out how to do it [here](/docs/trendz/install/windows#step-6-sync-thingsboard-with-trendz).
+After upgrade, it's necessary to sync SENTIENT ANALYTICS with SENTIENT. You can find out how to do it [here](/docs/sentient-analytics/install/windows#step-6-sync-sentient-with-sentient-analytics).
 
 ## Upgrading to 1.14.0
 
-These steps are applicable for 1.13.2 Trendz Analytics version.
-**Note:** after upgrading to the latest version it is required to update Trendz widget bundle in ThingsBoard.
-You can find detailed instructions how to do that via Trendz UI in [Trendz Widget Bundle upgrade](/docs/trendz/post-installation-steps/#trendz-widget-bundle) article.
+These steps are applicable for 1.13.2 SENTIENT ANALYTICS version.
+**Note:** after upgrading to the latest version it is required to update SENTIENT ANALYTICS widget bundle in SENTIENT.
+You can find detailed instructions how to do that via SENTIENT ANALYTICS UI in [SENTIENT ANALYTICS Widget Bundle upgrade](/docs/sentient-analytics/post-installation-steps/#sentient-analytics-widget-bundle) article.
 
 ### Ubuntu/CentOS {#ubuntucentos-1140}
 
 {% capture tb_3_7_0_upgrade_note %}
-**Important note before upgrading to Trendz 1.14.0**
+**Important note before upgrading to SENTIENT ANALYTICS 1.14.0**
 
-From version 1.14.0, python calculation fields and prediction models could be utilized only using Trendz Python Executor
+From version 1.14.0, python calculation fields and prediction models could be utilized only using SENTIENT ANALYTICS Python Executor
 service which can be used only inside the docker.
 
-If you are already using Trendz Python Executor via Docker, it's necessary to update it to version 1.14.0 before Trendz update.
-You can find detailed instructions on how to do that [here](/docs/trendz/install/python-executor-configuration/#how-to-migrate-trendz-python-executor-1132-to-trendz-python-executor-1140).
+If you are already using SENTIENT ANALYTICS Python Executor via Docker, it's necessary to update it to version 1.14.0 before SENTIENT ANALYTICS update.
+You can find detailed instructions on how to do that [here](/docs/sentient-analytics/install/python-executor-configuration/#how-to-migrate-sentient-analytics-python-executor-1132-to-sentient-analytics-python-executor-1140).
 
 If you were not using Python Executor before, you need to install it via Docker. 
-You can find detailed instructions on how to do that [here](/docs/trendz/install/python-executor-configuration/#python-executor-standalone-installation).
+You can find detailed instructions on how to do that [here](/docs/sentient-analytics/install/python-executor-configuration/#python-executor-standalone-installation).
 {% endcapture %}
 {% include templates/warn-banner.md content=tb_3_7_0_upgrade_note %}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-14-0
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.14.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.14.0/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.14.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.14.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-14-0
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.14.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.14.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.14.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.14.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-14-0
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.14.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.14.0/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.14.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.14.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-14-0
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.14.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.14.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.14.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.14.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.13.2
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.13.2
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1140}
 
 {% capture tb_3_7_0_upgrade_note %}
-**Important note before upgrading to Trendz 1.14.0**
+**Important note before upgrading to SENTIENT ANALYTICS 1.14.0**
 
-From version 1.14.0, python calculation fields and prediction models could be utilized only using Trendz Python Executor
+From version 1.14.0, python calculation fields and prediction models could be utilized only using SENTIENT ANALYTICS Python Executor
 service which can be used only inside the docker.
 
-If you are already using Trendz Python Executor via Docker, it's necessary to update it to version 1.14.0 before Trendz update.
-You can find detailed instructions on how to do that [here](/docs/trendz/install/python-executor-configuration/#how-to-migrate-trendz-python-executor-1132-to-trendz-python-executor-1140).
+If you are already using SENTIENT ANALYTICS Python Executor via Docker, it's necessary to update it to version 1.14.0 before SENTIENT ANALYTICS update.
+You can find detailed instructions on how to do that [here](/docs/sentient-analytics/install/python-executor-configuration/#how-to-migrate-sentient-analytics-python-executor-1132-to-sentient-analytics-python-executor-1140).
 
 If you were not using Python Executor before, you need to install it via Docker.
-You can find detailed instructions on how to do that [here](/docs/trendz/install/python-executor-configuration/#python-executor-standalone-installation).
+You can find detailed instructions on how to do that [here](/docs/sentient-analytics/install/python-executor-configuration/#python-executor-standalone-installation).
 {% endcapture %}
 {% include templates/warn-banner.md content=tb_3_7_0_upgrade_note %}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.14.0.zip](https://dist.thingsboard.io/trendz-windows-1.14.0.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.14.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.14.0.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.13.2
+C:\sentient-analytics>upgrade.bat --fromVersion=1.13.2
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.13.2
 
-These steps are applicable for 1.13.1 Trendz Analytics version.
-**Note:** after upgrading to the latest version it is required to update Trendz widget bundle in ThingsBoard.
-You can find detailed instructions how to do that via Trendz UI in [Trendz Widget Bundle upgrade](/docs/trendz/post-installation-steps/#trendz-widget-bundle) article.
+These steps are applicable for 1.13.1 SENTIENT ANALYTICS version.
+**Note:** after upgrading to the latest version it is required to update SENTIENT ANALYTICS widget bundle in SENTIENT.
+You can find detailed instructions how to do that via SENTIENT ANALYTICS UI in [SENTIENT ANALYTICS Widget Bundle upgrade](/docs/sentient-analytics/post-installation-steps/#sentient-analytics-widget-bundle) article.
 
 
 ### Ubuntu/CentOS {#ubuntucentos-1132}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-13-2
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.2/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.13.2/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.13.2/trendz-centos-download.sh,/docs/user-guide/install/resources/1.13.2/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-13-2
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.2/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.13.2/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.13.2/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.13.2/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-13-2
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.2/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.13.2/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.13.2/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.13.2/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-13-2
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.2/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.13.2/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.13.2/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.13.2/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.13.1
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.13.1
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1132}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.13.2.zip](https://dist.thingsboard.io/trendz-windows-1.13.2.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.13.2.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.13.2.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.13.1
+C:\sentient-analytics>upgrade.bat --fromVersion=1.13.1
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 
 ## Upgrading to 1.13.1
 
-These steps are applicable for 1.13.0 Trendz Analytics version.
-**Note:** after upgrading to the latest version it is required to update Trendz widget bundle in ThingsBoard.
-You can find detailed instructions how to do that via Trendz UI in [Trendz Widget Bundle upgrade](/docs/trendz/post-installation-steps/#trendz-widget-bundle) article.
+These steps are applicable for 1.13.0 SENTIENT ANALYTICS version.
+**Note:** after upgrading to the latest version it is required to update SENTIENT ANALYTICS widget bundle in SENTIENT.
+You can find detailed instructions how to do that via SENTIENT ANALYTICS UI in [SENTIENT ANALYTICS Widget Bundle upgrade](/docs/sentient-analytics/post-installation-steps/#sentient-analytics-widget-bundle) article.
 
 
 ### Ubuntu/CentOS {#ubuntucentos-1131}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-13-1
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.1/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.13.1/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.13.1/trendz-centos-download.sh,/docs/user-guide/install/resources/1.13.1/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-13-1
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.1/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.13.1/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.13.1/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.13.1/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-13-1
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.1/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.13.1/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.13.1/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.13.1/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-13-1
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.1/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.13.1/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.13.1/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.13.1/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.13.0
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.13.0
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1131}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.13.1.zip](https://dist.thingsboard.io/trendz-windows-1.13.1.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.13.1.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.13.1.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.13.0
+C:\sentient-analytics>upgrade.bat --fromVersion=1.13.0
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.13.0
 
-These steps are applicable for 1.12.0 Trendz Analytics version.
-**Note:** after upgrading to the latest version it is required to update Trendz widget bundle in ThingsBoard. 
-You can find detailed instructions how to do that via Trendz UI in [Trendz Widget Bundle upgrade](/docs/trendz/post-installation-steps/#trendz-widget-bundle) article.
+These steps are applicable for 1.12.0 SENTIENT ANALYTICS version.
+**Note:** after upgrading to the latest version it is required to update SENTIENT ANALYTICS widget bundle in SENTIENT. 
+You can find detailed instructions how to do that via SENTIENT ANALYTICS UI in [SENTIENT ANALYTICS Widget Bundle upgrade](/docs/sentient-analytics/post-installation-steps/#sentient-analytics-widget-bundle) article.
 
 
 ### Ubuntu/CentOS {#ubuntucentos-1130}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-13-0
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.13.0/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.13.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.13.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-13-0
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.13.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.13.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.13.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-13-0
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.13.0/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.13.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.13.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-13-0
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.13.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.13.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.13.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.13.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.12.0
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.12.0
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1130}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.13.0.zip](https://dist.thingsboard.io/trendz-windows-1.13.0.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.13.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.13.0.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.12.0
+C:\sentient-analytics>upgrade.bat --fromVersion=1.12.0
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.12.0
 
-These steps are applicable for 1.11.2 Trendz Analytics version.
+These steps are applicable for 1.11.2 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-1120}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-12-0
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.12.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.12.0/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.12.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.12.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-12-0
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.12.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.12.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.12.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.12.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-12-0
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.12.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.12.0/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.12.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.12.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-12-0
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.12.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.12.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.12.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.12.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.11.2
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.11.2
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1120}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.12.0.zip](https://dist.thingsboard.io/trendz-windows-1.12.0.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.12.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.12.0.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.11.2
+C:\sentient-analytics>upgrade.bat --fromVersion=1.11.2
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.11.2
 
-These steps are applicable for 1.11.1 Trendz Analytics version.
+These steps are applicable for 1.11.1 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-1112}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-11-2
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.2/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.11.2/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.11.2/trendz-centos-download.sh,/docs/user-guide/install/resources/1.11.2/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-11-2
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.2/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.11.2/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.11.2/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.11.2/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-11-2
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.2/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.11.2/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.11.2/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.11.2/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-11-2
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.2/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.11.2/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.11.2/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.11.2/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.11.1
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.11.1
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1112}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.11.2.zip](https://dist.thingsboard.io/trendz-windows-1.11.2.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.11.2.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.11.2.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.11.1
+C:\sentient-analytics>upgrade.bat --fromVersion=1.11.1
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.11.1
 
-These steps are applicable for 1.11.0 Trendz Analytics version.
+These steps are applicable for 1.11.0 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-1111}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-11-1
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.1/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.11.1/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.11.1/trendz-centos-download.sh,/docs/user-guide/install/resources/1.11.1/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-11-1
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.1/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.11.1/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.11.1/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.11.1/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-11-1
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.1/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.11.1/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.11.1/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.11.1/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-11-1
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.1/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.11.1/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.11.1/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.11.1/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.11.0
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.11.0
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1111}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.11.1.zip](https://dist.thingsboard.io/trendz-windows-1.11.1.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.11.1.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.11.1.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.11.0
+C:\sentient-analytics>upgrade.bat --fromVersion=1.11.0
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.11.0
 
-These steps are applicable for 1.10.3 Trendz Analytics version.
+These steps are applicable for 1.10.3 SENTIENT ANALYTICS version.
 
 {% capture tb_3_7_0_upgrade_note %}
-**Important note before upgrading to Trendz 1.11.0**
+**Important note before upgrading to SENTIENT ANALYTICS 1.11.0**
 
-Trendz backend was migrated to Java 17. Install JDK 17 and ensure that system's default Java version is set to 17.
+SENTIENT ANALYTICS backend was migrated to Java 17. Install JDK 17 and ensure that system's default Java version is set to 17.
 
 Please refer to Step 1 of the corresponding installation guide for detailed instructions:
 
-[**Ubuntu**](/docs/trendz/install/ubuntu/#step-1-install-java-17-openjdk)
+[**Ubuntu**](/docs/sentient-analytics/install/ubuntu/#step-1-install-java-17-openjdk)
 
-[**CentOS/RHEL**](/docs/trendz/install/rhel/#step-1-install-java-17-openjdk)
+[**CentOS/RHEL**](/docs/sentient-analytics/install/rhel/#step-1-install-java-17-openjdk)
 
 {% endcapture %}
 {% include templates/warn-banner.md content=tb_3_7_0_upgrade_note %}
@@ -983,774 +983,774 @@ Please refer to Step 1 of the corresponding installation guide for detailed inst
 
 ### Ubuntu/CentOS {#ubuntucentos-1110}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-11-0
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.11.0/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.11.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.11.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-11-0
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.11.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.11.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.11.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-11-0
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.11.0/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.11.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.11.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-11-0
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.11.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.11.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.11.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.11.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.10.3
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.10.3
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1110}
 
 {% capture tb_3_7_0_upgrade_note %}
-**Important note before upgrading to Trendz 1.11.0**
+**Important note before upgrading to SENTIENT ANALYTICS 1.11.0**
 
-Trendz backend was migrated to Java 17. Install JDK 17 and ensure that system's default Java version is set to 17.
+SENTIENT ANALYTICS backend was migrated to Java 17. Install JDK 17 and ensure that system's default Java version is set to 17.
 
-Please refer to [**Step 1 of the installation guide**](/docs/trendz/install/windows/#step-1-install-java-17-openjdk) for detailed instructions.
+Please refer to [**Step 1 of the installation guide**](/docs/sentient-analytics/install/windows/#step-1-install-java-17-openjdk) for detailed instructions.
 
 {% endcapture %}
 {% include templates/warn-banner.md content=tb_3_7_0_upgrade_note %}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.11.0.zip](https://dist.thingsboard.io/trendz-windows-1.11.0.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.11.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.11.0.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.10.3
+C:\sentient-analytics>upgrade.bat --fromVersion=1.10.3
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.10.3-HF7
 
-These steps are applicable for 1.10.3 Trendz Analytics version.
+These steps are applicable for 1.10.3 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-1103-hf7}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-10-3-hf7
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.3-HF7/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.3-HF7/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.10.3-HF7/trendz-centos-download.sh,/docs/user-guide/install/resources/1.10.3-HF7/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-10-3-hf7
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.3-HF7/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.3-HF7/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.10.3-HF7/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.10.3-HF7/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-10-3-hf7
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.3-HF7/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.3/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.10.3-HF7/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.10.3/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-10-3-hf7
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.3-HF7/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.3/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.10.3-HF7/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.10.3/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.10.3
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.10.3
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1103-hf7}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.3-HF7.zip](https://dist.thingsboard.io/trendz-windows-1.10.3-HF7.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.10.3-HF7.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.10.3-HF7.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.10.3
+C:\sentient-analytics>upgrade.bat --fromVersion=1.10.3
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.10.3
 
-These steps are applicable for 1.10.2 Trendz Analytics version.
+These steps are applicable for 1.10.2 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-1103}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-10-3
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.3/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.3/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.10.3/trendz-centos-download.sh,/docs/user-guide/install/resources/1.10.3/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-10-3
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.3/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.3/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.10.3/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.10.3/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-10-2
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.3/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.3/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.10.3/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.10.3/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-10-2
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.3/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.3/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.10.3/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.10.3/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.10.2
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.10.2
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1103}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.3.zip](https://dist.thingsboard.io/trendz-windows-1.10.3.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.10.3.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.10.3.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.10.2
+C:\sentient-analytics>upgrade.bat --fromVersion=1.10.2
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.10.2
 
-In Trendz 1.10.2 we add support of Python script execution for calculated fields and custom prediction models. Python script support is an experimental feature that was included into the current release. 
-For usage in production installations we recommend to start Python executor as a [separate docker container](/docs/trendz/install/docker/#standalone-python-executor-service). However, it is also possible to execute Python scripts in monolithic Trendz installations. In that case this feature requires Python 3.8 to be [installed on the server same server with Trendz](/docs/trendz/install/ubuntu/#step-8-install-trendz-python-executor). 
+In SENTIENT ANALYTICS 1.10.2 we add support of Python script execution for calculated fields and custom prediction models. Python script support is an experimental feature that was included into the current release. 
+For usage in production installations we recommend to start Python executor as a [separate docker container](/docs/sentient-analytics/install/docker/#standalone-python-executor-service). However, it is also possible to execute Python scripts in monolithic SENTIENT ANALYTICS installations. In that case this feature requires Python 3.8 to be [installed on the server same server with SENTIENT ANALYTICS](/docs/sentient-analytics/install/ubuntu/#step-8-install-sentient-analytics-python-executor). 
 
-Please follow the steps below to upgrade your Trendz Analytics instance to 1.10.2 version. These steps are applicable for 1.10.1 Trendz Analytics version.
+Please follow the steps below to upgrade your SENTIENT ANALYTICS instance to 1.10.2 version. These steps are applicable for 1.10.1 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-1102}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-10-2
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.2/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.2/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.10.2/trendz-centos-download.sh,/docs/user-guide/install/resources/1.10.2/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-10-2
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.2/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.2/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.10.2/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.10.2/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-10-2
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.2/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.2/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.10.2/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.10.2/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-10-2
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.2/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.2/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.10.2/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.10.2/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.10.1
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.10.1
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1102}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.2.zip](https://dist.thingsboard.io/trendz-windows-1.10.2.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.10.2.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.10.2.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.10.1
+C:\sentient-analytics>upgrade.bat --fromVersion=1.10.1
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.10.1
 
-These steps are applicable for 1.10.0 Trendz Analytics version.
+These steps are applicable for 1.10.0 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-1101}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-10-1
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.1/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.1/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.10.1/trendz-centos-download.sh,/docs/user-guide/install/resources/1.10.1/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-10-1
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.1/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.1/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.10.1/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.10.1/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-10-1
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.1/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.1/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.10.1/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.10.1/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-10-1
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.1/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.1/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.10.1/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.10.1/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.10.0
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.10.0
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1101}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.1.zip](https://dist.thingsboard.io/trendz-windows-1.10.1.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.10.1.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.10.1.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.10.0
+C:\sentient-analytics>upgrade.bat --fromVersion=1.10.0
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
-#### Trendz Bundle update
-If you are using ThingsBoard v3.5.0 or higher, you alos need to update Trendz bundle in ThingsBoard to use correct Trendz library version in ThingsBoard. 
-Detailed instructions how to do that you can find in [this article](/docs/trendz/trendz-bundle/#thingsboard-35-blank-widget-with-error)
+#### SENTIENT ANALYTICS Bundle update
+If you are using SENTIENT v3.5.0 or higher, you alos need to update SENTIENT ANALYTICS bundle in SENTIENT to use correct SENTIENT ANALYTICS library version in SENTIENT. 
+Detailed instructions how to do that you can find in [this article](/docs/sentient-analytics/sentient-analytics-bundle/#sentient-35-blank-widget-with-error)
 
 ## Upgrading to 1.10.0
 
-These steps are applicable for 1.9.2 Trendz Analytics version.
+These steps are applicable for 1.9.2 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-1100}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-10-0
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.0/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.10.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.10.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-10-0
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.10.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.10.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.10.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service
+* Install latest SENTIENT ANALYTICS service
 
-{% capture tabspec %}trendz-installation-1-9-2
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.0/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.10.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.10.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-9-2
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.10.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.10.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.10.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.10.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.9.2
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.9.2
 ```   
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-1100}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.10.0-HF1.zip](https://dist.thingsboard.io/trendz-windows-1.10.0-HF1.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.10.0-HF1.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.10.0-HF1.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.9.2
+C:\sentient-analytics>upgrade.bat --fromVersion=1.9.2
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 
 ## Upgrading to 1.9.2-HF3
 
-These steps are applicable for 1.8.0, 1.8.1, 1.9.0, 1.9.1, 1.9.2 Trendz Analytics version.
+These steps are applicable for 1.8.0, 1.8.1, 1.9.0, 1.9.1, 1.9.2 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-192}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-9-2
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.9.2/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.9.2/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.9.2/trendz-centos-download.sh,/docs/user-guide/install/resources/1.9.2/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-9-2
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.9.2/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.9.2/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.9.2/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.9.2/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
-{% capture tabspec %}trendz-installation-1-9-2
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.9.2/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.9.2/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.9.2/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.9.2/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-9-2
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.9.2/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.9.2/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.9.2/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.9.2/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
   
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.8.0
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.8.0
 ```   
  
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-192}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.9.2.zip](https://dist.thingsboard.io/trendz-windows-1.9.2.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.9.2.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.9.2.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
  
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.8.0
+C:\sentient-analytics>upgrade.bat --fromVersion=1.8.0
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 
 ## Upgrading to 1.8.2
 
-These steps are applicable for 1.8.0 and 1.8.1 Trendz Analytics version.
+These steps are applicable for 1.8.0 and 1.8.1 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-182}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-8-2
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.8.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.8.0/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.8.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.8.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-8-2
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.8.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.8.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.8.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.8.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
-{% capture tabspec %}trendz-installation-1-8-0
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.8.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.8.0/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.8.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.8.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-8-0
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.8.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.8.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.8.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.8.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
   
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-182}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.8.2.zip](https://dist.thingsboard.io/trendz-windows-1.8.2.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.8.2.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.8.2.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
  
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.8.1
 
-These steps are applicable for 1.7.0 Trendz Analytics version.
+These steps are applicable for 1.7.0 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-180}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-8-0
-trendz-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.8.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.8.0/trendz-ubuntu-download.sh
-trendz-download-1-8-0-centos,CentOS,shell,resources/1.8.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.8.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-8-0
+sentient-analytics-download-1-8-0-ubuntu,Ubuntu,shell,resources/1.8.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.8.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-8-0-centos,CentOS,shell,resources/1.8.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.8.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
-{% capture tabspec %}trendz-installation-1-8-0
-trendz-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.8.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.8.0/trendz-ubuntu-installation.sh
-trendz-installation-1-8-0-centos,CentOS,shell,resources/1.8.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.8.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-8-0
+sentient-analytics-installation-1-8-0-ubuntu,Ubuntu,shell,resources/1.8.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.8.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-8-0-centos,CentOS,shell,resources/1.8.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.8.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
  
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.7.0
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.7.0
 ``` 
 {: .copy-code}
  
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-180}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.8.0.zip](https://dist.thingsboard.io/trendz-windows-1.8.0.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.8.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.8.0.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
  
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.7.0
+C:\sentient-analytics>upgrade.bat --fromVersion=1.7.0
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.7.0
 
-**Note** These steps are applicable for 1.5.0, 1.5.1 and 1.6.0 Trendz Analytics version.
+**Note** These steps are applicable for 1.5.0, 1.5.1 and 1.6.0 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-170}
 
 {% capture tb_3_0_1_postgreSQL_linux %}
-**Since Trendz Analytics 1.7.0 only PostgreSQL database is supported**  
+**Since SENTIENT ANALYTICS 1.7.0 only PostgreSQL database is supported**  
  - During upgrade all data would be migrated form in-memory database into PostgreSQL
  - Please install PostgreSQL database before proceeding upgrade procedure using the following guide:
-   - [PostgreSQL Installation on Ubuntu](/docs/trendz/install/ubuntu/#step-5-configure-trendz-database)
-   - [PostgreSQL Installation on CentOS/RHEL](/docs/trendz/install/rhel/#step-5-configure-trendz-database)
+   - [PostgreSQL Installation on Ubuntu](/docs/sentient-analytics/install/ubuntu/#step-5-configure-sentient-analytics-database)
+   - [PostgreSQL Installation on CentOS/RHEL](/docs/sentient-analytics/install/rhel/#step-5-configure-sentient-analytics-database)
 
 {% endcapture %}
 {% include templates/info-banner.md content=tb_3_0_1_postgreSQL_linux %}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-7-0
-trendz-download-1-7-0-ubuntu,Ubuntu,shell,resources/1.7.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.7.0/trendz-ubuntu-download.sh
-trendz-download-1-7-0-centos,CentOS,shell,resources/1.7.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.7.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-7-0
+sentient-analytics-download-1-7-0-ubuntu,Ubuntu,shell,resources/1.7.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.7.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-7-0-centos,CentOS,shell,resources/1.7.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.7.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Backup Trendz Analytics configuration files and database
+#### Backup SENTIENT ANALYTICS configuration files and database
 
-For creating backup of Trendz configuration files and data storage, execute following commands:
+For creating backup of SENTIENT ANALYTICS configuration files and data storage, execute following commands:
 
 ```bash
-cd /usr/share/trendz
+cd /usr/share/sentient-analytics
 sudo tar -zcvf trndz_data_old.tar.gz ./data
 sudo tar -zcvf trndz_conf_old.tar.gz ./conf
 ```
 {: .copy-code}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
-{% capture tabspec %}trendz-installation-1-7-0
-trendz-installation-1-7-0-ubuntu,Ubuntu,shell,resources/1.7.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.7.0/trendz-ubuntu-installation.sh
-trendz-installation-1-7-0-centos,CentOS,shell,resources/1.7.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.7.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-7-0
+sentient-analytics-installation-1-7-0-ubuntu,Ubuntu,shell,resources/1.7.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.7.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-7-0-centos,CentOS,shell,resources/1.7.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.7.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
-Please make sure that you set **SPRING_DATASOURCE_URL**, **SPRING_DATASOURCE_USERNAME** and **SPRING_DATASOURCE_PASSWORD** parameters value (in the file **/etc/trendz/conf/trendz.conf**) 
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+Please make sure that you set **SPRING_DATASOURCE_URL**, **SPRING_DATASOURCE_USERNAME** and **SPRING_DATASOURCE_PASSWORD** parameters value (in the file **/etc/sentient-analytics/conf/sentient-analytics.conf**) 
  and application can connect to new PostgreSQL database: 
  
 ```bash
 # DB Configuration 
-export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/trendz
+export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/sentient-analytics
 export SPRING_DATASOURCE_USERNAME=postgres
 export SPRING_DATASOURCE_PASSWORD=PUT_YOUR_POSTGRESQL_PASSWORD_HERE
 ```
@@ -1759,50 +1759,50 @@ export SPRING_DATASOURCE_PASSWORD=PUT_YOUR_POSTGRESQL_PASSWORD_HERE
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh --fromVersion=1.6.0
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh --fromVersion=1.6.0
 ``` 
 {: .copy-code}
  
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-170}
 
 {% capture tb_3_0_1_postgreSQL_linux %}
-**Since Trendz Analytics 1.7.0 only PostgreSQL database is supported**  
+**Since SENTIENT ANALYTICS 1.7.0 only PostgreSQL database is supported**  
  - During upgrade all data would be migrated form in-memory database into PostgreSQL
  - Please install PostgreSQL database before proceeding upgrade procedure using the following guide:
-   - [PostgreSQL Installation on Windows](/docs/trendz/install/windows/#step-5-configure-trendz-database)
+   - [PostgreSQL Installation on Windows](/docs/sentient-analytics/install/windows/#step-5-configure-sentient-analytics-database)
 
 {% endcapture %}
 {% include templates/info-banner.md content=tb_3_0_1_postgreSQL_linux %}
 
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.7.0.zip](https://dist.thingsboard.io/trendz-windows-1.7.0.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.7.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.7.0.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
  
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Make a backup of previous Trendz Analytics data storage located in \<Trendz install dir\>\data (for ex. C:\trendz\data).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Make a backup of previous SENTIENT ANALYTICS data storage located in \<SENTIENT ANALYTICS install dir\>\data (for ex. C:\sentient-analytics\data).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
 Please make sure that you set **SPRING_DATASOURCE_URL**, **SPRING_DATASOURCE_USERNAME** and **SPRING_DATASOURCE_PASSWORD** parameters value
- (in the file **C:\Program Files (x86)\trendz\conf\trendz.yml**) and application can connect to new PostgreSQL database:
+ (in the file **C:\Program Files (x86)\sentient-analytics\conf\sentient-analytics.yml**) and application can connect to new PostgreSQL database:
 
 ```yml
 # SQL DAO Configuration
@@ -1817,7 +1817,7 @@ spring:
       ddl-auto: "none"
   datasource:
     driverClassName: "${SPRING_DRIVER_CLASS_NAME:org.postgresql.Driver}"
-    url: "${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/trendz}"
+    url: "${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/sentient-analytics}"
     username: "${SPRING_DATASOURCE_USERNAME:postgres}"
     password: "${SPRING_DATASOURCE_PASSWORD:YOUR_POSTGRES_PASSWORD_HERE}"
     hikari:
@@ -1825,107 +1825,107 @@ spring:
 ``` 
 {: .copy-code} 
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\trendz>upgrade.bat --fromVersion=1.6.0
+C:\sentient-analytics>upgrade.bat --fromVersion=1.6.0
 ```
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
-### Widget Bundle for ThingsBoard {#tb_widget_bundle-170}
+### Widget Bundle for SENTIENT {#tb_widget_bundle-170}
 
-In Trendz version 1.7.0 Widget Bundle for ThingsBoard was changed. You have to upgrade widget bundle to the latest version to receive latest
+In SENTIENT ANALYTICS version 1.7.0 Widget Bundle for SENTIENT was changed. You have to upgrade widget bundle to the latest version to receive latest
 features introduced in version 1.7.0
 
 #### Download new Widget Bundle
 
-* For ThingsBoard version **3.x** please use 
-this <a href="https://dist.thingsboard.io/trendz_bundle_tb3.json" download target="_blank">trendz_bundle_tb3</a>
+* For SENTIENT version **3.x** please use 
+this <a href="https://dist.docs.sentient.invenia.in/sentient-analytics_bundle_tb3.json" download target="_blank">sentient-analytics_bundle_tb3</a>
 
 
-* For ThingsBoard version **2.x** please use 
-this <a href="https://dist.thingsboard.io/trendz_bundle_tb2.json" download target="_blank">trendz_bundle_tb2</a>
+* For SENTIENT version **2.x** please use 
+this <a href="https://dist.docs.sentient.invenia.in/sentient-analytics_bundle_tb2.json" download target="_blank">sentient-analytics_bundle_tb2</a>
 
 #### Replace old Bundle with the new one
 
-* Login to ThingsBoard as tenant administrator
+* Login to SENTIENT as tenant administrator
 * Open **Widgets Library** section
-* Delete old **Trendz Bundle**
-* Import new Trendz Bundle from previous step
+* Delete old **SENTIENT ANALYTICS Bundle**
+* Import new SENTIENT ANALYTICS Bundle from previous step
 
-Widgets that already added to ThingsBoard dashboard are not affected and should not be changed.
+Widgets that already added to SENTIENT dashboard are not affected and should not be changed.
 
 ## Upgrading to 1.6.0
 
-These steps are applicable for 1.5.0 and 1.5.1 Trendz Analytics version.
+These steps are applicable for 1.5.0 and 1.5.1 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-160}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-6-0
-trendz-download-1-6-0-ubuntu,Ubuntu,shell,resources/1.6.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.6.0/trendz-ubuntu-download.sh
-trendz-download-1-6-0-centos,CentOS,shell,resources/1.6.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.6.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-6-0
+sentient-analytics-download-1-6-0-ubuntu,Ubuntu,shell,resources/1.6.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.6.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-6-0-centos,CentOS,shell,resources/1.6.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.6.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
-{% capture tabspec %}trendz-installation-1-6-0
-trendz-installation-1-6-0-ubuntu,Ubuntu,shell,resources/1.6.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.6.0/trendz-ubuntu-installation.sh
-trendz-installation-1-6-0-centos,CentOS,shell,resources/1.6.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.6.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-6-0
+sentient-analytics-installation-1-6-0-ubuntu,Ubuntu,shell,resources/1.6.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.6.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-6-0-centos,CentOS,shell,resources/1.6.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.6.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
  
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-160}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.6.0.zip](https://dist.thingsboard.io/trendz-windows-1.6.0.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.6.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.6.0.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
  
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
@@ -1933,271 +1933,271 @@ net start trendz
 
 ## Upgrading to 1.5.1
 
-These steps are applicable for 1.5.0 Trendz Analytics version.
+These steps are applicable for 1.5.0 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-151}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-5-1
-trendz-download-1-5-1-ubuntu,Ubuntu,shell,resources/1.5.1/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.5.1/trendz-ubuntu-download.sh
-trendz-download-1-5-1-centos,CentOS,shell,resources/1.5.1/trendz-centos-download.sh,/docs/user-guide/install/resources/1.5.1/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-5-1
+sentient-analytics-download-1-5-1-ubuntu,Ubuntu,shell,resources/1.5.1/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.5.1/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-5-1-centos,CentOS,shell,resources/1.5.1/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.5.1/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 {: .copy-code}
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
-{% capture tabspec %}trendz-installation-1-5-1
-trendz-installation-1-5-1-ubuntu,Ubuntu,shell,resources/1.5.1/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.5.1/trendz-ubuntu-installation.sh
-trendz-installation-1-5-1-centos,CentOS,shell,resources/1.5.1/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.5.1/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-5-1
+sentient-analytics-installation-1-5-1-ubuntu,Ubuntu,shell,resources/1.5.1/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.5.1/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-5-1-centos,CentOS,shell,resources/1.5.1/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.5.1/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
  
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
 ### Windows {#windows-151}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.5.1.zip](https://dist.thingsboard.io/trendz-windows-1.5.1.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.5.1.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.5.1.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
  
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
 ## Upgrading to 1.5.0
 
-These steps are applicable for 1.4.1 Trendz Analytics version.
+These steps are applicable for 1.4.1 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-150}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-5-0
-trendz-download-1-5-0-ubuntu,Ubuntu,shell,resources/1.5.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.5.0/trendz-ubuntu-download.sh
-trendz-download-1-5-0-centos,CentOS,shell,resources/1.5.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.5.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-5-0
+sentient-analytics-download-1-5-0-ubuntu,Ubuntu,shell,resources/1.5.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.5.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-5-0-centos,CentOS,shell,resources/1.5.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.5.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
-{% capture tabspec %}trendz-installation-1-5-0
-trendz-installation-1-5-0-ubuntu,Ubuntu,shell,resources/1.5.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.5.0/trendz-ubuntu-installation.sh
-trendz-installation-1-5-0-centos,CentOS,shell,resources/1.5.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.5.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-5-0
+sentient-analytics-installation-1-5-0-ubuntu,Ubuntu,shell,resources/1.5.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.5.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-5-0-centos,CentOS,shell,resources/1.5.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.5.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
  
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 
 ### Windows {#windows-150}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.5.0.zip](https://dist.thingsboard.io/trendz-windows-1.5.0.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.5.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.5.0.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
  
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 
-### Widget Bundle for ThingsBoard {#tb_widget_bundle-150}
+### Widget Bundle for SENTIENT {#tb_widget_bundle-150}
 
-In Trendz version 1.5.0 Widget Bundle for ThingsBoard was changed. You have to upgrade widget bundle to the latest version to receive latest
+In SENTIENT ANALYTICS version 1.5.0 Widget Bundle for SENTIENT was changed. You have to upgrade widget bundle to the latest version to receive latest
 features introduced in version 1.5.0
 
 #### Download new Widget Bundle
 
-* For ThingsBoard version **3.x** please use 
-this <a href="https://dist.thingsboard.io/trendz_bundle_tb3.json" download target="_blank">trendz_bundle_tb3</a>
+* For SENTIENT version **3.x** please use 
+this <a href="https://dist.docs.sentient.invenia.in/sentient-analytics_bundle_tb3.json" download target="_blank">sentient-analytics_bundle_tb3</a>
 
 
-* For ThingsBoard version **2.x** please use 
-this <a href="https://dist.thingsboard.io/trendz_bundle_tb2.json" download target="_blank">trendz_bundle_tb2</a>
+* For SENTIENT version **2.x** please use 
+this <a href="https://dist.docs.sentient.invenia.in/sentient-analytics_bundle_tb2.json" download target="_blank">sentient-analytics_bundle_tb2</a>
 
 #### Replace old Bundle with the new one
 
-* Login to ThingsBoard as tenant administrator
+* Login to SENTIENT as tenant administrator
 * Open **Widgets Library** section
-* Delete old **Trendz Bundle**
-* Import new Trendz Bundle from previous step
+* Delete old **SENTIENT ANALYTICS Bundle**
+* Import new SENTIENT ANALYTICS Bundle from previous step
 
-Widgets that already added to ThingsBoard dashboard are not affected and should not be changed.
+Widgets that already added to SENTIENT dashboard are not affected and should not be changed.
 
 ## Upgrading to 1.4.1
 
-These steps are applicable for 1.4.0 Trendz Analytics version.
+These steps are applicable for 1.4.0 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-141}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-4-1
-trendz-download-1-4-1-ubuntu,Ubuntu,shell,resources/1.4.1/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.4.1/trendz-ubuntu-download.sh
-trendz-download-1-4-1-centos,CentOS,shell,resources/1.4.1/trendz-centos-download.sh,/docs/user-guide/install/resources/1.4.1/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-4-1
+sentient-analytics-download-1-4-1-ubuntu,Ubuntu,shell,resources/1.4.1/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.4.1/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-4-1-centos,CentOS,shell,resources/1.4.1/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.4.1/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
-{% capture tabspec %}trendz-installation-1-4-1
-trendz-installation-1-4-1-ubuntu,Ubuntu,shell,resources/1.4.1/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.4.1/trendz-ubuntu-installation.sh
-trendz-installation-1-4-1-centos,CentOS,shell,resources/1.4.1/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.4.1/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-4-1
+sentient-analytics-installation-1-4-1-ubuntu,Ubuntu,shell,resources/1.4.1/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.4.1/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-4-1-centos,CentOS,shell,resources/1.4.1/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.4.1/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
  
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 
 ### Windows {#windows-141}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download ThingsBoard Trendz Analytics installation package for Windows: [trendz-windows-1.4.1.zip](https://dist.thingsboard.io/trendz-windows-1.4.1.zip).
+Download SENTIENT SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-1.4.1.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.4.1.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
  
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 
-* Make a backup of previous ThingsBoard Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 
 ## Upgrading to 1.4.0
 
-These steps are applicable for 1.3.1 Trendz Analytics version.
+These steps are applicable for 1.3.1 SENTIENT ANALYTICS version.
 
 ### Ubuntu/CentOS {#ubuntucentos-140}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-{% capture tabspec %}trendz-download-1-4-0
-trendz-download-1-4-0-ubuntu,Ubuntu,shell,resources/1.4.0/trendz-ubuntu-download.sh,/docs/user-guide/install/resources/1.4.0/trendz-ubuntu-download.sh
-trendz-download-1-4-0-centos,CentOS,shell,resources/1.4.0/trendz-centos-download.sh,/docs/user-guide/install/resources/1.4.0/trendz-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-download-1-4-0
+sentient-analytics-download-1-4-0-ubuntu,Ubuntu,shell,resources/1.4.0/sentient-analytics-ubuntu-download.sh,/docs/user-guide/install/resources/1.4.0/sentient-analytics-ubuntu-download.sh
+sentient-analytics-download-1-4-0-centos,CentOS,shell,resources/1.4.0/sentient-analytics-centos-download.sh,/docs/user-guide/install/resources/1.4.0/sentient-analytics-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz Analytics service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```bash
-sudo service trendz stop
+sudo service sentient-analytics stop
 ```
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
-{% capture tabspec %}trendz-installation-1-4-0
-trendz-installation-1-4-0-ubuntu,Ubuntu,shell,resources/1.4.0/trendz-ubuntu-installation.sh,/docs/user-guide/install/resources/1.4.0/trendz-ubuntu-installation.sh
-trendz-installation-1-4-0-centos,CentOS,shell,resources/1.4.0/trendz-centos-installation.sh,/docs/user-guide/install/resources/1.4.0/trendz-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-analytics-installation-1-4-0
+sentient-analytics-installation-1-4-0-ubuntu,Ubuntu,shell,resources/1.4.0/sentient-analytics-ubuntu-installation.sh,/docs/user-guide/install/resources/1.4.0/sentient-analytics-ubuntu-installation.sh
+sentient-analytics-installation-1-4-0-centos,CentOS,shell,resources/1.4.0/sentient-analytics-centos-installation.sh,/docs/user-guide/install/resources/1.4.0/sentient-analytics-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+**NOTE:** Package installer will ask you to merge your sentient-analytics configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
  
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 
 ### Windows {#windows-140}
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [trendz-windows-1.4.0.zip](https://dist.thingsboard.io/trendz-windows-1.4.0.zip).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-analytics-windows-1.4.0.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-1.4.0.zip).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
  
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\trendz\conf).
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```

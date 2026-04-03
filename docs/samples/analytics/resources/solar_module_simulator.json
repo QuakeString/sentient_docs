@@ -15,7 +15,7 @@
           "layoutX": 708,
           "layoutY": 147
         },
-        "type": "org.thingsboard.rule.engine.kafka.TbKafkaNode",
+        "type": "org.sentient.rule.engine.kafka.TbKafkaNode",
         "name": "Push to Kafka",
         "debugMode": true,
         "configuration": {
@@ -36,7 +36,7 @@
           "layoutX": 350,
           "layoutY": 73
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Module 1 Simulator",
         "debugMode": true,
         "configuration": {
@@ -52,7 +52,7 @@
           "layoutX": 351,
           "layoutY": 149
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Module 2 Simulator",
         "debugMode": true,
         "configuration": {
@@ -68,7 +68,7 @@
           "layoutX": 351,
           "layoutY": 218
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Module 2 Simulator",
         "debugMode": true,
         "configuration": {

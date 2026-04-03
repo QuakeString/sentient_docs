@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
 title: PROXY Protocol
-description: TBMQ PROXY Protocol description
+description: ST-RMQTT PROXY Protocol description
 
 ---
 

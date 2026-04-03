@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect HummingBoard Gate to ThingsBoard?
+title: How to connect HummingBoard Gate to SENTIENT?
 category: Single-board computers
 chip: i.MX6DualLite
 connectivity: [Ethernet, WIFI, Bluetooth]

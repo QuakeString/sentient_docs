@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect UP Squared Pro AI Edge to ThingsBoard?
+title: How to connect UP Squared Pro AI Edge to SENTIENT?
 category: Single-board computers
 chip: Intel Atom x7-E3950 Processor
 connectivity: [Ethernet, WIFI, Bluetooth]

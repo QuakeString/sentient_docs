@@ -3,15 +3,15 @@ import requests
 from urllib.parse import urlparse
 
 include_block_template = """
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "[]vendor_url[]" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign officialManualLink = "[]official_manual_link[]" %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - [[]device_name[] user manual](' | append: officialManualLink | append: '){: target="_blank"}
 - LoRaWAN® gateway (in our case [UG56 LoRaWAN® Gateway](/docs/pe/devices-library/ug56-lorawan-gateway/){:target="_blank"})
-- Configured integration on networks server and ThingsBoard
+- Configured integration on networks server and SENTIENT
 - [Network Server account](#device-connection)
 '
  %}
@@ -28,7 +28,7 @@ include_block_template = """
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 
 ## Device connection
@@ -51,12 +51,12 @@ TheThingsIndustries,
 Loriot
 '%}
 
-{% include /docs/devices-library/blocks/basic/thingsboard-add-lorawan-device-through-integration-block.liquid target-integration-types=targetIntegrationTypes %}
+{% include /docs/devices-library/blocks/basic/sentient-add-lorawan-device-through-integration-block.liquid target-integration-types=targetIntegrationTypes %}
 
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
-After the device is connected to the network server and ThingsBoard, you can check received and converted data on the platform for this device.  
+After the device is connected to the network server and SENTIENT, you can check received and converted data on the platform for this device.  
 
 To do this, open **Entities** menu section and select **Devices**.  
 Click on the device name to open the device details page.  
@@ -72,7 +72,7 @@ Go to the **Latest telemetry** tab to see the latest telemetry data received fro
 
 docs_block_template = """---
 layout: devices-library-article
-title: How to connect []device_name[] to ThingsBoard?
+title: How to connect []device_name[] to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: []vendor[]
@@ -144,7 +144,7 @@ class Article:
 def parse_github_link(link: str):
     p = urlparse(link)
     parts = p.path.lstrip("/").split("/")
-    assert parts[0]=="thingsboard" and parts[1]=="data-converters" and parts[2]=="tree"
+    assert parts[0]=="sentient" and parts[1]=="data-converters" and parts[2]=="tree"
     branch = parts[3]
     repo_path = "/".join(parts[4:])
     path_parts = repo_path.split("/")
@@ -155,7 +155,7 @@ def parse_github_link(link: str):
 def fetch_info_json(branch: str, repo_path: str) -> dict:
     raw = (
         f"https://raw.githubusercontent.com/"
-        f"thingsboard/data-converters/"
+        f"sentient/data-converters/"
         f"{branch}/{repo_path}/info.json"
     )
     resp = requests.get(raw); resp.raise_for_status()
@@ -165,8 +165,8 @@ def fetch_and_save_image(branch: str, repo_path: str, filename: str) -> str:
     dest_dir = "images/devices-library"
     if not os.path.exists(dest_dir):
         raise FileNotFoundError(f"Destination directory {dest_dir} does not exist. "
-                                f"Please check that you run script from root of thingsboard.github.io repository.")
-    raw = f"https://raw.githubusercontent.com/thingsboard/data-converters/{branch}/{repo_path}/photo.png"
+                                f"Please check that you run script from root of sentient.github.io repository.")
+    raw = f"https://raw.githubusercontent.com/sentient/data-converters/{branch}/{repo_path}/photo.png"
     r = requests.get(raw); r.raise_for_status()
     image_name_for_saving = filename + '.png'
     out_path = os.path.join(dest_dir, image_name_for_saving)
@@ -177,7 +177,7 @@ def fetch_and_save_image(branch: str, repo_path: str, filename: str) -> str:
 
 def collect_required_information():
     link = ""
-    while not link or "https://github.com/thingsboard/data-converters/tree" not in link:
+    while not link or "https://github.com/sentient/data-converters/tree" not in link:
         if link:
             print("Invalid link provided. Please provide a valid GitHub link.")
         link = input("Paste the GitHub link to the device directory:\n").strip()

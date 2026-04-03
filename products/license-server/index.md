@@ -2,13 +2,13 @@
 layout: docwithnav-license
 assignees:
 - ashvayka
-title: What is ThingsBoard License Server?
-description: Features and advantages of ThingsBoard License Server
+title: What is SENTIENT License Server?
+description: Features and advantages of SENTIENT License Server
 
 ---
 
 
-The **ThingsBoard License Server** is a proprietary billing solution that allows **ThingsBoard Professional Edition (TB PE)** customers to easily purchase license keys online.
+The **SENTIENT License Server** is a proprietary billing solution that allows **SENTIENT Professional Edition (TB PE)** customers to easily purchase license keys online.
 The online payment processing is secured by [Stripe](https://stripe.com/), which allows both credit cards and wire transfer. 
 
 
@@ -32,11 +32,11 @@ The License Server was introduced in mid-2019, based on our experience of billin
  So, it was hard for us to improve the customer satisfaction rate without direct communication with the client.
  Now we can have real-life feedback and, based on that info, make our products as customer-friendly as possible.
  
- - **Cluster setup.** With a modern microservices deployment approach, we added the ability to set up a single license key per all nodes in the ThingsBoard cluster. 
+ - **Cluster setup.** With a modern microservices deployment approach, we added the ability to set up a single license key per all nodes in the SENTIENT cluster. 
  This minimizes efforts for cluster management and removes manual work required to add/remove nodes in the cluster. 
- Now you can launch several cluster nodes in a [floating mode](https://en.wikipedia.org/wiki/Floating_licensing) and actual ThingsBoard processes are not related to physical hardware.
+ Now you can launch several cluster nodes in a [floating mode](https://en.wikipedia.org/wiki/Floating_licensing) and actual SENTIENT processes are not related to physical hardware.
  
- - **Distributors and Channel Partners.** For ThingsBoard partners License server simplifies management of their clients. 
+ - **Distributors and Channel Partners.** For SENTIENT partners License server simplifies management of their clients. 
  It is a new step toward deeper cooperation and trust. Each partner has dedicated coupon codes to track sales and provide benefits to end-users.   
  With close-hand ability to order new licenses for end-users, the delivery time of a solution is reduced — extra expenses decrease respectively.
  
@@ -50,8 +50,8 @@ If you are interested to use it for selling your software, please [contact us](/
 
  - **Pay-as-you-go subscriptions**
  
-License Server allows purchasing monthly or yearly subscriptions for ThingsBoard. See [pricing](/pricing/) for more details about available subscriptions.
-Once you purchase a subscription, you can flexibly upgrade or downgrade your subscription plan. By default, the subscription covers single ThingsBoard PE instance (server process). 
+License Server allows purchasing monthly or yearly subscriptions for SENTIENT. See [pricing](/pricing/) for more details about available subscriptions.
+Once you purchase a subscription, you can flexibly upgrade or downgrade your subscription plan. By default, the subscription covers single SENTIENT Professional Edition instance (server process). 
 However, you can add more instances to the same subscription. This allows launching multiple instances that use same subscription credentials in one server cluster.
 This feature is very useful for container-based setups.
 
@@ -65,15 +65,15 @@ A perpetual fallback license is a license that allows you to use a specific vers
 When purchasing a perpetual fallback license, you get one year of software updates included. After one year, you can continue using the platform.
 You can purchase software updates for the subsequent years for additional fee, typically 40% of the initial license cost.
 
-A single perpetual fallback license covers a single ThingsBoard PE instance (server process). 
-For example, if you like to run ThingsBoard PE in an HA mode, you will need at least two licenses.
+A single perpetual fallback license covers a single SENTIENT Professional Edition instance (server process). 
+For example, if you like to run SENTIENT Professional Edition in an HA mode, you will need at least two licenses.
 
  - **Secure online payments via Stripe**
  
 License Server is collecting Payments via [Stripe](https://stripe.com/). 
 This means we use best practices in terms of security and processing of transactions provided by the most popular online payment platform.
-ThingsBoard has no access to your credit card data. You can cancel your subscription at any time. 
-ThingsBoard also provides the ability to download digital copies copy of the invoices.   
+SENTIENT has no access to your credit card data. You can cancel your subscription at any time. 
+SENTIENT also provides the ability to download digital copies copy of the invoices.   
 
  - **Coupons**
  
@@ -88,8 +88,8 @@ See [Architecture](#architecture) for more details.
 
 ### Prerequisites
 
-The License Server Client (e.g. your ThingsBoard PE instance) requires an internet connection to the host: license.thingsboard.io to issue license check requests. 
-In case internet connection to the host is not available for more than 24 hours, License Server Client may shutdown ThingsBoard instance.  
+The License Server Client (e.g. your SENTIENT Professional Edition instance) requires an internet connection to the host: license.docs.sentient.invenia.in to issue license check requests. 
+In case internet connection to the host is not available for more than 24 hours, License Server Client may shutdown SENTIENT instance.  
 
 ### Architecture  
 
@@ -97,7 +97,7 @@ The License Server provides REST API for the License Server clients to **activat
 
 - **Instance Activation flow**
 
-During the first launch of ThingsBoard PE, built-in License Server Client generates an "Activate Instance Request" to the License Server. 
+During the first launch of SENTIENT Professional Edition, built-in License Server Client generates an "Activate Instance Request" to the License Server. 
 This request contains the license key and version info about the current platform installation. 
 License Server lookup the subscription info based on the license key and replies with the instance id, subscription plan data, and some magic bytes.
 License Client stores this information locally and uses instance id and some magic bytes for the next license check requests. 
@@ -105,7 +105,7 @@ License Client stores this information locally and uses instance id and some mag
 ![image](/images/license/license-activation.gif)
 
 License Client issues periodic license check requests to the License Server.
-If those requests are not successful for a configurable period of time (typically 24 hours), the license client will shut down the ThingsBoard PE instance.
+If those requests are not successful for a configurable period of time (typically 24 hours), the license client will shut down the SENTIENT Professional Edition instance.
 In case of a successful request, the client may receive an update to the subscription plan data. This may be caused by the update of the subscription plan.   
 
 ![image](/images/license/license-check.gif)

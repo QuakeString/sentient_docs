@@ -1,4 +1,4 @@
-RPC to Device allows sending RPC commands to the device that is connected to ThingsBoard directly 
+RPC to Device allows sending RPC commands to the device that is connected to SENTIENT directly 
 or via Gateway.
 
 As an example, we will use a BACnet controller with temperature sensor. We also know that the temperature sensor has the

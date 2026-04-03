@@ -57,17 +57,17 @@
                                 </div>
                             </div>
 
-                            <div class="addon-card" id="tbPcTrendzCard" data-addon="trendzAnalytics">
+                            <div class="addon-card" id="tbPcSENTIENT ANALYTICSCard" data-addon="sentient-analyticsAnalytics">
                                 <div class="addon-header">
                                     <span class="addon-title">
-                                        Trendz Analytics
+                                        SENTIENT ANALYTICS
                                         <span class="tooltip">
                                             <img src="/images/pricing/info-icon.svg" alt="Hint icon">
                                             <span class="tooltip-text">Advanced analytics and visualization for your IoT data</span>
                                         </span>
                                     </span>
                                     <label class="toggle-switch">
-                                        <input type="checkbox" id="tbPcTrendzToggle" data-addon-toggle="trendzAnalytics">
+                                        <input type="checkbox" id="tbPcSENTIENT ANALYTICSToggle" data-addon-toggle="sentient-analyticsAnalytics">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -139,7 +139,7 @@
                 <div class="input-group">
                     <label for="tbPcJsonInput">JSON value
                         <span class="tooltip"><img src="/images/pricing/info-icon.svg" alt="Hint icon">
-                            <span class="tooltip-text">For simplicity, this editor supports only JSON format. While ThingsBoard supports other payload formats in real-world use cases, this calculator is designed to keep things easy and straightforward.</span>
+                            <span class="tooltip-text">For simplicity, this editor supports only JSON format. While SENTIENT supports other payload formats in real-world use cases, this calculator is designed to keep things easy and straightforward.</span>
                         </span>
                     </label>
                     <textarea id="tbPcJsonInput" spellcheck="false"></textarea>
@@ -187,7 +187,7 @@
         deviceProfiles: [],
         addons: {
             edgeComputing: { enabled: false, instances: 10 },
-            trendzAnalytics: { enabled: false },
+            sentient-analyticsAnalytics: { enabled: false },
             mobileApp: { enabled: false },
             devQaInstances: { enabled: false, instances: 1 }
         },
@@ -210,7 +210,7 @@
         modeTabs: document.querySelectorAll('#tbPcCalculatorModal .mode-tab'),
         toggles: {
             edge: document.getElementById('tbPcEdgeToggle'),
-            trendz: document.getElementById('tbPcTrendzToggle'),
+            sentient-analytics: document.getElementById('tbPcSENTIENT ANALYTICSToggle'),
             mobileApp: document.getElementById('tbPcMobileAppToggle'),
             devQa: document.getElementById('tbPcDevQaToggle')
         },
@@ -220,7 +220,7 @@
         },
         cards: {
             edge: document.getElementById('tbPcEdgeCard'),
-            trendz: document.getElementById('tbPcTrendzCard'),
+            sentient-analytics: document.getElementById('tbPcSENTIENT ANALYTICSCard'),
             mobileApp: document.getElementById('tbPcMobileAppCard'),
             devQa: document.getElementById('tbPcDevQaCard')
         },
@@ -237,7 +237,7 @@
                     <label for="tbPcDevices-{PROFILE_ID}" class="label">
                         Number of Devices
                         <span class="tooltip"><img src="/images/pricing/info-icon.svg" alt="Hint icon">
-                            <span class="tooltip-text">The total number of IoT devices that will connect to ThingsBoard</span>
+                            <span class="tooltip-text">The total number of IoT devices that will connect to SENTIENT</span>
                         </span>
                     </label>
                     <input id="tbPcDevices-{PROFILE_ID}" type="number" value="5000" min="0" class="input input-right" data-profile-input="devices">
@@ -572,7 +572,7 @@
             totalDevices,
             addons: {
                 edgeComputing: { enabled: addons.edgeComputing.enabled, instances: addons.edgeComputing.instances },
-                trendzAnalytics: { enabled: addons.trendzAnalytics.enabled },
+                sentient-analyticsAnalytics: { enabled: addons.sentient-analyticsAnalytics.enabled },
                 mobileApp: { enabled: addons.mobileApp.enabled },
                 devQaInstances: { enabled: addons.devQaInstances.enabled, instances: addons.devQaInstances.instances }
             }
@@ -632,17 +632,17 @@
                 };
             }
 
-            if (inputs.addons.trendzAnalytics.enabled) {
-                const trendzExtraDevicesCost = extraDevices * plan.trendzExtraDevicePrice;
-                const trendzTotalCost = plan.trendzMonthPrice + trendzExtraDevicesCost;
+            if (inputs.addons.sentient-analyticsAnalytics.enabled) {
+                const sentient-analyticsExtraDevicesCost = extraDevices * plan.sentient-analyticsExtraDevicePrice;
+                const sentient-analyticsTotalCost = plan.sentient-analyticsMonthPrice + sentient-analyticsExtraDevicesCost;
 
-                addOnsCost += trendzTotalCost;
-                addOnsBreakdown.trendzAnalytics = {
+                addOnsCost += sentient-analyticsTotalCost;
+                addOnsBreakdown.sentient-analyticsAnalytics = {
                     includedDevices: plan.includedDevices,
-                    baseCost: plan.trendzMonthPrice,
+                    baseCost: plan.sentient-analyticsMonthPrice,
                     extraDevices: extraDevices,
-                    extraDevicesCost: trendzExtraDevicesCost,
-                    totalCost: trendzTotalCost
+                    extraDevicesCost: sentient-analyticsExtraDevicesCost,
+                    totalCost: sentient-analyticsTotalCost
                 };
             }
 
@@ -766,7 +766,7 @@
         if (extraDeviceCost > 0) totalTooltipParts.push(`${formatCurrency(extraDeviceCost)} (extra devices)`);
         if (extraStorageCost > 0) totalTooltipParts.push(`${formatCurrency(extraStorageCost)} (extra storage)`);
         if (addOnsBreakdown.edgeComputing) totalTooltipParts.push(`${formatCurrency(addOnsBreakdown.edgeComputing.totalCost)} (Edge Computing)`);
-        if (addOnsBreakdown.trendzAnalytics) totalTooltipParts.push(`${formatCurrency(addOnsBreakdown.trendzAnalytics.totalCost)} (Trendz Analytics)`);
+        if (addOnsBreakdown.sentient-analyticsAnalytics) totalTooltipParts.push(`${formatCurrency(addOnsBreakdown.sentient-analyticsAnalytics.totalCost)} (SENTIENT ANALYTICS)`);
         if (addOnsBreakdown.mobileApp) totalTooltipParts.push(`${formatCurrency(addOnsBreakdown.mobileApp.totalCost)} (Mobile App)`);
         if (addOnsBreakdown.devQaInstances) totalTooltipParts.push(`${formatCurrency(addOnsBreakdown.devQaInstances.totalCost)} (Dev & QA)`);
         let totalTooltip = totalTooltipParts.join(' + ');
@@ -853,30 +853,30 @@
                 </div>`;
         }
 
-        if (inputs.addons.trendzAnalytics.enabled && breakdown.trendzAnalytics) {
-            const trendz = breakdown.trendzAnalytics;
+        if (inputs.addons.sentient-analyticsAnalytics.enabled && breakdown.sentient-analyticsAnalytics) {
+            const sentient-analytics = breakdown.sentient-analyticsAnalytics;
             html += `
-                <div class="results-section expandable" data-section="trendzAnalytics">
-                    <div class="section-header" data-toggle="trendzAnalytics">
-                        <span class="section-title-with-chevron">Trendz Analytics ${chevronUpIcon}</span>
+                <div class="results-section expandable" data-section="sentient-analyticsAnalytics">
+                    <div class="section-header" data-toggle="sentient-analyticsAnalytics">
+                        <span class="section-title-with-chevron">SENTIENT ANALYTICS ${chevronUpIcon}</span>
                         <span class="section-value">
-                            ${formatCurrency(trendz.totalCost)}
-                            <span class="tooltip">${infoIcon}<span class="tooltip-text">Trendz Analytics add-on total</span></span>
+                            ${formatCurrency(sentient-analytics.totalCost)}
+                            <span class="tooltip">${infoIcon}<span class="tooltip-text">SENTIENT ANALYTICS add-on total</span></span>
                         </span>
                     </div>
                     <div class="section-content">
-                        ${tbPcCreateItem('Add-on Base Price', formatNumber(trendz.baseCost, 0), 'Monthly base price for Trendz Analytics')}
-                        ${tbPcCreateItem('Included Devices', formatNumber(trendz.includedDevices, 0), 'Devices included with this plan')}
-                        ${tbPcCreateItem('Extra Devices', formatNumber(trendz.extraDevices, 0), 'Devices beyond plan\'s included count')}
-                        ${tbPcCreateItem('Extra Devices Cost', formatCurrency(trendz.extraDevicesCost), `${formatNumber(trendz.extraDevices, 0)} × ${formatCurrency(plan.trendzExtraDevicePrice)}`)}
+                        ${tbPcCreateItem('Add-on Base Price', formatNumber(sentient-analytics.baseCost, 0), 'Monthly base price for SENTIENT ANALYTICS')}
+                        ${tbPcCreateItem('Included Devices', formatNumber(sentient-analytics.includedDevices, 0), 'Devices included with this plan')}
+                        ${tbPcCreateItem('Extra Devices', formatNumber(sentient-analytics.extraDevices, 0), 'Devices beyond plan\'s included count')}
+                        ${tbPcCreateItem('Extra Devices Cost', formatCurrency(sentient-analytics.extraDevicesCost), `${formatNumber(sentient-analytics.extraDevices, 0)} × ${formatCurrency(plan.sentient-analyticsExtraDevicePrice)}`)}
                     </div>
                 </div>`;
         } else {
             html += `
-                <div class="results-section inactive" data-section="trendzAnalytics">
+                <div class="results-section inactive" data-section="sentient-analyticsAnalytics">
                     <div class="section-header">
-                        <span class="section-title-with-chevron">Trendz Analytics ${chevronDownIcon}</span>
-                        <span class="add-to-plan-btn" data-addon="trendzAnalytics">Add to plan (${formatCurrency(plan.trendzMonthPrice)})</span>
+                        <span class="section-title-with-chevron">SENTIENT ANALYTICS ${chevronDownIcon}</span>
+                        <span class="add-to-plan-btn" data-addon="sentient-analyticsAnalytics">Add to plan (${formatCurrency(plan.sentient-analyticsMonthPrice)})</span>
                     </div>
                 </div>`;
         }
@@ -985,15 +985,15 @@
         });
 
         const { addons } = inputs;
-        const hasAddons = addons.edgeComputing.enabled || addons.trendzAnalytics.enabled || addons.mobileApp.enabled || addons.devQaInstances.enabled;
+        const hasAddons = addons.edgeComputing.enabled || addons.sentient-analyticsAnalytics.enabled || addons.mobileApp.enabled || addons.devQaInstances.enabled;
 
         if (hasAddons) {
             message += `\nAdd-ons:\n`;
             if (addons.edgeComputing.enabled) {
                 message += `- Edge Computing: ${addons.edgeComputing.instances} instance(s)\n`;
             }
-            if (addons.trendzAnalytics.enabled) {
-                message += `- Trendz Analytics: Enabled\n`;
+            if (addons.sentient-analyticsAnalytics.enabled) {
+                message += `- SENTIENT ANALYTICS: Enabled\n`;
             }
             if (addons.mobileApp.enabled) {
                 message += `- White-labeled Mobile App: Enabled\n`;
@@ -1096,10 +1096,10 @@
                     if (edge.extraInstances > 0) message += `  - Extra Instances Cost: ${formatCurrency(edge.extraCost)}\n`;
                 }
 
-                if (addOnsBreakdown.trendzAnalytics) {
-                    const trendz = addOnsBreakdown.trendzAnalytics;
-                    message += `- Trendz Analytics: ${formatCurrency(trendz.totalCost)}\n`;
-                    if (trendz.extraDevices > 0) message += `  - Extra Devices Cost: ${formatCurrency(trendz.extraDevicesCost)}\n`;
+                if (addOnsBreakdown.sentient-analyticsAnalytics) {
+                    const sentient-analytics = addOnsBreakdown.sentient-analyticsAnalytics;
+                    message += `- SENTIENT ANALYTICS: ${formatCurrency(sentient-analytics.totalCost)}\n`;
+                    if (sentient-analytics.extraDevices > 0) message += `  - Extra Devices Cost: ${formatCurrency(sentient-analytics.extraDevicesCost)}\n`;
                 }
 
                 if (addOnsBreakdown.mobileApp) {
@@ -1170,7 +1170,7 @@
 
         tbPcState.addons = {
             edgeComputing: { enabled: false, instances: 10 },
-            trendzAnalytics: { enabled: false },
+            sentient-analyticsAnalytics: { enabled: false },
             mobileApp: { enabled: false },
             devQaInstances: { enabled: false, instances: 1 }
         };
@@ -1178,7 +1178,7 @@
         tbPcState.billingPeriod = 'monthly';
 
         if (tbPcUi.toggles.edge) tbPcUi.toggles.edge.checked = false;
-        if (tbPcUi.toggles.trendz) tbPcUi.toggles.trendz.checked = false;
+        if (tbPcUi.toggles.sentient-analytics) tbPcUi.toggles.sentient-analytics.checked = false;
         if (tbPcUi.toggles.mobileApp) tbPcUi.toggles.mobileApp.checked = false;
         if (tbPcUi.toggles.devQa) tbPcUi.toggles.devQa.checked = false;
 
@@ -1351,7 +1351,7 @@
             'tb_pc_extra_storage_cost': tbPcState.extraStoragePrice,
             'tb_pc_addon_edge': inputs.addons.edgeComputing.enabled,
             'tb_pc_addon_edge_instances': inputs.addons.edgeComputing.instances,
-            'tb_pc_addon_trendz': inputs.addons.trendzAnalytics.enabled,
+            'tb_pc_addon_sentient-analytics': inputs.addons.sentient-analyticsAnalytics.enabled,
             'tb_pc_addon_mobile_app': inputs.addons.mobileApp.enabled,
             'tb_pc_addon_dev_qa': inputs.addons.devQaInstances.enabled,
             'tb_pc_addon_dev_qa_instances': inputs.addons.devQaInstances.instances,

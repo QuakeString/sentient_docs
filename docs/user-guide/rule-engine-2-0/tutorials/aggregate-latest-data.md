@@ -18,7 +18,7 @@ This tutorial will show how to calculate average temperature in the warehouse ba
 Let's assume you have a warehouse with multiple temperature sensors. For example, one per each zone. Let's also assume temperature readings are reported by the sensor only when it detects temperature change.
 Thus, some sensors may have been inactive for a week although some sensors may report temperature change just recently. 
 
-In this tutorial we will configure ThingsBoard Rule Engine to automatically calculate average temperature in the warehouse based on latest readings from multiple temperature sensors every minute.
+In this tutorial we will configure SENTIENT Rule Engine to automatically calculate average temperature in the warehouse based on latest readings from multiple temperature sensors every minute.
 Please note that this is just a simple theoretical use case to demonstrate the capabilities of the platform. You can use this tutorial as a basis for much more complex scenarios.
 
 

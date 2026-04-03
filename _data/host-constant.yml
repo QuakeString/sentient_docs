@@ -11,25 +11,25 @@
   hostName: localhost
   mqttHostName: localhost
   coapHostName: localhost
-  httpsUrl: https://thingsboard.cloud
-  lwm2mHostName: lwm2m.thingsboard.cloud
+  httpsUrl: https://sentient.cloud
+  lwm2mHostName: lwm2m.sentient.cloud
   apiHostName: YOUR_SERVER_HOSTNAME
 - tag: paas
-  hostLabel: ThingsBoard Cloud
-  hostName: thingsboard.cloud
-  mqttHostName: mqtt.thingsboard.cloud
-  coapHostName: coap.thingsboard.cloud
-  httpsUrl: https://thingsboard.cloud
-  lwm2mHostName: lwm2m.thingsboard.cloud
-  apiHostName: thingsboard.cloud
+  hostLabel: SENTIENT Cloud
+  hostName: sentient.cloud
+  mqttHostName: mqtt.sentient.cloud
+  coapHostName: coap.sentient.cloud
+  httpsUrl: https://sentient.cloud
+  lwm2mHostName: lwm2m.sentient.cloud
+  apiHostName: sentient.cloud
 - tag: paas-eu
-  hostLabel: ThingsBoard Cloud EU
-  hostName: eu.thingsboard.cloud
-  mqttHostName: mqtt.eu.thingsboard.cloud
-  coapHostName: coap.eu.thingsboard.cloud
-  httpsUrl: https://eu.thingsboard.cloud
-  lwm2mHostName: lwm2m.eu.thingsboard.cloud
-  apiHostName: eu.thingsboard.cloud
+  hostLabel: SENTIENT Cloud EU
+  hostName: eu.sentient.cloud
+  mqttHostName: mqtt.eu.sentient.cloud
+  coapHostName: coap.eu.sentient.cloud
+  httpsUrl: https://eu.sentient.cloud
+  lwm2mHostName: lwm2m.eu.sentient.cloud
+  apiHostName: eu.sentient.cloud
 - tag: edge
   hostLabel: localhost
   hostName: localhost

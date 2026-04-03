@@ -5,7 +5,7 @@
 
 The following table provides a comprehensive list of MQTT 5.0 error codes along with their descriptions. These error 
 codes are used in MQTT 5.0 to indicate various conditions and errors that may occur during communication between 
-clients and ThingsBoard platform.
+clients and SENTIENT platform.
 
 | Error Code | Name                          | Packets                                               | Description                                                                                                                                                                                                                                                               |
 |------------|-------------------------------|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

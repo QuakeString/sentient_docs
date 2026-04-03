@@ -16,7 +16,7 @@ redis-data-structures:
 jedis-to-lettuce:
   0:
    image: /images/mqtt-broker/architecture/details/jedis-performance.png
-   title: 'RedisInsight shows ~66k commands/s per node, aligning with TBMQ’s 40k msg/s, as Lua scripts trigger multiple Redis operations per message.'
+   title: 'RedisInsight shows ~66k commands/s per node, aligning with ST-RMQTT’s 40k msg/s, as Lua scripts trigger multiple Redis operations per message.'
   1:
    image: /images/mqtt-broker/architecture/details/lettuce-performance.png
    title: 'At 60k msg/s, RedisInsight shows ~100k commands/s per node, aligning with the expected increase from 40k msg/s, which produced ~66k commands/s per node.' 

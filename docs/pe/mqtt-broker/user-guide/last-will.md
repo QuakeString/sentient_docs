@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Last Will and Testament
-description: TBMQ Last Will and Testament guide
+description: ST-RMQTT Last Will and Testament guide
 
 ws-connection-add-camera:
   0:

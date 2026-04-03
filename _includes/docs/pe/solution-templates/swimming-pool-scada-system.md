@@ -6,9 +6,9 @@
 
 SCADA (Supervisory Control And Data Acquisition) is a complex software system for managing automated processes that collects and processes data in real time.
 
-Based on ThingsBoard, a Swimming Pool SCADA system template has been implemented. It's designed to monitor and control swimming pool components.
-Sensors data in the local network is collected and sent via the Modbus protocol to the [IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}. The Gateway communicates with ThingsBoard through the MQTT protocol, ensuring continuous devices connectivity and data transmission to the SCADA system.
-ThingsBoard acts as the core of the SCADA system, storing data from devices in a database, processing it, visualizing the information, and sending control commands to the devices.
+Based on SENTIENT, a Swimming Pool SCADA system template has been implemented. It's designed to monitor and control swimming pool components.
+Sensors data in the local network is collected and sent via the Modbus protocol to the [IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}. The Gateway communicates with SENTIENT through the MQTT protocol, ensuring continuous devices connectivity and data transmission to the SCADA system.
+SENTIENT acts as the core of the SCADA system, storing data from devices in a database, processing it, visualizing the information, and sending control commands to the devices.
 
 <br>
 
@@ -20,8 +20,8 @@ To understand how the Swimming Pool SCADA system template works, let's start by 
 
 ## Install solution template
 
-You will need to have access to ThingsBoard Professional Edition. The easiest way is to use [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} server.
-The alternative option is to install ThingsBoard using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
+The alternative option is to install SENTIENT using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Go to the "**Solution templates**" page. Find "**Swimming Pool SCADA system**" and click "**Install**" to start the installation process.
 - Configuration instructions for this solution will be provided — follow the steps as instructed.
@@ -65,14 +65,14 @@ Traditional<small>SCADA system</small>%,%traditional%,%templates/solutions/scada
 
 For further customization of the Swimming Pool SCADA system dashboard refer to the [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} development guide.
 
-For real-time monitoring of device data received from Modbus servers, you can access the **ThingsBoard IoT Gateways** dashboard to view the status and data of connected devices.
+For real-time monitoring of device data received from Modbus servers, you can access the **SENTIENT IoT Gateways** dashboard to view the status and data of connected devices.
 
 ## System components
 
 The SCADA Swimming Pool system includes:
 - 14 operational devices, essential for monitoring and controlling various components of the pool system;
 - An asset that gathers data from its connected devices and stores it as attributes for subsequent monitoring and control of various components within the SCADA system;
-- The gateway transmits data from these devices to ThingsBoard, ensuring seamless device connectivity and data transfer within the SCADA system.
+- The gateway transmits data from these devices to SENTIENT, ensuring seamless device connectivity and data transfer within the SCADA system.
 
 ### Devices
 
@@ -93,7 +93,7 @@ The data is then visualized on the dashboard, allowing users to interact with an
 
 ### Gateway
 
-The ThingsBoard IoT Gateway integrates devices into the SCADA system in ThingsBoard, ensuring seamless connectivity and data transmission. 
+The SENTIENT IoT Gateway integrates devices into the SCADA system in SENTIENT, ensuring seamless connectivity and data transmission. 
 The "Pool System Gateway" gateway configuration is accessible on the **Gateways** page in the **Entities** section.
 
 {% include images-gallery.html imageCollection="select-pool-system-gateway-1" %}
@@ -115,18 +115,18 @@ We'll examine the configuration parameters using the "Main intake valve" device 
 
 In this template, we're using an emulator to simulate devices and their telemetry data.
 The host `host.docker.internal` and port `5021` are specific to your Modbus device. If you need to connect actual devices, replace the host and port values with the real ones.
-A detailed description of other parameters, such as Method, Unit ID, and others, can be found on the [Modbus Connector configuration](https://thingsboard.io/docs/iot-gateway/config/modbus/#subsection-slaves){:target="_blank"} page.
+A detailed description of other parameters, such as Method, Unit ID, and others, can be found on the [Modbus Connector configuration](https://docs.sentient.invenia.in/docs/iot-gateway/config/modbus/#subsection-slaves){:target="_blank"} page.
 
 {% include images-gallery.html imageCollection="gateway-master-connections-2" %}
 
-Scroll down to the "Time series" section. Here, you can configure the processing of incoming data. These settings will be interpreted in ThingsBoard as device telemetry data. 
-To open the time series configuration, click the pencil icon. For more details on each parameter and setting in the "Time series" section, refer to the [Modbus time series settings](https://thingsboard.io/docs/iot-gateway/config/modbus/#key-settings-for-timeseries){:target="_blank"} documentation.
+Scroll down to the "Time series" section. Here, you can configure the processing of incoming data. These settings will be interpreted in SENTIENT as device telemetry data. 
+To open the time series configuration, click the pencil icon. For more details on each parameter and setting in the "Time series" section, refer to the [Modbus time series settings](https://docs.sentient.invenia.in/docs/iot-gateway/config/modbus/#key-settings-for-timeseries){:target="_blank"} documentation.
 
 {% include images-gallery.html imageCollection="time-series-section-1" %}
 
-In the "RPC Requests" section, you can configure parameters for remote procedure calls (RPC) from ThingsBoard to the device. 
+In the "RPC Requests" section, you can configure parameters for remote procedure calls (RPC) from SENTIENT to the device. 
 This section is necessary for sending commands and receiving responses from the device. 
-For detailed information on each parameter in "RPC Requests", refer to the [Modbus RPC settings](https://thingsboard.io/docs/iot-gateway/config/modbus/#key-settings-for-rpc){:target="_blank"}  documentation.
+For detailed information on each parameter in "RPC Requests", refer to the [Modbus RPC settings](https://docs.sentient.invenia.in/docs/iot-gateway/config/modbus/#key-settings-for-rpc){:target="_blank"}  documentation.
 
 {% include images-gallery.html imageCollection="rpc-requests-section-1" %}
 
@@ -163,7 +163,7 @@ Each message passes through The **Swimming Pool Device Rule Chain**. Here, telem
 
 ## Device profiles
 
-In ThingsBoard, a device profile is a set of configurations and rules that define the behavior of devices using it. Device profiles simplify managing devices with similar parameters.
+In SENTIENT, a device profile is a set of configurations and rules that define the behavior of devices using it. Device profiles simplify managing devices with similar parameters.
 They include a rule chain for processing incoming messages and events, transport configuration, alarm rules, and other parameters. Learn more about the device profile [here](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"}.
 
 For the "Swimming Pool SCADA system" solution template, six device profiles were created to manage the [14 operational devices](#devices). These profiles set a "[Swimming Pool Device Rule Chain](#rule-chain)" as the default rule chain to our devices, the transport configuration is set to default, and define specific alarm rules for them.
@@ -230,5 +230,5 @@ For more about alarms and how to configure them, read [here](/docs/{{docsPrefix}
 ## Conclusion
 
 The Swimming Pool SCADA template provides a ready-to-use framework for managing swimming pool components. 
-It ensures seamless integration between sensors, and ThingsBoard, allowing real-time data collection, processing, and visualization. 
+It ensures seamless integration between sensors, and SENTIENT, allowing real-time data collection, processing, and visualization. 
 This setup not only enhances operational efficiency but also provides a scalable and reliable solution for centralized supervision and control of swimming pool systems.

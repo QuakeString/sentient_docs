@@ -1,9 +1,9 @@
 ---
 layout: docwithnav-pe
-title: ThingsBoard Microservices architecture
-description: ThingsBoard architecture
-reference_compose_yml: https://github.com/thingsboard/thingsboard-pe-docker-compose/blob/master/basic/docker-compose.yml
-reference_compose_readme: https://thingsboard.io/docs/user-guide/install/pe/cluster/docker-compose-setup/
+title: SENTIENT Microservices architecture
+description: SENTIENT architecture
+reference_compose_yml: https://github.com/sentient/sentient-pe-docker-compose/blob/master/basic/docker-compose.yml
+reference_compose_readme: https://docs.sentient.invenia.in/docs/user-guide/install/pe/cluster/docker-compose-setup/
 
 ---
 

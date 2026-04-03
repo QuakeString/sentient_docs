@@ -1,12 +1,12 @@
 ---
 layout: docwithnav-mqtt-broker
-title: TBMQ Cluster Supports 100M MQTT Connections
-description: TBMQ cluster-mode 100M MQTT connections performance test
+title: ST-RMQTT Cluster Supports 100M MQTT Connections
+description: ST-RMQTT cluster-mode 100M MQTT connections performance test
 
 broker-aws-monitoring:
     0:
         image: /images/mqtt-broker/reference/aws/aws-broker.png
-        title: 'AWS EC2 TBMQ Monitoring'
+        title: 'AWS EC2 ST-RMQTT Monitoring'
     1:
         image: /images/mqtt-broker/reference/aws/aws-kafka.png
         title: 'AWS EC2 Kafka Monitoring'
@@ -20,7 +20,7 @@ broker-aws-monitoring:
 broker-jmx-monitoring:
     0:
         image: /images/mqtt-broker/reference/jmx/broker-jmx.png
-        title: 'TBMQ JMX'
+        title: 'ST-RMQTT JMX'
 
 broker-topics-monitoring:
     0:

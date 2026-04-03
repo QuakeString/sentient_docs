@@ -2,7 +2,7 @@ Open the Notepad or other editor as administrator user (right click on the app i
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):
 
 ```text 
-C:\Program Files (x86)\thingsboard\thingsboard.xml
+C:\Program Files (x86)\sentient\sentient.xml
 ``` 
 {: .copy-code}
 

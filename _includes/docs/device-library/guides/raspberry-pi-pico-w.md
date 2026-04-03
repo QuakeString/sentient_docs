@@ -1,6 +1,6 @@
 
 {% assign boardLedCount = 1 %}
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign arduinoBoardPath="**Raspberry Pi Pico/RP2040** > **Raspberry Pi Pico W**" %}
 {% assign prerequisites = "
 - " | append: deviceName | append: "
@@ -17,39 +17,39 @@ WiFi is enabled via the use of an Infineon CYW43439 wireless chip.
 
 {% include /docs/device-library/blocks/basic/introduction-block.md %}
 
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
-{% include /docs/device-library/blocks/basic/thingsboard-create-device-block.md %}
+{% include /docs/device-library/blocks/basic/sentient-create-device-block.md %}
 
 ## Install required libraries and tools
 
 {% include /docs/device-library/blocks/microcontrollers/raspberry-pi-pico-arduino-library-install-block.md %}
 
-{% include /docs/device-library/blocks/microcontrollers/thingsboard-arduino-library-install-block.md %}
+{% include /docs/device-library/blocks/microcontrollers/sentient-arduino-library-install-block.md %}
 
-## Connect device to ThingsBoard
+## Connect device to SENTIENT
 
-{% include /docs/device-library/blocks/basic/thingsboard-provide-device-access-token-block.md %}
+{% include /docs/device-library/blocks/basic/sentient-provide-device-access-token-block.md %}
 
 {% include /docs/device-library/blocks/microcontrollers/rp2040-general-code-to-program-block.md %}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
-{% include /docs/device-library/blocks/basic/thingsboard-upload-example-dashboard.md %}
+{% include /docs/device-library/blocks/basic/sentient-upload-example-dashboard.md %}
 
-{% include /docs/device-library/blocks/microcontrollers/thingsboard-check-example-data-block.md %}
+{% include /docs/device-library/blocks/microcontrollers/sentient-check-example-data-block.md %}
 
 ## Synchronize device state using client and shared attribute requests
 
-{% include /docs/device-library/blocks/microcontrollers/thingsboard-synchronize-device-state-using-attribute-requests-block.md %}
+{% include /docs/device-library/blocks/microcontrollers/sentient-synchronize-device-state-using-attribute-requests-block.md %}
 
 ## Control device using shared attributes
 
-{% include /docs/device-library/blocks/microcontrollers/thingsboard-update-shared-attributes-device-block.md %}
+{% include /docs/device-library/blocks/microcontrollers/sentient-update-shared-attributes-device-block.md %}
 
 ## Control device using RPC
 
-{% include /docs/device-library/blocks/microcontrollers/thingsboard-send-rpc-to-device-block.md %}
+{% include /docs/device-library/blocks/microcontrollers/sentient-send-rpc-to-device-block.md %}
 
 ## Conclusion
 {% include /docs/device-library/blocks/basic/conclusion-block.md %}

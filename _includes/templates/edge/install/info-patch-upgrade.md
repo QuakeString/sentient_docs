@@ -7,14 +7,14 @@ If you are upgrading from **{{minorVersion}}**, you **MUST** run the script belo
 
 {% if page.url contains 'centos' or page.url contains 'ubuntu' %}
 
-Upgrade the **ThingsBoard Edge** service:
+Upgrade the **SENTIENT GATEWAY** service:
 ```bash
 sudo /usr/share/tb-edge/bin/install/upgrade.sh 
 ```
 {: .copy-code}
 
 {% elsif page.url contains 'windows' %}
-Upgrade the **ThingsBoard Edge** service:
+Upgrade the **SENTIENT GATEWAY** service:
 ```bash
 C:\tb-edge>upgrade.bat 
 ```
@@ -22,7 +22,7 @@ C:\tb-edge>upgrade.bat
 **Note:** The upgrade script must be run with Administrator privileges.
 
 {% elsif page.url contains 'docker' %}
-Upgrade the **ThingsBoard Edge** service:
+Upgrade the **SENTIENT GATEWAY** service:
 ```bash
 docker compose run mytbedge upgrade-tb-edge.sh
 ```

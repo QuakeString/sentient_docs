@@ -99,7 +99,7 @@
 		<tr>
 			<td>zk.zk_dir</td>
 			<td>ZOOKEEPER_NODES_DIR</td>
-			<td>/thingsboard</td>
+			<td>/sentient</td>
 			<td> Name of the directory in zookeeper 'filesystem'</td>
 		</tr>
 		<tr>

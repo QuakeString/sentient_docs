@@ -14,7 +14,7 @@ creating-secret:
         title: 'Select secret type: Text or File. Next, enter the secret&#39;s name and its text value (for the "Text" type) or upload a certificate file (for the "File" type). Then, click "Add".'
     2:
         image: /images/user-guide/security/secrets-storage/creating-secret-3-pe.png
-        title: 'ThingsBoard automatically encrypts Secret values using the AES-256 encryption algorithm.'
+        title: 'SENTIENT automatically encrypts Secret values using the AES-256 encryption algorithm.'
 
 update-secret-value:
     0:
@@ -34,13 +34,13 @@ delete-secret:
 
 use-secret:
     0:
-        image: /images/user-guide/security/secrets-storage/use-secret-in-thingsboard-1-pe.png
+        image: /images/user-guide/security/secrets-storage/use-secret-in-sentient-1-pe.png
         title: 'In the "Password" field, click the "key" icon to select and use the Secret.'
     1:
-        image: /images/user-guide/security/secrets-storage/use-secret-in-thingsboard-2-pe.png
+        image: /images/user-guide/security/secrets-storage/use-secret-in-sentient-2-pe.png
         title: 'If the Secret has already been created, select "Use storage", pick the desired Secret from the dropdown menu, and click "Use".'
     2:
-        image: /images/user-guide/security/secrets-storage/use-secret-in-thingsboard-3-pe.png
+        image: /images/user-guide/security/secrets-storage/use-secret-in-sentient-3-pe.png
         title: 'The "Password" field use the value from Secret.'
 
 ---

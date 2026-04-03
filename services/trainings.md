@@ -2,7 +2,7 @@
 layout: trainings
 title: Training sessions
 notitle: "true"
-description: ThingsBoard training sessions
+description: SENTIENT training sessions
 redirect_from: "docs/services/trainings/"
 ---
 
@@ -10,13 +10,13 @@ redirect_from: "docs/services/trainings/"
 <div class="trainings">
     <div class="trainings-hero trainings-wrapper">
         <div class="trainings-hero-top">
-            <h1 class="trainings-h1">ThingsBoard training sessions</h1>
+            <h1 class="trainings-h1">SENTIENT training sessions</h1>
             <div class="trainings-hero-top-images">
-                <img src="/images/trainings/thingsboard-home-page.png" class="trainings-hero-image" alt="Thingsboard dashboards and menus">
-                <img src="/images/trainings/thingsboard-tenant-list.png" class="trainings-hero-image-2" alt="Thingsboard tenant list">
-                <img src="/images/trainings/thingsboard-alarm-list.png" class="trainings-hero-image-3" alt="Thingsboard alarm list">
-                <img src="/images/trainings/thingsboard-scada-example.png" class="trainings-hero-image-4" alt="Thingsboard SCADA">
-                <img src="/images/trainings/thingsboard-rule-chains-list.png" class="trainings-hero-image-5" alt="Thingsboard rule chains list">
+                <img src="/images/trainings/sentient-home-page.png" class="trainings-hero-image" alt="Sentient dashboards and menus">
+                <img src="/images/trainings/sentient-tenant-list.png" class="trainings-hero-image-2" alt="Sentient tenant list">
+                <img src="/images/trainings/sentient-alarm-list.png" class="trainings-hero-image-3" alt="Sentient alarm list">
+                <img src="/images/trainings/sentient-scada-example.png" class="trainings-hero-image-4" alt="Sentient SCADA">
+                <img src="/images/trainings/sentient-rule-chains-list.png" class="trainings-hero-image-5" alt="Sentient rule chains list">
             </div>
         </div>
         <div class="trainings-contact">
@@ -29,7 +29,7 @@ redirect_from: "docs/services/trainings/"
             </div>
             <div class="contact-text">
                 <p class="description">
-                    Our ThingsBoard training sessions are practical workshops led by experts from the ThingsBoard team, created especially for your company’s engineers. We offer fifteen 2-hour sessions that explain the basics of using ThingsBoard. Even though our documentation is detailed, these sessions focus on the most important points, helping you start IoT solution development quickly and easily.
+                    Our SENTIENT training sessions are practical workshops led by experts from the SENTIENT team, created especially for your company’s engineers. We offer fifteen 2-hour sessions that explain the basics of using SENTIENT. Even though our documentation is detailed, these sessions focus on the most important points, helping you start IoT solution development quickly and easily.
                 </p>
             </div>
             <a class="contact-us-button contact-us-button-hidden" href="/docs/contact-us/?subject=Training">Contact Us</a>
@@ -47,7 +47,7 @@ redirect_from: "docs/services/trainings/"
                         </li>
                         <li>
                             <img src="/images/trainings/icon_trophy.svg" alt="Trophy icon">
-                            <span>Individuals ready to get a <b>solid foundation and fully leverage</b> ThingsBoard.</span>
+                            <span>Individuals ready to get a <b>solid foundation and fully leverage</b> SENTIENT.</span>
                         </li>
                         <li>
                             <img src="/images/trainings/icon_target-line.svg" alt="Target icon">
@@ -60,7 +60,7 @@ redirect_from: "docs/services/trainings/"
                     <ul>
                         <li>
                             <img src="/images/trainings/icon_arrow-growth.svg" alt="Graph icon">
-                            <span>Enhance your <b>experience</b> with ThingsBoard. </span>
+                            <span>Enhance your <b>experience</b> with SENTIENT. </span>
                         </li>
                         <li>
                             <i class="far fa-question-circle fa-lg" style="color: #2A7DEC"></i>
@@ -94,7 +94,7 @@ redirect_from: "docs/services/trainings/"
                         </span>
                         <span class="trainings-card-subtitle">Participants</span>
                     </div>
-                    <p class="trainings-card-text">More than 1200 participants took part in ThingsBoard training sessions</p>
+                    <p class="trainings-card-text">More than 1200 participants took part in SENTIENT training sessions</p>
                 </div>       
                 <div class="trainings-card">
                     <div class="trainings-card-icon">
@@ -106,7 +106,7 @@ redirect_from: "docs/services/trainings/"
                         </span>
                         <span class="trainings-card-subtitle">Sessions</span>
                     </div>
-                    <p class="trainings-card-text">More than 200 sessions were organized for ThingsBoard clients</p>
+                    <p class="trainings-card-text">More than 200 sessions were organized for SENTIENT clients</p>
                 </div>    
             </div>    
             <div class="trainings-card-contact-us">

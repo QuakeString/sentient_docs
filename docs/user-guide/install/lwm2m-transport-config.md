@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - vparomskiy
 title: LWM2M transport parameters
-description: ThingsBoard configuration parameters and environment variables
+description: SENTIENT configuration parameters and environment variables
 
 ---
 

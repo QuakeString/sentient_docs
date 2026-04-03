@@ -1,7 +1,7 @@
 ---
 layout: use-case
-title: Tank Level Monitoring with ThingsBoard for Any Industry
-description: A comprehensive IoT solution for tank level monitoring. Real-time insights for fuel, water, and chemical storage with dashboards, alarms, and scalable device management — powered by ThingsBoard
+title: Tank Level Monitoring with SENTIENT for Any Industry
+description: A comprehensive IoT solution for tank level monitoring. Real-time insights for fuel, water, and chemical storage with dashboards, alarms, and scalable device management — powered by SENTIENT
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -17,15 +17,15 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">Modern enterprises that manage liquid storage — from fuel to water — face the critical need for continuous tank level monitoring and infrastructure status control. Poor monitoring can lead to leaks, equipment downtime, and higher operational costs. In this context, IoT-powered solutions become essential for digital transformation. The ThingsBoard IoT platform addresses these challenges with ease.</p>
+                <p class="text">Modern enterprises that manage liquid storage — from fuel to water — face the critical need for continuous tank level monitoring and infrastructure status control. Poor monitoring can lead to leaks, equipment downtime, and higher operational costs. In this context, IoT-powered solutions become essential for digital transformation. The SENTIENT IoT platform addresses these challenges with ease.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_FuelLevelMonitoring_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_FuelLevelMonitoring_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
             </div>
         </div>
         <div class="long">
-            <p>The ThingsBoard platform offers a comprehensive approach to tank level monitoring, enabling real-time tracking of key metrics such as volume, temperature, sensor battery level, and connectivity status. Thanks to its flexibility, ThingsBoard can be easily tailored to meet industry-specific needs, whether for small-scale or enterprise-wide deployments.</p>
-            <p>ThingsBoard stands out due to its scalability, support for multiple protocols (MQTT, HTTP, CoAP, and others), customizable dashboards, and robust device management tools. It empowers users to deploy both local and cloud-based solutions that effectively monitor dispersed tank networks at any scale.</p>
+            <p>The SENTIENT platform offers a comprehensive approach to tank level monitoring, enabling real-time tracking of key metrics such as volume, temperature, sensor battery level, and connectivity status. Thanks to its flexibility, SENTIENT can be easily tailored to meet industry-specific needs, whether for small-scale or enterprise-wide deployments.</p>
+            <p>SENTIENT stands out due to its scalability, support for multiple protocols (MQTT, HTTP, CoAP, and others), customizable dashboards, and robust device management tools. It empowers users to deploy both local and cloud-based solutions that effectively monitor dispersed tank networks at any scale.</p>
         </div>
     </div>
 </section>
@@ -41,11 +41,11 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">The <a href="https://thingsboard.io/docs/pe/solution-templates/fuel-level-monitoring/">tank level monitoring</a> solution integrates IoT sensors — such as level, temperature, and battery — with the ThingsBoard platform. Data is transmitted via standard protocols: MQTT for real-time telemetry, HTTP for periodic updates, and CoAP for low-power environments. This ensures reliable, efficient communication across a wide range of devices and conditions.</p>
+                <p class="text">The <a href="https://docs.sentient.invenia.in/docs/pe/solution-templates/fuel-level-monitoring/">tank level monitoring</a> solution integrates IoT sensors — such as level, temperature, and battery — with the SENTIENT platform. Data is transmitted via standard protocols: MQTT for real-time telemetry, HTTP for periodic updates, and CoAP for low-power environments. This ensures reliable, efficient communication across a wide range of devices and conditions.</p>
             </div>
         </div>
         <div class="long">
-            <p>Once collected, the data is transmitted to ThingsBoard for processing, aggregation, and visualization. The platform offers historical data storage, advanced alarm rule configuration, and remote device management. Incoming data is presented through interactive dashboards that display all metrics in user-friendly formats: graphs, maps, tables, and status widgets.</p>
+            <p>Once collected, the data is transmitted to SENTIENT for processing, aggregation, and visualization. The platform offers historical data storage, advanced alarm rule configuration, and remote device management. Incoming data is presented through interactive dashboards that display all metrics in user-friendly formats: graphs, maps, tables, and status widgets.</p>
         </div>
     </div>
     <div class="scheme">
@@ -57,7 +57,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>Tank level monitoring dashboard structure</h2>
         <p>
-            The dashboards in ThingsBoard are modular: each panel is a self-contained widget that retrieves data from a specific device or group. They support drill-down navigation, filtering, and grouping by fuel type or region. This makes the interface intuitive and easy to scale for large deployments.
+            The dashboards in SENTIENT are modular: each panel is a self-contained widget that retrieves data from a specific device or group. They support drill-down navigation, filtering, and grouping by fuel type or region. This makes the interface intuitive and easy to scale for large deployments.
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -129,7 +129,7 @@ contactUsModal: "true"
 <section class="applications applications-additional summary-margin section-padding">
     <div class="section-header">
         <h2>Applications of tank level monitoring solution</h2>
-        <p>ThingsBoard's Tank Level Monitoring Solution is adaptable across a wide range of industries, addressing their specific needs:</p>
+        <p>SENTIENT's Tank Level Monitoring Solution is adaptable across a wide range of industries, addressing their specific needs:</p>
     </div>
     <div class="applications-container-large">
         <div class="text-row-top">
@@ -206,7 +206,7 @@ contactUsModal: "true"
 <section class="summary">
     <div class="summary-text">
         <h2>Summary of tank level monitoring</h2>
-        <p>The ThingsBoard-based tank level monitoring solution automates fluid storage monitoring for any scale or complexity. With strong support for industrial protocols, real-time visualization, rule-based alarming, and device control, it is a perfect fit for B2B enterprises, public infrastructure, and industrial environments. Enhanced transparency and timely alarms lead to improved operational efficiency and reduced costs.</p>
+        <p>The SENTIENT-based tank level monitoring solution automates fluid storage monitoring for any scale or complexity. With strong support for industrial protocols, real-time visualization, rule-based alarming, and device control, it is a perfect fit for B2B enterprises, public infrastructure, and industrial environments. Enhanced transparency and timely alarms lead to improved operational efficiency and reduced costs.</p>
     </div>
     <div class="summary-icon">
         <img src="/images/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
@@ -310,7 +310,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_FuelLevelMonitoring_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_FuelLevelMonitoring_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>            
                 <a id="UseCases_FuelLevelMonitoring_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 
@@ -330,10 +330,10 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='/images/usecases/tank-level-monitoring/tank-level-monitoring-1.webp' data-bg='#F9F9F9' alt='Tank monitoring dashboard in light mode showing fuel level, temperature, battery, and alerts on the ThingsBoard platform' title='Tank Monitoring Dashboard'/>",
-                "<img src='/images/usecases/tank-level-monitoring/tank-level-monitoring-2.webp' data-bg='#A9AAAC' alt='Modal window for adding a new sensor with serial number and label fields in the ThingsBoard dashboard.' title='Add New Sensor Form'/>",
+                "<img src='/images/usecases/tank-level-monitoring/tank-level-monitoring-1.webp' data-bg='#F9F9F9' alt='Tank monitoring dashboard in light mode showing fuel level, temperature, battery, and alerts on the SENTIENT platform' title='Tank Monitoring Dashboard'/>",
+                "<img src='/images/usecases/tank-level-monitoring/tank-level-monitoring-2.webp' data-bg='#A9AAAC' alt='Modal window for adding a new sensor with serial number and label fields in the SENTIENT dashboard.' title='Add New Sensor Form'/>",
                 "<img src='/images/usecases/tank-level-monitoring/tank-level-monitoring-3.webp' data-bg='#A9AAAC' alt='Dialog for setting alarm thresholds for tank monitoring, including fuel level, temperature, and battery.' title='Alarm Threshold Settings for Tanks'/>",
-                "<img src='/images/usecases/tank-level-monitoring/tank-level-monitoring-4.webp' data-bg='#A9AAAC' alt='Editing a sensors serial number and label in the ThingsBoard tank monitoring interface.' title='Edit Sensor 001133'/>",
+                "<img src='/images/usecases/tank-level-monitoring/tank-level-monitoring-4.webp' data-bg='#A9AAAC' alt='Editing a sensors serial number and label in the SENTIENT tank monitoring interface.' title='Edit Sensor 001133'/>",
                 "<img src='/images/usecases/tank-level-monitoring/tank-level-monitoring-5.webp' data-bg='#F9F9F9' alt='Tank 1289 status dashboard showing fuel level, temperature, battery, and consumption chart.' title='Tank 1289 Monitoring Overview'/>",
                 "<img src='/images/usecases/tank-level-monitoring/tank-level-monitoring-6.webp' data-bg='#A9AAAC' alt='Interface to configure tank shape, size, and measurement system for accurate monitoring.' title='Configure Tank Shape and Dimensions'/>",
             ];

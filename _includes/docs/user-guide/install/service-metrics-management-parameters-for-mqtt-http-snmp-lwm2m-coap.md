@@ -1,4 +1,4 @@
-#### ThingsBoard service parameters
+#### SENTIENT service parameters
 
 <table>
     <thead>
@@ -22,7 +22,7 @@
     </tbody>
 </table>
 
-#### ThingsBoard metrics parameters
+#### SENTIENT metrics parameters
 
 <table>
     <thead>
@@ -40,7 +40,7 @@
     </tbody>
 </table>
 
-#### ThingsBoard management parameters
+#### SENTIENT management parameters
 
 <table>
     <thead>

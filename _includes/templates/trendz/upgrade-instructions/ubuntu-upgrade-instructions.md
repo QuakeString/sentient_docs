@@ -1,4 +1,4 @@
-{%- assign platform = "Trendz Analytics" -%}
+{%- assign platform = "SENTIENT ANALYTICS" -%}
 {%- assign current_version = include.version -%}
 {%- assign family = include.family -%}
 {%- assign patch_status = include.patch_status -%}
@@ -18,56 +18,56 @@
 ### Upgrading {{ platform }} to {{ current_version }}
 {% endif %}
 
-{%- assign platform_hash = "#upgrading-trendz-analytics-to-" -%}
+{%- assign platform_hash = "#upgrading-sentient-analytics-analytics-to-" -%}
 
 {% capture difference %}
 **NOTE:**
 <br>
-[**Prepare**](#prepare-for-upgrading-trendz-analytics) for upgrading Trendz Analytics.
+[**Prepare**](#prepare-for-upgrading-sentient-analytics-analytics) for upgrading SENTIENT ANALYTICS.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
 {% capture tb_haproxy_note %}
 **NOTE:**
 <br>
-If you are using Trendz behind **HAProxy**, make sure that the paths **`/trendz/`** and **`/apiTrendz/`** are routed to the Trendz backend instead of **`/trendz`** and **`/apiTrendz`**.
+If you are using SENTIENT ANALYTICS behind **HAProxy**, make sure that the paths **`/sentient-analytics/`** and **`/apiSENTIENT ANALYTICS/`** are routed to the SENTIENT ANALYTICS backend instead of **`/sentient-analytics`** and **`/apiSENTIENT ANALYTICS`**.
 <br>
-Additionally, we highly recommend adding Trendz to the **ThingsBoard HAProxy configuration** so that Trendz is accessible from the **same domain as ThingsBoard**.
+Additionally, we highly recommend adding SENTIENT ANALYTICS to the **SENTIENT HAProxy configuration** so that SENTIENT ANALYTICS is accessible from the **same domain as SENTIENT**.
 {% endcapture %}
 {% include templates/warn-banner.md content=tb_haproxy_note %}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
 ```bash
-wget https://dist.thingsboard.io/trendz-{{ current_version }}.deb
+wget https://dist.docs.sentient.invenia.in/sentient-analytics-{{ current_version }}.deb
 ```
 {: .copy-code}
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Install latest Trendz Analytics service 
+* Install latest SENTIENT ANALYTICS service 
 
 ```bash
-sudo dpkg -i trendz-{{ current_version }}.deb
+sudo dpkg -i sentient-analytics-{{ current_version }}.deb
 ```
 {: .copy-code}
 
-**NOTE:** Package installer will ask you to merge your Trendz configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your SENTIENT ANALYTICS configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Execute regular upgrade script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/upgrade.sh
+sudo /usr/share/sentient-analytics/bin/install/upgrade.sh
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
-#### Sync Trendz with ThingsBoard
+#### Sync SENTIENT ANALYTICS with SENTIENT
 
-After upgrade, it's necessary to sync Trendz with ThingsBoard. You can find out how to do it [here](/docs/trendz/install/ubuntu#step-6-sync-thingsboard-with-trendz).
+After upgrade, it's necessary to sync SENTIENT ANALYTICS with SENTIENT. You can find out how to do it [here](/docs/sentient-analytics/install/ubuntu#step-6-sync-sentient-with-sentient-analytics).

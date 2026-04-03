@@ -10,7 +10,7 @@ View last logs for the desired pod:
 kubectl logs -f POD_NAME
 ```
 
-To view ThingsBoard node logs use command:
+To view SENTIENT node logs use command:
 
 ```bash
 kubectl logs -f tb-node-0
@@ -31,9 +31,9 @@ kubectl logs -f tb-node-1 > tb-node-1.log
 ```
 
 
-**Note:** you can always log into the ThingsBoard container and view logs there:
+**Note:** you can always log into the SENTIENT container and view logs there:
 
 ```bash
 kubectl exec -it tb-node-0 -- bash
-cat /var/log/thingsboard/tb-node-0/thingsboard.log
+cat /var/log/sentient/tb-node-0/sentient.log
 ```

@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Monolith setup using AWS infrastructure
-description: ThingsBoard IoT platform monolith setup with Kubernetes in AWS EKS
+description: SENTIENT IoT platform monolith setup with Kubernetes in AWS EKS
 
 rdsSetup:
     0:
@@ -17,10 +17,10 @@ rdsSetup:
         title: 'Use "Provisioned IOPS" for better performance.'
     3:
         image: /images/install/cloud/aws/rds-4.png
-        title: 'Make sure your PostgreSQL RDS instance is accessible from the ThingsBoard cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
+        title: 'Make sure your PostgreSQL RDS instance is accessible from the SENTIENT cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-sentient-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
     4:
         image: /images/install/cloud/aws/rds-5.png
-        title: 'Make sure you use "thingsboard" as initial database name.'
+        title: 'Make sure you use "sentient" as initial database name.'
     5:
         image: /images/install/cloud/aws/rds-6.png
         title: 'Disable "auto minor version update".'
@@ -36,22 +36,22 @@ rdsEndpointUrl:
 
 {% assign tbServicesFile = "tb-node.yml" %}
 
-This guide will help you to set up ThingsBoard in monolith mode in AWS EKS. 
+This guide will help you to set up SENTIENT in monolith mode in AWS EKS. 
 
 ## Prerequisites
 
 {% include templates/install/aws/eks-prerequisites.md %}
 
-### Pull ThingsBoard PE images from docker hub
+### Pull SENTIENT Professional Edition images from docker hub
 
 {% assign checkoutMode = "monolith" %}
 {% include templates/install/dockerhub/checkout.md %}
 
-## Step 1. Clone ThingsBoard PE K8S scripts repository
+## Step 1. Clone SENTIENT Professional Edition K8S scripts repository
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-pe-k8s.git --depth 1
-cd thingsboard-pe-k8s/aws/monolith
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-pe-k8s.git --depth 1
+cd sentient-pe-k8s/aws/monolith
 ```
 {: .copy-code}
 
@@ -112,19 +112,19 @@ see `tb-node-0` pod in the `READY` state.
 
 {% include templates/install/k8s-configure-edge-load-balancer.md %}
 
-## Step 9. Configure Trendz (Optional)
+## Step 9. Configure SENTIENT ANALYTICS (Optional)
 
-### 9.1. Pull Trendz images from docker hub
+### 9.1. Pull SENTIENT ANALYTICS images from docker hub
 
-{% include templates/install/trendz/pull_trendz.md %}
+{% include templates/install/sentient-analytics/pull_sentient-analytics.md %}
 
-### 9.2. Create a Trendz database in the existing RDS instance
+### 9.2. Create a SENTIENT ANALYTICS database in the existing RDS instance
 
-{% include templates/install/trendz/eks/k8s-trendz-db-creating.md %}
+{% include templates/install/sentient-analytics/eks/k8s-sentient-analytics-db-creating.md %}
 
-### 9.3. Trendz starting
+### 9.3. SENTIENT ANALYTICS starting
 
-{% include templates/install/trendz/k8s-trendz-starting.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-starting.md %}
 
 ## Step 10. Validate the setup
 
@@ -132,13 +132,13 @@ see `tb-node-0` pod in the `READY` state.
 
 ## Upgrading
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
 {% include templates/install/aws/eks-upgrading.md %}
 
-### Upgrading to new Trendz version (Optional)
+### Upgrading to new SENTIENT ANALYTICS version (Optional)
 
-{% include templates/install/trendz/k8s-trendz-upgrading.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-upgrading.md %}
 
 {% include templates/install/aws/eks-deletion.md %}
 

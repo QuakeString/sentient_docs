@@ -16,7 +16,7 @@ Example of HTML
                     <td class="content-block" style="box-sizing: border-box; vertical-align: top; margin: 0px; padding: 0px 0px 20px; width: 600px;" valign="top"><span style="color: #000000;">This email is indicating that your outgoing mail settings were set up correctly.</span></td>
                 </tr>
                 <tr style="box-sizing: border-box; margin: 0px;">
-                    <td class="content-block" style="box-sizing: border-box; vertical-align: top; margin: 0px; padding: 0px 0px 20px; width: 600px;" valign="top"><span style="color: #000000;">&mdash; The ThingsBoard :)</span></td>
+                    <td class="content-block" style="box-sizing: border-box; vertical-align: top; margin: 0px; padding: 0px 0px 20px; width: 600px;" valign="top"><span style="color: #000000;">&mdash; The SENTIENT :)</span></td>
                 </tr>
                 </tbody>
             </table>

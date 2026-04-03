@@ -1,12 +1,12 @@
-bigheader: "ThingsBoard Cloud Documentation"
-abstract: "Documentation for using ThingsBoard Cloud IoT Platform."
+bigheader: "SENTIENT Cloud Documentation"
+abstract: "Documentation for using SENTIENT Cloud IoT Platform."
 toc:
-- title: ThingsBoard Cloud
+- title: SENTIENT Cloud
   path: /docs/paas/eu/
-- title: What is ThingsBoard?
-  path: /docs/paas/eu/getting-started-guides/what-is-thingsboard/
-- title: What is ThingsBoard Cloud?
-  path: /docs/paas/eu/getting-started-guides/what-is-thingsboard-cloud/
+- title: What is SENTIENT?
+  path: /docs/paas/eu/getting-started-guides/what-is-sentient/
+- title: What is SENTIENT Cloud?
+  path: /docs/paas/eu/getting-started-guides/what-is-sentient-cloud/
 - title: How to connect your device?
   path: /docs/paas/eu/getting-started-guides/connectivity/
 - title: Solution templates
@@ -245,8 +245,8 @@ toc:
     - title: Local AI with Ollama
       path: /docs/paas/eu/samples/analytics/ollama/
       new: true
-    - title: Trendz Analytics
-      path: /docs/trendz/
+    - title: SENTIENT ANALYTICS
+      path: /docs/sentient-analytics/
     - title: Kafka Streams
       path: /docs/paas/eu/samples/analytics/kafka-streams/
 - title: Reporting
@@ -305,7 +305,7 @@ toc:
       path: /docs/paas/eu/user-guide/csv-xls-data-export/
     - title: File storage
       path: /docs/paas/eu/user-guide/file-storage/
-    - title: ThingsBoard Expression Language (TBEL)
+    - title: SENTIENT Expression Language (TBEL)
       path: /docs/paas/eu/user-guide/tbel/
       new: true
 - title: Security

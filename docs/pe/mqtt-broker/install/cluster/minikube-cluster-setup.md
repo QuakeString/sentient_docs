@@ -1,10 +1,10 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: Deploy TBMQ PE Cluster on Minikube with Kubernetes
-description: Deploy TBMQ PE Cluster on Minikube with Kubernetes
+title: Deploy ST-RMQTT PE Cluster on Minikube with Kubernetes
+description: Deploy ST-RMQTT PE Cluster on Minikube with Kubernetes
 
 ---
 
 {% assign docsPrefix = "pe/" %}
-{% assign tbmqSuffix = "PE" %}
+{% assign st-rmqttSuffix = "PE" %}
 {% include docs/mqtt-broker/install/cluster/minikube-cluster-setup.md %}

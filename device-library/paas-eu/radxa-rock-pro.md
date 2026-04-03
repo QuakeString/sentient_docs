@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Radxa Rock Pro to ThingsBoard?
+title: How to connect Radxa Rock Pro to SENTIENT?
 category: Single-board computers
 chip: Rockchip RK3188
 connectivity: [Ethernet, WIFI, Bluetooth]

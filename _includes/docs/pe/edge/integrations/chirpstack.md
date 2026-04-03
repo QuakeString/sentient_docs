@@ -8,7 +8,7 @@
 ### Overview
 
 [ChirpStack](https://www.chirpstack.io/){: target="_blank"} is an **open-source LoRaWAN Network Server** which can be used to setup LoRaWAN networks.
-After integrating ChirpStack with **ThingsBoard Edge**, you can locally connect, process, and visualize device data at the edge, ensuring low-latency insights and offline capabilities.
+After integrating ChirpStack with **SENTIENT GATEWAY**, you can locally connect, process, and visualize device data at the edge, ensuring low-latency insights and offline capabilities.
 
 To learn more, please see the integration diagram.
 
@@ -16,14 +16,14 @@ To learn more, please see the integration diagram.
 
 ### Prerequisites
 
-* **ThingsBoard Edge Professional Edition** up and running.
+* **SENTIENT GATEWAY Professional Edition** up and running.
 * Install **ChirpStack Network Server** via [Docker Compose](https://www.chirpstack.io/project/guides/docker-compose/){: target="_blank"} or [Ubuntu](https://www.chirpstack.io/project/guides/debian-ubuntu/){: target="_blank"}.
 * Have a device connected to the network. Read how to connect the **LoRaWAN device** with [ChirpStack](https://www.chirpstack.io/project/guides/connect-device/){: target="_blank"}.
 
 ### Create converter and integration templates
 
-Only the **ThingsBoard Professional Edition** creates converters and integration templates.
-So please use [**ThingsBoard Cloud**](https://thingsboard.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
+Only the **SENTIENT Professional Edition** creates converters and integration templates.
+So please use [**SENTIENT Cloud**](https://sentient.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
 
 #### Basic settings
 
@@ -36,13 +36,13 @@ To add the **ChirpStack integration**:
 
 {% capture debug-mode %}
 **Debug mode** is extremely useful for development and troubleshooting. However, having it on all the time can significantly increase the disk space used by the database since all the debug data is stored there.
-<p>Therefore, starting from <b>version 3.9</b>, <b>ThingsBoard</b> stores all debug events for integrations only during the first <b>15 minutes</b>. After that, only failure events are retained. These settings can be combined or completely disabled.</p>
+<p>Therefore, starting from <b>version 3.9</b>, <b>SENTIENT</b> stores all debug events for integrations only during the first <b>15 minutes</b>. After that, only failure events are retained. These settings can be combined or completely disabled.</p>
 {% endcapture %}
 {% include templates/info-banner.md content=debug-mode %}
 
 #### Uplink data converter
 
-**Uplink** is necessary to convert the incoming data from the device into the required format for displaying them in **ThingsBoard**.
+**Uplink** is necessary to convert the incoming data from the device into the required format for displaying them in **SENTIENT**.
 
 * Select the **"Create new"** tab
 * Enter the **Converter name**
@@ -93,11 +93,11 @@ Before you proceed with the **Connection** configuration, create the **Applicati
     <br>Password: **admin**
 * Go to the **Tennant > API Keys** section and click the **"Add API Key"** button.
 * Enter the **API key name** and click the **"Submit"** button.
-* Once the **API key name** is created, copy and paste it into the **"Application server API Token"** field in the **ThingsBoard UI**.
+* Once the **API key name** is created, copy and paste it into the **"Application server API Token"** field in the **SENTIENT UI**.
 
 {% include images-gallery.html imageCollection="chirpstack-api-key" %}
 
-On the **ThingsBoard UI**, continue with the **Connection** configuration. Fill in the following fields:
+On the **SENTIENT UI**, continue with the **Connection** configuration. Fill in the following fields:
 * **Base URL:** Enter the URL in the format: **http://edge-ip:edge-port** (_e.g., http://10.7.2.193:8080_).
 * **HTTP endpoint URL:** Copy to use it while configuring the [ChirpStack application](#integration-on-chirpstack).
 * **Application server URL:** Enter the address of the application server or the REST API service in the format: **http://chipstack-server-ip:8090** (_e.g., http://10.7.2.193:8090_).
@@ -108,7 +108,7 @@ On the **ThingsBoard UI**, continue with the **Connection** configuration. Fill 
 
 ### Configure the integration on the ChirpStack application {#integration-on-chirpstack}
 
-To forward device data from **ChirpStack** to **ThingsBoard**, the **ChirpStack Application Integration** should be configured as well.
+To forward device data from **ChirpStack** to **SENTIENT**, the **ChirpStack Application Integration** should be configured as well.
 Log in to the **ChirpStack UI** at **http://chipstack-server-ip:8080** to proceed.
 
 #### Add a device profile
@@ -133,7 +133,7 @@ To configure an integration in the **ChirpStack** application:
 * Enter the **application name** and click the **"Submit"** button.
 * Select the **"Integrations"** tab.
 * Find the **HTTP integration** in the list and click the **"+"** button to add it to the application.
-* Paste the **HTTP endpoint URL** obtained at the [Connection](#connection) configuration step in the **ThingsBoard UI**.
+* Paste the **HTTP endpoint URL** obtained at the [Connection](#connection) configuration step in the **SENTIENT UI**.
 * Click the **"Submit"** button.
 
 {% include images-gallery.html imageCollection="chirpstack-applications" %}
@@ -164,7 +164,7 @@ However, the device itself will send data through the gateway. To add the gatewa
 Once the **integration template** is created and the **ChirpStack Application Integration** is configured, assign the **integration template** to the **Edge** instance:
 * Go to the **Edge management > Instances** section and click the **"Manage edge integrations"** button.
 * On the **"Integration"** page, click the **"Assign to edge"** button. In the **"Assign the Integration to the Edge"** pop-up window, select the integration from the drop-down menu and click the **"Assign"** button.
-* To confirm the **ChirpStack** integration on the **Edge**, login to your **ThingsBoard Edge** instance and go to the **Integrations center > Integrations** section. 
+* To confirm the **ChirpStack** integration on the **Edge**, login to your **SENTIENT GATEWAY** instance and go to the **Integrations center > Integrations** section. 
 
 {% include images-gallery.html imageCollection="assign-to-edge" %}
 
@@ -233,11 +233,11 @@ Where:
 * **deviceProfileName:** Replace the value with the ChirpStack device profile name.
 * **devEui:** Replace the value with the Device EUI you add in the ChirpStack device.
 * **gatewayId:** Replace the value with the ChirpStack gateway ID.
-* **$YOUR_HTTP_ENDPOINT_URL:** Replace it with the actual value obtained from the ThingsBoard integration.
+* **$YOUR_HTTP_ENDPOINT_URL:** Replace it with the actual value obtained from the SENTIENT integration.
 
 In production environments, devices **automatically** send uplink messages at regular intervals or in response to events, without manual intervention.
 
-After the message is sent, a new device will be created in the **ThingsBoard Edge** user interface. 
+After the message is sent, a new device will be created in the **SENTIENT GATEWAY** user interface. 
 * To view the received time-series data, go to the **Entities > Devices** section, click the **device** and select the **"Latest telemetry"** tab.
 
 {% include images-gallery.html imageCollection="device" %}

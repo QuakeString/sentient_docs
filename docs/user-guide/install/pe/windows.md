@@ -2,8 +2,8 @@
 layout: docwithnav-pe
 assignees:
 - ashvayka
-title: Installing ThingsBoard PE on Windows
-description: Installing ThingsBoard on Windows
+title: Installing SENTIENT Professional Edition on Windows
+description: Installing SENTIENT on Windows
 
 ---
 
@@ -16,27 +16,27 @@ description: Installing ThingsBoard on Windows
 
 ## Prerequisites
 
-This guide describes how to install ThingsBoard on a Windows machine.
+This guide describes how to install SENTIENT on a Windows machine.
 Instructions below are provided for Windows 11/10. 
 Hardware requirements depend on chosen database and amount of devices connected to the system. 
-To run ThingsBoard and PostgreSQL on a single machine you will need at least 4Gb of RAM.
-To run ThingsBoard and Cassandra on a single machine you will need at least 8Gb of RAM.
+To run SENTIENT and PostgreSQL on a single machine you will need at least 4Gb of RAM.
+To run SENTIENT and Cassandra on a single machine you will need at least 8Gb of RAM.
 
 ## Step 1. Install Java 17 (OpenJDK) 
 
 {% include templates/install/windows-java-install.md %}
 
-## Step 2. ThingsBoard service installation
+## Step 2. SENTIENT service installation
 
 Download and extract the package.
 
 ```bash
-https://dist.thingsboard.io/thingsboard-windows-{{ site.release.pe_ver }}.zip
+https://dist.docs.sentient.invenia.in/sentient-windows-{{ site.release.pe_ver }}.zip
 ```
 {: .copy-code}
 
 
-**Note:** We assume you have installed ThingsBoard to default location: *C:\Program Files (x86)\thingsboard*  
+**Note:** We assume you have installed SENTIENT to default location: *C:\Program Files (x86)\sentient*  
 
 ## Step 3. Obtain and configure license key 
 
@@ -44,13 +44,13 @@ We assume you have already chosen your subscription plan or decided to purchase 
 If not, please navigate to [pricing](/pricing/) page to select the best license option for your case and get your license. 
 See [How-to get pay-as-you-go subscription](https://www.youtube.com/watch?v=dK-QDFGxWek){:target="_blank"} or [How-to get perpetual license](https://www.youtube.com/watch?v=GPe0lHolWek){:target="_blank"} for more details.
 
-Once you get the license secret, you should put it to the thingsboard configuration file.
+Once you get the license secret, you should put it to the sentient configuration file.
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):
 
 ```text 
-C:\Program Files (x86)\thingsboard\conf\thingsboard.yml
+C:\Program Files (x86)\sentient\conf\sentient.yml
 ``` 
 {: .copy-code}
 
@@ -58,26 +58,26 @@ Scroll to the bottom of the file and locate the following configuration block:
 
 ```yml
 license:
-    secret: "${TB_LICENSE_SECRET:}" # license secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+    secret: "${TB_LICENSE_SECRET:}" # license secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
 ```
 
 and put your license secret. See example below: 
 
 ```yml
 license:
-    secret: "${TB_LICENSE_SECRET:YOUR_LICENSE_SECRET_HERE}" # license secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+    secret: "${TB_LICENSE_SECRET:YOUR_LICENSE_SECRET_HERE}" # license secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
 ``` 
 
-## Step 4. Configure ThingsBoard database
+## Step 4. Configure SENTIENT database
 
 {% include templates/install/install-db.md %}
 
 {% capture contenttogglespec %}
 PostgreSQL <small>(recommended for < 5K msg/sec)</small>%,%postgresql%,%templates/install/windows-db-postgresql.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="ubuntuThingsboardDatabase" toggle-spec=contenttogglespec %} 
+{% include content-toggle.liquid content-toggle-id="ubuntuSentientDatabase" toggle-spec=contenttogglespec %} 
 
-## Step 5. Choose ThingsBoard queue service
+## Step 5. Choose SENTIENT queue service
 
 {% include templates/install/install-queue.md %}
 
@@ -86,7 +86,7 @@ In Memory <small>(built-in and default)</small>%,%inmemory%,%templates/install/q
 Kafka <small>(recommended for on-prem, production installations)</small>%,%kafka%,%templates/install/windows-queue-kafka.md%br%
 Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confluent-cloud%,%templates/install/windows-queue-confluent-cloud.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="windowsThingsboardQueue" toggle-spec=contenttogglespecqueue %} 
+{% include content-toggle.liquid content-toggle-id="windowsSentientQueue" toggle-spec=contenttogglespecqueue %} 
 
 ## Step 6. [Optional] Memory update for slow machines 
 
@@ -94,24 +94,24 @@ Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confl
 
 ## Step 7. Run installation script
 
-Launch windows shell (Command Prompt) as Administrator. Change directory to your ThingsBoard installation directory.
+Launch windows shell (Command Prompt) as Administrator. Change directory to your SENTIENT installation directory.
 
-Execute **install.bat** script to install ThingsBoard as a Windows service (or run **".\install.bat --loadDemo"** to install and add demo data).
+Execute **install.bat** script to install SENTIENT as a Windows service (or run **".\install.bat --loadDemo"** to install and add demo data).
 This means it will be automatically started on system startup. 
-Similar, **uninstall.bat** will remove ThingsBoard from Windows services.
+Similar, **uninstall.bat** will remove SENTIENT from Windows services.
 The output should be similar to this one:
   
   ```text
-C:\Program Files (x86)\thingsboard>.\install.bat --loadDemo
+C:\Program Files (x86)\sentient>.\install.bat --loadDemo
 Detecting Java version installed.
 CurrentVersion 170
 Java 17 found!
-Installing thingsboard ...
+Installing sentient ...
 ...
-ThingsBoard installed successfully!
+SENTIENT installed successfully!
 ```
 
-## Step 8. Start ThingsBoard service
+## Step 8. Start SENTIENT service
 
 {% include templates/windows-start-service.md %}
 
@@ -119,22 +119,22 @@ ThingsBoard installed successfully!
 Please allow up to 90 seconds for the Web UI to start.{% endcapture %}
 {% include templates/info-banner.md content=90-sec-ui %}
 
-## Step 9. Install ThingsBoard Web Report Server component
+## Step 9. Install SENTIENT Web Report Server component
 
 Download and extract the installation package.
 
 ```bash
-https://dist.thingsboard.io/tb-web-report-windows-{{ site.release.pe_ver }}.zip
+https://dist.docs.sentient.invenia.in/tb-web-report-windows-{{ site.release.pe_ver }}.zip
 ```
 {: .copy-code}
 
-**Note:** We assume you have extracted ThingsBoard Web Report Server to default location: *C:\Program Files (x86)\tb-web-report* 
+**Note:** We assume you have extracted SENTIENT Web Report Server to default location: *C:\Program Files (x86)\tb-web-report* 
 
-Launch windows shell (Command Prompt) as Administrator. Change directory to your ThingsBoard installation directory.
+Launch windows shell (Command Prompt) as Administrator. Change directory to your SENTIENT installation directory.
 
-Execute **install.bat** script to install ThingsBoard Web Report Server as a Windows service.
+Execute **install.bat** script to install SENTIENT Web Report Server as a Windows service.
   This means it will be automatically started on system startup. 
-  Similar, **uninstall.bat** will remove ThingsBoard from Windows services.
+  Similar, **uninstall.bat** will remove SENTIENT from Windows services.
   The output should be like:
 
   ```text
@@ -143,7 +143,7 @@ Installing tb-web-report ...
 tb-web-report installed successfully!
   ```
 
-Now let's start the ThingsBoard service!
+Now let's start the SENTIENT service!
 Open the command prompt as an Administrator and execute the following command:
 
 ```shell
@@ -155,31 +155,31 @@ Expected output:
 
 ```text
 C:\Program Files (x86)\tb-web-report>net start tb-web-report
-The Thingsboard Web Report Microservice service is starting.
-The Thingsboard Web Report Microservice service was started successfully.
+The Sentient Web Report Microservice service is starting.
+The Sentient Web Report Microservice service was started successfully.
 ```
 
 ## Post-installation steps
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
-{% include templates/install/upgrade-thingsboard.md %}
+{% include templates/install/upgrade-sentient.md %}
 
 ## Troubleshooting
 
-The log files are located in **logs** folder ("C:\Program Files (x86)\thingsboard\logs" in our case).
+The log files are located in **logs** folder ("C:\Program Files (x86)\sentient\logs" in our case).
 
-The **thingsboard.log** file should contain following line:
+The **sentient.log** file should contain following line:
 
 ```text
-YYYY-MM-DD HH:mm:ss,sss [main] INFO  o.t.s.ThingsboardServerApplication - Started ThingsboardServerApplication in x.xxx seconds (JVM running for x.xxx)
+YYYY-MM-DD HH:mm:ss,sss [main] INFO  o.t.s.SentientServerApplication - Started SentientServerApplication in x.xxx seconds (JVM running for x.xxx)
 ```
 
 In case of any unclear errors, use general [troubleshooting guide](/docs/user-guide/troubleshooting/#getting-help) or [contact us](/docs/contact-us/).
 
 ## Windows firewall settings
 
-In order to have external access to ThingsBoard Web UI and device connectivity (HTTP, MQTT, CoAP)
+In order to have external access to SENTIENT Web UI and device connectivity (HTTP, MQTT, CoAP)
 you need to create a new inbound rule with Windows Firewall with Advanced Security.
  
 - Open "Windows Firewall" from "Control Panel":
@@ -210,7 +210,7 @@ you need to create a new inbound rule with Windows Firewall with Advanced Securi
 
 ![image](/images/user-guide/install/windows/windows7-firewall-7.png)
 
-- Finally, give the name to this rule (for ex. "ThingsBoard Service Networking") and click "Finish".
+- Finally, give the name to this rule (for ex. "SENTIENT Service Networking") and click "Finish".
 
 ![image](/images/user-guide/install/windows/windows7-firewall-8.png)
 

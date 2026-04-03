@@ -1,5 +1,5 @@
 ---
 layout: docwithnav-pe
-title: "How to connect AM308 Lorawan 9-IN-1 IAQ Sensor to ThingsBoard?"
+title: "How to connect AM308 Lorawan 9-IN-1 IAQ Sensor to SENTIENT?"
 redirect_to: "/device-library/pe/am308-sensor/"
 ---

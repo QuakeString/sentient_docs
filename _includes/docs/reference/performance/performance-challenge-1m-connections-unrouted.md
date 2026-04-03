@@ -3,7 +3,7 @@
 How to modify the docker file to handle more connections out of the box (optional)
 
 ```dockerfile
-FROM thingsboard/tb:latest
+FROM sentient/tb:latest
 USER root
 RUN echo 'net.ipv4.ip_local_port_range = 1024 65535' >> /etc/sysctl.conf
 RUN echo 'fs.file-max = 1048576' >> /etc/sysctl.conf
@@ -11,7 +11,7 @@ RUN echo '*                soft    nofile          1048576' >> /etc/security/lim
 RUN echo '*                hard    nofile          1048576' >> /etc/security/limits.conf
 RUN echo 'root             soft    nofile          1048576' >> /etc/security/limits.conf
 RUN echo 'root             hard    nofile          1048576' >> /etc/security/limits.conf
-USER thingsboard
+USER sentient
 ```
 {: .copy-code}
 
@@ -45,7 +45,7 @@ fs.file-max = 1048576
 
 ### m6a.2xlarge (8 vCPUs AMD EPYC 3rd, 32 GiB, EBS GP3) + Cassandra - 500k devices, 5k msg/sec, 15k tps
 
-Architecture is 1 Thingsboard server + 20 client instances each supply 25k devices (500k in total).
+Architecture is 1 Sentient server + 20 client instances each supply 25k devices (500k in total).
 
 500k devices connected
 
@@ -65,15 +65,15 @@ Almost handle, but it's hard to handle 10k mps rate with 500k devices without fu
 
 ### m6a.4xlarge (16 vCPUs AMD EPYC 3rd, 64 GiB, EBS GP3) + Cassandra - 1Million devices, 5k msg/sec, 15k tps
 
-Architecture is 1 Thingsboard server + 32 clients instances each supply 31250 devices (1 million in total).
+Architecture is 1 Sentient server + 32 clients instances each supply 31250 devices (1 million in total).
 
 Prepare the instance `pt01` example. See the particular scripts that manages many instances at once
 
 ```bash
 ssh tb2 <<'ENDSSH'
 set +x
-#optional. replace with your Thingsboard instance ip
-#echo '52.50.5.45 thingsboard' | sudo tee -a /etc/hosts
+#optional. replace with your Sentient instance ip
+#echo '52.50.5.45 sentient' | sudo tee -a /etc/hosts
 #extend the local port range up to 64500 
 cat /proc/sys/net/ipv4/ip_local_port_range
 #32768	60999
@@ -90,7 +90,7 @@ newgrp docker
 # test non-root docker run
 docker run hello-world
 cd ~
-git clone https://github.com/thingsboard/performance-tests.git
+git clone https://github.com/sentient/performance-tests.git
 # git pull
 cd performance-tests
 ./build.sh
@@ -114,7 +114,7 @@ ENDSSH
 
 Important: to handle more than 256k (limit depends on total memory size) TCP connections, please adjust the `conntrack_max` system parameter.
 
-Run this once on `thingsboard` node to increase file descriptor and net filter limits. This is required to handle about 1M TCP connections.
+Run this once on `sentient` node to increase file descriptor and net filter limits. This is required to handle about 1M TCP connections.
 
 ```bash
 ulimit -n 1048576
@@ -145,7 +145,7 @@ services:
     volumes:
       - cassandra:/bitnami
     environment:
-      CASSANDRA_CLUSTER_NAME: "Thingsboard Cluster"
+      CASSANDRA_CLUSTER_NAME: "Sentient Cluster"
       HEAP_NEWSIZE: "6144M"
       MAX_HEAP_SIZE: "12288M"
       JVM_EXTRA_OPTS: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=7199 -Dcom.sun.management.jmxremote.rmi.port=7199  -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=127.0.0.1"
@@ -181,10 +181,10 @@ services:
     volumes:
       - postgres:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: "thingsboard"
+      POSTGRES_DB: "sentient"
       POSTGRES_PASSWORD: "postgres"
   tb:
-    image: "thingsboard/tb"
+    image: "sentient/tb"
 #    build:
 #      context: .
 #      dockerfile: Dockerfile # for the custom build for experimental setup
@@ -195,15 +195,15 @@ services:
     network_mode: "host"
     restart: "always"
     volumes:
-      - thingsboard-data:/data
-      - thingsboard-logs:/var/log/thingsboard
+      - sentient-data:/data
+      - sentient-logs:/var/log/sentient
     environment:
       DATABASE_TS_TYPE: "cassandra"
       DATABASE_TS_LATEST_TYPE: "cassandra" # this is a key difference
       #Cassandra
-      CASSANDRA_CLUSTER_NAME: "Thingsboard Cluster"
+      CASSANDRA_CLUSTER_NAME: "Sentient Cluster"
       CASSANDRA_LOCAL_DATACENTER: "datacenter1"
-      CASSANDRA_KEYSPACE_NAME: "thingsboard"
+      CASSANDRA_KEYSPACE_NAME: "sentient"
       CASSANDRA_URL: "127.0.0.1:9042"
       CASSANDRA_USE_CREDENTIALS: "true"
       CASSANDRA_USERNAME: "cassandra"
@@ -226,7 +226,7 @@ services:
       TB_QUEUE_RE_SQ_CONSUMER_PER_PARTITION: "false"
       ACTORS_SYSTEM_RULE_DISPATCHER_POOL_SIZE: "8"
       # Postgres connection
-      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/thingsboard"
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://localhost:5432/sentient"
       SPRING_DATASOURCE_USERNAME: "postgres"
       SPRING_DATASOURCE_PASSWORD: "postgres"
       SPRING_DATASOURCE_MAXIMUM_POOL_SIZE: "25"
@@ -258,14 +258,14 @@ volumes: # to persist data between container restarts or being recreated
   kafka:
   zookeeper:
   postgres:
-  thingsboard-data:
-  thingsboard-logs:
+  sentient-data:
+  sentient-logs:
 ```
 {: .copy-code}
 
 How to forward JMX port with ssh for all Java application in this deployment.
 ```bash
-ssh -L 9999:127.0.0.1:9999 -L 1099:127.0.0.1:1099 -L 9199:127.0.0.1:9199 -L 7199:127.0.0.1:7199 thingsboard 
+ssh -L 9999:127.0.0.1:9999 -L 1099:127.0.0.1:1099 -L 9199:127.0.0.1:9199 -L 7199:127.0.0.1:7199 sentient 
 ```
 
 Enable pg_stat_statements preload library for PostgreSQL
@@ -285,13 +285,13 @@ Check network connection count.
 
 How to make a Java heap dump
 ```bash
-ssh thingsboard
+ssh sentient
 #docker exec -it ubuntu_tb_1 /bin/bash
 docker exec -it ubuntu_tb_1 ps -A | grep java
 # 8 ?        00:01:46 java
 docker exec -it ubuntu_tb_1 jmap -dump:live,format=b,file=/data/dump.hprof 8
 # Heap dump file created
-sudo mv /var/lib/docker/volumes/ubuntu_thingsboard-data/_data/dump.hprof ~
+sudo mv /var/lib/docker/volumes/ubuntu_sentient-data/_data/dump.hprof ~
 sudo chown ubuntu:ubuntu ~/dump.hprof
 exit
 #copy with compression - much faster
@@ -309,7 +309,7 @@ Here the results for 1M devices!
 ![](/images/reference/performance-aws-instances/method/m6a-4xlarge/500k-10k-30k/aws-storage-monitoring.png)
 
 Conclusion:
-1. We did it! Thingsboard has been demonstrated the code and design quality.
+1. We did it! Sentient has been demonstrated the code and design quality.
 2. It is too risky to go production with monolith with more than 100k devices on a single node.
 3. Never do such experiments on the production environment.
 4. This case helps to discover the bottlenecks and further improve performance.

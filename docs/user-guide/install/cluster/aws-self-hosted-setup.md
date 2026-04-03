@@ -3,14 +3,14 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Self-hosted setup using AWS EC2 instance
-description: ThingsBoard IoT platform self-hosted setup with AWS EC2 instance
+description: SENTIENT IoT platform self-hosted setup with AWS EC2 instance
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in AWS EC2 instance. 
+This guide will help you to setup SENTIENT in AWS EC2 instance. 
 
 ## Prerequisites
 

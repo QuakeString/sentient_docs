@@ -1,11 +1,11 @@
 Execute the following command to pull the image:
 
 ```bash
-docker pull thingsboard/tb-pe-tcp-udp-integration:{{ site.release.pe_full_ver }}
+docker pull sentient/tb-pe-tcp-udp-integration:{{ site.release.pe_full_ver }}
 ```
 {: .copy-code}
 
-Create a volume for the integration logs (_799 is the user ID of the non-root ThingsBoard Docker user_):
+Create a volume for the integration logs (_799 is the user ID of the non-root SENTIENT Docker user_):
 
 ```bash
 mkdir -p ~/.tb-pe-tcp-udp-integration-logs && sudo chown -R 799:799 ~/.tb-pe-tcp-udp-integration-logs
@@ -22,13 +22,13 @@ docker run -it -p 10560:10560 -v ~/.tb-pe-tcp-udp-integration-logs:/var/log/tb-t
 {%- endif -%}-e "RPC_HOST=mytbedge" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
 --name my-tb-pe-tcp-udp-integration --network NETWORK_NAME \
---restart always thingsboard/tb-pe-tcp-udp-integration:{{ site.release.pe_full_ver }}
+--restart always sentient/tb-pe-tcp-udp-integration:{{ site.release.pe_full_ver }}
 ```
 {: .copy-code}
 
 Where: 
 
-- **mytbedge:** The host name of the ThingsBoard Edge service.
+- **mytbedge:** The host name of the SENTIENT GATEWAY service.
 - **9090:** The integration port. It is configured by the **INTEGRATIONS_RPC_PORT** environment variable in the **tb-edge.yml** file.
 {% if page.url contains "udp" %}
 - **-p 11560:11560/udp:** Use if the exposed port is UDP.
@@ -45,8 +45,8 @@ Where:
 - **YOUR_SECRET:** Replace it with the actual **integration secret** obtained in [Step 3](/docs/pe/edge/user-guide/integrations/remote-integrations/#step-3-save-remote-integration-credentials){: target="_blank"}.
 {% endif %}
 - **docker run:** The command to run this container.
-- **-it:** Attaches a terminal session with current ThingsBoard remote integration process output.
-- **-v ~/.tb-pe-tcp-udp-integration-logs:/var/log/tb-tcp-udp-integration:** Mounts the host's dir **~/.tb-pe-tcp-udp-integration-logs** to ThingsBoard remote integration logs directory.
+- **-it:** Attaches a terminal session with current SENTIENT remote integration process output.
+- **-v ~/.tb-pe-tcp-udp-integration-logs:/var/log/tb-tcp-udp-integration:** Mounts the host's dir **~/.tb-pe-tcp-udp-integration-logs** to SENTIENT remote integration logs directory.
 - **--name tb-pe-tcp-udp-integration:** Set the local name for the integration.
 - **--network NETWORK_NAME:** The network name in which the **mytbedge** service operates. Replace the **NETWORK_NAME** value with the actual network name. 
   - To check the network name, run the following command: 
@@ -56,8 +56,8 @@ Where:
   ``` 
   {: .copy-code}
 
-- **--restart always:** The command automatically starts ThingsBoard Integration if the system reboots and restarts in case of failure.
-- **thingsboard/tb-pe-tcp-udp-integration:{{ site.release.pe_full_ver }}:** The docker image.
+- **--restart always:** The command automatically starts SENTIENT Integration if the system reboots and restarts in case of failure.
+- **sentient/tb-pe-tcp-udp-integration:{{ site.release.pe_full_ver }}:** The docker image.
 
 After executing this command, you can open the logs located here: **~/.tb-pe-tcp-udp-integration-logs**.
 You should be able to see INFO log messages containing your latest integration configuration that arrived from the server.
@@ -66,7 +66,7 @@ To keep the container running in the background but detach from the session term
 
 #### Reattaching, stop and start commands
 
-To reattach to the terminal (to see ThingsBoard remote integration logs), run:
+To reattach to the terminal (to see SENTIENT remote integration logs), run:
 
 ```bash
 docker attach my-tb-pe-tcp-udp-integration

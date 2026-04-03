@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
 title: Edge Release Notes
-description: ThingsBoard Edge Release Notes
+description: SENTIENT GATEWAY Release Notes
 
 ---
 
@@ -66,8 +66,8 @@ description: ThingsBoard Edge Release Notes
 
 **Hotfix** release to fix incorrect update of sequential id offset:
 
-* [#57](https://github.com/thingsboard/thingsboard-edge/issues/57){: target="_blank"} ThingsBoard Edge PE disconnects from cloud;
-* [#60](https://github.com/thingsboard/thingsboard-edge/issues/60){: target="_blank"} edge error log;
+* [#57](https://github.com/sentient/sentient-gateway/issues/57){: target="_blank"} SENTIENT GATEWAY PE disconnects from cloud;
+* [#60](https://github.com/sentient/sentient-gateway/issues/60){: target="_blank"} edge error log;
 
 ## v3.5.1 (Jun 1, 2023) {#v351}
 
@@ -104,7 +104,7 @@ Everything from [TB Edge v3.4](/docs/edge/releases/#v34-july-21-2022){: target="
 
 **Hot fix** release with the following bug fixes:
 * Core:
-    * Fix issue with duplicate system widget bundles that cause an error during widget loading on the dashboard [details](https://github.com/thingsboard/thingsboard-edge/issues/5){: target="_blank"}
+    * Fix issue with duplicate system widget bundles that cause an error during widget loading on the dashboard [details](https://github.com/sentient/sentient-gateway/issues/5){: target="_blank"}
 
 ## v3.3.4 (March 24, 2022)
 
@@ -112,8 +112,8 @@ Minor release with the following improvements and bug fixes:
 
 **Improvements**:
 * Supports the latest features of 3.3.4.1 releases
-   * CE [3.3.4.1 release notes](https://thingsboard.io/docs/reference/releases/#v3341-march-22-2022){: target="_blank"}
-   * PE [3.3.4.1 release notes](https://thingsboard.io/docs/pe/reference/releases/#v3341-march-18-2022){: target="_blank"}
+   * CE [3.3.4.1 release notes](https://docs.sentient.invenia.in/docs/reference/releases/#v3341-march-22-2022){: target="_blank"}
+   * PE [3.3.4.1 release notes](https://docs.sentient.invenia.in/docs/pe/reference/releases/#v3341-march-18-2022){: target="_blank"}
 * Fixed issue with incorrect license check in case of slow or limited internet connectivity
 
 ## v3.3.3 (January 28, 2022)
@@ -122,8 +122,8 @@ Minor release with the following improvements and bug fixes:
 
 **Improvements**:
  * Supports the latest features of 3.3.3 releases
-   * CE [3.3.3 release notes](https://thingsboard.io/docs/reference/releases/#v333-january-27-2022){: target="_blank"}
-   * PE [3.3.3 release notes](https://thingsboard.io/docs/pe/reference/releases/#v333-january-27-2022){: target="_blank"}
+   * CE [3.3.3 release notes](https://docs.sentient.invenia.in/docs/reference/releases/#v333-january-27-2022){: target="_blank"}
+   * PE [3.3.3 release notes](https://docs.sentient.invenia.in/docs/pe/reference/releases/#v333-january-27-2022){: target="_blank"}
  * Edge uses login white labeling configuration of the owner on the cloud, and not the system
 
 **Bug fixes**:

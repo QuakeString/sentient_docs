@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: OneData Boosts Hospital Efficiency 60-70% with ThingsBoard IoT
+title: OneData Boosts Hospital Efficiency 60-70% with SENTIENT IoT
 notitle: "true"
 customTitle: "true"
-description: OneData Software Solutions transforms multi-specialty hospital operations with ThingsBoard IoT platform—real-time asset tracking, patient monitoring, automated alerts, and comprehensive dashboards for 500+ assets.
+description: OneData Software Solutions transforms multi-specialty hospital operations with SENTIENT IoT platform—real-time asset tracking, patient monitoring, automated alerts, and comprehensive dashboards for 500+ assets.
 ---
 
 <div class="case-study-page-wrapper">
@@ -44,7 +44,7 @@ description: OneData Software Solutions transforms multi-specialty hospital oper
     <section class="quote-with-mark fill-background">
         <img src="/images/case-studies/quote.svg" title="Quote mark" alt="Quote mark" width="96" height="90">
         <div class="quote-text">
-            <p>"ThingsBoard and OneData have revolutionized our hospital—tracking assets and patients are now effortless with visual maps, saving us 60-70% time and allowing focus on patient care."</p>
+            <p>"SENTIENT and OneData have revolutionized our hospital—tracking assets and patients are now effortless with visual maps, saving us 60-70% time and allowing focus on patient care."</p>
             <h2>Dr. Rajesh Kumar, Hospital Administrator, Multi-Specialty Hospital-Chennai</h2>
         </div>
     </section>
@@ -111,7 +111,7 @@ description: OneData Software Solutions transforms multi-specialty hospital oper
         </div>
     </section>
     <section class="tb-power mb">
-        <h2>How ThingsBoard powers the Multi-Specialty Hospital?</h2>
+        <h2>How SENTIENT powers the Multi-Specialty Hospital?</h2>
         <div class="block">
             <div class="text">
                 <h3>Real-time asset tracking</h3>
@@ -143,15 +143,15 @@ description: OneData Software Solutions transforms multi-specialty hospital oper
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard helps healthcare improve operations with IoT</h2>
+        <h2>How SENTIENT helps healthcare improve operations with IoT</h2>
         <div class="block">
             <div class="text">
                 <h3>Rule Engine</h3>
                 <p>Processes telemetry to trigger actions like alarms for asset misuse, automating workflows that reduced manual checks by 60%. Custom chains filter data for efficiency in high-volume settings.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/entities-table.webp" title="ThingsBoard entities table widget" alt="ThingsBoard entities table widget" width="776" height="776">
-                <img src="/images/case-studies/value-card.webp" title="ThingsBoard value card widget" alt="ThingsBoard value card widget" width="388" height="388">
+                <img src="/images/case-studies/entities-table.webp" title="SENTIENT entities table widget" alt="SENTIENT entities table widget" width="776" height="776">
+                <img src="/images/case-studies/value-card.webp" title="SENTIENT value card widget" alt="SENTIENT value card widget" width="388" height="388">
             </div>
         </div>
         <div class="block">
@@ -160,8 +160,8 @@ description: OneData Software Solutions transforms multi-specialty hospital oper
                 <p>Organizes devices into logical groups (e.g., by ward), enabling bulk management and inheritance of rules, simplifying oversight for 80-bed facilities.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/hierarchy-widget.webp" title="ThingsBoard hierarchy widget" alt="ThingsBoard hierarchy widget" width="388" height="388">
-                <img src="/images/case-studies/roles-table.webp" title="Thingsboard roles table widget" alt="Thingsboard roles table widget" width="776" height="776">
+                <img src="/images/case-studies/hierarchy-widget.webp" title="SENTIENT hierarchy widget" alt="SENTIENT hierarchy widget" width="388" height="388">
+                <img src="/images/case-studies/roles-table.webp" title="Sentient roles table widget" alt="Sentient roles table widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
@@ -170,8 +170,8 @@ description: OneData Software Solutions transforms multi-specialty hospital oper
                 <p>Interactive visualizations with maps and charts provide role-based views, empowering staff with instant insights and cutting response times by 50%.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/time-series-chart.webp" title="Thingsboard time series chart widget" alt="Thingsboard time series chart widget" width="776" height="776">
-                <img src="/images/case-studies/maps-widgets.webp" title="ThingsBoard maps widget" alt="ThingsBoard maps widget" width="776" height="776">
+                <img src="/images/case-studies/time-series-chart.webp" title="Sentient time series chart widget" alt="Sentient time series chart widget" width="776" height="776">
+                <img src="/images/case-studies/maps-widgets.webp" title="SENTIENT maps widget" alt="SENTIENT maps widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
@@ -180,8 +180,8 @@ description: OneData Software Solutions transforms multi-specialty hospital oper
                 <p>Configurable notifications via SMS/email, plus RBAC and encryption, ensure secure, proactive operations, preventing breaches while scaling seamlessly.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/alarms-table.webp" title="ThingsBoard alarms table widget" alt="ThingsBoard alarms table widget" width="776" height="776">
-                <img src="/images/case-studies/notification-widget.webp" title="ThingsBoard notification widget" alt="ThingsBoard notification widget" width="388" height="388">
+                <img src="/images/case-studies/alarms-table.webp" title="SENTIENT alarms table widget" alt="SENTIENT alarms table widget" width="776" height="776">
+                <img src="/images/case-studies/notification-widget.webp" title="SENTIENT notification widget" alt="SENTIENT notification widget" width="388" height="388">
             </div>
         </div>
         {% include services-banner.liquid %}
@@ -190,7 +190,7 @@ description: OneData Software Solutions transforms multi-specialty hospital oper
         <img class="h-auto" src="/images/case-studies/Raja_Marimuthu.webp" title="Anuruddha Tennakoon and Migara Amithodhana" alt="Anuruddha Tennakoon and Migara Amithodhana" width="658" height="424">
         <div class="text">
             <h2>OneData Software Solutions Pvt. Ltd.</h2>
-            <p class="quote">“Managing and synchronizing hundreds of connected devices in a hospital was a key challenge, and ThingsBoard helped us turn that complexity into real-time operational clarity.”</p>
+            <p class="quote">“Managing and synchronizing hundreds of connected devices in a hospital was a key challenge, and SENTIENT helped us turn that complexity into real-time operational clarity.”</p>
             <p class="author">Raja Marimuthu</p>
             <p class="title">CEO</p>
         </div>
@@ -199,12 +199,12 @@ description: OneData Software Solutions transforms multi-specialty hospital oper
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img src="/images/case-studies/onedata.svg" title="OneData" alt="OneData logo" width="200" height="38">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_OneData_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us</a>
     </section>
 </div>

@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Build and release ThingsBoard Mobile Application
+title: Build and release SENTIENT Mobile Application
 
 ---
 

@@ -1,1 +1,1 @@
-For standalone deployment you need to update <code>/usr/share/thingsboard/conf/logback.xml</code> in order to change logging configuration.
+For standalone deployment you need to update <code>/usr/share/sentient/conf/logback.xml</code> in order to change logging configuration.

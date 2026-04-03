@@ -3,10 +3,10 @@
 
 ## Use case
 
-Let's assume your device is sending temperature and humidity data to ThingsBoard. We will simulate the message sending to some external server using 
+Let's assume your device is sending temperature and humidity data to SENTIENT. We will simulate the message sending to some external server using 
 Rest API call node.
 
-In this tutorial, we will configure ThingsBoard Rule Engine to use queue with retry failed and timeout messages processing strategy.
+In this tutorial, we will configure SENTIENT Rule Engine to use queue with retry failed and timeout messages processing strategy.
 Although this scenario is fictional, you will learn how to work with the queue to allow reprocessing messages in case of failure or timeout processing errors
 and use this knowledge in real-life applications.
 

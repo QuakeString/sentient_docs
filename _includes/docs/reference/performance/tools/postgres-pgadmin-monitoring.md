@@ -6,18 +6,18 @@ Open pgadmin
 
 Create a new connection like shown below. As example, we are going to connect to the AWS EC2 instance with SSH tunneling feature. The host name is the localhost for that case.
 
-![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-thingsboard-database-server-connect-general.png)
+![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-sentient-database-server-connect-general.png)
 
-The default PostgreSQL user is thingsboard, default password is postgres. Please, put your credentials here instead of default.
+The default PostgreSQL user is sentient, default password is postgres. Please, put your credentials here instead of default.
 
-![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-thingsboard-database-server-connect-connection.png)
+![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-sentient-database-server-connect-connection.png)
 
-To use SSH tunneling, put your Thingsboard instance IP and identity file (same as using to connect from terminal) for AWS EC2 instance.
+To use SSH tunneling, put your Sentient instance IP and identity file (same as using to connect from terminal) for AWS EC2 instance.
 
-![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-thingsboard-database-server-connect-ssh-tunnel.png)
+![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-sentient-database-server-connect-ssh-tunnel.png)
 
 As result, you can see the dashboard with real time PostgreSQL metrics.
 
-![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-thingsboard-dashboard.png)
+![](/images/reference/performance-aws-instances/method/pgadmin/pgadmin-sentient-dashboard.png)
 
 Notice: if you are running the PostgreSQL in container isolated from host network, your connection will come with internal docker IP and you should configure security configuration in the [pg_hba.conf](https://www.postgresql.org/docs/current/auth-pg-hba-conf.html) file.

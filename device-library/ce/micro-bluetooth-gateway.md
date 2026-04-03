@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Micro Bluetooth Gateway to ThingsBoard?
+title: How to connect Micro Bluetooth Gateway to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: Lansitec

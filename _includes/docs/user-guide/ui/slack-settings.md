@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-By integrating Slack with Thingsboard, users will be able to receive notifications in Slack of events occurring in the Thingsboard system according to the notification rules you set. For example, to notify about device status or detected issues.
+By integrating Slack with Sentient, users will be able to receive notifications in Slack of events occurring in the Sentient system according to the notification rules you set. For example, to notify about device status or detected issues.
 
 {% capture difference %}
 **Note:**
@@ -14,23 +14,23 @@ Tenant administrator is able to setup to distribute alarms produced by [**rule e
 
 ## Create an application in Slack. Get Slack API token
 
-To configure Slack settings in Thingsboard, first register an application in Slack API. To do this, open [get Slack API token](https://api.slack.com/tutorials/tracks/getting-a-token) page. Next, follow these steps:
+To configure Slack settings in Sentient, first register an application in Slack API. To do this, open [get Slack API token](https://api.slack.com/tutorials/tracks/getting-a-token) page. Next, follow these steps:
 
 {% include images-gallery.html imageCollection="slackProviderSettings" showListImageTitles="true" %}
 
 {% unless docsPrefix contains 'paas/' %}
 ## Slack settings configuration as System administrator
 
-Login to your ThingsBoard UI as a system administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".
+Login to your SENTIENT UI as a system administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".
 
-{% include images-gallery.html imageCollection="thingsboardSystemAdminSettings" %}
+{% include images-gallery.html imageCollection="sentientSystemAdminSettings" %}
 {% endunless %}
 
 ## Slack settings configuration as Tenant administrator
 
-Login to your ThingsBoard UI as a tenant administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".
+Login to your SENTIENT UI as a tenant administrator. Navigate to "Settings" page, "Notification" tab. In "Slack settings" window paste copied Slack API token to "Slack api token" row and click "Save".
 
-{% include images-gallery.html imageCollection="thingsboardTenantAdminSettings" %}
+{% include images-gallery.html imageCollection="sentientTenantAdminSettings" %}
 
 <br>
-Once you have configured your notifications, you will start receiving notifications in your Slack channel whenever an event is triggered in your Thingsboard instance according to the notification rules you set. You will also be able to send messages to any of your users.
+Once you have configured your notifications, you will start receiving notifications in your Slack channel whenever an event is triggered in your Sentient instance according to the notification rules you set. You will also be able to send messages to any of your users.

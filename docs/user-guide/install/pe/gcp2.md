@@ -1,13 +1,13 @@
 ---
 layout: docwithnav-pe
-title: Installing ThingsBoard PE from GCP Marketplace
-description: Installing ThingsBoard PE from Google Cloud Platform Marketplace
+title: Installing SENTIENT Professional Edition from GCP Marketplace
+description: Installing SENTIENT Professional Edition from Google Cloud Platform Marketplace
 
 ---
 
-This guide describes how to install ThingsBoard Professional Edition from GCP Marketplace. 
+This guide describes how to install SENTIENT Professional Edition from GCP Marketplace. 
 Using this guide you will install bring-your-own-license (BYOL) version of the product.
-Basically, you get the license directly from ThingsBoard, Inc, but purchase corresponding server instances and infrastructure from GCP.       
+Basically, you get the license directly from SENTIENT, Inc, but purchase corresponding server instances and infrastructure from GCP.       
 
 * TOC
 {:toc}
@@ -16,9 +16,9 @@ Basically, you get the license directly from ThingsBoard, Inc, but purchase corr
 
 - Active [GCP](https://cloud.google.com/){:target="_blank"} account
 
-### Step 1. Launch ThingsBoard PE BYOL
+### Step 1. Launch SENTIENT Professional Edition BYOL
 
-Open [ThingsBoard Professional Edition BYOL](https://console.cloud.google.com/marketplace/details/thingsboard-public/thingsboard-pe) product page on GCP Marketplace.
+Open [SENTIENT Professional Edition BYOL](https://console.cloud.google.com/marketplace/details/sentient-public/sentient-pe) product page on GCP Marketplace.
 
 ![image](/images/user-guide/install/gcp-marketplace-pe/launch.png) 
 
@@ -28,7 +28,7 @@ Open [ThingsBoard Professional Edition BYOL](https://console.cloud.google.com/ma
 
 ![image](/images/user-guide/install/gcp-marketplace-pe/deploy.png) 
 
-That's it! Your ThingsBoard instance is now deploying! When complete you should see:
+That's it! Your SENTIENT instance is now deploying! When complete you should see:
 
 ![image](/images/user-guide/install/gcp-marketplace-pe/ssh.png) 
 
@@ -36,31 +36,31 @@ That's it! Your ThingsBoard instance is now deploying! When complete you should 
 
 ### Step 2. Obtain your license secret
 
-In order to activate your ThingsBoard instance you will need to get the license secret. 
-ThingsBoard Licenses are managed by [ThingsBoard License Portal](https://license.thingsboard.io/signup).   
+In order to activate your SENTIENT instance you will need to get the license secret. 
+SENTIENT Licenses are managed by [SENTIENT License Portal](https://license.docs.sentient.invenia.in/signup).   
 
-Please register on [ThingsBoard License Portal](https://license.thingsboard.io/signup) to get your license. 
+Please register on [SENTIENT License Portal](https://license.docs.sentient.invenia.in/signup) to get your license. 
 See [How-to get pay-as-you-go subscription](https://www.youtube.com/watch?v=dK-QDFGxWek){:target="_blank"} or [How-to get perpetual license](https://www.youtube.com/watch?v=GPe0lHolWek){:target="_blank"} for more details.
  
 Please save your license secret to a safe place. We will use them later in this guide.
  
 ### Step 3. Configure your license secret
 
-Once you get the license secret, you should put it to the thingsboard configuration file. 
+Once you get the license secret, you should put it to the sentient configuration file. 
 
-#### Step 3.1. Put License Secret to thingsboard configuration file
+#### Step 3.1. Put License Secret to sentient configuration file
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/thingsboard/conf/thingsboard.conf
+sudo nano /etc/sentient/conf/sentient.conf
 ``` 
 {: .copy-code}
 
 Locate the following configuration block:
 
 ```bash
-# License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+# License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 # export TB_LICENSE_SECRET=
 ```
@@ -68,17 +68,17 @@ Locate the following configuration block:
 and put your license secret. Please don't forget to uncomment the export statement. See example below: 
 
 ```bash
-# License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+# License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 export TB_LICENSE_SECRET=YOUR_LICENSE_SECRET_HERE
 ``` 
 
-### Step 4. Launch ThingsBoard service  
+### Step 4. Launch SENTIENT service  
 
-Execute the following command to start ThingsBoard:
+Execute the following command to start SENTIENT:
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
@@ -86,7 +86,7 @@ sudo service thingsboard start
 Please allow up to 120 seconds for the Web UI to start. This is applicable only for slow machines with 1-2 CPUs or 1-2 GB RAM.{% endcapture %}
 {% include templates/info-banner.md content=90-sec-ui %}
 
-### Step 5. Connect to Thingsboard UI
+### Step 5. Connect to Sentient UI
 
 Now you can open this link in your browser:
 
@@ -94,7 +94,7 @@ Now you can open this link in your browser:
 
 Use this login to connect as system Administrator 
 
-- **sysadmin@thingsboard.org**
+- **sysadmin@sentient.org**
 
 Default password for System Administrator is **sysadmin** 
 

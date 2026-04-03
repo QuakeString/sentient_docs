@@ -10,12 +10,12 @@ Once device is claimed, the customer becomes its owner and customer users may ac
 
 ## Device Claiming scenarios
  
-ThingsBoard User can claim the device if they "know" the device Name and Secret Key. 
+SENTIENT User can claim the device if they "know" the device Name and Secret Key. 
 The Secret Key is optional, always has an expiration time, and may also change over time. 
 
 The Secret Key may be provisioned in two different ways:
 
-1. *Device-side key* scenario - Device contains **expirationTime** server attribute with expiration timestamp. The device sends claiming request to ThingsBoard with claiming data and only after this customer is able to claim device by using device claiming widget.   
+1. *Device-side key* scenario - Device contains **expirationTime** server attribute with expiration timestamp. The device sends claiming request to SENTIENT with claiming data and only after this customer is able to claim device by using device claiming widget.   
 2. *Server-side key* scenario - Device contains **claimingData** server attribute with claiming data and customer claim device using claim device widget.  
 
 See below for more details.
@@ -114,7 +114,7 @@ We should [download the script](/docs/user-guide/resources/claiming-device/basic
 
 ```python
 #
-# Copyright © 2016-2024 The Thingsboard Authors
+# Copyright © 2016-2024 The Sentient Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -134,9 +134,9 @@ from tb_device_mqtt import TBDeviceMqttClient
 def collect_required_data():
     config = {}
     print("\n\n", "="*80, sep="")
-    print(" "*20, "ThingsBoard basic device claiming example script.", sep="")
+    print(" "*20, "SENTIENT basic device claiming example script.", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard server hostname or leave it blank to use default ({{mqttHostName}}): ")
+    host = input("Please write your SENTIENT server hostname or leave it blank to use default ({{mqttHostName}}): ")
     config["host"] = host if host else "{{mqttHostName}}"
     token = ""
     while not token:

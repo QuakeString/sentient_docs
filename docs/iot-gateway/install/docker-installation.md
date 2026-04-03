@@ -1,19 +1,19 @@
 ---
 layout: docwithnav-gw
-title: Install ThingsBoard IoT Gateway using Docker Compose
+title: Install SENTIENT IoT Gateway using Docker Compose
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to install and start ThingsBoard Gateway using Docker Compose on Linux or macOS.
+This guide will help you to install and start SENTIENT Gateway using Docker Compose on Linux or macOS.
 
 ## Prerequisites
 
 - [Install Docker Compose](https://docs.docker.com/compose/){:target="_blank"};
-- You will need to have access to ThingsBoard. The easiest way is to [ThingsBoard Cloud](https://thingsboard.io/installations/){:target="_blank"}.
-The alternative option is to install the ThingsBoard locally using the [installation guide](https://thingsboard.io/docs/user-guide/install/installation-options/){:target="_blank"}.
+- You will need to have access to SENTIENT. The easiest way is to [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){:target="_blank"}.
+The alternative option is to install the SENTIENT locally using the [installation guide](https://docs.sentient.invenia.in/docs/user-guide/install/installation-options/){:target="_blank"}.
 
 ## Download a docker-compose file
 
@@ -73,16 +73,16 @@ In order to update to the latest image, execute the following commands:
 
 ```
 docker compose down
-docker pull thingsboard/tb-gateway
+docker pull sentient/tb-gateway
 docker compose up
 ```
 {: .copy-code}
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
- - [Getting Started](/docs/iot-gateway/getting-started/) with ThingsBoard IoT Gateway.
+ - [Getting Started](/docs/iot-gateway/getting-started/) with SENTIENT IoT Gateway.
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

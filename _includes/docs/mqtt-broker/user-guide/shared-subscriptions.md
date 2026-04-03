@@ -3,7 +3,7 @@
 {:toc}
 
 Shared subscriptions are an advanced capability introduced in MQTT v5 that has been widely anticipated by users. 
-While TBMQ does not restrict its usage to MQTT v5 clients exclusively, clients with **any protocol version** can leverage this feature. 
+While ST-RMQTT does not restrict its usage to MQTT v5 clients exclusively, clients with **any protocol version** can leverage this feature. 
 The official [documentation](https://docs.oasis-open.org/mqtt/mqtt/v5.0/os/mqtt-v5.0-os.html#_Toc3901250) offers comprehensive details on shared subscriptions, 
 and this tutorial will focus on the fundamental aspects of this functionality. 
 By understanding and exploring shared subscriptions, users can harness the full potential of this powerful feature in their MQTT interactions.
@@ -83,15 +83,15 @@ mosquitto_sub -d -h "YOUR_MQTT_BROKER_HOST" -p 1883 -t '$share/group/home/temp' 
 **Note:** do not forget to put your hostname instead of `YOUR_MQTT_BROKER_HOST`.
 Make sure authentications are disabled. Otherwise, adjust the commands in this guide appropriately.
 
-For example, to use the system's default MQTT client credentials and connect to a locally deployed TBMQ, run the following commands:
+For example, to use the system's default MQTT client credentials and connect to a locally deployed ST-RMQTT, run the following commands:
 
 ```bash
-mosquitto_sub -d -h "localhost" -p 1883 -t '$share/group/home/temp' -q 1 -V mqttv5 -i client1 -u tbmq_websockets_username
+mosquitto_sub -d -h "localhost" -p 1883 -t '$share/group/home/temp' -q 1 -V mqttv5 -i client1 -u st-rmqtt_websockets_username
 ```
 {: .copy-code}
 
 ```bash
-mosquitto_sub -d -h "localhost" -p 1883 -t '$share/group/home/temp' -q 1 -V mqttv5 -i client2 -u tbmq_websockets_username
+mosquitto_sub -d -h "localhost" -p 1883 -t '$share/group/home/temp' -q 1 -V mqttv5 -i client2 -u st-rmqtt_websockets_username
 ```
 {: .copy-code}
 
@@ -108,10 +108,10 @@ mosquitto_pub -d -h "YOUR_MQTT_BROKER_HOST" -p 1883 -t 'home/temp' -m 32 -q 1
 ```
 {: .copy-code}
 
-Utilize the following command to connect to a locally deployed TBMQ using default credentials:
+Utilize the following command to connect to a locally deployed ST-RMQTT using default credentials:
 
 ```bash
-mosquitto_pub -d -h "localhost" -p 1883 -t 'home/temp' -m 32 -q 1 -u tbmq_websockets_username
+mosquitto_pub -d -h "localhost" -p 1883 -t 'home/temp' -m 32 -q 1 -u st-rmqtt_websockets_username
 ```
 {: .copy-code}
 
@@ -125,30 +125,30 @@ Let's see shared subscription processing in action:
 
 ## Shared Subscriptions Load Balancing Strategy
 
-Currently, TBMQ supports the **ROUND_ROBIN** load balancing strategy type for shared subscriptions. 
+Currently, ST-RMQTT supports the **ROUND_ROBIN** load balancing strategy type for shared subscriptions. 
 This means that incoming messages for a shared subscription are evenly distributed among the subscribed clients in a round-robin fashion. 
 Each client in the group receives messages in sequential order, taking turns to handle the message load.
-We are continuously working on enhancing TBMQ and plan to introduce additional load-balancing strategy types in the near future. 
-These may include random and hash-based load-balancing strategies. Stay tuned for updates as we expand the capabilities of TBMQ.
+We are continuously working on enhancing ST-RMQTT and plan to introduce additional load-balancing strategy types in the near future. 
+These may include random and hash-based load-balancing strategies. Stay tuned for updates as we expand the capabilities of ST-RMQTT.
 
 ## Shared Subscriptions & Client Type
 
-The **DEVICE** and **APPLICATION** clients in TBMQ are implemented differently, and this impacts how the shared subscription feature 
+The **DEVICE** and **APPLICATION** clients in ST-RMQTT are implemented differently, and this impacts how the shared subscription feature 
 is utilized and how it processes messages for each client type.
 
 If you create a shared subscription with the same structure and subscribe to it with both DEVICE and APPLICATION clients,
-TBMQ will treat them as separate shared subscription groups. 
+ST-RMQTT will treat them as separate shared subscription groups. 
 This means that messages published to the shared subscription topic will be distributed only among clients of the same type. 
 DEVICE clients will receive messages within the DEVICE shared subscription group, while APPLICATION clients will receive messages within the APPLICATION shared subscription group.
 
 {% include images-gallery.html imageCollection="shared-subscription-groups" %}
 
-Therefore, it's important to consider the client type when working with shared subscriptions in TBMQ, 
+Therefore, it's important to consider the client type when working with shared subscriptions in ST-RMQTT, 
 as the messages will be processed and distributed accordingly based on the client type within their respective shared subscription groups.
 
 ### DEVICE client type
 
-From the user's perspective, using the shared subscription feature for DEVICE clients in TBMQ is seamless. 
+From the user's perspective, using the shared subscription feature for DEVICE clients in ST-RMQTT is seamless. 
 Simply subscribe your clients to the shared subscription, and the feature will work as intended.
 
 However, there are some considerations when persistent clients are involved in the shared subscription group:
@@ -167,7 +167,7 @@ These considerations ensure that message distribution and persistence are handle
 
 ### APPLICATION client type
 
-To utilize the shared subscription feature for APPLICATION clients in TBMQ, you need to follow an additional step. 
+To utilize the shared subscription feature for APPLICATION clients in ST-RMQTT, you need to follow an additional step. 
 First, you'll need to create an Application Shared Subscription entity in the PostgreSQL database. 
 To do so follow the instructions from the following [guide](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/shared-subscriptions/).
 This can also be done through the REST API, and detailed instructions can be found in the next [documentation](/docs/{{docsPrefix}}mqtt-broker/application-shared-subscription/). 
@@ -181,7 +181,7 @@ If this step is missed, the persistent APPLICATION client will be prevented from
 The naming convention for the Kafka topic created follows this format:
 
 ```text
-tbmq.msg.app.shared.$TOPIC_FILTER
+st-rmqtt.msg.app.shared.$TOPIC_FILTER
 ```
 where $TOPIC_FILTER represents the topic filter for the shared subscription.
 
@@ -190,7 +190,7 @@ This ensures compatibility with Kafka's naming conventions, as certain special c
 By generating a hash, any unsupported characters are safely managed, ensuring correct topic creation and functionality.
 
 ```text
-tbmq.msg.app.shared.$TOPIC_FILTER_HASH
+st-rmqtt.msg.app.shared.$TOPIC_FILTER_HASH
 ```
 
 After the entity is created, you're ready to start using the shared subscription feature. 
@@ -201,7 +201,7 @@ Similarly, when a client unsubscribes, its consumer is removed from the CG, and 
 Importantly, even if all APPLICATION clients go offline, messages published to the shared subscription continue to be written to Kafka.
 These messages are retained and delivered once any client in the group reconnects, ensuring no data is lost.
 
-This utilization of Kafka's capabilities enables enhanced performance, scalability, and reliability for shared subscriptions with APPLICATION clients in TBMQ. 
+This utilization of Kafka's capabilities enables enhanced performance, scalability, and reliability for shared subscriptions with APPLICATION clients in ST-RMQTT. 
 By leveraging Kafka's features, the system can effectively manage and distribute the workload among the subscribed clients, ensuring optimal performance and fault tolerance.
 
 ## Quality of Service (QoS) in Shared Subscriptions

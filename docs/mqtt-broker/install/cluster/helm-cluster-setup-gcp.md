@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
-title: Deploy TBMQ Cluster on GKE with Helm
-description: TBMQ microservices setup with Helm on GKE
+title: Deploy ST-RMQTT Cluster on GKE with Helm
+description: ST-RMQTT microservices setup with Helm on GKE
 
 ---
 

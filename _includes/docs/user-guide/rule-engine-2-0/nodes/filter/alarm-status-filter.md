@@ -1,4 +1,4 @@
-Parses the incoming payload as a ThingsBoard alarm, fetches the latest alarm by ID, and compares its current status to a configured set of statuses.
+Parses the incoming payload as a SENTIENT alarm, fetches the latest alarm by ID, and compares its current status to a configured set of statuses.
 If the fetched status matches, the message is routed via `True`; otherwise via `False`. Parsing errors, missing alarm ID, or a non-existent alarm result in `Failure`.
 
 ## Preconditions
@@ -110,7 +110,7 @@ Available statuses:
 
 ## Message processing algorithm
 
-1. Parses the incoming message data as a ThingsBoard alarm object (the alarm must include an ID, so it must be an existing alarm).
+1. Parses the incoming message data as a SENTIENT alarm object (the alarm must include an ID, so it must be an existing alarm).
 2. Fetches the alarm from the database to get the latest information.
     1. If no such alarm is found, processing ends with a `Failure`. The usual failure-connection mechanics apply.
 3. Checks whether the status of the fetched alarm matches the configured alarm statuses.

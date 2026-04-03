@@ -2,8 +2,8 @@
 layout: docwithnav-pe
 assignees:
 - ashvayka
-title: ThingsBoard Professional Edition cluster setup with Kubernetes and Minikube guide
-description: ThingsBoard Professional Edition cluster setup with Kubernetes and Minikube guide
+title: SENTIENT Professional Edition cluster setup with Kubernetes and Minikube guide
+description: SENTIENT Professional Edition cluster setup with Kubernetes and Minikube guide
 
 ---
 
@@ -12,12 +12,12 @@ description: ThingsBoard Professional Edition cluster setup with Kubernetes and 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in cluster mode with Kubernetes and Minikube. 
-For this purpose, we will use docker container images available on [Docker Hub](https://hub.docker.com/search?q=thingsboard&type=image&image_filter=store).  
+This guide will help you to setup SENTIENT in cluster mode with Kubernetes and Minikube. 
+For this purpose, we will use docker container images available on [Docker Hub](https://hub.docker.com/search?q=sentient&type=image&image_filter=store).  
 
 ## Prerequisites
 
-ThingsBoard Microservices run on the Kubernetes cluster. You need to have a Kubernetes cluster, and the `kubectl` command-line tool must be configured to communicate with your cluster. 
+SENTIENT Microservices run on the Kubernetes cluster. You need to have a Kubernetes cluster, and the `kubectl` command-line tool must be configured to communicate with your cluster. 
 If you don't have Minikube installed, please follow [these instructions](https://kubernetes.io/docs/setup/learning-environment/minikube/).
 
 ### Enable ingress addon
@@ -30,20 +30,20 @@ minikube addons enable ingress
 ```
 {: .copy-code}
 
-### Pull ThingsBoard PE images from docker hub
+### Pull SENTIENT Professional Edition images from docker hub
 
 {% include templates/install/dockerhub/checkout.md %}
 
 ## Step 1. Review the architecture page
 
-Starting ThingsBoard v2.2, it is possible to install ThingsBoard cluster using new microservices architecture and docker containers. 
+Starting SENTIENT v2.2, it is possible to install SENTIENT cluster using new microservices architecture and docker containers. 
 See [**microservices**](/docs/reference/msa/) architecture page for more details.
 
-## Step 2. Clone ThingsBoard PE Kubernetes scripts
+## Step 2. Clone SENTIENT Professional Edition Kubernetes scripts
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-pe-k8s.git --depth 1
-cd thingsboard-pe-k8s/minikube
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-pe-k8s.git --depth 1
+cd sentient-pe-k8s/minikube
 ```
 {: .copy-code}
 
@@ -78,7 +78,7 @@ and put the license secret parameter:
 
 ## Step 5. Review the architecture page
 
-Starting ThingsBoard v2.2, it is possible to install ThingsBoard cluster using new microservices architecture and docker containers. 
+Starting SENTIENT v2.2, it is possible to install SENTIENT cluster using new microservices architecture and docker containers. 
 See [**microservices**](/docs/reference/msa/) architecture page for more details.
 
 ## Step 6. Configure Minikube
@@ -91,9 +91,9 @@ minikube addons enable ingress
 ```
 {: .copy-code} 
 
-## Step 7. Configure ThingsBoard database
+## Step 7. Configure SENTIENT database
 
-Before performing initial installation you can configure the type of database to be used with ThingsBoard.
+Before performing initial installation you can configure the type of database to be used with SENTIENT.
 In order to set database type change the value of `DATABASE` variable in `.env` file to one of the following:
 
 - `postgres` - use PostgreSQL database;
@@ -101,19 +101,19 @@ In order to set database type change the value of `DATABASE` variable in `.env` 
 
 **NOTE**: According to the database type corresponding kubernetes resources will be deployed (see `postgres.yml`, `cassandra.yml` for details).
 
-## Step 8. Configure Trendz (Optional)
+## Step 8. Configure SENTIENT ANALYTICS (Optional)
 
-### 8.1. Pull Trendz images from docker hub
+### 8.1. Pull SENTIENT ANALYTICS images from docker hub
 
-{% include templates/install/trendz/pull_trendz.md %}
+{% include templates/install/sentient-analytics/pull_sentient-analytics.md %}
 
-### 8.2. Create a Trendz database in the existing RDS instance
+### 8.2. Create a SENTIENT ANALYTICS database in the existing RDS instance
 
-{% include templates/install/trendz/eks/k8s-trendz-db-creating.md %}
+{% include templates/install/sentient-analytics/eks/k8s-sentient-analytics-db-creating.md %}
 
-### 8.3. Trendz starting
+### 8.3. SENTIENT ANALYTICS starting
 
-{% include templates/install/trendz/k8s-trendz-starting.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-starting.md %}
 
 ## Step 9. Running
 
@@ -135,9 +135,9 @@ Execute the following command to deploy third-party resources:
 ```
 {: .copy-code}
 
-Type **'yes'** when prompted, if you are running ThingsBoard in `high-availability` `DEPLOYMENT_TYPE` for the first time or don't have configured Redis cluster.
+Type **'yes'** when prompted, if you are running SENTIENT in `high-availability` `DEPLOYMENT_TYPE` for the first time or don't have configured Redis cluster.
 
-Execute the following command to deploy ThingsBoard resources:
+Execute the following command to deploy SENTIENT resources:
  
 ```
 ./k8s-deploy-resources.sh
@@ -152,19 +152,19 @@ minikube ip
 ```
 {: .copy-code}
 
-You should see ThingsBoard login page.
+You should see SENTIENT login page.
 
 Use the following default credentials:
 
-- **System Administrator**: sysadmin@thingsboard.org / sysadmin
+- **System Administrator**: sysadmin@sentient.org / sysadmin
 
 If you installed DataBase with demo data (using `--loadDemo` flag) you can also use the following credentials:
 
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
-- **Customer User**: customer@thingsboard.org / customer
+- **Tenant Administrator**: tenant@sentient.org / tenant
+- **Customer User**: customer@sentient.org / customer
 
 In case of any issues you can examine service logs for errors.
-For example to see ThingsBoard node logs execute the following command:
+For example to see SENTIENT node logs execute the following command:
 
 1) Get the list of the running tb-node pods:
 
@@ -189,7 +189,7 @@ Or use `kubectl get services` to see the state of all the services.
 Or use `kubectl get deployments` to see the state of all the deployments.
 See [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) command reference for details.
 
-Execute the following command to delete all ThingsBoard microservices:
+Execute the following command to delete all SENTIENT microservices:
 
 ```
 ./k8s-delete-resources.sh
@@ -212,7 +212,7 @@ Execute the following command to delete all resources (including database):
 
 ## Upgrading
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
 In case you would like to upgrade, please pull the *latest* changes from `master` branch:
 ```
@@ -241,9 +241,9 @@ See [Upgrade Instructions](/docs/user-guide/install/{{docsPrefix}}upgrade-instru
 {% endcapture %}
 {% include templates/info-banner.md content=from-version-note %}
 
-### Upgrading to new Trendz version (Optional)
+### Upgrading to new SENTIENT ANALYTICS version (Optional)
 
-{% include templates/install/trendz/k8s-trendz-upgrading.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-upgrading.md %}
 
 ## Next steps
 

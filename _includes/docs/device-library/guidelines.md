@@ -5,10 +5,10 @@ If you want to add your device to Device Library, please follow the steps below:
 ```text 
     ## Introduction  
     ### Prerequisites
-    ## Create device on ThingsBoard  
+    ## Create device on SENTIENT  
     ## Install required libraries and tools (Optional)  
-    ## Connect device to ThingsBoard  
-    ## Check data on ThingsBoard  
+    ## Connect device to SENTIENT  
+    ## Check data on SENTIENT  
     ## Synchronize device state using client and shared attribute requests (Optional)  
     ## Control device using shared attributes (Optional)  
     ## Control device using RPC (Optional)  
@@ -17,8 +17,8 @@ If you want to add your device to Device Library, please follow the steps below:
     
 2. Use **docx**, regular **txt** or **markdown** to create you guides. **Markdown** is preferable.  
 3. If you decided to use **markdown** or **txt** format - please put your guide with **images/screenshots** to the archive or GitHub repository.  
-4. Submit the guide to [**devices@thingsboard.io**](mailto:devices@thingsboard.io) for review.  
+4. Submit the guide to [**devices@docs.sentient.invenia.in**](mailto:devices@docs.sentient.invenia.in) for review.  
 5. We will review your guide and may modify it, if necessary, to ensure its accuracy and quality.  
-6. The guide will be added to Device Library, and the rest of the community will be able to connect your device to ThingsBoard.  
+6. The guide will be added to Device Library, and the rest of the community will be able to connect your device to SENTIENT.  
 
 Please do not hesitate to contact us if you have any questions or feedback.  

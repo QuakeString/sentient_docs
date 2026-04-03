@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - ashvayka
 title: Device authentication options
-description: ThingsBoard IoT Device authentication options.
+description: SENTIENT IoT Device authentication options.
 
 ---
 

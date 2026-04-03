@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Configure alarm details dashboards in ThingsBoard Mobile Application
+title: Configure alarm details dashboards in SENTIENT Mobile Application
 
 alarm-dashboard:
  0:

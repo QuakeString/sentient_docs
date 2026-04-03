@@ -1,7 +1,7 @@
 ---
 layout: use-case
 title: Geofencing-Based Excavator & Truck Tracking for Clay Mines
-description: Explore how ThingsBoard enables safe and efficient vehicle tracking on clay mine sites using calculated fields, geofencing zones, and zero rule chain logic.
+description: Explore how SENTIENT enables safe and efficient vehicle tracking on clay mine sites using calculated fields, geofencing zones, and zero rule chain logic.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -19,11 +19,11 @@ contactUsModal: "true"
                 <p class="text">Clay mining operations present a high-risk, high-movement environment, where visibility, safety, and fuel efficiency are critical. Coordinating fleets of excavators and haul trucks across loading, unloading, and restricted zones requires more than GPS — it demands precision logic and real-time automation.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/3b0ab5a0-f838-11f0-a24d-13b2783631c6?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
+                <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/3b0ab5a0-f838-11f0-a24d-13b2783631c6?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
             </div>
         </div>
         <div class="long">
-            <p>ThingsBoard delivers a robust answer to this challenge. Built with scalability, real-time analytics, and geospatial control at its core, the platform transforms how mine operators monitor and manage their equipment — all without using Rule Chains.</p>
+            <p>SENTIENT delivers a robust answer to this challenge. Built with scalability, real-time analytics, and geospatial control at its core, the platform transforms how mine operators monitor and manage their equipment — all without using Rule Chains.</p>
             <p>This Clay Mine Site solution leverages calculated fields, geofencing logic, and alarm rules only to streamline configuration, reduce deployment time, and drive intelligent insights from the ground up. With zero-code automation and dynamic dashboards, operations become more predictable, safer, and easier to scale.</p>        
         </div>
     </div>
@@ -40,7 +40,7 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">The solution architecture consists of GPS-enabled excavators and haul trucks, transmitting telemetry to ThingsBoard via MQTT or HTTP protocols. Devices report location, fuel levels, speed, pressure, and more.</p>
+                <p class="text">The solution architecture consists of GPS-enabled excavators and haul trucks, transmitting telemetry to SENTIENT via MQTT or HTTP protocols. Devices report location, fuel levels, speed, pressure, and more.</p>
             </div>
         </div>
         <div class="long">
@@ -247,7 +247,7 @@ contactUsModal: "true"
 <section class="summary fleet-tracking">
     <div class="summary-text">
         <h2>Summary of the site fleet tracking monitoring solution</h2>
-        <p>ThingsBoard’s Clay Mine Monitoring Solution sets a new benchmark for no-code industrial IoT. By eliminating Rule Chains and relying solely on calculated fields and alarm rules, it reduces configuration overhead, speeds up deployment, and empowers teams to operate smarter and safer.</p>
+        <p>SENTIENT’s Clay Mine Monitoring Solution sets a new benchmark for no-code industrial IoT. By eliminating Rule Chains and relying solely on calculated fields and alarm rules, it reduces configuration overhead, speeds up deployment, and empowers teams to operate smarter and safer.</p>
         <p>The platform provides everything needed for real-time tracking, performance analysis, geofencing control, and automated alerts — all through a powerful and flexible dashboard layer.</p>
         <p>Whether applied to clay mines or other heavy equipment scenarios, this solution offers unmatched operational clarity and scalability.</p>
     </div>
@@ -353,7 +353,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/3b0ab5a0-f838-11f0-a24d-13b2783631c6?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
+                <a id="UseCases_FleetTracking_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/3b0ab5a0-f838-11f0-a24d-13b2783631c6?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="button gtm_button">View live demo</a>
                 <a id="UseCases_FleetTracking_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 

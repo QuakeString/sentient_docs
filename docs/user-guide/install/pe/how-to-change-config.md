@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - vparomskiy
 title: How to change configuration parameters
-description: How to change Thingsboard configuration parameters
+description: How to change Sentient configuration parameters
 
 ---
 

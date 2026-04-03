@@ -9,7 +9,7 @@ postgresql:
 ```  
 
 provisioning a single-node instance with configurable storage, backups, and monitoring options.
-For users with an existing PostgreSQL instance, TBMQ can be configured to connect externally.
+For users with an existing PostgreSQL instance, ST-RMQTT can be configured to connect externally.
 To do this, disable the built-in PostgreSQL by set `postgresql.enabled: false` and specify connection details in the `externalPostgresql` section.
 
 ```yaml
@@ -26,7 +26,7 @@ externalPostgresql:
   # @param password - PostgreSQL user password
   ##
   password: "postgres"
-  # @param database - PostgreSQL database name for TBMQ
+  # @param database - PostgreSQL database name for ST-RMQTT
   ##
-  database: "thingsboard_mqtt_broker"
+  database: "sentient_mqtt_broker"
 ```

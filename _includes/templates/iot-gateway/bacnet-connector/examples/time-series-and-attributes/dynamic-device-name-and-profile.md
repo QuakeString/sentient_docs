@@ -46,7 +46,7 @@ In this configuration:
 - The `deviceProfileExpression` is set to `${vendorId}_profile`, which will create a device profile name based on the vendor ID of the device.
 
 After applying this configuration, the device will be created with a name and profile that reflect its specific 
-properties. The screenshot below shows how the device appears in ThingsBoard with the dynamic name and profile:
+properties. The screenshot below shows how the device appears in SENTIENT with the dynamic name and profile:
 
 ![image](/images/gateway/bacnet-connector/examples/dynamic-device-name-and-profile-overview.png)
 
@@ -54,7 +54,7 @@ As you can see, the device name is generated based on the `objectName` and `addr
 on the `vendorId`.
 
 Device name/profile dynamic expressions provide flexibility in managing multiple BACnet devices with varying 
-configurations and can help in organizing devices effectively within ThingsBoard.
+configurations and can help in organizing devices effectively within SENTIENT.
 
 {% capture dynamicDeviceNameProfileExample %}
 You can find full list of available variables in

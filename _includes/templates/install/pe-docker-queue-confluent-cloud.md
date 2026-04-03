@@ -1,6 +1,6 @@
 {% include templates/install/queue-confluent-cloud-config.md %}
 
-Create docker compose file for ThingsBoard queue service:
+Create docker compose file for SENTIENT queue service:
 
 ```text
 nano docker-compose.yml
@@ -17,13 +17,13 @@ services:
     ports:
       - "5432"
     environment:
-      POSTGRES_DB: thingsboard
+      POSTGRES_DB: sentient
       POSTGRES_PASSWORD: postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
-  thingsboard-pe:
+  sentient-pe:
     restart: always
-    image: "thingsboard/tb-pe-node:{{ site.release.pe_full_ver }}"
+    image: "sentient/tb-pe-node:{{ site.release.pe_full_ver }}"
     ports:
       - "8080:8080"
       - "1883:1883"
@@ -41,9 +41,9 @@ services:
       TB_LICENSE_SECRET: PUT_YOUR_LICENSE_SECRET_HERE
       TB_LICENSE_INSTANCE_DATA_FILE: /data/license.data
       REPORTS_SERVER_ENDPOINT_URL: http://tb-web-report:8383
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/thingsboard
-      DEFAULT_TRENDZ_URL: http://trendz:8888
-      DEFAULT_TB_URL: http://thingsboard-pe:8080
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sentient
+      DEFAULT_TRENDZ_URL: http://sentient-analytics:8888
+      DEFAULT_TB_URL: http://sentient-pe:8080
       TB_QUEUE_TYPE: kafka
       TB_KAFKA_SERVERS: localhost:9092
       TB_QUEUE_KAFKA_REPLICATION_FACTOR: 3
@@ -79,11 +79,11 @@ services:
       - license-data:/data
   tb-web-report:
     restart: always
-    image: "thingsboard/tb-pe-web-report:{{ site.release.pe_full_ver }}"
+    image: "sentient/tb-pe-web-report:{{ site.release.pe_full_ver }}"
     ports:
       - "8383"
     depends_on:
-      - thingsboard-pe
+      - sentient-pe
     environment:
       HTTP_BIND_ADDRESS: 0.0.0.0
       HTTP_BIND_PORT: 8383
@@ -104,4 +104,4 @@ volumes:
 ```
 {: .copy-code.expandable-15}
 
-You can update default Rule Engine queues configuration using UI. More about ThingsBoard Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).
+You can update default Rule Engine queues configuration using UI. More about SENTIENT Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).

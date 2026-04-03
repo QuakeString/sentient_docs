@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - stitenko
 title: AI models
-description: Using AI models in ThingsBoard
+description: Using AI models in SENTIENT
 
 adding-ai-model:
     0:

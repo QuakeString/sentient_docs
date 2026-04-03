@@ -99,17 +99,17 @@ The key change is that MQTT v5.0 replaces the single **Clean Session** flag with
 > If the Session Expiry Interval is not specified, it defaults to 0. The value is expressed in seconds.
 > Clean Start is a boolean flag, equivalent to Clean Session, where a value of 0 means false and a value of 1 means true.
 
-For details on viewing and managing MQTT sessions in the TBMQ UI, see the [documentation](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/sessions/).
+For details on viewing and managing MQTT sessions in the ST-RMQTT UI, see the [documentation](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/sessions/).
 
-## Session State Management in TBMQ
+## Session State Management in ST-RMQTT
 
-TBMQ is designed to operate at scale in environments with highly diverse MQTT traffic patterns, ranging from lightweight IoT devices to high-throughput backend applications. 
-Session state in TBMQ is not managed in isolation. Its lifecycle, persistence, and resource impact are influenced by how a client connects, how much data it produces or consumes, and how reliably messages must be delivered. 
+ST-RMQTT is designed to operate at scale in environments with highly diverse MQTT traffic patterns, ranging from lightweight IoT devices to high-throughput backend applications. 
+Session state in ST-RMQTT is not managed in isolation. Its lifecycle, persistence, and resource impact are influenced by how a client connects, how much data it produces or consumes, and how reliably messages must be delivered. 
 
 ### Client Types and Session Behavior
 
-TBMQ improves scalability and reliability by classifying clients into two types: **DEVICE** and **APPLICATION**. 
-Each [Client Type](/docs/{{docsPrefix}}mqtt-broker/user-guide/mqtt-client-type/) has distinct traffic patterns and usage expectations, allowing TBMQ to apply tailored session persistence and message delivery strategies for efficient resource usage.
+ST-RMQTT improves scalability and reliability by classifying clients into two types: **DEVICE** and **APPLICATION**. 
+Each [Client Type](/docs/{{docsPrefix}}mqtt-broker/user-guide/mqtt-client-type/) has distinct traffic patterns and usage expectations, allowing ST-RMQTT to apply tailored session persistence and message delivery strategies for efficient resource usage.
 
 <table>
   <thead>
@@ -129,7 +129,7 @@ Each [Client Type](/docs/{{docsPrefix}}mqtt-broker/user-guide/mqtt-client-type/)
         Example: temperature sensor publishing every minute using QoS 0.
       </td>
       <td>
-        No session storage. Messages are dropped on disconnect. The device must re-subscribe after reconnect. TBMQ skips messages if the device is too slow, preventing broker overload.
+        No session storage. Messages are dropped on disconnect. The device must re-subscribe after reconnect. ST-RMQTT skips messages if the device is too slow, preventing broker overload.
       </td>
     </tr>
     <tr>
@@ -140,7 +140,7 @@ Each [Client Type](/docs/{{docsPrefix}}mqtt-broker/user-guide/mqtt-client-type/)
         Example: firmware update commands over unstable mobile networks.
       </td>
       <td>
-        Messages are queued while offline. TBMQ limits stored messages per DEVICE session to <b>65,535</b> and removes stale messages using a configurable TTL.
+        Messages are queued while offline. ST-RMQTT limits stored messages per DEVICE session to <b>65,535</b> and removes stale messages using a configurable TTL.
       </td>
     </tr>
     <tr>
@@ -150,7 +150,7 @@ Each [Client Type](/docs/{{docsPrefix}}mqtt-broker/user-guide/mqtt-client-type/)
         Generally not recommended for data processing applications.
       </td>
       <td>
-        Messages may be lost during disconnects. TBMQ shows a warning to administrators about the risk of data loss.
+        Messages may be lost during disconnects. ST-RMQTT shows a warning to administrators about the risk of data loss.
       </td>
     </tr>
     <tr>
@@ -169,7 +169,7 @@ Each [Client Type](/docs/{{docsPrefix}}mqtt-broker/user-guide/mqtt-client-type/)
 
 ### Session Configuration Parameters
 
-The configuration parameters (see [Configuration properties](/docs/{{docsPrefix}}mqtt-broker/install/config/)) control how TBMQ handles 
+The configuration parameters (see [Configuration properties](/docs/{{docsPrefix}}mqtt-broker/install/config/)) control how ST-RMQTT handles 
 **persistent sessions** and **session expiration**. They define limits and cleanup rules that affect message retention, buffering behavior, and the lifetime of inactive client sessions.
 
 - The `client-session-expiry` parameters control how long inactive sessions are allowed to exist and how expired sessions are periodically cleaned up, preventing unused session state from accumulating in the system.
@@ -200,7 +200,7 @@ persistent-session:
       buffered-msg-count: "${MQTT_PERSISTENT_BUFFERED_MSG_COUNT:5}"
   app:
     persisted-messages:
-      # Kafka topic properties separated by semicolon for `tbmq.msg.app` topics
+      # Kafka topic properties separated by semicolon for `st-rmqtt.msg.app` topics
       topic-properties: "${TB_KAFKA_APP_PERSISTED_MSG_TOPIC_PROPERTIES:retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;replication.factor:1}"
       # If enabled, each message is published to persistent APPLICATION client subscribers with flush. When disabled, the messages are buffered in the channel and are flushed once in a while
       write-and-flush: "${MQTT_APP_MSG_WRITE_AND_FLUSH:false}"
@@ -234,7 +234,7 @@ A message is delivered only if the Session still exists **and** the Message Expi
 
 ## Demonstrating a Persistent Session
 
-This example shows how a **persistent session** works in practice using the TBMQ [**WebSocket Client**](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/websocket-client/).
+This example shows how a **persistent session** works in practice using the ST-RMQTT [**WebSocket Client**](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/websocket-client/).
 You will see that messages published while a Client is offline are **not lost** and are delivered when the Client reconnects.
 
 The screenshots below demonstrate a simple IoT-style scenario:

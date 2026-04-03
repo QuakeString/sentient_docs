@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Get Support
-description: TBMQ help links
+description: ST-RMQTT help links
 
 ---
 

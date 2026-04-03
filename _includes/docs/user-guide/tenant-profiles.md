@@ -21,13 +21,13 @@ Let's consider more about these settings below.
 This group of settings allows the System Administrator to configure a maximum number of entities that each Tenant is able to create.
 
 {% if docsPrefix == null %}
-**[ThingsBoard Community Edition](/docs/user-guide/install/installation-options/)** supports limits for the following entities: devices, dashboards, assets, users, customers, and rule chains.
+**[SENTIENT](/docs/user-guide/install/installation-options/)** supports limits for the following entities: devices, dashboards, assets, users, customers, and rule chains.
 
-**[ThingsBoard Professional Edition](/docs/user-guide/install/pe/installation-options/)** supports limits for everything listed above and as well additional constraint support for the following entities: integrations, converters, and scheduler events.
+**[SENTIENT Professional Edition](/docs/user-guide/install/pe/installation-options/)** supports limits for everything listed above and as well additional constraint support for the following entities: integrations, converters, and scheduler events.
 {% endif %}
 
 {% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
-**[ThingsBoard Professional Edition](/docs/user-guide/install/pe/installation-options/)** supports limits for the following entities: devices, dashboards, assets, users, integrations, scheduler events, customers, rule chains, and converters.
+**[SENTIENT Professional Edition](/docs/user-guide/install/pe/installation-options/)** supports limits for the following entities: devices, dashboards, assets, users, integrations, scheduler events, customers, rule chains, and converters.
 {% endif %}
 
 {% include images-gallery.html imageCollection="entityLimits" %}
@@ -35,11 +35,11 @@ This group of settings allows the System Administrator to configure a maximum nu
 ### API Limits & Usage
 
 This group of settings allows a System Administrator to configure a maximum number of messages, API calls, etc., per month that each Tenant would like to perform. 
-ThingsBoard constantly collects and analyzes statistics about API Usage. The typical update interval of the statistics is 1 minute
+SENTIENT constantly collects and analyzes statistics about API Usage. The typical update interval of the statistics is 1 minute
 
-ThingsBoard tracks API usage for six main components: Transport, Rule Engine, JS functions, Telemetry persistence, Email, and SMS services. The platform will disable the component if one of the related API Limits reaches a threshold. 
+SENTIENT tracks API usage for six main components: Transport, Rule Engine, JS functions, Telemetry persistence, Email, and SMS services. The platform will disable the component if one of the related API Limits reaches a threshold. 
 For example, if Tenant devices produce more than 100M messages per a month, the platform will disable all connections for devices that belong to this Tenant. 
-When the API usage is disabled or reaches a certain threshold (typically 80%) ThingsBoard will notify the Tenant Administrator via email.  
+When the API usage is disabled or reaches a certain threshold (typically 80%) SENTIENT will notify the Tenant Administrator via email.  
 
 Let's review each limit separately:
 
@@ -119,20 +119,20 @@ You can define multiple intervals with ",". For example, "100:1,1000:60" means "
 
 {% include images-gallery.html imageCollection="rateLimits" %}
 
-## Processing in isolated ThingsBoard Rule Engine queues
+## Processing in isolated SENTIENT Rule Engine queues
 
-ThingsBoard Rule Engine is the main "worker" in the cluster and is responsible for processing incoming messages.
+SENTIENT Rule Engine is the main "worker" in the cluster and is responsible for processing incoming messages.
 
 By default, all messages (such as telemetry, connectivity, and lifecycle events) are pushed to the same message queue/topic (powered by Kafka, RabbitMQ, AWS SQS, Azure Service Bus, Google Pub/Sub).
-ThingsBoard pushes messages for all Tenants to a common queue when isolated processing is disabled (default). 
+SENTIENT pushes messages for all Tenants to a common queue when isolated processing is disabled (default). 
 
-ThingsBoard pushes messages to a separate queue when you select processing to be isolated for a particular tenant. 
-This provides a better level of isolation for those tenants. You need to create tenant profile with enabled "Use isolated ThingsBoard Rule Engine queues" box 
+SENTIENT pushes messages to a separate queue when you select processing to be isolated for a particular tenant. 
+This provides a better level of isolation for those tenants. You need to create tenant profile with enabled "Use isolated SENTIENT Rule Engine queues" box 
 and assign for a particular Tenant, or update existing tenant profile. 
 This will instruct Rule Engine to subscribe to specific message queue topics that contain data for corresponding tenants.
 
 You might as well set up a separate Rule Engine instance that will be responsible for tenants of specific tenant profiles only.
-See [configuration parameters](/docs/user-guide/install/config/#thingsboard-service-parameters).
+See [configuration parameters](/docs/user-guide/install/config/#sentient-service-parameters).
 
 ### Queue configuration for isolated tenants
 

@@ -1,7 +1,7 @@
-As an example, we will use ThingsBoard Modbus Demo Server, which can be run using Docker and the following command:
+As an example, we will use SENTIENT Modbus Demo Server, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 thingsboard/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
 ```
 {:.copy-code}
 

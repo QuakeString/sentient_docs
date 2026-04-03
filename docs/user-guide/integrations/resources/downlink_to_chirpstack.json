@@ -14,7 +14,7 @@
     "firstNodeIndex": 0,
     "nodes": [
       {
-        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetAttributesNode",
         "name": "get required fields",
         "debugMode": true,
         "singletonMode": false,
@@ -39,7 +39,7 @@
         }
       },
       {
-        "type": "org.thingsboard.rule.engine.integration.TbIntegrationDownlinkNode",
+        "type": "org.sentient.rule.engine.integration.TbIntegrationDownlinkNode",
         "name": "Send downlink",
         "debugMode": true,
         "singletonMode": false,

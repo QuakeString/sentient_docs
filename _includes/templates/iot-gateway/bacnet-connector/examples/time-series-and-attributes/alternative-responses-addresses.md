@@ -53,6 +53,6 @@ configuration. Here is an example configuration snippet:
 After applying this configuration, the connector will use the specified alternative response address 
 `192.168.1.200:45606` to recognize and validate responses from the BACnet device. This ensures that the connector can
 communicate effectively with the device even when they are located in different networks. As a result, you should see 
-created device in ThingsBoard:
+created device in SENTIENT:
 
 ![image](/images/gateway/bacnet-connector/examples/alternative-responses-addresses-overview.png)

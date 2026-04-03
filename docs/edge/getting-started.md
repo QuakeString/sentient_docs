@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: Getting Started with ThingsBoard Edge
-description: Getting Started with ThingsBoard Edge 
+title: Getting Started with SENTIENT GATEWAY
+description: Getting Started with SENTIENT GATEWAY 
 
 step1:
     0:
@@ -80,7 +80,7 @@ step3:
 step4:
     0:
         image: /images/edge/getting-started/step-2-item-1-ce.webp
-        title: 'Navigate to the <b>Devices</b> section to confirm that the newly created device, "My New Device", has been published to the <b>ThingsBoard Server (Cloud)</b>.'
+        title: 'Navigate to the <b>Devices</b> section to confirm that the newly created device, "My New Device", has been published to the <b>SENTIENT Server (Cloud)</b>.'
     1:
         image: /images/edge/getting-started/step-2-item-2-ce.webp
         title: 'Click on the "My New Device" to open the <b>"Device details"</b> page and select the <b>"Relations"</b> tab. Switch the direction from <b>"From"</b> to <b>"To"</b> to view the relation to the Edge that provisioned this device.'
@@ -96,7 +96,7 @@ step5Server:
 step5Edge:
     0:
         image: /images/edge/getting-started/step-5-item-3-ce.webp
-        title: 'Go to the <b>Dashboards</b> section and open the dashboard you have created on the <b>ThingsBoard Community Edition Server</b>'    
+        title: 'Go to the <b>Dashboards</b> section and open the dashboard you have created on the <b>SENTIENT Server</b>'    
     1:
         image: /images/edge/getting-started/step-5-item-4-ce.webp
         title: 'Verify that these are the same widgets that you have added on the Cloud.'
@@ -106,7 +106,7 @@ step5Edge:
 * TOC
 {:toc}
 
-{% assign currentThingsBoardVersion = "ThingsBoard Community Edition" %}
+{% assign currentSENTIENTVersion = "SENTIENT" %}
 
 {% include templates/edge/getting-started/introduction.md %}
 
@@ -139,10 +139,10 @@ Looking for **white-labeling** or **premium features**? <a href="/docs/pe/edge/"
 
 ## Your Feedback
 
-Congratulations! You have successfully completed the initial configuration steps for **ThingsBoard Edge**. Now you can send new telemetry readings and they will appear on the dashboard immediately.
+Congratulations! You have successfully completed the initial configuration steps for **SENTIENT GATEWAY**. Now you can send new telemetry readings and they will appear on the dashboard immediately.
 
-Help us improve by providing your feedback at [GitHub/Issues](https://github.com/thingsboard/thingsboard-edge/issues){: target="_blank"} or through the ["Contact us"](https://thingsboard.io/docs/contact-us/){: target="_blank"} form.
-We would also greatly appreciate it if you could star our project on [GitHub](https://github.com/thingsboard/thingsboard-edge){: target="_blank"}!
+Help us improve by providing your feedback at [GitHub/Issues](https://github.com/sentient/sentient-gateway/issues){: target="_blank"} or through the ["Contact us"](https://docs.sentient.invenia.in/docs/contact-us/){: target="_blank"} form.
+We would also greatly appreciate it if you could star our project on [GitHub](https://github.com/sentient/sentient-gateway){: target="_blank"}!
 
 ## Next steps
 

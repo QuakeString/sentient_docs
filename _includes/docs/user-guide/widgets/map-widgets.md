@@ -1,9 +1,9 @@
 * TOC
 {:toc}
 
-Map widgets in ThingsBoard enable you to visualize entities and data on a map. They allow placing markers, zones, routes, and other geo-objects in space, which is especially useful for IoT solutions involving physical locations.
+Map widgets in SENTIENT enable you to visualize entities and data on a map. They allow placing markers, zones, routes, and other geo-objects in space, which is especially useful for IoT solutions involving physical locations.
 
-In ThingsBoard version 4.0, we&#39;ve completely reworked our Map widgets to make them more flexible, easier to configure, and more powerful for working with geospatial data.
+In SENTIENT version 4.0, we&#39;ve completely reworked our Map widgets to make them more flexible, easier to configure, and more powerful for working with geospatial data.
 
 <b><font size="4">Use cases</font></b>
 
@@ -42,7 +42,7 @@ In ThingsBoard version 4.0, we&#39;ve completely reworked our Map widgets to mak
 - **Map scale display**. Add an optional scale bar to help users visually estimate distances on the map.
 - **Custom action buttons**. Add your own buttons right on the map — each can trigger a specific custom action (like creating an entity, switching views, or opening URLs).
 
-All of this — and more — is now available in the new Map widgets in ThingsBoard 4.0.
+All of this — and more — is now available in the new Map widgets in SENTIENT 4.0.
 
 ## Adding a Map widget to the dashboard
 
@@ -59,7 +59,7 @@ To add a Map widget to the dashboard, follow these steps:
 ## Map type
 
 The first step in configuring the map widget is selecting the map type.
-ThingsBoard offers several map widgets, including Image Map, which allows you to use a custom background image as the map.
+SENTIENT offers several map widgets, including Image Map, which allows you to use a custom background image as the map.
 
 You can also configure map layers, enabling flexible switching between different map styles — such as satellite, hybrid, or custom layers — directly within the widget, with just a few clicks.
 
@@ -97,7 +97,7 @@ In the "**Layer settings**", you can also enable the "**Reference layer**" optio
 Map items are visual elements displayed on a map widget to represent the spatial position, area, or influence zone of entities and data.
 These elements help visualize and interact with your devices, assets, or other tracked objects based on their spatial data.
 
-ThingsBoard supports the following map item types:
+SENTIENT supports the following map item types:
 
 - A **marker** is a point on the map based on the coordinates specified in the entity. It is used to display the location of a device, asset, vehicles or any tracked object.
 - A **polygon** is a flat, closed shape made up of multiple connected points. It is used to represent areas or boundaries on the map. You can use the polygon option to mark your assets or any other objects. The polygon is based on coordinates specified in the entity.
@@ -129,7 +129,7 @@ To place a marker on the map, follow these steps:
 - Enter widget edit mode and go to the "Overlays" section.
 - Make sure you&#39;re on the "Marker" tab and click "Add marker".
 - Select the data source - it can be a device, an entity alias, or a function.
-- Define the coordinate keys. By default, ThingsBoard uses *latitude* and *longitude* attributes as the coordinate keys for the marker. If your entity uses different key names, update them here.
+- Define the coordinate keys. By default, SENTIENT uses *latitude* and *longitude* attributes as the coordinate keys for the marker. If your entity uses different key names, update them here.
 - Apply the changes.
 
 The marker will appear on the map based on the specified coordinates.
@@ -160,7 +160,7 @@ If needed, use the data filter to refine the selection (e.g., filter by name or 
 **Keys**
 
 Define the coordinate keys.
-By default, ThingsBoard uses *latitude* and *longitude* attributes as the default coordinate keys.
+By default, SENTIENT uses *latitude* and *longitude* attributes as the default coordinate keys.
 If your entity uses custom key names, update them accordingly.
 
 You can also define additional keys for dynamic display elements, such as marker color, tooltip content, Label text, etc.
@@ -403,7 +403,7 @@ To place the polygon on the map, follow these steps:
 - Enter widget edit mode and go to the "Overlays" section.
 - Switch to the "Polygons" tab and click "Add polygon".
 - Select the entity that will be represented as a polygon. This can be a device, entity alias, or function.
-- Define the key with the coordinates of the polygon. ThingsBoard will use the "perimeter" key by default to read the polygon coordinates from the entity&#39;s attributes. If you use a different key, update it accordingly.
+- Define the key with the coordinates of the polygon. SENTIENT will use the "perimeter" key by default to read the polygon coordinates from the entity&#39;s attributes. If you use a different key, update it accordingly.
 - Click "Apply" — the polygon will appear on the map based on the entity&#39;s data.
 
 {% include images-gallery.html imageCollection="add-polygon" %}
@@ -430,7 +430,7 @@ If needed, apply a filter to narrow down the selection.
 **Keys**
 
 Define the key that contains the polygon coordinates.
-By default, ThingsBoard uses "perimeter" as the polygon key. If your entity uses a different key name, make sure to update it here.
+By default, SENTIENT uses "perimeter" as the polygon key. If your entity uses a different key name, make sure to update it here.
 
 Additional data keys can be used for labels, tooltips, or to display extra information directly on the map.
 
@@ -607,7 +607,7 @@ To place the circle on the map, follow these steps:
 - Enter widget edit mode and go to the "Overlays" section.
 - Switch to the "Circles" tab and click "Add circle".
 - Select the entity that will be represented as a circle. This can be a device, entity alias, or function.
-- Define the key with the coordinates of the circle. ThingsBoard will use the "perimeter" key by default to read the circle coordinates from the entity&#39;s attribute. If your entity uses a different key name, update it here.
+- Define the key with the coordinates of the circle. SENTIENT will use the "perimeter" key by default to read the circle coordinates from the entity&#39;s attribute. If your entity uses a different key name, update it here.
 - Click "Apply" — the circle will appear on the map based on the entity's data.
 
 {% include images-gallery.html imageCollection="add-circle" %}
@@ -632,7 +632,7 @@ If needed, apply a filter to narrow down the selection.
 
 **Keys**
 
-Define the key that contains the circle coordinates. By default, ThingsBoard uses "perimeter" as the circle key. If your entity uses a different key name, make sure to update it here.
+Define the key that contains the circle coordinates. By default, SENTIENT uses "perimeter" as the circle key. If your entity uses a different key name, make sure to update it here.
 
 Additional data keys can be used for labels, tooltips, or to display extra information directly on the map.
 
@@ -818,7 +818,7 @@ Go to the "**Assets**" page — here you&#39;ll find your newly created asset, "
 
 ## Common map settings
 
-**Common map settings** are the basic global settings for the Map widget in ThingsBoard. They define how the map behaves on load and what is displayed initially.
+**Common map settings** are the basic global settings for the Map widget in SENTIENT. They define how the map behaves on load and what is displayed initially.
 
 - **Fit map bounds to cover all markers**: Automatically adjusts the map zoom and position so that all markers are visible when the widget loads.
 - **Default map center position**: Sets the center of the map (lat/lng coordinates) if auto-zoom is disabled. Used as the initial map position when the widget is opened.

@@ -1,4 +1,4 @@
-Edit the **ThingsBoard Edge** configuration file by running this command:
+Edit the **SENTIENT GATEWAY** configuration file by running this command:
 
 ```bash
 echo 'export JAVA_OPTS="$JAVA_OPTS -Xms512M -Xmx1G"' | sudo tee -a /etc/tb-edge/conf/tb-edge.conf

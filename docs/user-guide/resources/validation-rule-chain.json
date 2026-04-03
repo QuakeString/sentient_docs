@@ -15,7 +15,7 @@
           "layoutX": 1005,
           "layoutY": 150
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "SaveTS",
         "debugMode": true,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 347,
           "layoutY": 149
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeSwitchNode",
         "name": "Message Type Switch",
         "debugMode": false,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 712,
           "layoutY": 149
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Temperature Validation",
         "debugMode": true,
         "configuration": {

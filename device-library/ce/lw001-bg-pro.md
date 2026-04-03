@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect LW001-BG PRO LoRaWAN Tracker to ThingsBoard?
+title: How to connect LW001-BG PRO LoRaWAN Tracker to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: MOKO SMART

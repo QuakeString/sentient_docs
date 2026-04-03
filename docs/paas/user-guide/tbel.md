@@ -2,7 +2,7 @@
 layout: docwithnav-paas
 assignees:
 - ashvayka
-title: ThingsBoard Expression Language (TBEL)
+title: SENTIENT Expression Language (TBEL)
 ---
 
 {% assign docsPrefix = "paas/" %}

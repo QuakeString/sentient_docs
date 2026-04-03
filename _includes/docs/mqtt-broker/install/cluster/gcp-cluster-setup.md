@@ -1,35 +1,35 @@
 * TOC
 {:toc}
 
-This guide will help you set up TBMQ {{tbmqSuffix}} in GKE. 
+This guide will help you set up ST-RMQTT {{st-rmqttSuffix}} in GKE. 
 
 ## Prerequisites
 
 {% include templates/mqtt-broker/install/gcp/gke-prerequisites.md %}
 
 {% if docsPrefix == null %}
-## Clone TBMQ repository
+## Clone ST-RMQTT repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq.git
-cd tbmq/k8s/gcp
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt.git
+cd st-rmqtt/k8s/gcp
 ```
 {: .copy-code}
 
 {% else %}
-## Clone TBMQ PE K8S repository
+## Clone ST-RMQTT PE K8S repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq-pe-k8s.git
-cd tbmq-pe-k8s/gcp
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt-pe-k8s.git
+cd st-rmqtt-pe-k8s/gcp
 ```
 {: .copy-code}
 {% endif %}
 
 ## Define environment variables
 
-{% assign tbClusterName = "tbmq-cluster" %}
-{% assign tbDbClusterName = "tbmq-db" %}
+{% assign tbClusterName = "st-rmqtt-cluster" %}
+{% assign tbDbClusterName = "st-rmqtt-db" %}
 {% include templates/mqtt-broker/install/gcp/env-variables.md %}
 
 ## Configure and create GKE cluster
@@ -42,7 +42,7 @@ cd tbmq-pe-k8s/gcp
 
 ## Provision Google Cloud SQL (PostgreSQL) Instance
 
-{% assign tbDbName = "thingsboard_mqtt_broker" %}
+{% assign tbDbName = "sentient_mqtt_broker" %}
 {% include templates/mqtt-broker/install/gcp/provision-postgresql.md %}
 
 #### Edit database settings
@@ -50,17 +50,17 @@ cd tbmq-pe-k8s/gcp
 Replace **YOUR_DB_IP_ADDRESS**, **YOUR_DB_PASSWORD** and **YOUR_DB_NAME** with the correct values:
 
 ```bash
-nano tbmq-db-configmap.yml
+nano st-rmqtt-db-configmap.yml
 ```
 {: .copy-code}
 
 ## Create Namespace
 
-Let's create a dedicated namespace for our TBMQ cluster deployment to ensure better resource isolation and management.
+Let's create a dedicated namespace for our ST-RMQTT cluster deployment to ensure better resource isolation and management.
 
 ```bash
-kubectl apply -f tbmq-namespace.yml
-kubectl config set-context $(kubectl config current-context) --namespace=thingsboard-mqtt-broker
+kubectl apply -f st-rmqtt-namespace.yml
+kubectl config set-context $(kubectl config current-context) --namespace=sentient-mqtt-broker
 ```
 {: .copy-code}
 
@@ -74,7 +74,7 @@ kubectl config set-context $(kubectl config current-context) --namespace=thingsb
 
 {% capture gcp-psql %}
 
-Otherwise, please check if you set the PostgreSQL URL and PostgreSQL password in the `tbmq-db-configmap.yml` correctly.
+Otherwise, please check if you set the PostgreSQL URL and PostgreSQL password in the `st-rmqtt-db-configmap.yml` correctly.
 
 {% endcapture %}
 {% include templates/info-banner.md content=gcp-psql %}
@@ -93,7 +93,7 @@ Otherwise, please check if you set the PostgreSQL URL and PostgreSQL password in
 
 ### Configure HTTP(S) Load Balancer
 
-Configure HTTP(S) Load Balancer to access the web interface of your TBMQ instance. Basically, you have 2 possible configuration options:
+Configure HTTP(S) Load Balancer to access the web interface of your ST-RMQTT instance. Basically, you have 2 possible configuration options:
 
 * http — Load Balancer without HTTPS support. Recommended for **development**. The only advantage is simple configuration and minimum costs. May be a good option for development server but definitely not suitable for production.
 * https — Load Balancer with HTTPS support. Recommended for **production**. Acts as an SSL termination point. You may easily configure it to issue and maintain a valid SSL certificate. Automatically redirects all non-secure (HTTP) traffic to secure (HTTPS) port.
@@ -106,7 +106,7 @@ See links/instructions below on how to configure each of the suggested options.
 
 #### HTTPS Load Balancer
 
-{% assign staticIP = "tbmq-http-lb-address" %}
+{% assign staticIP = "st-rmqtt-http-lb-address" %}
 {% include templates/mqtt-broker/install/gcp/configure-https-load-balancer.md %}
 Once provisioned, you may use your domain name to access Web UI (over https).
 
@@ -140,7 +140,7 @@ For further guidance, follow the [next instructions](https://learn.microsoft.com
 ### Upgrade to 2.2.0
 
 In this release, the MQTT authentication mechanism was migrated from YAML/env configuration into the database.
-During upgrade, TBMQ needs to know which authentication providers are enabled in your deployment.
+During upgrade, ST-RMQTT needs to know which authentication providers are enabled in your deployment.
 This information is provided through environment variables passed to the **upgrade pod**.
 
 The upgrade script requires a file named **`database-setup.yml`** that explicitly defines these variables.
@@ -164,7 +164,7 @@ Once the file is prepared and the values verified, proceed with the [upgrade pro
 
 ### Upgrade to 2.0.0
 
-For the TBMQ v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 7](#step-7-provision-valkey-cluster) to complete the installation.
+For the ST-RMQTT v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 7](#step-7-provision-valkey-cluster) to complete the installation.
 Only then you can proceed with the [upgrade](#run-upgrade).
 
 ### Run upgrade
@@ -184,12 +184,12 @@ git pull origin {{ site.release.broker_branch }}
 
 After that, execute the following command:
 
-{% capture tabspec %}tbmq-upgrade
-tbmq-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh
-tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md{% endcapture %}
+{% capture tabspec %}st-rmqtt-upgrade
+st-rmqtt-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh
+st-rmqtt-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md{% endcapture %}
 {% include tabs.html %}
 
-{% include templates/mqtt-broker/upgrade/stop-tbmq-pods-before-upgrade.md %}
+{% include templates/mqtt-broker/upgrade/stop-st-rmqtt-pods-before-upgrade.md %}
 
 {% else %}
 
@@ -199,14 +199,14 @@ tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/
 
 ## Cluster deletion
 
-Execute the following command to delete TBMQ nodes:
+Execute the following command to delete ST-RMQTT nodes:
 
 ```bash
-./k8s-delete-tbmq.sh
+./k8s-delete-st-rmqtt.sh
 ```
 {: .copy-code}
 
-Execute the following command to delete all TBMQ nodes and configmaps, load balancers, etc.:
+Execute the following command to delete all ST-RMQTT nodes and configmaps, load balancers, etc.:
 
 ```bash
 ./k8s-delete-all.sh

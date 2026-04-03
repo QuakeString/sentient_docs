@@ -6,7 +6,7 @@ description: Edge Alarms Overview
 push-to-edge:
     0:
         image: /images/edge/user-guide/manage-alarms/push-from-cloud-to-edge/0-device-profile-create-rule.png
-        title: 'Log in to the <b>ThingsBoard Cloud</b> and go to the <b>Profiles > Device profiles</b> section to create or modify the Device profile. Select the appropriate <b>Default rule chain</b>. Then, configure the <b>Alarm Rule</b>.'
+        title: 'Log in to the <b>SENTIENT Cloud</b> and go to the <b>Profiles > Device profiles</b> section to create or modify the Device profile. Select the appropriate <b>Default rule chain</b>. Then, configure the <b>Alarm Rule</b>.'
     1:
         image: /images/edge/user-guide/manage-alarms/push-from-cloud-to-edge/1-assign-the-profile.png
         title: 'Go to the <b>Entities > Devices</b> section. You can create a new <b>Device</b> or edit the existing one. On the <b>"Device details"</b> page, assign newly created (or updated) <b>Device profile</b> to this <b>Device</b>. Click the <b>“Apply changes”</b> button.'
@@ -38,13 +38,13 @@ push-to-edge:
 push-to-cloud:
     0:
         image: /images/edge/user-guide/manage-alarms/push-from-edge-to-cloud/0-device-profile.png
-        title: 'Log in to the <b>ThingsBoard Edge</b> and go to the <b>Profiles > Device profiles</b> section to create or edit the <b>Device profile</b>. Select the appropriate <b>Default rule chain</b>. Set the <b>Alarm Rule</b>.'
+        title: 'Log in to the <b>SENTIENT GATEWAY</b> and go to the <b>Profiles > Device profiles</b> section to create or edit the <b>Device profile</b>. Select the appropriate <b>Default rule chain</b>. Set the <b>Alarm Rule</b>.'
     1:
         image: /images/edge/user-guide/manage-alarms/push-from-edge-to-cloud/1-assign-profile.png
         title: 'Go to the <b>Entities > Devices</b> section. You can create a new device or edit the existing one. On the <b>"Device details"</b> page, assign newly created (or updated) <b>Device profile</b> to this device. Click the <b>“Apply changes”</b> button.'
     2:
         image: /images/edge/user-guide/manage-alarms/push-from-edge-to-cloud/2-rule-chain-template.png
-        title: 'Log in to the <b>ThingsBoard Cloud</b> and go to the <b>Edge management > Rule chain templates</b> section to modify the <b>Rule Chain</b> you have assigned to the <b>Device profile</b>. <i>Note: If you use <b>Edge version 4.0</b>, you can proceed with <b>Rule Chain</b> configurations on the <b>Edge</b> instance.</i>'
+        title: 'Log in to the <b>SENTIENT Cloud</b> and go to the <b>Edge management > Rule chain templates</b> section to modify the <b>Rule Chain</b> you have assigned to the <b>Device profile</b>. <i>Note: If you use <b>Edge version 4.0</b>, you can proceed with <b>Rule Chain</b> configurations on the <b>Edge</b> instance.</i>'
     3:
         image: /images/edge/user-guide/manage-alarms/push-from-edge-to-cloud/3-push-to-cloud-settings.png
         title: 'On the <b>Rule Chain</b> edit page, in the Node search bar find the <b>"push to cloud"</b> node. It pushes messages from <b>Edge</b> to <b>Cloud</b>. Once message arrives to this node it will be converted into Cloud event and saved to the local database. Drag and drop the node onto the <b>Rule Chain sheet</b>. Then, in the <b>"Add rule node"</b> pop-up window enter the node title and select the <b>"Server attributes"</b> option in the <b>"Entity attributes scope"</b> field. Click the <b>"Add"</b> button to proceed.'
@@ -59,7 +59,7 @@ push-to-cloud:
         title: 'To verify the received alarm notification, go to the <b>Entities > Devices</b> section, open the <b>"Device details"</b> page and select the <b>“Alarm”</b> tab. You also can view the incoming alarm notification in the <b>Notification center</b>.'
     7:
         image: /images/edge/user-guide/manage-alarms/push-from-edge-to-cloud/7-check-alarm-on-cloud.png
-        title: 'To verify that the notification is propagated to the <b>Cloud</b>, log in to the <b>ThingsBoard Cloud (Server)</b> and go to the <b>Entities > Devices</b> section, open the <b>"device details"</b> page and select the <b>“Alarm”</b> tab.'
+        title: 'To verify that the notification is propagated to the <b>Cloud</b>, log in to the <b>SENTIENT Cloud (Server)</b> and go to the <b>Entities > Devices</b> section, open the <b>"device details"</b> page and select the <b>“Alarm”</b> tab.'
     8:
         image: /images/edge/user-guide/manage-alarms/push-from-edge-to-cloud/8-acknowledge-clear.png
         title: 'Make sure to <b>Acknowledge</b> and <b>Clear</b> the notification after you received it. You can do it on either the <b>Cloud</b> or the <b>Edge</b>. If the <b>Uncleared Alarm</b> exists, it will be updated, instead of being created.'

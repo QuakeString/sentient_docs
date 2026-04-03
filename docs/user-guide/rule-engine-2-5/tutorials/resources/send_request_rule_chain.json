@@ -15,7 +15,7 @@
           "layoutX": 110,
           "layoutY": 295
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Generator",
         "debugMode": false,
         "configuration": {
@@ -31,7 +31,7 @@
           "layoutX": 387,
           "layoutY": 294
         },
-        "type": "org.thingsboard.rule.engine.flow.TbCheckpointNode",
+        "type": "org.sentient.rule.engine.flow.TbCheckpointNode",
         "name": "CheckPoint",
         "debugMode": true,
         "configuration": {
@@ -43,7 +43,7 @@
           "layoutX": 688,
           "layoutY": 296
         },
-        "type": "org.thingsboard.rule.engine.rest.TbRestApiCallNode",
+        "type": "org.sentient.rule.engine.rest.TbRestApiCallNode",
         "name": "Send Request",
         "debugMode": true,
         "configuration": {

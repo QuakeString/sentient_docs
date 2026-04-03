@@ -1,14 +1,14 @@
-Edit ThingsBoard configuration file 
+Edit SENTIENT configuration file 
 
 ```bash 
-sudo nano /etc/thingsboard/conf/thingsboard.conf
+sudo nano /etc/sentient/conf/sentient.conf
 ``` 
 {: .copy-code}
 
 Add the following lines to the configuration file. 
 
 ```bash
-# Update ThingsBoard memory usage and restrict it to 2G in /etc/thingsboard/conf/thingsboard.conf
+# Update SENTIENT memory usage and restrict it to 2G in /etc/sentient/conf/sentient.conf
 export JAVA_OPTS="$JAVA_OPTS -Xms2G -Xmx2G"
 ```
 {: .copy-code}

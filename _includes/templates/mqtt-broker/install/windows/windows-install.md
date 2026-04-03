@@ -18,21 +18,21 @@ Set-ExecutionPolicy Unrestricted
 ```
 {: .copy-code}
 
-* **Install TBMQ**
+* **Install ST-RMQTT**
 
 {% if docsPrefix == null %}
 
 ```bash
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/thingsboard/tbmq/{{ site.release.broker_branch }}/msa/tbmq/configs/windows/tbmq-install-and-run.ps1" `
--OutFile ".\tbmq-install-and-run.ps1"; .\tbmq-install-and-run.ps1
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sentient/st-rmqtt/{{ site.release.broker_branch }}/msa/st-rmqtt/configs/windows/st-rmqtt-install-and-run.ps1" `
+-OutFile ".\st-rmqtt-install-and-run.ps1"; .\st-rmqtt-install-and-run.ps1
 ```
 {: .copy-code}
 
 {% else %}
 
 ```bash
-Invoke-WebRequest -Uri "https://raw.githubusercontent.com/thingsboard/tbmq-pe-docker-compose/{{ site.release.broker_branch }}/basic/windows/tbmq-install-and-run.ps1" `
--OutFile ".\tbmq-install-and-run.ps1"; .\tbmq-install-and-run.ps1
+Invoke-WebRequest -Uri "https://raw.githubusercontent.com/sentient/st-rmqtt-pe-docker-compose/{{ site.release.broker_branch }}/basic/windows/st-rmqtt-install-and-run.ps1" `
+-OutFile ".\st-rmqtt-install-and-run.ps1"; .\st-rmqtt-install-and-run.ps1
 ```
 {: .copy-code}
 

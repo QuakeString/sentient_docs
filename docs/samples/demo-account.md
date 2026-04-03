@@ -3,34 +3,34 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Demo Account
-description: ThingsBoard default demo accounts
+description: SENTIENT default demo accounts
 
 ---
 
 * TOC
 {:toc}
 
-ThingsBoard installation contains single tenant account that is used in sample applications and contains a lot of pre-provisioned entities for demonstration purposes.
+SENTIENT installation contains single tenant account that is used in sample applications and contains a lot of pre-provisioned entities for demonstration purposes.
 
 ## System Administrator
  
 Default system administrator account:
 
- - login - **sysadmin@thingsboard.org**.
+ - login - **sysadmin@sentient.org**.
  - password - **sysadmin**.
  
 ## Demo Tenant
 
 Default tenant administrator account:
 
- - login - **tenant@thingsboard.org**.
+ - login - **tenant@sentient.org**.
  - password - **tenant**.
  
 Demo tenant customers:
 
- - Customer A users -  **customer@thingsboard.org** or **customerA@thingsboard.org**.
- - Customer B users -  **customerB@thingsboard.org**.
- - Customer C users -  **customerC@thingsboard.org**.
+ - Customer A users -  **customer@sentient.org** or **customerA@sentient.org**.
+ - Customer B users -  **customerB@sentient.org**.
+ - Customer C users -  **customerC@sentient.org**.
  - all users have **"customer"** password. 
  
 ## Tenant devices

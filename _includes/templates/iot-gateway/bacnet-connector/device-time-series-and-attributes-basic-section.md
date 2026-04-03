@@ -98,12 +98,12 @@ More usage examples can be found in the [Example usage](/docs/iot-gateway/config
 #### Report strategy
 
 For each time series or attribute, you can enable specific report strategy. This strategy defines how often the 
-data will be sent to the ThingsBoard server. The following strategies are available:
+data will be sent to the SENTIENT server. The following strategies are available:
 
-- **On report period** - sends data to ThingsBoard after the report period;
-- **On value change** - sends data to ThingsBoard when the value changes;
-- **On value change or report period** - sends data to ThingsBoard when the value changes or after the report period;
-- **On received** - sends data to ThingsBoard after receiving data from the device (default strategy).
+- **On report period** - sends data to SENTIENT after the report period;
+- **On value change** - sends data to SENTIENT when the value changes;
+- **On value change or report period** - sends data to SENTIENT when the value changes or after the report period;
+- **On received** - sends data to SENTIENT after receiving data from the device (default strategy).
 
 ![image](/images/gateway/bacnet-connector/bacnet-gateway-configuring-10-ce.png)
 

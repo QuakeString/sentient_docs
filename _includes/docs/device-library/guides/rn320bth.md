@@ -1,8 +1,8 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://en.radionode365.com/kr/product/product_view.php?idx=102&part_idx=1" %}
 {% assign officialManualLink = "/docs/devices-library/resources/manuals/rn172wcd-user-manual-v1.01.pdf" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - LoRaWAN gateway registered and online in The Things Stack (in our case Radionode LoRaWAN Gateway)
@@ -39,7 +39,7 @@ Before starting, ensure the following requirements are met:
 **Hardware**
 
 {{ prerequisites }}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 **Device Information**
 - DevEUI (from device label)
@@ -68,7 +68,7 @@ Before starting, ensure the following requirements are met:
 
 ### Configure Payload Formatter (Uplink Decoder)
 
-RN320-BTH transmits sensor data in binary format. Decoding must be performed before forwarding data to ThingsBoard.
+RN320-BTH transmits sensor data in binary format. Decoding must be performed before forwarding data to SENTIENT.
 - Open your application in TTS.
 - Navigate to Payload formatters → Uplink.
 - Paste the following decoder:
@@ -219,9 +219,9 @@ To register the end Device enter these details as shown in the image below:
 
 {% include images-gallery.liquid imageCollection=TBLora3 %}
 
-## ThingsBoard configuration
+## SENTIENT configuration
 
-- Log in to ThingsBoard. 
+- Log in to SENTIENT. 
 - Navigate to **Integrations &#8702; Add integration**. 
 - Select **HTTP** Integration as we will be receiving data from the webhooks created in TTS (Webhook configuration we will explain later in this documentation) .
 - In the payload decoder for the message received from the network server, copy and paste the following TBEL decoder code:
@@ -322,11 +322,11 @@ To create a webhook in the TTS platform:
 
 **General settings**
 - Add a webhook ID - name for your webhook. 
-- In the **Base URL** add the **endpoint URL** you copied from the ThingsBoard platform.
+- In the **Base URL** add the **endpoint URL** you copied from the SENTIENT platform.
 - In the **Additional header** option add **application/json** 
 - **Save** the webhook.
 
-Now the communication will start between the network server and the ThingsBoard platform to send data from your LoRaWAN devices to the ThingsBoard.
+Now the communication will start between the network server and the SENTIENT platform to send data from your LoRaWAN devices to the SENTIENT.
 
 {% assign TBLora10 = '
     ===
@@ -338,7 +338,7 @@ Now the communication will start between the network server and the ThingsBoard 
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=TBLora10 %}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
 - Navigate to **Devices**.
 - Confirm the **rn320-bth** device is created automatically.

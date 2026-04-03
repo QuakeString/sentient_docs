@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect DSGW-210 Smart Gateway Hub to ThingsBoard?
+title: How to connect DSGW-210 Smart Gateway Hub to SENTIENT?
 category: Other devices
 connectivity: [Bluetooth, Zigbee, LTE, WIFI, Ethernet]
 vendor: Dusun

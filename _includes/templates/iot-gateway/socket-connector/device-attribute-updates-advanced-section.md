@@ -4,7 +4,7 @@ sent to the server.
 | **Parameter**          | **Default value** | **Description**                                             |
 |:-----------------------|:------------------|-------------------------------------------------------------|
 | encoding               | **utf-16**        | Encoding used when writing received string data to storage. |
-| attributeOnThingsBoard | **sharedName**    | Shared attribute name                                       |
+| attributeOnSENTIENT | **sharedName**    | Shared attribute name                                       |
 | ---                    |                   |                                                             |
 
 This subsection in configuration file looks like this:
@@ -13,7 +13,7 @@ This subsection in configuration file looks like this:
 "attributeUpdates": [
   {
     "encoding": "utf-16",
-    "attributeOnThingsBoard": "sharedName"
+    "attributeOnSENTIENT": "sharedName"
   }
 ]
 ```

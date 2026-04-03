@@ -1,23 +1,23 @@
-{% capture tbmqPerpetualPlan %}{% include pricing/prices/tbmq-perpetual.json %}{% endcapture %}
-<div class="embedded-calculator" id="tbmqPerpCalculator">
+{% capture st-rmqttPerpetualPlan %}{% include pricing/prices/st-rmqtt-perpetual.json %}{% endcapture %}
+<div class="embedded-calculator" id="st-rmqttPerpCalculator">
     <div class="calculator-body">
         <div class="card calculator">
             <div class="calculator-header">
-                <h2>TBMQ Perpetual license calculator</h2>
+                <h2>ST-RMQTT Perpetual license calculator</h2>
             </div>
             <div class="input-parameters">
                 <div class="input-group">
                     <div class="input-label-group xs-row">
-                        <label for="tbmqPerp-sessions" class="label">
+                        <label for="st-rmqttPerp-sessions" class="label">
                             Sessions
                             <span class="tooltip"><img src="/images/pricing/info-icon.svg" alt="Hint icon">
                                 <span class="tooltip-text">Total unique logical states managed by the broker (identified by Client ID). Active connections and disconnected clients with persistent sessions both occupy quota slots.</span>
                             </span>
                         </label>
-                        <input id="tbmqPerp-sessions" type="number" value="10000" min="10000" class="input input-right">
+                        <input id="st-rmqttPerp-sessions" type="number" value="10000" min="10000" class="input input-right">
                     </div>
                     <div class="slider-container" data-slider-type="sessions">
-                        <input type="range" id="tbmqPerp-sessionsSlider" min="10000" max="550000" step="1000" value="10000" class="slider">
+                        <input type="range" id="st-rmqttPerp-sessionsSlider" min="10000" max="550000" step="1000" value="10000" class="slider">
                         <div class="tick-marks">
                             <div class="tick-mark" data-num="10000"><span class="tick"></span><span class="tick-label">10K</span></div>
                             <div class="tick-mark" data-num="50000"><span class="tick"></span><span class="tick-label">50K</span></div>
@@ -30,16 +30,16 @@
                 </div>
                 <div class="input-group">
                     <div class="input-label-group xs-row">
-                        <label for="tbmqPerp-throughput" class="label">
+                        <label for="st-rmqttPerp-throughput" class="label">
                             Throughput (msg/sec)
                             <span class="tooltip"><img src="/images/pricing/info-icon.svg" alt="Hint icon">
                                 <span class="tooltip-text">Combined number of MQTT PUBLISH packets processed per second, including both incoming (publisher) and outgoing (subscriber) messages.</span>
                             </span>
                         </label>
-                        <input id="tbmqPerp-throughput" type="number" value="1000" min="1000" class="input input-right">
+                        <input id="st-rmqttPerp-throughput" type="number" value="1000" min="1000" class="input input-right">
                     </div>
                     <div class="slider-container" data-slider-type="throughput">
-                        <input type="range" id="tbmqPerp-throughputSlider" min="1000" max="30000" step="100" value="1000" class="slider">
+                        <input type="range" id="st-rmqttPerp-throughputSlider" min="1000" max="30000" step="100" value="1000" class="slider">
                         <div class="tick-marks">
                             <div class="tick-mark" data-num="1000"><span class="tick"></span><span class="tick-label">1K</span></div>
                             <div class="tick-mark" data-num="2000"><span class="tick"></span><span class="tick-label">2K</span></div>
@@ -61,9 +61,9 @@
                             </h4>
                             <p>1 instance included. Add more for high availability (HA) and reliability.</p>
                         </div>
-                        <div class="stepper-control unset-width" id="tbmqPerpProdStepper">
+                        <div class="stepper-control unset-width" id="st-rmqttPerpProdStepper">
                             <button type="button" class="stepper-btn minus" data-action="decrement" disabled aria-label="Decrease production instances">−</button>
-                            <input type="number" value="1" min="1" id="tbmqPerpProdInstances" aria-label="Production instances count">
+                            <input type="number" value="1" min="1" id="st-rmqttPerpProdInstances" aria-label="Production instances count">
                             <button type="button" class="stepper-btn plus" data-action="increment" aria-label="Increase production instances">+</button>
                         </div>
                     </div>
@@ -77,9 +77,9 @@
                             </h4>
                             <p>Add dedicated instances for your dev, test, and CI/CD workflows. Keep your production data clean.</p>
                         </div>
-                        <div class="stepper-control unset-width" id="tbmqPerpDevStepper">
+                        <div class="stepper-control unset-width" id="st-rmqttPerpDevStepper">
                             <button type="button" class="stepper-btn minus" data-action="decrement" disabled aria-label="Decrease development instances">−</button>
-                            <input type="number" value="0" min="0" id="tbmqPerpDevInstances" aria-label="Development instances count">
+                            <input type="number" value="0" min="0" id="st-rmqttPerpDevInstances" aria-label="Development instances count">
                             <button type="button" class="stepper-btn plus" data-action="increment" aria-label="Increase development instances">+</button>
                         </div>
                     </div>
@@ -87,51 +87,51 @@
             </div>
             <div class="actions-container">
                 <div class="reset-container">
-                    <button id="tbmqPerpResetBtn" class="button reset">Reset</button>
+                    <button id="st-rmqttPerpResetBtn" class="button reset">Reset</button>
                 </div>
             </div>
         </div>
-        <div id="tbmqPerpResultsCard" class="card results"></div>
+        <div id="st-rmqttPerpResultsCard" class="card results"></div>
     </div>
 </div>
 <script>
-    const tbmqPerpetualPlan = {{ tbmqPerpetualPlan }};
+    const st-rmqttPerpetualPlan = {{ st-rmqttPerpetualPlan }};
 
-    const TBMQ_PERP_SESSIONS_MIN = 10000;
-    const TBMQ_PERP_SESSIONS_BREAKPOINT = 500000;
-    const TBMQ_PERP_SESSIONS_SLIDER_MAX = 550000;
-    const TBMQ_PERP_SESSIONS_REAL_MAX = 1000000;
+    const ST-RMQTT_PERP_SESSIONS_MIN = 10000;
+    const ST-RMQTT_PERP_SESSIONS_BREAKPOINT = 500000;
+    const ST-RMQTT_PERP_SESSIONS_SLIDER_MAX = 550000;
+    const ST-RMQTT_PERP_SESSIONS_REAL_MAX = 1000000;
 
-    const TBMQ_PERP_THROUGHPUT_MIN = 1000;
-    const TBMQ_PERP_THROUGHPUT_BREAKPOINT = 20000;
-    const TBMQ_PERP_THROUGHPUT_SLIDER_MAX = 30000;
-    const TBMQ_PERP_THROUGHPUT_REAL_MAX = 1000000;
+    const ST-RMQTT_PERP_THROUGHPUT_MIN = 1000;
+    const ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT = 20000;
+    const ST-RMQTT_PERP_THROUGHPUT_SLIDER_MAX = 30000;
+    const ST-RMQTT_PERP_THROUGHPUT_REAL_MAX = 1000000;
 
-    const tbmqPerpSessionsSliderToReal = (sliderVal) => {
-        if (sliderVal <= TBMQ_PERP_SESSIONS_BREAKPOINT) return sliderVal;
-        return Math.round(TBMQ_PERP_SESSIONS_BREAKPOINT + (sliderVal - TBMQ_PERP_SESSIONS_BREAKPOINT) *
-            ((TBMQ_PERP_SESSIONS_REAL_MAX - TBMQ_PERP_SESSIONS_BREAKPOINT) / (TBMQ_PERP_SESSIONS_SLIDER_MAX - TBMQ_PERP_SESSIONS_BREAKPOINT)));
+    const st-rmqttPerpSessionsSliderToReal = (sliderVal) => {
+        if (sliderVal <= ST-RMQTT_PERP_SESSIONS_BREAKPOINT) return sliderVal;
+        return Math.round(ST-RMQTT_PERP_SESSIONS_BREAKPOINT + (sliderVal - ST-RMQTT_PERP_SESSIONS_BREAKPOINT) *
+            ((ST-RMQTT_PERP_SESSIONS_REAL_MAX - ST-RMQTT_PERP_SESSIONS_BREAKPOINT) / (ST-RMQTT_PERP_SESSIONS_SLIDER_MAX - ST-RMQTT_PERP_SESSIONS_BREAKPOINT)));
     };
 
-    const tbmqPerpSessionsRealToSlider = (realVal) => {
-        if (realVal <= TBMQ_PERP_SESSIONS_BREAKPOINT) return realVal;
-        return TBMQ_PERP_SESSIONS_BREAKPOINT + (realVal - TBMQ_PERP_SESSIONS_BREAKPOINT) *
-            ((TBMQ_PERP_SESSIONS_SLIDER_MAX - TBMQ_PERP_SESSIONS_BREAKPOINT) / (TBMQ_PERP_SESSIONS_REAL_MAX - TBMQ_PERP_SESSIONS_BREAKPOINT));
+    const st-rmqttPerpSessionsRealToSlider = (realVal) => {
+        if (realVal <= ST-RMQTT_PERP_SESSIONS_BREAKPOINT) return realVal;
+        return ST-RMQTT_PERP_SESSIONS_BREAKPOINT + (realVal - ST-RMQTT_PERP_SESSIONS_BREAKPOINT) *
+            ((ST-RMQTT_PERP_SESSIONS_SLIDER_MAX - ST-RMQTT_PERP_SESSIONS_BREAKPOINT) / (ST-RMQTT_PERP_SESSIONS_REAL_MAX - ST-RMQTT_PERP_SESSIONS_BREAKPOINT));
     };
 
-    const tbmqPerpThroughputSliderToReal = (sliderVal) => {
-        if (sliderVal <= TBMQ_PERP_THROUGHPUT_BREAKPOINT) return sliderVal;
-        return Math.round(TBMQ_PERP_THROUGHPUT_BREAKPOINT + (sliderVal - TBMQ_PERP_THROUGHPUT_BREAKPOINT) *
-            ((TBMQ_PERP_THROUGHPUT_REAL_MAX - TBMQ_PERP_THROUGHPUT_BREAKPOINT) / (TBMQ_PERP_THROUGHPUT_SLIDER_MAX - TBMQ_PERP_THROUGHPUT_BREAKPOINT)));
+    const st-rmqttPerpThroughputSliderToReal = (sliderVal) => {
+        if (sliderVal <= ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT) return sliderVal;
+        return Math.round(ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT + (sliderVal - ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT) *
+            ((ST-RMQTT_PERP_THROUGHPUT_REAL_MAX - ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT) / (ST-RMQTT_PERP_THROUGHPUT_SLIDER_MAX - ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT)));
     };
 
-    const tbmqPerpThroughputRealToSlider = (realVal) => {
-        if (realVal <= TBMQ_PERP_THROUGHPUT_BREAKPOINT) return realVal;
-        return TBMQ_PERP_THROUGHPUT_BREAKPOINT + (realVal - TBMQ_PERP_THROUGHPUT_BREAKPOINT) *
-            ((TBMQ_PERP_THROUGHPUT_SLIDER_MAX - TBMQ_PERP_THROUGHPUT_BREAKPOINT) / (TBMQ_PERP_THROUGHPUT_REAL_MAX - TBMQ_PERP_THROUGHPUT_BREAKPOINT));
+    const st-rmqttPerpThroughputRealToSlider = (realVal) => {
+        if (realVal <= ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT) return realVal;
+        return ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT + (realVal - ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT) *
+            ((ST-RMQTT_PERP_THROUGHPUT_SLIDER_MAX - ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT) / (ST-RMQTT_PERP_THROUGHPUT_REAL_MAX - ST-RMQTT_PERP_THROUGHPUT_BREAKPOINT));
     };
 
-    let tbmqPerpState = {
+    let st-rmqttPerpState = {
         clipboardMessage: '',
         debounceTimer: null,
         sessions: 10000,
@@ -140,30 +140,30 @@
         devInstances: 0
     };
 
-    const tbmqPerpUi = {
-        calculator: document.getElementById('tbmqPerpCalculator'),
-        results: document.getElementById('tbmqPerpResultsCard'),
-        resetBtn: document.getElementById('tbmqPerpResetBtn'),
+    const st-rmqttPerpUi = {
+        calculator: document.getElementById('st-rmqttPerpCalculator'),
+        results: document.getElementById('st-rmqttPerpResultsCard'),
+        resetBtn: document.getElementById('st-rmqttPerpResetBtn'),
         inputs: {
-            sessions: document.getElementById('tbmqPerp-sessions'),
-            sessionsSlider: document.getElementById('tbmqPerp-sessionsSlider'),
-            throughput: document.getElementById('tbmqPerp-throughput'),
-            throughputSlider: document.getElementById('tbmqPerp-throughputSlider'),
-            prod: document.getElementById('tbmqPerpProdInstances'),
-            dev: document.getElementById('tbmqPerpDevInstances')
+            sessions: document.getElementById('st-rmqttPerp-sessions'),
+            sessionsSlider: document.getElementById('st-rmqttPerp-sessionsSlider'),
+            throughput: document.getElementById('st-rmqttPerp-throughput'),
+            throughputSlider: document.getElementById('st-rmqttPerp-throughputSlider'),
+            prod: document.getElementById('st-rmqttPerpProdInstances'),
+            dev: document.getElementById('st-rmqttPerpDevInstances')
         },
         steppers: {
-            prod: document.getElementById('tbmqPerpProdStepper'),
-            dev: document.getElementById('tbmqPerpDevStepper')
+            prod: document.getElementById('st-rmqttPerpProdStepper'),
+            dev: document.getElementById('st-rmqttPerpDevStepper')
         }
     };
 
-    const tbmqPerpCopy = (btn) => copyToClipboard(btn, tbmqPerpState.clipboardMessage);
-    const tbmqPerpDownload = () => typeof downloadSummary === 'function' && downloadSummary(tbmqPerpState);
+    const st-rmqttPerpCopy = (btn) => copyToClipboard(btn, st-rmqttPerpState.clipboardMessage);
+    const st-rmqttPerpDownload = () => typeof downloadSummary === 'function' && downloadSummary(st-rmqttPerpState);
 
-    function tbmqPerpInitTicks() {
+    function st-rmqttPerpInitTicks() {
         requestAnimationFrame(() => {
-            tbmqPerpUi.calculator.querySelectorAll('.slider-container').forEach(container => {
+            st-rmqttPerpUi.calculator.querySelectorAll('.slider-container').forEach(container => {
                 const sliderInput = container.querySelector('input.slider');
                 if (!sliderInput) return;
 
@@ -187,32 +187,32 @@
         });
     }
 
-    const tbmqPerpUpdateUI = () => {
-        tbmqPerpUi.steppers.prod.querySelector('[data-action="decrement"]').disabled = tbmqPerpState.prodInstances <= tbmqPerpetualPlan.includedProdInstances;
-        tbmqPerpUi.steppers.dev.querySelector('[data-action="decrement"]').disabled = tbmqPerpState.devInstances <= 0;
+    const st-rmqttPerpUpdateUI = () => {
+        st-rmqttPerpUi.steppers.prod.querySelector('[data-action="decrement"]').disabled = st-rmqttPerpState.prodInstances <= st-rmqttPerpetualPlan.includedProdInstances;
+        st-rmqttPerpUi.steppers.dev.querySelector('[data-action="decrement"]').disabled = st-rmqttPerpState.devInstances <= 0;
     };
 
-    const tbmqPerpHandleStepper = (type, action) => {
+    const st-rmqttPerpHandleStepper = (type, action) => {
         if (type === 'prod') {
-            const min = tbmqPerpetualPlan.includedProdInstances;
-            tbmqPerpState.prodInstances = action === 'increment' ? tbmqPerpState.prodInstances + 1 : Math.max(min, tbmqPerpState.prodInstances - 1);
-            tbmqPerpUi.inputs.prod.value = tbmqPerpState.prodInstances;
+            const min = st-rmqttPerpetualPlan.includedProdInstances;
+            st-rmqttPerpState.prodInstances = action === 'increment' ? st-rmqttPerpState.prodInstances + 1 : Math.max(min, st-rmqttPerpState.prodInstances - 1);
+            st-rmqttPerpUi.inputs.prod.value = st-rmqttPerpState.prodInstances;
         } else if (type === 'dev') {
-            tbmqPerpState.devInstances = action === 'increment' ? tbmqPerpState.devInstances + 1 : Math.max(0, tbmqPerpState.devInstances - 1);
-            tbmqPerpUi.inputs.dev.value = tbmqPerpState.devInstances;
+            st-rmqttPerpState.devInstances = action === 'increment' ? st-rmqttPerpState.devInstances + 1 : Math.max(0, st-rmqttPerpState.devInstances - 1);
+            st-rmqttPerpUi.inputs.dev.value = st-rmqttPerpState.devInstances;
         }
-        tbmqPerpCalculate();
-        tbmqPerpSendGTM();
+        st-rmqttPerpCalculate();
+        st-rmqttPerpSendGTM();
     };
 
-    const tbmqPerpCalculate = () => {
-        const plan = tbmqPerpetualPlan;
-        tbmqPerpUpdateUI();
+    const st-rmqttPerpCalculate = () => {
+        const plan = st-rmqttPerpetualPlan;
+        st-rmqttPerpUpdateUI();
 
-        const extraSessions = Math.max(0, tbmqPerpState.sessions - plan.includedSessions);
-        const extraThroughput = Math.max(0, tbmqPerpState.throughput - plan.includedThroughput);
-        const extraProd = Math.max(0, tbmqPerpState.prodInstances - plan.includedProdInstances);
-        const extraDev = tbmqPerpState.devInstances;
+        const extraSessions = Math.max(0, st-rmqttPerpState.sessions - plan.includedSessions);
+        const extraThroughput = Math.max(0, st-rmqttPerpState.throughput - plan.includedThroughput);
+        const extraProd = Math.max(0, st-rmqttPerpState.prodInstances - plan.includedProdInstances);
+        const extraDev = st-rmqttPerpState.devInstances;
 
         const extraSessionsCost = extraSessions * plan.extraSessionsPrice;
         const extraThroughputCost = extraThroughput * plan.extraThroughputPrice;
@@ -221,7 +221,7 @@
 
         const totalPrice = plan.basePrice + extraSessionsCost + extraThroughputCost + extraProdCost + extraDevCost;
 
-        tbmqPerpDisplay({
+        st-rmqttPerpDisplay({
             plan,
             extraSessions,
             extraSessionsCost,
@@ -235,7 +235,7 @@
         });
     };
 
-    const tbmqPerpCreateItem = (label, value, tooltip) => `
+    const st-rmqttPerpCreateItem = (label, value, tooltip) => `
         <div class="result-item">
             <span class="result-label">${label}:</span>
             <span class="result-value">
@@ -243,42 +243,42 @@
             </span>
         </div>`;
 
-    const tbmqPerpDisplay = ({ plan, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, totalPrice }) => {
+    const st-rmqttPerpDisplay = ({ plan, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, totalPrice }) => {
         let resultsHtml = `
             <div class="card-header">
                 <div class="header-top">
                     <h3>Calculation summary</h3>
                     <div class="header-actions">
-                        <div id="tbmqPerpCopyBtn" class="icon-button" title="Copy">${copyIcon}</div>
-                        <div id="tbmqPerpDownloadBtn" class="icon-button" title="Download">${downloadIcon}</div>
+                        <div id="st-rmqttPerpCopyBtn" class="icon-button" title="Copy">${copyIcon}</div>
+                        <div id="st-rmqttPerpDownloadBtn" class="icon-button" title="Download">${downloadIcon}</div>
                     </div>
                 </div>
             </div>
             <div class="results-scroll-container">
                 <div class="results-section">
                     <div class="section-content show">
-                        ${tbmqPerpCreateItem('Included Sessions', formatNumber(plan.includedSessions), 'Number of sessions covered by the perpetual license base price.')}
-                        ${tbmqPerpCreateItem('Included Throughput', `${formatNumber(plan.includedThroughput)} msg/sec`, 'Amount of throughput covered by the perpetual license base price.')}
-                        ${tbmqPerpCreateItem('Included Prod Instances', formatNumber(plan.includedProdInstances), 'Number of production instances covered by the perpetual license base price.')}
-                        ${tbmqPerpCreateItem('White Labeling', '<span class="badge enabled">Enabled</span>')}
-                        ${tbmqPerpCreateItem('Support', '<span class="support-priority">Priority Help Desk</span>', 'Prioritized ticket handling via a high-priority queue managed by the expert team.')}
-                        ${tbmqPerpCreateItem('Base Price', formatCurrency(plan.basePrice), 'One-time license fee before extras and add-ons.')}`;
+                        ${st-rmqttPerpCreateItem('Included Sessions', formatNumber(plan.includedSessions), 'Number of sessions covered by the perpetual license base price.')}
+                        ${st-rmqttPerpCreateItem('Included Throughput', `${formatNumber(plan.includedThroughput)} msg/sec`, 'Amount of throughput covered by the perpetual license base price.')}
+                        ${st-rmqttPerpCreateItem('Included Prod Instances', formatNumber(plan.includedProdInstances), 'Number of production instances covered by the perpetual license base price.')}
+                        ${st-rmqttPerpCreateItem('White Labeling', '<span class="badge enabled">Enabled</span>')}
+                        ${st-rmqttPerpCreateItem('Support', '<span class="support-priority">Priority Help Desk</span>', 'Prioritized ticket handling via a high-priority queue managed by the expert team.')}
+                        ${st-rmqttPerpCreateItem('Base Price', formatCurrency(plan.basePrice), 'One-time license fee before extras and add-ons.')}`;
 
         if (extraSessions > 0) {
-            resultsHtml += tbmqPerpCreateItem('Extra Sessions', formatNumber(extraSessions), 'Sessions exceeding the perpetual license included number (requires one-time fee).');
-            resultsHtml += tbmqPerpCreateItem('Extra Sessions Cost', formatCurrency(extraSessionsCost), `${formatNumber(extraSessions)} extra sessions × ${formatCurrency(plan.extraSessionsPrice)}/session`);
+            resultsHtml += st-rmqttPerpCreateItem('Extra Sessions', formatNumber(extraSessions), 'Sessions exceeding the perpetual license included number (requires one-time fee).');
+            resultsHtml += st-rmqttPerpCreateItem('Extra Sessions Cost', formatCurrency(extraSessionsCost), `${formatNumber(extraSessions)} extra sessions × ${formatCurrency(plan.extraSessionsPrice)}/session`);
         }
         if (extraThroughput > 0) {
-            resultsHtml += tbmqPerpCreateItem('Extra Throughput', `${formatNumber(extraThroughput)} msg/sec`, 'Throughput exceeding the perpetual license included number.');
-            resultsHtml += tbmqPerpCreateItem('Extra Throughput Cost', formatCurrency(extraThroughputCost), `${formatNumber(extraThroughput)} extra msg/sec × ${formatCurrency(plan.extraThroughputPrice)} per msg/sec`);
+            resultsHtml += st-rmqttPerpCreateItem('Extra Throughput', `${formatNumber(extraThroughput)} msg/sec`, 'Throughput exceeding the perpetual license included number.');
+            resultsHtml += st-rmqttPerpCreateItem('Extra Throughput Cost', formatCurrency(extraThroughputCost), `${formatNumber(extraThroughput)} extra msg/sec × ${formatCurrency(plan.extraThroughputPrice)} per msg/sec`);
         }
         if (extraProd > 0) {
-            resultsHtml += tbmqPerpCreateItem('Extra Prod Instances', formatNumber(extraProd), 'Production instances added beyond the perpetual license included number.');
-            resultsHtml += tbmqPerpCreateItem('Extra Prod Instances Cost', formatCurrency(extraProdCost), `${formatNumber(extraProd)} extra prod instance × ${formatCurrency(plan.extraProdInstancesPrice)}/prod instance`);
+            resultsHtml += st-rmqttPerpCreateItem('Extra Prod Instances', formatNumber(extraProd), 'Production instances added beyond the perpetual license included number.');
+            resultsHtml += st-rmqttPerpCreateItem('Extra Prod Instances Cost', formatCurrency(extraProdCost), `${formatNumber(extraProd)} extra prod instance × ${formatCurrency(plan.extraProdInstancesPrice)}/prod instance`);
         }
         if (extraDev > 0) {
-            resultsHtml += tbmqPerpCreateItem('Extra Dev Instances', formatNumber(extraDev), 'Development instances added beyond the perpetual license included number.');
-            resultsHtml += tbmqPerpCreateItem('Extra Dev Instances Cost', formatCurrency(extraDevCost), `${formatNumber(extraDev)} extra dev instance × ${formatCurrency(plan.extraDevInstancesPrice)}/dev instance`);
+            resultsHtml += st-rmqttPerpCreateItem('Extra Dev Instances', formatNumber(extraDev), 'Development instances added beyond the perpetual license included number.');
+            resultsHtml += st-rmqttPerpCreateItem('Extra Dev Instances Cost', formatCurrency(extraDevCost), `${formatNumber(extraDev)} extra dev instance × ${formatCurrency(plan.extraDevInstancesPrice)}/dev instance`);
         }
 
         resultsHtml += `
@@ -302,23 +302,23 @@
                         <span class="tooltip">${infoIcon}<span class="tooltip-text">${tooltipText}</span></span>
                     </span>
                 </div>
-                <a id="tbmqPerpContactUs" href="/docs/contact-us/" class="button">Contact Us</a>
+                <a id="st-rmqttPerpContactUs" href="/docs/contact-us/" class="button">Contact Us</a>
             </div>`;
 
-        tbmqPerpUi.results.innerHTML = resultsHtml;
+        st-rmqttPerpUi.results.innerHTML = resultsHtml;
 
-        document.getElementById('tbmqPerpCopyBtn')?.addEventListener('click', e => tbmqPerpCopy(e.currentTarget));
-        document.getElementById('tbmqPerpDownloadBtn')?.addEventListener('click', tbmqPerpDownload);
+        document.getElementById('st-rmqttPerpCopyBtn')?.addEventListener('click', e => st-rmqttPerpCopy(e.currentTarget));
+        document.getElementById('st-rmqttPerpDownloadBtn')?.addEventListener('click', st-rmqttPerpDownload);
 
-        tbmqPerpUpdateClipboard({ plan, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, totalPrice });
+        st-rmqttPerpUpdateClipboard({ plan, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, totalPrice });
     };
 
-    const tbmqPerpUpdateClipboard = ({ plan, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, totalPrice }) => {
-        let msg = `TBMQ Perpetual License\n`;
-        msg += `- Sessions: ${formatNumber(tbmqPerpState.sessions)}\n`;
-        msg += `- Throughput: ${formatNumber(tbmqPerpState.throughput)} msg/sec\n`;
-        msg += `- Prod Instances: ${formatNumber(tbmqPerpState.prodInstances)}\n`;
-        msg += `- Dev Instances: ${formatNumber(tbmqPerpState.devInstances)}\n`;
+    const st-rmqttPerpUpdateClipboard = ({ plan, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, totalPrice }) => {
+        let msg = `ST-RMQTT Perpetual License\n`;
+        msg += `- Sessions: ${formatNumber(st-rmqttPerpState.sessions)}\n`;
+        msg += `- Throughput: ${formatNumber(st-rmqttPerpState.throughput)} msg/sec\n`;
+        msg += `- Prod Instances: ${formatNumber(st-rmqttPerpState.prodInstances)}\n`;
+        msg += `- Dev Instances: ${formatNumber(st-rmqttPerpState.devInstances)}\n`;
         msg += `- Support: Priority Help Desk\n`;
         msg += `\nBase Price: ${formatCurrency(plan.basePrice)}\n`;
         if (extraSessions) msg += `- Extra Sessions: ${formatNumber(extraSessions)} (${formatCurrency(extraSessionsCost)})\n`;
@@ -326,34 +326,34 @@
         if (extraProd) msg += `- Extra Prod: ${formatNumber(extraProd)} (${formatCurrency(extraProdCost)})\n`;
         if (extraDev) msg += `- Extra Dev: ${formatNumber(extraDev)} (${formatCurrency(extraDevCost)})\n`;
 
-        tbmqPerpState.clipboardMessage = msg + `\nTotal: ${formatCurrency(totalPrice)}`;
+        st-rmqttPerpState.clipboardMessage = msg + `\nTotal: ${formatCurrency(totalPrice)}`;
     };
 
-    const tbmqPerpSendGTM = () => {
-        clearTimeout(tbmqPerpState.debounceTimer);
-        tbmqPerpState.debounceTimer = setTimeout(() => {
+    const st-rmqttPerpSendGTM = () => {
+        clearTimeout(st-rmqttPerpState.debounceTimer);
+        st-rmqttPerpState.debounceTimer = setTimeout(() => {
             window.dataLayer?.push({
-                event: 'tbmq_perpetual_calculator_interaction',
-                tbmq_perp_sessions: tbmqPerpState.sessions,
-                tbmq_perp_throughput: tbmqPerpState.throughput,
-                tbmq_perp_prod: tbmqPerpState.prodInstances,
-                tbmq_perp_dev: tbmqPerpState.devInstances
+                event: 'st-rmqtt_perpetual_calculator_interaction',
+                st-rmqtt_perp_sessions: st-rmqttPerpState.sessions,
+                st-rmqtt_perp_throughput: st-rmqttPerpState.throughput,
+                st-rmqtt_perp_prod: st-rmqttPerpState.prodInstances,
+                st-rmqtt_perp_dev: st-rmqttPerpState.devInstances
             });
         }, 3000);
     };
 
-    const tbmqPerpInit = () => {
-        if (!tbmqPerpUi.calculator) return;
+    const st-rmqttPerpInit = () => {
+        if (!st-rmqttPerpUi.calculator) return;
 
         setTimeout(() => {
-            tbmqPerpInitTicks();
-            sliderProgress(tbmqPerpUi.inputs.sessionsSlider);
-            sliderProgress(tbmqPerpUi.inputs.throughputSlider);
-            tbmqPerpCalculate();
+            st-rmqttPerpInitTicks();
+            sliderProgress(st-rmqttPerpUi.inputs.sessionsSlider);
+            sliderProgress(st-rmqttPerpUi.inputs.throughputSlider);
+            st-rmqttPerpCalculate();
         }, 100);
 
-        tbmqPerpUi.resetBtn.addEventListener('click', () => {
-            tbmqPerpState = {
+        st-rmqttPerpUi.resetBtn.addEventListener('click', () => {
+            st-rmqttPerpState = {
                 clipboardMessage: '',
                 debounceTimer: null,
                 sessions: 10000,
@@ -361,130 +361,130 @@
                 prodInstances: 1,
                 devInstances: 0
             };
-            tbmqPerpUi.inputs.sessions.value = 10000;
-            tbmqPerpUi.inputs.sessionsSlider.value = 10000;
-            tbmqPerpUi.inputs.throughput.value = 1000;
-            tbmqPerpUi.inputs.throughputSlider.value = 1000;
-            tbmqPerpUi.inputs.prod.value = 1;
-            tbmqPerpUi.inputs.dev.value = 0;
-            sliderProgress(tbmqPerpUi.inputs.sessionsSlider);
-            sliderProgress(tbmqPerpUi.inputs.throughputSlider);
-            tbmqPerpCalculate();
-            tbmqPerpSendGTM();
+            st-rmqttPerpUi.inputs.sessions.value = 10000;
+            st-rmqttPerpUi.inputs.sessionsSlider.value = 10000;
+            st-rmqttPerpUi.inputs.throughput.value = 1000;
+            st-rmqttPerpUi.inputs.throughputSlider.value = 1000;
+            st-rmqttPerpUi.inputs.prod.value = 1;
+            st-rmqttPerpUi.inputs.dev.value = 0;
+            sliderProgress(st-rmqttPerpUi.inputs.sessionsSlider);
+            sliderProgress(st-rmqttPerpUi.inputs.throughputSlider);
+            st-rmqttPerpCalculate();
+            st-rmqttPerpSendGTM();
         });
 
         const onSessionsInput = (val) => {
             let calcVal = parseInt(val);
-            if (isNaN(calcVal)) calcVal = TBMQ_PERP_SESSIONS_MIN;
+            if (isNaN(calcVal)) calcVal = ST-RMQTT_PERP_SESSIONS_MIN;
 
-            tbmqPerpState.sessions = Math.max(TBMQ_PERP_SESSIONS_MIN, calcVal);
+            st-rmqttPerpState.sessions = Math.max(ST-RMQTT_PERP_SESSIONS_MIN, calcVal);
 
-            const sliderVal = Math.min(tbmqPerpSessionsRealToSlider(tbmqPerpState.sessions), TBMQ_PERP_SESSIONS_SLIDER_MAX);
-            tbmqPerpUi.inputs.sessionsSlider.value = sliderVal;
-            sliderProgress(tbmqPerpUi.inputs.sessionsSlider);
-            tbmqPerpCalculate();
-            tbmqPerpSendGTM();
+            const sliderVal = Math.min(st-rmqttPerpSessionsRealToSlider(st-rmqttPerpState.sessions), ST-RMQTT_PERP_SESSIONS_SLIDER_MAX);
+            st-rmqttPerpUi.inputs.sessionsSlider.value = sliderVal;
+            sliderProgress(st-rmqttPerpUi.inputs.sessionsSlider);
+            st-rmqttPerpCalculate();
+            st-rmqttPerpSendGTM();
         };
 
         const onSessionsBlur = (e) => {
-            let val = parseInt(e.target.value) || TBMQ_PERP_SESSIONS_MIN;
-            val = Math.max(TBMQ_PERP_SESSIONS_MIN, val);
-            tbmqPerpState.sessions = val;
+            let val = parseInt(e.target.value) || ST-RMQTT_PERP_SESSIONS_MIN;
+            val = Math.max(ST-RMQTT_PERP_SESSIONS_MIN, val);
+            st-rmqttPerpState.sessions = val;
             e.target.value = val;
 
-            const sliderVal = Math.min(tbmqPerpSessionsRealToSlider(val), TBMQ_PERP_SESSIONS_SLIDER_MAX);
-            tbmqPerpUi.inputs.sessionsSlider.value = sliderVal;
-            sliderProgress(tbmqPerpUi.inputs.sessionsSlider);
-            tbmqPerpCalculate();
+            const sliderVal = Math.min(st-rmqttPerpSessionsRealToSlider(val), ST-RMQTT_PERP_SESSIONS_SLIDER_MAX);
+            st-rmqttPerpUi.inputs.sessionsSlider.value = sliderVal;
+            sliderProgress(st-rmqttPerpUi.inputs.sessionsSlider);
+            st-rmqttPerpCalculate();
         };
 
-        tbmqPerpUi.inputs.sessions.addEventListener('input', e => onSessionsInput(e.target.value));
-        tbmqPerpUi.inputs.sessions.addEventListener('change', onSessionsBlur);
+        st-rmqttPerpUi.inputs.sessions.addEventListener('input', e => onSessionsInput(e.target.value));
+        st-rmqttPerpUi.inputs.sessions.addEventListener('change', onSessionsBlur);
 
-        tbmqPerpUi.inputs.sessionsSlider.addEventListener('input', e => {
+        st-rmqttPerpUi.inputs.sessionsSlider.addEventListener('input', e => {
             const sliderVal = parseFloat(e.target.value);
-            tbmqPerpState.sessions = tbmqPerpSessionsSliderToReal(sliderVal);
-            tbmqPerpUi.inputs.sessions.value = tbmqPerpState.sessions;
+            st-rmqttPerpState.sessions = st-rmqttPerpSessionsSliderToReal(sliderVal);
+            st-rmqttPerpUi.inputs.sessions.value = st-rmqttPerpState.sessions;
             sliderProgress(e.target);
-            tbmqPerpCalculate();
-            tbmqPerpSendGTM();
+            st-rmqttPerpCalculate();
+            st-rmqttPerpSendGTM();
         });
 
 
         const onThroughputInput = (val) => {
             let calcVal = parseInt(val);
-            if (isNaN(calcVal)) calcVal = TBMQ_PERP_THROUGHPUT_MIN;
+            if (isNaN(calcVal)) calcVal = ST-RMQTT_PERP_THROUGHPUT_MIN;
 
-            tbmqPerpState.throughput = Math.max(TBMQ_PERP_THROUGHPUT_MIN, calcVal);
+            st-rmqttPerpState.throughput = Math.max(ST-RMQTT_PERP_THROUGHPUT_MIN, calcVal);
 
-            const sliderVal = Math.min(tbmqPerpThroughputRealToSlider(tbmqPerpState.throughput), TBMQ_PERP_THROUGHPUT_SLIDER_MAX);
-            tbmqPerpUi.inputs.throughputSlider.value = sliderVal;
-            sliderProgress(tbmqPerpUi.inputs.throughputSlider);
-            tbmqPerpCalculate();
-            tbmqPerpSendGTM();
+            const sliderVal = Math.min(st-rmqttPerpThroughputRealToSlider(st-rmqttPerpState.throughput), ST-RMQTT_PERP_THROUGHPUT_SLIDER_MAX);
+            st-rmqttPerpUi.inputs.throughputSlider.value = sliderVal;
+            sliderProgress(st-rmqttPerpUi.inputs.throughputSlider);
+            st-rmqttPerpCalculate();
+            st-rmqttPerpSendGTM();
         };
 
         const onThroughputBlur = (e) => {
-            let val = parseInt(e.target.value) || TBMQ_PERP_THROUGHPUT_MIN;
-            val = Math.max(TBMQ_PERP_THROUGHPUT_MIN, val);
-            tbmqPerpState.throughput = val;
+            let val = parseInt(e.target.value) || ST-RMQTT_PERP_THROUGHPUT_MIN;
+            val = Math.max(ST-RMQTT_PERP_THROUGHPUT_MIN, val);
+            st-rmqttPerpState.throughput = val;
             e.target.value = val;
 
-            const sliderVal = Math.min(tbmqPerpThroughputRealToSlider(val), TBMQ_PERP_THROUGHPUT_SLIDER_MAX);
-            tbmqPerpUi.inputs.throughputSlider.value = sliderVal;
-            sliderProgress(tbmqPerpUi.inputs.throughputSlider);
-            tbmqPerpCalculate();
+            const sliderVal = Math.min(st-rmqttPerpThroughputRealToSlider(val), ST-RMQTT_PERP_THROUGHPUT_SLIDER_MAX);
+            st-rmqttPerpUi.inputs.throughputSlider.value = sliderVal;
+            sliderProgress(st-rmqttPerpUi.inputs.throughputSlider);
+            st-rmqttPerpCalculate();
         };
 
-        tbmqPerpUi.inputs.throughput.addEventListener('input', e => onThroughputInput(e.target.value));
-        tbmqPerpUi.inputs.throughput.addEventListener('change', onThroughputBlur);
+        st-rmqttPerpUi.inputs.throughput.addEventListener('input', e => onThroughputInput(e.target.value));
+        st-rmqttPerpUi.inputs.throughput.addEventListener('change', onThroughputBlur);
 
-        tbmqPerpUi.inputs.throughputSlider.addEventListener('input', e => {
+        st-rmqttPerpUi.inputs.throughputSlider.addEventListener('input', e => {
             const sliderVal = parseFloat(e.target.value);
-            tbmqPerpState.throughput = tbmqPerpThroughputSliderToReal(sliderVal);
-            tbmqPerpUi.inputs.throughput.value = tbmqPerpState.throughput;
+            st-rmqttPerpState.throughput = st-rmqttPerpThroughputSliderToReal(sliderVal);
+            st-rmqttPerpUi.inputs.throughput.value = st-rmqttPerpState.throughput;
             sliderProgress(e.target);
-            tbmqPerpCalculate();
-            tbmqPerpSendGTM();
+            st-rmqttPerpCalculate();
+            st-rmqttPerpSendGTM();
         });
 
 
         const bindStepper = (stepper, type) => {
             stepper.querySelectorAll('.stepper-btn').forEach(btn => {
-                btn.addEventListener('click', () => !btn.disabled && tbmqPerpHandleStepper(type, btn.dataset.action));
+                btn.addEventListener('click', () => !btn.disabled && st-rmqttPerpHandleStepper(type, btn.dataset.action));
             });
         };
-        bindStepper(tbmqPerpUi.steppers.prod, 'prod');
-        bindStepper(tbmqPerpUi.steppers.dev, 'dev');
+        bindStepper(st-rmqttPerpUi.steppers.prod, 'prod');
+        bindStepper(st-rmqttPerpUi.steppers.dev, 'dev');
 
-        tbmqPerpUi.inputs.prod.addEventListener('input', e => {
+        st-rmqttPerpUi.inputs.prod.addEventListener('input', e => {
             let val = parseInt(e.target.value);
-            tbmqPerpState.prodInstances = isNaN(val) ? tbmqPerpetualPlan.includedProdInstances : Math.max(1, val);
-            tbmqPerpCalculate();
-            tbmqPerpSendGTM();
+            st-rmqttPerpState.prodInstances = isNaN(val) ? st-rmqttPerpetualPlan.includedProdInstances : Math.max(1, val);
+            st-rmqttPerpCalculate();
+            st-rmqttPerpSendGTM();
         });
-        tbmqPerpUi.inputs.prod.addEventListener('change', e => {
-            let val = parseInt(e.target.value) || tbmqPerpetualPlan.includedProdInstances;
-            tbmqPerpState.prodInstances = Math.max(tbmqPerpetualPlan.includedProdInstances, val);
-            e.target.value = tbmqPerpState.prodInstances;
-            tbmqPerpCalculate();
+        st-rmqttPerpUi.inputs.prod.addEventListener('change', e => {
+            let val = parseInt(e.target.value) || st-rmqttPerpetualPlan.includedProdInstances;
+            st-rmqttPerpState.prodInstances = Math.max(st-rmqttPerpetualPlan.includedProdInstances, val);
+            e.target.value = st-rmqttPerpState.prodInstances;
+            st-rmqttPerpCalculate();
         });
 
-        tbmqPerpUi.inputs.dev.addEventListener('input', e => {
+        st-rmqttPerpUi.inputs.dev.addEventListener('input', e => {
             let val = parseInt(e.target.value);
-            tbmqPerpState.devInstances = isNaN(val) ? 0 : Math.max(0, val);
-            tbmqPerpCalculate();
-            tbmqPerpSendGTM();
+            st-rmqttPerpState.devInstances = isNaN(val) ? 0 : Math.max(0, val);
+            st-rmqttPerpCalculate();
+            st-rmqttPerpSendGTM();
         });
-        tbmqPerpUi.inputs.dev.addEventListener('change', e => {
+        st-rmqttPerpUi.inputs.dev.addEventListener('change', e => {
             let val = parseInt(e.target.value) || 0;
-            tbmqPerpState.devInstances = Math.max(0, val);
-            e.target.value = tbmqPerpState.devInstances;
-            tbmqPerpCalculate();
+            st-rmqttPerpState.devInstances = Math.max(0, val);
+            e.target.value = st-rmqttPerpState.devInstances;
+            st-rmqttPerpCalculate();
         });
 
-        window.addEventListener('resize', tbmqPerpInitTicks);
+        window.addEventListener('resize', st-rmqttPerpInitTicks);
     };
 
-    tbmqPerpInit();
+    st-rmqttPerpInit();
 </script>

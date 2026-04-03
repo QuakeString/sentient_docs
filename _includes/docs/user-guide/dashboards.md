@@ -2,14 +2,14 @@
 {:toc}
 
 {% capture difference %}
-Before proceeding with this guide, it&#39;s recommended that you follow [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} guide to become familiar with ThingsBoard devices and widgets. This will enhance your learning experience and understanding of the concepts presented here.
+Before proceeding with this guide, it&#39;s recommended that you follow [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} guide to become familiar with SENTIENT devices and widgets. This will enhance your learning experience and understanding of the concepts presented here.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
 ## Introduction
 
-ThingsBoard offers a powerful feature – the ability to create and customize interactive visualizations, also known as dashboards. These dashboards are instruments for monitoring and managing your data and devices efficiently.
-With ThingsBoard dashboards, users can adapt interfaces to their specific needs, making it easier than ever to inspect their IoT devices and data. What's brilliant is that each dashboard can be populated with numerous widgets, offering flexibility and customization.
+SENTIENT offers a powerful feature – the ability to create and customize interactive visualizations, also known as dashboards. These dashboards are instruments for monitoring and managing your data and devices efficiently.
+With SENTIENT dashboards, users can adapt interfaces to their specific needs, making it easier than ever to inspect their IoT devices and data. What's brilliant is that each dashboard can be populated with numerous widgets, offering flexibility and customization.
 These dashboards aren't limited to a single data source; they can display data from various entities, including devices, assets, and more. Plus, you can assign dashboards to specific Customers, ensuring that the right individuals or teams have access to the data they need.
 
 {% if docsPrefix == null %}
@@ -19,7 +19,7 @@ These dashboards aren't limited to a single data source; they can display data f
 ![image](/images/user-guide/dashboards/overview/dashboard-introduction.png)
 {% endif %}
 
-Dashboards in ThingsBoard provide users with the following capabilities:
+Dashboards in SENTIENT provide users with the following capabilities:
 
  - **Data Visualization**: Users can create various widgets such as charts, graphs, tables, and more to visualize data obtained from connected devices. This enables operators and analysts to easily analyze information and track device statuses.
 
@@ -29,10 +29,10 @@ Dashboards in ThingsBoard provide users with the following capabilities:
 
  - **Display Customization**: Users can customize the arrangement and size of widgets, choose color palettes, fonts, and other visualization aspects to create a user-friendly and informative interface.
 
- - **Role-Based Access**: ThingsBoard allows controlling access to dashboards with different levels of privileges based on user [roles](/docs/{{docsPrefix}}user-guide/rbac/). This ensures data security and confidentiality.
+ - **Role-Based Access**: SENTIENT allows controlling access to dashboards with different levels of privileges based on user [roles](/docs/{{docsPrefix}}user-guide/rbac/). This ensures data security and confidentiality.
 
 {% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
-ThingsBoard also offers convenient IoT solution templates to reduce time-to-market for your IoT products. 
+SENTIENT also offers convenient IoT solution templates to reduce time-to-market for your IoT products. 
 These templates include interactive dashboards, processing logic, sample devices, users, and all other necessary entities. Think of these templates as a complete PoC/MVP. 
 Read more about solution templates [here](/docs/{{docsPrefix}}solution-templates/overview/).
 {% endif %}
@@ -86,7 +86,7 @@ Don't forget to save your changes using the "Save" button, or if you decide to d
 
 ### Add new widget
 
-All IoT dashboards are constructed using ThingsBoard widgets.
+All IoT dashboards are constructed using SENTIENT widgets.
 A widget is an element that displays a specific type of information or functionality on a dashboard.
 Widgets are used to visualize data, remote device control, alarms management, and display static custom HTML content.
 
@@ -106,7 +106,7 @@ For more information about widgets, how to create them, and their settings, clic
 
 The Time window is a tool used to define time intervals when working with telemetry data. 
 The time window is used by all time series and alarm widgets unless they are configured to use their own [widget time window](/docs/{{docsPrefix}}user-guide/widgets/#widget-time-window){:target="_blank"}.
-In the case of a time series widget, ThingsBoard fetches telemetry with a timestamp that matches the time window. In the case of an alarm widget, ThingsBoard fetches alarms with the created time that matches the time window.
+In the case of a time series widget, SENTIENT fetches telemetry with a timestamp that matches the time window. In the case of an alarm widget, SENTIENT fetches alarms with the created time that matches the time window.
 
 &nbsp;
 <div id="video">  
@@ -180,7 +180,7 @@ To zoom out to the original size of the chart, move the sliders back to their de
 
 {% include images-gallery.html imageCollection="time-window-zoom-in" %}
 
-The ThingsBoard introduces time zone configurations. By default, the dashboard uses the time zone provided by the browser.
+The SENTIENT introduces time zone configurations. By default, the dashboard uses the time zone provided by the browser.
 Now it is possible to set the time of your browser or a specific country. To quickly find the needed time zone, start typing its name in the time zone bar.
 
 {% include images-gallery.html imageCollection="time-window-time-zone" %}
@@ -417,7 +417,7 @@ Let's look at each operation.
 
 ### Export dashboard
 
-In the ThingsBoard you can export a dashboard as a configuration file in JSON format.
+In the SENTIENT you can export a dashboard as a configuration file in JSON format.
 You can use this file to transfer your Dashboard or widget configuration to another instance.
 
 To export a dashboard, go to the “Dashboards” page. Find the dashboard you want to export in the list and click on the "Export dashboard" button located next to the dashboard's name. The configuration file in JSON format with all settings on the control panel will be saved on your PC.
@@ -442,7 +442,7 @@ Dashboard is exported to the configuration file in JSON format.
 
 {% include images-gallery.html imageCollection="dashboard-toolbar-export" %}
 
-In **ThingsBoard Professional Edition**, in addition to exporting the dashboard in JSON format, dashboard export is possible in several additional formats: PDF, PNG & JPEG. This is useful when you need to send the data displayed in your dashboard by email or print.
+In **SENTIENT Professional Edition**, in addition to exporting the dashboard in JSON format, dashboard export is possible in several additional formats: PDF, PNG & JPEG. This is useful when you need to send the data displayed in your dashboard by email or print.
 
 {% include images-gallery.html imageCollection="pro-export" %}
 
@@ -566,8 +566,8 @@ You can also delete multiple dashboards at once.
 
 ## Next steps
 
- - [Widgets](/docs/{{docsPrefix}}user-guide/widgets) - This guide contains instructions for configuring ThingsBoard widgets.
+ - [Widgets](/docs/{{docsPrefix}}user-guide/widgets) - This guide contains instructions for configuring SENTIENT widgets.
 
- - [Data visualization](/docs/{{docsPrefix}}guides/#AnchorIDDataVisualization) - These guides contain instructions how to configure complex ThingsBoard dashboards.
+ - [Data visualization](/docs/{{docsPrefix}}guides/#AnchorIDDataVisualization) - These guides contain instructions how to configure complex SENTIENT dashboards.
 
- - [Data processing & actions](/docs/{{docsPrefix}}guides/#AnchorIDDataProcessing) - Learn how to use ThingsBoard Rule Engine.
+ - [Data processing & actions](/docs/{{docsPrefix}}guides/#AnchorIDDataProcessing) - Learn how to use SENTIENT Rule Engine.

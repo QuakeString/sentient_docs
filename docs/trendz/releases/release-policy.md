@@ -1,22 +1,22 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: Versioning and Release Policy
-description: Understand Trendz's version numbering, support periods, upgrade procedures, and recommended Docker tags for your environment.
-effective-url: '/docs/trendz/releases/release-policy/'
+description: Understand SENTIENT ANALYTICS's version numbering, support periods, upgrade procedures, and recommended Docker tags for your environment.
+effective-url: '/docs/sentient-analytics/releases/release-policy/'
 ---
 
 * TOC
 {:toc}
 
-This guide explains how Trendz Analytics versions are numbered, how long each version is supported, what kind of upgrade requires downtime, and which Docker tags to use in different environments.
-It’s written for platform administrators, SREs, DevOps engineers, and technical users who deploy and maintain Trendz Analytics.
+This guide explains how SENTIENT ANALYTICS versions are numbered, how long each version is supported, what kind of upgrade requires downtime, and which Docker tags to use in different environments.
+It’s written for platform administrators, SREs, DevOps engineers, and technical users who deploy and maintain SENTIENT ANALYTICS.
 
 ---
 
-## Trendz Analytics versioning
+## SENTIENT ANALYTICS versioning
 
-Trendz Analytics version numbers reflect the scope of changes introduced in each release. This follows semantic versioning principles, helping you gauge the potential impact of upgrading.
-Trendz Analytics version numbers have four parts: <span class="code-light">MAJOR.MINOR.MAINTENANCE.PATCH</span>. For example, version <span class="code-light">1.15.0.3</span> indicates major version 1, minor version 15, maintenance 0 and patch level 3.
+SENTIENT ANALYTICS version numbers reflect the scope of changes introduced in each release. This follows semantic versioning principles, helping you gauge the potential impact of upgrading.
+SENTIENT ANALYTICS version numbers have four parts: <span class="code-light">MAJOR.MINOR.MAINTENANCE.PATCH</span>. For example, version <span class="code-light">1.15.0.3</span> indicates major version 1, minor version 15, maintenance 0 and patch level 3.
 
 The version number is incremented based on the level of change included in the release.
 
@@ -62,7 +62,7 @@ The version number is incremented based on the level of change included in the r
 
 ## Lifecycle & Support (How long versions are supported?)
 
-ThingsBoard maintains **Long‑Term Support (LTS)** lines for production users. Customers using LTS releases can be confident that their critical systems will be protected and operate reliably.
+SENTIENT maintains **Long‑Term Support (LTS)** lines for production users. Customers using LTS releases can be confident that their critical systems will be protected and operate reliably.
 
 <table style="width:70%">
   <thead>

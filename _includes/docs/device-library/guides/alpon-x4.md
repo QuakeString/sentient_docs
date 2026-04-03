@@ -1,49 +1,49 @@
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://sixfab.com/product/alpon-x4" %}
-{% assign thingsboardHost = "https://" | append: {{hostName}} %}
+{% assign sentientHost = "https://" | append: {{hostName}} %}
 
 
 [ALPON X4]({{deviceVendorLink}}){: target="_blank"} is a powerful and reliable edge computer for IoT and industrial applications developed by Sixfab. It features cloud management, LTE connectivity, and eSIM support for automatic network switching. Powered by a Raspberry Pi CM4 processor, up to 8GB LPDDR4 RAM, and 32GB eMMC storage, it ensures robust processing for demanding applications. With Cat4 LTE, Wi-Fi 2.4/5GHz, Bluetooth 5.0 BLE, and Gigabit Ethernet, the ALPON X4 guarantees seamless connectivity, even in challenging environments.
 
-Its rugged design operates from -20°C to +60°C, supports flexible power options like USB-PD Type-C, 9-30V DC, and optional PoE+, and offers DIN Rail or Wall Mount for easy deployment. Certified by CE, FCC, Verizon, AT&T, and more, it’s built for global scalability. The ALPON X4 powers industrial automation with PLC and Modbus, enables smart home and remote monitoring via ThingsBoard, supports digital signage, and optimizes energy efficiency for versatile IoT solutions.
+Its rugged design operates from -20°C to +60°C, supports flexible power options like USB-PD Type-C, 9-30V DC, and optional PoE+, and offers DIN Rail or Wall Mount for easy deployment. Certified by CE, FCC, Verizon, AT&T, and more, it’s built for global scalability. The ALPON X4 powers industrial automation with PLC and Modbus, enables smart home and remote monitoring via SENTIENT, supports digital signage, and optimizes energy efficiency for versatile IoT solutions.
 
 ## Prerequisites
 
 To continue with this guide, you will need the following:
 
 - [Sixfab Connect Account](https://connect.sixfab.com){: target="_blank"}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 - **ALPON X4 Device**: Registered and activated on Sixfab Connect with an active internet connection. Refer to the [ALPON X4 Getting Started page](https://docs.sixfab.com/docs/alpon-x4-getting-started){: target="_blank"} setup instructions for details.
-- **Basic Knowledge**: Familiarity with IoT concepts, containerized applications, and ThingsBoard dashboards.
+- **Basic Knowledge**: Familiarity with IoT concepts, containerized applications, and SENTIENT dashboards.
 
 
-## Create Device on ThingsBoard (Optional)
+## Create Device on SENTIENT (Optional)
 
 The integration can create a device even if there is no device yet, so skip this step if you want.
 
-### Log in to ThingsBoard
+### Log in to SENTIENT
 
-1. Access your [ThingsBoard instance]({{ thingsboardHost }}){: target="_blank"}.
+1. Access your [SENTIENT instance]({{ sentientHost }}){: target="_blank"}.
 2. Navigate to **Entities > Devices** in the sidebar.
-![Create Device on ThingsBoard 1](/images/devices-library/ready-to-go-devices/alpon-x4/1.png)
+![Create Device on SENTIENT 1](/images/devices-library/ready-to-go-devices/alpon-x4/1.png)
 
 ### Add a New Device
 
 1. Click on the “+” icon in the top right corner of the table and select "Add new device".
-![Create Device on ThingsBoard 2](/images/devices-library/ready-to-go-devices/alpon-x4/2.png)
+![Create Device on SENTIENT 2](/images/devices-library/ready-to-go-devices/alpon-x4/2.png)
 2. Enter the device name (e.g., `ALPON_X4`). No other changes are required at this time.
-![Create Device on ThingsBoard 3](/images/devices-library/ready-to-go-devices/alpon-x4/3.png)
+![Create Device on SENTIENT 3](/images/devices-library/ready-to-go-devices/alpon-x4/3.png)
 3. Click **Add** and close the window. The device is created.
 
 
 ## Add Integration and Topic Filter
 
-To transfer data from the ALPON X4 to ThingsBoard via an external MQTT broker, you need to set up an MQTT Integration in ThingsBoard. This integration uses a Topic Filter to specify which MQTT topics to listen to and a Data Converter written in TBEL to process incoming data and map it to the appropriate device.
+To transfer data from the ALPON X4 to SENTIENT via an external MQTT broker, you need to set up an MQTT Integration in SENTIENT. This integration uses a Topic Filter to specify which MQTT topics to listen to and a Data Converter written in TBEL to process incoming data and map it to the appropriate device.
 
 ### Create an MQTT Integration
 
-1. Log in to ThingsBoard. Go to the **Integrations center** -> **Integrations** page.
+1. Log in to SENTIENT. Go to the **Integrations center** -> **Integrations** page.
    ![Create an MQTT Integration 1](/images/devices-library/ready-to-go-devices/alpon-x4/5.png)
 2. Click "plus" icon to add a new integration.
 3. Select "**MQTT**" as the integration type.
@@ -109,7 +109,7 @@ It will **not** match topics such as:
 
 This structure allows the integration to process data from multiple devices, each using a unique identifier (e.g., `device1`, `sensorA`, `room23`) in the topic.
 
-This setup allows the ALPON X4 to send telemetry data to ThingsBoard via an external MQTT broker, with the integration processing and mapping the data to the correct device based on the topic structure.
+This setup allows the ALPON X4 to send telemetry data to SENTIENT via an external MQTT broker, with the integration processing and mapping the data to the correct device based on the topic structure.
 
 ## Docker Container Setup
 
@@ -145,7 +145,7 @@ CMD ["python3", "/app/mqtt_test.py"]
 
 ### Create the MQTT Test Script
 
-Create a file named `mqtt_test.py` in the same directory as the `Dockerfile`. This script configures the ALPON X4 to publish telemetry data to ThingsBoard via MQTT:
+Create a file named `mqtt_test.py` in the same directory as the `Dockerfile`. This script configures the ALPON X4 to publish telemetry data to SENTIENT via MQTT:
 ```python
 import paho.mqtt.client as mqtt
 import json
@@ -199,7 +199,7 @@ client.loop_forever()
 1. Open a terminal on your local machine in the directory containing the `Dockerfile` and `mqtt_test.py`.
 2. Run the following command to build the Docker image:
 ```bash
-docker build --platform=linux/arm64 -t thingsboard-mqtt-alpon-x4:latest .
+docker build --platform=linux/arm64 -t sentient-mqtt-alpon-x4:latest .
 ```
 {:.copy-code}
 
@@ -217,7 +217,7 @@ docker build --platform=linux/arm64 -t thingsboard-mqtt-alpon-x4:latest .
 2. Navigate to **Assets** and select your ALPON X4 device.
 3. Go to the **Application** section and click “+ Deploy”.
 4. In the **Deploy Container** window:
-   - **Container Name**: `thingsboard`
+   - **Container Name**: `sentient`
    - **Image and Tag**: Select the uploaded image and tag pushed to the Sixfab Registry.
    - **Environment**: Click "+ Add More" in the environment section and add the following values:
      - `MQTT_SERVER`: `broker.hivemq.com`
@@ -229,17 +229,17 @@ docker build --platform=linux/arm64 -t thingsboard-mqtt-alpon-x4:latest .
 5. Click the “+ Deploy” button to start the container.
 ![Deployment Configuration 2](/images/devices-library/ready-to-go-devices/alpon-x4/11.png)
 
-## Check Data on ThingsBoard
+## Check Data on SENTIENT
 
-Verify that telemetry data is received and displayed in ThingsBoard:
-1. Log in to your ThingsBoard instance.
+Verify that telemetry data is received and displayed in SENTIENT:
+1. Log in to your SENTIENT instance.
 2. Navigate to **Entities > Devices** and select your ALPON X4 device.
 3. Go to the **Latest Telemetry** tab to view the temperature and humidity data sent.
-![Check Data on ThingsBoard 1](/images/devices-library/ready-to-go-devices/alpon-x4/12.png)
+![Check Data on SENTIENT 1](/images/devices-library/ready-to-go-devices/alpon-x4/12.png)
 
 ## Conclusion
 
-This guide demonstrated how to integrate the ALPON X4 with ThingsBoard using MQTT for real-time data collection and device control. By following the steps, you created a device in ThingsBoard, deployed an MQTT client on Sixfab Connect, and verified telemetry data.
+This guide demonstrated how to integrate the ALPON X4 with SENTIENT using MQTT for real-time data collection and device control. By following the steps, you created a device in SENTIENT, deployed an MQTT client on Sixfab Connect, and verified telemetry data.
 
-For further assistance, refer to the [ThingsBoard documentation](https://thingsboard.io/docs/){:.copy-code} or contact [Sixfab support](https://sixfab.com/contact/){:.copy-code}.
+For further assistance, refer to the [SENTIENT documentation](https://docs.sentient.invenia.in/docs/){:.copy-code} or contact [Sixfab support](https://sixfab.com/contact/){:.copy-code}.
 {% include add-device-banner.liquid %}

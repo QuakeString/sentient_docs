@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Solar Tracker to ThingsBoard?
+title: How to connect Solar Tracker to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: Lansitec

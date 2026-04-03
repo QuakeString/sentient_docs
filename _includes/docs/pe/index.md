@@ -1,22 +1,22 @@
 {% assign peDocsPrefix = '' %}
 {% if docsPrefix == 'pe/' %}
-{% assign platformName = 'ThingsBoard PE' %}
+{% assign platformName = 'SENTIENT Professional Edition' %}
 {% assign firstRowItemClasses = 'col-12 col-sm-6 col-lg col-xxl-6 col-4xl' %}
 {% assign faqItemClasses = 'col-12 col-sm-6 col-lg col-xxl-6 col-4xl' %}
-<p>The ThingsBoard Professional Edition(PE) documentation can help you set up ThingsBoard PE, learn about the platform and get your IoT projects running on ThingsBoard PE.</p>
+<p>The SENTIENT Professional Edition(PE) documentation can help you set up SENTIENT Professional Edition, learn about the platform and get your IoT projects running on SENTIENT Professional Edition.</p>
 {% elsif docsPrefix contains 'paas/' %}
 {% assign peDocsPrefix = docsPrefix %}
-{% assign platformName = 'ThingsBoard Cloud' %}
+{% assign platformName = 'SENTIENT Cloud' %}
 {% assign firstRowItemClasses = 'col-12 col-sm-6 col-lg-3 col-xxl-6 col-4xl-3' %}
 {% assign faqItemClasses = 'col col-lg-6 col-xxl col-4xl-6' %}
-<p>The ThingsBoard Cloud documentation can help you to start with ThingsBoard Cloud, learn about the platform and get your IoT projects running on ThingsBoard Cloud.</p>
+<p>The SENTIENT Cloud documentation can help you to start with SENTIENT Cloud, learn about the platform and get your IoT projects running on SENTIENT Cloud.</p>
 {% endif %}
 
 <div class="doc-features row mt-4">
     <div class="{{firstRowItemClasses}} mb-4">
-        <a class="feature-card" href="/docs/{{docsPrefix}}getting-started-guides/what-is-thingsboard/">
-            <img class="feature-logo" src="/images/feature-logo/thingsboard-logo.svg" alt="Thingsboard logo">
-            <div class="feature-title">What is ThingsBoard?</div>
+        <a class="feature-card" href="/docs/{{docsPrefix}}getting-started-guides/what-is-sentient/">
+            <img class="feature-logo" src="/images/feature-logo/sentient-logo.svg" alt="Sentient logo">
+            <div class="feature-title">What is SENTIENT?</div>
             <div class="feature-text">
                 <ul>
                     <li>Features</li>

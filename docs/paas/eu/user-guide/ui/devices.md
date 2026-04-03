@@ -3,12 +3,12 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Devices
-description: ThingsBoard IoT Device management
+description: SENTIENT IoT Device management
 
 add-device:
     0:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-1-pe.png
-        title: 'Login to your ThingsBoard instance. Navigate to "<b>Entities</b>" &#8702; "<b>Devices</b>".'
+        title: 'Login to your SENTIENT instance. Navigate to "<b>Entities</b>" &#8702; "<b>Devices</b>".'
     1:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-2-pe.png
         title: 'By default, you will see the "<b>All</b>" device group. Click the "<b>+</b>" icon in the upper-right corner and select "<b>Add new device</b>" from drop-down menu.'
@@ -17,7 +17,7 @@ add-device:
         title: 'In the device creation form, fill in the required fields: <b>Name</b> – a unique name for the device; <b>Device profile</b> – by default, the profile is set to "<b>default</b>", but you can choose a different profile if needed. Click "<b>Add</b>".'
     3:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-4-pe.png
-        title: 'A window will immediately open where you can check the device&#39;s connection to ThingsBoard platform. This step is optional. For now, let&#39;s close this window and return to the connection check in more detail later.'
+        title: 'A window will immediately open where you can check the device&#39;s connection to SENTIENT platform. This step is optional. For now, let&#39;s close this window and return to the connection check in more detail later.'
     4:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-5-pe.png
         title: 'Device successfully created and is now available in the list.'
@@ -173,17 +173,17 @@ events:
 relations:
   0:
     image: /images/user-guide/ui/devices/pe/device-relations-1-pe.png
-    title: 'This tab displays the relationships of this device with other devices, dashboards, assets, and other entities in the ThingsBoard system.'
+    title: 'This tab displays the relationships of this device with other devices, dashboards, assets, and other entities in the SENTIENT system.'
 
 audit-logs:
   0:
     image: /images/user-guide/ui/devices/pe/device-audit-logs-1-pe.png
-    title: 'ThingsBoard provides the ability to track user actions in order to keep an audit log. It is possible to log user actions related to main entities: assets, devices, dashboard, rules, etc.'
+    title: 'SENTIENT provides the ability to track user actions in order to keep an audit log. It is possible to log user actions related to main entities: assets, devices, dashboard, rules, etc.'
 
 version-control:
   0:
     image: /images/user-guide/ui/devices/pe/device-version-control-1-pe.png
-    title: 'ThingsBoard version control service provides the ability to export and restore ThingsBoard Entities using Git.'
+    title: 'SENTIENT version control service provides the ability to export and restore SENTIENT Entities using Git.'
 
 device-details-page:
     0:

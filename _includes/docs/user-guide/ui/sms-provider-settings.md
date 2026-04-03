@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-ThingsBoard System Administrator is able to configure SMS provider that will be used the SMS gateway to send text messages to your customers or users.
+SENTIENT System Administrator is able to configure SMS provider that will be used the SMS gateway to send text messages to your customers or users.
 For example, you can set up sending an SMS alert to the user when the sensor detects an abnormal condition.
 
 {% unless docsPrefix == null %}
@@ -10,7 +10,7 @@ At the tenant administrator level, you can use the SMS provider settings of the 
 
 Tenant administrator is able to setup [**sms rule node**](/docs/user-guide/rule-engine-2-0/nodes/external/send-sms/) to distribute alarms produced by [**rule engine**](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/re-getting-started/).  
 
-To configure SMS provider settings in Thingsboard, follow these steps:
+To configure SMS provider settings in Sentient, follow these steps:
 
 {% include images-gallery.html imageCollection="smsProviderSettings" showListImageTitles="true" %}
 

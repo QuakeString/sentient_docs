@@ -1,5 +1,5 @@
 #
-# Copyright © 2016-2024 The Thingsboard Authors
+# Copyright © 2016-2024 The Sentient Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,9 +19,9 @@ from tb_device_mqtt import TBDeviceMqttClient
 def collect_required_data():
     config = {}
     print("\n\n", "="*80, sep="")
-    print(" "*20, "ThingsBoard basic device claiming example script.", sep="")
+    print(" "*20, "SENTIENT basic device claiming example script.", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard server hostname or leave it blank to use default (thingsboard.cloud): ")
+    host = input("Please write your SENTIENT server hostname or leave it blank to use default (sentient.cloud): ")
     config["host"] = host if host else "{{mqttHostName}}"
     token = ""
     while not token:

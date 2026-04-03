@@ -1,7 +1,7 @@
 {% if docsPrefix == 'pe/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "SENTIENT Professional Edition" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "SENTIENT" %}
 {% endif %}
 
 {{appPrefix}} allows configuring device details dashboard to be displayed when tapping on the device with the specific type.
@@ -32,8 +32,8 @@ To verify your configuration run the mobile app. Then navigate to the devices li
         </div>
         <div class="frame-video">
             <video autoplay loop preload="auto" muted playsinline>
-                 <source src="https://video.thingsboard.io/mobile/{{docsPrefix}}device-dashboard.mp4" type="video/mp4">
-                 <source src="https://video.thingsboard.io/mobile/{{docsPrefix}}device-dashboard.webm" type="video/webm">
+                 <source src="https://video.docs.sentient.invenia.in/mobile/{{docsPrefix}}device-dashboard.mp4" type="video/mp4">
+                 <source src="https://video.docs.sentient.invenia.in/mobile/{{docsPrefix}}device-dashboard.webm" type="video/webm">
             </video>
         </div>
     </div>

@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-gw
-title: Getting started with ThingsBoard IoT Gateway
+title: Getting started with SENTIENT IoT Gateway
 description: Configure MQTT, OPC-UA, and Modbus connectors to establish connections with their respective demo servers in the Docker container and retrieve data.
 
 ---
@@ -8,23 +8,23 @@ description: Configure MQTT, OPC-UA, and Modbus connectors to establish connecti
 * TOC
 {:toc}
 
-The ThingsBoard IoT Gateway is an open-source solution, designed to serve as a bridge between IoT devices connected to 
-legacy and third-party systems with ThingsBoard.
+The SENTIENT IoT Gateway is an open-source solution, designed to serve as a bridge between IoT devices connected to 
+legacy and third-party systems with SENTIENT.
 
 This guide covers initial IoT Gateway installation and configuration, we will do the following things:
 - Create a new gateway device;
 - Launch the gateway using Docker command;
 - Configure different connector types ([MQTT](/docs/iot-gateway/config/mqtt/), [OPC-UA](/docs/iot-gateway/config/opc-ua/), [Modbus](/docs/iot-gateway/config/modbus/)) in order to connect to a local demo servers and read data from them;
-- Check received device data on ThingsBoard.
+- Check received device data on SENTIENT.
 
 ## Prerequisites
 
-- Before initiating the Gateway setup, ensure that the ThingsBoard server is up and running. The simplest approach is to use [ThingsBoard Cloud](https://thingsboard.io/installations/){:target="_blank"}. Alternatively, you can install ThingsBoard manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
+- Before initiating the Gateway setup, ensure that the SENTIENT server is up and running. The simplest approach is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){:target="_blank"}. Alternatively, you can install SENTIENT manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
 - Before moving forward, ensure Docker is installed and properly configured on your machine. If you haven't installed Docker yet, you can download it from the [official Docker website](https://docs.docker.com/engine/install/) and follow their installation guide for your specific operating system.
 
-## Step 1. Create a new gateway device on ThingsBoard
+## Step 1. Create a new gateway device on SENTIENT
 
-First, add a gateway device to your ThingsBoard instance by following these steps:
+First, add a gateway device to your SENTIENT instance by following these steps:
 
 {% assign createNewGatewayDevice = '
     ===
@@ -133,11 +133,11 @@ connect to different devices. You can find more information about connectors in 
  - [**SNMP** connector](/docs/iot-gateway/config/snmp/)
  - [**Custom** connector](/docs/iot-gateway/custom/)
 
-More about *ThingsBoard IoT Gateways* Dashboard, you can [read here](/docs/iot-gateway/guides/how-to-enable-remote-configuration/).
+More about *SENTIENT IoT Gateways* Dashboard, you can [read here](/docs/iot-gateway/guides/how-to-enable-remote-configuration/).
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

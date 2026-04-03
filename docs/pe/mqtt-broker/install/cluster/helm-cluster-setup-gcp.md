@@ -1,10 +1,10 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: Deploy TBMQ PE Cluster on GKE with Helm
-description: Deploy TBMQ PE Cluster on GKE with Helm
+title: Deploy ST-RMQTT PE Cluster on GKE with Helm
+description: Deploy ST-RMQTT PE Cluster on GKE with Helm
 
 ---
 
 {% assign docsPrefix = "pe/" %}
-{% assign tbmqSuffix = "PE" %}
+{% assign st-rmqttSuffix = "PE" %}
 ![image](/images/coming-soon.jpg)

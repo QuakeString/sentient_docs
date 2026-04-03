@@ -3,12 +3,12 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Tenants
-description: ThingsBoard Tenants management
+description: SENTIENT Tenants management
 
 tenants-pe:
     0:
         image: /images/user-guide/tenant-profile/PE/create-tenant-1-pe.png
-        title: 'Login to your ThingsBoard instance WEB UI as a system administrator;'
+        title: 'Login to your SENTIENT instance WEB UI as a system administrator;'
     1:
         image: /images/user-guide/tenant-profile/PE/create-tenant-2-pe.png
         title: 'Navigate to the Tenants page. Then click on the "plus" icon in the upper right corner of the screen;'

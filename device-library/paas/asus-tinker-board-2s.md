@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect ASUS Tinker Board 2S to ThingsBoard?
+title: How to connect ASUS Tinker Board 2S to SENTIENT?
 category: Single-board computers
 chip: Rockchip RK3399
 connectivity: [HTTP, Ethernet, WIFI, Bluetooth]

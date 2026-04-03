@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect NodeMCU V3 to ThingsBoard?
+title: How to connect NodeMCU V3 to SENTIENT?
 category: Microcontrollers
 chip: ESP8266
 connectivity: [HTTP, MQTT, WIFI]

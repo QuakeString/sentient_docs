@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
 title: Claiming devices
-description: IoT device management using ThingsBoard claiming devices feature
+description: IoT device management using SENTIENT claiming devices feature
 
 device-claiming-permissions-in-pe-carousel:
     0:

@@ -5,11 +5,11 @@
 
 ### Kafka Queue: Consumer Group Message Lag 
 
-You can use the log shown below to identify any issues with the processing of messages or other parts of TBMQ infrastructure. 
+You can use the log shown below to identify any issues with the processing of messages or other parts of ST-RMQTT infrastructure. 
 Since Kafka is used for MQTT message processing and other major parts of the system, such as `client sessions`, `client subscriptions`, `retained messages`, etc., 
 you can analyze the overall state of the broker.
 
-TBMQ provides the ability to monitor whether the rate of producing messages to Kafka is faster than the rate of consuming and processing them. 
+ST-RMQTT provides the ability to monitor whether the rate of producing messages to Kafka is faster than the rate of consuming and processing them. 
 In such cases, you will experience a growing latency for message processing. 
 To enable this functionality, ensure that Kafka consumer-stats are enabled (see the **queue.kafka.consumer-stats** section of the [Configuration properties](/docs/{{docsPrefix}}mqtt-broker/install/config/)).
 
@@ -18,10 +18,10 @@ Once Kafka consumer-stats are enabled, logs (see [Troubleshooting](#logs)) about
 Here is an example of the log message:
 
 ```bash
-2022-11-27 02:33:23,625 [kafka-consumer-stats-1-thread-1] INFO  o.t.m.b.q.k.s.TbKafkaConsumerStatsService - [msg-all-consumer-group] Topic partitions with lag: [[topic=[tbmq.msg.all], partition=[2], lag=[5]]].
+2022-11-27 02:33:23,625 [kafka-consumer-stats-1-thread-1] INFO  o.t.m.b.q.k.s.TbKafkaConsumerStatsService - [msg-all-consumer-group] Topic partitions with lag: [[topic=[st-rmqtt.msg.all], partition=[2], lag=[5]]].
 ```
 
-From this message we can see that there are five messages pushed to the `tbmq.msg.all` topic but not yet processed.
+From this message we can see that there are five messages pushed to the `st-rmqtt.msg.all` topic but not yet processed.
 
 In general, the logs have the following structure:
 
@@ -51,10 +51,10 @@ in the cluster or scale it vertically by increasing the total amount of CPU.
 
 ### Reading Logs
 
-Regardless of the deployment type, TBMQ logs are stored in the following directory:
+Regardless of the deployment type, ST-RMQTT logs are stored in the following directory:
 
 ```bash
-/var/log/thingsboard-mqtt-broker
+/var/log/sentient-mqtt-broker
 ```
 
 Different deployment tools provide different ways to view logs:
@@ -67,11 +67,11 @@ Kubernetes Deployment%,%kubernetes%,%templates/mqtt-broker/troubleshooting/logs/
 
 ### Enabling Certain Logs
 
-To facilitate troubleshooting, TBMQ allows users to enable or disable logging for specific parts of the system. 
+To facilitate troubleshooting, ST-RMQTT allows users to enable or disable logging for specific parts of the system. 
 This can be achieved by modifying the **logback.xml** file, which is located in the following directory:
 
 ```bash
-/usr/share/thingsboard-mqtt-broker/conf
+/usr/share/sentient-mqtt-broker/conf
 ```
 
 Please note that there are separate files for **k8s** and **Docker** deployments.
@@ -84,10 +84,10 @@ Here's an example of the **logback.xml** configuration:
 
     <appender name="fileLogAppender"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/var/log/thingsboard-mqtt-broker/${TB_SERVICE_ID}/thingsboard-mqtt-broker.log</file>
+        <file>/var/log/sentient-mqtt-broker/${TB_SERVICE_ID}/sentient-mqtt-broker.log</file>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>/var/log/thingsboard-mqtt-broker/${TB_SERVICE_ID}/thingsboard-mqtt-broker.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>/var/log/sentient-mqtt-broker/${TB_SERVICE_ID}/sentient-mqtt-broker.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <maxFileSize>100MB</maxFileSize>
             <maxHistory>30</maxHistory>
             <totalSizeCap>3GB</totalSizeCap>
@@ -97,9 +97,9 @@ Here's an example of the **logback.xml** configuration:
         </encoder>
     </appender>
 
-    <logger name="org.thingsboard.mqtt.broker.actors.client.service.connect" level="TRACE"/>
-    <logger name="org.thingsboard.mqtt.broker.actors.client.service.disconnect.DisconnectServiceImpl" level="INFO"/>
-    <logger name="org.thingsboard.mqtt.broker.actors.DefaultTbActorSystem" level="OFF"/>
+    <logger name="org.sentient.mqtt.broker.actors.client.service.connect" level="TRACE"/>
+    <logger name="org.sentient.mqtt.broker.actors.client.service.disconnect.DisconnectServiceImpl" level="INFO"/>
+    <logger name="org.sentient.mqtt.broker.actors.DefaultTbActorSystem" level="OFF"/>
 
     <root level="INFO">
         <appender-ref ref="fileLogAppender"/>
@@ -109,8 +109,8 @@ Here's an example of the **logback.xml** configuration:
 
 The configuration files contain _loggers_ which are the most useful for troubleshooting, as they allow you to enable or disable logging for a certain class or group of classes. 
 In the example given above, the default logging level is set to **INFO**, which means that the logs will contain general information, warnings, and errors. 
-However, for the `org.thingsboard.mqtt.broker.actors.client.service.connect` package, the most detailed level of logging is enabled. 
-You can also completely disable logs for a part of the system, as is done for the `org.thingsboard.mqtt.broker.actors.DefaultTbActorSystem` class using the **OFF** log-level.
+However, for the `org.sentient.mqtt.broker.actors.client.service.connect` package, the most detailed level of logging is enabled. 
+You can also completely disable logs for a part of the system, as is done for the `org.sentient.mqtt.broker.actors.DefaultTbActorSystem` class using the **OFF** log-level.
 
 To enable or disable logging for a certain part of the system, you need to add the appropriate `</logger>` configuration and wait for up to 10 seconds.
 
@@ -124,7 +124,7 @@ Kubernetes Deployment%,%kubernetes%,%templates/mqtt-broker/troubleshooting/logs/
 
 ## Metrics
 
-To enable Prometheus metrics in TBMQ you must: 
+To enable Prometheus metrics in ST-RMQTT you must: 
 - Set the `STATS_ENABLED` environment variable to `true`.
 - Set the `METRICS_ENDPOINTS_EXPOSE` environment variable to `prometheus` in the configuration file.
 
@@ -132,11 +132,11 @@ The metrics can then be accessed via the following path: `https://<yourhostname>
 
 ## Prometheus metrics
 
-The Spring Actuator in TBMQ can expose some internal state metrics through Prometheus.
+The Spring Actuator in ST-RMQTT can expose some internal state metrics through Prometheus.
 
-Here is a list of the metrics that TBMQ pushes to Prometheus:
+Here is a list of the metrics that ST-RMQTT pushes to Prometheus:
 
-### TBMQ-specific metrics:
+### ST-RMQTT-specific metrics:
 
 - <i>incomingPublishMsg_published</i> (statsNames - <i>totalMsgs, successfulMsgs, failedMsgs</i>): stats about incoming Publish messages to be persisted in the general queue.
 - <i>incomingPublishMsg_consumed</i> (statsNames - <i>totalMsgs, successfulMsgs, timeoutMsgs, failedMsgs, tmpTimeout,
@@ -190,14 +190,14 @@ Here is a list of the metrics that TBMQ pushes to Prometheus:
 - <i>sqlQueue_LatestTimeseriesQueue_${index_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about **latest historical stats persistence** to the database.
 - <i>sqlQueue_TimeseriesQueue_${index_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about **historical stats persistence** to the database.
 
-Please note that in order to achieve maximum performance, **TBMQ uses several queues (threads)** per each of the specified queues above.
+Please note that in order to achieve maximum performance, **ST-RMQTT uses several queues (threads)** per each of the specified queues above.
 
 ## Getting help
 
 <section id="talkToUs">
     <div class="doc-features row mt-4">
         <div class="col-12 col-sm-6 col-lg col-xxl-6 col-4xl mb-4">
-            <a class="feature-card" href="https://join.slack.com/t/tbmq/shared_invite/zt-31kk3315e-5jtPw8YAKskq1KkUqTrTyQ">
+            <a class="feature-card" href="https://join.slack.com/t/st-rmqtt/shared_invite/zt-31kk3315e-5jtPw8YAKskq1KkUqTrTyQ">
                 <img class="feature-logo" style="filter: unset" src="/images/mqtt-broker/slack-logo.svg" alt="Slack logo">
                 <div class="feature-title">Slack Community</div>
                 <div class="feature-text">
@@ -206,7 +206,7 @@ Please note that in order to achieve maximum performance, **TBMQ uses several qu
             </a>
         </div>
         <div class="col-12 col-sm-6 col-lg col-xxl-6 col-4xl mb-4">
-            <a class="feature-card" href="https://github.com/thingsboard/tbmq/issues?q=is%3Aissue">
+            <a class="feature-card" href="https://github.com/sentient/st-rmqtt/issues?q=is%3Aissue">
                 <img class="feature-logo" style="filter: unset" src="/images/mqtt-broker/github-logo.svg" alt="Github logo">
                 <div class="feature-title">Github Issues</div>
                 <div class="feature-text">
@@ -217,6 +217,6 @@ Please note that in order to achieve maximum performance, **TBMQ uses several qu
     </div>
 </section>
 
-If you are unable to find a solution to your problem from any of the guides provided above, please do not hesitate to contact the ThingsBoard team for further assistance.
+If you are unable to find a solution to your problem from any of the guides provided above, please do not hesitate to contact the SENTIENT team for further assistance.
 
-<a class="button" href="/docs/contact-us/?subject=TBMQ">Contact us</a>
+<a class="button" href="/docs/contact-us/?subject=ST-RMQTT">Contact us</a>

@@ -1,1 +1,1 @@
-wget https://dist.thingsboard.io/thingsboard-2.5.6pe.rpm
+wget https://dist.docs.sentient.invenia.in/sentient-2.5.6pe.rpm

@@ -3,7 +3,7 @@ layout: docwithnav-license
 assignees:
 - ashvayka
 title: Billing info
-description: Billing options via ThingsBoard License Server
+description: Billing options via SENTIENT License Server
 
 ---
 * TOC
@@ -11,7 +11,7 @@ description: Billing options via ThingsBoard License Server
 
 ## New billing provider
 
-The **ThingsBoard License Server** is a proprietary billing solution that allows **ThingsBoard Professional Edition (TB PE)** customers to easily purchase license keys online. The online payment processing is secured by [Stripe](https://stripe.com/), which allows both credit/debit cards and wire transfer. ThingsBoard Inc. has no access to your card data. 
+The **SENTIENT License Server** is a proprietary billing solution that allows **SENTIENT Professional Edition (TB PE)** customers to easily purchase license keys online. The online payment processing is secured by [Stripe](https://stripe.com/), which allows both credit/debit cards and wire transfer. SENTIENT Inc. has no access to your card data. 
 Now you can easily pay for the subscription or purchase a perperual license online, without manual paperwork. 
 
 Notice: payments are non-refundable. Although if you decide to terminate (***Cancel***) the subscription before the end time, remain amount of units will be reserved upon your account. In the Billing section you will see the ***Account credit*** notice next to ***Payment method*** and ***Billing information***. These credits will be deducted from the total sum of your next purchasing.  
@@ -24,7 +24,7 @@ All invoices are automatically generated and available for download in the Licen
  
 ## Payment method
 
-ThingsBoard Inc. wants the customer get most of the product and the way to get it was as comfortable as possible.  Launching of License portal allowed to use credit/debit cards for online payments. But we continue diversifying payment methods and this section will constantly extend.
+SENTIENT Inc. wants the customer get most of the product and the way to get it was as comfortable as possible.  Launching of License portal allowed to use credit/debit cards for online payments. But we continue diversifying payment methods and this section will constantly extend.
 
 In order to pay with the card the ***Owner name***, ***Country***, ***Card number*** and ***Expiry date*** should be populated either after registration on License portal or during first purchasing. Stripe provides charging silently (no need to confirm).
 

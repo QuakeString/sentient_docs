@@ -48,7 +48,7 @@ return result;
 {: .copy-code}
 
 <br>
-In **ThingsBoard 4.0**, an option has been added to the Loriot downlink functionality, allowing users to avoid double hexadecimal encoding.
+In **SENTIENT 4.0**, an option has been added to the Loriot downlink functionality, allowing users to avoid double hexadecimal encoding.
 If your data is already in hexadecimal format, you can add the following metadata property to your message:
 
 ```

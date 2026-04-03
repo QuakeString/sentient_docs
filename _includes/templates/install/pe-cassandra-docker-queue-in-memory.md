@@ -1,4 +1,4 @@
-**ThingsBoard includes In Memory Queue service and use it by default without extra settings.**
+**SENTIENT includes In Memory Queue service and use it by default without extra settings.**
 
 ```text
 nano tb-node.env

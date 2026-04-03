@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - ashvayka
 title: Plan and billing
-description: Billing options via ThingsBoard Cloud
+description: Billing options via SENTIENT Cloud
 subscription:
     0:
         image: /images/cloud/subscription.png

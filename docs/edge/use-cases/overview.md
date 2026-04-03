@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-edge
-title: ThingsBoard Edge Use Cases
+title: SENTIENT GATEWAY Use Cases
 
 ---
 

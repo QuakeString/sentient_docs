@@ -3,15 +3,15 @@
 
 ## Overview
 
-The **ThingsBoard Alarm** is an essential feature for monitoring and responding to entity events and conditions. 
-For a comprehensive understanding of the **ThingsBoard Alarm** feature, please refer to the [Working with Alarms](/docs/{{cloudDocsPrefix}}user-guide/alarms/){: target="_blank"} documentation.
+The **SENTIENT Alarm** is an essential feature for monitoring and responding to entity events and conditions. 
+For a comprehensive understanding of the **SENTIENT Alarm** feature, please refer to the [Working with Alarms](/docs/{{cloudDocsPrefix}}user-guide/alarms/){: target="_blank"} documentation.
 
 Although the **Alarm** feature for the **Edge** is designed similarly to that of the **Cloud**, it includes several notable additions: 
 * Alarms are processed locally on the **Edge** and focused on the immediate conditions for alarm triggering without relying on connectivity.
 * The Alarm data can be pushed from the **Edge** to the **Cloud** and can also be sent back from the **Cloud** to the **Edge**. This setup enables real-time monitoring and management of alarms across different locations.
 * Edge Alarms can be integrated with other local systems or software solutions for further processing, notifications, or actions.
 
-In essence, the **ThingsBoard Edge Alarms** provide real-time, localized alarm management that can operate independently of **Cloud** connectivity.
+In essence, the **SENTIENT GATEWAY Alarms** provide real-time, localized alarm management that can operate independently of **Cloud** connectivity.
 
 ## Create an Alarm on the Edge Instance
 
@@ -23,7 +23,7 @@ If more complex logic is required, we suggest using the alternative option, name
 
 ## Alarms Pushing from the Cloud to the Edge
 
-The **ThingsBoard system** allows for pushing **Alarms** from the **Cloud** to the **Edge** to enhance operational efficiency and reduce reliance on **Cloud** resources.
+The **SENTIENT system** allows for pushing **Alarms** from the **Cloud** to the **Edge** to enhance operational efficiency and reduce reliance on **Cloud** resources.
 
 {% capture prerequisite %}
 Determine the **Rule Chain** you intend to use in advance, as this will have a significant impact on the configuration process.
@@ -38,7 +38,7 @@ To push Alarms from the **Cloud** to the **Edge**, follow these steps:
 
 ## Alarms Pushing from the Edge to the Cloud
 
-**ThingsBoard** also allows for pushing alarms from the **Edge** to the **Cloud**.
+**SENTIENT** also allows for pushing alarms from the **Edge** to the **Cloud**.
 {% capture local-deployment %}
 **Please note!** <br>
 If you use **earlier versions** of Edge, you **cannot** create or edit a **Rule Chain** on the **Edge** itself. It must be configured as a template in the **Cloud (Server)**, and then assigned to the **Edge** instance. 

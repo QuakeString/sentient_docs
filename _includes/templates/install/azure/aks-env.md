@@ -3,7 +3,7 @@ Define environment variables that you will use in various commands later in this
 We assume you are using Linux. Execute the following command:
 
 ```bash
-export AKS_RESOURCE_GROUP=ThingsBoardResources
+export AKS_RESOURCE_GROUP=SENTIENTResources
 export AKS_LOCATION=eastus
 export AKS_GATEWAY=tb-gateway
 export TB_CLUSTER_NAME=tb-cluster

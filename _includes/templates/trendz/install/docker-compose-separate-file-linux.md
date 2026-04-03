@@ -1,4 +1,4 @@
-Create a docker compose file for Trendz Analytics service:
+Create a docker compose file for SENTIENT ANALYTICS service:
 
 ```text
 sudo nano docker-compose.yml
@@ -7,4 +7,4 @@ sudo nano docker-compose.yml
 
 Add the following configuration to the YAML file.
 
-{% include templates/trendz/install/docker-compose.md %}
+{% include templates/sentient-analytics/install/docker-compose.md %}

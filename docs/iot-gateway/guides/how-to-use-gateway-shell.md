@@ -15,8 +15,8 @@ By using the provided commands and corresponding arguments, users can execute sp
 from the Gateway. Refer to the usage examples outlined in this guide to effectively utilize the Gateway Shell feature.
 
 For the purpose of this tutorial, you need:  
-1. Locally installed instance of ThingsBoard platform (In case you are new with ThingsBoard [use this 'how to install' documentation](/docs/user-guide/install/installation-options/)).
-2. [Installed](/docs/iot-gateway/installation/) and [configured](/docs/iot-gateway/configuration/) ThingsBoard IoT Gateway.
+1. Locally installed instance of SENTIENT platform (In case you are new with SENTIENT [use this 'how to install' documentation](/docs/user-guide/install/installation-options/)).
+2. [Installed](/docs/iot-gateway/installation/) and [configured](/docs/iot-gateway/configuration/) SENTIENT IoT Gateway.
 
 ### Storage Command
 The `storage` command provides functionality related to storage operations.
@@ -77,7 +77,7 @@ tb-gateway-shell gateway -s
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

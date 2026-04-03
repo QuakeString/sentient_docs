@@ -21,7 +21,7 @@ The platform will automatically add the service ID and request ID to the message
 
 The typical workflow for handling REST API calls to the rule engine and sending replies follows these steps:
 
-1. When an external system or user sends a REST API call to submit a message to the ThingsBoard rule engine, a rule engine message of type `REST_API_REQUEST` is automatically created. 
+1. When an external system or user sends a REST API call to submit a message to the SENTIENT rule engine, a rule engine message of type `REST_API_REQUEST` is automatically created. 
    The message data contains the payload from the API call, and the metadata includes the service ID and request ID needed for routing the reply back as an HTTP response.
 
 2. In your rule chain, process this message to prepare the response. This may involve enriching the message with additional data, transforming the payload, calling external

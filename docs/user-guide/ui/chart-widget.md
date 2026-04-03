@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: Chart Widgets
-description: ThingsBoard Chart Widgets management
+description: SENTIENT Chart Widgets management
 
 charts-addwidget:
     0:

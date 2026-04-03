@@ -1,19 +1,19 @@
 ---
 layout: docwithnav-gw
 title: REST Connector Configuration
-description: REST API enpoints support for ThingsBoard IoT Gateway
+description: REST API enpoints support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with REST Connector configuration for ThingsBoard IoT Gateway.  
+This guide will help you to get familiar with REST Connector configuration for SENTIENT IoT Gateway.  
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector.  
 The purpose of this Connector is to create API endpoints and get data from received requests.  
-Connector is also able to push data to external HTTP(S) API based on the updates/commands from ThingsBoard.    
+Connector is also able to push data to external HTTP(S) API based on the updates/commands from SENTIENT.    
 
-This connector is useful when you have some HTTP(S) API endpoints in your device or some data in external resource and you would like to push this data to the ThingsBoard.    
+This connector is useful when you have some HTTP(S) API endpoints in your device or some data in external resource and you would like to push this data to the SENTIENT.    
 
 We will describe connector configuration file below.  
 
@@ -192,7 +192,7 @@ Response in REST Connector can have 3 variants of configuration:
     | ... unsuccessfulResponse      | **Error**                                             | Only if the response status different from 200                        |
     |---
 
-3. **ADVANCED** the remote response that will return by ThingsBoard.
+3. **ADVANCED** the remote response that will return by SENTIENT.
    1. To configure that variant you have to specify a new section in the config file as in the example below:
 
        | **Parameter**                 | **Default value**                                     | **Description**                                                       |
@@ -203,7 +203,7 @@ Response in REST Connector can have 3 variants of configuration:
        | ... responseAttribute         | **result**                                            | Shared attribute name which response will be return                   |
        |---
 
-   2. Configure RuleChain in ThingsBoard:
+   2. Configure RuleChain in SENTIENT:
       ![image](/images/gateway/custom-response-rule-chain-config.png)
       Finally, you have to configure rule node:
       1. Yellow Rule Node
@@ -214,7 +214,7 @@ Response in REST Connector can have 3 variants of configuration:
 ### Attribute request section
 Configuration in this section are optional.
 
-In order to request client-side or shared device attributes to ThingsBoard server node, Gateway allows sending 
+In order to request client-side or shared device attributes to SENTIENT server node, Gateway allows sending 
 attribute requests.
 
 | **Parameter**                 | **Default value**                                     | **Description**                                                       |
@@ -276,8 +276,8 @@ will look like:
 ### Attribute update section
 
 Configuration in this section are optional.  
-ThingsBoard allows to provision device attributes and fetch some of them from the device application.
-You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard.
+SENTIENT allows to provision device attributes and fetch some of them from the device application.
+You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from SENTIENT.
 See [user guide](/docs/user-guide/attributes/) for more details.
 
 The "**attributeUpdates**" configuration allows configuring the format of the corresponding attribute update messages. 
@@ -330,9 +330,9 @@ The **attributeUpdates** section will look like:
 ### Server side RPC section
 
 
-ThingsBoard allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to ThingsBoard directly or via Gateway.
+SENTIENT allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to SENTIENT directly or via Gateway.
  
-Configuration, provided in this section uses for sending RPC requests from ThingsBoard to device.
+Configuration, provided in this section uses for sending RPC requests from SENTIENT to device.
 
 | **Parameter**                 | **Default value**                                                 | **Description**                                                                       |
 |:-|:-|-
@@ -351,7 +351,7 @@ Configuration, provided in this section uses for sending RPC requests from Thing
 
 {% capture rpc_variants %}
 **There are 2 types of the RPC calls:**  
-1. With reply, after sending request the gateway will wait for response and send it to ThingsBoard.
+1. With reply, after sending request the gateway will wait for response and send it to SENTIENT.
 2. With no reply, after sending request the gateway will not wait for response.
 
 Examples for both methods provided below.
@@ -398,7 +398,7 @@ See [the guide](/docs/iot-gateway/guides/how-to-use-get-set-rpc-methods).
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

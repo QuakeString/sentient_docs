@@ -13,17 +13,17 @@ This tutorial will show how to send data to external MQTT broker using knob cont
 ## Use case
 
 Let's assume your device is controlling temperature and you would like to use it as an external MQTT
- broker with the help of Thingsboard. 
+ broker with the help of Sentient. 
 
-In this tutorial we will configure ThingsBoard Rule Engine to automatically send messages using MQTT
+In this tutorial we will configure SENTIENT Rule Engine to automatically send messages using MQTT
  protocol. You can use this tutorial as a basis for much more complex tasks. 
  
- MQTT Integration allows to convert existing protocols and payload formats to ThingsBoard message format and is useful 
+ MQTT Integration allows to convert existing protocols and payload formats to SENTIENT message format and is useful 
  in several deployment scenarios: 
  
   - stream device and/or asset data from external system, IoT platform or connectivity provider back-end.
   - stream device and/or asset data from your custom application running in the cloud.
-  - connect the existing device with custom MQTT based protocol to ThingsBoard.
+  - connect the existing device with custom MQTT based protocol to SENTIENT.
   
  Please review the integration diagram to learn more. 
  

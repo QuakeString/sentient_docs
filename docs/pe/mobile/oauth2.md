@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Configure OAuth 2.0 in ThingsBoard PE Mobile Application
+title: Configure OAuth 2.0 in SENTIENT Professional Edition Mobile Application
 
 oauth2:
  0:

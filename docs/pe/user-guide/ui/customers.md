@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Customers
-description: ThingsBoard Customers management
+description: SENTIENT Customers management
 
 customer-add-new-pe:
     0:

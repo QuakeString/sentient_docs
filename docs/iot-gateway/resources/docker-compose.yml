@@ -1,8 +1,8 @@
 version: '3.4'
 services:
-  # ThingsBoard IoT Gateway Service Configuration
+  # SENTIENT IoT Gateway Service Configuration
   tb-gateway:
-    image: thingsboard/tb-gateway:3.7-latest
+    image: sentient/tb-gateway:3.7-latest
     container_name: tb-gateway
     restart: always
 
@@ -21,17 +21,17 @@ services:
 
     # Environment variables
     environment:
-      - host=THINGSBOARD_HOST
-      - port=THINGSBOARD_PORT
+      - host=SENTIENT_HOST
+      - port=SENTIENT_PORT
       - TB_GW_PROVISIONING_DEVICE_KEY=YOUR_PROVISION_KEY
       - TB_GW_PROVISIONING_DEVICE_SECRET=YOUR_PROVISION_SECRET
       - TB_GW_PROVISIONING_DEVICE_NAME=Factory-Gateway-01
 
     # Volumes bind
     volumes:
-      - tb-gw-config:/thingsboard_gateway/config
-      - tb-gw-logs:/thingsboard_gateway/logs
-      - tb-gw-extensions:/thingsboard_gateway/extensions
+      - tb-gw-config:/sentient_gateway/config
+      - tb-gw-logs:/sentient_gateway/logs
+      - tb-gw-extensions:/sentient_gateway/extensions
 
 # Volumes declaration for configurations, extensions and configuration
 volumes:

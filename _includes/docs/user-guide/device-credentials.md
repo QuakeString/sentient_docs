@@ -1,6 +1,6 @@
 
-Device credentials are used in order to connect to the ThingsBoard server by applications that are running on the device.
-ThingsBoard is designed to support different device credentials. There are three supported credentials types at the moment:
+Device credentials are used in order to connect to the SENTIENT server by applications that are running on the device.
+SENTIENT is designed to support different device credentials. There are three supported credentials types at the moment:
 
  - [**Access Tokens**](/docs/{{docsPrefix}}user-guide/access-token/) - general purpose credentials that are suitable for wide range of devices. 
  Access Token based authentication may be used in not encrypted, one-way SSL mode or DTLS accessToken mode.
@@ -16,8 +16,8 @@ ThingsBoard is designed to support different device credentials. There are three
 
 Device credentials need to be provisioned to corresponding device entity on the server. There are multiple ways to do this:
 
- - **Automatically**, using [X.509 Certificate chain](/docs/{{docsPrefix}}user-guide/certificates/) or [device provisioning](/docs/{{docsPrefix}}user-guide/device-provisioning/). Allows devices to automatically provision themselves in ThingsBoard.
- - **Via Script**, using ThingsBoard [REST API](/docs/{{docsPrefix}}reference/rest-api/). For example during manufacturing, QA or purchase order fulfilment.
- - **Manually**, using ThingsBoard [Web UI](/docs/{{docsPrefix}}user-guide/ui/devices/#manage-device-credentials). For example for development purposes, or by system administrator.
+ - **Automatically**, using [X.509 Certificate chain](/docs/{{docsPrefix}}user-guide/certificates/) or [device provisioning](/docs/{{docsPrefix}}user-guide/device-provisioning/). Allows devices to automatically provision themselves in SENTIENT.
+ - **Via Script**, using SENTIENT [REST API](/docs/{{docsPrefix}}reference/rest-api/). For example during manufacturing, QA or purchase order fulfilment.
+ - **Manually**, using SENTIENT [Web UI](/docs/{{docsPrefix}}user-guide/ui/devices/#manage-device-credentials). For example for development purposes, or by system administrator.
 
 

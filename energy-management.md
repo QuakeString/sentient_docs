@@ -2,7 +2,7 @@
 layout: iot-article
 title: ᐉ IoT Energy Management & Monitoring
 notitle: "true"
-description: "IoT Energy Management ✔IoT Energy Monitoring ⚫ ThingsBoard ➤ Smart energy monitoring and data visualization with ThingsBoard IoT Platform"
+description: "IoT Energy Management ✔IoT Energy Monitoring ⚫ SENTIENT ➤ Smart energy monitoring and data visualization with SENTIENT IoT Platform"
 ---
 
 <section class="hero light-text"></section>
@@ -70,18 +70,18 @@ description: "IoT Energy Management ✔IoT Energy Monitoring ⚫ ThingsBoard ➤
                 </li>
             </ul>
             <h2>IoT-based energy Monitoring Solutions We Offer</h2>
-            <div class="text-content medium-margin">ThingsBoard provides a variety of IoT-based energy monitoring system solutions. Here are some of them:</div>
+            <div class="text-content medium-margin">SENTIENT provides a variety of IoT-based energy monitoring system solutions. Here are some of them:</div>
             <ul class="list">
                 <li>Smart meters — measure energy consumption in real-time, providing valuable data for analysis.</li>
                 <li>Modbus meters — are a type of smart meter that uses the Modbus protocol, a popular communication protocol in industrial applications.</li>
                 <li>IoT gateways connect smart meters and other IoT devices to the Internet, enabling real-time data collection and remote control.</li>
-                <li>The transport layer includes various protocols such as MQTT, CoAP, HTTP, and LwM2M that are used for transmitting data from IoT devices to the ThingsBoard platform.</li>
-                <li>The integration layer includes the ThingsBoard core, which provides device and user management, a rule engine for data processing and aggregation, and an SQL/NoSQL database for data storage.</li>
+                <li>The transport layer includes various protocols such as MQTT, CoAP, HTTP, and LwM2M that are used for transmitting data from IoT devices to the SENTIENT platform.</li>
+                <li>The integration layer includes the SENTIENT core, which provides device and user management, a rule engine for data processing and aggregation, and an SQL/NoSQL database for data storage.</li>
                 <li>The application layer includes end-user interfaces such as real-time dashboards and mobile apps that display the collected data in an easy-to-understand format.</li>
             </ul>
             <div class="text-content">Contact us to know more about how IoT solutions can help in energy efficiency!</div>
             <h2>Smart Energy Dashboard Examples</h2>
-            <div class="text-content small-margin">ThingsBoard offers a variety of smart energy dashboard examples that provide real-time data visualization. These dashboards are interactive and can be easily embedded into your IoT solution.</div>
+            <div class="text-content small-margin">SENTIENT offers a variety of smart energy dashboard examples that provide real-time data visualization. These dashboards are interactive and can be easily embedded into your IoT solution.</div>
             <div class="text-content medium-margin">Here are some key features of the smart energy dashboards:</div>
             <ul class="list">
                 <li>real-time data display;</li>
@@ -94,7 +94,7 @@ description: "IoT Energy Management ✔IoT Energy Monitoring ⚫ ThingsBoard ➤
         </div>
         <img class="image" srcset="/images/iot-articles/energy_management_2_1090x804.webp 1090w, /images/iot-articles/energy_management_2_2180x1608.webp 2180w" sizes="(max-width: 1920px) 1090px, (min-width: 1921px) 2180px" src="/images/iot-articles/energy_management_2_1090x804.webp" alt="IoT energy monitoring data center monitoring"/>
         <div class="text-wrapper">
-            <h2>ThingsBoard Benefits</h2>
+            <h2>SENTIENT Benefits</h2>
             <div class="text-content medium-margin">We offer a multitude of benefits for IoT energy monitoring:</div>
             <ul class="list">
                 <li>A robust infrastructure for connecting your smart meter devices, collecting, storing, and analyzing energy monitoring data.</li>
@@ -104,7 +104,7 @@ description: "IoT Energy Management ✔IoT Energy Monitoring ⚫ ThingsBoard ➤
                 <li>Our software provides remote control and OTA updates for your smart meters and other devices.</li>
                 <li>We allow customizable mobile applications with minimum coding efforts.</li>
             </ul>
-            <div class="text-content">With an expert team that understands these complexities, ThingsBoard is committed to providing an energy monitoring system using IoT that not only addresses these challenges but also drives efficiency and sustainability in IoT energy management.</div>
+            <div class="text-content">With an expert team that understands these complexities, SENTIENT is committed to providing an energy monitoring system using IoT that not only addresses these challenges but also drives efficiency and sustainability in IoT energy management.</div>
             <h3>Our cases:</h3>
         </div>
         <div class="definitions-block">

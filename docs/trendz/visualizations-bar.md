@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Bar & Histogram
@@ -9,7 +9,7 @@ description: Bar Chart and Histogram
 * TOC
 {:toc}
 
-Details about basic Bar chart you can find in [Line Chart Configuration](/docs/trendz/visualizations-line/)
+Details about basic Bar chart you can find in [Line Chart Configuration](/docs/sentient-analytics/visualizations-line/)
 Main concept for line and bar charts are the same. In this tutorial we will focus on differences.
 
 ## Video Tutorial
@@ -29,8 +29,8 @@ By default bar chart is vertical. In some cases it is required to show data usin
 * Open View Settings
 * Enable **Horizontal Bar** mode
 
-![image](/images/trendz/bar-horizontal.png)
-![image](/images/trendz/bar-horizontal-conf.png)
+![image](/images/sentient-analytics/bar-horizontal.png)
+![image](/images/sentient-analytics/bar-horizontal-conf.png)
 
 **Note** horizontal mode available only when **Y-axis** contains one field. When multiple fields added to **Y-axis** and there are fields 
 in **Series** section - horizontal bar would not display. 
@@ -40,13 +40,13 @@ in **Series** section - horizontal bar would not display.
 When bar chart contains multiple timeseries or series fields - each seria showed independently. And it is possible to enable 
 stacked mode for bar charts. Here are few examples: stacking disabled, stacking enabled and 100% stacked bars. 
 
-![image](/images/trendz/bar-stack-off.png)
-![image](/images/trendz/bar-stack-onn.png)
-![image](/images/trendz/bar-stack-100.png)
+![image](/images/sentient-analytics/bar-stack-off.png)
+![image](/images/sentient-analytics/bar-stack-onn.png)
+![image](/images/sentient-analytics/bar-stack-100.png)
 
 You can control stack options in View Settings
 
-![image](/images/trendz/bar-stack-conf.png)
+![image](/images/sentient-analytics/bar-stack-conf.png)
 
 ## Group By telemetry value
 
@@ -79,9 +79,9 @@ In both cases we need to group telemetry by **product** value and then apply req
 
 Now we now how much products in different categories were produced by different machines.
 
-![image](/images/trendz/bar-group-ts.png)
+![image](/images/sentient-analytics/bar-group-ts.png)
 
 ## Labels
 You can add/hide labels from the bar chart using checkbex in View Settings. 
 
-![image](/images/trendz/bar-labels.png)
+![image](/images/sentient-analytics/bar-labels.png)

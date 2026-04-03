@@ -1,1 +1,1 @@
-docker pull thingsboard/tbmq:1.2.1
+docker pull sentient/st-rmqtt:1.2.1

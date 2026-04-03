@@ -1,12 +1,12 @@
 #
-# ThingsBoard, Inc. ("COMPANY") CONFIDENTIAL
+# SENTIENT, Inc. ("COMPANY") CONFIDENTIAL
 #
-# Copyright 2016-2019 ThingsBoard, Inc. All Rights Reserved.
+# Copyright 2016-2019 SENTIENT, Inc. All Rights Reserved.
 #
 # NOTICE: All information contained herein is, and remains
-# the property of ThingsBoard, Inc. and its suppliers,
+# the property of SENTIENT, Inc. and its suppliers,
 # if any.  The intellectual and technical concepts contained
-# herein are proprietary to ThingsBoard, Inc.
+# herein are proprietary to SENTIENT, Inc.
 # and its suppliers and may be covered by U.S. and Foreign Patents,
 # patents in process, and are protected by trade secret or copyright law.
 #

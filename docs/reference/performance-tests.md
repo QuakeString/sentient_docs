@@ -1,14 +1,14 @@
 ---
 layout: docwithnav
 title: How to repeat the tests
-description: ThingsBoard IoT Platform performance tests
+description: SENTIENT IoT Platform performance tests
 
 ---
 
 We have prepared several AWS AMIs for anyone who is interested in replication of these tests.
 These AMIs contain some tuned OS parameters, for example, the maximum amount of threads per process and open file descriptors:
 
- - [ThingsBoard AMI](https://console.aws.amazon.com/ec2/v2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-09b1ed69) (username **ubuntu**)
+ - [SENTIENT AMI](https://console.aws.amazon.com/ec2/v2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-09b1ed69) (username **ubuntu**)
 
     **Following ports must be accessible for the cluster nodes: 8080, 1883**
 
@@ -19,10 +19,10 @@ These AMIs contain some tuned OS parameters, for example, the maximum amount of 
  - [Test Client AMI](https://console.aws.amazon.com/ec2/v2/home?region=us-west-1#LaunchInstanceWizard:ami=ami-30b0ec50) (username **ubuntu**)
 
 
-If you would like to verify performance for all components hosted on a single server instance, simply run ThingsBoard AMI instance.
+If you would like to verify performance for all components hosted on a single server instance, simply run SENTIENT AMI instance.
 By default this instance will be using Cassandra that runs locally.
 
-If you would like to verify performance for standalone ThingsBoard server that uses external Cassandra Cluster, please init Cassandra cluster using provided Cassandra AMI first.
+If you would like to verify performance for standalone SENTIENT server that uses external Cassandra Cluster, please init Cassandra cluster using provided Cassandra AMI first.
 For example, let's do the configuration for three Cassandra instances.
 Once you have launched 3 AWS instances using Cassandra AMI please update **cassandra.yml** file to make them run in a cluster.
 In our case we have 3 instances with the following IP addresses:
@@ -102,15 +102,15 @@ UN  172.31.25.178  289.4 KiB  256          35.2%             87f1ab4d-16d4-4969-
 Once the cluster is ready we need to create schema, system and demo data. At any of the Cassandra cluster node (here we use instance A) execute following commands:
 
 ```bash
-cqlsh 172.21.12.100 -f /usr/share/thingsboard/data/schema.cql 
-cqlsh 172.21.12.100 -f /usr/share/thingsboard/data/system-data.cql 
-cqlsh 172.21.12.100 -f /usr/share/thingsboard/data/demo-data.cql 
+cqlsh 172.21.12.100 -f /usr/share/sentient/data/schema.cql 
+cqlsh 172.21.12.100 -f /usr/share/sentient/data/system-data.cql 
+cqlsh 172.21.12.100 -f /usr/share/sentient/data/demo-data.cql 
 ```
 
-Once Cassandra cluster setup is done please run ThingsBoard AMI instance. You need to update **thingsboard.yml** config to use Cassandra cluster instead of a local instance:
+Once Cassandra cluster setup is done please run SENTIENT AMI instance. You need to update **sentient.yml** config to use Cassandra cluster instead of a local instance:
 
 ```bash
-sudo nano /etc/thingsboard/conf/thingsboard.yml
+sudo nano /etc/sentient/conf/sentient.yml
 ```
 
 And update the cassandra url from localhost to IPs of cassandra ring:
@@ -119,20 +119,20 @@ And update the cassandra url from localhost to IPs of cassandra ring:
 url: "${CASSANDRA_URL:172.21.12.100:9042,172.21.12.101:9042,172.21.12.102:9042}"
 ```
 
-After configuration update, restart ThingsBoard service:
+After configuration update, restart SENTIENT service:
 
 ```bash
-sudo service thingsboard stop
-sudo service thingsboard start
+sudo service sentient stop
+sudo service sentient start
 ```
 
-Once you will setup your cluster configuration using ThingsBoard and Cassandra AMIs you can execute tests from "client" machines (ThingsBoard Performance Test AMIs) using following commands:
+Once you will setup your cluster configuration using SENTIENT and Cassandra AMIs you can execute tests from "client" machines (SENTIENT Performance Test AMIs) using following commands:
  
 ```bash
 cd projects/performance-tests
 ```
 
-Update **mqttUrls** and **restUrl** and set private IPs of AWS instance where ThingsBoard service is deployed in **test.properties** file:
+Update **mqttUrls** and **restUrl** and set private IPs of AWS instance where SENTIENT service is deployed in **test.properties** file:
 
 ```bash
 nano src/main/resources/test.properties

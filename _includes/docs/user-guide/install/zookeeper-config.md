@@ -11,7 +11,7 @@
           <td>zk.enabled</td>
           <td>ZOOKEEPER_ENABLED</td>
           <td>false</td>
-          <td>Enable/disable zookeeper discovery service. Used for ThingsBoard cluster</td>
+          <td>Enable/disable zookeeper discovery service. Used for SENTIENT cluster</td>
         </tr>
         <tr>
           <td>zk.url</td>
@@ -40,7 +40,7 @@
         <tr>
           <td>zk.zk_dir</td>
           <td>ZOOKEEPER_NODES_DIR</td>
-          <td>/thingsboard</td>
+          <td>/sentient</td>
           <td>Name of the directory in zookeeper 'filesystem'</td>
         </tr>
     </tbody>

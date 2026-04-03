@@ -53,11 +53,11 @@ Now we need to configure integration on The Things Industries. to do this please
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=addIntegrationSteps %}
 
-Now we can move to ThingsBoard to configure integration.
+Now we can move to SENTIENT to configure integration.
 
-### Create integration in ThingsBoard
+### Create integration in SENTIENT
 
-Next, we will create the "**TheThingsIndustries**" integration inside the **ThingsBoard**.
+Next, we will create the "**TheThingsIndustries**" integration inside the **SENTIENT**.
 
 At first, copy the code, we will need it to create the uplink converter:
 
@@ -165,7 +165,7 @@ return result;
 In the "**Connect**" step, you will need the following parameters:
 
 - **Region**: *eu1* (region where your application was registered inside The Things Industries Console);
-- **Username**: *thingsboard-data-integration@thingsboard* (use ***Username*** from integration on The Things Stack Industries);
+- **Username**: *sentient-data-integration@sentient* (use ***Username*** from integration on The Things Stack Industries);
 - **Password**: use ***Password*** from integration on The Things Industries.
 
 <br>

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Managing domain
-description: Domain managing through TBMQ
+description: Domain managing through ST-RMQTT
 
 register-domain:
   0:
@@ -17,7 +17,7 @@ register-domain:
 login-with-domain:
   0:
     image: /images/pe/mqtt-broker/security/domain-login-1.png
-    title: 'Now you can use your domain name to access TBMQ web interface and services. Try to login by entering the chosen domain name in the browser address line.'
+    title: 'Now you can use your domain name to access ST-RMQTT web interface and services. Try to login by entering the chosen domain name in the browser address line.'
 
 domain-details:
   0:

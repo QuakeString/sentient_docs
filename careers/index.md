@@ -2,7 +2,7 @@
 layout: careers
 title: Careers
 notitle: "true"
-description: ThingsBoard Careers
+description: SENTIENT Careers
 ---
 
 ## Careers
@@ -38,8 +38,8 @@ description: ThingsBoard Careers
 
 <div id="about">
 <p class="title">About Us:</p>
-<h5>ThingsBoard, Inc. is a US corporation founded in 2016 with RnD center in Kyiv, Ukraine. We are main contributor and maintainer of ThingsBoard open-source IoT Platform.<br>
-<br>We deliver and constantly improve scalable, robust and affordable IoT Platform that dramatically reduces time-to-market for life-changing IoT solutions. We also help companies to deliver great IoT products based on ThingsBoard.</h5>
+<h5>SENTIENT, Inc. is a US corporation founded in 2016 with RnD center in Kyiv, Ukraine. We are main contributor and maintainer of SENTIENT open-source IoT Platform.<br>
+<br>We deliver and constantly improve scalable, robust and affordable IoT Platform that dramatically reduces time-to-market for life-changing IoT solutions. We also help companies to deliver great IoT products based on SENTIENT.</h5>
 </div>
 
 <h2>How do we work:</h2>

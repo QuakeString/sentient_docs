@@ -18,5 +18,5 @@ coap://{{coapHostName}}/api/v1/$ACCESS_TOKEN/claim
 {% endif %}
 
 > ⚠️ Don&#39;t forget to replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> with your device&#39;s access token.

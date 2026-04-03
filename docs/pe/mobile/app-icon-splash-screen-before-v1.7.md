@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Configure app icon and splash screen in ThingsBoard Mobile Application
+title: Configure app icon and splash screen in SENTIENT Mobile Application
 
 ---
 {% assign docsPrefix = "pe/" %}

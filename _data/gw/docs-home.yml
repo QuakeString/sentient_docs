@@ -1,9 +1,9 @@
 bigheader: "IoT Gateway Documentation"
-abstract: "Integrate legacy and third-party systems with ThingsBoard platform using IoT Gateway."
+abstract: "Integrate legacy and third-party systems with SENTIENT platform using IoT Gateway."
 toc:
-- title: ThingsBoard IoT Gateway
+- title: SENTIENT IoT Gateway
   path: /docs/iot-gateway/
-- title: What is ThingsBoard IoT Gateway?
+- title: What is SENTIENT IoT Gateway?
   path: /docs/iot-gateway/what-is-iot-gateway/
 - title: Configuration guides
   section:

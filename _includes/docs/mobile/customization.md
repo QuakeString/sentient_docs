@@ -1,7 +1,7 @@
 {% if docsPrefix == 'pe/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "SENTIENT Professional Edition" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "SENTIENT" %}
 {% endif %}
 
 {{appPrefix}} Mobile Application allows you to perform the following customizations **without code changes**:

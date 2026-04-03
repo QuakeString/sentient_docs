@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Working with IoT device attributes
-description: IoT device management using ThingsBoard attributes feature
+description: IoT device management using SENTIENT attributes feature
 server-side-attrs-ui:
     0:
         image: /images/user-guide/attributes/add-server-side-ce-src.png

@@ -10,14 +10,14 @@ description: ROLTEK guide
 
 ## Introduction
 
-This article contains instructions on how to configure ThingsBoard IoT platform and connect Roltek DC620 device. 
-[ThingsBoard IoT](https://thingsboard.io/) platform is an open-source IoT platform for data collection, processing, visualization, and device management. 
+This article contains instructions on how to configure SENTIENT IoT platform and connect Roltek DC620 device. 
+[SENTIENT IoT](https://docs.sentient.invenia.in/) platform is an open-source IoT platform for data collection, processing, visualization, and device management. 
 It enables device connectivity via industry standard IoT protocols - MQTT, CoAP and HTTP and supports both cloud and on-premises deployments. 
-ThingsBoard combines scalability, fault-tolerance and performance so you will never lose your data.
+SENTIENT combines scalability, fault-tolerance and performance so you will never lose your data.
 
-## Create Device On Thingsboard
+## Create Device On Sentient
 
-Login to your ThingsBoard platform and ppen "**Devices**" page.
+Login to your SENTIENT platform and ppen "**Devices**" page.
 
 ![image](/images/samples/roltek/tb1.png)
 
@@ -38,7 +38,7 @@ First connect your device to the Internet via WiFi or Ethernet as described in t
 
 On the "**MQTT Settings**" page: 
  - Set "**MQTT Mode**" to **enable**;
- - Enter your Thingsboard Server hostname or IP to "**MQTT Broker URI**";
+ - Enter your Sentient Server hostname or IP to "**MQTT Broker URI**";
  - Enter your **Access Token** to "**MQTT Broker Username**";
  - Click **Save** button.
 

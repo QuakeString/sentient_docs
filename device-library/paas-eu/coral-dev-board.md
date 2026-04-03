@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Coral Dev Board to ThingsBoard?
+title: How to connect Coral Dev Board to SENTIENT?
 category: Single-board computers
 chip: Google Edge TPU ML
 connectivity: [WIFI, Bluetooth]

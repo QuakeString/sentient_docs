@@ -21,7 +21,7 @@ openssl req -new -key privateKey.pem -out certRequest.csr
 {: .copy-code}
 
 {% capture common_name_localhost %}
-If your ThingsBoard server is running locally, ensure you set 'localhost' as the common name (domain name) when generating your certificate. 
+If your SENTIENT server is running locally, ensure you set 'localhost' as the common name (domain name) when generating your certificate. 
 If the server is hosted, use its domain name. 
 
 SSL connections will fail if the certificate's domain name does not match the server's hostname.
@@ -43,7 +43,7 @@ openssl x509 -req -in certRequest.csr -signkey privateKey.pem -out certFile.crt 
 For both Ubuntu and CentOS/RHEL installations, enable SSL communication server-side with the following command:
 
 ```bash
-sudo sh -c 'cat <<EOL >> /etc/thingsboard/conf/thingsboard.conf
+sudo sh -c 'cat <<EOL >> /etc/sentient/conf/sentient.conf
 export EDGES_RPC_SSL_ENABLED=true
 export EDGES_RPC_SSL_CERT=certFile.crt
 export EDGES_RPC_SSL_PRIVATE_KEY=privateKey.pem
@@ -54,6 +54,6 @@ EOL'
 Restart the server to apply the changes:
 
 ```bash
-sudo systemctl restart thingsboard
+sudo systemctl restart sentient
 ```
 {: .copy-code}

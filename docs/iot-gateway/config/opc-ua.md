@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: OPC-UA Connector Configuration
-description: OPC-UA protocol support for ThingsBoard IoT Gateway
+description: OPC-UA protocol support for SENTIENT IoT Gateway
 
 ---
 
@@ -10,14 +10,14 @@ description: OPC-UA protocol support for ThingsBoard IoT Gateway
 
 ## Overview
 
-This documentation will help you set up the OPC-UA connector for the ThingsBoard IoT Gateway. We'll explain the configuration 
+This documentation will help you set up the OPC-UA connector for the SENTIENT IoT Gateway. We'll explain the configuration 
 parameters in simple terms to make it easy for you to understand and follow. The OPC-UA (Open Platform Communications 
 Unified Architecture) is a machine-to-machine communication protocol for industrial automation, and this connector 
-allows seamless integration with the ThingsBoard platform. Use 
+allows seamless integration with the SENTIENT platform. Use 
 [general configuration](/docs/iot-gateway/configuration/){:target="_blank"} to enable this connector.
 
-Also, if you are new to ThingsBoard IoT Gateway, we recommend you to read the [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=opcua){:target="_blank"} 
-guide to understand the basic concepts of ThingsBoard IoT Gateway and how it works with OPC-UA protocol.
+Also, if you are new to SENTIENT IoT Gateway, we recommend you to read the [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=opcua){:target="_blank"} 
+guide to understand the basic concepts of SENTIENT IoT Gateway and how it works with OPC-UA protocol.
 
 The connector can be configured via the user interface form, which helps you set up a connection to the OPC-UA server, 
 collect data and write data to nodes. Let's look at all the available settings and explain each one clearly. 
@@ -32,7 +32,7 @@ To access the actual UI for the gateway - you need to a have connected gateway b
 ## Configuration modes
 
 The OPC-UA connector can be configured in two modes: **Basic** and **Advanced**.
-- **Basic** mode is designed for users who are new to ThingsBoard IoT Gateway and want to quickly set up the connector with minimal configuration. It provides a simplified interface with essential settings.
+- **Basic** mode is designed for users who are new to SENTIENT IoT Gateway and want to quickly set up the connector with minimal configuration. It provides a simplified interface with essential settings.
 - **Advanced** mode is intended for experienced users who need more control over the configuration. It offers additional options and flexibility for advanced use cases.
 
 {% capture difference %}
@@ -78,23 +78,23 @@ data nodes.
 ## Data mapping
 
 Data mapping is a section that allows you to configure which node from the OPC-UA server will be assigned to which 
-device in ThingsBoard.
+device in SENTIENT.
 You can also use this section to configure which data will be sent as device attributes or telemetry.
 Data mapping contains all the necessary settings for flexible device and data management.
 
 The following parameters are used to configure the base node of the device, its name and profile, as well as for 
 report strategy:
 - **Device node** - the base node for the device. Paths to the device name, profile, attributes, and telemetry can be specified relative to this node.
-- **Device name** - the name of the device in ThingsBoard. It can be specified as a path or identifier to the node or as a static value (more information about types can be found in the [Additional information](/docs/iot-gateway/config/opc-ua/#additional-information) section).
-- **Device profile** - the profile of the device in ThingsBoard. It can be specified as a path or identifier to the node or as a static value (more information about types can be found in the [Additional information](/docs/iot-gateway/config/opc-ua/#additional-information) section).
-- **Report strategy** - strategy for sending data to ThingsBoard:
-  - **Report period** - period for sending data to ThingsBoard in milliseconds;
+- **Device name** - the name of the device in SENTIENT. It can be specified as a path or identifier to the node or as a static value (more information about types can be found in the [Additional information](/docs/iot-gateway/config/opc-ua/#additional-information) section).
+- **Device profile** - the profile of the device in SENTIENT. It can be specified as a path or identifier to the node or as a static value (more information about types can be found in the [Additional information](/docs/iot-gateway/config/opc-ua/#additional-information) section).
+- **Report strategy** - strategy for sending data to SENTIENT:
+  - **Report period** - period for sending data to SENTIENT in milliseconds;
   - **Type** - type of the report strategy:
-    - **On report period** - sends data to ThingsBoard after the report period;
-    - **On value change** - sends data to ThingsBoard when the value changes;
-    - **On value change or report period** - sends data to ThingsBoard when the value changes or after the report
+    - **On report period** - sends data to SENTIENT after the report period;
+    - **On value change** - sends data to SENTIENT when the value changes;
+    - **On value change or report period** - sends data to SENTIENT when the value changes or after the report
       period;
-    - **On received** - sends data to ThingsBoard after receiving data from the device (default strategy).
+    - **On received** - sends data to SENTIENT after receiving data from the device (default strategy).
 
 ![image](/images/gateway/opc-ua-connector/opc-ua-data-mapping-overview.png)
 
@@ -125,10 +125,10 @@ More usage examples can be found in the [Usage examples](/docs/iot-gateway/confi
 ### Subsection "Attributes" and "Time series"
 
 The configuration in this subsection provides settings for processing data from the OPC-UA node. These settings will be 
-interpreted in ThingsBoard platform instance as attributes/time series of the device.
+interpreted in SENTIENT platform instance as attributes/time series of the device.
 
 The following parameters are used to configure device attributes and time series:
-- **Key** - the key of the attribute/time series in ThingsBoard. It can be specified as a static value.
+- **Key** - the key of the attribute/time series in SENTIENT. It can be specified as a static value.
 - **Type** - the type of expression in the **Value** field (more information about types can be found in the [Additional information](/docs/iot-gateway/config/opc-ua/#additional-information) section):
   - **[Path](/docs/iot-gateway/config/opc-ua/#path-types)** - can be absolute or relative path to the node in the OPC-UA server. The value will be taken from the node with the specified path.
   - **[Identifier](/docs/iot-gateway/config/opc-ua/#identifier-types)** - can be numeric, string, byte string or GUID identifier of the node in the OPC-UA server. The value will be taken from the node with the specified identifier.
@@ -161,30 +161,30 @@ Attributes/Time series with Identifier<small></small>%,%attributestimeseriesiden
 
 ## Requests mapping
 
-The Requests mapping section allows you to configure how the ThingsBoard platform instance will interact with the 
+The Requests mapping section allows you to configure how the SENTIENT platform instance will interact with the 
 devices. That is, how the platform will request data from the devices, how it will update device attributes, and how 
 it will send RPC commands to the devices.
 
 OPC-UA connector supports the following requests mapping:
-- **Attribute updates** - allows update device nodes values from ThingsBoard platform instance.
+- **Attribute updates** - allows update device nodes values from SENTIENT platform instance.
 - **RPC methods** - allows sending RPC commands to devices. Using RPC methods, you can get or set values of the OPC-UA nodes.
   OPC-UA connector supports different types of RPC methods, such as:
   - **Reserved GET/SET methods** - these methods are automatically created for each attribute and time series parameter. 
     You can use them to get or set values of the OPC-UA nodes.
-  - **RPC method to connector** - this method allows you to send a command to the connector from the ThingsBoard IoT Gateway UI. 
-    The command will be processed by the connector, and the result will be sent back to the ThingsBoard platform instance.
+  - **RPC method to connector** - this method allows you to send a command to the connector from the SENTIENT IoT Gateway UI. 
+    The command will be processed by the connector, and the result will be sent back to the SENTIENT platform instance.
   - **Configurable RPC methods to device** - these methods allow you to configure custom RPC commands in connector configuration that can be sent to the devices.
 
 ### Subsection "Attribute updates"
 
-This subsection contains configuration for attribute updates request from ThingsBoard platform instance.
+This subsection contains configuration for attribute updates request from SENTIENT platform instance.
 
-ThingsBoard allows the provisioning of device attributes and fetches some of them from
+SENTIENT allows the provisioning of device attributes and fetches some of them from
 the device application. You can treat this as a remote configuration for devices, enabling them to request 
-shared attributes from ThingsBoard. See [user guide](/docs/user-guide/attributes/){:target="_blank"} for more details.
+shared attributes from SENTIENT. See [user guide](/docs/user-guide/attributes/){:target="_blank"} for more details.
 
 The following parameters are used to configure attribute updates:
-- **Key** - the key of the shared attribute in ThingsBoard. It can be specified as a static value.
+- **Key** - the key of the shared attribute in SENTIENT. It can be specified as a static value.
 - **Type** - the type of expression in the **Value** field (more information about types can be found in the [Additional information](/docs/iot-gateway/config/opc-ua/#additional-information) section):
   - **[Path](/docs/iot-gateway/config/opc-ua/#path-types)** - can be absolute or relative path to the node in the OPC-UA server. The value will be taken from the node with the specified path.
   - **[Identifier](/docs/iot-gateway/config/opc-ua/#identifier-types)** - can be numeric, string, byte string or GUID identifier of the node in the OPC-UA server. The value will be taken from the node with the specified identifier.
@@ -205,7 +205,7 @@ More usage examples can be found in the [Usage examples](/docs/iot-gateway/confi
 
 ### Subsection "RPC methods"
 
-ThingsBoard allows sending [RPC commands](https://thingsboard.io/docs/user-guide/rpc/) to devices connected directly to ThingsBoard or via Gateway.
+SENTIENT allows sending [RPC commands](https://docs.sentient.invenia.in/docs/user-guide/rpc/) to devices connected directly to SENTIENT or via Gateway.
 The following parameters are used to configure RPC methods:
 
 - **Method name** - the name of the method on OPC-UA server.
@@ -260,7 +260,7 @@ The server object specifies the target OPC-UA server and how the gateway interac
 | server.subCheckPeriodInMillis (in ms)              | **100**           | Defines the publishing/check interval that the connector requests when creating OPC-UA subscriptions.                                                                                                                                                                                                                                             |
 | server.subKeepAlivePeriodInSeconds (in seconds) ** | **0**             | The interval at which the connector checks whether OPC-UA subscriptions are still “alive” (i.e., the publish/data-change flow is not stalled). This check is disabled by default (set to 0). If a subscription shows no activity longer than this threshold, the connector treats it as expired and triggers resubscription to restore updates.   |
 | server.subDataMaxBatchSize                         | **1000**          | Maximum number of data items in a single subscription update. This is useful for performance optimization.                                                                                                                                                                                                                                        |
-| server.subDataMinBatchCreationTimeMs (in ms)       | **200**           | Minimum time in milliseconds to wait before creating a new batch of data items in a subscription update. This helps to reduce the number of updates sent to ThingsBoard.                                                                                                                                                                          |
+| server.subDataMinBatchCreationTimeMs (in ms)       | **200**           | Minimum time in milliseconds to wait before creating a new batch of data items in a subscription update. This helps to reduce the number of updates sent to SENTIENT.                                                                                                                                                                          |
 | server.subscriptionProcessBatchSize                | **2000**          | Maximum number of data items to process in a single batch when handling subscription updates. This is useful for performance optimization.                                                                                                                                                                                                        |
 | server.sessionTimeoutInMillis (in ms)              | **120000**        | Session timeout in milliseconds. This is the maximum time the session can be inactive before it is closed by the server.                                                                                                                                                                                                                          |
 | server.showMap                                     | **false**         | If true - the gateway will show a map of OPC-UA server nodes in the terminal. This is useful for debugging and understanding the structure of the OPC-UA server.                                                                                                                                                                                  |
@@ -346,9 +346,9 @@ Example of the basic certificates configuration:
 ```json
 "identity": {
   "type": "cert.PEM",
-  "caCert": "etc/thingsboard-gateway/ca.pem",
-  "privateKey": "etc/thingsboard-gateway/private_key.pem", 
-  "cert": "etc/thingsboard-gateway/cert.pem",
+  "caCert": "etc/sentient-gateway/ca.pem",
+  "privateKey": "etc/sentient-gateway/private_key.pem", 
+  "cert": "etc/sentient-gateway/cert.pem",
   "mode": "SignAndEncrypt",
   "username": "user",
   "password": "5Tr0nG?@$sW0rD"
@@ -358,7 +358,7 @@ Example of the basic certificates configuration:
 ### Mapping
 
 The Mapping list is used to configure how the OPC-UA connector will map data from the OPC-UA server to
-ThingsBoard devices. It allows you to specify which nodes from the OPC-UA server will be used as device names,
+SENTIENT devices. It allows you to specify which nodes from the OPC-UA server will be used as device names,
 device profiles, device attributes, and telemetry data.
 
 #### Device mapping
@@ -400,13 +400,13 @@ Example of the device mapping configuration:
 
 | **Parameter**                            | **Description**                                                                                                                                            |
 |:-----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| mapping[].attributes[]                   | List of attributes that will be sent to the ThingsBoard platform instance.                                                                                 |
-| mapping[].attributes[].key               | Key name of the attribute in ThingsBoard. It can be specified as a static value.                                                                           |
+| mapping[].attributes[]                   | List of attributes that will be sent to the SENTIENT platform instance.                                                                                 |
+| mapping[].attributes[].key               | Key name of the attribute in SENTIENT. It can be specified as a static value.                                                                           |
 | mapping[].attributes[].type              | Type of the expression in the value field (can be [path](#path-types), [identifier](#identifier-types) or constant).                                       |
 | mapping[].attributes[].value             | Value of the attribute that will be sent to the platform. It should be specified depending on the selected type (`path`, `identifier` or `constant`).      |
 | mapping[].attributes[].reportStrategy    | (Optional) Report strategy for the attributes data. If not specified, the device report strategy will be used.                                             |
-| mapping[].timeseries[]                   | List of telemetry data that will be sent to the ThingsBoard platform instance.                                                                             |
-| mapping[].timeseries[].key               | Key name of the telemetry data in ThingsBoard. It can be specified as a static value.                                                                      |
+| mapping[].timeseries[]                   | List of telemetry data that will be sent to the SENTIENT platform instance.                                                                             |
+| mapping[].timeseries[].key               | Key name of the telemetry data in SENTIENT. It can be specified as a static value.                                                                      |
 | mapping[].timeseries[].type              | Type of the expression in the value field (can be [path](#path-types), [identifier](#identifier-types) or constant).                                       |
 | mapping[].timeseries[].value             | Value of the telemetry data that will be sent to the platform. It should be specified depending on the selected type (`path`, `identifier` or `constant`). |
 | mapping[].timeseries[].timestampLocation | (Optional) Location of the timestamp for the attribute. If not specified, the current time will be used. Can be: `sourcetimestamp`, `servertimestamp`      |
@@ -447,7 +447,7 @@ Example of the attributes and telemetry configuration:
 | **Parameter**                                  | **Default value** | **Description**                                                                                                                                     |
 |:-----------------------------------------------|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
 | mapping[].attributes_updates[]                 |                   | List of attributes that will be updated on the device.                                                                                              |
-| mapping[].attributes_updates[].key             |                   | Key name of the shared attribute in ThingsBoard. It can be specified as a static value.                                                             |
+| mapping[].attributes_updates[].key             |                   | Key name of the shared attribute in SENTIENT. It can be specified as a static value.                                                             |
 | mapping[].attributes_updates[].type            |                   | Type of the expression in the value field (can be [path](#path-types), [identifier](#identifier-types) or constant).                                |
 | mapping[].attributes_updates[].value           |                   | Value of the attribute that will be sent to the device. It should be specified depending on the selected type (`path`, `identifier` or `constant`). |
 | mapping[].attributes_updates[].timeout (in ms) | **5000**          | Timeout in milliseconds for the attribute update request.                                                                                           |
@@ -604,9 +604,9 @@ byte string (`b`), and GUID (`g`). Below is an explanation of each identifier ty
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
- - [How to connect OPC-UA device to ThingsBoard CE using ThingsBoard IoT Gateway](/docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-thingsboard-ce/)
- - [ThingsBoard IoT Gateway Features](/docs/iot-gateway/features/)
+Explore guides related to main SENTIENT features:
+ - [How to connect OPC-UA device to SENTIENT using SENTIENT IoT Gateway](/docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-sentient-ce/)
+ - [SENTIENT IoT Gateway Features](/docs/iot-gateway/features/)
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

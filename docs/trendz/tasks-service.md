@@ -1,9 +1,9 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Tasks 
-description: Task Service in Trendz
+description: Task Service in SENTIENT ANALYTICS
 ---
 
 * TOC
@@ -11,7 +11,7 @@ description: Task Service in Trendz
 
 ## Tasks Tab
 
-The Task Service in Trendz is a key feature for managing and running tasks related to data processing and calculations. It takes care of scheduling, running, and monitoring these tasks,
+The Task Service in SENTIENT ANALYTICS is a key feature for managing and running tasks related to data processing and calculations. It takes care of scheduling, running, and monitoring these tasks,
 ensuring that data updates and calculations happen efficiently and on time. This service is essential for automating and optimizing the handling of both real-time data and reprocessing historical data, helping you manage large datasets effectively.
 To see your tasks, go to the Tasks section in the main menu. Here, you will find a list of all tasks with a brief overview. Use the Job Type Filter to choose between different types of tasks:
 * Execute task sequence
@@ -34,7 +34,7 @@ To see your tasks, go to the Tasks section in the main menu. Here, you will find
 * Run custom prompt
 * Generate view summary
 
-![image](/images/trendz/tasks-types.png)
+![image](/images/sentient-analytics/tasks-types.png)
 
 **Stop All Tasks** button is designed to immediately stop all running executions of tasks in the system. This action terminates any tasks that are currently in progress but does not delete the tasks themselves or affect their configurations.
 
@@ -57,7 +57,7 @@ Within the task details, you can also manage tasks by:
 
 The Tasks section helps you easily monitor and control the execution of tasks, keeping your system running smoothly. From the task details, you can quickly go to the related entity for further management.
 
-![image](/images/trendz/tasks-go-to-entity.png)
+![image](/images/sentient-analytics/tasks-go-to-entity.png)
 
 ## Executions Tab
 
@@ -66,5 +66,5 @@ The tab lists all executions, allowing you to filter them by their status: **All
 For each execution, you can see details such as: **Time Started, Duration, Time Finished, Status.**
 This tab is crucial for monitoring the performance and health of your tasks, enabling you to quickly identify and address any issues that arise during execution.
 
-![image](/images/trendz/tasks-executions.png)
+![image](/images/sentient-analytics/tasks-executions.png)
 

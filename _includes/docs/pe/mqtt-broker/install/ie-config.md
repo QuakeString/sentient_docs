@@ -38,13 +38,13 @@
 			<td>queue.integration-downlink.poll-interval</td>
 			<td>TB_IE_DOWNLINK_POLL_INTERVAL</td>
 			<td>1000</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.ie.downlink' topics</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.ie.downlink' topics</td>
 		</tr>
 		<tr>
 			<td>queue.integration-msg.poll-interval</td>
 			<td>TB_IE_MSG_POLL_INTERVAL</td>
 			<td>1000</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.msg.ie' topics</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.msg.ie' topics</td>
 		</tr>
 		<tr>
 			<td>queue.integration-msg.pack-processing-timeout</td>
@@ -56,7 +56,7 @@
 			<td>queue.integration-msg.ack-strategy.type</td>
 			<td>TB_IE_MSG_ACK_STRATEGY_TYPE</td>
 			<td>SKIP_ALL</td>
-			<td> Processing strategy for 'tbmq.msg.ie' topics. Can be: SKIP_ALL, RETRY_ALL</td>
+			<td> Processing strategy for 'st-rmqtt.msg.ie' topics. Can be: SKIP_ALL, RETRY_ALL</td>
 		</tr>
 		<tr>
 			<td>queue.integration-msg.ack-strategy.retries</td>
@@ -80,11 +80,11 @@
 			<td>queue.kafka.enable-topic-deletion</td>
 			<td>TB_KAFKA_ENABLE_TOPIC_DELETION</td>
 			<td>true</td>
-			<td> Controls whether TBMQ is allowed to delete Kafka topics that were created for
+			<td> Controls whether ST-RMQTT is allowed to delete Kafka topics that were created for
  Integrations.
- When set to 'true', TBMQ may automatically remove topics during cleanup
+ When set to 'true', ST-RMQTT may automatically remove topics during cleanup
  (for example, when the Integration is deleted).
- When set to 'false', TBMQ will skip topic deletions and simply stop using them.
+ When set to 'false', ST-RMQTT will skip topic deletions and simply stop using them.
  This helps prevent accidental data loss in production environments</td>
 		</tr>
 		<tr>
@@ -207,128 +207,128 @@
 		<tr>
 			<td>queue.kafka.integration-downlink.topic-prefix</td>
 			<td>TB_KAFKA_IE_DOWNLINK_TOPIC_PREFIX</td>
-			<td>tbmq.ie.downlink</td>
-			<td> Prefix for topics for sending integration configurations and validation requests from tbmq to integration executors</td>
+			<td>st-rmqtt.ie.downlink</td>
+			<td> Prefix for topics for sending integration configurations and validation requests from st-rmqtt to integration executors</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.http.topic-properties</td>
 			<td>TB_KAFKA_IE_DOWNLINK_HTTP_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:6;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.downlink.http` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.downlink.http` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.http.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_HTTP_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.downlink.http` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.downlink.http` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.http.additional-producer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_HTTP_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.downlink.http` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.downlink.http` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.kafka.topic-properties</td>
 			<td>TB_KAFKA_IE_DOWNLINK_KAFKA_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:6;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.downlink.kafka` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.downlink.kafka` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.kafka.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_KAFKA_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.downlink.kafka` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.downlink.kafka` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.kafka.additional-producer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_KAFKA_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.downlink.kafka` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.downlink.kafka` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.mqtt.topic-properties</td>
 			<td>TB_KAFKA_IE_DOWNLINK_MQTT_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:6;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.downlink.mqtt` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.downlink.mqtt` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.mqtt.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_MQTT_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.downlink.mqtt` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.downlink.mqtt` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.mqtt.additional-producer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_MQTT_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.downlink.mqtt` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.downlink.mqtt` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink.topic</td>
 			<td>TB_KAFKA_IE_UPLINK_TOPIC</td>
-			<td>tbmq.ie.uplink</td>
-			<td> Topic for sending messages/events from integration executors to tbmq</td>
+			<td>st-rmqtt.ie.uplink</td>
+			<td> Topic for sending messages/events from integration executors to st-rmqtt</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink.topic-properties</td>
 			<td>TB_KAFKA_IE_UPLINK_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:6;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.uplink` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.uplink` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_UPLINK_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.uplink` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.uplink` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink.additional-producer-config</td>
 			<td>TB_KAFKA_IE_UPLINK_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.uplink` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.uplink` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink-notifications.topic-prefix</td>
 			<td>TB_KAFKA_IE_UPLINK_NOTIF_TOPIC_PREFIX</td>
-			<td>tbmq.ie.uplink.notifications</td>
-			<td> Prefix for topics for sending notifications or replies from integration executors to specific tbmq node</td>
+			<td>st-rmqtt.ie.uplink.notifications</td>
+			<td> Prefix for topics for sending notifications or replies from integration executors to specific st-rmqtt node</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink-notifications.topic-properties</td>
 			<td>TB_KAFKA_IE_UPLINK_NOTIF_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.uplink.notifications` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.uplink.notifications` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink-notifications.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_UPLINK_NOTIF_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.uplink.notifications` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.uplink.notifications` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink-notifications.additional-producer-config</td>
 			<td>TB_KAFKA_IE_UPLINK_NOTIF_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.uplink.notifications` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.uplink.notifications` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-msg.topic-properties</td>
 			<td>TB_KAFKA_IE_MSG_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.msg.ie` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.msg.ie` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-msg.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_MSG_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td>max.poll.records:50</td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.msg.ie` topics</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.msg.ie` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-msg.additional-producer-config</td>
 			<td>TB_KAFKA_IE_MSG_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.msg.ie` topics</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.msg.ie` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.kafka-prefix</td>
@@ -352,8 +352,8 @@
 		<tr>
 			<td>service.type</td>
 			<td>TB_SERVICE_TYPE</td>
-			<td>tbmq-integration-executor</td>
-			<td> Microservice type. Allowed value: tbmq-integration-executor</td>
+			<td>st-rmqtt-integration-executor</td>
+			<td> Microservice type. Allowed value: st-rmqtt-integration-executor</td>
 		</tr>
 		<tr>
 			<td>service.id</td>
@@ -453,7 +453,7 @@
 			<td>integrations.uplink.callback-threads-count</td>
 			<td>INTEGRATIONS_UPLINK_THREADS</td>
 			<td>4</td>
-			<td> Number of threads in the pool to process callbacks of uplink events to tbmq nodes</td>
+			<td> Number of threads in the pool to process callbacks of uplink events to st-rmqtt nodes</td>
 		</tr>
 		<tr>
 			<td>integrations.manage.lifecycle-threads-count</td>
@@ -503,7 +503,7 @@
 			<td>management.endpoint.health.show-details</td>
 			<td>HEALTH_SHOW_DETAILS</td>
 			<td>never</td>
-			<td> Controls whether health endpoint shows full component details (e.g., Redis, DB, TBMQ).
+			<td> Controls whether health endpoint shows full component details (e.g., Redis, DB, ST-RMQTT).
  Options:
  - 'never': always hide details (default if security is enabled).
  - 'when-authorized': show details only to authenticated users.

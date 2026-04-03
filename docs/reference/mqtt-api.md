@@ -9,7 +9,7 @@ redirect_from: "/docs/reference/mqtt-api"
 server-side-rpc:
     0:
         image: /images/reference/device-connectivity-apis/server-side-rpc-mqtt-1-ce.png
-        title: 'Use RPC debug terminal widget in your ThingsBoard instance'
+        title: 'Use RPC debug terminal widget in your SENTIENT instance'
     1:
         image: /images/reference/device-connectivity-apis/server-side-rpc-mqtt-2-ce.png
         title: 'Subscribe to RPC commands from the server'

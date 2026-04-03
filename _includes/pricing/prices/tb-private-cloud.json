@@ -18,8 +18,8 @@
       "edgeMonthPrice": 249,
       "edgeInstancesIncluded": 10,
       "extraEdgePrice": 39,
-      "trendzMonthPrice": 449,
-      "trendzExtraDevicePrice": 0.03
+      "sentient-analyticsMonthPrice": 449,
+      "sentient-analyticsExtraDevicePrice": 0.03
     },
     {
       "name": "Growth",
@@ -35,8 +35,8 @@
       "edgeMonthPrice": 379,
       "edgeInstancesIncluded": 20,
       "extraEdgePrice": 39,
-      "trendzMonthPrice": 659,
-      "trendzExtraDevicePrice": 0.03
+      "sentient-analyticsMonthPrice": 659,
+      "sentient-analyticsExtraDevicePrice": 0.03
     },
     {
       "name": "Scale",
@@ -52,8 +52,8 @@
       "edgeMonthPrice": 679,
       "edgeInstancesIncluded": 30,
       "extraEdgePrice": 39,
-      "trendzMonthPrice": 1199,
-      "trendzExtraDevicePrice": 0.03
+      "sentient-analyticsMonthPrice": 1199,
+      "sentient-analyticsExtraDevicePrice": 0.03
     }
   ]
 }

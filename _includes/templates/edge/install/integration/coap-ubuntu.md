@@ -1,7 +1,7 @@
 Download the installation package:
 
 ```bash
-wget https://dist.thingsboard.io/tb-coap-integration-{{ site.release.pe_ver }}.deb
+wget https://dist.docs.sentient.invenia.in/tb-coap-integration-{{ site.release.pe_ver }}.deb
 ```
 {: .copy-code}
 
@@ -23,7 +23,7 @@ Locate the following configuration block:
 
 ```bash
 # UNCOMMENT NEXT LINES AND PUT YOUR CONNECTION PARAMETERS:
-# export RPC_HOST=thingsboard.cloud
+# export RPC_HOST=sentient.cloud
 # export RPC_PORT=9090
 # export INTEGRATION_ROUTING_KEY=YOUR_INTEGRATION_KEY
 # export INTEGRATION_SECRET=YOUR_INTEGRATION_SECRET
@@ -48,7 +48,7 @@ export INTEGRATION_ROUTING_KEY=b75**************************34d
 export INTEGRATION_SECRET=vna**************mik
 ```
 
-Execute the following command to start ThingsBoard integration:
+Execute the following command to start SENTIENT integration:
 
 ```bash
 sudo service tb-coap-integration start

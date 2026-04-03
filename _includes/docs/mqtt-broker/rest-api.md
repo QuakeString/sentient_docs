@@ -4,7 +4,7 @@
 
 ## Swagger UI
 
-After installing TBMQ, you can explore the REST API using the Swagger UI.
+After installing ST-RMQTT, you can explore the REST API using the Swagger UI.
 
 Access the Swagger UI by opening the following URL:
 
@@ -19,8 +19,8 @@ http://localhost:8083/swagger-ui/
 ```
 {: .copy-code}
 
-This URL will provide you with an interactive interface to navigate and interact with the available REST API endpoints of TBMQ.
-By utilizing the Swagger UI, you can conveniently explore the functionality, test API calls, and gather information about the server-side APIs provided by TBMQ.
+This URL will provide you with an interactive interface to navigate and interact with the available REST API endpoints of ST-RMQTT.
+By utilizing the Swagger UI, you can conveniently explore the functionality, test API calls, and gather information about the server-side APIs provided by ST-RMQTT.
 
 The documentation page will automatically use your credentials if you have previously authorized on the main login page.
 This allows you to seamlessly access the documentation without the need for additional authentication.
@@ -34,7 +34,7 @@ By utilizing the "Authorize" button, you have the flexibility to authenticate as
 
 ## JWT Tokens
 
-TBMQ leverages [JWT](https://jwt.io/) (JSON Web Tokens) for securely representing claims between the API client (such as browsers and scripts) and the platform. 
+ST-RMQTT leverages [JWT](https://jwt.io/) (JSON Web Tokens) for securely representing claims between the API client (such as browsers and scripts) and the platform. 
 JWT tokens are used as a mechanism to exchange information securely.
 
 When you log in to the broker, your username and password are exchanged for a pair of tokens. These tokens, in the form of JWT, 
@@ -46,7 +46,7 @@ The main token is short-lived token you should use to perform the API calls. The
 The expiration time of main and refresh tokens is [configurable](/docs/{{docsPrefix}}mqtt-broker/install/config/) in system settings
 via `JWT_TOKEN_EXPIRATION_TIME` and `JWT_REFRESH_TOKEN_EXPIRATION_TIME` parameters. Default expiration time values are 2.5 hours and 1 week respectively.
 
-See sample command below to get the token for user "sysadmin@thingsboard.org", password "sysadmin" and server "THINGSBOARD_MQTT_BROKER_URL":
+See sample command below to get the token for user "sysadmin@sentient.org", password "sysadmin" and server "SENTIENT_MQTT_BROKER_URL":
 
 {% capture tabspec %}token
 A,get-token.sh,shell,reference/resources/get-token.sh,/docs/{{docsPrefix}}mqtt-broker/reference/resources/get-token.sh

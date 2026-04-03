@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: ODBC Connector Configuration
-description: ODBC support for ThingsBoard IoT Gateway
+description: ODBC support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with ODBC connector configuration for ThingsBoard IoT Gateway.
+This guide will help you get familiar with ODBC connector configuration for SENTIENT IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this connector.
 We will describe the connector configuration file below.
 
@@ -18,7 +18,7 @@ We will describe the connector configuration file below.
 
 {
   "connection": {
-    "str": "Driver={PostgreSQL};Server=localhost;Port=5432;Database=thingsboard;Uid=postgres;Pwd=postgres;",
+    "str": "Driver={PostgreSQL};Server=localhost;Port=5432;Database=sentient;Uid=postgres;Pwd=postgres;",
     "attributes": {
       "autocommit": true,
       "timeout": 0
@@ -79,7 +79,7 @@ We will describe the connector configuration file below.
 To install and get ODBC connector working, several additional steps need to be done:
 
 1. Install [Visual C++ Redistributable package](https://github.com/mkleehammer/pyodbc/wiki/Install#installing-on-windows) for Windows or [ODBC package](https://github.com/mkleehammer/pyodbc/wiki/Install#installing-on-linux) for Linux.
-2. Install ODBC driver(s) for database(s) the ThingsBoard gateway needs to connect to.
+2. Install ODBC driver(s) for database(s) the SENTIENT gateway needs to connect to.
 3. Add data source in [ODBC Data source Administrator](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/open-the-odbc-data-source-administrator) on Windows or add driver information (name, library path etc.) to ODBC configuration file [odbcinst.ini](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers#odbc-configuration-files-unix-only) on Unix systems. 
 
 ## Section "connection"
@@ -140,7 +140,7 @@ This **mandatory** section provides information on how often to query the databa
 
 **The requirements for the *query* option**:
 
-1. Valid SQL *SELECT* statement that meets requirements of SQL dialect of the database the ThingsBoard gateway needs to connect to.
+1. Valid SQL *SELECT* statement that meets requirements of SQL dialect of the database the SENTIENT gateway needs to connect to.
 2. Include *attributes* or/and *timeseries* columns in _SELECT_ list.
 3. Include the [*device*](/docs/iot-gateway/config/odbc/#subsection-device) column in the _SELECT_ list to determine to which device data belongs to.
 4. Include the [*iterator*](/docs/iot-gateway/config/odbc/#subsection-iterator) column in the _SELECT_ list.
@@ -225,7 +225,7 @@ This **mandatory** subsection provides information on how to map the result set 
 | **Parameter**               | **Default value**   | **Description**                     |
 |:-|:-|-
 | **name**                    |                     | Python [eval()](https://docs.python.org/3/library/functions.html#eval) expression to generate **unique** device name. |
-| type                        | **odbc**            | ThingsBoard device type. |
+| type                        | **odbc**            | SENTIENT device type. |
 
 **Note** All database columns listed in SQL *SELECT* clause of the [query](/docs/iot-gateway/config/odbc/#section-polling) option are available by their name in the Python [eval()](https://docs.python.org/3/library/functions.html#eval) context.
 
@@ -238,7 +238,7 @@ For example,
 means that the device name is a result of concatenating two strings: *ODBC* and the value of database column *entity_id*.
 
 ### Subsections "attributes" and "timeseries"
-These **optional** subsections provide information on which database columns are to be treated as attributes, which ones as time series keys, and what pre-processing tasks should be done before sending data to the ThingsBoard server.
+These **optional** subsections provide information on which database columns are to be treated as attributes, which ones as time series keys, and what pre-processing tasks should be done before sending data to the SENTIENT server.
 
 The connector supports several configuration modes for these subsections:
 
@@ -362,7 +362,7 @@ If *overrideRpcConfig* is set to *true*, [RPC params](/docs/reference/gateway-mq
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

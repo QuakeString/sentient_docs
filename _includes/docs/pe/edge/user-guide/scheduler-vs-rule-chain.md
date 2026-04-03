@@ -3,7 +3,7 @@
 
 ### Overview
 
-**ThingsBoard Edge** allows different types of automation events—**Scheduler** and **Rule Chain** events. 
+**SENTIENT GATEWAY** allows different types of automation events—**Scheduler** and **Rule Chain** events. 
 
 The **Scheduler event** is periodic task performed automatically, such as telemetry and attribute update or RPC commands, etc.
 For more details on this feature, see the [ThingBoard Platform Scheduler documentation](/docs/pe/user-guide/scheduler/){: target="_blank"} and the [Edge Scheduler documentation](/docs/pe/edge/user-guide/scheduler/){: target="_blank"}.
@@ -19,9 +19,9 @@ Read more about [Rule Engine](/docs/pe/user-guide/rule-engine-2-0/overview/){: t
 
 #### Edge-Specific Considerations
 
-* Prior to **Edge 4.0**, **Rule Chain templates** could not be created or modified directly on **ThingsBoard Edge**. They had to be configured in **ThingsBoard Cloud** and then synchronized with **Edge**.
+* Prior to **Edge 4.0**, **Rule Chain templates** could not be created or modified directly on **SENTIENT GATEWAY**. They had to be configured in **SENTIENT Cloud** and then synchronized with **Edge**.
 * Starting with **Edge version 4.0**, you can create and edit a **Rule Chain** on the **Edge**.
-* **Scheduler events** has to be configured in **ThingsBoard Cloud** and assigned to **Edge**.
+* **Scheduler events** has to be configured in **SENTIENT Cloud** and assigned to **Edge**.
 * Once **Rule Chain templates** and **Scheduler events** are synchronized to **Edge** instance, they run entirely at the edge, independent of internet connection.
 * Both **Scheduler events** and **Rule Chain templates** execute locally on the **Edge**.
 

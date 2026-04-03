@@ -1,13 +1,13 @@
 ## Cluster deletion
 
-Execute the following command to delete all ThingsBoard pods:
+Execute the following command to delete all SENTIENT pods:
 
 ```bash
 ./k8s-delete-resources.sh
 ```
 {: .copy-code}
 
-Execute the following command to delete all ThingsBoard pods and configmaps:
+Execute the following command to delete all SENTIENT pods and configmaps:
 
 ```bash
 ./k8s-delete-all.sh

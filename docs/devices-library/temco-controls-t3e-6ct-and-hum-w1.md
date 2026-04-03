@@ -1,5 +1,5 @@
 ---
 layout: docwithnav
-title: "How to connect Temco T3E-6CT to ThingsBoard?"
+title: "How to connect Temco T3E-6CT to SENTIENT?"
 redirect_to: "/device-library/ce/temco-controls-t3e-6ct-and-hum-w1/"
 ---

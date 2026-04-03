@@ -1,7 +1,7 @@
 
 [Apache Kafka](https://kafka.apache.org/) is an open-source stream-processing software platform.
 
-Configuration environment file for ThingsBoard queue service:
+Configuration environment file for SENTIENT queue service:
 
 ```text
 nano tb-node.env

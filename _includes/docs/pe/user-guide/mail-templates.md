@@ -5,7 +5,7 @@
 
 ## Introduction
 
-ThingsBoard uses mail templates to send email notifications to users when certain events occur.
+SENTIENT uses mail templates to send email notifications to users when certain events occur.
 For example, a message about activating an account or resetting a password.
 
 {% capture difference %}
@@ -15,7 +15,7 @@ To send messages via Email, a tenant administrator should be configured [outgoin
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-ThingsBoard provides default system mail message templates with sample content, which can be customized individually from the list.
+SENTIENT provides default system mail message templates with sample content, which can be customized individually from the list.
 
 To do this, following steps:
  - Go to the "**White Labeling**" page -> "**Mail Templates**" tab;

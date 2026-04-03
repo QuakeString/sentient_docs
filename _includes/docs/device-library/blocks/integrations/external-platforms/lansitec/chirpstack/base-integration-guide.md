@@ -59,7 +59,7 @@ To add a gateway, follow next steps:
         title: Fill in the required fields with your device information and specify the previously created device profile.
     ===
         image: /images/devices-library/ready-to-go-devices/lansitec-lorawan/application-5.png,
-        title: Go to the **Variables** tab, enter the value for **ThingsBoardAccessToken**, and click the **Submit** button.
+        title: Go to the **Variables** tab, enter the value for **SENTIENTAccessToken**, and click the **Submit** button.
     ===
         image: /images/devices-library/ready-to-go-devices/lansitec-lorawan/application-6.png,
         title: Put your **Application key** to the field and click on **Submit** button to save the device.
@@ -68,21 +68,21 @@ To add a gateway, follow next steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=application %}
 
-### Configure application integration with ThingsBoard
+### Configure application integration with SENTIENT
 
-{% assign thingsboard = '
+{% assign sentient = '
     ===
-        image: /images/devices-library/ready-to-go-devices/lansitec-lorawan/thingsboard-1.png,
-        title: Go to the **Integrations** page, find and select the **ThingsBoard**.
+        image: /images/devices-library/ready-to-go-devices/lansitec-lorawan/sentient-1.png,
+        title: Go to the **Integrations** page, find and select the **SENTIENT**.
     ===
-        image: /images/devices-library/ready-to-go-devices/lansitec-lorawan/thingsboard-2.png,
-        title: Enter **the URL of your ThingsBoard server** and click **Submit** button.
+        image: /images/devices-library/ready-to-go-devices/lansitec-lorawan/sentient-2.png,
+        title: Enter **the URL of your SENTIENT server** and click **Submit** button.
 '
 %}
 
-{% include images-gallery.liquid showListImageTitles="true" imageCollection=thingsboard %}
+{% include images-gallery.liquid showListImageTitles="true" imageCollection=sentient %}
 
-### Create device on ThingsBoard
+### Create device on SENTIENT
 
 {% assign devices = '
     ===

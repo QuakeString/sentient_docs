@@ -14,13 +14,13 @@ Provide the following fields in the opened model window:
 - **Poll period** - the period of time when the connector will try to poll BACnet device;
 - **Advanced configuration settings**:
   - **Alternative responses addresses** - the alternative address for responses from the device (you can find detail examples [here](/docs/iot-gateway/config/bacnet/#usage-examples)).
-- **Report strategy** - strategy for sending data to ThingsBoard:
-  - **Report period** - period for sending data to ThingsBoard in milliseconds;
+- **Report strategy** - strategy for sending data to SENTIENT:
+  - **Report period** - period for sending data to SENTIENT in milliseconds;
   - **Type** - type of the report strategy:
-    - **On report period** - sends data to ThingsBoard after the report period;
-    - **On value change** - sends data to ThingsBoard when the value changes;
-    - **On value change or report period** - sends data to ThingsBoard when the value changes or after the report period;
-    - **On received** - sends data to ThingsBoard after receiving data from the device (default strategy).
+    - **On report period** - sends data to SENTIENT after the report period;
+    - **On value change** - sends data to SENTIENT when the value changes;
+    - **On value change or report period** - sends data to SENTIENT when the value changes or after the report period;
+    - **On received** - sends data to SENTIENT after receiving data from the device (default strategy).
 
 {% capture difference %}
 All configuration parameters list, and their detailed description can be found in the

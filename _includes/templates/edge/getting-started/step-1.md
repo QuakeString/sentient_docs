@@ -1,7 +1,7 @@
-In **ThingsBoard**, the **device** is the key entity that generates telemetry data, which is stored and processed for dashboards and analytics. 
-**ThingsBoard** also provides a **virtual device shell** for sending telemetry on behalf of the physical device for testing purposes.
+In **SENTIENT**, the **device** is the key entity that generates telemetry data, which is stored and processed for dashboards and analytics. 
+**SENTIENT** also provides a **virtual device shell** for sending telemetry on behalf of the physical device for testing purposes.
 
-To add a new device on the **Edge**, log in to your **ThingsBoard Edge** instance at **EDGE_URL** and follow these steps:
+To add a new device on the **Edge**, log in to your **SENTIENT GATEWAY** instance at **EDGE_URL** and follow these steps:
 
 {% include images-gallery.html imageCollection="step1" showListImageTitles="true" %}
 
@@ -10,6 +10,6 @@ In addition, the following may be used:
 * [REST API](/docs/{{peDocsPrefix}}api/){: target="_blank"}: Use to add devices and other entities programmatically.
 
 {% capture local-deployment %}
-Once a device is created on the **Edge**, it will be **automatically provisioned** to the **ThingsBoard server**. To view the Edge device on the Server, visit the **SERVER_URL** and navigate to the **Entities > Devices** section.
+Once a device is created on the **Edge**, it will be **automatically provisioned** to the **SENTIENT server**. To view the Edge device on the Server, visit the **SERVER_URL** and navigate to the **Entities > Devices** section.
 {% endcapture %}
 {% include templates/info-banner.md content=local-deployment %}

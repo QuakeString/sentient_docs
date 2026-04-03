@@ -15,7 +15,7 @@
           "layoutX": 351,
           "layoutY": 150
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Has Temperature",
         "debugMode": true,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 668,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "High Temperature Filter",
         "debugMode": true,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 992,
           "layoutY": 68
         },
-        "type": "org.thingsboard.rule.engine.action.TbAddToGroupNode",
+        "type": "org.sentient.rule.engine.action.TbAddToGroupNode",
         "name": "High Temperature Group",
         "debugMode": true,
         "configuration": {
@@ -53,7 +53,7 @@
           "layoutX": 995,
           "layoutY": 204
         },
-        "type": "org.thingsboard.rule.engine.action.TbRemoveFromGroupNode",
+        "type": "org.sentient.rule.engine.action.TbRemoveFromGroupNode",
         "name": "High Temperature Group",
         "debugMode": true,
         "configuration": {

@@ -24,7 +24,7 @@
     "mode":"post",
     "path":"api/v1/swQYq04wk17QfdQI86Ai/telemetry",
     "attributes_path":"api/v1/swQYq04wk17QfdQI86Ai/attributes",
-    "server":"thingsboard.cloud",
+    "server":"sentient.cloud",
     "port":80,
     "username":"",
     "password":"",

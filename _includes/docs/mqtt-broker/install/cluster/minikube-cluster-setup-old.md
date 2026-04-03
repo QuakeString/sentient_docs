@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-This guide will help you to set up TBMQ in cluster mode using Minikube.
+This guide will help you to set up ST-RMQTT in cluster mode using Minikube.
 
 ## Prerequisites
 
@@ -9,29 +9,29 @@ You need to have a Kubernetes cluster, and the `kubectl` command-line tool must 
 If you don't have Minikube installed, please follow [these instructions](https://kubernetes.io/docs/setup/learning-environment/minikube/).
 Additionally, you will need [helm](https://helm.sh/docs/intro/install/) to be installed.
 
-## Step 1. Clone TBMQ repository
+## Step 1. Clone ST-RMQTT repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq.git
-cd tbmq/k8s/minikube
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt.git
+cd st-rmqtt/k8s/minikube
 ```
 {: .copy-code}
 
 ## Step 2. Installation
 
-To install TBMQ execute the following command:
+To install ST-RMQTT execute the following command:
 
 ```bash
-./k8s-install-tbmq.sh
+./k8s-install-st-rmqtt.sh
 ```
 {: .copy-code}
 
 ## Step 3. Running
 
-Execute the following command to deploy TBMQ:
+Execute the following command to deploy ST-RMQTT:
 
 ```bash
-./k8s-deploy-tbmq.sh
+./k8s-deploy-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -47,7 +47,7 @@ minikube ip
 ## Step 4. Logs, delete statefulsets and services
 
 In case of any issues, you can examine service logs for errors.
-For example to see TBMQ node logs execute the following commands:
+For example to see ST-RMQTT node logs execute the following commands:
 
 1) Get the list of the running tb-broker pods:
 
@@ -93,10 +93,10 @@ kubectl get statefulsets
 
 See [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) command reference for more details.
 
-Execute the following command to delete TBMQ nodes:
+Execute the following command to delete ST-RMQTT nodes:
 
 ```bash
-./k8s-delete-tbmq.sh
+./k8s-delete-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -114,12 +114,12 @@ Execute the following command to delete all resources (including database):
 ### Backup and restore (Optional)
 
 While backing up your PostgreSQL database is highly recommended, it is optional before proceeding with the upgrade.
-For further guidance, follow the [next instructions](https://github.com/thingsboard/tbmq/blob/main/k8s/minikube/backup-restore/README.md).
+For further guidance, follow the [next instructions](https://github.com/sentient/st-rmqtt/blob/main/k8s/minikube/backup-restore/README.md).
 
 ### Upgrade to 2.2.0
 
 In this release, the MQTT authentication mechanism was migrated from YAML/env configuration into the database.
-During upgrade, TBMQ needs to know which authentication providers are enabled in your deployment.
+During upgrade, ST-RMQTT needs to know which authentication providers are enabled in your deployment.
 This information is provided through environment variables passed to the **upgrade pod**.
 
 The upgrade script requires a file named **`database-setup.yml`** that explicitly defines these variables.
@@ -158,12 +158,12 @@ git pull origin {{ site.release.broker_branch }}
 
 After that, execute the following command:
 
-{% capture tabspec %}tbmq-upgrade
-tbmq-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh
-tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md{% endcapture %}
+{% capture tabspec %}st-rmqtt-upgrade
+st-rmqtt-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh
+st-rmqtt-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md{% endcapture %}
 {% include tabs.html %}
 
-{% include templates/mqtt-broker/upgrade/stop-tbmq-pods-before-upgrade.md %}
+{% include templates/mqtt-broker/upgrade/stop-st-rmqtt-pods-before-upgrade.md %}
 
 ## Next steps
 

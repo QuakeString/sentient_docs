@@ -17,7 +17,7 @@ coap://{{coapHostName}}/api/v1/$ACCESS_TOKEN/rpc
 {% endif %}
 
 > Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is your device&#39;s access token.
 
 Both request and response body should be valid JSON documents. The content of the documents is specific to the rule node that will handle your request.
@@ -53,7 +53,7 @@ cat rpc-client-request.json | coap post coap://{{coapHostName}}/api/v1/$ACCESS_T
 {% endif %}
 
 > ⚠️ Replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> with your device&#39;s access token.
 
 - You should receive a response from the server:

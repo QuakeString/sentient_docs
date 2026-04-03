@@ -1,7 +1,7 @@
 ---
 layout: use-case
-title: IoT Energy Management & Monitoring with ThingsBoard
-description: The Smart Energy solution based on ThingsBoard IoT platform enables real-time energy monitoring and optimization. It helps reduce costs, improve energy efficiency, automate management processes, and achieve sustainable development.
+title: IoT Energy Management & Monitoring with SENTIENT
+description: The Smart Energy solution based on SENTIENT IoT platform enables real-time energy monitoring and optimization. It helps reduce costs, improve energy efficiency, automate management processes, and achieve sustainable development.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -16,14 +16,14 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">Smart energy is intelligent energy resource management using IoT to improve efficiency, reduce costs, and automate processes. ThingsBoard is a perfect platform for these tasks, providing scalable data collection, analytics, and real-time remote control.</p>
+                <p class="text">Smart energy is intelligent energy resource management using IoT to improve efficiency, reduce costs, and automate processes. SENTIENT is a perfect platform for these tasks, providing scalable data collection, analytics, and real-time remote control.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_SmartEnergy_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>            </div>
+                <a id="UseCases_SmartEnergy_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>            </div>
             </div>
         <div class="long">
             <p>IoT is radically transforming the approach to energy management. IoT sensors capture the consumption of electricity, water, heat, as well as environmental parameters such as pressure, temperature, and more. This data is used to make automated decisions — from shutting down systems in case of failures to optimizing consumption and preventing losses.</p>
-            <p>The ThingsBoard platform provides a powerful technology stack for building such systems. It supports data collection from various types of devices and protocols (MQTT, CoAP, HTTP, etc.), dashboard visualizations, and advanced automation through its rule engine and alerting system. This enables real-time energy monitoring and rapid response to anomalies, reducing costs and improving operational efficiency.</p>
+            <p>The SENTIENT platform provides a powerful technology stack for building such systems. It supports data collection from various types of devices and protocols (MQTT, CoAP, HTTP, etc.), dashboard visualizations, and advanced automation through its rule engine and alerting system. This enables real-time energy monitoring and rapid response to anomalies, reducing costs and improving operational efficiency.</p>
         </div>
     </div>
 </section>
@@ -31,10 +31,10 @@ contactUsModal: "true"
 <section class="smart-energy-overview">
     <div class="img-comp-container">
         <div class="img-comp-img">
-            <img class="traditional-background" src="/images/usecases/smart-energy/smart-energy-1.webp" alt="ThingsBoard dashboard in light theme showing energy data from smart meters" title="Smart energy monitoring dashboard in light mode: real-time voltage, amperage, consumption, and critical alarms for three smart meters">
+            <img class="traditional-background" src="/images/usecases/smart-energy/smart-energy-1.webp" alt="SENTIENT dashboard in light theme showing energy data from smart meters" title="Smart energy monitoring dashboard in light mode: real-time voltage, amperage, consumption, and critical alarms for three smart meters">
         </div>
         <div class="img-comp-img img-comp-overlay">
-            <img class="traditional-background" src="/images/usecases/smart-energy/smart-energy-2.webp" alt="ThingsBoard dashboard in dark theme with smart meter data visualization" title="Smart energy monitoring in dark mode: ThingsBoard interface displaying real-time metrics and alarm conditions">
+            <img class="traditional-background" src="/images/usecases/smart-energy/smart-energy-2.webp" alt="SENTIENT dashboard in dark theme with smart meter data visualization" title="Smart energy monitoring in dark mode: SENTIENT interface displaying real-time metrics and alarm conditions">
         </div>
     </div>
 </section>
@@ -46,12 +46,12 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">ThingsBoard offers a comprehensive IoT-based energy monitoring solution built on a modular, scalable architecture. At the device level, smart meters and industrial Modbus meters collect real-time data on energy consumption across facilities.</p>
+                <p class="text">SENTIENT offers a comprehensive IoT-based energy monitoring solution built on a modular, scalable architecture. At the device level, smart meters and industrial Modbus meters collect real-time data on energy consumption across facilities.</p>
             </div>
         </div>
         <div class="long">
             <p>These devices connect through IoT gateways that support a wide range of communication protocols, including MQTT, CoAP, HTTP, and LwM2M, ensuring secure and seamless data transmission to the cloud.</p>
-            <p>ThingsBoard core handles device and user management, real-time data processing via a powerful rule engine. The collected data is visualized through intuitive dashboards and mobile applications, giving users clear insights into energy usage, system alarms, and performance metrics — all in real time, from a single interface.</p>
+            <p>SENTIENT core handles device and user management, real-time data processing via a powerful rule engine. The collected data is visualized through intuitive dashboards and mobile applications, giving users clear insights into energy usage, system alarms, and performance metrics — all in real time, from a single interface.</p>
         </div>
     </div>
     <div class="scheme">
@@ -95,7 +95,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>Dashboard structure of smart energy solution</h2>
         <p>
-            The live dashboard displays real-time data from several smart meters collected using ThingsBoard MQTT API. Collected data is processed via the rule engine to raise alarms on certain thresholds. The main dashboard displays the energy meters, corresponding alarms, and real-time data feeds. Click on the alarm or energy meter row to open the meter details. You may export the dashboard from our live demo server and import it to your ThingsBoard instance.    
+            The live dashboard displays real-time data from several smart meters collected using SENTIENT MQTT API. Collected data is processed via the rule engine to raise alarms on certain thresholds. The main dashboard displays the energy meters, corresponding alarms, and real-time data feeds. Click on the alarm or energy meter row to open the meter details. You may export the dashboard from our live demo server and import it to your SENTIENT instance.    
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -325,7 +325,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_SmartEnergy_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
+                <a id="UseCases_SmartEnergy_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
                 <a id="UseCases_SmartEnergy_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
     
@@ -334,11 +334,11 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='/images/usecases/smart-energy/smart-energy-1.webp' alt='ThingsBoard dashboard in light theme showing energy data from smart meters' title='Smart energy monitoring dashboard in light mode: real-time voltage, amperage, consumption, and critical alarms for three smart meters'/>",
+                "<img src='/images/usecases/smart-energy/smart-energy-1.webp' alt='SENTIENT dashboard in light theme showing energy data from smart meters' title='Smart energy monitoring dashboard in light mode: real-time voltage, amperage, consumption, and critical alarms for three smart meters'/>",
                 "<img src='/images/usecases/smart-energy/smart-energy-3.webp' alt='Smart Meter A dashboard on the 1st floor showing voltage, frequency, amperage, and energy consumption' title='Smart Meter A on the 1st floor: real-time monitoring of voltage, frequency, current and weekly energy usage with one active high voltage alarm'/>",
                 "<img src='/images/usecases/smart-energy/smart-energy-4.webp' alt='Smart Meter B dashboard on the 2nd floor with energy data and real-time frequency' title='Smart Meter B on the 2nd floor: displays live voltage, frequency, amperage and energy consumption. No active alarms detected'/>",
                 "<img src='/images/usecases/smart-energy/smart-energy-5.webp' alt='Smart Meter C dashboard on the 3rd floor showing real-time energy metrics and critical alarm' title='Smart Meter C on the 3rd floor: visualization of voltage, frequency, current and consumption, with one unacknowledged low voltage alarm'/>",
-                "<img src='/images/usecases/smart-energy/smart-energy-2.webp' alt='ThingsBoard dashboard in dark theme with smart meter data visualization' title='Smart energy monitoring in dark mode: ThingsBoard interface displaying real-time metrics and alarm conditions'/>",
+                "<img src='/images/usecases/smart-energy/smart-energy-2.webp' alt='SENTIENT dashboard in dark theme with smart meter data visualization' title='Smart energy monitoring in dark mode: SENTIENT interface displaying real-time metrics and alarm conditions'/>",
             ];
             return images[index];
         }

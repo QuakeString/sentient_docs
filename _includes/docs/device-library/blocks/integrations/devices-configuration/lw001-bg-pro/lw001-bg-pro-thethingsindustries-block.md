@@ -33,7 +33,7 @@ To add a device, you can follow next steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=ConfigurePayloadFormatter %}
 
-### Create integration in ThingsBoard
+### Create integration in SENTIENT
 
 At first, copy the code, we will need it to create the uplink converter:  
 
@@ -51,12 +51,12 @@ return result;
   
 In the "Connect" step, you will need the following parameters:  
 - Region: *eu1* (region where your application was registered inside The Things Industries Console);  
-- Username: *thingsboard-application-2025-05@lansitec-testplan* (use Username from integration on The Things Stack Industries);  
+- Username: *sentient-application-2025-05@lansitec-testplan* (use Username from integration on The Things Stack Industries);  
 - Password: use **Password** from integration on The Things Industries. 
 
-Now, navigate to the **Integrations** page under the **Integrations center** section of **your ThingsBoard instance** and follow these steps:
+Now, navigate to the **Integrations** page under the **Integrations center** section of **your SENTIENT instance** and follow these steps:
 
-{% assign createIntegrationInThingsBoard = '
+{% assign createIntegrationInSENTIENT = '
     ===
         image: /images/devices-library/ready-to-go-devices/lw001-bg-pro/31.png,
         title: Click "**plus**" icon in the upper right corner to add new integration. Select "**The Things Stack Industries**" integration type. Then, click "**Next**" button.
@@ -72,17 +72,17 @@ Now, navigate to the **Integrations** page under the **Integrations center** sec
 '
 %}
 
-{% include images-gallery.liquid showListImageTitles="true" imageCollection=createIntegrationInThingsBoard %}
+{% include images-gallery.liquid showListImageTitles="true" imageCollection=createIntegrationInSENTIENT %}
 
-### Check data on ThingsBoard
+### Check data on SENTIENT
 
 So, the device was added and if it sends any data - it should appear in the [devices](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"}. To check it you may open Devices page in Entities section. The device should be in devices list. You can check the data by click on it and open tab Attributes or Latest telemetry.
 
-{% assign checkDataOnThingsBoard = '
+{% assign checkDataOnSENTIENT = '
     ===
         image: /images/devices-library/ready-to-go-devices/lw001-bg-pro/35.png,
         title: So, the device was added and if it sends any data - it should appear in the devices. To check it you may open **Devices** page in **Entities** section. The device should be in devices list. You can check the data by click on it and open tab **Attributes** or **Latest telemetry**.  
 '
 %}
 
-{% include images-gallery.liquid imageCollection=checkDataOnThingsBoard %}
+{% include images-gallery.liquid imageCollection=checkDataOnSENTIENT %}

@@ -10,7 +10,7 @@ add-js-module:
         title: 'Go to the "JavaScript library" page, and click the "plus" icon. In the pop-up that opens, select "Extension" in the "JavaScript type" selector, enter title for your module, and drag the file with your compiled components. Then, click "Add".'
     1:
         image: /images/user-guide/contribution/extensions/add-js-module-2-pe.png
-        title: 'Congratulations, your components were added to the ThingsBoard!'
+        title: 'Congratulations, your components were added to the SENTIENT!'
 
 select-extensions-module:
     0:

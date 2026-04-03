@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: Installing ThingsBoard CE on Azure
-description: Installing ThingsBoard CE on Azure
+title: Installing SENTIENT on Azure
+description: Installing SENTIENT on Azure
 
 ---
 
@@ -10,10 +10,10 @@ description: Installing ThingsBoard CE on Azure
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <span class="heading">ThingsBoard Setup options on Azure</span>
+                <span class="heading">SENTIENT Setup options on Azure</span>
                 <div class="install-options-description">
                     <p>
-                        You may deploy ThingsBoard IoT Platform with different infrastructure setup
+                        You may deploy SENTIENT IoT Platform with different infrastructure setup
                     </p>
                 </div>
             </div>

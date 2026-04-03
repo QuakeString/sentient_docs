@@ -1,12 +1,12 @@
 {% if currentGuide != "GettingStartedGuide" %}
-- [Getting started guide](/docs/{{docsPrefix}}getting-started/) - Provide quick overview of main ThingsBoard Edge features. Designed to be completed in 15-30 minutes:
+- [Getting started guide](/docs/{{docsPrefix}}getting-started/) - Provide quick overview of main SENTIENT GATEWAY features. Designed to be completed in 15-30 minutes:
 {% endif %}
 {% if currentGuide != "InstallationGuides" %}
-- [Installation guides](/docs/user-guide/install/{{docsPrefix}}installation-options/) - Learn how to setup ThingsBoard Edge on various available operating systems and connect to ThingsBoard Server.
+- [Installation guides](/docs/user-guide/install/{{docsPrefix}}installation-options/) - Learn how to setup SENTIENT GATEWAY on various available operating systems and connect to SENTIENT Server.
 {% endif %}
 - Edge Rule Engine:
 {% if currentGuide != "RuleChainTemplates" %}
-  - [Rule Chain Templates](/docs/{{docsPrefix}}rule-engine/rule-chain-templates/) - Learn how to use ThingsBoard Edge Rule Chain Templates.
+  - [Rule Chain Templates](/docs/{{docsPrefix}}rule-engine/rule-chain-templates/) - Learn how to use SENTIENT GATEWAY Rule Chain Templates.
 {% endif %}
 {% if currentGuide != "ProvisionRuleChainFromCloudToEdge" %}
   - [Provision Rule Chains from cloud to edge](/docs/{{docsPrefix}}rule-engine/provision-rule-chains/) - Learn how to provision edge rule chains from cloud to edge.
@@ -17,10 +17,10 @@
 {% endif %}
 - Features:
 {% if currentGuide != "EdgeStatus" %}
-  - [Edge Status](/docs/{{docsPrefix}}features/edge-status/) - Learn about Edge Status page on ThingsBoard Edge.
+  - [Edge Status](/docs/{{docsPrefix}}features/edge-status/) - Learn about Edge Status page on SENTIENT GATEWAY.
 {% endif %}
 {% if currentGuide != "CloudEvents" %}
-  - [Cloud Events](/docs/{{docsPrefix}}features/cloud-events/) -  Learn about Cloud Events page on ThingsBoard Edge.
+  - [Cloud Events](/docs/{{docsPrefix}}features/cloud-events/) -  Learn about Cloud Events page on SENTIENT GATEWAY.
 {% endif %}    
 - Use cases:
 {% if currentGuide != "ManageAlarmsAndRpcRequestsOnEdgeDevices" %}
@@ -30,5 +30,5 @@
   - [Data filtering and traffic reduce](/docs/{{docsPrefix}}use-cases/data-filtering-traffic-reduce/) - This guide will show how to send to cloud from edge only filterd amount of device data:
 {% endif %}
 {% if currentGuide != "EdgeRoadmap" %}
-- [Roadmap](/docs/{{docsPrefix}}roadmap) - ThingsBoard Edge roadmap. 
+- [Roadmap](/docs/{{docsPrefix}}roadmap) - SENTIENT GATEWAY roadmap. 
 {% endif %}

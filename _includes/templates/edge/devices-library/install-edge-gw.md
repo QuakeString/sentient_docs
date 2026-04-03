@@ -42,4 +42,4 @@ ssh -N -L 8080:127.0.0.1:8080 {{userName}}@ip_address #Enter the actual IP addre
 
 Any connection to **localhost:8080** on your local machine will be forwarded to **127.0.0.1:8080** on the **{{deviceName}}**.
 
-The **ThingsBoard Edge** instance is available at [**http://127.0.0.1:8080**](http://127.0.0.1:8080){: target="_blank"}. Use your credentials to log in.
+The **SENTIENT GATEWAY** instance is available at [**http://127.0.0.1:8080**](http://127.0.0.1:8080){: target="_blank"}. Use your credentials to log in.

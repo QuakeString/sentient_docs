@@ -1,11 +1,11 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://www.makerfabs.com/agrosense-air-temperature-and-humidity-sensor-lorawan.html" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - LoRaWAN® gateway (in our case [UG56 LoRaWAN® Gateway](/device-library/pe/ug56-lorawan-gateway/){:target="_blank"})
-- Configured integration on networks server and ThingsBoard
+- Configured integration on networks server and SENTIENT
 - [Network Server account](#device-connection)
 '
  %}
@@ -23,7 +23,7 @@ The sensor benefits from LoRaWAN , which ensures stability and reliability. It i
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 
 
@@ -47,12 +47,12 @@ TheThingsIndustries,
 Loriot
 '%}
 
-{% include /docs/device-library/blocks/basic/thingsboard-add-lorawan-device-through-integration-block.liquid target-integration-types=targetIntegrationTypes %}
+{% include /docs/device-library/blocks/basic/sentient-add-lorawan-device-through-integration-block.liquid target-integration-types=targetIntegrationTypes %}
 
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
-After the device is connected to the network server and ThingsBoard, you can check received and converted data on the platform for this device.  
+After the device is connected to the network server and SENTIENT, you can check received and converted data on the platform for this device.  
 
 To do this, open **Entities** menu section and select **Devices**.  
 Click on the device name to open the device details page.  

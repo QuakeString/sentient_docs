@@ -1,7 +1,7 @@
 
 #### Step 1. Prepare your server and client certificate chain
 
-Follow the [MQTT over SSL](/docs/{{docsPrefix}}mqtt-broker/security/mqtts/) guide to provision server certificate if you are hosting your own TBMQ instance.
+Follow the [MQTT over SSL](/docs/{{docsPrefix}}mqtt-broker/security/mqtts/) guide to provision server certificate if you are hosting your own ST-RMQTT instance.
 
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by MQTT clients to validate the server certificate.
 Save the CA root certificate to your working directory as "**ca.pem**".
@@ -183,24 +183,24 @@ we will use device key file *deviceKey.pem* and a chain of certificates *chain.p
 
 #### Step 3. Provision Intermediate Public Key in MQTT Client Credentials
 
-Go to **TBMQ Web UI -> Authentication -> Credentials -> Create new or update exising one**.
+Go to **ST-RMQTT Web UI -> Authentication -> Credentials -> Create new or update exising one**.
 Select **X.509 Certificate Chain** type, insert the CN of *intermediateCert.pem* file.
 
 #### Step 4. Trust the certificate
 
 For the MQTT client to establish a secure TLS connection, the CA (Certificate Authority) that signed its certificate must be trusted.
 If the certificate is issued by a well-known public CA, it is already trusted by default.
-If both TBMQ and the clients use certificates issued by the same CA, no additional configuration is required.
-If it is another private or internal CA, you must add the CA certificate (`rootCert.pem`) to the Java truststore used by TBMQ.
+If both ST-RMQTT and the clients use certificates issued by the same CA, no additional configuration is required.
+If it is another private or internal CA, you must add the CA certificate (`rootCert.pem`) to the Java truststore used by ST-RMQTT.
 
 Run the [following command](/docs/{{docsPrefix}}mqtt-broker/security/mqtts/#adding-certificate-into-java-truststore) to import the CA certificate into the truststore.
 
 #### Step 5. Test the connection
 
-Execute the following command to upload temperature readings to TBMQ using secure channel:
+Execute the following command to upload temperature readings to ST-RMQTT using secure channel:
 
 ```bash
-mosquitto_pub --cafile ca.pem -d -q 1 -h "YOUR_TBMQ_HOST" -p "8883" \
+mosquitto_pub --cafile ca.pem -d -q 1 -h "YOUR_ST-RMQTT_HOST" -p "8883" \
 -t "sensors/temperature" --key deviceKey.pem --cert chain.pem -m {"temperature":25}
 ```
 {: .copy-code}
@@ -208,9 +208,9 @@ mosquitto_pub --cafile ca.pem -d -q 1 -h "YOUR_TBMQ_HOST" -p "8883" \
 Similar command for the [self-signed](/docs/{{docsPrefix}}mqtt-broker/security/mqtts/#self-signed-certificates-generation) server certificate:
 
 ```bash
-mosquitto_pub --insecure --cafile server.pem -d -q 1 -h "YOUR_TBMQ_HOST" -p "8883" \
+mosquitto_pub --insecure --cafile server.pem -d -q 1 -h "YOUR_ST-RMQTT_HOST" -p "8883" \
 -t "sensors/temperature" --key deviceKey.pem --cert chain.pem -m {"temperature":25}
 ```
 {: .copy-code}
 
-Don't forget to replace **YOUR_TBMQ_HOST** with the host of your TBMQ instance.
+Don't forget to replace **YOUR_ST-RMQTT_HOST** with the host of your ST-RMQTT instance.

@@ -12,7 +12,7 @@ kubectl logs -f POD_NAME
 ```
 {: .copy-code}
 
-To view TBMQ logs use command:
+To view ST-RMQTT logs use command:
 
 ```bash
 kubectl logs -f tb-broker-0
@@ -35,10 +35,10 @@ kubectl logs -f tb-broker-1 > tb-broker-1.log
 ```
 {: .copy-code}
 
-**Note:** you can always log into the TBMQ container and view logs there:
+**Note:** you can always log into the ST-RMQTT container and view logs there:
 
 ```bash
 kubectl exec -it tb-broker-0 -- bash
-cat /var/log/thingsboard-mqtt-broker/thingsboard-mqtt-broker.log
+cat /var/log/sentient-mqtt-broker/sentient-mqtt-broker.log
 ```
 {: .copy-code}

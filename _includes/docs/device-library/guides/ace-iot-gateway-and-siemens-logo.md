@@ -7,7 +7,7 @@
 - Modbus Controller (in our case, <a href="' | append: controllerVendorLink | append: '" target="_blank">' | append: controllerName | append: '</a>) '
  %}
 
-{% assign thingsboardInstanceLink = "https://" | append: hostName %}
+{% assign sentientInstanceLink = "https://" | append: hostName %}
 
 
 
@@ -24,7 +24,7 @@ harnessing real-time data. Simplify your connectivity and data management with t
 
 To continue with this guide, we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{thingsboardInstanceLink}}){: target="_blank"}  
+- [SENTIENT account]({{sentientInstanceLink}}){: target="_blank"}  
 
 
 ## Import Rule chain
@@ -292,9 +292,9 @@ config topics
 {% endcapture %}
 {% include code-toggle.liquid code=gatewayCode params="conf|.copy-code.expandable-20" %}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
-{% include /docs/device-library/blocks/ready-to-go-devices/check-data-on-thingsboard-block.md %}
+{% include /docs/device-library/blocks/ready-to-go-devices/check-data-on-sentient-block.md %}
 
 {% capture readytogodevicestogglespec %}
 Imported Dashboard%,%importedDashboard%,%templates/device-library/ready-to-go-devices/ace-gateway-imported-dashboard.md%br%
@@ -307,7 +307,7 @@ New Dashboard%,%newDashboard%,%templates/device-library/ready-to-go-devices/gate
 With the knowledge in this guide, you can easily connect your ACE Automation MQTT 4G GPS Gateway and use the built-in 
 integration to retrieve data from devices connected to ACE Automation MQTT 4G GPS Gateway.
 
-After connecting the devices to the gateway, you will be able to see and process the data coming from the devices on the ThingsBoard.
+After connecting the devices to the gateway, you will be able to see and process the data coming from the devices on the SENTIENT.
 
 Explore the platform [documentation](/docs/{{page.docsPrefix}}){: target="_blank"} to learn more about key concepts and features. 
 {% include add-device-banner.liquid %}

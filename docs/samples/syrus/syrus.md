@@ -1,6 +1,6 @@
 ---
 layout: docwithnav
-title: Integration Syrus 4 IoT Telematics Gateway - Thingsboard
+title: Integration Syrus 4 IoT Telematics Gateway - Sentient
 description: Syrus 4 IoT Telematics Gateway integration guide
 hidetoc: "true"
 
@@ -13,19 +13,19 @@ hidetoc: "true"
 
 ## Description
 
-Here&#39;s a detailed integration example between Syrus 4G IoT Telematics Gateway with Thingsboard Platform over MQTT connection.
+Here&#39;s a detailed integration example between Syrus 4G IoT Telematics Gateway with Sentient Platform over MQTT connection.
 
 ## Getting Started
 
 [Syrus 4G IoT Telematics Gateway.](https://syrus.pegasusgateway.com/syrdocs/syrus4/getting-started/)
 
-[ThingsBoard Cloud](https://thingsboard.io/installations/)
+[SENTIENT Cloud](https://docs.sentient.invenia.in/installations/)
 
-## Provisioning the device for Thingsboard
+## Provisioning the device for Sentient
 
 For simplicity, we will provision device manually using the UI.
 
-### 1. Login to your ThingsBoard instance and open Devices page.
+### 1. Login to your SENTIENT instance and open Devices page.
 
 ![image](/images/samples/syrus/device_page.png)
 
@@ -43,7 +43,7 @@ Now your device should be listed first, since the table sorts the devices by usi
 
 ### 2. Token creation
 
-To connect the device you need to get the device credentials first. ThingsBoard supports different device credentials. We recommend using default auto-generated credentials which is an access token for this guide.
+To connect the device you need to get the device credentials first. SENTIENT supports different device credentials. We recommend using default auto-generated credentials which is an access token for this guide.
 
 Click on the device row in the table to open device details
 
@@ -94,11 +94,11 @@ here is an example:
 
 ![image](/images/samples/syrus/example.png)
 
-Replace [YOUR\_TOKEN] with the copied access token you got from Thingsboard when you created the device.
+Replace [YOUR\_TOKEN] with the copied access token you got from Sentient when you created the device.
 
 More information about: [https://syrus.pegasusgateway.com/syrdocs/syrus4/syruslang/#destinations](https://syrus.pegasusgateway.com/syrdocs/syrus4/syruslang/#destinations)
 
-The second file contains all the events that will be sent to the Thingsboard over MQTT, here is an example, this will send Ignition On/Off events and track points every minute:
+The second file contains all the events that will be sent to the Sentient over MQTT, here is an example, this will send Ignition On/Off events and track points every minute:
 
 {% highlight bash %}
 _####### ###### ####### ###### #######_
@@ -107,7 +107,7 @@ _############ START MQTT EVENT ###########_
 
 define variable constant_1 1
 
-define fieldset thingsboard
+define fieldset sentient
 fields="ident":$modem.imei,position.context.lat:$gnss.latitude,position.context.lng:$gnss.longitude,
 position.value:$variables.constant_1,"position.direction":$gnss.heading,"position.hdop":$gnss.hdop,
 "position.pdop":$gnss.pdop,"position.vdop":$gnss.vdop,"position.speed":$gnss.mph,
@@ -119,24 +119,24 @@ position.value:$variables.constant_1,"position.direction":$gnss.heading,"positio
 "can.fuel.rate":$ecu.fuel_rate,"can.engine.hours":$ecu.hours_total,"can.ambient.temp":$ecu.ambient_air_temp,
 "can.oil.pressure":$ecu.oil_pressure
 
-define group thingsboard
+define group sentient
 
-set destinations group=thingsboard thingsboard
+set destinations group=sentient sentient
 
-define tracking_resolution thingsboard_tracking 5m 25deg 1000mts
+define tracking_resolution sentient_tracking 5m 25deg 1000mts
 
 define signal ignitionON min_duration=5s $io.ign == true
 define signal ignitionOFF min_duration=5s $io.ign == false
 
-define event ignitionONmqtt group=thingsboard fieldset=thingsboard ack=seq label=ignonmqtt code=102 trigger=ignitionON
-define event ignitionOFFmqtt group=thingsboard fieldset=thingsboard ack=seq label=ignoffmqtt code=103 trigger=ignitionOFF
+define event ignitionONmqtt group=sentient fieldset=sentient ack=seq label=ignonmqtt code=102 trigger=ignitionON
+define event ignitionOFFmqtt group=sentient fieldset=sentient ack=seq label=ignoffmqtt code=103 trigger=ignitionOFF
  
 _# Define tracking event, a single tracking resolution signal that can be controlled by different actions
 
-define event trackingOffMqtt group=thingsboard fieldset=thingsboard ack=seq label=prdtst code=100 trigger=@tracking_resolution.thingsboard_tracking.signal,ignitionOFF,and
-define event trackingOnMqtt group=thingsboard fieldset=thingsboard ack=seq label=trckpnt code=101 trigger=@tracking_resolution.thingsboard_tracking.time,ignitionON,and
-define event trackingHeadingMqtt group=thingsboard fieldset=thingsboard ack=seq label=heading code=140 trigger=@tracking_resolution.thingsboard_tracking.heading,ignitionON,and
-define event trackingDistanceMqtt group=thingsboard fieldset=thingsboard ack=seq label=distance code=141 trigger=@tracking_resolution.thingsboard_tracking.distance,ignitionON,and
+define event trackingOffMqtt group=sentient fieldset=sentient ack=seq label=prdtst code=100 trigger=@tracking_resolution.sentient_tracking.signal,ignitionOFF,and
+define event trackingOnMqtt group=sentient fieldset=sentient ack=seq label=trckpnt code=101 trigger=@tracking_resolution.sentient_tracking.time,ignitionON,and
+define event trackingHeadingMqtt group=sentient fieldset=sentient ack=seq label=heading code=140 trigger=@tracking_resolution.sentient_tracking.heading,ignitionON,and
+define event trackingDistanceMqtt group=sentient fieldset=sentient ack=seq label=distance code=141 trigger=@tracking_resolution.sentient_tracking.distance,ignitionON,and
 
 
 _############ END MQTT EVENT ###########_
@@ -182,7 +182,7 @@ Finally, go back to the Information tab and click the Start button:
 
 ![image](/images/samples/syrus/information_tab.png)
 
-## Check your data in Thingsboard demo account
+## Check your data in Sentient demo account
 
 The reported variables are automatically created according to the fieldset configuration.
 
@@ -190,6 +190,6 @@ Go to Devices, choose Syrus 4 and click &quot;Latest telemetry&quot;
 
 ![image](/images/samples/syrus/latest_telemetry.png)
 
-Now you can use Thingsboard&#39;s tools to design your own dashboard with Syrus 4G data:
+Now you can use Sentient&#39;s tools to design your own dashboard with Syrus 4G data:
 
 ![image](/images/samples/syrus/dashboard.png)

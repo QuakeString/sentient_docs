@@ -9,50 +9,50 @@ google-credentials-for-oauth-1:
         title: 'Go to the "Credentials" page in the left menu and select "OAuth client ID" from the "Create credentials" dropdown menu;'
     1:
         image: /images/user-guide/oauth-2-support/google/google-credentials-for-oauth/google-credentials-for-oauth-2.png
-        title: 'Enter a OAuth client name, and add the ThingsBoard redirect URI, to the "Authorized Redirect URIs" section. Then, click "Create";'
+        title: 'Enter a OAuth client name, and add the SENTIENT redirect URI, to the "Authorized Redirect URIs" section. Then, click "Create";'
     2:
         image: /images/user-guide/oauth-2-support/google/google-credentials-for-oauth/google-credentials-for-oauth-3.png
         title: 'OAuth client created. You now have credentials consisting of a Client ID and a Client secret;'
 
-google-configuration-of-thingsboard-google-1:
+google-configuration-of-sentient-google-1:
     0:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-1-pe.png
-        title: 'Login to your ThingsBoard instance as System Administrator. Go to the "OAuth 2.0" page of the "Security" section. While on the "Domains" tab, click the "plus" icon;'
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/google-configuration-of-sentient-1-pe.png
+        title: 'Login to your SENTIENT instance as System Administrator. Go to the "OAuth 2.0" page of the "Security" section. While on the "Domains" tab, click the "plus" icon;'
     1:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-2-pe.png
-        title: 'Enter your domain name or IP address of your ThingsBoard instance. Click "Create new" in the "OAuth 2.0 clients" section to add a new one.'
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/google-configuration-of-sentient-2-pe.png
+        title: 'Enter your domain name or IP address of your SENTIENT instance. Click "Create new" in the "OAuth 2.0 clients" section to add a new one.'
 
-google-configuration-of-thingsboard-google-2:
+google-configuration-of-sentient-google-2:
     0:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-3-pe.png
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/google-configuration-of-sentient-3-pe.png
         title: 'Enter "Google" as the title. The provider should be set to "Google". If necessary, specify the allowed platforms, or leave all. Enter the "Client ID" and "Client secret" from the Google API Console. Then, expand the "Advanced settings" menu;'
     1:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-4-pe.png
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/google-configuration-of-sentient-4-pe.png
         title: 'Let&#39;s make the settings for the "General" block. Select "POST" as the client authentication method. Turn on the "Allow user creation" option. Add to the scope field: "email", "openid", and "profile";'
 
-google-configuration-of-thingsboard-google-3:
+google-configuration-of-sentient-google-3:
     0:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-5-pe.png
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/google-configuration-of-sentient-5-pe.png
         title: 'Go to the "Mapper" block. Leave the mapper type "BASIC". Select "CUSTOM" as the tenant name strategy. Specify %{email} as "Tenant name pattern". Specify "Tenant Administrators" as the user group name pattern to automatically add a new user to the designated tenant group upon creation. Click "Add";'
 
-google-configuration-of-thingsboard-google-4:
+google-configuration-of-sentient-google-4:
     0:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-6-pe.png
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/google-configuration-of-sentient-6-pe.png
         title: 'The OAuth client is added successfully. Click "Add" again to confirm the addition of the domain;'
     1:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-7-pe.png
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/google-configuration-of-sentient-7-pe.png
         title: 'A new domain has been added.'
 
 login-with-google-1:
     0:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/login-with-google-1-pe.png
-        title: 'Navigate to the ThingsBoard login screen. We will see an additional "Login with Google" option. Click this button;'
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/login-with-google-1-pe.png
+        title: 'Navigate to the SENTIENT login screen. We will see an additional "Login with Google" option. Click this button;'
     1:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/login-with-google-2.png
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/login-with-google-2.png
         title: 'Select one of your Google accounts;'
     2:
         image: /images/user-guide/oauth-2-support/login-with-oauth-tenant-1-pe.png
-        title: 'You are logged into ThingsBoard using your Google email as a Tenant Administrator.'
+        title: 'You are logged into SENTIENT using your Google email as a Tenant Administrator.'
 
 login-with-google-2:
     0:
@@ -79,30 +79,30 @@ auth0-credentials-1:
         image: /images/user-guide/oauth-2-support/oauth0/oauth0-credentials/oauth0-credentials-6.png
         title: 'In the "Advanced Settings" section you will be able to find all the required URLs (endpoints) for OAuth 2.0 configuration. Click "Save Changes" button.'
 
-oauth0-configuration-of-thingsboard-1:
+oauth0-configuration-of-sentient-1:
     0:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-1-pe.png
-        title: 'Login to your ThingsBoard instance. Go to the "OAuth 2.0" page of the "Security" section. While on the "Domains" tab, click the "plus" icon;'
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/google-configuration-of-sentient-1-pe.png
+        title: 'Login to your SENTIENT instance. Go to the "OAuth 2.0" page of the "Security" section. While on the "Domains" tab, click the "plus" icon;'
     1:
-        image: /images/user-guide/oauth-2-support/google/configuration-of-thingsboard/google-configuration-of-thingsboard-2-pe.png
-        title: 'Enter your domain name of your ThingsBoard instance. Click "Create new" in the "OAuth 2.0 clients" section to add a new one.'
+        image: /images/user-guide/oauth-2-support/google/configuration-of-sentient/google-configuration-of-sentient-2-pe.png
+        title: 'Enter your domain name of your SENTIENT instance. Click "Create new" in the "OAuth 2.0 clients" section to add a new one.'
 
-oauth0-configuration-of-thingsboard-2:
+oauth0-configuration-of-sentient-2:
     0:
-        image: /images/user-guide/oauth-2-support/oauth0/configuration-of-thingsboard/oauth0-configuration-of-thingsboard-3-pe.png
+        image: /images/user-guide/oauth-2-support/oauth0/configuration-of-sentient/oauth0-configuration-of-sentient-3-pe.png
         title: 'Enter "OAuth0" as the title for the client. Select "Custom" as the provider. Now enter the "Client ID" and "Client secret" obtained from the OAuth0 Management Console. In the "General" block of the "Advanced settings" section, fill in all the necessary URLs. The client authentication method should be set to "POST". Enter "OAuth0" as the provider label. Add the following scopes in the scope field: "openid", "email", "profile";'
 
-oauth0-configuration-of-thingsboard-3:
+oauth0-configuration-of-sentient-3:
     0:
-        image: /images/user-guide/oauth-2-support/oauth0/configuration-of-thingsboard/oauth0-configuration-of-thingsboard-4-pe.png
+        image: /images/user-guide/oauth-2-support/oauth0/configuration-of-sentient/oauth0-configuration-of-sentient-4-pe.png
         title: 'Proceed to the "Mapper" block. Leave the mapper type "BASIC". The tenant name strategy should be "DOMAIN". Specify %{email} as the customer name pattern. Specify "Customer Users" as the user group name pattern to automatically add a new user to the designated customer group upon creation. Click "Add" to confirm adding the OAuth 2 client. Click "Add" to complete the addition of the new OAuth 2.0 client.'
 
-oauth0-configuration-of-thingsboard-4:
+oauth0-configuration-of-sentient-4:
     0:
-        image: /images/user-guide/oauth-2-support/oauth0/configuration-of-thingsboard/oauth0-configuration-of-thingsboard-5-pe.png
+        image: /images/user-guide/oauth-2-support/oauth0/configuration-of-sentient/oauth0-configuration-of-sentient-5-pe.png
         title: 'The OAuth0 client has been successfully added. Click "Add" again to confirm the addition of the domain.'
     1:
-        image: /images/user-guide/oauth-2-support/oauth0/configuration-of-thingsboard/oauth0-configuration-of-thingsboard-6-pe.png
+        image: /images/user-guide/oauth-2-support/oauth0/configuration-of-sentient/oauth0-configuration-of-sentient-6-pe.png
         title: 'A new domain has been added.'
 
 login-with-oauth0-1:
@@ -111,7 +111,7 @@ login-with-oauth0-1:
         title: 'Navigate to the login screen. You will find two available login methods: Google and Auth0. Click on the "Login with Auth0" button. Use your Auth0 credentials to log in as a Customer User. This method allows you to quickly and securely log into the system using your Auth0 credentials;'
     1:
         image: /images/user-guide/oauth-2-support/oauth0/login-with-oauth0-2-pe.png
-        title: 'You have logged into ThingsBoard as a Customer User.'
+        title: 'You have logged into SENTIENT as a Customer User.'
 
 login-with-oauth0-2:
     0:
@@ -140,7 +140,7 @@ create-new-realm:
         title: 'Click "Keycloak" next to the master realm, then click "Create realm" button;'
     1:
         image: /images/user-guide/oauth-2-support/keycloak/create-new-realm-2.png
-        title: 'Enter "ThingsBoard" in the realm name field, and click "Create" button;'
+        title: 'Enter "SENTIENT" in the realm name field, and click "Create" button;'
     2:
         image: /images/user-guide/oauth-2-support/keycloak/create-new-realm-3.png
         title: 'The new realm has been created.'
@@ -151,13 +151,13 @@ create-client:
         title: 'Go to the "Clients" page in the left-hand menu, and click the "Create client" button;'
     1:
         image: /images/user-guide/oauth-2-support/keycloak/create-client-2.png
-        title: 'Enter "thingsboard" as the client ID. Leave the client type as "OpenID Connect". Click "Next";'
+        title: 'Enter "sentient" as the client ID. Leave the client type as "OpenID Connect". Click "Next";'
     2:
         image: /images/user-guide/oauth-2-support/keycloak/create-client-3.png
         title: 'Turn on "Client authentication" option. Confirm that "Standard flow" is enabled. Click "Next";'
     3:
         image: /images/user-guide/oauth-2-support/keycloak/create-client-4.png
-        title: 'In the "Login settings" section, add the ThingsBoard redirect URI to the "Authorized Redirect URIs" section. Then, click "Save";'
+        title: 'In the "Login settings" section, add the SENTIENT redirect URI to the "Authorized Redirect URIs" section. Then, click "Save";'
     4:
         image: /images/user-guide/oauth-2-support/keycloak/create-client-5.png
         title: 'Client created successfully.'
@@ -176,7 +176,7 @@ endpoint-configuration:
         title: 'Go to the "Realm settings" page in the left-hand menu. Scroll down and locate the link to "OpenID Endpoint Configuration", then click on it;'
     1:
         image: /images/user-guide/oauth-2-support/keycloak/openid-endpoint-configuration-2.png
-        title: 'A new window with OpenID Endpoint Configuration will open. Check the "Pretty-print" option to make the data view more user-friendly. Here you found "Access token URI," "Authorization URI," "JSON Web Key URI," and "User info URI," which are necessary for configuring the OAuth 2.0 client in ThingsBoard.'
+        title: 'A new window with OpenID Endpoint Configuration will open. Check the "Pretty-print" option to make the data view more user-friendly. Here you found "Access token URI," "Authorization URI," "JSON Web Key URI," and "User info URI," which are necessary for configuring the OAuth 2.0 client in SENTIENT.'
 
 create-user:
     0:
@@ -203,26 +203,26 @@ create-password:
         image: /images/user-guide/oauth-2-support/keycloak/create-user-7.png
         title: 'The password has been successfully.'
 
-keycloak-add-thingsboard-oauth-client-1:
+keycloak-add-sentient-oauth-client-1:
     0:
-        image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-thingsboard-1-pe.png
-        title: 'Login to your ThingsBoard instance as System Administrator. Navigate to the "OAuth 2.0 clients" tab, and click "plus" icon to add a new client;'
+        image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-sentient-1-pe.png
+        title: 'Login to your SENTIENT instance as System Administrator. Navigate to the "OAuth 2.0 clients" tab, and click "plus" icon to add a new client;'
     1:
-        image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-thingsboard-2-pe.png
+        image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-sentient-2-pe.png
         title: 'Enter "Keycloak" as the title. Select the "Custom" from the dropdown menu as the authentication provider. Now enter the "Client ID" and "Client secret" using the values retrieved from the Keycloak console. In the "General" block of the "Advanced settings" section, fill in all the necessary URLs. The client authentication method should be set to "POST". Enter "Keycloak" as the provider label. Add the following scopes in the scope field: "openid", "email", "profile";'
 
-keycloak-add-thingsboard-oauth-client-2:
+keycloak-add-sentient-oauth-client-2:
     0:
-        image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-thingsboard-3-pe.png
+        image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-sentient-3-pe.png
         title: 'Go to the "Mapper" block. Leave the mapper type "BASIC". Select "CUSTOM" as the tenant name strategy. Specify %{email} as tenant name pattern. Specify "Tenant Administrators" as the user group name pattern to automatically add a new user to the designated tenant group upon creation. Click "Add" to confirm adding the OAuth 2 client;'
     1:
-        image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-thingsboard-4-pe.png
+        image: /images/user-guide/oauth-2-support/keycloak/keycloak-configuration-of-sentient-4-pe.png
         title: 'A new OAuth 2.0 client has been added.'
 
 keycloak-add-domain:
     0:
         image: /images/user-guide/oauth-2-support/keycloak/keycloak-adding-domain-1-pe.png
-        title: 'Navigate to the "Domains" tab, and click "plus" icon. Enter your domain name or IP address of your ThingsBoard instance. Specify "Keycloak" as the OAuth 2.0 client. Click "Add" again to confirm the addition of the domain;'
+        title: 'Navigate to the "Domains" tab, and click "plus" icon. Enter your domain name or IP address of your SENTIENT instance. Specify "Keycloak" as the OAuth 2.0 client. Click "Add" again to confirm the addition of the domain;'
     1:
         image: /images/user-guide/oauth-2-support/keycloak/keycloak-adding-domain-2-pe.png
         title: 'A new domain has been added.'
@@ -230,13 +230,13 @@ keycloak-add-domain:
 login-with-keycloak-1:
     0:
         image: /images/user-guide/oauth-2-support/keycloak/login-with-keycloak-1-pe.png
-        title: 'Go to the ThingsBoard login screen. You will see an additional option, "Login with Keycloak". Click this button;'
+        title: 'Go to the SENTIENT login screen. You will see an additional option, "Login with Keycloak". Click this button;'
     1:
         image: /images/user-guide/oauth-2-support/keycloak/login-with-keycloak-2.png
         title: 'A window will open prompting you to sign in to your Keycloak account. Enter your Keycloak credentials, and click "Sign In";'
     2:
         image: /images/user-guide/oauth-2-support/login-with-oauth-tenant-1-pe.png
-        title: 'You are logged into ThingsBoard using Keycloak authorization credentials.'
+        title: 'You are logged into SENTIENT using Keycloak authorization credentials.'
 
 login-with-keycloak-2:
     0:

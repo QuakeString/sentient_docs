@@ -2,7 +2,7 @@
 * TOC
 {:toc}
 
-ThingsBoard provides a rich set of features related to time-series data:
+SENTIENT provides a rich set of features related to time-series data:
 
  - **Collect** data from devices using various [protocols and integrations](/docs/{{docsPrefix}}getting-started-guides/connectivity/);
  - **Store** time series data in SQL (PostgreSQL) or NoSQL (Cassandra or Timescale) databases;
@@ -17,7 +17,7 @@ This guide provides an overview of the features listed above, and some useful li
 
 ## Data points
 
-ThingsBoard internally treats time-series data as timestamped key-value pairs. We call single timestamped key-value pair a **data point**. 
+SENTIENT internally treats time-series data as timestamped key-value pairs. We call single timestamped key-value pair a **data point**. 
 Flexibility and simplicity of the key-value format allow easy and seamless integration with almost any IoT device on the market. 
 Key is always a string and is basically a data point key name, while the value can be either string, boolean, double, integer or JSON.
 
@@ -45,7 +45,7 @@ The following JSON contains 5 data points: temperature (double), humidity (integ
 ```
 {: .copy-code}
 
-You may notice that the JSON listed above does not have a timestamp information. In such case, ThingsBoard uses current server timestamp. 
+You may notice that the JSON listed above does not have a timestamp information. In such case, SENTIENT uses current server timestamp. 
 However, you may include timestamp information into the message. See example below:
 
 ```json
@@ -73,7 +73,7 @@ Most of the protocols above support JSON, Protobuf or own data format. For other
 
 ## Data visualization
 
-We assume you have already pushed time-series data to ThingsBoard. Now you may use it in your dashboards. 
+We assume you have already pushed time-series data to SENTIENT. Now you may use it in your dashboards. 
 We recommend [dashboards overview](/docs/{{docsPrefix}}user-guide/dashboards/) to get started.
 Once you are familiar how to create dashboards and configure data sources,
 you may use widgets to visualize either latest values or real-time changes and historical values.
@@ -86,12 +86,12 @@ You may also use [input widgets](/docs/{{docsPrefix}}user-guide/ui/widget-librar
 
 {% if docsPrefix contains "paas/" %}
 
-ThingsBoard Cloud stores time-series data in the Cassandra database with replication factor of 3. 
-The on-prem installation of ThingsBoard support storage of time-series data in SQL (PostgreSQL) or NoSQL (Cassandra or Timescale) databases.
+SENTIENT Cloud stores time-series data in the Cassandra database with replication factor of 3. 
+The on-prem installation of SENTIENT support storage of time-series data in SQL (PostgreSQL) or NoSQL (Cassandra or Timescale) databases.
 
 {% else %}
 
-In ThingsBoard, timeseries data can be stored using either a SQL database (PostgreSQL) or a hybrid configuration in which PostgreSQL is paired with Cassandra or TimescaleDB.
+In SENTIENT, timeseries data can be stored using either a SQL database (PostgreSQL) or a hybrid configuration in which PostgreSQL is paired with Cassandra or TimescaleDB.
 Using SQL storage is recommended for small environments with less than 5000 [data points](#data-points) per second.
 Storing data in Cassandra makes sense when you have either high throughput or high availability requirements for your solution.
 
@@ -103,7 +103,7 @@ See [SQL vs Hybrid](/docs/{{docsPrefix}}reference/#sql-vs-nosql-vs-hybrid-databa
 
 {% if docsPrefix contains "paas/" %}
 
-ThingsBoard Cloud stores data with configurable time-to-live (TTL) parameter. 
+SENTIENT Cloud stores data with configurable time-to-live (TTL) parameter. 
 The value of the parameter is part of the [Subscription](/docs/{{docsPrefix}}subscription/) plan.
 You may overwrite the default value in the "Save Timeseries" rule node or using "TTL" metadata field of your message.
 This allows you to optimize storage consumption. The maximum allowed value of TTL is 5 years.
@@ -111,10 +111,10 @@ For example, you may store "raw" data for 3 month and aggregated data for 3 year
 
 {% else %}
 
-The data retention policy and mechanism in ThingsBoard depends on the selected [data storage](#data-storage). Retention can be configured in several ways:
+The data retention policy and mechanism in SENTIENT depends on the selected [data storage](#data-storage). Retention can be configured in several ways:
 
 #### System-wide configuration
-Defined in the ThingsBoard configuration file and applied across the platform.
+Defined in the SENTIENT configuration file and applied across the platform.
 
 - **Cassandra**  
   You can [configure](/docs/user-guide/install/{{docsPrefix}}config/) the default TTL using the `TS_KV_TTL` environment variable.  
@@ -162,7 +162,7 @@ See [Save Timeseries rule node](/docs/user-guide/rule-engine-2-0/nodes/action/sa
 
 ## Data durability
 
-The device that sends message with time-series data to ThingsBoard will receive confirmation 
+The device that sends message with time-series data to SENTIENT will receive confirmation 
 once the message is successfully stored into the Rule Engine [Queue](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/) 
 that is configured for particular device [profile](/docs/{{docsPrefix}}user-guide/device-profiles/#queue-name).
 
@@ -206,7 +206,7 @@ Useful to calculate total water consumption for the building/district based on d
 
 ## Data Query REST API
 
-ThingsBoard provides following REST API to fetch entity data:
+SENTIENT provides following REST API to fetch entity data:
 
 {% capture api_note %}
 **NOTE:** The API is available via Swagger UI. Please review the general [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation for more details.
@@ -264,7 +264,7 @@ The supported parameters are described below:
  - **agg** - the aggregation function. One of MIN, MAX, AVG, SUM, COUNT, NONE.
  - **limit** - the max amount of data points to return or intervals to process.
 
-ThingsBoard will use *startTs*, *endTs*, and *interval* to identify aggregation partitions or sub-queries and execute asynchronous queries to DB that leverage built-in aggregation functions.
+SENTIENT will use *startTs*, *endTs*, and *interval* to identify aggregation partitions or sub-queries and execute asynchronous queries to DB that leverage built-in aggregation functions.
 
 {% capture tabspec %}get-telemetry-values
 A,get-telemetry-values.sh,shell,resources/get-telemetry-values.sh,/docs/{{docsPrefix}}user-guide/resources/get-telemetry-values.sh
@@ -275,7 +275,7 @@ Supported entity types are: TENANT, CUSTOMER, USER, DASHBOARD, ASSET, DEVICE, AL
 
 ## WebSocket API
 
-WebSockets are actively used by Thingsboard Web UI. WebSocket API duplicates REST API functionality and provides the ability to subscribe to device data changes.
+WebSockets are actively used by Sentient Web UI. WebSocket API duplicates REST API functionality and provides the ability to subscribe to device data changes.
 You can open a WebSocket connection to a telemetry service using the following URL
 
 ```shell
@@ -294,9 +294,9 @@ Once opened, you need to authenticate the session within 10 seconds with auth co
 ```
 {: .copy-code}
 
-Then you can send [subscription commands](https://github.com/thingsboard/thingsboard/blob/release-3.6/application/src/main/java/org/thingsboard/server/service/ws/WsCommandsWrapper.java) 
+Then you can send [subscription commands](https://github.com/sentient/sentient/blob/release-3.6/application/src/main/java/org/sentient/server/service/ws/WsCommandsWrapper.java) 
 and receive 
-[subscription updates](https://github.com/thingsboard/thingsboard/blob/release-3.6/application/src/main/java/org/thingsboard/server/service/ws/telemetry/sub/TelemetrySubscriptionUpdate.java):
+[subscription updates](https://github.com/sentient/sentient/blob/release-3.6/application/src/main/java/org/sentient/server/service/ws/telemetry/sub/TelemetrySubscriptionUpdate.java):
 
 where 
 
@@ -314,7 +314,7 @@ Replace the following variables with your actual values:
 - <code>$YOUR_JWT_TOKEN</code> - the JWT token obtained using the [REST API authentication endpoint](/docs/{{docsPrefix}}reference/rest-api/#rest-api-auth){:target="_blank"}.
 - <code>$YOUR_DEVICE_ID</code> - the unique identifier of your device.
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-- <code>$THINGSBOARD_HOST_PORT</code> — the hostname and port (e.g. `127.0.0.1:8080`) where your ThingsBoard instance is running.
+- <code>$SENTIENT_HOST_PORT</code> — the hostname and port (e.g. `127.0.0.1:8080`) where your SENTIENT instance is running.
 {% endif %}
  
 {% capture tabspec %}web-socket

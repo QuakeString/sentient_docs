@@ -11,7 +11,7 @@
 * TOC
 {:toc}
 
-ThingsBoard supports a multilingual interface through its built-in internationalization (i18n) system. Select and use the interface in the language that suits you best.
+SENTIENT supports a multilingual interface through its built-in internationalization (i18n) system. Select and use the interface in the language that suits you best.
 
 However, for more specific requirements, the **Custom translation** feature is available, which allows you to:
 - [Add new languages](#adding-new-language);
@@ -25,7 +25,7 @@ To change the language of your account, follow these steps:
 - In the profile settings, choose the desired language from the dropdown list.
 - Apply the changes.
 
-After that, the ThingsBoard interface will switch to the selected language.
+After that, the SENTIENT interface will switch to the selected language.
 
 {% assign changeLanguagePE = '
     ===
@@ -39,7 +39,7 @@ After that, the ThingsBoard interface will switch to the selected language.
         title: Click the "Save" button to apply the changes;
     ===
         image: /images/user-guide/custom-translation/change-language-4-pe.png,
-        title: After that, the ThingsBoard interface will switch to the selected language.
+        title: After that, the SENTIENT interface will switch to the selected language.
 '
 %}
 
@@ -280,7 +280,7 @@ Of course, you can use any other language depending on your specific needs.
 
 First, add the "Weather" dashboard to your instance:
 - [Download the dashboard configuration as a JSON file](/docs/user-guide/resources/weather_dashboard.json){:target="_blank"}.
-- [Import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into your ThingsBoard instance.
+- [Import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into your SENTIENT instance.
 
 For this dashboard, I&#39;m emulating telemetry data using a [Generator node](/docs/user-guide/rule-engine-2-0/nodes/action/generator/){:target="_blank"} with the function provided below:
 

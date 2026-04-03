@@ -3,7 +3,7 @@
 * TOC
 {:toc}
 
-Customizing menu in ThingsBoard allows you to tailor the navigation menu to your needs, providing quick access to the most frequently used functions and dashboards.
+Customizing menu in SENTIENT allows you to tailor the navigation menu to your needs, providing quick access to the most frequently used functions and dashboards.
 You can add new and show/hide existing menu items.
 
 Menu customization options:
@@ -25,7 +25,7 @@ Menu customization options:
 
 ## Add custom menu
 
-Before adding a custom menu in ThingsBoard, it is important to define the scope of its application, depending on who the end user is: Tenant or Customer.
+Before adding a custom menu in SENTIENT, it is important to define the scope of its application, depending on who the end user is: Tenant or Customer.
 
 Tenant scope options:
 - *Not assigned* - indicates that the custom menu is not assigned to any tenant user. This option is convenient to use during the menu setup stage and can be assigned to the required tenant user afterward;
@@ -254,12 +254,12 @@ You can reset a menu item to its default state by clicking the "broom" icon in t
 
 ### Hide existing menu items
 
-To hide menu items in the ThingsBoard user interface, switch the "Hidden/Visible" toggle to "Hidden" in the row of the menu item you want to hide.
+To hide menu items in the SENTIENT user interface, switch the "Hidden/Visible" toggle to "Hidden" in the row of the menu item you want to hide.
 
 {% assign hideExistingMenuItems = '
     ===
         image: /images/user-guide/white-labeling/custom-menu/hide-existing-menu-items-1-pe.png,
-        title: To hide menu items in the ThingsBoard user interface, switch the "Hidden/Visible" toggle to "Hidden" in the row of the menu item you want to hide. For example, hide the "Plan and Billing" and "Dashboards" menu items. Then save the changes;
+        title: To hide menu items in the SENTIENT user interface, switch the "Hidden/Visible" toggle to "Hidden" in the row of the menu item you want to hide. For example, hide the "Plan and Billing" and "Dashboards" menu items. Then save the changes;
     ===
         image: /images/user-guide/white-labeling/custom-menu/hide-existing-menu-items-2-pe.png,
         title: As you can see, the menu items we marked as "Hidden" has disappeared from the left menu.

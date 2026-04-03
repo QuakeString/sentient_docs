@@ -1,5 +1,5 @@
 #
-# Copyright © 2016-2020 The Thingsboard Authors
+# Copyright © 2016-2020 The Sentient Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,9 +21,9 @@ import ssl
 def collect_required_data():
     config = {}
     print("\n\n", "="*80, sep="")
-    print(" "*20, "\033[1m\033[94mThingsBoard one way RPC example script.\033[0m", sep="")
+    print(" "*20, "\033[1m\033[94mSENTIENT one way RPC example script.\033[0m", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard \033[93mhost\033[0m or leave it blank to use default (localhost): ")
+    host = input("Please write your SENTIENT \033[93mhost\033[0m or leave it blank to use default (localhost): ")
     config["host"] = host if host else "localhost"
     ca_cert = input("Please write \033[93mpath\033[0m to your \033[93mserver public certificate\033[0m or leave it blank to use default (mqttserver.pub.pem): ")
     config["ca_cert"] = ca_cert if ca_cert else "mqttserver.pub.pem"

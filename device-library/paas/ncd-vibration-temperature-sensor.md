@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect NCD Vibration Temperature Sensor to ThingsBoard?
+title: How to connect NCD Vibration Temperature Sensor to SENTIENT?
 category: Other devices
 deviceImageFileName: ncd-vibration-sensor.png
 docsPrefix: paas/

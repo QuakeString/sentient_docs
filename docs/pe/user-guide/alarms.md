@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Working with alarms
-description: IoT device alarm management using ThingsBoard alarms feature
+description: IoT device alarm management using SENTIENT alarms feature
 
 alarm-type:
     0:

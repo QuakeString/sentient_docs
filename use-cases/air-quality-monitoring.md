@@ -1,7 +1,7 @@
 ---
 layout: use-case
 title: Urban & Industrial Air Monitoring with IoT and Dashboards
-description: Monitor, analyze, and act on air quality in real time with ThingsBoard — the flexible IoT platform for cities, industries, and research.
+description: Monitor, analyze, and act on air quality in real time with SENTIENT — the flexible IoT platform for cities, industries, and research.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -17,15 +17,15 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">Urban areas, industrial districts, and high-traffic zones constantly battle air pollution — a critical issue that affects both public health and regulatory compliance. From fine particulate matter (PM2.5, PM10) to harmful gases like SO₂ and CO, monitoring these environmental threats requires a robust and responsive system. ThingsBoard rises to this challenge with unmatched flexibility and reliability.</p>
+                <p class="text">Urban areas, industrial districts, and high-traffic zones constantly battle air pollution — a critical issue that affects both public health and regulatory compliance. From fine particulate matter (PM2.5, PM10) to harmful gases like SO₂ and CO, monitoring these environmental threats requires a robust and responsive system. SENTIENT rises to this challenge with unmatched flexibility and reliability.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_AirQM_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/ec564620-82b2-11ed-a624-8360a2a6cb0e?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_AirQM_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/ec564620-82b2-11ed-a624-8360a2a6cb0e?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            
             </div>
         </div>
         <div class="long">
-            <p>The ThingsBoard IoT platform is purpose-built to address this challenge with its scalable architecture, multi-protocol support (MQTT, HTTP, CoAP, LwM2M), and powerful rule engine. It seamlessly connects distributed air quality sensors, ensures secure and reliable data ingestion, and enables real-time analytics and alarming across large deployments.</p>
-            <p>With its customizable dashboards, flexible data visualization tools, and low-code rule configuration, ThingsBoard empowers organizations to deploy air quality monitoring systems faster, manage them efficiently, and respond to environmental changes proactively. Whether for smart cities, industrial compliance, or community health initiatives, ThingsBoard delivers the performance and adaptability needed to take control of air quality.</p>
+            <p>The SENTIENT IoT platform is purpose-built to address this challenge with its scalable architecture, multi-protocol support (MQTT, HTTP, CoAP, LwM2M), and powerful rule engine. It seamlessly connects distributed air quality sensors, ensures secure and reliable data ingestion, and enables real-time analytics and alarming across large deployments.</p>
+            <p>With its customizable dashboards, flexible data visualization tools, and low-code rule configuration, SENTIENT empowers organizations to deploy air quality monitoring systems faster, manage them efficiently, and respond to environmental changes proactively. Whether for smart cities, industrial compliance, or community health initiatives, SENTIENT delivers the performance and adaptability needed to take control of air quality.</p>
         </div>
     </div>
 </section>
@@ -41,11 +41,11 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">An <a href="/docs/pe/solution-templates/air-quality-monitoring/">air quality monitoring solution</a> powered by ThingsBoard consists of IoT sensors that collect real-time data on pollutants such as PM2.5, PM10, CO, SO₂, NO₂, and O₃. These devices transmit telemetry to the platform via industry-standard communication protocols, including MQTT, HTTP/HTTPS, CoAP, and LwM2M — enabling flexible integration across sectors.</p>
+                <p class="text">An <a href="/docs/pe/solution-templates/air-quality-monitoring/">air quality monitoring solution</a> powered by SENTIENT consists of IoT sensors that collect real-time data on pollutants such as PM2.5, PM10, CO, SO₂, NO₂, and O₃. These devices transmit telemetry to the platform via industry-standard communication protocols, including MQTT, HTTP/HTTPS, CoAP, and LwM2M — enabling flexible integration across sectors.</p>
             </div>
         </div>
         <div class="long">
-            <p>Once received by ThingsBoard, the data is processed, stored in a time-series database, and visualized via interactive dashboards. Custom rule chains allow the generation of automated alarms when AQI thresholds are breached or sensor battery levels drop below critical levels.</p>
+            <p>Once received by SENTIENT, the data is processed, stored in a time-series database, and visualized via interactive dashboards. Custom rule chains allow the generation of automated alarms when AQI thresholds are breached or sensor battery levels drop below critical levels.</p>
         </div>
     </div>
     <div class="scheme">
@@ -57,7 +57,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>Air quality monitoring dashboard structure</h2>
         <p>
-            The air quality monitoring solution in ThingsBoard is built on a modular dashboard structure that serves both public and administrative needs. Each dashboard is composed of configurable widgets, real-time data streams, map overlays, and interactive filters — all powered by ThingsBoard’s flexible dashboard engine.
+            The air quality monitoring solution in SENTIENT is built on a modular dashboard structure that serves both public and administrative needs. Each dashboard is composed of configurable widgets, real-time data streams, map overlays, and interactive filters — all powered by SENTIENT’s flexible dashboard engine.
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -139,13 +139,13 @@ contactUsModal: "true"
 <section class="applications applications-additional summary-margin section-padding">
     <div class="section-header">
         <h2>Applications of air quality monitoring</h2>
-        <p>An IoT-based solution like the air quality monitoring system, powered by ThingsBoard, can be adapted across industries where air quality impacts health, safety, or compliance. Its flexibility and real-time analytics make it valuable far beyond environmental use cases. Here are some key application areas:</p>
+        <p>An IoT-based solution like the air quality monitoring system, powered by SENTIENT, can be adapted across industries where air quality impacts health, safety, or compliance. Its flexibility and real-time analytics make it valuable far beyond environmental use cases. Here are some key application areas:</p>
     </div>
     <div class="applications-container-large">
         <div class="text-row-top">
             <div class="text-block">
                 <h3>Smart cities</h3>
-                <p>ThingsBoard enables city authorities to deploy scalable sensor networks and automate air quality alarms, helping protect public health and enforce clean air regulations in real time.</p>
+                <p>SENTIENT enables city authorities to deploy scalable sensor networks and automate air quality alarms, helping protect public health and enforce clean air regulations in real time.</p>
             </div>
             <div class="text-block">
                 <h3>Transportation & logistics</h3>
@@ -153,7 +153,7 @@ contactUsModal: "true"
             </div>
             <div class="text-block">
                 <h3>Real estate development</h3>
-                <p>Developers leverage ThingsBoard’s remote monitoring, public dashboards, and analytics to showcase air quality metrics as a selling point for eco-friendly properties.</p>
+                <p>Developers leverage SENTIENT’s remote monitoring, public dashboards, and analytics to showcase air quality metrics as a selling point for eco-friendly properties.</p>
             </div>
         </div>
         <div class="images-row">
@@ -166,11 +166,11 @@ contactUsModal: "true"
         <div class="text-row-bottom">
             <div class="text-block">
                 <h3>Industrial zones</h3>
-                <p>Manufacturers use ThingsBoard to monitor emissions through customizable dashboards and rule-based automation, ensuring regulatory compliance and minimizing environmental risks.</p>
+                <p>Manufacturers use SENTIENT to monitor emissions through customizable dashboards and rule-based automation, ensuring regulatory compliance and minimizing environmental risks.</p>
             </div>
             <div class="text-block">
                 <h3>Education & research</h3>
-                <p>Academic institutions benefit from ThingsBoard’s real-time data visualization and open API, integrating environmental data into curriculum, research projects, and citizen science initiatives.</p>
+                <p>Academic institutions benefit from SENTIENT’s real-time data visualization and open API, integrating environmental data into curriculum, research projects, and citizen science initiatives.</p>
             </div>
         </div>
     </div>
@@ -179,13 +179,13 @@ contactUsModal: "true"
             <div class="image"><img src="/images/usecases/air-quality/cities-2.svg" alt="Smart cities" title="Smart cities"></div>
             <div class="text-block">
                 <h3>Smart cities</h3>
-                <p>ThingsBoard enables city authorities to deploy scalable sensor networks and automate air quality alarms, helping protect public health and enforce clean air regulations in real time.</p>
+                <p>SENTIENT enables city authorities to deploy scalable sensor networks and automate air quality alarms, helping protect public health and enforce clean air regulations in real time.</p>
             </div>
         </div>
         <div class="application-block">
             <div class="text-block">
                 <h3>Industrial zones</h3>
-                <p>Manufacturers use ThingsBoard to monitor emissions through customizable dashboards and rule-based automation, ensuring regulatory compliance and minimizing environmental risks.</p>
+                <p>Manufacturers use SENTIENT to monitor emissions through customizable dashboards and rule-based automation, ensuring regulatory compliance and minimizing environmental risks.</p>
             </div>
             <div class="image"><img src="/images/usecases/air-quality/industrial-2.svg" alt="Industrial zones" title="Industrial zones"></div>
         </div>
@@ -199,7 +199,7 @@ contactUsModal: "true"
         <div class="application-block">
             <div class="text-block">
                 <h3>Education & research</h3>
-                <p>Academic institutions benefit from ThingsBoard’s real-time data visualization and open API, integrating environmental data into curriculum, research projects, and citizen science initiatives.</p>
+                <p>Academic institutions benefit from SENTIENT’s real-time data visualization and open API, integrating environmental data into curriculum, research projects, and citizen science initiatives.</p>
             </div>
             <div class="image"><img src="/images/usecases/air-quality/education-2.svg" alt="Education & research" title="Education & research"></div>
         </div>
@@ -207,7 +207,7 @@ contactUsModal: "true"
             <div class="image"><img src="/images/usecases/air-quality/development-2.svg" alt="Real estate development" title="Real estate development"></div>
             <div class="text-block">
                 <h3>Real estate development</h3>
-                <p>Developers leverage ThingsBoard’s remote monitoring, public dashboards, and analytics to showcase air quality metrics as a selling point for eco-friendly properties.</p>
+                <p>Developers leverage SENTIENT’s remote monitoring, public dashboards, and analytics to showcase air quality metrics as a selling point for eco-friendly properties.</p>
             </div>
         </div>
     </div>
@@ -216,7 +216,7 @@ contactUsModal: "true"
 <section class="summary">
     <div class="summary-text">
         <h2>Summary of air quality monitoring</h2>
-        <p>ThingsBoard’s air quality monitoring solution offers a scalable, real-time IoT-based platform for environmental intelligence. It connects pollution sensors with cloud dashboards, alarms, and data storage to empower cities, industries, and institutions to act on air quality insights. Its flexibility, open protocol support, and customizable visualization make it ideal for public health, regulatory compliance, and green initiatives.</p>
+        <p>SENTIENT’s air quality monitoring solution offers a scalable, real-time IoT-based platform for environmental intelligence. It connects pollution sensors with cloud dashboards, alarms, and data storage to empower cities, industries, and institutions to act on air quality insights. Its flexibility, open protocol support, and customizable visualization make it ideal for public health, regulatory compliance, and green initiatives.</p>
     </div>
     <div class="summary-icon">
         <img src="/images/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
@@ -320,7 +320,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_AirQM_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/ec564620-82b2-11ed-a624-8360a2a6cb0e?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            
+                <a id="UseCases_AirQM_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/ec564620-82b2-11ed-a624-8360a2a6cb0e?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>            
                 <a id="UseCases_AirQM_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
 
@@ -340,13 +340,13 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='/images/usecases/air-quality/aiq-1.webp' alt='Interactive AQI heatmap of Los Angeles on the ThingsBoard IoT Platform' title='AQI map of Los Angeles monitored via ThingsBoard'/>",
-                "<img src='/images/usecases/air-quality/aiq-2.webp' alt='Live PM10 air quality metrics for Beverly Hills on ThingsBoard dashboard' title='PM10 air quality levels in Beverly Hills displayed in ThingsBoard'/>",
-                "<img src='/images/usecases/air-quality/aiq-3.webp' alt='List of IoT dashboards for air quality monitoring in ThingsBoard' title='Manage air quality dashboards in ThingsBoard'/>",
-                "<img src='/images/usecases/air-quality/aiq-4.webp' alt='IoT air quality sensors and alerts visualized on ThingsBoard map dashboard' title='Live air quality sensors and alerts across LA in ThingsBoard'/>",
-                "<img src='/images/usecases/air-quality/aiq-5.webp' alt='Sensor metrics for Beverly Hills including AQI and battery on ThingsBoard' title='Sensor data for Beverly Hills – AQI, battery and status'/>",
-                "<img src='/images/usecases/air-quality/aiq-6.webp' data-bg='#A4A4A4' alt='Sensor registration form with ID and GPS fields in ThingsBoard' title='Create a new air quality sensor in ThingsBoard'/>",
-                "<img src='/images/usecases/air-quality/aiq-7.webp' data-bg='#A4A4A4' alt='ThingsBoard interface for configuring IoT alarm thresholds' title='Configure alert rules for sensor battery and connection'/>"
+                "<img src='/images/usecases/air-quality/aiq-1.webp' alt='Interactive AQI heatmap of Los Angeles on the SENTIENT IoT Platform' title='AQI map of Los Angeles monitored via SENTIENT'/>",
+                "<img src='/images/usecases/air-quality/aiq-2.webp' alt='Live PM10 air quality metrics for Beverly Hills on SENTIENT dashboard' title='PM10 air quality levels in Beverly Hills displayed in SENTIENT'/>",
+                "<img src='/images/usecases/air-quality/aiq-3.webp' alt='List of IoT dashboards for air quality monitoring in SENTIENT' title='Manage air quality dashboards in SENTIENT'/>",
+                "<img src='/images/usecases/air-quality/aiq-4.webp' alt='IoT air quality sensors and alerts visualized on SENTIENT map dashboard' title='Live air quality sensors and alerts across LA in SENTIENT'/>",
+                "<img src='/images/usecases/air-quality/aiq-5.webp' alt='Sensor metrics for Beverly Hills including AQI and battery on SENTIENT' title='Sensor data for Beverly Hills – AQI, battery and status'/>",
+                "<img src='/images/usecases/air-quality/aiq-6.webp' data-bg='#A4A4A4' alt='Sensor registration form with ID and GPS fields in SENTIENT' title='Create a new air quality sensor in SENTIENT'/>",
+                "<img src='/images/usecases/air-quality/aiq-7.webp' data-bg='#A4A4A4' alt='SENTIENT interface for configuring IoT alarm thresholds' title='Configure alert rules for sensor battery and connection'/>"
             ];
             return images[index];
         }

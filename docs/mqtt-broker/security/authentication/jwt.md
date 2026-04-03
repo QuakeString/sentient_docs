@@ -18,14 +18,14 @@ configure-hmac-based-verifier-mechanism:
 configure-pem-based-verifier-mechanism:
   0:
     image: /images/mqtt-broker/security/auth-providers/jwt/configure-pem-based-verifier-mechanism.png
-    title: 'Upload a PEM-encoded public key file. TBMQ will use this key to verify JWTs signed with the corresponding private key.'
+    title: 'Upload a PEM-encoded public key file. ST-RMQTT will use this key to verify JWTs signed with the corresponding private key.'
 configure-jwks-based-verifier-mechanism:
   0:
     image: /images/mqtt-broker/security/auth-providers/jwt/configure-jwks-based-verifier-mechanism-0.png
-    title: 'Enter the JWKS endpoint URL, which TBMQ will use to fetch the JSON Web Key Set for token signature verification.'
+    title: 'Enter the JWKS endpoint URL, which ST-RMQTT will use to fetch the JSON Web Key Set for token signature verification.'
   1:
     image: /images/mqtt-broker/security/auth-providers/jwt/configure-jwks-based-verifier-mechanism-1.png
-    title: 'Set the refresh interval in seconds. This controls how often TBMQ retrieves the JWKS from the remote endpoint.'
+    title: 'Set the refresh interval in seconds. This controls how often ST-RMQTT retrieves the JWKS from the remote endpoint.'
   2:
     image: /images/mqtt-broker/security/auth-providers/jwt/configure-jwks-based-verifier-mechanism-2.png
     title: 'Select the credentials type for accessing the JWKS endpoint. In this case, Anonymous is selected, meaning no authentication is required.'

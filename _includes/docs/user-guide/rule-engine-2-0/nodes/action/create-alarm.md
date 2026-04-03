@@ -4,7 +4,7 @@ Creates new alarms or updates existing active alarms.
 
 ### Basic settings
 
-- **Use message alarm data**: When enabled, the message data is parsed as a ThingsBoard Alarm object, and alarm configuration is extracted from the parsed message instead of using
+- **Use message alarm data**: When enabled, the message data is parsed as a SENTIENT Alarm object, and alarm configuration is extracted from the parsed message instead of using
   node configuration. If the message cannot be parsed as a valid Alarm object, the message is routed via `Failure` connection.
 - **Overwrite alarm details**: When enabled with **Use message alarm data**, the details script will be executed to generate a value for alarm's `details` field.
 
@@ -153,7 +153,7 @@ The node's behavior depends on the **Use message alarm data** setting:
 
 ### When using message alarm data (Use message alarm data = enabled)
 
-1. **Parse message as alarm**: Attempts to deserialize message data as a ThingsBoard Alarm object
+1. **Parse message as alarm**: Attempts to deserialize message data as a SENTIENT Alarm object
     - If parsing fails, routes to `Failure` connection
     - Overwrites `tenantId` in parsed alarm with current tenant ID
     - If `originator` is null in parsed alarm, defaults to message originator

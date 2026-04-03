@@ -1,7 +1,7 @@
 Download installation package:
 
 ```bash
-wget https://dist.thingsboard.io/tb-http-integration-{{ site.release.pe_ver }}.rpm
+wget https://dist.docs.sentient.invenia.in/tb-http-integration-{{ site.release.pe_ver }}.rpm
 ```
 {: .copy-code}
 
@@ -23,7 +23,7 @@ Locate the following configuration block:
 
 ```bash
 # UNCOMMENT NEXT LINES AND PUT YOUR CONNECTION PARAMETERS:
-# export RPC_HOST=thingsboard.cloud
+# export RPC_HOST=sentient.cloud
 # export RPC_PORT=9090
 # export INTEGRATION_ROUTING_KEY=YOUR_INTEGRATION_KEY
 # export INTEGRATION_SECRET=YOUR_INTEGRATION_SECRET
@@ -33,13 +33,13 @@ and put your configuration parameters. Please don't forget to uncomment the expo
 
 ```bash
 # UNCOMMENT NEXT LINES AND PUT YOUR CONNECTION PARAMETERS:
-export RPC_HOST=thingsboard.cloud
+export RPC_HOST=sentient.cloud
 export RPC_PORT=9090
 export INTEGRATION_ROUTING_KEY=b75**************************34d
 export INTEGRATION_SECRET=vna**************mik
 ```
 
-Execute the following command to start ThingsBoard:
+Execute the following command to start SENTIENT:
 
 ```bash
 sudo service tb-http-integration start

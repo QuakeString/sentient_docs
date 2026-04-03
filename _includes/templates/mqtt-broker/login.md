@@ -1,8 +1,8 @@
-You should see TBMQ login page. Use the following default credentials for **System Administrator**:
+You should see ST-RMQTT login page. Use the following default credentials for **System Administrator**:
 
 **Username**:
 ```
-sysadmin@thingsboard.org
+sysadmin@sentient.org
 ```
 {: .copy-code}
 **Password**:

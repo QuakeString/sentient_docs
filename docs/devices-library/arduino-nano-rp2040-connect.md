@@ -1,5 +1,5 @@
 ---
 layout: docwithnav
-title: "How to connect Arduino Nano RP2040 Connect to ThingsBoard?"
+title: "How to connect Arduino Nano RP2040 Connect to SENTIENT?"
 redirect_to: "/device-library/ce/arduino-nano-rp2040-connect/"
 ---

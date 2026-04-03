@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Troubleshooting
-description: ThingsBoard Edge troubleshooting
+description: SENTIENT GATEWAY troubleshooting
 
 how-to-import-dashboard:
   0:

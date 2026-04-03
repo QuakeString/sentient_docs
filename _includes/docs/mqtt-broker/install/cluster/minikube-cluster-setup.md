@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-This guide will help you set up TBMQ {{tbmqSuffix}} in cluster mode using Minikube.
+This guide will help you set up ST-RMQTT {{st-rmqttSuffix}} in cluster mode using Minikube.
 
 ## Prerequisites
 
@@ -9,30 +9,30 @@ You need to have a Kubernetes cluster, and the `kubectl` command-line tool must 
 If you don't have Minikube installed, please follow [these instructions](https://kubernetes.io/docs/setup/learning-environment/minikube/).
 
 {% if docsPrefix == null %}
-## Clone TBMQ repository
+## Clone ST-RMQTT repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq.git
-cd tbmq/k8s/minikube
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt.git
+cd st-rmqtt/k8s/minikube
 ```
 {: .copy-code}
 
 {% else %}
-## Clone TBMQ PE K8S repository
+## Clone ST-RMQTT PE K8S repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq-pe-k8s.git
-cd tbmq-pe-k8s/minikube
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt-pe-k8s.git
+cd st-rmqtt-pe-k8s/minikube
 ```
 {: .copy-code}
 {% endif %}
 
 ## Installation
 
-To install TBMQ {{tbmqSuffix}}, execute the following command:
+To install ST-RMQTT {{st-rmqttSuffix}}, execute the following command:
 
 ```bash
-./k8s-install-tbmq.sh
+./k8s-install-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -40,10 +40,10 @@ To install TBMQ {{tbmqSuffix}}, execute the following command:
 
 ## Running
 
-Execute the following command to deploy TBMQ {{tbmqSuffix}}:
+Execute the following command to deploy ST-RMQTT {{st-rmqttSuffix}}:
 
 ```bash
-./k8s-deploy-tbmq.sh
+./k8s-deploy-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -60,25 +60,25 @@ minikube ip
 ## Logs, delete statefulsets and services
 
 In case of any issues, you can examine service logs for errors.
-For example, to see TBMQ node logs execute the following commands:
+For example, to see ST-RMQTT node logs execute the following commands:
 
-1) Get the list of the running tbmq pods:
+1) Get the list of the running st-rmqtt pods:
 
 ```bash
-kubectl get pods -l app=tbmq
+kubectl get pods -l app=st-rmqtt
 ```
 {: .copy-code}
 
-2) Fetch logs of the tbmq pod:
+2) Fetch logs of the st-rmqtt pod:
 
 ```bash
-kubectl logs -f TBMQ_POD_NAME
+kubectl logs -f ST-RMQTT_POD_NAME
 ```
 {: .copy-code}
 
 Where:
 
-- `TBMQ_POD_NAME` - tbmq pod name obtained from the list of the running tbmq pods.
+- `ST-RMQTT_POD_NAME` - st-rmqtt pod name obtained from the list of the running st-rmqtt pods.
 
 Or use the next command to see the state of all the pods.
 
@@ -110,10 +110,10 @@ kubectl get statefulsets
 
 See [kubectl Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) command reference for more details.
 
-Execute the following command to delete TBMQ nodes:
+Execute the following command to delete ST-RMQTT nodes:
 
 ```bash
-./k8s-delete-tbmq.sh
+./k8s-delete-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -131,8 +131,8 @@ Execute the following command to delete all resources (including the databases):
 ### Backup and restore (Optional)
 
 While backing up your PostgreSQL database is highly recommended, it is optional before proceeding with the upgrade.
-{% if docsPrefix == null %} For further guidance, follow the [next instructions](https://github.com/thingsboard/tbmq/blob/main/k8s/minikube/backup-restore/README.md).
-{% else %} For further guidance, follow the [next instructions](https://github.com/thingsboard/tbmq-pe-k8s/blob/master/minikube/backup-restore/README.md).
+{% if docsPrefix == null %} For further guidance, follow the [next instructions](https://github.com/sentient/st-rmqtt/blob/main/k8s/minikube/backup-restore/README.md).
+{% else %} For further guidance, follow the [next instructions](https://github.com/sentient/st-rmqtt-pe-k8s/blob/master/minikube/backup-restore/README.md).
 {% endif %}
 
 {% if docsPrefix == null %}
@@ -140,7 +140,7 @@ While backing up your PostgreSQL database is highly recommended, it is optional 
 ### Upgrade to 2.2.0
 
 In this release, the MQTT authentication mechanism was migrated from YAML/env configuration into the database.
-During upgrade, TBMQ needs to know which authentication providers are enabled in your deployment.
+During upgrade, ST-RMQTT needs to know which authentication providers are enabled in your deployment.
 This information is provided through environment variables passed to the **upgrade pod**.
 
 The upgrade script requires a file named **`database-setup.yml`** that explicitly defines these variables.
@@ -179,12 +179,12 @@ git pull origin {{ site.release.broker_branch }}
 
 After that, execute the following command:
 
-{% capture tabspec %}tbmq-upgrade
-tbmq-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh
-tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md{% endcapture %}
+{% capture tabspec %}st-rmqtt-upgrade
+st-rmqtt-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh
+st-rmqtt-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md{% endcapture %}
 {% include tabs.html %}
 
-{% include templates/mqtt-broker/upgrade/stop-tbmq-pods-before-upgrade.md %}
+{% include templates/mqtt-broker/upgrade/stop-st-rmqtt-pods-before-upgrade.md %}
 
 {% else %}
 

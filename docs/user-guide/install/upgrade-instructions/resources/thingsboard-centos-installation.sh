@@ -1,1 +1,1 @@
-sudo rpm -Uvh thingsboard-{{ site.release.ce_ver }}.rpm
+sudo rpm -Uvh sentient-{{ site.release.ce_ver }}.rpm

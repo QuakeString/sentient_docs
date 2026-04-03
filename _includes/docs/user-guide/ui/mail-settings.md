@@ -1,15 +1,15 @@
 * TOC
 {:toc}
 
-This document provides step-by-step instructions for configuring the mail server in ThingsBoard.
+This document provides step-by-step instructions for configuring the mail server in SENTIENT.
 Using email allows you to send [notifications](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"}, password recovery messages, scheduled reports, and other important system messages.
 
 {% if docsPrefix == null %}
-ThingsBoard system administrator defines global mail server settings, which apply to all customers.
+SENTIENT system administrator defines global mail server settings, which apply to all customers.
 {% endif %}
 {% if docsPrefix == "pe/" %}
 
-ThingsBoard allows configuring the mail server at two levels:
+SENTIENT allows configuring the mail server at two levels:
 
 - System administrator level – Defines global SMTP settings that apply to all tenants unless overridden.
 - Tenant administrator level – Allows individual tenants to set up their own SMTP settings, overriding the global configuration if needed.
@@ -28,17 +28,17 @@ By default, if a Tenant mail server is not configured, the system will use the s
 
 Following steps are required to configure Mail server settings:
 {% if docsPrefix == null %}
-**Step 1.** Log in to your ThingsBoard instance WEB UI as system administrator;
+**Step 1.** Log in to your SENTIENT instance WEB UI as system administrator;
 
 **Step 2.** Go to the "Mail server" tab on the "Settings" page. You will be taken directly to the mail server settings;
 {% endif %}
 {% if docsPrefix == "pe/" %}
-**Step 1.** Log in to your ThingsBoard instance WEB UI;
+**Step 1.** Log in to your SENTIENT instance WEB UI;
 
 **Step 2.** Go to the "Mail server" tab on the "Settings" page. If you are logged in as a sysadmin, you will be taken directly to the mail server settings. If you are logged in as a tenant administrator, uncheck the "Use System Mail Server Settings" option to configure your own mail server settings;
 {% endif %}
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
-**Step 1.** Log in to your ThingsBoard instance WEB UI;
+**Step 1.** Log in to your SENTIENT instance WEB UI;
 
 **Step 2.** Go to the "Mail server" tab on the "Settings" page. Uncheck the "Use System Mail Server Settings" option to configure your own mail server settings;
 {% endif %}
@@ -61,7 +61,7 @@ Following steps are required to configure Mail server settings:
 
 ## Examples of mail server settings
 
-Starting from ThingsBoard 3.5.2 we have added mail settings templates for such providers: [Sendgrid](#sendgrid-configuration-example), [Gmail](#gmail-configuration-with-basic-authentication-example) and [Office 365](#office-365-configuration-with-oauth2-authentication-example). 
+Starting from SENTIENT 3.5.2 we have added mail settings templates for such providers: [Sendgrid](#sendgrid-configuration-example), [Gmail](#gmail-configuration-with-basic-authentication-example) and [Office 365](#office-365-configuration-with-oauth2-authentication-example). 
 So users don't have to fill in connection settings like SMTP server host, port and TLS configuration.
 If you want to use a different SMTP server, use the SMTP provider type "Custom".
 
@@ -74,9 +74,9 @@ You can try it for free and the free plan is most likely enough for platform eva
 
 {% include images-gallery.html imageCollection="sendgrid-configuration" showListImageTitles="true" %}
 
-**ㅤ2. Setup ThingsBoard mail server settings**
+**ㅤ2. Setup SENTIENT mail server settings**
 
-Now navigate to the "Settings" page -> "Mail Server" tab your ThingsBoard instance and fill in the form:
+Now navigate to the "Settings" page -> "Mail Server" tab your SENTIENT instance and fill in the form:
 
 - Fill in the "Mail From" field;
 - Select SMTP provider - **SendGrid**;
@@ -110,10 +110,10 @@ In order to use Gmail, you will need to enable two-step verification (this step 
 
 {% include images-gallery.html imageCollection="gmail-generate-an-app-password" showListImageTitles="true" %}
 
-**ㅤ2. Setup ThingsBoard mail server settings**
+**ㅤ2. Setup SENTIENT mail server settings**
 
 Once this is ready, you should be able to set up mail server using the information below.
-Navigate to the "Settings" page -> "Mail Server" tab your ThingsBoard instance and fill in the form:
+Navigate to the "Settings" page -> "Mail Server" tab your SENTIENT instance and fill in the form:
 
 - Fill in the "Mail From" field;
 - Select SMTP provider - **Google**;
@@ -138,15 +138,15 @@ In case of error in configuration, you should receive a popup with the error log
 
 ### Gmail configuration with OAuth2 authentication example
 
-Starting from ThingsBoard 3.5.2 it is possible to use OAuth2 authorization for Gmail SMTP server. 
+Starting from SENTIENT 3.5.2 it is possible to use OAuth2 authorization for Gmail SMTP server. 
 Using OAuth 2.0 protocol, user can do authentication by Gmail Web OAuth instead of inputting user and password directly in application. 
 This way is more secure, but a little bit complex.
 
-To use Gmail OAuth2 you need to create a project in Google Developers Console but first let's set up ThingsBoard mail server settings.
+To use Gmail OAuth2 you need to create a project in Google Developers Console but first let's set up SENTIENT mail server settings.
 
-**ㅤ1. Setup ThingsBoard mail server settings**
+**ㅤ1. Setup SENTIENT mail server settings**
 
-- In your ThingsBoard instance, go to the "Settings" page -> "Mail Server" tab;
+- In your SENTIENT instance, go to the "Settings" page -> "Mail Server" tab;
 - Fill in the "mail From" field;
 - Select SMTP provider - "**Google**";
 - In the "Authentication" block, fill in username with email address you are going to use for sending mail from;
@@ -170,9 +170,9 @@ To use Gmail OAuth2 you need to create a project in Google Developers Console bu
 {% include images-gallery.html imageCollection="create-gmail-credentials" showListImageTitles="true" %}
 
 <br>
-**ㅤ4. Complete ThingsBoard settings setup**
+**ㅤ4. Complete SENTIENT settings setup**
 
-Back to the Thingsboard portal and paste **Client ID** and **Client secret** from the previous steps into the appropriate fields. Click "Save".
+Back to the Sentient portal and paste **Client ID** and **Client secret** from the previous steps into the appropriate fields. Click "Save".
 
 {% if docsPrefix == null %}
 ![image](/images/user-guide/ui/mail/google-oauth-settings-2-ce.png)
@@ -185,7 +185,7 @@ Back to the Thingsboard portal and paste **Client ID** and **Client secret** fro
 **ㅤ5. Generate access token**
 
 Finally, we can get access token. For this click on the **Generate access token** and your browser will redirect you to provider login page. 
-Please follow the steps in your browser and after acceptance we will automatically save Refresh Token and Access Token and redirect you back to ThingsBoard portal. 
+Please follow the steps in your browser and after acceptance we will automatically save Refresh Token and Access Token and redirect you back to SENTIENT portal. 
 If access token was successfully generated you will see status "generated".
 
 {% if docsPrefix == null %}
@@ -202,7 +202,7 @@ To check if everything works click "Send test email" button. Keep in mind that e
 
 ### Office 365 configuration with OAuth2 authentication example
 
-Starting from ThingsBoard 3.6 it is possible to use OAuth2 authorization for Office 365 SMTP server. 
+Starting from SENTIENT 3.6 it is possible to use OAuth2 authorization for Office 365 SMTP server. 
 
 {% capture difference %}
 **Please note:**
@@ -218,11 +218,11 @@ First, go to the "Azure directory" to save user principal name of user you want 
 
 {% include images-gallery.html imageCollection="microsoft-azure-with-oauth2" %}
 
-To use Office 365 OAuth2 you need to register an application in the Azure portal but first let’s set up ThingsBoard mail server settings.
+To use Office 365 OAuth2 you need to register an application in the Azure portal but first let’s set up SENTIENT mail server settings.
 
-**ㅤ1. Setup ThingsBoard mail server settings**:
+**ㅤ1. Setup SENTIENT mail server settings**:
 
- - In your ThingsBoard instance, go to the "Settings" page -> "Mail Server" tab;
+ - In your SENTIENT instance, go to the "Settings" page -> "Mail Server" tab;
  - Enter previously copied Microsoft user principal name (e.g. app_user@onmicrosoft.com);
  - Select SMTP provider - "**Office 365**";
  - In the "Authentication" block, fill in username with microsoft user principal name (the same as you used for mail from);
@@ -252,9 +252,9 @@ To use Office 365 OAuth2 you need to register an application in the Azure portal
 {% include images-gallery.html imageCollection="add-api-permissions" showListImageTitles="true" %}
 
 <br>
-**ㅤ5. Complete ThingsBoard settings setup**:
+**ㅤ5. Complete SENTIENT settings setup**:
 
-Back to the ThingsBoard portal and paste **Client ID**, **Client secret** and **Directory (tenant) ID** from the previous steps into the appropriate fields. Click "Save".
+Back to the SENTIENT portal and paste **Client ID**, **Client secret** and **Directory (tenant) ID** from the previous steps into the appropriate fields. Click "Save".
 
 {% if docsPrefix == null %}
 ![image](/images/user-guide/ui/mail/microsoft-azure-oauth-settings-2-ce.png)
@@ -267,7 +267,7 @@ Back to the ThingsBoard portal and paste **Client ID**, **Client secret** and **
 **ㅤ6. Generate access token**:
 
 Finally, we can get access token. For this click on the "Generate access token" button and your browser will redirect you to provider login page. Please follow the steps
-in your browser and after acceptance we will automatically save Refresh Token and Access Token and redirect you back to ThingsBoard portal. 
+in your browser and after acceptance we will automatically save Refresh Token and Access Token and redirect you back to SENTIENT portal. 
 If access token was successfully generated you will see status "generated".
 
 {% if docsPrefix == null %}

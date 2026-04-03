@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: ThingsBoard Performance on different AWS instances
-description: ThingsBoard Performance on different AWS instances results
+title: SENTIENT Performance on different AWS instances
+description: SENTIENT Performance on different AWS instances results
 redirect_from:
   - "/docs/reference/1m-devices-test/"
   - "/docs/reference/20k-devices-test/"
@@ -9,10 +9,10 @@ redirect_from:
 postgres-only-1000:
     0:
         image: /images/reference/performance-aws-instances/method/t3-medium/postgres/queue-stats.png  
-        title: 'Thingsboard queue stats'
+        title: 'Sentient queue stats'
     1:
         image: /images/reference/performance-aws-instances/method/t3-medium/postgres/api-usage.png
-        title: 'Thingsboard API usage'
+        title: 'Sentient API usage'
     2:
         image: /images/reference/performance-aws-instances/method/t3-medium/postgres/htop.png
         title: 'htop'
@@ -32,10 +32,10 @@ postgres-only-1000:
 postgres-only-1000-arm:
     0:
         image: /images/reference/performance-aws-instances/method/arm/t4g-medium/postgres/queue-stats.png  
-        title: 'Thingsboard queue stats on ARM architecture'
+        title: 'Sentient queue stats on ARM architecture'
     1:
         image: /images/reference/performance-aws-instances/method/arm/t4g-medium/postgres/api-usage.png
-        title: 'Thingsboard API usage on ARM architecture'
+        title: 'Sentient API usage on ARM architecture'
     2:
         image: /images/reference/performance-aws-instances/method/arm/t4g-medium/postgres/htop.png
         title: 'htop on ARM architecture'
@@ -55,10 +55,10 @@ postgres-only-1000-arm:
 postgres-only-x3-stress:
     0:
         image: /images/reference/performance-aws-instances/method/t3-medium/burst-x3/burst-x3-queue-stats.png  
-        title: 'Thingsboard queue stats'
+        title: 'Sentient queue stats'
     1:
         image: /images/reference/performance-aws-instances/method/t3-medium/burst-x3/burst-x3-api-usage.png
-        title: 'Thingsboard API usage'
+        title: 'Sentient API usage'
     2:
         image: /images/reference/performance-aws-instances/method/t3-medium/burst-x3/burst-x3-htop.png
         title: 'htop'
@@ -103,37 +103,37 @@ postgres-only-x10-stress:
 
 postgres-only-6000:
     0:
-        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-queue-stats-dashboard.png  
+        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/sentient-aws-m6a-large-queue-stats-dashboard.png  
         title: 'Queue stats dashboard'
     1:
-        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-api-usage-dashboard.png
-        title: 'Thingsboard API usage dashboard'
+        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/sentient-aws-m6a-large-api-usage-dashboard.png
+        title: 'Sentient API usage dashboard'
     2:
-        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-htop-cpu-memory-io-monitoring.png
+        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/sentient-aws-m6a-large-htop-cpu-memory-io-monitoring.png
         title: 'htop: CPU, memory, IO read/write'
     3:
-        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-jmx-visualvm-monitoring.png
+        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/sentient-aws-m6a-large-jmx-visualvm-monitoring.png
         title: 'Java CPU and heap monitoring with JMX VisualVM'
     4:
-        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-postgresql-pgadmin-dashboard.png
+        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/sentient-aws-m6a-large-postgresql-pgadmin-dashboard.png
         title: 'Postgres PgAdmin dashboard'
     5:
-        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-cpu-network-monitoring.png
+        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/sentient-aws-m6a-large-cpu-network-monitoring.png
         title: 'AWS CPU and network monitoring'
     6:
-        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-disk-monitoring.png
+        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/sentient-aws-m6a-large-disk-monitoring.png
         title: 'AWS storage monitoring'
     7:
-        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/thingsboard-aws-m6a-large-disk-type.png
+        image: /images/reference/performance-aws-instances/method/m6a-large/postgres/sentient-aws-m6a-large-disk-type.png
         title: 'Storage type GP3, 3000 IOPS, 125 MB/s'
 
 postgres-kafka-5000:
     0:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/queue-stats.png  
-        title: 'Thingsboard queue stats'
+        title: 'Sentient queue stats'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/api-usage.png
-        title: 'Thingsboard API usage'
+        title: 'Sentient API usage'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/htop.png
         title: 'htop'
@@ -153,10 +153,10 @@ postgres-kafka-5000:
 postgres-kafka-5000-long-running:
     0:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/long-running/queue-stats-long-running.png  
-        title: 'Thingsboard queue stats'
+        title: 'Sentient queue stats'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/long-running/api-usage-long-running.png
-        title: 'Thingsboard API usage'
+        title: 'Sentient API usage'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/long-running/jmx-visualvm-monitoring-long-running.png
         title: 'JMX VisualVM monitoring'
@@ -167,7 +167,7 @@ postgres-kafka-x3-stress:
         title: '100% CPU utilization. The system is overloaded'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/stress-x3/queue-stats-stress-x3.png
-        title: 'Thingsboard queue stats under x3 stress test'
+        title: 'Sentient queue stats under x3 stress test'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-large/postgres-kafka/stress-x3/jmx-visualvm-monitoring-long-running-stress-x3.png
         title: 'Java machine feels good. Heap memory has enough space to operate'
@@ -195,7 +195,7 @@ cassandra-25k-10k-30k:
         title: 'Queue stats dashboard'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/api-usage.png
-        title: 'Thingsboard API usage dashboard'
+        title: 'Sentient API usage dashboard'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/htop.png
         title: 'htop: CPU, memory, IO read/write'
@@ -222,8 +222,8 @@ cassandra-25k-10k-30k-jmx:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/visualvm-forwarded-applications.png
         title: 'VisualVM Java application list'
     1:
-        image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/jmx-thingsboard.png
-        title: 'JMX monitoring for the Thingsboard. The system is stable'
+        image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/jmx-sentient.png
+        title: 'JMX monitoring for the Sentient. The system is stable'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/25k-10k-30k/jmx-kafka.png
         title: 'JMX monitoring for the Kafka. The system is stable'
@@ -240,7 +240,7 @@ cassandra-100k-5k-15k:
         title: 'Queue stats dashboard'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-5k-15k/api-usage.png
-        title: 'Thingsboard API usage dashboard'
+        title: 'Sentient API usage dashboard'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-5k-15k/htop.png
         title: 'htop: CPU, memory, IO read/write'
@@ -266,7 +266,7 @@ cassandra-100k-10k-30k:
         title: 'Queue stats dashboard'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-10k-30k/api-usage.png
-        title: 'Thingsboard API usage dashboard'
+        title: 'Sentient API usage dashboard'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-10k-30k/htop.png
         title: 'htop: CPU, memory, IO read/write'
@@ -289,7 +289,7 @@ cassandra-100k-10k-30k-24h:
         title: 'Queue stats dashboard'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-10k-30k/24h-run/api-usage.png
-        title: 'Thingsboard API usage dashboard'
+        title: 'Sentient API usage dashboard'
     2:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-10k-30k/24h-run/aws-instance-monitoring.png
         title: 'AWS CPU and network monitoring'
@@ -297,9 +297,9 @@ cassandra-100k-10k-30k-24h:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-10k-30k/24h-run/aws-storage-monitoring.png
         title: 'AWS storage monitoring'
 
-thingsboard-100k-devices-connected:
+sentient-100k-devices-connected:
     0:
-        image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-is-connected/devices-list-100k-thingsboard.png  
+        image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-is-connected/devices-list-100k-sentient.png  
         title: 'Device List with 100k+ lines'
     1:
         image: /images/reference/performance-aws-instances/method/m6a-2xlarge/100k-is-connected/jmx-mbeans-java-lang-operating-system-open-file-descriptor-count.png

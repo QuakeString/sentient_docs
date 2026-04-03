@@ -1,15 +1,15 @@
 * TOC
 {:toc}
 
-## ThingsBoard services
+## SENTIENT services
 
-ThingsBoard is designed to be:
+SENTIENT is designed to be:
 
 * **scalable**: horizontally scalable platform, build using leading open-source technologies.
 * **fault-tolerant**: no single-point-of-failure, every node in the cluster is identical.
 * **robust and efficient**: single server node can handle tens or even hundreds thousands of devices depending on use-case. 
-ThingsBoard cluster can handle millions of devices.
-* **durable**: never lose your data. ThingsBoard supports various queue implementations to provide extremely high message durability.
+SENTIENT cluster can handle millions of devices.
+* **durable**: never lose your data. SENTIENT supports various queue implementations to provide extremely high message durability.
 * **customizable**: adding new functionality is easy with customizable widgets and rule engine nodes.
 
 
@@ -17,32 +17,32 @@ The diagram below shows key system components and interfaces they provide. Let's
 
 
 {% if docsPrefix == null %}
-<object width="100%" data="/images/reference/thingsboard-architecture.svg"></object>
+<object width="100%" data="/images/reference/sentient-architecture.svg"></object>
 {% endif %}
 {% if docsPrefix == "pe/" %}
-<object width="100%" data="/images/reference/thingsboard-architecture-pe.svg"></object>
+<object width="100%" data="/images/reference/sentient-architecture-pe.svg"></object>
 {% endif %}
 
 
-**ThingsBoard Transports**
+**SENTIENT Transports**
  
-ThingsBoard provides [MQTT](/docs/{{docsPrefix}}reference/mqtt-api/), [HTTP](/docs/{{docsPrefix}}reference/http-api/), [CoAP](/docs/{{docsPrefix}}reference/coap-api/) and [LwM2M](/docs/{{docsPrefix}}reference/lwm2m-api/) based APIs that are available for your device applications/firmware. 
-Each of the protocol APIs are provided by a separate server component and is part of ThingsBoard "Transport Layer". 
+SENTIENT provides [MQTT](/docs/{{docsPrefix}}reference/mqtt-api/), [HTTP](/docs/{{docsPrefix}}reference/http-api/), [CoAP](/docs/{{docsPrefix}}reference/coap-api/) and [LwM2M](/docs/{{docsPrefix}}reference/lwm2m-api/) based APIs that are available for your device applications/firmware. 
+Each of the protocol APIs are provided by a separate server component and is part of SENTIENT "Transport Layer". 
 MQTT Transport also provides [Gateway APIs](/docs/{{docsPrefix}}reference/gateway-mqtt-api/) to be used by gateways that represent multiple connected devices and/or sensors.
 
 Once the Transport receives the message from device, it is parsed and pushed to durable [Message Queue](/docs/{{docsPrefix}}reference/#message-queues-are-awesome). 
 The message delivery is acknowledged to device only after corresponding message is acknowledged by the message queue.
 
-**ThingsBoard Core**
+**SENTIENT Core**
 
-ThingsBoard Core is responsible for handling [REST API](/docs/{{docsPrefix}}reference/rest-api/) calls and WebSocket [subscriptions](/docs/{{docsPrefix}}user-guide/telemetry/#websocket-api).
+SENTIENT Core is responsible for handling [REST API](/docs/{{docsPrefix}}reference/rest-api/) calls and WebSocket [subscriptions](/docs/{{docsPrefix}}user-guide/telemetry/#websocket-api).
 It is also responsible for storing up to date information about active device sessions and monitoring device [connectivity state](/docs/{{docsPrefix}}user-guide/device-connectivity-status/).
-ThingsBoard Core uses Actor System under the hood to implement actors for main entities: tenants and devices. 
+SENTIENT Core uses Actor System under the hood to implement actors for main entities: tenants and devices. 
 Platform nodes can join the cluster, where each node is responsible for certain partitions of the incoming messages.
 
-**ThingsBoard Rule Engine**
+**SENTIENT Rule Engine**
 
-ThingsBoard Rule Engine is the heart of the system and is responsible for processing incoming [messages](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-message).
+SENTIENT Rule Engine is the heart of the system and is responsible for processing incoming [messages](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-message).
 Rule Engine uses Actor System under the hood to implement actors for main entities: rule chains and rule nodes.
 Rule Engine nodes can join the cluster, where each node is responsible for certain partitions of the incoming messages.
 
@@ -51,66 +51,66 @@ There are multiple strategies available that control the order or message proces
 See [submit strategies](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/#queue-submit-strategy) and [processing strategies](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/#queue-processing-strategy)
 for more details.
 
-ThingsBoard Rule Engine may operate in two modes: shared and isolated. In shared mode, rule engine process messages that belong to multiple tenants.
+SENTIENT Rule Engine may operate in two modes: shared and isolated. In shared mode, rule engine process messages that belong to multiple tenants.
 In isolated mode Rule Engine may be configured to process messages for tenants of specific tenant profile only. 
 
-**ThingsBoard Web UI**
+**SENTIENT Web UI**
 
-ThingsBoard provides a lightweight component written using Express.js framework to host static web ui content. 
+SENTIENT provides a lightweight component written using Express.js framework to host static web ui content. 
 Those components are completely stateless and no much configuration available. 
-The static web UI contains application bundle. Once it is loaded, the application starts using the REST API and WebSockets API provided by ThingsBoard Core.  
+The static web UI contains application bundle. Once it is loaded, the application starts using the REST API and WebSockets API provided by SENTIENT Core.  
  
-## ThingsBoard message queues
+## SENTIENT message queues
 
-ThingsBoard supports two types of message queues: **Kafka** and **In-Memory**.
+SENTIENT supports two types of message queues: **Kafka** and **In-Memory**.
 - **Kafka** is a widely used, distributed, and durable message queue system designed to handle large volumes of data. It is well-suited for production environments where high throughput, fault tolerance, and scalability are critical.
 - **In-Memory** queue is a lightweight, fast, and simple message queue implementation designed for testing, smaller-scale or development environments. It stores messages in memory rather than on disk, prioritizing speed over persistence.
 
-Using durable and scalable Kafka queue allow ThingsBoard to implement back-pressure and load balancing. Back-pressure is extremely important in case of peak loads. 
+Using durable and scalable Kafka queue allow SENTIENT to implement back-pressure and load balancing. Back-pressure is extremely important in case of peak loads. 
 We provide "abstraction layer" over specific queue implementations and maintain two main concepts: topic and topic partition. 
 One topic may have configurable number of partitions. Since most of the queue implementations does not support partitions, we use *topic + "." + partition* pattern.
   
-ThingsBoard message Producers determines which partition to use based on the hash of entity id. 
+SENTIENT message Producers determines which partition to use based on the hash of entity id. 
 Thus, all messages for the same entity are always pushed to the same partition.
-ThingsBoard message Consumers coordinate using Zookeeper and use consistent-hash algorithm to determine list of partitions that each Consumer should subscribe to.
+SENTIENT message Consumers coordinate using Zookeeper and use consistent-hash algorithm to determine list of partitions that each Consumer should subscribe to.
 While running in microservices mode, each service also has the dedicated "Notifications" topic based on the unique service id that has only one partition.      
    
-ThingsBoard uses following topics:
+SENTIENT uses following topics:
 
- * **tb_transport.api.requests**: to send generic API calls to check device credentials from Transport to ThingsBoard Core.
- * **tb_transport.api.responses**: to receive device credentials verification results from ThingsBoard Core to Transport.
- * **tb_core**: to push messages from Transport or Rule Engine to ThingsBoard Core. Messages include session lifecycle events, attribute and RPC subscriptions, etc.
- * **tb_rule_engine**: to push messages from Transport or ThingsBoard Core to Rule Engine. Messages include incoming telemetry, device states, entity lifecycle events, etc.
+ * **tb_transport.api.requests**: to send generic API calls to check device credentials from Transport to SENTIENT Core.
+ * **tb_transport.api.responses**: to receive device credentials verification results from SENTIENT Core to Transport.
+ * **tb_core**: to push messages from Transport or Rule Engine to SENTIENT Core. Messages include session lifecycle events, attribute and RPC subscriptions, etc.
+ * **tb_rule_engine**: to push messages from Transport or SENTIENT Core to Rule Engine. Messages include incoming telemetry, device states, entity lifecycle events, etc.
 
 {% capture difference %}
-**Note:** All topic properties including names and number of partitions are [configurable](/docs/user-guide/install/{{docsPrefix}}config/){:target="_blank"} via thingsboard.yml or environment variables. 
-Since ThingsBoard 3.4 we can configure Rule Engine queues by the UI, see the [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/){:target="_blank"}.
+**Note:** All topic properties including names and number of partitions are [configurable](/docs/user-guide/install/{{docsPrefix}}config/){:target="_blank"} via sentient.yml or environment variables. 
+Since SENTIENT 3.4 we can configure Rule Engine queues by the UI, see the [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/){:target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
 {% capture difference %}
-**Note:** Starting version 2.5 we have switched from using [gRPC](https://grpc.io/){:target="_blank"} to [Message Queues](/docs/{{docsPrefix}}reference/#thingsboard-message-queues)
-for all communication between ThingsBoard components. 
+**Note:** Starting version 2.5 we have switched from using [gRPC](https://grpc.io/){:target="_blank"} to [Message Queues](/docs/{{docsPrefix}}reference/#sentient-message-queues)
+for all communication between SENTIENT components. 
 The main idea was to sacrifice small performance/latency penalties in favor of persistent and reliable message delivery and automatic load balancing.  
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
 ## On-premise vs cloud deployments
 
-ThingsBoard supports both on-premise and cloud deployments. 
-With more then 5000 ThingsBoard servers running all over the world, ThingsBoard is running in production on AWS, Azure, GCE and private data centers.
-It is possible to launch ThingsBoard in the private network with no internet access at all.
+SENTIENT supports both on-premise and cloud deployments. 
+With more then 5000 SENTIENT servers running all over the world, SENTIENT is running in production on AWS, Azure, GCE and private data centers.
+It is possible to launch SENTIENT in the private network with no internet access at all.
 
 ## Standalone vs cluster mode
 
-Platform is designed to be horizontally scalable and supports automatic discovery of new ThingsBoard servers (nodes). 
-All ThingsBoard nodes inside cluster are identical and are sharing the load. 
+Platform is designed to be horizontally scalable and supports automatic discovery of new SENTIENT servers (nodes). 
+All SENTIENT nodes inside cluster are identical and are sharing the load. 
 Since all nodes are identical there is no "master" or "coordinator" processes and there is no single point of failure. 
-The load balancer of your choice may forward request from devices, applications and users to all ThingsBoard nodes.
+The load balancer of your choice may forward request from devices, applications and users to all SENTIENT nodes.
 
 ## Monolithic vs microservices architecture
 
-Starting ThingsBoard v2.2, it is possible to run the platform as a monolithic application or as a set of microservices. 
+Starting SENTIENT v2.2, it is possible to run the platform as a monolithic application or as a set of microservices. 
 Supporting both options requires some additional programming efforts, however, is critical due to back-ward compatibility with variety of existing installations.
 
 Approximately 80% of the platform installations are still using monolithic mode due to minimum support efforts, knowledge and hardware resources to do the setup and low maintenance efforts.
@@ -126,23 +126,23 @@ For example, running a multi-tenant deployments where one need more granular iso
  
 Please follow the links listed below to learn more and choose the right architecture and deployment option:
 
-* [**monolithic**](/docs/{{docsPrefix}}reference/monolithic): Learn more about deployment, configuring and running ThingsBoard platform in a monolythic mode.  
-* [**microservices**](/docs/{{docsPrefix}}reference/msa): Learn more about deployment, configuring and running ThingsBoard platform in a microservices mode.
+* [**monolithic**](/docs/{{docsPrefix}}reference/monolithic): Learn more about deployment, configuring and running SENTIENT platform in a monolythic mode.  
+* [**microservices**](/docs/{{docsPrefix}}reference/msa): Learn more about deployment, configuring and running SENTIENT platform in a microservices mode.
  
 
 ## SQL vs NoSQL vs Hybrid database approach
 
-ThingsBoard uses database to store 
+SENTIENT uses database to store 
 [entities](/docs/{{docsPrefix}}user-guide/entities-and-relations/) (devices, assets, customers, dashboards, etc) and 
 [telemetry](/docs/{{docsPrefix}}user-guide/telemetry/) data (attributes, timeseries sensor readings, statistics, events). 
 Platform supports three database options at the moment:
 
-* **SQL** - Stores all entities and telemetry in SQL database. ThingsBoard authors recommend to use PostgreSQL and this is the main SQL database that ThingsBoard supports. 
+* **SQL** - Stores all entities and telemetry in SQL database. SENTIENT authors recommend to use PostgreSQL and this is the main SQL database that SENTIENT supports. 
 It is possible to use HSQLDB for local development purposes. **We do not recommend to use HSQLDB** for anything except running tests and launching dev instance that has minimum possible load.
 * **Hybrid (PostgreSQL + Cassandra)** - Stores all entities in PostgreSQL database and timeseries data in Cassandra database. 
 * **Hybrid (PostgreSQL + TimescaleDB)** - Stores all entities in PostgreSQL database and timeseries data in Timescale database. 
 
-It is possible to configure this options using **thingsboard.yml** file. See database [configuration](/docs/user-guide/install/{{docsPrefix}}config/) page for more details.
+It is possible to configure this options using **sentient.yml** file. See database [configuration](/docs/user-guide/install/{{docsPrefix}}config/) page for more details.
 
 ```yaml
 database:
@@ -156,5 +156,5 @@ database:
 
 ## Programming languages and third-party
 
-ThingsBoard back-end is written in Java, but we also have some micro-services based on Node.js. ThingsBoard front-end is a SPA based on Angular framework. 
+SENTIENT back-end is written in Java, but we also have some micro-services based on Node.js. SENTIENT front-end is a SPA based on Angular framework. 
 See [monolithic](/docs/{{docsPrefix}}reference/monolithic) and [microservices](/docs/{{docsPrefix}}reference/monolithic) pages for more details about third-party components used.  

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
-title: ThingsBoard PE Roadmap
-description: ThingsBoard architecture
+title: SENTIENT Professional Edition Roadmap
+description: SENTIENT architecture
 
 ---
 

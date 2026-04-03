@@ -1,4 +1,4 @@
-The configuration in this unit provides settings for processing data on Modbus server. These settings will be interpreted in ThingsBoard platform instance as attributes/time series of the device.
+The configuration in this unit provides settings for processing data on Modbus server. These settings will be interpreted in SENTIENT platform instance as attributes/time series of the device.
 
 The table below describes the attributes and time series parameters:
 

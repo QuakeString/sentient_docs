@@ -3,17 +3,17 @@
 
 ## Overview
 
-Since ThingsBoard 3.3, ThingsBoard allows you to upload and distribute over-the-air(OTA) updates to devices. 
+Since SENTIENT 3.3, SENTIENT allows you to upload and distribute over-the-air(OTA) updates to devices. 
 As a tenant administrator, you may upload firmware or software packages to the OTA repository. 
 Once uploaded, you may assign them to [Device Profile](/docs/{{docsPrefix}}user-guide/device-profiles/) or [Device](/docs/{{docsPrefix}}user-guide/ui/devices/). 
-ThingsBoard will notify devices about the available update and provide a protocol-specific API to download the firmware. 
+SENTIENT will notify devices about the available update and provide a protocol-specific API to download the firmware. 
 The platform tracks status of the update and stores history of the updates. 
 As a platform user, you may monitor the update process using the dashboard.
 <br>
 <object data="/images/user-guide/firmware/firmware-anim3.svg"></object>
 <br>
 
-## Provision OTA package to ThingsBoard repository
+## Provision OTA package to SENTIENT repository
 
 Navigate to the "OTA Updates" menu item to list and upload OTA update packages. Each package consist of:
 
@@ -39,7 +39,7 @@ All actions listed are also available via [REST API](/docs/{{docsPrefix}}referen
 
 ## Firmware vs Software
 
-There is a very minor difference between FOTA and SOTA implementation inside ThingsBoard core. Many use-cases and applications will need to use FOTA only. 
+There is a very minor difference between FOTA and SOTA implementation inside SENTIENT core. Many use-cases and applications will need to use FOTA only. 
 However, [LwM2M](/docs/{{docsPrefix}}reference/lwm2m-api/) devices process FOTA and SOTA updates differently. 
 
 ## Assign OTA package to device profile
@@ -48,7 +48,7 @@ You may assign firmware/software to the device profile to automatically distribu
 
 {% include images-gallery.html imageCollection="fw-deviceprofile" %}
 
-The device profile details will let you choose only compatible OTA update packages (see [provisioning](#provision-ota-package-to-thingsboard-repository) for more info).
+The device profile details will let you choose only compatible OTA update packages (see [provisioning](#provision-ota-package-to-sentient-repository) for more info).
 Device profile may be used by thousands of devices. Assignment of the firmware/software triggers the [update process](#update-process).
 
 
@@ -78,7 +78,7 @@ Deletion of the firmware packages that is assigned to at least one device or dev
 ## Update process
 
 Assignment of the firmware/software to the device or device profile triggers the update process.
-ThingsBoard tracks the progress of the update and persists it to the device attributes.
+SENTIENT tracks the progress of the update and persists it to the device attributes.
 
 Update progress may have one of the following states. The state of the update is stored as an attribute of the device and is used to visualize the update process on the [dashboard](#dashboard).
 
@@ -86,13 +86,13 @@ Update progress may have one of the following states. The state of the update is
 
 The very first state of the firmware/software update. 
 Means that the notification about new firmware/software is queued but not yet pushed to the device. 
-ThingsBoard queues the update notifications to avoid peak loads. The queue is processed with the constant pace. 
+SENTIENT queues the update notifications to avoid peak loads. The queue is processed with the constant pace. 
 By default, it is configured to notify up to 100 device per minute. See [configuration properties](/docs/{{docsPrefix}}user-guide/ota-updates/#queue-processing-pace) for more details.
    
 ### INITIATED state
 
 Means that the notification about firmware/software is fetched from queue and pushed to device.
-Under the hood, ThingsBoard converts notification to the update of the following [shared attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes):
+Under the hood, SENTIENT converts notification to the update of the following [shared attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes):
 
 - fw(sf)_title - name of the firmware (software).
 - fw(sf)_version - version of the firmware (software).
@@ -119,7 +119,7 @@ Sample applications simulate behavior of the device firmware/software and may us
  * FAILED - checksum wasn't verified, or the device failed to update. See "Device failed" tab on the Firmware dashboard for more details.
 
 
-Once the firmware/software is updated, ThingsBoard expect the device to send the following telemetry:
+Once the firmware/software is updated, SENTIENT expect the device to send the following telemetry:
 
 for firmware:
 ```json
@@ -131,7 +131,7 @@ for software:
 {"current_sw_title": "mySoftware", "current_sw_version": "1.2.3", "sw_state": "UPDATED"}
 ```
 
-If the firmware/software update failed, ThingsBoard expect the device to send the following telemetry:
+If the firmware/software update failed, SENTIENT expect the device to send the following telemetry:
 
 for firmware:
 ```json
@@ -151,12 +151,12 @@ CoAP<br>%,%aws%,%templates/install/coap-firmware.md%br%{% endcapture %}
 
 ## Dashboard
 
-ThingsBoard provides the summary of the firmware/software update to monitor and track the firmware/software update status of your device, such as which devices are updating right now, any boot issues, and which ones have already been updated.
+SENTIENT provides the summary of the firmware/software update to monitor and track the firmware/software update status of your device, such as which devices are updating right now, any boot issues, and which ones have already been updated.
 
 ### Firmware update monitoring dashboard
 
-The dashboard is created automatically for each new tenant that you add to ThingsBoard. 
-You can also download the dashboard JSON [here](https://github.com/thingsboard/thingsboard/blob/master/application/src/main/data/json/demo/dashboards/firmware.json) and import it for existing tenants.
+The dashboard is created automatically for each new tenant that you add to SENTIENT. 
+You can also download the dashboard JSON [here](https://github.com/sentient/sentient/blob/master/application/src/main/data/json/demo/dashboards/firmware.json) and import it for existing tenants.
 
 There you can see a list of all devices with full information about their firmware. 
 
@@ -168,8 +168,8 @@ Click the "History of the firmware updates" button next to the device name to le
 
 ### Software update monitoring dashboard
 
-The dashboard is created automatically for each new tenant that you add to ThingsBoard.
-You can also download the dashboard JSON [here](https://github.com/thingsboard/thingsboard/blob/master/application/src/main/data/json/demo/dashboards/software.json) and import it for existing tenants.
+The dashboard is created automatically for each new tenant that you add to SENTIENT.
+You can also download the dashboard JSON [here](https://github.com/sentient/sentient/blob/master/application/src/main/data/json/demo/dashboards/software.json) and import it for existing tenants.
 
 There you can see a list of all devices with full information about their software.
 

@@ -1,7 +1,7 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://www.ezurio.com/iot-devices/lorawan-iot-devices/rs26x-sensor" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - A smartphone with the Ezurio Xbit app for configuration of the RS26x ([Android](https://play.google.com/store/apps/details?id=com.rfpros.xbitmobile&hl=en_US){:target="_blank"}/[iOS](https://apps.apple.com/us/app/canvas-xbit-mobile/id6478117073){:target="_blank"})
@@ -22,7 +22,7 @@ They are available in two variants: One with an internal temperature sensor, and
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 
 ## Device connection
@@ -93,15 +93,15 @@ And you should be able to see some live data. It might take a while until new li
 
 ![image](/images/devices-library/ready-to-go-devices/s26x-lorawan/image-20250917-111643.png)
 
-## Log in to ThingsBoard
+## Log in to SENTIENT
 
-Log in to **ThingsBoard** by following [this link](https://thingsboard.io/installations/choose-region/){: target="_blank"} and selecting your region.
+Log in to **SENTIENT** by following [this link](https://docs.sentient.invenia.in/installations/choose-region/){: target="_blank"} and selecting your region.
 
 ![image](/images/devices-library/ready-to-go-devices/s26x-lorawan/image-20250917-113937.png)
 
 ## Adding the Data Converter
 
-The first thing to add would be the uplink data converter to convert the incoming data from TTN into a usable format for Thingsboard dashboard widgets.  
+The first thing to add would be the uplink data converter to convert the incoming data from TTN into a usable format for Sentient dashboard widgets.  
 
 - Navigate to **Data converter** in the **Integrations center**.  
 
@@ -141,7 +141,7 @@ Make sure to use the proper regional settings from your specific TTN settings. T
 
 ![image](/images/devices-library/ready-to-go-devices/s26x-lorawan/image-20250917-125911.png)
 
-In Thingsboard click **Check connection** and you should see a **Connected** message.
+In Sentient click **Check connection** and you should see a **Connected** message.
 
 ![image](/images/devices-library/ready-to-go-devices/s26x-lorawan/image-20250917-130107.png)
 
@@ -201,8 +201,8 @@ Try adding other widgets showing other telemetry data like RSSI, SNR or the used
 
 ## Conclusion
 
-Now you can easily connect your RS26x LoRaWAN temperature sensor and start sending data to **ThingsBoard**.  
+Now you can easily connect your RS26x LoRaWAN temperature sensor and start sending data to **SENTIENT**.  
 
-To go further, explore the [ThingsBoard documentation](https://thingsboard.io/docs/pe/){:target="_blank"} to learn more about key features, such as creating more [dashboards](https://thingsboard.io/docs/pe/user-guide/dashboards/){:target="_blank"} and leveragin additional widgets to visualize your telemetry, or setting up [alarm rules](https://thingsboard.io/docs/pe/user-guide/alarm-rules/){:target="_blank"} to monitor device behavior in real time.
+To go further, explore the [SENTIENT documentation](https://docs.sentient.invenia.in/docs/pe/){:target="_blank"} to learn more about key features, such as creating more [dashboards](https://docs.sentient.invenia.in/docs/pe/user-guide/dashboards/){:target="_blank"} and leveragin additional widgets to visualize your telemetry, or setting up [alarm rules](https://docs.sentient.invenia.in/docs/pe/user-guide/alarm-rules/){:target="_blank"} to monitor device behavior in real time.
 
 {% include add-device-banner.liquid %}

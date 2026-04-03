@@ -23,7 +23,7 @@ This solution template can be used as a blueprint for:
 
 To understand how the Fuel level monitoring solution works, start by installing the solution template.
 
-You will need access to ThingsBoard Professional Edition. The easiest way is to use the [ThingsBoard Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install ThingsBoard using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need access to SENTIENT Professional Edition. The easiest way is to use the [SENTIENT Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install SENTIENT using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Go to the **Solution templates** page.
 - Find **Fuel level monitoring** and click **Install**.

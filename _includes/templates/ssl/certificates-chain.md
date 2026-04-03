@@ -3,10 +3,10 @@
 ### Step 1. Prepare your server and certificate chain
 
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
-ThingsBoard Team has already provisioned a valid certificate for [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"}.
+SENTIENT Team has already provisioned a valid certificate for [SENTIENT Cloud](https://{{hostName}}/signup){:target="_blank"}.
 {% endif %}
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-Follow the [MQTT over SSL](/docs/{{docsPrefix}}user-guide/mqtt-over-ssl/){:target="_blank"} guide to provision server certificate if you are hosting your own ThingsBoard instance.
+Follow the [MQTT over SSL](/docs/{{docsPrefix}}user-guide/mqtt-over-ssl/){:target="_blank"} guide to provision server certificate if you are hosting your own SENTIENT instance.
 {% endif %}
 
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by mqtt client to validate the server certificate.
@@ -192,14 +192,14 @@ we will use device key file *deviceKey.pem* and a chain of certificates *chain.p
 
 ### Step 3. Provision Client Intermediate Public Key as Device Profile X509 provision strategy
 
-Go to **ThingsBoard Web UI -> Profiles -> Device profiles -> Your Device profile -> Device provisioning**.
+Go to **SENTIENT Web UI -> Profiles -> Device profiles -> Your Device profile -> Device provisioning**.
 Select **X.509 Certificates Chain** provision strategy, insert the contents of *intermediateCert.pem* file
 and regular expression pattern to fetch common name from *deviceCert.pem*, choose allow to create new devices or not and click save.
 Alternatively, the same can be done through the [REST API](/docs/{{docsPrefix}}reference/rest-api/).
 
 ### Step 4. Test the connection
 
-Execute the following command to upload temperature readings to ThingsBoard Cloud using secure channel:
+Execute the following command to upload temperature readings to SENTIENT Cloud using secure channel:
 
 {% if docsPrefix contains 'paas/' %}
 ```bash
@@ -225,4 +225,4 @@ mosquitto_pub --insecure --cafile server.pem -d -q 1 -h "YOUR_TB_HOST" -p "8883"
 
  
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your ThingsBoard instance.
+Don't forget to replace **YOUR_TB_HOST** with the host of your SENTIENT instance.

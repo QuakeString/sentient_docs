@@ -14,7 +14,7 @@ describe the structure of a management data of a device subsystem; they use a hi
 identifiers (OID). Each OID identifies a variable that can be read or set via SNMP. Agent takes information from the MIB
 and hands it over to the SNMP manager once a query has been made. SNMP manager is a system that has responsibility of
 communication with connected SNMP agents. SNMP manager queries agents, receives responses from agents and sets agent
-variables. ThingsBoard SNMP transport acts as a manager. Relationship between a manager and an agent is based on
+variables. SENTIENT SNMP transport acts as a manager. Relationship between a manager and an agent is based on
 messages and commands. Types of commands used by the transport are "GET" and "SET". Each SNMP message contains a
 protocol data unit (PDU).
 
@@ -23,7 +23,7 @@ Datagram Protocol (UDP) or Transmission Control Protocol (TCP): you may configur
 environment variable.
 
 Three significant versions of SNMP have been developed and deployed. SNMP v1 is the original version of the protocol.
-More recent versions, SNMP v2c and SNMP v3, feature improvements in performance, flexibility and security. ThingsBoard
+More recent versions, SNMP v2c and SNMP v3, feature improvements in performance, flexibility and security. SENTIENT
 supports them all.
 
 ## Device profile configuring
@@ -50,7 +50,7 @@ So, for versions 1 and 2c you must set a community string. Configuration example
 
 {% include images-gallery.html imageCollection="deviceConfiguring1" %}
 
-Let's move further to the third version of SNMP. ThingsBoard uses "authPriv" security level, which enables both
+Let's move further to the third version of SNMP. SENTIENT uses "authPriv" security level, which enables both
 authentication and encryption. Used security model is USM (User-based Security Model).
 
 There are following properties to configure for your SNMP v3 device (in addition to host and port):

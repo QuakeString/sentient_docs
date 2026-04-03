@@ -6,7 +6,7 @@
 
 {% assign feature = "Reporting" %}{% include templates/pe-feature-banner.md %}
 
-A **Subreport** in ThingsBoard is a special type of report template that is **designed to be embedded inside another (master) report**. 
+A **Subreport** in SENTIENT is a special type of report template that is **designed to be embedded inside another (master) report**. 
 It behaves like a **reusable**, **modular block** that receives context from the parent report and generates its content accordingly.
 
 Just like regular reports, subreports can contain components such as tables, text blocks, images, etc., and they fully support dynamic entity aliases and data filtering.

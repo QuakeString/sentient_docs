@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
 title: Dart API Client
-description: ThingsBoard PE API client library for Dart developers
+description: SENTIENT Professional Edition API client library for Dart developers
 
 ---
  

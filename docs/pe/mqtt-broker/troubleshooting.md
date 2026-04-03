@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Troubleshooting
-description: TBMQ troubleshooting guide
+description: ST-RMQTT troubleshooting guide
 
 ---
 

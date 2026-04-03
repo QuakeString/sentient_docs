@@ -15,7 +15,7 @@
           "layoutX": 378,
           "layoutY": 381
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetAttributesNode",
         "name": "Fetch Limit telemetry",
         "debugMode": true,
         "configuration": {
@@ -35,7 +35,7 @@
           "layoutX": 699,
           "layoutY": 156
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Validate Max temperature",
         "debugMode": true,
         "configuration": {
@@ -47,7 +47,7 @@
           "layoutX": 989,
           "layoutY": 105
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "Max Temperature",
         "debugMode": true,
         "configuration": {
@@ -62,7 +62,7 @@
           "layoutX": 987,
           "layoutY": 177
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "Max Temperature",
         "debugMode": false,
         "configuration": {
@@ -75,7 +75,7 @@
           "layoutX": 701,
           "layoutY": 436
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Validate Max speed",
         "debugMode": true,
         "configuration": {
@@ -87,7 +87,7 @@
           "layoutX": 992,
           "layoutY": 405
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "Max Speed",
         "debugMode": true,
         "configuration": {
@@ -102,7 +102,7 @@
           "layoutX": 994,
           "layoutY": 477
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "Max Speed",
         "debugMode": false,
         "configuration": {
@@ -115,7 +115,7 @@
           "layoutX": 701,
           "layoutY": 287
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Validate Min temperature",
         "debugMode": true,
         "configuration": {
@@ -127,7 +127,7 @@
           "layoutX": 987,
           "layoutY": 255
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "Min Temperature",
         "debugMode": true,
         "configuration": {
@@ -142,7 +142,7 @@
           "layoutX": 988,
           "layoutY": 327
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "Min Temperature",
         "debugMode": false,
         "configuration": {
@@ -155,7 +155,7 @@
           "layoutX": 703,
           "layoutY": 591
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Validate Min voltage",
         "debugMode": true,
         "configuration": {
@@ -167,7 +167,7 @@
           "layoutX": 994,
           "layoutY": 555
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "Min Voltage",
         "debugMode": true,
         "configuration": {
@@ -182,7 +182,7 @@
           "layoutX": 994,
           "layoutY": 637
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "Min Voltage",
         "debugMode": false,
         "configuration": {
@@ -195,7 +195,7 @@
           "layoutX": 95,
           "layoutY": 383
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Tracker Filter",
         "debugMode": false,
         "configuration": {

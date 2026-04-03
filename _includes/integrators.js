@@ -67,7 +67,7 @@ function createBox(integrator) {
      var link = integrator.site.href
        .replace(/^https?:\/\//, '')
        .replace(/^(.*?)(\/.*)?$/, (match, domain, path = '') => {
-           if (path.startsWith('/thingsboard')) {
+           if (path.startsWith('/sentient')) {
                return domain + path;
            }
            return domain;

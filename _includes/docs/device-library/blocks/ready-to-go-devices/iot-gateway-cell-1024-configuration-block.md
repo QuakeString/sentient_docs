@@ -5,7 +5,7 @@
         title: Open a Browser to the administration web of Cell 1024 using the URL: https://[IP_DEVICE] and go to the "<b>Cloud</b>" tab.
     ===
         image: /images/devices-library/ready-to-go-devices/iot-gateway-cell-1024/conn2.png,
-        title: Activate the Cloud control and configure all the parameters to connect the device to the specific ThingsBoard platform via MQTT.
+        title: Activate the Cloud control and configure all the parameters to connect the device to the specific SENTIENT platform via MQTT.
     ===
         image: /images/devices-library/ready-to-go-devices/iot-gateway-cell-1024/conn3.png,
         title: Click "<b>Save configuration</b>" button.
@@ -16,12 +16,12 @@
 
 | Configuration parameters | Description |
 |-|-|
-|**Cloud Platform**| Select ThingsBoard. |
+|**Cloud Platform**| Select SENTIENT. |
 |**MQTT broker URL**| URL to de Broker of the server we want to integrate to. |
 |**MQTT broker port**| Number of the port used by the server. |
 |**TLS**| Select true if the server use the Transport Layer Security protocol. |
-|**Connection Type**| Select 'Access Token' option. We will use an Access token previously created in ThingsBoard. |
-|**Access Token**| Indicate the Access token previously copied in ThingsBoard. |
+|**Connection Type**| Select 'Access Token' option. We will use an Access token previously created in SENTIENT. |
+|**Access Token**| Indicate the Access token previously copied in SENTIENT. |
 
 {% capture provisioningIsComing %}
 **Note**
@@ -32,7 +32,7 @@ EXXN team is working on a Pre-Provisioning integration method that will eliminat
 {% endcapture %}
 {% include templates/info-banner.md content=provisioningIsComing %}
 
-To verify that the device is connected correctly to ThingsBoard, go to the **Device groups** menu -> **All** devices, select your device.  
+To verify that the device is connected correctly to SENTIENT, go to the **Device groups** menu -> **All** devices, select your device.  
 In the **device details** select **client attributes** tab and check if the client attributes have been communicated to the device.  
 
 {% assign checkConnection = '
@@ -44,9 +44,9 @@ In the **device details** select **client attributes** tab and check if the clie
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=checkConnection %}
 
-The EXXN IoT Gateway will connect to ThingsBoard using the MQTT API.  
-We have previously covered how to configure the device to connect to ThingsBoard.  
-Now, we will show the steps to configure the device in ThingsBoard in order to monitor data and manage the device.  
+The EXXN IoT Gateway will connect to SENTIENT using the MQTT API.  
+We have previously covered how to configure the device to connect to SENTIENT.  
+Now, we will show the steps to configure the device in SENTIENT in order to monitor data and manage the device.  
 
 In order to configure the datalogger options of the EXXN IoT Gateway, we should create a new JSON "**Shared Attribute**" for the Device with the key "**config**".  
 

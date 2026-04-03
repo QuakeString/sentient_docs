@@ -42,10 +42,10 @@
 {% assign exampleDashboardPath = include.exampleDashboardPath %}
 {% endif %}
 
-ThingsBoard provides the ability to create and customize interactive visualizations (dashboards) for monitoring and managing data and devices.  
-Through ThingsBoard dashboards, you can efficiently manage and monitor your IoT devices and data. So, we will create the dashboard, for our device.  
+SENTIENT provides the ability to create and customize interactive visualizations (dashboards) for monitoring and managing data and devices.  
+Through SENTIENT dashboards, you can efficiently manage and monitor your IoT devices and data. So, we will create the dashboard, for our device.  
 
-To add the dashboard to ThingsBoard, we need to import it. To import a dashboard, follow these steps:  
+To add the dashboard to SENTIENT, we need to import it. To import a dashboard, follow these steps:  
 
 - First download the [Check and control device data dashboard]({{exampleDashboardPath}}){:target="_blank" download="dashboard.json"} file.
 

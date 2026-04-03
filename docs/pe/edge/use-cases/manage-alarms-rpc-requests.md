@@ -1,12 +1,12 @@
 ---
 layout: docwithnav-pe-edge
 title: Manage alarms and RPC requests on edge devices
-description: ThingsBoard Edge use case #1
+description: SENTIENT GATEWAY use case #1
 
 configureAlarmRules:
     0:
         image: /images/pe/edge/use-cases/manage-alarms/configure-rules-item-1.png
-        title: 'Login to your <b>ThingsBoard PE</b> instance and open <b>Device profiles</b> menu page.'
+        title: 'Login to your <b>SENTIENT Professional Edition</b> instance and open <b>Device profiles</b> menu page.'
     1:
         image: /images/pe/edge/use-cases/manage-alarms/configure-rules-item-2.png
         title: 'Click on the <b>("+")</b> to add new device profile.'
@@ -44,7 +44,7 @@ configureAlarmRules:
 configureAlarmRulesEdge:
     0:
         image: /images/pe/edge/use-cases/manage-alarms/configure-rules-item-13.png
-        title: 'Login to your ThingsBoard <b>Edge</b> instance and open Device profiles page.'
+        title: 'Login to your SENTIENT <b>Edge</b> instance and open Device profiles page.'
     1:
         image: /images/pe/edge/use-cases/manage-alarms/configure-rules-item-14.png
         title: 'Verify that <b>edge thermostat</b> was provisioned to edge as well.'
@@ -52,7 +52,7 @@ configureAlarmRulesEdge:
 provisionDevicesEdge:
     0:
         image: /images/pe/edge/use-cases/manage-alarms/provision-devices-item-1.png
-        title: 'Login to your ThingsBoard <b>Edge</b> instance and open Device groups page.'
+        title: 'Login to your SENTIENT <b>Edge</b> instance and open Device groups page.'
     1:
         image: /images/pe/edge/use-cases/manage-alarms/provision-devices-item-2.png
         title: 'Open <b>All</b> device group.'
@@ -81,7 +81,7 @@ provisionDevicesEdge:
 provisionDevices:
     0:
         image: /images/pe/edge/use-cases/manage-alarms/provision-devices-item-10.png
-        title: 'Login to your <b>ThingsBoard PE</b> instance and open "Device groups" menu page.'
+        title: 'Login to your <b>SENTIENT Professional Edition</b> instance and open "Device groups" menu page.'
     1:
         image: /images/pe/edge/use-cases/manage-alarms/provision-devices-item-11.png
         title: 'Click on the the group <b>All</b> in the menu or in the device groups list.'
@@ -99,7 +99,7 @@ rootRuleChainPreview:
 updateRootRuleChain:
     0:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-1.png
-        title: 'Login to your <b>ThingsBoard PE</b> instance and open <b>Rule chain</b> templates menu page.'
+        title: 'Login to your <b>SENTIENT Professional Edition</b> instance and open <b>Rule chain</b> templates menu page.'
     1:
         image: /images/pe/edge/use-cases/data-filtering/update-root-item-2.png
         title: 'Click on the <b>Open rule chain</b> icon to start editing <b>Edge Root Rule Chain</b>.'
@@ -131,7 +131,7 @@ updateRootRuleChain:
 updateRootRuleChainEdge:
     0:
         image: /images/pe/edge/use-cases/manage-alarms/update-root-item-11.png
-        title: 'Login to your ThingsBoard <b>Edge</b> instance and open <b>Rule chains</b> menu page.'
+        title: 'Login to your SENTIENT <b>Edge</b> instance and open <b>Rule chains</b> menu page.'
     1:
         image: /images/pe/edge/use-cases/manage-alarms/update-root-item-12.png
         title: 'Open <b>Edge Root Rule Chain</b>.'
@@ -142,7 +142,7 @@ updateRootRuleChainEdge:
 copyAccessTokenAirConditioner:
     0:
         image: /images/pe/edge/use-cases/manage-alarms/copy-access-token-item-1.png
-        title: 'Open Device groups menu page in the ThingsBoard <b>Edge</b> instance.'
+        title: 'Open Device groups menu page in the SENTIENT <b>Edge</b> instance.'
     1:
         image: /images/pe/edge/use-cases/manage-alarms/copy-access-token-item-2.png
         title: 'Open <b>All</b> device group.'
@@ -156,7 +156,7 @@ copyAccessTokenAirConditioner:
 copyAccessTokenDht22:
     0:
         image: /images/pe/edge/use-cases/manage-alarms/copy-access-token-item-1.png
-        title: 'Open Device groups menu page in the ThingsBoard <b>Edge</b> instance.'
+        title: 'Open Device groups menu page in the SENTIENT <b>Edge</b> instance.'
     1:
         image: /images/pe/edge/use-cases/manage-alarms/copy-access-token-item-2.png
         title: 'Open <b>All</b> device group.'
@@ -188,7 +188,7 @@ mqttWindows:
 {:toc}
 
 {% assign docsPrefix = "pe/edge/" %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "SENTIENT Professional Edition" %}
 
 ## Use case
 

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: White Labeling
-description: TBMQ PE White labeling
+description: ST-RMQTT PE White labeling
 redirect_from: "/docs/mqtt-broker/white-labeling/"
 
 white-labeling-default:
@@ -36,7 +36,7 @@ customize-login-page:
 verify-result-customize-login-page:
   0:
     image: /images/pe/mqtt-broker/user-guide/white-labeling/white-labeling-login-3.png
-    title: 'Now, use your custom domain name to access the TBMQ web interface login page and verify the result of your configuration.'
+    title: 'Now, use your custom domain name to access the ST-RMQTT web interface login page and verify the result of your configuration.'
 
 ---
 

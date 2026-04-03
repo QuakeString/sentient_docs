@@ -3,26 +3,26 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Monolith setup using GCP infrastructure
-description: ThingsBoard IoT platform monolith setup with Kubernetes in GKE
+description: SENTIENT IoT platform monolith setup with Kubernetes in GKE
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to set up ThingsBoard in monolith mode in GKE. 
+This guide will help you to set up SENTIENT in monolith mode in GKE. 
 
 ## Prerequisites
 
 {% include templates/install/gcp/gke-prerequisites.md %}
 
-## Step 1. Clone ThingsBoard CE K8S scripts repository
+## Step 1. Clone SENTIENT K8S scripts repository
 
 Clone the repository and change the working directory to GCP scripts.
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-сe-k8s.git
-cd thingsboard-сe-k8s/gcp/monolith
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-сe-k8s.git
+cd sentient-сe-k8s/gcp/monolith
 ```
 {: .copy-code}
 
@@ -43,7 +43,7 @@ cd thingsboard-сe-k8s/gcp/monolith
 
 ### Step 5.1 Google Cloud SQL (PostgreSQL) Instance
 
-{% assign tbDbName = "thingsboard" %}
+{% assign tbDbName = "sentient" %}
 {% include templates/install/gcp/provision-postgresql.md %}
 
 ### Step 5.2 Cassandra (optional)

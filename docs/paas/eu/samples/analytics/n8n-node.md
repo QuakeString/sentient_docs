@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas-eu
-title: ThingsBoard n8n Node
-description: Seamless IoT workflow automation with ThingsBoard and n8n integration
+title: SENTIENT n8n Node
+description: Seamless IoT workflow automation with SENTIENT and n8n integration
 ---
 
 {% assign docsPrefix = "paas/eu/" %}

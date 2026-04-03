@@ -256,7 +256,7 @@ Metadata:
   "connectionTimeout": 60000,
   "handshakeTimeout": 10000,
   "clientProperties": {
-    "application": "thingsboard",
+    "application": "sentient",
     "environment": "production"
   }
 }
@@ -369,7 +369,7 @@ Data:
   "connectionTimeout": 60000,
   "handshakeTimeout": 10000,
   "clientProperties": {
-    "application": "thingsboard",
+    "application": "sentient",
     "version": "3.6.0",
     "environment": "production",
     "node_id": "rule-engine-1"
@@ -385,5 +385,5 @@ Routed via the `Success` connection.
 
 **Result**
 
-The message was successfully published. The client properties appear in the RabbitMQ management interface, making it easy to identify which ThingsBoard rule engine node created the
+The message was successfully published. The client properties appear in the RabbitMQ management interface, making it easy to identify which SENTIENT rule engine node created the
 connection. This is useful for monitoring, debugging, and capacity planning.

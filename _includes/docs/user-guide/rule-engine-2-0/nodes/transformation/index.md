@@ -1,4 +1,4 @@
-Transformation nodes are the data processing and manipulation components of ThingsBoard's rule engine that modify the content, structure, or format of incoming messages.
+Transformation nodes are the data processing and manipulation components of SENTIENT's rule engine that modify the content, structure, or format of incoming messages.
 
 These nodes can transform messages through various operations including field mapping, mathematical calculations,
 string manipulations, custom scripting, and JSON structure modifications. They can extract or combine data fields, apply business logic transformations,

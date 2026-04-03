@@ -1,8 +1,8 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://www.milesight-iot.com/lorawan/gateway/ug67" %}
 
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
@@ -30,13 +30,13 @@ Global LoRaWAN® Frequency Plans (CN470/RU864/IN865/EU868/AU915/US915/KR920/AS92
 
 {% assign feature = "Platform Integrations" %}{% include templates/pe-feature-banner.md %}
 
-After doing steps described in this guide you will have a connected and configured gateway on a network server and integration on ThingsBoard, it will allow you to add devices, receive data from them and process a data.
+After doing steps described in this guide you will have a connected and configured gateway on a network server and integration on SENTIENT, it will allow you to add devices, receive data from them and process a data.
 
 ## Prerequisites
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 
 ## Gateway connection
@@ -87,9 +87,9 @@ TheThingsIndustries,
 Loriot
 '%}
 
-{% include /docs/device-library/blocks/basic/thingsboard-create-integration-block.liquid target-integration-types=targetIntegrationTypes %}
+{% include /docs/device-library/blocks/basic/sentient-create-integration-block.liquid target-integration-types=targetIntegrationTypes %}
 
-{% include /docs/device-library/blocks/basic/thingsboard-check-integration-connection.md %}
+{% include /docs/device-library/blocks/basic/sentient-check-integration-connection.md %}
 
 
 ## Conclusion

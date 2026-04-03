@@ -35,7 +35,7 @@ Specifies how long messages will be delayed before becoming available for proces
 
 For FIFO queues, the node automatically configures message deduplication and grouping:
 
-- **Message Deduplication ID** – Set to the ThingsBoard message ID to ensure exactly-once processing.
+- **Message Deduplication ID** – Set to the SENTIENT message ID to ensure exactly-once processing.
 - **Message Group ID** – Set to the message originator ID to maintain message ordering per originator.
 
 ### Message attributes

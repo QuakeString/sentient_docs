@@ -1,6 +1,6 @@
 {% capture postgresql-info %}
-ThingsBoard team recommends to use PostgreSQL for development and production environments with reasonable load (< 5000 msg/sec).
-Many cloud vendors support managed PostgreSQL servers which is a cost-effective solution for most of ThingsBoard instances.
+SENTIENT team recommends to use PostgreSQL for development and production environments with reasonable load (< 5000 msg/sec).
+Many cloud vendors support managed PostgreSQL servers which is a cost-effective solution for most of SENTIENT instances.
 {% endcapture %}
 {% include templates/info-banner.md content=postgresql-info %}
 
@@ -11,12 +11,12 @@ Download the installation file (PostgreSQL 15 or newer releases) [here](https://
 During PostgreSQL installation, you will be prompted for superuser (postgres) password.
 Don't forget this password. It will be used later. For simplicity, we will substitute it with "postgres".
 
-##### Create ThingsBoard Database
+##### Create SENTIENT Database
 
 Once installed, launch the "pgAdmin" software and login as superuser (postgres). 
-Open your server and create database "thingsboard" with owner "postgres".
+Open your server and create database "sentient" with owner "postgres".
 
-##### ThingsBoard Configuration
+##### SENTIENT Configuration
 
 In case you have specified the PostgreSQL superuser password as "postgres", you can skip this step. 
 
@@ -24,7 +24,7 @@ Open the Notepad or other editor as administrator user (right click on the app i
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):
 
 ```text 
-C:\Program Files (x86)\thingsboard\conf\thingsboard.yml
+C:\Program Files (x86)\sentient\conf\sentient.yml
 ``` 
 {: .copy-code}
 
@@ -44,7 +44,7 @@ spring:
       ddl-auto: "none"
   datasource:
     driverClassName: "${SPRING_DRIVER_CLASS_NAME:org.postgresql.Driver}"
-    url: "${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/thingsboard}"
+    url: "${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/sentient}"
     username: "${SPRING_DATASOURCE_USERNAME:postgres}"
     password: "${SPRING_DATASOURCE_PASSWORD:YOUR_POSTGRES_PASSWORD_HERE}"
     hikari:

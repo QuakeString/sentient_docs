@@ -11,10 +11,10 @@ This will gracefully shut down the gateway and remove the containers, without de
 
 ### Step 2. Pull the Latest Gateway Image
 
-Fetch the latest version of the ThingsBoard IoT Gateway Docker image:
+Fetch the latest version of the SENTIENT IoT Gateway Docker image:
 
 ```bash
-docker pull thingsboard/tb-gateway
+docker pull sentient/tb-gateway
 ```
 {: .copy-code}
 

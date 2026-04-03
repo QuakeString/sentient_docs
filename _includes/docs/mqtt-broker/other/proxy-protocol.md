@@ -5,13 +5,13 @@
 
 The [PROXY Protocol](https://www.haproxy.org/download/1.8/doc/proxy-protocol.txt) is a simple protocol used to safely transport connection information such as the client's IP address across multiple layers of proxies or load balancers.
 
-TBMQ supports both **PROXY Protocol v1** and **v2**, enabling it to receive and process the real client IP and port, 
+ST-RMQTT supports both **PROXY Protocol v1** and **v2**, enabling it to receive and process the real client IP and port, 
 which is critical for accurate auditing, rate limiting, access control, and understanding the actual source of client connections.
 
 - **PROXY Protocol v1**: A human-readable ASCII-based format that prepends connection metadata (e.g., IP addresses and ports) to the TCP stream.
 - **PROXY Protocol v2**: A more efficient binary format that provides the same information as v1 but with enhanced protocol support and better performance in high-throughput environments.
 
-By using PROXY Protocol, TBMQ can log, filter, and apply policies based on the real IP address of clients, which is otherwise masked by the proxy or load balancer.
+By using PROXY Protocol, ST-RMQTT can log, filter, and apply policies based on the real IP address of clients, which is otherwise masked by the proxy or load balancer.
 
 ## How does the PROXY protocol work?
 
@@ -20,16 +20,16 @@ This metadata is sent by the proxy or load balancer **before** any protocol-spec
 
 ![image](/images/mqtt-broker/other/proxy-protocol.png)
 
-When a client connects to TBMQ through a proxy that supports PROXY Protocol, the connection flow is as follows:
+When a client connects to ST-RMQTT through a proxy that supports PROXY Protocol, the connection flow is as follows:
 
 1. The proxy accepts the TCP connection from the client.
 2. The proxy immediately sends a **PROXY Protocol header** containing:
     - The client's **source IP** and **port**.
     - The proxy's **destination IP** and **port**.
     - The **protocol type** (TCP over IPv4 or IPv6).
-3. TBMQ, with PROXY Protocol enabled, reads this header first, extracts the real client information, and then continues processing the application data:
-    - For plain MQTT/WS connections: TBMQ processes the MQTT CONNECT packet next.
-    - For TLS-secured MQTT/WS connections: TBMQ proceeds with the **TLS handshake** after parsing the header.
+3. ST-RMQTT, with PROXY Protocol enabled, reads this header first, extracts the real client information, and then continues processing the application data:
+    - For plain MQTT/WS connections: ST-RMQTT processes the MQTT CONNECT packet next.
+    - For TLS-secured MQTT/WS connections: ST-RMQTT proceeds with the **TLS handshake** after parsing the header.
 
 - In **PROXY Protocol v1**, this header is sent in **ASCII** format, e.g.:
   ```
@@ -37,32 +37,32 @@ When a client connects to TBMQ through a proxy that supports PROXY Protocol, the
   ```
 - In **PROXY Protocol v2**, the header is in a **binary** format, more compact and efficient for high-performance systems.
 
-This means TBMQ treats the very first bytes of every incoming connection as PROXY Protocol data, before interpreting it as an MQTT connection.
+This means ST-RMQTT treats the very first bytes of every incoming connection as PROXY Protocol data, before interpreting it as an MQTT connection.
 
 ## When to use the protocol?
 
-You should enable the PROXY Protocol in TBMQ when:
+You should enable the PROXY Protocol in ST-RMQTT when:
 
-- TBMQ is deployed **behind a load balancer** or **reverse proxy** (e.g., HAProxy, AWS NLB, NGINX) that supports the PROXY Protocol.
+- ST-RMQTT is deployed **behind a load balancer** or **reverse proxy** (e.g., HAProxy, AWS NLB, NGINX) that supports the PROXY Protocol.
 - You need to capture the **real IP address** of clients for:
     - Accurate **logging** of client connection details.
     - Applying **IP-based security policies** and **rate limiting**.
     - Detailed **auditing** and **analytics** based on the true client origin.
 
-TBMQ stores the client IP address as part of the **client session information**.
-This IP address is also used in the **Unauthorized Clients** feature, where TBMQ tracks connection attempts from clients that fail authentication.
+ST-RMQTT stores the client IP address as part of the **client session information**.
+This IP address is also used in the **Unauthorized Clients** feature, where ST-RMQTT tracks connection attempts from clients that fail authentication.
 Having the correct IP address helps in identifying the source of unauthorized access attempts and improving security monitoring.
 
-Without PROXY Protocol, TBMQ will only see the IP of the proxy or load balancer, making it impossible to distinguish between individual clients behind the proxy.
-Enabling PROXY Protocol ensures TBMQ receives the actual client IP and port at connection time.
+Without PROXY Protocol, ST-RMQTT will only see the IP of the proxy or load balancer, making it impossible to distinguish between individual clients behind the proxy.
+Enabling PROXY Protocol ensures ST-RMQTT receives the actual client IP and port at connection time.
 
-> **Important**: Do **not** enable PROXY Protocol unless your proxy is properly configured to send PROXY Protocol headers. When enabled, TBMQ expects the PROXY Protocol header at the beginning of each TCP connection.
+> **Important**: Do **not** enable PROXY Protocol unless your proxy is properly configured to send PROXY Protocol headers. When enabled, ST-RMQTT expects the PROXY Protocol header at the beginning of each TCP connection.
 
 ## How to enable the protocol?
 
-To enable PROXY Protocol support in TBMQ, you need to update the configuration settings for MQTT listeners. 
+To enable PROXY Protocol support in ST-RMQTT, you need to update the configuration settings for MQTT listeners. 
 
-- **Before TBMQ v2.3**: The PROXY Protocol setting applies **globally** to all MQTT listeners in TBMQ and **cannot** be configured per listener.
+- **Before ST-RMQTT v2.3**: The PROXY Protocol setting applies **globally** to all MQTT listeners in ST-RMQTT and **cannot** be configured per listener.
 
 ```yaml
 # MQTT listeners parameters
@@ -74,7 +74,7 @@ listener:
 
 Set the environment variable `MQTT_PROXY_PROTOCOL_ENABLED` to "**true**".
 
-- **Since TBMQ v2.3**: In addition to the global setting, you can also configure PROXY Protocol **per MQTT listener**.
+- **Since ST-RMQTT v2.3**: In addition to the global setting, you can also configure PROXY Protocol **per MQTT listener**.
   Per-listener settings are unset by default and inherit the global value.
   If explicitly set, the per-listener value overrides the global one.
 
@@ -118,27 +118,27 @@ MQTT_SSL_PROXY_PROTOCOL_ENABLED=        # TLS listener has PROXY protocol settin
 
 **Important Notes:**
 
-- When `proxy_enabled` is set to `true`, TBMQ automatically supports both **PROXY Protocol v1 and v2**.
-- This setting ensures that TBMQ correctly interprets the PROXY Protocol headers sent at the start of each TCP connection, **before** any MQTT or TLS-specific data.
+- When `proxy_enabled` is set to `true`, ST-RMQTT automatically supports both **PROXY Protocol v1 and v2**.
+- This setting ensures that ST-RMQTT correctly interprets the PROXY Protocol headers sent at the start of each TCP connection, **before** any MQTT or TLS-specific data.
 
 ### HAProxy
 
-To forward the real client IP to TBMQ using PROXY Protocol, configure **HAProxy** as follows:
+To forward the real client IP to ST-RMQTT using PROXY Protocol, configure **HAProxy** as follows:
 
 ```text
-server tbmq1 192.168.1.100:1883 send-proxy
+server st-rmqtt1 192.168.1.100:1883 send-proxy
 ```
 
-- `send-proxy`: Instructs HAProxy to send PROXY Protocol v1 headers to TBMQ.
-- Replace `192.168.1.100:1883` with your TBMQ broker’s IP and port.
+- `send-proxy`: Instructs HAProxy to send PROXY Protocol v1 headers to ST-RMQTT.
+- Replace `192.168.1.100:1883` with your ST-RMQTT broker’s IP and port.
 
 To use PROXY Protocol v2, change to:
 
 ```text
-server tbmq1 192.168.1.100:1883 send-proxy-v2
+server st-rmqtt1 192.168.1.100:1883 send-proxy-v2
 ```
 
-- `send-proxy-v2`: Sends PROXY Protocol v2 headers to TBMQ.
+- `send-proxy-v2`: Sends PROXY Protocol v2 headers to ST-RMQTT.
 
 You can find the full HAProxy configuration guide for enabling PROXY Protocol [here](https://www.haproxy.com/documentation/haproxy-configuration-tutorials/proxying-essentials/client-ip-preservation/enable-proxy-protocol/).
 
@@ -171,24 +171,24 @@ See official [AWS documentation](https://kubernetes-sigs.github.io/aws-load-bala
 
 ### Other Load Balancers
 
-You are not limited to HAProxy or AWS NLB — any load balancer that supports the PROXY Protocol can be used with TBMQ.
+You are not limited to HAProxy or AWS NLB — any load balancer that supports the PROXY Protocol can be used with ST-RMQTT.
 Examples include **Google Cloud Load Balancer**, **Azure Load Balancer**, **NGINX**, or other reverse proxies.
 
 The setup steps are straightforward:
 
 1. Enable PROXY Protocol on your chosen load balancer according to its **official documentation**.
-2. Enable PROXY Protocol on the TBMQ side (globally or per-listener, depending on your version).
+2. Enable PROXY Protocol on the ST-RMQTT side (globally or per-listener, depending on your version).
 
-Once both sides are properly configured, TBMQ will correctly interpret the PROXY Protocol headers and capture the real client IP and port, regardless of which load balancer you use.
+Once both sides are properly configured, ST-RMQTT will correctly interpret the PROXY Protocol headers and capture the real client IP and port, regardless of which load balancer you use.
 
 ## Considerations
 
-* If PROXY Protocol is enabled in TBMQ but not used by your proxy/load balancer, TBMQ will fail to interpret the initial bytes, potentially rejecting the connection.
-* If PROXY Protocol is disabled in TBMQ but enabled on your proxy/load balancer, TBMQ will misinterpret the PROXY Protocol header as part of the MQTT or TLS data, leading to connection errors or protocol parsing failures.
-* Ensure all connections to TBMQ are routed through a properly configured proxy when PROXY Protocol support is enabled.
-* PROXY Protocol should only be enabled if TBMQ is deployed behind a trusted proxy, as it allows the proxy to define client IPs.
+* If PROXY Protocol is enabled in ST-RMQTT but not used by your proxy/load balancer, ST-RMQTT will fail to interpret the initial bytes, potentially rejecting the connection.
+* If PROXY Protocol is disabled in ST-RMQTT but enabled on your proxy/load balancer, ST-RMQTT will misinterpret the PROXY Protocol header as part of the MQTT or TLS data, leading to connection errors or protocol parsing failures.
+* Ensure all connections to ST-RMQTT are routed through a properly configured proxy when PROXY Protocol support is enabled.
+* PROXY Protocol should only be enabled if ST-RMQTT is deployed behind a trusted proxy, as it allows the proxy to define client IPs.
 
-> **Note:** TBMQ is not protocol-agnostic regarding PROXY Protocol support. 
+> **Note:** ST-RMQTT is not protocol-agnostic regarding PROXY Protocol support. 
 > When PROXY Protocol is enabled, all connections must include the PROXY header. 
 > Mixing connections with and without the PROXY header on the same listener is not supported.
 > Future releases may introduce more flexible handling to support mixed connection types.

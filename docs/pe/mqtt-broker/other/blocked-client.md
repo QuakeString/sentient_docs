@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Blocked Clients
-description: TBMQ Blocked Clients description
+description: ST-RMQTT Blocked Clients description
 
 ---
 

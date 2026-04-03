@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect NVIDIA Jetson Nano Developer Kit to ThingsBoard?
+title: How to connect NVIDIA Jetson Nano Developer Kit to SENTIENT?
 category: Single-board computers
 chip: NVIDIA CUDA
 connectivity: [Ethernet, WIFI, Bluetooth]

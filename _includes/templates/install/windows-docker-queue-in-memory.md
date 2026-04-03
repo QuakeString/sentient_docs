@@ -1,6 +1,6 @@
-**ThingsBoard includes In Memory Queue service and use it by default without extra settings.**
+**SENTIENT includes In Memory Queue service and use it by default without extra settings.**
 
-Create docker compose file for ThingsBoard queue service:
+Create docker compose file for SENTIENT queue service:
 
 ```text
 notepad docker-compose.yml
@@ -17,13 +17,13 @@ services:
     ports:
       - "5432"
     environment:
-      POSTGRES_DB: thingsboard
+      POSTGRES_DB: sentient
       POSTGRES_PASSWORD: postgres
     volumes:
       - postgres-data:/var/lib/postgresql/data
-  thingsboard-ce:
+  sentient-ce:
     restart: always
-    image: "thingsboard/tb-node:{{ site.release.ce_full_ver }}"
+    image: "sentient/tb-node:{{ site.release.ce_full_ver }}"
     ports:
       - "8080:8080"
       - "7070:7070"
@@ -37,7 +37,7 @@ services:
         max-file: "10"
     environment:
       TB_SERVICE_ID: tb-ce-node
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/thingsboard
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sentient
     depends_on:
       - postgres
 

@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - vparomskiy
 title: Rule Chains
-description: ThingsBoard Rule Chains management
+description: SENTIENT Rule Chains management
 redirect_to: "/docs/pe/user-guide/rule-engine-2-0/overview/"
 
 ---

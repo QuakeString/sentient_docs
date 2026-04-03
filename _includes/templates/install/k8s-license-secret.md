@@ -6,7 +6,7 @@ Create docker secret with your license key:
 
 ```text
 export TB_LICENSE_KEY=PUT_YOUR_LICENSE_KEY_HERE 
-kubectl create -n thingsboard secret generic tb-license --from-literal=license-key=$TB_LICENSE_KEY
+kubectl create -n sentient secret generic tb-license --from-literal=license-key=$TB_LICENSE_KEY
 ```
 {: .copy-code}
 

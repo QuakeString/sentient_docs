@@ -5,17 +5,17 @@
 
 Telegram provides a possibility to create Telegram Bots, which are considered as third-party applications. 
 So, In this tutorial, we are going to demonstrate how you can create a Telegram Bot<br>
-and configure your ThingsBoard rule engine to be able to send notifications to Telegram App using Rest API Call extension.
+and configure your SENTIENT rule engine to be able to send notifications to Telegram App using Rest API Call extension.
 
 ## Use case
 
 This tutorial is based on the [create & clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/#use-case) tutorial and it's use case. 
 We will reuse the rule chains from above mentioned tutorial and will add few more rule nodes to integrate with Telegram   
 
-Let's assume your device is using DHT22 sensor to collect and push temperature readings to ThingsBoard. 
+Let's assume your device is using DHT22 sensor to collect and push temperature readings to SENTIENT. 
 DHT22 sensor is good for -40 to 80°C temperature readings.We want to generate Alarms if temperature is out of good range and send notifications to Telegram App when the alarm was created.
 
-In this tutorial we will configure ThingsBoard Rule Engine to: 
+In this tutorial we will configure SENTIENT Rule Engine to: 
 
 - Send a message notification to the user if the alarm was created.
 
@@ -47,7 +47,7 @@ The token is a string that looks like this - **'110201543:AAHdqTcvCH1vGWJxfSeofS
     
 Prerequisites :
 
- - ThingsBoard is up and running
+ - SENTIENT is up and running
  - Telegram Bot is created
 
 ### Getting the Chat ID
@@ -66,7 +66,7 @@ There are several ways to get the Chat ID:
     
        ![image](/images/gateway/telegram-bot/msg-to-bot-in-chat.png)    
       
-    <br> where **ThingsBoard_Bot** is name of the Telegram bot.
+    <br> where **SENTIENT_Bot** is name of the Telegram bot.
 
  - Next, open your web browser and enter the following URL:
 

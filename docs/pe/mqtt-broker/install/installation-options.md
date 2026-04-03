@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: TBMQ PE installation options
-description: TBMQ Professional Edition installation instructions for various operation systems
+title: ST-RMQTT PE installation options
+description: ST-RMQTT Professional Edition installation instructions for various operation systems
 notitle: "true"
 ---
 
@@ -10,7 +10,7 @@ notitle: "true"
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <h1>TBMQ Professional Edition installation options</h1>
+                <h1>ST-RMQTT Professional Edition installation options</h1>
             </div>
             <div class="deployment-container">
                 <div class="deployment-div">

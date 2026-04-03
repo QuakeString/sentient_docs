@@ -1,20 +1,20 @@
 * TOC
 {:toc}
 
-## ThingsBoard extensions
+## SENTIENT extensions
 
-[ThingsBoard extensions](https://github.com/thingsboard/thingsboard-extensions){:target="_blank"} is our additional project that allows you to create your own angular components and use them in your widgets and actions.
+[SENTIENT extensions](https://github.com/sentient/sentient-extensions){:target="_blank"} is our additional project that allows you to create your own angular components and use them in your widgets and actions.
 We highly recommend using this feature for any complex logic in your solutions, because it provides you an opportunity to reuse your code, using all functionality of TypeScript, RXJS, Angular, etc.
-In this topic, we will cover how to connect your extensions in ThingsBoard 3.6 and higher using our UI.
+In this topic, we will cover how to connect your extensions in SENTIENT 3.6 and higher using our UI.
 
 {% capture difference %}
-**Important remark**: you can use **extensions** even if you use previous versions of ThingsBoard(before 3.6). For this, you will need to load the extension file manually to your server and restart it. All the necessary information can be found in the **README** file in the corresponding branches of the extensions project. [This branch](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.1) is used for the ThingsBoard 3.1.0 - 3.4.1 version and [this one](https://github.com/thingsboard/thingsboard-extensions/tree/release-3.5) is for 3.5 - 3.5.1 version.
+**Important remark**: you can use **extensions** even if you use previous versions of SENTIENT(before 3.6). For this, you will need to load the extension file manually to your server and restart it. All the necessary information can be found in the **README** file in the corresponding branches of the extensions project. [This branch](https://github.com/sentient/sentient-extensions/tree/release-3.1) is used for the SENTIENT 3.1.0 - 3.4.1 version and [this one](https://github.com/sentient/sentient-extensions/tree/release-3.5) is for 3.5 - 3.5.1 version.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-First of all, you need a file with your compiled components. By default, it is called **thingsboard-extension-widgets.js**. All instructions on how to create it can be found inside the **README** file to [ThingsBoard extensions](https://github.com/thingsboard/thingsboard-extensions){:target="_blank"}.
+First of all, you need a file with your compiled components. By default, it is called **sentient-extension-widgets.js**. All instructions on how to create it can be found inside the **README** file to [SENTIENT extensions](https://github.com/sentient/sentient-extensions){:target="_blank"}.
 
-Once you have the file with your components, let's proceed to load them into ThingsBoard:
+Once you have the file with your components, let's proceed to load them into SENTIENT:
 
 - Go to the "**JavaScript library**" page inside "**Resources**" section;
 - Click the "**Add JavaScript resource**" button (the "plus" icon in the upper-right corner of the window);
@@ -23,7 +23,7 @@ Once you have the file with your components, let's proceed to load them into Thi
 - Drag the file with your compiled components;
 - Click "Add".
 
-Congratulations, your components have been added to the ThingsBoard!
+Congratulations, your components have been added to the SENTIENT!
 
 {% include images-gallery.html imageCollection="add-js-module" %}
 
@@ -69,7 +69,7 @@ Now, your component is used inside your widget.
 
 {% include images-gallery.html imageCollection="select-extensions-module" %}
 
-In general, [ThingsBoard extensions](https://github.com/thingsboard/thingsboard-extensions){:target="_blank"} allow you to create any possible widgets in the scope of ThingsBoard platforms.
+In general, [SENTIENT extensions](https://github.com/sentient/sentient-extensions){:target="_blank"} allow you to create any possible widgets in the scope of SENTIENT platforms.
 
 Good luck with your future awesome solutions!
 
@@ -242,12 +242,12 @@ Please note that xAxis (time axis) is limited to current timewindow bounds obtai
 ### Using existing JavaScript code
 
 Another approach of creating widgets is to use existing bundled JavaScript code.
-In this case, you can create your own TypeScript class or Angular component and bundle it into the ThingsBoard UI code.
+In this case, you can create your own TypeScript class or Angular component and bundle it into the SENTIENT UI code.
 In order to make this code accessible within the widget, you need to register corresponding Angular module or inject TypeScript class to a global variable (for ex. window object).
-Some of the ThingsBoard widgets already use this approach. Take a look at the [polyfills.ts](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/polyfills.ts#L106)
-or [widget-components.module.ts](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/widget-components.module.ts#L44).
-Here you can find how some bundled classes or components are registered for later use in ThingsBoard widgets.
-For example "Timeseries - Flot" widget (from "Charts" Widgets Bundle) uses [**TbFlot**](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/lib/flot-widget.ts#L63) TypeScript class which is injected as window property inside **polyfills.ts**:
+Some of the SENTIENT widgets already use this approach. Take a look at the [polyfills.ts](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/polyfills.ts#L106)
+or [widget-components.module.ts](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/widget-components.module.ts#L44).
+Here you can find how some bundled classes or components are registered for later use in SENTIENT widgets.
+For example "Timeseries - Flot" widget (from "Charts" Widgets Bundle) uses [**TbFlot**](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/lib/flot-widget.ts#L63) TypeScript class which is injected as window property inside **polyfills.ts**:
 
 ```typescript
 ...
@@ -260,7 +260,7 @@ import { TbFlot } from '@home/components/widget/lib/flot-widget';
 
 ```
 
-Another example is "Timeseries table" widget (from "Cards" Widgets Bundle) that uses Angular component [**tb-timeseries-table-widget**](https://github.com/thingsboard/thingsboard/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/lib/timeseries-table-widget.component.ts#L99) which is registered as dependency of **WidgetComponentsModule** Angular module inside **widget-components.module.ts**.
+Another example is "Timeseries table" widget (from "Cards" Widgets Bundle) that uses Angular component [**tb-timeseries-table-widget**](https://github.com/sentient/sentient/blob/13e6b10b7ab830e64d31b99614a9d95a1a25928a/ui-ngx/src/app/modules/home/components/widget/lib/timeseries-table-widget.component.ts#L99) which is registered as dependency of **WidgetComponentsModule** Angular module inside **widget-components.module.ts**.
 Thereby this component becomes available for use inside the widget template HTML.
 
 ```typescript

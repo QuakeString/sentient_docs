@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Orange Pi Plus 2E to ThingsBoard?
+title: How to connect Orange Pi Plus 2E to SENTIENT?
 category: Single-board computers
 chip: Allwinner H3
 connectivity: [Ethernet, WIFI, Bluetooth]

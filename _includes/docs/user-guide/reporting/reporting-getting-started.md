@@ -6,7 +6,7 @@
 
 {% assign feature = "Reporting" %}{% include templates/pe-feature-banner.md %}
 
-In ThingsBoard, **Reporting** is a powerful and flexible tool for collecting, organizing, and automatically delivering data in the form of reports.
+In SENTIENT, **Reporting** is a powerful and flexible tool for collecting, organizing, and automatically delivering data in the form of reports.
 
 The reporting system is built around two key components:
 - **Report Template** – defines the structure, content, and format of a report. A template can be in **PDF** or **CSV** format and include any [supported components](/docs/{{docsPrefix}}user-guide/reporting/reporting-key-concepts/#components--interaction){:target="_blank"}.
@@ -14,14 +14,14 @@ The reporting system is built around two key components:
 
 **In short**: the template defines **what** will be in the report, while the scheduler determines **when** and **to whom** it will be delivered.
 
-In this guide, we&#39;ll walk through the basic steps of using Reporting in ThingsBoard, and create a report template with automated delivery configured for two different customers.
+In this guide, we&#39;ll walk through the basic steps of using Reporting in SENTIENT, and create a report template with automated delivery configured for two different customers.
 
 {% include templates/prerequisites-pe.md %}
 
 > <b>Important:</b>
 - For this example, three devices and two customers who own these devices have been created. Alarms have also been triggered on some of the devices. 
 You&#39;ll need to do the same — otherwise, the device and alarm tables in your report will appear empty.
-- If you&#39;re just getting started with the ThingsBoard platform, it is recommended that you first review the [Getting Started Guide with ThingsBoard Professional Edition](/docs/getting-started-guides/helloworld-pe/){:target="_blank"}.
+- If you&#39;re just getting started with the SENTIENT platform, it is recommended that you first review the [Getting Started Guide with SENTIENT Professional Edition](/docs/getting-started-guides/helloworld-pe/){:target="_blank"}.
 
 ## Step 1. Create the report template
 
@@ -213,7 +213,7 @@ To ensure the report is generated correctly and contains accurate data, you must
 
 <b>Why this matters</b>
 
-In ThingsBoard, reports are generated according to the access rights of the user account that triggers them.
+In SENTIENT, reports are generated according to the access rights of the user account that triggers them.
 
 Example:
 - If the report should include only devices owned by <b>Customer A</b>, you must set the <b>User</b> field to the email address of a user belonging to Customer A when scheduling the report.
@@ -237,7 +237,7 @@ The report will be generated on behalf of <b>Jane Smith</b>, the administrator f
 
   - <b>Event type</b> – always set to <b>Create report</b>.
   - <b>Report template</b> – select the previously created Daily Devices Alarm Report template.
-  - <b>User</b> – specify the user account on whose behalf the report will be generated: <b>janesmith@thingsboard.io</b> (Jane Smith — Customer A administrator).
+  - <b>User</b> – specify the user account on whose behalf the report will be generated: <b>janesmith@docs.sentient.invenia.in</b> (Jane Smith — Customer A administrator).
 
 {% include images-gallery.html imageCollection="scheduler-event-customer-a-1" %}
 
@@ -282,7 +282,7 @@ This report will be generated on behalf of <b>Emma Johnson</b> — the administr
   {:.copy-code}
 
 - Select the same template used for Customer A — <b>Daily Device Alarm Report.
-- Set the user account to <b>emmajohnson@thingsboard.io</b> (Emma Johnson – Customer B Administrator). 
+- Set the user account to <b>emmajohnson@docs.sentient.invenia.in</b> (Emma Johnson – Customer B Administrator). 
   > The report will be generated on behalf of this user, containing only the data accessible to Customer B.
 
 - In the "<b>Recipients</b>" field, click "<b>Create new</b>" to create a new recipient group.
@@ -316,11 +316,11 @@ Notifications will be delivered through two channels:
 
 <b>1. Web UI notification<b>
 
-- A notification about the generated report will appear in the ThingsBoard Web UI.
-- Tenant Users can open the report directly within the ThingsBoard interface.
+- A notification about the generated report will appear in the SENTIENT Web UI.
+- Tenant Users can open the report directly within the SENTIENT interface.
 
 > <b>Important:</b>
-- Only Tenant Users can view generated reports directly in the ThingsBoard Web UI.
+- Only Tenant Users can view generated reports directly in the SENTIENT Web UI.
 - Customer users do not have access to reports in the Web UI — they can only receive them through <b>Email</b> or <b>Slack</b>.   
 If your recipients are customer users, make sure at least one of these delivery channels is selected.
 
@@ -344,5 +344,5 @@ To import a template from a JSON file into your instance, see the instructions [
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

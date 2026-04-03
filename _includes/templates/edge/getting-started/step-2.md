@@ -1,6 +1,6 @@
-A **Dashboard** is another key entity within **ThingsBoard**. It allows you to visualize IoT data and control devices through the user interface.
+A **Dashboard** is another key entity within **SENTIENT**. It allows you to visualize IoT data and control devices through the user interface.
 
-To create a **dashboard**, login to your **ThingsBoard Edge** instance and navigate to the **Dashboard** section. Then, follow these steps:
+To create a **dashboard**, login to your **SENTIENT GATEWAY** instance and navigate to the **Dashboard** section. Then, follow these steps:
 
 {% include images-gallery.html imageCollection="step2-1" showListImageTitles="true" %}
 

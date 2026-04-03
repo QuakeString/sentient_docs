@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-<b>Rule Engine</b> in ThingsBoard is the core data processing mechanism responsible for receiving, transforming, routing, and reacting to events and telemetry coming from devices and related assets.
+<b>Rule Engine</b> in SENTIENT is the core data processing mechanism responsible for receiving, transforming, routing, and reacting to events and telemetry coming from devices and related assets.
 
 Rule Engine built around three main components:
 
@@ -18,7 +18,7 @@ Rule Engine built around three main components:
 
 ## Typical use cases
 
-Here are some common scenarios that can be configured using <b>ThingsBoard Rule Chains</b>:
+Here are some common scenarios that can be configured using <b>SENTIENT Rule Chains</b>:
 - <b>Data validation and transformation</b> – Validate and modify incoming telemetry or attributes before persisting them in the database.
 - <b>Telemetry aggregation</b> – Copy telemetry or attributes from devices to related assets to enable aggregation. For example, data from multiple devices can be combined into a related Asset for summary analytics.
 - <b>Alarm management</b> – Create, update, or clear alarms based on defined conditions.
@@ -233,14 +233,14 @@ List of the predefined Message Types is presented in the following table:
       <tr>
           <td>ADDED_TO_ENTITY_GROUP</td>
           <td><b>Added to Group</b></td>
-          <td>Event produced when entity was added to <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">ThingsBoard PE</a>.</td>
+          <td>Event produced when entity was added to <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/sentient-pe/">SENTIENT Professional Edition</a>.</td>
           <td><b>userName</b> - name of the user who performed assignment operation,<br><b>userId</b> - the user Id,<br><b>addedToEntityGroupName</b> - entity group name,<br><b>addedToEntityGroupId</b> - Id of entity group</td>
           <td>empty json payload</td>
       </tr>
       <tr>
           <td>REMOVED_FROM_ENTITY_GROUP</td>
           <td><b>Removed from Group</b></td>
-          <td>Event produced when entity was removed from <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/thingsboard-pe/">ThingsBoard PE</a>.</td>
+          <td>Event produced when entity was removed from <a href="/docs/{{docsPrefix}}user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/sentient-pe/">SENTIENT Professional Edition</a>.</td>
           <td><b>userName</b> - name of the user who performed unassignment operation,<br><b>userId</b> - the user Id,<br><b>removedFromEntityGroupName</b> - entity group name,<br><b>removedFromEntityGroupId</b> - Id of entity group</td>
           <td>empty json payload</td>
       </tr>
@@ -411,7 +411,7 @@ After pressing **Test** output will be returned in right **Output** section.
 
 ## Rule Engine statistics
 
-ThingsBoard Team have prepared the "default" dashboard for Rule Engine statistics. 
+SENTIENT Team have prepared the "default" dashboard for Rule Engine statistics. 
 This dashboard is automatically loaded for each tenant. 
 You may access it by navigating to "Api Usage"->"View statistics" (see screen below).
 
@@ -425,7 +425,7 @@ You may notice insights about errors in processing and what causes them on the d
 
 ## Debugging
 
-ThingsBoard provides ability to review incoming and outgoing messages for each Rule Node.
+SENTIENT provides ability to review incoming and outgoing messages for each Rule Node.
 To enable debug, user need to ensure that "Debug mode" checkbox is selected in the main configuration window 
 (see first image in the [Configuration](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#configuration){:target="_blank"} section). 
 
@@ -446,7 +446,7 @@ To add a new rule chain, you should:
 
 ### Import/Export
 
-You are able to [export](#export-rule-chain) your rule chain to а JSON file and [import](#import-rule-chain) it to the same or another ThingsBoard instance.
+You are able to [export](#export-rule-chain) your rule chain to а JSON file and [import](#import-rule-chain) it to the same or another SENTIENT instance.
 
 #### Export rule chain
 
@@ -511,7 +511,7 @@ To learn more about internals of the Rule Engine, see [architecture](/docs/{{doc
 
 {% assign feature = "Custom Rule Engine REST API calls" %}{% include templates/pe-feature-banner.md %}
 
-ThingsBoard provides API to send custom REST API calls to the Rule Engine, process the payload of the request and return result of the processing in response body. 
+SENTIENT provides API to send custom REST API calls to the Rule Engine, process the payload of the request and return result of the processing in response body. 
 This is useful for a number of use cases. For example:
  
  - extend existing REST API of the platform with custom API calls;
@@ -526,7 +526,7 @@ To execute the REST API call, you may use rule-engine-controller [REST APIs](/do
 
 ## Tutorials
 
-ThingsBoard authors have prepared several tutorials to help you get started with designing rule chains by example:
+SENTIENT authors have prepared several tutorials to help you get started with designing rule chains by example:
 
   * [**Transform incoming messages from device**](/docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/){:target="_blank"} 
   * [**Transform incoming messages using previous messages from device**](/docs/user-guide/rule-engine-2-0/tutorials/transform-telemetry-using-previous-record/) {:target="_blank"}
@@ -540,8 +540,8 @@ See more tutorials [here](/docs/{{docsPrefix}}guides/){:target="_blank"}.
 
 ## Troubleshooting
 
-If you are using Kafka queue for processing messages, ThingsBoard provides the ability to monitor if the rate of pushing messages to the Kafka is faster than rate of consuming and processing them (in such case you will have a growing latency for message processing).
-To enable this functionality, you need to ensure that Kafka consumer-stats are enabled (see <b>queue.kafka.consumer-stats</b> section of the [Configuration properties](/docs/user-guide/install/{{docsPrefix}}config/#thingsboard-core-settings){:target="_blank"})
+If you are using Kafka queue for processing messages, SENTIENT provides the ability to monitor if the rate of pushing messages to the Kafka is faster than rate of consuming and processing them (in such case you will have a growing latency for message processing).
+To enable this functionality, you need to ensure that Kafka consumer-stats are enabled (see <b>queue.kafka.consumer-stats</b> section of the [Configuration properties](/docs/user-guide/install/{{docsPrefix}}config/#sentient-core-settings){:target="_blank"})
 
 Once Kafka consumer-stats are enabled, you will see logs (see [Troubleshooting](/docs/user-guide/troubleshooting/#logs){:target="_blank"}) about offset lag for consumer groups (there are consumer-group logs for tb-core, tb-rule-engine and all transport services).
 

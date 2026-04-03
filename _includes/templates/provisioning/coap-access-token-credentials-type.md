@@ -1,11 +1,11 @@
 |---
 | **Parameter**             | **Example value**                            | **Description**                                                                |
 |:-|:-|-
-| *deviceName*              | **DEVICE_NAME**                              | Device name in ThingsBoard.                                                    |
+| *deviceName*              | **DEVICE_NAME**                              | Device name in SENTIENT.                                                    |
 | *provisionDeviceKey*      | **PUT_PROVISION_KEY_HERE**                   | Provisioning device key, you should take it from configured device profile.    |
 | *provisionDeviceSecret*   | **PUT_PROVISION_SECRET_HERE**                | Provisioning device secret, you should take it from configured device profile. | 
 | credentialsType           | **ACCESS_TOKEN**                             | Credentials type parameter.                                                    |
-| token                     | **DEVICE_ACCESS_TOKEN**                      | Access token for device in ThingsBoard.                                        |
+| token                     | **DEVICE_ACCESS_TOKEN**                      | Access token for device in SENTIENT.                                        |
 |---
 
 Provisioning request data example:
@@ -33,7 +33,7 @@ Provisioning response example:
 
 #### Sample script
 
-To communicate with ThingsBoard we will use asyncio and aiocoap modules, so we should install it:
+To communicate with SENTIENT we will use asyncio and aiocoap modules, so we should install it:
 
 ```bash
 pip3 install asyncio aiocoap --user
@@ -64,8 +64,8 @@ import asyncio
 from aiocoap import Context, Message, Code
 from json import loads, dumps
 
-THINGSBOARD_HOST = ""
-THINGSBOARD_PORT = ""
+SENTIENT_HOST = ""
+SENTIENT_PORT = ""
 
 logging.basicConfig(level=logging.INFO)
 
@@ -73,11 +73,11 @@ logging.basicConfig(level=logging.INFO)
 def collect_required_data():
     config = {}
     print("\n\n", "="*80, sep="")
-    print(" "*10, "\033[1m\033[94mThingsBoard device provisioning with access token authorization example script. CoAP API\033[0m", sep="")
+    print(" "*10, "\033[1m\033[94mSENTIENT device provisioning with access token authorization example script. CoAP API\033[0m", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard \033[93mhost\033[0m or leave it blank to use default ({{coapHostName}}): ")
+    host = input("Please write your SENTIENT \033[93mhost\033[0m or leave it blank to use default ({{coapHostName}}): ")
     config["host"] = host if host else "{{coapHostName}}"
-    port = input("Please write your ThingsBoard \033[93mCoAP port\033[0m or leave it blank to use default (5683): ")
+    port = input("Please write your SENTIENT \033[93mCoAP port\033[0m or leave it blank to use default (5683): ")
     config["port"] = int(port) if port else 5683
     config["provision_device_key"] = input("Please write \033[93mprovision device key\033[0m: ")
     config["provision_device_secret"] = input("Please write \033[93mprovision device secret\033[0m: ")
@@ -89,7 +89,7 @@ def collect_required_data():
     return config
 
 
-# Example for message to ThingsBoard
+# Example for message to SENTIENT
 to_publish = {
   "stringKey": "value1",
   "booleanKey": True,
@@ -104,7 +104,7 @@ to_publish = {
 
 
 async def process():
-    server_address = "coap://" + THINGSBOARD_HOST + ":" + str(THINGSBOARD_PORT)
+    server_address = "coap://" + SENTIENT_HOST + ":" + str(SENTIENT_PORT)
 
     client_context = await Context.create_client_context()
     await asyncio.sleep(2)
@@ -132,10 +132,10 @@ async def process():
                 raise Exception("Request timed out!")
 
             if response:
-                logging.info("[THINGSBOARD CLIENT] Response from Thingsboard.")
+                logging.info("[SENTIENT CLIENT] Response from Sentient.")
                 logging.info(response)
             else:
-                raise Exception("[THINGSBOARD CLIENT] Cannot save telemetry with received credentials!")
+                raise Exception("[SENTIENT CLIENT] Cannot save telemetry with received credentials!")
         else:
             logging.error("Failed to get access token from response.")
             logging.error(decoded_response.get("errorMsg"))
@@ -148,8 +148,8 @@ if __name__ == '__main__':
 
     config = collect_required_data()
 
-    THINGSBOARD_HOST = config["host"]  # ThingsBoard instance host
-    THINGSBOARD_PORT = config["port"]  # ThingsBoard instance port
+    SENTIENT_HOST = config["host"]  # SENTIENT instance host
+    SENTIENT_PORT = config["port"]  # SENTIENT instance port
 
     PROVISION_REQUEST = {"provisionDeviceKey": config["provision_device_key"],  # Provision device key, replace this value with your value from device profile.
                          "provisionDeviceSecret": config["provision_device_secret"],  # Provision device secret, replace this value with your value from device profile.

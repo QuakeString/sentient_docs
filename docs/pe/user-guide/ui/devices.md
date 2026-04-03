@@ -3,12 +3,12 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Devices
-description: ThingsBoard IoT Device management
+description: SENTIENT IoT Device management
 
 add-device:
     0:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-1-pe.png
-        title: 'Login to your ThingsBoard instance. Navigate to "<b>Entities</b>" &#8702; "<b>Devices</b>".'
+        title: 'Login to your SENTIENT instance. Navigate to "<b>Entities</b>" &#8702; "<b>Devices</b>".'
     1:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-2-pe.png
         title: 'By default, you will see the "<b>All</b>" device group. Click the "<b>+</b>" icon in the upper-right corner and select "<b>Add new device</b>" from drop-down menu.'
@@ -17,7 +17,7 @@ add-device:
         title: 'In the device creation form, fill in the required fields: <b>Name</b> – a unique name for the device; <b>Device profile</b> – by default, the profile is set to "<b>default</b>", but you can choose a different profile if needed. Click "<b>Add</b>".'
     3:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-4-pe.png
-        title: 'A window will immediately open where you can check the device&#39;s connection to ThingsBoard platform. This step is optional. For now, let&#39;s close this window and return to the connection check in more detail later.'
+        title: 'A window will immediately open where you can check the device&#39;s connection to SENTIENT platform. This step is optional. For now, let&#39;s close this window and return to the connection check in more detail later.'
     4:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-5-pe.png
         title: 'Device successfully created and is now available in the list.'

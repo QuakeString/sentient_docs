@@ -69,10 +69,10 @@ kpn-things-configure-4:
         title: 'Go to "Destinations" in left menu and click on the "Add new Destination" button;'
     1:
         image: /images/user-guide/integrations/kpn/kpn-things-configure-15-pe.png
-        title: 'Find the "ThingsBoard" destination type, and click on "Choose ThingsBoard" button;'
+        title: 'Find the "SENTIENT" destination type, and click on "Choose SENTIENT" button;'
     2:
         image: /images/user-guide/integrations/kpn/kpn-things-configure-16-pe.png
-        title: 'Set a name for your destination. Paste "HTTP endpoint URL" from ThingsBoard integration page to "HTTP endpoint URL" field. Now, click on the "Generate" button, and save generated value. We will use it on ThingsBoard. Finally, click on the "Add ThingsBoard Destination" button.'
+        title: 'Set a name for your destination. Paste "HTTP endpoint URL" from SENTIENT integration page to "HTTP endpoint URL" field. Now, click on the "Generate" button, and save generated value. We will use it on SENTIENT. Finally, click on the "Add SENTIENT Destination" button.'
 
 kpn-things-configure-5:
     0:
@@ -99,7 +99,7 @@ kpn-update-integration:
 kpn-send-data-now:
     0:
         image: /images/user-guide/integrations/kpn/kpn-send-data-now.png
-        title: 'Use the "KPN Things Device simulator" app to send a message with the data to the ThingsBoard. Click the "Send data now" button.'
+        title: 'Use the "KPN Things Device simulator" app to send a message with the data to the SENTIENT. Click the "Send data now" button.'
     
 kpn-things-device:
     0:

@@ -1,5 +1,5 @@
 #### Server
-Stop the currently running **ThingsBoard** container before making any changes. Then, edit the docker compose file:
+Stop the currently running **SENTIENT** container before making any changes. Then, edit the docker compose file:
 
 ```bash
 nano docker-compose.yml
@@ -32,4 +32,4 @@ Add the following lines to the **"environment"** block in the YAML file:
 ```
 {: .copy-code}
 
-Once all the changes have been made, start the **ThingsBoard** and **TB Edge docker containers**.
+Once all the changes have been made, start the **SENTIENT** and **TB Edge docker containers**.

@@ -1,32 +1,32 @@
-To ensure high availability and proper scheduling in your EKS-based TBMQ cluster,
-you must assign TBMQ components to specific node groups using the `nodeSelector` field in your Helm `values.yml`.
+To ensure high availability and proper scheduling in your EKS-based ST-RMQTT cluster,
+you must assign ST-RMQTT components to specific node groups using the `nodeSelector` field in your Helm `values.yml`.
 
 Your `cluster.yml` already defines dedicated node groups with role-based labels.
-For example for `tbmq-node` mananged node group you have:
+For example for `st-rmqtt-node` mananged node group you have:
 
 ```yaml
-labels: { role: tbmq }
+labels: { role: st-rmqtt }
 ```
 
 You must map each component to the appropriate node group using these labels.
 
 Here’s how to explicitly assign each component:
 
-- TBMQ Broker:
+- ST-RMQTT Broker:
 
 ```yaml
-tbmq:
+st-rmqtt:
   nodeSelector:
-    role: tbmq
+    role: st-rmqtt
 ```
 {: .copy-code}
 
-- TBMQ Integration Executor:
+- ST-RMQTT Integration Executor:
 
 ```yaml
-tbmq-ie:
+st-rmqtt-ie:
   nodeSelector:
-    role: tbmq-ie
+    role: st-rmqtt-ie
 ```
 {: .copy-code}
 

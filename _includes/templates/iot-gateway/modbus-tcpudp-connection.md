@@ -14,8 +14,8 @@ Also, you can configure TLS connection using the following configuration:
 
 | **Parameter**                 | **Default value**                            | **Description**           |
 |:-|:---------------------------------------------|---------------------------
-| certfile                      | **/etc/thingsboard-gateway/certificate.pem** | Path to certificate file. |
-| keyfile                       | **/etc/thingsboard-gateway/privateKey.pem**  | Path to private key file. |
+| certfile                      | **/etc/sentient-gateway/certificate.pem** | Path to certificate file. |
+| keyfile                       | **/etc/sentient-gateway/privateKey.pem**  | Path to private key file. |
 | password                      | **YOUR_PASSWORD**                            | Server password.          |
 | server_hostname               | **localhost**                                | Server host name.         |
 |---
@@ -31,8 +31,8 @@ Configuration example:
         "type": "tcp",
         "method": "socket",
         "tls": {
-          "certfile": "/etc/thingsboard-gateway/certificate.pem",
-          "keyfile": "/etc/thingsboard-gateway/privateKey.pem",
+          "certfile": "/etc/sentient-gateway/certificate.pem",
+          "keyfile": "/etc/sentient-gateway/privateKey.pem",
           "password": "YOUR_PASSWORD",
           "server_hostname": "localhost"
         },

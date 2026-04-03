@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect RS26x LoRaWAN Temperature Sensor to ThingsBoard?
+title: How to connect RS26x LoRaWAN Temperature Sensor to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN®
 vendor: Ezurio

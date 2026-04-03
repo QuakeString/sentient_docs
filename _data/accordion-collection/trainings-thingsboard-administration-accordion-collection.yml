@@ -1,22 +1,22 @@
 0:
-  title: "ThingsBoard administration"
+  title: "SENTIENT administration"
   additionalText: "2 hours"
   additionalFaIcon : "far fa-clock fa-lg"
   allTextContentIcon: "fas fa-check"
   allTextContentIconColor: "#2A7DEC"
   textContentCollection:
     0:
-      textContent: "Learn how to install and configure ThingsBoard in both monolithic and cluster deployments."
+      textContent: "Learn how to install and configure SENTIENT in both monolithic and cluster deployments."
     1:
       textContent: "Understand the limitations and load capacity of each deployment option, and for which use cases they suit the best."
     2:
-      textContent: "Explore ThingsBoard architecture and understand the role of key services and third-party applications."
+      textContent: "Explore SENTIENT architecture and understand the role of key services and third-party applications."
     3:
-      textContent: "Develop hands-on skills in deploying ThingsBoard on AWS including both basic monolithic and Docker-based microservice platforms."
+      textContent: "Develop hands-on skills in deploying SENTIENT on AWS including both basic monolithic and Docker-based microservice platforms."
     4:
       textContent: "Understand the advantages and limitations of different deployment types, including monolith and cluster setups."
     5:
-      textContent: "Discuss best practices for configuring ThingsBoard for optimal performance in different environments."
+      textContent: "Discuss best practices for configuring SENTIENT for optimal performance in different environments."
     6:
       textContent: "Identify and troubleshoot common issues using logs and diagnostic tools."
     7:

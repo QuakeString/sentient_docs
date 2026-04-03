@@ -2,22 +2,22 @@
 {% assign HOST = "localhost:8080" %}
 {% endif %}
 {% if docsPrefix == "paas/" %}
-{% assign HOST = "thingsboard.cloud" %}
+{% assign HOST = "sentient.cloud" %}
 {% endif %}
 {% if docsPrefix == "paas/eu/" %}
-{% assign HOST = "eu.thingsboard.cloud" %}
+{% assign HOST = "eu.sentient.cloud" %}
 {% endif %}
 
 * TOC
 {:toc}
 
-This document describes a ThingsBoard solution that turns raw device telemetry into actionable maintenance insights:
+This document describes a SENTIENT solution that turns raw device telemetry into actionable maintenance insights:
 
 **Workflow:**
 1. Devices send `vibration` (mm/s), `temperature` (°C), and `acousticDev` (% deviation from baseline).
 2. [Calculated Fields](/docs/user-guide/calculated-fields/) maintain a rolling window of the last N values (default: 100) and/or last M minutes for each metric.
 3. The rolling window is forwarded to an AI Rule Node (OpenAI or another LLM provider).
-4. If the AI detects an anomaly, the rule chain creates a ThingsBoard Alarm and optionally sends a notification.
+4. If the AI detects an anomaly, the rule chain creates a SENTIENT Alarm and optionally sends a notification.
 
 
 ### Architecture
@@ -26,7 +26,7 @@ This document describes a ThingsBoard solution that turns raw device telemetry i
 
 ### Prerequisites
 
-- ThingsBoard version **4.2+**
+- SENTIENT version **4.2+**
 - Device(s) capable of sending the required telemetry values (for this guide, we will emulate them)
 - LLM provider credentials (OpenAI, Azure OpenAI, etc.)
 
@@ -47,7 +47,7 @@ This document describes a ThingsBoard solution that turns raw device telemetry i
 
 **Steps:**
 
-<b>1. [Download](/docs/samples/analytics/resources/equipment_sensor.json){:target="_blank" download="equipment_sensor.json"}</b> and import the **EquipmentSensor** device profile into your ThingsBoard instance.
+<b>1. [Download](/docs/samples/analytics/resources/equipment_sensor.json){:target="_blank" download="equipment_sensor.json"}</b> and import the **EquipmentSensor** device profile into your SENTIENT instance.
 
 {% include images-gallery.html imageCollection="import-equipment-sensor-device-profile" %}
 
@@ -112,7 +112,7 @@ curl -v -X POST http://{{ HOST }}/api/v1/6sED1ALqyJg0P6ezIODH/telemetry \
 --data "{temperature:25}"
 ```
 
-<b>&#8195; *</b> Where `{{ HOST }}` is the <b>host of your ThingsBoard instance</b>, and `6sED1ALqyJg0P6ezIODH` is the <b>device access token</b>.
+<b>&#8195; *</b> Where `{{ HOST }}` is the <b>host of your SENTIENT instance</b>, and `6sED1ALqyJg0P6ezIODH` is the <b>device access token</b>.
 
 {% include images-gallery.html imageCollection="check-connectivity-command-from-device" %}
 
@@ -122,12 +122,12 @@ curl -v -X POST http://{{ HOST }}/api/v1/6sED1ALqyJg0P6ezIODH/telemetry \
 
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
 
-Send the following test data to ThingsBoard. Be sure to replace:
-- `$THINGSBOARD_HOST_NAME` with the host of your ThingsBoard instance,
+Send the following test data to SENTIENT. Be sure to replace:
+- `$SENTIENT_HOST_NAME` with the host of your SENTIENT instance,
 - `$YOUR_DEVICE_ACCESS_TOKEN` with your device&#39;s access token.
 
 ```bash
-curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/telemetry \
+curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/telemetry \
 --header Content-Type:application/json \
 --data '{"vibration":4.2,"temperature":70,"acousticDev":5}'
 ```
@@ -136,7 +136,7 @@ curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/t
 {% endif %}
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
 
-Send the following test data to ThingsBoard.
+Send the following test data to SENTIENT.
 Make sure to replace `$YOUR_DEVICE_ACCESS_TOKEN` with your device&#39;s access token.
 
 ```bash
@@ -157,12 +157,12 @@ There won&#39;t be an alarm created.
 
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
 
-Simulate a bearing wear event by sending the following test data to ThingsBoard. Be sure to replace:
-- `$THINGSBOARD_HOST_NAME` with the host of your ThingsBoard instance,
+Simulate a bearing wear event by sending the following test data to SENTIENT. Be sure to replace:
+- `$SENTIENT_HOST_NAME` with the host of your SENTIENT instance,
 - `$YOUR_DEVICE_ACCESS_TOKEN` with your device&#39;s access token.
 
 ```bash
-curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/telemetry \
+curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/telemetry \
 --header Content-Type:application/json \
 --data '{"vibration":8.2,"temperature":88,"acousticDev":5}'
 ```
@@ -171,7 +171,7 @@ curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/t
 {% endif %}
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
 
-Simulate a bearing wear event by sending the following test data to ThingsBoard.
+Simulate a bearing wear event by sending the following test data to SENTIENT.
 Make sure to replace `$YOUR_DEVICE_ACCESS_TOKEN` with your device&#39;s access token.
 
 ```bash
@@ -199,12 +199,12 @@ curl -v -X POST http://{{ HOST }}/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/telemetry \
 
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
 
-Simulate a misalignment event by sending the following test data to ThingsBoard. Be sure to replace:
-- `$THINGSBOARD_HOST_NAME` with the host of your ThingsBoard instance,
+Simulate a misalignment event by sending the following test data to SENTIENT. Be sure to replace:
+- `$SENTIENT_HOST_NAME` with the host of your SENTIENT instance,
 - `$YOUR_DEVICE_ACCESS_TOKEN` with your device&#39;s access token.
 
 ```bash
-curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/telemetry \
+curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/telemetry \
 --header Content-Type:application/json \
 --data '{"vibration":32.2,"temperature":38,"acousticDev":5}'
 ```
@@ -213,7 +213,7 @@ curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$YOUR_DEVICE_ACCESS_TOKEN/t
 {% endif %}
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
 
-Simulate misalignment event by sending the following test data to ThingsBoard. 
+Simulate misalignment event by sending the following test data to SENTIENT. 
 Make sure to replace `$YOUR_DEVICE_ACCESS_TOKEN` with your device&#39;s access token.
 
 ```bash

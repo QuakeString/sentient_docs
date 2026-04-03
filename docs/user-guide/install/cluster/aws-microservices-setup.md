@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Microservices setup using AWS EKS
-description: ThingsBoard IoT platform microservices setup with Kubernetes in AWS EKS
+description: SENTIENT IoT platform microservices setup with Kubernetes in AWS EKS
 
 rdsSetup:
     0:
@@ -17,10 +17,10 @@ rdsSetup:
         title: 'Use "Provisioned IOPS" for better performance.'
     3:
         image: /images/install/cloud/aws/rds-4.png
-        title: 'Make sure your PostgreSQL RDS instance is accessible from the ThingsBoard cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
+        title: 'Make sure your PostgreSQL RDS instance is accessible from the SENTIENT cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-sentient-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
     4:
         image: /images/install/cloud/aws/rds-5.png
-        title: 'Make sure you use "thingsboard" as initial database name.'
+        title: 'Make sure you use "sentient" as initial database name.'
     5:
         image: /images/install/cloud/aws/rds-6.png
         title: 'Disable "auto minor version update".'  
@@ -39,10 +39,10 @@ mskSetup:
         title: 'Choose <b>kafka.m7.large</b> or similar instance types.'
     2:
         image: /images/install/cloud/aws/msk-3.png
-        title: 'Select the <b>storage size</b> for the broker (with the default ThingsBoard partition settings, Kafka can use up to <b>100 GB</b>).'
+        title: 'Select the <b>storage size</b> for the broker (with the default SENTIENT partition settings, Kafka can use up to <b>100 GB</b>).'
     3:
         image: /images/install/cloud/aws/msk-4.png
-        title: 'Make sure your <b>MSK instance is accessible</b> from the <b>ThingsBoard cluster</b>. The easiest way to achieve this is by <b>deploying the MSK instance in the same VPC</b>.   
+        title: 'Make sure your <b>MSK instance is accessible</b> from the <b>SENTIENT cluster</b>. The easiest way to achieve this is by <b>deploying the MSK instance in the same VPC</b>.   
                 We also recommend using <b>private subnets</b>, as this will make it virtually impossible to accidentally expose the instance to the <b>Internet</b>.'
     4:
         image: /images/install/cloud/aws/msk-5.png
@@ -65,7 +65,7 @@ redisSetup:
         title: 'Specify <b>Valkey Engine version 8.x</b> and node type with at least 1 GB of RAM.'
     1:
         image: /images/install/cloud/aws/valkey-3.png
-        title: 'Make sure your <b>Valkey cluster</b> is accessible from the <b>ThingsBoard cluster</b>. The easiest way to achieve this is by <b>deploying the Valkey cluster in the same VPC</b>. We also recommend using <b>private subnets</b>. Use your <b>group ID</b>.'
+        title: 'Make sure your <b>Valkey cluster</b> is accessible from the <b>SENTIENT cluster</b>. The easiest way to achieve this is by <b>deploying the Valkey cluster in the same VPC</b>. We also recommend using <b>private subnets</b>. Use your <b>group ID</b>.'
     2:
         image: /images/install/cloud/aws/valkey-2.png
         title: 'Disable the "<b>Enable automatic backups</b>" option.'
@@ -73,14 +73,14 @@ redisSetup:
 redisEndpointUrl:
     0:
         image: /images/install/cloud/aws/valkey-4.png
-        title: 'Once the <b>Valkey cluster</b> switches to the "<b>Available" state</b>, navigate to the "<b>Details</b>" section and copy the "<b>Endpoint</b>" field <b>without the ":6379" port suffix</b> – this is the <b>Valkey endpoint</b> for ThingsBoard.'
+        title: 'Once the <b>Valkey cluster</b> switches to the "<b>Available" state</b>, navigate to the "<b>Details</b>" section and copy the "<b>Endpoint</b>" field <b>without the ":6379" port suffix</b> – this is the <b>Valkey endpoint</b> for SENTIENT.'
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in microservices mode using AWS EKS. 
+This guide will help you to setup SENTIENT in microservices mode using AWS EKS. 
 See [microservices](/docs/reference/msa/) architecture page for more details about each component that will be installed.
 We will use Amazon RDS for managed PostgreSQL, Amazon MSK for managed Kafka and Amazon ElastiCache for managed Redis.
 
@@ -88,11 +88,11 @@ We will use Amazon RDS for managed PostgreSQL, Amazon MSK for managed Kafka and 
 
 {% include templates/install/aws/eks-prerequisites.md %}
 
-## Step 1. Clone ThingsBoard CE K8S scripts repository
+## Step 1. Clone SENTIENT K8S scripts repository
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-ce-k8s.git
-cd thingsboard-ce-k8s/aws/microservices
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-ce-k8s.git
+cd sentient-ce-k8s/aws/microservices
 ```
 {: .copy-code}
 
@@ -144,7 +144,7 @@ Recommended CPU/memory resources allocation:
 
 ## Step 9. Starting
 
-Execute the following command to deploy ThingsBoard services:
+Execute the following command to deploy SENTIENT services:
 
 ```
  ./k8s-deploy-resources.sh

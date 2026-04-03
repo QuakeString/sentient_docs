@@ -2,13 +2,13 @@
 * TOC
 {:toc}
 
-There are multiple ways to customize ThingsBoard platform to suit your needs:
+There are multiple ways to customize SENTIENT platform to suit your needs:
 {% unless docsPrefix contains 'paas/' %}
- - [Rule Engine](/docs/{{docsPrefix}}user-guide/contribution/rule-node-development/) - allows to create custom rule nodes and add them to your ThingsBoard server instance.
+ - [Rule Engine](/docs/{{docsPrefix}}user-guide/contribution/rule-node-development/) - allows to create custom rule nodes and add them to your SENTIENT server instance.
 {% endunless %}
  - [Widgets Library](/docs/{{docsPrefix}}user-guide/contribution/widgets-development/) - allows to develop new widgets.
 {% unless docsPrefix %}
- - [Device Connectivity Protocols](/docs/reference/protocols/) - add new protocol or customize [existing implementations](https://github.com/thingsboard/thingsboard/tree/master/transport)
+ - [Device Connectivity Protocols](/docs/reference/protocols/) - add new protocol or customize [existing implementations](https://github.com/sentient/sentient/tree/master/transport)
 {% else %}
 {% assign peDocsPrefix = '' %}
 {% if docsPrefix contains 'paas/' %}

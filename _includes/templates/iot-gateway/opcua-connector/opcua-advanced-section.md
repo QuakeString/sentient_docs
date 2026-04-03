@@ -22,7 +22,7 @@ This example uses the Prosys OPC-UA Simulation Server to demonstrate how to conf
 
 On the main **"Status"** tab, copy connection address (UA TCP).
 
-To connect your OPC-UA server to ThingsBoard, open the OPC-UA Connector configuration file (opcua.json) and replace the "url" value with the copied connection address.
+To connect your OPC-UA server to SENTIENT, open the OPC-UA Connector configuration file (opcua.json) and replace the "url" value with the copied connection address.
 
 Our **server** section would look like this:
 

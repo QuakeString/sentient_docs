@@ -14,7 +14,7 @@ Before you add an Efento sensor to the platform you need to create a new Device 
         title: From the dropdown menu in the "Transport type" field select "CoAP", and from the dropdown menu in "CoAP device type" field select "Efento NB-IoT", click "Add" button to confirm adding new device profile;
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/create-device-profile-4-pe.png,
-        title: Once the profile is ready you will see it on the list in the "Device profiles" section. If you plan to use your ThingsBoard instance only with Efento sensors you can set the profile as default.
+        title: Once the profile is ready you will see it on the list in the "Device profiles" section. If you plan to use your SENTIENT instance only with Efento sensors you can set the profile as default.
 '
 %}
 
@@ -30,7 +30,7 @@ Before you add an Efento sensor to the platform you need to create a new Device 
         title: From the dropdown menu in the "Transport type" field select "CoAP", and from the dropdown menu in "CoAP device type" field select "Efento NB-IoT", click "Add" button to confirm adding new device profile;
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/create-device-profile-4-ce.png,
-        title: Once the profile is ready you will see it on the list in the "Device profiles" section. If you plan to use your ThingsBoard instance only with Efento sensors you can set the profile as default.
+        title: Once the profile is ready you will see it on the list in the "Device profiles" section. If you plan to use your SENTIENT instance only with Efento sensors you can set the profile as default.
 '
 %}
 
@@ -45,7 +45,7 @@ If you want to learn more about these features please refer to the [documentatio
 
 ### Create a device
 
-In order to save a data from the sensor we should also create a device on ThingsBoard.  
+In order to save a data from the sensor we should also create a device on SENTIENT.  
 
 {% assign deviceAddingPE = '
     ===
@@ -56,10 +56,10 @@ In order to save a data from the sensor we should also create a device on Things
         title: Enter the device name. In the "Device profile" field specify the profile you have recently created for Efento sensors. Then, click "Next: Credentials" button;
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/create-device-3-pe.png,
-        title: Leave the credential type as "Access token". Set the new access token, which will be used by a sensor to validate in the ThingsBoard platform. Note that the token must be unique for each sensor. Configuration of the token is optional. Click "Add" button to confirm adding new device;
+        title: Leave the credential type as "Access token". Set the new access token, which will be used by a sensor to validate in the SENTIENT platform. Note that the token must be unique for each sensor. Configuration of the token is optional. Click "Add" button to confirm adding new device;
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/create-device-4-pe.png,
-        title: A window will open where you can check the device&#39;s connection to ThingsBoard. This step is optional. Close this window;
+        title: A window will open where you can check the device&#39;s connection to SENTIENT. This step is optional. Close this window;
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/create-device-5-pe.png,
         title: Once added, the device appears in the "All" device group list.
@@ -75,10 +75,10 @@ In order to save a data from the sensor we should also create a device on Things
         title: Enter the device name. In the "Device profile" field specify the profile you have recently created for Efento sensors. Then, click "Next: Credentials" button;
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/create-device-3-ce.png,
-        title: Leave the credential type as "Access token". Set the new access token, which will be used by a sensor to validate in the ThingsBoard platform. Note that the token must be unique for each sensor. Configuration of the token is optional. Click "Add" button to confirm adding new device;
+        title: Leave the credential type as "Access token". Set the new access token, which will be used by a sensor to validate in the SENTIENT platform. Note that the token must be unique for each sensor. Configuration of the token is optional. Click "Add" button to confirm adding new device;
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/create-device-4-ce.png,
-        title: A window will open where you can check the device&#39;s connection to ThingsBoard. This step is optional. Close this window;
+        title: A window will open where you can check the device&#39;s connection to SENTIENT. This step is optional. Close this window;
     ===
         image: /images/devices-library/ready-to-go-devices/wireless-open-close-sensor/create-device-5-ce.png,
         title: Once added, the device appears in the device list.

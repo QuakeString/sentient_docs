@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect AgroSense Positioning Water Leak Sensor to ThingsBoard?
+title: How to connect AgroSense Positioning Water Leak Sensor to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: Makerfabs

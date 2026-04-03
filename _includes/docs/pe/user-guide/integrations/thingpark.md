@@ -1,7 +1,7 @@
 {% assign feature = "Platform Integrations" %}{% include templates/pe-feature-banner.md %}
 
 
-ThingPark Integration allows to stream data from Actility ThingPark servers to ThingsBoard and converts binary device payloads to the ThingsBoard format.
+ThingPark Integration allows to stream data from Actility ThingPark servers to SENTIENT and converts binary device payloads to the SENTIENT format.
 
 <object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/thingpark-integration.svg"></object>
 
@@ -18,7 +18,7 @@ Configuration steps:
 
 [Check the connection and operation of your device](https://thingparkenterprise.eu.actility.com/thingpark/wlogger/gui/).
 
-- To create a new Integration on the ThingsBoard platform with the ThingPark Wireless OSS intelligent logger (Actility) platform, click on the link.
+- To create a new Integration on the SENTIENT platform with the ThingPark Wireless OSS intelligent logger (Actility) platform, click on the link.
 
 [Create new Integration of type "ThingPark"](/docs/samples/abeeway/tracker)
 

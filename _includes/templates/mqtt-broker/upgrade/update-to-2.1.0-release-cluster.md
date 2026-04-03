@@ -1,4 +1,4 @@
-TBMQ v2.1.0 introduces enhancements, including a new Integration Executor microservice and bumped versions for third-party services.
+ST-RMQTT v2.1.0 introduces enhancements, including a new Integration Executor microservice and bumped versions for third-party services.
 
 #### Add Integration Executor microservice
 

@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-Users log into ThingsBoard using a username and password. To improve account security, you can adjust your security settings. To configure these settings, sign in to **ThingsBoard** with a **System Administrator** account.
+Users log into SENTIENT using a username and password. To improve account security, you can adjust your security settings. To configure these settings, sign in to **SENTIENT** with a **System Administrator** account.
 
 {% if docsPrefix == null %}
 ![image](/images/user-guide/ui/security-settings/security-settings-general-ce.png)
@@ -32,7 +32,7 @@ The **TTL** value for **User Activation** and **Password Reset** links can be co
 
 ## Password policy
 
-The password policy sets the rules that passwords for the ThingsBoard must meet. You can specify the following options:
+The password policy sets the rules that passwords for the SENTIENT must meet. You can specify the following options:
 
 - **Minimum password length** - the parameter determines the minimum number of characters in the password. Minimum password length should be in a range from 6 to 50;
 
@@ -46,7 +46,7 @@ The password policy sets the rules that passwords for the ThingsBoard must meet.
 
 - **Minimum number of special characters** - specify the minimum number of special characters in the password;
 
-- **Password expiration period in days** - force expiration of the password. After the password expires, ThingsBoard will require the user to change it. This ensures users regularly update their passwords;
+- **Password expiration period in days** - force expiration of the password. After the password expires, SENTIENT will require the user to change it. This ensures users regularly update their passwords;
 
 - **Password reuse frequency in days** - disallow to use the same password for the defined number of days;
 
@@ -58,7 +58,7 @@ After the settings, apply the changes by pressing the **Save** button.
 
 ## JWT Security Settings
 
-In this section, you can configure the **JSON Web Token** (JWT) parameters used by **ThingsBoard** for authentication and session management. The settings allow you to control token generation, expiration, and signing.
+In this section, you can configure the **JSON Web Token** (JWT) parameters used by **SENTIENT** for authentication and session management. The settings allow you to control token generation, expiration, and signing.
 
 - **Issuer name** – specify the name of the issuer for JWT tokens. This value will be included in all generated tokens and can be used to validate their source.
 

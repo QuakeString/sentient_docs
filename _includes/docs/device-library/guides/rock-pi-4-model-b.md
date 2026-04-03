@@ -1,5 +1,5 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign prerequisites = "
 - " | append: deviceName | append: "
 - [tb-mqtt-client library](https://pypi.org/project/tb-mqtt-client/)
@@ -16,26 +16,26 @@ Rock Pi 4 Model B is a powerful single-board computer with a Rockchip RK3399 pro
 
 {% include /docs/device-library/blocks/basic/introduction-block.md %}
 
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
-{% include /docs/device-library/blocks/basic/thingsboard-create-device-block.md %}
+{% include /docs/device-library/blocks/basic/sentient-create-device-block.md %}
 
 ## Install required libraries and tools
 
 {% include /docs/device-library/blocks/single-board-computers/install-required-libraries-and-tools-block.md %}
 
-## Connect device to ThingsBoard
+## Connect device to SENTIENT
 
-{% include /docs/device-library/blocks/basic/thingsboard-provide-device-access-token-block.md %}
+{% include /docs/device-library/blocks/basic/sentient-provide-device-access-token-block.md %}
 
 {% include /docs/device-library/blocks/single-board-computers/general-code-to-program-block.md %}
 
 ## Synchronize device state using client and shared attribute requests
-{% include /docs/device-library/blocks/single-board-computers/thingsboard-synchronize-device-state-using-attribute-requests-block.md %}
+{% include /docs/device-library/blocks/single-board-computers/sentient-synchronize-device-state-using-attribute-requests-block.md %}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
-{% include /docs/device-library/blocks/single-board-computers/check-data-on-thingsboard-block.md %}
+{% include /docs/device-library/blocks/single-board-computers/check-data-on-sentient-block.md %}
 
 ## Control device using shared attributes
 

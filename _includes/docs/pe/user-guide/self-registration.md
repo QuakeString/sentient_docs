@@ -3,8 +3,8 @@
 * TOC
 {:toc}
 
-ThingsBoard self-registration feature allows tenant to configure sign-up page for its customers to be able to simply sign-up and login to the ThingsBoard with predefined permission configurations.
-This feature was introduced in ThingsBoard PE 2.4.1. 
+SENTIENT self-registration feature allows tenant to configure sign-up page for its customers to be able to simply sign-up and login to the SENTIENT with predefined permission configurations.
+This feature was introduced in SENTIENT Professional Edition 2.4.1. 
 
 This documentation page contains complete use case configuration example. 
 
@@ -17,22 +17,22 @@ Let’s start with the prerequisites.
 
 ## Prerequisites
 
-### Step 1. Install ThingsBoard in the cloud 
+### Step 1. Install SENTIENT in the cloud 
 
-We will need a running ThingsBoard PE instance with white-labeling feature enabled. 
-You can easily deploy your own ThingsBoard PE instance using the [installation instructions](/docs/user-guide/install/pe/installation-options/). 
+We will need a running SENTIENT Professional Edition instance with white-labeling feature enabled. 
+You can easily deploy your own SENTIENT Professional Edition instance using the [installation instructions](/docs/user-guide/install/pe/installation-options/). 
 Note that your instance should run in the cloud, and have public IP address assigned to it.
 
-### Step 2. Assign DNS record to your ThingsBoard IP address
+### Step 2. Assign DNS record to your SENTIENT IP address
 
-We also need a valid **DNS name** to be assigned to your ThingsBoard instance.
+We also need a valid **DNS name** to be assigned to your SENTIENT instance.
 You can use any domain registrar, if you don't have a domain.
 If you do have the domain name, contact your system administrator to issue sub-domain, for example iot.mycompany.com. 
 
-### Step 3. Setup HTTPS access to your ThingsBoard instance
+### Step 3. Setup HTTPS access to your SENTIENT instance
 
 Please note the HAProxy installation instructions in the [post install steps](/docs/user-guide/install/pe/ubuntu/#post-installation-steps). 
-They are available for Linux distributions and Docker. You can easily issue a valid Let's Encrypt certificate and setup HTTPS for your ThingsBoard instance.
+They are available for Linux distributions and Docker. You can easily issue a valid Let's Encrypt certificate and setup HTTPS for your SENTIENT instance.
 
 ### Step 4. ReCAPTCHA v2
 
@@ -46,17 +46,17 @@ Copy-paste the site key and secret to the safe place.
 
 ### Prerequisites summary
 
-We have prepared a ThingsBoard Prototype instance running on DigitalOcean. 
-Specific domain name: srd.thingsboard.io (srd stands for “self registration demo”) to server’s IP address: 46.101.146.242.
+We have prepared a SENTIENT Prototype instance running on DigitalOcean. 
+Specific domain name: srd.docs.sentient.invenia.in (srd stands for “self registration demo”) to server’s IP address: 46.101.146.242.
 
 ![image](/images/user-guide/self-registration/digitalocean.png)
 
-## ThingsBoard configuration
+## SENTIENT configuration
 
 ### Step 5. Mail Server settings
 
 Login to your instance as a tenant administrator and navigate to Whitelabeling —> Mail server.
-Configure ThingsBoard using your SMTP server settings. If you don't have one, the easiest way is to use [SendGrid](https://sendgrid.com/).
+Configure SENTIENT using your SMTP server settings. If you don't have one, the easiest way is to use [SendGrid](https://sendgrid.com/).
 See more info in mail settings [guide](/docs/{{docsPrefix}}user-guide/ui/mail-settings/).
 
 Don't forget to validate the mail server settings using "Send Test Mail" button.

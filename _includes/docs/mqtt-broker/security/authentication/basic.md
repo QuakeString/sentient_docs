@@ -9,8 +9,8 @@ When combined with secure transport (TLS), it provides a reliable and widely ado
 ### Basic authentication overview
 
 Basic authentication allows MQTT clients to authenticate using credentials sent in the `CONNECT` packet — such as clientId, username, and password.
-TBMQ uses these credentials to generate a unique `credentialsId` and match against the stored [MQTT client credential](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/mqtt-client-credentials/) records using flexible matching strategies.
-To optimize authentication performance, TBMQ maintains credentials in Redis for fast lookups, while PostgreSQL ensures reliable persistence.
+ST-RMQTT uses these credentials to generate a unique `credentialsId` and match against the stored [MQTT client credential](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/mqtt-client-credentials/) records using flexible matching strategies.
+To optimize authentication performance, ST-RMQTT maintains credentials in Redis for fast lookups, while PostgreSQL ensures reliable persistence.
 The following sections explain provider configuration, credential matching, `credentialsId` generation, and how authorization is applied after successful authentication.
 
 ### Configure provider
@@ -46,7 +46,7 @@ Where `$CLIENT_USERNAME` refers to the specified username, `$CLIENT_ID` refers t
 
 After the user has been authenticated, it is possible to restrict the client's access to topics they can publish or subscribe to.
 
-To provide flexible control over authorization rules, TBMQ uses regular expressions. 
+To provide flexible control over authorization rules, ST-RMQTT uses regular expressions. 
 
 For example, to **allow clients to publish or subscribe to all topics** that begin with **city/**, an authorization rule should be created with the value **city/.***.
 
@@ -69,41 +69,41 @@ The following configuration allows clients to publish messages to topics that st
 
 For this option, you should populate Client ID, Username and Password in the MQTT client credential. MQTT clients will be able to connect if they specify correct combination of client ID, username and password.
 
-Let's review a simple command to publish message using MQTT client ID, username and password to the TBMQ. The command is using plain MQTT without TLS:
+Let's review a simple command to publish message using MQTT client ID, username and password to the ST-RMQTT. The command is using plain MQTT without TLS:
 
 ```bash
-mosquitto_pub -d -q 1 -h "YOUR_TBMQ_HOST" -p "1883" -t "sensors/temperature" -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "YOUR_ST-RMQTT_HOST" -p "1883" -t "sensors/temperature" -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
 ```
 {: .copy-code}
 
 where:
 
-* **YOUR_TBMQ_HOST** is the host of your TBMQ instance;
+* **YOUR_ST-RMQTT_HOST** is the host of your ST-RMQTT instance;
 * **YOUR_CLIENT_ID** is your client id;
 * **YOUR_CLIENT_USERNAME**, **YOUR_CLIENT_PASSWORD** is your client username and password.
 
-{% include images-gallery.html imageCollection="tbmq-client-id-username-and-password" %}
+{% include images-gallery.html imageCollection="st-rmqtt-client-id-username-and-password" %}
 
 ### MQTTS Example based on Client ID, Username and Password
 
 One-way SSL authentication is a standard authentication mode, where your client device verifies the identity of a server using server certificate.
-Follow the [MQTT over SSL](/docs/{{docsPrefix}}mqtt-broker/security/mqtts/) guide to provision server certificate for your own TBMQ instance.
+Follow the [MQTT over SSL](/docs/{{docsPrefix}}mqtt-broker/security/mqtts/) guide to provision server certificate for your own ST-RMQTT instance.
 
-Let's review a simple command to publish message using MQTT client ID, username and password to the TBMQ. The command is using MQTTS:
+Let's review a simple command to publish message using MQTT client ID, username and password to the ST-RMQTT. The command is using MQTTS:
 
 ```bash
-mosquitto_pub -d -q 1 --cafile YOUR_PEM_FILE -h "YOUR_TBMQ_HOST" -p 8883 -t "sensors/temperature" -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
+mosquitto_pub -d -q 1 --cafile YOUR_PEM_FILE -h "YOUR_ST-RMQTT_HOST" -p 8883 -t "sensors/temperature" -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
 ```
 {: .copy-code}
 
 where:
 
 * **YOUR_PEM_FILE** is your CA file;
-* **YOUR_TBMQ_HOST** is the host of your TBMQ instance;
+* **YOUR_ST-RMQTT_HOST** is the host of your ST-RMQTT instance;
 * **YOUR_CLIENT_ID** is your client id;
 * **YOUR_CLIENT_USERNAME**, **YOUR_CLIENT_PASSWORD** is your client username and password.
 
-{% include images-gallery.html imageCollection="tbmq-tls-client-id-username-and-password" %}
+{% include images-gallery.html imageCollection="st-rmqtt-tls-client-id-username-and-password" %}
 
 ## Next steps
 

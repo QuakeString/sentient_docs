@@ -1,9 +1,9 @@
 {% if docsPrefix == 'pe/' or docsPrefix contains 'paas/' %}
 {% assign mobileDocsPrefix = "pe/" %}
-{% assign mobilePrefix = "ThingsBoard PE Mobile Application" %}
+{% assign mobilePrefix = "SENTIENT Professional Edition Mobile Application" %}
 {% else %}
 {% assign mobileDocsPrefix = "" %}
-{% assign mobilePrefix = "ThingsBoard Mobile Application" %}
+{% assign mobilePrefix = "SENTIENT Mobile Application" %}
 {% endif %}
 
 * TOC
@@ -997,7 +997,7 @@ Mobile action is explained in mobile application configuration. See [Mobile acti
 
 ### Open URL
 
-This type of action will transfer you to the resource represented by the URL. This resource can be an HTML page, a document, an image, internal ThingsBoard page (for example, Alarms), etc.
+This type of action will transfer you to the resource represented by the URL. This resource can be an HTML page, a document, an image, internal SENTIENT page (for example, Alarms), etc.
 
 We assume that you are already familiar with the "[Add action](#add-action)" step. Therefore, we will proceed directly to the action configuration step.
 
@@ -1013,7 +1013,7 @@ We assume that you are already familiar with the "[Add action](#add-action)" ste
 
 {% include images-gallery.html imageCollection="open-url-1" %}
 
-After saving the changes, you can see an icon in the upper right part of the widget. Click this icon. You will be transferred to the URL specified in the action. In our case, it's the "Working with ThingsBoard widgets" documentation page.
+After saving the changes, you can see an icon in the upper right part of the widget. Click this icon. You will be transferred to the URL specified in the action. In our case, it's the "Working with SENTIENT widgets" documentation page.
 
 {% include images-gallery.html imageCollection="open-url-2" %}
 
@@ -1249,7 +1249,7 @@ You can assign the `id` to any HTML element (e.g., `<div>`, `<span>`, `<p>`, `<h
 6. Go to the **Appearance** tab → **HTML** section, and add an element with an `id` that **exactly matches** the action&#39;s Name. 
 7. Apply changes (**Apply**) and **save the dashboard**.
 
-After saving, ThingsBoard "listens" for clicks on the element with an id that matches the Name of the created action for that widget. If found, the chosen action type (navigate, update state, custom action, etc.) is executed.
+After saving, SENTIENT "listens" for clicks on the element with an id that matches the Name of the created action for that widget. If found, the chosen action type (navigate, update state, custom action, etc.) is executed.
 
 <br><b><font size="3">Example: Markdown/HTML Card widget — Click the blue area</font></b>
 
@@ -1257,7 +1257,7 @@ After saving, ThingsBoard "listens" for clicks on the element with an id that ma
 1. Add a [Markdown/HTML Card](/docs/{{docsPrefix}}user-guide/widgets/cards/markdown-html-card/){:target="_blank"} widget to your dashboard using the HTML and CSS provided below.  
 2. [Create a new dashboard state](/docs/{{docsPrefix}}user-guide/dashboards/#states){:target="_blank"} with device **temperature details**.
 
-**Alternative:** You can [download a pre-configured dashboard](/docs/pe/user-guide/widgets/resources/smart_device_details.json){:target="_blank" download="smart_device_details.json"} with the Markdown/HTML Card widget and the details state already set up, then [import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into your ThingsBoard instance.
+**Alternative:** You can [download a pre-configured dashboard](/docs/pe/user-guide/widgets/resources/smart_device_details.json){:target="_blank" download="smart_device_details.json"} with the Markdown/HTML Card widget and the details state already set up, then [import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into your SENTIENT instance.
 
 {% capture difference %}
 **Important:** After importing, update the **target entity** and **data key** in the widget&#39;s datasource.

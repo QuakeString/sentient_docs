@@ -2,14 +2,14 @@
 
 `GET` and `SET` RPC methods are out of the box, so you don’t need to configure them manually.
 
-Suppose we have a device `SN-001` that tracks the light level of the room and is connected to ThingsBoard via an MQTT Gateway. 
+Suppose we have a device `SN-001` that tracks the light level of the room and is connected to SENTIENT via an MQTT Gateway. 
 We want to send an RPC command to know the current state of the light level with two options: in the first case we want to get a response back, and in the second case we don't need a response.
 Additionally, we will update the room light level by sending a command without expecting a response.
 
-As an example, we will use ThingsBoard MQTT Demo Broker, which can be run using Docker and the following command:
+As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 thingsboard/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
 ```
 {:.copy-code}
 
@@ -38,7 +38,7 @@ The gateway will:
 2. Process the built-in "get" method
 3. Send a message to the topic `data/get_light_level` with the specified parameters
 4. Subscribe to the topic `data/response` to wait for a response
-5. Return the response to ThingsBoard when received
+5. Return the response to SENTIENT when received
 
 ![image](/images/gateway/mqtt-connector/examples/result-device-overview-reserved-rpc-1.png)
 
@@ -96,7 +96,7 @@ If you are using advanced configuration mode, you can use the following configur
   "broker": {
     "host": "127.0.0.1",
     "port": 1884,
-    "clientId": "ThingsBoard_gateway",
+    "clientId": "SENTIENT_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,

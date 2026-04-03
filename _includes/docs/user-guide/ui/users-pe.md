@@ -1,19 +1,19 @@
 * TOC
 {:toc}
 
-In ThingsBoard, a **User** is an entity with credentials to access the platform.   
-Users in [ThingsBoard Professional Edition](https://thingsboard.io/products/thingsboard-pe/){:target="_blank"} benefit from an extended [access control model](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} that enables the creation of flexible, multi-level organizational structures with fine-grained control over entities, resources, dashboards, and more.
+In SENTIENT, a **User** is an entity with credentials to access the platform.   
+Users in [SENTIENT Professional Edition](https://docs.sentient.invenia.in/products/sentient-pe/){:target="_blank"} benefit from an extended [access control model](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} that enables the creation of flexible, multi-level organizational structures with fine-grained control over entities, resources, dashboards, and more.
 
 **Key characteristics of users:**
 - **Ownership**: Each user belongs to a specific [Tenant](/docs/{{docsPrefix}}user-guide/ui/tenants/){:target="_blank"} or [Customer](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}.
 - **Access control**: A [Role-Based Access Control (RBAC)](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} model defines user permissions, including rights to read, write, and manage entities, resources, dashboards, and more.
 - **User groups**: A user can belong to one or more user [groups](/docs/{{docsPrefix}}user-guide/groups/){:target="_blank"}, which simplifies bulk permission management.
 
-This model allows ThingsBoard to scale efficiently for large organizations and IoT projects with multiple users and complex access requirements.
+This model allows SENTIENT to scale efficiently for large organizations and IoT projects with multiple users and complex access requirements.
 
 ## Creating new user
 
-To create a new user in ThingsBoard:
+To create a new user in SENTIENT:
 - Log in as a **Tenant Administrator** or **Customer Administrator**.
 - Navigate to the "**Users**" section from the left-hand menu.
 - Click the "**Add user**" button in the top-right corner.
@@ -64,7 +64,7 @@ You can change a user’s owner (which can be either a Tenant or a Customer, see
 To do this:
 - Click on the user to open their **User details**.
 - Click “**Manage owner and groups**” button.
-- In **Owner** field, select [Tenant](https://thingsboard.io/docs/{{docsPrefix}}user-guide/ui/tenants/) or a specific [Customer](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}.
+- In **Owner** field, select [Tenant](https://docs.sentient.invenia.in/docs/{{docsPrefix}}user-guide/ui/tenants/) or a specific [Customer](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}.
 - Add the user to the relevant **user groups** or [create a new group](#create-new-user-group) if needed.
 - Click “**Update**” to confirm and apply the changes.
 
@@ -93,13 +93,13 @@ The user will be removed from all user groups, including the special "<b>All</b>
 
 ## User group
 
-A **User group** is a mechanism for grouping users who share the same level of access to ThingsBoard resources. It enables centralized management of access to entities, dashboards, widgets, and more.
+A **User group** is a mechanism for grouping users who share the same level of access to SENTIENT resources. It enables centralized management of access to entities, dashboards, widgets, and more.
 
 > A single user can belong to multiple user groups simultaneously.
 
 > Each group defines roles and permissions, which are inherited by all its members.
 
-In ThingsBoard PE, predefined user groups are automatically created for each level (Tenant / Customer):
+In SENTIENT Professional Edition, predefined user groups are automatically created for each level (Tenant / Customer):
 
 - For **Tenant level**:
   - **Tenant Administrators** – includes users with full access to all tenant resources.

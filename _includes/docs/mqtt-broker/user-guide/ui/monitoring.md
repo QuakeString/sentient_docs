@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-TBMQ offers user-friendly tools that enable users to monitor broker activity and conveniently access features through the **Home** and **Monitoring** pages.
+ST-RMQTT offers user-friendly tools that enable users to monitor broker activity and conveniently access features through the **Home** and **Monitoring** pages.
 
 {% if docsPrefix == "pe/" %}
 ![image](/images/pe/mqtt-broker/user-guide/ui/home-page.png)
@@ -92,7 +92,7 @@ Displays basic information regarding the Kafka Consumer Groups (CG):
 
 ## Resource Usage Statistics
 
-TBMQ provides runtime resource usage statistics for each service instance. These metrics help monitor system behavior and support debugging or optimization across different environments (VMs, containers, physical machines).
+ST-RMQTT provides runtime resource usage statistics for each service instance. These metrics help monitor system behavior and support debugging or optimization across different environments (VMs, containers, physical machines).
 
 {% capture resource-usage-note %}
 System metrics are collected using the OSHI Java library, which retrieves hardware and operating system statistics directly from the host environment.
@@ -109,7 +109,7 @@ persist-frequency: "${STATS_SYSTEM_INFO_PERSIST_FREQUENCY_SEC:60}"
 The Resource Usage table includes the following info about each service:
 * **Last update time**. Timestamp of the most recent metrics update.
 * **Service ID**. Identifier of the service instance.
-* **Service type**. Type of service (e.g., TBMQ, Integration Executor).
+* **Service type**. Type of service (e.g., ST-RMQTT, Integration Executor).
 * **CPU**. CPU load in percentage (hover to see the number of available CPU cores).
 * **RAM** Physical memory usage in percentage (hover to see total memory in GB).
 * **Disk**. Disk space usage in percentage (hover to see total disk capacity in GB).
@@ -118,11 +118,11 @@ The Resource Usage table includes the following info about each service:
     - `Inactive` - Reported between 1 hour and 1 week ago.
     - `Outdated` - Reported more than 1 week ago.
 
-TBMQ tracks all registered services in Redis using the key `tbmq:service:registry`.
+ST-RMQTT tracks all registered services in Redis using the key `st-rmqtt:service:registry`.
 Each **Service ID**, used later to fetch resource usage data, is stored in this key as part of a Redis hash.
 Services are automatically added to the registry on their first launch, and the stored metadata helps identify which services are currently available for system metrics reporting.
 
-The key is not managed by TTL and entries are stored indefinitely. TBMQ does not automatically remove services from the registry, even if they stop running.
+The key is not managed by TTL and entries are stored indefinitely. ST-RMQTT does not automatically remove services from the registry, even if they stop running.
 You can manually delete a service from the UI (or using REST API) using the "Delete" button that is available only when the service status is `Outdated`.
 
 {% if docsPrefix == "pe/" %}

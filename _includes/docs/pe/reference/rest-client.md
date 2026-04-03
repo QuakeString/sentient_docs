@@ -1,8 +1,8 @@
 * TOC
 {:toc}
 
-The ThingsBoard REST API Client helps you interact with ThingsBoard REST API from your Java application.
-With Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in ThingsBoard.
+The SENTIENT REST API Client helps you interact with SENTIENT REST API from your Java application.
+With Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in SENTIENT.
  
 The recommended method for installing the Rest Client is with a build automation tool, like Maven. 
 The version of the REST Client depends on the version of the platform that you are using.   
@@ -16,7 +16,7 @@ In order to add REST Client to your Maven/Gradle project, you should use the fol
 ```xml
 <dependencies>
     <dependency>
-        <groupId>org.thingsboard</groupId>
+        <groupId>org.sentient</groupId>
         <artifactId>rest-client</artifactId>
         <version>{{ site.release.pe_full_ver}}</version>
     </dependency>
@@ -31,8 +31,8 @@ In order to download the REST Client dependency, you should add the following re
 ```xml
 <repositories>
     <repository>
-        <id>thingsboard</id>
-        <url>https://repo.thingsboard.io/artifactory/libs-release-public</url>
+        <id>sentient</id>
+        <url>https://repo.docs.sentient.invenia.in/artifactory/libs-release-public</url>
     </repository>
 </repositories>
 ```
@@ -50,7 +50,7 @@ In order to download the REST Client dependency, you should add the following re
 You can authenticate using an API key without the need for login/logout operations:
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Your API key
@@ -71,14 +71,14 @@ client.close();
 
 #### Authentication with credentials (deprecated)
 
-Alternatively, you can create a ThingsBoard Client instance, authenticate, and retrieve the data of the currently logged-in user.
+Alternatively, you can create a SENTIENT Client instance, authenticate, and retrieve the data of the currently logged-in user.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@sentient.org";
 String password = "tenant";
 
 // Creating new rest client and auth with credentials
@@ -106,7 +106,7 @@ client.close();
 Alternatively, you can authenticate using an API key without the need for login/logout operations:
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Your API key
@@ -131,7 +131,7 @@ The examples below demonstrate how to use the API with standard username/passwor
 If you prefer to use an API key, simply replace the lines:
 
 ```java
-String username = "tenant@thingsboard.org";
+String username = "tenant@sentient.org";
 String password = "tenant";
 RestClient client = new RestClient(url);
 client.login(username, password);
@@ -160,7 +160,7 @@ RestClient client = RestClient.withApiKey(url, apiKey);
 with:
 
 ```java
-String username = "tenant@thingsboard.org";
+String username = "tenant@sentient.org";
 String password = "tenant";
 RestClient client = new RestClient(url);
 client.login(username, password);
@@ -175,7 +175,7 @@ The rest of the logic remains exactly the same.
 The following sample code shows how to get allowed permissions of current logged in user and then check sample permission.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with API key
@@ -200,7 +200,7 @@ client.close();
 The following sample code shows how to fetch tenant devices via page link.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Authentication using an API key
@@ -230,7 +230,7 @@ client.close();
 The following sample code shows how to fetch tenant dashboards via page link.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Authentication using an API key
@@ -260,7 +260,7 @@ client.close();
 The following sample code shows how to fetch entity groups.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with Customer User API key
@@ -285,7 +285,7 @@ client.close();
 
 The following sample code shows how to use Entity Data Query API to count total devices, total active devices.
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User API key
@@ -334,7 +334,7 @@ client.close();
 The following sample code shows how to use Entity Data Query API to get all active devices.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User API key
@@ -397,7 +397,7 @@ client.close();
 
 The following sample code demonstrates basic concepts of device management API (add/get/delete device, get/save device attributes).
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User API key
@@ -446,11 +446,11 @@ client.close();
 ## Some useful code snippets
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 final String url = "http://localhost:8080";
 
 // Default System Administrator credentials
-final String username = "sysadmin@thingsboard.org";
+final String username = "sysadmin@sentient.org";
 final String password = "sysadmin";
 
 // creating new rest restClient and auth with system administrator credentials
@@ -462,7 +462,7 @@ Tenant tenant = new Tenant();
 tenant.setTitle("Test Tenant");
 tenant = restClient.saveTenant(tenant);
 
-final String tenantUsername = "testtenant@thingsboard.org";
+final String tenantUsername = "testtenant@sentient.org";
 final String tenantPassword = "testtenant";
 
 // Created User for Tenant
@@ -543,7 +543,7 @@ groupPermission.setEntityGroupType(sharedDashboardsGroup.getType());
 groupPermission = restClient.saveGroupPermission(groupPermission);
 
 // Creating User for Customer 1 with default dashboard from Tenant "Shared Dashboards" group.
-String userEmail = "user@thingsboard.org";
+String userEmail = "user@sentient.org";
 String userPassword = "secret";
 User user = new User();
 user.setAuthority(Authority.CUSTOMER_USER);
@@ -564,4 +564,4 @@ restClient.addEntitiesToEntityGroup(customer1Administrators.getId(), Collections
 
 ### More examples
 
-You can find the example application [here](https://github.com/thingsboard/tb-pe-rest-client-example){:target="_blank"}.
+You can find the example application [here](https://github.com/sentient/tb-pe-rest-client-example){:target="_blank"}.

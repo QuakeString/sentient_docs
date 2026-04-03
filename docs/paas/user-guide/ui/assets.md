@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - stitenko
 title: Assets
-description: Thingsboard IoT Asset management
+description: Sentient IoT Asset management
 
 creating-asset:
     0:

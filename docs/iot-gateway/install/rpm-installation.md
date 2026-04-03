@@ -1,10 +1,10 @@
 ---
 layout: docwithnav-gw
-title: Install ThingsBoard IoT Gateway as package.
+title: Install SENTIENT IoT Gateway as package.
 
 ---
 
-This guide will help you to install ThingsBoard IoT Gateway on AlmaLinux or RHEL.
+This guide will help you to install SENTIENT IoT Gateway on AlmaLinux or RHEL.
 
 ## Prerequisites
 
@@ -15,33 +15,33 @@ This guide will help you to install ThingsBoard IoT Gateway on AlmaLinux or RHEL
 Download installation package.
 
 ```bash
-wget https://github.com/thingsboard/thingsboard-gateway/releases/latest/download/python3-thingsboard-gateway.rpm
+wget https://github.com/sentient/sentient-gateway/releases/latest/download/python3-sentient-gateway.rpm
 ```
 {: .copy-code}
 
 ## Step 2. Install the gateway using dnf
 
-Install ThingsBoard IoT Gateway as package and run it as daemon uses the following command:<br><br>
+Install SENTIENT IoT Gateway as package and run it as daemon uses the following command:<br><br>
 
 ```bash
-sudo dnf install -y ./python3-thingsboard-gateway.rpm
+sudo dnf install -y ./python3-sentient-gateway.rpm
 ```
 {: .copy-code}  
 
 ## Step 3. Check gateway status 
 
 ```bash
-systemctl status thingsboard-gateway
+systemctl status sentient-gateway
 ```
 {: .copy-code}
 
-You may notice some errors in the output. However, it is expected, since gateway is not configured to connect to ThingsBoard yet:
+You may notice some errors in the output. However, it is expected, since gateway is not configured to connect to SENTIENT yet:
 
 ```text
 ... python3[7563]: ''2019-12-26 09:31:15' - ERROR - mqtt_connector - 181 - Default Broker connection FAIL with error 5 not authorised!'
 ... python3[7563]: ''2019-12-26 09:31:15' - DEBUG - mqtt_connector - 186 - "Default Broker" was disconnected.'
-... python3[7563]: ''2019-12-26 09:31:16' - DEBUG - tb_client - 78 - connecting to ThingsBoard'
-... python3[7563]: ''2019-12-26 09:31:17' - DEBUG - tb_client - 78 - connecting to ThingsBoard'
+... python3[7563]: ''2019-12-26 09:31:16' - DEBUG - tb_client - 78 - connecting to SENTIENT'
+... python3[7563]: ''2019-12-26 09:31:17' - DEBUG - tb_client - 78 - connecting to SENTIENT'
 ```
 
 ## Step 4. Configure the gateway 
@@ -49,13 +49,13 @@ You may notice some errors in the output. However, it is expected, since gateway
 Now you can go to [**configuration guide**](/docs/iot-gateway/configuration/) to configure the gateway. In order for the changes to be saved, we need to restart the gateway.
 
 ```bash
-systemctl restart thingsboard-gateway
+systemctl restart sentient-gateway
 ```
 {: .copy-code}
 
 ## Offline Build Version
 
-The Offline Build is a special variant of the ThingsBoard Gateway package designed for installation and execution without 
+The Offline Build is a special variant of the SENTIENT Gateway package designed for installation and execution without 
 internet access. Also, the offline build allows you to use any connector without installing dependencies in runtime. 
 It contains all necessary dependencies bundled in advance, including:
 - A prebuilt Python virtual environment.
@@ -66,7 +66,7 @@ This ensures seamless deployment in air-gapped, offline, or restricted-network e
 
 ### Example of usage
 
-A company runs all their infrastructure inside a private datacenter. Their ThingsBoard Gateway needs to connect to 
+A company runs all their infrastructure inside a private datacenter. Their SENTIENT Gateway needs to connect to 
 OPC-UA and MQTT sources inside the network but cannot access the internet due to strict firewall rules.
 
 ### Prerequisites
@@ -92,23 +92,23 @@ sudo dnf install -y python3.11
 Download installation package.
 
 ```bash
-wget https://github.com/thingsboard/thingsboard-gateway/releases/latest/download/python3.11-thingsboard-gateway-offline.rpm
+wget https://github.com/sentient/sentient-gateway/releases/latest/download/python3.11-sentient-gateway-offline.rpm
 ```
 {: .copy-code}
 
 #### Step 2. Install the gateway using dnf
 
-Install ThingsBoard IoT Gateway as package and run it as daemon uses the following command:<br><br>
+Install SENTIENT IoT Gateway as package and run it as daemon uses the following command:<br><br>
 
 ```bash
-sudo dnf install -y ./python3.11-thingsboard-gateway-offline.rpm
+sudo dnf install -y ./python3.11-sentient-gateway-offline.rpm
 ```
 {: .copy-code}  
 
 #### Step 3. Check gateway status 
 
 ```bash
-systemctl status thingsboard-gateway
+systemctl status sentient-gateway
 ```
 {: .copy-code}
 
@@ -117,12 +117,12 @@ systemctl status thingsboard-gateway
 - **Wrong Python version**
 
   The installer will show a detailed guide for installing the required version.
-- **Need to remove installed ThingsBoard IoT Gateway after fixing Python**
+- **Need to remove installed SENTIENT IoT Gateway after fixing Python**
 
   When the required Python version is installed, remove the previously installed Gateway package using:
 
   ```bash
-  sudo rpm -e --noscripts thingsboard-gateway
+  sudo rpm -e --noscripts sentient-gateway
   ```
   {: .copy-code}
 

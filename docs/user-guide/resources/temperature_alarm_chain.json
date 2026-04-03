@@ -15,7 +15,7 @@
           "layoutX": 288,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeSwitchNode",
         "name": "Message Type Switch",
         "debugMode": false,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 624,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save timeseries",
         "debugMode": false,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 923,
           "layoutY": 150
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Under threshold",
         "debugMode": false,
         "configuration": {
@@ -51,7 +51,7 @@
           "layoutX": 1173,
           "layoutY": 72
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "Create Alarm",
         "debugMode": false,
         "configuration": {
@@ -66,7 +66,7 @@
           "layoutX": 1178,
           "layoutY": 236
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "Clear Alarm",
         "debugMode": false,
         "configuration": {

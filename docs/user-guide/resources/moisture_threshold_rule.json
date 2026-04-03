@@ -10,7 +10,7 @@
           "POST_TELEMETRY"
         ]
       },
-      "clazz": "org.thingsboard.server.extensions.core.filter.MsgTypeFilter",
+      "clazz": "org.sentient.server.extensions.core.filter.MsgTypeFilter",
       "name": "TelemetryFilter"
     },
     {
@@ -21,14 +21,14 @@
           }
         ]
       },
-      "clazz": "org.thingsboard.server.extensions.core.filter.DeviceTypeFilter",
+      "clazz": "org.sentient.server.extensions.core.filter.DeviceTypeFilter",
       "name": "DeviceTypeFilter"
     },
     {
       "configuration": {
         "filter": "typeof moisture !== 'undefined'"
       },
-      "clazz": "org.thingsboard.server.extensions.core.filter.DeviceTelemetryFilter",
+      "clazz": "org.sentient.server.extensions.core.filter.DeviceTelemetryFilter",
       "name": "MoistureFilter"
     }
   ],
@@ -43,7 +43,7 @@
       "alarmDetailsTemplate": "{\"message\": \"Moisture alarm detected!\"}"
     },
     "name": "MoistureAlarmProcessor",
-    "clazz": "org.thingsboard.server.extensions.core.processor.AlarmProcessor"
+    "clazz": "org.sentient.server.extensions.core.processor.AlarmProcessor"
   },
   "action": null,
   "additionalInfo": null

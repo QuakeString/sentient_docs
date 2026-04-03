@@ -18,6 +18,6 @@ Here are the steps to update default edge "Root Rule Chain" to the rule chain ab
 
 {% include images-gallery.html imageCollection="updateRootRuleChain" showListImageTitles="true" %}
 
-Now let's open ThingsBoard **Edge** UI to see updated root rule chain:
+Now let's open SENTIENT **Edge** UI to see updated root rule chain:
 
 {% include images-gallery.html imageCollection="updateRootRuleChainEdge" showListImageTitles="true" %}

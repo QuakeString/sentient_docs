@@ -14,7 +14,7 @@ openssl pkcs12 -export \
   -inkey server_key.pem \
   -certfile ca.pem \
   -out keystore.p12 \
-  -name tbmq \
+  -name st-rmqtt \
   -passout pass:changeit
 ```
 {: .copy-code}

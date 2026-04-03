@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect CO2 Display lite Temperature and humidity sensor to ThingsBoard?
+title: How to connect CO2 Display lite Temperature and humidity sensor to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: MClimate

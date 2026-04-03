@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: XMPP Connector Configuration
-description: XMPP protocol support for ThingsBoard IoT Gateway
+description: XMPP protocol support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with XMPP Connector configuration for ThingsBoard IoT Gateway.
+This guide will help you get familiar with XMPP Connector configuration for SENTIENT IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this Connector.
 The purpose of this connector is to collect data from IoT devices using XMPP protocol.
 
@@ -60,7 +60,7 @@ the data, and other service features. Let’s review the format of the configura
       ],
       "attributeUpdates": [
         {
-          "attributeOnThingsBoard": "shared",
+          "attributeOnSENTIENT": "shared",
           "valueExpression": "{\"${attributeKey}\":\"${attributeValue}\"}"
         }
       ],
@@ -130,11 +130,11 @@ This object configuration section includes the parameters for processing incomin
 | deviceNameExpression | **${serialNumber}**           | JSON-path expression, is used for looking the device name.                                                                                                       |
 | deviceTypeExpression | **${sensorType}**             | JSON-path expression, is used for looking the device type.                                                                                                       |
 | attributes           |                               | This subsection contains parameters of the incoming requests, that will be interpreted as attributes for the device.                                             |
-| ... key              | **temperature**               | Name for attribute in ThingsBoard.                                                                                                                               |
-| ... value            | **${temp}**                   | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to ThingsBoard instance as the value of the key parameter. |
+| ... key              | **temperature**               | Name for attribute in SENTIENT.                                                                                                                               |
+| ... value            | **${temp}**                   | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to SENTIENT instance as the value of the key parameter. |
 | timeseries           |                               | This subsection contains parameters of the incoming message, that will be interpreted as telemetry for the device.                                               |
-| ... key              | **humidity**                  | Name for telemetry in ThingsBoard.                                                                                                                               |
-| ... value            | **${hum}**                    | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to ThingsBoard instance as the value of the key parameter. |
+| ... key              | **humidity**                  | Name for telemetry in SENTIENT.                                                                                                                               |
+| ... value            | **${hum}**                    | Simple JSON expression, is used for looking up value in the incoming message, which will then be sent to SENTIENT instance as the value of the key parameter. |
 | ---                  |                               |                                                                                                                                                                  |
 
 Example:
@@ -164,16 +164,16 @@ Example:
 
 #### Attribute updates subsection
 
-This configuration section is optional. ThingsBoard allows the provisioning of device attributes and fetches some of them from 
+This configuration section is optional. SENTIENT allows the provisioning of device attributes and fetches some of them from 
 the device application. You can treat this as a remote configuration for devices, enabling them to request 
-shared attributes from ThingsBoard. See [user guide](/docs/reference/mqtt-api/#attributes-api) for more details.
+shared attributes from SENTIENT. See [user guide](/docs/reference/mqtt-api/#attributes-api) for more details.
 
 The “attributeUpdates” configuration allows you to configure the format of the corresponding attribute data that will be 
 sent to the XMPP device.
 
 | **Parameter**          | **Default value**                               | **Description**                                                                         |
 |:-----------------------|:------------------------------------------------|-----------------------------------------------------------------------------------------|
-| attributeOnThingsBoard | **sharedName**                                  | Shared attribute name.                                                                  |
+| attributeOnSENTIENT | **sharedName**                                  | Shared attribute name.                                                                  |
 | valueExpression        | **{\"${attributeKey}\":\"${attributeValue}\"}** | JSON-path expression is used for creating the message data that will be sent to device. |
 | ---                    |                                                 |                                                                                         |
 
@@ -181,7 +181,7 @@ This section in configuration file looks like:
 ```json
 "attributeUpdates": [
   {
-    "attributeOnThingsBoard": "shared",
+    "attributeOnSENTIENT": "shared",
     "valueExpression": "{\"${attributeKey}\":\"${attributeValue}\"}"
   }
 ]
@@ -189,14 +189,14 @@ This section in configuration file looks like:
 
 #### Server side RPC subsection
 
-ThingsBoard allows sending RPC commands to the device connected to ThingsBoard directly or via Gateway.
+SENTIENT allows sending RPC commands to the device connected to SENTIENT directly or via Gateway.
 
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to the device.
+Configuration, provided in this section is used for sending RPC requests from SENTIENT to the device.
 
 | **Parameter**   | **Default value** | **Description**                                                                   |
 |:----------------|:------------------|-----------------------------------------------------------------------------------|
 | methodRPC       | **rpcMethod1**    | RPC method name.                                                                  |
-| withResponse    | **true**          | Boolean value that determines whether to send response back to ThingsBoard.       |
+| withResponse    | **true**          | Boolean value that determines whether to send response back to SENTIENT.       |
 | valueExpression | **${params}**     | JSON-path expression uses for creating the message data that will send to device. |
 | ---             |                   |                                                                                   |
 
@@ -214,7 +214,7 @@ This subsection in configuration file looks like:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

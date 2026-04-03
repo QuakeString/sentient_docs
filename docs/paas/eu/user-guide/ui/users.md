@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: Users
-description: ThingsBoard Users management
+description: SENTIENT Users management
 
 users-intro-pe:
     0:

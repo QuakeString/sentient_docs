@@ -1,4 +1,4 @@
-#      Copyright 2021. ThingsBoard
+#      Copyright 2021. SENTIENT
 #  #
 #      Licensed under the Apache License, Version 2.0 (the "License");
 #      you may not use this file except in compliance with the License.
@@ -38,11 +38,11 @@ REQUIRED_SHARED_KEYS = f"{FW_CHECKSUM_ATTR},{FW_CHECKSUM_ALG_ATTR},{FW_SIZE_ATTR
 def collect_required_data():
     config = {}
     print("\n\n", "="*80, sep="")
-    print(" "*20, "ThingsBoard getting firmware example script.", sep="")
+    print(" "*20, "SENTIENT getting firmware example script.", sep="")
     print("="*80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard host or leave it blank to use default (localhost): ")
+    host = input("Please write your SENTIENT host or leave it blank to use default (localhost): ")
     config["host"] = host if host else "localhost"
-    port = input("Please write your ThingsBoard port or leave it blank to use default (1883): ")
+    port = input("Please write your SENTIENT port or leave it blank to use default (1883): ")
     config["port"] = int(port) if port else 1883
     token = ""
     while not token:

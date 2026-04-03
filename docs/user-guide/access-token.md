@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Access Token based authentication for MQTT
-description: ThingsBoard Access Token based authentication.
+description: SENTIENT Access Token based authentication.
 
 ---
 

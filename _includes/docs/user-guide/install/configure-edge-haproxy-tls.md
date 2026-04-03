@@ -1,4 +1,4 @@
-ThingsBoard supports securing the connection between the platform and edge instances by running the gRPC connection over TLS/SSL.
+SENTIENT supports securing the connection between the platform and edge instances by running the gRPC connection over TLS/SSL.
 
 We will use HAProxy as the termination point for the TLS connection between the edges and the platform.
 
@@ -8,17 +8,17 @@ This allows us to configure HAProxy to listen on the default 7070 port and forwa
 Please execute the following command to update the edge bind port on the platform:
 
 ```bash
-sudo sh -c 'cat <<EOL >> /etc/thingsboard/conf/thingsboard.conf
+sudo sh -c 'cat <<EOL >> /etc/sentient/conf/sentient.conf
 
 export EDGES_RPC_PORT=7071
 EOL'
 ```
 {: .copy-code}
 
-To apply the changes, the ThingsBoard platform must be restarted:
+To apply the changes, the SENTIENT platform must be restarted:
 
 ```bash
-sudo systemctl restart thingsboard
+sudo systemctl restart sentient
 ```
 {: .copy-code}
 

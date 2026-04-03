@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-ThingsBoard provides the ability to run LwM2M server over DTLS. 
+SENTIENT provides the ability to run LwM2M server over DTLS. 
 Platform supports Pre-Shared Key, Raw Public Key and X.509 Certificate credentials over DTLS.
 DTLS provisioning requires valid [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) certificates. 
 ECDSA keys are smaller than RSA keys and thus more preferable for constrained devices. 
@@ -16,7 +16,7 @@ See instructions below on how to configure SSL for certificates stored in PEM fi
 {% include templates/since.md %}
 
 Configure the following environment variables via [configuration](/docs/user-guide/install/{{docsPrefix}}config/) file, docker-compose or kubernetes scripts.
-We will use **thingsboard.conf** for example:
+We will use **sentient.conf** for example:
 
 ```bash
 ...
@@ -43,7 +43,7 @@ where:
 * LWM2M_SERVER_PEM_KEY - Path to the server certificate private key file. Optional by default. Required if the private key is not present in server certificate file;
 * LWM2M_SERVER_PEM_KEY_PASSWORD - Optional server certificate private key password.
 
-After completing the setup, start or restart the ThingsBoard server.
+After completing the setup, start or restart the SENTIENT server.
 
 {% include templates/ssl/pem_files_location.md %}
 

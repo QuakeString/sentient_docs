@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Monolith setup using AWS EKS
-description: ThingsBoard IoT platform monolith setup with Kubernetes in AWS EKS
+description: SENTIENT IoT platform monolith setup with Kubernetes in AWS EKS
 rdsSetup:
     0:
         image: /images/install/cloud/aws/rds-1.png
@@ -16,10 +16,10 @@ rdsSetup:
         title: 'Use "Provisioned IOPS" for better performance.'
     3:
         image: /images/install/cloud/aws/rds-4.png
-        title: 'Make sure your PostgreSQL RDS instance is accessible from the ThingsBoard cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
+        title: 'Make sure your PostgreSQL RDS instance is accessible from the SENTIENT cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-sentient-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
     4:
         image: /images/install/cloud/aws/rds-5.png
-        title: 'Make sure you use "thingsboard" as initial database name.'
+        title: 'Make sure you use "sentient" as initial database name.'
     5:
         image: /images/install/cloud/aws/rds-6.png
         title: 'Disable "auto minor version update".'
@@ -35,7 +35,7 @@ rdsEndpointUrl:
 
 {% assign tbServicesFile = "tb-node.yml" %}
 
-This guide will help you to setup ThingsBoard in monolith mode using AWS EKS. 
+This guide will help you to setup SENTIENT in monolith mode using AWS EKS. 
 See [monolithic](/docs/reference/monolithic/) architecture page for more details about how it works. 
 The advantage of monolithic deployment via K8S comparing to Docker Compose is that in case of AWS instance outage, 
 K8S will restart the service on another instance. We will use Amazon RDS for managed PostgreSQL.
@@ -44,11 +44,11 @@ K8S will restart the service on another instance. We will use Amazon RDS for man
 
 {% include templates/install/aws/eks-prerequisites.md %}
 
-## Step 1. Clone ThingsBoard CE K8S scripts repository
+## Step 1. Clone SENTIENT K8S scripts repository
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-ce-k8s.git
-cd thingsboard-ce-k8s/aws/monolith
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-ce-k8s.git
+cd sentient-ce-k8s/aws/monolith
 ```
 
 ## Step 2. Configure and create EKS cluster

@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Arduino Nano RP2040 Connect to ThingsBoard?
+title: How to connect Arduino Nano RP2040 Connect to SENTIENT?
 category: Microcontrollers
 chip: RP2040
 connectivity: [HTTP, MQTT, WIFI, Bluetooth]

@@ -2,13 +2,13 @@
 layout: docwithnav-paas-eu
 assignees:
 - ashvayka
-title: Getting Started with ThingsBoard Cloud
-description: Getting started with ThingsBoard open-source IoT platform and simulated IoT devices
+title: Getting Started with SENTIENT Cloud
+description: Getting started with SENTIENT open-source IoT platform and simulated IoT devices
 
 step1:
     0:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-1-pe.png
-        title: 'Login to your ThingsBoard instance and go to the "Devices" page of the "Entities" section;'
+        title: 'Login to your SENTIENT instance and go to the "Devices" page of the "Entities" section;'
     1:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-2-pe.png
         title: 'By default, you navigate to the device group “All”. Click on the "+" icon in the top right corner of the table and then select "Add new device" from drop-down menu;'
@@ -17,7 +17,7 @@ step1:
         title: 'Enter the device name. For example, "My New Device". No other changes are required at this time. Click "Add";'
     3:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-4-pe.png
-        title: 'A window will open where you can check the device&#39;s connection to ThingsBoard. This step is optional. Let&#39;s close this window for now and return to checking the connection in the next step in more detail;'
+        title: 'A window will open where you can check the device&#39;s connection to SENTIENT. This step is optional. Let&#39;s close this window for now and return to checking the connection in the next step in more detail;'
     4:
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-5-pe.png
         title: 'Congratulations on adding your first device! As you add more devices, they will be added at the top of the table, as the table automatically sorts devices by their creation time, with the newest ones listed first.'
@@ -169,7 +169,7 @@ step5:
 notification-center:
     0:
         image: /images/helloworld/getting-started-pe/notification-center-getting-started-1-pe.png
-        title: 'The ThingsBoard Notification center allows sending personalized notifications to end-users. These can include notifications about device activity, changes in temperature within your environment, or other events detected in your IoT ecosystem.'
+        title: 'The SENTIENT Notification center allows sending personalized notifications to end-users. These can include notifications about device activity, changes in temperature within your environment, or other events detected in your IoT ecosystem.'
 
 step71:
     0:

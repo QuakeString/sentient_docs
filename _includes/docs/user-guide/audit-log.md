@@ -1,4 +1,4 @@
-ThingsBoard provides the ability to track user actions in order to keep audit log. 
+SENTIENT provides the ability to track user actions in order to keep audit log. 
 It is possible to log user actions related to main entities: assets, devices, dashboard, rules, etc. 
 
 ## User Interface
@@ -19,7 +19,7 @@ There are several API calls that allow to fetch entities related to particular u
 {% unless docsPrefix contains "paas/" %}
 ## General configuration
 
-System administrator is able to configure audit log levels using [thingsboard.yml](/docs/user-guide/install/{{docsPrefix}}config/). You can find sample configuration below:
+System administrator is able to configure audit log levels using [sentient.yml](/docs/user-guide/install/{{docsPrefix}}config/). You can find sample configuration below:
 
 ```yaml
 # Audit log parameters
@@ -44,7 +44,7 @@ audit_log:
 ```
 
 This configuration sample disables the logging of any actions related to dashboards and logs read operations for users and rules. 
-For all other entities, ThingsBoard will log only write level operations.
+For all other entities, SENTIENT will log only write level operations.
 
 We recommend to modify "by_tenant_partitioning" parameter based on the number of devices and user actions that will be logged. 
 The more actions you plan to log, the more precise partitioning is required. 

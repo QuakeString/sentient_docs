@@ -1,1 +1,1 @@
-sudo rpm -Uvh trendz-1.8.2.rpm
+sudo rpm -Uvh sentient-analytics-1.8.2.rpm

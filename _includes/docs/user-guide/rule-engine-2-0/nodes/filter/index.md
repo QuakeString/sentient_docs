@@ -1,4 +1,4 @@
-Filter nodes are the routing and conditional logic components of ThingsBoard's rule engine that examine messages and determine how they should be routed to downstream nodes 
+Filter nodes are the routing and conditional logic components of SENTIENT's rule engine that examine messages and determine how they should be routed to downstream nodes 
 based on various criteria.
 
 These nodes do not modify messages or perform any actions in the system - they are purely for determining which processing path a message should take. 

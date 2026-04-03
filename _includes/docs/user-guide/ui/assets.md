@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-**Asset** is an abstract entity in the IoT system of ThingsBoard that represents any physical object, space, or organizational unit. 
+**Asset** is an abstract entity in the IoT system of SENTIENT that represents any physical object, space, or organizational unit. 
 Examples include a building, room, production area, field, streetlight, substation, or vehicle.
 
 **Key characteristics of an asset:**
@@ -9,15 +9,15 @@ Examples include a building, room, production area, field, streetlight, substati
 - **Can have its own attributes**, such as location, type, or responsible personnel.
 - **Used for grouping** devices and other entities.
 - **Can be part of a hierarchy**, e.g., Substation &#10230; Line &#10230; Streetlight.
-- **Participates in ThingsBoard business logic**, such as rule chains, alarms, and dashboards.
+- **Participates in SENTIENT business logic**, such as rule chains, alarms, and dashboards.
 
 Assets help logically and efficiently structure your IoT project, making it easier to manage and scale.
 
-> ThingsBoard supports asset management functions via both the web UI and the [REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}.
+> SENTIENT supports asset management functions via both the web UI and the [REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}.
 
 <br><b><font size="4">Practical video course 🎥</font></b>
 
-Watch this practical video course to learn how to configure and manage ThingsBoard dashboards, resources, and devices, and how to use them in real-world scenarios.
+Watch this practical video course to learn how to configure and manage SENTIENT dashboards, resources, and devices, and how to use them in real-world scenarios.
 
 &nbsp;
 <div id="video">  
@@ -28,7 +28,7 @@ Watch this practical video course to learn how to configure and manage ThingsBoa
 
 ## How to create, edit, and delete asset
 
-Tenant administrators and users with appropriate [permissions](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} can create, edit, or delete assets in ThingsBoard.
+Tenant administrators and users with appropriate [permissions](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} can create, edit, or delete assets in SENTIENT.
 
 ### Creating asset
 
@@ -349,5 +349,5 @@ From the Assets page, you can create, view, edit, and delete relations between a
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

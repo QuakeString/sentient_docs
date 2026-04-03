@@ -3,14 +3,14 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Self-hosted setup using GCP VM instance
-description: ThingsBoard IoT platform self-hosted setup with GCP VM instance
+description: SENTIENT IoT platform self-hosted setup with GCP VM instance
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in GCP VM instance. 
+This guide will help you to setup SENTIENT in GCP VM instance. 
 
 ## Prerequisites
 

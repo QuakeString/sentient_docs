@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - ashvayka
 title: Tenants
-description: ThingsBoard Tenants management
+description: SENTIENT Tenants management
 
 ---
 

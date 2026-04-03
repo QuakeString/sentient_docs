@@ -5,10 +5,10 @@
 
 Tuya is an IoT platform that enables device manufacturers and solution providers to connect, manage, and control smart devices through the Tuya Cloud.
 
-The Tuya Cloud Integration in ThingsBoard allows you to:
-- Connect Tuya-managed devices to ThingsBoard
+The Tuya Cloud Integration in SENTIENT allows you to:
+- Connect Tuya-managed devices to SENTIENT
 - Receive telemetry and device state updates
-- Send control commands from ThingsBoard to Tuya devices
+- Send control commands from SENTIENT to Tuya devices
 - Visualize device data and manage devices centrally
 
 This guide describes how to configure an end-to-end integration using a real device - **Tuya Smart Plug**.   
@@ -17,7 +17,7 @@ Also, you can use a [virtual Tuya device](https://developer.tuya.com/en/docs/iot
 ## Prerequisites
 
 Before starting, ensure you have:
-- A ThingsBoard account with permission to create integrations 
+- A SENTIENT account with permission to create integrations 
 - A Tuya IoT Platform account 
 - At least one Tuya device (physical or virtual)
 - Tuya Smart App installed and logged in
@@ -61,13 +61,13 @@ Make sure you enabled Messaging rule (filter) to receive uplinks. The very basic
 
 {% include images-gallery.html imageCollection="tuya-enable-rules-environment" showListImageTitles="true" %}
 
-## ThingsBoard integration configuration
+## SENTIENT integration configuration
 
-Let&#39;s move on to setting up the integration between the ThingsBoard platform and Tuya.
+Let&#39;s move on to setting up the integration between the SENTIENT platform and Tuya.
 
 <b><font size="4">1. Basic settings</font></b>
 
-- Log in to your ThingsBoard account.
+- Log in to your SENTIENT account.
 - Go to the **Integrations center** &#8702; **Integrations**.
 - Click **+** (**plus**) button.
 - From the list, select **Tuya** integration type.
@@ -77,7 +77,7 @@ Let&#39;s move on to setting up the integration between the ThingsBoard platform
 
 <b><font size="4">2. Uplink data converter</font></b>
 
-Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in ThingsBoard.
+Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in SENTIENT.
 - Enter a name for the converter. It must be unique. 
 - To view the events, enable debug mode. 
 - In the **Main decoding configuration** section, provide your own script or use the script below.
@@ -109,7 +109,7 @@ In the last step, fill in the following fields:
 - **Region** - specify your region;
 - **Environment**:
   - Choose **PROD** for real devices. 
-  - Select **TEST** if you want to connect a **virtual device** to Thingsboard and test its operation before you buy it.
+  - Select **TEST** if you want to connect a **virtual device** to Sentient and test its operation before you buy it.
 - **Access Id** and **Access Key** is an authorization certificate distributed by Tuya. Paste [previously copied Access Id and Access Key](#create-cloud-project) into the integration.
 - Click **Add** to create an integration.
 
@@ -125,7 +125,7 @@ After these steps, we need to tap on a right grey circle of rule node **message 
 
 ## Uplink message
 
-Once ThingsBoard Tuya Integration has been created, you must disconnect Smart Plug from power and reconnect. The device will send an uplink message with telemetry and attributes to the integration.
+Once SENTIENT Tuya Integration has been created, you must disconnect Smart Plug from power and reconnect. The device will send an uplink message with telemetry and attributes to the integration.
 
 Go to **Entities &#8702; Devices**. You should find your device provisioned by the Integration.
 

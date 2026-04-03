@@ -4,7 +4,7 @@ sudo apt install openjdk-11-jdk-headless
 ```
 {: .copy-code}
 
-Set **Java 17** as the default version (required for ThingsBoard Edge):
+Set **Java 17** as the default version (required for SENTIENT GATEWAY):
 ```bash
 sudo update-alternatives --config java
 ```

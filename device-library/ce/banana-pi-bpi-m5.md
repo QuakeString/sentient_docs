@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Banana Pi BPI-M5 to ThingsBoard?
+title: How to connect Banana Pi BPI-M5 to SENTIENT?
 category: Single-board computers
 chip: Rockchip RK3328
 connectivity: [Ethernet, WIFI, Bluetooth]

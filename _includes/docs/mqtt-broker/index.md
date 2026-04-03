@@ -1,13 +1,13 @@
-{% include templates/mqtt-broker/pe-tbmq-explore-banner.md %}
+{% include templates/mqtt-broker/pe-st-rmqtt-explore-banner.md %}
 
-**TBMQ** is a highly scalable and fault-tolerant [MQTT broker](/products/mqtt-broker/){:target="_blank"} designed for efficient and reliable message routing between connected devices and applications using the 
+**ST-RMQTT** is a highly scalable and fault-tolerant [MQTT broker](/products/mqtt-broker/){:target="_blank"} designed for efficient and reliable message routing between connected devices and applications using the 
 <a href="/products/mqtt-broker/" target="_blank" style="color: inherit; text-decoration: none;">MQTT protocol</a>.
 
-Engineered for high performance, TBMQ can handle **millions** of concurrent connections and process [millions of messages per second](/docs/{{docsPrefix}}mqtt-broker/reference/3m-throughput-single-node-performance-test/) 
+Engineered for high performance, ST-RMQTT can handle **millions** of concurrent connections and process [millions of messages per second](/docs/{{docsPrefix}}mqtt-broker/reference/3m-throughput-single-node-performance-test/) 
 while maintaining exceptionally low latency. 
 Its distributed **cluster architecture** takes scalability even further, supporting [massive IoT deployments](/docs/{{docsPrefix}}mqtt-broker/reference/100m-connections-performance-test/) and ensuring **high availability** across all nodes.
 
-For installation instructions and detailed insights into its architecture and MQTT features, refer to the official TBMQ documentation.
+For installation instructions and detailed insights into its architecture and MQTT features, refer to the official ST-RMQTT documentation.
 
 ## Try Live Demo
 
@@ -18,7 +18,7 @@ The fastest way to get started is to use our **free public MQTT broker** — no 
         <div class="feature-card w-100">
             <div class="feature-title">MQTT Connection Details</div>
             <div class="feature-text">
-                <b>Host:</b> <code>demo.tbmq.io</code><br>
+                <b>Host:</b> <code>demo.st-rmqtt.io</code><br>
                 <b>TCP Port:</b> <code>1883</code><br>
                 <b>TLS Port:</b> <code>8883</code><br>
                 <b>Username:</b> <code>demo</code><br>
@@ -27,11 +27,11 @@ The fastest way to get started is to use our **free public MQTT broker** — no 
         </div>
     </div>
     <div class="col-12 col-sm-5 col-lg-5 mb-4 d-flex">
-        <a class="feature-card w-100" href="https://demo.tbmq.io/signup" target="_blank">
+        <a class="feature-card w-100" href="https://demo.st-rmqtt.io/signup" target="_blank">
             <img class="feature-logo" src="/images/feature-logo/getting-started.svg" alt="Sign up icon">
             <div class="feature-title">Sign Up for Free</div>
             <div class="feature-text">
-                Create an account to access the live TBMQ Demo Broker — monitor sessions, subscriptions, and broker statistics in real time.
+                Create an account to access the live ST-RMQTT Demo Broker — monitor sessions, subscriptions, and broker statistics in real time.
             </div>
         </a>
     </div>
@@ -39,9 +39,9 @@ The fastest way to get started is to use our **free public MQTT broker** — no 
 
 <div class="doc-features row mt-4">
     <div class="col-12 col-sm-6 col-lg col-xxl-6 col-4xl mb-4">
-        <a class="feature-card" href="/docs/{{docsPrefix}}mqtt-broker/getting-started-guides/what-is-thingsboard-mqtt-broker/">
-            <img class="feature-logo" src="/images/feature-logo/thingsboard-logo.svg" alt="Thingsboard logo">
-            <div class="feature-title">What is TBMQ?</div>
+        <a class="feature-card" href="/docs/{{docsPrefix}}mqtt-broker/getting-started-guides/what-is-sentient-mqtt-broker/">
+            <img class="feature-logo" src="/images/feature-logo/sentient-logo.svg" alt="Sentient logo">
+            <div class="feature-title">What is ST-RMQTT?</div>
             <div class="feature-text">
                 <ul>
                     <li>Features</li>
@@ -55,7 +55,7 @@ The fastest way to get started is to use our **free public MQTT broker** — no 
             <img class="feature-logo" src="/images/feature-logo/getting-started.svg" alt="Getting started icon">
             <div class="feature-title">Getting started</div>
             <div class="feature-text">
-                Learn how to use TBMQ.
+                Learn how to use ST-RMQTT.
             </div>
         </a>
     </div>
@@ -64,7 +64,7 @@ The fastest way to get started is to use our **free public MQTT broker** — no 
             <img class="feature-logo" src="/images/feature-logo/install.svg" alt="Install icon">
             <div class="feature-title">Installation</div>
             <div class="feature-text">
-                Learn how to install and upgrade TBMQ.
+                Learn how to install and upgrade ST-RMQTT.
             </div>
         </a>
     </div>
@@ -83,7 +83,7 @@ The fastest way to get started is to use our **free public MQTT broker** — no 
             <img class="feature-logo" src="/images/feature-logo/configuration.svg" alt="Gear icon">
             <div class="feature-title">Configuration</div>
             <div class="feature-text">
-                Configuration of TBMQ.
+                Configuration of ST-RMQTT.
             </div>
         </a>
     </div>

@@ -1,6 +1,6 @@
 {% capture hybrid-timescale-info %}
-ThingsBoard team recommends using Timescale database only for companies that already use TimescaleDB in production.
-In this case, ThingsBoard will be storing timeseries data in TimescaleDB Hypertable while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
+SENTIENT team recommends using Timescale database only for companies that already use TimescaleDB in production.
+In this case, SENTIENT will be storing timeseries data in TimescaleDB Hypertable while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
 {% endcapture %}
 {% include templates/info-banner.md content=hybrid-timescale-info %}
 
@@ -14,12 +14,12 @@ In this case, ThingsBoard will be storing timeseries data in TimescaleDB Hyperta
 
 {% include templates/install/timescale-ubuntu-install.md %}
 
-##### ThingsBoard Configuration
+##### SENTIENT Configuration
 
-Edit ThingsBoard configuration file 
+Edit SENTIENT configuration file 
 
 ```bash
-sudo nano /etc/thingsboard/conf/thingsboard.conf
+sudo nano /etc/sentient/conf/sentient.conf
 ```
 {: .copy-code}
 
@@ -28,7 +28,7 @@ Add the following lines to the configuration file. Don't forget **to replace** "
 ```bash
 # DB Configuration 
 export DATABASE_TS_TYPE=timescale
-export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/thingsboard
+export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/sentient
 export SPRING_DATASOURCE_USERNAME=postgres
 export SPRING_DATASOURCE_PASSWORD=PUT_YOUR_POSTGRESQL_PASSWORD_HERE
 # Specify Interval size for data chunks storage. Please note that this value can be set only once.

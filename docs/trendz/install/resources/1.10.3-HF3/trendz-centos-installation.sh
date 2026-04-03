@@ -1,1 +1,1 @@
-sudo rpm -Uvh trendz-1.10.3-HF3.rpm
+sudo rpm -Uvh sentient-analytics-1.10.3-HF3.rpm

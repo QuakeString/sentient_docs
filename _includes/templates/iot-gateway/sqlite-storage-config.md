@@ -3,7 +3,7 @@
 |:-|:-|-
 | type                        | **sqlite**                                   | Storage type (Saving data to .db files).|
 | data_file_path              | **./data/**                                  | Path to the directory that will contain database files (no filename). A trailing path separator is required.|
-| max_read_records_count      | **1000**                                     | Maximum number of messages to get from storage and send to ThingsBoard.|
+| max_read_records_count      | **1000**                                     | Maximum number of messages to get from storage and send to SENTIENT.|
 | size_limit *                | **1024**                                     | Maximum size of each SQLite file in megabytes. When exceeded, triggers rotation to a new DB file.|
 | max_db_amount *             | **10**                                       | Maximum number of rotated DB files to keep on disk. When reached, further writes are dropped until cleanup.|    
 | oversize_check_period       | **1**                                        | How frequently (in minutes) to check the current DB’s file size against *size_limit*.|

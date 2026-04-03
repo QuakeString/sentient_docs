@@ -2,8 +2,8 @@
 layout: docwithnav
 assignees:
 - ashvayka
-title: Installing ThingsBoard CE on Ubuntu Server
-description: Installing ThingsBoard CE on Ubuntu Server
+title: Installing SENTIENT on Ubuntu Server
+description: Installing SENTIENT on Ubuntu Server
 
 ---
 
@@ -12,10 +12,10 @@ description: Installing ThingsBoard CE on Ubuntu Server
 
 ## Prerequisites
 
-This guide describes how to install ThingsBoard on Ubuntu 22.04 LTS / 24.04 LTS.
+This guide describes how to install SENTIENT on Ubuntu 22.04 LTS / 24.04 LTS.
 Hardware requirements depend on chosen database and amount of devices connected to the system. 
-To run ThingsBoard and PostgreSQL on a single machine you will need at least 4Gb of RAM.
-To run ThingsBoard and Cassandra on a single machine you will need at least 8Gb of RAM.
+To run SENTIENT and PostgreSQL on a single machine you will need at least 4Gb of RAM.
+To run SENTIENT and Cassandra on a single machine you will need at least 8Gb of RAM.
 
 Check if required font libraries are installed:
 ```bash
@@ -33,23 +33,23 @@ sudo apt update && sudo apt install -y libharfbuzz0b fontconfig fonts-dejavu-cor
 
 {% include templates/install/ubuntu-java-install.md %}
 
-## Step 2. ThingsBoard service installation
+## Step 2. SENTIENT service installation
 
 Download installation package.
 
 ```bash
-wget https://github.com/thingsboard/thingsboard/releases/download/{{ site.release.ce_tag }}/thingsboard-{{ site.release.ce_ver }}.deb
+wget https://github.com/sentient/sentient/releases/download/{{ site.release.ce_tag }}/sentient-{{ site.release.ce_ver }}.deb
 ```
 {: .copy-code}
 
-Install ThingsBoard as a service
+Install SENTIENT as a service
 
 ```bash
-sudo dpkg -i thingsboard-{{ site.release.ce_ver }}.deb
+sudo dpkg -i sentient-{{ site.release.ce_ver }}.deb
 ```
 {: .copy-code}
 
-## Step 3. Configure ThingsBoard database
+## Step 3. Configure SENTIENT database
 
 {% include templates/install/install-db.md %}
 
@@ -57,9 +57,9 @@ sudo dpkg -i thingsboard-{{ site.release.ce_ver }}.deb
 PostgreSQL <small>(recommended for < 5K msg/sec)</small>%,%postgresql%,%templates/install/ubuntu-db-postgresql.md%br%
 Hybrid <br>PostgreSQL+Cassandra<br><small>(recommended for > 5K msg/sec)</small>%,%hybrid%,%templates/install/ubuntu-db-hybrid.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="ubuntuThingsboardDatabase" toggle-spec=contenttogglespec %} 
+{% include content-toggle.liquid content-toggle-id="ubuntuSentientDatabase" toggle-spec=contenttogglespec %} 
 
-## Step 4. Choose ThingsBoard queue service
+## Step 4. Choose SENTIENT queue service
 
 {% include templates/install/install-queue.md %}
 
@@ -68,7 +68,7 @@ In Memory <small>(built-in and default)</small>%,%inmemory%,%templates/install/q
 Kafka <small>(recommended for on-prem, production installations)</small> %,%kafka-in-docker%,%templates/install/ubuntu-queue-kafka-in-docker.md%br%
 Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confluent-cloud%,%templates/install/ubuntu-queue-confluent-cloud.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="ubuntuThingsboardQueue" toggle-spec=contenttogglespecqueue %} 
+{% include content-toggle.liquid content-toggle-id="ubuntuSentientQueue" toggle-spec=contenttogglespecqueue %} 
 
 ## Step 5. [Optional] Memory update for slow machines (4GB of RAM) 
 
@@ -78,7 +78,7 @@ Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confl
 {% include templates/run-install.md %} 
 
 
-## Step 7. Start ThingsBoard service
+## Step 7. Start SENTIENT service
 
 {% include templates/start-service.md %}
 
@@ -92,9 +92,9 @@ Please allow up to 90 seconds for the Web UI to start.{% endcapture %}
 
 {% include templates/install/ubuntu-haproxy-postinstall.md %}
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
-{% include templates/install/upgrade-thingsboard.md %}
+{% include templates/install/upgrade-sentient.md %}
 
 ## Troubleshooting
 

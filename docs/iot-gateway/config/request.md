@@ -1,19 +1,19 @@
 ---
 layout: docwithnav-gw
 title: Request Connector Configuration
-description: HTTP protocol support for ThingsBoard IoT Gateway
+description: HTTP protocol support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with Request Connector configuration for ThingsBoard IoT Gateway.  
+This guide will help you to get familiar with Request Connector configuration for SENTIENT IoT Gateway.  
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector.  
 The purpose of this Connector is to connect to external HTTP(S) API endpoints and get data from them.  
-Connector is also able to push data to external HTTP(S) API based on the updates/commands from ThingsBoard.    
+Connector is also able to push data to external HTTP(S) API based on the updates/commands from SENTIENT.    
 
-This connector is useful when you have some HTTP(S) API endpoints in your device or some data in external resource and you would like to push this data to the ThingsBoard.    
+This connector is useful when you have some HTTP(S) API endpoints in your device or some data in external resource and you would like to push this data to the SENTIENT.    
 
 We will describe connector configuration file below.  
 
@@ -180,7 +180,7 @@ Anonymous<small>No security</small>%,%anonymous%,%templates/iot-gateway/request-
 This configuration section contains array of objects with endpoints that the gateway will try to read after connecting to the server.  
 Also this section contains settings about processing incoming messages (converter).  
 After request, each response from that url is analyzed to extract device name, type and data (attributes and/or timeseries values).  
-By default, the gateway uses Json converter, but it is possible to provide custom converter. See [example](https://github.com/thingsboard/thingsboard-gateway/blob/master/thingsboard_gateway/extensions/request/custom_request_uplink_converter.py) in the source code.  
+By default, the gateway uses Json converter, but it is possible to provide custom converter. See [example](https://github.com/sentient/sentient-gateway/blob/master/sentient_gateway/extensions/request/custom_request_uplink_converter.py) in the source code.  
 
 **Note**: You can specify multiple mapping objects inside the array.
 
@@ -213,8 +213,8 @@ custom<small>Recommended if bytes or anything else will be received in response<
 ### Attribute update section
 
 Configuration in this section are optional.  
-ThingsBoard allows to provision device attributes and fetch some of them from the device application.
-You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard.
+SENTIENT allows to provision device attributes and fetch some of them from the device application.
+You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from SENTIENT.
 See [user guide](/docs/user-guide/attributes/) for more details.
 
 The "**attributeRequests**" configuration allows configuring the format of the corresponding attribute request and response messages. 
@@ -256,9 +256,9 @@ The **attributeUpdates** section will look like:
 
 ### Server side RPC section
 
-ThingsBoard allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to ThingsBoard directly or via Gateway.
+SENTIENT allows sending [RPC commands](/docs/user-guide/rpc/) to the device that is connected to SENTIENT directly or via Gateway.
  
-Configuration, provided in this section uses for sending RPC requests from ThingsBoard to device.
+Configuration, provided in this section uses for sending RPC requests from SENTIENT to device.
 
 | **Parameter**                 | **Default value**                                                 | **Description**                                                                       |
 |:-|:-|-
@@ -275,7 +275,7 @@ Configuration, provided in this section uses for sending RPC requests from Thing
 
 {% capture rpc_variants %}
 **There are 2 types of the RPC calls:**  
-1. With reply, after sending request the gateway will wait for response and send it to ThingsBoard.
+1. With reply, after sending request the gateway will wait for response and send it to SENTIENT.
 2. With no reply, after sending request the gateway will not wait for response.
 
 Examples for both methods provided below.
@@ -313,7 +313,7 @@ Examples for both methods provided below.
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

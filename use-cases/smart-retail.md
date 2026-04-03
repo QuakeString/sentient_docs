@@ -1,7 +1,7 @@
 ---
 layout: use-case
-title: Turn your market into a Smart Retail powerhouse with ThingsBoard IoT
-description: Discover how ThingsBoard's Smart Retail Solutions enable real-time monitoring, automated alarms, and intelligent dashboards for supermarkets and retail chains. A scalable IoT template for building connected, efficient retail environments.
+title: Turn your market into a Smart Retail powerhouse with SENTIENT IoT
+description: Discover how SENTIENT's Smart Retail Solutions enable real-time monitoring, automated alarms, and intelligent dashboards for supermarkets and retail chains. A scalable IoT template for building connected, efficient retail environments.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -16,14 +16,14 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">Smart retail solution by ThingsBoard is a powerful platform that helps retailers gain full visibility into store infrastructure, automate data collection, respond to incidents in real time, and make informed decisions. Leveraging the flexibility of ThingsBoard, retailers can integrate a wide range of sensors and devices, visualize key metrics through custom dashboards, and implement intelligent analytics.</p>
+                <p class="text">Smart retail solution by SENTIENT is a powerful platform that helps retailers gain full visibility into store infrastructure, automate data collection, respond to incidents in real time, and make informed decisions. Leveraging the flexibility of SENTIENT, retailers can integrate a wide range of sensors and devices, visualize key metrics through custom dashboards, and implement intelligent analytics.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_SmartRetail_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/551d4ca0-8b54-11ec-98f9-ff45c37940c6?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>
+                <a id="UseCases_SmartRetail_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/551d4ca0-8b54-11ec-98f9-ff45c37940c6?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>
             </div>
         </div>
         <div class="long">
-            <p>The <a href="/docs/pe/solution-templates/smart-retail/">smart retail solution</a> template represents a flexible, ready-to-use structure for building intelligent retail infrastructures using the ThingsBoard IoT platform. As a solution provider, you can provision multiple customers and assign each one a dedicated pool of IoT devices to monitor key assets across their supermarkets. Customers can easily upload custom floor plans, install devices on-site, and place them logically within the dashboard layout to reflect the physical environment.</p>
+            <p>The <a href="/docs/pe/solution-templates/smart-retail/">smart retail solution</a> template represents a flexible, ready-to-use structure for building intelligent retail infrastructures using the SENTIENT IoT platform. As a solution provider, you can provision multiple customers and assign each one a dedicated pool of IoT devices to monitor key assets across their supermarkets. Customers can easily upload custom floor plans, install devices on-site, and place them logically within the dashboard layout to reflect the physical environment.</p>
             <p>With built-in alarm logic and fully configurable thresholds per device, users can detect anomalies such as temperature fluctuations or unauthorized access without needing a complex setup. The template also includes interactive dashboards that allow both providers and customers to monitor the current and historical state of their supermarkets—empowering data-driven decisions, operational efficiency, and a higher standard of safety and service.</p>        
         </div>
     </div>
@@ -40,11 +40,11 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">A wide range of IoT devices installed across supermarkets—such as motion sensors, temperature probes, smoke detectors, door sensors, and more—are connected to the ThingsBoard platform using MQTT, CoAP, or HTTP protocols.</p>
+                <p class="text">A wide range of IoT devices installed across supermarkets—such as motion sensors, temperature probes, smoke detectors, door sensors, and more—are connected to the SENTIENT platform using MQTT, CoAP, or HTTP protocols.</p>
             </div>
         </div>
         <div class="long">
-            <p>All telemetry and event data is collected within ThingsBoard, where it is structured, stored, and processed via the built-in Rule Engine. This enables real-time alarm generation, automation workflows, and configurable notifications to ensure prompt response to anomalies. </p>
+            <p>All telemetry and event data is collected within SENTIENT, where it is structured, stored, and processed via the built-in Rule Engine. This enables real-time alarm generation, automation workflows, and configurable notifications to ensure prompt response to anomalies. </p>
             <p>Custom dashboards provide visual insights into equipment status, temperature trends, sensor activity, and alarm history. This empowers operators with clear and actionable monitoring across the entire retail network.</p>
         </div>
     </div>
@@ -57,7 +57,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>Smart retail dashboard structure</h2>
         <p>
-            <a href="/docs/pe/solution-templates/smart-retail/">Smart retail solution</a> dashboards in ThingsBoard are designed to give retail operators full situational awareness, from high-level monitoring of multiple store locations down to detailed insights into individual devices. Each dashboard state provides a specific layer of visibility to support operational efficiency and safety.
+            <a href="/docs/pe/solution-templates/smart-retail/">Smart retail solution</a> dashboards in SENTIENT are designed to give retail operators full situational awareness, from high-level monitoring of multiple store locations down to detailed insights into individual devices. Each dashboard state provides a specific layer of visibility to support operational efficiency and safety.
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -139,7 +139,7 @@ contactUsModal: "true"
 <section class="applications applications-additional summary-margin section-padding">
     <div class="section-header">
         <h2>Applications of smart retail solution</h2>
-        <p>While smart retail solution were originally designed for retail store environments, the versatility and scalability of ThingsBoard's IoT platform make it a perfect fit for a wide range of industries where real-time monitoring, environmental control, and asset visibility are critical.</p>
+        <p>While smart retail solution were originally designed for retail store environments, the versatility and scalability of SENTIENT's IoT platform make it a perfect fit for a wide range of industries where real-time monitoring, environmental control, and asset visibility are critical.</p>
     </div>
     <div class="applications-container-large">
         <div class="text-row-top">
@@ -153,7 +153,7 @@ contactUsModal: "true"
             </div>
             <div class="text-block">
                 <h3>Food Courts and Restaurant Chains</h3>
-                <p>Restaurants and food courts can leverage ThingsBoard to track equipment health, detect fire risks, and monitor access to restricted areas in real time.</p>
+                <p>Restaurants and food courts can leverage SENTIENT to track equipment health, detect fire risks, and monitor access to restricted areas in real time.</p>
             </div>
         </div>
         <div class="images-row">
@@ -207,7 +207,7 @@ contactUsModal: "true"
             <div class="image"><img src="/images/usecases/smart-retail/court-2.svg" alt="Food Courts and Restaurant Chains" title="Food Courts and Restaurant Chains"></div>
             <div class="text-block">
                 <h3>Food Courts and Restaurant Chains</h3>
-                <p>Restaurants and food courts can leverage ThingsBoard to track equipment health, detect fire risks, and monitor access to restricted areas in real time.</p>
+                <p>Restaurants and food courts can leverage SENTIENT to track equipment health, detect fire risks, and monitor access to restricted areas in real time.</p>
             </div>
         </div>
     </div>
@@ -217,7 +217,7 @@ contactUsModal: "true"
 <section class="summary">
     <div class="summary-text">
         <h2>Summary of smart retail</h2>
-        <p>Smart retail solution by ThingsBoard is a comprehensive solution that enables centralized monitoring of store operations, improves safety through automated alarms and incident logging, and reduces costs related to equipment failures and product spoilage. By streamlining incident response and automating routine checks, it also enhances staff efficiency. More than just data visualization, this solution transforms retail infrastructure into an intelligent, predictive, and adaptive environment that drives value for both customers and businesses.</p>
+        <p>Smart retail solution by SENTIENT is a comprehensive solution that enables centralized monitoring of store operations, improves safety through automated alarms and incident logging, and reduces costs related to equipment failures and product spoilage. By streamlining incident response and automating routine checks, it also enhances staff efficiency. More than just data visualization, this solution transforms retail infrastructure into an intelligent, predictive, and adaptive environment that drives value for both customers and businesses.</p>
     </div>
     <div class="summary-icon">
         <img src="/images/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
@@ -318,7 +318,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_EnvMon_ViewLiveDemo" target="_blank" href="https://thingsboard.cloud/dashboard/551d4ca0-8b54-11ec-98f9-ff45c37940c6?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>
+                <a id="UseCases_EnvMon_ViewLiveDemo" target="_blank" href="https://sentient.cloud/dashboard/551d4ca0-8b54-11ec-98f9-ff45c37940c6?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="button gtm_button">View live demo</a>
                 <a id="UseCases_EnvMon_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
  
@@ -327,13 +327,13 @@ contactUsModal: "true"
 
         function getImage(index) {
             const images = [
-                "<img src='/images/usecases/smart-retail/smart-retail-1.webp' alt='ThingsBoard dashboard displaying supermarket locations and active critical alarms on the map' title='Overview of supermarket monitoring with critical and major alerts'/>",
-                "<img src='/images/usecases/smart-retail/smart-retail-2.webp' alt='Critical motion sensor and list of active alarms for Supermarket S1 in ThingsBoard interface' title='Device and alarm status for Supermarket S1'/>",
-                "<img src='/images/usecases/smart-retail/smart-retail-3.webp' alt='ThingsBoard interface showing Supermarket S1 floor plan with critical motion sensor alerts and alarm chart' title='Floor plan of Supermarket S1 with device states and motion sensor data'/>",
+                "<img src='/images/usecases/smart-retail/smart-retail-1.webp' alt='SENTIENT dashboard displaying supermarket locations and active critical alarms on the map' title='Overview of supermarket monitoring with critical and major alerts'/>",
+                "<img src='/images/usecases/smart-retail/smart-retail-2.webp' alt='Critical motion sensor and list of active alarms for Supermarket S1 in SENTIENT interface' title='Device and alarm status for Supermarket S1'/>",
+                "<img src='/images/usecases/smart-retail/smart-retail-3.webp' alt='SENTIENT interface showing Supermarket S1 floor plan with critical motion sensor alerts and alarm chart' title='Floor plan of Supermarket S1 with device states and motion sensor data'/>",
                 "<img src='/images/usecases/smart-retail/smart-retail-4.webp' alt='Dashboard view of Supermarket S2 with critical door sensor and major chiller alarm' title='Device overview and alarms in Supermarket S2'/>",
                 "<img src='/images/usecases/smart-retail/smart-retail-5.webp' alt='Supermarket S2 layout with freezer temperature monitoring and no active alarms' title='Temperature graph for freezer in Supermarket S2'/>",
-                "<img src='/images/usecases/smart-retail/smart-retail-6.webp' alt='Critical door sensor and multiple major temperature alarms in Supermarket S3 on ThingsBoard' title='Supermarket S3 device list and alarm summary'/>",
-                "<img src='/images/usecases/smart-retail/smart-retail-7.webp' alt='Dashboard showing temperature fluctuations of chiller in Supermarket S3 on ThingsBoard' title='Supermarket S3 floor plan and temperature trend for chiller'/>",
+                "<img src='/images/usecases/smart-retail/smart-retail-6.webp' alt='Critical door sensor and multiple major temperature alarms in Supermarket S3 on SENTIENT' title='Supermarket S3 device list and alarm summary'/>",
+                "<img src='/images/usecases/smart-retail/smart-retail-7.webp' alt='Dashboard showing temperature fluctuations of chiller in Supermarket S3 on SENTIENT' title='Supermarket S3 floor plan and temperature trend for chiller'/>",
             ];
             return images[index];
         }

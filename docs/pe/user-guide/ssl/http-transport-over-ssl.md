@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: HTTP Transport over SSL
-description: Launching ThingsBoard with secure HTTP protocol to connect your IoT devices and projects.
+description: Launching SENTIENT with secure HTTP protocol to connect your IoT devices and projects.
 
 ---
 

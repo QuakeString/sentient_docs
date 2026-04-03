@@ -1,9 +1,9 @@
 {% assign integrationType = include.integration-type | downcase %}
 {% assign integrationTypeCorrectName = include.integration-type-correct-name %}
 
-<br><b>Step 2: Import the Uplink converter into ThingsBoard</b>
+<br><b>Step 2: Import the Uplink converter into SENTIENT</b>
 
-After downloading the file with the Uplink converter configuration, import it into ThingsBoard:
+After downloading the file with the Uplink converter configuration, import it into SENTIENT:
 
 - Navigate to the "**Data converters**" page in the "**Integration center**" section.
 - Click the "**+**" icon in the top-right corner of the page and select "**Import converter**" from the drop-down menu.

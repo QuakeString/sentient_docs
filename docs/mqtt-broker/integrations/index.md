@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
 title: Integrations
-description: TBMQ Integrations Documentation 
+description: ST-RMQTT Integrations Documentation 
 
 ---
 

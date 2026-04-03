@@ -51,10 +51,10 @@ mosquitto_pub -d -h "YOUR_MQTT_BROKER_HOST" -p 1883 -D PUBLISH user-property hel
 **Note:** do not forget to put your hostname instead of `YOUR_MQTT_BROKER_HOST`. 
 Make sure authentications are disabled. Otherwise, adjust the commands in this guide appropriately.
 
-Utilize the following command to connect to a locally deployed TBMQ using default credentials:
+Utilize the following command to connect to a locally deployed ST-RMQTT using default credentials:
 
 ```bash
-mosquitto_pub -d -h "localhost" -p 1883 -D PUBLISH user-property hello world -q 1 -t demo/topic -V mqttv5 -m "Hello world" -r -u tbmq_websockets_username
+mosquitto_pub -d -h "localhost" -p 1883 -D PUBLISH user-property hello world -q 1 -t demo/topic -V mqttv5 -m "Hello world" -r -u st-rmqtt_websockets_username
 ```
 {: .copy-code}
 
@@ -83,11 +83,11 @@ mosquitto_pub -d -h "YOUR_MQTT_BROKER_HOST" -p 1883 -q 1 -t demo/topic -n -r
 
 For local deployment using default credentials:
 ```shell
-mosquitto_pub -d -h "localhost" -p 1883 -q 1 -t demo/topic -n -r -u tbmq_websockets_username
+mosquitto_pub -d -h "localhost" -p 1883 -q 1 -t demo/topic -n -r -u st-rmqtt_websockets_username
 ```
 {: .copy-code}
 
-To delete retained messages using the WEB UI of TBMQ, you have two options based on the number of messages you want to delete:
+To delete retained messages using the WEB UI of ST-RMQTT, you have two options based on the number of messages you want to delete:
 1. **Deleting a Single Retained Message.** Click on the icon 'Delete retained message' and confirm action.
 2. **Deleting Multiple Retained Messages:** 
   * Select messages you want to delete.

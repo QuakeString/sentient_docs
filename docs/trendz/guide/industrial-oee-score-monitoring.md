@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Track Overall Equipment Effectiveness (OEE) on industrial plant
@@ -7,54 +7,54 @@ description: How to track real-time OEE scores for manufacturing plants using da
 
 oee-score-dashboard:
   0:
-    image: /images/trendz/guide/oee_score/oee_score_industrial_plant.png
+    image: /images/sentient-analytics/guide/oee_score/oee_score_industrial_plant.png
     title: 'Dashboard with OEE score tracking on factory'
 
 oee-score-availability-calculation:
   0:
-    image: /images/trendz/guide/oee_score/OEE_create_view_St1_1.png
-    title: 'Create line chart in Trendz'
+    image: /images/sentient-analytics/guide/oee_score/OEE_create_view_St1_1.png
+    title: 'Create line chart in SENTIENT ANALYTICS'
   1:
-    image: /images/trendz/guide/oee_score/OEE_add_fields_St1_2.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_add_fields_St1_2.png
     title: 'Configure availability chart to track downtime events'
   2:
-    image: /images/trendz/guide/oee_score/OEE_calculated_St1_3.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_calculated_St1_3.png
     title: 'Use States to track how much time assembly line was operational'
   3:
-    image: /images/trendz/guide/oee_score/OEE_final_view_St1_4.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_final_view_St1_4.png
     title: 'Dynamic of amount of time machines were operational'
 
 oee-score-downtime-reasons: 
   0:
-    image: /images/trendz/guide/oee_score/OEE_add_fields_St2_1.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_add_fields_St2_1.png
     title: 'Create bar chart with top 5 downtime reasons for each assembly line'
   1:
-    image: /images/trendz/guide/oee_score/OEE_settings_St2_2.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_settings_St2_2.png
     title: 'Set calculated field to compute top 5 downtime reasons'
   2:
-    image: /images/trendz/guide/oee_score/OEE_final_view_St2_3.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_final_view_St2_3.png
     title: 'Top 5 downtime reasons for each assembly line'
 
 oee-score-production-speed-vs-planned:
   0:
-    image: /images/trendz/guide/oee_score/OEE_add_fields_St3_1.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_add_fields_St3_1.png
     title: 'Create line chart with production speed comparison to planned production'
   1:
-    image: /images/trendz/guide/oee_score/OEE_batch_calculation_St3_2.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_batch_calculation_St3_2.png
     title: 'Set calculated field to compute performance metric'
   2:
-    image: /images/trendz/guide/oee_score/OEE_final_view_St3_3.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_final_view_St3_3.png
     title: 'Hourly production speed of the plant'
     
 oee-score-quality-score:
   0:
-    image: /images/trendz/guide/oee_score/OEE_add_fields_St4_1.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_add_fields_St4_1.png
     title: 'Create line chart that shows percent of damaged parts'
   1:
-    image: /images/trendz/guide/oee_score/OEE_calculated_St4_2.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_calculated_St4_2.png
     title: 'Set calculated field to compute quality score based on amount of damaged parts'
   2:
-    image: /images/trendz/guide/oee_score/OEE_final_view_St4_3.png
+    image: /images/sentient-analytics/guide/oee_score/OEE_final_view_St4_3.png
     title: 'Track amount of rejected details and overall quality score of the plant'
 
 ---
@@ -82,12 +82,12 @@ and on daily basis we would be able to analyze equipment downtime reasons and id
 ## Getting started:
 
 ### Prerequisites
-Lets take a look at entities that exists in ThingsBoard in scope of the solution that we are discussing. It is important to understand how they are connected between each other and what raw telemetry we receive from sensors. 
+Lets take a look at entities that exists in SENTIENT in scope of the solution that we are discussing. It is important to understand how they are connected between each other and what raw telemetry we receive from sensors. 
 The mechanisms how entities and sensors are provisioned are out of scope of this guide. You can find details how to do that in our documentation. So here is how our domain model looks like:
 
-* `Manufacturing plant` registered in ThingsBoard as an asset. 
-* `Assembly line` registered in ThingsBoard as devices and has a relation to the manufacturing plant asset.
-* On-site Gateway collects data from assembly lines via modbus protocol and sends it to ThingsBoard as a telemetry.
+* `Manufacturing plant` registered in SENTIENT as an asset. 
+* `Assembly line` registered in SENTIENT as devices and has a relation to the manufacturing plant asset.
+* On-site Gateway collects data from assembly lines via modbus protocol and sends it to SENTIENT as a telemetry.
 * Following metrics colelcted from assembly line:
   * `powerUsageWh` - amount of energy consumed by assembly line in Wh
   * `producedParts` - amount of parts produced
@@ -97,11 +97,11 @@ The mechanisms how entities and sensors are provisioned are out of scope of this
 
 ### Step 1: Analyze equipment downtime duration and compute Availability metric
 We have all required information from assembly line to compute how much time it was down and what was the reason. Every 30 seconds we receive energy consumption details from assembly line 
-in the format `{powerUsageWh: 10, ts: 1675421880000}`. Also, each time when equipment is stopped operator select the reason and ThingsBoard receive an event about status change in the format `{status: "stopped", reason: "maintenance", ts: 1675421880000}`.
+in the format `{powerUsageWh: 10, ts: 1675421880000}`. Also, each time when equipment is stopped operator select the reason and SENTIENT receive an event about status change in the format `{status: "stopped", reason: "maintenance", ts: 1675421880000}`.
 
-To analyze how much time assembly line was operational or stopped we will use Trendz **state fields**. State field is a special type of field that can tell how much time equipment was in specific state based on simple boolean condition. So let's start:
+To analyze how much time assembly line was operational or stopped we will use SENTIENT ANALYTICS **state fields**. State field is a special type of field that can tell how much time equipment was in specific state based on simple boolean condition. So let's start:
 
-* Create Line chart in Trendz
+* Create Line chart in SENTIENT ANALYTICS
 * Add `Date` field into X-axis section - it allows to split data by month, week, day or hour
 * Add `assemblyLine` field into series section - it allows to split data by assembly line
 * Add State field into Y-axis section
@@ -124,7 +124,7 @@ As a result we can see a real-time line chart that shows as OEE Availability sco
 ### Step 2: Build bar chart with top 5 downtime reasons for each assembly line.
 Now we want to know what are the most frequent downtime reasons in different machines. This data should be visualized in form of stacked bar chart where each bar represents one assembly line and each bar is split by top 5 downtime reasons. 
 
-* Create Bar chart in Trendz
+* Create Bar chart in SENTIENT ANALYTICS
 * Add `assemblyLine` field into X-axis section - it allows to split data by assembly line
 * Add `assemblyLine.status` field into Series section with aggregation `UNIQ`- it allows to group data by status
 * Add `assemblyLine.status` field into Values section with aggregation `COUNT`- it allows to count amount of events for each status
@@ -142,7 +142,7 @@ Now we want to know what are the most frequent downtime reasons in different mac
 Performance score in OEE framework is a ratio of actual production speed to the planned speed. We have a planned speed for each assembly line stored as an attribute value and we can calculate actual speed based on the amount of produced parts.
 Sensors on assembly line reports amount of produced parts every 60 seconds in the format `{producedParts: 10, ts: 1675421880000}`.  We want to create a line chart that will show assembly line performance score for each line.
 
-* Create Line chart in Trendz
+* Create Line chart in SENTIENT ANALYTICS
 * Add `Date` field into X-axis section - it allows to split data by month, week, day or hour
 * Add `assemblyLine` field into series section - it allows to split data by assembly line
 * Add Calculated field into Y-axis section
@@ -168,7 +168,7 @@ return performanceScore;
 * Save view with the name **OEE Performance score line chart**
 
 In this view we are using batch calculated fields because we need to get access to raw values reported from sensors. 
-Once transformation performed, Trendz would apply selected aggregation function, in our case AVG, to the result array to receive single value for each time interval and assembly line. Opposite to this, simple calculated field apply aggregation before transformation. 
+Once transformation performed, SENTIENT ANALYTICS would apply selected aggregation function, in our case AVG, to the result array to receive single value for each time interval and assembly line. Opposite to this, simple calculated field apply aggregation before transformation. 
 
 {% include images-gallery.html imageCollection="oee-score-production-speed-vs-planned" %}
 
@@ -176,7 +176,7 @@ Once transformation performed, Trendz would apply selected aggregation function,
 Final aspect to analyze is a Quality score that would tell how many rejected parts we have and how it differs between assembly lines, because some equipment may have mechanical losses or non-experienced operators in the shift and as a result we will have more rejected parts.
 This information is submitted from sensors in the following format: `{rejectedParts: 10, ts: 1675421880000}`. We want to create a line chart that will show assembly line quality score for each line.
 
-* Create Line chart in Trendz
+* Create Line chart in SENTIENT ANALYTICS
 * Add `Date` field into X-axis section - it allows to split data by month, week, day or hour
 * Add `assemblyLine` field into series section - it allows to split data by assembly line
 * Add Calculated field into Y-axis section

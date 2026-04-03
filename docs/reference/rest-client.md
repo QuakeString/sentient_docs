@@ -9,8 +9,8 @@ description: Supported REST API Reference for server-side integration of your ja
  * TOC
  {:toc}
 
-The ThingsBoard REST API Client helps you interact with ThingsBoard REST API from your Java application.
-With Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in ThingsBoard.
+The SENTIENT REST API Client helps you interact with SENTIENT REST API from your Java application.
+With Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in SENTIENT.
  
 The recommended method for installing the Rest Client is with a build automation tool, like Maven. 
 The version of the REST Client depends on the version of the platform that you are using.   
@@ -24,7 +24,7 @@ In order to add REST Client to your Maven/Gradle project, you should use the fol
 ```xml
 <dependencies>
     <dependency>
-        <groupId>org.thingsboard</groupId>
+        <groupId>org.sentient</groupId>
         <artifactId>rest-client</artifactId>
         <version>{{ site.release.ce_full_ver}}</version>
     </dependency>
@@ -34,13 +34,13 @@ In order to add REST Client to your Maven/Gradle project, you should use the fol
 
 Note: The REST Client is built on top of Spring RestTemplate and thus depends on Spring Web (5.1.5.RELEASE at the moment of writing this article).
 
-In order to download the REST Client dependency, you should add the following repository to your project. Alternatively, you can build REST Client from [sources](https://github.com/thingsboard/thingsboard/tree/master/rest-client). 
+In order to download the REST Client dependency, you should add the following repository to your project. Alternatively, you can build REST Client from [sources](https://github.com/sentient/sentient/tree/master/rest-client). 
 
 ```xml
 <repositories>
     <repository>
-        <id>thingsboard</id>
-        <url>https://repo.thingsboard.io/artifactory/libs-release-public</url>
+        <id>sentient</id>
+        <url>https://repo.docs.sentient.invenia.in/artifactory/libs-release-public</url>
     </repository>
 </repositories>
 ```
@@ -58,7 +58,7 @@ In order to download the REST Client dependency, you should add the following re
 You can authenticate using an API key without the need for login/logout operations:
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Your API key
@@ -79,14 +79,14 @@ client.close();
 
 #### Authentication with credentials (deprecated)
 
-Alternatively, you can create a ThingsBoard Client instance, authenticate, and retrieve the data of the currently logged-in user.
+Alternatively, you can create a SENTIENT Client instance, authenticate, and retrieve the data of the currently logged-in user.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Default Tenant Administrator credentials
-String username = "tenant@thingsboard.org";
+String username = "tenant@sentient.org";
 String password = "tenant";
 
 // Creating new rest client and auth with credentials
@@ -118,7 +118,7 @@ RestClient client = RestClient.withApiKey(url, apiKey);
 with:
 
 ```java
-String username = "tenant@thingsboard.org";
+String username = "tenant@sentient.org";
 String password = "tenant";
 RestClient client = new RestClient(url);
 client.login(username, password);
@@ -134,7 +134,7 @@ The rest of the logic remains exactly the same.
 The following sample code shows how to fetch tenant devices via page link.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Authentication using an API key
@@ -164,7 +164,7 @@ client.close();
 The following sample code shows how to fetch tenant dashboards via page link.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Authentication using an API key
@@ -194,7 +194,7 @@ client.close();
 The following sample code shows how to fetch customer devices via page link.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with Customer User API key
@@ -224,7 +224,7 @@ client.close();
 The following sample code shows how to use Entity Data Query API to count total devices, total active devices.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User API key
@@ -273,7 +273,7 @@ client.close();
 The following sample code shows how to use Entity Data Query API to get all active devices.
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User API key
@@ -337,7 +337,7 @@ client.close();
 The following sample code demonstrates basic concepts of device management API (add/get/delete device, get/save device attributes).
 
 ```java
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 String url = "http://localhost:8080";
 
 // Perform login with default Customer User API key
@@ -385,5 +385,5 @@ client.close();
 
 ### More examples
 
-You can find the example to learn how to use ThingsBoard REST Client [here](https://github.com/thingsboard/tb-ce-rest-client-example){:target="_blank"}.
+You can find the example to learn how to use SENTIENT REST Client [here](https://github.com/sentient/tb-ce-rest-client-example){:target="_blank"}.
 

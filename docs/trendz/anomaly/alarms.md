@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: Anomaly-Driven Alarm Creation
 description: How to configure alarms triggered by anomaly detection, including alarm types, severities, and behaviors.
 
@@ -10,8 +10,8 @@ description: How to configure alarms triggered by anomaly detection, including a
 
 ## Overview
 
-Trendz supports automatic creation of alarms based on detected anomalies. This feature allows users to react to abnormal 
-behavior in real time by integrating with ThingsBoard's native alarm system. Alarms can be created during both 
+SENTIENT ANALYTICS supports automatic creation of alarms based on detected anomalies. This feature allows users to react to abnormal 
+behavior in real time by integrating with SENTIENT's native alarm system. Alarms can be created during both 
 **Refresh** and **Reprocess** tasks, depending on your configuration.
 
 ## Enabling Alarm Creation
@@ -27,7 +27,7 @@ To enable alarm creation:
 
 Once enabled, alarms will be automatically created for all newly detected anomalies during the refresh process.
 
-**Read more about refresh configuration [here](/docs/trendz/anomaly/refresh-reprocess#anomaly-refresh).**
+**Read more about refresh configuration [here](/docs/sentient-analytics/anomaly/refresh-reprocess#anomaly-refresh).**
 
 ### Enable Alarms in Anomaly Reprocess
 
@@ -39,11 +39,11 @@ You can also generate alarms during anomaly reprocessing:
 
 Alarms will be created for anomalies found within the selected time range and items during reprocess.
 
-**Read more about reprocess configuration [here](/docs/trendz/anomaly/refresh-reprocess#anomaly-reprocess).**
+**Read more about reprocess configuration [here](/docs/sentient-analytics/anomaly/refresh-reprocess#anomaly-reprocess).**
 
 ## Alarm Behavior and Lifecycle
 
-Here’s how alarm behavior works in Trendz:
+Here’s how alarm behavior works in SENTIENT ANALYTICS:
 
 - **One anomaly = one alarm**  
   Each anomaly is associated with exactly one alarm.
@@ -57,7 +57,7 @@ Here’s how alarm behavior works in Trendz:
 
 - **Alarm severity and type**
   - The **severity** level of the alarm is configured in the **Input** tab, after model build.  
-    Trendz generates default score thresholds for severity levels (e.g., CRITICAL, MAJOR, etc.).
+    SENTIENT ANALYTICS generates default score thresholds for severity levels (e.g., CRITICAL, MAJOR, etc.).
   - The **alarm type** is also configurable in the **Input** tab.
 
 - **Threshold rule**  

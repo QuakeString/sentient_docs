@@ -1,15 +1,15 @@
 bigheader: "MQTT Broker Documentation"
-abstract: "TBMQ."
+abstract: "ST-RMQTT."
 toc:
-- title: TBMQ
+- title: ST-RMQTT
   path: /docs/mqtt-broker/
-- title: What is TBMQ?
-  path: /docs/mqtt-broker/getting-started-guides/what-is-thingsboard-mqtt-broker/
+- title: What is ST-RMQTT?
+  path: /docs/mqtt-broker/getting-started-guides/what-is-sentient-mqtt-broker/
 - title: Configuration
   section:
-    - title: TBMQ
+    - title: ST-RMQTT
       path: /docs/mqtt-broker/install/config/
-    - title: TBMQ Integration Executor
+    - title: ST-RMQTT Integration Executor
       path: /docs/mqtt-broker/install/ie-config/
 - title: Security
   section:
@@ -41,8 +41,8 @@ toc:
     - title: RBAC
       pe: true
       path: /docs/pe/mqtt-broker/security/rbac/
-- title: Integration with ThingsBoard
-  path: /docs/mqtt-broker/user-guide/integrations/how-to-connect-thingsboard-to-tbmq/
+- title: Integration with SENTIENT
+  path: /docs/mqtt-broker/user-guide/integrations/how-to-connect-sentient-to-st-rmqtt/
 - title: MQTT Features
   section:
     - title: MQTT protocol
@@ -68,7 +68,7 @@ toc:
 - title: Other Features
   new: true
   section:
-    - title: TBMQ Client Type
+    - title: ST-RMQTT Client Type
       path: /docs/mqtt-broker/user-guide/mqtt-client-type/
     - title: Blocked Clients
       path: /docs/mqtt-broker/other/blocked-client/

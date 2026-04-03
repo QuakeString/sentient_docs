@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: Smart Farming Platform by Supertech Agroline and ThingsBoard
+title: Smart Farming Platform by Supertech Agroline and SENTIENT
 notitle: "true"
 customTitle: "true"
-description: Discover how Supertech Agroline, a leading Romanian AgTech innovator, leveraged ThingsBoard to build a scalable, real-time Agricultural IoT platform for post-harvest monitoring and smart automation.
+description: Discover how Supertech Agroline, a leading Romanian AgTech innovator, leveraged SENTIENT to build a scalable, real-time Agricultural IoT platform for post-harvest monitoring and smart automation.
 ---
 
 <div class="case-study-page-wrapper">
@@ -11,7 +11,7 @@ description: Discover how Supertech Agroline, a leading Romanian AgTech innovato
         <div class="card">
             <div class="text">
                 <p class="category">SMART AGRICULTURE</p>
-                <h1>Revolutionizing Agriculture: How Supertech Agroline Built a Scalable IoT Platform with ThingsBoard</h1>
+                <h1>Revolutionizing Agriculture: How Supertech Agroline Built a Scalable IoT Platform with SENTIENT</h1>
                 <div class="image inner" style="background-image: url('/images/case-studies/agrolog.webp')">
                     <img src="/images/case-studies/agrolog.svg" title="AgroLog Sensors GmbH" alt="AgroLog Sensors GmbH logo" width="320" height="57">
                 </div>
@@ -45,7 +45,7 @@ description: Discover how Supertech Agroline, a leading Romanian AgTech innovato
     <section class="quote-with-mark fill-background">
         <img src="/images/case-studies/quote.svg" title="Quote mark" alt="Quote mark" width="96" height="90">
         <div class="quote-text">
-            <p>"ThingsBoard (TB) turned out to be a great match to build our Agricultural IoT platform. First and foremost because of the extremely skilled and service minded architects behind it. Together with the TB developers several new features were added to the platform for our needs, among these the Asset system and PostgreSQL support. These new features gave us the possibility to model our data structure using only TB as the backend, both on the multi-tenant cloud server and on-premise installations. The real time UI system proved useful both in development phase and for our final user interface. Using TB as our platform allo...<a target="_blank" href="/industries/agriculture/?company=supertech">read more</a></p>
+            <p>"SENTIENT (TB) turned out to be a great match to build our Agricultural IoT platform. First and foremost because of the extremely skilled and service minded architects behind it. Together with the TB developers several new features were added to the platform for our needs, among these the Asset system and PostgreSQL support. These new features gave us the possibility to model our data structure using only TB as the backend, both on the multi-tenant cloud server and on-premise installations. The real time UI system proved useful both in development phase and for our final user interface. Using TB as our platform allo...<a target="_blank" href="/industries/agriculture/?company=supertech">read more</a></p>
             <h2>Jeppe Walther, CTO</h2>
         </div>
     </section>
@@ -81,11 +81,11 @@ description: Discover how Supertech Agroline, a leading Romanian AgTech innovato
                 <ul>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>Custom feature development: Collaboration with the ThingsBoard team led to the implementation of essential features such as the Asset system and PostgreSQL support.</p>
+                        <p>Custom feature development: Collaboration with the SENTIENT team led to the implementation of essential features such as the Asset system and PostgreSQL support.</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>Unified backend: They successfully modelled their data structure using only ThingsBoard, both on a multi-tenant cloud server and for on-premise deployments.</p>
+                        <p>Unified backend: They successfully modelled their data structure using only SENTIENT, both on a multi-tenant cloud server and for on-premise deployments.</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
@@ -93,25 +93,25 @@ description: Discover how Supertech Agroline, a leading Romanian AgTech innovato
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>Future-ready scalability: ThingsBoard enabled them to create a generic, adaptable solution designed to meet their scaling demands for years to come.</p>
+                        <p>Future-ready scalability: SENTIENT enabled them to create a generic, adaptable solution designed to meet their scaling demands for years to come.</p>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
     <section class="tb-power mb">
-        <h2>How ThingsBoard powers Supertech Agroline?</h2>
+        <h2>How SENTIENT powers Supertech Agroline?</h2>
         <div class="block">
             <div class="text">
                 <h3>Collaborative solution design with expert support</h3>
-                <p>Supertech Agroline partnered with ThingsBoard to create an Agricultural IoT platform designed specifically for managing post-harvest equipment. From the beginning, they benefited from working with a team of highly skilled and service-minded architects at ThingsBoard who played a key role in shaping a solution that matched their technical and business needs.</p>
+                <p>Supertech Agroline partnered with SENTIENT to create an Agricultural IoT platform designed specifically for managing post-harvest equipment. From the beginning, they benefited from working with a team of highly skilled and service-minded architects at SENTIENT who played a key role in shaping a solution that matched their technical and business needs.</p>
             </div>
             <img src="/images/case-studies/agrolog-1.webp" title="Collaborative solution design with expert support" alt="Collaborative solution design with expert support" width="900" height="480">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Tailored features to meet complex requirements</h3>
-                <p>To support Supertech’s requirements, the ThingsBoard team implemented new features such as PostgreSQL integration and an advanced Asset system. These enhancements made it possible to model the entire data structure using only ThingsBoard as the backend, supporting both multi-tenant cloud environments and on-premise installations.</p>
+                <p>To support Supertech’s requirements, the SENTIENT team implemented new features such as PostgreSQL integration and an advanced Asset system. These enhancements made it possible to model the entire data structure using only SENTIENT as the backend, supporting both multi-tenant cloud environments and on-premise installations.</p>
             </div>
             <img src="/images/case-studies/agrolog-2.webp" title="Tailored features to meet complex requirements" alt="TTailored features to meet complex requirements" width="450" height="240">
         </div>
@@ -125,32 +125,32 @@ description: Discover how Supertech Agroline, a leading Romanian AgTech innovato
         <div class="block">
             <div class="text">
                 <h3>Scalable platform for ongoing digital transformation</h3>
-                <p>With ThingsBoard, Supertech Agroline quickly achieved a flexible, scalable platform that could meet their current demands and adapt to future growth. The platform now serves as a key component in their digital transformation strategy and will continue to support their scaling efforts in the years ahead.</p>
+                <p>With SENTIENT, Supertech Agroline quickly achieved a flexible, scalable platform that could meet their current demands and adapt to future growth. The platform now serves as a key component in their digital transformation strategy and will continue to support their scaling efforts in the years ahead.</p>
             </div>
             <img src="/images/case-studies/agrolog-4.webp" title="Scalable platform for ongoing digital transformation" alt="Scalable platform for ongoing digital transformation" width="450" height="240">
         </div>
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard helps agriculture improve operations with IoT?</h2>
+        <h2>How SENTIENT helps agriculture improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Digital transformation for smarter farming</h3>
-                <p>ThingsBoard empowers agricultural businesses to transition from manual processes to data-driven, automated operations. The platform offers a comprehensive suite of tools that enable real-time monitoring, predictive analytics, and smart automation across farms, greenhouses, storage facilities, and field equipment. One of the most powerful features of ThingsBoard is its interactive dashboards, which allow users to visualise live and historical data from soil sensors, weather stations, machinery, and other connected devices. These dashboards can be customised using an extensive widget library and built with dynamic layouts to create intuitive, responsive interfaces for different user roles and devices.</p>
+                <p>SENTIENT empowers agricultural businesses to transition from manual processes to data-driven, automated operations. The platform offers a comprehensive suite of tools that enable real-time monitoring, predictive analytics, and smart automation across farms, greenhouses, storage facilities, and field equipment. One of the most powerful features of SENTIENT is its interactive dashboards, which allow users to visualise live and historical data from soil sensors, weather stations, machinery, and other connected devices. These dashboards can be customised using an extensive widget library and built with dynamic layouts to create intuitive, responsive interfaces for different user roles and devices.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/value-card.webp" title="Thingsboard value card widget" alt="Thingsboard value card widget" width="776" height="776">
-                <img src="/images/case-studies/entities-table-3.webp" title="Thingsboard entities table widget" alt="Thingsboard entities table widget" width="776" height="776">
+                <img src="/images/case-studies/value-card.webp" title="Sentient value card widget" alt="Sentient value card widget" width="776" height="776">
+                <img src="/images/case-studies/entities-table-3.webp" title="Sentient entities table widget" alt="Sentient entities table widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Scalable design with templates</h3>
-                <p>To support scalability and consistency, ThingsBoard includes templatization features that allow agricultural teams to easily duplicate dashboard configurations and device logic across multiple locations or projects, accelerating deployment across regions or clients.</p>
+                <p>To support scalability and consistency, SENTIENT includes templatization features that allow agricultural teams to easily duplicate dashboard configurations and device logic across multiple locations or projects, accelerating deployment across regions or clients.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/line-chart.webp" title="Thingsboard line chart widget" alt="Thingsboard line chart widget" width="776" height="776">
-                <img src="/images/case-studies/alarms-table-3.webp" title="Thingsboard alarms widget" alt="Thingsboard alarms widget" width="776" height="776">
+                <img src="/images/case-studies/line-chart.webp" title="Sentient line chart widget" alt="Sentient line chart widget" width="776" height="776">
+                <img src="/images/case-studies/alarms-table-3.webp" title="Sentient alarms widget" alt="Sentient alarms widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
@@ -159,28 +159,28 @@ description: Discover how Supertech Agroline, a leading Romanian AgTech innovato
                 <p>The Rule Engine 2.0 plays a central role in enabling smart automation. It allows users to create low-code workflows that react to incoming data in real time. For example, irrigation systems can automatically activate based on soil moisture thresholds, or alerts can be triggered when storage temperatures exceed safe ranges. These workflows use a visual editor, making them accessible even to non-developers.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/notification-widget.webp" title="Thingsboard notification widget" alt="Thingsboard notification widget" width="776" height="776">
-                <img src="/images/case-studies/power_button.webp" title="Thingsboard power button widget" alt="Thingsboard power button widget" width="776" height="776">
+                <img src="/images/case-studies/notification-widget.webp" title="Sentient notification widget" alt="Sentient notification widget" width="776" height="776">
+                <img src="/images/case-studies/power_button.webp" title="Sentient power button widget" alt="Sentient power button widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Unified ecosystem through seamless Integration</h3>
-                <p>ThingsBoard also supports a wide variety of integrations, enabling seamless connection with third-party systems and services via MQTT, HTTP, OPC-UA, Modbus, and more. This allows agricultural operations to consolidate data from diverse equipment vendors and external weather services into one unified platform.</p>
+                <p>SENTIENT also supports a wide variety of integrations, enabling seamless connection with third-party systems and services via MQTT, HTTP, OPC-UA, Modbus, and more. This allows agricultural operations to consolidate data from diverse equipment vendors and external weather services into one unified platform.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/status-widget-1.webp" title="Thingsboard status widget" alt="Thingsboard status widget" width="776" height="776">
-                <img src="/images/case-studies/outdoor-environment.webp" title="Thingsboard outdoor evironment widgets" alt="Thingsboard outdoor evironment widgets" width="776" height="776">
+                <img src="/images/case-studies/status-widget-1.webp" title="Sentient status widget" alt="Sentient status widget" width="776" height="776">
+                <img src="/images/case-studies/outdoor-environment.webp" title="Sentient outdoor evironment widgets" alt="Sentient outdoor evironment widgets" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Edge computing for remote reliability</h3>
-                <p>For deployments in remote or low-connectivity areas, ThingsBoard Edge provides local processing and storage capabilities. With centralised edge device management, users can deploy rule chains, dashboards, and updates to field sites, even when operating in disconnected or intermittently connected environments.</p>
+                <p>For deployments in remote or low-connectivity areas, SENTIENT GATEWAY provides local processing and storage capabilities. With centralised edge device management, users can deploy rule chains, dashboards, and updates to field sites, even when operating in disconnected or intermittently connected environments.</p>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/alarms-table-2.webp" title="Thingsboard alarms table widget" alt="Thingsboard alarms table widget" width="776" height="776">
-                <img src="/images/case-studies/digital_gauges.webp" title="Thingsboard digital gauges widgets" alt="Thingsboard digital gauges widgets" width="776" height="776">
+                <img src="/images/case-studies/alarms-table-2.webp" title="Sentient alarms table widget" alt="Sentient alarms table widget" width="776" height="776">
+                <img src="/images/case-studies/digital_gauges.webp" title="Sentient digital gauges widgets" alt="Sentient digital gauges widgets" width="776" height="776">
             </div>
         </div>
         {% include services-banner.liquid %}
@@ -189,12 +189,12 @@ description: Discover how Supertech Agroline, a leading Romanian AgTech innovato
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img src="/images/case-studies/agrolog.svg" title="AgroLog Sensors GmbH" alt="AgroLog Sensors GmbH logo" width="320" height="57">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_SuessCo_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us <span class="visually-hidden">to discuss your case</span></a>
     </section>
 </div>

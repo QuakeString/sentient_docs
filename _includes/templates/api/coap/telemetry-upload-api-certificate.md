@@ -6,7 +6,7 @@ coap://{{HOST_NAME}}/api/v1/telemetry
 ```
 {: .copy-code}
 
-> ⚠️ Don&#39;t forget to replace <code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
+> ⚠️ Don&#39;t forget to replace <code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
 
 {% else %}
 

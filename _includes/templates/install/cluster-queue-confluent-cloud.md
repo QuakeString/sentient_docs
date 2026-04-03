@@ -1,6 +1,6 @@
 {% include templates/install/queue-confluent-cloud-config.md %}
 
-Configure ThingsBoard environment file:
+Configure SENTIENT environment file:
 
 ```text
 nano .env
@@ -14,7 +14,7 @@ TB_QUEUE_TYPE=confluent
 ```
 {: .copy-code}
 
-Configure Confluent Cloud environment file for ThingsBoard queue service:
+Configure Confluent Cloud environment file for SENTIENT queue service:
 
 ```text
 nano queue-confluent-cloud.env
@@ -72,4 +72,4 @@ TB_QUEUE_VC_PARTITIONS=1
 ```
 {: .copy-code}
 
-You can update default Rule Engine queues configuration using UI. More about ThingsBoard Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).
+You can update default Rule Engine queues configuration using UI. More about SENTIENT Rule Engine queues see in [documentation](/docs/{{docsPrefix}}user-guide/rule-engine-2-5/queues/).

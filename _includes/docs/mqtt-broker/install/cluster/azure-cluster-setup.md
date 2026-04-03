@@ -7,27 +7,27 @@
 * TOC
 {:toc}
 
-This guide will help you set up TBMQ {{tbmqSuffix}} in AKS.
+This guide will help you set up ST-RMQTT {{st-rmqttSuffix}} in AKS.
 
 ## Prerequisites
 
 {% include templates/mqtt-broker/install/azure/aks-prerequisites.md %}
 
 {% if docsPrefix == null %}
-## Clone TBMQ repository
+## Clone ST-RMQTT repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq.git
-cd tbmq/k8s/azure
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt.git
+cd st-rmqtt/k8s/azure
 ```
 {: .copy-code}
 
 {% else %}
-## Clone TBMQ PE K8S repository
+## Clone ST-RMQTT PE K8S repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq-pe-k8s.git
-cd tbmq-pe-k8s/azure
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt-pe-k8s.git
+cd st-rmqtt-pe-k8s/azure
 ```
 {: .copy-code}
 {% endif %}
@@ -51,8 +51,8 @@ but take into account the following requirements:
 
 * Keep your postgresql password in a safe place. We will refer to it later in this guide using **YOUR_AZURE_POSTGRES_PASSWORD**;
 * Make sure your Azure Database for PostgreSQL version is 17.x;
-* Make sure your Azure Database for PostgreSQL instance is accessible from the TBMQ cluster;
-* Make sure you use "thingsboard_mqtt_broker" as the initial database name.
+* Make sure your Azure Database for PostgreSQL instance is accessible from the ST-RMQTT cluster;
+* Make sure you use "sentient_mqtt_broker" as the initial database name.
 
 **Note**: Use "High availability" enabled. It enables a lot of useful settings by default.
 
@@ -62,7 +62,7 @@ Another way by which you can create Azure Database for PostgreSQL is using az to
 az postgres flexible-server create --location $AKS_LOCATION --resource-group $AKS_RESOURCE_GROUP \
   --name $TB_DATABASE_NAME --admin-user POSTGRESS_USER --admin-password POSTGRESS_PASS \
   --public-access 0.0.0.0 --storage-size 32 \
-  --version 17 -d thingsboard_mqtt_broker
+  --version 17 -d sentient_mqtt_broker
 ```
 {: .copy-code}
 
@@ -85,50 +85,50 @@ Example of response:
 
 ```text
 {
-  "connectionString": "postgresql://postgres:postgres@$tbmq-db.postgres.database.azure.com/postgres?sslmode=require",
-  "databaseName": "thingsboard_mqtt_broker",
+  "connectionString": "postgresql://postgres:postgres@$st-rmqtt-db.postgres.database.azure.com/postgres?sslmode=require",
+  "databaseName": "sentient_mqtt_broker",
   "firewallName": "AllowAllAzureServicesAndResourcesWithinAzureIps_2021-11-17_15-45-6",
-  "host": "tbmq-db.postgres.database.azure.com",
-  "id": "/subscriptions/daff3288-1d5d-47c7-abf0-bfb7b738a18c/resourceGroups/myResourceGroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/thingsboard_mqtt_broker",
+  "host": "st-rmqtt-db.postgres.database.azure.com",
+  "id": "/subscriptions/daff3288-1d5d-47c7-abf0-bfb7b738a18c/resourceGroups/myResourceGroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/sentient_mqtt_broker",
   "location": "East US",
   "password": "postgres",
-  "resourceGroup": "TBMQResources",
+  "resourceGroup": "ST-RMQTTResources",
   "skuname": "Standard_D2s_v3",
   "username": "postgres",
   "version": "17"
 }
 ```
 
-Note the value of the host from the command output (**tbmq-db.postgres.database.azure.com** in our case). Also, note username and password (**postgres**) from the command.
+Note the value of the host from the command output (**st-rmqtt-db.postgres.database.azure.com** in our case). Also, note username and password (**postgres**) from the command.
 
 Edit the database settings file and replace **YOUR_AZURE_POSTGRES_ENDPOINT_URL** with the host value, **YOUR_AZURE_POSTGRES_USER** and **YOUR_AZURE_POSTGRES_PASSWORD** with the correct values:
 
 ```bash
-nano tbmq-db-configmap.yml
+nano st-rmqtt-db-configmap.yml
 ```
 {: .copy-code}
 
 ## Create Namespace
 
-Let’s create a dedicated namespace for our TBMQ cluster deployment to ensure better resource isolation and management.
+Let’s create a dedicated namespace for our ST-RMQTT cluster deployment to ensure better resource isolation and management.
 
 ```bash
-kubectl apply -f tbmq-namespace.yml
-kubectl config set-context $(kubectl config current-context) --namespace=thingsboard-mqtt-broker
+kubectl apply -f st-rmqtt-namespace.yml
+kubectl config set-context $(kubectl config current-context) --namespace=sentient-mqtt-broker
 ```
 {: .copy-code}
 
 ## Azure Cache for Valkey
 
-TBMQ {{tbmqSuffix}} relies on **Valkey** to store messages for [DEVICE persistent clients](/docs/{{docsPrefix}}mqtt-broker/architecture/#persistent-device-client).
+ST-RMQTT {{st-rmqttSuffix}} relies on **Valkey** to store messages for [DEVICE persistent clients](/docs/{{docsPrefix}}mqtt-broker/architecture/#persistent-device-client).
 The cache also improves performance by reducing the number of direct database reads, especially when authentication is enabled and multiple clients connect at once.
 Without caching, every new connection triggers a database query to validate MQTT client credentials, which can cause the unnecessary load under high connection rates.
 
 {% capture valkey-azure-version %}
-**Note:** Starting from **TBMQ {{tbmqSuffix}} {{valkey_from_version}}**, [Valkey](https://valkey.io/) **8.0** is officially supported.
+**Note:** Starting from **ST-RMQTT {{st-rmqttSuffix}} {{valkey_from_version}}**, [Valkey](https://valkey.io/) **8.0** is officially supported.
 Azure currently does **not** provide a managed Valkey service. However, Valkey is fully compatible with **Redis 7.2.x**, which is supported on Azure **Cache for Redis Enterprise** and **Enterprise Flash** SKUs.
-The Basic, Standard, and Premium SKUs only support up to **Redis 6.x**, and are therefore **not recommended** for TBMQ deployments.
-To ensure compatibility with TBMQ {{tbmqSuffix}} {{valkey_from_version}} and later, deploy your own Valkey cluster or use an Enterprise-tier SKU.
+The Basic, Standard, and Premium SKUs only support up to **Redis 6.x**, and are therefore **not recommended** for ST-RMQTT deployments.
+To ensure compatibility with ST-RMQTT {{st-rmqttSuffix}} {{valkey_from_version}} and later, deploy your own Valkey cluster or use an Enterprise-tier SKU.
 {% endcapture %}
 {% include templates/info-banner.md content=valkey-azure-version %}
 
@@ -137,7 +137,7 @@ You can choose one of the following paths depending on your environment:
 - [Deploy a Valkey cluster on AKS](https://learn.microsoft.com/en-us/azure/aks/valkey-overview)**(Recommended)**
 - [Quickstart: Create a Redis Enterprise cache](https://learn.microsoft.com/en-us/azure/redis/quickstart-create-managed-redis)
 
-Once your Azure Cache is ready, update the cache configuration in `tbmq-cache-configmap.yml` with the correct endpoint values:
+Once your Azure Cache is ready, update the cache configuration in `st-rmqtt-cache-configmap.yml` with the correct endpoint values:
 
 * **For standalone Redis**:
   Uncomment and set the following values. Make sure the `REDIS_HOST` value does **not** include the port (`:6379`).
@@ -167,7 +167,7 @@ The official Azure documentation for creating a Valkey cluster assumes a complet
 * **Skip Infrastructure Creation:** You have already created the Resource Group and AKS cluster. You may skip the steps regarding `az group create` and `az aks create`.
 * **Optional Services:** You can choose to skip creating an **Azure Key Vault (AKV)** instance and **Azure Container Registry (ACR)** to simplify the setup.
 * **Node Pools:** Creating a dedicated node pool for Valkey is optional. While dedicated pools offer better resource isolation, you can use your existing node pool for this deployment.
-* **Namespace:** We recommend deploying the Valkey cluster into the same namespace as TBMQ (e.g., `thingsboard-mqtt-broker`) rather than creating a separate `valkey` namespace. This keeps all components unified.
+* **Namespace:** We recommend deploying the Valkey cluster into the same namespace as ST-RMQTT (e.g., `sentient-mqtt-broker`) rather than creating a separate `valkey` namespace. This keeps all components unified.
 
 #### Creating the Secret
 
@@ -186,7 +186,7 @@ echo "Generated Password: $VALKEY_PASSWORD"
 # 2. Create the secret directly in Kubernetes
 # We format it exactly how the container expects: 'requirepass' on line 1, 'primaryauth' on line 2
 kubectl create secret generic valkey-password \
-  --namespace thingsboard-mqtt-broker \
+  --namespace sentient-mqtt-broker \
   --from-literal=valkey-password-file.conf=$'requirepass '"$VALKEY_PASSWORD"$'\nprimaryauth '"$VALKEY_PASSWORD"
 ```
 {: .copy-code}
@@ -196,7 +196,7 @@ kubectl create secret generic valkey-password \
 
 Proceed with creating the ConfigMap, Primary cluster pods, and Replica cluster pods. You will need to modify the Azure documentation examples to fit your environment:
 
-* **Namespace:** Ensure all resources point to your defined namespace (e.g., `thingsboard-mqtt-broker`).
+* **Namespace:** Ensure all resources point to your defined namespace (e.g., `sentient-mqtt-broker`).
 * **Affinity:** Update the `affinity` section. If you are using a shared node pool, remove the specific `nodeSelector` or `nodeAffinity` requirements. Instead, use `podAntiAffinity` to spread pods across nodes where possible.
 * **Image:** If skipping ACR, use the public Docker image: `image: "valkey/valkey:8.0"`. **Note:** Avoid using the `:latest` tag for production stability; stick to a specific version.
 * **Secret Volume:** Update the volume configuration to use the standard Kubernetes secret created in the previous step, replacing the CSI/Key Vault driver configuration.
@@ -213,7 +213,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: valkey-masters
-  namespace: thingsboard-mqtt-broker
+  namespace: sentient-mqtt-broker
 spec:
   serviceName: "valkey-masters"
   replicas: 3
@@ -320,9 +320,9 @@ EOF
 2.  **Initialization:** Run the Valkey cluster creation commands to join the nodes.
 3.  **Verification:** Verify the roles of the pods and the replication status to ensure the cluster is healthy.
 
-#### TBMQ Configuration
+#### ST-RMQTT Configuration
 
-Once the cluster is verified, update your TBMQ configuration values:
+Once the cluster is verified, update your ST-RMQTT configuration values:
 
 * **REDIS_NODES:** Set this to the headless service DNS, e.g., `valkey-cluster:6379`.
 * **REDIS_PASSWORD:** Use the password you generated during secret creation (or the value of `$VALKEY_PASSWORD`).
@@ -330,22 +330,22 @@ Once the cluster is verified, update your TBMQ configuration values:
 ## Installation
 
 Execute the following command to run the initial setup of the database.
-This command will launch a short-living TBMQ pod to provision necessary DB tables, indexes, etc.
+This command will launch a short-living ST-RMQTT pod to provision necessary DB tables, indexes, etc.
 
 ```bash
-./k8s-install-tbmq.sh
+./k8s-install-st-rmqtt.sh
 ```
 {: .copy-code}
 
 After this command is finished, you should see the next line in the console:
 
 ```text
-INFO  o.t.m.b.i.ThingsboardMqttBrokerInstallService - Installation finished successfully!
+INFO  o.t.m.b.i.SentientMqttBrokerInstallService - Installation finished successfully!
 ```
 
 {% capture aws-rds %}
 
-Otherwise, please check if you set the PostgreSQL URL and PostgreSQL password in the `tbmq-db-configmap.yml` correctly.
+Otherwise, please check if you set the PostgreSQL URL and PostgreSQL password in the `st-rmqtt-db-configmap.yml` correctly.
 
 {% endcapture %}
 {% include templates/info-banner.md content=aws-rds %}
@@ -364,7 +364,7 @@ Otherwise, please check if you set the PostgreSQL URL and PostgreSQL password in
 
 ### Configure HTTP(S) Load Balancer
 
-Configure HTTP(S) Load Balancer to access the web interface of your TBMQ {{tbmqSuffix}} instance. Basically, you have 2 possible options of configuration:
+Configure HTTP(S) Load Balancer to access the web interface of your ST-RMQTT {{st-rmqttSuffix}} instance. Basically, you have 2 possible options of configuration:
 
 * http — Load Balancer without HTTPS support. Recommended for **development**. The only advantage is simple configuration and minimum costs. May be a good option for development server but definitely not suitable for production.
 * https — Load Balancer with HTTPS support. Recommended for **production**. Acts as an SSL termination point. You may easily configure it to issue and maintain a valid SSL certificate. Automatically redirects all non-secure (HTTP) traffic to secure (HTTPS) port.
@@ -383,7 +383,7 @@ For using ssl certificates, we can add our certificate directly in Azure Applica
 az network application-gateway ssl-cert create \
    --resource-group $(az aks show --name $TB_CLUSTER_NAME --resource-group $AKS_RESOURCE_GROUP --query nodeResourceGroup | tr -d '"') \
    --gateway-name $AKS_GATEWAY\
-   --name TBMQHTTPSCert \
+   --name ST-RMQTTHTTPSCert \
    --cert-file YOUR_CERT \
    --cert-password YOUR_CERT_PASS
 ```
@@ -426,7 +426,7 @@ For further guidance, follow the [next instructions](https://learn.microsoft.com
 ### Upgrade to 2.2.0
 
 In this release, the MQTT authentication mechanism was migrated from YAML/env configuration into the database.
-During upgrade, TBMQ needs to know which authentication providers are enabled in your deployment.
+During upgrade, ST-RMQTT needs to know which authentication providers are enabled in your deployment.
 This information is provided through environment variables passed to the **upgrade pod**.
 
 The upgrade script requires a file named **`database-setup.yml`** that explicitly defines these variables.
@@ -450,7 +450,7 @@ Once the file is prepared and the values verified, proceed with the [upgrade pro
 
 ### Upgrade to 2.0.0
 
-For the TBMQ v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 6](#step-6-azure-cache-for-valkey) to complete the installation.
+For the ST-RMQTT v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 6](#step-6-azure-cache-for-valkey) to complete the installation.
 Only then you can proceed with the [upgrade](#run-upgrade).
 
 ### Run upgrade
@@ -470,12 +470,12 @@ git pull origin {{ site.release.broker_branch }}
 
 After that, execute the following command:
 
-{% capture tabspec %}tbmq-upgrade
-tbmq-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh
-tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md{% endcapture %}
+{% capture tabspec %}st-rmqtt-upgrade
+st-rmqtt-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh
+st-rmqtt-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md,/docs/{{docsPrefix}}mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md{% endcapture %}
 {% include tabs.html %}
 
-{% include templates/mqtt-broker/upgrade/stop-tbmq-pods-before-upgrade.md %}
+{% include templates/mqtt-broker/upgrade/stop-st-rmqtt-pods-before-upgrade.md %}
 
 {% else %}
 
@@ -485,14 +485,14 @@ tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/
 
 ## Cluster deletion
 
-Execute the following command to delete TBMQ nodes:
+Execute the following command to delete ST-RMQTT nodes:
 
 ```bash
-./k8s-delete-tbmq.sh
+./k8s-delete-st-rmqtt.sh
 ```
 {: .copy-code}
 
-Execute the following command to delete all TBMQ nodes and configmaps, load balancers, etc.:
+Execute the following command to delete all ST-RMQTT nodes and configmaps, load balancers, etc.:
 
 ```bash
 ./k8s-delete-all.sh

@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Asus Tinker Board S to ThingsBoard?
+title: How to connect Asus Tinker Board S to SENTIENT?
 category: Single-board computers
 chip: Rockchip RK3288-C
 connectivity: [HTTP, MQTT, WIFI, Bluetooth]

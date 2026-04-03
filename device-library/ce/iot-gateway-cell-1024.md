@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect IoT Gateway Cell 1024 to ThingsBoard?
+title: How to connect IoT Gateway Cell 1024 to SENTIENT?
 category: Other devices
 chip: ARM Cortex-A53
 connectivity: [Ethernet, WIFI, Bluetooth, SIGFOX, 4G, 5G]

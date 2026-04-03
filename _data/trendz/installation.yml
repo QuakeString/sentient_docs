@@ -1,27 +1,27 @@
 bigheader: "Installation"
-abstract: "Documentation for installation and configuration of Trendz Analytics."
+abstract: "Documentation for installation and configuration of SENTIENT ANALYTICS."
 toc:
 - title: Installation options
-  path: /docs/trendz/install/installation-options/
+  path: /docs/sentient-analytics/install/installation-options/
 - title: Cloud
-  path: /docs/trendz/install/cloud/
+  path: /docs/sentient-analytics/install/cloud/
 - title: On-premises
   section:
   - title: Ubuntu Server
-    path: /docs/trendz/install/ubuntu/
+    path: /docs/sentient-analytics/install/ubuntu/
   - title: CentOS/RHEL Server
-    path: /docs/trendz/install/rhel/
+    path: /docs/sentient-analytics/install/rhel/
   - title: Windows
-    path: /docs/trendz/install/windows/
+    path: /docs/sentient-analytics/install/windows/
   - title: Docker (Windows)
-    path: /docs/trendz/install/docker-windows/
+    path: /docs/sentient-analytics/install/docker-windows/
   - title: Docker (Linux or Mac OS)
-    path: /docs/trendz/install/docker/
+    path: /docs/sentient-analytics/install/docker/
   - title: Kubernetes
-    path: /docs/trendz/install/kubernetes/
+    path: /docs/sentient-analytics/install/kubernetes/
 - title: Upgrade instructions
-  path: /docs/trendz/install/upgrade-instructions/
+  path: /docs/sentient-analytics/install/upgrade-instructions/
 - title: Python Executor Configuration
-  path: /docs/trendz/install/python-executor-configuration/
+  path: /docs/sentient-analytics/install/python-executor-configuration/
 - title: Configuration properties
-  path: /docs/trendz/configuration-properties/
+  path: /docs/sentient-analytics/configuration-properties/

@@ -8,7 +8,7 @@ The table below describes the parameters required to configure TCP connection fo
 | unitId                | **0**                    | ID of current slave on Modbus                                                                                   |
 | deviceName            | **Modbus Slave Example** | Name of the current slave                                                                                       |
 | deviceProfile         | **default**              | Device profile of the current slave                                                                             |
-| sendDataToThingsBoard | **false**                | If set to **TRUE**, the Gateway will perform autoconfiguration and send values to ThingsBoard every poll period |
+| sendDataToSENTIENT | **false**                | If set to **TRUE**, the Gateway will perform autoconfiguration and send values to SENTIENT every poll period |
 | pollPeriod            | **5000**                 | Period in milliseconds for checking the attributes and the telemetry                                            |
 | ---                   
 

@@ -1,4 +1,4 @@
-{%- assign platform = "ThingsBoard CE" -%}
+{%- assign platform = "SENTIENT" -%}
 {%- assign current_version = include.version -%}
 {%- assign family = include.family -%}
 {%- assign current_version_with_platform = current_version -%}
@@ -13,7 +13,7 @@
 {%- assign x_status = include.x -%}
 
 {% if docsPrefix == "pe/" %}
-{%- assign platform = "ThingsBoard PE" -%}
+{%- assign platform = "SENTIENT Professional Edition" -%}
 {%- assign current_version_with_platform = current_version | append: "pe" -%}
 {% endif %}
 
@@ -58,9 +58,9 @@
 {%- assign prev_version_label = prev_version_label | append: "PE" -%}
 {% endif %}
 
-{% assign platform_hash = "#upgrading-thingsboard-ce-to-" %}
+{% assign platform_hash = "#upgrading-sentient-ce-to-" %}
 {% if docsPrefix == "pe/" %}
-{%- assign platform_hash = "#upgrading-thingsboard-pe-to-" -%}
+{%- assign platform_hash = "#upgrading-sentient-pe-to-" -%}
 {% endif %}
 
 {%- if use_external_link -%}
@@ -72,10 +72,10 @@
 {% capture difference %}
 **NOTE:**
 {% if curr_major > "4" or (curr_major == "4" and curr_minor >= "2") %}
-{% if include.is_latest_patch == "true" %}{% if prev_version contains ".x" %}{% assign prev_version_plus = prev_version | replace: ".x", "+" %}{% else %}{% assign prev_version_plus = prev_version | append: "+" %}{% endif %}These upgrade steps are applicable for ThingsBoard version {{ prev_version_plus }}.{% else %}These upgrade steps are applicable for ThingsBoard version {{ prev_version }}{% if patch_status == "true" %} or any {{ base_version }} patch{% endif %}.{% endif %}
+{% if include.is_latest_patch == "true" %}{% if prev_version contains ".x" %}{% assign prev_version_plus = prev_version | replace: ".x", "+" %}{% else %}{% assign prev_version_plus = prev_version | append: "+" %}{% endif %}These upgrade steps are applicable for SENTIENT version {{ prev_version_plus }}.{% else %}These upgrade steps are applicable for SENTIENT version {{ prev_version }}{% if patch_status == "true" %} or any {{ base_version }} patch{% endif %}.{% endif %}
 In order to upgrade to {{ current_version_with_platform | upcase }} you need to [**upgrade to {{ prev_version }} first**]({{ prev_version_href }}).
 {% else %}
-These upgrade steps are applicable for ThingsBoard version {{ prev_version_label }}{% if applicable_versions %}{% assign versions = applicable_versions | split: "," %}{% for v in versions %} and ThingsBoard version {{ v | strip }}{% endfor %}{% endif %}.
+These upgrade steps are applicable for SENTIENT version {{ prev_version_label }}{% if applicable_versions %}{% assign versions = applicable_versions | split: "," %}{% for v in versions %} and SENTIENT version {{ v | strip }}{% endfor %}{% endif %}.
 In order to upgrade to {{ current_version_with_platform | upcase }} you need to [**upgrade to {{ prev_version_label }} first**]({{ prev_version_href }}).
 {% endif %}
 {% endcapture %}
@@ -111,31 +111,31 @@ In order to upgrade to {{ current_version_with_platform | upcase }} you need to 
 {% include templates/install/tb-350-update.md %}
 {% endif %}
 
-#### ThingsBoard{% if docsPrefix == "pe/" %} PE{% endif %} package download
+#### SENTIENT{% if docsPrefix == "pe/" %} PE{% endif %} package download
 
 {% assign upgrade_package = "" %}
 {% if docsPrefix == "pe/" %}
-{% assign upgrade_package = "thingsboard-windows-" %}
+{% assign upgrade_package = "sentient-windows-" %}
 {% if zip == "true" %}
 {% assign upgrade_package = upgrade_package | append: current_version | append: "pe.zip" %}
 {% else %}
 {% assign upgrade_package = upgrade_package | append: "setup-" | append: current_version | append: "pe.exe" %}
 {% endif %}
-Download ThingsBoard PE installation package for Windows: [{{ upgrade_package }}](https://dist.thingsboard.io/{{ upgrade_package }}).
+Download SENTIENT Professional Edition installation package for Windows: [{{ upgrade_package }}](https://dist.docs.sentient.invenia.in/{{ upgrade_package }}).
 {% else %}
-Download ThingsBoard installation file for Windows: [thingsboard-windows-{{ current_version }}.zip](https://github.com/thingsboard/thingsboard/releases/download/v{{ current_version }}/thingsboard-windows-{{ current_version }}.zip).
+Download SENTIENT installation file for Windows: [sentient-windows-{{ current_version }}.zip](https://github.com/sentient/sentient/releases/download/v{{ current_version }}/sentient-windows-{{ current_version }}.zip).
 {% endif %}
 
-#### ThingsBoard{% if docsPrefix == "pe/" %} PE{% endif %} service upgrade
+#### SENTIENT{% if docsPrefix == "pe/" %} PE{% endif %} service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard{% if docsPrefix == "pe/"%} PE{% endif %} configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
+* Make a backup of previous SENTIENT{% if docsPrefix == "pe/"%} PE{% endif %} configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
 {% if docsPrefix == "pe/" %}
 {% if zip == "true" %}
 * Copy content of the **{{ upgrade_package }}** to the same location.
@@ -144,10 +144,10 @@ net stop thingsboard
 {% endif %}
 {% endif %}
 {% if docsPrefix != "pe/" %}
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
 {% endif %}
-* Compare and merge your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
+* Compare and merge your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
 
 
 {% capture update_note %}
@@ -165,7 +165,7 @@ If you are upgrading from version {{ previous_version }}, you must run the scrip
 Execute regular upgrade script:
 
 ```text
-C:\thingsboard>upgrade.bat{% if manual_version_upgrade == "true" %} --fromVersion={% if manual_version_upgrade_label %}{{ manual_version_upgrade_label }}{% else %}{{ previous_version }}{% endif %}{% endif %}
+C:\sentient>upgrade.bat{% if manual_version_upgrade == "true" %} --fromVersion={% if manual_version_upgrade_label %}{{ manual_version_upgrade_label }}{% else %}{{ previous_version }}{% endif %}{% endif %}
 ```
 {: .copy-code}
 {% endcapture %}
@@ -192,13 +192,13 @@ Scripts listed above should be executed using Administrator Role.
 
 #### Start the service
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 
 {% if current_version == "3.4.2" %}
 {% capture default-jwt %}
-Update the JWT signing key if you use the default one "thingsboardDefaultSigningKey" on production environments. See [JWT security settings](/docs/user-guide/ui/security-settings/#jwt-security-settings) for details.
+Update the JWT signing key if you use the default one "sentientDefaultSigningKey" on production environments. See [JWT security settings](/docs/user-guide/ui/security-settings/#jwt-security-settings) for details.
 {% endcapture %}
 {% include templates/info-banner.md content=default-jwt %}
 {% endif %}

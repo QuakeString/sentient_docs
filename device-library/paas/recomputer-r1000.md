@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect reComputer R1000 to ThingsBoard?
+title: How to connect reComputer R1000 to SENTIENT?
 category: Other devices
 connectivity: [LoRaWAN, Ethernet, WIFI, Bluetooth, 4G]
 chip: R1000

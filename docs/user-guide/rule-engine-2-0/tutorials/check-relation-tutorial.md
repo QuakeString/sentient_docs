@@ -15,7 +15,7 @@ Let’s assume the following use case:
 
  - You have 2 devices:
 
-   - **Smoke Detector** with the **Smoke Sensor** which sends data to ThingsBoard when it appears.
+   - **Smoke Detector** with the **Smoke Sensor** which sends data to SENTIENT when it appears.
 
    - **Fire Alarm System** which provides a fire alarm, when the smoke is present.
 
@@ -31,7 +31,7 @@ You need to read the following guides before you start this tutorial:
 
 ## Adding the devices and creating the relation between them
 
-  Add two Device entity in ThingsBoard:
+  Add two Device entity in SENTIENT:
 
    - Smoke Detector is represented as a Device. Its name is **Smoke Detector** and its type is **Smoke Sensor**.
 
@@ -309,7 +309,7 @@ The following screenshot shows how the final **Root Rule Chain** should look lik
 - Use the Rest APIs, [Telemetry upload APIs](/docs/reference/http-api/#telemetry-upload-api), for posting telemetry from the device **Smoke Detector**. <br>
 
 {% highlight bash %}
-curl -v -X POST -d '{"smoke":"true"}' https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+curl -v -X POST -d '{"smoke":"true"}' https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 
 **you need to replace $ACCESS_TOKEN with the actual device token**
 {% endhighlight %}

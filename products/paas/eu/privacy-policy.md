@@ -1,7 +1,7 @@
 ---
 layout: plain
-title: ThingsBoard Cloud Privacy Policy
-description: ThingsBoard Cloud Privacy Policy
+title: SENTIENT Cloud Privacy Policy
+description: SENTIENT Cloud Privacy Policy
 
 ---
 
@@ -15,7 +15,7 @@ description: ThingsBoard Cloud Privacy Policy
 <br>
 
 <p> <b>1. Definition of Policy</b> </p> 
-<p> 1.1 The following Privacy Policy is adopted by ThingsBoard, Inc. (“ThingsBoard” or “We”) in regards to the use of ThingsBoard Cloud Platform and related web pages and services (the <b>“Service”</b>), excluding affiliated websites covered by independent privacy policies. This Privacy Policy applies to information collected through the Service and otherwise (for example, if you contact us directly). However, it does not cover any information, whether personal or not, that may be collected through other websites or in other venues. Your use of the Service and our remaining services is subject to this Privacy Policy, which may be updated periodically to reflect changes in how we collect, use, and/or share information.</p>
+<p> 1.1 The following Privacy Policy is adopted by SENTIENT, Inc. (“SENTIENT” or “We”) in regards to the use of SENTIENT Cloud Platform and related web pages and services (the <b>“Service”</b>), excluding affiliated websites covered by independent privacy policies. This Privacy Policy applies to information collected through the Service and otherwise (for example, if you contact us directly). However, it does not cover any information, whether personal or not, that may be collected through other websites or in other venues. Your use of the Service and our remaining services is subject to this Privacy Policy, which may be updated periodically to reflect changes in how we collect, use, and/or share information.</p>
 
 <p> 1.2 It is your responsibility to review this Privacy Policy together with the actual date of the change. Please check this Privacy Policy each time you use our Service to ensure you are aware of any changes in our practices. Your continued use of the Service will signify your acceptance of any changes to our Privacy Policy.</p>
 
@@ -33,13 +33,13 @@ description: ThingsBoard Cloud Privacy Policy
 
 <br>
 <p> <b>3. Purpose and Use</b> </p> 
-<p> 3.1 ThingsBoard, Inc. uses the personally identifiable information to provide you with public information regarding us and our services; to share news, updates and reports in response to your inquiries; for gaining an understanding of your needs; for performing statistical analysis or analyses of global Service usage; for security and legal compliance; for notifying you of any changes to this Service or our remain services; for billing; and for other services. We also reserve the right to make full use of information that is not personally identifiable information.</p> 
+<p> 3.1 SENTIENT, Inc. uses the personally identifiable information to provide you with public information regarding us and our services; to share news, updates and reports in response to your inquiries; for gaining an understanding of your needs; for performing statistical analysis or analyses of global Service usage; for security and legal compliance; for notifying you of any changes to this Service or our remain services; for billing; and for other services. We also reserve the right to make full use of information that is not personally identifiable information.</p> 
 
 <br>
 <p> <b>4. Disclosure</b> </p> 
 <p>4.1 We will not sell, share, or rent your information to others except to our staff and to trusted third parties and affiliates when we need to share the information to provide a product or service you have requested. Without limiting the above, we will share your personal data with third parties only in the ways that are described in this Privacy Policy.</p> 
 
-<p>4.2 It may happen, the disclosure of your personally identifiable information would be necessary in response to a subpoena, court order, or a request for cooperation from law enforcement or other governmental agency globally, in accordance with applicable law. Your personal data may also be shared when we believe disclosure is necessary in connection with efforts to investigate, prevent, or take other action regarding actual or suspected illegal activity or other wrongdoing, to protect and defend the rights, property or safety of the Service, ThingsBoard, Inc., our users, or others.</p> 
+<p>4.2 It may happen, the disclosure of your personally identifiable information would be necessary in response to a subpoena, court order, or a request for cooperation from law enforcement or other governmental agency globally, in accordance with applicable law. Your personal data may also be shared when we believe disclosure is necessary in connection with efforts to investigate, prevent, or take other action regarding actual or suspected illegal activity or other wrongdoing, to protect and defend the rights, property or safety of the Service, SENTIENT, Inc., our users, or others.</p> 
 
 <p> 4.3 We will use commercially reasonable efforts to make you aware of the disclosure of your personal information contrary to the terms set forth in this Privacy Policy (e.g., in the event of any material security breach).</p> 
 

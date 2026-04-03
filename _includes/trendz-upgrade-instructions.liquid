@@ -1,4 +1,4 @@
-{% assign upgrade_instructions_data = site.data.trendz-upgrade-instructions-data %}
+{% assign upgrade_instructions_data = site.data.sentient-analytics-upgrade-instructions-data %}
 {% assign family = include.family %}
 {% assign os = include.os %}
 
@@ -35,13 +35,13 @@
 {% endif %}
 
 {% if os == "windows" %}
-{% include templates/trendz/upgrade-instructions/windows-upgrade-instructions.md family=family version=display_version patch_status=patch_status base_version=base_version x=data.x %}
+{% include templates/sentient-analytics/upgrade-instructions/windows-upgrade-instructions.md family=family version=display_version patch_status=patch_status base_version=base_version x=data.x %}
 {% elsif os == "ubuntu" %}
-{% include templates/trendz/upgrade-instructions/ubuntu-upgrade-instructions.md family=family version=display_version patch_status=patch_status base_version=base_version x=data.x %}
+{% include templates/sentient-analytics/upgrade-instructions/ubuntu-upgrade-instructions.md family=family version=display_version patch_status=patch_status base_version=base_version x=data.x %}
 {% elsif os == "centos" %}
-{% include templates/trendz/upgrade-instructions/centos-upgrade-instructions.md family=family version=display_version patch_status=patch_status base_version=base_version x=data.x %}
+{% include templates/sentient-analytics/upgrade-instructions/centos-upgrade-instructions.md family=family version=display_version patch_status=patch_status base_version=base_version x=data.x %}
 {% elsif os == "docker" %}
-{% include templates/trendz/upgrade-instructions/docker-upgrade-instructions.md family=family version=display_version patch_status=patch_status base_version=base_version %}
+{% include templates/sentient-analytics/upgrade-instructions/docker-upgrade-instructions.md family=family version=display_version patch_status=patch_status base_version=base_version %}
 {% endif %}
 {% endif %}
 

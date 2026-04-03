@@ -1,188 +1,188 @@
 ---
-layout: docwithnav-trendz
-title: Getting started with Trendz Analytics
-description: ThingsBoard Trendz - Business Intelligence and Analytics Platform for IoT-powered Business
+layout: docwithnav-sentient-analytics
+title: Getting started with SENTIENT ANALYTICS
+description: SENTIENT SENTIENT ANALYTICS - Business Intelligence and Analytics Platform for IoT-powered Business
 
 demo-topology:
   0:
-    image: /images/trendz/getting-started/demo-topology-1.png
+    image: /images/sentient-analytics/getting-started/demo-topology-1.png
     title: "Relationship between business entities that are used in getting-started guide."
   1:
-    image: /images/trendz/getting-started/demo-topology-2.png
+    image: /images/sentient-analytics/getting-started/demo-topology-2.png
     title: "Business entity fields of EM building asset."
   2:
-    image: /images/trendz/getting-started/demo-topology-3.png
+    image: /images/sentient-analytics/getting-started/demo-topology-3.png
     title: "Business entity fields of EM apartment asset."
   3:
-    image: /images/trendz/getting-started/demo-topology-4.png
+    image: /images/sentient-analytics/getting-started/demo-topology-4.png
     title: "Business entity fields of EM energy meter device."
   4:
-    image: /images/trendz/getting-started/demo-topology-5.png
+    image: /images/sentient-analytics/getting-started/demo-topology-5.png
     title: "Business entity fields of EM heat meter device."
 
 discover-topology:
   0:
-    image: /images/trendz/getting-started/topology1.png
-    title: "Once logged in you should click on <b>Discover Topology</b> button to discover ThingsBoard entities."
+    image: /images/sentient-analytics/getting-started/topology1.png
+    title: "Once logged in you should click on <b>Discover Topology</b> button to discover SENTIENT entities."
   1:
-    image: /images/trendz/getting-started/topology2.png
+    image: /images/sentient-analytics/getting-started/topology2.png
     title: 'When Topology Discovery finished click <b>Finish</b>.'
 
 first-view:
   0:
-    image: /images/trendz/getting-started/first-view-1.png
+    image: /images/sentient-analytics/getting-started/first-view-1.png
     title: "On the home page, click the <b>Create view</b> button and select <b>Line</b>."
   1:
-    image: /images/trendz/getting-started/first-view-2.png
+    image: /images/sentient-analytics/getting-started/first-view-2.png
     title: "Drag and drop all necessary fields to each section."
   2:
-    image: /images/trendz/getting-started/first-view-3.png
+    image: /images/sentient-analytics/getting-started/first-view-3.png
     title: "Set the date picker to <b>Today</b>, and set \"Group by\" to <b>Hour</b>."
   3:
-    image: /images/trendz/getting-started/first-view-4.png
+    image: /images/sentient-analytics/getting-started/first-view-4.png
     title: "Add `EM building.EM building` into the filters section to view the consumption of a specific building."
   4:
-    image: /images/trendz/getting-started/first-view-5.png
+    image: /images/sentient-analytics/getting-started/first-view-5.png
     title: "Click <b>Build report</b> — you will see a generated line chart, broken down by buildings."
   5:
-    image: /images/trendz/getting-started/first-view-6.png
+    image: /images/sentient-analytics/getting-started/first-view-6.png
     title: "Rename the view by clicking the pencil icon next to the name and name it \"Building energy consumption trends for today\"."
   6:
-    image: /images/trendz/getting-started/first-view-7.png
+    image: /images/sentient-analytics/getting-started/first-view-7.png
     title: "Click the <b>Save Changes</b> button to save the chart."
   7:
-    image: /images/trendz/getting-started/first-view-8.png
+    image: /images/sentient-analytics/getting-started/first-view-8.png
     title: "In the pop-up section, click the <b>Save</b> button."
 
 add-to-tb:
   0:
-    image: /images/trendz/getting-started/add-to-tb-1.png
-    title: "Click the <b>Share to ThingsBoard</b> button and choose <b>Add on New Dashboard</b>."
+    image: /images/sentient-analytics/getting-started/add-to-tb-1.png
+    title: "Click the <b>Share to SENTIENT</b> button and choose <b>Add on New Dashboard</b>."
   1:
-    image: /images/trendz/getting-started/add-to-tb-2.png
+    image: /images/sentient-analytics/getting-started/add-to-tb-2.png
     title: "Set the dashboard name to `Energy consumption`, leave the rest of the settings as default. Click <b>Add</b> button."
   2:
-    image: /images/trendz/getting-started/add-to-tb-3.png
-    title: "On the ThingsBoard platform, you will see a new dashboard named `Energy consumption` with a generated alias and Trendz line view."
+    image: /images/sentient-analytics/getting-started/add-to-tb-3.png
+    title: "On the SENTIENT platform, you will see a new dashboard named `Energy consumption` with a generated alias and SENTIENT ANALYTICS line view."
 
 create-calculation:
   0:
-    image: /images/trendz/getting-started/create-calculation-1.png
+    image: /images/sentient-analytics/getting-started/create-calculation-1.png
     title: "Go to the <b>Calculated Fields</b> page and Click the <b>Create Calculated Field</b> button"
   1:
-    image: /images/trendz/getting-started/create-calculation-2.png
+    image: /images/sentient-analytics/getting-started/create-calculation-2.png
     title: "Set the name to `Consumption Per Square Meter`, the key to `cons_per_sq_meter` and the entity to `EM apartment`."
   2:
-    image: /images/trendz/getting-started/create-calculation-3.png
+    image: /images/sentient-analytics/getting-started/create-calculation-3.png
     title: "Copy and paste the following code into the code editor, than click <b>Run Test</b>."
   3:
-    image: /images/trendz/getting-started/create-calculation-4.png
+    image: /images/sentient-analytics/getting-started/create-calculation-4.png
     title: "Validate the calculation and click <b>Save Field</b> button to save it."
   4:
-    image: /images/trendz/getting-started/create-calculation-5.png
+    image: /images/sentient-analytics/getting-started/create-calculation-5.png
     title: "In the popup window, click <b>Enable</b>."
   5:
-    image: /images/trendz/getting-started/create-calculation-6.png
+    image: /images/sentient-analytics/getting-started/create-calculation-6.png
     title: "Enable calculation result saving and click the <b>Save</b> button."
   
 calculation-view:
   0:
-    image: /images/trendz/getting-started/calculation-view-1.png
+    image: /images/sentient-analytics/getting-started/calculation-view-1.png
     title: "On the home page, click the <b>Create view</b> button and select <b>Table</b>."
   1:
-    image: /images/trendz/getting-started/calculation-view-2.png
+    image: /images/sentient-analytics/getting-started/calculation-view-2.png
     title: "Add all necessary fields to each section."
   2:
-    image: /images/trendz/getting-started/calculation-view-3.png
+    image: /images/sentient-analytics/getting-started/calculation-view-3.png
     title: "Set up date fields and filters."
   3:
-    image: /images/trendz/getting-started/calculation-view-4.png
+    image: /images/sentient-analytics/getting-started/calculation-view-4.png
     title: "Click <b>Build report</b>."
   4:
-    image: /images/trendz/getting-started/calculation-view-5.png
+    image: /images/sentient-analytics/getting-started/calculation-view-5.png
     title: "Rename the view to \"Apartments total consumption per square meter for today\"."
   5:
-    image: /images/trendz/getting-started/calculation-view-6.png
+    image: /images/sentient-analytics/getting-started/calculation-view-6.png
     title: "Click the <b>Save Changes</b> button to save the chart."
   6:
-    image: /images/trendz/getting-started/calculation-view-7.png
+    image: /images/sentient-analytics/getting-started/calculation-view-7.png
     title: "In the pop-up section, click the <b>Save</b> button."
 
 create-prediction:
   0:
-    image: /images/trendz/getting-started/create-prediction-1.png
+    image: /images/sentient-analytics/getting-started/create-prediction-1.png
     title: "Go to the <b>Prediction Model</b> page and click the <b>Create model</b> button."
   1:
-    image: /images/trendz/getting-started/create-prediction-2.png
+    image: /images/sentient-analytics/getting-started/create-prediction-2.png
     title: "Set the entity to `EM energy meter`, the prediction field to `energyConsumption`, the prediction method to `FOURIER_TRANSFORMATION` and the aggregation to `SUM`."
   2:
-    image: /images/trendz/getting-started/create-prediction-3.png
+    image: /images/sentient-analytics/getting-started/create-prediction-3.png
     title: "Click the <b>Train Model</b> button and wait until the accuracy tab is shown."
   3:
-    image: /images/trendz/getting-started/create-prediction-4.png
+    image: /images/sentient-analytics/getting-started/create-prediction-4.png
     title: "Click the <b>Jobs</b> button."
   4:
-    image: /images/trendz/getting-started/create-prediction-5.png
+    image: /images/sentient-analytics/getting-started/create-prediction-5.png
     title: "In the popup window, enable prediction model refreshing and click the <b>Save</b> button."
 
 prediction-view:
   0:
-    image: /images/trendz/getting-started/prediction-view-1.png
+    image: /images/sentient-analytics/getting-started/prediction-view-1.png
     title: "Click the <b>Create view</b> button and select <b>Bar</b>."
   1:
-    image: /images/trendz/getting-started/prediction-view-2.png
+    image: /images/sentient-analytics/getting-started/prediction-view-2.png
     title: "In the <b>X Axis</b> section, add `Date (DAY Mon-Sun)` (To select it, click on the date field in the <b>X Axis</b> section, and choose the appropriate aggregation using the dropdown. Click anywhere on the screen to close it.)."
   2:
-    image: /images/trendz/getting-started/prediction-view-3.png
+    image: /images/sentient-analytics/getting-started/prediction-view-3.png
     title: "Add all other fields to each section."
   3:
-    image: /images/trendz/getting-started/prediction-view-4.png
+    image: /images/sentient-analytics/getting-started/prediction-view-4.png
     title: "Click <b>Build report</b>."
   4:
-    image: /images/trendz/getting-started/prediction-view-5.png
+    image: /images/sentient-analytics/getting-started/prediction-view-5.png
     title: "Rename the view to \"Energy consumption forecast for this week\"."
   5:
-    image: /images/trendz/getting-started/prediction-view-6.png
+    image: /images/sentient-analytics/getting-started/prediction-view-6.png
     title: "Click the <b>Save Changes</b> button to save the chart."
   6:
-    image: /images/trendz/getting-started/prediction-view-7.png
+    image: /images/sentient-analytics/getting-started/prediction-view-7.png
     title: "In the pop-up section, click the <b>Save</b> button."
 
 anomaly:
   0: 
-    image: /images/trendz/getting-started/anomaly-1.png
+    image: /images/sentient-analytics/getting-started/anomaly-1.png
     title: "Go to the <b>Anomaly Models</b> page and click the <b>Create model</b> button."
   1:
-    image: /images/trendz/getting-started/anomaly-2.png
+    image: /images/sentient-analytics/getting-started/anomaly-2.png
     title: "Set the entity to `EM energy meter`, the fields to `energyConsumption` only and the name to `Energy Meter Anomaly Model`."
   2:
-    image: /images/trendz/getting-started/anomaly-3.png
+    image: /images/sentient-analytics/getting-started/anomaly-3.png
     title: "Click <b>Build Model</b>."
   3:
-    image: /images/trendz/getting-started/anomaly-4.png
+    image: /images/sentient-analytics/getting-started/anomaly-4.png
     title: "Go to the <b>Review</b> tab, and validate the detected anomalies."
   4:
-    image: /images/trendz/getting-started/anomaly-5.png
+    image: /images/sentient-analytics/getting-started/anomaly-5.png
     title: "Click the <b>Jobs</b> button."
   5:
-    image: /images/trendz/getting-started/anomaly-6.png
+    image: /images/sentient-analytics/getting-started/anomaly-6.png
     title: "Enable anomaly model refreshing, saving anomaly data, anomaly alarms creation and click the <b>Save</b> button."
 
 ai-assistance:
   0:
-    image: /images/trendz/getting-started/ai-assistance-1.png
+    image: /images/sentient-analytics/getting-started/ai-assistance-1.png
     title: "Go to the <b>Assistant</b> page and click <b>New Chat</b>."
   1:
-    image: /images/trendz/getting-started/ai-assistance-2.png
+    image: /images/sentient-analytics/getting-started/ai-assistance-2.png
     title: "When prompted to select topology entities, click <b>Save</b>."
   2:
-    image: /images/trendz/getting-started/ai-assistance-3.png
+    image: /images/sentient-analytics/getting-started/ai-assistance-3.png
     title: "In the chat input, type: \"I want to see how total energy consumption was changing during the last 14 days for each building\"."
   3:
-    image: /images/trendz/getting-started/ai-assistance-4.png
+    image: /images/sentient-analytics/getting-started/ai-assistance-4.png
     title: "Review the generated view, validate the results and type a follow-up instruction: \"Show data only about Alpire building\"."
   4:
-    image: /images/trendz/getting-started/ai-assistance-5.png
+    image: /images/sentient-analytics/getting-started/ai-assistance-5.png
     title: "Observe that a building filter has been added automatically."
 
 ---
@@ -192,16 +192,16 @@ ai-assistance:
 
 ## Introduction
 
-The goal of this tutorial is to demonstrate the basic usage of Trendz Analytics. You will learn how to:
+The goal of this tutorial is to demonstrate the basic usage of SENTIENT ANALYTICS. You will learn how to:
 
-* Log in to Trendz for the first time
-* Discover topology from ThingsBoard
+* Log in to SENTIENT ANALYTICS for the first time
+* Discover topology from SENTIENT
 * Create basic visualizations
-* Add a Trendz view to a ThingsBoard dashboard
+* Add a SENTIENT ANALYTICS view to a SENTIENT dashboard
 * Calculate new telemetry based on existing telemetry
 * Predict telemetry using historical data
 * Detect anomalies in telemetry data
-* Interact with Trendz AI Assistant
+* Interact with SENTIENT ANALYTICS AI Assistant
 
 <div id="video">  
     <div id="video_wrapper">
@@ -211,10 +211,10 @@ The goal of this tutorial is to demonstrate the basic usage of Trendz Analytics.
 
 ## Prerequisites
 
-You will need to have a Trendz Analytics up and running.
-The easiest way is to use [Trendz Analytics add-on in ThingsBoard Cloud](/docs/trendz/install/cloud/) SaaS.
+You will need to have a SENTIENT ANALYTICS up and running.
+The easiest way is to use [SENTIENT ANALYTICS add-on in SENTIENT Cloud](/docs/sentient-analytics/install/cloud/) SaaS.
 
-Alternatively, you can install Trendz Analytics using the [Installation Guide](/docs/trendz/install/installation-options/).
+Alternatively, you can install SENTIENT ANALYTICS using the [Installation Guide](/docs/sentient-analytics/install/installation-options/).
 
 For this guide, we will use Building and Apartment assets, along with Heat Meter and Energy Meter devices.  
 To follow along, you can use your own devices and apply the same concepts. If you don't have any devices, you can try any [available solution template](/docs/pe/solution-templates/overview/).  
@@ -224,14 +224,14 @@ The full set of fields and relationships used in this guide is shown below:
 
 ## Step 1. Discover topology
 
-Once the Trendz Service is up and running, you can sign in to the Trendz UI using the following URL:
+Once the SENTIENT ANALYTICS Service is up and running, you can sign in to the SENTIENT ANALYTICS UI using the following URL:
 
-* ThingsBoard Cloud (North America): [https://thingsboard.cloud/trendz/](https://thingsboard.cloud/trendz/)
-* ThingsBoard Cloud (Europe): [https://eu.thingsboard.cloud/trendz/](https://eu.thingsboard.cloud/trendz/)
-* Self-hosted Trendz: [http://localhost:8888/trendz/](http://localhost:8888/trendz/)
+* SENTIENT Cloud (North America): [https://sentient.cloud/sentient-analytics/](https://sentient.cloud/sentient-analytics/)
+* SENTIENT Cloud (Europe): [https://eu.sentient.cloud/sentient-analytics/](https://eu.sentient.cloud/sentient-analytics/)
+* Self-hosted SENTIENT ANALYTICS: [http://localhost:8888/sentient-analytics/](http://localhost:8888/sentient-analytics/)
 
-You can log in using Tenant Administrator credentials from ThingsBoard. Any Tenant Administrator or Customer User can 
-sign in to the Trendz UI using the same login/password they use in ThingsBoard.
+You can log in using Tenant Administrator credentials from SENTIENT. Any Tenant Administrator or Customer User can 
+sign in to the SENTIENT ANALYTICS UI using the same login/password they use in SENTIENT.
 
 {% include images-gallery.html imageCollection="discover-topology" %}
 
@@ -258,22 +258,22 @@ Build and save the view:
 * Click the **Save Changes** button to save the chart
 * In the pop-up section, click the **Save** button
 
-You can find out more about different types of views you can build with Trendz [here](/docs/trendz/visualizations-overview)
+You can find out more about different types of views you can build with SENTIENT ANALYTICS [here](/docs/sentient-analytics/visualizations-overview)
 
 {% include images-gallery.html imageCollection="first-view" %}
 
-## Step 3. Add line chart to ThingsBoard Dashboard
+## Step 3. Add line chart to SENTIENT Dashboard
 
-Now we can add this line chart to a ThingsBoard dashboard.
+Now we can add this line chart to a SENTIENT dashboard.
 
-* Click the **Share to ThingsBoard** button and choose **Add on New Dashboard**
+* Click the **Share to SENTIENT** button and choose **Add on New Dashboard**
 * Set the dashboard name to `Energy consumption`; leave the rest of the settings as default. Click the **Add** button.
-* On the ThingsBoard platform, you will see a new dashboard named `Energy consumption` with a generated alias and Trendz line view
+* On the SENTIENT platform, you will see a new dashboard named `Energy consumption` with a generated alias and SENTIENT ANALYTICS line view
   (you can check charts for each building by clicking on each building in the table).  
 
-A new dashboard in ThingsBoard is created, and your chart is there with the ability to filter by building.
+A new dashboard in SENTIENT is created, and your chart is there with the ability to filter by building.
 
-You can find more about sharing views [here](/docs/trendz/embed-visuals)
+You can find more about sharing views [here](/docs/sentient-analytics/embed-visuals)
 
 {% include images-gallery.html imageCollection="add-to-tb" %}
 
@@ -307,7 +307,7 @@ Firstly, we will create a calculated field, it could be used across multiple vie
 * Enable *calculation result saving* and click the **Save** button
   (you can leave the other properties as default)
 
-Your calculated field is now ready to use. Learn more about calculated fields [here](/docs/trendz/calculations/overview).
+Your calculated field is now ready to use. Learn more about calculated fields [here](/docs/sentient-analytics/calculations/overview).
 
 {% include images-gallery.html imageCollection="create-calculation" %}
 
@@ -355,7 +355,7 @@ Firstly, we will create a prediction model. It could be used across multiple vie
 * Click the **Train Model** button and wait until the accuracy tab is shown
 * Click the **Jobs** button; in the popup window, enable prediction model refreshing and click the **Save** button (you can leave the other properties as default)
 
-Your prediction model is now ready to use. Learn more about prediction models [here](/docs/trendz/prediction).
+Your prediction model is now ready to use. Learn more about prediction models [here](/docs/sentient-analytics/prediction).
 
 {% include images-gallery.html imageCollection="create-prediction" %}
 
@@ -389,7 +389,7 @@ Historical data for each building is visualized with solid bars, and the forecas
 
 ## Step 6. Find anomalies in energy consumption
 
-Trendz supports out-of-the-box anomaly detection tools. Let's explore them by finding anomalies in the energy consumption telemetry.
+SENTIENT ANALYTICS supports out-of-the-box anomaly detection tools. Let's explore them by finding anomalies in the energy consumption telemetry.
 
 * Go to the **Anomaly Models** page by clicking the **Anomalies** icon on the left panel
 * Click the **Create model** button
@@ -398,15 +398,15 @@ Trendz supports out-of-the-box anomaly detection tools. Let's explore them by fi
 * Set the name to `Energy Meter Anomaly Model`
 * Click **Build Model**, go to the **Review** tab, and validate the detected anomalies
 
-Now we can set up an anomaly refresh job to automatically find anomalies and create alarms in ThingsBoard for them. To do this, you need to:
+Now we can set up an anomaly refresh job to automatically find anomalies and create alarms in SENTIENT for them. To do this, you need to:
 * Click the **Jobs** button; in the popup window:
   * Enable anomaly model refreshing
-  * Enable saving anomaly data (to ThingsBoard)
-  * Enable anomaly alarms creation (in ThingsBoard)
+  * Enable saving anomaly data (to SENTIENT)
+  * Enable anomaly alarms creation (in SENTIENT)
   * Click the **Save** button
   
 Now, as soon as an anomaly occurs, the anomaly model will detect it and an alert will be created immediately.
-You can find out more about anomaly models [here](/docs/trendz/anomaly/overview).
+You can find out more about anomaly models [here](/docs/sentient-analytics/anomaly/overview).
 
 {% include images-gallery.html imageCollection="anomaly" %}
 
@@ -423,7 +423,7 @@ Let's explore AI Assistance — an AI-powered feature that can build views based
   "Show data only about Alpire building"
 * Observe that a building filter has been added automatically
 
-You can read more about AI Assistance [here](/docs/trendz/ai-assistance-overview)
+You can read more about AI Assistance [here](/docs/sentient-analytics/ai-assistance-overview)
 
 {% include images-gallery.html imageCollection="ai-assistance" %}
 

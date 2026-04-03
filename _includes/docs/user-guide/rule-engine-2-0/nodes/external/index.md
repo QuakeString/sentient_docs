@@ -1,6 +1,6 @@
-External nodes are the integration components of ThingsBoard's rule engine that send messages to third-party services and external systems.
+External nodes are the integration components of SENTIENT's rule engine that send messages to third-party services and external systems.
 
-These nodes publish or transmit data to destinations outside ThingsBoard, including cloud platforms (AWS, Azure, GCP), messaging systems (MQTT, Kafka, RabbitMQ), 
+These nodes publish or transmit data to destinations outside SENTIENT, including cloud platforms (AWS, Azure, GCP), messaging systems (MQTT, Kafka, RabbitMQ), 
 communication services (email, SMS, Slack), AI services, and REST APIs.
 
 This allows rule chains to integrate with external infrastructure and services as part of automated workflows.

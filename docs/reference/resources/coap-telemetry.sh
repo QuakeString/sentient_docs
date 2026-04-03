@@ -1,1 +1,1 @@
-cat telemetry-data-as-object.json | coap post coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry
+cat telemetry-data-as-object.json | coap post coap://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry

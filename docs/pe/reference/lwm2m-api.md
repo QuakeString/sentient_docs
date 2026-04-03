@@ -8,7 +8,7 @@ description: Supported LwM2M API Reference for IoT Devices
 upload-models:
     0:
         image: /images/lwm2m/upload-lwm2m-models-1-pe.png
-        title: 'Log in to your ThingsBoard PE instance as a System administrator. Navigate to the "Resources library" page under the "Resources" section. Click the "+" (Add resource) button in the top-right corner of the window.'
+        title: 'Log in to your SENTIENT Professional Edition instance as a System administrator. Navigate to the "Resources library" page under the "Resources" section. Click the "+" (Add resource) button in the top-right corner of the window.'
     1:
         image: /images/lwm2m/upload-lwm2m-models-2-pe.png
         title: 'Upload one or more LwM2M model files. Click "Add" to complete the upload.'
@@ -41,16 +41,16 @@ device-objects:
 configure-mapping-1:
     0:
         image: /images/lwm2m/configure-mapping-1-pe.png
-        title: 'For the Device object (#3_1.2), check the "Attribute" box for resource #0 (Manufacturer), resource #1 (Model Number) and resource #2 (Serial Number) so that the server can track these values, receive updates, and store them as attributes in ThingsBoard.'
+        title: 'For the Device object (#3_1.2), check the "Attribute" box for resource #0 (Manufacturer), resource #1 (Model Number) and resource #2 (Serial Number) so that the server can track these values, receive updates, and store them as attributes in SENTIENT.'
     1:
         image: /images/lwm2m/configure-mapping-2-pe.png
-        title: 'For the Connectivity Monitoring object (#4_1.3), check the "Telemetry" and/or "Observe" boxes for resource #2 (Radio Signal Strength) and resource #3 (Link Quality) so that the server can track these values, receive updates, and store them as telemetry in ThingsBoard.'
+        title: 'For the Connectivity Monitoring object (#4_1.3), check the "Telemetry" and/or "Observe" boxes for resource #2 (Radio Signal Strength) and resource #3 (Link Quality) so that the server can track these values, receive updates, and store them as telemetry in SENTIENT.'
     2:
         image: /images/lwm2m/configure-mapping-3-pe.png
-        title: 'For the Firmware Update object (#5_1.1), check the "Telemetry" and/or "Observe" boxes for resource #3 (State) and resource #5 (Update Result) so that the server can track these values, receive updates, and store them as telemetry in ThingsBoard.'
+        title: 'For the Firmware Update object (#5_1.1), check the "Telemetry" and/or "Observe" boxes for resource #3 (State) and resource #5 (Update Result) so that the server can track these values, receive updates, and store them as telemetry in SENTIENT.'
     3:
         image: /images/lwm2m/configure-mapping-4-pe.png
-        title: 'For the Location object (#6_1.0), check the "Attribute" box for resource #0 (Latitude) and resource #1 (Longitude) so that the server can track these values, receive updates, and store them as attributes in ThingsBoard.'
+        title: 'For the Location object (#6_1.0), check the "Attribute" box for resource #0 (Latitude) and resource #1 (Longitude) so that the server can track these values, receive updates, and store them as attributes in SENTIENT.'
 
 configure-mapping-2:
     0:
@@ -65,12 +65,12 @@ configure-mapping-3:
 configure-mapping-observe-strategy:
     0:
         image: /images/lwm2m/configure-mapping-observe-strategy-1-pe.png
-        title: 'ThingsBoard supports multiple observe strategies that define how LwM2M resources are grouped and monitored.'
+        title: 'SENTIENT supports multiple observe strategies that define how LwM2M resources are grouped and monitored.'
 
 device-credentials:
     0:
         image: /images/lwm2m/device-credentials-lwm2m-1-pe.png
-        title: 'ThingsBoard supports four types of credentials: "Pre-Shared Key (PSK)", "Raw Public Key (RPK)", "X.509 Certificate" and "No Security".'
+        title: 'SENTIENT supports four types of credentials: "Pre-Shared Key (PSK)", "Raw Public Key (RPK)", "X.509 Certificate" and "No Security".'
 
 no-security-credentials:
     0:

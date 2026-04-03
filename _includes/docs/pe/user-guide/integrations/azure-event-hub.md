@@ -10,7 +10,7 @@
 
 ## Overview
 
-Azure Event Hub Integration allows to stream data from Azure Event Hub to ThingsBoard and converts device payloads to the ThingsBoard format.
+Azure Event Hub Integration allows to stream data from Azure Event Hub to SENTIENT and converts device payloads to the SENTIENT format.
 
 ![image](/images/user-guide/integrations/azure-event-hub-integration.svg)
  
@@ -54,7 +54,7 @@ Go to the "**Integrations**" page of the "**Integrations center**" section. Clic
 <br>
 **2. Uplink data converter**. 
 
-Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in the ThingsBoard.
+Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in the SENTIENT.
 
 In the function decoder field, specify a script to parse and transform data. For our example, use the default decoder function (or use your own configuration). Then, click "**Next**";
 
@@ -78,7 +78,7 @@ Retrieve the Event Hub-compatible Endpoint in the Azure portal:
 - Open the "**Built-in endpoints**" page from the context menu;
 - Locate and copy the "**Event Hub-compatible endpoint**" value.
 
-This value will be used to integrate with ThingsBoard services.
+This value will be used to integrate with SENTIENT services.
 
 {% include images-gallery.html imageCollection="event-hub-compatible-endpoint" preview="false" %}
 
@@ -98,7 +98,7 @@ To find the storage <b>connection string</b> values, navigate to the "<b>Access 
 {% include images-gallery.html imageCollection="connection-string" %}
 
 <br>
-In ThingsBoard:
+In SENTIENT:
 
 - Paste in the "**Connection String**" field copied "**Event Hub-compatible endpoint**";
 - Enable persistent checkpoints to resume processing from the last checkpoint after an integration restart, and fill in the fields "**Storage connection string**" and "**Container name**" with the appropriate values. Disable to always start from the latest event;
@@ -134,7 +134,7 @@ return { msg: msg, metadata: metadata, msgType: msgType };
 
 {% include images-gallery.html imageCollection="primary-key" preview="false" %}
 
-3) Return to your ThingsBoard instance. We need to find another rule node. Type &#39;iot&#39; in the search nodes field and select the <b>azure iot hub</b> node. Drag it onto the canvas. In the pop-up window, specify the <b>node name</b>, replace <b>&#60;device_id&#62;</b> in the <b>Topic</b> with your Device Name, and enter the <b>Hostname</b> by retrieving it from the "<b>IoT Hub</b>" resource in the Azure portal. Enter the Device Name as the <b>Device ID</b> and add the <b>SAS Key</b> (<b>Primary Key</b>) that we previously copied from the device credentials. If you need to monitor events, enable Debug mode;
+3) Return to your SENTIENT instance. We need to find another rule node. Type &#39;iot&#39; in the search nodes field and select the <b>azure iot hub</b> node. Drag it onto the canvas. In the pop-up window, specify the <b>node name</b>, replace <b>&#60;device_id&#62;</b> in the <b>Topic</b> with your Device Name, and enter the <b>Hostname</b> by retrieving it from the "<b>IoT Hub</b>" resource in the Azure portal. Enter the Device Name as the <b>Device ID</b> and add the <b>SAS Key</b> (<b>Primary Key</b>) that we previously copied from the device credentials. If you need to monitor events, enable Debug mode;
 
 {% include images-gallery.html imageCollection="rule-chain-iot-node" %}
 
@@ -195,12 +195,12 @@ return result;
 
 **Ok, downlink converter ready, integration ready, Let's test it:**
 
-1) After test of uplink, integration have created the device inside ThingsBoard, and we need to know for which Rule Chain it connected.
-Just go to the Device groups in ThingsBoard menu choose **All** and find the device with the name that we have used in the uplink.
+1) After test of uplink, integration have created the device inside SENTIENT, and we need to know for which Rule Chain it connected.
+Just go to the Device groups in SENTIENT menu choose **All** and find the device with the name that we have used in the uplink.
 
 {% include images-gallery.html imageCollection="device_groups_all" preview="false" %}
 
-2) Find the name of necessary rule chain in "Rule Chains" pages of ThingsBoard menu. 
+2) Find the name of necessary rule chain in "Rule Chains" pages of SENTIENT menu. 
 
 3) In the "Search nodes" field type 'down' and choose in the menu **integration downlink** node, drag it to the canvas. In pop-up you need to specify the name of rule node and choose our integration.
 

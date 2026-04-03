@@ -23,7 +23,7 @@ This solution template can be used as a baseline for:
 
 To understand how the Temperature & Humidity sensors solution works, start by installing the solution template.
 
-You will need access to ThingsBoard Professional Edition. The easiest way is to use the [ThingsBoard Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install ThingsBoard using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need access to SENTIENT Professional Edition. The easiest way is to use the [SENTIENT Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install SENTIENT using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Go to the **Solution templates** page.
 - Find **Temperature & Humidity sensors** and click **Install**.
@@ -43,7 +43,7 @@ Temperature & Humidity sensors template includes:
 - **Device Profile and Logic**. A predefined Temperature Sensor device profile is included with built-in logic and preconfigured alarms for high temperature and low humidity conditions. 
 - **Customers and Users**. The system contains one demo customer (Customer D) and two read-only customer users with predefined role-based access control.
 
-**Edge Support.** The solution can optionally be deployed to [ThingsBoard Edge](/docs/edge/){:target="_blank"} for local data processing and reduced latency.
+**Edge Support.** The solution can optionally be deployed to [SENTIENT GATEWAY](/docs/edge/){:target="_blank"} for local data processing and reduced latency.
 
 ## Dashboard
 
@@ -65,7 +65,7 @@ The dashboard consists of two states:
 - **Sensor Details state.** Opens when a sensor row is selected.   
   Allows viewing historical temperature and humidity data, editing sensor parameters, and changing location.
 
-The dashboard can be fully customized using the ThingsBoard [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} development tools.
+The dashboard can be fully customized using the SENTIENT [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} development tools.
 
 ## Devices
 
@@ -107,8 +107,8 @@ To demonstrate multi-tenancy and data isolation, the solution creates a sample c
 **Customer users**
 
 The following users are created and assigned to Customer D:
-- Toni Collier (toni.collier@thingsboard.io)
-- Sheri Addison (sheri.addison@thingsboard.io)
+- Toni Collier (toni.collier@docs.sentient.invenia.in)
+- Sheri Addison (sheri.addison@docs.sentient.invenia.in)
 
 These users:
 - Have read-only access to the dashboard

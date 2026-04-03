@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Wireless open/close logger to ThingsBoard?
+title: How to connect Wireless open/close logger to SENTIENT?
 category: Other devices
 connectivity: [BLE, NB-IoT, CoAP]
 vendor: Efento

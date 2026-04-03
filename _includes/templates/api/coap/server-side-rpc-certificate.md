@@ -6,7 +6,7 @@ coap://{{HOST_NAME}}/api/v1/rpc
 ```
 {: .copy-code}
 
-> ⚠️ Where <code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
+> ⚠️ Where <code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
 
 {% endif %}
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/"%}
@@ -61,7 +61,7 @@ coap://{{coapHostName}}/api/v1/rpc/{$id}
 
 **Example**
 
-- Use **RPC debug terminal** widget in your ThingsBoard instance;
+- Use **RPC debug terminal** widget in your SENTIENT instance;
 - Subscribe to RPC commands from the server using the command below. To do this, in the first terminal window send GET request with observe flag.
 
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
@@ -97,7 +97,7 @@ coap-client -f rpc-response.json -m post coap://{{HOST_NAME}}/api/v1/rpc/1
 ```
 {: .copy-code}
 
-> ⚠️ Replace <code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
+> ⚠️ Replace <code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
 
 
 {% endif %}

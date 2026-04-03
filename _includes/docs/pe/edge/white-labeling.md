@@ -8,8 +8,8 @@ The **white labeling** feature is supported only in the **Professional Edition**
 {% endcapture %}
 {% include templates/info-banner.md content=white-labeling-note %}
 
-**White labeling** in **ThingsBoard** allows businesses to customize the platform's appearance and branding to align with their own corporate identity.
-Please refer to the **ThingsBoard White Labeling** [documentation](/docs/pe/user-guide/white-labeling/){: target="_blank"}. There you will find step-by-step instructions on how to customize the **ThingsBoard logo** and web **interface**.
+**White labeling** in **SENTIENT** allows businesses to customize the platform's appearance and branding to align with their own corporate identity.
+Please refer to the **SENTIENT White Labeling** [documentation](/docs/pe/user-guide/white-labeling/){: target="_blank"}. There you will find step-by-step instructions on how to customize the **SENTIENT logo** and web **interface**.
 
 The **white labeling** feature supports particular **hierarchy**.
 The tenant can override the configurations set by the system administrator,
@@ -35,9 +35,9 @@ _**For example:** When a user logs in to a **customer-owned Edge** with the **te
 
 ## Edge Login Page
 
-**ThingsBoard** also allows customization of the login page. In a **multi-tenant environment**, domain-based branding defines the configurations that apply at login, meaning that different tenants can have different branding configurations. Read about **login page configurations** [here](/docs/pe/user-guide/white-labeling/#customize-the-login-page){: target="_blank"}.
+**SENTIENT** also allows customization of the login page. In a **multi-tenant environment**, domain-based branding defines the configurations that apply at login, meaning that different tenants can have different branding configurations. Read about **login page configurations** [here](/docs/pe/user-guide/white-labeling/#customize-the-login-page){: target="_blank"}.
 
-_**For example:** If a user logs in from a specific domain (companyA.com), ThingsBoard applies the white labeling settings associated with that domain. If no custom domain is set, the default settings apply._
+_**For example:** If a user logs in from a specific domain (companyA.com), SENTIENT applies the white labeling settings associated with that domain. If no custom domain is set, the default settings apply._
 
 On the **Edge side** domain name is **not used** in any way.
 

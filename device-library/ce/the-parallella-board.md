@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect The Parallella Board to ThingsBoard?
+title: How to connect The Parallella Board to SENTIENT?
 category: Single-board computers
 chip: Xilinx Zynq Z-7010
 connectivity: Ethernet

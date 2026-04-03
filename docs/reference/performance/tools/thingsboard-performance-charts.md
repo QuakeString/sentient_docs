@@ -1,8 +1,8 @@
 ---
 layout: docwithnav
-title: Thingsboard performance charts
-description: Thingsboard performance charts
+title: Sentient performance charts
+description: Sentient performance charts
 
 ---
 
-{% include /docs/reference/performance/tools/thingsboard-performance-charts.md %}
+{% include /docs/reference/performance/tools/sentient-performance-charts.md %}

@@ -48,7 +48,7 @@ assignIntegration:
         title: 'On the Integration page, click the <b>"Assign to edge"</b> button. In the <b>"Assign the Integration to the Edge"</b> pop-up window, select the integration from the drop-down menu and click the <b>"Assign"</b> button.'
     2:
         image: /images/pe/edge/integrations/udp/assign-integration-step-3.webp
-        title: 'Login to your <b>ThingsBoard Edge</b> instance and go to the <b>Integrations center > Integrations</b> section. Confirm the <b>UDP integration</b> on the <b>Edge</b>.'
+        title: 'Login to your <b>SENTIENT GATEWAY</b> instance and go to the <b>Integrations center > Integrations</b> section. Confirm the <b>UDP integration</b> on the <b>Edge</b>.'
 
 sendUplink:
     0:
@@ -103,8 +103,8 @@ To learn more, review the integration diagram:
 
 In this tutorial, we will use:
 
-- [ThingsBoard Edge Professional Edition](/docs/pe/edge/getting-started-guides/what-is-edge/){: target="_blank"};
-- **UDP Integration:** The integration that runs externally and is connected to the **ThingsBoard Edge** instance.
+- [SENTIENT GATEWAY Professional Edition](/docs/pe/edge/getting-started-guides/what-is-edge/){: target="_blank"};
+- **UDP Integration:** The integration that runs externally and is connected to the **SENTIENT GATEWAY** instance.
 - **echo** command: To display a line of text, and redirect its output to the **netcat** (**nc**) utility.
 - **netcat (nc) utility**: To establish TCP connections, receive data from there, and transmit it.
 
@@ -161,7 +161,7 @@ To create **Converter** and **Integration templates**, log in to the **Cloud** i
 
 Before creating the **Integration template**, create an Uplink and Downlink converter templates in **Converters templates** section.
 
-The **uplink data converter** is needed to convert the incoming data from the device into the format required for display on **ThingsBoard Edge**.
+The **uplink data converter** is needed to convert the incoming data from the device into the format required for display on **SENTIENT GATEWAY**.
 * Log in to the **Cloud** and go to the **Edge management > Converter templates** section. To create a Converter template, click the **"Add data converter"** button (the **+** icon) and select the **"Create new converter"** option.
 * In the **"Add data converter"** pop-up window:
   * **Name:** Enter the name of the data converter.
@@ -315,7 +315,7 @@ CentOS/RHEL Server%,%centos%,%templates/edge/integrations/resources/centos-rhel.
 
 ### Send an uplink message
 
-Once the **ThingsBoard UDP Integration** has been created, the UDP server starts, and then it waits for data from the devices.
+Once the **SENTIENT UDP Integration** has been created, the UDP server starts, and then it waits for data from the devices.
 
 {% capture debug %}
 Before you proceed, ensure that the **Debug mode is enabled**.
@@ -370,7 +370,7 @@ click the **UDP integration** and select the **"Events"** tab:
 
 {% include images-gallery.html imageCollection="downlinkMessage" %}
 
-The example of the message sent to the device and the response from **ThingsBoard Edge** in the terminal:
+The example of the message sent to the device and the response from **SENTIENT GATEWAY** in the terminal:
 
 {% include images-gallery.html imageCollection="downlinkTerminal" %}
 

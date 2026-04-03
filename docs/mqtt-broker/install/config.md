@@ -1,9 +1,9 @@
 ---
 layout: docwithnav-mqtt-broker
 title: Configuration properties
-description: TBMQ CE configuration properties and environment variables
+description: ST-RMQTT CE configuration properties and environment variables
 
 ---
 
-{% assign tbmqSuffix = "CE" %}
+{% assign st-rmqttSuffix = "CE" %}
 {% include docs/mqtt-broker/install/configuration.md %}

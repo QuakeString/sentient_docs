@@ -23,10 +23,10 @@ redirect_from:
             </div>
         </div>
         <div class="hero-images">
-            <img class="main" loading="lazy" src="/images/development-services/hero-1.webp" title="ThingsBoard Trendz widgets" alt="ThingsBoard Trendz widgets image">
-            <img class="top" loading="lazy" src="/images/development-services/hero-2.webp" title="ThingsBoard Trendz widgets" alt="ThingsBoard Trendz widgets image">
-            <img class="right" loading="lazy" src="/images/development-services/hero-3.webp" title="ThingsBoard Trendz widgets" alt="ThingsBoard Trendz widgets image">
-            <img class="bottom" loading="lazy" src="/images/development-services/hero-4.webp" title="ThingsBoard Trendz widgets" alt="ThingsBoard Trendz widgets image">
+            <img class="main" loading="lazy" src="/images/development-services/hero-1.webp" title="SENTIENT SENTIENT ANALYTICS widgets" alt="SENTIENT SENTIENT ANALYTICS widgets image">
+            <img class="top" loading="lazy" src="/images/development-services/hero-2.webp" title="SENTIENT SENTIENT ANALYTICS widgets" alt="SENTIENT SENTIENT ANALYTICS widgets image">
+            <img class="right" loading="lazy" src="/images/development-services/hero-3.webp" title="SENTIENT SENTIENT ANALYTICS widgets" alt="SENTIENT SENTIENT ANALYTICS widgets image">
+            <img class="bottom" loading="lazy" src="/images/development-services/hero-4.webp" title="SENTIENT SENTIENT ANALYTICS widgets" alt="SENTIENT SENTIENT ANALYTICS widgets image">
         </div>
     </div>
     <div class="statistics">
@@ -233,8 +233,8 @@ redirect_from:
                 <div class="vision-info">
                     <div class="vision-header">
                         <div class="vision-title">
-                            <img class="vision-img" src="/images/development-services/artur-ishkhanishvili.webp" alt="Photo of Artur Ishkhanishvili, VP Business Development ThingsBoard">
-                            <img class="vision-img-mobile" src="/images/development-services/artur-mobile.webp" alt="Photo of Artur Ishkhanishvili, VP Business Development ThingsBoard">
+                            <img class="vision-img" src="/images/development-services/artur-ishkhanishvili.webp" alt="Photo of Artur Ishkhanishvili, VP Business Development SENTIENT">
+                            <img class="vision-img-mobile" src="/images/development-services/artur-mobile.webp" alt="Photo of Artur Ishkhanishvili, VP Business Development SENTIENT">
                             <div class="vision-text">
                                 <div class="name">Artur Ishkhanishvili</div>
                                 <div class="title">VP Business Development</div>
@@ -242,7 +242,7 @@ redirect_from:
                         </div>
                         <div class="vision-descr">
                             <div class="text-wrap">
-                                <p>In IoT, data and dashboards mean nothing if they don’t create real business value. At ThingsBoard, our Development Unit makes sure your solution does exactly that. </p>
+                                <p>In IoT, data and dashboards mean nothing if they don’t create real business value. At SENTIENT, our Development Unit makes sure your solution does exactly that. </p>
                                 <p>We don’t just build features — we help you turn ideas into results. With our platform and experts, your technical goals are covered, so you can stay focused on your business impact. From optimizing supply chains to launching smart services, we ensure the tech drives results that matter — to your customers and your bottom line.</p>
                             </div>
                         </div>
@@ -270,7 +270,7 @@ redirect_from:
                                 <img class="logo" src="/images/case-studies/schwarz.svg" title="Schwarz" alt="Schwarz logo">
                             </div>
                             <div class="footer">
-                                <p>IoT in retail: how Schwarz Group accelerated digitalization with ThingsBoard</p>
+                                <p>IoT in retail: how Schwarz Group accelerated digitalization with SENTIENT</p>
                                 <div class="stats">
                                     <p>
                                         <span class="num">500K+</span><br>
@@ -298,7 +298,7 @@ redirect_from:
                                 <img class="logo" src="/images/case-studies/super-bock-group.svg" title="Super Bock Group" alt="Super Bock Group logo">
                             </div>
                             <div class="footer">
-                                <p>Revolutionizing beer distribution: how ThingsBoard empowered Super Bock Group</p>
+                                <p>Revolutionizing beer distribution: how SENTIENT empowered Super Bock Group</p>
                                 <div class="stats">
                                     <p>
                                         <span class="num">100%</span><br>
@@ -445,7 +445,7 @@ redirect_from:
         <section class="services">
             <div class="services-container">
                 <h2 class="services-title">Custom IoT development services</h2>
-                <div class="services-sub-title">These are custom development services delivered directly by the in-house ThingsBoard team. No third parties — just our engineers and proven processes</div>
+                <div class="services-sub-title">These are custom development services delivered directly by the in-house SENTIENT team. No third parties — just our engineers and proven processes</div>
                 <div class="cards">
                     <div class="expansion-card">
                         <div class="expansion-header">
@@ -609,9 +609,9 @@ redirect_from:
                         </div>
                         <div class="expansion-content">
                             <ul class="expansion-content-list">
-                                <li>Evaluate current IoT system & plan managed migration to ThingsBoard</li>
-                                <li>Migrate devices, data & logic to ThingsBoard for scale & lower TCO</li>
-                                <li>Deploy reliable ThingsBoard solution, ready for future feature growth</li>
+                                <li>Evaluate current IoT system & plan managed migration to SENTIENT</li>
+                                <li>Migrate devices, data & logic to SENTIENT for scale & lower TCO</li>
+                                <li>Deploy reliable SENTIENT solution, ready for future feature growth</li>
                             </ul>
                         </div>
                     </div>
@@ -751,8 +751,8 @@ redirect_from:
                 </div>
                 <div class="trusted-partner-footer">
                     <div class="trusted-partner-avatar">
-                        <img class="avatar" src="/images/development-services/vitaliy-paromskiy.webp" alt="Photo of Vitaliy Paromskiy, Chief Solutions Officer ThingsBoard">
-                        <img class="avatar-mobile" src="/images/development-services/vitaliy-mobile.webp" alt="Photo of Vitaliy Paromskiy, Chief Solutions Officer ThingsBoard">
+                        <img class="avatar" src="/images/development-services/vitaliy-paromskiy.webp" alt="Photo of Vitaliy Paromskiy, Chief Solutions Officer SENTIENT">
+                        <img class="avatar-mobile" src="/images/development-services/vitaliy-mobile.webp" alt="Photo of Vitaliy Paromskiy, Chief Solutions Officer SENTIENT">
                         <div class="trusted-partner-text">
                             <div class="name">Vitaliy Paromskiy</div>
                             <div class="title">Chief solutions officer</div>
@@ -761,7 +761,7 @@ redirect_from:
                     <div class="wrap">
                         <div class="trusted-partner-descr">
                             <p>A serious IoT solution is never just devices and dashboards. It’s an ecosystem of 30-plus moving parts - middleware, integrations, workflows, server-side and application-level services. All of this must be scaled and upgraded together. </p>
-                            <p>Most projects stall at that integration layer, while business logic waits. We eliminate that bottleneck by placing ThingsBoard at the core of the solution.</p>
+                            <p>Most projects stall at that integration layer, while business logic waits. We eliminate that bottleneck by placing SENTIENT at the core of the solution.</p>
                             <p>Its microservice architecture already provides us with all the needed components, and they are already integrated, so we can focus on business logic and reuse functions instead of re-inventing them.</p>
                             <p>The outcome for our clients is simple - solution delivery is about 8x faster and 11x cheaper than a traditional greenfield development.</p>
                         </div>
@@ -782,8 +782,8 @@ redirect_from:
                     </thead>
                     <tbody>
                     <tr>
-                        <td>ThingsBoard at the Core</td>
-                        <td>We build on ThingsBoard’s micro-service stack and re-using components instead of wiring them from scratch</td>
+                        <td>SENTIENT at the Core</td>
+                        <td>We build on SENTIENT’s micro-service stack and re-using components instead of wiring them from scratch</td>
                         <td>8× faster process: regular 8-month MVP delivered in just 1 month</td>
                     </tr>
                     <tr>
@@ -814,9 +814,9 @@ redirect_from:
                     <p class="content">Why it matters</p>
                     <p class="content">What it gives</p>
                 </div>
-                <h3>ThingsBoard at the Core</h3>
+                <h3>SENTIENT at the Core</h3>
                 <div class="row">
-                    <p class="content">We build on ThingsBoard’s micro-service stack and re-using components instead of wiring them from scratch</p>
+                    <p class="content">We build on SENTIENT’s micro-service stack and re-using components instead of wiring them from scratch</p>
                     <p class="content">8x faster process: regular 8-month MVP delivered in just 1 month</p>
                 </div>
                 <h3>Low-code accelerators</h3>
@@ -853,7 +853,7 @@ redirect_from:
             <div class="cards">
                 <div class="card">
                     <h4 class="card-title">Pre-built stack, custom focus</h4>
-                    <div class="card-descr">70% of the stack comes from ThingsBoard + low-code, so engineers focus only on the remaining 30% of business logic</div>
+                    <div class="card-descr">70% of the stack comes from SENTIENT + low-code, so engineers focus only on the remaining 30% of business logic</div>
                 </div>
                 <div class="card">
                     <h4 class="card-title">Scalable by design</h4>
@@ -875,7 +875,7 @@ redirect_from:
                             id="Serv_DevServ_GetInTouch"
                             onclick="onContactUsClick(0)"
                             class="cdu-button anchor-button gtm_button button book-free-session">
-                        Book a free session with a ThingsBoard architect
+                        Book a free session with a SENTIENT architect
                     </button>
                 </div>
                 <img src="/images/usecases/services-icon.svg" width="380" height="267" alt="Letter icon">
@@ -1096,7 +1096,7 @@ redirect_from:
                     <div class="card">
                         <img width="96" height="96" src="/images/development-services/co-development.svg" alt="Team augmentation & co-development">
                         <h3>Team augmentation & co-development</h3>
-                        <p class="subtitle">We integrate our ThingsBoard experts directly into your team, providing specialized skills to accelerate your project and overcome specific technical challenges.</p>
+                        <p class="subtitle">We integrate our SENTIENT experts directly into your team, providing specialized skills to accelerate your project and overcome specific technical challenges.</p>
                         <button
                                 id="Serv_DevServ_Enagement2"
                                 onclick="onContactUsClick(0)"
@@ -1180,7 +1180,7 @@ redirect_from:
                     <div id="faq-iot-development-buildingAndManagingIoTSolutions" class="pi-accordion">
                         <div class="item" data-tag="h3" data-item-id="how-tb-cloud-billing-works" data-title="What is an IoT platform, and do I need one?">
                             <div class="container">
-                                <p>An IoT platform is software that helps you easily manage connected devices, collect data, and visualise it in a clear and easy way. If you plan to effectively manage multiple devices and data streams, you'll definitely need an IoT platform, and we recommend using an IoT platform like ThingsBoard.</p>
+                                <p>An IoT platform is software that helps you easily manage connected devices, collect data, and visualise it in a clear and easy way. If you plan to effectively manage multiple devices and data streams, you'll definitely need an IoT platform, and we recommend using an IoT platform like SENTIENT.</p>
                             </div>
                         </div>
                         <div class="item" data-tag="h3" data-item-id="tb-cloud-payment-methods" data-title="How long does it take to develop an IoT solution?">
@@ -1193,9 +1193,9 @@ redirect_from:
                                 <p>Yes, we offer ongoing support, including problem analysis, problem resolution, upgrades, scaling services, and continuous enhancements to ensure your IoT system is running smoothly and meeting your ever-changing needs.</p>
                             </div>
                         </div>
-                        <div class="item" data-tag="h3" data-item-id="tb-cloud-payment-methods" data-title="Can existing IoT solutions be integrated with the ThingsBoard platform?">
+                        <div class="item" data-tag="h3" data-item-id="tb-cloud-payment-methods" data-title="Can existing IoT solutions be integrated with the SENTIENT platform?">
                             <div class="container">
-                                <p>Yes, existing IoT solutions can be easily integrated with ThingsBoard. We help with seamless integration, ensuring that your current setup receives enhanced functionality and improved management capabilities.</p>
+                                <p>Yes, existing IoT solutions can be easily integrated with SENTIENT. We help with seamless integration, ensuring that your current setup receives enhanced functionality and improved management capabilities.</p>
                             </div>
                         </div>
                     </div>
@@ -1229,7 +1229,7 @@ redirect_from:
                             <span>Fill out the form — we’ll get back to you shortly to clarify the details and prepare a tailored estimate</span>
                         </div>
                         <div class="client-avatar-container">
-                            <div class="client-avatar-img"><img src="/images/development-services/artur-2.webp" alt="Photo of Artur Ishkhanishvili, VP Business Development ThingsBoard"></div>
+                            <div class="client-avatar-img"><img src="/images/development-services/artur-2.webp" alt="Photo of Artur Ishkhanishvili, VP Business Development SENTIENT"></div>
                             <div class="client-descr">
                                 <div class="client-name">Artur Ishkhanishvili</div>
                                 <div class="client-title">VP Business Development</div>
@@ -1259,7 +1259,7 @@ redirect_from:
                                             <option value="" disabled>Select Subject</option>
                                             <option value="Custom Development" selected>Custom Development</option>
                                             <option value="Technical Support">Technical Support</option>
-                                            <option value="ThingsBoard Products">ThingsBoard Products</option>
+                                            <option value="SENTIENT Products">SENTIENT Products</option>
                                             <option value="Deployment Options">Deployment Options</option>
                                             <option value="Training">Training</option>
                                             <option value="Professional Services">Professional Services</option>
@@ -1335,7 +1335,7 @@ redirect_from:
                                 <option value="" disabled>Select Subject</option>
                                 <option value="Custom Development" selected>Custom Development</option>
                                 <option value="Technical Support">Technical Support</option>
-                                <option value="ThingsBoard Products">ThingsBoard Products</option>
+                                <option value="SENTIENT Products">SENTIENT Products</option>
                                 <option value="Deployment Options">Deployment Options</option>
                                 <option value="Training">Training</option>
                                 <option value="Professional Services">Professional Services</option>
@@ -1459,13 +1459,13 @@ redirect_from:
 
         function updateImages(index) {
             const darkMapImages = [
-                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/site-fleet-tracking-1.webp" alt="A map with markers and vehicle monitoring data, demonstrating real-time fleet tracking, including speed, fuel level, and status (e.g., en route, breakdown, refueling)."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://thingsboard.cloud/dashboard/3b0ab5a0-f838-11f0-a24d-13b2783631c6?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about ThingsBoard</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Eric-Bourbeau.webp" alt="Eric Bourbeau, Founder and CEO X-TELIA"></div><div class="client-feedback">“We were looking for a robust and scalable IoT platform to help us deploy leading edge LoRaWAN™-based IoT projects.We landed a contract to deploy a city-wide network of solar/wireless variable message “No Parking” signs to manage on-street parking for snow removal operations. The dead... <a class="read-more-link" href="/industries/smart-city/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Eric Bourbeau, Founder and CEO at X-TELIA</div></div></div>',
-                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/smart-energy-1.webp" alt="A monitoring dashboard showing real-time electricity consumption data (voltage, current, frequency) from multiple smart meters, with graphs and alarm threshold indicators."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://demo.thingsboard.io/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about ThingsBoard</p><div class="client-info"><div class="client-avatar-container"><div class="client-feedback">“Our company operates with the Smart Building Technology sector and were looking for a solution that was adaptable, programmable and easy to use for providing complete solutions to our existing customers with good clear visualisations of their data. We had researched and tried other solutions but... <a class="read-more-link" href="/industries/smart-energy/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div class="no-margin">Nairn Harrison, Director at Environmental Energy Controls</div></div></div>',
-                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/waste-1.webp" alt="An interactive map or diagram with asset locations and their status (e.g., equipment condition, temperature, humidity), displaying movement history and alerts."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://thingsboard.cloud/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about ThingsBoard</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Jeppe-Walther.webp" alt="Jeppe Walther, CTO Supertech Agroline"></div><div class="client-feedback">“ThingsBoard (TB) turned out to be a great match to build our Agricultural IoT platform. First and foremost because of the extremely skilled and service minded architects behind it. Together with the TB developers several new features were added to the platform for our needs, among these the Asset system... <a class="read-more-link" href="/industries/agriculture/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Jeppe Walther, CTO at Supertech Agroline</div></div></div>',
-                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/hp-swiming-pool-system-state.webp" alt="A SCADA control panel with mimic diagrams visualizing industrial processes (e.g., oil and gas drilling system, pumping station, water treatment), with equipment status indicators, sensor readings, and control elements."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://thingsboard.cloud/dashboard/231a5800-ce96-11ef-852e-bd51c2b30fde?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about ThingsBoard</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Mamadou-Ly.webp" alt="Mamadou Ly, Project Manager at Farinia Group"></div><div class="client-feedback">“With ThingsBoard we found the platform to modernize our factories and especially improve our performance processes. Following a benchmarking of solutions on the market, we came across Thingsboard. It was a surprising discovery, but above all a turning point for Farinia group. Now we have a real-ti... <a class="read-more-link" href="/industries/industry40/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Mamadou Ly, Project Manager at Farinia Group</div></div></div>',
-                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/smart-metering-1.webp" alt="A dashboard displaying smart water, gas, or electricity metering data, broken down by areas, buildings, or apartments, with historical consumption graphs and anomaly alerts."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://demo.thingsboard.io/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="cdu-button button gtm_button view-live-demo">View live demo</a></a></div><p class="feedback-heading">What our customers say about ThingsBoard</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/peter-backes.webp" alt="Peter Backes, CEO co.met GmbH"></div><div class="client-feedback">“We’re a meter operator and as such a service provider for energy distribution network carriers (electricity, gas, water and heat) and other meter operators. We provide SaaS-Solutions for the remote reading of meters, field force management (for meter fitters) and the administration of smart meter gateways. Addition... <a class="read-more-link" href="/industries/smart-energy/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Peter Backes, CEO at co.met GmbH</div></div></div>',
-                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/tank-level-monitoring-1.webp" alt="A dashboard monitoring liquid levels in tanks, showing current fuel level, temperature, and battery status, with fill level visualization and consumption history."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://thingsboard.cloud/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about ThingsBoard</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Patricia-Crispim.webp" alt="Patricia Crispim, Super Bock Group"></div><div class="client-feedback">“ThingsBoard delivered an exceptional beer tank tracking solution, on-time and within budget. The platform provided us visibility into our assets, real-time tracking, and actionable insights that significantly improved our operational efficiency... <a class="read-more-link" href="/case-studies/super-bock/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Patricia Crispim, Super Bock Group</div></div></div>',
-                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/smart-retail-3.webp" alt="A monitoring panel for the condition of cold storage rooms or vehicles in a cold chain, displaying temperature and humidity data, with trend graphs, threshold values, and alerts for storage condition violations."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://thingsboard.cloud/dashboard/551d4ca0-8b54-11ec-98f9-ff45c37940c6?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about ThingsBoard</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Steven-Kruse.webp" alt="Steven Kruse, CEO SenseING GmbH"></div><div class="client-feedback">“With ThingsBoard, we can offer our customers a customised IoT platform that has been specially developed for monitoring temperature and storage conditions in food logistics. One of the platform\'s greatest strengths is its low-code approach, which allows us to implement complex solutions with minima... <a class="read-more-link" href="/industries/warehouse-monitoring/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Steven Kruse, CEO at SenseING GmbH</div></div></div>'
+                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/site-fleet-tracking-1.webp" alt="A map with markers and vehicle monitoring data, demonstrating real-time fleet tracking, including speed, fuel level, and status (e.g., en route, breakdown, refueling)."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://sentient.cloud/dashboard/3b0ab5a0-f838-11f0-a24d-13b2783631c6?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about SENTIENT</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Eric-Bourbeau.webp" alt="Eric Bourbeau, Founder and CEO X-TELIA"></div><div class="client-feedback">“We were looking for a robust and scalable IoT platform to help us deploy leading edge LoRaWAN™-based IoT projects.We landed a contract to deploy a city-wide network of solar/wireless variable message “No Parking” signs to manage on-street parking for snow removal operations. The dead... <a class="read-more-link" href="/industries/smart-city/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Eric Bourbeau, Founder and CEO at X-TELIA</div></div></div>',
+                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/smart-energy-1.webp" alt="A monitoring dashboard showing real-time electricity consumption data (voltage, current, frequency) from multiple smart meters, with graphs and alarm threshold indicators."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about SENTIENT</p><div class="client-info"><div class="client-avatar-container"><div class="client-feedback">“Our company operates with the Smart Building Technology sector and were looking for a solution that was adaptable, programmable and easy to use for providing complete solutions to our existing customers with good clear visualisations of their data. We had researched and tried other solutions but... <a class="read-more-link" href="/industries/smart-energy/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div class="no-margin">Nairn Harrison, Director at Environmental Energy Controls</div></div></div>',
+                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/waste-1.webp" alt="An interactive map or diagram with asset locations and their status (e.g., equipment condition, temperature, humidity), displaying movement history and alerts."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://sentient.cloud/dashboard/7814f8a0-8fa9-11ef-baa8-4521077809fd?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about SENTIENT</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Jeppe-Walther.webp" alt="Jeppe Walther, CTO Supertech Agroline"></div><div class="client-feedback">“SENTIENT (TB) turned out to be a great match to build our Agricultural IoT platform. First and foremost because of the extremely skilled and service minded architects behind it. Together with the TB developers several new features were added to the platform for our needs, among these the Asset system... <a class="read-more-link" href="/industries/agriculture/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Jeppe Walther, CTO at Supertech Agroline</div></div></div>',
+                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/hp-swiming-pool-system-state.webp" alt="A SCADA control panel with mimic diagrams visualizing industrial processes (e.g., oil and gas drilling system, pumping station, water treatment), with equipment status indicators, sensor readings, and control elements."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://sentient.cloud/dashboard/231a5800-ce96-11ef-852e-bd51c2b30fde?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about SENTIENT</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Mamadou-Ly.webp" alt="Mamadou Ly, Project Manager at Farinia Group"></div><div class="client-feedback">“With SENTIENT we found the platform to modernize our factories and especially improve our performance processes. Following a benchmarking of solutions on the market, we came across Sentient. It was a surprising discovery, but above all a turning point for Farinia group. Now we have a real-ti... <a class="read-more-link" href="/industries/industry40/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Mamadou Ly, Project Manager at Farinia Group</div></div></div>',
+                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/smart-metering-1.webp" alt="A dashboard displaying smart water, gas, or electricity metering data, broken down by areas, buildings, or apartments, with historical consumption graphs and anomaly alerts."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="cdu-button button gtm_button view-live-demo">View live demo</a></a></div><p class="feedback-heading">What our customers say about SENTIENT</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/peter-backes.webp" alt="Peter Backes, CEO co.met GmbH"></div><div class="client-feedback">“We’re a meter operator and as such a service provider for energy distribution network carriers (electricity, gas, water and heat) and other meter operators. We provide SaaS-Solutions for the remote reading of meters, field force management (for meter fitters) and the administration of smart meter gateways. Addition... <a class="read-more-link" href="/industries/smart-energy/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Peter Backes, CEO at co.met GmbH</div></div></div>',
+                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/tank-level-monitoring-1.webp" alt="A dashboard monitoring liquid levels in tanks, showing current fuel level, temperature, and battery status, with fill level visualization and consumption history."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://sentient.cloud/dashboard/e1ff5690-5e0c-11ee-aeee-d16039673934?publicId=7aa99e80-8acd-11ef-a59e-a9c993dbec14" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about SENTIENT</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Patricia-Crispim.webp" alt="Patricia Crispim, Super Bock Group"></div><div class="client-feedback">“SENTIENT delivered an exceptional beer tank tracking solution, on-time and within budget. The platform provided us visibility into our assets, real-time tracking, and actionable insights that significantly improved our operational efficiency... <a class="read-more-link" href="/case-studies/super-bock/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Patricia Crispim, Super Bock Group</div></div></div>',
+                '<div class="client-feedback-cards"><div class="project-screen-container"><div class="project-screen"><div class="bg-1"></div><div class="bg-2"></div><div class="bg-3"></div><img src="/images/development-services/smart-retail-3.webp" alt="A monitoring panel for the condition of cold storage rooms or vehicles in a cold chain, displaying temperature and humidity data, with trend graphs, threshold values, and alerts for storage condition violations."></div></div><div class="buttons-block"><a id="Serv_DevServ_GetInTouch" onclick="onContactUsClick(0)" class="gtm_button button contact-us">Contact us</a><a target="_blank" href="https://sentient.cloud/dashboard/551d4ca0-8b54-11ec-98f9-ff45c37940c6?publicId=4978baf0-8a92-11ec-98f9-ff45c37940c6" class="cdu-button button gtm_button view-live-demo">View live demo</a></div><p class="feedback-heading">What our customers say about SENTIENT</p><div class="client-info"><div class="client-avatar-container"><div class="client-avatar-img"><img src="/images/development-services/Steven-Kruse.webp" alt="Steven Kruse, CEO SenseING GmbH"></div><div class="client-feedback">“With SENTIENT, we can offer our customers a customised IoT platform that has been specially developed for monitoring temperature and storage conditions in food logistics. One of the platform\'s greatest strengths is its low-code approach, which allows us to implement complex solutions with minima... <a class="read-more-link" href="/industries/warehouse-monitoring/" target="_blank" rel="noopener noreferrer">read more</a></div></div><div>Steven Kruse, CEO at SenseING GmbH</div></div></div>'
             ];
 
             const imageHtml = darkMapImages[index];

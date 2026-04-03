@@ -8,8 +8,8 @@ hidetoc: "true"
 
 {% assign feature = "Platform Integrations" %}{% include templates/pe-feature-banner.md %}
 
-This guide contains step-by-step instruction how to to connect your SODAQ NB-IoT boards to ThingsBoard Professional Edition (PE) through the T-Mobile NB IoT network.
-We will use free ThingsBoard PE demo server [thingsboard.cloud](https://thingsboard.cloud/signup) in this guide.
+This guide contains step-by-step instruction how to to connect your SODAQ NB-IoT boards to SENTIENT Professional Edition (PE) through the T-Mobile NB IoT network.
+We will use free SENTIENT Professional Edition demo server [sentient.cloud](https://sentient.cloud/signup) in this guide.
 This guide will be useful for anyone who wants to connect their SODAQ NB-IoT boards or other hardware to T-Mobile NB IoT network.
 
 * TOC
@@ -18,23 +18,23 @@ This guide will be useful for anyone who wants to connect their SODAQ NB-IoT boa
 ## Prerequisites
 
 We assume you have at least one of SODAQ NB-IoT Trackers in your lab that is already connected to your T-Mobile IoT network.
-We also assume you already have a ThingsBoard PE server or free demo account.
-Otherwise you can register for a 30-days free demo account here: [thingsboard.cloud](https://thingsboard.cloud/signup).
+We also assume you already have a SENTIENT Professional Edition server or free demo account.
+Otherwise you can register for a 30-days free demo account here: [sentient.cloud](https://sentient.cloud/signup).
 
-We expect you have a very basic knowledge about ThingsBoard. Otherwise we do recommend to complete the following guides:
+We expect you have a very basic knowledge about SENTIENT. Otherwise we do recommend to complete the following guides:
 - [Getting Started](/docs/getting-started-guides/helloworld/) guide.
 - [Platform Integrations](/docs/user-guide/integrations/) guide.
 
 ## Integration overview
 
-ThingsBoard Platform Integrations feature allows to push data from various platforms and connectivity solutions to ThingsBoard.
-We will use "UDP" platform integration to consume data from T-Mobile NB IoT Network and automatically register devices in ThingsBoard.
-Besides configuring the integration, we will also setup ThingsBoard to decode incoming data, store it in the database, visualize on the dashboard and generate alarms based on configurable thresholds.
+SENTIENT Platform Integrations feature allows to push data from various platforms and connectivity solutions to SENTIENT.
+We will use "UDP" platform integration to consume data from T-Mobile NB IoT Network and automatically register devices in SENTIENT.
+Besides configuring the integration, we will also setup SENTIENT to decode incoming data, store it in the database, visualize on the dashboard and generate alarms based on configurable thresholds.
 
 ## Step 1. Data Converter configuration
 
 In order to create an [Integration](/docs/user-guide/integrations), we should create the [Uplink Data Converter](/docs/user-guide/integrations/#uplink-data-converter) first.
-The converter will decode incoming telemetry payload data from T-Mobile NB IoT that contains in encoded hex string to human readable, simplified ThingsBoard data format.
+The converter will decode incoming telemetry payload data from T-Mobile NB IoT that contains in encoded hex string to human readable, simplified SENTIENT data format.
 
  - Input data from T-Mobile NB IoT Platform is a byte sequence and after converting them to a hexadecimal string-type look like this:
 
@@ -147,8 +147,8 @@ The converter will decode incoming telemetry payload data from T-Mobile NB IoT t
 
 Few things to notice:
 
- * The IMEI from the incoming message will become the Device Name in ThingsBoard;
- * ThingsBoard will automatically create device with type "tracker" and name equal to IMEI;
+ * The IMEI from the incoming message will become the Device Name in SENTIENT;
+ * SENTIENT will automatically create device with type "tracker" and name equal to IMEI;
  * Timestamp and sensor readings are decoded from incoming hex string.
  * The following table shows the first byte position and the number of bytes for each encoded field that includes in the incoming hex string:
 
@@ -280,14 +280,14 @@ as described on the following screencast:
 
 Before we rush to T-Mobile IoT platform configuration, make sure that you complete the [**Remote integration installation steps**](/docs/user-guide/integrations/remote-integrations/#remote-integration-installation-steps).
 
-Also, let’s make sure ThingsBoard is properly configured using simple **echo** command and **netcat** utility.
+Also, let’s make sure SENTIENT is properly configured using simple **echo** command and **netcat** utility.
 We will simulate messages from the T-Mobile IoT platform using the command below.
 Let's execute the following command:
 
 {% highlight bash %}
-echo -e -n '$PAYLOAD' | xxd -r -p | nc -q1 -w1 -u $URL_THINGSBOARD_CLOUD_HOST $PORT
+echo -e -n '$PAYLOAD' | xxd -r -p | nc -q1 -w1 -u $URL_SENTIENT_CLOUD_HOST $PORT
 
-You need to replace $PAYLOAD, $URL_THINGSBOARD_CLOUD_HOST and $PORT respectively with the actual payload, cloud host URL and port.
+You need to replace $PAYLOAD, $URL_SENTIENT_CLOUD_HOST and $PORT respectively with the actual payload, cloud host URL and port.
 {% endhighlight %}
 
 Sample:

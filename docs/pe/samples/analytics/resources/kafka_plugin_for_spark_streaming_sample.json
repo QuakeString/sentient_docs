@@ -1,7 +1,7 @@
 {
   "apiToken": "kafka-spark-streaming-sample",
   "name": "Kafka Plugin for Spark Streaming Sample",
-  "clazz": "org.thingsboard.server.extensions.kafka.plugin.KafkaPlugin",
+  "clazz": "org.sentient.server.extensions.kafka.plugin.KafkaPlugin",
   "publicAccess": false,
   "state": "SUSPENDED",
   "configuration": {

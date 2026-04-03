@@ -1,17 +1,17 @@
 {% if docsPrefix == null or docsPrefix == "paas/" %}
-{% assign hostName = "ThingsBoard Cloud" %}
-{% assign host = "thingsboard.cloud" %}
+{% assign hostName = "SENTIENT Cloud" %}
+{% assign host = "sentient.cloud" %}
 {% endif %}
 {% if docsPrefix == "paas/eu/" %}
-{% assign hostName = "ThingsBoard EU Cloud" %}
-{% assign host = "eu.thingsboard.cloud" %}
+{% assign hostName = "SENTIENT EU Cloud" %}
+{% assign host = "eu.sentient.cloud" %}
 {% endif %}
 
 * TOC
 {:toc}
 
-ThingsBoard provides a powerful REST API that allows you to manage all platform entities, perform integrations, automate device provisioning, and build custom applications. 
-To simplify API exploration and testing, ThingsBoard includes built-in interactive documentation powered by [Swagger UI](https://swagger.io/){:target="_blank"}.
+SENTIENT provides a powerful REST API that allows you to manage all platform entities, perform integrations, automate device provisioning, and build custom applications. 
+To simplify API exploration and testing, SENTIENT includes built-in interactive documentation powered by [Swagger UI](https://swagger.io/){:target="_blank"}.
 
 ## Swagger UI
 
@@ -26,23 +26,23 @@ This makes it ideal for development, debugging, and API exploration.
 ## Where to find Swagger UI?
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-Every ThingsBoard instance hosts its own Swagger UI page at:
+Every SENTIENT instance hosts its own Swagger UI page at:
 
 ```text
-http://$THINGSBOARD_HOST:PORT/swagger-ui.html
+http://$SENTIENT_HOST:PORT/swagger-ui.html
 ```
 {: .copy-code}
 
-&#42; Replace **$THINGSBOARD_HOST:PORT** with the address of your ThingsBoard deployment.
+&#42; Replace **$SENTIENT_HOST:PORT** with the address of your SENTIENT deployment.
 {% endif %}
 
 {% if docsPrefix == "pe/" %}
-The easiest way to get your account is to use [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"} server.
+The easiest way to get your account is to use [SENTIENT Cloud](https://{{hostName}}/signup){:target="_blank"} server.
 {% endif %}
 
 {% if docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}
 Every [{{hostName}}](https://{{host}}/){:target="_blank"} instance has its own Swagger UI page.   
-Browse ThingsBoard Cloud REST API documentation by clicking the button below:
+Browse SENTIENT Cloud REST API documentation by clicking the button below:
 
 <br>
 <p><a href="https://{{host}}/swagger-ui.html" target="_blank" class="n-button add-device">{{hostName}} REST API</a></p>
@@ -52,7 +52,7 @@ Browse ThingsBoard Cloud REST API documentation by clicking the button below:
 
 <b><font size="3">Automatic authentication</font></b>
 
-If you are already logged in through the main ThingsBoard UI, Swagger UI automatically uses your authenticated session.
+If you are already logged in through the main SENTIENT UI, Swagger UI automatically uses your authenticated session.
 
 <b><font size="3">Manual authentication</font></b>
 
@@ -80,7 +80,7 @@ API keys provide a simpler, automation-friendly alternative to JWT authenticatio
 - **Revocable:** You can easily disable a specific key
 
 {% capture difference %}
-**Note:** Use the **API keys** tab in the ThingsBoard UI to create and manage them.
+**Note:** Use the **API keys** tab in the SENTIENT UI to create and manage them.
 For more details, see the [full documentation](/docs/{{ docsPrefix }}user-guide/security/api-keys/){: target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
@@ -103,14 +103,14 @@ Example (curl)
 ```text
 curl -X GET --header 'Accept: application/json' \
             --header 'X-Authorization: ApiKey $YOUR_API_KEY_VALUE' \
-            'http://$THINGSBOARD_URL/api/auth/user'
+            'http://$SENTIENT_URL/api/auth/user'
 ```
 
 <hr>
 
 ### JWT authentication (deprecated)
 
-ThingsBoard uses [JWT](https://jwt.io/){:target="_blank"} tokens to authenticate API requests.
+SENTIENT uses [JWT](https://jwt.io/){:target="_blank"} tokens to authenticate API requests.
 
 When you log in, your username and password are exchanged for two tokens:
 - **Access Token (JWT)** - A short-lived token used for API requests.
@@ -131,13 +131,13 @@ Expiration times are [configurable](/docs/user-guide/install/{{docsPrefix}}confi
 <b><font size="4">How to obtain a JWT token?</font></b>
 
 {% if docsPrefix == null or docsPrefix == "pe/" %}
-To obtain a JWT token for the user "tenant@thingsboard.org" with password "tenant" on "$THINGSBOARD_URL" (actual ThingsBoard server address), execute the following command:
+To obtain a JWT token for the user "tenant@sentient.org" with password "tenant" on "$SENTIENT_URL" (actual SENTIENT server address), execute the following command:
 
 ```text
 curl -X POST --header 'Content-Type: application/json' \
              --header 'Accept: application/json' \
-             -d '{"username":"tenant@thingsboard.org", "password":"tenant"}' \
-             'http://$THINGSBOARD_URL/api/auth/login'
+             -d '{"username":"tenant@sentient.org", "password":"tenant"}' \
+             'http://$SENTIENT_URL/api/auth/login'
 ```
 {: .copy-code}
 {% endif %}
@@ -148,7 +148,7 @@ To obtain a JWT token for the user "your_user@company.com" with password "secret
 curl -X POST --header 'Content-Type: application/json' \
              --header 'Accept: application/json' \
              -d '{"username":"your_user@company.com", "password":"secret"}' \
-             'https://thingsboard.cloud/api/auth/login'
+             'https://sentient.cloud/api/auth/login'
 ```
 {: .copy-code}
 {% endif %}
@@ -159,7 +159,7 @@ To obtain a JWT token for the user "your_user@company.com" with password "secret
 curl -X POST --header 'Content-Type: application/json' \
              --header 'Accept: application/json' \
              -d '{"username":"your_user@company.com", "password":"secret"}' \
-             'https://eu.thingsboard.cloud/api/auth/login'
+             'https://eu.sentient.cloud/api/auth/login'
 ```
 {: .copy-code}
 {% endif %}
@@ -180,9 +180,9 @@ X-Authorization: Bearer $YOUR_JWT_TOKEN
 
 ## Additional tools
 
-For easier integration with the ThingsBoard API, you can use ThingsBoard team client libraries:
+For easier integration with the SENTIENT API, you can use SENTIENT team client libraries:
 
 - [Java REST API Client](/docs/{{docsPrefix}}reference/rest-client/){:target="_blank"} – client library written in Java to simplify consumption of the REST API.
 - [Python REST API Client](/docs/{{docsPrefix}}reference/python-rest-client/){:target="_blank"} – client library written in Python to simplify the consumption of the REST API.
 
-These clients allow you to create devices, assets, users, and other entities, as well as manage their relationships within ThingsBoard.
+These clients allow you to create devices, assets, users, and other entities, as well as manage their relationships within SENTIENT.

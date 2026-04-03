@@ -21,7 +21,7 @@ This solution template can be used as a blueprint for:
 
 To understand how the Site Fleet Tracking solution works, start by installing the solution template.
 
-You will need access to ThingsBoard Professional Edition. The easiest way is to use the [ThingsBoard Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install ThingsBoard using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need access to SENTIENT Professional Edition. The easiest way is to use the [SENTIENT Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install SENTIENT using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Go to the **Solution templates** page.
 - Find **Site fleet tracking** and click **Install**.
@@ -68,7 +68,7 @@ The Site Fleet Tracking dashboard supports interactive simulation to demonstrate
 
 Moving a machine marker updates its latitude and longitude telemetry, automatically triggering geofencing logic, recalculating time-in-zone metrics, and generating alarms if zone rules are violated.
 
-The dashboard can be customized further using the ThingsBoard [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} development guide.
+The dashboard can be customized further using the SENTIENT [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} development guide.
 
 ## Devices
 
@@ -100,7 +100,7 @@ The solution expects telemetry such as <span class="code-light">latitude</span>,
 ```bash
 curl -v -X POST \
 -d "{\"latitude\":36.215322,\"longitude\":-88.665637,\"speed\":18.5,\"fuelLevel\":72.3,\"loadWeight\":56000}" \
-https://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry \
+https://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry \
 --header "Content-Type:application/json"
 ```
 {: .copy-code}
@@ -109,7 +109,7 @@ https://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry \
 ```shell
 curl -v -X POST \
 -d "{\"latitude\":36.215322,\"longitude\":-88.665637,\"speed\":18.5,\"fuelLevel\":72.3,\"loadWeight\":56000}" \
-https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry \
+https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry \
 --header "Content-Type:application/json"
 ```
 {: .copy-code}
@@ -118,14 +118,14 @@ https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry \
 ```shell
 curl -v -X POST \
 -d "{\"latitude\":36.215322,\"longitude\":-88.665637,\"speed\":18.5,\"fuelLevel\":72.3,\"loadWeight\":56000}" \
-https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry \
+https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry \
 --header "Content-Type:application/json"
 ```
 {: .copy-code}
 {% endif %}
 
 Where
-{% if docsPrefix == null or docsPrefix == "pe/" %}- **$THINGSBOARD_HOST_NAME** - the hostname or IP address your platform is running on.{% endif %}
+{% if docsPrefix == null or docsPrefix == "pe/" %}- **$SENTIENT_HOST_NAME** - the hostname or IP address your platform is running on.{% endif %}
 - **$ACCESS_TOKEN** - device access token.
 
 After sending telemetry, open the dashboard to observe real-time updates on the map, KPI cards, and alarms.

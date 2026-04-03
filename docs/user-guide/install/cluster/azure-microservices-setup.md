@@ -3,24 +3,24 @@ layout: docwithnav
 assignees:
 - amykolaichuk
 title: Microservices setup using AKS infrastructure
-description: ThingsBoard IoT platform microservices setup with Kubernetes in Azure AKS 
+description: SENTIENT IoT platform microservices setup with Kubernetes in Azure AKS 
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in microservices mode in Azure AKS.
+This guide will help you to setup SENTIENT in microservices mode in Azure AKS.
 
 ## Prerequisites
 
 {% include templates/install/azure/aks-prerequisites.md %}
 
-## Step 1. Clone ThingsBoard CE K8S scripts repository
+## Step 1. Clone SENTIENT K8S scripts repository
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-ce-k8s.git
-cd thingsboard-ce-k8s/azure/microservices
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-ce-k8s.git
+cd sentient-ce-k8s/azure/microservices
 ```
 {: .copy-code}
 
@@ -57,7 +57,7 @@ cd thingsboard-ce-k8s/azure/microservices
 
 ## Step 8. Starting
 
-Execute the following command to deploy ThingsBoard services:
+Execute the following command to deploy SENTIENT services:
 
 ```
  ./k8s-deploy-resources.sh

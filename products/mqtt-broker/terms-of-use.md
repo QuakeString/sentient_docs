@@ -1,7 +1,7 @@
 ---
 layout: plain
-title: TBMQ Terms of Use
-description: TBMQ Terms of Use
+title: ST-RMQTT Terms of Use
+description: ST-RMQTT Terms of Use
 
 ---
 
@@ -14,7 +14,7 @@ description: TBMQ Terms of Use
 <br>
 
 <p> <b>1. Service Description</b> </p>
-<p> 1.1 This MQTT broker service (the <b>"Service"</b>) is powered by TBMQ (ThingsBoard MQTT Broker) and is provided free of charge for testing, prototyping, and educational purposes.</p>
+<p> 1.1 This MQTT broker service (the <b>"Service"</b>) is powered by ST-RMQTT (SENTIENT MQTT Broker) and is provided free of charge for testing, prototyping, and educational purposes.</p>
 
 <br>
 <p> <b>2. Acceptance of Terms</b> </p>
@@ -54,4 +54,4 @@ description: TBMQ Terms of Use
 
 <br>
 <p> <b>8. Contact</b> </p>
-<p> 8.1 For inquiries regarding this Service, please contact: <a href="mailto:info@thingsboard.io">info@thingsboard.io</a>.</p>
+<p> 8.1 For inquiries regarding this Service, please contact: <a href="mailto:info@docs.sentient.invenia.in">info@docs.sentient.invenia.in</a>.</p>

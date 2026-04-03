@@ -1,5 +1,5 @@
 ---
 layout: docwithnav-pe
-title: "How to connect PINE A64 to ThingsBoard?"
+title: "How to connect PINE A64 to SENTIENT?"
 redirect_to: "/device-library/pe/pine-a64/"
 ---

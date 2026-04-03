@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: Installing ThingsBoard Edge on Ubuntu Server
-description: Installing ThingsBoard Edge on Ubuntu Server
+title: Installing SENTIENT GATEWAY on Ubuntu Server
+description: Installing SENTIENT GATEWAY on Ubuntu Server
 
 ---
 
@@ -12,7 +12,7 @@ description: Installing ThingsBoard Edge on Ubuntu Server
 
 {% assign docsPrefix = "edge/" %}
 
-This guide provides step-by-step instructions for installing **ThingsBoard Edge** on **Ubuntu 22.04 LTS and 24.04 LTS**.
+This guide provides step-by-step instructions for installing **SENTIENT GATEWAY** on **Ubuntu 22.04 LTS and 24.04 LTS**.
 
 {% include templates/edge/install/prerequisites.md %}
 
@@ -26,46 +26,46 @@ This guide provides step-by-step instructions for installing **ThingsBoard Edge*
 
 {% include templates/install/ubuntu-java-install.md %}
 
-### Step 2. Configure the ThingsBoard Edge database
+### Step 2. Configure the SENTIENT GATEWAY database
 
-**ThingsBoard Edge** supports **SQL** and **hybrid** database approaches. See the architecture [page](/docs/reference/#sql-vs-nosql-vs-hybrid-database-approach){: target="_blank"} for details.
+**SENTIENT GATEWAY** supports **SQL** and **hybrid** database approaches. See the architecture [page](/docs/reference/#sql-vs-nosql-vs-hybrid-database-approach){: target="_blank"} for details.
 
 {% capture contenttogglespec %}
 PostgreSQL <small>(recommended for < 5K msg/sec)</small>%,%postgresql%,%templates/edge/install/ubuntu-db-postgresql.md%br%
 Hybrid <br>PostgreSQL+Cassandra<br><small>(recommended for > 5K msg/sec)</small>%,%hybrid%,%templates/edge/install/ubuntu-db-hybrid.md{% endcapture %}
-{% include content-toggle.liquid content-toggle-id="ubuntuThingsboardDatabase" toggle-spec=contenttogglespec %}
+{% include content-toggle.liquid content-toggle-id="ubuntuSentientDatabase" toggle-spec=contenttogglespec %}
 
 ### Step 3. Select the Queue service
 
-**ThingsBoard Edge** can use different messaging systems and brokers for storing messages and enabling communication between its services. Choose the appropriate queue implementation based on your specific business needs:
+**SENTIENT GATEWAY** can use different messaging systems and brokers for storing messages and enabling communication between its services. Choose the appropriate queue implementation based on your specific business needs:
 
 * **In Memory**: The built-in and default queue implementation. It is useful for development or proof-of-concept (PoC) environments, but is not recommended for production or any type of clustered deployments due to limited scalability.
 
-* **Kafka**: Recommended for production deployments. This queue is used in most of the ThingsBoard production environments now.
+* **Kafka**: Recommended for production deployments. This queue is used in most of the SENTIENT production environments now.
 
 {% capture contenttogglespecqueue %}
 In Memory <small>(built-in and default)</small>%,%inmemory%,%templates/install/queue-in-memory.md%br%
 Kafka <small>(recommended for on-prem, production installations)</small>%,%kafka-in-docker%,%templates/edge/install/ubuntu-queue-kafka-in-docker.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="ubuntuThingsboardQueue" toggle-spec=contenttogglespecqueue %}
+{% include content-toggle.liquid content-toggle-id="ubuntuSentientQueue" toggle-spec=contenttogglespecqueue %}
 
-### Step 4. ThingsBoard Edge service installation
+### Step 4. SENTIENT GATEWAY service installation
 
 Download the installation package:
 
 ```bash
-wget https://github.com/thingsboard/thingsboard-edge/releases/download/{{ site.release.edge_tag }}/tb-edge-{{ site.release.edge_ver }}.deb
+wget https://github.com/sentient/sentient-gateway/releases/download/{{ site.release.edge_tag }}/tb-edge-{{ site.release.edge_ver }}.deb
 ```
 {: .copy-code}
 
-Go to the download repository and install ThingsBoard Edge service
+Go to the download repository and install SENTIENT GATEWAY service
 
 ```bash
 sudo dpkg -i tb-edge-{{ site.release.edge_ver }}.deb
 ```
 {: .copy-code}
 
-### Step 5. Configure the ThingsBoard Edge
+### Step 5. Configure the SENTIENT GATEWAY
 
 {% include templates/edge/install/linux-configure-edge.md %}
 
@@ -73,20 +73,20 @@ sudo dpkg -i tb-edge-{{ site.release.edge_ver }}.deb
 
 {% include templates/edge/install/run-edge-install.md %} 
 
-### Step 7. Start the ThingsBoard Edge service
+### Step 7. Start the SENTIENT GATEWAY service
 
 ```bash
 sudo service tb-edge start
 ```
 {: .copy-code}
 
-### Step 8. Open the ThingsBoard Edge UI
+### Step 8. Open the SENTIENT GATEWAY UI
 
 {% include templates/edge/install/open-edge-ui.md %} 
 
 ## Troubleshooting
 
-The **ThingsBoard Edge** logs are stored in the following directory:
+The **SENTIENT GATEWAY** logs are stored in the following directory:
  
 ```bash
 /var/log/tb-edge

@@ -1,12 +1,12 @@
-{% include templates/mqtt-broker/pe-tbmq-explore-banner.md %}
+{% include templates/mqtt-broker/pe-st-rmqtt-explore-banner.md %}
 
-**TBMQ {{tbmqSuffix}}** is an {{tbmqDefinition}} <a target="_blank" href="/products/mqtt-broker/">MQTT message broker</a> designed for massive scalability and high-performance message routing.
+**ST-RMQTT {{st-rmqttSuffix}}** is an {{st-rmqttDefinition}} <a target="_blank" href="/products/mqtt-broker/">MQTT message broker</a> designed for massive scalability and high-performance message routing.
 It efficiently handles **millions** of concurrent client connections and delivers [millions of messages per second](/docs/{{docsPrefix}}mqtt-broker/reference/3m-throughput-single-node-performance-test/)
 with low latency in a single-node setup.
-In cluster mode, TBMQ’s capabilities scale even further, enabling it to support [large-scale IoT deployments](/docs/{{docsPrefix}}mqtt-broker/reference/100m-connections-performance-test/) 
+In cluster mode, ST-RMQTT’s capabilities scale even further, enabling it to support [large-scale IoT deployments](/docs/{{docsPrefix}}mqtt-broker/reference/100m-connections-performance-test/) 
 with exceptional reliability and throughput.
 
-At ThingsBoard, we’ve accumulated extensive experience in building scalable IoT applications, which has allowed us to identify **three key patterns** commonly found in MQTT-based solutions.
+At SENTIENT, we’ve accumulated extensive experience in building scalable IoT applications, which has allowed us to identify **three key patterns** commonly found in MQTT-based solutions.
 
 * **Fan-in pattern:**
   In this scenario, a large number of devices generate high message volumes that are consumed by a smaller set of applications. 
@@ -20,17 +20,17 @@ At ThingsBoard, we’ve accumulated extensive experience in building scalable Io
   This is a targeted one-to-one communication model, ideal for use cases like private messaging or command-response interactions. 
   Messages are exchanged directly between a single publisher and a specific subscriber through uniquely defined topics.
 
-Recognizing these common patterns, we designed TBMQ to be exceptionally well-suited for all three.
-Developed in **Java**, TBMQ leverages leading open-source technologies, including **Kafka**, to provide low-latency message delivery, data durability, and horizontal scalability across the platform.
+Recognizing these common patterns, we designed ST-RMQTT to be exceptionally well-suited for all three.
+Developed in **Java**, ST-RMQTT leverages leading open-source technologies, including **Kafka**, to provide low-latency message delivery, data durability, and horizontal scalability across the platform.
 
 ## Full MQTT Specification Support
 
-TBMQ is fully compliant with the MQTT protocol, delivering complete support for all core MQTT features across both single-node and clustered environments.
-Whether you're building scalable IoT solutions or ensuring reliable communication for connected devices, TBMQ meets the latest standards for seamless interoperability.
+ST-RMQTT is fully compliant with the MQTT protocol, delivering complete support for all core MQTT features across both single-node and clustered environments.
+Whether you're building scalable IoT solutions or ensuring reliable communication for connected devices, ST-RMQTT meets the latest standards for seamless interoperability.
 
 ### Supported MQTT versions
 
-TBMQ supports the following MQTT versions:
+ST-RMQTT supports the following MQTT versions:
 
 * [MQTT 3.1](https://public.dhe.ibm.com/software/dw/webservices/ws-mqtt/mqtt-v3r1.html)
 * [MQTT 3.1.1](https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html)
@@ -38,7 +38,7 @@ TBMQ supports the following MQTT versions:
 
 Our implementation ensures reliable performance and compatibility across diverse use cases.
 
-## TBMQ Features
+## ST-RMQTT Features
 
 * All MQTT v3.x features
 * All MQTT v5.0 features
@@ -64,17 +64,17 @@ Our implementation ensures reliable performance and compatibility across diverse
 
 ## Architecture
 
-TBMQ is designed to be:
+ST-RMQTT is designed to be:
 
 * **scalable**: the platform is horizontally scalable and built using the leading open-source technologies;
 * **fault-tolerant**: there is no single point of failure, and every node in the cluster is identical, ensuring high availability and fault tolerance;
 * **robust and efficient**: can manage millions of clients and process millions of messages per second;
 * **durable**: the broker ensures data durability, preventing data loss.
 
-See [**TBMQ Architecture**](/docs/{{docsPrefix}}mqtt-broker/architecture) for more details.
+See [**ST-RMQTT Architecture**](/docs/{{docsPrefix}}mqtt-broker/architecture) for more details.
 
 ## Ready to get started?
 
-Follow the getting started guide to learn the basics, or try TBMQ instantly on our public demo instance — no installation required.
+Follow the getting started guide to learn the basics, or try ST-RMQTT instantly on our public demo instance — no installation required.
 
-<p><a href="/docs/{{docsPrefix}}mqtt-broker/getting-started/" class="button">Hello World Application</a> <a target="_blank" href="https://demo.tbmq.io/signup" class="button">Try TBMQ Live</a></p>
+<p><a href="/docs/{{docsPrefix}}mqtt-broker/getting-started/" class="button">Hello World Application</a> <a target="_blank" href="https://demo.st-rmqtt.io/signup" class="button">Try ST-RMQTT Live</a></p>

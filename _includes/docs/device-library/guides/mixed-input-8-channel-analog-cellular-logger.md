@@ -1,5 +1,5 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://fusiondaq.com/product/mixed-input-8-channel-analog-cellular-logger/" %} 
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
@@ -15,28 +15,28 @@ Advanced triggering functionality allows the MI-8 to conserve storage space and 
 The low power consumption and wide operating temperature range are designed to allow outdoor and remote installations.  
 The MI-8 is available with and without an enclosure to support custom packaging solutions. For example, the enclosureless (OEM) configuration is often mounted into an IP-67 rated NEMA enclosure along with supporting sensors and hardware.  
 
-In this guide, we will learn how to [create device on Thingsboard](#create-device-on-thingsboard).  
-After this we will [configure and connect the device](#connect-device-to-thingsboard), and [check the data on ThingsBoard](#check-data-on-thingsboard).  
+In this guide, we will learn how to [create device on Sentient](#create-device-on-sentient).  
+After this we will [configure and connect the device](#connect-device-to-sentient), and [check the data on SENTIENT](#check-data-on-sentient).  
 
 ### Prerequisites
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
 
-- [ThingsBoard account](https://{{hostName}})
+- [SENTIENT account](https://{{hostName}})
 
 
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
-{% include /docs/device-library/blocks/basic/thingsboard-create-device-block.md %}
+{% include /docs/device-library/blocks/basic/sentient-create-device-block.md %}
 
-## Connect device to ThingsBoard 
+## Connect device to SENTIENT 
 
-{% include /docs/device-library/blocks/basic/thingsboard-provide-device-access-token-block.md %}
+{% include /docs/device-library/blocks/basic/sentient-provide-device-access-token-block.md %}
 
 {% include /docs/device-library/blocks/ready-to-go-devices/mixed-input-8-channel-analog-cellular-logger-configuration-block.md %}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
 {% include /docs/device-library/blocks/ready-to-go-devices/mixed-input-8-channel-analog-cellular-logger-check-data-block.md %}
 

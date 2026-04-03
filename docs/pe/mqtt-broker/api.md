@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: TBMQ API reference
-description: TBMQ API reference
+title: ST-RMQTT API reference
+description: ST-RMQTT API reference
 
 ---
 

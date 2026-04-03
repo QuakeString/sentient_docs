@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
 title: Troubleshooting
-description: ThingsBoard IoT Platform troubleshooting
+description: SENTIENT IoT Platform troubleshooting
 
 metrics-dashboards:
     0:

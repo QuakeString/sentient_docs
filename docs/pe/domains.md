@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Managing domain
-description: Domain managing through ThingsBoard
+description: Domain managing through SENTIENT
 
 register-domain:
     0:
@@ -19,7 +19,7 @@ register-domain:
 login-with-domain:
     0:
         image: /images/user-guide/domain/domain-login-1-pe.png
-        title: 'Now you can use your domain name to access ThingsBoard web interface and services. Try to login by entering the chosen domain name in the browser address line.'
+        title: 'Now you can use your domain name to access SENTIENT web interface and services. Try to login by entering the chosen domain name in the browser address line.'
 
 domain-details:
     0:

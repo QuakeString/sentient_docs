@@ -1,18 +1,18 @@
 ---
 layout: docwithnav-gw
 title: SNMP Connector Configuration
-description: SNMP monitoring support for ThingsBoard IoT Gateway
+description: SNMP monitoring support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with SNMP Connector configuration for ThingsBoard IoT Gateway.  
+This guide will help you to get familiar with SNMP Connector configuration for SENTIENT IoT Gateway.  
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector.  
 The purpose of this Connector is to get data from SNMP manager objects and write some data to them.  
 
-This connector is useful when you have SNMP manager in your network and you would like to push the data to the ThingsBoard.    
+This connector is useful when you have SNMP manager in your network and you would like to push the data to the SENTIENT.    
 
 We will describe connector configuration file below.  
 
@@ -176,8 +176,8 @@ Main configuration for the device item should contain the following parameters:
 
 | **Parameter** | **Default value**                       | **Description**                               |
 |:-|:-|-
-| deviceName    | **SNMP router**                         | Device name in ThingsBoard.                   |
-| deviceType    | **snmp**                                | Device type in ThingsBoard.                   |
+| deviceName    | **SNMP router**                         | Device name in SENTIENT.                   |
+| deviceType    | **snmp**                                | Device type in SENTIENT.                   |
 | ip            | **snmp.live.gambitcommunications.com**  | Ip or hostname of SNMP manager.               |
 | port          | **161**                                 | SNMP port.                                    |
 | pollPeriod    | **5000**                                | Period for data checking.                     |
@@ -187,7 +187,7 @@ Main configuration for the device item should contain the following parameters:
 #### Attributes section
 
 This configuration section contains an array of objects with configuration for data processing. Objects configured here will be processed as device attributes.  
-By default, the gateway uses an uplink converter to send received data from SNMP manager to ThingsBoard, but it is also possible to use a custom converter.  
+By default, the gateway uses an uplink converter to send received data from SNMP manager to SENTIENT, but it is also possible to use a custom converter.  
 
 **Note**: Some configuration parameters in the configuration objects depend on the method being used. You can read more about specific configuration parameters for methods [here](#supported-methods-and-their-configuration)
 
@@ -195,7 +195,7 @@ General configuration parameters are:
 
 | **Parameter**     | **Default value**              | **Description**                                                                                         |
 |:-|:-------------------------------|-
-| key               | **ReceivedFromGet**            | Attribute key in device on ThingsBoard.                                                                 |
+| key               | **ReceivedFromGet**            | Attribute key in device on SENTIENT.                                                                 |
 | method            | **get**                        | Method for data processing. Supported methods are [here](#supported-methods-and-their-configuration).   |
 | oid               | **1.3.6.1.2.1.1.1.0**          | Manager object identifier.                                                                              |
 |---
@@ -213,7 +213,7 @@ Configuration section item example:
 #### Telemetry section
 
 This configuration section contains an array of objects with configuration for data processing. Objects configured here will be processed as device telemetry.  
-By default, the gateway uses an uplink converter to send received data from SNMP manager to ThingsBoard, but it is also possible to use a custom converter.  
+By default, the gateway uses an uplink converter to send received data from SNMP manager to SENTIENT, but it is also possible to use a custom converter.  
 
 **Note**: Some configuration parameters in configuration objects depend on used method. You can read more about specific configuration parameters for methods [here](#supported-methods-and-their-configuration)
 
@@ -221,7 +221,7 @@ General configuration parameters are:
 
 | **Parameter**     | **Default value**             | **Description**                                                                                         |
 |:-|:------------------------------|---------------------------------------------------------------------------------------------------------
-| key               | **ReceivedFromTable**         | Telemetry key in device on ThingsBoard.                                                                 |
+| key               | **ReceivedFromTable**         | Telemetry key in device on SENTIENT.                                                                 |
 | method            | **table**                     | Method for data processing. Supported methods are [here](#supported-methods-and-their-configuration).   |
 | oid               | **1.3.6.1.2.1.1**             | Manager object identifier.                                                                              |
 |---
@@ -239,8 +239,8 @@ Configuration section item example:
 #### Attribute update requests section
 
 Configurations in this section are optional.  
-ThingsBoard allows the provision of device attributes and fetches some of them from the device application.
-You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard.
+SENTIENT allows the provision of device attributes and fetches some of them from the device application.
+You can treat this as a remote configuration for devices. Your devices are able to request shared attributes from SENTIENT.
 See [user guide](/docs/user-guide/attributes/) for more details.
 
 The "**attributeUpdateRequests**" configuration allows configuring the format of the corresponding attribute request and response messages. 
@@ -277,13 +277,13 @@ The **attributeUpdates** section will look like:
 
 #### Server side RPC section
 
-ThingsBoard allows sending [RPC commands](/docs/user-guide/rpc/) to the device connected to ThingsBoard directly or via Gateway.
+SENTIENT allows sending [RPC commands](/docs/user-guide/rpc/) to the device connected to SENTIENT directly or via Gateway.
  
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to the device through the gateway.
+Configuration, provided in this section is used for sending RPC requests from SENTIENT to the device through the gateway.
 
 {% capture rpc_variants %}
 **There are 2 types of the RPC calls:**  
-1. With reply, after sending request the gateway will wait for a response and send it to ThingsBoard.
+1. With reply, after sending request the gateway will wait for a response and send it to SENTIENT.
 2. With no reply, after sending request the gateway will not wait for a response.
 
 Examples for both methods are provided below.
@@ -530,7 +530,7 @@ Supported methods are:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

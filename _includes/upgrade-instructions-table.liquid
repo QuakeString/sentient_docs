@@ -1,17 +1,17 @@
-{% if docsPrefix == "trendz/" %}
-    {% assign versionsCollection = site.data.trendz-upgrade-instructions-data %}
+{% if docsPrefix == "sentient-analytics/" %}
+    {% assign versionsCollection = site.data.sentient-analytics-upgrade-instructions-data %}
 {% else %}
     {% assign versionsCollection = site.data.upgrade-instructions-data %}
 {% endif %}
 
-<div class="releases-table upgrade-instructions-table{% if docsPrefix == "pe/" %} pe-table {% elsif docsPrefix == "trendz/" %} trendz-table{% elsif docsPrefix == "edge/" %} edge-table{% elsif docsPrefix == "pe/edge/" %} pe-edge-table{% endif %}">
+<div class="releases-table upgrade-instructions-table{% if docsPrefix == "pe/" %} pe-table {% elsif docsPrefix == "sentient-analytics/" %} sentient-analytics-table{% elsif docsPrefix == "edge/" %} edge-table{% elsif docsPrefix == "pe/edge/" %} pe-edge-table{% endif %}">
     <div class="releases-table-content">
         <div class="releases-table-header">
             <div class="releases-table-header-item">Version</div>
             <div class="releases-table-header-item">Release Date</div>
             <div class="releases-table-header-item">
-                {% if docsPrefix == "trendz/" %}
-                    ThingsBoard Support
+                {% if docsPrefix == "sentient-analytics/" %}
+                    SENTIENT Support
                 {% else %}
                     Upgradable From
                 {% endif %}
@@ -55,7 +55,7 @@
                     {% assign hashBase = version | replace: ".", "" %}
                 {% endif %}
 
-                {% assign hashLinkReleaseBase = "thingsboard" %}
+                {% assign hashLinkReleaseBase = "sentient" %}
 
                 {% if docsPrefix == "pe/" %}
                     {% assign hashLinkReleaseBase = hashLinkReleaseBase | append: "-pe-" %}
@@ -63,8 +63,8 @@
                     {% assign hashLinkReleaseBase = hashLinkReleaseBase | append: "-edge-" %}
                 {% elsif docsPrefix == "pe/edge/" %}
                     {% assign hashLinkReleaseBase = hashLinkReleaseBase | append: "-pe-edge-" %}
-                {% elsif docsPrefix == "trendz/" %}
-                    {% assign hashLinkReleaseBase = hashLinkReleaseBase | append: "-trendz-" %}
+                {% elsif docsPrefix == "sentient-analytics/" %}
+                    {% assign hashLinkReleaseBase = hashLinkReleaseBase | append: "-sentient-analytics-" %}
                 {% else %}
                     {% assign hashLinkReleaseBase = hashLinkReleaseBase | append: "-ce-" %}
                 {% endif %}
@@ -119,7 +119,7 @@
                             </time>
                         </div>
 
-                        {%- if docsPrefix == "trendz/" -%}
+                        {%- if docsPrefix == "sentient-analytics/" -%}
                             <div class="releases-table-content-item">Up to v{{ item[1].tbVersion }}</div>
                         {%- else -%}
                             {%- if item[1].patch == "true" -%}
@@ -161,15 +161,15 @@
                             <i class="fas fa-external-link-alt" style="opacity: 0.54; color: #000"></i>
                         </a>
 
-                        {% assign hashLinkUpgradeBase = "upgrading-thingsboard" %}
+                        {% assign hashLinkUpgradeBase = "upgrading-sentient" %}
                         {% if docsPrefix == "pe/" %}
                             {% assign hashLinkUpgradeBase = hashLinkUpgradeBase | append: "-pe-to-" %}
                         {% elsif docsPrefix == "edge/" %}
                             {% assign hashLinkUpgradeBase = hashLinkUpgradeBase | append: "-edge-to-" %}
                         {% elsif docsPrefix == "pe/edge/" %}
                             {% assign hashLinkUpgradeBase = hashLinkUpgradeBase | append: "-pe-edge-to-" %}
-                        {% elsif docsPrefix == "trendz/" %}
-                            {% assign hashLinkUpgradeBase = "upgrading-trendz-analytics-to-" %}
+                        {% elsif docsPrefix == "sentient-analytics/" %}
+                            {% assign hashLinkUpgradeBase = "upgrading-sentient-analytics-analytics-to-" %}
                         {% else %}
                             {% assign hashLinkUpgradeBase = hashLinkUpgradeBase | append: "-ce-to-" %}
                         {% endif %}
@@ -203,7 +203,7 @@
                                 <a href="/docs/user-guide/install/{{ docsPrefix }}upgrade-instructions/docker/{{ versionFamily }}/{{ hashLinkUpgrade }}" data-tooltip="Docker Instructions">
                                     <img src="/images/docker.svg" alt="Upgrade Docker Instructions">
                                 </a>
-                            {% elsif docsPrefix == "trendz/" %}
+                            {% elsif docsPrefix == "sentient-analytics/" %}
                                 <a href="/docs/{{ docsPrefix }}install/upgrade-instructions/ubuntu/{{ versionFamily }}/{{ hashLinkUpgrade }}" data-tooltip="Ubuntu Instructions">
                                     <img src="/images/ubuntu.svg" alt="Upgrade Ubuntu Instructions">
                                 </a>

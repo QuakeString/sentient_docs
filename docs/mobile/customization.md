@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile
-title: Customize ThingsBoard Mobile Application
+title: Customize SENTIENT Mobile Application
 
 ---
 

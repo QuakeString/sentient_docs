@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
-title: How to connect OPC-UA device to ThingsBoard CE?
-description: Understand how to connect OPC-UA device to ThingsBoard CE using ThingsBoard IoT Gateway
+title: How to connect OPC-UA device to SENTIENT?
+description: Understand how to connect OPC-UA device to SENTIENT using SENTIENT IoT Gateway
 redirect_from: "/docs/iot-gateway/guides/how-to-connect-opcua-server/"
 
 ---
@@ -11,15 +11,15 @@ redirect_from: "/docs/iot-gateway/guides/how-to-connect-opcua-server/"
 
 ## Overview
 
-In this guide, we will describe how to connect an OPC-UA device to ThingsBoard CE using ThingsBoard IoT Gateway. 
+In this guide, we will describe how to connect an OPC-UA device to SENTIENT using SENTIENT IoT Gateway. 
 Whether you are just starting with OPC-UA integration or looking to streamline your existing setup, this guide will 
 provide you with the essential knowledge to get up and running quickly.
 
-**What is ThingsBoard IoT Gateway?**
+**What is SENTIENT IoT Gateway?**
 
-The ThingsBoard IoT Gateway is an open-source solution that serves as a bridge between IoT devices connected to 
-legacy or third-party systems and the ThingsBoard platform. It enables seamless integration of devices that cannot 
-communicate with ThingsBoard directly, ensuring data can be collected, processed, and visualized in real time. With 
+The SENTIENT IoT Gateway is an open-source solution that serves as a bridge between IoT devices connected to 
+legacy or third-party systems and the SENTIENT platform. It enables seamless integration of devices that cannot 
+communicate with SENTIENT directly, ensuring data can be collected, processed, and visualized in real time. With 
 the IoT Gateway, you can connect multiple devices, aggregate telemetry, and manage configurations centrally. It 
 supports flexible deployment scenarios, making it especially suitable for industrial automation, monitoring, and smart 
 energy systems where OPC-UA is widely used.
@@ -34,15 +34,15 @@ make it a standard choice for industries that require consistent, real-time, and
 
 **What will You Learn?**
 
-In this guide, we will walk step by step through the process of integrating an OPC-UA device with ThingsBoard CE. You 
-will learn how to install and configure the ThingsBoard IoT Gateway, set up the OPC-UA connector, and establish a 
-connection to your OPC-UA server. We will also demonstrate how to map data points, send telemetry to ThingsBoard. 
+In this guide, we will walk step by step through the process of integrating an OPC-UA device with SENTIENT. You 
+will learn how to install and configure the SENTIENT IoT Gateway, set up the OPC-UA connector, and establish a 
+connection to your OPC-UA server. We will also demonstrate how to map data points, send telemetry to SENTIENT. 
 By the end of this guide, you will have a working setup that allows you to seamlessly monitor and analyze your OPC-UA 
-device data in ThingsBoard CE.
+device data in SENTIENT.
 
 ## Prerequisites
 
-- Before initiating the Gateway setup, ensure that the ThingsBoard server is up and running. You can install ThingsBoard
+- Before initiating the Gateway setup, ensure that the SENTIENT server is up and running. You can install SENTIENT
   CE manually by following the steps outlined in
   the [Installation Guide](/docs/user-guide/install/installation-options/).
 - Before moving forward, ensure Docker is installed and properly configured on your machine. If you haven't installed
@@ -71,25 +71,25 @@ Its structure looks like this:
 In our example, we’ll focus on the following nodes:
 
 - `Root.Objects.OPC-UA_PLC` - the parent device node that contains all related data points:
-    - Root.Objects.OPC-UA_PLC.`Humidity` - represents humidity value. We’ll map this node to ThingsBoard CE as a
+    - Root.Objects.OPC-UA_PLC.`Humidity` - represents humidity value. We’ll map this node to SENTIENT as a
       time-series value.
-    - Root.Objects.OPC-UA_PLC.`Temperature` - represents temperature value. We’ll also send this value to ThingsBoard CE
+    - Root.Objects.OPC-UA_PLC.`Temperature` - represents temperature value. We’ll also send this value to SENTIENT
       as a time-series value.
-    - Root.Objects.OPC-UA_PLC.`Pressure` - represents pressure measurements, which will be stored in ThingsBoard CE as a
+    - Root.Objects.OPC-UA_PLC.`Pressure` - represents pressure measurements, which will be stored in SENTIENT as a
       time-series value.
     - Root.Objects.OPC-UA_PLC.`FirmwareInformation` - a child node that holds metadata about the device firmware:
-      - Root.Objects.OPC-UA_PLC.FirmwareInformation.`Version` - the firmware version number. We’ll map this to ThingsBoard
+      - Root.Objects.OPC-UA_PLC.FirmwareInformation.`Version` - the firmware version number. We’ll map this to SENTIENT
         CE as a device attribute.
       - Root.Objects.OPC-UA_PLC.FirmwareInformation.`UpdatedDate` - the last time the firmware was updated. This will also
-        be sent to ThingsBoard CE as a device attribute.
+        be sent to SENTIENT as a device attribute.
 
 By working with these nodes, you’ll see how to extract both real-time telemetry data (Humidity, Temperature, Pressure)
-and static attributes (firmware details) from an OPC-UA device, and then forward them into ThingsBoard CE for 
+and static attributes (firmware details) from an OPC-UA device, and then forward them into SENTIENT for 
 monitoring and visualization.
 
-## Step 1. Create a new gateway device on ThingsBoard
+## Step 1. Create a new gateway device on SENTIENT
 
-First, add a gateway device to your ThingsBoard instance by following these steps:
+First, add a gateway device to your SENTIENT instance by following these steps:
 
 {% assign createNewGatewayDevice = '
     ===
@@ -220,10 +220,10 @@ the following is important:
 - **`security`** - sets the OPC-UA security policy. Options include `Basic128Rsa15`, `Basic256`, and `Basic256Sha256`. Depends on your OPC-UA server settings.
 - **`identity`** - defines how the gateway authenticates to the server: here, anonymous for simplicity.
 
-**Mapping** - defines how node data from the OPC-UA server maps to ThingsBoard devices:
+**Mapping** - defines how node data from the OPC-UA server maps to SENTIENT devices:
 - **`deviceNodeSource`** & **`deviceNodePattern`** - the source type is path, and the pattern matches the root node (`Root.Objects.OPC-UA_PLC`) that represents our device.
-- **`deviceInfo`** - define ThingsBoard device name and device profile. In our example, we use constant values for this purpose.
-- **`attributes`** - these values are pushed to ThingsBoard attributes and are typically static or change infrequently. We use a relative path for configuring attributes data mapping.
+- **`deviceInfo`** - define SENTIENT device name and device profile. In our example, we use constant values for this purpose.
+- **`attributes`** - these values are pushed to SENTIENT attributes and are typically static or change infrequently. We use a relative path for configuring attributes data mapping.
 - **`timeseries`** -  these gauge readings will appear under the "**Latest Telemetry**" tab in the device's page. We use a relative path for configuring time series data mapping too.
 
 {% capture difference %}
@@ -249,13 +249,13 @@ To review the data uploaded from your gateway, use the following steps:
 
 ## Conclusion
 
-In this guide, we demonstrated how to connect an OPC-UA device to ThingsBoard CE using the ThingsBoard IoT Gateway. 
+In this guide, we demonstrated how to connect an OPC-UA device to SENTIENT using the SENTIENT IoT Gateway. 
 By configuring the gateway, setting up the OPC-UA connector, and mapping both telemetry data (such as humidity, 
 temperature, and pressure) and device attributes (like firmware version and update date), we established a complete 
-data flow from the OPC-UA server into ThingsBoard.
+data flow from the OPC-UA server into SENTIENT.
 
 With this setup, you can now monitor your device data in real time, visualize it on dashboards, and use 
-ThingsBoard’s powerful features—such as alarms, rule chains—to build advanced IoT solutions. The same approach 
+SENTIENT’s powerful features—such as alarms, rule chains—to build advanced IoT solutions. The same approach 
 can be extended to real industrial OPC-UA devices, enabling seamless integration of systems into modern IoT platforms.
 
 This example using the Prosys Simulation Server is just the beginning. You can now adapt the configuration to 
@@ -263,7 +263,7 @@ your own devices, scale up to multiple servers, and customize data mappings base
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

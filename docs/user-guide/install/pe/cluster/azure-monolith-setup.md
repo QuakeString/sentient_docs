@@ -3,29 +3,29 @@ layout: docwithnav-pe
 assignees:
 - amykolaichuk
 title: Monolith setup using AKS infrastructure
-description: ThingsBoard IoT platform monolith setup with Kubernetes in Azure AKS 
+description: SENTIENT IoT platform monolith setup with Kubernetes in Azure AKS 
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to setup ThingsBoard in monolith mode in Azure AKS.
+This guide will help you to setup SENTIENT in monolith mode in Azure AKS.
 
 ## Prerequisites
 
 {% include templates/install/azure/aks-prerequisites.md %}
 
-### Pull ThingsBoard PE images from docker hub
+### Pull SENTIENT Professional Edition images from docker hub
 
 {% assign checkoutMode = "monolith" %}
 {% include templates/install/dockerhub/checkout.md %}
 
-## Step 1. Clone ThingsBoard PE K8S scripts repository
+## Step 1. Clone SENTIENT Professional Edition K8S scripts repository
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-pe-k8s.git --depth 1
-cd thingsboard-pe-k8s/azure/monolith
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-pe-k8s.git --depth 1
+cd sentient-pe-k8s/azure/monolith
 ```
 {: .copy-code}
 
@@ -62,7 +62,7 @@ cd thingsboard-pe-k8s/azure/monolith
 
 ## Step 8. Starting
 
-Execute the following command to deploy ThingsBoard services:
+Execute the following command to deploy SENTIENT services:
 
 ```
  ./k8s-deploy-resources.sh
@@ -90,19 +90,19 @@ After few minutes you may call `kubectl get pods`. If everything went fine, you 
 
 {% include templates/install/k8s-configure-edge-load-balancer.md %}
 
-## Step 10. Configure Trendz (Optional)
+## Step 10. Configure SENTIENT ANALYTICS (Optional)
 
-### 10.1. Pull Trendz images from docker hub
+### 10.1. Pull SENTIENT ANALYTICS images from docker hub
 
-{% include templates/install/trendz/pull_trendz.md %}
+{% include templates/install/sentient-analytics/pull_sentient-analytics.md %}
 
-### 10.2. Create a Trendz database in the existing Azure Database
+### 10.2. Create a SENTIENT ANALYTICS database in the existing Azure Database
 
-{% include templates/install/trendz/azure/k8s-trendz-db-creating.md %}
+{% include templates/install/sentient-analytics/azure/k8s-sentient-analytics-db-creating.md %}
 
-### 10.3. Trendz starting
+### 10.3. SENTIENT ANALYTICS starting
 
-{% include templates/install/trendz/k8s-trendz-starting.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-starting.md %}
 
 ## Step 11. Using
 
@@ -110,13 +110,13 @@ After few minutes you may call `kubectl get pods`. If everything went fine, you 
 
 ## Upgrading
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
 {% include templates/install/azure/upgrading-msa.md %}
 
-### Upgrading to new Trendz version (Optional)
+### Upgrading to new SENTIENT ANALYTICS version (Optional)
 
-{% include templates/install/trendz/k8s-trendz-upgrading.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-upgrading.md %}
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect EG8200 Gateway to ThingsBoard?
+title: How to connect EG8200 Gateway to SENTIENT?
 category: Other devices
 connectivity: [4G, LAN, WAN, WiFi]
 vendor: IOTRouter

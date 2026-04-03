@@ -1,14 +1,14 @@
 ---
 layout: mobile
-title: ThingsBoard Mobile Application
+title: SENTIENT Mobile Application
 description:
 ---
 
 <section id="intro">
     <main>
-        <h1><a href="/docs/mobile/">ThingsBoard Mobile Application</a> is an open-source <a href="https://github.com/thingsboard/flutter_thingsboard_app">project</a> based on Flutter</h1>
+        <h1><a href="/docs/mobile/">SENTIENT Mobile Application</a> is an open-source <a href="https://github.com/sentient/flutter_sentient_app">project</a> based on Flutter</h1>
         <h2 class="second">Build your own IoT mobile application with minimum coding efforts</h2>
-        <h3 class="second" style="text-align: center">Powered by ThingsBoard IoT Platform</h3>
+        <h3 class="second" style="text-align: center">Powered by SENTIENT IoT Platform</h3>
     </main>
 </section>
 
@@ -33,8 +33,8 @@ description:
                         </div>
                         <div class="frame-video">
                             <video autoplay loop preload="auto" muted playsinline>
-                                 <source src="https://video.thingsboard.io/mobile/browse-dashboards.mp4" type="video/mp4">
-                                 <source src="https://video.thingsboard.io/mobile/browse-dashboards.webm" type="video/webm">
+                                 <source src="https://video.docs.sentient.invenia.in/mobile/browse-dashboards.mp4" type="video/mp4">
+                                 <source src="https://video.docs.sentient.invenia.in/mobile/browse-dashboards.webm" type="video/webm">
                             </video>
                         </div>
                     </div>
@@ -51,8 +51,8 @@ description:
                         </div>
                         <div class="frame-video">
                             <video autoplay loop preload="auto" muted playsinline>
-                                 <source src="https://video.thingsboard.io/mobile/manage-alarms.mp4" type="video/mp4">
-                                 <source src="https://video.thingsboard.io/mobile/manage-alarms.webm" type="video/webm">
+                                 <source src="https://video.docs.sentient.invenia.in/mobile/manage-alarms.mp4" type="video/mp4">
+                                 <source src="https://video.docs.sentient.invenia.in/mobile/manage-alarms.webm" type="video/webm">
                             </video>
                         </div>
                     </div>
@@ -74,7 +74,7 @@ description:
             </div>
             <div class="block dark">
                 <div class="feature-des"><h2>Structured devices navigation</h2>
-                    <p>Browse devices grouped by their type and online status. On ThingsBoard, assign device specific dashboard and image.</p>
+                    <p>Browse devices grouped by their type and online status. On SENTIENT, assign device specific dashboard and image.</p>
                     <a class="read-more-button" href="/docs/mobile/customize-devices/">Read more<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
                 <div class="preview">
@@ -87,8 +87,8 @@ description:
                         </div>
                         <div class="frame-video">
                             <video autoplay loop preload="auto" muted playsinline>
-                                 <source src="https://video.thingsboard.io/mobile/navigate-devices.mp4" type="video/mp4">
-                                 <source src="https://video.thingsboard.io/mobile/navigate-devices.webm" type="video/webm">
+                                 <source src="https://video.docs.sentient.invenia.in/mobile/navigate-devices.mp4" type="video/mp4">
+                                 <source src="https://video.docs.sentient.invenia.in/mobile/navigate-devices.webm" type="video/webm">
                             </video>
                         </div>
                     </div>
@@ -105,14 +105,14 @@ description:
                         </div>
                         <div class="frame-video">
                             <video autoplay loop preload="auto" muted playsinline>
-                                 <source src="https://video.thingsboard.io/mobile/mobile-actions.mp4" type="video/mp4">
-                                 <source src="https://video.thingsboard.io/mobile/mobile-actions.webm" type="video/webm">
+                                 <source src="https://video.docs.sentient.invenia.in/mobile/mobile-actions.mp4" type="video/mp4">
+                                 <source src="https://video.docs.sentient.invenia.in/mobile/mobile-actions.webm" type="video/webm">
                             </video>
                         </div>
                     </div>
                 </div>
                 <div class="feature-des"><h2>Rich set of mobile actions</h2>
-                    <p>Use mobile device to take photo, scan QR code, update location and more within dashboard. Extend the action with your own processing logic using ThingsBoard.</p>
+                    <p>Use mobile device to take photo, scan QR code, update location and more within dashboard. Extend the action with your own processing logic using SENTIENT.</p>
                     <a class="read-more-button" href="/docs/mobile/mobile-actions/">Read more<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 </div>
             </div>

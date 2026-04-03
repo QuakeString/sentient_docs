@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Raspberry Pi Zero W to ThingsBoard?
+title: How to connect Raspberry Pi Zero W to SENTIENT?
 category: Single-board computers
 chip: BCM2835
 connectivity: [WIFI, Bluetooth, BLE]

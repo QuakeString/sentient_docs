@@ -1,27 +1,27 @@
-If something goes wrong, you can stream the ThingsBoard container logs in real time:
+If something goes wrong, you can stream the SENTIENT container logs in real time:
 
 ```bash
-docker compose -f docker-compose.yml -f docker-compose-trendz.yml logs -f thingsboard-pe
+docker compose -f docker-compose.yml -f docker-compose-sentient-analytics.yml logs -f sentient-pe
 ```
 {: .copy-code}
 
-Stream the Trendz container logs in real time:
+Stream the SENTIENT ANALYTICS container logs in real time:
 
 ```bash
-docker compose -f docker-compose.yml -f docker-compose-trendz.yml logs -f trendz
+docker compose -f docker-compose.yml -f docker-compose-sentient-analytics.yml logs -f sentient-analytics
 ```
 {: .copy-code}
 
 Bring down every container defined in your Compose files:
 
 ```bash
-docker compose -f docker-compose.yml -f docker-compose-trendz.yml down
+docker compose -f docker-compose.yml -f docker-compose-sentient-analytics.yml down
 ```
 {: .copy-code}
 
 Launch all services in detached mode:
 
 ```bash
-docker compose -f docker-compose.yml -f docker-compose-trendz.yml up -d
+docker compose -f docker-compose.yml -f docker-compose-sentient-analytics.yml up -d
 ```
 {: .copy-code}

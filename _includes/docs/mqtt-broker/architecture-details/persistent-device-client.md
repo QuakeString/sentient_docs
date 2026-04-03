@@ -2,7 +2,7 @@
 * TOC
 {:toc}
 
-In TBMQ 1.x, persistent DEVICE clients relied on PostgreSQL for message persistence and retrieval,
+In ST-RMQTT 1.x, persistent DEVICE clients relied on PostgreSQL for message persistence and retrieval,
 ensuring that messages were delivered when a client reconnected.
 While PostgreSQL performed well initially, it had a fundamental limitation — it could only scale vertically.
 We anticipated that as the number of persistent MQTT sessions grew, PostgreSQL’s architecture would eventually become a bottleneck.
@@ -80,7 +80,7 @@ While vertical scaling can provide some improvement, PostgreSQL’s per-table in
 
 Our decision to migrate to Redis was driven by its ability to address the core performance bottlenecks encountered with PostgreSQL.
 Unlike PostgreSQL, which relies on disk-based storage and vertical scaling, Redis operates primarily in memory, significantly reducing read and write latency.
-Additionally, Redis’s distributed architecture allows TBMQ to scale horizontally, keeping the retrieval and delivery of persistent messages efficient even as the number of client sessions and stored messages grows.
+Additionally, Redis’s distributed architecture allows ST-RMQTT to scale horizontally, keeping the retrieval and delivery of persistent messages efficient even as the number of client sessions and stored messages grows.
 
 With these benefits in mind, we started our migration process with an evaluation of data structures that could preserve the functionality of the PostgreSQL approach
 while aligning with Redis Cluster constraints to enable efficient horizontal scaling.
@@ -102,7 +102,7 @@ This guarantees that related data for each client stays together, allowing multi
 
 ### Atomic Operations via Lua Scripts
 
-Consistency is critical in a high-throughput environment like TBMQ, where many messages can arrive simultaneously for the same MQTT client.
+Consistency is critical in a high-throughput environment like ST-RMQTT, where many messages can arrive simultaneously for the same MQTT client.
 Hashtagging helps to avoid cross-slot errors, but without atomic operations, there is a risk of race conditions or partial updates.
 This could lead to message loss or incorrect ordering. It is important to make sure that operations updating the keys for the same MQTT client are atomic.
 

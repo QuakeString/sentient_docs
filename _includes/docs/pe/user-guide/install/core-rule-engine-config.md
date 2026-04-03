@@ -73,7 +73,7 @@
 		<tr>
 			<td>server.ssl.credentials.keystore.store_password</td>
 			<td>SSL_KEY_STORE_PASSWORD</td>
-			<td>thingsboard</td>
+			<td>sentient</td>
 			<td> Password used to access the key store</td>
 		</tr>
 		<tr>
@@ -85,7 +85,7 @@
 		<tr>
 			<td>server.ssl.credentials.keystore.key_password</td>
 			<td>SSL_KEY_PASSWORD</td>
-			<td>thingsboard</td>
+			<td>sentient</td>
 			<td> Password used to access the key</td>
 		</tr>
 		<tr>
@@ -275,7 +275,7 @@
 		<tr>
 			<td>zk.zk_dir</td>
 			<td>ZOOKEEPER_NODES_DIR</td>
-			<td>/thingsboard</td>
+			<td>/sentient</td>
 			<td> Name of the directory in zookeeper 'filesystem'</td>
 		</tr>
 		<tr>
@@ -327,7 +327,7 @@
 		<tr>
 			<td>plugins.scan_packages</td>
 			<td>PLUGINS_SCAN_PACKAGES</td>
-			<td>org.thingsboard.server.extensions,org.thingsboard.rule.engine</td>
+			<td>org.sentient.server.extensions,org.sentient.rule.engine</td>
 			<td> Comma-separated package list used during classpath scanning for plugins</td>
 		</tr>
 	</tbody>
@@ -358,13 +358,13 @@
 		<tr>
 			<td>security.jwt.tokenIssuer</td>
 			<td>JWT_TOKEN_ISSUER</td>
-			<td>thingsboard.io</td>
+			<td>docs.sentient.invenia.in</td>
 			<td> User JWT Token issuer</td>
 		</tr>
 		<tr>
 			<td>security.jwt.tokenSigningKey</td>
 			<td>JWT_TOKEN_SIGNING_KEY</td>
-			<td>thingsboardDefaultSigningKey</td>
+			<td>sentientDefaultSigningKey</td>
 			<td> Base64 encoded</td>
 		</tr>
 		<tr>
@@ -535,13 +535,13 @@
 		<tr>
 			<td>ui.help.base-url</td>
 			<td>UI_HELP_BASE_URL</td>
-			<td>https://raw.githubusercontent.com/thingsboard/thingsboard-pe-ui-help/release-4.3</td>
+			<td>https://raw.githubusercontent.com/sentient/sentient-pe-ui-help/release-4.3</td>
 			<td> Base URL for UI help assets</td>
 		</tr>
 		<tr>
 			<td>ui.solution_templates.docs_base_url</td>
 			<td>UI_SOLUTION_TEMPLATES_DOCS_BASE_URL</td>
-			<td>https://thingsboard.io/docs/pe</td>
+			<td>https://docs.sentient.invenia.in/docs/pe</td>
 			<td> Base URL for solution templates docs</td>
 		</tr>
 	</tbody>
@@ -591,14 +591,14 @@
 		<tr>
 			<td>cassandra.cluster_name</td>
 			<td>CASSANDRA_CLUSTER_NAME</td>
-			<td>Thingsboard Cluster</td>
-			<td> Thingsboard cluster name</td>
+			<td>Sentient Cluster</td>
+			<td> Sentient cluster name</td>
 		</tr>
 		<tr>
 			<td>cassandra.keyspace_name</td>
 			<td>CASSANDRA_KEYSPACE_NAME</td>
-			<td>thingsboard</td>
-			<td> Thingsboard keyspace name</td>
+			<td>sentient</td>
+			<td> Sentient keyspace name</td>
 		</tr>
 		<tr>
 			<td>cassandra.url</td>
@@ -720,7 +720,7 @@
 			<td>cassandra.cloud.secure_connect_bundle_path</td>
 			<td>CASSANDRA_CLOUD_SECURE_BUNDLE_PATH</td>
 			<td></td>
-			<td> /etc/thingsboard/astra/secure-connect-thingsboard.zip</td>
+			<td> /etc/sentient/astra/secure-connect-sentient.zip</td>
 		</tr>
 		<tr>
 			<td>cassandra.cloud.client_id</td>
@@ -738,7 +738,7 @@
 			<td>cassandra.socket.connect_timeout</td>
 			<td>CASSANDRA_SOCKET_TIMEOUT</td>
 			<td>5000</td>
-			<td> Sets the timeout, in milliseconds, of a native connection from ThingsBoard to Cassandra. The default value is 5000</td>
+			<td> Sets the timeout, in milliseconds, of a native connection from SENTIENT to Cassandra. The default value is 5000</td>
 		</tr>
 		<tr>
 			<td>cassandra.socket.read_timeout</td>
@@ -1721,7 +1721,7 @@
 		<tr>
 			<td>integrations.converters.library.url</td>
 			<td>TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_URL</td>
-			<td>https://github.com/thingsboard/data-converters.git</td>
+			<td>https://github.com/sentient/data-converters.git</td>
 			<td> URL of the data converters repository</td>
 		</tr>
 		<tr>
@@ -2264,13 +2264,13 @@
 			<td> 0 means the cache is disabled</td>
 		</tr>
 		<tr>
-			<td>cache.specs.trendzSettings.timeToLiveInMinutes</td>
+			<td>cache.specs.sentient-analyticsSettings.timeToLiveInMinutes</td>
 			<td>CACHE_SPECS_TRENDZ_SETTINGS_TTL</td>
 			<td>1440</td>
-			<td> Trendz settings cache TTL</td>
+			<td> SENTIENT ANALYTICS settings cache TTL</td>
 		</tr>
 		<tr>
-			<td>cache.specs.trendzSettings.maxSize</td>
+			<td>cache.specs.sentient-analyticsSettings.maxSize</td>
 			<td>CACHE_SPECS_TRENDZ_SETTINGS_MAX_SIZE</td>
 			<td>10000</td>
 			<td> 0 means the cache is disabled</td>
@@ -2925,7 +2925,7 @@
 		<tr>
 			<td>spring.jpa.properties.hibernate.dialect</td>
 			<td>SPRING_JPA_DIALECT</td>
-			<td>org.thingsboard.server.dao.ThingsboardPostgreSQLDialect</td>
+			<td>org.sentient.server.dao.SentientPostgreSQLDialect</td>
 			<td> we use custom dialect that contains ilike(arg1, arg2) function (is interpreted to postgres ILIKE operator)</td>
 		</tr>
 	</tbody>
@@ -2974,7 +2974,7 @@
 		<tr>
 			<td>spring.datasource.url</td>
 			<td>SPRING_DATASOURCE_URL</td>
-			<td>jdbc:postgresql://localhost:5432/thingsboard</td>
+			<td>jdbc:postgresql://localhost:5432/sentient</td>
 			<td> Database connection URL</td>
 		</tr>
 		<tr>
@@ -3024,7 +3024,7 @@
 		<tr>
 			<td>spring.datasource.events.url</td>
 			<td>SPRING_EVENTS_DATASOURCE_URL</td>
-			<td>jdbc:postgresql://localhost:5432/thingsboard_events</td>
+			<td>jdbc:postgresql://localhost:5432/sentient_events</td>
 			<td> Database connection URL for events datasource</td>
 		</tr>
 		<tr>
@@ -4260,7 +4260,7 @@
 		<tr>
 			<td>transport.gateway.dashboard.sync.repository_url</td>
 			<td>TB_GATEWAY_DASHBOARD_SYNC_REPOSITORY_URL</td>
-			<td>https://github.com/thingsboard/gateway-management-extensions-dist.git</td>
+			<td>https://github.com/sentient/gateway-management-extensions-dist.git</td>
 			<td> URL of gateways dashboard repository</td>
 		</tr>
 		<tr>
@@ -4585,7 +4585,7 @@
 			<td>device.connectivity.gateway.image_version</td>
 			<td>DEVICE_CONNECTIVITY_GATEWAY_IMAGE_VERSION</td>
 			<td>3.8-stable</td>
-			<td> The docker tag for thingsboard/tb-gateway image used in docker-compose file for gateway launch</td>
+			<td> The docker tag for sentient/tb-gateway image used in docker-compose file for gateway launch</td>
 		</tr>
 	</tbody>
 </table>
@@ -4745,7 +4745,7 @@
 </table>
 
 
-##  Trendz parameters
+##  SENTIENT ANALYTICS parameters
 
 <table>
 	<thead>
@@ -4755,31 +4755,31 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td>trendz.enabled</td>
+			<td>sentient-analytics.enabled</td>
 			<td>TRENDZ_ENABLED</td>
 			<td>true</td>
-			<td> Enable/disable Trendz synchronization</td>
+			<td> Enable/disable SENTIENT ANALYTICS synchronization</td>
 		</tr>
 		<tr>
-			<td>trendz.default_tb_url</td>
+			<td>sentient-analytics.default_tb_url</td>
 			<td>DEFAULT_TB_URL</td>
 			<td></td>
-			<td> Default ThingsBoard URL used for startup synchronization</td>
+			<td> Default SENTIENT URL used for startup synchronization</td>
 		</tr>
 		<tr>
-			<td>trendz.default_trendz_url</td>
+			<td>sentient-analytics.default_sentient-analytics_url</td>
 			<td>DEFAULT_TRENDZ_URL</td>
 			<td></td>
-			<td> Default Trendz URL used for startup synchronization</td>
+			<td> Default SENTIENT ANALYTICS URL used for startup synchronization</td>
 		</tr>
 		<tr>
-			<td>trendz.request_timeout_ms</td>
+			<td>sentient-analytics.request_timeout_ms</td>
 			<td>TRENDZ_REQUEST_TIMEOUT_MS</td>
 			<td>15000</td>
 			<td> Request timeout in ms</td>
 		</tr>
 		<tr>
-			<td>trendz.usage_request_timeout_ms</td>
+			<td>sentient-analytics.usage_request_timeout_ms</td>
 			<td>TRENDZ_USAGE_REQUEST_TIMEOUT_MS</td>
 			<td>3000</td>
 			<td> Usage request timeout in ms</td>
@@ -4849,31 +4849,31 @@
 		<tr>
 			<td>swagger.title</td>
 			<td>SWAGGER_TITLE</td>
-			<td>ThingsBoard REST API</td>
+			<td>SENTIENT REST API</td>
 			<td> The title on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.description</td>
 			<td>SWAGGER_DESCRIPTION</td>
-			<td> ThingsBoard Professional Edition IoT platform REST API documentation.</td>
+			<td> SENTIENT Professional Edition IoT platform REST API documentation.</td>
 			<td> The description on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.name</td>
 			<td>SWAGGER_CONTACT_NAME</td>
-			<td>ThingsBoard, Inc.</td>
+			<td>SENTIENT, Inc.</td>
 			<td> The contact name on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.url</td>
 			<td>SWAGGER_CONTACT_URL</td>
-			<td>https://thingsboard.io</td>
+			<td>https://docs.sentient.invenia.in</td>
 			<td> The contact URL on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.email</td>
 			<td>SWAGGER_CONTACT_EMAIL</td>
-			<td>info@thingsboard.io</td>
+			<td>info@docs.sentient.invenia.in</td>
 			<td> The contact email on the API doc UI page</td>
 		</tr>
 		<tr>
@@ -4885,7 +4885,7 @@
 		<tr>
 			<td>swagger.license.url</td>
 			<td>SWAGGER_LICENSE_URL</td>
-			<td>https://github.com/thingsboard/thingsboard/blob/master/LICENSE</td>
+			<td>https://github.com/sentient/sentient/blob/master/LICENSE</td>
 			<td> Link to the license body on the API doc UI page</td>
 		</tr>
 		<tr>
@@ -4897,7 +4897,7 @@
 		<tr>
 			<td>swagger.group_name</td>
 			<td>SWAGGER_GROUP_NAME</td>
-			<td>thingsboard</td>
+			<td>sentient</td>
 			<td> The group name (definition) on the API doc UI page.</td>
 		</tr>
 		<tr>
@@ -6323,7 +6323,7 @@
 </table>
 
 
-##  Mobile application settings for Thingsboard mobile application
+##  Mobile application settings for Sentient mobile application
 
 <table>
 	<thead>
@@ -6335,20 +6335,20 @@
 		<tr>
 			<td>mobileApp.domain</td>
 			<td>TB_MOBILE_APP_DOMAIN</td>
-			<td>thingsboard.cloud</td>
-			<td> Server domain name for Thingsboard Live mobile application</td>
+			<td>sentient.cloud</td>
+			<td> Server domain name for Sentient Live mobile application</td>
 		</tr>
 		<tr>
 			<td>mobileApp.googlePlayLink</td>
 			<td>TB_MOBILE_APP_GOOGLE_PLAY_LINK</td>
-			<td>https://play.google.com/store/apps/details?id=org.thingsboard.cloud</td>
-			<td> Link to Google Play store for Thingsboard Live mobile application</td>
+			<td>https://play.google.com/store/apps/details?id=org.sentient.cloud</td>
+			<td> Link to Google Play store for Sentient Live mobile application</td>
 		</tr>
 		<tr>
 			<td>mobileApp.appStoreLink</td>
 			<td>TB_MOBILE_APP_APP_STORE_LINK</td>
-			<td>https://apps.apple.com/ua/app/thingsboard-cloud/id6499209395</td>
-			<td> Link to App Store for Thingsboard Live mobile application</td>
+			<td>https://apps.apple.com/ua/app/sentient-cloud/id6499209395</td>
+			<td> Link to App Store for Sentient Live mobile application</td>
 		</tr>
 		<tr>
 			<td>mqtt.client.retransmission.max_attempts</td>

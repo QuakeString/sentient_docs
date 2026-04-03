@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect RN172plus series to ThingsBoard?
+title: How to connect RN172plus series to SENTIENT?
 category: Other devices
 connectivity: [Wi-Fi, MODBUS TCP, HTTP, HTTPS]
 vendor: Radionode

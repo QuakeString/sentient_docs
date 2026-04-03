@@ -1,7 +1,7 @@
 ---
 layout: page-with-filter
-title: Official Thingsboard hardware partners
-description: Meet our official hardware partners and explore IoT devices tailored for seamless ThingsBoard integration. Join the partnership program or find the right vendor for your IoT deployment needs.
+title: Official Sentient hardware partners
+description: Meet our official hardware partners and explore IoT devices tailored for seamless SENTIENT integration. Join the partnership program or find the right vendor for your IoT deployment needs.
 pagination: "true"
 containerId: "card-collection"
 filterSelector: ".pagination-render-trigger"
@@ -100,11 +100,11 @@ filterCollection:
 <div class="hardware-hero">
     <div class="hardware-wrapper">
         <div class="hardware-hero-text">
-            <h1>ThingsBoard Hardware Partners</h1>
-            <p>Hardware Partnership Program goal is to reduce time to market for ThingsBoard based solutions. Together with Hardware Partners we simplify implementation of the most challenging IoT projects by providing a rich set of integration tutorials, typical use cases and best practices.</p>
+            <h1>SENTIENT Hardware Partners</h1>
+            <p>Hardware Partnership Program goal is to reduce time to market for SENTIENT based solutions. Together with Hardware Partners we simplify implementation of the most challenging IoT projects by providing a rich set of integration tutorials, typical use cases and best practices.</p>
         </div>
         <div class="hardware-hero-banner">
-            <p>Want to become ThingsBoard Hardware Partner?</p>
+            <p>Want to become SENTIENT Hardware Partner?</p>
             <a href="/partners/hardware/program/">Apply for program</a>
             <img src="/images/hardware-partners-icon.svg" width="210" height="210" alt="Hardware partner icon">
         </div>

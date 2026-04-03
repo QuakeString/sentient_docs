@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: Installing ThingsBoard CE on IBM Cloud
-description: Installing ThingsBoard CE on IBM Cloud
+title: Installing SENTIENT on IBM Cloud
+description: Installing SENTIENT on IBM Cloud
 
 ---
 

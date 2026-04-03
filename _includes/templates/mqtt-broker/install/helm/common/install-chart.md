@@ -1,8 +1,8 @@
-Now you’re ready to install TBMQ using the Helm chart.
+Now you’re ready to install ST-RMQTT using the Helm chart.
 Make sure you're in the same directory as your customized `values.yaml` file.
 
 ```bash
-helm install my-tbmq-cluster tbmq-helm-chart/tbmq-cluster \
+helm install my-st-rmqtt-cluster st-rmqtt-helm-chart/st-rmqtt-cluster \
   -f values.yaml \
   --set installation.installDbSchema=true
 ```
@@ -10,7 +10,7 @@ helm install my-tbmq-cluster tbmq-helm-chart/tbmq-cluster \
 
 {% capture installation-tip %}
 
-`my-tbmq-cluster` is the Helm release name. You can change it to any name of your choice, which will be used to reference this deployment in future Helm commands.
+`my-st-rmqtt-cluster` is the Helm release name. You can change it to any name of your choice, which will be used to reference this deployment in future Helm commands.
 
 {% endcapture %}
 {% include templates/info-banner.md content=installation-tip %}
@@ -18,14 +18,14 @@ helm install my-tbmq-cluster tbmq-helm-chart/tbmq-cluster \
 Once the deployment process is completed, you should see output similar to the following:
 
 ```bash
-NAME: my-tbmq-cluster
+NAME: my-st-rmqtt-cluster
 LAST DEPLOYED: Wed Mar 26 17:42:49 2025
-NAMESPACE: tbmq
+NAMESPACE: st-rmqtt
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
 NOTES:
-TBMQ Cluster my-tbmq-cluster will be deployed in few minutes.
+ST-RMQTT Cluster my-st-rmqtt-cluster will be deployed in few minutes.
 Info:
-Namespace: tbmq
+Namespace: st-rmqtt
 ```

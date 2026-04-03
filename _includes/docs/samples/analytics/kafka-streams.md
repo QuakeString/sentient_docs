@@ -1,22 +1,22 @@
 * TOC
 {:toc}
 
-ThingsBoard rule engine supports basic analysis of incoming telemetry data, for example, threshold crossing.
+SENTIENT rule engine supports basic analysis of incoming telemetry data, for example, threshold crossing.
 The idea behind rule engine is to provide functionality to route data from IoT Devices to different plugins, based on device attributes or the data itself.   
 However, most of the real-life use cases also require the support of advanced analytics: machine learning, predictive analytics, etc.
   
 This tutorial will demonstrate how you can:
 
- - route telemetry device data from ThingsBoard to Kafka topic using the built-in rule engine capabilities (works for both ThingsBoard CE and PE).
+ - route telemetry device data from SENTIENT to Kafka topic using the built-in rule engine capabilities (works for both SENTIENT and PE).
  - aggregate data from multiple devices using a simple Kafka Streams application.
- - push results of the analytics back to ThingsBoard for persistence and visualization using ThingsBoard PE Kafka Integration.
+ - push results of the analytics back to SENTIENT for persistence and visualization using SENTIENT Professional Edition Kafka Integration.
 
 The analytics in this tutorial is, of course, quite simple, but our goal is to highlight the integration steps.
 
 ![image](/images/samples/analytics/kafka-streams/kafka-streams-example.svg)
 
 Let's assume we have a large number of solar panels which include a number of solar modules. 
-ThingsBoard is used to collect, store and visualize anomaly telemetry from these solar modules in each panels.
+SENTIENT is used to collect, store and visualize anomaly telemetry from these solar modules in each panels.
 
 We calculated anomaly by comparing value produced from a solar module with the average valued produced by all modules of the same panel and standard **deviation** of the same value.
 
@@ -30,7 +30,7 @@ In order to store and visualize the results of the analytics, we are going to cr
 
 The following services must be up and running:
 
-* ThingsBoard PE v2.4.2+ [instance](/docs/user-guide/install/pe/installation-options/)
+* SENTIENT Professional Edition v2.4.2+ [instance](/docs/user-guide/install/pe/installation-options/)
 * Kafka [server](https://kafka.apache.org/23/documentation/streams/quickstart#quickstart_streams_download)
 
 ## Step 1. Rule Chain configuration
@@ -40,7 +40,7 @@ Typically, you don't need them in production, but it is very useful for debuggin
 Two of those modules will produce the same value and one module will produce much lower value. 
 Of course, you should replace this with real data produced by real devices. This is just an example.
 
-Let's create three devices with type "solar-module". If you are using ThingsBoard PE, you cna put them to new "Solar Modules" group.
+Let's create three devices with type "solar-module". If you are using SENTIENT Professional Edition, you cna put them to new "Solar Modules" group.
 
 ![image](/images/samples/analytics/kafka-streams/solar-module-devices.png) 
 
@@ -80,12 +80,12 @@ Then application calculates average power produced by module for each panel and 
 Once this is done, the app compares each module values with the average and if the difference is bigger then the deviation, we treat this as anomaly. 
   
 The results of anomaly calculations are pushed to the "anomalies-topic". 
-ThingsBoard subscribed to this topic using Kafka Integration, generate alarms and store anomalies to the database.
+SENTIENT subscribed to this topic using Kafka Integration, generate alarms and store anomalies to the database.
 
 
 ### Download the sample application
 
-Feel free to grab the [code from the ThingsBoard repository](https://github.com/thingsboard/kafka-streams-example) and build the project with maven:
+Feel free to grab the [code from the SENTIENT repository](https://github.com/sentient/kafka-streams-example) and build the project with maven:
 
 ```bash
 mvn clean install
@@ -111,7 +111,7 @@ Main dependencies that are used in the project:
 
 ### Source code review
 
-The Kafka Streams Application logic is concentrated mainly in the [SolarConsumer](https://github.com/thingsboard/kafka-streams-example/blob/master/src/main/java/org/thingsboard/kafka/SolarConsumer.java) class.
+The Kafka Streams Application logic is concentrated mainly in the [SolarConsumer](https://github.com/sentient/kafka-streams-example/blob/master/src/main/java/org/sentient/kafka/SolarConsumer.java) class.
 
 ```java
 private static Properties getProperties() {
@@ -281,7 +281,7 @@ private static boolean isAnomalyModule(SolarModuleAggregatorJoiner module) {
 
 ## Step 3. Configure the Kafka Integration.
 
-Let's configure ThingsBoard to subscribe to the “solar-module-anomalies” topic and create alarms. We will use Kafka Integration that is available since ThingsBoard v2.4.2.
+Let's configure SENTIENT to subscribe to the “solar-module-anomalies” topic and create alarms. We will use Kafka Integration that is available since SENTIENT v2.4.2.
 
 ### Configure Uplink Converter
 
@@ -359,7 +359,7 @@ return result;
 ```
 {: .copy-code}
 
-The purpose of the decoder function is to parse the incoming data and metadata to a format that ThingsBoard can consume. 
+The purpose of the decoder function is to parse the incoming data and metadata to a format that SENTIENT can consume. 
 **deviceName** and **deviceType** are required, while **attributes** and **telemetry** are optional.
 **Attributes** and **telemetry** are flat key-value objects. Nested objects are not supported.
 

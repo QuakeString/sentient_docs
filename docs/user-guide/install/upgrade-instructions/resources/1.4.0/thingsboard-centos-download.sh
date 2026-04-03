@@ -1,1 +1,1 @@
-wget https://github.com/thingsboard/thingsboard/releases/download/v1.4/thingsboard-1.4.rpm
+wget https://github.com/sentient/sentient/releases/download/v1.4/sentient-1.4.rpm

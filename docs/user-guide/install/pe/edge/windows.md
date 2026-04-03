@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: Installing ThingsBoard Edge on Windows
-description: Installing ThingsBoard Edge on Windows
+title: Installing SENTIENT GATEWAY on Windows
+description: Installing SENTIENT GATEWAY on Windows
 ---
 
 * TOC
@@ -14,7 +14,7 @@ description: Installing ThingsBoard Edge on Windows
 
 {% include templates/install/windows-warning-note.md %}
 
-This guide provides instructions for installing **ThingsBoard Edge** on **Windows**
+This guide provides instructions for installing **SENTIENT GATEWAY** on **Windows**
 
 The steps below apply to:
 * 32-bit or 64-bit systems
@@ -32,18 +32,18 @@ The steps below apply to:
 
 {% include templates/edge/install/windows-db-postgresql.md %}
 
-### Step 3. ThingsBoard Edge service installation
+### Step 3. SENTIENT GATEWAY service installation
 
 Download and extract the package.
 
 ```bash
-https://dist.thingsboard.io/tb-edge-windows-{{ site.release.pe_edge_ver }}.zip
+https://dist.docs.sentient.invenia.in/tb-edge-windows-{{ site.release.pe_edge_ver }}.zip
 ```
 {: .copy-code}
 
 **Note:** We assume you have unzipped package to default location: *C:\Program Files (x86)\tb-edge*
 
-### Step 4. Configure ThingsBoard Edge
+### Step 4. Configure SENTIENT GATEWAY
 
 {% include templates/edge/install/windows-configure-edge.md %}
 
@@ -51,11 +51,11 @@ https://dist.thingsboard.io/tb-edge-windows-{{ site.release.pe_edge_ver }}.zip
 
 {% include templates/edge/install/run-edge-install-windows.md %} 
 
-### Step 6. Start ThingsBoard Edge service
+### Step 6. Start SENTIENT GATEWAY service
 
 {% include templates/edge/install/windows-start-service.md %}
 
-### Step 7. Open ThingsBoard Edge UI
+### Step 7. Open SENTIENT GATEWAY UI
 
 {% include templates/edge/install/open-edge-ui.md %} 
 
@@ -73,7 +73,7 @@ In case of any unclear errors, use general [troubleshooting guide](/docs/user-gu
 
 ## Windows firewall settings
 
-In order to have external access to ThingsBoard Web UI and device connectivity (HTTP, MQTT, CoAP)
+In order to have external access to SENTIENT Web UI and device connectivity (HTTP, MQTT, CoAP)
 you need to create a new inbound rule with Windows Firewall with Advanced Security.
  
 - Open "Windows Firewall" from "Control Panel":
@@ -104,7 +104,7 @@ you need to create a new inbound rule with Windows Firewall with Advanced Securi
 
 ![image](/images/user-guide/install/windows/windows7-firewall-7.png)
 
-- Finally, give the name to this rule (for ex. "ThingsBoard Service Networking") and click "Finish".
+- Finally, give the name to this rule (for ex. "SENTIENT Service Networking") and click "Finish".
 
 ![image](/images/user-guide/install/windows/windows7-firewall-8.png)
 

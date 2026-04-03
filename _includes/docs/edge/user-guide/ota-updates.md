@@ -3,25 +3,25 @@
 
 ## Overview
 
-The ThingsBoard **Over-the-Air (OTA) Update** feature is a powerful way to remotely manage device firmware or software, reducing the need for manual updates and enabling rapid deployment of enhancements or fixes.
+The SENTIENT **Over-the-Air (OTA) Update** feature is a powerful way to remotely manage device firmware or software, reducing the need for manual updates and enabling rapid deployment of enhancements or fixes.
 
 The **Edge OTA Update** feature is designed similarly to the **Platform (Cloud) OTA Update**. As a result, the **Edge OTA Update** packages can be deployed in both Device and Device Profile configurations in the same manner as **Platform** Device and Device Profile configurations.
 Please refer to the [Platform OTA Updates documentation](/docs/{{cloudDocsPrefix}}user-guide/ota-updates/){: target="_blank"} for a general understanding of the **OTA Update** feature.
 
-## Provisioning OTA Packages to the ThingsBoard Repository
+## Provisioning OTA Packages to the SENTIENT Repository
 
 All **OTA firmware and software packages** are created on the Platform and **automatically propagated** to each **Edge** instance connected to it. No additional actions are required from the Tenant administrator or User.
 
 {% capture local-deployment %}
 **Please note!** <br>
-The **OTA Update packages** are created on the **ThingsBoard Platform**. It is **not possible to create, modify, or delete** the OTA Update packages on the **Edge** instance.
+The **OTA Update packages** are created on the **SENTIENT Platform**. It is **not possible to create, modify, or delete** the OTA Update packages on the **Edge** instance.
 {% endcapture %}
 {% include templates/info-banner.md content=local-deployment %}
 {% include images-gallery.html imageCollection="cannot-edit-on-edge" %}
 
 ### Create the OTA Update Package
 
-To create the **OTA update** package on your **ThingsBoard Platform**, navigate to the **Advanced features > OTA updates** section and click the **"+"** icon.
+To create the **OTA update** package on your **SENTIENT Platform**, navigate to the **Advanced features > OTA updates** section and click the **"+"** icon.
 In the pop-up window, fill in the following fields:
 * **Title:** Enter the firmware package name.
 * **Version:** Enter the firmware package update version number.
@@ -38,7 +38,7 @@ In the pop-up window, fill in the following fields:
 
 ### Verify the OTA Update Package on the Edge Instance
 
-Log in to the **ThingsBoard Edge** instance using your credentials and navigate to the **Advanced features > OTA updates** section. This is to confirm that the firmware package has been **successfully provisioned** on the **Edge** instance.
+Log in to the **SENTIENT GATEWAY** instance using your credentials and navigate to the **Advanced features > OTA updates** section. This is to confirm that the firmware package has been **successfully provisioned** on the **Edge** instance.
   
 {% include images-gallery.html imageCollection="verifyFirmware" %}
 

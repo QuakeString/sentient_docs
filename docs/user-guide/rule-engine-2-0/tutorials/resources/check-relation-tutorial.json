@@ -15,7 +15,7 @@
           "layoutX": 824,
           "layoutY": 156
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save Timeseries",
         "debugMode": false,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 825,
           "layoutY": 52
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgAttributesNode",
         "name": "Save Client Attributes",
         "debugMode": false,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 347,
           "layoutY": 149
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeSwitchNode",
         "name": "Message Type Switch",
         "debugMode": false,
         "configuration": {
@@ -51,7 +51,7 @@
           "layoutX": 825,
           "layoutY": 266
         },
-        "type": "org.thingsboard.rule.engine.action.TbLogNode",
+        "type": "org.sentient.rule.engine.action.TbLogNode",
         "name": "Log RPC from Device",
         "debugMode": false,
         "configuration": {
@@ -63,7 +63,7 @@
           "layoutX": 825,
           "layoutY": 379
         },
-        "type": "org.thingsboard.rule.engine.action.TbLogNode",
+        "type": "org.sentient.rule.engine.action.TbLogNode",
         "name": "Log Other",
         "debugMode": false,
         "configuration": {
@@ -75,7 +75,7 @@
           "layoutX": 825,
           "layoutY": 468
         },
-        "type": "org.thingsboard.rule.engine.rpc.TbSendRPCRequestNode",
+        "type": "org.sentient.rule.engine.rpc.TbSendRPCRequestNode",
         "name": "RPC Call Request",
         "debugMode": false,
         "configuration": {
@@ -87,7 +87,7 @@
           "layoutX": 1111,
           "layoutY": 158
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Smoke Alarm Filter",
         "debugMode": true,
         "configuration": {
@@ -99,7 +99,7 @@
           "layoutX": 1421,
           "layoutY": 164
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "Create Smoke Alarm",
         "debugMode": false,
         "configuration": {
@@ -114,7 +114,7 @@
           "layoutX": 1419,
           "layoutY": 68
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "Clear Smoke Alarm",
         "debugMode": false,
         "configuration": {

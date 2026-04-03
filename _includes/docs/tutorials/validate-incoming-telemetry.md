@@ -1,20 +1,20 @@
 * TOC
 {:toc}
 
-This guide explains how to validate incoming telemetry data in ThingsBoard and discard invalid values before they are stored.
+This guide explains how to validate incoming telemetry data in SENTIENT and discard invalid values before they are stored.
 
 As an example, we will validate temperature readings received from a Thermometer sensor and ensure that only values within the supported range are stored in the database.
 
 The guide is introductory and focuses on demonstrating the core platform capabilities rather than building configurations from scratch.    
 For this reason, predefined rule chain configurations are provided and imported during the setup process.
 
-After importing these configurations into your ThingsBoard instance, you can explore their structure, logic, and behavior, and later adapt them for your own use cases.
+After importing these configurations into your SENTIENT instance, you can explore their structure, logic, and behavior, and later adapt them for your own use cases.
 
 <hr>
 
 ## Use case
 
-Assume your device is equipped with a Thermometer temperature sensor that periodically sends telemetry to ThingsBoard.
+Assume your device is equipped with a Thermometer temperature sensor that periodically sends telemetry to SENTIENT.
 
 The Thermometer sensor supports temperature measurements in the range -40 °C to +80 °C
 
@@ -95,19 +95,19 @@ You can use the [Check connectivity](/docs/{{docsPrefix}}user-guide/ui/devices/#
 1. Temperature **within** the valid range (for example, <span class="code-light">25</span>).   
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:25}"
    ```
    {: .copy-code}
    {% endif %}
@@ -115,19 +115,19 @@ You can use the [Check connectivity](/docs/{{docsPrefix}}user-guide/ui/devices/#
 2. Temperature **below** the range (for example, <span class="code-light">-50<span>).   
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:-50}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:-50}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:-50}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:-50}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:-50}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:-50}"
    ```
    {: .copy-code}
    {% endif %}
@@ -135,19 +135,19 @@ You can use the [Check connectivity](/docs/{{docsPrefix}}user-guide/ui/devices/#
 3. Temperature **above** the range (for example, <span class="code-light">100</span>).   
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:100}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:100}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:100}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:100}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:100}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:100}"
    ```
    {: .copy-code}
    {% endif %}
@@ -155,25 +155,25 @@ You can use the [Check connectivity](/docs/{{docsPrefix}}user-guide/ui/devices/#
 4. A message **without** the <span class="code-light">temperature</span> field.   
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{humidity:46}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{humidity:46}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{humidity:46}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{humidity:46}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{humidity:46}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{humidity:46}"
    ```
    {: .copy-code}
    {% endif %}
 
 **&#42;** Make sure to replace:
-{% if docsPrefix == null or docsPrefix == "pe/" %}- **$THINGSBOARD_HOST_NAME** with the hostname or IP address of your ThingsBoard instance.{% endif %}
+{% if docsPrefix == null or docsPrefix == "pe/" %}- **$SENTIENT_HOST_NAME** with the hostname or IP address of your SENTIENT instance.{% endif %}
 - **$ACCESS_TOKEN** with the device access token
 
 Only telemetry messages that pass validation are persisted. Invalid temperature values are discarded.

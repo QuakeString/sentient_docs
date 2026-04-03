@@ -1,12 +1,12 @@
 ---
 layout: docwithnav
-title: Install HAProxy Load Balancer for ThingsBoard on CentOS/RHEL
-description: Install HAProxy Load Balancer for ThingsBoard on CentOS/RHEL
+title: Install HAProxy Load Balancer for SENTIENT on CentOS/RHEL
+description: Install HAProxy Load Balancer for SENTIENT on CentOS/RHEL
 hidetoc: "true"
 ---
 
 This guide describes how to install HAProxy with Let's Encrypt
-as a service. This is possible in case you are hosting ThingsBoard in the cloud and have a valid DNS name assigned to your instance.
+as a service. This is possible in case you are hosting SENTIENT in the cloud and have a valid DNS name assigned to your instance.
 
 * TOC
 {:toc}
@@ -24,7 +24,7 @@ sudo firewall-cmd --reload
 ``` 
 {: .copy-code}
 
-### Step 1. Connect to your ThingsBoard instance over SSH
+### Step 1. Connect to your SENTIENT instance over SSH
 
 Below is example command for AWS as a reference:
 

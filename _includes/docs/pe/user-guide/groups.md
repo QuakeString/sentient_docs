@@ -3,13 +3,13 @@
 
 ## Introduction
 
-ThingsBoard allows you to configure multiple custom Entity Groups.
+SENTIENT allows you to configure multiple custom Entity Groups.
 You can create an entity group for the devices, assets, entity views, customers, users, dashboards and edge instances
 Each entity may belong to multiple groups simultaneously.
 Special group "All" always contains all entities that belong to specific tenant account.
 
-For each entity group, ThingsBoard user may configure different columns to visualize specific telemetry or attributes values.
-ThingsBoard user may also define custom actions to be present for each entity: open dashboard or send RPC call, etc.
+For each entity group, SENTIENT user may configure different columns to visualize specific telemetry or attributes values.
+SENTIENT user may also define custom actions to be present for each entity: open dashboard or send RPC call, etc.
 Bulk operations to delete entities, add them to the group or remove are also supported.
 
 ## Create new entity group

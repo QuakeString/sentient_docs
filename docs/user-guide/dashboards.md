@@ -3,13 +3,13 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Working with IoT dashboards
-description: IoT dashboards using ThingsBoard
+description: IoT dashboards using SENTIENT
 redirect_from: "/docs/user-guide/ui/dashboards/"
 
 creating-dashboard:
     0:
         image: /images/user-guide/dashboards/overview/create-dashboard-1-ce.png
-        title: 'Login to your ThingsBoard instance and navigate to the "Dashboards" page through the main menu on the left of the screen. Then, click the "+" sign in the upper right corner of the screen, and select "Create new dashboard" from the drop-down menu;'
+        title: 'Login to your SENTIENT instance and navigate to the "Dashboards" page through the main menu on the left of the screen. Then, click the "+" sign in the upper right corner of the screen, and select "Create new dashboard" from the drop-down menu;'
     1:
         image: /images/user-guide/dashboards/overview/create-dashboard-2-ce.png
         title: 'In the opened dialog, it is necessary to enter a dashboard title, description is optional. Click "Add";'

@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect uPesy ESP32 Wroom DevKit v2 to ThingsBoard?
+title: How to connect uPesy ESP32 Wroom DevKit v2 to SENTIENT?
 category: Microcontrollers
 chip: ESP32
 connectivity: [HTTP, MQTT, WIFI, Bluetooth]

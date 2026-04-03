@@ -8,31 +8,31 @@
 * TOC
 {:toc}
 
-Remote Integrations allow reliable data streaming from multiple devices in the local area network (LAN) to the ThingsBoard platform in the cloud. 
-They are helpful if you have, for example, a local MQTT broker or OPC-UA server with no external IP address and is not reachable from where your ThingsBoard platform is installed. 
-The remote integration initiates a connection to these servers, pulls the data, stores it locally, and then streams it to the ThingsBoard instance.
+Remote Integrations allow reliable data streaming from multiple devices in the local area network (LAN) to the SENTIENT platform in the cloud. 
+They are helpful if you have, for example, a local MQTT broker or OPC-UA server with no external IP address and is not reachable from where your SENTIENT platform is installed. 
+The remote integration initiates a connection to these servers, pulls the data, stores it locally, and then streams it to the SENTIENT instance.
 
 Although this approach requires some additional steps in the deployment process, it allows integration with servers and devices deployed in the LAN. A separate integration process improves isolation level and performance.
 
 The remote integration approach enables tenants to launch plain [TCP](/docs/user-guide/integrations/tcp/) and [UDP](/docs/user-guide/integrations/udp/) integrations. Those two integrations are unique because they start a server that binds to a specific port. 
-Since ThingsBoard is a multi-tenant environment, we can't launch TCP and UDP integrations as part of the core service due to possible port collisions between tenants. 
+Since SENTIENT is a multi-tenant environment, we can't launch TCP and UDP integrations as part of the core service due to possible port collisions between tenants. 
 That is why we propose each tenant to launch a TCP/UDP integration as a remote one. The same applies to any custom integration that the tenant creates.
 
 ![image](/images/user-guide/integrations/remote/remote-integrations-overview.png)
 
-It is possible to execute any ThingsBoard Integration separately from the ThingsBoard instance.
+It is possible to execute any SENTIENT Integration separately from the SENTIENT instance.
 
-This guide contains step-by-step instructions on how to launch MQTT remote integration that connects to the local MQTT Broker and pushes data to the [ThingsBoard Cloud](https://{{hostName}}/signup).
+This guide contains step-by-step instructions on how to launch MQTT remote integration that connects to the local MQTT Broker and pushes data to the [SENTIENT Cloud](https://{{hostName}}/signup).
 
-You can find additional information about the ThingsBoard Platform integrations feature [here](/docs/{{peDocsPrefix}}user-guide/integrations/).
+You can find additional information about the SENTIENT Platform integrations feature [here](/docs/{{peDocsPrefix}}user-guide/integrations/).
 
-## ThingsBoard configuration
+## SENTIENT configuration
 
-We assume you already have a tenant administrator account on your own [ThingsBoard PE instance](/docs/user-guide/install/pe/installation-options/) or [ThingsBoard Cloud](https://{{hostName}}/signup).
+We assume you already have a tenant administrator account on your own [SENTIENT Professional Edition instance](/docs/user-guide/install/pe/installation-options/) or [SENTIENT Cloud](https://{{hostName}}/signup).
 
-### Create remote integration in ThingsBoard
+### Create remote integration in SENTIENT
 
-Let's create remote integration in ThingsBoard that will connect to the local broker using port 1883 and subscribe to all topics.
+Let's create remote integration in SENTIENT that will connect to the local broker using port 1883 and subscribe to all topics.
 
 - Go to the "**Integrations center**" section -> "**Integrations**" page and click "plus" icon to add a new integration. Name it "**MQTT remote integration**", select type "**MQTT**";
 
@@ -63,7 +63,7 @@ Now let's proceed to the steps for installation remote integration.
 
 ## Choose your platform and install
 
-One can install ThingsBoard Integration via Docker, Debian or RPM packages.
+One can install SENTIENT Integration via Docker, Debian or RPM packages.
 Please use one of the next steps.
 
  * [Docker on Linux or Mac OS](#docker-on-linuxmac)
@@ -157,7 +157,7 @@ CoAP<br> Integration<br>%,%coap%,%templates/install/integration/coap-rhel.md{% e
 
 ## Remote integration configuration
 
-Remote integration configuration is done via ThingsBoard UI and there is no specific steps.
+Remote integration configuration is done via SENTIENT UI and there is no specific steps.
 Explore guides and video tutorials related to specific integrations:
 
  - [HTTP](/docs/{{peDocsPrefix}}user-guide/integrations/http/)

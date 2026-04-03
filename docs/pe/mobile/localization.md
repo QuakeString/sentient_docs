@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Add a custom localization to ThingsBoard PE Mobile App
+title: Add a custom localization to SENTIENT Professional Edition Mobile App
 
 ---
 {% assign docsPrefix = "pe/" %}

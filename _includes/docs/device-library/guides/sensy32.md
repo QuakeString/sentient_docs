@@ -1,7 +1,7 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://www.tindie.com/products/sensy32/sensy32-all-in-one-sensor-iot-board-with-lcd/" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - A smartphone with the Ezurio Xbit app for configuration of the RS26x ([Android](https://play.google.com/store/apps/details?id=com.rfpros.xbitmobile&hl=en_US){:target="_blank"}/[iOS](https://apps.apple.com/us/app/canvas-xbit-mobile/id6478117073){:target="_blank"})
@@ -32,8 +32,8 @@ The Sensy32 board includes the following components and sensors:
 - MEMS Microphone
 - A built-in LCD screen that allows real-time monitoring and control.
 
-In this guide, we will learn how to create a device on Thingsboard, install required libraries and tools.   
-After this we will modify our code and upload it to the device, and check the results of our coding and check data on ThingsBoard using imported dashboard.
+In this guide, we will learn how to create a device on Sentient, install required libraries and tools.   
+After this we will modify our code and upload it to the device, and check the results of our coding and check data on SENTIENT using imported dashboard.
 
 ## Prerequisites
 
@@ -41,7 +41,7 @@ To continue with this guide, we will need the following:
 - Editor [Arduino IDE](https://www.arduino.cc/en/software){:target="_blank"}
 - [CP210xVCP Driver](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers){:target="_blank"}
 - Sensy32 board (you can get it from [Tindie](https://www.tindie.com/products/sensy32/sensy32-all-in-one-sensor-iot-board-with-lcd/){:target="_blank"} or [Elecrow](https://www.elecrow.com/){:target="_blank"})
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 ## Install required libraries and tools
 
@@ -99,7 +99,7 @@ Port depends on operation system and may be different:
 
 **4.** To install the needed libraries - we will need to do the following steps:
 - Go to the **Tools** tab and click on **Manage libraries**.
-- Enter the name of the following libraries in the search bar and click **INSTALL**: "ThingsBoard", "ss_oled", "Adafruit TSL259", "SparkFun BNO08x", "SparkFun STHS34PF80", "BMP388_DEV", "SparkFun BME280", "Adafruit LTR390 Library".
+- Enter the name of the following libraries in the search bar and click **INSTALL**: "SENTIENT", "ss_oled", "Adafruit TSL259", "SparkFun BNO08x", "SparkFun STHS34PF80", "BMP388_DEV", "SparkFun BME280", "Adafruit LTR390 Library".
 - If prompted to install library dependencies, simply click **Install All** to ensure all necessary libraries are installed.
 
 {% assign manageLibraries = '
@@ -111,7 +111,7 @@ Port depends on operation system and may be different:
         title: If prompted to install library dependencies, simply click **Install All** to ensure all necessary libraries are installed.
     ===
         image: /images/devices-library/ready-to-go-devices/sensy32/library-1.png
-        title: **ThingsBoard**: This is the ThingsBoard Arduino SDK, used to connect with the ThingsBoard Platform.
+        title: **SENTIENT**: This is the SENTIENT Arduino SDK, used to connect with the SENTIENT Platform.
     ===
         image: /images/devices-library/ready-to-go-devices/sensy32/library-2.png
         title: **ss_oled.h**: This library is used to configure and display data on the LCD screen.
@@ -139,7 +139,7 @@ Port depends on operation system and may be different:
 {% include images-gallery.liquid imageCollection=manageLibraries %}
 
 Let&#39;s dive deeper to see what are these libraries are used for:
-- **ThingsBoard**: This is the ThingsBoard Arduino SDK, used to connect with the ThingsBoard Platform.
+- **SENTIENT**: This is the SENTIENT Arduino SDK, used to connect with the SENTIENT Platform.
 - **ss_oled.h**: This library is used to configure and display data on the LCD screen.
 - **SparkFunBME280.h**: This library helps work with the SparkFun BME280 sensor, allowing you to read temperature, humidity, and pressure data.
 - **BMP388_DEV.h**: This library facilitates interaction with the BMP388 sensor module.
@@ -150,20 +150,20 @@ Let&#39;s dive deeper to see what are these libraries are used for:
 - **SparkFun_STHS34PF80_Arduino_Library.h**: Simplifies interfacing with the STHS34PF80 sensor in Arduino projects.
 
 {% capture difference %}
-**Please note:** All provided code examples require ThingsBoard Library version 0.14.0
+**Please note:** All provided code examples require SENTIENT Library version 0.14.0
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
 At this point, we have installed all required libraries and tools.
 
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
 For simplicity, we will provide the device manually using the UI.
 
-{% assign createDeviceOnThingsBoardPE = '
+{% assign createDeviceOnSENTIENTPE = '
     ===
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-1-pe.png
-        title: Log in to your ThingsBoard instance and go to the **Entities > Devices** section.
+        title: Log in to your SENTIENT instance and go to the **Entities > Devices** section.
     ===
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-2-pe.png
         title: Click the "**+**" button in the top-right corner and select Add new device.
@@ -176,10 +176,10 @@ For simplicity, we will provide the device manually using the UI.
 '
 %}
 
-{% assign createDeviceOnThingsBoardCE = '
+{% assign createDeviceOnSENTIENTCE = '
     ===
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-1-ce.png
-        title: Log in to your ThingsBoard instance and go to the **Entities > Devices** section.
+        title: Log in to your SENTIENT instance and go to the **Entities > Devices** section.
     ===
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-2-ce.png
         title: Click the "**+**" button in the top-right corner and select Add new device.
@@ -193,15 +193,15 @@ For simplicity, we will provide the device manually using the UI.
 %}
 
 {% if page.docsPrefix == "pe/" or page.docsPrefix contains "paas/" or docsPrefix == "pe/" or docsPrefix contains "paas/" %}
-{% include images-gallery.liquid showListImageTitles="true" imageCollection=createDeviceOnThingsBoardPE %}
+{% include images-gallery.liquid showListImageTitles="true" imageCollection=createDeviceOnSENTIENTPE %}
 {% else %}  
-{% include images-gallery.liquid showListImageTitles="true" imageCollection=createDeviceOnThingsBoardCE %}
+{% include images-gallery.liquid showListImageTitles="true" imageCollection=createDeviceOnSENTIENTCE %}
 {% endif %}
 
 
-## Connect device to ThingsBoard
+## Connect device to SENTIENT
 
-To connect your device, you’ll first need to get its credentials. While ThingsBoard supports a variety of device credentials, for this guide, we will use the default auto-generated credentials, which is an access token.
+To connect your device, you’ll first need to get its credentials. While SENTIENT supports a variety of device credentials, for this guide, we will use the default auto-generated credentials, which is an access token.
 
 {% assign connectDevicePE = '
     ===
@@ -215,14 +215,14 @@ To connect your device, you’ll first need to get its credentials. While Things
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=connectDevicePE %}
 
-Now it&#39;s time to program the board to read data, display it on the Sensy board LCD screen, and connect to ThingsBoard.
+Now it&#39;s time to program the board to read data, display it on the Sensy board LCD screen, and connect to SENTIENT.
 
 To do this, you can use the code below. It contains all required functionality for this guide.
 
-> Click to download the **source code**: [thingsboard.ino](/docs/devices-library/resources/sensy32/thingsboard.ino){:target="_blank" download="thingsboard.ino"}
+> Click to download the **source code**: [sentient.ino](/docs/devices-library/resources/sensy32/sentient.ino){:target="_blank" download="sentient.ino"}
 
 {% capture difference %}
-⚠️ Don&#39;t forget to replace placeholders with your real WiFi network SSID, password, ThingsBoard device access token.
+⚠️ Don&#39;t forget to replace placeholders with your real WiFi network SSID, password, SENTIENT device access token.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -258,11 +258,11 @@ If you cannot upload the code and receive an error: `Property 'upload.tool.seria
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=programmer %}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
-ThingsBoard provides the ability to create and customize interactive visualizations (dashboards) for monitoring and managing data and devices.
+SENTIENT provides the ability to create and customize interactive visualizations (dashboards) for monitoring and managing data and devices.
 
-Through ThingsBoard dashboards, you can efficiently manage and monitor your IoT devices and data. So, we will create the dashboard for our device.
+Through SENTIENT dashboards, you can efficiently manage and monitor your IoT devices and data. So, we will create the dashboard for our device.
 
 To do this, you can either create your own dashboard using custom widgets or import a ready-made one.
 
@@ -301,6 +301,6 @@ To import the ready-to-use dashboard, follow these steps:
 
 ## Conclusion
 
-Now you can easily connect your Sensy32 and start sending data to ThingsBoard.
+Now you can easily connect your Sensy32 and start sending data to SENTIENT.
 
-To go further, explore the [ThingsBoard documentation](https://thingsboard.io/docs/pe/){:target="_blank"} to learn more about key features, such as creating [dashboards](https://thingsboard.io/docs/pe/user-guide/dashboards/){:target="_blank"} to visualize your telemetry, or setting up [alarm rules](https://thingsboard.io/docs/pe/user-guide/alarm-rules/){:target="_blank"} to monitor device behavior in real time.
+To go further, explore the [SENTIENT documentation](https://docs.sentient.invenia.in/docs/pe/){:target="_blank"} to learn more about key features, such as creating [dashboards](https://docs.sentient.invenia.in/docs/pe/user-guide/dashboards/){:target="_blank"} to visualize your telemetry, or setting up [alarm rules](https://docs.sentient.invenia.in/docs/pe/user-guide/alarm-rules/){:target="_blank"} to monitor device behavior in real time.

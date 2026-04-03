@@ -3,7 +3,7 @@ the report is generated, its ID is added to the message metadata under the `repo
 successfully generated) or the `Failure` connection (if an error occurs during generation).
 
 {% capture template_note %}
-**Report template required:** Before using this node, ensure that a report template has been created in ThingsBoard. The report template defines the structure and content of the
+**Report template required:** Before using this node, ensure that a report template has been created in SENTIENT. The report template defines the structure and content of the
 generated report.
 {% endcapture %}
 {% include templates/info-banner.md content=template_note %}

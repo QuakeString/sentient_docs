@@ -9,8 +9,8 @@ for IP in ${IPS}; do
 
   ssh -i ~/.ssh/aws/smatvienko.pem -o StrictHostKeyChecking=accept-new ubuntu@${IP} <<'ENDSSH'
 set +x
-#optional. replace with your Thingsboard instance ip
-#echo '52.50.5.45 thingsboard' | sudo tee -a /etc/hosts
+#optional. replace with your Sentient instance ip
+#echo '52.50.5.45 sentient' | sudo tee -a /etc/hosts
 #extend the local port range up to 64500 
 cat /proc/sys/net/ipv4/ip_local_port_range
 #32768	60999
@@ -29,7 +29,7 @@ newgrp docker
 # test non-root docker run
 docker run hello-world
 cd ~
-git clone https://github.com/thingsboard/performance-tests.git
+git clone https://github.com/sentient/performance-tests.git
 # git pull
 cd performance-tests
 screen -d -m ~/performance-tests/build.sh

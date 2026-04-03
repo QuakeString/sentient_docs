@@ -1,5 +1,5 @@
 ---
 layout: docwithnav-paas
-title: "How to connect Lenovo Leez SBC P710 to ThingsBoard?"
+title: "How to connect Lenovo Leez SBC P710 to SENTIENT?"
 redirect_to: "/device-library/paas/lenovo-leez-sbc-p710/"
 ---

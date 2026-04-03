@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: HTTP over SSL
-description: Launching ThingsBoard with secure HTTP web interface and REST API.
+description: Launching SENTIENT with secure HTTP web interface and REST API.
 
 ---
 

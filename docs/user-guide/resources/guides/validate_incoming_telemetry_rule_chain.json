@@ -15,7 +15,7 @@
     "firstNodeIndex": 1,
     "nodes": [
       {
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save Time Series",
         "debugSettings": {
           "failuresEnabled": true,
@@ -38,7 +38,7 @@
         }
       },
       {
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeSwitchNode",
         "name": "Message Type Switch",
         "debugSettings": null,
         "singletonMode": false,
@@ -53,7 +53,7 @@
         }
       },
       {
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Temperature Validation",
         "debugSettings": {
           "failuresEnabled": true,

@@ -2,7 +2,7 @@
 layout: iot-data-visualization
 title: IoT Data Visualization with Widgets, SCADA & Dashboards
 notitle: "true"
-description: Explore powerful IoT data visualization with ThingsBoard. Build interactive dashboards using charts, graphs, SCADA widgets, and control elements. Leverage states and responsive layouts for real-time monitoring, enhanced UX, decision-making, and industrial process optimization.
+description: Explore powerful IoT data visualization with SENTIENT. Build interactive dashboards using charts, graphs, SCADA widgets, and control elements. Leverage states and responsive layouts for real-time monitoring, enhanced UX, decision-making, and industrial process optimization.
 ---
 
 <div class="visualization-wrapper">
@@ -14,7 +14,7 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
         </div>
         <div class="images">
             <div class="circle-bg"></div>
-            <img src="/images/visualization/bar-chart.svg" class="visualization-hero-image" alt="Thingsboard dashboards and menus">
+            <img src="/images/visualization/bar-chart.svg" class="visualization-hero-image" alt="Sentient dashboards and menus">
             <img src="/images/visualization/cold_water_usage.webp" class="visualization-hero-image-2" alt="Cold water usage value-chart card">
             <img src="/images/visualization/route_history.webp" class="visualization-hero-image-3" alt="Trip animation map">
             <img src="/images/visualization/moisture_himidity.webp" class="visualization-hero-image-4" alt="Moisture and humidity line chart">
@@ -25,12 +25,12 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
     <section class="visualization-definition">
         <div class="title">
             <h2>What is data visualization in IoT?</h2>
-            <p>IoT Data visualization is the process of turning raw device data into visual formats like charts, graphs, and gauges to help users quickly understand patterns and trends. In ThingsBoard, you can create real-time dashboards using a variety of widgets—charts, tables, SCADA symbols, and more—for monitoring and control. Dashboards support responsive layouts, navigation flows, and can be easily shared with customers.</p>
+            <p>IoT Data visualization is the process of turning raw device data into visual formats like charts, graphs, and gauges to help users quickly understand patterns and trends. In SENTIENT, you can create real-time dashboards using a variety of widgets—charts, tables, SCADA symbols, and more—for monitoring and control. Dashboards support responsive layouts, navigation flows, and can be easily shared with customers.</p>
         </div>
         <img data-src="/images/visualization/visualization-scheme.svg" src="/images/visualization/visualization-scheme.svg" class="svg-animation" alt="Visualization scheme">
     </section>
     <section class="visualization-implementation">
-        <h2>How data visualization is implemented in ThingsBoard</h2>
+        <h2>How data visualization is implemented in SENTIENT</h2>
         <div class="block">
             <div class="title">
                 <h3>Widgets</h3>
@@ -83,7 +83,7 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
         <div class="block">
             <div class="title">
                 <h3>SCADA dashboards</h3>
-                <p>SCADA refers to an architecture used to monitor and control various machines and manufacturing processes. ThingsBoard provides comprehensive tools to collect, process, and visualize data from SCADA components, such as PLCs (Programmable Logic Controllers) and RCUs (Remote Control Units), enabling seamless integration with various industrial processes.</p>
+                <p>SCADA refers to an architecture used to monitor and control various machines and manufacturing processes. SENTIENT provides comprehensive tools to collect, process, and visualize data from SCADA components, such as PLCs (Programmable Logic Controllers) and RCUs (Remote Control Units), enabling seamless integration with various industrial processes.</p>
             </div>
             <div class="row">
                 <div class="card">
@@ -112,7 +112,7 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
         <div class="block">
             <div class="title">
                 <h3>Solution templates</h3>
-                <p>ThingsBoard provides convenient IoT solution templates to reduce time-to-market for your IoT products. The template includes interactive dashboards, processing logic, sample devices, users and all other required entities. You can treat template as a complete PoC/MVP.</p>
+                <p>SENTIENT provides convenient IoT solution templates to reduce time-to-market for your IoT products. The template includes interactive dashboards, processing logic, sample devices, users and all other required entities. You can treat template as a complete PoC/MVP.</p>
             </div>
             <div class="row">
                 <div class="card">
@@ -123,7 +123,7 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
                     </div>
                     <div class="content">
                         <h4>Health care</h4>
-                        <p>ThingsBoard is an IoT platform with all the tools needed to build a comprehensive healthcare monitoring and management solution with ease. ThingsBoard provides an extensive range of built-in features as well as flexible customization options.</p>
+                        <p>SENTIENT is an IoT platform with all the tools needed to build a comprehensive healthcare monitoring and management solution with ease. SENTIENT provides an extensive range of built-in features as well as flexible customization options.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -134,7 +134,7 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
                     </div>
                     <div class="content">
                         <h4>SCADA Energy management</h4>
-                        <p>The use of SCADA systems enables businesses to monitor energy generation, distribution, and consumption in real time, optimize energy efficiency, reduce costs, and enhance system reliability with ThingsBoard IoT platform.</p>
+                        <p>The use of SCADA systems enables businesses to monitor energy generation, distribution, and consumption in real time, optimize energy efficiency, reduce costs, and enhance system reliability with SENTIENT IoT platform.</p>
                     </div>
                 </div>
             </div>
@@ -162,13 +162,13 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
                 <div class="card">
                     <div class="content">
                         <h4><a href="/docs/user-guide/dashboards/#states">States</a></h4>
-                        <p>States in ThingsBoard dashboards allow you to create multi-view dashboards where each state represents a separate screen or context, such as a detailed device view or a summary panel. You can define navigation rules and pass parameters between states to build dynamic, context-aware user flows.</p>
+                        <p>States in SENTIENT dashboards allow you to create multi-view dashboards where each state represents a separate screen or context, such as a detailed device view or a summary panel. You can define navigation rules and pass parameters between states to build dynamic, context-aware user flows.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="content">
                         <h4><a href="/docs/user-guide/ui/layouts/">Layouts</a></h4>
-                        <p>Layouts define how widgets are arranged and displayed within each dashboard state, supporting responsive design for different screen sizes. ThingsBoard supports grid and fixed layouts, allowing you to control widget size, position, and behavior for desktop, tablet, and mobile views.</p>
+                        <p>Layouts define how widgets are arranged and displayed within each dashboard state, supporting responsive design for different screen sizes. SENTIENT supports grid and fixed layouts, allowing you to control widget size, position, and behavior for desktop, tablet, and mobile views.</p>
                     </div>
                 </div>
             </div>
@@ -176,7 +176,7 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
         <div class="block">
             <div class="title">
                 <h3>Dashboards</h3>
-                <p>Dashboards in ThingsBoard are flexible visualization tools that allow users to monitor, control, and interact with IoT data in real time. They support assigning dashboards to specific customers or sharing them directly with individual users, enabling secure, role-based access and collaboration across different stakeholders. With dynamic data sources, SCADA-like controls, custom widgets, and responsive layouts, dashboards offer a customizable interface for building industrial-grade monitoring and control systems.</p>
+                <p>Dashboards in SENTIENT are flexible visualization tools that allow users to monitor, control, and interact with IoT data in real time. They support assigning dashboards to specific customers or sharing them directly with individual users, enabling secure, role-based access and collaboration across different stakeholders. With dynamic data sources, SCADA-like controls, custom widgets, and responsive layouts, dashboards offer a customizable interface for building industrial-grade monitoring and control systems.</p>
             </div>
             <div class="row no-margin">
                 <div class="card image-only">
@@ -191,13 +191,13 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
             <div class="row no-margin">
                 <div class="card">
                     <div class="content">
-                        <h4><a href="/docs/getting-started-guides/helloworld/#step-7-assign-device-and-dashboard-to-customer">In ThingsBoard Community Edition</a></h4>
+                        <h4><a href="/docs/getting-started-guides/helloworld/#step-7-assign-device-and-dashboard-to-customer">In SENTIENT</a></h4>
                         <p>You assign dashboards to a customer, granting their users read-only access to the data that belongs to their devices and assets.</p>
                     </div>
                 </div>
                 <div class="card">
                     <div class="content">
-                        <h4><a href="/docs/getting-started-guides/helloworld-pe/#step-7-share-dashboard-with-customers">In ThingsBoard Professional Edition</a></h4>
+                        <h4><a href="/docs/getting-started-guides/helloworld-pe/#step-7-share-dashboard-with-customers">In SENTIENT Professional Edition</a></h4>
                         <p>You can fully control access to dashboards with advanced RBAC and white labeling—enabling flexible, secure, and branded data visualization for your customers.</p>
                     </div>
                 </div>
@@ -235,14 +235,14 @@ description: Explore powerful IoT data visualization with ThingsBoard. Build int
     </section>
     <section class="widgets">
         <div class="widgets-slide">
-            <img src="/images/visualization/widgets_part.webp" alt="Thingsboard widgets">
+            <img src="/images/visualization/widgets_part.webp" alt="Sentient widgets">
         </div>
         <div class="widgets-slide">
-            <img src="/images/visualization/widgets_part.webp" alt="Thingsboard widgets">
+            <img src="/images/visualization/widgets_part.webp" alt="Sentient widgets">
         </div>
     </section>
     <section class="visualize-with-tb">
-        <h2>Visualize your data with ThingsBoard!</h2>
+        <h2>Visualize your data with SENTIENT!</h2>
         <a id="visualization_try_it_now" target="_blank" href="/installations/" class="button gtm_button">Try it now</a>
     </section>
 </div>

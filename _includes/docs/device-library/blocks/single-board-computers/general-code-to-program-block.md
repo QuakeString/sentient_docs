@@ -1,12 +1,12 @@
 Now you are ready to publish telemetry data on behalf of your device. We will use, as mentioned before, the 
-`thingsboard-python-client-sdk` library.
+`sentient-python-client-sdk` library.
 
 Let’s set up our project:
 
 1. Create project folder:
 
     ```bash
-{% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}   mkdir thingsboard_edge_example && cd thingsboard_edge_example{% else %}   mkdir thingsboard_example && cd thingsboard_example{% endif %}
+{% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}   mkdir sentient_edge_example && cd sentient_edge_example{% else %}   mkdir sentient_example && cd sentient_example{% endif %}
    ```
    {:.copy-code}
 
@@ -34,8 +34,8 @@ Let’s set up our project:
    from tb_gateway_mqtt import TBDeviceMqttClient
    
    ACCESS_TOKEN = "TEST_TOKEN" {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-   THINGSBOARD_EDGE_SERVER = '{{hostName}}' {% else %}
-   THINGSBOARD_SERVER = '{{hostName}}'{% endif %}
+   SENTIENT_EDGE_SERVER = '{{hostName}}' {% else %}
+   SENTIENT_SERVER = '{{hostName}}'{% endif %}
 
    logging.basicConfig(level=logging.DEBUG)
    
@@ -102,8 +102,8 @@ Let’s set up our project:
 
    def main():
         global client {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-        client = TBDeviceMqttClient(THINGSBOARD_EDGE_SERVER, username=ACCESS_TOKEN){% else %}
-        client = TBDeviceMqttClient(THINGSBOARD_SERVER, username=ACCESS_TOKEN){% endif %}
+        client = TBDeviceMqttClient(SENTIENT_EDGE_SERVER, username=ACCESS_TOKEN){% else %}
+        client = TBDeviceMqttClient(SENTIENT_SERVER, username=ACCESS_TOKEN){% endif %}
         client.connect()
         client.request_attributes(shared_keys=['blinkingPeriod'], callback=sync_state)
         
@@ -130,27 +130,27 @@ Let’s set up our project:
 
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
 
-In the code above, change values for the following variables - THINGSBOARD_EDGE_SERVER, ACCESS_TOKEN to your credentials.
+In the code above, change values for the following variables - SENTIENT_EDGE_SERVER, ACCESS_TOKEN to your credentials.
 
 Necessary variables for connection:  
 
    | Variable name | Default value | Description |
    |-|-|
    | ACCESS_TOKEN | **TEST_TOKEN** | Your device access token |
-   | THINGSBOARD_EDGE_SERVER | **{{hostName}}** | The IP address of your {{deviceName}} running Edge | 
+   | SENTIENT_EDGE_SERVER | **{{hostName}}** | The IP address of your {{deviceName}} running Edge | 
    
 If you are running the script on the same **{{deviceName}}** where Edge is installed, you can also use `localhost`.
 
 {% else %}
 
-In the code above, change values for the following variables - THINGSBOARD_SERVER, ACCESS_TOKEN to your credentials.
+In the code above, change values for the following variables - SENTIENT_SERVER, ACCESS_TOKEN to your credentials.
 
 Necessary variables for connection:  
 
    | Variable name | Default value | Description | 
    |-|-|
    | ACCESS_TOKEN | **TEST_TOKEN** | Your device access token |
-   | THINGSBOARD_SERVER | **{{hostName}}** | Your ThingsBoard host or ip address. |
+   | SENTIENT_SERVER | **{{hostName}}** | Your SENTIENT host or ip address. |
 {% endif %}
 
 5. Click **Ctrl+O** and **Ctrl+X** keys to save the file.

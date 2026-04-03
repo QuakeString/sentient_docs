@@ -1,12 +1,12 @@
-To deploy the **ThingsBoard Gateway**:
+To deploy the **SENTIENT Gateway**:
 
 {% assign iotGWdashboardPE = '
     ===
         image: /images/edge/user-guide/edge-install/6-dashboard-group-pe.webp,
-        title: Log in to the **ThingsBoard Professional Edition** instance and go to the **Dashboards** section and select the **"Group"** tab. Click the **"+"** icon to add a new group. In the **"Add entity group"** pop-up window, enter the group name in the **"Name"** field and click the **"Add"** button.
+        title: Log in to the **SENTIENT Professional Edition** instance and go to the **Dashboards** section and select the **"Group"** tab. Click the **"+"** icon to add a new group. In the **"Add entity group"** pop-up window, enter the group name in the **"Name"** field and click the **"Add"** button.
     ===
         image: /images/edge/user-guide/edge-install/7-all-dashboards-pe.webp,
-        title: Then, select the **"All"** tab and find the **"ThingsBoard IoT Gateways"** dashboard. The **"ThingsBoard IoT Gateways"** dashboard is one of the pre-created, out-of-the-box dashboards available. Click the **"Dashboard details"** button.
+        title: Then, select the **"All"** tab and find the **"SENTIENT IoT Gateways"** dashboard. The **"SENTIENT IoT Gateways"** dashboard is one of the pre-created, out-of-the-box dashboards available. Click the **"Dashboard details"** button.
     ===
         image: /images/edge/user-guide/edge-install/8-manage-owner-and-groups-pe.webp,
         title: On the **"Dashboard details"** page click the **"Manage owner and groups"** button.
@@ -25,10 +25,10 @@ To deploy the **ThingsBoard Gateway**:
 {% assign iotGWdashboardCE = '
     ===
         image: /images/edge/user-guide/edge-install/6-instance-section-manage-dashboard.webp,
-        title: Log in to the **ThingsBoard Community Edition** instance and go to the **Edge Management > Instances** section, then click the **“Manage dashboards”** button.
+        title: Log in to the **SENTIENT** instance and go to the **Edge Management > Instances** section, then click the **“Manage dashboards”** button.
     ===
         image: /images/edge/user-guide/edge-install/7-assign.webp,
-        title: On the **“Edge Dashboards”** page, click the **“+”** icon to assign the **“ThingsBoard IoT Gateways”** dashboard to the Edge instance. Click the **“Assign”** button. The **"ThingsBoard IoT Gateways"** dashboard is one of the pre-created, out-of-the-box dashboards available.
+        title: On the **“Edge Dashboards”** page, click the **“+”** icon to assign the **“SENTIENT IoT Gateways”** dashboard to the Edge instance. Click the **“Assign”** button. The **"SENTIENT IoT Gateways"** dashboard is one of the pre-created, out-of-the-box dashboards available.
 '
 %}
 
@@ -41,7 +41,7 @@ To deploy the **ThingsBoard Gateway**:
 {% assign localhostPE = '
     ===
         image: /images/edge/user-guide/edge-install/12-dashboards-on-edge-pe.webp,
-        title: Open your **Edge instance**, navigate to the **Dashboards** section and open the **“ThingsBoard IoT Gateways”** dashboard.
+        title: Open your **Edge instance**, navigate to the **Dashboards** section and open the **“SENTIENT IoT Gateways”** dashboard.
     ===
         image: /images/edge/user-guide/edge-install/13-add-gw-pe.webp,
         title: Click the **“+”** icon in the upper right corner to add a new gateway. Enter the gateway name in the **“Name”** field, and select the **“default”** device profile. Click the **“Create”** button.
@@ -51,7 +51,7 @@ To deploy the **ThingsBoard Gateway**:
 {% assign localhostCE = '
     ===
         image: /images/edge/user-guide/edge-install/8-dashboards-on-edge.webp,
-        title: Open your **Edge instance**, navigate to the **Dashboards** section and open the **“ThingsBoard IoT Gateways”** dashboard.
+        title: Open your **Edge instance**, navigate to the **Dashboards** section and open the **“SENTIENT IoT Gateways”** dashboard.
     ===
         image: /images/edge/user-guide/edge-install/9-add-gw.webp,
         title: Click the **“+”** icon in the upper right corner to add a new gateway. Enter the gateway name in the **“Name”** field, and select the **“default”** device profile. Click the **“Create”** button.

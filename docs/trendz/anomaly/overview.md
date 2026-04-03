@@ -1,45 +1,45 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: Overview
-description: Introduction to anomaly detection in Trendz
+description: Introduction to anomaly detection in SENTIENT ANALYTICS
 
 page-anomaly-models:
   0:
-    image: /images/trendz/anomaly/page-anomaly-models.png
+    image: /images/sentient-analytics/anomaly/page-anomaly-models.png
     title: 'Anomaly Models Tab'
 
 page-cluster-info-tab:
   0:
-    image: /images/trendz/anomaly/page-cluster-info-all.png
+    image: /images/sentient-analytics/anomaly/page-cluster-info-all.png
     title: 'Cluster Info Tab'
   1:
-    image: /images/trendz/anomaly/page-cluster-info-specific.png
+    image: /images/sentient-analytics/anomaly/page-cluster-info-specific.png
     title: 'Cluster Info Tab (Specific Cluster)'
 
 page-input-tab:
   0:
-    image: /images/trendz/anomaly/page-input-tab.png
+    image: /images/sentient-analytics/anomaly/page-input-tab.png
     title: 'Input Tab'
 
 page-review-tab:
   0:
-    image: /images/trendz/anomaly/page-review-tab.png
+    image: /images/sentient-analytics/anomaly/page-review-tab.png
     title: 'Review Tab'
 
 page-summary-tab:
   0:
-    image: /images/trendz/anomaly/page-summary-calendar.png
+    image: /images/sentient-analytics/anomaly/page-summary-calendar.png
     title: 'Summary Tab: Calendar Mode'
   1:
-    image: /images/trendz/anomaly/page-summary-dynamic.png
+    image: /images/sentient-analytics/anomaly/page-summary-dynamic.png
     title: 'Summary Tab: Dynamic Mode'
   2:
-    image: /images/trendz/anomaly/page-summary-review.png
+    image: /images/sentient-analytics/anomaly/page-summary-review.png
     title: 'Summary Tab: Review Mode'
 
 page-task-tab:
   0:
-    image: /images/trendz/anomaly/page-task-tab.png
+    image: /images/sentient-analytics/anomaly/page-task-tab.png
     title: 'Task Tab'
 
 ---
@@ -58,12 +58,12 @@ In modern monitoring and analytics, anomaly detection is essential for:
 - Early fault detection
 - Operational efficiency
 
-**Trendz** provides a powerful, out-of-the-box solution for anomaly detection, capable of automatically finding abnormal 
-patterns in time-series data without requiring manual thresholding or expert labeling. For advanced users, Trendz also 
+**SENTIENT ANALYTICS** provides a powerful, out-of-the-box solution for anomaly detection, capable of automatically finding abnormal 
+patterns in time-series data without requiring manual thresholding or expert labeling. For advanced users, SENTIENT ANALYTICS also 
 offers full control over the model configuration process - including input preparation, feature extraction, distance 
 function tuning, and scoring logic - all within a convenient and intuitive interface.
 
-You can find details how to use Trendz Analytics to create anomaly detection models here:
+You can find details how to use SENTIENT ANALYTICS to create anomaly detection models here:
 &nbsp;
 <div id="video">  
     <div id="video_wrapper">
@@ -71,9 +71,9 @@ You can find details how to use Trendz Analytics to create anomaly detection mod
     </div>
 </div>
 
-### Key Concepts in Trendz Anomaly Detection
+### Key Concepts in SENTIENT ANALYTICS Anomaly Detection
 
-In Trendz, anomaly detection is based on two core metrics:
+In SENTIENT ANALYTICS, anomaly detection is based on two core metrics:
 
 - **Anomaly Score**  
   A numeric value representing how far a data segment deviates from expected (normal) behavior. Think of it as measuring the **intensity** of the anomaly.
@@ -85,7 +85,7 @@ In Trendz, anomaly detection is based on two core metrics:
 
 Let’s explore a real-world example showing pump vibrations right after startup:
 
-![image](/images/trendz/anomaly/without-preview/score_vs_index.png)
+![image](/images/sentient-analytics/anomaly/without-preview/score_vs_index.png)
 
 - **Anomaly A**
   - Characterized by a **sharp vibration spike** lasting ~5 seconds.
@@ -114,9 +114,9 @@ to investigate due to its prolonged effect - this is exactly what the **Anomaly 
   Common algorithms include K-Means, DBSCAN, Gaussian Mixture Models, and Hierarchical Clustering.  
   *Advantages:* Automatically detects unknown anomaly types, suitable for real-world scenarios with limited labeled data.
 
-**Trendz currently supports only unsupervised machine learning algorithms** for anomaly detection, leveraging clustering-based methods to detect anomalies in time-series data.
+**SENTIENT ANALYTICS currently supports only unsupervised machine learning algorithms** for anomaly detection, leveraging clustering-based methods to detect anomalies in time-series data.
 
-### How Unsupervised Anomaly Detection Works in Trendz
+### How Unsupervised Anomaly Detection Works in SENTIENT ANALYTICS
 
 1. Collect and segment telemetry data.
 2. Normalize and preprocess data.
@@ -142,21 +142,21 @@ This page displays key characteristics of each model:
   - **IN PROGRESS** – Currently being trained
   - **CANCELLED** – Training was canceled; needs rebuilding
   - **FAILED** – Training failed; needs rebuilding
-- **Anomaly autodiscovery** – [Read more here](/docs/trendz/anomaly/refresh-reprocess)
-- **Saving telemetry** – [Read more here](/docs/trendz/anomaly/save-to-tb)
-- **Alarm auto creation** – [Read more here](/docs/trendz/anomaly/alarms)
+- **Anomaly autodiscovery** – [Read more here](/docs/sentient-analytics/anomaly/refresh-reprocess)
+- **Saving telemetry** – [Read more here](/docs/sentient-analytics/anomaly/save-to-tb)
+- **Alarm auto creation** – [Read more here](/docs/sentient-analytics/anomaly/alarms)
 
 **Available Actions:**
 
 - **Create Model**
   - Click the *Create model* button in the top-right corner of the screen to create a new anomaly model.
   - You will be navigated to the **Input** tab to configure the model.
-  - [Read more about the Input tab here](/docs/trendz/anomaly/overview#input-tab)
+  - [Read more about the Input tab here](/docs/sentient-analytics/anomaly/overview#input-tab)
 
 - **Check Model**
   - Click on any model row to open and inspect it.
   - This will redirect you to the **Input** tab.
-  - [Read more about the Input tab here](/docs/trendz/anomaly/overview#input-tab)
+  - [Read more about the Input tab here](/docs/sentient-analytics/anomaly/overview#input-tab)
 
 - **Delete Model**
   - Click the three-dot menu in the *Actions* column and select **Delete**.
@@ -183,10 +183,10 @@ The **Input** tab allows you to manage and configure core aspects of your anomal
 - **Configure Jobs**
   - Job configuration is available only for models in the **READY** state.
   - Click the **Jobs** button in the upper section of the screen to open the Jobs configuration popup.
-  - Here, you can configure the **refresh job** (read more about refresh jobs [here](/docs/trendz/anomaly/refresh-reprocess#anomaly-refresh)).
+  - Here, you can configure the **refresh job** (read more about refresh jobs [here](/docs/sentient-analytics/anomaly/refresh-reprocess#anomaly-refresh)).
 
 - **Change Properties**
-  - You can update various anomaly model properties in the **Input** tab (read more about model properties [here](/docs/trendz/anomaly/build)).
+  - You can update various anomaly model properties in the **Input** tab (read more about model properties [here](/docs/sentient-analytics/anomaly/build)).
   - To apply changes, click **Save Model**. A rebuild is **not** required unless you change:
     - **Anomaly Model Name**
     - **Telemetry key**
@@ -236,7 +236,7 @@ You can use this tab to:
 
 - **Validate** the anomalies discovered by the anomaly model.
 - **Fine-tune** the model by reviewing results and retraining if necessary.
-- **Determine optimal thresholds** for alarm creation (read more about alarms [here](/docs/trendz/anomaly/alarms)).
+- **Determine optimal thresholds** for alarm creation (read more about alarms [here](/docs/sentient-analytics/anomaly/alarms)).
 
 You can **sort anomalies** by various fields to better analyze the results:
   - Total Duration
@@ -286,10 +286,10 @@ In the Tasks tab, you can review tasks that are associated with the current anom
 - Anomaly model refresh
 - Anomaly model reprocess
 
-You can see their results, last executions, and more. Read more about Trendz tasks [here](/docs/trendz/tasks-service).
+You can see their results, last executions, and more. Read more about SENTIENT ANALYTICS tasks [here](/docs/sentient-analytics/tasks-service).
 
 It is also possible to run the anomaly model reprocess task directly from this tab by clicking the **Run Reprocess Task** 
-button located in the upper right corner of the screen (read more about anomaly reprocess [here](/docs/trendz/anomaly/refresh-reprocess#anomaly-reprocess)).
+button located in the upper right corner of the screen (read more about anomaly reprocess [here](/docs/sentient-analytics/anomaly/refresh-reprocess#anomaly-reprocess)).
 
 {% include images-gallery.html imageCollection="page-task-tab" %}
 

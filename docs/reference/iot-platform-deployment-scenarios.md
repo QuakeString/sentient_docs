@@ -1,6 +1,6 @@
 ---
 layout: docwithnav
-title: ThingsBoard IoT Platform deployment scenarios
+title: SENTIENT IoT Platform deployment scenarios
 description: Overview of deployment scenarios and tips
 
 ---

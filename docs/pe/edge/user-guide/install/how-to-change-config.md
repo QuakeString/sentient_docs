@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
 title: Configuration properties
-description: ThingsBoard Edge configuration properties and environment variables
+description: SENTIENT GATEWAY configuration properties and environment variables
 
 ---
 

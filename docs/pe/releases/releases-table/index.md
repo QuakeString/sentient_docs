@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
-title: ThingsBoard PE Releases table
-description: ThingsBoard architecture
+title: SENTIENT Professional Edition Releases table
+description: SENTIENT architecture
 table-of-contents: "false"
 ---
 {% assign docsPrefix = "pe/" %}

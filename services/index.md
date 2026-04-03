@@ -2,7 +2,7 @@
 layout: common
 title: Services
 notitle: "true"
-description: ThingsBoard support plans, services and training sessions
+description: SENTIENT support plans, services and training sessions
 redirect_from: "docs/services/"
 ---
 

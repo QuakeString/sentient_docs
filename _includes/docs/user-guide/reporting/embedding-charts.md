@@ -18,9 +18,9 @@ Common use cases:
 
 Using charts makes analytics more visual and helps you make informed decisions faster.
 
-## Chart types in ThingsBoard reports
+## Chart types in SENTIENT reports
 
-ThingsBoard supports a variety of chart components, each designed for specific purposes. 
+SENTIENT supports a variety of chart components, each designed for specific purposes. 
 Below is a list of available charts with explanations and practical examples.
 
 <div style="display: flex; flex-direction: column;">
@@ -192,7 +192,7 @@ The system will generate a sample report using the available test data from the 
 
 <br><b><font size="4">Step 1. Preparation</font></b>
 
-- **Prepare three devices** that will send temperature values to ThingsBoard as telemetry. Data from my devices is sent once per hour.   
+- **Prepare three devices** that will send temperature values to SENTIENT as telemetry. Data from my devices is sent once per hour.   
   > If needed, simulate telemetry in real time using the [Rule Engine](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/){:target="_blank"}.   
   [See the guide here.](/docs/{{docsPrefix}}user-guide/advanced-guides-for-working-with-dashboard/advanced-dashboard-guide-lesson-3/#simulation-of-the-devices-telemetry-data){:target="_blank"}
 
@@ -270,5 +270,5 @@ The generated report will include a line chart showing temperature trends from a
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

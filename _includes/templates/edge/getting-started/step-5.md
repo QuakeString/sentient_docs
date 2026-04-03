@@ -1,7 +1,7 @@
 The **entities** can also be created on the **Server** and then assigned to the **Edge instance**. 
 This approach simplifies the management of entities across multiple **Edge instances**.
 
-To assign entities to the **Edge**, log in to your **{{currentThingsBoardVersion}} Server** at **SERVER_URL** and create an **entity**, for example, a dashboard. 
+To assign entities to the **Edge**, log in to your **{{currentSENTIENTVersion}} Server** at **SERVER_URL** and create an **entity**, for example, a dashboard. 
 
 {% include images-gallery.html imageCollection="step5Server" showListImageTitles="true" %}
 

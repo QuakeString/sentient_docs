@@ -1,15 +1,15 @@
 * TOC
 {:toc}
 
-ThingsBoard provides the ability to run MQTT server over SSL. Both one-way and two-way SSL are supported.
+SENTIENT provides the ability to run MQTT server over SSL. Both one-way and two-way SSL are supported.
 
-Most of the ThingsBoard environments use the load balancer as a termination point for the SSL connection between the devices and the platform.
+Most of the SENTIENT environments use the load balancer as a termination point for the SSL connection between the devices and the platform.
 In other words, MQTT traffic is encrypted between the device and the load balancer, but is decrypted between the load balancer and platform services.
 The advantage of such an option is the simplicity of configuration. 
 Most of the cloud load balancers (AWS, Google cloud, etc) have built-in certificate generation tools and rich documentation how to configure SSL over TCP.
 The disadvantage of such an option is that two-way SSL is not possible. The information about client certificate is not passed from the load balancer to the platform services. 
 
-Nevertheless, it is possible to configure ThingsBoard to two-way SSL for MQTT and avoid SSL termination on the Load Balancer.
+Nevertheless, it is possible to configure SENTIENT to two-way SSL for MQTT and avoid SSL termination on the Load Balancer.
 We recommend to use valid SSL certificates generated using trusted CA authorities and avoid spending time on resolving issues with [self-signed certificates](#self-signed-certificates-generation).
 See instructions below on how to configure SSL for certificates stored in PEM file format or Java Keystore.
 
@@ -20,7 +20,7 @@ See instructions below on how to configure SSL for certificates stored in PEM fi
 {% include templates/since.md %}
 
 Configure the following environment variables via [configuration](/docs/user-guide/install/{{docsPrefix}}config/) file, docker-compose or kubernetes scripts.
-We will use **thingsboard.conf** for example:
+We will use **sentient.conf** for example:
 
 ```bash
 ...
@@ -40,7 +40,7 @@ where:
 * MQTT_SSL_PEM_KEY - Path to the server certificate private key file. Optional by default. Required if the private key is not present in server certificate file;
 * MQTT_SSL_PEM_KEY_PASSWORD - Optional server certificate private key password.
 
-After completing the setup, start or restart the ThingsBoard server.
+After completing the setup, start or restart the SENTIENT server.
 
 {% include templates/ssl/pem_files_location.md %}
 

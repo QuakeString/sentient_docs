@@ -1,7 +1,7 @@
 Execute the following command to deploy the broker:
 
 ```bash
-./k8s-deploy-tbmq.sh
+./k8s-deploy-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -12,4 +12,4 @@ kubectl get pods
 ```
 {: .copy-code}
 
-If everything went fine, you should be able to see `tbmq-0` and `tbmq-1` pods. Every pod should be in the `READY` state.
+If everything went fine, you should be able to see `st-rmqtt-0` and `st-rmqtt-1` pods. Every pod should be in the `READY` state.

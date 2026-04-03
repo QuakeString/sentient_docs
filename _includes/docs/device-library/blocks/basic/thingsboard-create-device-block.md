@@ -3,7 +3,7 @@ For simplicity, we will provide the device manually using the UI.
 {% assign provisionDeviceCE = '
     ===
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-1-ce.png,
-        title: Log in to your ThingsBoard instance and go to the **Entities > Devices** section.
+        title: Log in to your SENTIENT instance and go to the **Entities > Devices** section.
     ===
         image: /images/helloworld/getting-started-ce/hello-world-1-1-provision-device-2-ce.png,
         title: Click the **“+”** button in the top-right corner and select **Add new device**.
@@ -19,7 +19,7 @@ For simplicity, we will provide the device manually using the UI.
 {% assign provisionDevicePE = '
     ===
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-1-pe.png,
-        title: Log in to your ThingsBoard instance and go to the **Entities > Devices** section.
+        title: Log in to your SENTIENT instance and go to the **Entities > Devices** section.
     ===
         image: /images/helloworld/getting-started-pe/hello-world-1-1-provision-device-2-pe.png,
         title: By default, you navigate to the device group “All”. Click the **“+”** button in the top-right corner and select **Add new device**.
@@ -35,7 +35,7 @@ For simplicity, we will provide the device manually using the UI.
 {% assign provisionDeviceEdgeCE = '
     ===
         image: /images/edge/config/general/1-provision-device-ce.webp,
-        title: Log in to your ThingsBoard Edge instance and go to the **Entities > Devices** section. Click the **“+”** button in the top-right corner and select **Add new device**.
+        title: Log in to your SENTIENT GATEWAY instance and go to the **Entities > Devices** section. Click the **“+”** button in the top-right corner and select **Add new device**.
     ===
         image: /images/edge/config/general/2-provision-device-ce.webp,
         title: Enter a **device name**, for example, “My Device”. You can leave all other fields with their default values. Click **Add** to add the device.
@@ -48,7 +48,7 @@ For simplicity, we will provide the device manually using the UI.
 {% assign provisionDeviceEdgePE = '
     ===
         image: /images/edge/config/general/1-provision-device-pe.webp,
-        title: Log in to your ThingsBoard Edge instance and go to the **Entities > Devices** section. Click the **“+”** button in the top-right corner and select **Add new device**.
+        title: Log in to your SENTIENT GATEWAY instance and go to the **Entities > Devices** section. Click the **“+”** button in the top-right corner and select **Add new device**.
     ===
         image: /images/edge/config/general/2-provision-device-pe.webp,
         title: Enter a **device name**, for example, “My Device”. You can leave all other fields with their default values. Click **Add** to add the device.

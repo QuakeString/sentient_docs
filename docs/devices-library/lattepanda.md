@@ -1,5 +1,5 @@
 ---
 layout: docwithnav
-title: "How to connect LattePanda to ThingsBoard?"
+title: "How to connect LattePanda to SENTIENT?"
 redirect_to: "/device-library/ce/lattepanda/"
 ---

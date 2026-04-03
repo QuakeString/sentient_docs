@@ -1,9 +1,9 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Card
-description: Trendz Card
+description: SENTIENT ANALYTICS Card
 ---
 
 * TOC
@@ -30,7 +30,7 @@ For creating simple Card view:
 * drag and drop the field that you would like to monitor in the **Main Value** column;
 * select required aggregation type
 
-![image](/images/trendz/card-simple.png)
+![image](/images/sentient-analytics/card-simple.png)
 
 
 ## Compare with other value
@@ -40,7 +40,7 @@ And we ant compare it with how many products already produced.
 
 * Add the value for comparison in the **Compared value** column;
 
-![image](/images/trendz/card-compare.png)
+![image](/images/sentient-analytics/card-compare.png)
 
 
 The compared value will present the difference between these two figures in percentage.
@@ -54,7 +54,7 @@ this month compared to the previous month:
 * Select **Prev Month** time range
 * For the main view time range set **This Month**
 
-![image](/images/trendz/card-local-config.png)
+![image](/images/sentient-analytics/card-local-config.png)
 
 
 The compared value will present the difference between these two figures in percentage.

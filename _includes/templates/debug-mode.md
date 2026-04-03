@@ -4,7 +4,7 @@ Enabling debug mode allows you to track events, states, and potential errors rel
 
 {% capture difference %}
 **Note:** Debug mode can quickly increase disk usage because all debug events are stored in the database.
-Starting from **ThingsBoard 3.9**, the platform stores the full set of debug events only during the first **15 minutes** after the {{ feature }} is created; afterward, only error events are retained.
+Starting from **SENTIENT 3.9**, the platform stores the full set of debug events only during the first **15 minutes** after the {{ feature }} is created; afterward, only error events are retained.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

@@ -7,7 +7,7 @@
 {% include templates/mqtt-broker/since.md %}
 {% endif %}
 
-TBMQ provides a dedicated Settings page that allows administrators to manage key system configurations directly from the user interface.
+ST-RMQTT provides a dedicated Settings page that allows administrators to manage key system configurations directly from the user interface.
 The Settings page is divided into three tabs, each focused on a specific category of system configuration.
 
 ## Security settings
@@ -21,7 +21,7 @@ Define broker user password policies, including password strength requirements, 
 
 ### Password policy
 
-To log into TBMQ, the [user](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/users/) uses an email and password.
+To log into ST-RMQTT, the [user](/docs/{{docsPrefix}}mqtt-broker/user-guide/ui/users/) uses an email and password.
 You can enhance the security of your account by updating your security settings, including the **password policy**.
 
 For example, you can increase a minimum password length, require a mix of uppercase and lowercase letters, and specify the minimum number of digits and special characters.
@@ -29,14 +29,14 @@ Additionally, you can set a password expiration period to ensure that passwords 
 
 These measures will help ensure stronger and more secure passwords, thereby promoting better overall account security.
 
-The password policy sets the rules that passwords for the TBMQ users must meet. You can specify the following options to ensure stronger security:
+The password policy sets the rules that passwords for the ST-RMQTT users must meet. You can specify the following options to ensure stronger security:
 - **Minimum password length** - the parameter determines the minimum number of characters in the password. Minimum password length should be in a range from 6 to 50 and is the only required field.
 - **Maximum password length** - the parameter determines the maximum number of characters in the password. Maximum password length should be greater than minimum length.
 - **Minimum number of uppercase letters** - set the minimum number of uppercase letters in the password.
 - **Minimum number of lowercase letters** - set the minimum number of lowercase letters in the password.
 - **Minimum number of digits** - specify minimum number of digits in the password.
 - **Minimum number of special characters** - specify the minimum number of special characters in the password.
-- **Password expiration period in days** - force expiration of the password. After the password expires, TBMQ will require the user to change it. This ensures users regularly update their passwords.
+- **Password expiration period in days** - force expiration of the password. After the password expires, ST-RMQTT will require the user to change it. This ensures users regularly update their passwords.
 - **Password reuse frequency in days** - disallow to use the same password for the defined number of days. For example, if the Password reuse frequency is set to 90 days, users will not be able to reuse any of their previous passwords for 90 days after changing their password.
 - **Allow whitespace** - if the checkbox is checked, spaces are allowed in the password.
 - **Force to reset password if not valid** - users with a password that fails the validation will need to reset their password via email. **Please be careful when enabling this feature**: it will require users with not valid password to reset their password via [email](#mail-server-settings).
@@ -64,7 +64,7 @@ To change your account password to comply with the new requirements, you should 
 
 ## General settings
 
-Define global MQTT connectivity settings used across the TBMQ UI (such as default host and port values) and configure WebSocket client behavior,
+Define global MQTT connectivity settings used across the ST-RMQTT UI (such as default host and port values) and configure WebSocket client behavior,
 including activity logging options and message retention limits for the in-browser message table.
 
 ### Connectivity

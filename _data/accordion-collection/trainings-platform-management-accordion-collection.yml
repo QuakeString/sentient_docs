@@ -1,5 +1,5 @@
 0:
-  title: "Rule engine deep dive: data processing & automation in ThingsBoard"
+  title: "Rule engine deep dive: data processing & automation in SENTIENT"
   additionalText: "2 hours"
   additionalFaIcon : "far fa-clock fa-lg"
   allTextContentIcon: "fas fa-check"
@@ -72,7 +72,7 @@
   allTextContentIconColor: "#2A7DEC"
   textContentCollection:
     0:
-      textContent: "Understand what an alarm is in ThingsBoard and how it models real-life abnormal conditions."
+      textContent: "Understand what an alarm is in SENTIENT and how it models real-life abnormal conditions."
     1:
       textContent: "Learn about alarm types and their intended usage(e.g. threshold-exceeded alarm)."
     2:
@@ -102,14 +102,14 @@
     14:
       textContent: "Manage alarms using the REST API, including creating, acknowledging, and clearing alarms programmatically."
 3:
-  title: "ThingsBoard platform API fundamentals (session 1)"
+  title: "SENTIENT platform API fundamentals (session 1)"
   additionalText: "2 hours"
   additionalFaIcon : "far fa-clock fa-lg"
   allTextContentIcon: "fas fa-check"
   allTextContentIconColor: "#2A7DEC"
   textContentCollection:
     0:
-      textContent: "Understand how to interact with ThingsBoard using the REST API."
+      textContent: "Understand how to interact with SENTIENT using the REST API."
     1:
       textContent: "Learn how to use Swagger UI for testing, developing, and exploring APIs."
     2:
@@ -131,7 +131,7 @@
     10:
       textContent: "Work with Time Series API for fetching and uploading telemetry data."
 4:
-  title: "ThingsBoard platform API fundamentals (session 2)"
+  title: "SENTIENT platform API fundamentals (session 2)"
   additionalText: "2 hours"
   additionalFaIcon : "far fa-clock fa-lg"
   allTextContentIcon: "fas fa-check"
@@ -142,11 +142,11 @@
     1:
       textContent: "Learn how to send and receive data using MQTT, HTTP, and CoAP protocols."
     2:
-      textContent: "Understand how Remote Procedure Calls (RPC) work in ThingsBoard."
+      textContent: "Understand how Remote Procedure Calls (RPC) work in SENTIENT."
     3:
       textContent: "Learn different ways to send RPC commands from server to device and vice versa."
     4:
-      textContent: "Discover how to use WebSockets for real-time communication with ThingsBoard."
+      textContent: "Discover how to use WebSockets for real-time communication with SENTIENT."
     5:
       textContent: "Learn how to subscribe to WebSocket updates and integrate them into applications."
 5:
@@ -161,19 +161,19 @@
       faIcon: "fas fa-exclamation-circle"
       faIconColor: "#F36500"
     1:
-      textContent: "Learn how to write a custom rule node from scratch and integrate it into ThingsBoard."
+      textContent: "Learn how to write a custom rule node from scratch and integrate it into SENTIENT."
     2:
       textContent: "Explore a prepared project template that includes a basic skeleton and sample custom nodes."
     3:
-      textContent: "Use internal ThingsBoard APIs to manipulate and execute various operations within the system."
+      textContent: "Use internal SENTIENT APIs to manipulate and execute various operations within the system."
     4:
       textContent: "Manage entity data, update records, store information, and send data using custom nodes."
     5:
-      textContent: "Learn how to deploy a custom node to a self-hosted ThingsBoard instance."
+      textContent: "Learn how to deploy a custom node to a self-hosted SENTIENT instance."
     6:
       textContent: "Explore rule node versioning and upgrade mechanisms."
     7:
-      textContent: "Work with the @RuleNode annotation and understand its role in ThingsBoard."
+      textContent: "Work with the @RuleNode annotation and understand its role in SENTIENT."
     8:
       textContent: "Use the TbNode interface to define custom logic within a rule node."
     9:

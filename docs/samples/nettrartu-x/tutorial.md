@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: Temperature upload over MQTT using Nettra RTU
-description: ThingsBoard IoT Platform sample for temperature upload over MQTT using Nettra RTU
+description: SENTIENT IoT Platform sample for temperature upload over MQTT using Nettra RTU
 hidetoc: "true"
 ---
 
@@ -9,14 +9,14 @@ hidetoc: "true"
 1. [Introduction](#introduction)
 3. [Prerequisites](#prerequisites)
 4. [Connection diagram](#connection_diagram)
-5. [ThingsBoard configuration](#tb_configuration)
+5. [SENTIENT configuration](#tb_configuration)
 6. [Connect RTU-X to PC](#connection_pc)
 7. [RTU-X configuration](#rtu_configuration)
 8. [Data visualization](#data_visualization)
 
 ## Introduction
 
-This guide contains step-by-step instructions on how to connect your Nettra RTU device to ThingsBoard Community Edition through TCP/IP via wifi, using as sample, one of the many applications that the Nettra RTU has. At the end of this guide, you will be able to monitor data using Thingsboard web UI to display it.
+This guide contains step-by-step instructions on how to connect your Nettra RTU device to SENTIENT through TCP/IP via wifi, using as sample, one of the many applications that the Nettra RTU has. At the end of this guide, you will be able to monitor data using Sentient web UI to display it.
 
 ### Nettra RTU
 [Nettra RTU](https://nettra.tech) called **"RTU-X"** is a powerful IoT electronic device that has digital and analog inputs and outputs, as well as several integrated communication interfaces as modem, ethernet, bluetooth, 802.15.4, RS485, RS232 and GPS. It is an ideal product to implement monitoring, data acquisition and control applications over a distributed data network.
@@ -39,7 +39,7 @@ Once you complete this sample/tutorial, you will see your sensor data on a dashb
 
 ### Software
  - [RTU-X Configuration Interface](http://wiki.nettra.tech/en/downloads).
- - You will need to have ThingsBoard server up and running. Use either [ThingsBoard Cloud](https://thingsboard.io/installations/){:target="_blank"} or [Installation Guide](https://thingsboard.io/docs/user-guide/install/ubuntu/) to install ThingsBoard.
+ - You will need to have SENTIENT server up and running. Use either [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){:target="_blank"} or [Installation Guide](https://docs.sentient.invenia.in/docs/user-guide/install/ubuntu/) to install SENTIENT.
 
 ## Connection diagram
 
@@ -47,11 +47,11 @@ The following picture summarizes the connections for this simple project:
 <br><br>
 ![copy_941957077](https://user-images.githubusercontent.com/61634031/133837072-8340491f-ea35-4204-91e1-7d513641d7bb.png)
 
-## ThingsBoard configuration
+## SENTIENT configuration
 
-This step contains instructions that are necessary to connect your device to ThingsBoard.
+This step contains instructions that are necessary to connect your device to SENTIENT.
 
-See [ThingsBoard Cloud](https://thingsboard.io/installations/) page for more details how to get your account.
+See [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/) page for more details how to get your account.
 
 ### Device
 
@@ -67,7 +67,7 @@ See [ThingsBoard Cloud](https://thingsboard.io/installations/) page for more det
 ### Dashboard
 
 Download the dashboard file (.json) using this [link](/docs/samples/nettrartu-x/resources/rtu_x_dashboard.json).
-Use import/export [instructions](https://thingsboard.io/docs/user-guide/dashboards/#import-dashboard) to import the dashboard to your ThingsBoard instance.
+Use import/export [instructions](https://docs.sentient.invenia.in/docs/user-guide/dashboards/#import-dashboard) to import the dashboard to your SENTIENT instance.
 
 ## Connect RTU-X to PC
 
@@ -114,7 +114,7 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 
 1. Go to *"Communications"*.
 2. Click on *"MQTT"*.
-3. On *"Interface"* select *"Modem"*. On *"Format"* select *"Thingsboard"*. On *"URI"* paste *"mqtt://thingsboard.cloud:1883"*. On *"Password"* paste the Device Acces Token from *"Device"* step.
+3. On *"Interface"* select *"Modem"*. On *"Format"* select *"Sentient"*. On *"URI"* paste *"mqtt://sentient.cloud:1883"*. On *"Password"* paste the Device Acces Token from *"Device"* step.
 4. Click on *"Apply Changes"*.
 
 ![rtu5_step5](https://user-images.githubusercontent.com/61634031/134028854-17b5d9c8-c807-4b3b-a557-00ea5b25d7ac.png)
@@ -126,7 +126,7 @@ Once you have your RTU-X connected to the PC, we can proceed with its configurat
 ```c
 /*
  * DESCRIPTION :
- *	- Sending a variable to a Thingsboard Dashboard
+ *	- Sending a variable to a Sentient Dashboard
 */
 // VARIABLES DEFINITION ------------------------------------------
 // Attributes
@@ -153,7 +153,7 @@ while (1)
 
 ## Data visualization
 
-Finally, open ThingsBoard Web UI with same user and password as *ThingsBoard configuration* section.
+Finally, open SENTIENT Web UI with same user and password as *SENTIENT configuration* section.
 
 Go to *"Devices"* section and locate *"RTU-X Device"*, open device details and switch to *"Latest telemetry"* tab.
 If all is configured correctly you should be able to see latest values of *"variable"* in the table.<br><br>
@@ -167,11 +167,11 @@ As a result, you will see an analog gauge (similar to dashboard image in the int
 
 ## See also
 
-Browse other [samples](https://thingsboard.io/docs/samples/) or explore guides related to main ThingsBoard features:
+Browse other [samples](https://docs.sentient.invenia.in/docs/samples/) or explore guides related to main SENTIENT features:
 
- - [Device attributes](https://thingsboard.io/docs/user-guide/attributes/) - how to use device attributes.
- - [Data Visualization](https://thingsboard.io/docs/guides/#AnchorIDDataVisualization) - how to visualize collected data.
- - [Data Analytics](https://thingsboard.io/docs/guides/#AnchorIDDataAnalytics) - how to collect telemetry data.
- - [Rule Engine](https://thingsboard.io/docs/user-guide/rule-engine-2-0/re-getting-started/) - how to use rule engine to analyze data from devices.
- - [Using RPC capabilities](https://thingsboard.io/docs/user-guide/rule-engine-2-0/tutorials/rpc-request-tutorial/) - how to send commands to/from devices.
+ - [Device attributes](https://docs.sentient.invenia.in/docs/user-guide/attributes/) - how to use device attributes.
+ - [Data Visualization](https://docs.sentient.invenia.in/docs/guides/#AnchorIDDataVisualization) - how to visualize collected data.
+ - [Data Analytics](https://docs.sentient.invenia.in/docs/guides/#AnchorIDDataAnalytics) - how to collect telemetry data.
+ - [Rule Engine](https://docs.sentient.invenia.in/docs/user-guide/rule-engine-2-0/re-getting-started/) - how to use rule engine to analyze data from devices.
+ - [Using RPC capabilities](https://docs.sentient.invenia.in/docs/user-guide/rule-engine-2-0/tutorials/rpc-request-tutorial/) - how to send commands to/from devices.
 

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: LPWA GPS Tracker with monoZ
-description: Configuration of a monoZ telemetry device to enable it to send telemetry data to the ThingsBoard.
+description: Configuration of a monoZ telemetry device to enable it to send telemetry data to the SENTIENT.
 
 ---
 
@@ -19,7 +19,7 @@ This guide will cover the following sections:
 
 1. Hardware setup of GPS tracker using monoZero;
 2. Embedded firmware to read and send GPS data via MQTT using monoZ SDK;
-3. monoZ Cloud OSS (based on ThingsBoard) configuration to receive the GPS data via MQTT and display in a dashboard.
+3. monoZ Cloud OSS (based on SENTIENT) configuration to receive the GPS data via MQTT and display in a dashboard.
 
 ![image](/images/samples/monoz/monoZero-01.png)
 
@@ -104,11 +104,11 @@ Refer to [docs.monoz.io](https://docs.monoz.io) for STM32CubeIDE operations, CLI
 
 ![image](/images/samples/monoz/monoZero-09.png)
 
-## Configuring Centra-IoT OSS / ThingsBoard platform
+## Configuring Centra-IoT OSS / SENTIENT platform
 
 ### Login to Cloud Platform
 
-Get monoZ Cloud OSS instance or ThingsBoard instance and login to your
+Get monoZ Cloud OSS instance or SENTIENT instance and login to your
 account.
 
 ![image](/images/samples/monoz/monoZero-10.png)
@@ -119,7 +119,7 @@ Go to "Device group" and click "plus" button to add a new device.
 
 ![image](/images/samples/monoz/monoZero-11.png)
 
-Enter device name, select existing or create a new [device profile](https://thingsboard.io/docs/user-guide/device-profiles/) and click on "Add" button.
+Enter device name, select existing or create a new [device profile](https://docs.sentient.invenia.in/docs/user-guide/device-profiles/) and click on "Add" button.
 
 ![image](/images/samples/monoz/monoZero-12.png)
 
@@ -135,7 +135,7 @@ Make sure the same device details and credentials are provided in the MQTT setti
 ### Create dashboard to visualise telemetry data
 
 Turn on monoZero and send telemetry data to cloud.
-Open your device details in Centra-IoT OSS / ThingsBoard platform, **Latest telemetry** tab.
+Open your device details in Centra-IoT OSS / SENTIENT platform, **Latest telemetry** tab.
 Select the **latitude** and **longitude** keys and click on "**Show on Widget**" button.
 
 ![image](/images/samples/monoz/monoZero-17.png)
@@ -144,11 +144,11 @@ Select the "**OpenStreetMap**" widget from the "**Maps**" widgets bundle. Click 
 
 ![image](/images/samples/monoz/monoZero-18.png)
 
-Select an existing [dashboard](https://thingsboard.io/docs/pe/user-guide/dashboards) if you have it or create a new one if you don't have an existing dashboard. Click on "Add" button to add widget to the dashboard.
+Select an existing [dashboard](https://docs.sentient.invenia.in/docs/pe/user-guide/dashboards) if you have it or create a new one if you don't have an existing dashboard. Click on "Add" button to add widget to the dashboard.
 
 ![image](/images/samples/monoz/monoZero-19.png)
 
-Go to dashboards in Centra-IoT OSS / ThingsBoard platform and open your dashboard. The telemetry data is visualized in the widget on the toolbar.
+Go to dashboards in Centra-IoT OSS / SENTIENT platform and open your dashboard. The telemetry data is visualized in the widget on the toolbar.
 
 ![image](/images/samples/monoz/monoZero-20.png)
 

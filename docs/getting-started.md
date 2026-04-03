@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: Getting Started
-description: Getting started with ThingsBoard
+description: Getting started with SENTIENT
 notitle: "true"
 ---
 

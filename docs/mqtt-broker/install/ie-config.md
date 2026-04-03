@@ -1,9 +1,9 @@
 ---
 layout: docwithnav-mqtt-broker
 title: Integration Executor configuration properties
-description: TBMQ CE IE configuration properties and environment variables
+description: ST-RMQTT CE IE configuration properties and environment variables
 
 ---
 
-{% assign tbmqSuffix = "CE" %}
+{% assign st-rmqttSuffix = "CE" %}
 {% include docs/mqtt-broker/install/ie-configuration.md %}

@@ -1,4 +1,4 @@
-TBMQ v2.1.0 introduces enhancements, including a new Integration Executor microservice and bumped versions for third-party services.
+ST-RMQTT v2.1.0 introduces enhancements, including a new Integration Executor microservice and bumped versions for third-party services.
 
 #### Add Integration Executor microservice
 
@@ -10,12 +10,12 @@ Follow the steps outlined in the [run upgrade instructions](#run-upgrade) up to 
 The `cluster.yml` file has been updated to include the new managed node group specifically for Integration Executor pods.
 
 ```yaml
-  - name: tbmq-ie
+  - name: st-rmqtt-ie
     instanceType: m7a.large
     desiredCapacity: 2
     maxSize: 2
     minSize: 1
-    labels: { role: tbmq-ie }
+    labels: { role: st-rmqtt-ie }
     ssh:
       allow: true
       publicKeyName: 'dlandiak' # Note, use your own public key name here
@@ -29,14 +29,14 @@ eksctl create nodegroup --config-file=cluster.yml
 {: .copy-code}
 
 You may choose to skip creating dedicated instances for Integration Executors. 
-If so, you can skip this step, but you must update the **nodeSelector** section in the `tbmq-ie.yml` file accordingly.
+If so, you can skip this step, but you must update the **nodeSelector** section in the `st-rmqtt-ie.yml` file accordingly.
 
 ```yaml
   nodeSelector:
-    role: tbmq-ie
+    role: st-rmqtt-ie
 ```
 
-Change the role from **"tbmq-ie"** to **"tbmq"** to deploy Integration Executor pods on the same AWS EC2 instances as the TBMQ pods.
+Change the role from **"st-rmqtt-ie"** to **"st-rmqtt"** to deploy Integration Executor pods on the same AWS EC2 instances as the ST-RMQTT pods.
 
 #### Update third-party services
 

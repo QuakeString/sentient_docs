@@ -1,4 +1,4 @@
-Execute the following command to run the initial setup of the database. This command will launch short-living ThingsBoard pod to provision necessary DB tables, indexes, etc
+Execute the following command to run the initial setup of the database. This command will launch short-living SENTIENT pod to provision necessary DB tables, indexes, etc
 ```
  ./k8s-install-tb.sh --loadDemo
 ```

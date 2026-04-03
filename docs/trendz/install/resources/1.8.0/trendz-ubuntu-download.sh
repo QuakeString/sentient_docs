@@ -1,1 +1,1 @@
-wget https://dist.thingsboard.io/trendz-1.8.2.deb
+wget https://dist.docs.sentient.invenia.in/sentient-analytics-1.8.2.deb

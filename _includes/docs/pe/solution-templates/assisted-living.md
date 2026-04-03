@@ -4,7 +4,7 @@
 
 {% include templates/solution-templates.md %}
 
-An Assisted Living solution template for monitoring resident health and facility safety has been implemented based on ThingsBoard.   
+An Assisted Living solution template for monitoring resident health and facility safety has been implemented based on SENTIENT.   
 The solution is designed for senior housing, nursing homes, and care facilities where staff need real-time visibility into residents’ vital signs, indoor location, and critical safety events.
 
 The template combines wearable devices (BLE/LoRa wristbands), environmental room sensors, and gateways to collect telemetry, detect abnormal conditions, and trigger alarms such as panic button presses, abnormal heart rate/temperature, smoke, water leaks, or open doors/windows. It also provides administrative tools to manage facility layout (floors/zones/rooms) and assign devices to residents and rooms.
@@ -15,7 +15,7 @@ The template combines wearable devices (BLE/LoRa wristbands), environmental room
 
 To understand how the Assisted Living solution works, start by installing the solution template.
 
-You will need access to ThingsBoard Professional Edition. The easiest way is to use the [ThingsBoard Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install ThingsBoard using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need access to SENTIENT Professional Edition. The easiest way is to use the [SENTIENT Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install SENTIENT using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Go to the **Solution templates** page.
 - Find **Assisted living** and click **Install**.
@@ -53,7 +53,7 @@ The Assisted Living solution includes the following core components:
 The solution includes wearable devices and room sensors connected via gateways.
 - **Resident wristbands** – Provide vitals and location signals (BLE beacon) and generate panic/noise/battery telemetry.
 - **Room sensors** – Provide telemetry for environment and safety, including IAQ, temperature, humidity, smoke, leak, and door/window status.
-- **Gateways** – Collect data from nearby wristbands and sensors and forward messages to ThingsBoard.
+- **Gateways** – Collect data from nearby wristbands and sensors and forward messages to SENTIENT.
 
 ## Dashboard
 
@@ -114,5 +114,5 @@ The Assisted Living solution relies on dedicated rule chains for gateway ingesti
 
 ## Conclusion
 
-The Assisted Living solution demonstrates how ThingsBoard can be used to build an integrated resident safety and facility monitoring platform. 
+The Assisted Living solution demonstrates how SENTIENT can be used to build an integrated resident safety and facility monitoring platform. 
 By combining wearable telemetry, room sensor data, RSSI-based indoor positioning, and alarm-driven workflows, the solution enables care staff to respond to emergencies faster, maintain comfortable living conditions, and manage facility structure and device assignments from a single administration dashboard.

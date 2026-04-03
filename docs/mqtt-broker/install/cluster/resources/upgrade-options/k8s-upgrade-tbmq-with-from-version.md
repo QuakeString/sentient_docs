@@ -1,5 +1,5 @@
 ```bash
-./k8s-upgrade-tbmq.sh --fromVersion=FROM_VERSION
+./k8s-upgrade-st-rmqtt.sh --fromVersion=FROM_VERSION
 ```
 {: .copy-code}
 

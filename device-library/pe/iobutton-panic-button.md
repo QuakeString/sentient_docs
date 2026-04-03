@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect ioButton Panic button to ThingsBoard?
+title: How to connect ioButton Panic button to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: ioThings

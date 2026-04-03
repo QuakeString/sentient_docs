@@ -1,4 +1,4 @@
-To install the `thingsboard-python-client-sdk`, use the command below.
+To install the `sentient-python-client-sdk`, use the command below.
 We recommend installing packages outside the global environment:
 
 ```bash

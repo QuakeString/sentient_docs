@@ -3,9 +3,9 @@
 
 ## Entities Overview
 
-In **ThingsBoard**, an **entity** is a core component that represents a physical object or a concept within the platform. You can view the list of ThingsBoard entities [here](/docs/{{peDocsPrefix}}user-guide/entities-and-relations/){: target="_blank"}.
+In **SENTIENT**, an **entity** is a core component that represents a physical object or a concept within the platform. You can view the list of SENTIENT entities [here](/docs/{{peDocsPrefix}}user-guide/entities-and-relations/){: target="_blank"}.
 
-**ThingsBoard Edge** supports entities that are relevant for edge computing.
+**SENTIENT GATEWAY** supports entities that are relevant for edge computing.
 
 ### Available Edge Entities
 
@@ -28,7 +28,7 @@ The **Devices** and **Assets** entities have the configuration templates as [Dev
 **Attributes** are the structured data that can be associated with the entities (e.g., device model, location, token). 
 They are stored in the local database and can be used for visualization, analysis, logic configuration, and integration with other services.
 
-For a comprehensive understanding of the **ThingsBoard attributes**, please refer to the [Working with IoT Attributes](/docs/{{peDocsPrefix}}user-guide/attributes/){: target="_blank"} documentation. 
+For a comprehensive understanding of the **SENTIENT attributes**, please refer to the [Working with IoT Attributes](/docs/{{peDocsPrefix}}user-guide/attributes/){: target="_blank"} documentation. 
 You can also refer to the [Edge Attributes article](/docs/{{docsPrefix}}user-guide/edge-attributes/){: target="_blank"} to review the attributes specific to **Edge**.
 
 ### Telemetry
@@ -49,7 +49,7 @@ Example:
 ```
 You can learn more about working with telemetry data [here](/{{peDocsPrefix}}docs/user-guide/telemetry/){: target="_blank"}.
 
-By default, **ThingsBoard Edge** synchronizes telemetry data with the **ThingsBoard Cloud**. 
+By default, **SENTIENT GATEWAY** synchronizes telemetry data with the **SENTIENT Cloud**. 
 During an internet outage, telemetry is stored **locally** and sent to the **Cloud** once the connection is restored.
 
 ### Relations

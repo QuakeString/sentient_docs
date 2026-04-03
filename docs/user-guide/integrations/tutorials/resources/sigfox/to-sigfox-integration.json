@@ -15,7 +15,7 @@
           "layoutX": 379,
           "layoutY": 153
         },
-        "type": "org.thingsboard.rule.engine.filter.TbCheckMessageNode",
+        "type": "org.sentient.rule.engine.filter.TbCheckMessageNode",
         "name": "Check status field",
         "debugMode": true,
         "configuration": {
@@ -31,7 +31,7 @@
           "layoutX": 718,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.integration.TbIntegrationDownlinkNode",
+        "type": "org.sentient.rule.engine.integration.TbIntegrationDownlinkNode",
         "name": "Push to integration",
         "debugMode": true,
         "configuration": {

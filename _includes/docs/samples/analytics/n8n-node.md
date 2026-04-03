@@ -1,9 +1,9 @@
 * TOC
 {:toc}
 
-[n8n](https://n8n.io/){: target="_blank"} is a workflow automation platform that lets you connect ThingsBoard to hundreds of other services.
+[n8n](https://n8n.io/){: target="_blank"} is a workflow automation platform that lets you connect SENTIENT to hundreds of other services.
 
-The [ThingsBoard n8n Node](https://github.com/thingsboard/thingsboard-n8n-node){: target="_blank"} gives you direct access to your IoT entities, telemetry, and alarms from n8n workflows.
+The [SENTIENT n8n Node](https://github.com/sentient/sentient-n8n-node){: target="_blank"} gives you direct access to your IoT entities, telemetry, and alarms from n8n workflows.
 
 - **Manage IoT devices, assets, and customers** directly from n8n workflows
 - **Access and manipulate telemetry data** in real-time with attribute and time-series operations
@@ -23,9 +23,9 @@ Schedule (Daily at 00:00 UTC)
     ↓
 Code node (calculate last 24h time range in MS)
     ↓
-ThingsBoard: Get device by a name
+SENTIENT: Get device by a name
     ↓
-ThingsBoard: Get timeseries data for device
+SENTIENT: Get timeseries data for device
     ↓
 Convert to File (JSON format)
     ↓
@@ -48,9 +48,9 @@ This is a production-ready pattern used for IoT data archival, analytics pipelin
 
 Want to see the full step-by-step walkthrough with code details? Jump to [Example 2: Daily Telemetry Export to AWS S3](#example-2-daily-telemetry-export-to-aws-s3) after installation.
 
-## When to use n8n with ThingsBoard
+## When to use n8n with SENTIENT
 
-ThingsBoard's Rule Engine is great for IoT-specific automation. But when you need to connect to external systems that ThingsBoard doesn't integrate with natively, n8n fills the gap.
+SENTIENT's Rule Engine is great for IoT-specific automation. But when you need to connect to external systems that SENTIENT doesn't integrate with natively, n8n fills the gap.
 
 **Use n8n when you need to**:
 - Archive telemetry to **AWS S3**, **Google Cloud Storage**, or **Azure Blob** for data warehousing
@@ -64,29 +64,29 @@ ThingsBoard's Rule Engine is great for IoT-specific automation. But when you nee
 Before you begin, ensure you have the following:
 
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-- **ThingsBoard instance**:
-    - **Local/On-premise instance**: Self-hosted ThingsBoard installation on your own [infrastructure](/docs/{{docsPrefix}}user-guide/install/installation-options/){: target="_blank"}, or
+- **SENTIENT instance**:
+    - **Local/On-premise instance**: Self-hosted SENTIENT installation on your own [infrastructure](/docs/{{docsPrefix}}user-guide/install/installation-options/){: target="_blank"}, or
 {% endif %}
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-    - **ThingsBoard Cloud**: Fully managed cloud service available [here](https://thingsboard.io/installations/choose-region/){: target="_blank"}
+    - **SENTIENT Cloud**: Fully managed cloud service available [here](https://docs.sentient.invenia.in/installations/choose-region/){: target="_blank"}
 {% endif %}
 {% if docsPrefix == "paas/" %}
-- **ThingsBoard Cloud**: Fully managed cloud service available at [thingsboard.cloud](https://thingsboard.cloud/signup){: target="_blank"}
+- **SENTIENT Cloud**: Fully managed cloud service available at [sentient.cloud](https://sentient.cloud/signup){: target="_blank"}
 {% endif %}
 {% if docsPrefix == "paas/eu/" %}
-- **EU ThingsBoard Cloud**: Fully managed cloud service available at [eu.thingsboard.cloud](https://eu.thingsboard.cloud/signup){: target="_blank"}
+- **EU SENTIENT Cloud**: Fully managed cloud service available at [eu.sentient.cloud](https://eu.sentient.cloud/signup){: target="_blank"}
 {% endif %}
-- **Authentication credentials**: API key or username and password (deprecated) with appropriate permissions on the ThingsBoard instance. See [API Keys](/docs/{{docsPrefix}}user-guide/security/api-keys/){: target="_blank"} for details on generating API keys.
+- **Authentication credentials**: API key or username and password (deprecated) with appropriate permissions on the SENTIENT instance. See [API Keys](/docs/{{docsPrefix}}user-guide/security/api-keys/){: target="_blank"} for details on generating API keys.
 - **n8n instance**:
     - **Local n8n installation**: Self-hosted n8n on your infrastructure, or
     - **Docker-based n8n deployment**: n8n running in Docker containers
-    - **Cloud n8n**: The ThingsBoard node is verified and available on [n8n Cloud](https://n8n.io/){: target="_blank"} — no manual installation required.
+    - **Cloud n8n**: The SENTIENT node is verified and available on [n8n Cloud](https://n8n.io/){: target="_blank"} — no manual installation required.
 
 ## Installation
 
 Before you start, make sure n8n is already running. Check the [official n8n docs](https://docs.n8n.io/){: target="_blank"} if you need to install it first.
 
-### Install the ThingsBoard Node
+### Install the SENTIENT Node
 
 {% capture difference %}
 **Note:** Community nodes require `N8N_COMMUNITY_PACKAGES_ENABLED=true` in your n8n environment. Most n8n installations have this enabled by default. If you can't access the Community Nodes section in Settings, you'll need to set this variable before starting n8n.
@@ -98,7 +98,7 @@ Before you start, make sure n8n is already running. Check the [official n8n docs
 1. Open n8n in your browser
 2. Click the **three dots** (bottom-left) → **Settings** → **Community Nodes**
 3. Click **Install a community node**
-4. Enter: `@thingsboard/n8n-nodes-thingsboard` and click **Install**
+4. Enter: `@sentient/n8n-nodes-sentient` and click **Install**
 5. Refresh your browser
 
 {% assign n8nGuiInstallation = '
@@ -110,7 +110,7 @@ Before you start, make sure n8n is already running. Check the [official n8n docs
         title: Go to the **Community Nodes** tab and click **Install a community node**.
    ===
         image: /images/samples/analytics/n8n-node/n8n-gui-installation-3.png
-        title: Enter the package name: `@thingsboard/n8n-nodes-thingsboard` and click **Install**.
+        title: Enter the package name: `@sentient/n8n-nodes-sentient` and click **Install**.
     ===
         image: /images/samples/analytics/n8n-node/n8n-gui-installation-4.png
         title: Wait for the installation to complete. Then, refresh the browser page.
@@ -123,7 +123,7 @@ Before you start, make sure n8n is already running. Check the [official n8n docs
 
 Skip this if you're only using the node in regular workflows (not with AI agents).
 
-To let AI agents use ThingsBoard as a tool, add this **additional** environment variable before starting n8n:
+To let AI agents use SENTIENT as a tool, add this **additional** environment variable before starting n8n:
 
 ```text
 N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true
@@ -136,30 +136,30 @@ N8N_COMMUNITY_PACKAGES_ALLOW_TOOL_USAGE=true
 
 ### Configure Credentials
 
-Connect n8n to your ThingsBoard instance. There are two authentication options:
+Connect n8n to your SENTIENT instance. There are two authentication options:
 
 #### Option A: API Key
 
 1. Click **+** (top-left) → **Credentials**
-2. Search for **ThingsBoard API Key** → **Continue**
+2. Search for **SENTIENT API Key** → **Continue**
 3. Fill in the required fields:
-   - **Base URL**: Your instance URL (e.g., {% if docsPrefix == "paas/eu/" %}`https://eu.thingsboard.cloud`{% else %}`https://thingsboard.cloud`{% endif %})
+   - **Base URL**: Your instance URL (e.g., {% if docsPrefix == "paas/eu/" %}`https://eu.sentient.cloud`{% else %}`https://sentient.cloud`{% endif %})
    - **Connect using**: API Key
-   - **API Key**: Generated from your ThingsBoard instance. See [API Keys](/docs/{{docsPrefix}}user-guide/security/api-keys/){: target="_blank"} for details.
+   - **API Key**: Generated from your SENTIENT instance. See [API Keys](/docs/{{docsPrefix}}user-guide/security/api-keys/){: target="_blank"} for details.
 4. Click **Save**
 
 #### Option B: Username/Password (Deprecated)
 
 1. Click **+** (top-left) → **Credentials**
-2. Search for **ThingsBoard Username/Password** → **Continue**
+2. Search for **SENTIENT Username/Password** → **Continue**
 3. Fill in the required fields:
-   - **Base URL**: Your instance URL (e.g., {% if docsPrefix == "paas/eu/" %}`https://eu.thingsboard.cloud`{% else %}`https://thingsboard.cloud`{% endif %})
+   - **Base URL**: Your instance URL (e.g., {% if docsPrefix == "paas/eu/" %}`https://eu.sentient.cloud`{% else %}`https://sentient.cloud`{% endif %})
    - **Connect using**: Username/Password
    - **Username**: Your email
    - **Password**: Your password
 4. Click **Save**
 
-The credentials are encrypted and stored securely by n8n. You can reuse the same credentials across multiple ThingsBoard nodes in different workflows.
+The credentials are encrypted and stored securely by n8n. You can reuse the same credentials across multiple SENTIENT nodes in different workflows.
 
 {% assign n8nGuiInstallation = '
     ===
@@ -167,13 +167,13 @@ The credentials are encrypted and stored securely by n8n. You can reuse the same
         title: In the top-left corner, click **+** and select **Credentials** from the dropdown menu.
     ===
         image: /images/samples/analytics/n8n-node/credentials-configuration-2.png
-        title: Search and select **ThingsBoard API** to connect to and click **Continue**.
+        title: Search and select **SENTIENT API** to connect to and click **Continue**.
     ===
         image: /images/samples/analytics/n8n-node/credentials-configuration-3.png
-        title: Fill in the **Base URL** — your ThingsBoard instance URL (without a trailing slash), and the **API Key** — generated from your ThingsBoard instance. Click **Save** to store the credentials.
+        title: Fill in the **Base URL** — your SENTIENT instance URL (without a trailing slash), and the **API Key** — generated from your SENTIENT instance. Click **Save** to store the credentials.
     ===
         image: /images/samples/analytics/n8n-node/credentials-configuration-4.png
-        title: The credentials are saved and the connection is tested successfully. You can reuse the same credentials across multiple ThingsBoard nodes in different workflows.
+        title: The credentials are saved and the connection is tested successfully. You can reuse the same credentials across multiple SENTIENT nodes in different workflows.
 '
 %}
 
@@ -181,13 +181,13 @@ The credentials are encrypted and stored securely by n8n. You can reuse the same
 
 ### Verify Installation
 
-After installing the node and restarting n8n, verify the ThingsBoard node is available:
+After installing the node and restarting n8n, verify the SENTIENT node is available:
 
 1. **Open n8n** in your browser (typically [http://localhost:5678](http://localhost:5678){:target="_blank"})
 2. **Create a new workflow** - Click **Create Workflow** in the top-right corner
 3. **Add a node** - Click the **+** button on the workflow canvas
-4. **Search for ThingsBoard** - Type "ThingsBoard" in the search field
-5. **Verify it appears** - You should see the ThingsBoard node with available actions
+4. **Search for SENTIENT** - Type "SENTIENT" in the search field
+5. **Verify it appears** - You should see the SENTIENT node with available actions
 
 {% assign installationVerification = '
     ===
@@ -198,7 +198,7 @@ After installing the node and restarting n8n, verify the ThingsBoard node is ava
         title: On the workflow canvas, click the **+** button to open the list of available nodes.
     ===
         image: /images/samples/analytics/n8n-node/installation-verification-3.png
-        title: In the node search field, type **ThingsBoard**. The **ThingsBoard node** should appear in the search results. Click on it.
+        title: In the node search field, type **SENTIENT**. The **SENTIENT node** should appear in the search results. Click on it.
     ===
         image: /images/samples/analytics/n8n-node/installation-verification-4.png
         title: A list of available **actions** will be displayed.
@@ -219,8 +219,8 @@ After installing the node and restarting n8n, verify the ThingsBoard node is ava
 
 {% assign n8nUsageNode = '
     ===
-        image: /images/samples/analytics/n8n-node/thingsboard-n8n-node.png
-        title: A ThingsBoard Node and a ThingsBoard Tool for AI Agent.
+        image: /images/samples/analytics/n8n-node/sentient-n8n-node.png
+        title: A SENTIENT Node and a SENTIENT Tool for AI Agent.
 '
 %}
 
@@ -228,11 +228,11 @@ After installing the node and restarting n8n, verify the ThingsBoard node is ava
 
 
 
-There are two ways to use the ThingsBoard node:
+There are two ways to use the SENTIENT node:
 
 ### 1. Regular Workflow Node
 
-Drag the ThingsBoard node onto your canvas and configure what you want to do (get devices, save telemetry, create alarms, etc.).
+Drag the SENTIENT node onto your canvas and configure what you want to do (get devices, save telemetry, create alarms, etc.).
 
 Good for:
 - Scheduled tasks (daily reports, health checks)
@@ -241,7 +241,7 @@ Good for:
 
 ### 2. AI Agent Tool
 
-Give an AI agent access to ThingsBoard operations. Users can then ask questions in plain English instead of building workflows.
+Give an AI agent access to SENTIENT operations. Users can then ask questions in plain English instead of building workflows.
 
 Good for:
 - Non-technical users querying entities, data, etc
@@ -259,11 +259,11 @@ Check out the [examples below](#usage-examples) to see both approaches in action
 
 **Customer onboarding automation**: CRM webhook (new customer) → Create devices and dashboard → Assign to customer
 
-**AI-powered queries**: Chat → AI Agent → ThingsBoard operations → Natural language response
+**AI-powered queries**: Chat → AI Agent → SENTIENT operations → Natural language response
 
 ## Usage Examples
 
-This section provides practical examples demonstrating the three usage patterns of the ThingsBoard n8n node.
+This section provides practical examples demonstrating the three usage patterns of the SENTIENT n8n node.
 
 ### Example 1: AI Agent
 
@@ -273,7 +273,7 @@ This section provides practical examples demonstrating the three usage patterns 
 - Just ask what you need (“Which devices are offline?”, “Show today’s temperature”) and the node handles the technical part for you.
 - Reduces bottlenecks in your IoT operations
 
-**Setup**: Use the ThingsBoard node as a **tool for AI Agents** to enable conversational IoT control
+**Setup**: Use the SENTIENT node as a **tool for AI Agents** to enable conversational IoT control
 
 {% assign example1 = '
     ===
@@ -281,7 +281,7 @@ This section provides practical examples demonstrating the three usage patterns 
         title: Create a new workflow with AI Agent node. Choose your AI Model (Gemini, Anthropic, ChatGPT, etc.) and configure memory settings.
     ===
         image: /images/samples/analytics/n8n-node/example-1-1-1.png
-        title: Select ThingsBoard from the Tools list. Add **Get devices** and **Get timeseries** operations.
+        title: Select SENTIENT from the Tools list. Add **Get devices** and **Get timeseries** operations.
     ===
         image: /images/samples/analytics/n8n-node/ai-agent-define-parameter.png
         title: For tools with required or optional fields, the AI model intelligently determines parameter values based on conversation context. The model decides which values to pass automatically.
@@ -307,7 +307,7 @@ This section provides practical examples demonstrating the three usage patterns 
 - *"Which sensors are in Building A?"*
 - *"Get me the last week of humidity data for all warehouse sensors"*
 
-This democratizes IoT access - anyone can query your infrastructure without knowing ThingsBoard's API.
+This democratizes IoT access - anyone can query your infrastructure without knowing SENTIENT's API.
 
 ---
 
@@ -315,7 +315,7 @@ This democratizes IoT access - anyone can query your infrastructure without know
 
 **Real-world scenario**: Every night, export device telemetry to S3, but also enrich it with device metadata from your CRM, convert to Parquet format for Athena, and trigger a Lambda function to update your data warehouse. One workflow, multiple outputs.
 
-**Why use n8n instead of ThingsBoard's native export**:
+**Why use n8n instead of SENTIENT's native export**:
 - **Multi-destination** - Send the same data to S3 + Snowflake + email report in one workflow
 - **Data transformation** - Enrich telemetry with business context (customer names, locations from CRM)
 - **Custom formats** - Convert to Parquet, Avro, or CSV with specific schemas for your analytics tools
@@ -353,7 +353,7 @@ Start by creating a new workflow and adding a Schedule Trigger to run the export
 
 <b><font size="3">Step 2: Add Code node for time range calculation</font></b>
 
-ThingsBoard's API requires timestamps in milliseconds. Add a Code node to calculate the exact 24-hour time range.
+SENTIENT's API requires timestamps in milliseconds. Add a Code node to calculate the exact 24-hour time range.
 
 **Configuration**:
 - Click **+** after the Schedule node → Select **Code**
@@ -386,19 +386,19 @@ return [{ startTsMs, endTsMs }];  // Pass to next node
 
 ---
 
-<b><font size="3">Step 3: Get device by name from ThingsBoard</font></b>
+<b><font size="3">Step 3: Get device by name from SENTIENT</font></b>
 
 Now retrieve the device you want to export telemetry for.
 
 **Configuration**:
-- Click **+** → **ThingsBoard** → **Get a device by name**
+- Click **+** → **SENTIENT** → **Get a device by name**
 - **Device Name**: Enter your device name (e.g., "Temperature Sensor 1")
 - Click **Execute node**
 
 {% assign example23 = '
     ===
         image: /images/samples/analytics/n8n-node/example-2-5.png
-        title: Add ThingsBoard node and select **Get a device by name**.
+        title: Add SENTIENT node and select **Get a device by name**.
     ===
         image: /images/samples/analytics/n8n-node/example-2-6.png
         title: Enter the device name and execute to retrieve the device object.
@@ -416,7 +416,7 @@ Now retrieve the device you want to export telemetry for.
 Fetch the telemetry data using the time range from the Code node.
 
 **Configuration**:
-- Click **+** → **ThingsBoard** → **Get timeseries**
+- Click **+** → **SENTIENT** → **Get timeseries**
 - Drag values from the **INPUT panel** (left side):
   - **Entity ID**: From "Get a device by name" → id → id
   - **Entity Type**: From "Get a device by name" → id → entityType
@@ -428,7 +428,7 @@ Fetch the telemetry data using the time range from the Code node.
 {% assign example24 = '
     ===
         image: /images/samples/analytics/n8n-node/example-2-7.png
-        title: Add ThingsBoard **Get timeseries** node.
+        title: Add SENTIENT **Get timeseries** node.
     ===
         image: /images/samples/analytics/n8n-node/example-2-8.png
         title: Configure with device ID, entity type, and time range from previous nodes. Execute to fetch telemetry data.
@@ -474,7 +474,7 @@ Finally, upload the file to your S3 bucket.
 You've built a complete automated data pipeline that:
 1. Runs every night at midnight UTC
 2. Calculates the exact 24-hour time window
-3. Fetches device telemetry from ThingsBoard
+3. Fetches device telemetry from SENTIENT
 4. Converts it to a file format
 5. Uploads to AWS S3 with predictable naming
 
@@ -485,7 +485,7 @@ You've built a complete automated data pipeline that:
 - Complete audit trail of daily exports
 
 **What makes this powerful**:
-n8n acts as the orchestration layer between ThingsBoard and your data ecosystem. You're not just exporting data - you're building a complete data pipeline with transformations, enrichments, and multi-system integration that ThingsBoard alone can't handle.
+n8n acts as the orchestration layer between SENTIENT and your data ecosystem. You're not just exporting data - you're building a complete data pipeline with transformations, enrichments, and multi-system integration that SENTIENT alone can't handle.
 
 **Next steps - extend this workflow**:
 - **Add multiple destinations**: After "Convert to File", split to also send to Snowflake, Google Sheets, or email
@@ -505,7 +505,7 @@ n8n acts as the orchestration layer between ThingsBoard and your data ecosystem.
 - External systems triggering reports for specific assets
 - Customer-facing dashboards that filter by user
 
-**What you'll learn**: How to chain ThingsBoard operations together, passing data between nodes (device name → device ID → telemetry keys → actual data).
+**What you'll learn**: How to chain SENTIENT operations together, passing data between nodes (device name → device ID → telemetry keys → actual data).
 
 ---
 
@@ -552,12 +552,12 @@ We'll use a manual trigger to simulate what would normally be a webhook from you
 
 ---
 
-<b><font size="3">Step 2: Find the device in ThingsBoard</font></b>
+<b><font size="3">Step 2: Find the device in SENTIENT</font></b>
 
-Now we need to look up the device by name to get its ID (since most ThingsBoard operations need the device ID, not the name).
+Now we need to look up the device by name to get its ID (since most SENTIENT operations need the device ID, not the name).
 
 **Configuration**:
-- Click **+** next to the trigger node → **ThingsBoard** → **Get device by name**
+- Click **+** next to the trigger node → **SENTIENT** → **Get device by name**
 - Drag `deviceName` from the **INPUT panel** (left) into the **Name** field
 
   *This creates a dynamic link - the node will use whatever device name was in the trigger*
@@ -571,7 +571,7 @@ Now we need to look up the device by name to get its ID (since most ThingsBoard 
         title: Click the **+** button to the right of the **trigger node**.
     ===
         image: /images/samples/analytics/n8n-node/example-3-2-2.png
-        title: Find and select **ThingsBoard**
+        title: Find and select **SENTIENT**
     ===
         image: /images/samples/analytics/n8n-node/example-3-2-3.png
         title: Choose **Get a device by name** action.
@@ -598,7 +598,7 @@ Now we need to look up the device by name to get its ID (since most ThingsBoard 
 Before we can fetch telemetry, we need to know what keys are available (temperature? humidity? battery?). This step finds that out.
 
 **Configuration**:
-- Click **+** → **ThingsBoard** → **Get timeseries keys**
+- Click **+** → **SENTIENT** → **Get timeseries keys**
 - Drag **Entity ID** and **Entity Type** from the **INPUT panel** (left)
 
   *We're using the device info from Step 2 automatically*
@@ -609,7 +609,7 @@ Before we can fetch telemetry, we need to know what keys are available (temperat
 {% assign example33 = '
     ===
         image: /images/samples/analytics/n8n-node/example-3-3-1.png
-        title: - Click the **+** button to the right of the **Get a device by name** node.<br>- Select **ThingsBoard**<br>- Choose **Get timeseries keys** action.
+        title: - Click the **+** button to the right of the **Get a device by name** node.<br>- Select **SENTIENT**<br>- Choose **Get timeseries keys** action.
     ===
         image: /images/samples/analytics/n8n-node/example-3-3-2.png
         title: - Set parameters dynamically:<br>- Entity ID<br>- Entity Type<br>You can drag these values directly from the **INPUT** panel (left side).<br>- Click **Execute step**<br>- **Back to canvas**
@@ -628,7 +628,7 @@ Finally, get the actual sensor readings using the keys we just discovered.
 
 **Configuration**:
 - Click the **+** button to the right of the **Get timeseries keys** node.
-- Select **ThingsBoard**
+- Select **SENTIENT**
 - Choose **Get timeseries** action
 - Configure parameters:
   - Get a device by name -> id -> **id** to **Entity ID**
@@ -643,7 +643,7 @@ Finally, get the actual sensor readings using the keys we just discovered.
 {% assign example34 = '
     ===
         image: /images/samples/analytics/n8n-node/example-3-4-1.png
-        title: Click the **+** button to the right of the trigger node.<br>Select **ThingsBoard**.<br>Choose **Get timeseries action**.
+        title: Click the **+** button to the right of the trigger node.<br>Select **SENTIENT**.<br>Choose **Get timeseries action**.
     ===
         image: /images/samples/analytics/n8n-node/example-3-4-2.png
         title: Configure parameters:<br>- **Entity ID**<br>- **Entity Type**<br>- **Keys (Comma Separated)**<br>You can drag these values directly from the **INPUT** panel (left side).<br>- Click **Execute step**.<br>- **Back to canvas**.
@@ -669,7 +669,7 @@ You just built a completely reusable workflow. Change the input from "Refrigerat
 {% assign ruleChainUseCase = '
     ===
         image: /images/samples/analytics/n8n-node/example-3-final-1.png
-        title: Accepts a device name as input. Finds the corresponding device in ThingsBoard.
+        title: Accepts a device name as input. Finds the corresponding device in SENTIENT.
     ===
         image: /images/samples/analytics/n8n-node/example-3-final-2.png
         title: Discovers available telemetry keys.
@@ -690,26 +690,26 @@ You just built a completely reusable workflow. Change the input from "Refrigerat
 
 ## API Reference
 
-The ThingsBoard n8n node is built on top of the ThingsBoard REST API. For detailed information about API endpoints, request/response formats, and additional parameters, refer to the [ThingsBoard REST API documentation](https://thingsboard.io/docs/{{docsPrefix}}reference/rest-api/){: target="_blank"}.
+The SENTIENT n8n node is built on top of the SENTIENT REST API. For detailed information about API endpoints, request/response formats, and additional parameters, refer to the [SENTIENT REST API documentation](https://docs.sentient.invenia.in/docs/{{docsPrefix}}reference/rest-api/){: target="_blank"}.
 
 ## Links
 
-- **npm Package**: [@thingsboard/n8n-nodes-thingsboard](https://www.npmjs.com/package/@thingsboard/n8n-nodes-thingsboard){: target="_blank"}
-- **GitHub Repository**: [thingsboard/thingsboard-n8n-node](https://github.com/thingsboard/thingsboard-n8n-node){: target="_blank"}
+- **npm Package**: [@sentient/n8n-nodes-sentient](https://www.npmjs.com/package/@sentient/n8n-nodes-sentient){: target="_blank"}
+- **GitHub Repository**: [sentient/sentient-n8n-node](https://github.com/sentient/sentient-n8n-node){: target="_blank"}
 - **n8n Documentation**: [docs.n8n.io](https://docs.n8n.io/){: target="_blank"}
 - **n8n Community**: [community.n8n.io](https://community.n8n.io/){: target="_blank"}
-- **ThingsBoard REST API**: [REST API Reference](/docs/{{docsPrefix}}reference/rest-api/){: target="_blank"}
+- **SENTIENT REST API**: [REST API Reference](/docs/{{docsPrefix}}reference/rest-api/){: target="_blank"}
 
 ## Support
 
-If you encounter issues or have questions about the ThingsBoard n8n node:
+If you encounter issues or have questions about the SENTIENT n8n node:
 
-- **GitHub Issues**: [Report bugs or request features](https://github.com/thingsboard/thingsboard-n8n-node/issues){: target="_blank"}
-- **ThingsBoard Community**: [Get help from the community](https://thingsboard.io/community/){: target="_blank"}
+- **GitHub Issues**: [Report bugs or request features](https://github.com/sentient/sentient-n8n-node/issues){: target="_blank"}
+- **SENTIENT Community**: [Get help from the community](https://docs.sentient.invenia.in/community/){: target="_blank"}
 - **n8n Community**: [n8n community](https://community.n8n.io/){: target="_blank"}
 
 ## License
 
-MIT License - see the [LICENSE file](https://github.com/thingsboard/thingsboard-n8n-node/blob/master/LICENSE.md){: target="_blank"} for details.
+MIT License - see the [LICENSE file](https://github.com/sentient/sentient-n8n-node/blob/master/LICENSE.md){: target="_blank"} for details.
 
 ---

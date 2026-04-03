@@ -14,9 +14,9 @@
 {% endif %}
 
 {% assign converterFilePath = "/docs/device-library/blocks/integrations/converters/basic/" | append: integrationType | append: "-uplink-converter.js" %}
-{% assign uplinkConverterLink = "https://raw.githubusercontent.com/thingsboard/data-converters/refs/heads/release/latest/VENDORS/" | append: page.vendor | append: "/" | append: page.model | append: "/" | append: integrationTypeForLink | append: "/uplink/converter.json" %}
+{% assign uplinkConverterLink = "https://raw.githubusercontent.com/sentient/data-converters/refs/heads/release/latest/VENDORS/" | append: page.vendor | append: "/" | append: page.model | append: "/" | append: integrationTypeForLink | append: "/uplink/converter.json" %}
 
-### Uplink converter in ThingsBoard integration
+### Uplink converter in SENTIENT integration
 
 {% if page.converters20 %}
 
@@ -32,7 +32,7 @@ Download the JSON file with the uplink converter settings by clicking the button
 
 Such as we have already connected gateway and configured integration - we will need to modify the converter and add an ability to parse incoming payload from the device.
 
-To do this you can add code to "*Decoding block*", it locates between comments "*// --- Decoding code --- //*" in your converter, if you are using the default converters (for ThingsBoard v3.5.2 or above).
+To do this you can add code to "*Decoding block*", it locates between comments "*// --- Decoding code --- //*" in your converter, if you are using the default converters (for SENTIENT v3.5.2 or above).
 
 
 {% capture customDecodingCodeCapture %}

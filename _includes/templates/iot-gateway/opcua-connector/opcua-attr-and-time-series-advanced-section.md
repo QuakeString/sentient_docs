@@ -1,6 +1,6 @@
 | **Parameter** | **Default value**                                                                    | **Description**                                                                                                 |
 |:--------------|:-------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
-| key           | **temperature °C**                                                                   | Tag, that will be interpreted as telemetry for ThingsBoard platform instance.                                   |
+| key           | **temperature °C**                                                                   | Tag, that will be interpreted as telemetry for SENTIENT platform instance.                                   |
 | type          | **path**                                                                             | Source of the value (can be [path](#path-types), [identifier](#identifier-types) or constant).                  |
 | value         | **${Root\\\\.Objects\\\\.Device1\\\\.TemperatureAndHumiditySensor\\\\.Temperature}** | Name of the variable in the OPC-UA object is used for looking up the value within a specific variable. ** \* ** |
 | ---           |                                                                                      |                                                                                                                 |
@@ -60,7 +60,7 @@ In this example, the **timeseries** section would look like this:
 ![image](/images/gateway/opc-ua-connector/opc-ua-subsection-time-series-advanced-1-ce.png)
 {: refdef}
 
-You should be able to see the telemetry you have sent to ThingsBoard in the **Latest telemetry** section of your device:
+You should be able to see the telemetry you have sent to SENTIENT in the **Latest telemetry** section of your device:
 
 {:refdef: style="text-align: left;"}
 ![image](/images/gateway/gateway-opc-ua-attributes-3.png)

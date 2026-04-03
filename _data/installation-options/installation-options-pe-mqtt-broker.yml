@@ -1,79 +1,79 @@
 mqttBroker:
   0:
-    title: TBMQ Public Demo
-    description: Try TBMQ instantly — no installation required. Connect to the public demo instance and start publishing and subscribing right away.
-    link: https://demo.tbmq.io/signup
-    icon: /images/install/platform/tbmq-demo.svg
-    alt: TBMQ logo
-    imageTitleAttribute: Try TBMQ Public Demo
+    title: ST-RMQTT Public Demo
+    description: Try ST-RMQTT instantly — no installation required. Connect to the public demo instance and start publishing and subscribing right away.
+    link: https://demo.st-rmqtt.io/signup
+    icon: /images/install/platform/st-rmqtt-demo.svg
+    alt: ST-RMQTT logo
+    imageTitleAttribute: Try ST-RMQTT Public Demo
     imageWidth: 36
     imageHeight: 36
   1:
     title: Docker (Linux or Mac OS)
-    description: This guide will help you install and start standalone TBMQ using Docker on Linux or macOS.
+    description: This guide will help you install and start standalone ST-RMQTT using Docker on Linux or macOS.
     link: /docs/pe/mqtt-broker/install/docker/
     icon: /images/install/platform/docker-linux-macos.svg
     alt: Docker logo with Linux and macOS icons
-    imageTitleAttribute: Install TBMQ using Docker on Linux or macOS
+    imageTitleAttribute: Install ST-RMQTT using Docker on Linux or macOS
     imageWidth: 170
     imageHeight: 36
   2:
     title: Docker (Windows)
-    description: This guide will help you install and start standalone TBMQ using Docker on Windows.
+    description: This guide will help you install and start standalone ST-RMQTT using Docker on Windows.
     link: /docs/pe/mqtt-broker/install/docker-windows/
     icon: /images/install/platform/docker-windows.svg
     alt: Docker logo with Windows icon
-    imageTitleAttribute: Install TBMQ using Docker on Windows
+    imageTitleAttribute: Install ST-RMQTT using Docker on Windows
     imageWidth: 96
     imageHeight: 36
   3:
     title: Docker Cluster setup
-    description: This guide will help you set up TBMQ in cluster mode using Docker Compose.
+    description: This guide will help you set up ST-RMQTT in cluster mode using Docker Compose.
     link: /docs/pe/mqtt-broker/install/cluster/docker-compose-setup/
     icon: /images/install/cluster/docker-compose.svg
     alt: Docker Compose logo
-    imageTitleAttribute: Set up TBMQ in cluster mode using Docker Compose
+    imageTitleAttribute: Set up ST-RMQTT in cluster mode using Docker Compose
     imageWidth: 36
     imageHeight: 36
   4:
     title: Minikube
-    description: This guide will help you set up TBMQ in cluster mode using Minikube.
+    description: This guide will help you set up ST-RMQTT in cluster mode using Minikube.
     link: /docs/pe/mqtt-broker/install/cluster/minikube-cluster-setup/
     icon: /images/install/cluster/minikube.svg
     alt: Minikube logo
-    imageTitleAttribute: Deploy TBMQ cluster using Minikube tool
+    imageTitleAttribute: Deploy ST-RMQTT cluster using Minikube tool
     imageWidth: 36
     imageHeight: 36
   5:
     title: Amazon EKS
-    description: This guide will help you set up TBMQ in AWS EKS.
+    description: This guide will help you set up ST-RMQTT in AWS EKS.
     link: /docs/pe/mqtt-broker/install/cluster/aws-cluster-setup/
     icon: /images/install/cloud/eks.svg
     alt: Amazon EKS logo
-    imageTitleAttribute: Deploy TBMQ using Amazon EKS platform
+    imageTitleAttribute: Deploy ST-RMQTT using Amazon EKS platform
     imageWidth: 32
     imageHeight: 36
   6:
     title: Azure
-    description: This guide will help you set up TBMQ in AKS.
+    description: This guide will help you set up ST-RMQTT in AKS.
     link: /docs/pe/mqtt-broker/install/cluster/azure-cluster-setup/
     icon: /images/install/cloud/azure.svg
     alt: Microsoft Azure logo
-    imageTitleAttribute: Deploy TBMQ on Microsoft Azure
+    imageTitleAttribute: Deploy ST-RMQTT on Microsoft Azure
     imageWidth: 123
     imageHeight: 36
   7:
     title: Google Cloud Platform
-    description: This guide will help you set up TBMQ in GKE.
+    description: This guide will help you set up ST-RMQTT in GKE.
     link: /docs/pe/mqtt-broker/install/cluster/gcp-cluster-setup/
     icon: /images/install/cloud/gcp.svg
     alt: Google Cloud Platform logo
-    imageTitleAttribute: Deploy TBMQ on Google Cloud infrastructure
+    imageTitleAttribute: Deploy ST-RMQTT on Google Cloud infrastructure
     imageWidth: 40
     imageHeight: 36
   8:
     title: Helm
-    description: Kubernetes environment options for TBMQ cluster setup using Helm.
+    description: Kubernetes environment options for ST-RMQTT cluster setup using Helm.
     link: /docs/pe/mqtt-broker/install/cluster/helm-cluster-setup-options/
     icon: /images/install/cluster/helm.svg
     alt: Helm logo

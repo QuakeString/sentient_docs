@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: MQTT Topics & Wildcards
-description: TBMQ Topics guide
+description: ST-RMQTT Topics guide
 
 ---
 

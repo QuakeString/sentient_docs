@@ -1,6 +1,6 @@
 ---
-layout: thingsboard-edge
-title: ThingsBoard Edge
+layout: sentient-gateway
+title: SENTIENT GATEWAY
 description: Comprehensive software solutions for edge computing, providing data analysis and management at the source of data creation.
 ---
 
@@ -49,7 +49,7 @@ description: Comprehensive software solutions for edge computing, providing data
             </div>
             <div class="scenario-tab active" onclick="switchProductTab('edge', event)">
                 <div class="tab-header">
-                    <h3 class="tab-name">ThingsBoard Edge</h3>
+                    <h3 class="tab-name">SENTIENT GATEWAY</h3>
                     <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
                       <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -60,12 +60,12 @@ description: Comprehensive software solutions for edge computing, providing data
                   <span class="tag">Low latency</span>
                   <span class="tag">Remote sites</span>
                   <span class="tag">On-premises analytics</span>
-                  <p>ThingsBoard Edge processes and visualizes data locally at the network edge, enabling autonomous operation during connectivity outages. It reduces bandwidth costs by filtering data before cloud transmission while maintaining sub-second response times for critical automation.</p>
+                  <p>SENTIENT GATEWAY processes and visualizes data locally at the network edge, enabling autonomous operation during connectivity outages. It reduces bandwidth costs by filtering data before cloud transmission while maintaining sub-second response times for critical automation.</p>
                 </div>
             </div>
             <div class="scenario-tab" onclick="switchProductTab('server', event)">
                 <div class="tab-header">
-                    <h3 class="tab-name">ThingsBoard Server</h3>
+                    <h3 class="tab-name">SENTIENT Server</h3>
                     <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
                       <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -75,7 +75,7 @@ description: Comprehensive software solutions for edge computing, providing data
                     <span class="tag">Centralized platform</span>
                     <span class="tag">Multi-tenancy</span>
                     <span class="tag">Scalable architecture</span>
-                    <p>The ThingsBoard Server provides centralized data processing, storage, and advanced analytics with enterprise-grade scalability. It supports multi-tenancy, flexible deployment options from on-premises to cloud, and unlimited device connectivity for large-scale IoT infrastructure.</p>
+                    <p>The SENTIENT Server provides centralized data processing, storage, and advanced analytics with enterprise-grade scalability. It supports multi-tenancy, flexible deployment options from on-premises to cloud, and unlimited device connectivity for large-scale IoT infrastructure.</p>
                 </div>
             </div>
         </div>
@@ -85,7 +85,7 @@ description: Comprehensive software solutions for edge computing, providing data
                     <div class="image-background"></div>
                     <div class="image-background"></div>
                     <div class="image">
-                        <img src="/images/edge/tb-edge-gw.webp" alt="ThingsBoard Gateway block" width="615" height="719" loading="lazy">
+                        <img src="/images/edge/tb-edge-gw.webp" alt="SENTIENT Gateway block" width="615" height="719" loading="lazy">
                     </div>
                 </div>
                 <a href="/docs/iot-gateway/getting-started/" target="_blank" class="cta-button gtm_button">Connect Your Devices</a>
@@ -97,7 +97,7 @@ description: Comprehensive software solutions for edge computing, providing data
                     <div class="image-background"></div>
                     <div class="image-background"></div>
                     <div class="image">
-                        <img src="/images/edge/tb-edge.webp" alt="ThingsBoard Edge block" loading="lazy">
+                        <img src="/images/edge/tb-edge.webp" alt="SENTIENT GATEWAY block" loading="lazy">
                     </div>
                 </div>
                 <a href="/docs/edge/getting-started/" target="_blank" class="cta-button gtm_button">Try Edge Now</a>
@@ -109,7 +109,7 @@ description: Comprehensive software solutions for edge computing, providing data
                     <div class="image-background"></div>
                     <div class="image-background"></div>
                     <div class="image">
-                        <img src="/images/edge/tb-cloud.webp" alt="ThingsBoard Cloud block" loading="lazy">
+                        <img src="/images/edge/tb-cloud.webp" alt="SENTIENT Cloud block" loading="lazy">
                     </div>
                 </div>
                 <a href="/docs/getting-started-guides/helloworld/" target="_blank" class="cta-button gtm_button">Get Started</a>
@@ -120,7 +120,7 @@ description: Comprehensive software solutions for edge computing, providing data
 
 <section id="matrix">
     <div class="main-content">
-    <h2>Which ThingsBoard Product Is Right for You?</h2>
+    <h2>Which SENTIENT Product Is Right for You?</h2>
     <table>
             <colgroup>
                 <col class="col-feature">
@@ -132,13 +132,13 @@ description: Comprehensive software solutions for edge computing, providing data
                 <tr>
                     <td></td>
                     <th class="gateway">IoT<br>Gateway</th>
-                    <th class="edge">ThingsBoard<br>Edge</th>
-                    <th class="server">ThingsBoard<br>Server</th>
+                    <th class="edge">SENTIENT<br>Edge</th>
+                    <th class="server">SENTIENT<br>Server</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th>ThingsBoard Server Required</th>
+                    <th>SENTIENT Server Required</th>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td><img src="/images/pe/checked.svg" alt="checked"></td>
                     <td>N/A</td>
@@ -216,7 +216,7 @@ description: Comprehensive software solutions for edge computing, providing data
         <img class="h-auto" src="/images/case-studies/Dominic_Winkler.webp" title="ÖBB-Infrastruktur AG IT Enterprise Architect Dominic Winkler" alt="Dominic Winkler" width="1316" height="848">
         <div class="text">
             <h2>ÖBB-Infrastruktur AG</h2>
-            <p class="quote">"Thingsboard Edge gives us the invaluable ability to allow data to flow within our IT network without the need to bridge Firewalls and Public Internet."</p>
+            <p class="quote">"Sentient Edge gives us the invaluable ability to allow data to flow within our IT network without the need to bridge Firewalls and Public Internet."</p>
             <p class="author">Dominic Winkler</p>
             <p class="title">IT Enterprise Architect</p>
         </div>
@@ -227,7 +227,7 @@ description: Comprehensive software solutions for edge computing, providing data
     <div class="main-content">
         <div class="block">
             <h2 class="cta">Need offline-capable IoT solution?</h2>
-            <a id="Lets-Talk-Edge" href="/docs/contact-us/?subject=ThingsBoard%20Products" target="_blank"
+            <a id="Lets-Talk-Edge" href="/docs/contact-us/?subject=SENTIENT%20Products" target="_blank"
                class="button contact-us gtm_button">Let's talk Edge</a>
         </div>
     </div>
@@ -256,7 +256,7 @@ description: Comprehensive software solutions for edge computing, providing data
                 <img src="/images/edge/data-filtering.svg" alt="data filtering">
             </div>
             <div class="feature-des"><h3 class="item-heading">Data Filtering</h3>
-                <p>Use the ThingsBoard Edge service to filter data from local (edge) devices and forward only a subset of data to the server for further processing or storage.</p>
+                <p>Use the SENTIENT GATEWAY service to filter data from local (edge) devices and forward only a subset of data to the server for further processing or storage.</p>
                 <a class="read-more-button" href="/docs/edge/getting-started-guides/what-is-edge/">Edge CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 <a class="read-more-button" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
             </div>

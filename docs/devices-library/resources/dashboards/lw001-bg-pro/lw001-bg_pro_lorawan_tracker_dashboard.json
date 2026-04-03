@@ -486,7 +486,7 @@
                 },
                 "markerImage": {
                   "type": "image",
-                  "image": "https://static.thingsboard.cloud/assets/markers/shape1.svg",
+                  "image": "https://static.sentient.cloud/assets/markers/shape1.svg",
                   "imageSize": 34
                 },
                 "markerOffsetX": 0.5,

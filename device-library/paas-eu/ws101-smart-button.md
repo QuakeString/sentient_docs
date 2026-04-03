@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect WS101 LoRaWAN® Smart Button to ThingsBoard?
+title: How to connect WS101 LoRaWAN® Smart Button to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: Milesight

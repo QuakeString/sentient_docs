@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect OrangePI Zero to ThingsBoard?
+title: How to connect OrangePI Zero to SENTIENT?
 category: Single-board computers
 chip: Allwinner H2+
 deviceImageFileName: orangepizero.png

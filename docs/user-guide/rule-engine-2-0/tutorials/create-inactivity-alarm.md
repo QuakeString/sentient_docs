@@ -16,17 +16,17 @@ This tutorial is to show you how to create an alarm when the device is offline f
 
 Let’s assume the following use case:
 
- - you have a device connected to ThingsBoard and this device has a temperature sensor to collect and push the telemetry data.
+ - you have a device connected to SENTIENT and this device has a temperature sensor to collect and push the telemetry data.
 
  - the temperature sensor may stop pushing the telemetry data due to any kind of faults.
 
 
-Therefore, in this case, you will need to configure ThingsBoard Rule Engine to:
+Therefore, in this case, you will need to configure SENTIENT Rule Engine to:
 
  - create an alarm if the device remains inactive for a certain period of time. This period of time can be defined in either of two ways:
 
     - The first way: by changing the global configuration parameter for the inactivity timeout. <br>
-      This parameter is defined in **thingsboard.yml** (state.defaultInactivityTimeoutInSec) and by default it is set to 600 seconds (10 minutes).
+      This parameter is defined in **sentient.yml** (state.defaultInactivityTimeoutInSec) and by default it is set to 600 seconds (10 minutes).
 
     - The second way: by overwriting this parameter for a particular device by setting the **“inactivityTimeout”** server-side attribute (value is set in milliseconds). <br>
       This way will be described in the following sections.
@@ -35,9 +35,9 @@ Therefore, in this case, you will need to configure ThingsBoard Rule Engine to:
 
 
 ## Background
-The ThingsBoard Device State service is responsible for monitoring the device connectivity state and triggering the device connectivity events that are pushed to Rule Engine.
+The SENTIENT Device State service is responsible for monitoring the device connectivity state and triggering the device connectivity events that are pushed to Rule Engine.
 
-ThingsBoard supports four types of events:
+SENTIENT supports four types of events:
 <table style="width: 70%">
   <thead>
       <tr>
@@ -47,11 +47,11 @@ ThingsBoard supports four types of events:
   <tbody>
       <tr>
           <td>Connect</td>
-          <td>triggered when the device connects to ThingsBoard.</td>
+          <td>triggered when the device connects to SENTIENT.</td>
       </tr>
       <tr>
           <td>Disconnect</td>
-          <td>triggered when the device disconnects from ThingsBoard.</td>
+          <td>triggered when the device disconnects from SENTIENT.</td>
       </tr>
       <tr>
           <td>Activity</td>
@@ -75,7 +75,7 @@ This tutorial will explain in details the device Inactivity event and it will sh
 
 ## Adding the Device
 
- - Add a Device entity in ThingsBoard.
+ - Add a Device entity in SENTIENT.
  - Enter the Device name as **Temperature device**, and the Device type as **Temperature sensor**:
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/inactivity alarms/add-device.png)

@@ -9,5 +9,5 @@
 | byteOrder                     | **BIG**                               | Order of bytes to read.                                                                                                  |
 | unitId                        | **0**                                 | Unit id of the device                                                                                                    |
 | pollPeriod                    | **5000**                              | Period in milliseconds for checking the attributes and the telemetry.                                                    |
-| sendDataToThingsBoard         | **false**                             | If set to TRUE, the Gateway will perform autoconfiguration and send values to ThingsBoard every <pollPeriod> millisecond |
+| sendDataToSENTIENT         | **false**                             | If set to TRUE, the Gateway will perform autoconfiguration and send values to SENTIENT every <pollPeriod> millisecond |
 |---

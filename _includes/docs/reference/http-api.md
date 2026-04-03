@@ -1,8 +1,8 @@
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-{% assign HOST_NAME = "$THINGSBOARD_HOST_NAME" %}
+{% assign HOST_NAME = "$SENTIENT_HOST_NAME" %}
 {% endif %}
 {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
-{% assign HOST_NAME = "$THINGSBOARD_EDGE_HOST_NAME" %}
+{% assign HOST_NAME = "$SENTIENT_EDGE_HOST_NAME" %}
 {% endif %}
 
 * TOC
@@ -12,7 +12,7 @@
 You can find more information about HTTP [here](https://www.w3.org/Protocols/rfc2616/rfc2616.txt).
 HTTP protocol is TCP based and uses request-response model.  
 
-ThingsBoard server nodes act as an HTTP Server that supports both HTTP and HTTPS protocols.
+SENTIENT server nodes act as an HTTP Server that supports both HTTP and HTTPS protocols.
 
 <hr>
 
@@ -33,7 +33,7 @@ sudo apt-get install curl
 
 ## HTTP authentication method
 
-ThingsBoard supports [access token](/docs/user-guide/ssl/http-access-token/){:target="_blank"}-based authentication to secure HTTP connections. For each HTTP request, the client must include the access token as part of the request URL.
+SENTIENT supports [access token](/docs/user-guide/ssl/http-access-token/){:target="_blank"}-based authentication to secure HTTP connections. For each HTTP request, the client must include the access token as part of the request URL.
 
 > The examples in this guide use **access token–based authentication**.
 
@@ -52,7 +52,7 @@ Using custom binary format or some serialization framework is also possible. See
 
 ## Telemetry upload API
 
-In order to publish telemetry data to ThingsBoard server node, send POST request to the following URL:
+In order to publish telemetry data to SENTIENT server node, send POST request to the following URL:
 
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
 ```shell
@@ -71,7 +71,7 @@ http(s)://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/telemetry
 {% endif %}
 
 > ⚠️ Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is the device&#39;s access token.
 
 The simplest supported data formats are:
@@ -101,7 +101,7 @@ For example, the value '1451649600512' corresponds to 'Fri, 01 Jan 2016 12:00:00
 Below are the examples of commands for publishing different types of telemetry data.
 
 > ⚠️ Don&#39;t forget to replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is your device&#39;s access token.
 
 **Example 1**.   
@@ -242,7 +242,7 @@ The content of the JSON file:
 
 ## Attributes API
 
-ThingsBoard attributes API allows devices to
+SENTIENT attributes API allows devices to
 
 * Upload [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes to the server.
 * Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes from the server.
@@ -252,7 +252,7 @@ ThingsBoard attributes API allows devices to
 
 ### Publish attribute update to the server
 
-In order to publish client-side device attributes to ThingsBoard server node, send POST request to the following URL:
+In order to publish client-side device attributes to SENTIENT server node, send POST request to the following URL:
 
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
 ```shell
@@ -271,7 +271,7 @@ http(s)://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/attributes
 {% endif %}
 
 > Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is the device&#39;s access token.
 <br>
 
@@ -334,7 +334,7 @@ The content of the JSON file:
 
 ### Request attribute values from the server
 
-In order to request client-side or shared device attributes to ThingsBoard server node, send GET request to the following URL:
+In order to request client-side or shared device attributes to SENTIENT server node, send GET request to the following URL:
 
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
 ```shell
@@ -353,7 +353,7 @@ http(s)://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/attributes?clientKeys=attribute1,at
 {% endif %}
 
 > Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is the device&#39;s access token.
 
 <br>
@@ -411,7 +411,7 @@ http(s)://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/attributes/updates
 {% endif %}
 
 > Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is the device&#39;s access token.
 
 Once shared attribute will be changed by one of the server-side components (REST API or Rule Chain) the client will receive the following update: 
@@ -468,7 +468,7 @@ http(s)://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/rpc
 {% endif %}
 
 > Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is the device&#39;s access token.
 
 Once subscribed, a client may receive rpc request or a timeout message if there are no requests to a particular device.
@@ -513,7 +513,7 @@ http(s)://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/rpc/{$id}
 <br>
 **Let&#39;s look at an example**:
 
-- Use **RPC debug terminal** widget in your ThingsBoard instance;
+- Use **RPC debug terminal** widget in your SENTIENT instance;
 - Subscribe to RPC commands from the server using the command below. To do this, in the first terminal window send GET request with observe flag.
 
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
@@ -534,7 +534,7 @@ curl -v -X GET {{httpsUrl}}/api/v1/$ACCESS_TOKEN/rpc?timeout=20000
 {% endif %}
 
 > Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is the device&#39;s access token.
 
 - Send an RPC request "connect" to the device using **RPC debug terminal** widget;
@@ -587,7 +587,7 @@ http(s)://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/rpc
 {% endif %}
 
 > Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is the device&#39;s access token.
 
 Both request and response body should be valid JSON documents. The content of the documents is specific to the rule node that will handle your request.
@@ -637,7 +637,7 @@ You should receive a response from the server:
 
 ## Claiming devices
 
-The Device Claiming feature allows end users to securely associate a device with their account after the device has been deployed and connected to ThingsBoard.
+The Device Claiming feature allows end users to securely associate a device with their account after the device has been deployed and connected to SENTIENT.
 For a detailed explanation of the device claiming workflow and supported scenarios, refer to the {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix contains "paas/" %}[Claiming devices](/docs/{{docsPrefix}}user-guide/claiming-devices){:target="_blank"}{% endif %}{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}[Claiming devices](/docs/user-guide/claiming-devices){:target="_blank"}{% endif %} documentation.
 
 **Claiming request**   
@@ -661,7 +661,7 @@ http(s)://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/claim
 {% endif %}
 
 > Where {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> is the device&#39;s access token.
 
 **Request payload**   
@@ -677,7 +677,7 @@ The request body must contain the following JSON structure:
 
 {% capture difference %}
 **Please note** that the above fields are optional. In case the **secretKey** is not specified, the empty string as a default value is used.
-In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/thingsboard/conf/thingsboard.yml**).
+In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/sentient/conf/sentient.yml**).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -685,7 +685,7 @@ In case the **durationMs** is not specified, the system parameter **device.claim
 
 ## Device provisioning
 
-Device provisioning allows devices to be registered dynamically without manual creation in the ThingsBoard UI.
+Device provisioning allows devices to be registered dynamically without manual creation in the SENTIENT UI.
 For a detailed explanation of the provisioning process and supported scenarios, refer to the {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix contains "paas/" %}[Device provisioning](/docs/{{docsPrefix}}user-guide/device-provisioning){:target="_blank"}{% endif %}{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}[Device provisioning](/docs/user-guide/device-provisioning){:target="_blank"}{% endif %} documentation.
 
 **Provisioning request**
@@ -697,7 +697,7 @@ http(s)://{{HOST_NAME}}/api/v1/provision
 ```
 {: .copy-code}
 
-Where **{{HOST_NAME}}** is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
+Where **{{HOST_NAME}}** is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
 
 {% endif %}
 {% if docsPrefix contains "paas/" %}
@@ -722,16 +722,16 @@ The provisioning request must use the following JSON format:
 
 **Payload fields**   
 - **deviceName** — the name of the device to be provisioned.
-- **provisionDeviceKey** — the provisioning key configured in ThingsBoard.
+- **provisionDeviceKey** — the provisioning key configured in SENTIENT.
 - **provisionDeviceSecret** — the provisioning secret associated with the provisioning key.
 
-If the provided credentials are valid, ThingsBoard automatically creates the device (if it does not already exist) and returns the device credentials, allowing the device to start communicating with the platform.
+If the provided credentials are valid, SENTIENT automatically creates the device (if it does not already exist) and returns the device credentials, allowing the device to start communicating with the platform.
 
 <hr>
 
 ## Firmware API
 
-When ThingsBoard initiates the firmware update over HTTP it sets the _fw_title_, _fw_version_, _fw_checksum_, _fw_checksum_algorithm_ shared attributes.
+When SENTIENT initiates the firmware update over HTTP it sets the _fw_title_, _fw_version_, _fw_checksum_, _fw_checksum_algorithm_ shared attributes.
 
 To receive firmware update information and download the firmware, the device must send a GET request to the following endpoint:
 
@@ -753,7 +753,7 @@ http(s)://{{HOST_NAME}}/api/v1/$ACCESS_TOKEN/firmware?title=$TITLE&version=$VERS
 {% endif %}
 
 Parameters   
-{% unless docsPrefix contains "paas/" %}&#8194;&#8226;&#8194;**{{HOST_NAME}}** is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address{% endunless %}   
+{% unless docsPrefix contains "paas/" %}&#8194;&#8226;&#8194;**{{HOST_NAME}}** is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address{% endunless %}   
 &#8194;&#8226;&#8194;**$ACCESS_TOKEN** is your device&#39;s access token   
 &#8194;&#8226;&#8194;**$TITLE** - the firmware title   
 &#8194;&#8226;&#8194;**$VERSION** - the target firmware version
@@ -762,7 +762,7 @@ Parameters
 
 ## Protocol customization
 
-HTTP transport can be fully customized for specific use-case by changing the corresponding [module](https://github.com/thingsboard/thingsboard/tree/master/transport/http){:target="_blank"}.
+HTTP transport can be fully customized for specific use-case by changing the corresponding [module](https://github.com/sentient/sentient/tree/master/transport/http){:target="_blank"}.
 
 <hr>
 

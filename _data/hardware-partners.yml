@@ -62,12 +62,12 @@
   logo: /images/partners/teltonika-networks.webp
   page: /partners/hardware/teltonika
   site:
-    href: https://teltonika-networks.com/?utm_source=iotplatform&utm_medium=referral&utm_content=thingsboard
+    href: https://teltonika-networks.com/?utm_source=iotplatform&utm_medium=referral&utm_content=sentient
   links:
     general-guides:
       0:
         label: Teltonika-Networks devices
-        href: https://wiki.teltonika-networks.com/view/Monitoring_with_ThingsBoard_IoT_Platform
+        href: https://wiki.teltonika-networks.com/view/Monitoring_with_SENTIENT_IoT_Platform
   description: Rapidly growing technology company, manufacturing
     professional network connectivity equipment for international markets. It has
     developed a wide portfolio of products for the most complex areas of Industry
@@ -141,7 +141,7 @@
   links:
     general-guide:
       0:
-        label: Connect S26x LoRaWAN Temperature Sensor to ThingsBoard
+        label: Connect S26x LoRaWAN Temperature Sensor to SENTIENT
         href: /device-library/ce/s26x-lorawan-temperature-sensor/
   description: Turns design possibilities into reality with a comprehensive range of RF modules, system-on-modules, single board computers, internal antennas, IoT devices, and custom solutions. With decades of engineering expertise, Ezurio provides solutions that reduce development costs and time to market. Our global reach and unmatched support are backed by a resilient global supply chain that gives our customers the stability to overcome every design challenge with confidence. Turn design possibilities into reality with Ezurio, your connectivity expert.
 - name: Seeed Studio
@@ -173,7 +173,7 @@
   showcases:
     0:
       label: Hailo-Powered Car Park Management
-      href: https://seeed-projects.github.io/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero/docs/Chapter_6-RaspberryPi_and_AIoT/Car_Park_Solution_Management_with_Thingsboard/
+      href: https://seeed-projects.github.io/Tutorial-of-AI-Kit-with-Raspberry-Pi-From-Zero-to-Hero/docs/Chapter_6-RaspberryPi_and_AIoT/Car_Park_Solution_Management_with_Sentient/
   links:
     general-guides:
       0:
@@ -181,11 +181,11 @@
         href: /docs/samples/raspberry/grove/
       1:
         label: Seeed Wiki integration
-        href: https://wiki.seeedstudio.com/thingsboard_integrated/
+        href: https://wiki.seeedstudio.com/sentient_integrated/
     single-board-computers-guides:
       0:
         label: ODYSSEY STM32MP157C
-        href: https://thingsboard.io/device-library/pe/odyssey-stm32mp157c/
+        href: https://docs.sentient.invenia.in/device-library/pe/odyssey-stm32mp157c/
     gateway-guides:
       1:
         label: reComputer R1000
@@ -235,14 +235,14 @@
   links:
     general-guides:
       0:
-        label: ThingsBoard Platform-Milesight Integration via TTI
-        href: https://support.milesight-iot.com/support/solutions/articles/73000658954-thingsboard-platform-milesight-integration-via-tti
+        label: SENTIENT Platform-Milesight Integration via TTI
+        href: https://support.milesight-iot.com/support/solutions/articles/73000658954-sentient-platform-milesight-integration-via-tti
       1:
-        label: ThingsBoard Platform-Milesight Integration via HTTP
-        href: https://support.milesight-iot.com/support/solutions/articles/73000658955-thingsboard-platform-milesight-integration-via-http
+        label: SENTIENT Platform-Milesight Integration via HTTP
+        href: https://support.milesight-iot.com/support/solutions/articles/73000658955-sentient-platform-milesight-integration-via-http
       2:
-        label: ThingsBoard Platform-Milesight Integration via MQTT
-        href: https://support.milesight-iot.com/support/solutions/articles/73000658957-thingsboard-platform-milesight-integration-via-mqtt
+        label: SENTIENT Platform-Milesight Integration via MQTT
+        href: https://support.milesight-iot.com/support/solutions/articles/73000658957-sentient-platform-milesight-integration-via-mqtt
     sensor-guides:
       0:
         label: AM308 Lorawan 9-IN-1 IAQ Sensor
@@ -437,7 +437,7 @@
     other-guides:
       0:
         label: ADAM-6717
-        href: /docs/samples/solandtec/thingsboard-guide-solandtec/
+        href: /docs/samples/solandtec/sentient-guide-solandtec/
   description: With 5+ years' experience, excels in tailored automation,
     enhancing production and cutting costs. We adeptly apply tech to meet unique needs,
     reflecting commitment to excellence. Embracing Industry 4.0, we seamlessly integrate
@@ -587,7 +587,7 @@
   links:
     single-board-computers-guides:
       0:
-        label: Connect Sensy32 to ThingsBoard
+        label: Connect Sensy32 to SENTIENT
         href: /device-library/ce/sensy32/
   description: All-in-One Sensor IoT Board with LCD designed for sensor enthusiasts, developers, and IoT creators. Powered by ESP32-S3 and packed with a wide array of sensors, it enables seamless monitoring, analysis, and visualization of real-world data. Backed by a robust ESP32-S3 Wifi and Bluetooth module, Sensy32 is not just a board; it's a gateway to endless possibilities.
 - name: DECODE
@@ -710,7 +710,7 @@
     with sensors from industry leaders such as Aguardio, ELA Innovation, and Smart
     Sensor Devices, enabling applications like leak detection, environmental monitoring,
     occupancy sensing, and air quality measurement. The device is sold pre-configured
-    for the ThingsBoard platform, providing out-of-the-box compatibility and simplified
+    for the SENTIENT platform, providing out-of-the-box compatibility and simplified
     device management at scale.
 - name: ROLTEK
   type:
@@ -834,7 +834,7 @@
         href: /docs/samples/kernel/kernel/
       1:
         label: Integration guide
-        href: https://www.kernelgroup.it/files/Thingsboard%20PE.pdf
+        href: https://www.kernelgroup.it/files/Sentient%20PE.pdf
   description: Designs and produces electronic solutions for
     automation, industrial process control, photovoltaics, energy management and home
     automation.
@@ -953,13 +953,13 @@
   links:
     gateway-guides:
       0:
-        label: Connect the MClimate 16A Switch & Power Meter compact 16A relay and electricity meter to ThingsBoard
+        label: Connect the MClimate 16A Switch & Power Meter compact 16A relay and electricity meter to SENTIENT
         href: /device-library/pe/16a-switch-and-power-meter-compact-16a-relay-and-electricity-meter/
       1:
-        label: Connect the MClimate CO2 Display lite to ThingsBoard
+        label: Connect the MClimate CO2 Display lite to SENTIENT
         href: /device-library/pe/co2-display-lite-temperature-and-humidity-sensor/
       2:
-        label: Connect the MClimate Vicki Smart Radiator Thermostat to ThingsBoard
+        label: Connect the MClimate Vicki Smart Radiator Thermostat to SENTIENT
         href: /device-library/pe/vicki-smart-radiator-thermostat/
   description: Europe-based company specializing in the development of IoT hardware devices and software solutions that prioritize energy efficiency, air quality, and water loss prevention to make any building smart. Our goal is through partnerships with global entities, technology providers, end-users, and institutions, to retrofit buildings into sustainable places that enhance the well-being and health of their occupants. Moreover, we aid companies in measuring buildings'  data and achieving their ESG goals along the way. We bring best-in-class complete smart solutions in combination with operational excellence, fast response time, and reliable logistics to our partners. Our core philosophy revolves around fostering strong, transparent relationships with our partners and distributors based on our commitment to maintain the highest standards.
 - name: Senquip
@@ -1002,7 +1002,7 @@
         href: /docs/samples/senquip/senquip/
       1:
         label: Integration guide
-        href: https://cdn.senquip.com/wp-content/uploads/2024/04/18103454/APN0015-Rev-1.1-Connecting-Senquip-Devices-to-the-ThingsBoard.pdf
+        href: https://cdn.senquip.com/wp-content/uploads/2024/04/18103454/APN0015-Rev-1.1-Connecting-Senquip-Devices-to-the-SENTIENT.pdf
   description: Rugged, programmable telemetry devices that connect to any industrial
     sensor or system.
 - name: Dusun
@@ -1191,7 +1191,7 @@
     sensor-guides:
       0:
         label: SD-1001
-        href: https://docs.yobiiq.com/thingsboard/sd-1001-integration-guide
+        href: https://docs.yobiiq.com/sentient/sd-1001-integration-guide
   description: The best way to predict the future is by creating it. As an IoT Solutions
     Company, we develop smart solutions daily, tailored to your business and objectives.
     We pride ourselves on being a bit different, boosted by a healty dose of honest,
@@ -1226,7 +1226,7 @@
     gateway-guides:
       0:
         label: YuDash IoT Gateway
-        href: https://docs.yudash.com/integration-guides/iot-platform-integration/thingsboard
+        href: https://docs.yudash.com/integration-guides/iot-platform-integration/sentient
   description: Industrial IoT gateway manufacturer, offering flexible,
     user-friendly, and cost-effective products. Cloud connectivity through 4G/LTE,
     Ethernet and WiFi is available. Industrial protocols like Modbus-RS485, Modbus-TCP/IP,
@@ -1281,7 +1281,7 @@
         label: MOKO SMART LoRaWAN device
         href: /docs/samples/moko-smart/moko-smart-guide/
       1:
-        label: How to connect LW001-BG PRO LoRaWAN Tracker to ThingsBoard?
+        label: How to connect LW001-BG PRO LoRaWAN Tracker to SENTIENT?
         href: /device-library/ce/lw001-bg-pro/
   description: Leading manufacturer and provider of ODM,
     OEM, and IoT devices in China. Established in 2013, created its own IoT brand,
@@ -1493,7 +1493,7 @@
     gateway-guides:
       0:
         label: Connect Atomsenses Indoor LoRaWAN® Gateway
-        href: https://www.atomsenses.com/how-to-connect-indoor-lorawan-gateway-to-thingsboard-in-collaboration-with-atomsenses/
+        href: https://www.atomsenses.com/how-to-connect-indoor-lorawan-gateway-to-sentient-in-collaboration-with-atomsenses/
   description: Specialist IoT solution provider focusing on Lorawan
     sensors for indoor air quality monitoring, our vision is to transform how we manage
     and maintain healthy indoor environments.
@@ -1537,7 +1537,7 @@
     general-guides:
       0:
         label: Energy Meter monitoring
-        href: /docs/samples/digicom/energy-meter-monitoring-with-thingsboard-iot-plaƞorm/
+        href: /docs/samples/digicom/energy-meter-monitoring-with-sentient-iot-plaƞorm/
   description: Brand with over 45 years of history and experience in
     the development and management of Internet-connected products. In 2017, Digicom
     Spa joined the B810 Group, becoming a leading company in the IoT sector enriching
@@ -1592,22 +1592,22 @@
   links:
     general-guides:
       0:
-        label: MQTT and ThingsBoard configuration
-        href: https://help.mikrotik.com/docs/spaces/ROS/pages/105742352/MQTT+and+ThingsBoard+configuration
+        label: MQTT and SENTIENT configuration
+        href: https://help.mikrotik.com/docs/spaces/ROS/pages/105742352/MQTT+and+SENTIENT+configuration
     trackers-guides:
       0:
-        label: Bluetooth tag-tracking using MQTT and ThingsBoard
-        href: https://help.mikrotik.com/docs/spaces/ROS/pages/176914435/Bluetooth+tag-tracking+using+MQTT+and+ThingsBoard
+        label: Bluetooth tag-tracking using MQTT and SENTIENT
+        href: https://help.mikrotik.com/docs/spaces/ROS/pages/176914435/Bluetooth+tag-tracking+using+MQTT+and+SENTIENT
       1:
-        label: GPS-tracking using MQTT and ThingsBoard
-        href: https://help.mikrotik.com/docs/spaces/ROS/pages/166920428/GPS-tracking+using+MQTT+and+ThingsBoard
+        label: GPS-tracking using MQTT and SENTIENT
+        href: https://help.mikrotik.com/docs/spaces/ROS/pages/166920428/GPS-tracking+using+MQTT+and+SENTIENT
       2:
         label: TG-BT5-OUT tag
-        href: https://help.mikrotik.com/docs/spaces/UM/pages/143327239/Sending+temperature+readings+from+the+TG-BT5-OUT+tag+to+ThingsBoard
+        href: https://help.mikrotik.com/docs/spaces/UM/pages/143327239/Sending+temperature+readings+from+the+TG-BT5-OUT+tag+to+SENTIENT
     other-devices-guides:
       1:
-        label: Container - ThingsBoard MQTT/HTTP server
-        href: https://help.mikrotik.com/docs/spaces/ROS/pages/166920348/Container+-+ThingsBoard+MQTT+HTTP+server
+        label: Container - SENTIENT MQTT/HTTP server
+        href: https://help.mikrotik.com/docs/spaces/ROS/pages/166920348/Container+-+SENTIENT+MQTT+HTTP+server
   description: EU-based leader in networking hardware and software,
     providing high-performance routers, switches, 5G and wireless solutions. Our technology
     powers ISPs, enterprises, and IoT networks—enabling everything from asset tracking
@@ -1832,7 +1832,7 @@
     general-guides:
       0:
         label: Dragino -NB and -CB series devices
-        href: https://wiki.dragino.com/xwiki/bin/view/Main/ThingsBoard
+        href: https://wiki.dragino.com/xwiki/bin/view/Main/SENTIENT
   description: Specializes in IoT
     solutions, with a focus on LoRaWAN and NB-IoT technologies. We offer end-to-end
     IoT services, including hardware, software, and network solutions, enabling customers
@@ -1875,7 +1875,7 @@
     general-guides:
       0:
         label: Integration guide
-        href: https://support.haltian.com/knowledgebase/thingsboard/
+        href: https://support.haltian.com/knowledgebase/sentient/
   description: Secure IoT sensor solution for
     enterprises. Includes mesh-connected sensors, gateways, cellular connectivity
     and device management cloud. Implemented in commercial real estate, hospitals
@@ -1932,7 +1932,7 @@
         href: /device-library/ce/alpon-x4/
   description: Builds modular, always online, industrial-grade edge computers
     based on Raspberry Pi, designed for real-world deployments. Our ALPON™ devices
-    integrate seamlessly with ThingsBoard and support remote fleet provisioning, resilient
+    integrate seamlessly with SENTIENT and support remote fleet provisioning, resilient
     multi-network connectivity, and local data processing. Engineered for reliability
     in harsh conditions, products focus on practical deployment, automation,
     and maintainability at scale.

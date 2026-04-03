@@ -3,7 +3,7 @@ Stores the incoming message data in a custom Cassandra table.
 ## Configuration
 
 - **Custom table name** - The name of the target custom table without the `cs_tb_` prefix. The table must already exist in the Cassandra cluster with the full name
-  `cs_tb_{tableName}`. Prefix is necessary to distinguish custom tables from ThingsBoard standard tables.
+  `cs_tb_{tableName}`. Prefix is necessary to distinguish custom tables from SENTIENT standard tables.
 - **Fields mapping** - A mapping between message field names (keys) and table column names (values). Each entry defines how a field from the message data should be stored in the
   corresponding table column.
 - **Default TTL** - Time-To-Live in seconds for the inserted records. Set to 0 to disable TTL. When set to a positive value, records will automatically expire after the specified

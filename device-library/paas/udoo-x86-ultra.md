@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Udoo x86 Ultra to ThingsBoard?
+title: How to connect Udoo x86 Ultra to SENTIENT?
 category: Single-board computers
 chip: Pentium N3710
 connectivity: [WIFI, Bluetooth]

@@ -3,7 +3,7 @@ layout: docwithnav-paas-eu
 assignees:
 - ashvayka
 title: SCADA dashboards
-description: SCADA IoT dashboards using ThingsBoard
+description: SCADA IoT dashboards using SENTIENT
 
 scada-dashboard-layout-1:
     0:

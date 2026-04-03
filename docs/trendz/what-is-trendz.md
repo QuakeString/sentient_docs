@@ -1,11 +1,11 @@
 ---
-layout: docwithnav-trendz
-title: What is Trendz Analytics?
-description: Trendz key features and advantages for the advanced telemetry analytics.
+layout: docwithnav-sentient-analytics
+title: What is SENTIENT ANALYTICS?
+description: SENTIENT ANALYTICS key features and advantages for the advanced telemetry analytics.
 ---
-The **Trendz Analytics** is an add-on for ThingsBoard Platform that converts the IoT dataset into insights and simplifies the decision-making process.
+The **SENTIENT ANALYTICS** is an add-on for SENTIENT Platform that converts the IoT dataset into insights and simplifies the decision-making process.
 
-With Trendz you can:
+With SENTIENT ANALYTICS you can:
 - Easily explore any metric from any device
 - Analyse behavior patterns, outliers and trends
 - Predict system behavior and react beforehand
@@ -17,5 +17,5 @@ With Trendz you can:
 
 ## Ready to get started?
 
-<p><a href="/docs/trendz/getting-started/" class="button">Hello World analytics</a></p>
+<p><a href="/docs/sentient-analytics/getting-started/" class="button">Hello World analytics</a></p>
 

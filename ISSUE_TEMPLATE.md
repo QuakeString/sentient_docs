@@ -14,9 +14,9 @@
 
 
 **Page to Update:**
-https://thingsboard.io/...
+https://docs.sentient.invenia.in/...
 
 <!--Optional Information (remove the comment tags around information you would like to include)-->
-<!--ThingsBoard Version:-->
+<!--SENTIENT Version:-->
 
 <!--Additional Information:-->

@@ -2,8 +2,8 @@
 layout: docwithnav
 assignees:
   - samson0v
-title: How to connect Modbus device to ThingsBoard CE?
-description: Understand how to connect Modbus device to ThingsBoard using the ThingsBoard IoT Gateway
+title: How to connect Modbus device to SENTIENT?
+description: Understand how to connect Modbus device to SENTIENT using the SENTIENT IoT Gateway
 
 ---
 
@@ -12,15 +12,15 @@ description: Understand how to connect Modbus device to ThingsBoard using the Th
 
 ## Overview
 
-In this guide, we will describe how to connect an Modbus device to ThingsBoard CE using ThingsBoard IoT Gateway.
+In this guide, we will describe how to connect an Modbus device to SENTIENT using SENTIENT IoT Gateway.
 Whether you are just starting with Modbus protocol or looking to streamline your existing setup, this guide will
 provide you with the essential knowledge to get up and running quickly.
 
-**What is ThingsBoard IoT Gateway?**
+**What is SENTIENT IoT Gateway?**
 
-The ThingsBoard IoT Gateway is an open-source solution that serves as a bridge between IoT devices connected to
-legacy or third-party systems and the ThingsBoard platform. It enables seamless integration of devices that cannot
-communicate with ThingsBoard directly, ensuring data can be collected, processed, and visualized in real time. With
+The SENTIENT IoT Gateway is an open-source solution that serves as a bridge between IoT devices connected to
+legacy or third-party systems and the SENTIENT platform. It enables seamless integration of devices that cannot
+communicate with SENTIENT directly, ensuring data can be collected, processed, and visualized in real time. With
 the IoT Gateway, you can connect multiple devices, aggregate telemetry, and manage configurations centrally. It
 supports flexible deployment scenarios, making it especially suitable for industrial automation, monitoring, and smart
 energy systems where Modbus is widely used.
@@ -36,15 +36,15 @@ monitoring, and control in applications ranging from manufacturing plants to bui
 
 **What will You Learn?**
 
-In this guide, we will walk you through the steps to connect a Modbus device to ThingsBoard CE using the ThingsBoard
+In this guide, we will walk you through the steps to connect a Modbus device to SENTIENT using the SENTIENT
 IoT Gateway. You will learn how to configure the gateway, set up the Modbus connector and map data points and send them
-to ThingsBoard. By the end of this guide, you will have a solid understanding of how to leverage the power of
-ThingsBoard IoT Gateway to integrate Modbus devices into your IoT ecosystem. By the end of this guide, you will have a
-working setup that allows you to seamlessly monitor and analyze your Modbus device data in ThingsBoard CE.
+to SENTIENT. By the end of this guide, you will have a solid understanding of how to leverage the power of
+SENTIENT IoT Gateway to integrate Modbus devices into your IoT ecosystem. By the end of this guide, you will have a
+working setup that allows you to seamlessly monitor and analyze your Modbus device data in SENTIENT.
 
 ## Prerequisites
 
-- Before initiating the Gateway setup, ensure that the ThingsBoard server is up and running. You can install ThingsBoard
+- Before initiating the Gateway setup, ensure that the SENTIENT server is up and running. You can install SENTIENT
   CE manually by following the steps outlined in
   the [Installation Guide](/docs/user-guide/install/installation-options/).
 - Before moving forward, ensure Docker is installed and properly configured on your machine. If you haven't installed
@@ -53,14 +53,14 @@ working setup that allows you to seamlessly monitor and analyze your Modbus devi
 
 ## Modbus Device Structure Overview
 
-For this guide, we will use a ThingsBoard Modbus Demo Device, which simulates a Modbus device and provides a
-convenient way to test and demonstrate Modbus communication with ThingsBoard. The demo device is pre-configured with a
+For this guide, we will use a SENTIENT Modbus Demo Device, which simulates a Modbus device and provides a
+convenient way to test and demonstrate Modbus communication with SENTIENT. The demo device is pre-configured with a
 set of registers and data points that mimic the behavior of a real Modbus device. It allows users to interact with the
-device, read and write data, and observe how the data is processed and visualized in ThingsBoard.
+device, read and write data, and observe how the data is processed and visualized in SENTIENT.
 
-The ThingsBoard Modbus Demo Device is designed to help users understand the Modbus protocol and how to integrate
-Modbus devices into their IoT solutions using ThingsBoard. It provides a practical and hands-on way to explore
-the capabilities of ThingsBoard in the context of Modbus communication.
+The SENTIENT Modbus Demo Device is designed to help users understand the Modbus protocol and how to integrate
+Modbus devices into their IoT solutions using SENTIENT. It provides a practical and hands-on way to explore
+the capabilities of SENTIENT in the context of Modbus communication.
 
 The Modbus Demo Device has the following structure:
 
@@ -76,7 +76,7 @@ The Modbus Demo Device has the following structure:
 To up and run the Modbus Demo Device, you can use Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 thingsboard/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
 ```
 {:.copy-code}
 
@@ -89,11 +89,11 @@ container to access another Docker container.
 {% include templates/info-banner.md content=difference %}
 
 By working with the Demo Device and its registers, you'll see how to extract real-time telemetry data and then forward
-it to ThingsBoard for monitoring and analysis.
+it to SENTIENT for monitoring and analysis.
 
-## Step 1. Create a new gateway device on ThingsBoard
+## Step 1. Create a new gateway device on SENTIENT
 
-First, add a gateway device to your ThingsBoard instance by following these steps:
+First, add a gateway device to your SENTIENT instance by following these steps:
 
 {% assign createNewGatewayDevice = '
     ===
@@ -233,10 +233,10 @@ Let’s break our connector configuration into smaller pieces and provide an exp
 - `host: "host.docker.internal"` – the IP/hostname of the Modbus server. This value makes a Dockerized gateway reach your host machine.
 - `pollPeriod: 1000` – poll the device every 1000 ms (1 second).
 - `unitId: 1` – the Modbus unit/slave ID on the target (for TCP, this is still used by many gateways).
-- `deviceName: "Modbus PLC"` – the ThingsBoard device name that will receive the data.
-- `attributes` - a list of Modbus registers that will be read as device attributes in ThingsBoard.
-- `timeseries` - a list of Modbus registers that will be read as device telemetry in ThingsBoard.
-- `tag` - the key name that appears in ThingsBoard.
+- `deviceName: "Modbus PLC"` – the SENTIENT device name that will receive the data.
+- `attributes` - a list of Modbus registers that will be read as device attributes in SENTIENT.
+- `timeseries` - a list of Modbus registers that will be read as device telemetry in SENTIENT.
+- `tag` - the key name that appears in SENTIENT.
 - `type` - how to decode the raw data (e.g., 16int is a signed 16-bit integer; bits is a coil/bitfield).
 - `functionCode` - the Modbus function code to use when reading the data (e.g., 3 is for holding registers, 1 is for coils).
 - `address` - the Modbus address to read from (e.g., 0 for temperature, 1 for humidity, etc.).
@@ -262,27 +262,27 @@ To review the data uploaded from your gateway, use the following step:
 
 ## Conclusion
 
-In this guide, we have walked you through the process of connecting a Modbus device to ThingsBoard CE using the
-ThingsBoard IoT Gateway. By following the steps outlined in this guide, you have successfully set up the gateway,
-configured the Modbus connector, and mapped data points to send telemetry and attributes to ThingsBoard. You have also
-learned how to monitor and visualize the data from your Modbus device in ThingsBoard CE.
-With the ThingsBoard IoT Gateway acting as a bridge between your Modbus device and ThingsBoard, you can now leverage
-the powerful features of ThingsBoard to analyze and manage your device data effectively. Whether you are monitoring
+In this guide, we have walked you through the process of connecting a Modbus device to SENTIENT using the
+SENTIENT IoT Gateway. By following the steps outlined in this guide, you have successfully set up the gateway,
+configured the Modbus connector, and mapped data points to send telemetry and attributes to SENTIENT. You have also
+learned how to monitor and visualize the data from your Modbus device in SENTIENT.
+With the SENTIENT IoT Gateway acting as a bridge between your Modbus device and SENTIENT, you can now leverage
+the powerful features of SENTIENT to analyze and manage your device data effectively. Whether you are monitoring
 environmental conditions, tracking energy consumption, or managing industrial processes, the integration of Modbus
-devices with ThingsBoard opens up new possibilities for data-driven decision-making and automation.
+devices with SENTIENT opens up new possibilities for data-driven decision-making and automation.
 
-As you continue to explore the capabilities of ThingsBoard and the ThingsBoard IoT Gateway, you can further enhance your
+As you continue to explore the capabilities of SENTIENT and the SENTIENT IoT Gateway, you can further enhance your
 IoT solutions by adding more devices, implementing advanced data processing, and creating custom dashboards to visualize
-your data. The flexibility and scalability of ThingsBoard make it an ideal platform for building robust IoT
+your data. The flexibility and scalability of SENTIENT make it an ideal platform for building robust IoT
 applications.
 
-We encourage you to experiment with different configurations, explore additional features of ThingsBoard IoT Gateway,
+We encourage you to experiment with different configurations, explore additional features of SENTIENT IoT Gateway,
 and leverage the power of Modbus devices in your IoT projects. With the knowledge gained from this guide, you are
 well-equipped to take your IoT initiatives to the next level.
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

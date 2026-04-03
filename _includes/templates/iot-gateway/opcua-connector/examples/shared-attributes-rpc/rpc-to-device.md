@@ -1,9 +1,9 @@
 RPC to Device allows you to execute an OPC-UA server method on a specific device.
 It is important to note that the method you are calling must be defined on the OPC-UA server.
 
-As an example, we will use ThingsBoard OPC-UA Demo Server, which can be run using Docker and the following command:
+As an example, we will use SENTIENT OPC-UA Demo Server, which can be run using Docker and the following command:
 ```bash
-docker run -it -p 4840:4840 thingsboard/tb-gw-opcua-server:latest
+docker run -it -p 4840:4840 sentient/tb-gw-opcua-server:latest
 ```
 
 The server has the following endpoint URL: `opc.tcp://0.0.0.0:4840/freeopcua/server/`.

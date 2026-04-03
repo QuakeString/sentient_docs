@@ -24,7 +24,7 @@ Use "Related entities aggregation" when you need to compute a "group-level" metr
 
 ### Aggregation path to related entities
 
-ThingsBoard will collect data for aggregation from all entities that match the selected relationship direction and relationship type.
+SENTIENT will collect data for aggregation from all entities that match the selected relationship direction and relationship type.
 
 <b><font size="3">Relation direction</font></b>   
 Define the path to the entities from which the data will be read:
@@ -286,5 +286,5 @@ Example:
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

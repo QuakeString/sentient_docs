@@ -1,37 +1,37 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
-title: Save predicted telemetry to ThingsBoard
-description: Save predicted telemetry to ThingsBoard
+title: Save predicted telemetry to SENTIENT
+description: Save predicted telemetry to SENTIENT
 
 models-save-telemetry:
   0: 
-    image: /images/trendz/models-save-telemetry.png
+    image: /images/sentient-analytics/models-save-telemetry.png
     title: 
 
 models-jobs:
   0:
-    image: /images/trendz/models-jobs-1.png
+    image: /images/sentient-analytics/models-jobs-1.png
     title: Click on the JOBS button to open the Prediction Model Parameters modal
   1:
-    image: /images/trendz/models-jobs-2.png
-    title: 1. Enable/disable saving predicted telemetry to ThingsBoard. Toggle this setting to save predicted telemetry to ThingsBoard and ensure regular updates. 2. Specify how often telemetry should be updated. 3. Select the specific devices for which predicted telemetry will be saved. 4. Toggle Enable Model Retraining to allow the model to retrain automatically whenever new real data is detected.
+    image: /images/sentient-analytics/models-jobs-2.png
+    title: 1. Enable/disable saving predicted telemetry to SENTIENT. Toggle this setting to save predicted telemetry to SENTIENT and ensure regular updates. 2. Specify how often telemetry should be updated. 3. Select the specific devices for which predicted telemetry will be saved. 4. Toggle Enable Model Retraining to allow the model to retrain automatically whenever new real data is detected.
 ---
 
-Prediction models in Trendz are designed to generate predicted telemetry after training and store the results in ThingsBoard as new telemetry, which can then be processed, observed, or manipulated further. 
+Prediction models in SENTIENT ANALYTICS are designed to generate predicted telemetry after training and store the results in SENTIENT as new telemetry, which can then be processed, observed, or manipulated further. 
 The process of generating and presenting this telemetry in the system works as follows:
 
-First, you need a successfully trained model. The model must have a name, an associated business entity, and a ThingsBoard telemetry key. The telemetry key defines how the prediction will be stored: as telemetry in Trendz, as telemetry in ThingsBoard under the same key, 
-and associated with the selected business entity. Once these conditions are met, Trendz generates predictions starting from the latest training telemetry and covering the same time range as the model’s segment size.
+First, you need a successfully trained model. The model must have a name, an associated business entity, and a SENTIENT telemetry key. The telemetry key defines how the prediction will be stored: as telemetry in SENTIENT ANALYTICS, as telemetry in SENTIENT under the same key, 
+and associated with the selected business entity. Once these conditions are met, SENTIENT ANALYTICS generates predictions starting from the latest training telemetry and covering the same time range as the model’s segment size.
 
 For example, let’s say today is January 1, 2025. You have a device, an Energy Meter, which measures telemetry like "Energy Consumption" in kWh. The telemetry data for the whole of 2024 is available, and you want to predict monthly energy consumption. 
-You create a model called "Energy Consumption Prediction," select the "Energy Meter" business entity, and assign "energy_consumption_prediction" as the ThingsBoard key. For training, you choose the time range 01/01/2024–31/12/2024, set the prediction range to 1 month, and choose the FIXED segmentation strategy.
+You create a model called "Energy Consumption Prediction," select the "Energy Meter" business entity, and assign "energy_consumption_prediction" as the SENTIENT key. For training, you choose the time range 01/01/2024–31/12/2024, set the prediction range to 1 month, and choose the FIXED segmentation strategy.
 
 {% include images-gallery.html imageCollection="models-save-telemetry" %}
 
-After training, the model divides the data into 12 segments, one for each month, without gaps or overlaps (as defined by the FIXED strategy). Trendz then generates a prediction for the next month after the latest training data, which in this case is January 2025. 
-This prediction is stored in ThingsBoard under the key "energy_consumption_prediction" and is accessible in Trendz through the "Energy Consumption Prediction" business entity field.
+After training, the model divides the data into 12 segments, one for each month, without gaps or overlaps (as defined by the FIXED strategy). SENTIENT ANALYTICS then generates a prediction for the next month after the latest training data, which in this case is January 2025. 
+This prediction is stored in SENTIENT under the key "energy_consumption_prediction" and is accessible in SENTIENT ANALYTICS through the "Energy Consumption Prediction" business entity field.
 
 In cases where predictions need to stay relevant over time, a **refresh task** updates the model when new telemetry is received. This task:
 1. Loads new telemetry to form additional segments.
@@ -52,7 +52,7 @@ After training your prediction model and confirming that the accuracy meets your
 Follow the steps below to configure and enable your prediction model:
 * Click on the **JOBS** button to open the **Prediction Model Parameters** modal
 * In the modal, you can configure the following parameters:
-  1. Enable/disable saving predicted telemetry to ThingsBoard. Toggle this setting to save predicted telemetry to ThingsBoard and ensure regular updates.
+  1. Enable/disable saving predicted telemetry to SENTIENT. Toggle this setting to save predicted telemetry to SENTIENT and ensure regular updates.
   2. Specify how often telemetry should be updated.
   3. Select the specific devices for which predicted telemetry will be saved.
   4. Toggle Enable Model Retraining to allow the model to retrain automatically whenever new real data is detected.

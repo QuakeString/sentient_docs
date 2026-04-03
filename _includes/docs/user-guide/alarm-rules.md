@@ -3,7 +3,7 @@
 
 **Alarm rules** define the conditions for triggering alarms, the logic for setting severity levels, and the rules for clearing and automatically closing notifications. This enables administrators and developers to maintain full control over system behavior in real time and respond promptly to abnormal conditions.
 
-Starting from ThingsBoard **4.3**, alarm rule configuration capabilities have been significantly enhanced. Rules can now be defined at the level of a [Device](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"}, [Asset](/docs/{{docsPrefix}}user-guide/ui/assets/){:target="_blank"}, **their Profiles**, or even a [Customer](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}, enabling a multi-layered monitoring system that respects organizational structure and contextual logic. This approach allows precise control over when and where an alarm should be raised — globally, at the profile level, or for a specific device or entity.
+Starting from SENTIENT **4.3**, alarm rule configuration capabilities have been significantly enhanced. Rules can now be defined at the level of a [Device](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"}, [Asset](/docs/{{docsPrefix}}user-guide/ui/assets/){:target="_blank"}, **their Profiles**, or even a [Customer](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}, enabling a multi-layered monitoring system that respects organizational structure and contextual logic. This approach allows precise control over when and where an alarm should be raised — globally, at the profile level, or for a specific device or entity.
 
 Unified mechanisms for alarm uniqueness, severity levels, timestamps, and alarm propagation ensure consistent data handling and help operators efficiently analyze, filter, and process critical events.
 
@@ -29,7 +29,7 @@ The **alarm rules page** allows you to centrally manage all alarm rules in the s
 ### General
 
 The "General" section defines the basic configuration of the alarm rule:
-- **Alarm type** — the name and unique identifier of the alarm (for example, "High Temperature"). The alarm type defines which event the alarm represents and allows ThingsBoard to determine whether a new alarm should be created or an existing active one should be updated.
+- **Alarm type** — the name and unique identifier of the alarm (for example, "High Temperature"). The alarm type defines which event the alarm represents and allows SENTIENT to determine whether a new alarm should be created or an existing active one should be updated.
 - **Entity type** - the target entity or entity profile where the alarm rule will be applied.
 
 {% include images-gallery.html imageCollection="step-2-general-section-1" %}
@@ -101,7 +101,7 @@ Click **Add trigger condition** and configure the following parameters:
 
 #### Severity
 
-In ThingsBoard, **alarm severity** indicates how critical an alarm condition is and helps prioritize response actions.   
+In SENTIENT, **alarm severity** indicates how critical an alarm condition is and helps prioritize response actions.   
 The following severity levels are available:
 - <span style="color:#d12730">Critical</span> — Indicates a severe condition that requires **immediate action**, such as equipment failure, safety risks, or conditions that may cause data loss or system downtime. 
 - <span style="color:#f66716">Major</span> — Represents a significant issue that can impact system operation but is **not immediately critical**, for example, performance degradation or operation outside recommended parameters. 
@@ -168,7 +168,7 @@ After adding all required filters, click **Add** to save the condition.
 
 <b><font size="3">Condition types</font></b>
 
-ThingsBoard supports **three types** of conditions:
+SENTIENT supports **three types** of conditions:
 
 - **Simple.**   
   Triggers immediately when the expression becomes true.   
@@ -200,7 +200,7 @@ The system evaluates create conditions only when the current time falls within a
 
 **Static mode**
 
-ThingsBoard supports three schedule modes:
+SENTIENT supports three schedule modes:
 - **Active all time** — always active
 - **Active at a specific time range**
   *Example:* Mon–Fri, 09:00–18:00 
@@ -324,7 +324,7 @@ This information is stored together with the alarm and displayed in the alarm de
 
 #### Mobile dashboard
 
-This option defines which **mobile dashboard** will open in the ThingsBoard mobile app when a user views the alarm.
+This option defines which **mobile dashboard** will open in the SENTIENT mobile app when a user views the alarm.
 
 <b><font size="3">How it works</font></b>
 
@@ -348,7 +348,7 @@ After selecting a mobile dashboard:
 
 ### Clear condition
 
-The **Clear condition** defines the logic by which ThingsBoard automatically transitions an alarm into the **Cleared** state.
+The **Clear condition** defines the logic by which SENTIENT automatically transitions an alarm into the **Cleared** state.
 
 If no clear condition is configured, the alarm will **never** clear automatically, even if the monitored values return to normal.   
 In such cases, the alarm can only be cleared manually — via the UI or API.
@@ -400,7 +400,7 @@ After adding all required filters, click **Add** to save the clear condition.
 
 **Condition types**
 
-ThingsBoard supports the same condition types as for alarm creation:
+SENTIENT supports the same condition types as for alarm creation:
 - **Simple** — clears immediately when the condition becomes true
 - **Duration** — must remain true for a specified period before clearing
 - **Repeating** — the condition must be satisfied a certain number of times before clearing
@@ -442,7 +442,7 @@ Supports dynamic placeholders using *${attributeName}*.
 
 <b><font size="4">Step 5.4 Mobile dashboard</font></b>
 
-Defines which mobile dashboard is opened in the ThingsBoard mobile app when viewing a cleared alarm.
+Defines which mobile dashboard is opened in the SENTIENT mobile app when viewing a cleared alarm.
 
 This is useful when:
 - additional diagnostics should be shown after clearance
@@ -523,7 +523,7 @@ This is the most global visibility option.
 
 Click **Add** to save the rule configuration.
 
-After saving, ThingsBoard will automatically begin creating, updating, and processing alarms according to the conditions, schedule, and propagation settings you defined.
+After saving, SENTIENT will automatically begin creating, updating, and processing alarms according to the conditions, schedule, and propagation settings you defined.
 
 {% include images-gallery.html imageCollection="step-7-save-rule-1" %}
 
@@ -538,7 +538,7 @@ Each rule row includes an action panel that lets you copy, export, debug, edit, 
 
 Each alarm rule includes an action bar for managing it:
 1. **Copy alarm rule configuration**. Copies the rule configuration, allowing you to quickly create a new rule based on the existing one.
-2. **Export**. Exports the rule as a JSON file for backup or migration to another ThingsBoard instance.
+2. **Export**. Exports the rule as a JSON file for backup or migration to another SENTIENT instance.
 3. **Events**. Opens the event log associated with the rule, including triggers, clears, state changes, and errors.
 4. **Debug configuration**. Enables debug mode and provides access to detailed execution information for troubleshooting.
 5. **Edit**. Opens the rule editor where you can modify any configuration parameters.
@@ -565,7 +565,7 @@ After making the required changes, click the **orange checkmark** icon to apply 
 
 ## Export / Import alarm rule
 
-You can **export** the alarm rule to a JSON file and **import** it into the same or another ThingsBoard instance.
+You can **export** the alarm rule to a JSON file and **import** it into the same or another SENTIENT instance.
 
 <br><b><font size="4">Export alarm rule</font></b>
 
@@ -576,7 +576,7 @@ You can **export** the alarm rule to a JSON file and **import** it into the same
 
 <br><b><font size="4">Import alarm rule</font></b>
 
-ThingsBoard allows you to import previously exported alarm rules in JSON format. This simplifies configuration migration between instances, rapid deployment of standard alarm templates, and restoration from backups.
+SENTIENT allows you to import previously exported alarm rules in JSON format. This simplifies configuration migration between instances, rapid deployment of standard alarm templates, and restoration from backups.
 
 Steps to import:
 - Navigate to **Alarms** page &#8702; **Alarm rules** tab.
@@ -586,7 +586,7 @@ Steps to import:
 - In the dialog that opens, specify the entity or profile to which the alarm rule will be applied.
 - Click **Add** to save the rule.
 
-After saving, the rule becomes active immediately and ThingsBoard starts applying it according to its configured logic.
+After saving, the rule becomes active immediately and SENTIENT starts applying it according to its configured logic.
 
 {% include images-gallery.html imageCollection="import-alarm-rule-1" %}
 
@@ -688,7 +688,7 @@ Click **Add** to save the rule.
 
 <b><font size="4">Result</font></b>
 
-After saving, ThingsBoard will automatically create a critical alarm whenever the <span class="code-light">temperature</span> value exceeds **10°C**.
+After saving, SENTIENT will automatically create a critical alarm whenever the <span class="code-light">temperature</span> value exceeds **10°C**.
 
 {% include images-gallery.html imageCollection="alarm-rules-example-simple-1" %}
 
@@ -741,7 +741,7 @@ Click **Apply** to save the updated rule.
 
 <b><font size="4">Result</font></b>
 
-After saving, ThingsBoard will:
+After saving, SENTIENT will:
 - create a **Critical** — **High Temperature** alarm when the temperature exceeds **10°C**
 - automatically clear the alarm when the temperature is **≤ 4°C**
 
@@ -785,7 +785,7 @@ Click **Apply** to save the updated rule configuration.
 
 <b><font size="4">Result</font></b>
 
-After saving, ThingsBoard will:
+After saving, SENTIENT will:
 - create the **High Temperature** alarm only when the temperature exceeds the threshold for **1 full minute**
 - ignore short, random temperature spikes
 - provide a more stable alarm system with fewer false alerts
@@ -860,7 +860,7 @@ Click **Apply** to save the updated configuration.
 
 <b><font size="4">Result</font></b>
 
-After saving, ThingsBoard will:
+After saving, SENTIENT will:
 - create a **High Temperature** alarm if the temperature:
   - exceeds the threshold (e.g., >10°C), **and**
   - remains above it for the period defined in the <span class="code-light">highTemperatureDurationThreshold</span> attribute (e.g., 2 minutes)
@@ -894,7 +894,7 @@ Update the existing trigger condition by changing the following parameters:
 - **Count of events:** 3   
 Click **Save** to apply the changes.
 
-With this configuration, ThingsBoard will check whether the threshold condition occurs **three times in a row** before creating the alarm.
+With this configuration, SENTIENT will check whether the threshold condition occurs **three times in a row** before creating the alarm.
 
 <b><font size="3">Step 3. Save the rule</font></b>
 
@@ -904,7 +904,7 @@ Click **Apply** to save the updated configuration.
 
 <b><font size="4">Result</font></b>
 
-After saving, ThingsBoard behaves as follows:
+After saving, SENTIENT behaves as follows:
 - create the **High Temperature** alarm only when the condition is met **3 times in a row**
 - Single or random temperature spikes will not trigger an alarm
 
@@ -951,7 +951,7 @@ Click **Apply** to save the updated configuration.
 
 <b><font size="4">Result</font></b>
 
-After saving, ThingsBoard will:
+After saving, SENTIENT will:
 - activate the **High Temperature** rule only on weekdays **from 10:00 to 19:00**
 - ignore temperature threshold violations that occur outside this time window
 
@@ -1028,7 +1028,7 @@ Click **Apply** to save the updated configuration.
 
 <b><font size="4">Result</font></b>
 
-After saving, ThingsBoard will:
+After saving, SENTIENT will:
 - create the High Temperature alarm only if:
   - <span class="code-light">temperatureAlarmFlag == true</span>, and 
   - the <span class="code-light">temperature</span> exceeds **10°C**
@@ -1055,5 +1055,5 @@ After saving, ThingsBoard will:
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

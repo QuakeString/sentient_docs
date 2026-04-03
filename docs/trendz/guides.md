@@ -1,13 +1,13 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
   - vparomskiy
-title: Trendz Analytics guides
-description: Trendz Analytics guides and tutorials
+title: SENTIENT ANALYTICS guides
+description: SENTIENT ANALYTICS guides and tutorials
 ---
-{% assign guides = site.data.trendz.guides-list %}
+{% assign guides = site.data.sentient-analytics.guides-list %}
 <div class="guides">
-    <p>Explore our collection of step-by-step guides on implementing various IoT use cases with a focus on data analytics. Learn how to leverage Trendz Analytics to extract insights, optimize operations, and drive informed decision-making. Discover practical solutions for predictive maintenance, energy management, occupancy tracking, anomaly detection, and more.</p>
+    <p>Explore our collection of step-by-step guides on implementing various IoT use cases with a focus on data analytics. Learn how to leverage SENTIENT ANALYTICS to extract insights, optimize operations, and drive informed decision-making. Discover practical solutions for predictive maintenance, energy management, occupancy tracking, anomaly detection, and more.</p>
     {% for guide in guides %}
     <div class="guides-block">
         <div class="guides-title-panel">

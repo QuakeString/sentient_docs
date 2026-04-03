@@ -29,7 +29,7 @@ configure-chirpstack-integration:
         title: 'Find and add a "HTTP" integration by clicking "+" icon;'
     4:
         image: /images/user-guide/integrations/chirpstack/chirpstack-configure-integration-5.png
-        title: 'Fill in the field with the "HTTP endpoint URL" previously copied from the ChirpStack integration in the ThingsBoard. Then, click "Submit" button;'
+        title: 'Fill in the field with the "HTTP endpoint URL" previously copied from the ChirpStack integration in the SENTIENT. Then, click "Submit" button;'
     5:
         image: /images/user-guide/integrations/chirpstack/chirpstack-configure-integration-6.png
         title: 'HTTP integration created.'
@@ -37,7 +37,7 @@ configure-chirpstack-integration:
 device:
     0:
         image: /images/user-guide/integrations/chirpstack/device-created-1-pe.png
-        title: 'When your device sends an uplink message, a new device will appear in the ThingsBoard user interface.'
+        title: 'When your device sends an uplink message, a new device will appear in the SENTIENT user interface.'
 
 uplink-message-in-integration:
     0:

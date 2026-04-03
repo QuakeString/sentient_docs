@@ -6,7 +6,7 @@
 
 ## Overview
 
-Azure IoT Hub Integration allows to stream data from AWS IoT Backend to ThingsBoard and converts device payloads to the ThingsBoard format.
+Azure IoT Hub Integration allows to stream data from AWS IoT Backend to SENTIENT and converts device payloads to the SENTIENT format.
 
   <object width="80%" data="/images/user-guide/integrations/azure/iot-hub-integration.svg"></object>
 
@@ -16,10 +16,10 @@ Azure IoT Hub Integration allows to stream data from AWS IoT Backend to ThingsBo
 
 - [Register a new device in the IoT hub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-through-portal#register-a-new-device-in-the-iot-hub).
 
-## Integration with the Thingsboard
-We have done all necessary steps on the Azure IoT Hub side. Now we can start configuring the Thingsboard.
+## Integration with the Sentient
+We have done all necessary steps on the Azure IoT Hub side. Now we can start configuring the Sentient.
 
-### Thingsboard Uplink Data Converter
+### Sentient Uplink Data Converter
 
 First, we need to create Uplink Data converter that will be used for converting messages received from the Azure IoT Hub. The converter should transform incoming payload into the required message format.
 Message must contains **deviceName** and **deviceType**. Those fields are used for submitting data to the correct device. If a device was not found then new device will be created.
@@ -69,7 +69,7 @@ return result;
 
 ### Azure IoT Hub Integration
 
-Next we will create Integration with Azure IoT Hub inside the Thingsboard. Open **Integrations** section and add new Integration with type
+Next we will create Integration with Azure IoT Hub inside the Sentient. Open **Integrations** section and add new Integration with type
 **Azure IoT Hub**
 
 - Name: IoT Hub
@@ -109,7 +109,7 @@ If **PEM** credentials type is selected, the following configuration should be p
 ## Validation
 
 ### Validate Uplink Messages
-Lets verify our integration. First, lets put message into uplink stream, so Thingsboard will fetch this message. 
+Lets verify our integration. First, lets put message into uplink stream, so Sentient will fetch this message. 
 
 Open page with your Device and go to **Message to Device**.
 
@@ -120,7 +120,7 @@ Send test message to device.
 
 Go to **Device Group** -> **All** -> **T1** - you can see that 
 
-- new device was registered in the thingsboard
+- new device was registered in the sentient
 - In the **Latest Telemetry** section you will see that last submitted temperature = 42 and humidity = 77.
 
 ![image](/images/user-guide/integrations/azure/iot-hub-validate-telemetry.png)

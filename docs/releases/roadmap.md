@@ -1,13 +1,13 @@
 ---
 layout: docwithnav
-title: ThingsBoard Roadmap
-description: ThingsBoard architecture
+title: SENTIENT Roadmap
+description: SENTIENT architecture
 
 ---
 
 The product roadmap listed below covers only main features and does not cover small improvements and bug fixes.
 
-## ThingsBoard CE
+## SENTIENT
 
 ### v4.3
 
@@ -15,7 +15,7 @@ The product roadmap listed below covers only main features and does not cover sm
 * Geofencing Calculated Field;
 * Support of revocable API keys instead of JWT tokens for programmatic REST API access;
 
-See active development in progress [here](https://github.com/thingsboard/thingsboard/tree/{{ site.release.branch_major_next }}) and work on latest release bug fixes [here](https://github.com/thingsboard/thingsboard/tree/master).
+See active development in progress [here](https://github.com/sentient/sentient/tree/{{ site.release.branch_major_next }}) and work on latest release bug fixes [here](https://github.com/sentient/sentient/tree/master).
 
 ### Upcoming releases
 

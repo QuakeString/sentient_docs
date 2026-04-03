@@ -12,27 +12,27 @@ smart-farming:
 fleet-tracking:
   0:
     src: "/images/usecases/fleet-tracking/site-fleet-tracking-1.webp"
-    alt: "ThingsBoard interface showing bus status, speed, fuel level, and location on the map"
-    imageTitleAttribute: "Real-time bus monitoring using ThingsBoard platform"
+    alt: "SENTIENT interface showing bus status, speed, fuel level, and location on the map"
+    imageTitleAttribute: "Real-time bus monitoring using SENTIENT platform"
     width: 1819
     height: 966
   1:
     src: "/images/usecases/fleet-tracking/site-fleet-tracking-2.webp"
-    alt: "ThingsBoard interface showing historical route and movement playback for Bus A on the map"
-    imageTitleAttribute: "Bus A route playback and history visualization in ThingsBoard"
+    alt: "SENTIENT interface showing historical route and movement playback for Bus A on the map"
+    imageTitleAttribute: "Bus A route playback and history visualization in SENTIENT"
     width: 1819
     height: 966
   2:
     src: "/images/usecases/fleet-tracking/site-fleet-tracking-3.webp"
-    alt: "ThingsBoard dashboard displaying real-time and historical data for Bus A, including speed, fuel level, route history, and critical events"
-    imageTitleAttribute: "Real-time telemetry dashboard for Bus A in ThingsBoard"
+    alt: "SENTIENT dashboard displaying real-time and historical data for Bus A, including speed, fuel level, route history, and critical events"
+    imageTitleAttribute: "Real-time telemetry dashboard for Bus A in SENTIENT"
     width: 1819
     height: 966
 
 tank-level-monitoring:
   0:
     src: "/images/usecases/tank-level-monitoring/tank-level-monitoring-1.webp"
-    alt: "Tank monitoring dashboard in light mode showing fuel level, temperature, battery, and alerts on the ThingsBoard platform"
+    alt: "Tank monitoring dashboard in light mode showing fuel level, temperature, battery, and alerts on the SENTIENT platform"
     imageTitleAttribute: "Tank Monitoring Dashboard"
     width: 1819
     height: 977
@@ -58,26 +58,26 @@ tank-level-monitoring:
 smart-metering:
   0:
     src: "/images/usecases/smart-metering/smart-metering-1.webp"
-    alt: "ThingsBoard dashboard showing energy and water consumption, district map, and critical alarm for District B in San Francisco"
-    imageTitleAttribute: "ThingsBoard dashboard – energy and water monitoring, map and alarms for San Francisco districts"
+    alt: "SENTIENT dashboard showing energy and water consumption, district map, and critical alarm for District B in San Francisco"
+    imageTitleAttribute: "SENTIENT dashboard – energy and water monitoring, map and alarms for San Francisco districts"
     width: 2048
     height: 1090
   1:
     src: "/images/usecases/smart-metering/smart-metering-2.webp"
-    alt: "ThingsBoard dashboard displaying District A buildings on the map, energy and water consumption, and a critical high temperature alarm"
-    imageTitleAttribute: "ThingsBoard dashboard – monitoring buildings in District A with real-time energy, water usage, and critical alarms"
+    alt: "SENTIENT dashboard displaying District A buildings on the map, energy and water consumption, and a critical high temperature alarm"
+    imageTitleAttribute: "SENTIENT dashboard – monitoring buildings in District A with real-time energy, water usage, and critical alarms"
     width: 2048
     height: 1090
   2:
     src: "/images/usecases/smart-metering/smart-metering-3.webp"
-    alt: "ThingsBoard dashboard with apartment layout of Building A1, showing energy and water usage for Apartments A1-1 and A1-2, and a critical temperature alarm"
-    imageTitleAttribute: "ThingsBoard dashboard – apartment-level monitoring in Building A1 with real-time energy, water consumption, and alarms"
+    alt: "SENTIENT dashboard with apartment layout of Building A1, showing energy and water usage for Apartments A1-1 and A1-2, and a critical temperature alarm"
+    imageTitleAttribute: "SENTIENT dashboard – apartment-level monitoring in Building A1 with real-time energy, water consumption, and alarms"
     width: 2048
     height: 1090
   3:
     src: "/images/usecases/smart-metering/smart-metering-4.webp"
-    alt: "ThingsBoard dashboard showing thermostat readings, real-time temperature control, a critical high temperature alarm, and historical temperature graph for Apartment A1-1"
-    imageTitleAttribute: "ThingsBoard dashboard – thermostat monitoring and control with temperature history and alarm for Apartment A1-1"
+    alt: "SENTIENT dashboard showing thermostat readings, real-time temperature control, a critical high temperature alarm, and historical temperature graph for Apartment A1-1"
+    imageTitleAttribute: "SENTIENT dashboard – thermostat monitoring and control with temperature history and alarm for Apartment A1-1"
     width: 2048
     height: 1090
 
@@ -91,12 +91,12 @@ environment-monitoring:
   1:
     src: "/images/usecases/environment-monitoring/environment-monitoring-2.webp"
     alt: "Dashboard with sensor status, critical alarm, and map location of sensors"
-    imageTitleAttribute: "ThingsBoard dashboard showing real-time sensor metrics, alarm status, and their geographic positions on the map"
+    imageTitleAttribute: "SENTIENT dashboard showing real-time sensor metrics, alarm status, and their geographic positions on the map"
     width: 2048
     height: 1010
   2:
     src: "/images/usecases/environment-monitoring/environment-monitoring-1.webp"
-    alt: "Sensor configuration panel with thresholds and map location in ThingsBoard"
+    alt: "Sensor configuration panel with thresholds and map location in SENTIENT"
     imageTitleAttribute: "Editing Sensor T1: setting temperature and humidity thresholds and viewing sensor location on the map"
     width: 2048
     height: 1010
@@ -105,7 +105,7 @@ smart-office:
   0:
     src: "/images/usecases/smart-office/smart-office-1-v2.webp"
     alt: "HVAC switch, temperature and power chart, device list, and floor plan with sensor locations"
-    imageTitleAttribute: "HVAC system dashboard: includes temperature control knob, power chart, connected devices, and interactive floor plan in ThingsBoard"
+    imageTitleAttribute: "HVAC system dashboard: includes temperature control knob, power chart, connected devices, and interactive floor plan in SENTIENT"
     width: 2048
     height: 951
   1:
@@ -117,7 +117,7 @@ smart-office:
   2:
     src: "/images/usecases/smart-office/smart-office-3.webp"
     alt: "HVAC control with state, airflow history, and temperature targets"
-    imageTitleAttribute: "ThingsBoard dashboard for HVAC: displays airflow, target temperature, device state, and alarm history over time"
+    imageTitleAttribute: "SENTIENT dashboard for HVAC: displays airflow, target temperature, device state, and alarm history over time"
     width: 2048
     height: 951
   3:
@@ -129,7 +129,7 @@ smart-office:
   4:
     src: "/images/usecases/smart-office/smart-office-5.webp"
     alt: "Smart sensor dashboard with temperature, humidity, CO2, TVOC, and occupancy tracking"
-    imageTitleAttribute: "Environmental monitoring via smart sensor: tracks temperature, humidity, air quality, and room occupancy in ThingsBoard platform"
+    imageTitleAttribute: "Environmental monitoring via smart sensor: tracks temperature, humidity, air quality, and room occupancy in SENTIENT platform"
     width: 2048
     height: 951
 
@@ -163,19 +163,19 @@ water-metering:
 smart-retail:
   0:
     src: "/images/usecases/smart-retail/smart-retail-1.webp"
-    alt: "ThingsBoard dashboard displaying supermarket locations and active critical alarms on the map"
+    alt: "SENTIENT dashboard displaying supermarket locations and active critical alarms on the map"
     imageTitleAttribute: "Overview of supermarket monitoring with critical and major alerts"
     width: 1819
     height: 966
   1:
     src: "/images/usecases/smart-retail/smart-retail-2.webp"
-    alt: "Critical motion sensor and list of active alarms for Supermarket S1 in ThingsBoard interface"
+    alt: "Critical motion sensor and list of active alarms for Supermarket S1 in SENTIENT interface"
     imageTitleAttribute: "Device and alarm status for Supermarket S1"
     width: 1819
     height: 966
   2:
     src: "/images/usecases/smart-retail/smart-retail-3.webp"
-    alt: "ThingsBoard interface showing Supermarket S1 floor plan with critical motion sensor alerts and alarm chart"
+    alt: "SENTIENT interface showing Supermarket S1 floor plan with critical motion sensor alerts and alarm chart"
     imageTitleAttribute: "Floor plan of Supermarket S1 with device states and motion sensor data"
     width: 1819
     height: 966
@@ -193,13 +193,13 @@ smart-retail:
     height: 966
   5:
     src: "/images/usecases/smart-retail/smart-retail-6.webp"
-    alt: "Critical door sensor and multiple major temperature alarms in Supermarket S3 on ThingsBoard"
+    alt: "Critical door sensor and multiple major temperature alarms in Supermarket S3 on SENTIENT"
     imageTitleAttribute: "Supermarket S3 device list and alarm summary"
     width: 1819
     height: 966
   6:
     src: "/images/usecases/smart-retail/smart-retail-7.webp"
-    alt: "Dashboard showing temperature fluctuations of chiller in Supermarket S3 on ThingsBoard"
+    alt: "Dashboard showing temperature fluctuations of chiller in Supermarket S3 on SENTIENT"
     imageTitleAttribute: "Supermarket S3 floor plan and temperature trend for chiller"
     width: 1819
     height: 966
@@ -207,25 +207,25 @@ smart-retail:
 air-quality-monitoring:
   0:
     src: "/images/usecases/air-quality/aiq-1.webp"
-    alt: "Interactive AQI heatmap of Los Angeles on the ThingsBoard IoT Platform"
-    imageTitleAttribute: "AQI map of Los Angeles monitored via ThingsBoard"
+    alt: "Interactive AQI heatmap of Los Angeles on the SENTIENT IoT Platform"
+    imageTitleAttribute: "AQI map of Los Angeles monitored via SENTIENT"
     width: 1302
     height: 699
   1:
     src: "/images/usecases/air-quality/aiq-2.webp"
-    alt: "Live PM10 air quality metrics for Beverly Hills on ThingsBoard dashboard"
-    imageTitleAttribute: "PM10 air quality levels in Beverly Hills displayed in ThingsBoard"
+    alt: "Live PM10 air quality metrics for Beverly Hills on SENTIENT dashboard"
+    imageTitleAttribute: "PM10 air quality levels in Beverly Hills displayed in SENTIENT"
     width: 1302
     height: 699
   3:
     src: "/images/usecases/air-quality/aiq-4.webp"
-    alt: "IoT air quality sensors and alerts visualized on ThingsBoard map dashboard"
-    imageTitleAttribute: "Live air quality sensors and alerts across LA in ThingsBoard"
+    alt: "IoT air quality sensors and alerts visualized on SENTIENT map dashboard"
+    imageTitleAttribute: "Live air quality sensors and alerts across LA in SENTIENT"
     width: 1302
     height: 699
   4:
     src: "/images/usecases/air-quality/aiq-5.webp"
-    alt: "Sensor metrics for Beverly Hills including AQI and battery on ThingsBoard"
+    alt: "Sensor metrics for Beverly Hills including AQI and battery on SENTIENT"
     imageTitleAttribute: "Sensor data for Beverly Hills – AQI, battery and status"
     width: 1302
     height: 699
@@ -233,25 +233,25 @@ air-quality-monitoring:
 smart-irrigation:
   0:
     src: "/images/usecases/smart-irrigation/smart-irrigation-1.webp"
-    alt: "Satellite view of crop fields with real-time moisture levels and chart in ThingsBoard"
-    imageTitleAttribute: "Soil moisture monitoring for wheat and corn fields using ThingsBoard"
+    alt: "Satellite view of crop fields with real-time moisture levels and chart in SENTIENT"
+    imageTitleAttribute: "Soil moisture monitoring for wheat and corn fields using SENTIENT"
     width: 1302
     height: 699
   1:
     src: "/images/usecases/smart-irrigation/smart-irrigation-2.webp"
-    alt: "Field configuration form for setting crop type and moisture range in ThingsBoard"
+    alt: "Field configuration form for setting crop type and moisture range in SENTIENT"
     imageTitleAttribute: "Add a new field and define crop type and soil moisture thresholds"
     width: 1302
     height: 699
   3:
     src: "/images/usecases/smart-irrigation/smart-irrigation-4.webp"
-    alt: "Dashboard showing irrigation status, alarms, field map, and moisture statistics in ThingsBoard"
+    alt: "Dashboard showing irrigation status, alarms, field map, and moisture statistics in SENTIENT"
     imageTitleAttribute: "Irrigation and soil monitoring dashboard for smart agriculture"
     width: 1302
     height: 699
   6:
     src: "/images/usecases/smart-irrigation/smart-irrigation-7.webp"
-    alt: "Active and cleared alarms for soil moisture and battery levels in ThingsBoard"
+    alt: "Active and cleared alarms for soil moisture and battery levels in SENTIENT"
     imageTitleAttribute: "View and manage critical alerts from field sensors in the irrigation system"
     width: 1302
     height: 699
@@ -259,23 +259,23 @@ smart-irrigation:
 waste-management:
   0:
     src: "/images/usecases/waste-monitoring/waste-1.webp"
-    alt: "Smart waste management dashboard with bin status, battery levels, and interactive map in ThingsBoard"
-    imageTitleAttribute: "Live overview of smart waste bins, battery alerts, and location tracking via ThingsBoard IoT"
+    alt: "Smart waste management dashboard with bin status, battery levels, and interactive map in SENTIENT"
+    imageTitleAttribute: "Live overview of smart waste bins, battery alerts, and location tracking via SENTIENT IoT"
   1:
     src: "/images/usecases/waste-monitoring/waste-2.webp"
-    alt: "Sensor registration dialog for uploading CSV file with bin data in ThingsBoard"
-    imageTitleAttribute: "Register multiple smart bin sensors by importing CSV in ThingsBoard"
+    alt: "Sensor registration dialog for uploading CSV file with bin data in SENTIENT"
+    imageTitleAttribute: "Register multiple smart bin sensors by importing CSV in SENTIENT"
   2:
     src: "/images/usecases/waste-monitoring/waste-3.webp"
-    alt: "Alarm rule configuration for bin fullness and battery level in ThingsBoard"
-    imageTitleAttribute: "Define alarm rules – fullness over 90%, battery below 30% (ThingsBoard IoT)"
+    alt: "Alarm rule configuration for bin fullness and battery level in SENTIENT"
+    imageTitleAttribute: "Define alarm rules – fullness over 90%, battery below 30% (SENTIENT IoT)"
   3:
     src: "/images/usecases/waste-monitoring/waste-4.webp"
-    alt: "Edit bin sensor data including location and address in ThingsBoard"
+    alt: "Edit bin sensor data including location and address in SENTIENT"
     imageTitleAttribute: "Modify sensor details – serial number, address, GPS coordinates"
   4:
     src: "/images/usecases/waste-monitoring/waste-5.webp"
-    alt: "Smart bin sensor detail view with charts for fullness and battery history in ThingsBoard"
+    alt: "Smart bin sensor detail view with charts for fullness and battery history in SENTIENT"
     imageTitleAttribute: "Sensor data trends – fullness and battery level monitoring over time"
 
 health-care:

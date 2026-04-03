@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: TBMQ Client Type
-description: TBMQ MQTT Client types overview
+title: ST-RMQTT Client Type
+description: ST-RMQTT MQTT Client types overview
 
 mqtt-client-type:
   0:

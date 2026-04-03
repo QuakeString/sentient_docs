@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Cluster setup using AWS infrastructure
-description: ThingsBoard IoT platform cluster setup with Kubernetes in AWS EKS
+description: SENTIENT IoT platform cluster setup with Kubernetes in AWS EKS
 
 ---
 

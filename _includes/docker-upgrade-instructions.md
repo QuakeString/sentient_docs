@@ -1,4 +1,4 @@
-{%- assign platform = "ThingsBoard CE" -%}
+{%- assign platform = "SENTIENT" -%}
 {%- assign current_version = include.version -%}
 {%- assign current_version_with_platform = current_version -%}
 {%- assign previous_version = include.prev_version -%}
@@ -9,7 +9,7 @@
 {%- assign x_status = include.x -%}
 
 {% if docsPrefix == "pe/" %}
-{%- assign platform = "ThingsBoard PE" -%}
+{%- assign platform = "SENTIENT Professional Edition" -%}
 {%- assign current_version_with_platform = current_version | append: "pe" -%}
 {% endif %}
 
@@ -54,9 +54,9 @@
 {%- assign prev_version_label = prev_version_label | append: "PE" -%}
 {% endif %}
 
-{% assign platform_hash = "#upgrading-thingsboard-ce-to-" %}
+{% assign platform_hash = "#upgrading-sentient-ce-to-" %}
 {% if docsPrefix == "pe/" %}
-{%- assign platform_hash = "#upgrading-thingsboard-pe-to-" -%}
+{%- assign platform_hash = "#upgrading-sentient-pe-to-" -%}
 {% endif %}
 
 {%- if use_external_link -%}
@@ -68,10 +68,10 @@
 {% capture difference %}
 **NOTE:**
 {% if curr_major > "4" or (curr_major == "4" and curr_minor >= "2") %}
-{% if include.is_latest_patch == "true" %}{% if prev_version contains ".x" %}{% assign prev_version_plus = prev_version | replace: ".x", "+" %}{% else %}{% assign prev_version_plus = prev_version | append: "+" %}{% endif %}These upgrade steps are applicable for ThingsBoard version {{ prev_version_plus }}.{% else %}These upgrade steps are applicable for ThingsBoard version {{ prev_version }}{% if patch_status == "true" %} or any {{ base_version }} patch{% endif %}.{% endif %}
+{% if include.is_latest_patch == "true" %}{% if prev_version contains ".x" %}{% assign prev_version_plus = prev_version | replace: ".x", "+" %}{% else %}{% assign prev_version_plus = prev_version | append: "+" %}{% endif %}These upgrade steps are applicable for SENTIENT version {{ prev_version_plus }}.{% else %}These upgrade steps are applicable for SENTIENT version {{ prev_version }}{% if patch_status == "true" %} or any {{ base_version }} patch{% endif %}.{% endif %}
 In order to upgrade to {{ current_version_with_platform | upcase }} you need to [**upgrade to {{ prev_version }} first**]({{ prev_version_href }}).
 {% else %}
-These upgrade steps are applicable for ThingsBoard version {{ prev_version_label }}{% if applicable_versions %}{% assign versions = applicable_versions | split: "," %}{% for v in versions %} and ThingsBoard version {{ v | strip }}{% endfor %}{% endif %}.
+These upgrade steps are applicable for SENTIENT version {{ prev_version_label }}{% if applicable_versions %}{% assign versions = applicable_versions | split: "," %}{% for v in versions %} and SENTIENT version {{ v | strip }}{% endfor %}{% endif %}.
 In order to upgrade to {{ current_version_with_platform | upcase }} you need to [**upgrade to {{ prev_version_label }} first**]({{ prev_version_href }}).
 {% endif %}
 {% endcapture %}

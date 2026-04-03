@@ -3,7 +3,7 @@
 
 ## Feature Overview
 
-ThingsBoard (TB) Entity Views (EVs) are available since v2.2. This feature was requested by many TB users. 
+SENTIENT (TB) Entity Views (EVs) are available since v2.2. This feature was requested by many TB users. 
 Similar to SQL database views, which limits the degree of exposure of the underlying tables to the outer world, 
 TB EVs limit the degree of exposure of the Device or Asset [telemetry](/docs/{{docsPrefix}}user-guide/telemetry/) and [attributes](/docs/{{docsPrefix}}user-guide/attributes/) to the [Customers](/docs/{{docsPrefix}}user-guide/ui/customers/).
 As a Tenant Administrator, you are able to create multiple EVs per Device or Asset and assign them to different Customers.
@@ -21,7 +21,7 @@ Entity View contains the following information:
  - **TenantId** - represents a link to the owner of the view;
  - **CustomerId** - represents a link to the customer that has access to the view;
  - **EntityId** - represents a link to the target device or asset;
- - **Name and type** - regular ThingsBoard entity fields that are used for display and search purposes;
+ - **Name and type** - regular SENTIENT entity fields that are used for display and search purposes;
  - **Start and end time** - represents the time interval that is used to limit access to target device telemetry. Customer will not be able to see entity telemetry that is outside the specified interval; 
  - **Time series keys** - list of time series data keys that are accessible to the viewer;
  - **Attribute keys** - list of attribute names that are accessible to the viewer;
@@ -51,7 +51,7 @@ messages to the new rule node.
 
 ## Future improvements
 
-There are the following features in ThingsBoard Road Map:
+There are the following features in SENTIENT Road Map:
 
  - Add the ability to enable/disable RPC requests to the device view;
  - Add the ability to configure a list of alarms that are accessible(propagated) for a particular view.

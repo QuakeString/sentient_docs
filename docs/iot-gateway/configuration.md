@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: IoT Gateway Configuration
-description: Installation structure and configuration of ThingsBoard IoT Gateway 
+description: Installation structure and configuration of SENTIENT IoT Gateway 
 
 ---
 
@@ -15,7 +15,7 @@ description: Installation structure and configuration of ThingsBoard IoT Gateway
 Please see default directory structure below for daemon installation.
 
 ```text
-/etc/thingsboard-gateway/config                   - Configuration folder.
+/etc/sentient-gateway/config                   - Configuration folder.
     tb_gateway.json                               - Main configuration file for Gateway.
     logs.json                                     - Configuration file for logging.
     modbus.json                                   - Modbus connector configuration.
@@ -26,7 +26,7 @@ Please see default directory structure below for daemon installation.
     can.json                                      - CAN connector configuration. 
     ... 
 
-/var/lib/thingsboard_gateway/extensions           - Folder for custom connectors/converters.                      
+/var/lib/sentient_gateway/extensions           - Folder for custom connectors/converters.                      
     modbus                                        - Folder for Modbus custom connectors/converters.
     mqtt                                          - Folder for MQTT custom connectors/converters.
         __init__.py                               - Default Python package file, needed for correct imports.
@@ -37,11 +37,11 @@ Please see default directory structure below for daemon installation.
     request                                       - Folder for Request custom connectors/converters.
     can                                           - Folder for CAN custom connectors/converters.
 
-/var/log/thingsboard-gateway                      - Logs folder.
+/var/log/sentient-gateway                      - Logs folder.
     connector.log                                 - Connector logs.
     service.log                                   - Main gateway service logs.
     storage.log                                   - Storage logs.
-    tb_connection.log                             - Logs for connection to the ThingsBoard instance.
+    tb_connection.log                             - Logs for connection to the SENTIENT instance.
 ```
 
 ## Environmental variables
@@ -60,9 +60,9 @@ environment variables within a Docker Compose file. Here’s how you can achieve
 ```yaml
 version: '3.4'
 services:
-  # ThingsBoard IoT Gateway Service Configuration
+  # SENTIENT IoT Gateway Service Configuration
   tb-gateway:
-    image: thingsboard/tb-gateway
+    image: sentient/tb-gateway
     container_name: tb-gateway
     ...
     # Environment variables
@@ -77,29 +77,29 @@ In the example above, we set the "**host.docker.internal**" as a host, **1883** 
 as an access token for the gateway using the "**TB_GW_HOST**", "**TB_GW_PORT**" and "**TB_GW_ACCESS_TOKEN**" 
 environment variables, respectively.
 
-The following environmental variables can be used to configure the ThingsBoard IoT Gateway:
+The following environmental variables can be used to configure the SENTIENT IoT Gateway:
 
 | **ENV variable**     | **Default value**             | **Description**                                                                   |
 |----------------------|-------------------------------|-----------------------------------------------------------------------------------|
-| TB_GW_HOST           | **host.docker.internal**      | Hostname or IP address of ThingsBoard server.                                     |
-| TB_GW_PORT           | **1883**                      | Port of MQTT service on ThingsBoard server.                                       |
-| TB_GW_ACCESS_TOKEN   | **YOUR_ACCESS_TOKEN**         | Access token for the gateway from ThingsBoard server.                             |
+| TB_GW_HOST           | **host.docker.internal**      | Hostname or IP address of SENTIENT server.                                     |
+| TB_GW_PORT           | **1883**                      | Port of MQTT service on SENTIENT server.                                       |
+| TB_GW_ACCESS_TOKEN   | **YOUR_ACCESS_TOKEN**         | Access token for the gateway from SENTIENT server.                             |
 | TB_GW_CA_CERT        |                               | Path to CA certificate file.                                                      |
 | TB_GW_PRIVATE_KEY    |                               | Path to private key file.                                                         |
 | TB_GW_CERT           |                               | Path to certificate file.                                                         |
-| TB_GW_CLIENT_ID      |                               | MQTT client id for the gateway form ThingsBoard server.                           |
-| TB_GW_USERNAME       |                               | MQTT username for the gateway form ThingsBoard server.                            |
-| TB_GW_PASSWORD       |                               | MQTT password for the gateway form ThingsBoard server.                            |
-| TB_GW_RATE_LIMITS    | **15:1,300:60,**              | Messages rate limit to ThingsBoard server in `MESSSAGE_COUNT:TIME,` format.       |
-| TB_GW_DP_RATE_LIMITS | **15:1,300:60,**              | Data points rate limit to ThingsBoard server in `DATA_POINTS_COUNT:TIME,` format. |
-| TB_GW_LOGS_PATH      | **/thingsboard_gateway/logs** | Path to the logs folder.                                                          |
+| TB_GW_CLIENT_ID      |                               | MQTT client id for the gateway form SENTIENT server.                           |
+| TB_GW_USERNAME       |                               | MQTT username for the gateway form SENTIENT server.                            |
+| TB_GW_PASSWORD       |                               | MQTT password for the gateway form SENTIENT server.                            |
+| TB_GW_RATE_LIMITS    | **15:1,300:60,**              | Messages rate limit to SENTIENT server in `MESSSAGE_COUNT:TIME,` format.       |
+| TB_GW_DP_RATE_LIMITS | **15:1,300:60,**              | Data points rate limit to SENTIENT server in `DATA_POINTS_COUNT:TIME,` format. |
+| TB_GW_LOGS_PATH      | **/sentient_gateway/logs** | Path to the logs folder.                                                          |
 
 ## General configuration file
 
-The main configuration file that is used for connection to ThingsBoard platform instance and enable/disable connectors. 
+The main configuration file that is used for connection to SENTIENT platform instance and enable/disable connectors. 
 
-The example configuration file provided below sets a connection to the ThingsBoard instance located at 
-thingsboard.cloud and utilizes memory file storage, which is set up to hold a maximum of 100,000 records. There are 4 
+The example configuration file provided below sets a connection to the SENTIENT instance located at 
+sentient.cloud and utilizes memory file storage, which is set up to hold a maximum of 100,000 records. There are 4 
 different connectors active. If you prefer to use only one, simply remove the others from the configuration.
 
 <b>Example of main configuration file. Press to show.</b>
@@ -107,8 +107,8 @@ different connectors active. If you prefer to use only one, simply remove the ot
 {% capture genConf %}
 
 {
-  "thingsboard": {
-    "host": "thingsboard.cloud",
+  "sentient": {
+    "host": "sentient.cloud",
     "port": 1883,
     "remoteShell": false,
     "remoteConfiguration": true,
@@ -182,25 +182,25 @@ different connectors active. If you prefer to use only one, simply remove the ot
 
 ### Sections in config file
 
-+ **thingsboard** -- Configuration for connecting to ThingsBoard platform.
++ **sentient** -- Configuration for connecting to SENTIENT platform.
   - *security* -- Configuration for type of encryption and authorization.
 + **storage** -- Configuration for local storage of incoming data from devices.
 + **connectors** -- Array of Connectors and their configuration to use.
 
-### Connection to ThingsBoard
+### Connection to SENTIENT
 
 |**Parameter**             | **Default value**                            | **Description**                                                                         |
 |---                       |---                                           |-----------------------------------------------------------------------------------------|
-| ***thingsboard***        |                                              | Configuration for connection to server.                                                 |
-| host                     | **thingsboard.cloud**                        | Hostname or IP address of ThingsBoard server.                                           |
-| port                     | **1883**                                     | Port of MQTT service on ThingsBoard server.                                             |
+| ***sentient***        |                                              | Configuration for connection to server.                                                 |
+| host                     | **sentient.cloud**                        | Hostname or IP address of SENTIENT server.                                           |
+| port                     | **1883**                                     | Port of MQTT service on SENTIENT server.                                             |
 | qos                      | **1**                                        | QoS levels 0 (at most once) and 1 (at least once).                                      |
 | minPackSendDelayMS       | **200**                                      | Delay between sending packets (Decreasing this setting results in increased CPU usage). |
 | minPackSizeToSend        | **500**                                      | Minimum size of packs to send.                                                          |
 
 #### Subsection "statistics"
 
-This subsection is used to configure collecting statistics data and sending them to ThingsBoard Gateway device attributes.
+This subsection is used to configure collecting statistics data and sending them to SENTIENT Gateway device attributes.
 
 |**Parameter**|**Default value**| **Description**                                                                |
 |:-|:-|--------------------------------------------------------------------------------
@@ -250,7 +250,7 @@ Also, you can find example files for different OS (Linux, macOS, Windows) in `/c
 
 #### Subsection "deviceFiltering"
 
-This subsection is optional and used to filter allowed devices to send data to ThingsBoard.
+This subsection is optional and used to filter allowed devices to send data to SENTIENT.
 
 The Device Filtering feature allows you to define rules for filtering devices based on specific criteria.
 
@@ -386,7 +386,7 @@ There are 4 options of provisioning configuration (you can read more about provi
 
 ### Storage configuration
 
-Configs in storage subsection provides configuration for saving incoming data before it will be send to ThingsBoard platform.
+Configs in storage subsection provides configuration for saving incoming data before it will be send to SENTIENT platform.
   
 There are 3 variants for this section: memory or file.
 1. **Memory** storage - Received data saving to the RAM memory.
@@ -446,4 +446,4 @@ Section connectors in your configuration file may differ from shown below, but t
 
 **Note:** You can use several similar connectors at same time, but you should provide different names and configuration files to them. 
 
-If you need different type of connector, you can implement it using [customization guide](/docs/iot-gateway/custom/) or email us: <info@thingsboard.io>.
+If you need different type of connector, you can implement it using [customization guide](/docs/iot-gateway/custom/) or email us: <info@docs.sentient.invenia.in>.

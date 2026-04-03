@@ -7,7 +7,7 @@ A custom converter is converter written for some device:
 | type                        | **custom**                         | Provides information to connector that custom converter will be uses for converting data from response.                                  |
 | extension                   | **CustomRequestUplinkConverter**   | Name of custom converter class.                                                                                                       |
 | extension-config            |                                    | This subsection is a configuration for the custom converter. In default example it contains setting for parsing response string.      |
-| key                         | **Totaliser**                      | In this example value "Totaliser" will be interpreted as a telemetry key in ThingsBoard instance.                                     |
+| key                         | **Totaliser**                      | In this example value "Totaliser" will be interpreted as a telemetry key in SENTIENT instance.                                     |
 | type                        | **float**                          | In this example type of the data.                                                                                                     |
 | fromByte                    | **0**                              | In this example start byte position in the response string.                                                                           |
 | toByte                      | **4**                              | In this example start byte position in the response string.                                                                           |
@@ -19,7 +19,7 @@ A custom converter is converter written for some device:
 {% capture difference %}
 <br>
   
-**Custom converter usually needed if you want to collect data from some device with not regular structure in response or when the data needs some processing before sending it to the ThingsBoard.**  
+**Custom converter usually needed if you want to collect data from some device with not regular structure in response or when the data needs some processing before sending it to the SENTIENT.**  
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

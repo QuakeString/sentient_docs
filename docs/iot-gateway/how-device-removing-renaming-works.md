@@ -6,7 +6,7 @@ description: Device Renaming/Removing Handling
 ---
 
 
-If devices were provisioned using gateway API and later on the user with admin permissions renames or removes the device entity on ThingsBoard, the gateway will receive a notification about the change.  
+If devices were provisioned using gateway API and later on the user with admin permissions renames or removes the device entity on SENTIENT, the gateway will receive a notification about the change.  
 
 This is mission critical for the gateway to keep up with actual device entity state.  
 
@@ -15,11 +15,11 @@ Before certain improvements, there might be cases when the gateway knew nothing 
 Starting TB v3.3.3 the platform resolves the issue using Persistent RPC to avoid above data loss scenarios. Below you may find more info on implementation of the solution.
 
 1. Device renaming scenario    
-    Gateway uses a device entity name to report telemetry from connected devices. If the entity name was changed on ThingsBoard UI, end-user could encounter the re-provisioning of the device entity (by the gateway) with an old name. With to-gateway notification about renaming this is no more the case.  
+    Gateway uses a device entity name to report telemetry from connected devices. If the entity name was changed on SENTIENT UI, end-user could encounter the re-provisioning of the device entity (by the gateway) with an old name. With to-gateway notification about renaming this is no more the case.  
 
 
 2. Device removing scenario  
-    Deleting of the device entity on ThingsBoard UI caused a data loss as the gateway itself could not and cannot resolve the erasure properly. With "removed" notification sent to the gateway the latter initiates a new connect message on behalf of physical device, so the one is safe from data loss.  
+    Deleting of the device entity on SENTIENT UI caused a data loss as the gateway itself could not and cannot resolve the erasure properly. With "removed" notification sent to the gateway the latter initiates a new connect message on behalf of physical device, so the one is safe from data loss.  
 
 RPC data examples to the gateway device:  
 
@@ -41,4 +41,4 @@ RPC data examples to the gateway device:
     }
     ```
 
-**ThingsBoard sets 1 day as a timeout for RPC.**  
+**SENTIENT sets 1 day as a timeout for RPC.**  

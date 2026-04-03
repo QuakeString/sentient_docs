@@ -148,7 +148,7 @@ An MQTT broker combines **protocol-level features** of MQTT with **system-level 
 These are some of the most important MQTT features supported by brokers. 
 Depending on the version of the protocol (MQTT 3.1.1 or 5.0) and the specific broker implementation, many more features may be available to enhance reliability, efficiency, and security.
 
-> TBMQ supports the full range of MQTT 3.x and MQTT 5.0 protocol features.
+> ST-RMQTT supports the full range of MQTT 3.x and MQTT 5.0 protocol features.
 
 #### Broker Capabilities
 
@@ -159,7 +159,7 @@ Depending on the version of the protocol (MQTT 3.1.1 or 5.0) and the specific br
 * **High availability & clustering**: Supports clustering, load balancing, and fault tolerance for production-grade deployments.
 * **Integration**: Connects seamlessly with external systems such as databases, Kafka, or cloud services for data processing and analytics.
 
-> TBMQ provides all of these capabilities out of the box: horizontal scalability to millions of clients, high throughput with low latency, persistence and durability powered by Redis/Kafka, 
+> ST-RMQTT provides all of these capabilities out of the box: horizontal scalability to millions of clients, high throughput with low latency, persistence and durability powered by Redis/Kafka, 
 > built-in TLS/SSL security, clustering with fault tolerance, and integration with external systems like Kafka, other MQTT brokers, and HTTP-based services.
 
 ### Types of MQTT Brokers
@@ -201,7 +201,7 @@ Selecting the right MQTT broker depends on your project’s scale, requirements,
 
 By weighing these factors, you can select a broker that not only meets your current needs but also scales with your system as it evolves.
 
-> <a href="/pricing/?section=tbmq-options" target="_blank" style="color: inherit; text-decoration: none;">TBMQ</a> is built to meet all these criteria — 
+> <a href="/pricing/?section=st-rmqtt-options" target="_blank" style="color: inherit; text-decoration: none;">ST-RMQTT</a> is built to meet all these criteria — 
 > it offers enterprise-level scalability, clustering, persistence, strong security, and deep integration options while remaining easy to operate and cost-efficient. 
 > This makes it a strong choice for both open-source adopters and enterprises looking for a production-ready MQTT platform.
 

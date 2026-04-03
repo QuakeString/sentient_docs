@@ -1,24 +1,24 @@
 * TOC
 {:toc}
 
-This guide will help you to setup TBMQ in microservices mode in GKE.
+This guide will help you to setup ST-RMQTT in microservices mode in GKE.
 
 ## Prerequisites
 
 {% include templates/install/gcp/gke-prerequisites.md %}
 
-## Step 1. Clone TBMQ K8S scripts repository
+## Step 1. Clone ST-RMQTT K8S scripts repository
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq.git
-cd tbmq/k8s/gcp
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt.git
+cd st-rmqtt/k8s/gcp
 ```
 {: .copy-code}
 
 ## Step 2. Define environment variables
 
-{% assign tbClusterName = "tbmq-cluster" %}
-{% assign tbDbClusterName = "tbmq-db" %}
+{% assign tbClusterName = "st-rmqtt-cluster" %}
+{% assign tbDbClusterName = "st-rmqtt-db" %}
 {% include templates/mqtt-broker/install/gcp/env-variables.md %}
 
 ## Step 3. Configure and create GKE cluster
@@ -31,7 +31,7 @@ cd tbmq/k8s/gcp
 
 ## Step 5. Provision Google Cloud SQL (PostgreSQL) Instance
 
-{% assign tbDbName = "thingsboard_mqtt_broker" %}
+{% assign tbDbName = "sentient_mqtt_broker" %}
 {% include templates/install/gcp/provision-postgresql.md %}
 
 #### 5.5 Edit database settings
@@ -45,11 +45,11 @@ nano tb-broker-db-configmap.yml
 
 ## Step 6. Create Namespace
 
-Let's create a dedicated namespace for our TBMQ cluster deployment to ensure better resource isolation and management.
+Let's create a dedicated namespace for our ST-RMQTT cluster deployment to ensure better resource isolation and management.
 
 ```bash
 kubectl apply -f tb-broker-namespace.yml
-kubectl config set-context $(kubectl config current-context) --namespace=thingsboard-mqtt-broker
+kubectl config set-context $(kubectl config current-context) --namespace=sentient-mqtt-broker
 ```
 {: .copy-code}
 
@@ -87,7 +87,7 @@ Once deployed, you should see the information about deployment state, followed b
 ```text
 NAME: redis
 LAST DEPLOYED: Tue Apr  8 11:22:44 2025
-NAMESPACE: thingsboard-mqtt-broker
+NAMESPACE: sentient-mqtt-broker
 STATUS: deployed
 REVISION: 1
 TEST SUITE: None
@@ -98,13 +98,13 @@ APP VERSION: 7.2.5** Please be patient while the chart is being deployed **
 
 
 To get your password run:
-    export REDIS_PASSWORD=$(kubectl get secret --namespace "thingsboard-mqtt-broker" redis-redis-cluster -o jsonpath="{.data.redis-password}" | base64 -d)
+    export REDIS_PASSWORD=$(kubectl get secret --namespace "sentient-mqtt-broker" redis-redis-cluster -o jsonpath="{.data.redis-password}" | base64 -d)
 ```
 
 Let's modify this command to print the password to the terminal:
 
 ```bash
-echo $(kubectl get secret --namespace "thingsboard-mqtt-broker" redis-redis-cluster -o jsonpath="{.data.redis-password}" | base64 -d)
+echo $(kubectl get secret --namespace "sentient-mqtt-broker" redis-redis-cluster -o jsonpath="{.data.redis-password}" | base64 -d)
 ```
 {: .copy-code}
 
@@ -145,7 +145,7 @@ Otherwise, please check if you set the PostgreSQL URL and PostgreSQL password in
 Execute the following command to deploy the broker:
 
 ```bash
-./k8s-deploy-tbmq.sh
+./k8s-deploy-st-rmqtt.sh
 ```
 {: .copy-code}
 
@@ -162,7 +162,7 @@ If everything went fine, you should be able to see `tb-broker-0` and `tb-broker-
 
 ### 11.1 Configure HTTP(S) Load Balancer
 
-Configure HTTP(S) Load Balancer to access web interface of your TBMQ instance. Basically, you have 2 possible configuration options:
+Configure HTTP(S) Load Balancer to access web interface of your ST-RMQTT instance. Basically, you have 2 possible configuration options:
 
 * http - Load Balancer without HTTPS support. Recommended for **development**. The only advantage is simple configuration and minimum costs. May be good option for development server but definitely not suitable for production.
 * https - Load Balancer with HTTPS support. Recommended for **production**. Acts as an SSL termination point. You may easily configure it to issue and maintain a valid SSL certificate. Automatically redirects all non-secure (HTTP) traffic to secure (HTTPS) port.
@@ -194,7 +194,7 @@ tb-broker-http-loadbalancer   <none>   *       34.111.24.134   80      7m25s
 
 #### HTTPS Load Balancer
 
-{% assign staticIP = "tbmq-http-lb-address" %}
+{% assign staticIP = "st-rmqtt-http-lb-address" %}
 The process of configuring the load balancer using Google-managed SSL certificates is described on the official [documentation page](https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs).
 The instructions below are extracted from the official documentation. Make sure you read [prerequisites](https://cloud.google.com/kubernetes-engine/docs/how-to/managed-certs#prerequisites) carefully before proceeding.
 
@@ -290,12 +290,12 @@ The load balancer will forward all TCP traffic for ports 1883 and 8883.
 
 #### MQTT over SSL
 
-Follow [this guide](https://thingsboard.io/docs/user-guide/mqtt-over-ssl/) to create a .pem file with the SSL certificate. Store the file as _server.pem_ in the working directory.
+Follow [this guide](https://docs.sentient.invenia.in/docs/user-guide/mqtt-over-ssl/) to create a .pem file with the SSL certificate. Store the file as _server.pem_ in the working directory.
 
 You’ll need to create a config-map with your PEM file, you can do it by calling command:
 
 ```bash
-kubectl create configmap tbmq-mqtts-config \
+kubectl create configmap st-rmqtt-mqtts-config \
  --from-file=server.pem=YOUR_PEM_FILENAME \
  --from-file=mqttserver_key.pem=YOUR_PEM_KEY_FILENAME \
  -o yaml --dry-run=client | kubectl apply -f -
@@ -316,7 +316,7 @@ kubectl apply -f tb-broker.yml
 
 ## Step 12. Validate the setup
 
-Now you can open TBMQ web interface in your browser using DNS name of the load balancer.
+Now you can open ST-RMQTT web interface in your browser using DNS name of the load balancer.
 
 You can get DNS name of the load-balancers using the next command:
 
@@ -356,7 +356,7 @@ Use `EXTERNAL-IP` field of the load-balancer to connect to the cluster via MQTT 
 
 ### Troubleshooting
 
-In case of any issues you can examine service logs for errors. For example to see TBMQ logs execute the following command:
+In case of any issues you can examine service logs for errors. For example to see ST-RMQTT logs execute the following command:
 
 ```bash
 kubectl logs -f tb-broker-0
@@ -383,7 +383,7 @@ For further guidance, follow the [next instructions](https://learn.microsoft.com
 ### Upgrade to 2.2.0
 
 In this release, the MQTT authentication mechanism was migrated from YAML/env configuration into the database.
-During upgrade, TBMQ needs to know which authentication providers are enabled in your deployment.
+During upgrade, ST-RMQTT needs to know which authentication providers are enabled in your deployment.
 This information is provided through environment variables passed to the **upgrade pod**.
 
 The upgrade script requires a file named **`database-setup.yml`** that explicitly defines these variables.
@@ -407,7 +407,7 @@ Once the file is prepared and the values verified, proceed with the [upgrade pro
 
 ### Upgrade to 2.0.0
 
-For the TBMQ v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 7](#step-7-provision-redis-cluster) to complete the installation.
+For the ST-RMQTT v2.0.0 upgrade, if you haven't installed Redis yet, please follow [step 7](#step-7-provision-redis-cluster) to complete the installation.
 Only then you can proceed with the [upgrade](#run-upgrade).
 
 ### Run upgrade
@@ -427,23 +427,23 @@ git pull origin {{ site.release.broker_branch }}
 
 After that, execute the following command:
 
-{% capture tabspec %}tbmq-upgrade
-tbmq-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-without-from-version.sh
-tbmq-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version.md{% endcapture %}
+{% capture tabspec %}st-rmqtt-upgrade
+st-rmqtt-upgrade-without-from-version,Since v2.1.0,shell,resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-without-from-version.sh
+st-rmqtt-upgrade-with-from-version,Before v2.1.0,markdown,resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md,/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version.md{% endcapture %}
 {% include tabs.html %}
 
-{% include templates/mqtt-broker/upgrade/stop-tbmq-pods-before-upgrade.md %}
+{% include templates/mqtt-broker/upgrade/stop-st-rmqtt-pods-before-upgrade.md %}
 
 ## Cluster deletion
 
-Execute the following command to delete TBMQ nodes:
+Execute the following command to delete ST-RMQTT nodes:
 
 ```bash
-./k8s-delete-tbmq.sh
+./k8s-delete-st-rmqtt.sh
 ```
 {: .copy-code}
 
-Execute the following command to delete all TBMQ nodes and configmaps, load balancers, etc.:
+Execute the following command to delete all ST-RMQTT nodes and configmaps, load balancers, etc.:
 
 ```bash
 ./k8s-delete-all.sh

@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Entities and relations
-description: IoT asset management using ThingsBoard entities and relations feature
+description: IoT asset management using SENTIENT entities and relations feature
 
 ---
 

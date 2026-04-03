@@ -4,9 +4,9 @@
 
 ## User overview
 
-In ThingsBoard, a **User** is an entity with credentials to access the platform.
+In SENTIENT, a **User** is an entity with credentials to access the platform.
 
-ThingsBoard supports a three-level role hierarchy:
+SENTIENT supports a three-level role hierarchy:
 
 1) **System administrator**. 
 - Has full access to the entire platform instance.
@@ -26,7 +26,7 @@ ThingsBoard supports a three-level role hierarchy:
 {% capture difference %}
 **Important:**
 <br>
-In Thingsboard Professional Edition, the Customer can create other customer users and subcustomers.
+In Sentient Professional Edition, the Customer can create other customer users and subcustomers.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -49,7 +49,7 @@ The system administrator can also add the name and description optionally. After
 
    ![image](/images/user-guide/ui/users/ce/user-activation-link.png)
 
-4. If you selected send **activation mail option,** then you need to check your email box and find the message about the Thingsboard account activation. 
+4. If you selected send **activation mail option,** then you need to check your email box and find the message about the Sentient account activation. 
 Click Activate Your Account, and follow the easy password-creating process.
 
    ![image](/images/user-guide/ui/users/ce/account-activation-email.png)
@@ -57,7 +57,7 @@ Click Activate Your Account, and follow the easy password-creating process.
 {% capture difference %}
 **NOTE:**
 <br>
-To receive an email from ThingsBoard, you should set up a mail server at the system administrator level in advance.
+To receive an email from SENTIENT, you should set up a mail server at the system administrator level in advance.
 Check out the [mail settings](/docs/{{docsPrefix}}user-guide/ui/mail-settings) instructions.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
@@ -73,7 +73,7 @@ They are as follows:
 
 3) **Resend activation** will resend the account activation email to the user's email box.
 
-4) **Login as Tenant administrator** opens the Thingsboard platform from the Tenant administrator UI. 
+4) **Login as Tenant administrator** opens the Sentient platform from the Tenant administrator UI. 
 
 5) The System Administrator can also **delete** the Tenant administrator from the tenants' users list.
 
@@ -115,7 +115,7 @@ They are as follows:
 
 3) **Resend activation** will resend the account activation email to the user's email box. 
 
-4) **Login as a Customer user** lets the Tenant administrator open the Thingsboard platform from the user UI. 
+4) **Login as a Customer user** lets the Tenant administrator open the Sentient platform from the user UI. 
 
 5) The Tenant Administrator can also **delete the Customer user** from the customers’ list.
 

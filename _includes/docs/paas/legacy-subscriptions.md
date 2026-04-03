@@ -5,7 +5,7 @@
 **Legacy Content**: This page documents subscription plans for accounts created prior to **January 20, 2026**. 
 
 **Why upgrade?** Our new subscription plans offer greater flexibility, allowing you to [top-up](/docs/{{docsPrefix}}subscriptions/#top-ups) entity and API limits on demand. 
-They also let you enable ThingsBoard Edge and Trendz Analytics as [add-ons](/docs/{{docsPrefix}}subscriptions/#add-ons), so you can manage your entire IoT infrastructure in one place.
+They also let you enable SENTIENT GATEWAY and SENTIENT ANALYTICS as [add-ons](/docs/{{docsPrefix}}subscriptions/#add-ons), so you can manage your entire IoT infrastructure in one place.
 
 Ready to switch? Please refer to the [how-to switch to the new subscription plans](#how-to-switch-to-the-new-subscription-plans) page.
 
@@ -520,8 +520,8 @@ where "**K**" means 1 thousand, "**M**" means 1 million, "**B**" means 1 billion
 
 ## White labeling
 
-ThingsBoard web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
-See feature [documentation](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} for more details. ThingsBoard Cloud extends white-labeling feature with ability to configure own domain name easily. 
+SENTIENT web interface allows you to configure your company or product logo and color scheme in 2 minutes with zero coding efforts and no service restart required. 
+See feature [documentation](/docs/{{docsPrefix}}user-guide/white-labeling/){:target="_blank"} for more details. SENTIENT Cloud extends white-labeling feature with ability to configure own domain name easily. 
 See [managing domain](/products/{{docsPrefix}}domains/){:target="_blank"} for more details. 
 
 The white-labeling feature is available for **Prototype**, **Startup** and **Business** **legacy** subscription plans.
@@ -548,14 +548,14 @@ Transitioning to the new model is seamless and requires no migration of data.
 
 ## How to cancel my subscription?
 
-To terminate your ThingsBoard Cloud subscription, follow these steps:
+To terminate your SENTIENT Cloud subscription, follow these steps:
 
-- Log in to ThingsBoard Cloud as Tenant Administrator.
+- Log in to SENTIENT Cloud as Tenant Administrator.
 - Go to account settings by clicking the **three-dot icon** in the upper-right corner of the screen and selecting **Account** from the dropdown menu.
 - Under the **Profile** tab, click the orange **Delete account** button.
 - Follow the instructions to cancel your subscription.
 - Confirm the action by clicking the "**I understand the consequences, delete account**" button.
 
-In the future, the subscription termination button will be moved to the "**Plan and billing**" page in the ThingsBoard navigation menu.
+In the future, the subscription termination button will be moved to the "**Plan and billing**" page in the SENTIENT navigation menu.
 
 {% include images-gallery.html imageCollection="cancel-my-subscription" %}

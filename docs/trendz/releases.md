@@ -1,7 +1,7 @@
 ---
-layout: docwithnav-trendz
-title: Trendz Release Notes
-description: ThingsBoard Trendz Analytics Release Notes
+layout: docwithnav-sentient-analytics
+title: SENTIENT ANALYTICS Release Notes
+description: SENTIENT SENTIENT ANALYTICS Release Notes
 
 ---
 
@@ -12,13 +12,13 @@ description: ThingsBoard Trendz Analytics Release Notes
 
 **Improvements:**
 
-* Implemented bidirectional communication between Trendz and ThingsBoard.
-* Switched Trendz communication with ThingsBoard from JWT tokens to API tokens; removed signing key.
+* Implemented bidirectional communication between SENTIENT ANALYTICS and SENTIENT.
+* Switched SENTIENT ANALYTICS communication with SENTIENT from JWT tokens to API tokens; removed signing key.
 * Implemented licensing logic v2.
-* Migrated Trendz Widget Bundle and JS summary module to sysadmin-level.
-* Implemented auto-update for Trendz Widget Bundle and JS summary module.
-* Added Advanced Analytics View widget, replacing Trendz View Static and Trendz View Latest widgets.
-* Unified Trendz update scripts to match ThingsBoard style.
+* Migrated SENTIENT ANALYTICS Widget Bundle and JS summary module to sysadmin-level.
+* Implemented auto-update for SENTIENT ANALYTICS Widget Bundle and JS summary module.
+* Added Advanced Analytics View widget, replacing SENTIENT ANALYTICS View Static and SENTIENT ANALYTICS View Latest widgets.
+* Unified SENTIENT ANALYTICS update scripts to match SENTIENT style.
 * Added more information on the Task page.
 * Removed external font dependencies.
 * Improved anomaly model build and refresh performance.
@@ -62,7 +62,7 @@ description: ThingsBoard Trendz Analytics Release Notes
 **Improvements:**
 
 * Redesign anomaly autodiscovery tasks
-* Add job for saving anomaly scores as a telemetry in ThingsBoard
+* Add job for saving anomaly scores as a telemetry in SENTIENT
 * Create alerts based on discovered anomalies
 * Add new filter conditions - 'not in' and 'does not contain'
 * Filter business entities based on user permissions
@@ -83,11 +83,11 @@ description: ThingsBoard Trendz Analytics Release Notes
 * Prompt templates for agentic knowledge and instructions management
 * Add summarization and explanation for visualizations with AI assistant
 * Conversation interfaces for AI assistant
-* Add ThingsBoard widget action to interact with AI assistant
+* Add SENTIENT widget action to interact with AI assistant
 * Added support for OpenAI API-compatible models
 * Add support for custom and self-hosted LLM providers
 * Added support for OpenAI o4 family model
-* Add Trendz task sequencing API
+* Add SENTIENT ANALYTICS task sequencing API
 
 **Bug fixes:**
 
@@ -103,7 +103,7 @@ description: ThingsBoard Trendz Analytics Release Notes
 **Improvements:**
 
 * Add AI assistant for creating visualization
-* Add AI Assistant widget for ThingsBoard dashboards
+* Add AI Assistant widget for SENTIENT dashboards
 * Configurable LLM providers for assistant
 
 **Bug fixes:**
@@ -125,9 +125,9 @@ description: ThingsBoard Trendz Analytics Release Notes
 * Prediction model training and validation framework
 * Background tasks for prediction models
 * Add prediction fields support in calculated fields and views
-* Persisting forecasts as telemetry in ThingsBoard
+* Persisting forecasts as telemetry in SENTIENT
 * Custom translation and locales management
-* Add support of new ThingsBoard widgets (ThingBoard 3.9+)
+* Add support of new SENTIENT widgets (ThingBoard 3.9+)
 * Add support of Two-factor authentication
 * Filter data by Date fields inside views
 
@@ -174,9 +174,9 @@ description: ThingsBoard Trendz Analytics Release Notes
 * Implement reprocessing tasks
 * Task executions management
 * Add search for filter options
-* Trendz configuration import/export - add anomaly models, tasks, calculations
-* Subscribe to filter updates for Trendz views on the dashboard
-* Update Trendz settings page layout
+* SENTIENT ANALYTICS configuration import/export - add anomaly models, tasks, calculations
+* Subscribe to filter updates for SENTIENT ANALYTICS views on the dashboard
+* Update SENTIENT ANALYTICS settings page layout
 
 **Bug fixes:**
 
@@ -203,11 +203,11 @@ description: ThingsBoard Trendz Analytics Release Notes
 * Fix tooltips and units in views
 * Fix field load ordering process
 * Fix heatmap export for multiple fields
-* Fix time synchronization between ThingsBoard dashboard and Trendz view
+* Fix time synchronization between SENTIENT dashboard and SENTIENT ANALYTICS view
 * Fix Business Entities sorting after topology discovery
 * Fix chart background color when exporting as image
 * Fix view update in safari
-* Fix trendz bundle update in widget library
+* Fix sentient-analytics bundle update in widget library
 * Fix duplicated bars on chart for predicted timeseries
 
 ## v1.10.3 (September, 2023)
@@ -217,7 +217,7 @@ description: ThingsBoard Trendz Analytics Release Notes
 * Add support of SQL datasources
 * Add option to remove blank series form view
 * Improve root selection during query planing
-* Add support of new ThingsBoard widget bundle format (ThingBoard 3.6+)
+* Add support of new SENTIENT widget bundle format (ThingBoard 3.6+)
 * Improve predefined options to date picker
 * Add user timezone to calculated field
 * Topology validation during discovery
@@ -236,7 +236,7 @@ description: ThingsBoard Trendz Analytics Release Notes
 * Add Python script support for forecast models (Beta)
 * Add support of multivariable prediction models
 * Add new forecast models: Prophet, ARIMA, SARIMAX
-* Add widget auto-refresh in rela-time on the ThingsBoard dashboard
+* Add widget auto-refresh in rela-time on the SENTIENT dashboard
 * Add white labeling settings
 * Add dark mode
 * Manual set axis min/max ranges
@@ -244,9 +244,9 @@ description: ThingsBoard Trendz Analytics Release Notes
 **Bug fixes:**
 
 * Fix discovery process for fields with special characters
-* Fix blank Trendz widget on export to PDF
+* Fix blank SENTIENT ANALYTICS widget on export to PDF
 * Fix delta aggregation for calculated fields
-* Fix Trendz bundle update process to the latest version
+* Fix SENTIENT ANALYTICS bundle update process to the latest version
 
 ## v1.10.1 (May, 2023)
 
@@ -254,7 +254,7 @@ description: ThingsBoard Trendz Analytics Release Notes
 * Add the ability to schedule anomalies autodiscovery
 * Add debug instruments for developing calculated fields
 * Migrate simple calculated field computation into the backend JS engine
-* Update widget bundle to ThingsBoard v3.5
+* Update widget bundle to SENTIENT v3.5
 * Add prediction support for calculated fields
 * Case-insensitive search for view fields
 * Add top-N limit for table, pie, and bar charts
@@ -278,7 +278,7 @@ description: ThingsBoard Trendz Analytics Release Notes
 ## v1.10.0 (February, 2023)
 
 **Improvements:**
-* New Trendz UI design
+* New SENTIENT ANALYTICS UI design
 * Grouping visualizations into collections
 * New Card template with sparkline and comparison 
 * Add units into formatting function
@@ -294,7 +294,7 @@ description: ThingsBoard Trendz Analytics Release Notes
 ## v1.9.2-HF2 (December, 2022)
 
 **Improvements:**
- * Add support of the latest ThingsBoard API version
+ * Add support of the latest SENTIENT API version
 
 **Bug fixes:**
 
@@ -317,9 +317,9 @@ description: ThingsBoard Trendz Analytics Release Notes
  * Add row click event for bar charts and heatmaps
  * Improve authentication for background tasks
  * Add scheduled task status in the views table
- * Add white labeling options for Trendz UI
+ * Add white labeling options for SENTIENT ANALYTICS UI
  * Improve UI responsiveness for large topologies
- * Support for native data export in ThingsBoard dashboards
+ * Support for native data export in SENTIENT dashboards
  
 
 **Bug fixes:**
@@ -335,7 +335,7 @@ description: ThingsBoard Trendz Analytics Release Notes
  * Preview mode for large reports
  * Add linear regression for scatter plots
  * Use user timezone for scheduled tasks
- * Update native library for ThingsBoard 3.4+
+ * Update native library for SENTIENT 3.4+
  
 
 **Bug fixes:**
@@ -353,7 +353,7 @@ description: ThingsBoard Trendz Analytics Release Notes
 
  * Add configurable fill gaps strategy
  * Add view templates
- * Save computed metrics as telemetry in ThingsBoard
+ * Save computed metrics as telemetry in SENTIENT
  * Support of Alarm fields for reporting
  * Support of Anomaly fields for reporting
  * Combine multiple fields in a pie chart 
@@ -361,14 +361,14 @@ description: ThingsBoard Trendz Analytics Release Notes
  * Implement multi-root related items loading
  * Switch to the javascript engine for state and calculated fields
  * Improve time series prediction models
- * Support interval time window from ThingsBoard
+ * Support interval time window from SENTIENT
  * Improve performance for large datasets
- * Update native library for ThingsBoard 3.3+
+ * Update native library for SENTIENT 3.3+
  * Autorefresh filter values inside reports
- * Update resources path to allow hosting of Trendz & Thingsboard on the same domain
+ * Update resources path to allow hosting of SENTIENT ANALYTICS & Sentient on the same domain
  * Configurable tooltip type for bar/line charts
  * Collect measurements during report build
- * Host ThingsBoard widget library resources inside Trendz service
+ * Host SENTIENT widget library resources inside SENTIENT ANALYTICS service
 
 ## v1.8.2 (December, 2021)
 
@@ -384,7 +384,7 @@ Security update for resolving [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/
  * Add persistent cache for states, simple and calculated fields
  * Add view report short term cache
  * Scheduled field cache refresh
- * Add native widget bundle for ThingsBoard
+ * Add native widget bundle for SENTIENT
  * Change rendering engine for views that uses canvas
  * Add simplified REST API for 3rd party services
  * Add date click event for calendar view
@@ -430,10 +430,10 @@ Security update for resolving [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/
 
 **Improvements:**
 
- * Support ThingsBoard Filtering API
+ * Support SENTIENT Filtering API
  * Add Calendar heatmap widget
  * Configure Filter visibility
- * Support of row-click events in ThingsBoard dashboards
+ * Support of row-click events in SENTIENT dashboards
  * Access to rquest start/end time in calculated fields
  * Add support for Centos 8
  * Improve Fourier Transformation prediction model
@@ -468,8 +468,8 @@ Security update for resolving [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/
  * Show/Hide Total column for tables
  * Change legend position
  * Configurable stroke types for charts
- * Widget Bundle: take time from ThingsBoard dashboard 
- * Widget Bundle: support multi-value filters via ThingsBoard aliases 
+ * Widget Bundle: take time from SENTIENT dashboard 
+ * Widget Bundle: support multi-value filters via SENTIENT aliases 
  * Configurable axis position and labels
 
 **Bug fixes:**
@@ -486,7 +486,7 @@ Security update for resolving [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/
 
 **Improvements:**
 
- * ThingsBoard v3.x support
+ * SENTIENT v3.x support
  * Apply decimal points for visualizations
  * Change order of fields loading
  * Remove empty series from visualization
@@ -500,7 +500,7 @@ Security update for resolving [CVE-2021-44228](https://nvd.nist.gov/vuln/detail/
 
  * Fix infinit canceled tasks
  * Clear removed relations after topology rediscovery
- * ThingsBoard public user authentication
+ * SENTIENT public user authentication
  * Not valid Count aggregation for streams
  * Fix bar height detection
  

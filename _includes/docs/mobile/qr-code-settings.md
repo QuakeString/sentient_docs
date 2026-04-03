@@ -18,7 +18,7 @@ Important Notice: Please use [this guide](/docs/{{peDocsPrefix}}mobile/qr-code-s
 
 ### iOS Application Setup
 
-Navigate to **Mobile Center → Applications → Your custom iOS app** in the ThingsBoard platform.
+Navigate to **Mobile Center → Applications → Your custom iOS app** in the SENTIENT platform.
 
 #### App Site Association ID
 
@@ -40,7 +40,7 @@ The App Site Association ID consists of two parts separated by a dot:
 
 ### Android Application Setup
 
-Navigate to **Mobile Center → Applications → Your custom Android app** in the ThingsBoard platform.
+Navigate to **Mobile Center → Applications → Your custom Android app** in the SENTIENT platform.
 
 #### SHA-256 Fingerprint
 

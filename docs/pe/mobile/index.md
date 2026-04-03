@@ -1,13 +1,13 @@
 ---
 layout: docwithnav-mobile-pe
-title: ThingsBoard PE Mobile Application Documentation
-description: ThingsBoard PE Mobile Application - starting point for your IoT mobile product
+title: SENTIENT Professional Edition Mobile Application Documentation
+description: SENTIENT Professional Edition Mobile Application - starting point for your IoT mobile product
 ---
 
 * TOC
 {:toc}
 
-The ThingsBoard PE Mobile Application is an open-source [project](https://github.com/thingsboard/flutter_thingsboard_pe_app) based on [Flutter](https://flutter.dev/).
+The SENTIENT Professional Edition Mobile Application is an open-source [project](https://github.com/sentient/flutter_sentient_pe_app) based on [Flutter](https://flutter.dev/).
 It allows you to build your own IoT mobile application **with minimum coding efforts**.
 
 This documentation can help you set up and run your first IoT mobile app, learn how to customize the app and publish it to Google Play or App Store.
@@ -44,12 +44,12 @@ This documentation can help you set up and run your first IoT mobile app, learn 
 
 ## Compatibility Table
 
-A compatibility table between the Flutter ThingsBoard PE mobile application and the version of your ThingsBoard PE instance.
+A compatibility table between the Flutter SENTIENT Professional Edition mobile application and the version of your SENTIENT Professional Edition instance.
 
 <table id="compatibility-table">
     <thead>
         <tr>
-          <td style="width: 25%"><b>ThingsBoard PE version</b></td><td style="width: 25%"><b>Flutter ThingsBoard PE Mobile Application</b></td><td style="width: 25%"><b>Dart ThingsBoard PE Client</b></td><td style="width: 25%"><b>Flutter version</b></td>
+          <td style="width: 25%"><b>SENTIENT Professional Edition version</b></td><td style="width: 25%"><b>Flutter SENTIENT Professional Edition Mobile Application</b></td><td style="width: 25%"><b>Dart SENTIENT Professional Edition Client</b></td><td style="width: 25%"><b>Flutter version</b></td>
         </tr>
     </thead>
     <tbody>

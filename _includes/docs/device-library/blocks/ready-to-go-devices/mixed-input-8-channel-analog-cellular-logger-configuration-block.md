@@ -62,20 +62,20 @@ Necessary parameters to change for connection:
 
 | Parameter | Default value | Description |
 |-|-|
-| path | **api/v1/YOUR_ACCESS_TOKEN/telemetry** | Replace **YOUR_ACCESS_TOKEN** with your access token for the device on ThingsBoard. |
-| attributes_path | **api/v1/YOUR_ACCESS_TOKEN/attributes** | Replace **YOUR_ACCESS_TOKEN** with your access token for the device on ThingsBoard. | 
-| server | **{{hostName}}** | Your ThingsBoard instance address. |
-| port | **80** | Your ThingsBoard instance HTTP port. You can Set **port** equal to 443 and **use_ssl** equal to true to use SSL encryption (HTTPS). Either protocol is supported, but HTTPS will consume more cellular data each time data is pushed to the server.|
+| path | **api/v1/YOUR_ACCESS_TOKEN/telemetry** | Replace **YOUR_ACCESS_TOKEN** with your access token for the device on SENTIENT. |
+| attributes_path | **api/v1/YOUR_ACCESS_TOKEN/attributes** | Replace **YOUR_ACCESS_TOKEN** with your access token for the device on SENTIENT. | 
+| server | **{{hostName}}** | Your SENTIENT instance address. |
+| port | **80** | Your SENTIENT instance HTTP port. You can Set **port** equal to 443 and **use_ssl** equal to true to use SSL encryption (HTTPS). Either protocol is supported, but HTTPS will consume more cellular data each time data is pushed to the server.|
 
 Other configuration parameters:
 
-- The name field is optional in this file. This name is displayed on the MI-8 OLED screen and is sent to ThingsBoard as a device attribute. Best practice is for the name in config.json to match the name of the device in ThingsBoard, but this doesn’t have to be the case. The name field isn’t used to associate telemetry data between the MI-8 and ThingsBoard. It is only meant as an aid for the user.  
-- The push field describes the connection to the ThingsBoard servers. In this example we use HTTP POST requests (“mode”:”post”). MQTT is also supported, but POST consumes less cellular data. The HTTP request URL is built up through the server, port, use_ssl, and path/attributes_path fields.  
+- The name field is optional in this file. This name is displayed on the MI-8 OLED screen and is sent to SENTIENT as a device attribute. Best practice is for the name in config.json to match the name of the device in SENTIENT, but this doesn’t have to be the case. The name field isn’t used to associate telemetry data between the MI-8 and SENTIENT. It is only meant as an aid for the user.  
+- The push field describes the connection to the SENTIENT servers. In this example we use HTTP POST requests (“mode”:”post”). MQTT is also supported, but POST consumes less cellular data. The HTTP request URL is built up through the server, port, use_ssl, and path/attributes_path fields.  
 - The use_ssl field describes whether HTTP or HTTPS is used. The server field is everything between the double slashes ‘//’ and the colon. Next comes the port and one additional slash. Everything beyond that is the path.  
 - Set push_attributes equal to true so that attributes (things such as the MI-8 IMEI number which don’t change frequently) are sent once each power up.  
-- Set use_json equal to true. All data sent to ThingsBoard should be formatted as JSON.  
-- Set use_headers false. HTTP headers are not required by ThingsBoard, but require additional cellular data each push.  
-- You can set include_name, include_imei, and include_iccid to false. These fields cause the ICCID, IMEI, and MI-8 name to be included in the telemetry pushes which would consume additional cellular data. They do not need included here since they are already sent to ThingsBoard in a separate attributes HTTP request once per MI-8 power cycle.  
+- Set use_json equal to true. All data sent to SENTIENT should be formatted as JSON.  
+- Set use_headers false. HTTP headers are not required by SENTIENT, but require additional cellular data each push.  
+- You can set include_name, include_imei, and include_iccid to false. These fields cause the ICCID, IMEI, and MI-8 name to be included in the telemetry pushes which would consume additional cellular data. They do not need included here since they are already sent to SENTIENT in a separate attributes HTTP request once per MI-8 power cycle.  
 
 After adding or changing configuration file do the following steps:  
 - Save config.json

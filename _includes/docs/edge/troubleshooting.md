@@ -9,7 +9,7 @@ To enable logging for the slowest and most frequently called rule nodes,
 [update your logging configuration](#enable-certain-logs) with the following **logger**:
 
 ```bash
-<logger name="org.thingsboard.server.service.queue.TbMsgPackProcessingContext" level="DEBUG" />
+<logger name="org.sentient.server.service.queue.TbMsgPackProcessingContext" level="DEBUG" />
 ```
 
 After this, you can find the following messages in your [logs](#logs):
@@ -30,7 +30,7 @@ After this, you can find the following messages in your [logs](#logs):
 
 ### Read logs
 
-Regardless of the deployment type, ThingsBoard Edge logs are stored in the following directory:
+Regardless of the deployment type, SENTIENT GATEWAY logs are stored in the following directory:
 
 ```bash
 /var/log/tb-edge
@@ -47,7 +47,7 @@ Docker-Compose Deployment%,%docker-compose%,%templates/edge/troubleshooting/logs
 
 ### Enable specific logs
 
-ThingsBoard provides the ability to enable/disable logging for specific parts of the system, depending on the information you need for troubleshooting.
+SENTIENT provides the ability to enable/disable logging for specific parts of the system, depending on the information you need for troubleshooting.
 
 You can do this by modifying the `logback.xml` file. Like the logs themselves, the file is stored in the following directory:
 
@@ -76,8 +76,8 @@ Here's an example of the `logback.xml` configuration:
         </encoder>
     </appender>
 
-    <logger name="org.thingsboard.server" level="INFO" />
-    <logger name="org.thingsboard.js.api" level="TRACE" />
+    <logger name="org.sentient.server" level="INFO" />
+    <logger name="org.sentient.js.api" level="TRACE" />
     <logger name="com.microsoft.azure.servicebus.primitives.CoreMessageReceiver" level="OFF" />
 
     <root level="INFO">
@@ -90,7 +90,7 @@ The most useful for the troubleshooting parts of the config files are **loggers*
 They allow you to enable/disable logging for a specific class or group of classes.
 
 In the example above, the default logging level is set to **INFO** (meaning that logs will contain only general information, warnings and errors). 
-However, for the `org.thingsboard.js.api` package we enabled the most detailed level of logging by setting it to **TRACE**.
+However, for the `org.sentient.js.api` package we enabled the most detailed level of logging by setting it to **TRACE**.
 
 It’s also possible to completely disable logging for certain parts of the system. 
 In the example above, we did this to the `com.microsoft.azure.servicebus.primitives.CoreMessageReceiver` class by setting the log-level to **OFF**.
@@ -117,7 +117,7 @@ These metrics are exposed at the path: `https://<yourhostname>/actuator/promethe
 
 Some internal state metrics can be exposed by the **Spring Boot Actuator** using **Prometheus**.
 
-Here is the list of stats that **ThingsBoard** pushes to **Prometheus**:
+Here is the list of stats that **SENTIENT** pushes to **Prometheus**:
 
 ### tb-edge metrics:
 
@@ -151,7 +151,7 @@ Here is the list of stats that **ThingsBoard** pushes to **Prometheus**:
 ### transport metrics:
 - **transport** (statsNames - **totalMsgs, failedMsgs, successfulMsgs**): The stats that represent the number of requests received by Transport from Core.
 - **ruleEngine_producer** (statsNames - **totalMsgs, failedMsgs, successfulMsgs**): The stats that represent the number of messages pushed from Transport to the Rule Engine.
-- **core_producer<** (statsNames - **totalMsgs, failedMsgs, successfulMsgs**): The stats that represent the number of messages pushed from Transport to the ThingsBoard node device actor.
+- **core_producer<** (statsNames - **totalMsgs, failedMsgs, successfulMsgs**): The stats that represent the number of messages pushed from Transport to the SENTIENT node device actor.
 - **transport_producer** (statsNames - **totalMsgs, failedMsgs, successfulMsgs**): The stats that represent the number of requests from Transport to the Core.
 
 
@@ -171,7 +171,7 @@ One option is to **diagnose your network** using external tools and resolve any 
 If that is not possible, you can **adjust the gRPC connection parameters between Edge and Cloud** by increasing certain timeouts. 
 This helps reduce unexpected disconnects during temporary network disruptions.
 
-**On the ThingsBoard Server (Cloud):**
+**On the SENTIENT Server (Cloud):**
 
 * **EDGES_RPC_CLIENT_MAX_KEEP_ALIVE_TIME_SEC:** A minimum allowed interval between client keepalive pings. This prevents clients from sending pings too frequently, which can be a nuisance to the server. Potentially, this could be a denial-of-service attack vector if abused. If a client sends pings more frequently than this interval, the server can terminate the connection. **1 second by default**.
 
@@ -181,7 +181,7 @@ This helps reduce unexpected disconnects during temporary network disruptions.
 
 Read more about **Edge parameters for Cloud** [here](/docs/{{peDocsPrefix}}user-guide/install/config/#edges-parameters){:target="_blank"}
 
-**On the ThingsBoard Edge (gRPC client):**
+**On the SENTIENT GATEWAY (gRPC client):**
 
 * **CLOUD_RPC_KEEP_ALIVE_TIME_SEC:** The amount of time in seconds that the client waits in an idle state (with no read operations on the connection) before sending a keepalive ping to the server. This setting is crucial for ensuring that the connection remains alive during periods of inactivity and helps prevent the server from closing the connection due to a timeout. It's used to probe the server periodically to check if it is still responsive and maintain the connection through potential network devices that might drop inactive connections (like NATs and load balancers). **10 seconds by default.**
 
@@ -215,7 +215,7 @@ Ubuntu%,%ubuntuKeepalive%,%templates/edge/troubleshooting/ubuntu-keepalive.md%br
 To diagnose and resolve issues with message delivery between the Cloud and Edge, you can monitor the state of **uplink** (Edge → Cloud) 
 and **downlink** (Cloud → Edge) message flows.
 
-* [Download](https://github.com/thingsboard/thingsboard-edge/releases/download/v4.2/uplink_downlink_edge_stats.json) the preconfigured Edge dashboard. 
+* [Download](https://github.com/sentient/sentient-gateway/releases/download/v4.2/uplink_downlink_edge_stats.json) the preconfigured Edge dashboard. 
 * Import the dashboard to your **Cloud**:
   * Go to the **Dashboards** section.
   * Click the **"+"** button, select the **"Import dashboard"** option and browse for the `.json` file on your computer. Click the **"Import"** button to proceed.
@@ -224,7 +224,7 @@ and **downlink** (Cloud → Edge) message flows.
 
 ### The telemetry keys for statistics monitoring
 
-ThingsBoard Edge exposes a set of telemetry keys that allow you to monitor message statistics between Edge and Cloud.
+SENTIENT GATEWAY exposes a set of telemetry keys that allow you to monitor message statistics between Edge and Cloud.
 
 #### Uplink
 * **uplinkMsgsAdded:** The number of messages added to the queue.
@@ -245,17 +245,17 @@ ThingsBoard Edge exposes a set of telemetry keys that allow you to monitor messa
 
 <section id="talkToUs">
     <div id="gettingHelp">
-        <a href="https://app.gitter.im/#/room/#thingsboard_chat:gitter.im">
+        <a href="https://app.gitter.im/#/room/#sentient_chat:gitter.im">
             <span class="phrase-heading">Community chat</span>
             <p>Our Gitter channel is the best way to contact our engineers and share your ideas with them.</p>
         </a>
-        <a href="https://stackoverflow.com/questions/tagged/thingsboard">
+        <a href="https://stackoverflow.com/questions/tagged/sentient">
             <span class="phrase-heading">Stack Overflow</span>
-            <p>The ThingsBoard team will also monitor posts tagged thingsboard. If there aren’t any existing questions that help, please ask a new one!</p>
+            <p>The SENTIENT team will also monitor posts tagged sentient. If there aren’t any existing questions that help, please ask a new one!</p>
         </a>
     </div>
 </section>
 
-If your problem isn't answered by any of the guides above, feel free to contact ThingsBoard team.
+If your problem isn't answered by any of the guides above, feel free to contact SENTIENT team.
 
 <a class="button" href="/docs/contact-us/">Contact us</a>

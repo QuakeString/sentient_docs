@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: Anomaly Visualization
 description: Visualize detected anomalies.
 
@@ -11,7 +11,7 @@ description: Visualize detected anomalies.
 ## Anomalies View Report
 
 The Anomaly View Report is a fully configured solution for anomaly visualization. The view functionality is quite 
-similar to the Review tab in the anomaly model details (read more about the Review tab [here](/docs/trendz/anomaly/overview#review-tab)).
+similar to the Review tab in the anomaly model details (read more about the Review tab [here](/docs/sentient-analytics/anomaly/overview#review-tab)).
 
 You can customize the view using the following settings:
 - **Default Anomaly Selection:** Sets the default anomaly selected when opening the view.
@@ -32,7 +32,7 @@ You can customize the view using the following settings:
 
 ## Anomaly View Field
 
-Trendz provides low-level tools for anomaly visualization via **Anomaly Fields**, which can be used to build custom dashboards and insights.
+SENTIENT ANALYTICS provides low-level tools for anomaly visualization via **Anomaly Fields**, which can be used to build custom dashboards and insights.
 
 To use anomaly fields:
 
@@ -63,11 +63,11 @@ To use anomaly fields:
 
 - **Chart Type:** Choose from: `bar`, `line`, or `area`
 
-Anomaly fields are ideal for building flexible visualizations across time and devices without storing anomalies in ThingsBoard.
+Anomaly fields are ideal for building flexible visualizations across time and devices without storing anomalies in SENTIENT.
 
 ## Anomaly Business Entity Fields
 
-Available **only when "Save to TB" is enabled** (See [this section](/docs/trendz/anomaly/save-to-tb.md) for more on saving to ThingsBoard).
+Available **only when "Save to TB" is enabled** (See [this section](/docs/sentient-analytics/anomaly/save-to-tb.md) for more on saving to SENTIENT).
 
 To use:
 1. Open any view.
@@ -81,13 +81,13 @@ To use:
 
 ## Best Practices
 
-Use the following guidance to choose the right tool for visualizing and analyzing anomalies in Trendz:
+Use the following guidance to choose the right tool for visualizing and analyzing anomalies in SENTIENT ANALYTICS:
 
 - **If you want a simple, plug-and-play anomaly visualization:**  
   - Use **Anomaly Report**.
-- **If you need flexible visualizations and don’t want to save anomalies to ThingsBoard:**  
+- **If you need flexible visualizations and don’t want to save anomalies to SENTIENT:**  
   - Use **Anomaly Fields**.
-- **If you need fine control over which anomalies are saved to ThingsBoard:** 
+- **If you need fine control over which anomalies are saved to SENTIENT:** 
   - Use **Anomaly Business Entity Fields**.
 
 ## Next Steps

@@ -3,7 +3,7 @@
 * TOC
 {:toc}
 
-A versatile widget for static or dynamic content on a ThingsBoard dashboard. It renders **Markdown** or **free‑form HTML**, and it can work **with or without data sources**. 
+A versatile widget for static or dynamic content on a SENTIENT dashboard. It renders **Markdown** or **free‑form HTML**, and it can work **with or without data sources**. 
 Use it for notes, contextual hints, KPIs, banners, or compact info cards alongside charts, tables, and maps.
 
 <br><b><font size="3">Markdown vs HTML</font></b>
@@ -61,7 +61,7 @@ Basic numeric formatting for a data key&#39;s value is supported via `${key:n}`,
 
 **Example:** 
 
-The Smart Device sends a temperature value to ThingsBoard. Display the temperature value in a card.
+The Smart Device sends a temperature value to SENTIENT. Display the temperature value in a card.
 
 **Datasource:**
 - **Type**: Device
@@ -99,7 +99,7 @@ Best for conditions, calculations, combining multiple keys, or switching layouts
 
 **Example:** 
 
-The Smart Device sends a temperature value to ThingsBoard. Display the temperature in a card with color rules:
+The Smart Device sends a temperature value to SENTIENT. Display the temperature in a card with color rules:
 - If the temperature is below 20 °C, the value is shown <span style="color:blue">blue</span>.
 - If it&#39;s between 20 °C and 25 °C, the value is <span style="color:green">green</span>.
 - If it&#39;s above 25 °C, the value is <span style="color:red">red</span>.
@@ -144,7 +144,7 @@ return entityName + temp;
 
 <br><b><font size="3">Apply default Markdown style</font></b>
 
-Applies ThingsBoard&#39;s **built‑in Markdown typography** (headings, paragraphs, lists, tables, code) aligned with the current dashboard theme.
+Applies SENTIENT&#39;s **built‑in Markdown typography** (headings, paragraphs, lists, tables, code) aligned with the current dashboard theme.
 - **ON (recommended for most cases):** you get clean defaults that match the dashboard look & feel.
 - **OFF:** minimal browser defaults — choose this when you want full visual control via your own CSS.
 

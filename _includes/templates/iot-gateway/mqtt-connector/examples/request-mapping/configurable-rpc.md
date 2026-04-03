@@ -1,12 +1,12 @@
-RPC to Device allows sending RPC commands to the device that is connected to ThingsBoard directly or via Gateway.
+RPC to Device allows sending RPC commands to the device that is connected to SENTIENT directly or via Gateway.
 
-Suppose we have a device `SN-001` that tracks the light level of the room and is connected to ThingsBoard via an MQTT Gateway. 
+Suppose we have a device `SN-001` that tracks the light level of the room and is connected to SENTIENT via an MQTT Gateway. 
 We want to send an RPC command to know the current state of the light level with two options: in the first case we want to get a response back, and in the second case we don't need a response.
 
-As an example, we will use ThingsBoard MQTT Demo Broker, which can be run using Docker and the following command:
+As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 thingsboard/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
 ```
 {:.copy-code}
 
@@ -20,7 +20,7 @@ use cases.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-Let's configure RPC commands in the MQTT connector to allow ThingsBoard to send commands to devices.
+Let's configure RPC commands in the MQTT connector to allow SENTIENT to send commands to devices.
 
 Follow these steps:
 
@@ -70,7 +70,7 @@ The gateway will:
 2. Match it to the "echo" method configuration
 3. Send a message to the topic `sensor/SN-001/request/echo/12345` (where 12345 is a unique request ID)
 4. Subscribe to the topic `sensor/SN-001/response/echo/12345` to wait for a response
-5. Return the response to ThingsBoard when received
+5. Return the response to SENTIENT when received
 
 ![image](/images/gateway/mqtt-connector/examples/result-device-overview-rpc-1.png)
 
@@ -98,7 +98,7 @@ If you are using advanced configuration mode, you can use the following configur
   "broker": {
     "host": "127.0.0.1",
     "port": 1884,
-    "clientId": "ThingsBoard_gateway",
+    "clientId": "SENTIENT_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,

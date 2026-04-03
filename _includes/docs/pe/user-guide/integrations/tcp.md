@@ -8,7 +8,7 @@
 * TOC
 {:toc}
 
-TCP Integration allows to stream data from devices which use a TCP transport protocol to ThingsBoard and converts payloads of these devices into the ThingsBoard format.
+TCP Integration allows to stream data from devices which use a TCP transport protocol to SENTIENT and converts payloads of these devices into the SENTIENT format.
 
 {% capture difference %}
 **Please note** TCP Integration can be started only as [remote Integration](/docs/{{peDocsPrefix}}user-guide/integrations/remote-integrations){:target="_blank"}. It could be started on the same machine, where TB instance is running, or you can start in on another machine, that has access over the network to the TB instance.
@@ -24,12 +24,12 @@ Please review the integration diagram to learn more.
 In this tutorial, we will use:
 
 {% if docsPrefix == "pe/" %}
- - The instance of [ThingsBoard Professional Edition](https://thingsboard.io/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
+ - The instance of [SENTIENT Professional Edition](https://docs.sentient.invenia.in/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
 {% endif %}
 {% if docsPrefix contains "paas/" %}
- - ThingsBoard Professional Edition instance — [{{hostName}}](https://{{hostName}}){:target="_blank"};
+ - SENTIENT Professional Edition instance — [{{hostName}}](https://{{hostName}}){:target="_blank"};
 {% endif %}
- - TCP Integration, running externally and connected to the cloud ThingsBoard PE instance;
+ - TCP Integration, running externally and connected to the cloud SENTIENT Professional Edition instance;
  - **echo** command which intended to display a line of text, and will redirect it's output to **netcat** (**nc**) utility;
  - **netcat** (**nc**) utility to establish TCP connections, receive data from there and transfer them;    
 
@@ -65,7 +65,7 @@ Go to the "**Integrations**" page of the "**Integrations center**" section. Clic
 <br>
 **2. Uplink data converter**. 
 
-An uplink converter that is a script for parsing and transforming the data received by TCP integration to a format that ThingsBoard can consume.
+An uplink converter that is a script for parsing and transforming the data received by TCP integration to a format that SENTIENT can consume.
 **deviceName** and **deviceType** are required, while **attributes** and **telemetry** are optional. **attributes** and **telemetry** are flat key-value objects. Nested objects are not supported.
 
 Choose device payload type to for decoder configuration:
@@ -125,7 +125,7 @@ Please use **Integration key** and **Integration secret** from the above section
 
 ## Send uplink message
 
-Once ThingsBoard TCP Integration has been created, the TCP server starts, and then it waits for data from the devices.
+Once SENTIENT TCP Integration has been created, the TCP server starts, and then it waits for data from the devices.
 
 Choose device payload type to send uplink message
 
@@ -145,7 +145,7 @@ If your payload contains "**humidity**" telemetry, you should see "humidity" key
 
 ## Advanced usage: downlink
 
-For sending downlink messages from the Thingsboard to the device, we need to define a downlink converter.
+For sending downlink messages from the Sentient to the device, we need to define a downlink converter.
 
 ### Add downlink converter
 
@@ -227,7 +227,7 @@ echo -e 'SN-002,default,temperature,25.7\nSN-002,default,humidity,69' | nc -w60 
 ```
 {: .copy-code}
 
-You should get the following response from the ThingsBoard in the terminal:
+You should get the following response from the SENTIENT in the terminal:
 
 ![image](/images/user-guide/integrations/tcp/tcp-terminal-send-downlink-message.png)
 

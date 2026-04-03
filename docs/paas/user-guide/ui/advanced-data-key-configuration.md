@@ -3,7 +3,7 @@ layout: docwithnav-paas
 assignees:
 - ashvayka
 title: Advanced data key configuration
-description: ThingsBoard advanced configuration of data keys
+description: SENTIENT advanced configuration of data keys
   
 entity-table-example:
     0:

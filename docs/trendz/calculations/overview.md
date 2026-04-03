@@ -1,31 +1,31 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Calculated Fields
-description: Trendz Calculated Fields
+description: SENTIENT ANALYTICS Calculated Fields
 ---
 
 * TOC
 {:toc}
 
-Calculated fields are a powerful feature in Trendz for KPI monitoring and prediction. They allow you to apply statistical functions and create new data items based on your input data, all while processing calculations on the fly.
-This ensures that no data in the ThingsBoard database is damaged or subjected to additional load. Trendz offers a robust tool for creating and managing these calculated fields, enabling complex calculations and custom formulas for data analysis and visualization.
-Additionally, you can store your calculations as telemetry in ThingsBoard, enhancing the utility and integration of your data.
+Calculated fields are a powerful feature in SENTIENT ANALYTICS for KPI monitoring and prediction. They allow you to apply statistical functions and create new data items based on your input data, all while processing calculations on the fly.
+This ensures that no data in the SENTIENT database is damaged or subjected to additional load. SENTIENT ANALYTICS offers a robust tool for creating and managing these calculated fields, enabling complex calculations and custom formulas for data analysis and visualization.
+Additionally, you can store your calculations as telemetry in SENTIENT, enhancing the utility and integration of your data.
 
 To access the calculated fields tool, click on the icon **√x**  labeled "Calculation Fields" located on the left side of the workspace.
 
 Within this section, a table lists all created calculated fields, along with key details. You can open, modify, or perform other actions on any of these fields.
 To create a new calculated field, click the "Create Calculation Field" button.
 
-![image](/images/trendz/calculations/calculated-field-create.png)
+![image](/images/sentient-analytics/calculations/calculated-field-create.png)
 
 
 ## Function Tab
 
 The Function tab is where you configure parameters that affect data calculations. Below is a breakdown of each option:
 
-***KEY:*** The identifier under which the calculated telemetry data is saved in ThingsBoard with prefix \_ECD_. *(Required)*
+***KEY:*** The identifier under which the calculated telemetry data is saved in SENTIENT with prefix \_ECD_. *(Required)*
 
 ***ENTITY:*** The business entity to which this calculated field is linked. Affects entity settings, visualization, and filters. *(Required)*
 
@@ -42,7 +42,7 @@ The Function tab is where you configure parameters that affect data calculations
 
 ***AGGREGATION:*** Method for data aggregation, including options like AVG, SUM, LATEST, MIN, MAX, COUNT, UNIQ, etc.
 
-Aggregation function applied to a grouped dataset. Find more details about [Aggregation in this article](/docs/trendz/telemetry-aggregation/)
+Aggregation function applied to a grouped dataset. Find more details about [Aggregation in this article](/docs/sentient-analytics/telemetry-aggregation/)
 
 ***Fill Gap:*** Handles missing telemetry data with different methods, which are selected in the TIME UNIT and STRATEGY settings.
 
@@ -51,10 +51,10 @@ Aggregation function applied to a grouped dataset. Find more details about [Aggr
 * *Dynamic Strategy:* Loads new data since the last calculation.
 * *Fixed Strategy:* Uses a predefined time range for each execution.
 
-For details on writing functions for [Calculated Fields](/docs/trendz/calculations/overview/#examples), refer to the corresponding documentation section.
-Choose to work with aggregated or raw data by enabling [batch mode](/docs/trendz/calculations/batch/)  as needed.
+For details on writing functions for [Calculated Fields](/docs/sentient-analytics/calculations/overview/#examples), refer to the corresponding documentation section.
+Choose to work with aggregated or raw data by enabling [batch mode](/docs/sentient-analytics/calculations/batch/)  as needed.
 
-![image](/images/trendz/calculations/calculated-function-tab.png)
+![image](/images/sentient-analytics/calculations/calculated-function-tab.png)
 
 
 
@@ -75,7 +75,7 @@ The Input section allows you to define and understand the data that will be used
 
 This setup makes sure the data is defined correctly, allowing for accurate calculations and useful insights.
 
-![image](/images/trendz/calculations/calculated-input-tab.png)
+![image](/images/sentient-analytics/calculations/calculated-input-tab.png)
 
 
 
@@ -89,7 +89,7 @@ When you click "Run test," you will access the Output tab, featuring the followi
 
 ***Logs:*** Shows logs similar to those in the browser console.
 
-![image](/images/trendz/calculations/calculated-output-tab.png)
+![image](/images/sentient-analytics/calculations/calculated-output-tab.png)
 
 
 
@@ -112,7 +112,7 @@ var fahrenheit = celsius*1.8 + 32;
 return fahrenheit;
 {% endhighlight %}   
 
-![image](/images/trendz/calculations/calculated-simple.png)
+![image](/images/sentient-analytics/calculations/calculated-simple.png)
 
 **Multiple fields for calculation**
 
@@ -134,7 +134,7 @@ var size = uniq(apartment.area);
     return (energy + heat) / size;
 {% endhighlight %}   
 
-![image](/images/trendz/calculations/calculated-complex-config.png)
+![image](/images/sentient-analytics/calculations/calculated-complex-config.png)
 
 **Get original field value**
 
@@ -162,11 +162,11 @@ If a field with the same name or key already exists, the system will notify you 
 
 **Enabling Calculated Fields**
 
-During the saving process, you have the option to "Enable" the calculated field. When enabled, the calculated field will be recorded as telemetry in ThingsBoard with the specified parameters.
+During the saving process, you have the option to "Enable" the calculated field. When enabled, the calculated field will be recorded as telemetry in SENTIENT with the specified parameters.
 
-![image](/images/trendz/calculations/calculated-enable.png)
+![image](/images/sentient-analytics/calculations/calculated-enable.png)
 
-For more details, refer to the [Save Metric to ThingsBoard](/docs/trendz/calculations/save-to-thingsboard/) section.
+For more details, refer to the [Save Metric to SENTIENT](/docs/sentient-analytics/calculations/save-to-sentient/) section.
 
 **Modifying and Re-Saving Calculations**
 
@@ -179,7 +179,7 @@ Once saved, you can modify your calculations as needed. Here's how the process w
 * *Save Changes:* After making modifications, save the calculation again.
 
 **Applying Changes to View Fields:**
-* *Prompt for Update:* Upon re-saving, Trendz will prompt you to apply these changes across all view fields based on this calculation, ensuring consistency in data representation.
+* *Prompt for Update:* Upon re-saving, SENTIENT ANALYTICS will prompt you to apply these changes across all view fields based on this calculation, ensuring consistency in data representation.
 * *Automatic Update:* If you choose to apply the changes, all relevant view fields will automatically update with the new logic or parameters.
 
 **Handling Enabled Calculations:**
@@ -187,44 +187,44 @@ Once saved, you can modify your calculations as needed. Here's how the process w
 * *Future Data:* Without running the Reprocess Task, the updated calculation only applies to new data recorded after re-saving, leaving historical data unchanged.
 * *How to Run the Reprocess Task:* Go to the Tasks tab and click the “Run Reprocess Task” button to apply the updated calculation to all relevant historical data.
 
-![image](/images/trendz/calculations/calculated-reprocess-task.png)
+![image](/images/sentient-analytics/calculations/calculated-reprocess-task.png)
 
 This functionality ensures seamless management of calculations, consistently reflecting updates across all areas where the calculation is applied.
 
 
 ## Using Calculations in View Fields
 
-Once you have created and saved a calculation in Trendz, it can be used in view fields to enhance data representation and analysis. Here’s how to effectively use these calculations:
+Once you have created and saved a calculation in SENTIENT ANALYTICS, it can be used in view fields to enhance data representation and analysis. Here’s how to effectively use these calculations:
 
 **Accessing the Calculations in View Fields**
 * *Business Entities List:* Calculations created by a tenant will appear in the list of business entities under the name provided during creation. This allows for easy selection and integration into view fields.
 * *Telemetry Display for Customers:* Once enabled, the calculated data becomes visible to end users as telemetry. It will be displayed under the key name defined in the calculation, making it accessible in dashboards and widgets.
 
-![image](/images/trendz/calculations/calculated-view-fields.png)
+![image](/images/sentient-analytics/calculations/calculated-view-fields.png)
 
 **Using the Calculation in Views**
 
 Simply select the desired calculation to include it in the view field. The data generated by this calculation will now be part of the visual representation in the selected view.
 
-**Using Real-Time (RT) and ThingsBoard (TB) Data**
-* *ThingsBoard Data (TB):* Calculations saved as telemetry in ThingsBoard can be displayed in view fields for historical or periodically updated data. These calculations update according to the schedule set in the task settings.
+**Using Real-Time (RT) and SENTIENT (TB) Data**
+* *SENTIENT Data (TB):* Calculations saved as telemetry in SENTIENT can be displayed in view fields for historical or periodically updated data. These calculations update according to the schedule set in the task settings.
 * *Real-Time Data (RT):* For immediate data needs, real-time calculations can be utilized. Note that RT calculations might take longer to process than batch-calculated data.
 
-![image](/images/trendz/calculations/calculated-real-time.png)
+![image](/images/sentient-analytics/calculations/calculated-real-time.png)
 
 **Editing and Managing Calculations:**
 
 To adjust or manage a calculation after adding it to a view field, access the calculation settings directly from the view field configuration by pressing the "Go to calculation field" button.
 
-![image](/images/trendz/calculations/calculated-go-to-calculation.png)
+![image](/images/sentient-analytics/calculations/calculated-go-to-calculation.png)
 
 
 ## Disabled Calculation
 
-If a calculated field is disabled isn't saved in ThingsBoard as telemetry, it will appear normally in the list of business entity fields.
+If a calculated field is disabled isn't saved in SENTIENT as telemetry, it will appear normally in the list of business entity fields.
 However, when you drag this field into the chart-building area, a red bell icon will appear next to it. By clicking on the red bell icon, you can go directly to the created calculated field, where you can enable it as telemetry.
 
-![image](/images/trendz/calculations/calculated-disabled-bell.png)
+![image](/images/sentient-analytics/calculations/calculated-disabled-bell.png)
 
 By following these steps, you can effectively use created calculations within view fields, making sure your data analysis is both complete and exact.
 

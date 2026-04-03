@@ -1,18 +1,18 @@
 * TOC
 {:toc}
 
-A **Customer** in ThingsBoard represents a distinct business entity — an individual or an organization — that purchases or uses a tenant&#39;s devices and/or assets. A customer may also represent a department or subdivision within the tenant&#39;s organization.
+A **Customer** in SENTIENT represents a distinct business entity — an individual or an organization — that purchases or uses a tenant&#39;s devices and/or assets. A customer may also represent a department or subdivision within the tenant&#39;s organization.
 
 A customer user belongs to the customer and has read permissions to view dashboards and other entities assigned by the tenant administrator.
 
-In Thingsboard Community Edition a customer user cannot create their own customers, users, or subcustomers.
+In Sentient Community Edition a customer user cannot create their own customers, users, or subcustomers.
 
 {% capture difference %}
 **Important:**
 <br>
-In **Thingsboard Professional Edition** customer user can create other customers, users and subcustomers.
-To try this functionality, use the [ThingsBoard Cloud](https://{{hostName}}/signup) server.
-The alternative option is to install ThingsBoard locally using this [installation guide](/docs/user-guide/install/pe/installation-options/)
+In **Sentient Professional Edition** customer user can create other customers, users and subcustomers.
+To try this functionality, use the [SENTIENT Cloud](https://{{hostName}}/signup) server.
+The alternative option is to install SENTIENT locally using this [installation guide](/docs/user-guide/install/pe/installation-options/)
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -124,5 +124,5 @@ Allows exporting and restoring customer-related entities using the Git-based [ve
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

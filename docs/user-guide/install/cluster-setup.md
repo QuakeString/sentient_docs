@@ -4,7 +4,7 @@ assignees:
 - ashvayka
 title: Cluster setup
 notitle: "true"
-description: ThingsBoard IoT platform cluster setup guide
+description: SENTIENT IoT platform cluster setup guide
 
 ---
 
@@ -13,10 +13,10 @@ description: ThingsBoard IoT platform cluster setup guide
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <h1>ThingsBoard Cluster setup options</h1>
+                <h1>SENTIENT Cluster setup options</h1>
                 <div class="install-options-description">
                     <p>
-                        You may deploy ThingsBoard IoT Platform using different tools and platforms
+                        You may deploy SENTIENT IoT Platform using different tools and platforms
                     </p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 {% if docsPrefix == 'pe/edge/' %}
-{% assign appPrefix = "ThingsBoard PE" %}
+{% assign appPrefix = "SENTIENT Professional Edition" %}
 {% else %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "SENTIENT" %}
 {% endif %}
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
@@ -42,9 +42,9 @@ Locate "# Cloud configuration" block and replace **PUT_YOUR_EDGE_KEY_HERE** and 
 
 Please replace **PUT_YOUR_CLOUD_IP** with an IP address of the machine where {{appPrefix}} version is running:
 {% if docsPrefix == 'pe/edge/' %}
-* Use **thingsboard.cloud** in case you are connecting edge to [**ThingsBoard Cloud**](https://thingsboard.cloud/signup).
+* Use **sentient.cloud** in case you are connecting edge to [**SENTIENT Cloud**](https://sentient.cloud/signup).
 
-**NOTE**: **thingsboard.cloud** uses SSL protocol for edge communication. 
+**NOTE**: **sentient.cloud** uses SSL protocol for edge communication. 
 Please change **CLOUD_RPC_SSL_ENABLED** to **true** as well.
 {% endif %}
 * Use **localhost** in case edge is running on the same machine where cloud instance is running. 
@@ -59,7 +59,7 @@ cloud:
     rpc:
       host: "${CLOUD_RPC_HOST:PUT_YOUR_CLOUD_IP}"
       ssl:
-        # Set to 'true' if using thingsboard.cloud or if you have configured a TLS connection on your Server; set to 'false' otherwise.
+        # Set to 'true' if using sentient.cloud or if you have configured a TLS connection on your Server; set to 'false' otherwise.
         enabled: "${CLOUD_RPC_SSL_ENABLED:true/false}" 
 ```
 {% else %}
@@ -74,9 +74,9 @@ cloud:
 {% endif %}
 
 {% capture local-deployment %}
-If ThingsBoard Edge is set to run on the same machine where the **{{appPrefix}}** server is operating, you need to update additional configuration parameters to prevent port collision between the ThingsBoard server and ThingsBoard Edge.
+If SENTIENT GATEWAY is set to run on the same machine where the **{{appPrefix}}** server is operating, you need to update additional configuration parameters to prevent port collision between the SENTIENT server and SENTIENT GATEWAY.
 
-Please locate and change next parameters in ThingsBoard Edge configuration file (**C:\Program Files (x86)\tb-edge\conf\tb-edge.yml**):
+Please locate and change next parameters in SENTIENT GATEWAY configuration file (**C:\Program Files (x86)\tb-edge\conf\tb-edge.yml**):
 <br>
 <br>**...**
 <br>**port: "${HTTP_BIND_PORT:18080}"**

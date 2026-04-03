@@ -11,7 +11,7 @@
       "devQaExtraInstancePrice": 50,
       "edgeMonthPrice": 0,
       "edgeInstancesIncluded": 1,
-      "trendzMonthPrice": 0,
+      "sentient-analyticsMonthPrice": 0,
       "wl": false,
       "productId": "b5a35ce0-f5ea-11f0-8e58-abbac8d0a38a",
       "planId": "fe493b90-f5ea-11f0-8e58-abbac8d0a38a"
@@ -26,7 +26,7 @@
       "edgeMonthPrice": 7,
       "edgeInstancesIncluded": 1,
       "extraEdgePrice": 39,
-      "trendzMonthPrice": 12,
+      "sentient-analyticsMonthPrice": 12,
       "wl": false,
       "productId": "b5a35ce0-f5ea-11f0-8e58-abbac8d0a38a",
       "planId": "648c95a0-f5eb-11f0-8e58-abbac8d0a38a"
@@ -41,7 +41,7 @@
       "edgeMonthPrice": 19,
       "edgeInstancesIncluded": 1,
       "extraEdgePrice": 39,
-      "trendzMonthPrice": 29,
+      "sentient-analyticsMonthPrice": 29,
       "wl": true,
       "productId": "b5a35ce0-f5ea-11f0-8e58-abbac8d0a38a",
       "planId": "87f3b1e0-f5eb-11f0-8e58-abbac8d0a38a"
@@ -56,7 +56,7 @@
       "edgeMonthPrice": 49,
       "edgeInstancesIncluded": 2,
       "extraEdgePrice": 39,
-      "trendzMonthPrice": 89,
+      "sentient-analyticsMonthPrice": 89,
       "wl": true,
       "productId": "b5a35ce0-f5ea-11f0-8e58-abbac8d0a38a",
       "planId": "b8ad2500-f5eb-11f0-8e58-abbac8d0a38a"
@@ -72,8 +72,8 @@
       "edgeMonthPrice": 89,
       "edgeInstancesIncluded": 3,
       "extraEdgePrice": 39,
-      "trendzMonthPrice": 149,
-      "trendzExtraDevicePrice": 0.03,
+      "sentient-analyticsMonthPrice": 149,
+      "sentient-analyticsExtraDevicePrice": 0.03,
       "wl": true,
       "productId": "b5a35ce0-f5ea-11f0-8e58-abbac8d0a38a",
       "planId": "f4b90050-f5eb-11f0-8e58-abbac8d0a38a"

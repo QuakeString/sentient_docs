@@ -101,7 +101,7 @@ In the example, widget is displaying the latest pressure time series data values
 ### Basic widget settings 
 
 Basic widget settings are responsible for the appearance and style of the widget: from the title style and legend configuration to the settings for mobile devices. 
-All of ThingsBoard widgets have the same basic settings, you can learn how to customize them [here](/docs/{{docsPrefix}}user-guide/dashboards/#basic-widget-settings).
+All of SENTIENT widgets have the same basic settings, you can learn how to customize them [here](/docs/{{docsPrefix}}user-guide/dashboards/#basic-widget-settings).
 
 ### Advanced widgets settings
 

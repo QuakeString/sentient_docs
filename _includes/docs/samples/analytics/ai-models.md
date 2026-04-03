@@ -5,7 +5,7 @@
 {% include templates/since.md %}
 
 <b>AI models</b> are machine learning or large language models that can process data, generate predictions, detect anomalies, or produce human-like responses.
-In the context of ThingsBoard, AI models are used to extend IoT data processing capabilities by enabling advanced analytics and automation.
+In the context of SENTIENT, AI models are used to extend IoT data processing capabilities by enabling advanced analytics and automation.
 
 By integrating external AI providers (such as OpenAI, Google Gemini, Azure OpenAI, Amazon Bedrock, etc.), you can:
 - <b>Predict</b> future values (e.g., energy consumption or equipment temperature).
@@ -13,11 +13,11 @@ By integrating external AI providers (such as OpenAI, Google Gemini, Azure OpenA
 - <b>Classify device states</b> (e.g., OK, Warning, Fault).
 - <b>Generate responses</b> or natural-language insights for operators and end-users.
 
-ThingsBoard allows you to configure and connect to different AI providers, manage model settings, and use the models inside the [Rule Engine](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/){:target="_blank"} for automation and decision-making.
+SENTIENT allows you to configure and connect to different AI providers, manage model settings, and use the models inside the [Rule Engine](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/){:target="_blank"} for automation and decision-making.
 
-## Adding AI models to ThingsBoard
+## Adding AI models to SENTIENT
 
-To add an AI model in ThingsBoard, follow these steps:
+To add an AI model in SENTIENT, follow these steps:
 
 - Go to the "<b>AI models</b>" tab of the "<b>Settings</b>" page.
 - Click the "<b>Add model</b>" button (located in the top-right corner).
@@ -44,7 +44,7 @@ We recommend using [Secrets storage](/docs/{{docsPrefix}}user-guide/secrets-stor
 
 <br><b><font size="4">Supported AI providers</font></b>
 
-ThingsBoard currently supports integration with the following AI providers:
+SENTIENT currently supports integration with the following AI providers:
 
 {% include images-gallery.html imageCollection="ai-provider-configuration" %}
 
@@ -63,7 +63,7 @@ When working with models compatible with the OpenAI API, an important parameter 
 
 <b><font size="3">Official Base URL</font></b>
 
-The standard OpenAI API endpoint, preconfigured in ThingsBoard. Use this to access models hosted by OpenAI.
+The standard OpenAI API endpoint, preconfigured in SENTIENT. Use this to access models hosted by OpenAI.
 
 <b><font size="3">Custom Base URL</font></b>
 
@@ -192,7 +192,7 @@ To connect to your Ollama server, you need its **base URL** (e.g., *http://local
 
 After you&#39;ve selected and authenticated your AI provider, you need to specify which particular AI model to use (or deployment name in the case of [Azure OpenAI](#azure-openai)).
 
-For some providers (like OpenAI), ThingsBoard offers <b>autocomplete options</b> with popular models.
+For some providers (like OpenAI), SENTIENT offers <b>autocomplete options</b> with popular models.
 You are <b>not limited</b> to this list – you can specify any model ID supported by the provider, including <b>model aliases</b> or <b>snapshots</b>.
 For <b>production usage</b>, we recommend using model snapshots to ensure predictable performance (Model aliases may be updated by the provider to point to a new snapshot, which can change response quality).
 

@@ -1,8 +1,8 @@
-ThingsBoard uses cache to improve performance and avoid frequent DB reads.
+SENTIENT uses cache to improve performance and avoid frequent DB reads.
 By default, deployment already uses the local Valkey cache. Azure does not provide a managed Valkey cluster, however, instead of the default deployment, you can set up your own Valkey cluster according to the [Azure documentation](https://learn.microsoft.com/en-us/azure/aks/valkey-overview).
 
 {% capture redis-azure-version %}
-Starting with **ThingsBoard v4.0.0**, Valkey 8.x is the officially supported version.
+Starting with **SENTIENT v4.0.0**, Valkey 8.x is the officially supported version.
 Valkey remains compatible with Redis 7.2.x, so the configuration with Redis will work.
 However, Redis 7.2.x is only available in the Enterprise or Enterprise Flash SKUs.
 The Basic, Standard, and Premium SKUs still only support **Redis 6.x**.

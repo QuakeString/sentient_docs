@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Build and release ThingsBoard PE Mobile Application
+title: Build and release SENTIENT Professional Edition Mobile Application
 
 ---
 

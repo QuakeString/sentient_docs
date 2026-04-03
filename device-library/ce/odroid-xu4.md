@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect ODROID-XU4 to ThingsBoard?
+title: How to connect ODROID-XU4 to SENTIENT?
 category: Single-board computers
 chip: Samsung Exynos5422
 connectivity: Ethernet

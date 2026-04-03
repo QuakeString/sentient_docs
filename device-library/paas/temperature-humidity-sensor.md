@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Temperature and Humidity Sensor to ThingsBoard?
+title: How to connect Temperature and Humidity Sensor to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: Lansitec

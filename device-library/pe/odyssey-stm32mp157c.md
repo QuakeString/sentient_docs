@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect ODYSSEY STM32MP157C to ThingsBoard?
+title: How to connect ODYSSEY STM32MP157C to SENTIENT?
 category: Single-board computers
 chip: STM32MP157C
 connectivity: [Ethernet, WIFI, Bluetooth]

@@ -1,11 +1,11 @@
 #### Step 1. Launch EC2 instance. 
 
-To run clear test lets spin up two instances for ThingsBoard and for performance tool.
+To run clear test lets spin up two instances for SENTIENT and for performance tool.
 Operating system is Linux, image *Ubuntu 20 LTS*. Architecture x64 or ARM depending on instance type.
 Assign Elastic IP to get permanent access to the instances between restarts.
-We need at least two instances: first is to run ThingsBoard itself and second is to run the Performance test application.   
+We need at least two instances: first is to run SENTIENT itself and second is to run the Performance test application.   
 
-![ThingsBoard and Performance test instances](/images/reference/performance-aws-instances/method/setup/performance_test_aws_instances.png "ThingsBoard and Performance test instances")
+![SENTIENT and Performance test instances](/images/reference/performance-aws-instances/method/setup/performance_test_aws_instances.png "SENTIENT and Performance test instances")
 
 At the beginning, the firewall does not allow to connect your instances. Lest open the necessary ports to enable connectivity between instances and your admin machine.  
 
@@ -31,7 +31,7 @@ Host tb
 ```
 {: .copy-code}
 
-To connect ThingsBoard instance simply use the command below:
+To connect SENTIENT instance simply use the command below:
 ```bash
 ssh tb
 ```
@@ -40,7 +40,7 @@ ssh tb
 
 We are going use docker and docker-compose to run performance tests under non-root users. 
 To save the setup time and make the environment the same all the time we provide an all-in-one setup script below.  
-Login with ssh and run the commands both on ThingsBoard and Performance test instances:
+Login with ssh and run the commands both on SENTIENT and Performance test instances:
 
 ```bash
 sudo apt update
@@ -57,7 +57,7 @@ docker run hello-world
 {: .copy-code}
 
 
-#### Step 4. Launch ThingsBoard and third-party components using docker-compose
+#### Step 4. Launch SENTIENT and third-party components using docker-compose
 
 Download the docker-compose file to the work directory. 
 The docker-compose file is listed in the "How to reproduce the test" section that corresponds to your performance test [scenario](/docs/{{docsPrefix}}reference/performance-comparison/#test-summary).

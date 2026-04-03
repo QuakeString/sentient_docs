@@ -1,4 +1,4 @@
-{%- assign platform = "ThingsBoard CE" -%}
+{%- assign platform = "SENTIENT" -%}
 {%- assign current_version = include.version -%}
 {%- assign current_version_with_platform = current_version -%}
 {%- assign previous_version = include.prev_version -%}
@@ -9,7 +9,7 @@
 {%- assign x_status = include.x -%}
 
 {% if docsPrefix == "pe/" %}
-{%- assign platform = "ThingsBoard PE" -%}
+{%- assign platform = "SENTIENT Professional Edition" -%}
 {%- assign current_version_with_platform = current_version | append: "pe" -%}
 {% endif %}
 
@@ -54,9 +54,9 @@
 {%- assign prev_version_label = prev_version_label | append: "PE" -%}
 {% endif %}
 
-{% assign platform_hash = "#upgrading-thingsboard-ce-to-" %}
+{% assign platform_hash = "#upgrading-sentient-ce-to-" %}
 {% if docsPrefix == "pe/" %}
-{%- assign platform_hash = "#upgrading-thingsboard-pe-to-" -%}
+{%- assign platform_hash = "#upgrading-sentient-pe-to-" -%}
 {% endif %}
 
 {%- if use_external_link -%}
@@ -68,10 +68,10 @@
 {% capture difference %}
 **NOTE:**
 {% if curr_major > "4" or (curr_major == "4" and curr_minor >= "2") %}
-{% if include.is_latest_patch == "true" %}{% if prev_version contains ".x" %}{% assign prev_version_plus = prev_version | replace: ".x", "+" %}{% else %}{% assign prev_version_plus = prev_version | append: "+" %}{% endif %}These upgrade steps are applicable for ThingsBoard version {{ prev_version_plus }}.{% else %}These upgrade steps are applicable for ThingsBoard version {{ prev_version }}{% if patch_status == "true" %} or any {{ base_version }} patch{% endif %}.{% endif %}
+{% if include.is_latest_patch == "true" %}{% if prev_version contains ".x" %}{% assign prev_version_plus = prev_version | replace: ".x", "+" %}{% else %}{% assign prev_version_plus = prev_version | append: "+" %}{% endif %}These upgrade steps are applicable for SENTIENT version {{ prev_version_plus }}.{% else %}These upgrade steps are applicable for SENTIENT version {{ prev_version }}{% if patch_status == "true" %} or any {{ base_version }} patch{% endif %}.{% endif %}
 In order to upgrade to {{ current_version_with_platform | upcase }} you need to [**upgrade to {{ prev_version }} first**]({{ prev_version_href }}).
 {% else %}
-These upgrade steps are applicable for ThingsBoard version {{ prev_version_label }}{% if applicable_versions %}{% assign versions = applicable_versions | split: "," %}{% for v in versions %} and ThingsBoard version {{ v | strip }}{% endfor %}{% endif %}.
+These upgrade steps are applicable for SENTIENT version {{ prev_version_label }}{% if applicable_versions %}{% assign versions = applicable_versions | split: "," %}{% for v in versions %} and SENTIENT version {{ v | strip }}{% endfor %}{% endif %}.
 In order to upgrade to {{ current_version_with_platform | upcase }} you need to [**upgrade to {{ prev_version_label }} first**]({{ prev_version_href }}).
 {% endif %}
 {% endcapture %}
@@ -86,19 +86,19 @@ In order to upgrade to {{ current_version_with_platform | upcase }} you need to 
 
 {% include templates/install/upgrade-version-warning.md version=include.raw_version known_vulnerabilities=include.known_vulnerabilities %}
 
-{% assign docker-compose-repo-link = "https://github.com/thingsboard/" %}
+{% assign docker-compose-repo-link = "https://github.com/sentient/" %}
 
 {% if docsPrefix == "pe/" %}
-{% assign docker-compose-repo-link = docker-compose-repo-link | append: "thingsboard-pe-docker-compose/tree/release-" | append: current_version %}
+{% assign docker-compose-repo-link = docker-compose-repo-link | append: "sentient-pe-docker-compose/tree/release-" | append: current_version %}
 {% else %}
-{% assign docker-compose-repo-link = docker-compose-repo-link | append: "thingsboard/tree/v" | append: current_version | append: "/docker" %}
+{% assign docker-compose-repo-link = docker-compose-repo-link | append: "sentient/tree/v" | append: current_version | append: "/docker" %}
 {% endif %}
 
 {% capture update_manifests_note %}
-We strongly recommend that you also update your Docker Compose deployment manifests to [**the corresponding version from GitHub repository**]({{ docker-compose-repo-link }}) with every ThingsBoard upgrade. This ensures your ThingsBoard service runs with the latest best-practice parameters and configurations, while also guarantees that all required services are correctly deployed to support the newest features introduced in the release.
+We strongly recommend that you also update your Docker Compose deployment manifests to [**the corresponding version from GitHub repository**]({{ docker-compose-repo-link }}) with every SENTIENT upgrade. This ensures your SENTIENT service runs with the latest best-practice parameters and configurations, while also guarantees that all required services are correctly deployed to support the newest features introduced in the release.
 <br>
 <br>
-If you are running older releases of ThingsBoard - be aware that the manifests in `master` branch of the repository may contain configurations for features that are not available in your specific version. Always ensure that manifests are compatible with your target ThingsBoard version while merging deployment files.
+If you are running older releases of SENTIENT - be aware that the manifests in `master` branch of the repository may contain configurations for features that are not available in your specific version. Always ensure that manifests are compatible with your target SENTIENT version while merging deployment files.
 {% endcapture %}
 {% include templates/warn-banner.md content=update_manifests_note %}
 

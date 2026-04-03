@@ -96,7 +96,7 @@
 		<tr>
 			<td>server.ssl.credentials.keystore.store_password</td>
 			<td>SSL_KEY_STORE_PASSWORD</td>
-			<td>thingsboard_mqtt_broker</td>
+			<td>sentient_mqtt_broker</td>
 			<td> Password used to access the key store</td>
 		</tr>
 		<tr>
@@ -108,7 +108,7 @@
 		<tr>
 			<td>server.ssl.credentials.keystore.key_password</td>
 			<td>SSL_KEY_PASSWORD</td>
-			<td>thingsboard_mqtt_broker</td>
+			<td>sentient_mqtt_broker</td>
 			<td> Password used to access the key</td>
 		</tr>
 	</tbody>
@@ -141,14 +141,14 @@
 			<td>listener.write_buffer_high_water_mark</td>
 			<td>NETTY_WRITE_BUFFER_HIGH_WATER_MARK</td>
 			<td>64</td>
-			<td> The threshold (in KB) where Netty considers the channel non-writable. When the limit reached, TBMQ stops delivering data to subscriber until the channel is writable again.
+			<td> The threshold (in KB) where Netty considers the channel non-writable. When the limit reached, ST-RMQTT stops delivering data to subscriber until the channel is writable again.
  Non-persistent clients lose data in this case</td>
 		</tr>
 		<tr>
 			<td>listener.write_buffer_low_water_mark</td>
 			<td>NETTY_WRITE_BUFFER_LOW_WATER_MARK</td>
 			<td>32</td>
-			<td> The threshold (in KB) where Netty considers the channel writable again. When the limit reached, TBMQ starts delivering data to subscriber</td>
+			<td> The threshold (in KB) where Netty considers the channel writable again. When the limit reached, ST-RMQTT starts delivering data to subscriber</td>
 		</tr>
 		<tr>
 			<td>listener.so_receive_buffer</td>
@@ -568,7 +568,7 @@
 			<td>queue.msg-all.consumers-count</td>
 			<td>TB_MSG_ALL_CONSUMERS_COUNT</td>
 			<td>4</td>
-			<td> Number of parallel consumers for 'tbmq.msg.all' topic. Should not be more than the number of partitions in topic</td>
+			<td> Number of parallel consumers for 'st-rmqtt.msg.all' topic. Should not be more than the number of partitions in topic</td>
 		</tr>
 		<tr>
 			<td>queue.msg-all.threads-count</td>
@@ -580,19 +580,19 @@
 			<td>queue.msg-all.poll-interval</td>
 			<td>TB_MSG_ALL_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.msg.all' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.msg.all' topic</td>
 		</tr>
 		<tr>
 			<td>queue.msg-all.pack-processing-timeout</td>
 			<td>TB_MSG_ALL_PACK_PROCESSING_TIMEOUT</td>
 			<td>20000</td>
-			<td> Timeout in milliseconds for processing the pack of messages from 'tbmq.msg.all' topic</td>
+			<td> Timeout in milliseconds for processing the pack of messages from 'st-rmqtt.msg.all' topic</td>
 		</tr>
 		<tr>
 			<td>queue.msg-all.ack-strategy.type</td>
 			<td>TB_MSG_ALL_ACK_STRATEGY_TYPE</td>
 			<td>SKIP_ALL</td>
-			<td> Processing strategy for 'tbmq.msg.all' topic. Can be: SKIP_ALL, RETRY_ALL</td>
+			<td> Processing strategy for 'st-rmqtt.msg.all' topic. Can be: SKIP_ALL, RETRY_ALL</td>
 		</tr>
 		<tr>
 			<td>queue.msg-all.ack-strategy.retries</td>
@@ -648,7 +648,7 @@
 			<td>queue.device-persisted-msg.consumers-count</td>
 			<td>TB_DEVICE_PERSISTED_MSG_CONSUMERS_COUNT</td>
 			<td>3</td>
-			<td> Number of parallel consumers for 'tbmq.msg.persisted' topic. Should not be more than the number of partitions in topic</td>
+			<td> Number of parallel consumers for 'st-rmqtt.msg.persisted' topic. Should not be more than the number of partitions in topic</td>
 		</tr>
 		<tr>
 			<td>queue.device-persisted-msg.threads-count</td>
@@ -660,13 +660,13 @@
 			<td>queue.device-persisted-msg.poll-interval</td>
 			<td>TB_DEVICE_PERSISTED_MSG_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.msg.persisted' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.msg.persisted' topic</td>
 		</tr>
 		<tr>
 			<td>queue.device-persisted-msg.pack-processing-timeout</td>
 			<td>TB_DEVICE_PERSISTED_MSG_PACK_PROCESSING_TIMEOUT</td>
 			<td>20000</td>
-			<td> Timeout in milliseconds for processing the pack of messages from 'tbmq.msg.persisted' topic</td>
+			<td> Timeout in milliseconds for processing the pack of messages from 'st-rmqtt.msg.persisted' topic</td>
 		</tr>
 		<tr>
 			<td>queue.device-persisted-msg.ack-strategy.type</td>
@@ -690,43 +690,43 @@
 			<td>queue.retained-msg.poll-interval</td>
 			<td>TB_RETAINED_MSG_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.msg.retained' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.msg.retained' topic</td>
 		</tr>
 		<tr>
 			<td>queue.retained-msg.acknowledge-wait-timeout-ms</td>
 			<td>TB_RETAINED_MSG_ACK_WAIT_TIMEOUT_MS</td>
 			<td>500</td>
-			<td> Interval in milliseconds to wait for system messages to be delivered to 'tbmq.msg.retained' topic</td>
+			<td> Interval in milliseconds to wait for system messages to be delivered to 'st-rmqtt.msg.retained' topic</td>
 		</tr>
 		<tr>
 			<td>queue.client-session.poll-interval</td>
 			<td>TB_CLIENT_SESSION_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.client.session' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.client.session' topic</td>
 		</tr>
 		<tr>
 			<td>queue.client-session.acknowledge-wait-timeout-ms</td>
 			<td>TB_CLIENT_SESSION_ACK_WAIT_TIMEOUT_MS</td>
 			<td>500</td>
-			<td> Interval in milliseconds to wait for system messages to be delivered to 'tbmq.client.session' topic</td>
+			<td> Interval in milliseconds to wait for system messages to be delivered to 'st-rmqtt.client.session' topic</td>
 		</tr>
 		<tr>
 			<td>queue.client-subscriptions.poll-interval</td>
 			<td>TB_CLIENT_SUBSCRIPTIONS_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.client.subscriptions' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.client.subscriptions' topic</td>
 		</tr>
 		<tr>
 			<td>queue.client-subscriptions.acknowledge-wait-timeout-ms</td>
 			<td>TB_CLIENT_SUBSCRIPTIONS_ACK_WAIT_TIMEOUT_MS</td>
 			<td>500</td>
-			<td> Interval in milliseconds to wait for system messages to be delivered to 'tbmq.client.subscriptions' topic</td>
+			<td> Interval in milliseconds to wait for system messages to be delivered to 'st-rmqtt.client.subscriptions' topic</td>
 		</tr>
 		<tr>
 			<td>queue.client-session-event.consumers-count</td>
 			<td>TB_CLIENT_SESSION_EVENT_CONSUMERS_COUNT</td>
 			<td>2</td>
-			<td> Number of parallel consumers for `tbmq.client.session.event.request` topic</td>
+			<td> Number of parallel consumers for `st-rmqtt.client.session.event.request` topic</td>
 		</tr>
 		<tr>
 			<td>queue.client-session-event.max-pending-requests</td>
@@ -738,13 +738,13 @@
 			<td>queue.client-session-event.poll-interval</td>
 			<td>TB_CLIENT_SESSION_EVENT_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.client.session.event.request' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.client.session.event.request' topic</td>
 		</tr>
 		<tr>
 			<td>queue.client-session-event.batch-wait-timeout-ms</td>
 			<td>TB_CLIENT_SESSION_EVENT_BATCH_WAIT_MS</td>
 			<td>2000</td>
-			<td> Max interval in milliseconds to process 'tbmq.client.session.event.request' messages after consuming them</td>
+			<td> Max interval in milliseconds to process 'st-rmqtt.client.session.event.request' messages after consuming them</td>
 		</tr>
 		<tr>
 			<td>queue.client-session-event-response.response-sender-threads</td>
@@ -756,7 +756,7 @@
 			<td>queue.client-session-event-response.poll-interval</td>
 			<td>TB_CLIENT_SESSION_EVENT_RESPONSE_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.client.session.event.response' topics</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.client.session.event.response' topics</td>
 		</tr>
 		<tr>
 			<td>queue.client-session-event-response.max-request-timeout</td>
@@ -774,13 +774,13 @@
 			<td>queue.disconnect-client-command.poll-interval</td>
 			<td>TB_DISCONNECT_CLIENT_COMMAND_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.client.disconnect' topics</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.client.disconnect' topics</td>
 		</tr>
 		<tr>
 			<td>queue.persisted-downlink-msg.consumers-count</td>
 			<td>TB_PERSISTED_DOWNLINK_MSG_CONSUMERS_COUNT</td>
 			<td>2</td>
-			<td> Number of parallel consumers for `tbmq.msg.downlink.persisted` topics</td>
+			<td> Number of parallel consumers for `st-rmqtt.msg.downlink.persisted` topics</td>
 		</tr>
 		<tr>
 			<td>queue.persisted-downlink-msg.threads-count</td>
@@ -792,13 +792,13 @@
 			<td>queue.persisted-downlink-msg.poll-interval</td>
 			<td>TB_PERSISTED_DOWNLINK_MSG_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.msg.downlink.persisted' topics</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.msg.downlink.persisted' topics</td>
 		</tr>
 		<tr>
 			<td>queue.basic-downlink-msg.consumers-count</td>
 			<td>TB_BASIC_DOWNLINK_MSG_CONSUMERS_COUNT</td>
 			<td>2</td>
-			<td> Number of parallel consumers for `tbmq.msg.downlink.basic` topics</td>
+			<td> Number of parallel consumers for `st-rmqtt.msg.downlink.basic` topics</td>
 		</tr>
 		<tr>
 			<td>queue.basic-downlink-msg.threads-count</td>
@@ -810,13 +810,13 @@
 			<td>queue.basic-downlink-msg.poll-interval</td>
 			<td>TB_BASIC_DOWNLINK_MSG_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.msg.downlink.basic' topics</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.msg.downlink.basic' topics</td>
 		</tr>
 		<tr>
 			<td>queue.application-removed-event.poll-interval</td>
 			<td>TB_APPLICATION_REMOVED_EVENT_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.sys.app.removed' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.sys.app.removed' topic</td>
 		</tr>
 		<tr>
 			<td>queue.application-removed-event.processing.cron</td>
@@ -834,37 +834,37 @@
 			<td>queue.historical-data-total.poll-interval</td>
 			<td>TB_HISTORICAL_DATA_TOTAL_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.sys.historical.data' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.sys.historical.data' topic</td>
 		</tr>
 		<tr>
 			<td>queue.integration-uplink.poll-interval</td>
 			<td>TB_IE_UPLINK_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.ie.uplink' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.ie.uplink' topic</td>
 		</tr>
 		<tr>
 			<td>queue.integration-uplink-notifications.poll-interval</td>
 			<td>TB_IE_UPLINK_NOTIFICATIONS_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.ie.uplink.notifications' topics</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.ie.uplink.notifications' topics</td>
 		</tr>
 		<tr>
 			<td>queue.internode-notifications.poll-interval</td>
 			<td>TB_NODE_NOTIFICATION_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.sys.internode.notifications' topics</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.sys.internode.notifications' topics</td>
 		</tr>
 		<tr>
 			<td>queue.blocked-client.poll-interval</td>
 			<td>TB_BLOCKED_CLIENT_POLL_INTERVAL</td>
 			<td>100</td>
-			<td> Interval in milliseconds to poll messages from 'tbmq.client.blocked' topic</td>
+			<td> Interval in milliseconds to poll messages from 'st-rmqtt.client.blocked' topic</td>
 		</tr>
 		<tr>
 			<td>queue.blocked-client.acknowledge-wait-timeout-ms</td>
 			<td>TB_BLOCKED_CLIENT_ACK_WAIT_TIMEOUT_MS</td>
 			<td>500</td>
-			<td> Interval in milliseconds to wait for system messages to be delivered to 'tbmq.client.blocked' topic</td>
+			<td> Interval in milliseconds to wait for system messages to be delivered to 'st-rmqtt.client.blocked' topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.bootstrap.servers</td>
@@ -876,11 +876,11 @@
 			<td>queue.kafka.enable-topic-deletion</td>
 			<td>TB_KAFKA_ENABLE_TOPIC_DELETION</td>
 			<td>true</td>
-			<td> Controls whether TBMQ is allowed to delete Kafka topics that were created for
+			<td> Controls whether ST-RMQTT is allowed to delete Kafka topics that were created for
  Application MQTT Clients or Application Shared subscriptions.
- When set to 'true', TBMQ may automatically remove topics during cleanup
+ When set to 'true', ST-RMQTT may automatically remove topics during cleanup
  (for example, when an Application client or shared subscription is deleted).
- When set to 'false', TBMQ will skip topic deletions and simply stop using them.
+ When set to 'false', ST-RMQTT will skip topic deletions and simply stop using them.
  This helps prevent accidental data loss in production environments</td>
 		</tr>
 		<tr>
@@ -1015,44 +1015,44 @@
 		<tr>
 			<td>queue.kafka.msg-all.topic</td>
 			<td>TB_KAFKA_MSG_ALL_TOPIC</td>
-			<td>tbmq.msg.all</td>
+			<td>st-rmqtt.msg.all</td>
 			<td> Topic for persisting incoming PUBLISH messages</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.msg-all.topic-properties</td>
 			<td>TB_KAFKA_MSG_ALL_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:2147483648;partitions:16;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.msg.all` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.msg.all` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.msg-all.additional-consumer-config</td>
 			<td>TB_KAFKA_MSG_ALL_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.msg.all` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.msg.all` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.msg-all.additional-producer-config</td>
 			<td>TB_KAFKA_MSG_ALL_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.msg.all` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.msg.all` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.application-persisted-msg.topic-properties</td>
 			<td>TB_KAFKA_APP_PERSISTED_MSG_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.msg.app` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.msg.app` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.application-persisted-msg.additional-consumer-config</td>
 			<td>TB_KAFKA_APP_PERSISTED_MSG_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td>max.poll.records:200</td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.msg.app` topics</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.msg.app` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.application-persisted-msg.additional-producer-config</td>
 			<td>TB_KAFKA_APP_PERSISTED_MSG_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.msg.app` topics</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.msg.app` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.application-persisted-msg.shared-topic.topic-properties</td>
@@ -1075,440 +1075,440 @@
 		<tr>
 			<td>queue.kafka.device-persisted-msg.topic</td>
 			<td>TB_KAFKA_DEVICE_PERSISTED_MSG_TOPIC</td>
-			<td>tbmq.msg.persisted</td>
+			<td>st-rmqtt.msg.persisted</td>
 			<td> Topic for persisting messages related to Device clients before saving them in Database</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.device-persisted-msg.topic-properties</td>
 			<td>TB_KAFKA_DEVICE_PERSISTED_MSG_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:12;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.msg.persisted` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.msg.persisted` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.device-persisted-msg.additional-consumer-config</td>
 			<td>TB_KAFKA_DEVICE_PERSISTED_MSG_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.msg.persisted` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.msg.persisted` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.device-persisted-msg.additional-producer-config</td>
 			<td>TB_KAFKA_DEVICE_PERSISTED_MSG_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.msg.persisted` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.msg.persisted` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.retained-msg.topic</td>
 			<td>TB_KAFKA_RETAINED_MSG_TOPIC</td>
-			<td>tbmq.msg.retained</td>
+			<td>st-rmqtt.msg.retained</td>
 			<td> Topic for retained messages</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.retained-msg.topic-properties</td>
 			<td>TB_KAFKA_RETAINED_MSG_TOPIC_PROPERTIES</td>
 			<td>segment.bytes:26214400;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.msg.retained` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.msg.retained` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.retained-msg.additional-consumer-config</td>
 			<td>TB_KAFKA_RETAINED_MSG_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.msg.retained` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.msg.retained` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.retained-msg.additional-producer-config</td>
 			<td>TB_KAFKA_RETAINED_MSG_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td>retries:3</td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.msg.retained` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.msg.retained` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session.topic</td>
 			<td>TB_KAFKA_CLIENT_SESSION_TOPIC</td>
-			<td>tbmq.client.session</td>
+			<td>st-rmqtt.client.session</td>
 			<td> Topic for persisting client sessions</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session.topic-properties</td>
 			<td>TB_KAFKA_CLIENT_SESSION_TOPIC_PROPERTIES</td>
 			<td>segment.bytes:26214400;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.client.session` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.client.session` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session.additional-consumer-config</td>
 			<td>TB_KAFKA_CLIENT_SESSION_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.client.session` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.client.session` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session.additional-producer-config</td>
 			<td>TB_KAFKA_CLIENT_SESSION_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td>retries:3</td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.client.session` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.client.session` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-subscriptions.topic</td>
 			<td>TB_KAFKA_CLIENT_SUBSCRIPTIONS_TOPIC</td>
-			<td>tbmq.client.subscriptions</td>
+			<td>st-rmqtt.client.subscriptions</td>
 			<td> Topic for persisting client subscriptions</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-subscriptions.topic-properties</td>
 			<td>TB_KAFKA_CLIENT_SUBSCRIPTIONS_TOPIC_PROPERTIES</td>
 			<td>segment.bytes:26214400;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.client.subscriptions` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.client.subscriptions` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-subscriptions.additional-consumer-config</td>
 			<td>TB_KAFKA_CLIENT_SUBSCRIPTIONS_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.client.subscriptions` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.client.subscriptions` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-subscriptions.additional-producer-config</td>
 			<td>TB_KAFKA_CLIENT_SUBSCRIPTIONS_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td>retries:3</td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.client.subscriptions` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.client.subscriptions` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session-event.topic</td>
 			<td>TB_KAFKA_CLIENT_SESSION_EVENT_TOPIC</td>
-			<td>tbmq.client.session.event.request</td>
+			<td>st-rmqtt.client.session.event.request</td>
 			<td> Topic for sending client session event requests</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session-event.topic-properties</td>
 			<td>TB_KAFKA_CLIENT_SESSION_EVENT_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:24;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.client.session.event.request` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.client.session.event.request` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session-event.additional-consumer-config</td>
 			<td>TB_KAFKA_CLIENT_SESSION_EVENT_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td>max.poll.records:1000</td>
-			<td> Additional Kafka consumer configs separated by semicolon for ``tbmq.client.session.event.request`` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for ``st-rmqtt.client.session.event.request`` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session-event.additional-producer-config</td>
 			<td>TB_KAFKA_CLIENT_SESSION_EVENT_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for ``tbmq.client.session.event.request`` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for ``st-rmqtt.client.session.event.request`` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session-event-response.topic-prefix</td>
 			<td>TB_KAFKA_CLIENT_SESSION_EVENT_RESPONSE_TOPIC_PREFIX</td>
-			<td>tbmq.client.session.event.response</td>
+			<td>st-rmqtt.client.session.event.response</td>
 			<td> Prefix for topics for sending client session event responses to Broker nodes</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session-event-response.topic-properties</td>
 			<td>TB_KAFKA_CLIENT_SESSION_EVENT_RESPONSE_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.client.session.event.response` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.client.session.event.response` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session-event-response.additional-consumer-config</td>
 			<td>TB_KAFKA_CLIENT_SESSION_EVENT_RESPONSE_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.client.session.event.response` topics</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.client.session.event.response` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.client-session-event-response.additional-producer-config</td>
 			<td>TB_KAFKA_CLIENT_SESSION_EVENT_RESPONSE_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.client.session.event.response` topics</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.client.session.event.response` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.disconnect-client-command.topic-prefix</td>
 			<td>TB_KAFKA_DISCONNECT_CLIENT_COMMAND_TOPIC_PREFIX</td>
-			<td>tbmq.client.disconnect</td>
+			<td>st-rmqtt.client.disconnect</td>
 			<td> Prefix for topics for sending disconnect client commands to Broker nodes</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.disconnect-client-command.topic-properties</td>
 			<td>TB_KAFKA_DISCONNECT_CLIENT_COMMAND_RESPONSE_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.client.disconnect` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.client.disconnect` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.disconnect-client-command.additional-consumer-config</td>
 			<td>TB_KAFKA_DISCONNECT_CLIENT_COMMAND_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.client.disconnect` topics</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.client.disconnect` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.disconnect-client-command.additional-producer-config</td>
 			<td>TB_KAFKA_DISCONNECT_CLIENT_COMMAND_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.client.disconnect` topics</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.client.disconnect` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.basic-downlink-msg.topic-prefix</td>
 			<td>TB_KAFKA_BASIC_DOWNLINK_MSG_TOPIC_PREFIX</td>
-			<td>tbmq.msg.downlink.basic</td>
+			<td>st-rmqtt.msg.downlink.basic</td>
 			<td> Prefix for topics for non-persistent Device messages that should be transferred to other Broker nodes</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.basic-downlink-msg.topic-properties</td>
 			<td>TB_KAFKA_BASIC_DOWNLINK_MSG_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:12;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.msg.downlink.basic` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.msg.downlink.basic` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.basic-downlink-msg.additional-consumer-config</td>
 			<td>TB_KAFKA_BASIC_DOWNLINK_MSG_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.msg.downlink.basic` topics</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.msg.downlink.basic` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.basic-downlink-msg.additional-producer-config</td>
 			<td>TB_KAFKA_BASIC_DOWNLINK_MSG_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td>batch.size:32768</td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.msg.downlink.basic` topics</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.msg.downlink.basic` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.persisted-downlink-msg.topic-prefix</td>
 			<td>TB_KAFKA_PERSISTED_DOWNLINK_MSG_TOPIC_PREFIX</td>
-			<td>tbmq.msg.downlink.persisted</td>
+			<td>st-rmqtt.msg.downlink.persisted</td>
 			<td> Prefix for topics for persistent Device messages that should be transferred to other Broker nodes</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.persisted-downlink-msg.topic-properties</td>
 			<td>TB_KAFKA_PERSISTED_DOWNLINK_MSG_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:12;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.msg.downlink.persisted` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.msg.downlink.persisted` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.persisted-downlink-msg.additional-consumer-config</td>
 			<td>TB_KAFKA_PERSISTED_DOWNLINK_MSG_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.msg.downlink.persisted` topics</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.msg.downlink.persisted` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.persisted-downlink-msg.additional-producer-config</td>
 			<td>TB_KAFKA_PERSISTED_DOWNLINK_MSG_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.msg.downlink.persisted` topics</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.msg.downlink.persisted` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.application-removed-event.topic</td>
 			<td>TB_KAFKA_APPLICATION_REMOVED_EVENT_TOPIC</td>
-			<td>tbmq.sys.app.removed</td>
+			<td>st-rmqtt.sys.app.removed</td>
 			<td> Topic for sending events to remove application topics when application clients are changed to be device clients</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.application-removed-event.topic-properties</td>
 			<td>TB_KAFKA_APPLICATION_REMOVED_EVENT_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.sys.app.removed` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.sys.app.removed` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.application-removed-event.additional-consumer-config</td>
 			<td>TB_KAFKA_APPLICATION_REMOVED_EVENT_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.sys.app.removed` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.sys.app.removed` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.application-removed-event.additional-producer-config</td>
 			<td>TB_KAFKA_APPLICATION_REMOVED_EVENT_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.sys.app.removed` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.sys.app.removed` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.historical-data-total.topic</td>
 			<td>TB_KAFKA_HISTORICAL_DATA_TOTAL_TOPIC</td>
-			<td>tbmq.sys.historical.data</td>
+			<td>st-rmqtt.sys.historical.data</td>
 			<td> Topic for sending historical data stats to be summed from each broker</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.historical-data-total.topic-properties</td>
 			<td>TB_KAFKA_HISTORICAL_DATA_TOTAL_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.sys.historical.data` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.sys.historical.data` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.historical-data-total.additional-consumer-config</td>
 			<td>TB_KAFKA_HISTORICAL_DATA_TOTAL_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.sys.historical.data` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.sys.historical.data` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.historical-data-total.additional-producer-config</td>
 			<td>TB_KAFKA_HISTORICAL_DATA_TOTAL_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.sys.historical.data` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.sys.historical.data` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.topic-prefix</td>
 			<td>TB_KAFKA_IE_DOWNLINK_TOPIC_PREFIX</td>
-			<td>tbmq.ie.downlink</td>
-			<td> Prefix for topics for sending integration configurations and validation requests from tbmq to integration executors</td>
+			<td>st-rmqtt.ie.downlink</td>
+			<td> Prefix for topics for sending integration configurations and validation requests from st-rmqtt to integration executors</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.http.topic-properties</td>
 			<td>TB_KAFKA_IE_DOWNLINK_HTTP_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:6;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.downlink.http` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.downlink.http` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.http.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_HTTP_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.downlink.http` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.downlink.http` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.http.additional-producer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_HTTP_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.downlink.http` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.downlink.http` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.kafka.topic-properties</td>
 			<td>TB_KAFKA_IE_DOWNLINK_KAFKA_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:6;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.downlink.kafka` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.downlink.kafka` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.kafka.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_KAFKA_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.downlink.kafka` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.downlink.kafka` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.kafka.additional-producer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_KAFKA_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.downlink.kafka` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.downlink.kafka` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.mqtt.topic-properties</td>
 			<td>TB_KAFKA_IE_DOWNLINK_MQTT_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:6;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.downlink.mqtt` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.downlink.mqtt` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.mqtt.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_MQTT_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.downlink.mqtt` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.downlink.mqtt` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-downlink.mqtt.additional-producer-config</td>
 			<td>TB_KAFKA_IE_DOWNLINK_MQTT_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.downlink.mqtt` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.downlink.mqtt` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink.topic</td>
 			<td>TB_KAFKA_IE_UPLINK_TOPIC</td>
-			<td>tbmq.ie.uplink</td>
-			<td> Topic for sending messages/events from integration executors to tbmq</td>
+			<td>st-rmqtt.ie.uplink</td>
+			<td> Topic for sending messages/events from integration executors to st-rmqtt</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink.topic-properties</td>
 			<td>TB_KAFKA_IE_UPLINK_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:6;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.uplink` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.uplink` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_UPLINK_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.uplink` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.uplink` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink.additional-producer-config</td>
 			<td>TB_KAFKA_IE_UPLINK_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.uplink` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.uplink` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink-notifications.topic-prefix</td>
 			<td>TB_KAFKA_IE_UPLINK_NOTIF_TOPIC_PREFIX</td>
-			<td>tbmq.ie.uplink.notifications</td>
-			<td> Prefix for topics for sending notifications or replies from integration executors to specific tbmq node</td>
+			<td>st-rmqtt.ie.uplink.notifications</td>
+			<td> Prefix for topics for sending notifications or replies from integration executors to specific st-rmqtt node</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink-notifications.topic-properties</td>
 			<td>TB_KAFKA_IE_UPLINK_NOTIF_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.ie.uplink.notifications` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.ie.uplink.notifications` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink-notifications.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_UPLINK_NOTIF_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.ie.uplink.notifications` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.ie.uplink.notifications` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-uplink-notifications.additional-producer-config</td>
 			<td>TB_KAFKA_IE_UPLINK_NOTIF_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.ie.uplink.notifications` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.ie.uplink.notifications` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-msg.topic-properties</td>
 			<td>TB_KAFKA_IE_MSG_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.msg.ie` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.msg.ie` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-msg.additional-consumer-config</td>
 			<td>TB_KAFKA_IE_MSG_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td>max.poll.records:50</td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.msg.ie` topics</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.msg.ie` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.integration-msg.additional-producer-config</td>
 			<td>TB_KAFKA_IE_MSG_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.msg.ie` topics</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.msg.ie` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.internode-notifications.topic-prefix</td>
 			<td>TB_KAFKA_INTERNODE_NOTIFICATIONS_TOPIC_PREFIX</td>
-			<td>tbmq.sys.internode.notifications</td>
+			<td>st-rmqtt.sys.internode.notifications</td>
 			<td> Prefix for topics for sending system notifications to Broker nodes</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.internode-notifications.topic-properties</td>
 			<td>TB_KAFKA_INTERNODE_NOTIFICATIONS_TOPIC_PROPERTIES</td>
 			<td>retention.ms:604800000;segment.bytes:26214400;retention.bytes:1048576000;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.sys.internode.notifications` topics</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.sys.internode.notifications` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.internode-notifications.additional-consumer-config</td>
 			<td>TB_KAFKA_INTERNODE_NOTIFICATIONS_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.sys.internode.notifications` topics</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.sys.internode.notifications` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.internode-notifications.additional-producer-config</td>
 			<td>TB_KAFKA_INTERNODE_NOTIFICATIONS_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.sys.internode.notifications` topics</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.sys.internode.notifications` topics</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.blocked-client.topic</td>
 			<td>TB_KAFKA_BLOCKED_CLIENT_TOPIC</td>
-			<td>tbmq.client.blocked</td>
+			<td>st-rmqtt.client.blocked</td>
 			<td> Topic for blocked clients</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.blocked-client.topic-properties</td>
 			<td>TB_KAFKA_BLOCKED_CLIENT_TOPIC_PROPERTIES</td>
 			<td>segment.bytes:26214400;partitions:1;replication.factor:1</td>
-			<td> Kafka topic properties separated by semicolon for `tbmq.client.blocked` topic</td>
+			<td> Kafka topic properties separated by semicolon for `st-rmqtt.client.blocked` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.blocked-client.additional-consumer-config</td>
 			<td>TB_KAFKA_BLOCKED_CLIENT_ADDITIONAL_CONSUMER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka consumer configs separated by semicolon for `tbmq.client.blocked` topic</td>
+			<td> Additional Kafka consumer configs separated by semicolon for `st-rmqtt.client.blocked` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.blocked-client.additional-producer-config</td>
 			<td>TB_KAFKA_BLOCKED_CLIENT_ADDITIONAL_PRODUCER_CONFIG</td>
 			<td></td>
-			<td> Additional Kafka producer configs separated by semicolon for `tbmq.client.blocked` topic</td>
+			<td> Additional Kafka producer configs separated by semicolon for `st-rmqtt.client.blocked` topic</td>
 		</tr>
 		<tr>
 			<td>queue.kafka.kafka-prefix</td>
@@ -1532,8 +1532,8 @@
 		<tr>
 			<td>service.type</td>
 			<td>TB_SERVICE_TYPE</td>
-			<td>tbmq</td>
-			<td> Microservice type. Allowed value: tbmq</td>
+			<td>st-rmqtt</td>
+			<td> Microservice type. Allowed value: st-rmqtt</td>
 		</tr>
 		<tr>
 			<td>service.id</td>
@@ -1999,7 +1999,7 @@
 		<tr>
 			<td>spring.datasource.url</td>
 			<td>SPRING_DATASOURCE_URL</td>
-			<td>jdbc:postgresql://localhost:5432/thingsboard_mqtt_broker</td>
+			<td>jdbc:postgresql://localhost:5432/sentient_mqtt_broker</td>
 			<td> Database connection URL</td>
 		</tr>
 		<tr>
@@ -2155,7 +2155,7 @@
 		<tr>
 			<td>security.jwt.tokenIssuer</td>
 			<td>JWT_TOKEN_ISSUER</td>
-			<td>thingsboard.io</td>
+			<td>docs.sentient.invenia.in</td>
 			<td> User JWT Token issuer</td>
 		</tr>
 		<tr>
@@ -2951,7 +2951,7 @@
 			<td>management.endpoint.health.show-details</td>
 			<td>HEALTH_SHOW_DETAILS</td>
 			<td>never</td>
-			<td> Controls whether health endpoint shows full component details (e.g., Redis, DB, TBMQ).
+			<td> Controls whether health endpoint shows full component details (e.g., Redis, DB, ST-RMQTT).
  Options:
  - 'never': always hide details (default if security is enabled).
  - 'when-authorized': show details only to authenticated users.
@@ -3010,17 +3010,17 @@
 		</tr>
 		<tr>
 			<td>license.secret</td>
-			<td>TBMQ_LICENSE_SECRET</td>
+			<td>ST-RMQTT_LICENSE_SECRET</td>
 			<td></td>
-			<td> License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)</td>
+			<td> License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)</td>
 		</tr>
 		<tr>
 			<td>license.instance_data_file</td>
-			<td>TBMQ_LICENSE_INSTANCE_DATA_FILE</td>
-			<td>tbmq-instance-license.data</td>
-			<td> Instance data is auto-generated and is used to identify a particular TBMQ Instance.
+			<td>ST-RMQTT_LICENSE_INSTANCE_DATA_FILE</td>
+			<td>st-rmqtt-instance-license.data</td>
+			<td> Instance data is auto-generated and is used to identify a particular ST-RMQTT Instance.
  Instance data is periodically updated and stored into the specified file which can be set to absolute or relative path.
- Please make sure that TBMQ process has access to the instance data file, in case you use absolute path</td>
+ Please make sure that ST-RMQTT process has access to the instance data file, in case you use absolute path</td>
 		</tr>
 	</tbody>
 </table>
@@ -3081,31 +3081,31 @@
 		<tr>
 			<td>swagger.title</td>
 			<td>SWAGGER_TITLE</td>
-			<td>TBMQ REST API</td>
+			<td>ST-RMQTT REST API</td>
 			<td> The title on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.description</td>
 			<td>SWAGGER_DESCRIPTION</td>
-			<td>TBMQ Professional Edition REST API documentation</td>
+			<td>ST-RMQTT Professional Edition REST API documentation</td>
 			<td> The description on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.name</td>
 			<td>SWAGGER_CONTACT_NAME</td>
-			<td>TBMQ team</td>
+			<td>ST-RMQTT team</td>
 			<td> The contact name on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.url</td>
 			<td>SWAGGER_CONTACT_URL</td>
-			<td>https://thingsboard.io/products/mqtt-broker/</td>
+			<td>https://docs.sentient.invenia.in/products/mqtt-broker/</td>
 			<td> The contact URL on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.email</td>
 			<td>SWAGGER_CONTACT_EMAIL</td>
-			<td>info@thingsboard.io</td>
+			<td>info@docs.sentient.invenia.in</td>
 			<td> The contact email on the API doc UI page</td>
 		</tr>
 		<tr>
@@ -3117,7 +3117,7 @@
 		<tr>
 			<td>swagger.license.url</td>
 			<td>SWAGGER_LICENSE_URL</td>
-			<td>https://github.com/thingsboard/tbmq/blob/main/LICENSE</td>
+			<td>https://github.com/sentient/st-rmqtt/blob/main/LICENSE</td>
 			<td> Link to the license body on the API doc UI page</td>
 		</tr>
 		<tr>
@@ -3129,7 +3129,7 @@
 		<tr>
 			<td>swagger.group_name</td>
 			<td>SWAGGER_GROUP_NAME</td>
-			<td>TBMQ</td>
+			<td>ST-RMQTT</td>
 			<td> The group name (definition) on the API doc UI page</td>
 		</tr>
 	</tbody>

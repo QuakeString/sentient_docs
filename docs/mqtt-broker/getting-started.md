@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
-title: Getting started with TBMQ
-description: TBMQ - broker for real Use Cases
+title: Getting started with ST-RMQTT
+description: ST-RMQTT - broker for real Use Cases
 
 broker-sessions:
     0:
@@ -38,6 +38,6 @@ check-connectivity:
 
 ---
 
-{% assign tbmqSuffix = "CE" %}
-{% assign tbmqSuffixLc = "ce" %}
+{% assign st-rmqttSuffix = "CE" %}
+{% assign st-rmqttSuffixLc = "ce" %}
 {% include docs/mqtt-broker/getting-started.md %}

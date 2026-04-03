@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: What is ThingsBoard Edge?
-description: ThingsBoard Edge features, FAQ
+title: What is SENTIENT GATEWAY?
+description: SENTIENT GATEWAY features, FAQ
 redirect_from: "/docs/user-guide/edge-computing/"
 ---
 

@@ -1,4 +1,4 @@
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 
 [Elastel EG500](https://www.elastel.com/products/industrial-raspberry-pi/eg500-edge-computing-gateway/){:target="_blank"} is an Industrial Edge Computing Gateway powered by **Raspberry Pi CM4**.
 
@@ -9,12 +9,12 @@ Designed for IIoT applications, it features:
 - **Connectivity options**: 4G, LoRa, Wi-Fi/BLE, WiFi HaLow (802.11ah WiFi)
 - **Enclosure**: Truly IPC-grade stability and ruggedness
 
-In this tutorial we will use Elastel EG500 as edge gateway to collect data from RS485 Modbus temperature & humidity sensor, also collect the DI status value and control the DO on/off which wiring a LED light. EG500 will connect to ThingsBoard for data visualizing and controlling the LED.
+In this tutorial we will use Elastel EG500 as edge gateway to collect data from RS485 Modbus temperature & humidity sensor, also collect the DI status value and control the DO on/off which wiring a LED light. EG500 will connect to SENTIENT for data visualizing and controlling the LED.
 
 ## Prerequisites
 
-To continue with this guide, you will need to have access to ThingsBoard Professional Edition. The easiest way is to use [ThingsBoard Cloud](https://thingsboard.io/installations/choose-region/){:target="_blank"} server.
-The alternative option is to install ThingsBoard using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+To continue with this guide, you will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
+The alternative option is to install SENTIENT using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 Also, you will require the following items:
 
@@ -28,15 +28,15 @@ Also, you will require the following items:
 ![wiring2](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/wiring2.png)
 
 
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
-**1. In our example, we use ThingsBoard Cloud**
+**1. In our example, we use SENTIENT Cloud**
 
-Create an account and then [log in](https://thingsboard.cloud/login){:target="_blank"}.
+Create an account and then [log in](https://sentient.cloud/login){:target="_blank"}.
 
-![thingsboard_login](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/thingsboard_login.png)
+![sentient_login](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/sentient_login.png)
 
-<br>**2. Create a device on ThingsBoard**
+<br>**2. Create a device on SENTIENT**
 
 Go to the "**Devices**" page of the "**Entities**" section, click on the "**+**" icon button in the top right corner of the table and then select "**Add new device**" from drop-down menu.
 
@@ -48,7 +48,7 @@ Go to the "**Devices**" page of the "**Entities**" section, click on the "**+**"
 
 <br>**4. Copy and save the Access token**
 
-It will be needed in further device configuration for connecting to ThingsBoard cloud.
+It will be needed in further device configuration for connecting to SENTIENT cloud.
 
 ![access token](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/access_token.png)
 
@@ -82,21 +82,21 @@ Go to **Data Collect** -> **South Devices** -> **IO**, add DI and DO Setting rul
 
 ![IO settings](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/io_settings.png)
 
-## Connect device to ThingsBoard
+## Connect device to SENTIENT
 
-Go to the **Data Collect** -> **North Apps** -> **Reporting Center** to configure the connection to ThingsBoard platform via MQTT.
+Go to the **Data Collect** -> **North Apps** -> **Reporting Center** to configure the connection to SENTIENT platform via MQTT.
 
-![Connect mqtt to ThingsBoard](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/mqtt_thingsboard_connect.png)
+![Connect mqtt to SENTIENT](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/mqtt_sentient_connect.png)
 
-> Note: If using custom MQTT credentials on ThingsBoard, set them under **Next: Credentials → MQTT Basic** during device creation, and use those here.
+> Note: If using custom MQTT credentials on SENTIENT, set them under **Next: Credentials → MQTT Basic** during device creation, and use those here.
 
 Refer to the [**ElastPro User Manual**](https://docs.elastel.com/docs/ElastPro/intro){:target="_blank"} for more detailed configuration options.
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
-Once connected, data will appear under the device&#39;s **latest telemetry** tab in ThingsBoard.
+Once connected, data will appear under the device&#39;s **latest telemetry** tab in SENTIENT.
 
-![check data on thingsboard](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/data_on_thingsboard.png)
+![check data on sentient](/images/devices-library/basic/single-board-computers/raspberry-pi-cm4/data_on_sentient.png)
 
 <br>You can also view the data on EG500&#39;s local dashboard.
 
@@ -135,8 +135,8 @@ Now we have a visualizing dashboard for displaying data and controlling the DO (
 
 ## Conclusion
 
-By following this guide, you can easily integrate Elastel IIoT gateways with ThingsBoard. Elastel’s easy-to-use web UI and ThingsBoard’s powerful visualization tools make the edge-to-cloud connection seamless.
+By following this guide, you can easily integrate Elastel IIoT gateways with SENTIENT. Elastel’s easy-to-use web UI and SENTIENT’s powerful visualization tools make the edge-to-cloud connection seamless.
 
 - Learn more about [**Elastel Edge Devices**](https://www.elastel.com/products/){:target="_blank"}.
-- Explore ThingsBoard [**Documentation**](https://thingsboard.io/docs/pe/){:target="_blank"} for advanced features and concepts.
+- Explore SENTIENT [**Documentation**](https://docs.sentient.invenia.in/docs/pe/){:target="_blank"} for advanced features and concepts.
 {% include add-device-banner.liquid %}

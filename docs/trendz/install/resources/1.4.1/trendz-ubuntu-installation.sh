@@ -1,1 +1,1 @@
-sudo dpkg -i trendz-1.4.1.deb
+sudo dpkg -i sentient-analytics-1.4.1.deb

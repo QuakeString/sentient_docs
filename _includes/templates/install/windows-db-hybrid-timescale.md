@@ -1,6 +1,6 @@
 {% capture hybrid-info %}
-ThingsBoard team recommends using Timescale database only for companies that already use TimescaleDB in production.
-In this case, ThingsBoard will be storing timeseries data in TimescaleDB Hypertable while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
+SENTIENT team recommends using Timescale database only for companies that already use TimescaleDB in production.
+In this case, SENTIENT will be storing timeseries data in TimescaleDB Hypertable while continue to use PostgreSQL for main entities (devices/assets/dashboards/customers).  
 {% endcapture %}
 {% include templates/info-banner.md content=hybrid-info %}
 
@@ -11,22 +11,22 @@ Download the installation file (PostgreSQL 15 or newer releases) [here](https://
 During PostgreSQL installation, you will be prompted for superuser (postgres) password.
 Don't forget this password. It will be used later. For simplicity, we will substitute it with "postgres".
 
-##### Create ThingsBoard Database
+##### Create SENTIENT Database
 
 Once installed, launch the "pgAdmin" software and login as superuser (postgres). 
-Open your server and create database "thingsboard" with owner "postgres".
+Open your server and create database "sentient" with owner "postgres".
 
 ##### TimescaleDB Installation
 
 {% include templates/install/timescale-windows-install.md %}
 
-##### ThingsBoard Configuration
+##### SENTIENT Configuration
 
 Open the Notepad or other editor as administrator user (right click on the app icon and select "Run as administrator").  
 Open the following file for editing (select "All Files" instead of "Text Documents" in file choosing dialog, the encoding is UTF-8):
 
 ```text 
-C:\Program Files (x86)\thingsboard\conf\thingsboard.yml
+C:\Program Files (x86)\sentient\conf\sentient.yml
 ``` 
 {: .copy-code}
 
@@ -46,7 +46,7 @@ spring:
       ddl-auto: "none"
   datasource:
     driverClassName: "${SPRING_DRIVER_CLASS_NAME:org.postgresql.Driver}"
-    url: "${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/thingsboard}"
+    url: "${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/sentient}"
     username: "${SPRING_DATASOURCE_USERNAME:postgres}"
     password: "${SPRING_DATASOURCE_PASSWORD:YOUR_POSTGRES_PASSWORD_HERE}"
     hikari:

@@ -14,7 +14,7 @@
    fill="none"
    version="1.1"
    id="svg1791"
-   sodipodi:docname="thingsboard-architecture-pe.svg"
+   sodipodi:docname="sentient-architecture-pe.svg"
    inkscape:version="0.92.5 (2060ec1f9f, 2020-04-08)">
   <metadata
      id="metadata1797">
@@ -3251,7 +3251,7 @@ opacity: 1;
      fill="#28232D"
      id="path1575" />
   <a
-     xlink:href="https://thingsboard.io/docs/pe/user-guide/rule-engine-2-0/re-getting-started/"
+     xlink:href="https://docs.sentient.invenia.in/docs/pe/user-guide/rule-engine-2-0/re-getting-started/"
      target="_parent"
      xlink:title="Rule Engine"
      id="a1605">
@@ -3318,9 +3318,9 @@ opacity: 1;
     </g>
   </a>
   <a
-     xlink:href="https://thingsboard.io/docs/pe/reference/msa/#thingsboard-node"
+     xlink:href="https://docs.sentient.invenia.in/docs/pe/reference/msa/#sentient-node"
      target="_parent"
-     xlink:title="ThingsBoard Node"
+     xlink:title="SENTIENT Node"
      id="a1645">
     <g
        class="black_magic"
@@ -3405,7 +3405,7 @@ opacity: 1;
     </g>
   </a>
   <a
-     xlink:href="https://thingsboard.io/docs/pe/reference/msa/#web-ui-microservices"
+     xlink:href="https://docs.sentient.invenia.in/docs/pe/reference/msa/#web-ui-microservices"
      target="_parent"
      xlink:title="Web UI Microservices"
      id="a1681">
@@ -3484,7 +3484,7 @@ opacity: 1;
     </g>
   </a>
   <a
-     xlink:href="https://thingsboard.io/docs/pe/user-guide/scheduler/"
+     xlink:href="https://docs.sentient.invenia.in/docs/pe/user-guide/scheduler/"
      target="_parent"
      xlink:title="Scheduler"
      id="a1711">
@@ -3551,7 +3551,7 @@ opacity: 1;
     </g>
   </a>
   <a
-     xlink:href="https://thingsboard.io/docs/user-guide/integrations/"
+     xlink:href="https://docs.sentient.invenia.in/docs/user-guide/integrations/"
      target="_parent"
      xlink:title="Platform Integrations"
      id="a1767">
@@ -3670,7 +3670,7 @@ opacity: 1;
     </g>
   </a>
   <a
-     xlink:href="https://thingsboard.io/docs/pe/reference/#message-queues-are-awesome"
+     xlink:href="https://docs.sentient.invenia.in/docs/pe/reference/#message-queues-are-awesome"
      target="_parent"
      xlink:title="Message Queues are awesome!"
      id="a1775">
@@ -3695,9 +3695,9 @@ opacity: 1;
        id="path1773" />
   </a>
   <a
-     xlink:href="https://thingsboard.io/docs/iot-gateway/what-is-iot-gateway/"
+     xlink:href="https://docs.sentient.invenia.in/docs/iot-gateway/what-is-iot-gateway/"
      target="_parent"
-     xlink:title="What is ThingsBoard IoT Gateway?"
+     xlink:title="What is SENTIENT IoT Gateway?"
      id="a1779">
     <rect
        class="magic"
@@ -3711,7 +3711,7 @@ opacity: 1;
        id="rect1777" />
   </a>
   <a
-     xlink:href="https://thingsboard.io/docs/pe/reference/msa/#transport-microservices"
+     xlink:href="https://docs.sentient.invenia.in/docs/pe/reference/msa/#transport-microservices"
      target="_parent"
      xlink:title="Transport Microservices"
      id="a1783">
@@ -3727,7 +3727,7 @@ opacity: 1;
        id="rect1781" />
   </a>
   <a
-     xlink:href="https://thingsboard.io/docs/pe/reference/#sql-vs-nosql-vs-hybrid-database-approach"
+     xlink:href="https://docs.sentient.invenia.in/docs/pe/reference/#sql-vs-nosql-vs-hybrid-database-approach"
      target="_parent"
      xlink:title="SQL vs NoSQL vs Hybrid database approach"
      id="a1789">

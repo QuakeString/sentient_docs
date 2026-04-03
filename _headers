@@ -10,9 +10,9 @@ https://:any.tbqa.cloud/*
 https://:any.:subdomain.tbqa.cloud/*
   X-Robots-Tag: noindex
   X-TB: custom header for *.*.tbqa.cloud
-https://:subdomain.thingsboard.:zone/*
+https://:subdomain.sentient.:zone/*
   X-Robots-Tag: noindex
-  X-TB: custom header for *.thingsboard.*
-https://:any.:subdomain.thingsboard.:zone/*
+  X-TB: custom header for *.sentient.*
+https://:any.:subdomain.sentient.:zone/*
   X-Robots-Tag: noindex
-  X-TB: custom header for *.*.thingsboard.*
+  X-TB: custom header for *.*.sentient.*

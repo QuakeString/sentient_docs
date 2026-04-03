@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: TBMQ Professional Edition Roadmap
-description: TBMQ upcoming releases
+title: ST-RMQTT Professional Edition Roadmap
+description: ST-RMQTT upcoming releases
 
 ---
 
@@ -24,7 +24,7 @@ All features and capabilities available in the [Community Edition](/docs/mqtt-br
 
 * **Expanded Third-Party Service Integrations**
     * **Focus:** Ecosystem Connectivity & Data Pipeline Flexibility
-    * **Value:** Delivers new pre-built integrations with major external services (e.g., specific databases, cloud services, and enterprise applications). This accelerates development and simplifies the process of **connecting TBMQ data directly into enterprise workflows**.
+    * **Value:** Delivers new pre-built integrations with major external services (e.g., specific databases, cloud services, and enterprise applications). This accelerates development and simplifies the process of **connecting ST-RMQTT data directly into enterprise workflows**.
 
 * **Comprehensive Audit Logs**
     * **Focus:** Accountability & Compliance

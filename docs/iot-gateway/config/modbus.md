@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: Modbus Connector Configuration
-description: Modbus protocol support for ThingsBoard IoT Gateway
+description: Modbus protocol support for SENTIENT IoT Gateway
 redirect_from: "/docs/iot-gateway/guides/how-to-use-rpc-modbus-connector/"
 
 ---
@@ -11,15 +11,15 @@ redirect_from: "/docs/iot-gateway/guides/how-to-use-rpc-modbus-connector/"
 
 ## Overview
 
-This documentation will help you set up the Modbus connector for the ThingsBoard IoT Gateway. We’ll explain the
+This documentation will help you set up the Modbus connector for the SENTIENT IoT Gateway. We’ll explain the
 configuration parameters in simple terms to make it easy for you to understand and follow. The Modbus is a widely used
 protocol for industrial automation and control systems, allowing devices to communicate with each other over a network,
-and this connector allows seamless integration with the ThingsBoard platform. Use
+and this connector allows seamless integration with the SENTIENT platform. Use
 [general configuration](/docs/iot-gateway/configuration/){:target="_blank"} to enable this extension.
 
-Also, if you are new to ThingsBoard IoT Gateway, we recommend you to read the
+Also, if you are new to SENTIENT IoT Gateway, we recommend you to read the
 [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=modbus){:target="_blank"}
-guide to understand the basic concepts of ThingsBoard IoT Gateway and how it works with Modbus protocol.
+guide to understand the basic concepts of SENTIENT IoT Gateway and how it works with Modbus protocol.
 
 The connector can be configured via the user interface form, which helps you set up a connection to the Modbus server,
 collect data and write data to slaves (devices). Let’s look at all the available settings and explain each one clearly. This will
@@ -43,7 +43,7 @@ backward compatibility.
 
 The Modbus connector can be configured in two modes: **Basic** and **Advanced**.
 
-- **Basic** mode is designed for users who are new to ThingsBoard IoT Gateway and want to quickly set up the connector
+- **Basic** mode is designed for users who are new to SENTIENT IoT Gateway and want to quickly set up the connector
   with minimal configuration. It provides a simplified interface with essential settings.
 - **Advanced** mode is intended for experienced users who need more control over the configuration. It offers additional
   options and flexibility for advanced use cases.
@@ -89,13 +89,13 @@ report strategy:
 - **Unit ID** - ID of the Modbus slave.
 - **Device name** - name of the device on the platform.
 - **Device profile** - device profile name on the platform.
-- **Report strategy**  strategy for sending data to ThingsBoard:
-  - **Report period** - period for sending data to ThingsBoard in milliseconds;
+- **Report strategy**  strategy for sending data to SENTIENT:
+  - **Report period** - period for sending data to SENTIENT in milliseconds;
   - **Type** - type of the report strategy: 
-    - **On report period** - sends data to ThingsBoard after the report period;
-    - **On value change** - sends data to ThingsBoard when the value changes;
-    - **On value change or report period** - sends data to ThingsBoard when the value changes or after the report period;
-    - **On received** - sends data to ThingsBoard after receiving data from the device (default strategy).
+    - **On report period** - sends data to SENTIENT after the report period;
+    - **On value change** - sends data to SENTIENT when the value changes;
+    - **On value change or report period** - sends data to SENTIENT when the value changes or after the report period;
+    - **On received** - sends data to SENTIENT after receiving data from the device (default strategy).
 
 {% capture difference %}
 Additional information about the report strategy can be found [here](/docs/iot-gateway/features-overview/report-strategy){:target="_blank"}.
@@ -140,13 +140,13 @@ Enum mapping<small>(advanced configuration mode only)</small>%,%enummapping%,%te
 
 ### Requests mapping
 
-The Requests mapping section allows you to configure how the ThingsBoard platform instance will interact with the
+The Requests mapping section allows you to configure how the SENTIENT platform instance will interact with the
 devices. That is, how the platform will request data from the devices, how it will update device attributes, and how
 it will send RPC commands to the devices.
 
 Modbus connector supports the following requests mapping:
 
-- **Attribute updates** - allows update device nodes values from ThingsBoard platform instance.
+- **Attribute updates** - allows update device nodes values from SENTIENT platform instance.
 - **RPC methods** - allows sending RPC commands to devices. Using RPC methods, you can get or set values of the Modbus
   registers. Modbus connector supports different types of RPC methods, such as:
     - **Reserved GET/SET methods** - these methods are automatically created for each attribute and time series
@@ -157,11 +157,11 @@ Modbus connector supports the following requests mapping:
 
 #### Subsection "Attribute updates"
 
-This subsection contains configuration for attribute updates request from ThingsBoard platform instance.
+This subsection contains configuration for attribute updates request from SENTIENT platform instance.
 
-ThingsBoard allows provisioning device attributes and fetches some of them from the device application. You can treat
-this as a remote configuration for devices. Your devices are able to request shared attributes from ThingsBoard.
-See [user guide](https://thingsboard.io/docs/user-guide/attributes/) for more details.
+SENTIENT allows provisioning device attributes and fetches some of them from the device application. You can treat
+this as a remote configuration for devices. Your devices are able to request shared attributes from SENTIENT.
+See [user guide](https://docs.sentient.invenia.in/docs/user-guide/attributes/) for more details.
 
 The following parameters are used to configure attribute updates:
 
@@ -188,9 +188,9 @@ More usage examples can be found in the [Example usage](/docs/iot-gateway/config
 
 #### Subsection "RPC requests"
 
-ThingsBoard allows sending [RPC commands](https://thingsboard.io/docs/user-guide/rpc/) to the device that is connected
-to ThingsBoard directly or via Gateway.
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to device. The following
+SENTIENT allows sending [RPC commands](https://docs.sentient.invenia.in/docs/user-guide/rpc/) to the device that is connected
+to SENTIENT directly or via Gateway.
+Configuration, provided in this section is used for sending RPC requests from SENTIENT to device. The following
 parameters are used to configure RPC methods:
 
 - **Method name** - RPC method name, which is used to identify the request.
@@ -255,7 +255,7 @@ The Slaves list is used to specify the list of Modbus slaves that the master wil
 | server.slaves[].retryOnEmpty                      | **true**          | (Optional) Retrying sending data to the master if it is empty.                                                                                                |
 | server.slaves[].retryOnInvalid                    | **true**          | (Optional) Retrying sending data to the master if it is failed.                                                                                               |
 | server.slaves[].connectAttemptTimeMs (in ms)      | **5000**          | (Optional) A waiting period in milliseconds before connecting to the master.                                                                                  |
-| server.slaves[].connectAttemptCount               | **5**             | (Optional) The number of connection attempts made through the ThingsBoard gateway.                                                                            |
+| server.slaves[].connectAttemptCount               | **5**             | (Optional) The number of connection attempts made through the SENTIENT gateway.                                                                            |
 | server.slaves[].waitAfterFailedAttemptsMs (in ms) | **300000**        | (Optional) A waiting period in milliseconds before trying to send data to the master.                                                                         |
 | server.slaves[].byteOrder                         | **LITTLE**        | Order of bytes to read.                                                                                                                                       |
 | server.slaves[].wordOrder                         | **LITTLE**        | The order of words when reading several registers.                                                                                                            |
@@ -358,8 +358,8 @@ Example of the serial slave configuration:
 
 | **Parameter**                              | **Description**                                                                                                                                                    |
 |:-------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| server.slaves[].attributes[]               | List of attributes that will be sent to the ThingsBoard platform instance.                                                                                         |
-| server.slaves[].attributes[].tag           | Key name of the attribute in ThingsBoard. It can be specified as a static value.                                                                                   |
+| server.slaves[].attributes[]               | List of attributes that will be sent to the SENTIENT platform instance.                                                                                         |
+| server.slaves[].attributes[].tag           | Key name of the attribute in SENTIENT. It can be specified as a static value.                                                                                   |
 | server.slaves[].attributes[].type          | [Data type](/docs/iot-gateway/config/modbus/#data-types) of value.                                                                                                 |
 | server.slaves[].attributes[].functionCode  | [Function code](/docs/iot-gateway/config/modbus/#modbus-functions) to use for reading the attribute value from the Modbus slave.                                   |
 | server.slaves[].attributes[].objectsCount  | Number of objects to read from the Modbus slave.                                                                                                                   |
@@ -368,8 +368,8 @@ Example of the serial slave configuration:
 | server.slaves[].attributes[].multiplier    | (Optional) Multiplier for the value. If not specified, the value will be sent as is.                                                                               |
 | server.slaves[].attributes[].bitTargetType | The response type can be either an integer (0/1) or a boolean (True/False). **Used only with type `bits`**.                                                        |
 | mapping[].attributes[].reportStrategy      | (Optional) Report strategy for the attributes data. If not specified, the device report strategy will be used.                                                     |
-| server.slaves[].timeseries[]               | List of time series that will be sent to the ThingsBoard platform instance.                                                                                        |
-| server.slaves[].timeseries[].tag           | Key name of the time series in ThingsBoard. It can be specified as a static value.                                                                                 |
+| server.slaves[].timeseries[]               | List of time series that will be sent to the SENTIENT platform instance.                                                                                        |
+| server.slaves[].timeseries[].tag           | Key name of the time series in SENTIENT. It can be specified as a static value.                                                                                 |
 | server.slaves[].timeseries[].type          | [Data type](/docs/iot-gateway/config/modbus/#data-types) of value.                                                                                                 |
 | server.slaves[].timeseries[].functionCode  | [Function code](/docs/iot-gateway/config/modbus/#modbus-functions) to use for reading the time series value from the Modbus slave.                                 |
 | server.slaves[].timeseries[].objectsCount  | Number of objects to read from the Modbus slave.                                                                                                                   |
@@ -408,7 +408,7 @@ Example of the attributes and telemetry configuration:
 | **Parameter**                                      | **Description**                                                                                                                  |
 |:---------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
 | server.slaves[].attributeUpdates[]                 | List of attributes that will be updated on the device.                                                                           |
-| server.slaves[].attributeUpdates[].tag             | Key name of the shared attribute in ThingsBoard. It can be specified as a static value.                                          |
+| server.slaves[].attributeUpdates[].tag             | Key name of the shared attribute in SENTIENT. It can be specified as a static value.                                          |
 | server.slaves[].attributeUpdates[].type            | [Data type](/docs/iot-gateway/config/modbus/#data-types) of value.                                                               |
 | server.slaves[].attributeUpdates[].functionCode    | [Function code](/docs/iot-gateway/config/modbus/#modbus-functions) to use for reading the attribute value from the Modbus slave. |
 | server.slaves[].attributeUpdates[].objectsCount    | Number of objects to read from the Modbus slave.                                                                                 |
@@ -524,7 +524,7 @@ send updates to the platform when changes occur or at fixed intervals.
 | slave.byteOrder             | **LITTLE**        | The order of bytes to read.                                                                                     |
 | slave.wordOrder             | **LITTLE**        | The order of words when reading several registers.                                                              |
 | slave.pollPeriod (in ms)    | **5000**          | Period in milliseconds to read and send the attributes and the telemetry to the platform.                       |
-| slave.sendDataToThingsBoard | **true**          | If set to **TRUE**, the Gateway will perform autoconfiguration and send values to ThingsBoard every poll period |
+| slave.sendDataToSENTIENT | **true**          | If set to **TRUE**, the Gateway will perform autoconfiguration and send values to SENTIENT every poll period |
 | slave.unitId                |                   | ID of current gateway slave on Modbus.                                                                          |
 | slave.deviceName            |                   | Device name on the platform.                                                                                    |
 | slave.deviceType            | **default**       | (Optional) Device profile name on the platform.                                                                 |
@@ -541,7 +541,7 @@ Example of the slave configuration:
   "deviceName": "Modbus Slave Example",
   "deviceType": "default",
   "pollPeriod": 5000,
-  "sendDataToThingsBoard": false,
+  "sendDataToSENTIENT": false,
   "byteOrder": "LITTLE",
   "wordOrder": "LITTLE",
   "unitId": 0,
@@ -820,9 +820,9 @@ A list and description of the supported data types for reading/writing data.
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
-- [How to connect Modbus device to ThingsBoard CE using ThingsBoard IoT Gateway](/docs/iot-gateway/guides/how-to-connect-modbus-device/)
+- [How to connect Modbus device to SENTIENT using SENTIENT IoT Gateway](/docs/iot-gateway/guides/how-to-connect-modbus-device/)
 - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
 - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
 - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

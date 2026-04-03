@@ -1,7 +1,7 @@
-Here you can find ThingsBoard Edge docker image: 
+Here you can find SENTIENT GATEWAY docker image: 
 
 {% if docsPrefix == "pe/edge/" %}
-* [thingsboard/tb-edge-pe](https://hub.docker.com/r/thingsboard/tb-edge-pe){:target="_blank"}
+* [sentient/tb-edge-pe](https://hub.docker.com/r/sentient/tb-edge-pe){:target="_blank"}
 {% else %}
-* [thingsboard/tb-edge](https://hub.docker.com/r/thingsboard/tb-edge){:target="_blank"}
+* [sentient/tb-edge](https://hub.docker.com/r/sentient/tb-edge){:target="_blank"}
 {% endif %}

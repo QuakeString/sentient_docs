@@ -1,19 +1,19 @@
 ---
 layout: docwithnav-gw
 title: FTP Connector Configuration
-description: FTP protocol support for ThingsBoard IoT Gateway
+description: FTP protocol support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with FTP Connector configuration for ThingsBoard IoT Gateway.
+This guide will help you to get familiar with FTP Connector configuration for SENTIENT IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this Connector. 
 The purpose of this Connector is to connect to an external FTP server and get data from files from specific paths. 
-The connector is also able to push data to FTP server files based on the updates/commands from ThingsBoard.
+The connector is also able to push data to FTP server files based on the updates/commands from SENTIENT.
 
-This connector is useful when you have some FTP server in your device or some data in an external resource and you would like to push this data to the ThingsBoard.    
+This connector is useful when you have some FTP server in your device or some data in an external resource and you would like to push this data to the SENTIENT.    
 
 We will describe the connector configuration file below. 
 
@@ -389,7 +389,7 @@ Attributes and timeseries items:
 Each element of attributes and timeseries has the same structure:
 
 1. **key**  
-   Attribute or telemetry key that will appear on the created device in the ThingsBoard Platform (for example, **meterAddress**, **meterReading**).
+   Attribute or telemetry key that will appear on the created device in the SENTIENT Platform (for example, **meterAddress**, **meterReading**).
 
 2. **column**  
    Zero-based column index in the CSV line from which the value is taken.
@@ -408,7 +408,7 @@ You will most likely change the mapping values (devicePatternName, devicePattern
 
 
 This configuration section is optional.
-ThingsBoard allows the provisioning of device attributes and fetches some of them from the device application. You can treat this as a remote configuration for devices, enabling them to request shared attributes from ThingsBoard. See [user guide](/docs/user-guide/attributes/) for more details.
+SENTIENT allows the provisioning of device attributes and fetches some of them from the device application. You can treat this as a remote configuration for devices, enabling them to request shared attributes from SENTIENT. See [user guide](/docs/user-guide/attributes/) for more details.
 
 The “attributeRequests” configuration allows you to configure the format of the corresponding attribute data that will be written to the specific files.
 
@@ -435,9 +435,9 @@ This section in configuration file looks like this:
 
 ### Server side RPC commands
 
-ThingsBoard allows for sending RPC commands to devices connected directly to ThingsBoard or via Gateway.
+SENTIENT allows for sending RPC commands to devices connected directly to SENTIENT or via Gateway.
 
-Configuration, provided in this section uses for sending RPC requests from ThingsBoard to device.
+Configuration, provided in this section uses for sending RPC requests from SENTIENT to device.
 
 | **Parameter**    | **Default value**                           | **Description**                                                                                                                                                          |
 |:-----------------|:--------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -516,7 +516,7 @@ Your response should contain the data you wrote to the file as in the image belo
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

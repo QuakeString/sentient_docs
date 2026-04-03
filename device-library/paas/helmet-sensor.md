@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Helmet Sensor to ThingsBoard?
+title: How to connect Helmet Sensor to SENTIENT?
 category: Other devices
 connectivity: [Bluetooth, LoRaWAN]
 vendor: Lansitec

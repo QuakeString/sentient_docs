@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
-title: TBMQ cluster setup using Helm
-description: K8S environment options for TBMQ cluster setup using Helm
+title: ST-RMQTT cluster setup using Helm
+description: K8S environment options for ST-RMQTT cluster setup using Helm
 notitle: "true"
 ---
 

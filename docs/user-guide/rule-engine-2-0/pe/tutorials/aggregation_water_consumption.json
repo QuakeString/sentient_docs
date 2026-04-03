@@ -15,7 +15,7 @@
           "layoutX": 301,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode",
+        "type": "org.sentient.rule.engine.transform.TbChangeOriginatorNode",
         "name": "To Building Asset",
         "debugMode": true,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 1033,
           "layoutY": 154
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save To DB",
         "debugMode": false,
         "configuration": {
@@ -51,7 +51,7 @@
           "layoutX": 668,
           "layoutY": 152
         },
-        "type": "org.thingsboard.rule.engine.analytics.incoming.TbSimpleAggMsgNode",
+        "type": "org.sentient.rule.engine.analytics.incoming.TbSimpleAggMsgNode",
         "name": "TotalWaterConsumptionPer10Sec",
         "debugMode": true,
         "configuration": {

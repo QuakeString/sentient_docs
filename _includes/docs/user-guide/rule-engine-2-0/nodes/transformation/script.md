@@ -6,7 +6,7 @@ Supports **TBEL** and **JavaScript**.
 
 The node provides a choice of scripting language and a code editor to write the transformation logic.
 
-- **Language Selector** - choose between **TBEL** (ThingsBoard Expression Language) or **JavaScript**.
+- **Language Selector** - choose between **TBEL** (SENTIENT Expression Language) or **JavaScript**.
 - **Script Editor** - a text area where you write the body of the transformation function.
 
 ### Transformation function
@@ -199,7 +199,7 @@ and its metadata (`apiKey`, `serialId`). This results in three distinct messages
 
 ### Example 2 — Parsing a REST API response
 
-This example demonstrates how to transform a message with a custom data structure into a single, standardized telemetry message that ThingsBoard can store.
+This example demonstrates how to transform a message with a custom data structure into a single, standardized telemetry message that SENTIENT can store.
 This is a common scenario when fetching data from external systems or third-party APIs.
 
 **Scenario**: A "rest api call" node queries an external API and receives a response in a non-standard format.
@@ -325,5 +325,5 @@ Data:
 Message type: `POST_TELEMETRY_REQUEST`
 
 **Explanation**: The script processes the incoming message, which contains a batch of observations in a custom format. 
-It iterates through the observations array, transforming each entry into the standard ThingsBoard timeseries format. 
+It iterates through the observations array, transforming each entry into the standard SENTIENT timeseries format. 
 It does this by converting the time string to a Unix timestamp and using the top-level metric field (`pressure`) as the dynamic telemetry key.

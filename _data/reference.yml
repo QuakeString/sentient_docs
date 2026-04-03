@@ -9,13 +9,13 @@ toc:
   path: /docs/reference/msa/
 - title: Deployment scenarios
   path: /docs/reference/iot-platform-deployment-scenarios/
-- title: ThingsBoard Performance
+- title: SENTIENT Performance
   section:
     - title: Data Collection Performance
       path: /docs/reference/performance/
-#    - title: 20K IoT devices on single ThingsBoard server
+#    - title: 20K IoT devices on single SENTIENT server
 #      path: /docs/reference/20k-devices-test/
-#    - title: 1M IoT devices on ThingsBoard cluster with Kubernetes and Amazon EC2
+#    - title: 1M IoT devices on SENTIENT cluster with Kubernetes and Amazon EC2
 #      path: /docs/reference/1m-devices-test/
 - title: Performance on AWS EC2
   path: /docs/reference/performance-aws-instances/
@@ -30,5 +30,5 @@ toc:
 #      path: /docs/reference/performance/tools/java-jmx-monitoring/
 #    - title: PgAdmin for Postgres
 #      path: /docs/reference/performance/tools/postgres-pgadmin-monitoring/
-#    - title: Thingsboard performance charts
-#      path: /docs/reference/performance/tools/thingsboard-performance-charts/
+#    - title: Sentient performance charts
+#      path: /docs/reference/performance/tools/sentient-performance-charts/

@@ -4,7 +4,7 @@
 {% assign sinceVersion = "4.3" %}
 {% include templates/since.md %}
 
-API keys provide a simpler alternative to password-based authentication for the ThingsBoard API.   
+API keys provide a simpler alternative to password-based authentication for the SENTIENT API.   
 Unlike JWT tokens that require login and periodically expire, API keys are long-lived credentials that remain valid until their configured expiration date or until they are manually revoked.
 
 <hr>
@@ -80,7 +80,7 @@ X-Authorization: ApiKey $YOUR_API_KEY_VALUE
 ```text
 curl -X GET --header 'Accept: application/json' \
             --header 'X-Authorization: ApiKey tb_4xpayYjwrKCv5n15CvvS6IUb8vVZe55D-aoXcn_-hl9foOCxlEbtWYoy8bhhMqGt' \
-            'https://thingsboard.cloud/api/auth/user'
+            'https://sentient.cloud/api/auth/user'
 ```
 {: .copy-code}
 

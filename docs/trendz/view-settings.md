@@ -1,7 +1,7 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: View Settings
-description: Trendz View Settings
+description: SENTIENT ANALYTICS View Settings
 ---
 
 * TOC
@@ -176,7 +176,7 @@ Common to most views:
 
 ## Query Params
 
-Let’s say we have 2 buildings and 2 sensors registered in ThingsBoard with the following relationships:
+Let’s say we have 2 buildings and 2 sensors registered in SENTIENT with the following relationships:
 
 - **Building A** contains **Sensor_1**
 - **Building B** has no sensors
@@ -192,18 +192,18 @@ You can control how the query is built using these parameters:
 - **Preview mode** – Load a limited set of data to preview how the view will look
   - **Preview item count** – Number of root items to load for preview
 
-- **Entities Root** – Override the default root entity automatically selected by Trendz
+- **Entities Root** – Override the default root entity automatically selected by SENTIENT ANALYTICS
 
-- **Topology Entities** – Trendz builds a query plan using the Topology Graph by finding the shortest path between all used entities  
+- **Topology Entities** – SENTIENT ANALYTICS builds a query plan using the Topology Graph by finding the shortest path between all used entities  
   For complex graphs, shortest path may not be optimal — you can manually define which entities to include
 
-- **Raw data loading** – Load unaggregated data directly from the ThingsBoard
+- **Raw data loading** – Load unaggregated data directly from the SENTIENT
 
 - **Enable multi-root items loading** – Allows multiple root-level entities to be processed in the same view
 
 ## View Mode Fields
 
-These settings apply only when the view is shown in full-screen mode or embedded in a Trendz Widget on the ThingsBoard dashboard. [More details here](/docs/trendz/widget-actions/)
+These settings apply only when the view is shown in full-screen mode or embedded in a SENTIENT ANALYTICS Widget on the SENTIENT dashboard. [More details here](/docs/sentient-analytics/widget-actions/)
 
 - **Hide filters** – Hide the filter section
 - **Hide date filters** – Hide the date picker
@@ -212,9 +212,9 @@ These settings apply only when the view is shown in full-screen mode or embedded
 - **Get filter values from URL** – Load filter parameters from browser URL query string
 - **Set filter values to URL** – Save selected filter values into the browser URL
 - **Hidden filters** – Hide specific filters
-- **Row click entities** – On clicking a chart or table item, send the selected entity to ThingsBoard alias  
+- **Row click entities** – On clicking a chart or table item, send the selected entity to SENTIENT alias  
   (commonly used for triggering filter updates in other widgets)  
-  [Read more here](/docs/trendz/widget-actions/#configure-onrowclick-action)
+  [Read more here](/docs/sentient-analytics/widget-actions/#configure-onrowclick-action)
 
 ### Anomalies View
 
@@ -224,8 +224,8 @@ These settings apply only when the view is shown in full-screen mode or embedded
 ## AI Assistant
 
 - **Prompt** – Select the AI prompt used when the **AI Summary** button is clicked  
-  Learn more about the AI Summary button [here](/docs/trendz/ai-widget-summary#trendz-widgets)  
-  To create your own prompts, see [this guide](/docs/trendz/ai-assistance-prompts)
+  Learn more about the AI Summary button [here](/docs/sentient-analytics/ai-widget-summary#sentient-analytics-widgets)  
+  To create your own prompts, see [this guide](/docs/sentient-analytics/ai-assistance-prompts)
 
 ## Colors
 
@@ -243,7 +243,7 @@ These settings apply only when the view is shown in full-screen mode or embedded
 
 ## Cache
 
-[Read more about caching here](/docs/trendz/cache-settings/)
+[Read more about caching here](/docs/sentient-analytics/cache-settings/)
 
 - **Cache Report** – Use the cached View Report when the query plan and time range haven't changed (default: enabled).
 - **Enable caching** – Enables Metrics Long-Term Cache.

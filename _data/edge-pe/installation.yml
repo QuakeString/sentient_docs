@@ -1,5 +1,5 @@
 bigheader: "Installation"
-abstract: "Guides for installing and configuring ThingsBoard PE Edge."
+abstract: "Guides for installing and configuring SENTIENT Professional Edition Edge."
 toc:
   - title: Installation options
     path: /docs/user-guide/install/pe/edge/installation-options/

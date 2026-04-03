@@ -9,7 +9,7 @@ redirect_from: "/docs/paas/reference/http-api"
 server-side-rpc:
     0:
         image: /images/reference/device-connectivity-apis/server-side-rpc-http-1-paas.png
-        title: 'Use RPC debug terminal widget in your ThingsBoard instance'
+        title: 'Use RPC debug terminal widget in your SENTIENT instance'
     1:
         image: /images/reference/device-connectivity-apis/server-side-rpc-http-2-paas.png
         title: 'Subscribe to RPC commands from the server. To do this, in the first terminal window send GET request with observe flag'

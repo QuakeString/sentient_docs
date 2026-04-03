@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Kafka Integration
-description: TBMQ Kafka integration guide
+description: ST-RMQTT Kafka integration guide
 
 add-kafka-integration:
   0:
@@ -12,7 +12,7 @@ add-kafka-integration:
     title: 'Select "HTTP" as the integration type and click "Next".'
   2:
     image: /images/pe/mqtt-broker/user-guide/ui/add-http-integration-3.png
-    title: 'Click "Next" to subscribe to the default topic "tbmq/#".'
+    title: 'Click "Next" to subscribe to the default topic "st-rmqtt/#".'
 
 kafka-integration-docker:
   0:
@@ -49,13 +49,13 @@ send-uplink-message-kafka:
     title: 'Navigate to the "WebSocket Client" page, select working connection, then click "Connect".'
   1:
     image: /images/pe/mqtt-broker/user-guide/ui/send-uplink-message-kafka-1.png
-    title: 'Set topic name as "tbmq/kafka-integration", and click "Send" to publish message.'
+    title: 'Set topic name as "st-rmqtt/kafka-integration", and click "Send" to publish message.'
   2:
     image: /images/mqtt-broker/user-guide/ui/send-uplink-message-kafka-2.png
-    title: 'In the Confluent Cloud open Topics and click on the topic "tbmq.messages".'
+    title: 'In the Confluent Cloud open Topics and click on the topic "st-rmqtt.messages".'
   3:
     image: /images/mqtt-broker/user-guide/ui/send-uplink-message-kafka-3.png
-    title: 'The message from the TBMQ Kafka integration should be available in the messages table.'
+    title: 'The message from the ST-RMQTT Kafka integration should be available in the messages table.'
 
 ---
 

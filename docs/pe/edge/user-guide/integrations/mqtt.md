@@ -21,7 +21,7 @@ assign-integration:
         title: 'Click the <b>"+"</b> button at the top right of the corner. Select your integration from the drop-down menu and click the <b>"Assign"</b> button.'
     5:
         image: /images/pe/edge/integrations/mqtt/assign-mqtt-integration-6-edge.png
-        title: 'Login to your <b>ThingsBoard Edge</b> instance and go to the <b>Integrations center > Integrations</b> section. You should see your integration. Click on it.'
+        title: 'Login to your <b>SENTIENT GATEWAY</b> instance and go to the <b>Integrations center > Integrations</b> section. You should see your integration. Click on it.'
     6:
         image: /images/pe/edge/integrations/mqtt/assign-mqtt-integration-7-edge.png
         title: 'In the <b>"Integration details"</b> window, the <b>${{brokerIp}}</b> placeholder will be replaced with the value of the attribute.'
@@ -85,21 +85,21 @@ downlink-converter-message:
 {% assign integrationUrl = "mqtt" %}
 {% include templates/edge/integrations/edge-pe-reference.md %}
 
-**MQTT Integration** allows connecting to external MQTT brokers, subscribe to data streams from those brokers, and convert any type of payload from your devices to the ThingsBoard Edge message format. 
+**MQTT Integration** allows connecting to external MQTT brokers, subscribe to data streams from those brokers, and convert any type of payload from your devices to the SENTIENT GATEWAY message format. 
 It is typically used when your devices are already connected to an external MQTT broker or any other IoT platform or connectivity provider with MQTT based backend.
 
 To learn more, please see the integration diagram.
 
 <object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/mqtt-integration.svg"></object>
 
-ThingsBoard Edge MQTT Integration acts as an MQTT client. 
+SENTIENT GATEWAY MQTT Integration acts as an MQTT client. 
 It subscribes to topics and converts the data into telemetry and attribute updates.
 In the case of a downlink message, MQTT Integration converts it to the device-appropriate format and pushes it to an external MQTT broker.
 
 {% capture note %}
 **Note**: 
 
-The **MQTT broker** should either be co-located with the **ThingsBoard Edge** instance or deployed in the cloud and have a valid DNS name or static IP address.
+The **MQTT broker** should either be co-located with the **SENTIENT GATEWAY** instance or deployed in the cloud and have a valid DNS name or static IP address.
 {% endcapture %}
 {% include templates/info-banner.md content=note %}
 
@@ -107,16 +107,16 @@ The **MQTT broker** should either be co-located with the **ThingsBoard Edge** in
 
 In this tutorial, we will use:
 
-- [ThingsBoard Professional Edition](https://thingsboard.cloud){: target="_blank"} account;
-- Locally installed [ThingsBoard PE Edge](/docs/user-guide/install/pe/edge/installation-options/){: target="_blank"} instance;
-- **MQTT broker** that can be accessed through the **ThingsBoard Edge** instance: broker.hivemq.com (port 1883);
+- [SENTIENT Professional Edition](https://sentient.cloud){: target="_blank"} account;
+- Locally installed [SENTIENT Professional Edition Edge](/docs/user-guide/install/pe/edge/installation-options/){: target="_blank"} instance;
+- **MQTT broker** that can be accessed through the **SENTIENT GATEWAY** instance: broker.hivemq.com (port 1883);
 - **mosquitto_pub** and **mosquitto_sub** MQTT clients for sending and receiving messages.
 - a sensor device that sends temperature readings. In this guide we'll use **SN-001** to **'tb-edge/mqtt-integration-tutorial/sensors/SN-001/temperature'** and is subscribed to **'tb-edge/mqtt-integration-tutorial/sensors/SN-001/rx'** to receive **RPC calls**. We will send a message with temperature readings in a simple format: **`{"value":25.1}`**
 
 ### Create converter and integration templates
 
-Only the **ThingsBoard Professional Edition** creates converters and integration templates.
-So please use [**ThingsBoard Cloud**](https://thingsboard.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
+Only the **SENTIENT Professional Edition** creates converters and integration templates.
+So please use [**SENTIENT Cloud**](https://sentient.cloud/signup){: target="_blank"} or [**install**](/docs/user-guide/install/pe/installation-options/){: target="_blank"} your own platform instance to log in as a **Tenant administrator**.
 
 Follow the steps below to add the **MQTT integration**:
 
@@ -128,7 +128,7 @@ Follow the steps below to add the **MQTT integration**:
 
 - The next step is to create an **Uplink data converter**. 
 
-The purpose of the decoder function is to parse the incoming data and metadata into a format that ThingsBoard can consume.
+The purpose of the decoder function is to parse the incoming data and metadata into a format that SENTIENT can consume.
 **deviceName** and **deviceType** are required, while *attributes* and *telemetry* are optional.
 **Attributes** and **telemetry** are flat key-value objects. Nested objects are not supported.
 
@@ -211,7 +211,7 @@ mosquitto_pub -h broker.hivemq.com -p 1883 -t "tb-edge/mqtt-integration-tutorial
 ```
 {: .copy-code}
 
-Now, go to the **Integrations center > Integrations** section and select the **"Events"** tab in your MQTT integration on the **ThingsBoard Edge**. 
+Now, go to the **Integrations center > Integrations** section and select the **"Events"** tab in your MQTT integration on the **SENTIENT GATEWAY**. 
 If you have done everything correctly, you will find an uplink message with the **OK** status. To see the message, click the three dots in the **"Message"** column.
 
 {% include images-gallery.html imageCollection="send-uplink-edge" %}
@@ -239,13 +239,13 @@ Keep this terminal running in the background. In this terminal window, you shoul
 ![image](/images/pe/edge/integrations/mqtt/terminal-running-in-background.png)
 
 Now let's add a shared attribute 'firmware'. 
-Go to the **Devices** page, select your device, and navigate to the **"Attributes"** tab on the **ThingsBoard Edge**.
+Go to the **Devices** page, select your device, and navigate to the **"Attributes"** tab on the **SENTIENT GATEWAY**.
 To create a new attribute, select the **"Shared attributes"** scope and click the "**plus"** button. 
 Then set the attribute name, its value (_for example, the key name is 'firmware', value: 'v1.0_') and save the data.
 
 ![image](/images/pe/edge/integrations/mqtt/add-mqtt-shared-attribute-1-edge.png)
 
-An example of incoming messages from **ThingsBoard Edge** in the terminal:
+An example of incoming messages from **SENTIENT GATEWAY** in the terminal:
 
 ![image](/images/pe/edge/integrations/mqtt/incoming-message-in-terminal.png)
 

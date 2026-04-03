@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: Connecting Raspberry Pi with Grove Base Hat to ThingsBoard
-description: ThingsBoard IoT Platform sample for Raspberry Pi Grove Base Hat connecting over MQTT
+title: Connecting Raspberry Pi with Grove Base Hat to SENTIENT
+description: SENTIENT IoT Platform sample for Raspberry Pi Grove Base Hat connecting over MQTT
 
 ---
 
@@ -11,14 +11,14 @@ description: ThingsBoard IoT Platform sample for Raspberry Pi Grove Base Hat con
 
 ## Introduction
 
-ThingsBoard Community Edition is an open-source server-side platform that allows you to monitor and control IoT devices.
+SENTIENT is an open-source server-side platform that allows you to monitor and control IoT devices.
 It is free for both personal and commercial usage and you can deploy it anywhere.
-If you are not familiar with the platform yet, we recommend to review [what is thingsboard page](/docs/getting-started-guides/what-is-thingsboard/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
-Within this guide we use [thingsboard.cloud](https://thingsboard.cloud).
+If you are not familiar with the platform yet, we recommend to review [what is sentient page](/docs/getting-started-guides/what-is-sentient/) and [getting started guide](/docs/getting-started-guides/helloworld/) at first and then proceed with this tutorial.
+Within this guide we use [sentient.cloud](https://sentient.cloud).
 
-This sample application will allow you to collect information from sensors and control Servo, Led of your Raspberry Pi device with Grove Base Hat PCB using ThingsBoard web UI. The purpose of this application is to demonstrate ThingsBoard and Grove Base Hat PCB integrations.
+This sample application will allow you to collect information from sensors and control Servo, Led of your Raspberry Pi device with Grove Base Hat PCB using SENTIENT web UI. The purpose of this application is to demonstrate SENTIENT and Grove Base Hat PCB integrations.
 
-Raspberry Pi will use simple application written in Python for connecting to ThingsBoard server via MQTT, sending information from sensors and listening to RPC commands. ThingsBoard built-in dashboards will be used for data visualizing and controlling Servo and Led as well.
+Raspberry Pi will use simple application written in Python for connecting to SENTIENT server via MQTT, sending information from sensors and listening to RPC commands. SENTIENT built-in dashboards will be used for data visualizing and controlling Servo and Led as well.
 
 At the end we will get the following result:
 <br>
@@ -38,7 +38,7 @@ At the end we will get the following result:
 
 ## Prerequisites
 
-For the purpose of this tutorial you need ThingsBoard server up and running. Within this guide we use [thingsboard.cloud](https://thingsboard.cloud)
+For the purpose of this tutorial you need SENTIENT server up and running. Within this guide we use [sentient.cloud](https://sentient.cloud)
 
 
 Hardware and pinouts:
@@ -86,7 +86,7 @@ By first we need to configure the Raspberry Pi. Please follow this [article](htt
 
 After the configuration we need to install libraries used in the script to the Raspberry Pi.
 
-The following command will install thingsboard python client sdk, it is used for communication with ThingsBoard server:
+The following command will install sentient python client sdk, it is used for communication with SENTIENT server:
 
 
 ```bash
@@ -120,9 +120,9 @@ sudo python3 ./Seeed_Python_DHT/setup.py install
 
 ## Application source code
 
-Our application consists of a [single python script](/docs/samples/raspberry/resources/tb_grove.py) that is well documented. You will need to modify THINGSBOARD_HOST constant to match your ThingsBoard server installation IP address or hostname.
+Our application consists of a [single python script](/docs/samples/raspberry/resources/tb_grove.py) that is well documented. You will need to modify SENTIENT_HOST constant to match your SENTIENT server installation IP address or hostname.
 
-Also we need say to ThingsBoard that we want to connect this device and get the device ACCESS_TOKEN, which will be used in the script.
+Also we need say to SENTIENT that we want to connect this device and get the device ACCESS_TOKEN, which will be used in the script.
 <b>Log in to your environment</b> — <b>Device groups</b> — <b>Add device group</b>  — <b>Add new device</b> (e.g. Device 1 with type grove) — <b>Open device details</b> — <b>Copy access token</b>.
 
 
@@ -135,12 +135,12 @@ Also we need say to ThingsBoard that we want to connect this device and get the 
 <br>
 
 
-After this you need to replace the THINGSBOARD_HOST and ACCESS_TOKEN in the script below, with your values. 
-In case you use ThingsBoard Cloud, populate either <b>mqtt.thingsboard.cloud</b> (for North America) or <b>mqtt.eu.thingsboard.cloud</b> (for Europe) as THINGSBOARD_HOST
+After this you need to replace the SENTIENT_HOST and ACCESS_TOKEN in the script below, with your values. 
+In case you use SENTIENT Cloud, populate either <b>mqtt.sentient.cloud</b> (for North America) or <b>mqtt.eu.sentient.cloud</b> (for Europe) as SENTIENT_HOST
 
 ```python
 #
-# Copyright © 2019-2024 The Thingsboard Authors
+# Copyright © 2019-2024 The Sentient Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -174,7 +174,7 @@ logging.basicConfig(level=logging.INFO,
 
 log = logging.getLogger(__name__)
 
-THINGSBOARD_SERVER = 'THINGSBOARD_HOST'
+SENTIENT_SERVER = 'SENTIENT_HOST'
 ACCESS_TOKEN = 'ACCESS_TOKEN'
 
 
@@ -217,8 +217,8 @@ def main():
         elif request_body['method'] == 'getServoAngle':
             client.send_rpc_reply(request_id, servo_angle)
 
-    # Connecting to ThingsBoard
-    client = TBDeviceMqttClient(THINGSBOARD_SERVER, username=ACCESS_TOKEN)
+    # Connecting to SENTIENT
+    client = TBDeviceMqttClient(SENTIENT_SERVER, username=ACCESS_TOKEN)
     client.set_server_side_rpc_request_handler(on_server_side_rpc_request)
     client.connect()
 
@@ -268,7 +268,7 @@ def main():
 
             log.debug('light: {}'.format(light_sensor.light))
 
-            # Formatting the data for sending to ThingsBoard
+            # Formatting the data for sending to SENTIENT
             telemetry = {'distance': distance,
                          'temperature': temperature,
                          'humidity': humidity,
@@ -294,7 +294,7 @@ if __name__ == '__main__':
 
 ## Data Visualization and Control
 
-To configure dashboard you should login into ThingsBoard environment.
+To configure dashboard you should login into SENTIENT environment.
 
 To proceed with this step, please download a [grove_seeed_studio.json](/docs/samples/raspberry/resources/grove_seeed_studio.json) file, which contains preconfigured dashboard for this script.
 Once logged in, open Dashboards, click on the plus button in the bottom right corner of the screen and select the "Import dashboard" icon. Select recently downloaded file of dashboard configuration. Now you must edit the alias of Grove widget you should do this by pressing on the pen icon. Select the Filter type parameter as "Single entity", set Type as "Device" and from the list of devices  - select your GROVE device.
@@ -322,7 +322,7 @@ Also from dashboard you can control the servo (by rotating the knob control with
 
 ## See Also
 
-Browse other [samples](/docs/samples) or explore guides related to main ThingsBoard features:
+Browse other [samples](/docs/samples) or explore guides related to main SENTIENT features:
 
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

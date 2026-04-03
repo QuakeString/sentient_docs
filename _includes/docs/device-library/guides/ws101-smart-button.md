@@ -1,15 +1,15 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://www.milesight-iot.com/lorawan/sensor/ws101/" %}
 
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign officialManualLink = "https://resource.milesight.com/milesight/iot/document/ws101-user-guide-en.pdf" %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - [WS101 Smart Button user manual](' | append: officialManualLink | append: '){: target="_blank"}
 - Smartphone with NFC-enabled and Milesight ToolBox application ([Android](https://play.google.com/store/apps/details?id=com.ursalinknfc){: target="_blank"}/[iOS](https://itunes.apple.com/app/id1518748039){: target="_blank"})
 - LoRaWAN® gateway (in our case [UG56 LoRaWAN® Gateway](/device-library/pe/ug56-lorawan-gateway/){:target="_blank"})
-- Configured integration on networks server and ThingsBoard
+- Configured integration on networks server and SENTIENT
 - [Network Server account](#device-connection)
 '
  %}
@@ -29,15 +29,15 @@ LoRaWAN® enables encrypted radio transmissions over long distances while consum
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 
 
 ## Device connection
 
 According to the [official user manual]({{officialManualLink}}){: target="_blank"}, we need a smartphone with NFC enabled and the ToolBox application to connect the sensor.  
-Since this device can only be operated using a LoRaWAN® gateway, we must first connect it to a network server that has an integration configured with ThingsBoard.  
-Afterward, it can be provisioned to ThingsBoard.
+Since this device can only be operated using a LoRaWAN® gateway, we must first connect it to a network server that has an integration configured with SENTIENT.  
+Afterward, it can be provisioned to SENTIENT.
 
 {% if page.hasIntegrationDeviceConfiguration | downcase == "true"%}
 
@@ -57,7 +57,7 @@ TheThingsIndustries,
 Loriot
 '%}
 
-{% include /docs/device-library/blocks/basic/thingsboard-add-lorawan-device-through-integration-block.liquid target-integration-types=targetIntegrationTypes %}
+{% include /docs/device-library/blocks/basic/sentient-add-lorawan-device-through-integration-block.liquid target-integration-types=targetIntegrationTypes %}
 
 {% include /docs/device-library/blocks/ready-to-go-devices/ws101-smart-button-check-data-block.md %}
 

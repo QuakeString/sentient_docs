@@ -3,7 +3,7 @@
 Download installation `.rpm` package.
 
 ```bash
-wget https://github.com/thingsboard/thingsboard-gateway/releases/latest/download/python3-thingsboard-gateway.rpm
+wget https://github.com/sentient/sentient-gateway/releases/latest/download/python3-sentient-gateway.rpm
 ````
 {: .copy-code}
 
@@ -12,7 +12,7 @@ wget https://github.com/thingsboard/thingsboard-gateway/releases/latest/download
 Run the following command in the terminal to install the updated package:
 
 ```bash
-sudo dnf install -y ./python3-thingsboard-gateway.rpm
+sudo dnf install -y ./python3-sentient-gateway.rpm
 ```
 {: .copy-code}
 
@@ -32,7 +32,7 @@ If you are upgrading from a gateway version lower than 3.7.6, make backups of yo
 After the upgrade, restart the Gateway service to apply the changes:
 
 ```bash
-sudo systemctl restart thingsboard-gateway
+sudo systemctl restart sentient-gateway
 ```
 {: .copy-code}
 
@@ -41,7 +41,7 @@ sudo systemctl restart thingsboard-gateway
 To ensure the upgrade was successful, check the Gateway status and logs by running:
 
 ```bash
-sudo systemctl status thingsboard-gateway
+sudo systemctl status sentient-gateway
 ```
 {: .copy-code}
 
@@ -57,12 +57,12 @@ recoverability in case of any issues. The backups are stored under the following
 
 - For connector configurations:
   ```
-  /etc/thingsboard-gateway/configs_backup.tar.gz
+  /etc/sentient-gateway/configs_backup.tar.gz
   ```
 
 - For user extensions:
   ```
-  /var/lib/thingsboard_gateway/extensions_backup.tar.gz
+  /var/lib/sentient_gateway/extensions_backup.tar.gz
   ```
 
 ### Notes

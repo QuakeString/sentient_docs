@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect LattePanda to ThingsBoard?
+title: How to connect LattePanda to SENTIENT?
 category: Single-board computers
 chip: Intel Atom x5-Z8350
 connectivity: [WIFI, Bluetooth]

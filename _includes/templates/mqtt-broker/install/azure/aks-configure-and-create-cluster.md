@@ -31,7 +31,7 @@ and a lot of not required parameters (defaults values will be used if not set). 
 * **generate-ssh-keys** - Generate SSH public and private key files if missing. The keys will be stored in the ~/.ssh directory.
 
 From the command above, we add AKS addon for [ApplicationGateway](https://learn.microsoft.com/en-us/azure/application-gateway/).
-We will use this gateway as Path-Based Load Balancer for the TBMQ.
+We will use this gateway as Path-Based Load Balancer for the ST-RMQTT.
 
 Full list af `az aks create` options can be found [here](https://learn.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az_aks_create).
 

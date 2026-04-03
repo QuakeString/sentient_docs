@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: ThingsBoard Roadmap
-description: ThingsBoard architecture
+title: SENTIENT Roadmap
+description: SENTIENT architecture
 redirect_to: "/docs/releases/roadmap/"
 
 ---

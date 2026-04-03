@@ -3,20 +3,20 @@
 
 ### Overview
 
-The [MicroPython Client SDK](https://github.com/thingsboard/thingsboard-micropython-client-sdk) is a software
+The [MicroPython Client SDK](https://github.com/sentient/sentient-micropython-client-sdk) is a software
 development kit for client-side integration of your MicroPython projects. It allows you to connect your MicroPython 
-devices to ThingsBoard using MQTT protocol and send telemetry data, attributes, and receive RPC calls. The SDK 
-provides a simple and easy-to-use API for connecting to ThingsBoard and sending data, making it easier for developers 
+devices to SENTIENT using MQTT protocol and send telemetry data, attributes, and receive RPC calls. The SDK 
+provides a simple and easy-to-use API for connecting to SENTIENT and sending data, making it easier for developers 
 to integrate their MicroPython devices with the platform.
 
 MicroPython Client SDK supports the following features:
 
-- Connecting to ThingsBoard using MQTT protocol.
-- Sending attributes to ThingsBoard.
-- Sending telemetry data to ThingsBoard.
-- Receiving RPC calls from ThingsBoard.
-- Request client and shared attributes from ThingsBoard.
-- Subscribing to attribute updates from ThingsBoard.
+- Connecting to SENTIENT using MQTT protocol.
+- Sending attributes to SENTIENT.
+- Sending telemetry data to SENTIENT.
+- Receiving RPC calls from SENTIENT.
+- Request client and shared attributes from SENTIENT.
+- Subscribing to attribute updates from SENTIENT.
 - Device claiming.
 - Device provisioning.
 
@@ -29,7 +29,7 @@ the REPL or in your code:
 ```python
 import mip
 
-mip.install('github:thingsboard/thingsboard-micropython-client-sdk')
+mip.install('github:sentient/sentient-micropython-client-sdk')
 ```
 {: .copy-code}
 
@@ -38,13 +38,13 @@ and also to not install the SDK every time you run your code:
 
 ```python
 try:
-    from thingsboard_sdk.tb_device_mqtt import TBDeviceMqttClient
+    from sentient_sdk.tb_device_mqtt import TBDeviceMqttClient
 
-    print("thingsboard-micropython-client-sdk package already installed.")
+    print("sentient-micropython-client-sdk package already installed.")
 except ImportError:
-    print("Installing thingsboard-micropython-client-sdk package...")
-    mip.install('github:thingsboard/thingsboard-micropython-client-sdk')
-    from thingsboard_sdk.tb_device_mqtt import TBDeviceMqttClient
+    print("Installing sentient-micropython-client-sdk package...")
+    mip.install('github:sentient/sentient-micropython-client-sdk')
+    from sentient_sdk.tb_device_mqtt import TBDeviceMqttClient
 ```
 {: .copy-code}
 
@@ -52,16 +52,16 @@ except ImportError:
 
 #### Introduction
 
-The MicroPython Client SDK has a `TBDeviceMqttClient` class that provides methods for connecting to ThingsBoard and
+The MicroPython Client SDK has a `TBDeviceMqttClient` class that provides methods for connecting to SENTIENT and
 sending data.
 
 This class is designed to be simple to use and easy to understand for developers who are new to MicroPython or
-ThingsBoard.
+SENTIENT.
 
 #### connect
 
-Connects to ThingsBoard using MQTT protocol. This method should be called before sending any data to ThingsBoard.
-Credentials for connecting to ThingsBoard should be provided when creating an instance of the `TBDeviceMqttClient` 
+Connects to SENTIENT using MQTT protocol. This method should be called before sending any data to SENTIENT.
+Credentials for connecting to SENTIENT should be provided when creating an instance of the `TBDeviceMqttClient` 
 class. When you call the `connect` method, `self.connected` property of the client will be set to `True`.
 
 **Method Syntax**
@@ -72,7 +72,7 @@ class. When you call the `connect` method, `self.connected` property of the clie
 
 | **Arguments** | **Default value** | **Description**                                           |
 |:--------------|-------------------|:----------------------------------------------------------|
-| timeout       | **10**            | (Optional) Time to establish a connection to ThingsBoard. |
+| timeout       | **10**            | (Optional) Time to establish a connection to SENTIENT. |
 | ---           |                   |                                                           |
 
 **Example usage**
@@ -91,10 +91,10 @@ result = client.connect(timeout=20)
 
 #### disconnect
 
-Disconnects from ThingsBoard. This method can be called after connecting to ThingsBoard. It is recommended to call 
-this method when you no longer need to send data to ThingsBoard or when you want to free up resources. After calling 
+Disconnects from SENTIENT. This method can be called after connecting to SENTIENT. It is recommended to call 
+this method when you no longer need to send data to SENTIENT or when you want to free up resources. After calling 
 this method, you will need to call the [connect](/docs/reference/micropython-client-sdk/#connect) method again to send 
-data to ThingsBoard. When you call the `disconnect` method, `self.connected` property of the client will be set 
+data to SENTIENT. When you call the `disconnect` method, `self.connected` property of the client will be set 
 to `False`.
 
 **Method Syntax**
@@ -106,7 +106,7 @@ to `False`.
 ```python
 client.connect()
 
-# some tasks with ThingsBoard
+# some tasks with SENTIENT
 
 client.disconnect()
 ```
@@ -114,7 +114,7 @@ client.disconnect()
 
 #### send_attributes
 
-Sends attributes to ThingsBoard. This method can be called after connecting to ThingsBoard. Method supports sending
+Sends attributes to SENTIENT. This method can be called after connecting to SENTIENT. Method supports sending
 attributes in key-value pairs.
 
 **Method Syntax**
@@ -125,7 +125,7 @@ attributes in key-value pairs.
 
 | **Arguments** | **Description**                                                 |
 |:--------------|:----------------------------------------------------------------|
-| data          | (Required) Data that will be sent as attributes to ThingsBoard. |
+| data          | (Required) Data that will be sent as attributes to SENTIENT. |
 | ---           |                                                                 |
 
 **Example usage**
@@ -138,9 +138,9 @@ client.send_attributes(attributes)
 
 #### send_telemetry
 
-Sends telemetry data to ThingsBoard. This method can be called after connecting to ThingsBoard. Method supports 
+Sends telemetry data to SENTIENT. This method can be called after connecting to SENTIENT. Method supports 
 sending telemetry data in different formats, key-value pairs, and lists. Also, it supports sending telemetry data 
-grouped by timestamp, which is useful for sending historical data to ThingsBoard.
+grouped by timestamp, which is useful for sending historical data to SENTIENT.
 
 **Method Syntax**
 
@@ -150,7 +150,7 @@ grouped by timestamp, which is useful for sending historical data to ThingsBoard
 
 | **Arguments** | **Description**                                                  |
 |:--------------|:-----------------------------------------------------------------|
-| data          | (Required) Data that will be sent as a telemetry to ThingsBoard. |
+| data          | (Required) Data that will be sent as a telemetry to SENTIENT. |
 | ---           |                                                                  |
 
 **Example usage**
@@ -170,10 +170,10 @@ client.send_telemetry(telemetry)
 
 #### request_attributes
 
-Requests client and shared attributes from ThingsBoard. This method can be called after connecting to ThingsBoard.
+Requests client and shared attributes from SENTIENT. This method can be called after connecting to SENTIENT.
 Method supports requesting both client and shared attributes. You can specify which attributes you want to request by 
-providing a list of attribute keys. If requested attributes are received from ThingsBoard, the provided callback 
-function will be called with the result. If requested attributes are not found on ThingsBoard, the callback function 
+providing a list of attribute keys. If requested attributes are received from SENTIENT, the provided callback 
+function will be called with the result. If requested attributes are not found on SENTIENT, the callback function 
 will be called with empty result.
 
 **Method Syntax**
@@ -184,9 +184,9 @@ will be called with empty result.
 
 | **Arguments** | **Description**                                                                                                                                                                                                                                                       |
 |:--------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| client_keys   | (Optional) List of client attribute keys to request from ThingsBoard.                                                                                                                                                                                                 |
-| shared_keys   | (Optional) List of shared attribute keys to request from ThingsBoard.                                                                                                                                                                                                 |
-| callback      | (Optional) Callback function that will be called when the requested attributes are received from ThingsBoard. The callback function should accept two arguments: `result` and `exception`, which will contain the requested attributes.                               |
+| client_keys   | (Optional) List of client attribute keys to request from SENTIENT.                                                                                                                                                                                                 |
+| shared_keys   | (Optional) List of shared attribute keys to request from SENTIENT.                                                                                                                                                                                                 |
+| callback      | (Optional) Callback function that will be called when the requested attributes are received from SENTIENT. The callback function should accept two arguments: `result` and `exception`, which will contain the requested attributes.                               |
 | ---           |                                                                                                                                                                                                                                                                       |
 
 **Example usage**
@@ -221,7 +221,7 @@ the [Device claiming](/docs/user-guide/claiming-devices/) section of the documen
 
 | **Arguments** | **Description**                                                                                                                                                            |
 |:--------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| secret_key    | (Required) Secret key that will be used to claim the device on ThingsBoard.                                                                                                |
+| secret_key    | (Required) Secret key that will be used to claim the device on SENTIENT.                                                                                                |
 | duration_ms   | (Optional) Duration in milliseconds for which the claim code will be valid. If not provided, the claim code will be valid indefinitely until it is used to claim a device. |
 | ---           |                                                                                                                                                                            |
 
@@ -238,7 +238,7 @@ client.claim_device("my_claim_code", duration_ms=60000)
 
 #### subscribe_to_attribute
 
-Subscribes to attribute updates from ThingsBoard. You can specify which shared attribute you want to subscribe to by 
+Subscribes to attribute updates from SENTIENT. You can specify which shared attribute you want to subscribe to by 
 providing an attribute key. If subscribed attribute value is updated, the provided callback function will be 
 called with the corresponding attribute value.
 
@@ -253,8 +253,8 @@ the [unsubscribe_from_attribute](/docs/reference/micropython-client-sdk/#unsubsc
 
 | **Arguments** | **Description**                                                                                                                                                                                                        |
 |:--------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key           | (Required) Shared attribute key to subscribe to for updates from ThingsBoard.                                                                                                                                          |
-| callback      | (Required) A user-defined function triggered whenever a subscribed attribute is updated on ThingsBoard. The callback must accept two parameters: result (the updated data dictionary) and *args (additional metadata). |
+| key           | (Required) Shared attribute key to subscribe to for updates from SENTIENT.                                                                                                                                          |
+| callback      | (Required) A user-defined function triggered whenever a subscribed attribute is updated on SENTIENT. The callback must accept two parameters: result (the updated data dictionary) and *args (additional metadata). |
 | ---           |                                                                                                                                                                                                                        |
 
 **Example usage**
@@ -270,7 +270,7 @@ sub_id = client.subscribe_to_attribute("frequency", callback)
 
 #### subscribe_to_all_attributes
 
-Subscribes to all shared attribute updates from ThingsBoard. Whenever any shared attribute is modified on the server, 
+Subscribes to all shared attribute updates from SENTIENT. Whenever any shared attribute is modified on the server, 
 the SDK triggers the designated callback function, passing the updated data as the result.
 
 Method will return a subscription ID that can be used to unsubscribe from attribute updates using 
@@ -331,7 +331,7 @@ client.unsubscribe_from_attribute(sub_id)
 
 #### set_server_side_rpc_request_handler
 
-Configures a handler for [Remote Procedure Call](/docs/user-guide/rpc/) requests initiated from ThingsBoard. This 
+Configures a handler for [Remote Procedure Call](/docs/user-guide/rpc/) requests initiated from SENTIENT. This 
 method should be invoked after establishing a connection. When a request is received, the SDK executes the designated 
 handler, passing the following arguments:
 
@@ -346,7 +346,7 @@ handler, passing the following arguments:
 
 | **Arguments** | **Description**                                                                                                                                                                                                         |
 |:--------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| handler       | Defines the logic to execute when ThingsBoard initiates a remote command. The function receives two parameters: request_id, representing the transaction ID, and request_body, containing the specific request payload. |
+| handler       | Defines the logic to execute when SENTIENT initiates a remote command. The function receives two parameters: request_id, representing the transaction ID, and request_body, containing the specific request payload. |
 | ---           |                                                                                                                                                                                                                         |
 
 **Example usage**
@@ -361,9 +361,9 @@ client.set_server_side_rpc_request_handler(handler)
 
 #### send_rpc_reply
 
-Responds to an incoming RPC request from ThingsBoard. Use this method inside your RPC handler to return data to the 
+Responds to an incoming RPC request from SENTIENT. Use this method inside your RPC handler to return data to the 
 server. It requires the `request_id` from the initial request and a `response` object containing the result. Failing to 
-call this method may result in `request timeout` errors on the ThingsBoard dashboard.
+call this method may result in `request timeout` errors on the SENTIENT dashboard.
 
 **Method Syntax**
 
@@ -391,7 +391,7 @@ client.set_server_side_rpc_request_handler(handler)
 #### get_provision_request
 
 Static method that forms a request for [device provisioning](/docs/user-guide/device-provisioning/) by input arguments. 
-The returned provision request should be sent to ThingsBoard using the 
+The returned provision request should be sent to SENTIENT using the 
 [provision](/docs/reference/micropython-client-sdk/#provision) method.
 
 **Method Syntax**
@@ -404,12 +404,12 @@ The returned provision request should be sent to ThingsBoard using the
 |:-----------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | provision_key    | (Required) Provisioning device key, you should take it from configured device profile.                                                                       |
 | provision_secret | (Required) Provisioning device secret, you should take it from configured device profile.                                                                    |
-| device_name      | (Optional) Device name in ThingsBoard.                                                                                                                       |
-| access_token     | (Optional) Access token for device in ThingsBoard.                                                                                                           |
-| client_id        | (Optional) Client id for device in ThingsBoard.                                                                                                              |
-| username         | (Optional) Username for device in ThingsBoard.                                                                                                               |
-| password         | (Optional) Password for device in ThingsBoard.                                                                                                               |
-| hash             | (Optional) Public key X509 hash for device in ThingsBoard.                                                                                                   |
+| device_name      | (Optional) Device name in SENTIENT.                                                                                                                       |
+| access_token     | (Optional) Access token for device in SENTIENT.                                                                                                           |
+| client_id        | (Optional) Client id for device in SENTIENT.                                                                                                              |
+| username         | (Optional) Username for device in SENTIENT.                                                                                                               |
+| password         | (Optional) Password for device in SENTIENT.                                                                                                               |
+| hash             | (Optional) Public key X509 hash for device in SENTIENT.                                                                                                   |
 | gateway          | (Optional) Flag that indicates whether the provision request is for a gateway device. If not provided, the provision request will be for a regular device.   |
 | ---              |                                                                                                                                                              |
 
@@ -435,10 +435,10 @@ provision_request = TBDeviceMqttClient.get_provision_request("my_provision_key",
 
 #### provision
 
-Sends a request to ThingsBoard for [device provisioning](/docs/user-guide/device-provisioning/). 
+Sends a request to SENTIENT for [device provisioning](/docs/user-guide/device-provisioning/). 
 The argument of the method should be the provision request that is formed using the 
 [get_provision_request](/docs/reference/micropython-client-sdk/#get_provision_request) static method. If the request 
-is successful, the device will be provisioned on ThingsBoard and associated with the account that owns the 
+is successful, the device will be provisioned on SENTIENT and associated with the account that owns the 
 provision key and provision secret. If the request is not successful, an exception will be raised.
 
 **Method Syntax**
@@ -449,9 +449,9 @@ provision key and provision secret. If the request is not successful, an excepti
 
 | **Arguments**     | **Description**                                                                                                                                                      |
 |:------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| host              | (Required) Host of the ThingsBoard server.                                                                                                                           |
-| port              | (Required) Port of the ThingsBoard server.                                                                                                                           |
-| provision_request | (Required) Request that will be sent to ThingsBoard for device provisioning. The provision request should be formed using the `get_provision_request` static method. |
+| host              | (Required) Host of the SENTIENT server.                                                                                                                           |
+| port              | (Required) Port of the SENTIENT server.                                                                                                                           |
+| provision_request | (Required) Request that will be sent to SENTIENT for device provisioning. The provision request should be formed using the `get_provision_request` static method. |
 | ---               |                                                                                                                                                                      |
 
 **Example usage**
@@ -459,8 +459,8 @@ provision key and provision secret. If the request is not successful, an excepti
 ```python
 # Forming provision request
 provision_request = TBDeviceMqttClient.get_provision_request("my_provision_key", "my_provision_secret")
-# Sending provision request to ThingsBoard for device provisioning
-provisioned_credentials = client.provision("thingsboard.cloud", 1883, provision_request)
+# Sending provision request to SENTIENT for device provisioning
+provisioned_credentials = client.provision("sentient.cloud", 1883, provision_request)
 ```
 {: .copy-code}
 
@@ -468,7 +468,7 @@ provisioned_credentials = client.provision("thingsboard.cloud", 1883, provision_
 
 #### Introduction
 
-In this section, we will go over the core concepts of the MicroPython Client SDK, such as connecting to ThingsBoard, 
+In this section, we will go over the core concepts of the MicroPython Client SDK, such as connecting to SENTIENT, 
 sending and receiving data. Understanding these concepts will help you to use the MicroPython Client SDK effectively 
 in your projects.
 
@@ -477,7 +477,7 @@ Let's review the main concepts of the MicroPython Client SDK using the following
 ```python
 import time
 import network
-from thingsboard_sdk.tb_device_mqtt import TBDeviceMqttClient
+from sentient_sdk.tb_device_mqtt import TBDeviceMqttClient
 
 # Enabling WLAN interface
 wlan = network.WLAN(network.STA_IF)
@@ -493,7 +493,7 @@ if not wlan.isconnected():
 print("Connected! Network config:", wlan.ifconfig())
 
 
-# This callback will be called when an RPC request is received from ThingsBoard.
+# This callback will be called when an RPC request is received from SENTIENT.
 def on_server_side_rpc_request(request_id, request_body):
     # request_id: numeric id from the MQTT topic
     # request_body: decoded JSON dict, typically {"method": "...", "params": ...}
@@ -502,11 +502,11 @@ def on_server_side_rpc_request(request_id, request_body):
     client.send_rpc_reply(request_id, "ok")
 
 
-# Initialising client to communicate with ThingsBoard
-client = TBDeviceMqttClient("THINGSBOARD_HOST", port=1883, access_token="ACCESS_TOKEN")
+# Initialising client to communicate with SENTIENT
+client = TBDeviceMqttClient("SENTIENT_HOST", port=1883, access_token="ACCESS_TOKEN")
 # Register the server-side RPC callback before the main loop
 client.set_server_side_rpc_request_handler(on_server_side_rpc_request)
-# Connect to ThingsBoard
+# Connect to SENTIENT
 client.connect()
 
 
@@ -534,9 +534,9 @@ while True:
 ```
 {:.copy-code.expandable-15}
 
-#### Connecting to ThingsBoard
+#### Connecting to SENTIENT
 
-To connect to ThingsBoard using the MicroPython Client SDK, instantiate the `TBDeviceMqttClient` class by providing 
+To connect to SENTIENT using the MicroPython Client SDK, instantiate the `TBDeviceMqttClient` class by providing 
 your server credentials: host, port, and access token. Once the client is initialized, invoke the 
 [connect()](/docs/reference/micropython-client-sdk/#connect) method to establish the MQTT session. After a successful 
 connection, the device is ready to transmit telemetry or subscribe to updates. We recommend the following minimal code 
@@ -544,7 +544,7 @@ snippet to use:
 
 ```python
 import network
-from thingsboard_sdk.tb_device_mqtt import TBDeviceMqttClient
+from sentient_sdk.tb_device_mqtt import TBDeviceMqttClient
 
 wlan = network.WLAN(network.STA_IF)
 wlan.active(True)
@@ -558,32 +558,32 @@ if not wlan.isconnected():
 
 print('Connected! Network config:', wlan.ifconfig())
 
-client = TBDeviceMqttClient(host="thingsboard.cloud", port=1883, access_token="YOUR_ACCESS_TOKEN")
+client = TBDeviceMqttClient(host="sentient.cloud", port=1883, access_token="YOUR_ACCESS_TOKEN")
 client.connect()
 
 while True:
-    # some tasks with ThingsBoard
+    # some tasks with SENTIENT
 ```
 {: .copy-code}
 
-Before communicating with the ThingsBoard, the device must bridge the gap between the hardware and the network:
+Before communicating with the SENTIENT, the device must bridge the gap between the hardware and the network:
 
 - The network module initializes the Wi-Fi instance. We use STA_IF (Station Interface) to connect the device to an existing
   access point.
-- The `TBDeviceMqttClient` is the primary class. It requires ThingsBoard host and a unique Access Token generated in the
-  ThingsBoard device page.
+- The `TBDeviceMqttClient` is the primary class. It requires SENTIENT host and a unique Access Token generated in the
+  SENTIENT device page.
 
 #### Handling Server-Side RPC
 
-[Remote Procedure Calls](/docs/user-guide/rpc/) allow ThingsBoard to send commands to your device 
+[Remote Procedure Calls](/docs/user-guide/rpc/) allow SENTIENT to send commands to your device 
 (e.g., "Turn on the LED" or "Reset"). To handle these commands, you need to set a handler function using
 the [set_server_side_rpc_request_handler](/docs/reference/micropython-client-sdk/#set_server_side_rpc_request_handler)
-method. This handler will be called whenever a server-side RPC request is received from ThingsBoard. The handler
+method. This handler will be called whenever a server-side RPC request is received from SENTIENT. The handler
 function should accept two arguments: `request_id` and `request_body`, which will contain the ID of the received RPC
 request and the data of the received RPC request, respectively.
 
 ```python
-# This callback will be called when an RPC request is received from ThingsBoard.
+# This callback will be called when an RPC request is received from SENTIENT.
 def on_server_side_rpc_request(request_id, request_body):
     # request_id: numeric id from the MQTT topic
     # request_body: decoded JSON dict, typically {"method": "...", "params": ...}
@@ -615,9 +615,9 @@ device is effectively "blind" to incoming messages during that pause.
 
 #### Telemetry and Data Flow
 
-The SDK provides methods to send telemetry data to ThingsBoard. You can use the [send_telemetry()](/docs/reference/micropython-client-sdk/#send_telemetry) method to send
+The SDK provides methods to send telemetry data to SENTIENT. You can use the [send_telemetry()](/docs/reference/micropython-client-sdk/#send_telemetry) method to send
 data in various formats, including key-value pairs and lists. The SDK also supports sending telemetry data grouped by 
-timestamp, which is useful for sending historical data to ThingsBoard.
+timestamp, which is useful for sending historical data to SENTIENT.
 
 ```python
 # Main loop (non-blocking)
@@ -635,8 +635,8 @@ the device can simultaneously send telemetry and receive RPC commands without on
 ### Examples
 
 You can find more examples of using the MicroPython Client SDK in
-the [examples](https://github.com/thingsboard/thingsboard-micropython-client-sdk/tree/main/examples) directory of the
-[thingsboard-micropython-client-sdk](https://github.com/thingsboard/thingsboard-micropython-client-sdk) repository on
+the [examples](https://github.com/sentient/sentient-micropython-client-sdk/tree/main/examples) directory of the
+[sentient-micropython-client-sdk](https://github.com/sentient/sentient-micropython-client-sdk) repository on
 GitHub.
 
 ### Troubleshooting
@@ -665,6 +665,6 @@ GitHub.
         while not wlan.isconnected():
             pass
     
-    mip.install('github:thingsboard/thingsboard-micropython-client-sdk')
+    mip.install('github:sentient/sentient-micropython-client-sdk')
     ```
     {: .copy-code}

@@ -144,7 +144,7 @@ if __name__ == '__main__':
     tb_repo_abs_path = os.path.join(script_dir, tb_repo_rel_path)
 
     if tb_repo_type.lower() == "pe":
-        update_page(tb_repo_abs_path + "/application/src/main/resources/thingsboard.yml",
+        update_page(tb_repo_abs_path + "/application/src/main/resources/sentient.yml",
                     "_includes/docs/pe/user-guide/install/core-rule-engine-config.md")
         update_page(tb_repo_abs_path + "/transport/http/src/main/resources/tb-http-transport.yml",
                     "_includes/docs/pe/user-guide/install/http-transport-config.md")
@@ -163,7 +163,7 @@ if __name__ == '__main__':
         update_page(tb_repo_abs_path + "/report/src/main/resources/tb-report.yml",
                     "_includes/docs/pe/user-guide/install/report-service-config.md")
     elif tb_repo_type.lower() == "ce":
-        update_page(tb_repo_abs_path + "/application/src/main/resources/thingsboard.yml",
+        update_page(tb_repo_abs_path + "/application/src/main/resources/sentient.yml",
                     "_includes/docs/user-guide/install/core-rule-engine-config.md")
         update_page(tb_repo_abs_path + "/transport/http/src/main/resources/tb-http-transport.yml",
                     "_includes/docs/user-guide/install/http-transport-config.md")
@@ -177,15 +177,15 @@ if __name__ == '__main__':
                     "_includes/docs/user-guide/install/snmp-transport-config.md")
         update_page(tb_repo_abs_path + "/msa/vc-executor/src/main/resources/tb-vc-executor.yml",
                     "_includes/docs/user-guide/install/vc-executor-config.md")
-    elif tb_repo_type.lower() == "tbmq":
-        update_page(tb_repo_abs_path + "/application/src/main/resources/thingsboard-mqtt-broker.yml",
+    elif tb_repo_type.lower() == "st-rmqtt":
+        update_page(tb_repo_abs_path + "/application/src/main/resources/sentient-mqtt-broker.yml",
                     "_includes/docs/mqtt-broker/install/config.md")
-        update_page(tb_repo_abs_path + "/integration/executor/src/main/resources/tbmq-integration-executor.yml",
+        update_page(tb_repo_abs_path + "/integration/executor/src/main/resources/st-rmqtt-integration-executor.yml",
                     "_includes/docs/mqtt-broker/install/ie-config.md")
-    elif tb_repo_type.lower() == "tbmq-pe":
-        update_page(tb_repo_abs_path + "/application/src/main/resources/thingsboard-mqtt-broker.yml",
+    elif tb_repo_type.lower() == "st-rmqtt-pe":
+        update_page(tb_repo_abs_path + "/application/src/main/resources/sentient-mqtt-broker.yml",
                     "_includes/docs/pe/mqtt-broker/install/config.md")
-        update_page(tb_repo_abs_path + "/integration/executor/src/main/resources/tbmq-integration-executor.yml",
+        update_page(tb_repo_abs_path + "/integration/executor/src/main/resources/st-rmqtt-integration-executor.yml",
                     "_includes/docs/pe/mqtt-broker/install/ie-config.md")
     elif tb_repo_type.lower() == "edge":
         update_page(tb_repo_abs_path + "/application/src/main/resources/tb-edge.yml",
@@ -194,4 +194,4 @@ if __name__ == '__main__':
         update_page(tb_repo_abs_path + "/application/src/main/resources/tb-edge.yml",
                     "_includes/docs/pe/edge/user-guide/install/config.md")
     else:
-        print("Invalid 'tb_repo_type'. Please provide 'ce' or `pe` or `tbmq` or 'tbmq-pe' or 'edge' or 'edge-pe' as the first argument.")
+        print("Invalid 'tb_repo_type'. Please provide 'ce' or `pe` or `st-rmqtt` or 'st-rmqtt-pe' or 'edge' or 'edge-pe' as the first argument.")

@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} to become familiar with ThingsBoard basics. Additionally, it is advisable to explore the [Device profiles](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} documentation.
+> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} to become familiar with SENTIENT basics. Additionally, it is advisable to explore the [Device profiles](/docs/{{docsPrefix}}user-guide/device-profiles/){:target="_blank"} documentation.
 
 ## LwM2M basics
 
@@ -142,7 +142,7 @@ If the model explicitly includes the <ObjectVersion> tag for a given <ObjectID>,
 
 If the <ObjectVersion> tag is absent, the system sets ObjectVersion = 1.0 when adding the model structure to the device profile.
 
-> ⚠️ **Note**: Important!!! ObjectVersion is always controlled by the ThingsBoard LwM2M transport through the model added to the corresponding device profile.
+> ⚠️ **Note**: Important!!! ObjectVersion is always controlled by the SENTIENT LwM2M transport through the model added to the corresponding device profile.
 
 During LwM2M client registration, the initialization procedure is triggered as defined in the profile configuration: Read (Attributes and/or Telemetry), and Observe of those fields.
 If the ObjectVersion in the profile differs from the ObjectVersion sent by the LwM2M client during registration, all initialization operations for that object will be rejected.
@@ -163,17 +163,17 @@ Example usage of object version syntax when sending requests from the terminal:
 ```
 
 #### Handling object versions when sending requests from the terminal
-If an LwM2M client registered in the ThingsBoard LwM2M transport has ObjectID = 3, ObjectVersion = 1.1, then the request "/3_1.1/0/9" will be successfully processed.
+If an LwM2M client registered in the SENTIENT LwM2M transport has ObjectID = 3, ObjectVersion = 1.1, then the request "/3_1.1/0/9" will be successfully processed.
 
 If an LwM2M client has ObjectID = 3, ObjectVersion = 1.2, and the request is "/3_1.1/0/9", the request will be rejected and return an error with the message:
 "Invalid object version. Required version: 1.1"
 
 ```bash
-  // LwM2M client registered in the ThingsBoard LwM2M transport has ObjectID = 3, ObjectVersion = 1.1
+  // LwM2M client registered in the SENTIENT LwM2M transport has ObjectID = 3, ObjectVersion = 1.1
 "/3_1.1/0/9"    // ok
 "/3_1.2/0/9"    // return error
 
-  // LwM2M client registered in the ThingsBoard LwM2M transport has ObjectID = 3, ObjectVersion = 1.2
+  // LwM2M client registered in the SENTIENT LwM2M transport has ObjectID = 3, ObjectVersion = 1.2
 "/3_1.1/0/9"    // return error
 "/3_1.2/0/9"    // ok
 ````
@@ -197,7 +197,7 @@ Each **resource** has the following main properties:
 
 ## Getting started
 
-This section covers how to provision your first LwM2M device in ThingsBoard. We will use [ThingsBoard LwM2M Demo Client](https://github.com/thingsboard/thingsboard.lwm2m.demo.client){:target="_blank"} test client to simulate LwM2M device.
+This section covers how to provision your first LwM2M device in SENTIENT. We will use [SENTIENT LwM2M Demo Client](https://github.com/sentient/sentient.lwm2m.demo.client){:target="_blank"} test client to simulate LwM2M device.
 
 ### Step 1. Upload LwM2M models
 
@@ -207,7 +207,7 @@ To begin, the {% if docsPrefix == "pe/" or docsPrefix == null %}System administr
 
 > **Make sure** that the versions of the LwM2M models you upload match the versions of the LwM2M objects used by your actual devices.
 
-- Log in to your ThingsBoard instance as a System administrator.
+- Log in to your SENTIENT instance as a System administrator.
 - Navigate to the "Resources library" page under the "Resources" section.
 - Click the "+" (Add resource) button in the top-right corner of the window.
 - Upload one or more LwM2M model files.
@@ -265,9 +265,9 @@ To do this, follow these steps:
 
 #### Step 2.3 Configure the Mapping
 
-Now let&#39;s configure how ThingsBoard should process LwM2M object data:
-- The **device object** provides **manufacturer**, **model number**, and **serial number**. Let&#39;s configure ThingsBoard to receive this data as **attributes**.
-- We will observe and collect data such as **radio signal strength**, **link quality**, and **device location**, and store it as **telemetry** in ThingsBoard.
+Now let&#39;s configure how SENTIENT should process LwM2M object data:
+- The **device object** provides **manufacturer**, **model number**, and **serial number**. Let&#39;s configure SENTIENT to receive this data as **attributes**.
+- We will observe and collect data such as **radio signal strength**, **link quality**, and **device location**, and store it as **telemetry** in SENTIENT.
 
 > The **Observe** feature in LwM2M allows the server to receive data only when the values change.<br>
   You can also configure conditions for reporting specific resources via LwM2M attributes (covered in the [advanced](#object-and-resource-attributes) section).<br>
@@ -287,8 +287,8 @@ info: Endpoint [MyClientNoSec] Client registered with registration id: [fR5In7YZ
 To do this, follow these steps:
 
 **1. For each selected object:**
-  - Check the "**Attributes**" box for any data you want to retrieve when the device connects and store it as ThingsBoard **attributes**.
-  - Check the "**Telemetry**" and/or "**Observe**" boxes if you want the Server to monitor those values, fetch updates, and store them as ThingsBoard **telemetry**.
+  - Check the "**Attributes**" box for any data you want to retrieve when the device connects and store it as SENTIENT **attributes**.
+  - Check the "**Telemetry**" and/or "**Observe**" boxes if you want the Server to monitor those values, fetch updates, and store them as SENTIENT **telemetry**.
 
 {% include images-gallery.html imageCollection="configure-mapping-1" %}
 
@@ -312,7 +312,7 @@ Additionally, the "**Transport configuration**" tab also allows you to configure
 
 ##### Step 2.3.1 Observe strategy
 
-ThingsBoard supports multiple observe strategies that define how LwM2M resources are grouped and monitored.
+SENTIENT supports multiple observe strategies that define how LwM2M resources are grouped and monitored.
 
 - **Single** (default): Each resource is observed individually.  
   _✓ Best accuracy_<br>
@@ -352,7 +352,7 @@ If you perform Observe operations manually (e.g., via terminal), make sure to ac
 We assume you have successfully created a device profile for LwM2M devices in the previous steps.
 Now let&#39;s create a new device, assign it the previously created LwM2M profile, and configure its credentials.
 
-ThingsBoard supports four types of credentials:
+SENTIENT supports four types of credentials:
 - **Pre-Shared Key (PSK)**
 - **Raw Public Key (RPK)**
 - **X.509 Certificate**
@@ -381,30 +381,30 @@ Refer to the [DTLS configuration](#dtls-configuration) guide for more informatio
 
 At this point, you should have:
 - Provisioned the LwM2M device and its credentials (as described in the previous step).
-- Built the [ThingsBoard LwM2M Demo Client](https://github.com/thingsboard/thingsboard.lwm2m.demo.client){:target="_blank"}.
+- Built the [SENTIENT LwM2M Demo Client](https://github.com/sentient/sentient.lwm2m.demo.client){:target="_blank"}.
 
-Now you are ready to start the client and observe incoming telemetry in ThingsBoard.
+Now you are ready to start the client and observe incoming telemetry in SENTIENT.
 
 <b><font size="4">Launch the test client</font></b>
 
 Run the following command from your terminal:
 
 ```bash
-java -jar thingsboard-lwm2m-demo-client-{version}.jar -u coap://{{lwm2mHostName}} -n $UNIQUE_ENDPOINT_NAME
+java -jar sentient-lwm2m-demo-client-{version}.jar -u coap://{{lwm2mHostName}} -n $UNIQUE_ENDPOINT_NAME
 ```
 {: .copy-code}
 
 or
 
 ```bash
-java -jar thingsboard-lwm2m-demo-client-4.1.0.jar -u coap://{{lwm2mHostName}} -n $UNIQUE_ENDPOINT_NAME
+java -jar sentient-lwm2m-demo-client-4.1.0.jar -u coap://{{lwm2mHostName}} -n $UNIQUE_ENDPOINT_NAME
 ```
 {: .copy-code}
 
 or
 
 ```bash
-docker run --rm -it thingsboard/tb-lwm2m-demo-client:latest -u coap://{{lwm2mHostName}} -n $UNIQUE_ENDPOINT_NAME
+docker run --rm -it sentient/tb-lwm2m-demo-client:latest -u coap://{{lwm2mHostName}} -n $UNIQUE_ENDPOINT_NAME
 ```
 {: .copy-code}
 
@@ -417,7 +417,7 @@ docker run --rm -it thingsboard/tb-lwm2m-demo-client:latest -u coap://{{lwm2mHos
 <b><font size="4">Monitoring telemetry</font></b>
 
 Once the client connects:
-- The device will register with the ThingsBoard LwM2M transport.
+- The device will register with the SENTIENT LwM2M transport.
 - You will begin to receive telemetry data.
 
 The LwM2M transport implementation also stores the logs of communication with the device into telemetry.
@@ -425,32 +425,32 @@ You can view these logs under the "**transportLog**" event of the "**Latest tele
 
 {% include images-gallery.html imageCollection="transport-log" %}
 
-## ThingsBoard LwM2M support
+## SENTIENT LwM2M support
 
-ThingsBoard provides full support for both an LwM2M Server and a Bootstrap Server, with communication over:
+SENTIENT provides full support for both an LwM2M Server and a Bootstrap Server, with communication over:
 - **Plain UDP**
 - **DTLS** (secure transport over UDP)
 
-As a platform user, you are able to provision LwM2M devices and define the mapping between the LwM2M resources and ThingsBoard device [attributes](/docs/{{docsPrefix}}user-guide/attributes/){:target="_blank"} and [telemetry](/docs/{{docsPrefix}}user-guide/telemetry/){:target="_blank"} (time series data).
+As a platform user, you are able to provision LwM2M devices and define the mapping between the LwM2M resources and SENTIENT device [attributes](/docs/{{docsPrefix}}user-guide/attributes/){:target="_blank"} and [telemetry](/docs/{{docsPrefix}}user-guide/telemetry/){:target="_blank"} (time series data).
 These mappings are configured within the corresponding **LwM2M device profile**.
 
 > For step-by-step instructions on creating a device profile, refer to the [getting started guide](#getting-started).
 
 In the following sections, we will use screenshots of the LwM2M device profile UI to illustrate key features and configuration steps.
 
-### Reading LwM2M resources into ThingsBoard attributes
+### Reading LwM2M resources into SENTIENT attributes
 
-You may configure a device profile to read and/or observe specific LwM2M resources. When configured, the values of these resources will be stored as device attributes in ThingsBoard.
+You may configure a device profile to read and/or observe specific LwM2M resources. When configured, the values of these resources will be stored as device attributes in SENTIENT.
 
 To store resource as the attribute:
 - Navigate to the "**Transport configuration**" tab of your LwM2M device profile.
 - Locate the desired **LwM2M resource**.
-- Select the "**Attribute**" checkbox to store its value as a ThingsBoard attribute.
+- Select the "**Attribute**" checkbox to store its value as a SENTIENT attribute.
 - Optionally, modify the auto-generated key to define a custom **attribute name**.
 
-> ThingsBoard will read the attribute value during device registration (LwM2M "Register" operation) or during registration update (LwM2M "Update" operation).
+> SENTIENT will read the attribute value during device registration (LwM2M "Register" operation) or during registration update (LwM2M "Update" operation).
 
-**Example:** Let&#39;s configure the platform to read the **LwM2M resource** */3/0/2* (Device Serial Number) and store it in ThingsBoard as an attribute named "*serialNumber*".
+**Example:** Let&#39;s configure the platform to read the **LwM2M resource** */3/0/2* (Device Serial Number) and store it in SENTIENT as an attribute named "*serialNumber*".
 
 {% if docsPrefix == null %}
 ![image](/images/lwm2m/read-lwm2m-resources-attributes-ce.png)
@@ -473,25 +473,25 @@ To do this, check the "**Observe**" box for the desired resource. This will subs
 ![image](/images/lwm2m/observe-lwm2m-resources-pe.png)
 {% endif %}
 
-With this setup, the *timezone* attribute in ThingsBoard will always contain the latest value of the *Timezone* resource.
+With this setup, the *timezone* attribute in SENTIENT will always contain the latest value of the *Timezone* resource.
 
-### Write LwM2M resource via ThingsBoard attributes update
+### Write LwM2M resource via SENTIENT attributes update
 
-ThingsBoard enables configuration updates to be pushed to LwM2M devices using [Shared attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes){:target="_blank"}. 
+SENTIENT enables configuration updates to be pushed to LwM2M devices using [Shared attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes){:target="_blank"}. 
 These updates can be initiated from various sources, such as:
 - The administration UI
 - A dashboard [widget](/docs/{{docsPrefix}}user-guide/widgets/){:target="_blank"}
 - [The REST API](/docs/{{docsPrefix}}reference/rest-api/){:target="_blank"}
 - [A Rule Engine node](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-node){:target="_blank"}
 
-Once you change the shared attribute, ThingsBoard will search for the mapping between the attribute key and LwM2M resource in the device profile.
+Once you change the shared attribute, SENTIENT will search for the mapping between the attribute key and LwM2M resource in the device profile.
 If the resource is marked as an attribute, platform will send the LwM2M Write operation to the LwM2M client device.
 
-> See the *Timezone* example in the [reading attributes](#reading-lwm2m-resources-into-thingsboard-attributes) section.
+> See the *Timezone* example in the [reading attributes](#reading-lwm2m-resources-into-sentient-attributes) section.
 
 ### Read LwM2M resources to time series data
 
-You may configure the device profile to read and observe specific LwM2M resources and store their values as telemetry [time series data](/docs/{{docsPrefix}}user-guide/telemetry/){:target="_blank"} data in ThingsBoard.
+You may configure the device profile to read and observe specific LwM2M resources and store their values as telemetry [time series data](/docs/{{docsPrefix}}user-guide/telemetry/){:target="_blank"} data in SENTIENT.
 
 To store resource as the telemetry:
 - Navigate to the "**Transport configuration**" tab of your LwM2M device profile.
@@ -499,7 +499,7 @@ To store resource as the telemetry:
 - Select the "**Telemetry**" checkbox.
 - Optionally, customize the telemetry key name by changing the auto-generated key.
 
-**For example**, let&#39;s configure the platform to read the LwM2M Resources: */3/0/7* (Power Source Voltage), */3/0/8* (Power Source Current), */3/0/9* (Battery Level), and */3/0/10* (Memory Free), and to store them as time series data in ThingsBoard:
+**For example**, let&#39;s configure the platform to read the LwM2M Resources: */3/0/7* (Power Source Voltage), */3/0/8* (Power Source Current), */3/0/9* (Battery Level), and */3/0/10* (Memory Free), and to store them as time series data in SENTIENT:
 
 {% if docsPrefix == null %}
 ![image](/images/lwm2m/read-lwm2m-resources-time-series-ce.png)
@@ -508,9 +508,9 @@ To store resource as the telemetry:
 ![image](/images/lwm2m/read-lwm2m-resources-time-series-pe.png)
 {% endif %}
 
-### Execute LwM2M operation using the ThingsBoard RPC command
+### Execute LwM2M operation using the SENTIENT RPC command
 
-ThingsBoard supports **on-demand execution of LwM2M operations** using its **Remote Procedure Call (RPC)** feature. For simplicity, we often refer to RPCs as "**commands**".
+SENTIENT supports **on-demand execution of LwM2M operations** using its **Remote Procedure Call (RPC)** feature. For simplicity, we often refer to RPCs as "**commands**".
 
 You can send these commands using:
 - The **REST API**
@@ -538,13 +538,13 @@ Each RPC command contains two main properties:
 * [Delete](#delete-operation) - delete an Object Instance within the LwM2M Client;
 * [Observe](#observe-operation) - initiates an observation request for changes of a specific Resource;
 * [ObserveCancel](#cancel-observation-operation) - ends an observation relationship that was previously created with an “Observe” operation;
-* [ObserveCancelAll](#cancel-all-observations-operation) - Thingsboard-specific operation and allows to cancel all observations on the device at once;
-* [ObserveReadAll](#read-all-observations-operation) - Thingsboard-specific operation and allows to get all observations that are set on the device;
-* [DiscoverAll](#discover-all-operation) - Thingsboard-specific operation and allows to get the object and resources hierarchy, instantiated on the client.
+* [ObserveCancelAll](#cancel-all-observations-operation) - Sentient-specific operation and allows to cancel all observations on the device at once;
+* [ObserveReadAll](#read-all-observations-operation) - Sentient-specific operation and allows to get all observations that are set on the device;
+* [DiscoverAll](#discover-all-operation) - Sentient-specific operation and allows to get the object and resources hierarchy, instantiated on the client.
 
 **Example: Reboot the device**
 
-To trigger a **reboot** on the device using resource */3/0/4*, send the following RPC command to ThingsBoard:
+To trigger a **reboot** on the device using resource */3/0/4*, send the following RPC command to SENTIENT:
 
 ```json
 {
@@ -634,7 +634,7 @@ To be able to use the Key, you have to assign it to the attribute in the Device 
 
 {% include images-gallery.html imageCollection="change-attribute-key-name" %}
 
-Below you can find examples of usage for commands that are supported by the Thingsboard platform for LWM2M protocol. Please note that your target client may not support all of them, please refer to the client’s documentation for detailed information on supported commands.
+Below you can find examples of usage for commands that are supported by the Sentient platform for LWM2M protocol. Please note that your target client may not support all of them, please refer to the client’s documentation for detailed information on supported commands.
 
 
 ### Read Operation
@@ -712,10 +712,10 @@ Read {"id":"/3/0"}
         [
           id=0, resources=
             {
-              0=LwM2mSingleResource [id=0, value=Thingsboard Test Device, type=STRING], 
+              0=LwM2mSingleResource [id=0, value=Sentient Test Device, type=STRING], 
               1=LwM2mSingleResource [id=1, value=Model 500, type=STRING], 
               2=LwM2mSingleResource [id=2, value=TH-500-000-0001, type=STRING], 
-              3=LwM2mSingleResource [id=3, value=TestThingsboard@TestMore1024_2.04, type=STRING], 
+              3=LwM2mSingleResource [id=3, value=TestSentient@TestMore1024_2.04, type=STRING], 
               6=LwM2mSingleResource [id=6, value=1, type=INTEGER], 
               7=LwM2mSingleResource [id=7, value=96, type=INTEGER], 
               8=LwM2mSingleResource [id=8, value=37, type=INTEGER], 
@@ -1033,10 +1033,10 @@ ReadComposite {"ids":["/3/0", "/1_1.2/0"]}
       /3/0=LwM2mObjectInstance 
         [id=0, resources=
           {
-            0=LwM2mSingleResource [id=0, value=Thingsboard Test Device, type=STRING], 
+            0=LwM2mSingleResource [id=0, value=Sentient Test Device, type=STRING], 
             1=LwM2mSingleResource [id=1, value=Model 500, type=STRING], 
             2=LwM2mSingleResource [id=2, value=TH-500-000-0001, type=STRING], 
-            3=LwM2mSingleResource [id=3, value=TestThingsboard@TestMore1024_2.04, type=STRING], 
+            3=LwM2mSingleResource [id=3, value=TestSentient@TestMore1024_2.04, type=STRING], 
             6=LwM2mSingleResource [id=6, value=1, type=INTEGER], 
             7=LwM2mSingleResource [id=7, value=2, type=INTEGER], 
             8=LwM2mSingleResource [id=8, value=61, type=INTEGER], 
@@ -1232,10 +1232,10 @@ Observe {"id":"/3/0"}
   "LwM2mObjectInstance 
     [id=0, resources=
       {
-        0=LwM2mSingleResource [id=0, value=Thingsboard Test Device, type=STRING], 
+        0=LwM2mSingleResource [id=0, value=Sentient Test Device, type=STRING], 
         1=LwM2mSingleResource [id=1, value=Model 500, type=STRING], 
         2=LwM2mSingleResource [id=2, value=TH-500-000-0001, type=STRING], 
-        3=LwM2mSingleResource [id=3, value=TestThingsboard@TestMore1024_2.04, type=STRING], 
+        3=LwM2mSingleResource [id=3, value=TestSentient@TestMore1024_2.04, type=STRING], 
         6=LwM2mSingleResource [id=6, value=1, type=INTEGER], 
         7=LwM2mSingleResource [id=7, value=90, type=INTEGER], 
         8=LwM2mSingleResource [id=8, value=29, type=INTEGER], 
@@ -1309,9 +1309,9 @@ ObserveComposite {"ids":["/5_1.2/0/7", "/5_1.2/0/5", "/5_1.2/0/3", "/3", "/19_1.
   "{
     /3=LwM2mObject [id=3, instances={0=LwM2mObjectInstance [id=0, 
       resources={
-        0=LwM2mSingleResource [id=0, value=Thingsboard Demo Lwm2mDevice, type=STRING], 
+        0=LwM2mSingleResource [id=0, value=Sentient Demo Lwm2mDevice, type=STRING], 
         1=LwM2mSingleResource [id=1, value=Model 500, type=STRING], 
-        2=LwM2mSingleResource [id=2, value=Thingsboard-500-000-0001, type=STRING], 
+        2=LwM2mSingleResource [id=2, value=Sentient-500-000-0001, type=STRING], 
         3=LwM2mSingleResource [id=3, value=1.0.2, type=STRING], 
         6=LwM2mMultipleResource [id=6, values={
           0=LwM2mResourceInstance [id=0, value=0, type=INTEGER], 
@@ -1423,7 +1423,7 @@ ObserveCompositeCancel {"ids":["/5/0/7", "/5/0/5", "/5/0/3", "/3/0/9", "/19/1/0/
 
 ### Cancel All Observations Operation
 
-The "Cancel All Observations" operation is Thingsboard-specific operation and allows to cancel all observations
+The "Cancel All Observations" operation is Sentient-specific operation and allows to cancel all observations
 on the device at once
 
 <b> Example: Cancel All Observations</b>
@@ -1452,7 +1452,7 @@ ObserveCancelAll
 
 ### Read All Observations Operation
 
-The "Read All Observations" operation is Thingsboard-specific operation and allows to get all observations 
+The "Read All Observations" operation is Sentient-specific operation and allows to get all observations 
 that are set on the device.
 
 <b> Example: Read All Observations</b>
@@ -1480,7 +1480,7 @@ ObserveReadAll
 
 ### Discover All Operation
 
-The "Discover All Observations" operation is Thingsboard-specific operation and allows to get the object and resources hierarchy,
+The "Discover All Observations" operation is Sentient-specific operation and allows to get the object and resources hierarchy,
 instantiated on the client. When DiscoverAll is executed, it doesn&#39;t send any request to the client device, instead it 
 returns LwM2M model of the client device, which was created during the device connection to the server.
 This command is very useful for device setting up and troubleshooting, as it allows to see available objects and their 
@@ -1537,7 +1537,7 @@ To be able to run the update using Object 5, you have to make sure that Object 5
 
 ### Firmware update strategy
 
-ThingsBoard provides multiple strategies to run OTA firmware updates over LwM2M transport:<br>
+SENTIENT provides multiple strategies to run OTA firmware updates over LwM2M transport:<br>
 - Push firmware update as binary file using Object 5 and Resource 0 (Package)<br>
 - Auto-generate unique CoAP URL to download the package and push firmware update as Object 5 and Resource 1 (Package URI)<br>
 - Push firmware update as binary file using Object 19 and Resource 0 (Data)
@@ -1554,7 +1554,7 @@ To select firmware update strategy:
 
 ### Use Object 19 for OTA file metadata [Optional]
 
-ThingsBoard also supports **Object 19**, which enables delivery of **firmware metadata**.
+SENTIENT also supports **Object 19**, which enables delivery of **firmware metadata**.
 
 > ⚠️ This feature is complementary to Object 5, not a replacement.
 
@@ -1566,10 +1566,10 @@ To enable Object 19 usage:
 
 {% include images-gallery.html imageCollection="firmware-update-strategy-2" %}
 
-When this option is enabled, ThingsBoard will:
+When this option is enabled, SENTIENT will:
 
-1. At device connection, ThingsBoard verifies that **Object 19 is supported** by the device.
-2. If present, ThingsBoard creates an instance of Object 19 with **InstanceId** = **65534** (used for firmware metadata).
+1. At device connection, SENTIENT verifies that **Object 19 is supported** by the device.
+2. If present, SENTIENT creates an instance of Object 19 with **InstanceId** = **65534** (used for firmware metadata).
 3. FOTA metadata is sent to this instance as a **Base64-encoded JSON object**.
 
 FOTA metadata JSON structure:
@@ -1632,7 +1632,7 @@ feedback from the device on the status of the update process:
 
 ### Software update strategy
 
-ThingsBoard supports multiple ways to initiate software updates using the LwM2M transport:<br>
+SENTIENT supports multiple ways to initiate software updates using the LwM2M transport:<br>
 - **Push binary file using Object 9 and Resource 2 (Package)**<br>
 - **Auto-generate unique CoAP URL to download the package and push software update using Object 9 and Resource 3 (Package URI)**
 
@@ -1648,7 +1648,7 @@ To select software update strategy:
 
 ### Use Object 19 for OTA file metadata [Optional]
 
-ThingsBoard also supports Object 19 to deliver software update metadata (SOTA):
+SENTIENT also supports Object 19 to deliver software update metadata (SOTA):
 
 > ⚠️ This feature is complementary to Object 5, not a replacement.
 
@@ -1660,10 +1660,10 @@ To enable Object 19 usage:
 
 {% include images-gallery.html imageCollection="software-update-strategy-2" %}
 
-When this option is enabled, ThingsBoard will:
+When this option is enabled, SENTIENT will:
 
-1. At device connection, ThingsBoard verifies that **Object 19 is supported** by the device.
-2. If present, ThingsBoard creates an instance of Object 19 with **InstanceId** = **65535** (used for firmware metadata).
+1. At device connection, SENTIENT verifies that **Object 19 is supported** by the device.
+2. If present, SENTIENT creates an instance of Object 19 with **InstanceId** = **65535** (used for firmware metadata).
 3. SOTA metadata is sent to this instance as a **Base64-encoded JSON object**.
 
 SOTA metadata JSON structure:
@@ -1708,10 +1708,10 @@ This option allows running the software update with the image file located on th
 the server generates a CoAP-URL and  sends it to the client, and the client downloads software image from the external 
 resource directly without transferring image to the server.
 
-## Test OTA using ThingsBoard LwM2M Demo Client
+## Test OTA using SENTIENT LwM2M Demo Client
 
-The [ThingsBoard LwM2M Demo Client](https://github.com/thingsboard/thingsboard.lwm2m.demo.client) is a command-line tool 
-designed to simulate an LwM2M client and connect it to a ThingsBoard server.
+The [SENTIENT LwM2M Demo Client](https://github.com/sentient/sentient.lwm2m.demo.client) is a command-line tool 
+designed to simulate an LwM2M client and connect it to a SENTIENT server.
 
 This client can be used to test OTA firmware and software updates, as it supports:
 
@@ -1733,7 +1733,7 @@ To get started:
 1. Clone the project:
 
 ```ruby
-git clone https://github.com/thingsboard/thingsboard.lwm2m.demo.client
+git clone https://github.com/sentient/sentient.lwm2m.demo.client
 ```
 {: .copy-code}
 
@@ -1748,18 +1748,18 @@ mvn clean install
 3. Run the client with custom parameters:
 
 ```
-java -jar thingsboard-lwm2m-demo-client-{version}.jar -u coap://{{lwm2mHostName}} -n MyClientNoSec -tota
+java -jar sentient-lwm2m-demo-client-{version}.jar -u coap://{{lwm2mHostName}} -n MyClientNoSec -tota
 ```
 {: .copy-code}
 
-Refer to the [README](https://github.com/thingsboard/thingsboard.lwm2m.demo.client/blob/master/README.md) for full usage details and advanced configuration options.
+Refer to the [README](https://github.com/sentient/sentient.lwm2m.demo.client/blob/master/README.md) for full usage details and advanced configuration options.
 
 ## Advanced topics
 
 ### Object and Resource attributes
 
 Please note that attributes in LwM2M context are different and not related to Server, Client or Shared attributes on 
-the Thingsboard platform.
+the Sentient platform.
 
 In LwM2M protocol, attributes are metadata which can be attached to an Object, an Object Instance, or a Resource. These 
 attributes can fulfil various roles, from carrying information only to carrying parameters for setting up certain
@@ -1775,7 +1775,7 @@ There are two types of attributes:
 <b> PROPERTIES Class Attributes, or Object Attributes </b> 
 
 The role of these Attributes is to provide metadata which may communicate helpful information to the LwM2M Server, for 
-example easing data management. Thingsboard supports Object Version attribute, which indicates the version of the 
+example easing data management. Sentient supports Object Version attribute, which indicates the version of the 
 associated Object and is displayed in the results of [DiscoverAll](/docs/{{docsPrefix}}reference/lwm2m-api/#discover-all-operation){:target="_blank"} command.
 
 You can find more details about all available in LwM2M Object attributes here: [PROPERTIES Class Attributes](http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/HTML-Version/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.html#Table-512-1-lessPROPERTIESgreater-Class-Attributes){:target="_blank"}
@@ -1819,18 +1819,18 @@ Notification attributes can be configured in the Device Profile, please follow t
 
 ### DTLS configuration
 
-The Thingsboard platform supports secured connection using DTLS. DTLS, which stands for Datagram Transport Layer
+The Sentient platform supports secured connection using DTLS. DTLS, which stands for Datagram Transport Layer
 Security, is based on the Transport Layer Security (TLS) protocol and built on top of the User Datagram Protocol (UDP).
-Thingsboard allows the use of DTLS  with the LwM2M transport connection for devices.
+Sentient allows the use of DTLS  with the LwM2M transport connection for devices.
 
 You can find detailed information about `LWM2M DTLS-based Security` [here](http://www.openmobilealliance.org/release/LightweightM2M/V1_2-20201110-A/OMA-TS-LightweightM2M_Transport-V1_2-20201110-A.pdf#page=19){:target="_blank"}.
 
-There are three authentication methods available on the Thingsboard for LwM2M DTLS: using the Pre-Shared Key(PSK), using
+There are three authentication methods available on the Sentient for LwM2M DTLS: using the Pre-Shared Key(PSK), using
 the Raw Public Key(RPK) and using the X.509 certificate.
 
-To use DTLS, the end-user device has to connect to the ThingsBoard server using secured port 5686.
+To use DTLS, the end-user device has to connect to the SENTIENT server using secured port 5686.
 
-For the demonstration purpose we will use **ThingsBoard LwM2M Demo Client**, please refer to the link for downloading and configuration: [here](https://github.com/thingsboard/thingsboard.lwm2m.demo.client){:target="_blank"}.
+For the demonstration purpose we will use **SENTIENT LwM2M Demo Client**, please refer to the link for downloading and configuration: [here](https://github.com/sentient/sentient.lwm2m.demo.client){:target="_blank"}.
 
 #### 1. Pre-shared Key mode (PSK).
 
@@ -1847,38 +1847,38 @@ You need only three strings to configure the connection in the Device profile:
 * Client identity (PSK identity) key: any text string.
 * PSK key (security key): should be a random sequence in HexDec format and 32, 64 or 128 characters long.
 
-Example of using **ThingsBoard LwM2M Demo Client**:
+Example of using **SENTIENT LwM2M Demo Client**:
 
     Endpoint client name= "MyClientPsk";
     Client identity (PSK identity) = "myIdentity";
     Client key (PSK key or PSK security key) = "01020304050607080A0B0C0D0F010203";
 
-Example command for start [ThingsBoard LwM2M Demo Client](https://github.com/thingsboard/thingsboard.lwm2m.demo.client) in mode PSK:
+Example command for start [SENTIENT LwM2M Demo Client](https://github.com/sentient/sentient.lwm2m.demo.client) in mode PSK:
 
 ```ruby
-java -jar thingsboard-lwm2m-demo-client-{version}.jar -u coaps://{{lwm2mHostName}} -n MyClientPsk --psk-identity myIdentity --psk-key 01020304050607080A0B0C0D0F010203 
+java -jar sentient-lwm2m-demo-client-{version}.jar -u coaps://{{lwm2mHostName}} -n MyClientPsk --psk-identity myIdentity --psk-key 01020304050607080A0B0C0D0F010203 
 ```
 
   or
 
 ```ruby
-java -jar thingsboard-lwm2m-demo-client-4.1.0.jar -u coaps://{{lwm2mHostName}} -n MyClientPsk --psk-identity myIdentity --psk-key 01020304050607080A0B0C0D0F010203
+java -jar sentient-lwm2m-demo-client-4.1.0.jar -u coaps://{{lwm2mHostName}} -n MyClientPsk --psk-identity myIdentity --psk-key 01020304050607080A0B0C0D0F010203
 ```
 {: .copy-code}
 
   or
 
 ```ruby
-docker run --rm -it thingsboard/tb-lwm2m-demo-client:latest -u coaps://{{lwm2mHostName}} -n 	MyClientPsk -i myIdentity -p 01020304050607080A0B0C0D0F010203
+docker run --rm -it sentient/tb-lwm2m-demo-client:latest -u coaps://{{lwm2mHostName}} -n 	MyClientPsk -i myIdentity -p 01020304050607080A0B0C0D0F010203
 ```
 {: .copy-code}
 
-Thingsboard-demo-client Interactive Console :
+Sentient-demo-client Interactive Console :
 
 ```
 DefaultRegistrationEngine 2021-09-30 19:09:52,789 [INFO] Trying to register to coaps://192.168.1.81:5686 ...
-thingsboard-demo-client 2021-09-30 19:09:52,830 [INFO] DTLS Full Handshake initiated by client : STARTED ...
-thingsboard-demo-client 2021-09-30 19:09:52,949 [INFO] DTLS Full Handshake initiated by client : SUCCEED
+sentient-demo-client 2021-09-30 19:09:52,830 [INFO] DTLS Full Handshake initiated by client : STARTED ...
+sentient-demo-client 2021-09-30 19:09:52,949 [INFO] DTLS Full Handshake initiated by client : SUCCEED
 DefaultRegistrationEngine 2021-09-30 19:09:52,990 [INFO] Registered with location '/rd/vXMGfVFgQi'.
 ```
 {: .copy-code}
@@ -1892,7 +1892,7 @@ the overhead associated with certificates and the public key infrastructure.
 
 To configure the connection, you need to do following steps:
 
-   * Generate Client keys and copy-paste the Client Public key to the Device Credentials - Client Key on the Thingsboard platform.
+   * Generate Client keys and copy-paste the Client Public key to the Device Credentials - Client Key on the Sentient platform.
    * Generate Server keys and add them to the Server key-storage file lwm2mserver.jks, copy the file back to the server installation folder.
    * Configure your client’s connection.
 
@@ -1901,7 +1901,7 @@ We will use OpenSSl tool and follow the guide from Leshan: [here](https://github
 <b>Note:</b> This step requires Linux-based OS with Java installed.
 
 1. Create a separate folder where we will keep all generated keys.
-2. Thingsboard keeps server keys in the key-storage file "lwm2mserver.jks", please find and copy this file to our folder.
+2. Sentient keeps server keys in the key-storage file "lwm2mserver.jks", please find and copy this file to our folder.
    Default key file location is:
 
 ```ruby
@@ -1918,7 +1918,7 @@ script into it and save the file with *.sh extention, for example 'generate-rpk.
 ```ruby
 #!/bin/bash
 #
-# Copyright © 2016-2021 The Thingsboard Authors
+# Copyright © 2016-2021 The Sentient Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -1945,7 +1945,7 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in keysClient.pem -out cprik.der 
 # Output Client Public Key portion in SubjectPublicKeyInfo format (DER encoding):
 openssl ec -in keysClient.pem -pubout -outform DER -out cpubk.der
 
-echo "Client public key in base64 format. Copy this key to the Thingsboard - Client Key field in Device Credentials"
+echo "Client public key in base64 format. Copy this key to the Sentient - Client Key field in Device Credentials"
 base64 cpubk.der
 
 # get server keys
@@ -1968,7 +1968,7 @@ openssl ec -in scertServer.pem -pubout -outform DER -out spubk.der
 {: .copy-code}
 
 Please note that script us using the default password for "lwm2mserver.jks" file. If you are going to use another password,
-please also update it in ["thingsboard.yml"](https://thingsboard.io/docs/user-guide/install/config/){:target="_blank"} configuration file:
+please also update it in ["sentient.yml"](https://docs.sentient.invenia.in/docs/user-guide/install/config/){:target="_blank"} configuration file:
 
 ```ruby
 ...
@@ -2001,7 +2001,7 @@ This script will run keytool and ssh utilities. It will generate the following o
 * scertServer.pem - Server public key with no encryption 
   
 {:start="5"}
-5. Configure Device on the Thingsboard platform:
+5. Configure Device on the Sentient platform:
 
 * Endpoint name: input unique text string used to identify the client device
 * Client key:
@@ -2016,15 +2016,15 @@ MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEdvBZZ2vQRK9wgDhctj6B1c7bxR3Z0wYg1+YdoYFnVUKW
 ```
 
 {:start="6"}
-6. Example command to launch   [ThingsBoard LwM2M Demo Client](https://github.com/thingsboard/thingsboard.lwm2m.demo.client) in RPK mode:
+6. Example command to launch   [SENTIENT LwM2M Demo Client](https://github.com/sentient/sentient.lwm2m.demo.client) in RPK mode:
 
 
 ```ruby
 #command:
-$ java -jar thingsboard-lwm2m-demo-client-{version}.jar -u coaps://{{lwm2mHostName}} -n MyClientRpk -cpubk ./clietPubK.der -cprik ./clientKey.der -spubk ./serverPubK.der
+$ java -jar sentient-lwm2m-demo-client-{version}.jar -u coaps://{{lwm2mHostName}} -n MyClientRpk -cpubk ./clietPubK.der -cprik ./clientKey.der -spubk ./serverPubK.der
 
 #Output:
-ThingsBoard LwM2M Demo Client Interactive Console :
+SENTIENT LwM2M Demo Client Interactive Console :
  
 Commands:
   help	Displays help information about the specified command
@@ -2036,12 +2036,12 @@ Commands:
  
 Press Ctl-C to exit.
 
-ThingsBoard Demo Client 2021-10-27 10:37:21,196 [INFO] Starting Leshan client ...
+SENTIENT Demo Client 2021-10-27 10:37:21,196 [INFO] Starting Leshan client ...
 CaliforniumEndpointsManager 2021-10-27 10:37:21,470 [INFO] New endpoint created for server coaps://18.184.200.162:5686 at coaps://[0:0:0:0:0:0:0:0]:10004
-ThingsBoard Demo Client 2021-10-27 10:37:21,472 [INFO] Leshan client[endpoint:leshan-rpkz] started.
+SENTIENT Demo Client 2021-10-27 10:37:21,472 [INFO] Leshan client[endpoint:leshan-rpkz] started.
 DefaultRegistrationEngine 2021-10-27 10:37:21,474 [INFO] Trying to register to coaps://18.184.200.162:5686 ...
-ThingsBoard Demo Client 2021-10-27 10:37:21,549 [INFO] DTLS Full Handshake initiated by client : STARTED ...
-ThingsBoard Demo Client 2021-10-27 10:37:21,729 [INFO] DTLS Full Handshake initiated by client : SUCCEED
+SENTIENT Demo Client 2021-10-27 10:37:21,549 [INFO] DTLS Full Handshake initiated by client : STARTED ...
+SENTIENT Demo Client 2021-10-27 10:37:21,729 [INFO] DTLS Full Handshake initiated by client : SUCCEED
 DefaultRegistrationEngine 2021-10-27 10:37:21,771 [INFO] Registered with location '/rd/yyIIQFyg6H'.
 DefaultRegistrationEngine 2021-10-27 10:37:21,773 [INFO] Next registration update to coaps://18.184.200.162:5686 in 53s...
 ```

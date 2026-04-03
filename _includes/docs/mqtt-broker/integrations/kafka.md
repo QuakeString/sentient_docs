@@ -2,36 +2,36 @@
 * TOC 
 {:toc}
 
-TBMQ Kafka Integration enables seamless communication with **Apache Kafka**. It allows TBMQ to **publish messages** to the external Kafka clusters and can be useful for the following scenarios:
+ST-RMQTT Kafka Integration enables seamless communication with **Apache Kafka**. It allows ST-RMQTT to **publish messages** to the external Kafka clusters and can be useful for the following scenarios:
 
 - **Streaming IoT Data** – Forwarding device telemetry, logs, or events to Kafka for processing and storage.
 - **Event-Driven Architectures** – Publishing messages to Kafka topics for real-time analytics and monitoring.
-- **Decoupled System Communication** – Using Kafka as a buffer between TBMQ and downstream applications.
+- **Decoupled System Communication** – Using Kafka as a buffer between ST-RMQTT and downstream applications.
 
 ## Data Flow Overview
 
-TBMQ Kafka Integration processes messages and forwards them to an external Kafka cluster in the following steps:
+ST-RMQTT Kafka Integration processes messages and forwards them to an external Kafka cluster in the following steps:
 
 1. **Device (client) publishes an MQTT message** to a topic that matches the Integration's **Topic Filters**.
-2. **TBMQ broker receives the message** and forwards to TBMQ Integration Executor.
-3. **TBMQ Integration Executor processes the message**, formats it accordingly, and sends it to a configured **Kafka topic**.
+2. **ST-RMQTT broker receives the message** and forwards to ST-RMQTT Integration Executor.
+3. **ST-RMQTT Integration Executor processes the message**, formats it accordingly, and sends it to a configured **Kafka topic**.
 4. **Kafka consumers process the message** in downstream systems.
 
-![image](/images/mqtt-broker/integrations/tbmq-kafka-integration.png)
+![image](/images/mqtt-broker/integrations/st-rmqtt-kafka-integration.png)
 
 ## Prerequisites
 
 Before setting up the integration, ensure the following:
 
-- A running **[TBMQ](/docs/{{docsPrefix}}mqtt-broker/install/installation-options/) instance**.
+- A running **[ST-RMQTT](/docs/{{docsPrefix}}mqtt-broker/install/installation-options/) instance**.
 - An external service ready to receive Kafka message (e.g. **Confluent Cloud**).
-- A client capable of publishing MQTT messages (e.g., **TBMQ WebSocket Client**).
+- A client capable of publishing MQTT messages (e.g., **ST-RMQTT WebSocket Client**).
 
-## Create TBMQ Kafka Integration
+## Create ST-RMQTT Kafka Integration
 
 1. Navigate to the **Integrations** page and click the **"+"** button to create a new integration.
 2. Select **Kafka** as the integration type and click **Next**.
-3. On the **Topic Filters** page click **Next** to subscribe to the default topic `tbmq/#`.
+3. On the **Topic Filters** page click **Next** to subscribe to the default topic `st-rmqtt/#`.
 
 {% include images-gallery.html imageCollection="add-kafka-integration" %}
 
@@ -59,11 +59,11 @@ Confluent Cloud<br><small>Cloud solution</small>%,%confluent%,%/templates/mqtt-b
 
 |**Field**|**Description**|
 |:-|:-|-
-| **Send only message payload** | If enabled, only the raw message payload is forwarded. If disabled, TBMQ wraps the payload in a JSON object containing additional metadata. |
+| **Send only message payload** | If enabled, only the raw message payload is forwarded. If disabled, ST-RMQTT wraps the payload in a JSON object containing additional metadata. |
 | **Bootstrap servers** | The Kafka broker addresses (comma-separated list of hostnames/IPs and ports). |
 | **Topic** | The Kafka topic where messages will be published. |
 | **Key** | (Optional) Used for partitioning messages. If specified, Kafka hashes the key to consistently assign messages to the same partition. |
-| **Client ID prefix** | (Optional) Defines the prefix for the Kafka client ID. If not set, the default `tbmq-ie-kafka-producer` is used. |
+| **Client ID prefix** | (Optional) Defines the prefix for the Kafka client ID. If not set, the default `st-rmqtt-ie-kafka-producer` is used. |
 | **Automatically retry times if fails** | Number of retries before marking a message as failed. |
 | **Produces batch size in bytes** | Maximum batch size before sending messages to Kafka. |
 | **Time to buffer locally (ms)** | Time in milliseconds to buffer messages locally before sending. |
@@ -85,8 +85,8 @@ To send a message, follow these steps:
 
 1. Navigate to the **WebSocket Client** page.
 2. Select 'WebSocket Default Connection' or any other available working connection, then click **Connect**. Make sure the 'Connection status' is shown as `Connected`.
-3. Set the 'Topic' field to `tbmq/kafka-integration` to match the Integration's 'Topic Filter' `tbmq/#`.
+3. Set the 'Topic' field to `st-rmqtt/kafka-integration` to match the Integration's 'Topic Filter' `st-rmqtt/#`.
 4. Click the **Send** icon to publish the message.
-5. If successful, the message should be available in your Kafka service under the topic `tbmq.messages`.
+5. If successful, the message should be available in your Kafka service under the topic `st-rmqtt.messages`.
 
 {% include images-gallery.html imageCollection="send-uplink-message-kafka" %}

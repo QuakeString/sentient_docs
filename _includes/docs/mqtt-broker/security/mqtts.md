@@ -1,15 +1,15 @@
 * TOC
 {:toc}
 
-TBMQ provides the ability to run MQTT server and MQTT over WebSocket over SSL. Both one-way and two-way SSL are supported.
+ST-RMQTT provides the ability to run MQTT server and MQTT over WebSocket over SSL. Both one-way and two-way SSL are supported.
 
-Most of the TBMQ environments use the load balancer as a termination point for the SSL connection between the devices and the broker.
+Most of the ST-RMQTT environments use the load balancer as a termination point for the SSL connection between the devices and the broker.
 In other words, MQTT traffic is encrypted between the device and the load balancer but is decrypted between the load balancer and broker services.
 The advantage of such an option is the simplicity of configuration.
 Most of the cloud load balancers (AWS, Google Cloud, etc.) have built-in certificate generation tools and rich documentation on how to configure SSL over TCP.
 The disadvantage of such an option is that two-way SSL is not possible. The information about the client certificate is not passed from the load balancer to the broker services.
 
-Nevertheless, it is possible to configure TBMQ to two-way SSL for MQTT and avoid SSL termination on the Load Balancer.
+Nevertheless, it is possible to configure ST-RMQTT to two-way SSL for MQTT and avoid SSL termination on the Load Balancer.
 We recommend using valid SSL certificates generated using trusted CA authorities and avoid spending time on resolving issues with [self-signed certificates](#self-signed-certificates-generation).
 See the instructions below on how to configure SSL for certificates stored in PEM file format or Java Keystore.
 
@@ -35,7 +35,7 @@ where:
 * LISTENER_SSL_PEM_KEY — Path to the server certificate private key file. Optional by default. Required if the private key is not present in the server certificate file;
 * LISTENER_SSL_PEM_KEY_PASSWORD — Optional server certificate private key password.
 
-After completing the setup, start or restart the TBMQ server.
+After completing the setup, start or restart the ST-RMQTT server.
 
 {% include templates/mqtt-broker/ssl/pem_files_location.md %}
 
@@ -49,8 +49,8 @@ export LISTENER_SSL_ENABLED=true
 export LISTENER_SSL_CREDENTIALS_TYPE=KEYSTORE
 export LISTENER_SSL_KEY_STORE_TYPE=PKCS12
 export LISTENER_SSL_KEY_STORE=keystore.p12
-export LISTENER_SSL_KEY_STORE_PASSWORD=tbmq
-export LISTENER_SSL_KEY_PASSWORD=tbmq
+export LISTENER_SSL_KEY_STORE_PASSWORD=st-rmqtt
+export LISTENER_SSL_KEY_PASSWORD=st-rmqtt
 ...
 ```
 
@@ -63,7 +63,7 @@ where:
 * LISTENER_SSL_KEY_STORE_PASSWORD — Password used to access the key store;
 * LISTENER_SSL_KEY_PASSWORD — Password used to access the server private key.
 
-After completing the setup, start or restart the TBMQ server.
+After completing the setup, start or restart the ST-RMQTT server.
 
 {% include templates/mqtt-broker/ssl/keystore_files_location.md %}
 
@@ -77,9 +77,9 @@ You may configure following additional environment variables via [configuration]
 
 {% include docs/user-guide/ssl/self-signed-ecc.md %}
 
-> It is recommended to include the **ca.pem** file in TBMQ’s Truststore.
+> It is recommended to include the **ca.pem** file in ST-RMQTT’s Truststore.
 > This is especially important if you plan to issue client certificates signed by the same CA that signed the server certificate.
-> By doing so, TBMQ will be able to validate these client certificates during the TLS handshake, allowing secure MQTT client connections.
+> By doing so, ST-RMQTT will be able to validate these client certificates during the TLS handshake, allowing secure MQTT client connections.
 
 To achieve this, you need to create a certificate chain by concatenating the server certificate and the CA certificate:
 
@@ -88,7 +88,7 @@ cat server.pem ca.pem > serverChain.pem
 ```
 {: .copy-code}
 
-The resulting `serverChain.pem` file should then be configured in TBMQ by setting the following environment variable:
+The resulting `serverChain.pem` file should then be configured in ST-RMQTT by setting the following environment variable:
 
 ```bash
 LISTENER_SSL_PEM_CERT=serverChain.pem
@@ -117,7 +117,7 @@ keytool -importcert -file CERT.pem -alias ALIAS -keystore keystore.p12 -storepas
 * `-keystore keystore.p12` — the Java keystore/truststore file (.jks or .p12) to which the certificate will be added. If it doesn’t exist, it will be created.
 * `-storepass KEYSTOREPASS` — the password protecting the keystore.
 
-> Ensure you configure TBMQ to enable MQTTS using the appropriate [Keystore parameters](#ssl-configuration-using-java-keystore).
+> Ensure you configure ST-RMQTT to enable MQTTS using the appropriate [Keystore parameters](#ssl-configuration-using-java-keystore).
  
 To use the *keytool* command, a Java Development Kit (JDK) must be installed on your system.
 

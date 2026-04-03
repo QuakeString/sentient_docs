@@ -1,6 +1,6 @@
 ```bash
 ./scripts/docker-stop-services.sh
-./scripts/docker-upgrade-tbmq.sh --fromVersion=FROM_VERSION
+./scripts/docker-upgrade-st-rmqtt.sh --fromVersion=FROM_VERSION
 ./scripts/docker-start-services.sh
 ```
 {: .copy-code}

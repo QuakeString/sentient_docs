@@ -2,7 +2,7 @@
 {:toc}
 
 ## Introduction
-This tutorial will show how to set up and integrate diverse signals from District Heating Substation (DHS) facility into ThingsBoard IoT platform using Decode DL28 Communications processor. Signals from digital and analog I/O, Modbus RTU devices and M-Bus heat meters are combined in a single ThingsBoard dashboard. Due to simplicity only a few signals and devices are connected but in real world  installation up to several hundred devices and several thousand signals may be used.
+This tutorial will show how to set up and integrate diverse signals from District Heating Substation (DHS) facility into SENTIENT IoT platform using Decode DL28 Communications processor. Signals from digital and analog I/O, Modbus RTU devices and M-Bus heat meters are combined in a single SENTIENT dashboard. Due to simplicity only a few signals and devices are connected but in real world  installation up to several hundred devices and several thousand signals may be used.
 
 
 
@@ -19,10 +19,10 @@ System diagram shows some typical automation and metering elements in DHS: subst
 
 
 
-Decode [DL28](https://decode.rs/product/dl28/) device plays role of communication and signal concentrator and provides bridge function between all control, monitoring and measuring equipment installed in DHS and ThingsBoard servers on internet. Three signal are used in this example: two relay outputs and one of temperatures from heat meter.
+Decode [DL28](https://decode.rs/product/dl28/) device plays role of communication and signal concentrator and provides bridge function between all control, monitoring and measuring equipment installed in DHS and SENTIENT servers on internet. Three signal are used in this example: two relay outputs and one of temperatures from heat meter.
 
 ## Prerequisites 
-- Account on [ThingsBoard Cloud](https://thingsboard.cloud/signup/)
+- Account on [SENTIENT Cloud](https://sentient.cloud/signup/)
 - Computer with Ethernet connection and web browser
 - Decode DL28 communication controller
 - Decode EXIO I/O expansion device
@@ -30,9 +30,9 @@ Decode [DL28](https://decode.rs/product/dl28/) device plays role of communicatio
 - Heat meter with M-Bus
 - Connection to Internet
 
-## Setup of ThingsBoard
+## Setup of SENTIENT
 ### Step 1. Log in
-Go to ThingsBoard Cloud web page and log in with credentials obtained when account is created.
+Go to SENTIENT Cloud web page and log in with credentials obtained when account is created.
 ### Step 2. Add DL28 device
 After the successful login procedure, click on the Devices entry in the left side menu and then on "+" icon. Select Add New Device option, enter Name, Device type and Label fields and click on Add button.
 
@@ -150,7 +150,7 @@ Select a show/hide option to show detailed device data. Data values from M-Bus a
 
 
 ### Step 6. Setup MQTT
-In MQTT Settings menu tick check boxes: Enable, Clean Session and JSON format. Enter Thingsboard broker data: Broker: **mqtt.thingsboard.cloud**, Port: **1883**, Reconnect Period: **10**, Keep Alive Interval: **60**, Client ID: Enter **Device ID** obtained from ThingsBoard demo account, Username: Enter **Access Token** obtained from ThingsBoard demo account, Password: Leave empty. Click on a Save button.
+In MQTT Settings menu tick check boxes: Enable, Clean Session and JSON format. Enter Sentient broker data: Broker: **mqtt.sentient.cloud**, Port: **1883**, Reconnect Period: **10**, Keep Alive Interval: **60**, Client ID: Enter **Device ID** obtained from SENTIENT demo account, Username: Enter **Access Token** obtained from SENTIENT demo account, Password: Leave empty. Click on a Save button.
 In MQTT Publish List menu add three parameters, two for publishing relay states,  and one for publishing return temperature from heat meter. Click on a Save button.
 
 
@@ -178,14 +178,14 @@ Open the DL28 dashboard. Relays are controlled by clicking on switches EXIO RL1 
 
 
 ## Conclusion
-It is shown that the ThingsBoard is ideal platform for remote monitoring and control of district heating substation facilities. The solution is very scalable in terms of increasing the number of devices, dashboards and widgets and may cover even large distribution networks for whole cities. It is also demonstrated that mixing of remote monitoring and control with meter reading is possible in a ThingsBoard system.
+It is shown that the SENTIENT is ideal platform for remote monitoring and control of district heating substation facilities. The solution is very scalable in terms of increasing the number of devices, dashboards and widgets and may cover even large distribution networks for whole cities. It is also demonstrated that mixing of remote monitoring and control with meter reading is possible in a SENTIENT system.
 
 More details about the used products are available on their pages and manuals that could be downloaded from download page.
 
 Please feel free to get in touch with Decode Team if you have any additional questions.
 ## See also
 
-Browse other [samples](/device-library/) or explore guides related to main ThingsBoard features:
+Browse other [samples](/device-library/) or explore guides related to main SENTIENT features:
 
  - [Device attributes](/docs/{{docsPrefix}}user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/{{docsPrefix}}user-guide/telemetry/) - how to collect telemetry data.

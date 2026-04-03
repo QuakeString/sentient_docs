@@ -6,7 +6,7 @@ Counts incoming messages over a specified time interval and outputs a message co
 
 - **Interval in seconds**: Time interval in seconds for counting messages. The node will output the message count at each interval and reset the counter.
 - **Output time series key prefix**: Prefix used to create the property name in the output message that holds the count result. The property name will be formatted as
-  `{prefix}_{serviceId}`, where serviceId is the unique identifier of the ThingsBoard service instance (e.g., "tb-rule-engine1").
+  `{prefix}_{serviceId}`, where serviceId is the unique identifier of the SENTIENT service instance (e.g., "tb-rule-engine1").
 
 ### JSON Schema
 

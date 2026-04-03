@@ -11,7 +11,7 @@ cannot-edit-on-edge:
 createFirmware:
     0:
         image: /images/edge/user-guide/ota-update/1-ota-upd-section-ce.png
-        title: 'To create the OTA updates package on your ThingsBoard server, navigate to the Advanced features > OTA updates section and click the "+" icon.'
+        title: 'To create the OTA updates package on your SENTIENT server, navigate to the Advanced features > OTA updates section and click the "+" icon.'
     1:
         image: /images/edge/user-guide/ota-update/2-add-package-ce.png
         title: 'Fill in all mandatory fields and click the "Add" button to proceed. Please note that once the package is uploaded, the title, version, device profile, and package type cannot be modified.'
@@ -22,7 +22,7 @@ createFirmware:
 verifyFirmware:
     0:
         image: /images/edge/user-guide/ota-update/4-verify-on-edge-ce.png
-        title: 'Log in to the ThingsBoard Edge instance, go to the Advanced features > OTA updates section and confirm that the firmware package has been successfully provisioned on the Edge instance.'
+        title: 'Log in to the SENTIENT GATEWAY instance, go to the Advanced features > OTA updates section and confirm that the firmware package has been successfully provisioned on the Edge instance.'
 ---
 
 {% assign docsPrefix = "edge/" %}

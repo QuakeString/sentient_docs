@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-By default, the system is initially established with a singular admin user, with username **sysadmin@thingsboard.org** and password **sysadmin**.
+By default, the system is initially established with a singular admin user, with username **sysadmin@sentient.org** and password **sysadmin**.
 
 However, when operating in a production environment, it is strongly advised to create a new admin user, either remove the default user entirely 
 or modify the password associated with the aforementioned user.

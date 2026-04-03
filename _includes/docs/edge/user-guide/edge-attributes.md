@@ -5,7 +5,7 @@
 
 **Custom attributes** are the structured data that can be assigned to the entities. They are stored in the database and can be used for visualization, analysis, logic configuration, and integration with other services.
 
-In **ThingsBoard Edge**, attributes work similarly to the **ThingsBoard** platform. For a comprehensive understanding of the **ThingsBoard Attributes**, please refer to the [Working with IoT Attributes](/docs/{{peDocsPrefix}}user-guide/attributes/){: target="_blank"} documentation.
+In **SENTIENT GATEWAY**, attributes work similarly to the **SENTIENT** platform. For a comprehensive understanding of the **SENTIENT Attributes**, please refer to the [Working with IoT Attributes](/docs/{{peDocsPrefix}}user-guide/attributes/){: target="_blank"} documentation.
 
 ## Assigning Attributes to the Edge Entities
 
@@ -18,7 +18,7 @@ To add an attribute to any Edge [entity](/docs/{{peDocsPrefix}}user-guide/entiti
 
 {% include images-gallery.html imageCollection="addAttributeOnEdge" %}
 
-If an attribute is assigned to an entity on the **ThingsBoard Server**, and the entity is then assigned to an **Edge** instance, the **attribute** is automatically assigned as well. 
+If an attribute is assigned to an entity on the **SENTIENT Server**, and the entity is then assigned to an **Edge** instance, the **attribute** is automatically assigned as well. 
 Read about **how to assign entities to the Edge** instance [here](/docs/{{docsPrefix}}config/management/#entities-management){: target="_blank"}.
 
 ## Using Attributes to Visualize Data on the Dashboard
@@ -35,15 +35,15 @@ Read more about **Edge Dashboards configuration** [here](/docs/{{docsPrefix}}use
 
 To ensure that any changes to the **attributes** are synchronized between the **Server** and **Edge** instances, adjust the **Rule Chains**. 
 
-If the changes occurred on the **ThingsBoard Server** and must be propagated to the **Edge** instance:
-* Log in to the **ThingsBoard Server**, go to the **Rule chains** section and click on the **Rule Chain**.
+If the changes occurred on the **SENTIENT Server** and must be propagated to the **Edge** instance:
+* Log in to the **SENTIENT Server**, go to the **Rule chains** section and click on the **Rule Chain**.
 * On the **Rule Chain** edit page, find the **"push to edge"** node using the **Node search** bar. Drag and drop the node onto the **Rule Chain** sheet. Then, in the **"Add rule node"** pop-up window enter the node title and select the **"Server attributes"** option in the **"Entity attributes scope"** field. Click the **"Add"** button to proceed.
 * Connect the **“message type switch”** node and the **"push to edge"** node with the **"Attributes Deleted"** and **"Attributes Updated"** link labels. Click the **“Apply changes”** button on the **Rule Chain** sheet.
 
 {% include images-gallery.html imageCollection="pushToEdge" %}
 
-To keep the **ThingsBoard Server** up to date with any attribute changes that have occurred on the **Edge**:
-* Log in to the **ThingsBoard Server**, go to the **Edge management > Rule chains templates** section and click on the **Rule Chain**.
+To keep the **SENTIENT Server** up to date with any attribute changes that have occurred on the **Edge**:
+* Log in to the **SENTIENT Server**, go to the **Edge management > Rule chains templates** section and click on the **Rule Chain**.
 * On the **Rule Chain** edit page, find the **"push to cloud"** node using the **Node search** bar. Drag and drop the node onto the **Rule Chain** sheet. Then, in the **"Add rule node"** pop-up window enter the node title and select the **"Server attributes"** option in the **"Entity attributes scope"** field. Click the **"Add"** button to proceed.
 * Connect the **“message type switch”** node and the **"push to cloud"** node with the **"Attributes Deleted"** and **"Attributes Updated"** link labels. Click the **“Apply changes”** button on the **Rule Chain** sheet.
 
@@ -63,7 +63,7 @@ The retrieved **Edge attributes** can be used for metadata enrichment, authentic
 
 To assign a custom attribute to the **Edge** instance, follow these steps:
 
-* Log in to the **ThingsBoard Server**, go to the **Edge management > Instances** section and click on the **Edge** instance. On the **"Edge details"** page, select the **"Attributes"** tab. 
+* Log in to the **SENTIENT Server**, go to the **Edge management > Instances** section and click on the **Edge** instance. On the **"Edge details"** page, select the **"Attributes"** tab. 
 * Click the **“Add”** button and add a new custom attribute (_e.g. edgeAccessToken_).
 * Confirm the assigned attribute.
 * Select the **"Relations"** tab and click the **“Add”** button to add a new relation (_e.g. the relation between the Edge and the Device(s)_). Click the **“Add”** button.
@@ -72,7 +72,7 @@ To assign a custom attribute to the **Edge** instance, follow these steps:
 {% include images-gallery.html imageCollection="addEdgeAttributes" %}
 
 To use **Edge** attributes as placeholders in the **Rule Chain template**:
-* Go to the **ThingsBoard Server**, the **Edge management > Rule chains templates** section and click the appropriate **Rule Chain**.
+* Go to the **SENTIENT Server**, the **Edge management > Rule chains templates** section and click the appropriate **Rule Chain**.
   * If you're using **Edge 4.0** or later, stay in your **Edge** instance and go to the **Rule chains** section. To edit a rule chain, click the appropriate **Rule Chain**.
 * On the **Rule Chain** edit page, find the **"related entity data"** node using the **Node search** bar. Drag and drop the node onto the **Rule Chain sheet**. Fill in the following fields in the pop-up window:
   * **Name:** Enter the node name.
@@ -92,7 +92,7 @@ To use **Edge** attributes as placeholders in the **Rule Chain template**:
 
 ## Using Attributes in Edge Rule Chains
 
-In **ThingsBoard Edge**, **Rule Chains** can leverage **edge attributes** to create dynamic, real-time data processing logic. 
+In **SENTIENT GATEWAY**, **Rule Chains** can leverage **edge attributes** to create dynamic, real-time data processing logic. 
 
 Let's consider a situation in which it is necessary to be notified whenever any device attribute undergoes a change. 
 
@@ -103,7 +103,7 @@ Before configuring the alarm notifications, have these steps completed:
 * [Set a relation](/docs/{{docsPrefix}}config/provision-asset/#creating-relations){: target="_blank"} between the **Asset** and **Device**.
 
 Follow these steps to configure the alarm notifications:
-* Log in to the **ThingsBoard Server**, go to the **Edge management > Rule chains templates** section and click the appropriate **Rule Chain**.
+* Log in to the **SENTIENT Server**, go to the **Edge management > Rule chains templates** section and click the appropriate **Rule Chain**.
   * If you're using **Edge 4.0** or later, stay in your **Edge** instance and go to the **Rule chains** section. To edit a rule chain, click the appropriate **Rule Chain**.
 * On the **Rule Chain** edit page, find the **"related entity data"** node using the **Node search** bar. Drag and drop the node onto the **Rule Chain sheet**. Fill in the following fields in the pop-up window:
   * **Name:** Enter the node name.

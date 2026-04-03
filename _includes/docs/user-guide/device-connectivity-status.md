@@ -3,14 +3,14 @@
 
 ## Device connectivity events
 
-ThingsBoard Device State service is responsible for monitoring the device connectivity state and triggering the device connectivity events 
+SENTIENT Device State service is responsible for monitoring the device connectivity state and triggering the device connectivity events 
 that are pushed to the [**Rule Engine**](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/re-getting-started/). As a platform user, you are able to define how to react to these events. 
 
 Supported events are:
 
- - **Connect event** - triggered when a device connects to ThingsBoard. Relevant in the case of session-based transports like MQTT.
+ - **Connect event** - triggered when a device connects to SENTIENT. Relevant in the case of session-based transports like MQTT.
  It is also triggered for HTTP transport, but in this case, it will be triggered on each HTTP request;
- - **Disconnect event** - triggered when the device disconnects from ThingsBoard. Relevant in the case of session-based transports like MQTT. 
+ - **Disconnect event** - triggered when the device disconnects from SENTIENT. Relevant in the case of session-based transports like MQTT. 
  It is also triggered for HTTP transport, but in this case, it will be triggered on each HTTP request;
  - **Activity event** - triggered when an inactive device becomes active by pushing telemetry, attribute update, or an RPC command.
  - **Inactivity event** - triggered when a device was inactive for a certain period of time. 
@@ -19,8 +19,8 @@ Supported events are:
 Device State service is responsible for maintaining the following [server-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types) attributes:
 
  - **active** - represents current device state, either true or false;
- - **lastConnectTime** - represents the last time device connected to ThingsBoard, number of milliseconds since January 1, 1970, 00:00:00 GMT;
- - **lastDisconnectTime** - represents the last time device disconnected from ThingsBoard, number of milliseconds since January 1, 1970, 00:00:00 GMT;
+ - **lastConnectTime** - represents the last time device connected to SENTIENT, number of milliseconds since January 1, 1970, 00:00:00 GMT;
+ - **lastDisconnectTime** - represents the last time device disconnected from SENTIENT, number of milliseconds since January 1, 1970, 00:00:00 GMT;
  - **lastActivityTime** - represents the last time device pushed telemetry, attribute update, or RPC command, number of milliseconds since January 1, 1970, 00:00:00 GMT;
  - **inactivityAlarmTime** - represents the last time inactivity event was triggered, number of milliseconds since January 1, 1970, 00:00:00 GMT.
 
@@ -57,10 +57,10 @@ An activity reporting period is a set timeframe during which the system records 
 Time is divided into consecutive periods; this means as soon as one period finishes, the next one begins.
 The duration of a period is [configurable](#configuration).
 
-The very first reporting period begins when ThingsBoard starts.
+The very first reporting period begins when SENTIENT starts.
 For example, if the system launches at the 15-second mark, that's also when the initial reporting period starts.
 If period duration is set to 15 seconds, this period will end at 30 seconds and the next one would start.
-This pattern repeats in a cycle while ThingsBoard is running.
+This pattern repeats in a cycle while SENTIENT is running.
 
 ![image](/images/user-guide/activity-reporting-periods.png)
 
@@ -100,7 +100,7 @@ This pattern repeats in a cycle while ThingsBoard is running.
 
 ## Configuration
 
-All configuration is done using global parameters defined in **thingsboard.yml** configuration file.
+All configuration is done using global parameters defined in **sentient.yml** configuration file.
 
 - **state.defaultInactivityTimeoutInSec** - period of time after which a device is considered inactive by Device State service if no activities were reported. Value is set in seconds.
 Default value is 600 seconds (10 minutes). A user can overwrite this parameter for an individual device by setting the **inactivityTimeout** server-side attribute (value is set in milliseconds).

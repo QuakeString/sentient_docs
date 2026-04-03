@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: BLE Connector Configuration
-description: BLE protocol support for ThingsBoard IoT Gateway
+description: BLE protocol support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with BLE connector configuration for ThingsBoard IoT Gateway.
+This guide will help you to get familiar with BLE connector configuration for SENTIENT IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this extension.
 We will describe connector configuration file below.
 
@@ -63,7 +63,7 @@ YUM<br>%,%rpm%,%templates/iot-gateway/ble-requirements-rpm.md{% endcapture %}
             ],
             "attributeUpdates": [
                 {
-                    "attributeOnThingsBoard": "sharedName",
+                    "attributeOnSENTIENT": "sharedName",
                     "characteristicUUID": "00002A00-0000-1000-8000-00805F9B34FB"
                 }
             ],
@@ -85,7 +85,7 @@ YUM<br>%,%rpm%,%templates/iot-gateway/ble-requirements-rpm.md{% endcapture %}
 
 <br>
 
-To understand how this connector works, we will describe how to connect device Xiaomi Mi Smart Temperature Humidity Sensor to ThingsBoard using gateway.
+To understand how this connector works, we will describe how to connect device Xiaomi Mi Smart Temperature Humidity Sensor to SENTIENT using gateway.
 We know following device parameters:
 Device **MAC address** - 4C:65:A8:DF:85:C0
 Default name characteristic id -  00002A00-0000-1000-8000-00805F9B34FB   - This is a default characteristic - we have got it ID from [GATT characeristics documentation](https://www.bluetooth.com/specifications/gatt/characteristics/)
@@ -94,9 +94,9 @@ Temperature characteristic id - 00002A00-0000-1000-8000-00805F9B34FB    - This i
 Default configuration created for this device to process data from it, receive notifies and write some information.  
 
 In a [main section](#main-section) we write general configuration for our connector, such as connector name, scan mode, scanner, etc.  
-In a [device subsection](#device-object-subsection) we write general configuration for connection to our device (name for device in ThingsBoard and device MAC address, etc.).  
-In a [subsection telemetry](#subsection-telemetry) we write the configuration for processing data from the device (Where the gateway should take the data, method and converter will interpret this data to telemetry and attributes on ThingsBoard).  
-In a [subsection attributeUpdates](#subsection-attributes) we write the configuration to rename the device after receiving attribute update request from ThingsBoard.  
+In a [device subsection](#device-object-subsection) we write general configuration for connection to our device (name for device in SENTIENT and device MAC address, etc.).  
+In a [subsection telemetry](#subsection-telemetry) we write the configuration for processing data from the device (Where the gateway should take the data, method and converter will interpret this data to telemetry and attributes on SENTIENT).  
+In a [subsection attributeUpdates](#subsection-attributes) we write the configuration to rename the device after receiving attribute update request from SENTIENT.  
 If device shared attribute with a name "sharedName" changed - gateway will write data from this attribute to characteristic with ID - 00002A00-0000-1000-8000-00805F9B34FB.  
 
 ## Main section
@@ -174,16 +174,16 @@ This subsection contains general settings for the device and subsections for pro
 
 | **Parameter**     | **Default value** | **Description**                                                                                           |
 |:-|:-|-
-| name              | **BLE Connector** | Name for the device in ThingsBoard.                                                                       |
+| name              | **BLE Connector** | Name for the device in SENTIENT.                                                                       |
 | MACAddress        | **4C:65:A8:DF:C0**| MAC address for the device of interest.                                                                   |
-| deviceType        | **BLEDevice**     | Device type for ThingsBoard, by default this parameter is absent, but you can add it.                     |
+| deviceType        | **BLEDevice**     | Device type for SENTIENT, by default this parameter is absent, but you can add it.                     |
 | pollPeriod        | **5000**          | The period of time (in ms) that data in the device will be reading.                                       |
 | showMap           | **false**         | If set to **true** will show all GATT objects (characteristics, services, etc.) in device.                |
 | timeout           | **10000**         | The time that BLE Connector will try to connect to a device.                                              |
 | telemetry         |                   | Array of objects for processing device telemetry.                                                         |
 | attributes        |                   | Array of objects for processing device attributes.                                                        |
-| attributeUpdates  |                   | Array of objects for processing attributeUpdate requests from ThingsBoard.                                |
-| serverSideRpc     |                   | Array of objects for processing RPC requests from ThingsBoard.                                            |
+| attributeUpdates  |                   | Array of objects for processing attributeUpdate requests from SENTIENT.                                |
+| serverSideRpc     |                   | Array of objects for processing RPC requests from SENTIENT.                                            |
 |---
 
 
@@ -217,10 +217,10 @@ This subsection contains general settings for the processing data interpreted as
 
 | **Parameter**         | **Default value**                         | **Description**                                                          |
 |:-|:-|-
-| key                   | **temperature**                           | Name for telemetry in ThingsBoard.                                       |
+| key                   | **temperature**                           | Name for telemetry in SENTIENT.                                       |
 | method                | **notify**                                | Method for Characteristic processing (Can be **NOTIFY** or **READ**).    |
 | characteristicUUID    | **226CAA55-6476-4566-7562-66734470666D**  | UUID of characteristic on the device.                                    |
-| valueExpression       | **[0:1]**                                 | Final view of data that will be send to ThingsBoard, [0:1] - will replace to device data using python slice rules |
+| valueExpression       | **[0:1]**                                 | Final view of data that will be send to SENTIENT, [0:1] - will replace to device data using python slice rules |
 |---
 
 
@@ -251,10 +251,10 @@ This subsection contains general settings for the processing data interpreted as
 
 | **Parameter**         | **Default name**                          | **Description**                                                          |
 |:-|:-|-
-| key                   | **name**                                  | Name for telemetry in ThingsBoard.                                       |
+| key                   | **name**                                  | Name for telemetry in SENTIENT.                                       |
 | method                | **read**                                  | Method for Characteristic processing (Can be **NOTIFY** or **READ**).    |
 | characteristicUUID    | **00002A00-0000-1000-8000-00805F9B34FB**  | UUID of characteristic on the device.                                    |
-| valueExpression       | **[0:1] cm**                              | Final view of data that will be send to ThingsBoard, [0:1] - will replace to device data using python slice rules |
+| valueExpression       | **[0:1] cm**                              | Final view of data that will be send to SENTIENT, [0:1] - will replace to device data using python slice rules |
 |---
 
 
@@ -280,7 +280,7 @@ You can find more examples of data converting in section **"Examples of data con
 <br><br>
   
 {% capture bleGATTinfo %}
-Services and characteristics, from <a target="_blank" rel="noopener noreferrer" href="https://www.bluetooth.com/specifications/gatt/services/">GATT Specification</a> will also interpret as attributes of device and automatically loaded to ThingsBoard.
+Services and characteristics, from <a target="_blank" rel="noopener noreferrer" href="https://www.bluetooth.com/specifications/gatt/services/">GATT Specification</a> will also interpret as attributes of device and automatically loaded to SENTIENT.
 {% endcapture %}
 {% include templates/info-banner.md content=bleGATTinfo %}
 
@@ -295,30 +295,30 @@ and humidity. So, data from device have the next view: **b'\x08<\x08\x00'** and 
    
    **"valueExpression": "[0]"**
    
-   Data to ThingsBoard:**8**
+   Data to SENTIENT:**8**
 2. We want to read only humidity value
 
    **"valueExpression": "[1]"**
    
-   Data to ThingsBoard:**34**
+   Data to SENTIENT:**34**
 3. We want to read all values
 
    "valueExpression": "[:]" or "valueExpression": "[0:2]"
    
-   Data to ThingsBoard: **834**
+   Data to SENTIENT: **834**
 4. We want to read all values and dimensional units
 
    **"valueExpression": "[0]°C [1]%"**
    
-   Data to ThingsBoard: **8°C 34%**    
+   Data to SENTIENT: **8°C 34%**    
 
 #### Subsection attributeUpdates
 
-This subsection contains settings for the processing attributeUpdate requests from ThingsBoard.  
+This subsection contains settings for the processing attributeUpdate requests from SENTIENT.  
 
 | **Parameter**          | **Default name**                         | **Description**                                                      |
 |:-|:-|-
-| attributeOnThingsBoard | **sharedName**                           | Name of shared device attribute in ThingsBoard.                      |
+| attributeOnSENTIENT | **sharedName**                           | Name of shared device attribute in SENTIENT.                      |
 | characteristicUUID     | **00002A00-0000-1000-8000-00805F9B34FB** | UUID of characteristic in which the attribute value will be written. |
 |---
 
@@ -327,7 +327,7 @@ This part of configuration will look like:
 
 ```json
 {
-    "attributeOnThingsBoard": "sharedName",
+    "attributeOnSENTIENT": "sharedName",
     "characteristicUUID": "00002A00-0000-1000-8000-00805F9B34FB"
 }
 ```
@@ -340,12 +340,12 @@ Characteristic should support method **WRITE** for processing the attributeUpdat
 
 #### Subsection serverSideRpc
 
-This subsection contains settings for the processing RPC requests from ThingsBoard.  
+This subsection contains settings for the processing RPC requests from SENTIENT.  
 
 | **Parameter**      | **Default name**                         | **Description**                                                               |
 |:-|:
 | methodRPC          | **rpcMethod1**                           | RPC method name.                                                              |
-| withResponse       | **true**                                 | If true, response will be sent to ThingsBoard.                                |
+| withResponse       | **true**                                 | If true, response will be sent to SENTIENT.                                |
 | characteristicUUID | **00002A00-0000-1000-8000-00805F9B34FB** | UUID of characteristic.                                                       |
 | methodProcessing   | **read**                                 | Method for processing to characteristic. (**READ**/**WRITE**/**NOTIFY**)      |
 |---
@@ -365,9 +365,9 @@ This part of configuration will look like:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
- - [Connect BLE sensor](/docs/iot-gateway/guides/how-to-connect-ble-sensor-using-gateway/) - how to connect BLE sensor using ThingsBoard IoT Gateway
+ - [Connect BLE sensor](/docs/iot-gateway/guides/how-to-connect-ble-sensor-using-gateway/) - how to connect BLE sensor using SENTIENT IoT Gateway
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

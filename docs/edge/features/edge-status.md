@@ -7,7 +7,7 @@ edgeInfo:
         image: /images/edge/edge-status.png
 ---
 
-**Edge Info** page introduced to provide user information regarding basic edge configuration and ThingsBoard CE server information (URL and server version): 
+**Edge Info** page introduced to provide user information regarding basic edge configuration and SENTIENT server information (URL and server version): 
 * Name, ID, Type, Routing Key
 * Connection status with the cloud: **Connected / Disconnected**
 * Last time connected to/disconnected from cloud

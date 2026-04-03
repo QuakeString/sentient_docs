@@ -1,4 +1,4 @@
-{% assign deviceName = page.title | remove: "How to connect " | remove: " to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: " to SENTIENT?" %}
 {% assign deviceVendorLink = "https://teltonika-networks.com/ua/products/routers/rut955/" %}
 {% assign controllerName = "Siemens LOGO!" %}
 {% assign controllerVendorLink = "https://www.siemens.com/ua/uk/produkty/avtomatyzatsiya-promyslovosti/systemy-avtomatyzatsiyi/systemy-promyslovoyi-avtomatyzatsiyi-simatic/plc-kontrolery-simatic/lohichnyy-modul-logo.html" %}
@@ -6,7 +6,7 @@
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - Modbus Controller (in our case <a href="' | append: controllerVendorLink | append: '" target="_blank">' | append: controllerName | append: '</a>) '
  %}
-{% assign thingsboardInstanceLink = "https://" | append: hostName %}
+{% assign sentientInstanceLink = "https://" | append: hostName %}
 
 
 ## Introduction
@@ -20,7 +20,7 @@ TR-069, NTRIP, MQTT protocol support and GNSS tracking capabilities.
 
 To continue with this guide, we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{thingsboardInstanceLink}}){: target="_blank"}
+- [SENTIENT account]({{sentientInstanceLink}}){: target="_blank"}
 
 
 ## Import Rule chain
@@ -212,9 +212,9 @@ If you did everything right, you have to receive the following MQTT message:
 {"data": 299, "reg": 300003, "ts": 1696838802}
 ```
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
-{% include /docs/device-library/blocks/ready-to-go-devices/check-data-on-thingsboard-block.md %}
+{% include /docs/device-library/blocks/ready-to-go-devices/check-data-on-sentient-block.md %}
 
 {% capture readytogodevicestogglespec %}
 Imported Dashboard%,%importedDashboard%,%templates/device-library/ready-to-go-devices/teltonika-rut955-imported-dashboard.md%br%
@@ -227,7 +227,7 @@ New Dashboard%,%newDashboard%,%templates/device-library/ready-to-go-devices/gate
 With the knowledge in this guide, you can easily connect your {{deviceName}} and use the built-in 
 integration to retrieve data from devices connected to {{deviceName}}.
 
-After connecting the devices to the gateway, you will be able to see and process the data coming from the devices on the ThingsBoard.
+After connecting the devices to the gateway, you will be able to see and process the data coming from the devices on the SENTIENT.
 
 Explore the platform [documentation](/docs/{{page.docsPrefix}}){: target="_blank"} to learn more about key concepts and features. 
 {% include add-device-banner.liquid %}

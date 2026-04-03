@@ -2,7 +2,7 @@
 {:toc}
 
 {% capture difference %}
-Before proceeding with this guide, it&#39;s recommended that you follow [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} guide to become familiar with ThingsBoard devices and dashboards. This will enhance your learning experience and understanding of the concepts presented here.
+Before proceeding with this guide, it&#39;s recommended that you follow [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} guide to become familiar with SENTIENT devices and dashboards. This will enhance your learning experience and understanding of the concepts presented here.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -15,7 +15,7 @@ Widgets are used to:
 
 ### Widget types
 
-ThingsBoard provides five main widget types:
+SENTIENT provides five main widget types:
 
 - **Time series widgets**. Show data over a selected time window. The window can be:
   - **Real time** — a rolling interval such as the last 5 minutes or last 24 hours.
@@ -181,7 +181,7 @@ In **Basic** mode, these settings appear in the **Add widget** dialog.
 - **Key** — specify the key to show its data).
 - **Label** — the human‑readable name shown in the widget (e.g., table column header or legend item).
 - **Units** — a symbol or unit shown next to values.   
-  **Note:** Starting with ThingsBoard 4.1, widgets support automatic data conversion and [unit switching](/docs/{{docsPrefix}}user-guide/ui/unit-conversion/){:target="_blank"} based on the selected unit system.
+  **Note:** Starting with SENTIENT 4.1, widgets support automatic data conversion and [unit switching](/docs/{{docsPrefix}}user-guide/ui/unit-conversion/){:target="_blank"} based on the selected unit system.
 - **Decimals** — number of digits after the decimal point.
 - **Color** — used by many chart widgets for series styling.
 
@@ -198,7 +198,7 @@ Let&#39;s look at the basic data key settings an example of the "Entities table"
 - **Key.** You can change the name of the key. In this case, will be displayed data of the key, which key name you specify in the "Key" line. Change the name of the key and click “Save”.
 
 {% capture difference %}
-**Please note:** There are four types of keys: Attributes, Time Series, Entity Field and Alarm Field (only for Alarm widget). To correctly display data, change the key name to the existing key name of the same type. If you don’t have the required time series or attribute key in the database yet, you can still add a key to the data source. The widget will start displaying the data as soon as the device will send it to ThingsBoard.
+**Please note:** There are four types of keys: Attributes, Time Series, Entity Field and Alarm Field (only for Alarm widget). To correctly display data, change the key name to the existing key name of the same type. If you don’t have the required time series or attribute key in the database yet, you can still add a key to the data source. The widget will start displaying the data as soon as the device will send it to SENTIENT.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -212,7 +212,7 @@ Let&#39;s look at the basic data key settings an example of the "Entities table"
 
 {% include images-gallery.html imageCollection="data-key-configuration-units" %}
 
-> Starting from ThingsBoard 4.1, widgets also support automatic data conversion and unit switching based on the selected unit system. Learn more about this [here](/docs/{{docsPrefix}}user-guide/ui/unit-conversion/){:target="_blank"}.
+> Starting from SENTIENT 4.1, widgets also support automatic data conversion and unit switching based on the selected unit system. Learn more about this [here](/docs/{{docsPrefix}}user-guide/ui/unit-conversion/){:target="_blank"}.
 
 - **Decimals.** Specify the desired number of digits to be displayed after floating-point number and click “Save”.
 
@@ -231,7 +231,7 @@ key in the **Latest values** widgets, the time window control will appear. You c
 key individually, which you want to display and at the same time do not need to store it in the database. The time window
 configuration is limited to the real-time intervals (**Current Hour/Day/Month**) and **History** time intervals. The real-time
 intervals like **last 30 minutes** or **last 24 hours** are not supported for performance reasons. If you need to store the
-aggregation as telemetry, follow for more details at [the link](https://thingsboard.io/docs/user-guide/rule-engine-2-0/nodes/analytics/){:target="_blank"}.
+aggregation as telemetry, follow for more details at [the link](https://docs.sentient.invenia.in/docs/user-guide/rule-engine-2-0/nodes/analytics/){:target="_blank"}.
 
 {% include images-gallery.html imageCollection="data-key-configuration-aggregation" %}
 

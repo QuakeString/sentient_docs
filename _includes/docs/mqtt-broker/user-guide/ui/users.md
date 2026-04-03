@@ -1,12 +1,12 @@
 {% if docsPrefix == null %}
-TBMQ provides a single user role: **Administrator**. Administrators have full permissions to create, update, and delete user accounts.
+ST-RMQTT provides a single user role: **Administrator**. Administrators have full permissions to create, update, and delete user accounts.
 {% endif %}
 
 {% if docsPrefix == "pe/" %}
-TBMQ PE includes two predefined user roles: **Administrator** and **Viewer**. For a detailed explanation of role-based access control, see [RBAC](/docs/pe/mqtt-broker/security/rbac/).
+ST-RMQTT PE includes two predefined user roles: **Administrator** and **Viewer**. For a detailed explanation of role-based access control, see [RBAC](/docs/pe/mqtt-broker/security/rbac/).
 {% endif %}
 
-User management can be performed through TBMQ's Web UI or [REST API](/docs/{{docsPrefix}}mqtt-broker/user-management/).
+User management can be performed through ST-RMQTT's Web UI or [REST API](/docs/{{docsPrefix}}mqtt-broker/user-management/).
 
 * TOC
 {:toc}
@@ -43,7 +43,7 @@ Logged-in user can delete other users, but not itself. To delete the user, follo
 
 ## Login as another user
 
-TBMQ allows Admin users to securely log in as other users automatically, without requiring their credentials or manual authentication.
+ST-RMQTT allows Admin users to securely log in as other users automatically, without requiring their credentials or manual authentication.
 
 1. Find the user in the _Users_ table (you can only log in as other users).
 2. Click the _Login_ button in the corresponding row.

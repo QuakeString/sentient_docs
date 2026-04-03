@@ -1,48 +1,48 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: Anomaly Model Properties
 description: How to train anomaly models using historical data. Covers segmentation, preprocessing, and the "Build" task
 
 general-settings:
   0:
-    image: /images/trendz/anomaly/general-settings.png
+    image: /images/sentient-analytics/anomaly/general-settings.png
     title: 'General Settings'
 
 clustering-settings:
   0:
-    image: /images/trendz/anomaly/clustering-settings-k-means.png
+    image: /images/sentient-analytics/anomaly/clustering-settings-k-means.png
     title: 'Clustering Settings For <b>K-Means</b>'
   1:
-    image: /images/trendz/anomaly/clustering-settings-dbscan.png
+    image: /images/sentient-analytics/anomaly/clustering-settings-dbscan.png
     title: 'Clustering Settings For <b>DBSCAN</b>'
   2:
-    image: /images/trendz/anomaly/clustering-settings-gmm.png
+    image: /images/sentient-analytics/anomaly/clustering-settings-gmm.png
     title: 'Clustering Settings For <b>GMM (Gaussian Mixture Model)</b>'
 
 segmentation-settings:
   0:
-    image: /images/trendz/anomaly/segmentation-settings.png
+    image: /images/sentient-analytics/anomaly/segmentation-settings.png
     title: 'Segmentation Settings'
 
 anomaly-detection-settings:
   0:
-    image: /images/trendz/anomaly/anomaly-detection-settings-feature-based.png
+    image: /images/sentient-analytics/anomaly/anomaly-detection-settings-feature-based.png
     title: 'Anomaly Detection Settings (Feature based)'
   1:
-    image: /images/trendz/anomaly/anomaly-detection-settings-behaviour-based.png
+    image: /images/sentient-analytics/anomaly/anomaly-detection-settings-behaviour-based.png
     title: 'Anomaly Detection Settings (Behaviour based)'
 
 limits-settings:
   0:
-    image: /images/trendz/anomaly/limits-settings.png
+    image: /images/sentient-analytics/anomaly/limits-settings.png
     title: 'Limits Settings'
     
 alarm-configuration:
   0:
-    image: /images/trendz/anomaly/alarm-configuration-before-build.png
+    image: /images/sentient-analytics/anomaly/alarm-configuration-before-build.png
     title: 'Alarm Configuration (before build)'
   1:
-    image: /images/trendz/anomaly/alarm-configuration-after-build.png
+    image: /images/sentient-analytics/anomaly/alarm-configuration-after-build.png
     title: 'Alarm Configuration (after build)'
 
 ---
@@ -76,15 +76,15 @@ or devices and which time range will be used for training the anomaly model.
 
 Additionally, it's possible to specify telemetry saving options here.
 
-* **Key:** Telemetry key that will be used during reprocess/refresh to save anomaly score and anomaly score index to ThingsBoard.
+* **Key:** Telemetry key that will be used during reprocess/refresh to save anomaly score and anomaly score index to SENTIENT.
 
-* **Telemetry Storage Frequency:** This parameter specifies the aggregation level at which the anomaly score and anomaly score index will be stored in ThingsBoard.  
+* **Telemetry Storage Frequency:** This parameter specifies the aggregation level at which the anomaly score and anomaly score index will be stored in SENTIENT.  
   We recommend specifying a telemetry storage frequency that is:
     - Less than the segment time range (for fixed segment strategy)
     - Less than `segment size * sliding step % / 100` (for sliding window strategy)
 
-  Find out more about refresh/reprocess [here](/docs/trendz/anomaly/refresh-reprocess).  
-  Find out more about saving telemetry to ThingsBoard [here](/docs/trendz/anomaly/save-to-tb).
+  Find out more about refresh/reprocess [here](/docs/sentient-analytics/anomaly/refresh-reprocess).  
+  Find out more about saving telemetry to SENTIENT [here](/docs/sentient-analytics/anomaly/save-to-tb).
 
 {% include images-gallery.html imageCollection="general-settings" %}
 
@@ -175,12 +175,12 @@ After segmenting the data, extract useful features that help the model understan
 ### Alarm Configuration
 
 - **Alarm Type:** Configure the type/category of alarm that will be created for detected anomalies. This setting helps categorize alarms 
-  within ThingsBoard.
+  within SENTIENT.
 
 - **Alarm Behavior on Anomaly Detection:** Defines how alarms are managed in anomaly deletion case.
 
 - **Severities:** This section becomes available after the first model build and allows you to configure threshold values for alarm 
-  severities (e.g., Critical, Major, Minor). Trendz automatically generates default thresholds based on the anomaly score distribution.
+  severities (e.g., Critical, Major, Minor). SENTIENT ANALYTICS automatically generates default thresholds based on the anomaly score distribution.
 
 {% include images-gallery.html imageCollection="alarm-configuration" %}
 

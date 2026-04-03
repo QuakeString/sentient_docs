@@ -1,6 +1,6 @@
 {% capture tb_3_0_upgrade_note %}
-**Important note before upgrading to ThingsBoard 3.0**
- - ThingsBoard UI was rewritten from AngularJS 1.5.8 to use Angular 9. 
+**Important note before upgrading to SENTIENT 3.0**
+ - SENTIENT UI was rewritten from AngularJS 1.5.8 to use Angular 9. 
    - What does it mean? 
      - Generally speaking, it means: state of the art application, easier development of front-end elements, performance improvements and more flexibility with UI customizations.
    - How to upgrade?

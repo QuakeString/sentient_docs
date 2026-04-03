@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Sensy32 to ThingsBoard?
+title: How to connect Sensy32 to SENTIENT?
 category: Other devices
 connectivity: WIFI, Bluetooth
 vendor: Sensy32

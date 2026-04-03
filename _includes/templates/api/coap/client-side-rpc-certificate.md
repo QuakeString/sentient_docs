@@ -7,7 +7,7 @@ coap://{{HOST_NAME}}/api/v1/rpc
 ```
 {: .copy-code}
 
-> ⚠️ Where <code>{{HOST_NAME}}</code> is your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
+> ⚠️ Where <code>{{HOST_NAME}}</code> is your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
 
 {% endif %}
 {% if docsPrefix contains "paas/" %}
@@ -42,7 +42,7 @@ cat rpc-client-request.json | coap post coap://{{HOST_NAME}}/api/v1/rpc
 ```
 {: .copy-code}
 
-> ⚠️ Replace <code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
+> ⚠️ Replace <code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.
 
 {% endif %}
 {% if docsPrefix contains "paas/" %}

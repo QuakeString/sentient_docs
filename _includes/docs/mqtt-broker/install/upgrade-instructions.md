@@ -9,7 +9,7 @@
          <div class="install-options-hero">
             <div class="container">
               <div class="install-options-hero-content">
-                  <h1>TBMQ Professional Edition upgrade options</h1>
+                  <h1>ST-RMQTT Professional Edition upgrade options</h1>
               </div>
               <div class="deployment-container one-line-deployment-container">
                   <div class="deployment-div">
@@ -28,7 +28,7 @@
          <div class="install-options-hero">
             <div class="container">
               <div class="install-options-hero-content">
-                  <h1>TBMQ upgrade options</h1>
+                  <h1>ST-RMQTT upgrade options</h1>
               </div>
               <div class="deployment-container one-line-deployment-container">
                   <div class="deployment-div">
@@ -44,35 +44,35 @@
 
 {% if docsPrefix == "pe/" %}
 
-### Upgrade from TBMQ CE to TBMQ PE (v2.2.0)
+### Upgrade from ST-RMQTT CE to ST-RMQTT PE (v2.2.0)
 
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 2.2.0 TBMQ CE version. In order to upgrade to TBMQ PE 2.2.0 you need to [upgrade to 2.2.0 TBMQ CE first](/docs/mqtt-broker/install/upgrade-instructions/#upgrading-to-220).
+These steps are applicable for 2.2.0 ST-RMQTT CE version. In order to upgrade to ST-RMQTT PE 2.2.0 you need to [upgrade to 2.2.0 ST-RMQTT CE first](/docs/mqtt-broker/install/upgrade-instructions/#upgrading-to-220).
 **Notice the Bitnami Images information.**
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-#### Notice: Third-Party Component Updates in TBMQ PE v2.2.0
+#### Notice: Third-Party Component Updates in ST-RMQTT PE v2.2.0
 
-We’d like to inform you about several **third-party component updates** introduced in **TBMQ Professional Edition (PE) v2.2.0** compared to the Community Edition (CE).
-These changes improve performance, stability, and align TBMQ with officially supported open-source technologies.
+We’d like to inform you about several **third-party component updates** introduced in **ST-RMQTT Professional Edition (PE) v2.2.0** compared to the Community Edition (CE).
+These changes improve performance, stability, and align ST-RMQTT with officially supported open-source technologies.
 
 These updates follow the modernization plan outlined here:
-[Bitnami Image Migration](https://github.com/thingsboard/thingsboard-ce-k8s/blob/master/BITNAMI-IMAGE-MIGRATION.md#3-long-term-production-solution).
+[Bitnami Image Migration](https://github.com/sentient/sentient-ce-k8s/blob/master/BITNAMI-IMAGE-MIGRATION.md#3-long-term-production-solution).
 
 #### What’s Changed
 
-| Component          | TBMQ CE v2.2.0              | TBMQ PE v2.2.0       | What Changed & Why                                                                                                                                                                                                                                                      |
+| Component          | ST-RMQTT CE v2.2.0              | ST-RMQTT PE v2.2.0       | What Changed & Why                                                                                                                                                                                                                                                      |
 | ------------------ | --------------------------- | -------------------- |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **PostgreSQL**     | `postgres:16`               | `postgres:17`        | Upgraded to a newer major version with improved performance, reliability, and better resource efficiency. Existing data volumes remain fully compatible.                                                                                                                |
 | **Kafka**          | `bitnamilegacy/kafka:3.7.0` | `apache/kafka:4.0.0` | Updated according to the plan to migrate from Bitnami to official open-source images. New volumes were introduced and all of them are mapped to new paths required by the Apache Kafka image.                                                                           |
-| **Redis → Valkey** | `bitnamilegacy/redis:7.2.5` | `valkey/valkey:8.0`  | Updated according to the plan to migrate from Bitnami to open-source images. Redis was replaced by Valkey (a community-driven fork of Redis 7). A new volume (`tbmq-valkey-data`) was introduced and mapped to the appropriate data directory used by the Valkey image. |
+| **Redis → Valkey** | `bitnamilegacy/redis:7.2.5` | `valkey/valkey:8.0`  | Updated according to the plan to migrate from Bitnami to open-source images. Redis was replaced by Valkey (a community-driven fork of Redis 7). A new volume (`st-rmqtt-valkey-data`) was introduced and mapped to the appropriate data directory used by the Valkey image. |
 
 #### Important Notes
 
-Upgrading from TBMQ CE 2.2.0 to TBMQ PE 2.2.0 introduces several component changes that require attention before and during the migration process.
+Upgrading from ST-RMQTT CE 2.2.0 to ST-RMQTT PE 2.2.0 introduces several component changes that require attention before and during the migration process.
 
 Before starting the upgrade, it is **strongly recommended to create full backups** of your existing environment.
 This includes the **PostgreSQL database** (for example, using `pg_dump`), as well as your **Kafka** and **Redis** data volumes if you plan to migrate them.
@@ -105,7 +105,7 @@ on top of the page.
 
 {% if docsPrefix != 'pe/' %}
 {% capture difference %}
-Interested in the **TBMQ Professional Edition**? Upgrade your TBMQ CE to [TBMQ PE](/docs/pe/mqtt-broker/install/upgrade-instructions/){:target="_blank"}.
+Interested in the **ST-RMQTT Professional Edition**? Upgrade your ST-RMQTT CE to [ST-RMQTT PE](/docs/pe/mqtt-broker/install/upgrade-instructions/){:target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 {% endif %}
@@ -115,13 +115,13 @@ Interested in the **TBMQ Professional Edition**? Upgrade your TBMQ CE to [TBMQ P
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 2.1.0 TBMQ version. In order to upgrade to 2.2.0 you need to [upgrade to 2.1.0 first](#upgrading-to-210).
+These steps are applicable for 2.1.0 ST-RMQTT version. In order to upgrade to 2.2.0 you need to [upgrade to 2.1.0 first](#upgrading-to-210).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-#### Notice About Bitnami Images in TBMQ Deployments
+#### Notice About Bitnami Images in ST-RMQTT Deployments
 
-In our TBMQ deployments, we use **Bitnami images** for third-party components such as PostgreSQL, Redis, and Kafka. 
+In our ST-RMQTT deployments, we use **Bitnami images** for third-party components such as PostgreSQL, Redis, and Kafka. 
 The Bitnami team [**has announced important upcoming changes**](https://github.com/bitnami/charts/issues/35164) to their catalog that affect these images.
 
 **What’s happening:**
@@ -131,11 +131,11 @@ The Bitnami team [**has announced important upcoming changes**](https://github.c
 * The long-term, supported solution is Bitnami’s new Secure Images (subscription-based).
 
 **Temporary solution:**
-To avoid disruption in your TBMQ deployments, please update your image references from `docker.io/bitnami/...` to `docker.io/bitnamilegacy/...`.
+To avoid disruption in your ST-RMQTT deployments, please update your image references from `docker.io/bitnami/...` to `docker.io/bitnamilegacy/...`.
 This ensures that your clusters continue to work after August 28, 2025.
 
 **Next steps:**
-We are currently evaluating a **long-term strategy** for TBMQ third-party images. We’ll share the details once the new approach is finalized.
+We are currently evaluating a **long-term strategy** for ST-RMQTT third-party images. We’ll share the details once the new approach is finalized.
 
 ---
 
@@ -147,18 +147,18 @@ on top of the page.
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 2.0.0 and 2.0.1 TBMQ versions.
+These steps are applicable for 2.0.0 and 2.0.1 ST-RMQTT versions.
 In order to upgrade to 2.1.0, your current version should be greater or equal to 2.0.0 version.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-#### Pull TBMQ image (Optional)
+#### Pull ST-RMQTT image (Optional)
 
-Pull 2.1.0 version TBMQ image depending on your current installation.
+Pull 2.1.0 version ST-RMQTT image depending on your current installation.
 
-{% capture tabspec %}tbmq-pull-2-1-0
-tbmq-pull-2-1-0-single,Single node,shell,resources/2.1.0/tbmq-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.1.0/tbmq-single-node-pull.sh
-tbmq-pull-2-1-0-cluster,Cluster mode,shell,resources/2.1.0/tbmq-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.1.0/tbmq-cluster-mode-pull.sh{% endcapture %}
+{% capture tabspec %}st-rmqtt-pull-2-1-0
+st-rmqtt-pull-2-1-0-single,Single node,shell,resources/2.1.0/st-rmqtt-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.1.0/st-rmqtt-single-node-pull.sh
+st-rmqtt-pull-2-1-0-cluster,Cluster mode,shell,resources/2.1.0/st-rmqtt-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.1.0/st-rmqtt-cluster-mode-pull.sh{% endcapture %}
 {% include tabs.html %}
 
 #### From version (automatically detected since 2.1.0)
@@ -174,17 +174,17 @@ on top of the page.
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 2.0.0 TBMQ version. In order to upgrade to 2.0.1 you need to [upgrade to 2.0.0 first](#upgrading-to-200).
+These steps are applicable for 2.0.0 ST-RMQTT version. In order to upgrade to 2.0.1 you need to [upgrade to 2.0.0 first](#upgrading-to-200).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-#### Pull TBMQ image (Optional)
+#### Pull ST-RMQTT image (Optional)
 
-Pull 2.0.1 version TBMQ image depending on your current installation.
+Pull 2.0.1 version ST-RMQTT image depending on your current installation.
 
-{% capture tabspec %}tbmq-pull-2-0-1
-tbmq-pull-2-0-1-single,Single node,shell,resources/2.0.1/tbmq-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.0.1/tbmq-single-node-pull.sh
-tbmq-pull-2-0-1-cluster,Cluster mode,shell,resources/2.0.1/tbmq-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.0.1/tbmq-cluster-mode-pull.sh{% endcapture %}
+{% capture tabspec %}st-rmqtt-pull-2-0-1
+st-rmqtt-pull-2-0-1-single,Single node,shell,resources/2.0.1/st-rmqtt-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.0.1/st-rmqtt-single-node-pull.sh
+st-rmqtt-pull-2-0-1-cluster,Cluster mode,shell,resources/2.0.1/st-rmqtt-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.0.1/st-rmqtt-cluster-mode-pull.sh{% endcapture %}
 {% include tabs.html %}
 
 #### From version
@@ -199,23 +199,23 @@ on top of the page.
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 1.4.0 TBMQ version. In order to upgrade to 2.0.0 you need to [upgrade to 1.4.0 first](#upgrading-to-140).
+These steps are applicable for 1.4.0 ST-RMQTT version. In order to upgrade to 2.0.0 you need to [upgrade to 1.4.0 first](#upgrading-to-140).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-This release of TBMQ introduces significant improvements, including key new features and a migration from PostgreSQL to Redis for storing messages for persistent DEVICE clients. 
+This release of ST-RMQTT introduces significant improvements, including key new features and a migration from PostgreSQL to Redis for storing messages for persistent DEVICE clients. 
 For more details, refer to the [architecture documentation](/docs/{{docsPrefix}}mqtt-broker/architecture/).
 
 Before upgrading, it is strongly recommended to back up your PostgreSQL database to ensure data safety. 
 Follow the steps by selecting an appropriate guide from [one of the cards](/docs/{{docsPrefix}}mqtt-broker/install/upgrade-instructions/) on top of the page.
 
-#### Pull TBMQ image (Optional)
+#### Pull ST-RMQTT image (Optional)
 
-Pull 2.0.0 version TBMQ image depending on your current installation.
+Pull 2.0.0 version ST-RMQTT image depending on your current installation.
 
-{% capture tabspec %}tbmq-pull-2-0-0
-tbmq-pull-2-0-0-single,Single node,shell,resources/2.0.0/tbmq-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.0.0/tbmq-single-node-pull.sh
-tbmq-pull-2-0-0-cluster,Cluster mode,shell,resources/2.0.0/tbmq-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.0.0/tbmq-cluster-mode-pull.sh{% endcapture %}
+{% capture tabspec %}st-rmqtt-pull-2-0-0
+st-rmqtt-pull-2-0-0-single,Single node,shell,resources/2.0.0/st-rmqtt-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.0.0/st-rmqtt-single-node-pull.sh
+st-rmqtt-pull-2-0-0-cluster,Cluster mode,shell,resources/2.0.0/st-rmqtt-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/2.0.0/st-rmqtt-cluster-mode-pull.sh{% endcapture %}
 {% include tabs.html %}
 
 #### From version
@@ -230,17 +230,17 @@ on top of the page.
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 1.3.0 TBMQ version. In order to upgrade to 1.4.0 you need to [upgrade to 1.3.0 first](#upgrading-to-130).
+These steps are applicable for 1.3.0 ST-RMQTT version. In order to upgrade to 1.4.0 you need to [upgrade to 1.3.0 first](#upgrading-to-130).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-#### Pull TBMQ image (Optional)
+#### Pull ST-RMQTT image (Optional)
 
-Pull 1.4.0 version TBMQ image depending on your current installation.
+Pull 1.4.0 version ST-RMQTT image depending on your current installation.
 
-{% capture tabspec %}tbmq-pull-1-4-0
-tbmq-pull-1-4-0-single,Single node,shell,resources/1.4.0/tbmq-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.4.0/tbmq-single-node-pull.sh
-tbmq-pull-1-4-0-cluster,Cluster mode,shell,resources/1.4.0/tbmq-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.4.0/tbmq-cluster-mode-pull.sh{% endcapture %}
+{% capture tabspec %}st-rmqtt-pull-1-4-0
+st-rmqtt-pull-1-4-0-single,Single node,shell,resources/1.4.0/st-rmqtt-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.4.0/st-rmqtt-single-node-pull.sh
+st-rmqtt-pull-1-4-0-cluster,Cluster mode,shell,resources/1.4.0/st-rmqtt-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.4.0/st-rmqtt-cluster-mode-pull.sh{% endcapture %}
 {% include tabs.html %}
 
 #### From version
@@ -255,17 +255,17 @@ on top of the page.
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 1.2.1 TBMQ version. In order to upgrade to 1.3.0 you need to [upgrade to 1.2.1 first](#upgrading-to-121).
+These steps are applicable for 1.2.1 ST-RMQTT version. In order to upgrade to 1.3.0 you need to [upgrade to 1.2.1 first](#upgrading-to-121).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-#### Pull TBMQ image (Optional)
+#### Pull ST-RMQTT image (Optional)
 
-Pull 1.3.0 version TBMQ image depending on your current installation.
+Pull 1.3.0 version ST-RMQTT image depending on your current installation.
 
-{% capture tabspec %}tbmq-pull-1-3-0
-tbmq-pull-1-3-0-single,Single node,shell,resources/1.3.0/tbmq-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.3.0/tbmq-single-node-pull.sh
-tbmq-pull-1-3-0-cluster,Cluster mode,shell,resources/1.3.0/tbmq-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.3.0/tbmq-cluster-mode-pull.sh{% endcapture %}
+{% capture tabspec %}st-rmqtt-pull-1-3-0
+st-rmqtt-pull-1-3-0-single,Single node,shell,resources/1.3.0/st-rmqtt-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.3.0/st-rmqtt-single-node-pull.sh
+st-rmqtt-pull-1-3-0-cluster,Cluster mode,shell,resources/1.3.0/st-rmqtt-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.3.0/st-rmqtt-cluster-mode-pull.sh{% endcapture %}
 {% include tabs.html %}
 
 #### From version
@@ -280,17 +280,17 @@ on top of the page.
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 1.2.0 TBMQ version. In order to upgrade to 1.2.1 you need to [upgrade to 1.2.0 first](#upgrading-to-120).
+These steps are applicable for 1.2.0 ST-RMQTT version. In order to upgrade to 1.2.1 you need to [upgrade to 1.2.0 first](#upgrading-to-120).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-#### Pull TBMQ image (Optional)
+#### Pull ST-RMQTT image (Optional)
 
-Pull 1.2.1 version TBMQ image depending on your current installation.
+Pull 1.2.1 version ST-RMQTT image depending on your current installation.
 
-{% capture tabspec %}tbmq-pull-1-2-1
-tbmq-pull-1-2-1-single,Single node,shell,resources/1.2.1/tbmq-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.2.1/tbmq-single-node-pull.sh
-tbmq-pull-1-2-1-cluster,Cluster mode,shell,resources/1.2.1/tbmq-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.2.1/tbmq-cluster-mode-pull.sh{% endcapture %}
+{% capture tabspec %}st-rmqtt-pull-1-2-1
+st-rmqtt-pull-1-2-1-single,Single node,shell,resources/1.2.1/st-rmqtt-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.2.1/st-rmqtt-single-node-pull.sh
+st-rmqtt-pull-1-2-1-cluster,Cluster mode,shell,resources/1.2.1/st-rmqtt-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.2.1/st-rmqtt-cluster-mode-pull.sh{% endcapture %}
 {% include tabs.html %}
 
 #### From version
@@ -305,17 +305,17 @@ on top of the page.
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 1.1.0 TBMQ version. In order to upgrade to 1.2.0 you need to [upgrade to 1.1.0 first](#upgrading-to-110).
+These steps are applicable for 1.1.0 ST-RMQTT version. In order to upgrade to 1.2.0 you need to [upgrade to 1.1.0 first](#upgrading-to-110).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-#### Pull TBMQ image (Optional)
+#### Pull ST-RMQTT image (Optional)
 
-Pull 1.2.0 version TBMQ image depending on your current installation.
+Pull 1.2.0 version ST-RMQTT image depending on your current installation.
 
-{% capture tabspec %}tbmq-pull-1-2-0
-tbmq-pull-1-2-0-single,Single node,shell,resources/1.2.0/tbmq-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.2.0/tbmq-single-node-pull.sh
-tbmq-pull-1-2-0-cluster,Cluster mode,shell,resources/1.2.0/tbmq-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.2.0/tbmq-cluster-mode-pull.sh{% endcapture %}
+{% capture tabspec %}st-rmqtt-pull-1-2-0
+st-rmqtt-pull-1-2-0-single,Single node,shell,resources/1.2.0/st-rmqtt-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.2.0/st-rmqtt-single-node-pull.sh
+st-rmqtt-pull-1-2-0-cluster,Cluster mode,shell,resources/1.2.0/st-rmqtt-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.2.0/st-rmqtt-cluster-mode-pull.sh{% endcapture %}
 {% include tabs.html %}
 
 #### From version
@@ -330,17 +330,17 @@ on top of the page.
 {% capture difference %}
 **NOTE**:
 <br>
-These steps are applicable for 1.0.0, and 1.0.1 TBMQ versions.
+These steps are applicable for 1.0.0, and 1.0.1 ST-RMQTT versions.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-#### Pull TBMQ image (Optional)
+#### Pull ST-RMQTT image (Optional)
 
-Pull 1.1.0 version TBMQ image depending on your current installation.
+Pull 1.1.0 version ST-RMQTT image depending on your current installation.
 
-{% capture tabspec %}tbmq-pull-1-1-0
-tbmq-pull-1-1-0-single,Single node,shell,resources/1.1.0/tbmq-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.1.0/tbmq-single-node-pull.sh
-tbmq-pull-1-1-0-cluster,Cluster mode,shell,resources/1.1.0/tbmq-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.1.0/tbmq-cluster-mode-pull.sh{% endcapture %}
+{% capture tabspec %}st-rmqtt-pull-1-1-0
+st-rmqtt-pull-1-1-0-single,Single node,shell,resources/1.1.0/st-rmqtt-single-node-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.1.0/st-rmqtt-single-node-pull.sh
+st-rmqtt-pull-1-1-0-cluster,Cluster mode,shell,resources/1.1.0/st-rmqtt-cluster-mode-pull.sh,/docs/{{docsPrefix}}mqtt-broker/install/resources/1.1.0/st-rmqtt-cluster-mode-pull.sh{% endcapture %}
 {% include tabs.html %}
 
 #### From version

@@ -1,5 +1,5 @@
 
-TBMQ API consists of two main parts: MQTT client API and server-side API.
+ST-RMQTT API consists of two main parts: MQTT client API and server-side API.
 
 MQTT client API can be reviewed with the following pages:
 
@@ -13,5 +13,5 @@ Server-side API is available as REST API:
 * [**MQTT Client Credentials Management**](/docs/{{docsPrefix}}mqtt-broker/mqtt-client-credentials-management/) - The server-side APIs for MQTT client credentials management.
 * [**Application Shared Subscriptions Management**](/docs/{{docsPrefix}}mqtt-broker/application-shared-subscription/) - The server-side APIs for Application Shared Subscriptions management.
 
-These APIs offer a comprehensive set of tools and functionalities to manage and interact with TBMQ, 
+These APIs offer a comprehensive set of tools and functionalities to manage and interact with ST-RMQTT, 
 empowering users to administer, control, and customize their MQTT-based applications effectively.

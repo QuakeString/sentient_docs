@@ -34,10 +34,10 @@
     function initPricingState() {
         $(function(){
             setCloudServerDefault();
-            if (window.location.href.includes('section=thingsboard-ce')) {
-                window.history.replaceState(null, '', window.location.href.replace('section=thingsboard-ce', 'product=thingsboard-ce'));
+            if (window.location.href.includes('section=sentient-ce')) {
+                window.history.replaceState(null, '', window.location.href.replace('section=sentient-ce', 'product=sentient-ce'));
             }
-            if (window.location.href.includes('section=trendz-options') || window.location.href.includes('section=thingsboard-edge')) {
+            if (window.location.href.includes('section=sentient-analytics-options') || window.location.href.includes('section=sentient-gateway')) {
                 const url = new URL(window.location.href);
                 url.search = ''
                 window.history.replaceState(null, '', url.toString());
@@ -55,7 +55,7 @@
             const toggle = document.getElementById('regionSelect');
             if (toggle) {
                 toggle.checked = true;
-                document.querySelectorAll(`#thingsboard-cloud .billing-toggle.solution-selector .label-text`).forEach(elem => elem.classList.toggle('selected'));
+                document.querySelectorAll(`#sentient-cloud .billing-toggle.solution-selector .label-text`).forEach(elem => elem.classList.toggle('selected'));
             }
             setTopUpsCurrency('eur');
             generateAddOnsCards('eur');
@@ -146,7 +146,7 @@
         setCloudServerHref();
         updateQueryParam({solution: solutionId});
         setActiveSolutionSection(solutionId);
-        document.querySelectorAll(`#thingsboard-cloud .billing-toggle.solution-selector .label-text`)
+        document.querySelectorAll(`#sentient-cloud .billing-toggle.solution-selector .label-text`)
             .forEach(elem => {
                 elem.classList.toggle('selected');
                 elem.classList.toggle('defaultselection');
@@ -174,7 +174,7 @@
     }
 
     function setActivePricingSection(sectionId) {
-        var activateSelectProduct = sectionId === 'thingsboard-pe-options' || sectionId === 'tbmq-options';
+        var activateSelectProduct = sectionId === 'sentient-pe-options' || sectionId === 'st-rmqtt-options';
         $("li.menu-item").removeClass("active");
         $("li.menu-item#menu-item-"+sectionId).addClass("active");
         hidePricingContent();
@@ -247,10 +247,10 @@
     }
 
     function getLicense(event, productId, planId, productName, coupon, extraDeviceCount, extraSessionCount, extraThroughputCount, extraInstanceCount,
-                        extraDevInstanceCount, edgeEnabled, extraEdgeCount, trendzEnabled, whiteLabelingAddonEnabled, priorityHelpDeskEnabled,
+                        extraDevInstanceCount, edgeEnabled, extraEdgeCount, sentient-analyticsEnabled, whiteLabelingAddonEnabled, priorityHelpDeskEnabled,
                         offlineLicenseEnabled) {
         event.preventDefault();
-        let url = "https://license.thingsboard.io/signup?createSubscription=true";
+        let url = "https://license.docs.sentient.invenia.in/signup?createSubscription=true";
         url += "&productId="+productId;
         url += "&planId="+planId;
         if (coupon) {
@@ -278,8 +278,8 @@
         if (extraEdgeCount && extraEdgeCount !== '0') {
             items.extraEdgeCount = Number(extraEdgeCount);
         }
-        if (trendzEnabled && trendzEnabled === 'true') {
-            items.trendzEnabled = true;
+        if (sentient-analyticsEnabled && sentient-analyticsEnabled === 'true') {
+            items.sentient-analyticsEnabled = true;
         }
         if (whiteLabelingAddonEnabled && whiteLabelingAddonEnabled === 'true') {
             items.whiteLabelingAddonEnabled = true;
@@ -329,7 +329,7 @@
         });
     }
 
-    let currentFaqContainer = 'thingsboard-cloud';
+    let currentFaqContainer = 'sentient-cloud';
     let sectionSwitched = false;
 
     function switchFaqContainer(containerId) {
@@ -349,35 +349,35 @@
     function changeFaqHeader(id) {
         let correspondingHeader;
         switch (id) {
-            case 'thingsboard-ce':
-                correspondingHeader = 'ThingsBoard Community Edition FAQs';
+            case 'sentient-ce':
+                correspondingHeader = 'SENTIENT FAQs';
                 break;
-            case 'thingsboard-cloud':
-                correspondingHeader = 'ThingsBoard Cloud FAQs';
+            case 'sentient-cloud':
+                correspondingHeader = 'SENTIENT Cloud FAQs';
                 break;
-            case 'thingsboard-private-cloud':
-                correspondingHeader = 'ThingsBoard Private Cloud FAQs';
+            case 'sentient-private-cloud':
+                correspondingHeader = 'SENTIENT Private Cloud FAQs';
                 break;
             case 'pe-pay-as-you-go':
-                correspondingHeader = 'ThingsBoard Professional Edition: Self-managed Subscriptions FAQs';
+                correspondingHeader = 'SENTIENT Professional Edition: Self-managed Subscriptions FAQs';
                 break;
             case 'pe-perpetual':
-                correspondingHeader = 'ThingsBoard Professional Edition: Self-managed Perpetual FAQs';
+                correspondingHeader = 'SENTIENT Professional Edition: Self-managed Perpetual FAQs';
                 break;
-            case 'tbmq-private-cloud':
-                correspondingHeader = 'TBMQ Private Cloud FAQs';
-                tbmqPcInitTicks();
+            case 'st-rmqtt-private-cloud':
+                correspondingHeader = 'ST-RMQTT Private Cloud FAQs';
+                st-rmqttPcInitTicks();
                 break;
-            case 'tbmq-ce':
-                correspondingHeader = 'TBMQ Community Edition FAQs';
+            case 'st-rmqtt-ce':
+                correspondingHeader = 'ST-RMQTT Community Edition FAQs';
                 break;
-            case 'tbmq-pe-pay-as-you-go':
-                correspondingHeader = 'TBMQ Self-managed PAYG FAQs';
-                tbmqPaygInitTicks();
+            case 'st-rmqtt-pe-pay-as-you-go':
+                correspondingHeader = 'ST-RMQTT Self-managed PAYG FAQs';
+                st-rmqttPaygInitTicks();
                 break;
-            case 'tbmq-pe-perpetual':
-                correspondingHeader = 'TBMQ Self-managed Perpetual FAQs';
-                tbmqPerpInitTicks();
+            case 'st-rmqtt-pe-perpetual':
+                correspondingHeader = 'ST-RMQTT Self-managed Perpetual FAQs';
+                st-rmqttPerpInitTicks();
                 break;
         }
         if (correspondingHeader && document.getElementById('faq-header')) {
@@ -468,7 +468,7 @@
     }
 
     function switchToPrivateCloud() {
-        window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname + '?section=thingsboard-pe-options&product=thingsboard-private-cloud'
+        window.location.href = window.location.protocol + "//" + window.location.host + window.location.pathname + '?section=sentient-pe-options&product=sentient-private-cloud'
     }
 
     function generateAddOnsCards(currency = 'usd') {
@@ -487,7 +487,7 @@
             };
 
             const edgePrice = getPrice(addOnsPricing[product].edge);
-            const trendzPrice = getPrice(addOnsPricing[product].trendz);
+            const sentient-analyticsPrice = getPrice(addOnsPricing[product].sentient-analytics);
             const wlPrice = getPrice(addOnsPricing[product].wl);
 
             elem.innerHTML = `
@@ -503,11 +503,11 @@
                         </div>
                     </div>
                     <div class="card">
-                        <img src="/images/pricing/trendz-add-on-icon.svg" alt="Trendz add on icon">
+                        <img src="/images/pricing/sentient-analytics-add-on-icon.svg" alt="SENTIENT ANALYTICS add on icon">
                         <div class="text">
-                            <h3 class="faq" data-faq-id="${addOnsPricing[product].trendz.faq}" data-faq-tooltip="Turn raw IoT data into actionable insights with advanced analytics and trend prediction.">Trendz Analytics<a class="faq-link faq-link-50"></a></h3>
+                            <h3 class="faq" data-faq-id="${addOnsPricing[product].sentient-analytics.faq}" data-faq-tooltip="Turn raw IoT data into actionable insights with advanced analytics and trend prediction.">SENTIENT ANALYTICS<a class="faq-link faq-link-50"></a></h3>
                             <p>Advanced analytics for your solution</p>
-                            <p>Starting from <span>${trendzPrice}</span></p>
+                            <p>Starting from <span>${sentient-analyticsPrice}</span></p>
                         </div>
                     </div>
                     <div class="card">
@@ -628,7 +628,7 @@
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `thingsboard-pricing-summary-${new Date().toISOString().slice(0, 10)}.txt`;
+        a.download = `sentient-pricing-summary-${new Date().toISOString().slice(0, 10)}.txt`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);

@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Upgrade instructions
-description: ThingsBoard IoT platform upgrade instructions
+description: SENTIENT IoT platform upgrade instructions
 table-of-contents: "false"
 active-menu-item-click: "true"
 

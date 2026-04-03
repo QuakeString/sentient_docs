@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Rock64 to ThingsBoard?
+title: How to connect Rock64 to SENTIENT?
 category: Single-board computers
 chip: Rockchip RK3328
 connectivity: Ethernet

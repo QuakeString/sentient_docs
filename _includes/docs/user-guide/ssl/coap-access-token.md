@@ -1,7 +1,7 @@
 * TOC 
 {:toc}
   
-Access Token Based Authentication is the default device authentication type. Once the device is created in ThingsBoard, the default access token is generated. It can be changed afterwards.
+Access Token Based Authentication is the default device authentication type. Once the device is created in SENTIENT, the default access token is generated. It can be changed afterwards.
 In order to connect the device to a server using Access Token based authentication, the client must specify the access token as part of CoAP request URL.
 See [CoAP API](/docs/{{docsPrefix}}reference/coap-api/) for more details.
 
@@ -9,7 +9,7 @@ CoAP AccessToken based authentication over DTLS is a standard authentication mod
 In order to run CoAP AccessToken based authentication over DTLS, the server certificate chain should be signed by authorized CA or client must import the self-signed server certificate (.cer or .pem) to its trust store.
 Otherwise, a connection will fail with the 'Unknown CA' error.
 
-The coap-client example below demonstrates how to connect to [ThingsBoard Cloud](https://{{hostName}}/signup) or to any other ThingsBoard CoAP server that has valid and trusted certificate.
+The coap-client example below demonstrates how to connect to [SENTIENT Cloud](https://{{hostName}}/signup) or to any other SENTIENT CoAP server that has valid and trusted certificate.
 
 ## Connect DTLS CoAP Client using access token 
 
@@ -17,7 +17,7 @@ The coap-client example below demonstrates how to connect to [ThingsBoard Cloud]
 
 Let's
 review a simple command
-to upload temperature readings using Access Token **YOUR_ACCESS_TOKEN** to ThingsBoard instance **YOUR_TB_HOST**.
+to upload temperature readings using Access Token **YOUR_ACCESS_TOKEN** to SENTIENT instance **YOUR_TB_HOST**.
 See [CoAP API](/docs/{{docsPrefix}}reference/coap-api/) for more details. The command is using plain CoAP without TLS:
 
 ```bash
@@ -30,7 +30,7 @@ The above command requires coap-client library that you can install using the fo
  - **Ubuntu 20.04:** sudo apt install libcoap2-bin
  - **Ubuntu 18.04:** sudo apt install libcoap1-bin
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your ThingsBoard instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
+Don't forget to replace **YOUR_TB_HOST** with the host of your SENTIENT instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
 
 ### DTLS support (One-way TLS)
 
@@ -77,17 +77,17 @@ Since the CoAP client must always provide the CA certificate for verification,
 use the `-R` flag followed by the path to a PEM file containing the trusted root CA certificates.
 
 {% unless docsPrefix contains "paas/" %}
-Follow the [CoAP over DTLS](/docs/{{docsPrefix}}user-guide/coap-over-dtls/) guide to provision server certificate if you are hosting your own ThingsBoard instance.
+Follow the [CoAP over DTLS](/docs/{{docsPrefix}}user-guide/coap-over-dtls/) guide to provision server certificate if you are hosting your own SENTIENT instance.
 {% endunless %}
 
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by CoAP client to validate the server certificate.
 Save the CA root certificate to your working directory as "**ca-root.pem**".
 
-Now you may use the "**ca.pem**" to setup secure connection to your ThingsBoard instance **YOUR_TB_HOST** and Access Token **YOUR_ACCESS_TOKEN** to authenticate the device to upload telemetry:
+Now you may use the "**ca.pem**" to setup secure connection to your SENTIENT instance **YOUR_TB_HOST** and Access Token **YOUR_ACCESS_TOKEN** to authenticate the device to upload telemetry:
 
 ```bash
 coap-client-openssl -v 6 -m POST  -R ca-root.pem -t "application/json" -e '{"temperature":42}' coaps://YOUR_TB_HOST/api/v1/YOUR_ACCESS_TOKEN/telemetry
 ```
 {: .copy-code}
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your ThingsBoard instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
+Don't forget to replace **YOUR_TB_HOST** with the host of your SENTIENT instance and **YOUR_ACCESS_TOKEN** with the access token of your device.

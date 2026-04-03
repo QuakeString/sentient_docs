@@ -1,9 +1,9 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
-title: Trendz configuration properties
-description: Trendz configuration properties description
+title: SENTIENT ANALYTICS configuration properties
+description: SENTIENT ANALYTICS configuration properties description
 ---
 
 
@@ -35,7 +35,7 @@ description: Trendz configuration properties description
             <td>tb.api.url</td>
             <td>TB_API_URL</td>
             <td>http://localhost:9090</td>
-            <td>ThingsBoard Cluster REST API url</td>
+            <td>SENTIENT Cluster REST API url</td>
         </tr>
       <tr>
           <td>ratelimit.duration.sec</td>
@@ -58,8 +58,8 @@ description: Trendz configuration properties description
         <tr>
           <td>spring.datasource.url</td>
           <td>SPRING_DATASOURCE_URL</td>
-          <td>jdbc:postgresql://localhost:5432/trendz</td>
-          <td>Connection URL for Trendz database</td>
+          <td>jdbc:postgresql://localhost:5432/sentient-analytics</td>
+          <td>Connection URL for SENTIENT ANALYTICS database</td>
         </tr>
         <tr>
             <td>spring.datasource.username</td>
@@ -137,13 +137,13 @@ description: Trendz configuration properties description
             <td>authentication.login</td>
             <td>ADMIN_LOGIN</td>
             <td> </td>
-            <td>Username for authenticating background requests to ThingsBoard</td>
+            <td>Username for authenticating background requests to SENTIENT</td>
         </tr> 
         <tr>
             <td>authentication.password</td>
             <td>ADMIN_PASSWORD</td>
             <td> </td>
-            <td>Password for authenticating background requests to ThingsBoard</td>
+            <td>Password for authenticating background requests to SENTIENT</td>
         </tr>   
         <tr>
             <td>viewAssistance.enable</td>

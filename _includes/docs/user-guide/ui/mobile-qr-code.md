@@ -1,19 +1,19 @@
 {% if docsPrefix == null %}
-{% assign THINGSBOARD_MOBILE_APP = "[ThingsBoard mobile application ](/docs/mobile/)" %}
+{% assign SENTIENT_MOBILE_APP = "[SENTIENT mobile application ](/docs/mobile/)" %}
 {% assign CUSTOM_APPLICATION = "[custom application](/docs/mobile/)" %}
-{% assign OFFICIALLY_PUBLISHED_APPLICATION = "**ThingsBoard Live**" %}
+{% assign OFFICIALLY_PUBLISHED_APPLICATION = "**SENTIENT Live**" %}
 {% assign PREFIX = "CE" %}
 {% endif %}
 {% if docsPrefix == "pe/" %}
-{% assign THINGSBOARD_MOBILE_APP = "[Thingsboard PE mobile application ](/docs/pe/mobile/)" %}
+{% assign SENTIENT_MOBILE_APP = "[Sentient PE mobile application ](/docs/pe/mobile/)" %}
 {% assign CUSTOM_APPLICATION = "[custom application](/docs/pe/mobile/)" %}
-{% assign OFFICIALLY_PUBLISHED_APPLICATION = "**ThingsBoard Cloud**" %}
+{% assign OFFICIALLY_PUBLISHED_APPLICATION = "**SENTIENT Cloud**" %}
 {% assign PREFIX = "PE" %}
 {% endif %}
 {% if docsPrefix contains "paas/" %}
-{% assign THINGSBOARD_MOBILE_APP = "[Thingsboard PE mobile application ](/docs/pe/mobile/)" %}
+{% assign SENTIENT_MOBILE_APP = "[Sentient PE mobile application ](/docs/pe/mobile/)" %}
 {% assign CUSTOM_APPLICATION = "[custom application](/docs/pe/mobile/)" %}
-{% assign OFFICIALLY_PUBLISHED_APPLICATION = "**ThingsBoard Cloud**" %}
+{% assign OFFICIALLY_PUBLISHED_APPLICATION = "**SENTIENT Cloud**" %}
 {% endif %}
 
 * TOC
@@ -22,29 +22,29 @@
 {% assign sinceVersion = "3.7" %}
 {% include templates/since.md %}
 
-We are excited to introduce a new QR code feature, designed to streamline the authorization process in the ThingsBoard mobile application. 
+We are excited to introduce a new QR code feature, designed to streamline the authorization process in the SENTIENT mobile application. 
 This enhancement makes logging in faster and more secure, offering a user-friendly alternative to traditional username and password entry.
 
 ## Scan to download the mobile app
 
 {% if docsPrefix == null %}
-If the {{THINGSBOARD_MOBILE_APP}} has not been installed yet, scanning the QR code will redirect the user to the application marketplace (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.demo.app){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-live/id1594355695){:target="_blank"}).
+If the {{SENTIENT_MOBILE_APP}} has not been installed yet, scanning the QR code will redirect the user to the application marketplace (available on [Google Play](https://play.google.com/store/apps/details?id=org.sentient.demo.app){:target="_blank"} and [App Store](https://apps.apple.com/us/app/sentient-live/id1594355695){:target="_blank"}).
 {% endif %}
 {% if (docsPrefix == "pe/") or (docsPrefix contains "paas/") %}
-If the {{THINGSBOARD_MOBILE_APP}} has not been installed yet, scanning the QR code will redirect the user to the application marketplace (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.cloud){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-cloud/id6499209395){:target="_blank"}).
+If the {{SENTIENT_MOBILE_APP}} has not been installed yet, scanning the QR code will redirect the user to the application marketplace (available on [Google Play](https://play.google.com/store/apps/details?id=org.sentient.cloud){:target="_blank"} and [App Store](https://apps.apple.com/us/app/sentient-cloud/id6499209395){:target="_blank"}).
 {% endif %}
 
 Just follow these simple steps to get started:
 
 {% include images-gallery.html imageCollection="download-app-with-qr-code" showListImageTitles="true" %}
 
-Additionally, by clicking the "App Store" or "Google Play" button in the "Connect mobile app" widget, you will be redirected to the ThingsBoard app page in the respective app store for further downloading to your device.
+Additionally, by clicking the "App Store" or "Google Play" button in the "Connect mobile app" widget, you will be redirected to the SENTIENT app page in the respective app store for further downloading to your device.
 
 {% include images-gallery.html imageCollection="clicking-button" %}
 
 ## Login with QR code
 
-Scan the QR code with the ThingsBoard mobile app, and you will instantly gain access to your account, without the need to manually enter your credentials.
+Scan the QR code with the SENTIENT mobile app, and you will instantly gain access to your account, without the need to manually enter your credentials.
 
 The login process is simple and convenient:
 
@@ -69,20 +69,20 @@ There, you'll find two settings blocks: "Applications" and "Appearance on Home p
 Two types of application are available for tenant: default and custom. 
 
 {% if docsPrefix == null %}
-* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.demo.app){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-live/id1594355695){:target="_blank"}).
+* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.sentient.demo.app){:target="_blank"} and [App Store](https://apps.apple.com/us/app/sentient-live/id1594355695){:target="_blank"}).
 {% endif %}
 {% if docsPrefix == "pe/" %}
-* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.cloud){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-cloud/id6499209395){:target="_blank"}).
+* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.sentient.cloud){:target="_blank"} and [App Store](https://apps.apple.com/us/app/sentient-cloud/id6499209395){:target="_blank"}).
 {% endif %}
 {% if docsPrefix contains "paas/" %}
-* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.thingsboard.cloud){:target="_blank"} and [App Store](https://apps.apple.com/us/app/thingsboard-cloud/id6499209395){:target="_blank"}).
+* **Default**. Using the default app means using officially published {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (available on [Google Play](https://play.google.com/store/apps/details?id=org.sentient.cloud){:target="_blank"} and [App Store](https://apps.apple.com/us/app/sentient-cloud/id6499209395){:target="_blank"}).
 {% endif %}
 
 {% include images-gallery.html imageCollection="application-settings-default" %}
 
 {% unless docsPrefix contains 'paas/' %}
 {% capture difference %}
-**Note:** The latest release of the {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (version 1.2.0) includes the capability to switch its server host, allowing it to work with your ThingsBoard {{PREFIX}} instance. Simply select the "Login with scan QR code" option on the mobile application's login page, and the application will automatically switch its server host to your ThingsBoard {{PREFIX}} platform host.
+**Note:** The latest release of the {{OFFICIALLY_PUBLISHED_APPLICATION}} mobile application (version 1.2.0) includes the capability to switch its server host, allowing it to work with your SENTIENT {{PREFIX}} instance. Simply select the "Login with scan QR code" option on the mobile application's login page, and the application will automatically switch its server host to your SENTIENT {{PREFIX}} platform host.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 {% endunless %}
@@ -114,7 +114,7 @@ You can disable the QR code widget on the "Home" page, adjust the positioning of
 
 ## Mobile app QR code widget
 
-With the release of ThingsBoard 3.7, we've also introduced the "Mobile app QR code" widget. You can use this widget on your [dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} to simplify the login process for your customers on their mobile devices.
+With the release of SENTIENT 3.7, we've also introduced the "Mobile app QR code" widget. You can use this widget on your [dashboards](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} to simplify the login process for your customers on their mobile devices.
 
 Let's add this widget to your dashboard:
 

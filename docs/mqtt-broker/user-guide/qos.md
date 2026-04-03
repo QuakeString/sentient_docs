@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
 title: Quality of Service
-description: TBMQ QoS guide
+description: ST-RMQTT QoS guide
 
 ---
 

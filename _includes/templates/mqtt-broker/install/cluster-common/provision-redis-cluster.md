@@ -1,4 +1,4 @@
-TBMQ relies on **Valkey** to store messages for [DEVICE persistent clients](/docs/{{docsPrefix}}mqtt-broker/architecture/#persistent-device-client).
+ST-RMQTT relies on **Valkey** to store messages for [DEVICE persistent clients](/docs/{{docsPrefix}}mqtt-broker/architecture/#persistent-device-client).
 The cache also improves performance by reducing the number of direct database reads, especially when authentication is enabled and multiple clients connect at once.
 Without caching, every new connection triggers a database query to validate MQTT client credentials, which can cause the unnecessary load under high connection rates.
 
@@ -32,7 +32,7 @@ To set up Valkey in Google Cloud, refer to the Google Memorystore for Valkey doc
   Advice on memory management, eviction policies, when to scale, and how to handle growing workloads effectively.
   ([Google Cloud][7])
 
-Once your Valkey cluster is ready, update the cache configuration in `tbmq-cache-configmap.yml` with the correct endpoint values:
+Once your Valkey cluster is ready, update the cache configuration in `st-rmqtt-cache-configmap.yml` with the correct endpoint values:
 
 * **For standalone Valkey**:
   Uncomment and set the following values. Make sure the `REDIS_HOST` value does **not** include the port (`:6379`).

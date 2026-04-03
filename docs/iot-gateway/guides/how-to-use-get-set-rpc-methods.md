@@ -25,7 +25,7 @@ Socket<small></small>%,%socket%,%templates/iot-gateway/get-set-connector-rpc/soc
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

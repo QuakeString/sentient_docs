@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect NVIDIA Jetson Xavier NX Developer Kit to ThingsBoard?
+title: How to connect NVIDIA Jetson Xavier NX Developer Kit to SENTIENT?
 category: Single-board computers
 chip: NVIDIA CUDA
 connectivity: [Ethernet, WIFI, Bluetooth]

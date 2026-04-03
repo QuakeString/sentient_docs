@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect VIBit to ThingsBoard?
+title: How to connect VIBit to SENTIENT?
 category: Other devices
 connectivity: [Wi-Fi, RS-485, Bluetooth]
 vendor: MachineAstro Pvt Ltd

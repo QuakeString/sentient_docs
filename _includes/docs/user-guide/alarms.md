@@ -3,7 +3,7 @@
 
 **Alarms** are a key tool for monitoring events related to your entities — devices, assets, customers, and other components of your system. The alarm mechanism allows you to quickly react to anomalies, condition violations, or critical state changes, helping prevent potential issues and ensuring stable, efficient system operation.
 
-For example, you can configure ThingsBoard to automatically create an alarm when the temperature exceeds a defined threshold. This is only a simple example — real-world scenarios may involve complex conditions, combined parameters, time intervals, aggregated data, or context-dependent logic.
+For example, you can configure SENTIENT to automatically create an alarm when the temperature exceeds a defined threshold. This is only a simple example — real-world scenarios may involve complex conditions, combined parameters, time intervals, aggregated data, or context-dependent logic.
 
 The foundation of the alarm mechanism lies in the conditions and logic defined in [Alarm rules](/docs/{{docsPrefix}}user-guide/alarm-rules){:target="_blank"}. These rules determine when an alarm should be created, updated, or cleared. Once the rules are configured, the system begins generating the corresponding alarms, which you can view, filter, and manage through the dedicated interface. For more details on creating and configuring rules, see the [Alarm rules](/docs/{{docsPrefix}}user-guide/alarm-rules/){:target="_blank"} section.
 
@@ -13,19 +13,19 @@ This section focuses on the practical use of alarms, the available interface too
 
 ## Notification about created or cleared an alarm
 
-The [Notification center](/docs/{{docsPrefix}}user-guide/notifications){:target="_blank"} in ThingsBoard is responsible for delivering alerts about alarm events and other system activity to the appropriate users.
+The [Notification center](/docs/{{docsPrefix}}user-guide/notifications){:target="_blank"} in SENTIENT is responsible for delivering alerts about alarm events and other system activity to the appropriate users.
 By default, you receive notifications for all alarms originating from your devices, as well as alarms created by customer entities (for Tenant Administrators).
 
 {% include images-gallery.html imageCollection="notification-about-alarm" %}
 
 The Notification center allows you to flexibly configure notification rules, defining who should receive notifications, under which conditions, and through which delivery channels.   
 Available delivery channels include:
-- ThingsBoard web interface
+- SENTIENT web interface
 - Email
 - SMS
 - [Slack](/docs/{{docsPrefix}}user-guide/notifications/#slack){:target="_blank"}
 - [Microsoft Teams](/docs/{{docsPrefix}}user-guide/notifications/#microsoft-teams){:target="_blank"}
-- [ThingsBoard in-app notifications](/docs/{{docsPrefix}}mobile/){:target="_blank"}
+- [SENTIENT in-app notifications](/docs/{{docsPrefix}}mobile/){:target="_blank"}
 
 Learn more about configuring the Notification сenter [here](/docs/{{docsPrefix}}user-guide/notifications){:target="_blank"}.
 
@@ -53,7 +53,7 @@ By default, the page shows all active alarms. You can apply filters and time ran
 
 <b><font size="4">Alarm widgets</font></b>
 
-ThingsBoard provides dedicated widgets for visualizing and managing alarms on dashboards:
+SENTIENT provides dedicated widgets for visualizing and managing alarms on dashboards:
 
 <b><font size="3">Alarms table widget</font></b>
 
@@ -151,7 +151,7 @@ Alarm type defines alarm uniqueness within an entity.
 
 ### Severity
 
-Indicates the criticality of the event. ThingsBoard supports five levels, listed from highest to lowest priority:
+Indicates the criticality of the event. SENTIENT supports five levels, listed from highest to lowest priority:
 - **Critical**
 - **Major**
 - **Minor**
@@ -178,7 +178,7 @@ Alarms can be cleared either manually by a user or automatically when a predefin
 
 ### Alarm uniqueness
 
-ThingsBoard identifies an alarm using a combination of the **originator**, **type**, and **start time**.   
+SENTIENT identifies an alarm using a combination of the **originator**, **type**, and **start time**.   
 This means that at any given moment, only one active alarm can exist with the same originator, type, and start time.
 
 **Example:**   
@@ -198,10 +198,10 @@ As a result, the system produces a **single** "High Temperature" alarm with star
 
 An alarm includes two key timestamps:
 - **Start time**. The moment when the alarm condition first becomes true. This reflects the actual event time based on the incoming telemetry.
-- **Creation time**. The moment when ThingsBoard receives and processes the telemetry and creates the alarm.
+- **Creation time**. The moment when SENTIENT receives and processes the telemetry and creates the alarm.
 
 In most cases, these timestamps match. However, they may differ when devices send delayed or backdated telemetry — for example, when operating offline or uploading data in batches.
-In this situation, the alarm start time reflects the timestamp of the telemetry that crossed the threshold, while the creation time is the moment when ThingsBoard processed that message. As a result, the start time and creation time may differ.
+In this situation, the alarm start time reflects the timestamp of the telemetry that crossed the threshold, while the creation time is the moment when SENTIENT processed that message. As a result, the start time and creation time may differ.
 
 **Example with delayed telemetry**
 
@@ -209,7 +209,7 @@ An air-quality monitoring system has a pollution threshold of 100 units.
 
 **12:00** — sensor reports 95 → no alarm condition.   
 **12:05** — sensor reports 105 → **alarm condition becomes true**.   
-**12:08** — ThingsBoard receives and processes the data, **creating an alarm**.
+**12:08** — SENTIENT receives and processes the data, **creating an alarm**.
 
 Here:
 - **startTime = 12:05** (moment the threshold was actually exceeded)
@@ -253,7 +253,7 @@ Alarm propagation makes an alarm visible not only on its originator but across r
 
 **How it works**
 
-When an alarm is created, ThingsBoard:
+When an alarm is created, SENTIENT:
 1. Identifies the originator
 2. Analyzes entity relations
 3. Applies propagation filters defined in the rule
@@ -289,7 +289,7 @@ To view more information about an alarm, click on the ellipsis (...) in the "Det
 <br>
 **Alarm widgets**
 
-Also, the ThingsBoard has handy widgets for visualizing alarms on the dashboard.
+Also, the SENTIENT has handy widgets for visualizing alarms on the dashboard.
 
 The "**Alarms table**" widget allows you to conveniently display and manage alarms for selected entities based on a defined time window and filters.
 
@@ -347,7 +347,7 @@ Authorized users may add, edit, and delete their comments. System comments are n
 
 ## Alarm management using REST API
 
-ThingsBoard provides REST API to manage and query alarms. See [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation for more details.
+SENTIENT provides REST API to manage and query alarms. See [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation for more details.
 
 ## Next steps
 
@@ -357,5 +357,5 @@ ThingsBoard provides REST API to manage and query alarms. See [REST API](/docs/{
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word.
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word.
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

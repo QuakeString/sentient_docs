@@ -1,4 +1,4 @@
-The result is not stored directly on database. Instead, ThingsBoard generates an internal message:
+The result is not stored directly on database. Instead, SENTIENT generates an internal message:
 - <span class="code-light">POST_TELEMETRY_REQUEST</span>, or
 - <span class="code-light">POST_ATTRIBUTES_REQUEST</span>
 

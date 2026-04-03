@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-pe-edge
-title: ThingsBoard Edge Professional Edition Roadmap
+title: SENTIENT GATEWAY Professional Edition Roadmap
 description: Upcoming releases
 effective-url: '/docs/pe/edge/releases/roadmap/'
 ---

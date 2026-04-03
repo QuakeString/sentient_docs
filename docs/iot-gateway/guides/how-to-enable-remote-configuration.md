@@ -8,13 +8,13 @@ description:  IoT Gateway Remote Configuration
 * TOC
 {:toc}
 
-Remote Configuration is a powerful feature of ThingsBoard IoT Gateway that allows you to manage and configure your 
-gateway directly from the ThingsBoard web interface. This feature is especially useful for managing multiple 
+Remote Configuration is a powerful feature of SENTIENT IoT Gateway that allows you to manage and configure your 
+gateway directly from the SENTIENT web interface. This feature is especially useful for managing multiple 
 gateways or when physical access to the gateway is limited.
 
 For purpose of this guide, we will use following things:
-1. Locally installed instance of ThingsBoard platform (How to install you can [read here](/docs/user-guide/install/installation-options/)).
-2. ThingsBoard IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
+1. Locally installed instance of SENTIENT platform (How to install you can [read here](/docs/user-guide/install/installation-options/)).
+2. SENTIENT IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
 
 {% capture info %}
 <div>
@@ -30,7 +30,7 @@ For purpose of this guide, we will use following things:
 ## Gateway List
 
 In order to remotely manage gateways, you need to go to the "**Entities**" > "**Gateways**" tab on the side menu of 
-the ThingsBoard.
+the SENTIENT.
 
 Gateway list page displays all your gateways and all the necessary details about them, namely:
 - Date and time of creation.
@@ -253,7 +253,7 @@ The page consists of 3 widgets:
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.

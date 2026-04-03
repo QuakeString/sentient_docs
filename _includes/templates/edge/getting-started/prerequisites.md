@@ -1,4 +1,4 @@
-{% if currentThingsBoardVersion == "ThingsBoard Professional Edition" %}
+{% if currentSENTIENTVersion == "SENTIENT Professional Edition" %}
 {% assign appPrefix = "Professional Edition" %}
 {% else %}
 {% assign appPrefix = "Community Edition" %}
@@ -8,7 +8,7 @@
 
 ### Edge Installation and Configuration
 
-#### Guided Installation with ThingsBoard Server Pre-configured Instructions
+#### Guided Installation with SENTIENT Server Pre-configured Instructions
 
 {% include templates/edge/install/tb-server-pre-configured-install-instructions.md %}
 
@@ -19,19 +19,19 @@ If for any reason you are unable to access and/or use **Edge preset configuratio
 
 ### Accessing User Interfaces: URLs and Credentials
 
-{% if currentThingsBoardVersion == "ThingsBoard Professional Edition" %}
+{% if currentSENTIENTVersion == "SENTIENT Professional Edition" %}
 {% assign peDocsPrefix = "pe/" %}
 {% capture contenttogglespec %}
-ThingsBoard Cloud<br><small>Connect Edge to<br>https://thingsboard.cloud</small>%,%cloud%,%templates/edge/pe-cloud.md%br%
+SENTIENT Cloud<br><small>Connect Edge to<br>https://sentient.cloud</small>%,%cloud%,%templates/edge/pe-cloud.md%br%
 On-premise Server<br><small>Connect Edge to local server</small>%,%on-premise%,%templates/edge/on-premise-cloud.md{% endcapture %}
 {% include content-toggle.liquid content-toggle-id="cloudType" toggle-spec=contenttogglespec %}
 {% endif %}
-{% if currentThingsBoardVersion == "ThingsBoard Community Edition" %}
+{% if currentSENTIENTVersion == "SENTIENT" %}
 Once **Edge** is installed, you’ll be able to access the interface via [http://localhost:18080](http://localhost:18080){:target="_blank"}.
 This URL will be referred to as **EDGE_URL** throughout the rest of this tutorial.
 
 To log in, use the same credentials as **SERVER_URL**:
-* **Username:** tenant@thingsboard.org
+* **Username:** tenant@sentient.org
 * **Password:** tenant
 {% endif %}
 

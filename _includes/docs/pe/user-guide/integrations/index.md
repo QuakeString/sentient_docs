@@ -8,19 +8,19 @@
 * TOC
 {:toc}
 
-ThingsBoard Platform integrations feature was designed for two primary use cases / deployment options:
+SENTIENT Platform integrations feature was designed for two primary use cases / deployment options:
 
-- Connect existing NB IoT, LoRaWAN, SigFox and other devices with specific payload formats directly to ThingsBoard platform.
+- Connect existing NB IoT, LoRaWAN, SigFox and other devices with specific payload formats directly to SENTIENT platform.
 - Stream data from devices connected to existing IoT Platforms to enable real-time interactive dashboards and efficient data processing.
   
 Both use cases have few things in common. There is a server-side component in the deployment topology that prevents direct access to device and provides set of APIs to interact with the device in the field instead.
 The payload format of the device is not well-defined. Often two devices that have similar sensors have different payload formats depending on a vendor or even software version.  
 
-The job of ThingsBoard Integration is to provide secure and reliable API bridge between core platform features (telemetry collection, attributes and RPC calls) and specific third-party platform APIs.    
+The job of SENTIENT Integration is to provide secure and reliable API bridge between core platform features (telemetry collection, attributes and RPC calls) and specific third-party platform APIs.    
 
 ## How it works?
 
-At the moment ThingsBoard supports various integration protocols. Most popular are HTTP, MQTT and OPC-UA. 
+At the moment SENTIENT supports various integration protocols. Most popular are HTTP, MQTT and OPC-UA. 
 Platform also support integration with specific LoRaWAN Network servers, Sigfox backend, various NB IoT devices using raw UDP and TCP integrations. 
 AWS IoT, IBM Watson and Azure Event Hub allows to subscribe to the data feed from devices via MQTT or AMQP.
 
@@ -28,9 +28,9 @@ AWS IoT, IBM Watson and Azure Event Hub allows to subscribe to the data feed fro
 
 The list of platform integrations is constantly growing, however, the general integration concepts are the same and explained below.  
 
-Once message arrives from External Platform to ThingsBoard it passes validation according to platform specific payload format and security rules. 
-Once message is validated ThingsBoard Integration invokes assigned [**Uplink data converter**](#uplink-data-converter) to extract sub-set of meaningful information out of the incoming message.
-The message is basically transformed from device and platform specific payload to the format that ThingsBoard uses.
+Once message arrives from External Platform to SENTIENT it passes validation according to platform specific payload format and security rules. 
+Once message is validated SENTIENT Integration invokes assigned [**Uplink data converter**](#uplink-data-converter) to extract sub-set of meaningful information out of the incoming message.
+The message is basically transformed from device and platform specific payload to the format that SENTIENT uses.
 
 Since TB PE v2.0, Rule Engine is also able to push Downlink messages to the integrations. The example of such message may be:
  
@@ -44,7 +44,7 @@ The most common use cases are:
  - triggering firmware update procedure based on shared attribute value change
  - changing device state based on rpc call;    
  
-Once message is pushed by the rule engine, ThingsBoard invokes assigned [**Downlink data converter**](#downlink-data-converter) and transforms the rule engine message to the specific data format that is used by the Integration.
+Once message is pushed by the rule engine, SENTIENT invokes assigned [**Downlink data converter**](#downlink-data-converter) and transforms the rule engine message to the specific data format that is used by the Integration.
 
 <br>
 
@@ -52,9 +52,9 @@ Once message is pushed by the rule engine, ThingsBoard invokes assigned [**Downl
  
 ## Uplink data converter
 
-The primary function of the Uplink data converter is to parse the payload of incoming messages from devices (e.g., MQTT, HTTP, CoAP, or other protocols) and convert it into a format that ThingsBoard can process.
+The primary function of the Uplink data converter is to parse the payload of incoming messages from devices (e.g., MQTT, HTTP, CoAP, or other protocols) and convert it into a format that SENTIENT can process.
 
-Starting from ThingsBoard version 4.0, we have simplified the process of writing converters for certain integrations that receive payload messages with the same structure.
+Starting from SENTIENT version 4.0, we have simplified the process of writing converters for certain integrations that receive payload messages with the same structure.
 You can now easily choose where the message fields from the integration should go (attributes or telemetry) without manually defining this in the decoder function.
 
 This feature applies to uplink converters for the following integrations:
@@ -66,7 +66,7 @@ This feature applies to uplink converters for the following integrations:
 - **ThingPark**
 - **ThingPark Enterprise**
 
-> Converters created before the release of ThingsBoard 4.0 will still be available and will continue to function properly.
+> Converters created before the release of SENTIENT 4.0 will still be available and will continue to function properly.
 
 ### Generic Uplink data converter
 
@@ -165,18 +165,18 @@ For example, you may define a metadata parameter such as deviceType and then use
 #### Converter output
 
 The **Converter output** displays the result in JSON format returned by your decoder function. This includes device value arrays (such as telemetry or attributes) and may also contain timestamps in telemetry values.
-This allows you to compare and verify how the decoded data is ultimately interpreted and processed by ThingsBoard.
+This allows you to compare and verify how the decoded data is ultimately interpreted and processed by SENTIENT.
 
 > The only mandatory parameters in the output JSON are **deviceName** and **deviceType**.
 
 {% capture difference %}
-**NOTE**: Starting version 2.4.2, ThingsBoard also supports **assetName** and **assetType** instead of deviceName and deviceType.
+**NOTE**: Starting version 2.4.2, SENTIENT also supports **assetName** and **assetType** instead of deviceName and deviceType.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
 {% capture difference %}
-**NOTE**: Starting version 2.4.2, ThingsBoard also support optional **customerName** and **groupName**.
-Those parameters will cause ThingsBoard to automatically create customer and/or entity group and assign those entities to the customer and/or group.
+**NOTE**: Starting version 2.4.2, SENTIENT also support optional **customerName** and **groupName**.
+Those parameters will cause SENTIENT to automatically create customer and/or entity group and assign those entities to the customer and/or group.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -216,7 +216,7 @@ Example of converter output data:
 The main function of **downlink data converter** is to transform the incoming rule engine message and its metadata to the format that is used by corresponding Integration.
 
 {% capture difference %}
-**NOTE**: A Downlink Converter is generally optional. It is required only if your integration needs ThingsBoard to send outgoing messages, such as RPCs, attribute updates, or other commands. If your integration only involves receiving data without initiating outbound communication, you can skip creating a Downlink Converter.
+**NOTE**: A Downlink Converter is generally optional. It is required only if your integration needs SENTIENT to send outgoing messages, such as RPCs, attribute updates, or other commands. If your integration only involves receiving data without initiating outbound communication, you can skip creating a Downlink Converter.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -284,7 +284,7 @@ In this case, the last downlink message originated by rule engine will be stored
 
 ### Example
 
-Let&#39;s assume an example where temperature and humidity upload frequency attributes are updated via ThingsBoard REST API and 
+Let&#39;s assume an example where temperature and humidity upload frequency attributes are updated via SENTIENT REST API and 
 you would like to push this update to an external MQTT broker (TTN, Mosquitto, AWS IoT, etc.). 
 You may also want to include the "firmwareVersion" attribute value that was configured long time ago and is not present in this particular request.
 The topic to push the update should contain the device name.
@@ -305,7 +305,7 @@ The full rule chain configuration is available [**here**](/docs/user-guide/resou
 
 ## Converters library
 
-ThingsBoard Converters library is a built-in collection of ready-to-use uplink decoder functions for over 100 devices, supporting six popular LoRaWAN network servers.   
+SENTIENT Converters library is a built-in collection of ready-to-use uplink decoder functions for over 100 devices, supporting six popular LoRaWAN network servers.   
 It significantly simplifies integration setup with various sensors and vendors.
 
 Currently, the converters library is supported by the following integrations: [ChirpStack](/docs/{{peDocsPrefix}}user-guide/integrations/chirpstack/){:target="_blank"}, [Loriot](/docs/{{peDocsPrefix}}user-guide/integrations/loriot/){:target="_blank"}, [The Things Stack Community](/docs/{{peDocsPrefix}}user-guide/integrations/ttn/){:target="_blank"}, [The Things Stack Industries](/docs/{{peDocsPrefix}}user-guide/integrations/tti/){:target="_blank"}, **ThingPark**, and **ThingPark Enterprise**.   
@@ -339,14 +339,14 @@ To access the Converters library:
 
 {% include images-gallery.liquid imageCollection=convertersLibrary %}
 
-The Converters library is open-source and actively maintained by the ThingsBoard team. It is hosted on GitHub at the [following link](https://github.com/thingsboard/data-converters){:target="_blank"}.
+The Converters library is open-source and actively maintained by the SENTIENT team. It is hosted on GitHub at the [following link](https://github.com/sentient/data-converters){:target="_blank"}.
 
 {% if docsPrefix == "pe/" %}
 <br>**Using a custom converters repository**
 
-You can [configure](/docs/user-guide/install/pe/how-to-change-config/){:target="_blank"} ThingsBoard to use your own repository with personalized decoders for your specific devices instead of using the default converters library.
+You can [configure](/docs/user-guide/install/pe/how-to-change-config/){:target="_blank"} SENTIENT to use your own repository with personalized decoders for your specific devices instead of using the default converters library.
 
-Set new environment variables in ThingsBoard configuration file to define your custom repository and branch:
+Set new environment variables in SENTIENT configuration file to define your custom repository and branch:
 
 ```text
 export TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_URL=https://github.com/my-github-account/my-repo-name.git
@@ -356,53 +356,53 @@ export TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH=my-branch
 where
 
 ㅤ**&#42; TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_URL** – URL of your GitHub (or other Git-based) repository<br>
-ㅤ**&#42; TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH** – The branch name you want ThingsBoard to pull the converters from (e.g., main, develop, or any custom branch name)
+ㅤ**&#42; TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH** – The branch name you want SENTIENT to pull the converters from (e.g., main, develop, or any custom branch name)
 
 ![image](/images/user-guide/integrations/overview/terminal-custom-repo-converters-library.png)
 
-Once configured, ThingsBoard will pull device decoder functions directly from your custom Git repository.
+Once configured, SENTIENT will pull device decoder functions directly from your custom Git repository.
 {% endif %}
 
 ## Debug mode
 
 **Debug mode** is extremely useful for development and troubleshooting.
 However, having it on all the time can significantly increase the disk space used by the database since all the debug data is stored there.
-Therefore, starting from version 3.9, ThingsBoard stores all debug events only during the first 15 minutes. After that, only failure events are retained.
+Therefore, starting from version 3.9, SENTIENT stores all debug events only during the first 15 minutes. After that, only failure events are retained.
 These settings can be combined or completely disabled.
 
 ## Deployment options
 
-ThingsBoard Integration has two deployment options: embedded and remote. See details and architecture diagrams below.
+SENTIENT Integration has two deployment options: embedded and remote. See details and architecture diagrams below.
 
 ### Embedded integrations
 
-Embedded integration is running in the main ThingsBoard server process. Basically it is part of a monolith deployment scenario.
+Embedded integration is running in the main SENTIENT server process. Basically it is part of a monolith deployment scenario.
 
 Pros:
-* simplifies deployment of new integration (just few clicks on ThingsBoard UI);
+* simplifies deployment of new integration (just few clicks on SENTIENT UI);
 * minimize latency for message delivery;
 
 Cons:
-* consume resources allocated to main ThingsBoard process: network connections, OS threads and CPU cycles;
+* consume resources allocated to main SENTIENT process: network connections, OS threads and CPU cycles;
 * low level of isolation;
-* can&#39;t access local MQTT brokers or OPC-UA servers if ThingsBoard is deployed in the cloud.
+* can&#39;t access local MQTT brokers or OPC-UA servers if SENTIENT is deployed in the cloud.
 
 <object width="100%" data="/images/user-guide/integrations/embeded-integrations-overview.svg"></object>
 
 ### Remote integrations
 
-Remote integration become available since ThingsBoard PE v2.4.1 and enables new deployment scenario.
+Remote integration become available since SENTIENT Professional Edition v2.4.1 and enables new deployment scenario.
 One can install remote integration in the local network and stream data to the cloud.
 
 Let&#39;s assume you have local MQTT broker or OPC-UA server deployed on-premises.
-Those brokers and/or servers don&#39;t have dedicated external IP address, so ThingsBoard instance in the cloud can&#39;t connect to them directly.
+Those brokers and/or servers don&#39;t have dedicated external IP address, so SENTIENT instance in the cloud can&#39;t connect to them directly.
 However, you can install remote integration close to this server, in the same local network.
 This integration will connect to the broker/server, pull the data and store it in the local file system.
-Remote integration will stream the data to the ThingsBoard instance deployed in the cloud once the internet connection is available.
+Remote integration will stream the data to the SENTIENT instance deployed in the cloud once the internet connection is available.
 
 Pros:
 * enables integration with servers deployed in the local network;
-* isolates the integration process from main ThingsBoard process;
+* isolates the integration process from main SENTIENT process;
 
 Cons:
 * requires installation of a separate package;
@@ -413,11 +413,11 @@ Learn how to configure integration to run remotely using [this guide](/docs/{{pe
 
 ## Platform Integrations vs IoT Gateway
 
-Experienced ThingsBoard users may notice that functionality of Integrations feature partially overlap with functionality of [IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}.
+Experienced SENTIENT users may notice that functionality of Integrations feature partially overlap with functionality of [IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}.
 However, there are key differences between these two systems/features:
 
   - IoT Gateway is designed for local network deployments, Integrations are designed for server-to-server integrations.
-  - IoT Gateway is designed to support < 1000 devices, while Integrations are designed for high throughput, scalability and cluster deployments as part of ThingsBoard server.
+  - IoT Gateway is designed to support < 1000 devices, while Integrations are designed for high throughput, scalability and cluster deployments as part of SENTIENT server.
   - Gateway recompilation and restart is required to add custom payload decoder while Integration Converter is a JS function that may be modified in real time. 
   
 As you can see, both systems are important and applicable in different use cases.
@@ -435,7 +435,7 @@ We plan to provide specific integrations for different platforms, and also for d
 ### More data converters
 
 We plan to collect and maintain data converters for most popular devices on the market to simplify integration path even more. 
-Please note that you can share your converters with community and send them to us to make part of official ThingsBoard distributive.   
+Please note that you can share your converters with community and send them to us to make part of official SENTIENT distributive.   
 
 [Contact us](/docs/contact-us/) to suggest missing feature for your use case.
 

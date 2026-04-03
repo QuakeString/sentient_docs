@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: TBMQ PE Private Cloud subscription definition
-description: Features and advantages of TBMQ Private Cloud payment model
+title: ST-RMQTT PE Private Cloud subscription definition
+description: Features and advantages of ST-RMQTT Private Cloud payment model
 redirect_from: "/docs/mqtt-broker/subscription/"
 
 ---

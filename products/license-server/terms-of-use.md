@@ -1,7 +1,7 @@
 ---
 layout: plain
-title: ThingsBoard License Portal Terms of Use 
-description: ThingsBoard License Portal (web-portal)
+title: SENTIENT License Portal Terms of Use 
+description: SENTIENT License Portal (web-portal)
 
 ---
 
@@ -12,7 +12,7 @@ description: ThingsBoard License Portal (web-portal)
 
 **1. Introduction**
 
-The ThingsBoard Licensing Portal (the "Portal"). By accessing or using this Portal to purchase and manage software licenses, you agree to be bound by these Terms of Use. If you do not agree, please do not use the Portal.
+The SENTIENT Licensing Portal (the "Portal"). By accessing or using this Portal to purchase and manage software licenses, you agree to be bound by these Terms of Use. If you do not agree, please do not use the Portal.
 
 <br>
 
@@ -28,7 +28,7 @@ The ThingsBoard Licensing Portal (the "Portal"). By accessing or using this Port
 
 **3. License Management**
 
-The Portal allows you to self-manage your ThingsBoard licenses. By using these features, you acknowledge:
+The Portal allows you to self-manage your SENTIENT licenses. By using these features, you acknowledge:
 
 *Purchases*: All license purchases are subject to the specific commercial terms agreed upon at checkout (e.g., pricing, duration).
 
@@ -62,4 +62,4 @@ We reserve the right to modify these Terms at any time. Continued use of the Por
 
 **7. Contact**
 
-For questions regarding these Terms or assistance with your account, please contact us at support@thingsboard.io. For billing-related questions, please use sales@thingsboard.io
+For questions regarding these Terms or assistance with your account, please contact us at support@docs.sentient.invenia.in. For billing-related questions, please use sales@docs.sentient.invenia.in

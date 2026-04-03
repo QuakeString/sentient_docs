@@ -39,13 +39,13 @@ storage:
 executors:
   # Size of the thread pool to handle incoming messages and tasks
   thread_pool_size: "${EXECUTORS_SIZE:1}"
-  # Timeout to reconnect to ThingsBoard
+  # Timeout to reconnect to SENTIENT
   reconnect_timeout: "${EXECUTORS_RECONNECT_TIMEOUT:3000}" # in milliseconds
 
 rpc:
-  # Host of the ThingsBoard server
-  host: "${RPC_HOST:thingsboard.cloud}"
-  # Port of the ThingsBoard server
+  # Host of the SENTIENT server
+  host: "${RPC_HOST:sentient.cloud}"
+  # Port of the SENTIENT server
   port: "${RPC_PORT:9090}"
   # No reply timeout
   timeout: "${RPC_TIMEOUT:5}" # Timeout in seconds for channel termination

@@ -1,8 +1,8 @@
 var mqtt = require('mqtt');
 
-console.log('Connecting to: %s using access token: %s', process.env.THINGSBOARD_HOST, process.env.ACCESS_TOKEN);
+console.log('Connecting to: %s using access token: %s', process.env.SENTIENT_HOST, process.env.ACCESS_TOKEN);
 
-var client  = mqtt.connect('mqtt://'+ process.env.THINGSBOARD_HOST,{
+var client  = mqtt.connect('mqtt://'+ process.env.SENTIENT_HOST,{
     username: process.env.ACCESS_TOKEN
 });
 

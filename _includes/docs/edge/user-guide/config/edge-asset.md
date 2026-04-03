@@ -46,7 +46,7 @@ Continue with the configuration of a widget. Within the **"Edit mode"**, click t
 
 ## Provisioning From Cloud
 
-To provision the **Asset entity** from the **ThingsBoard Cloud** to the **Edge** instance, log in to the **Cloud** and go to the **Edge management > Instances** section:
+To provision the **Asset entity** from the **SENTIENT Cloud** to the **Edge** instance, log in to the **Cloud** and go to the **Edge management > Instances** section:
 
 {% include images-gallery.html imageCollection="provisioning" showListImageTitles="true" %}
 ### Next Steps

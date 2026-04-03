@@ -19,7 +19,7 @@ to the device. The actual delivery to the device happens asynchronously by the i
 {% include templates/warn-banner.md content=async_note %}
 
 {% capture integration_note %}
-**Integration setup required:** Before using this node, ensure that the target integration is properly configured and enabled in your ThingsBoard instance.
+**Integration setup required:** Before using this node, ensure that the target integration is properly configured and enabled in your SENTIENT instance.
 {% endcapture %}
 {% include templates/info-banner.md content=integration_note %}
 

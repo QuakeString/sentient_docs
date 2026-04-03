@@ -2,7 +2,7 @@ We will update “Edge Root Rule Chain” that will be saving on the edge 10 sen
 
 {% include images-gallery.html imageCollection="rootRuleChainPreview" %}
 
-In the next steps, we will create a [TBEL](https://thingsboard.io/docs/user-guide/tbel/) node to filter data. The [TBEL](https://thingsboard.io/docs/user-guide/tbel/) script language node will create an empty object *newMsg*, 
+In the next steps, we will create a [TBEL](https://docs.sentient.invenia.in/docs/user-guide/tbel/) node to filter data. The [TBEL](https://docs.sentient.invenia.in/docs/user-guide/tbel/) script language node will create an empty object *newMsg*, 
 add a property named “distance” with the corresponding value from the “In-vehicle monitoring system”, and then send the *newMsg* object as a new message.
 
 {% highlight javascript %}
@@ -14,7 +14,7 @@ Here are the steps to update the default Edge "Root Rule Chain" with the provide
 
 {% include images-gallery.html imageCollection="updateRootRuleChain" showListImageTitles="true" %}
 
-Now let's open ThingsBoard **Edge** UI to see updated Root Rule Chain:
+Now let's open SENTIENT **Edge** UI to see updated Root Rule Chain:
 
 {% include images-gallery.html imageCollection="updateRootRuleChainEdge" showListImageTitles="true" %}
 

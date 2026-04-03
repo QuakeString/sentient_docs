@@ -23,7 +23,7 @@ The **Smart office** solution template can be used as a foundation for:
 
 To understand how the Smart office solution works, start by installing the solution template.
 
-You will need access to ThingsBoard Professional Edition. The easiest way is to use the [ThingsBoard Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install ThingsBoard using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need access to SENTIENT Professional Edition. The easiest way is to use the [SENTIENT Cloud](/installations/choose-region/){:target="_blank"}. Alternatively, you can install SENTIENT using the [Professional Edition installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Go to the **Solution templates** page.
 - Find **Smart office** and click **Install**.
@@ -43,7 +43,7 @@ Smart office template includes:
 - **Assets**. An Office asset is created to represent the facility structure, with all devices logically associated to reflect real-world relationships.
 - **Device Profiles and Logic**. Dedicated device profiles are provided for smart-sensor, hvac, energy-meter, and water-meter devices, including built-in logic and preconfigured alarm rules for environmental monitoring.
 
-**Edge Support**. The solution can optionally be deployed to [ThingsBoard Edge](/docs/edge/){:target="_blank"} for local data processing and control.
+**Edge Support**. The solution can optionally be deployed to [SENTIENT GATEWAY](/docs/edge/){:target="_blank"} for local data processing and control.
 
 ## Dashboard
 
@@ -63,7 +63,7 @@ The dashboard consists of multiple states:
 - **Device Details state**. Opens when a device is selected.   
   The layout and controls depend on the selected device type (sensor, HVAC, meter).
 
-The dashboard can be customized using the ThingsBoard [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} development tools.
+The dashboard can be customized using the SENTIENT [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} development tools.
 
 {% include images-gallery.html imageCollection="navigation-between-dashboard-states" %}
 
@@ -117,7 +117,7 @@ The HVAC device also accepts RPC commands from the dashboard to:
 - enable or disable the system
 - change the target temperature
 
-RPC communication is handled via the ThingsBoard [RPC API](/docs/{{docsPrefix}}user-guide/rpc/){:target="_blank"}..
+RPC communication is handled via the SENTIENT [RPC API](/docs/{{docsPrefix}}user-guide/rpc/){:target="_blank"}..
 
 You may find the exact commands to send data on behalf of created devices in the solution [instructions](/docs/{{docsPrefix}}solution-templates/overview/#view-instructions){:target="_blank"}..
 See [connecting devices](/docs/{{docsPrefix}}getting-started-guides/connectivity/){:target="_blank"}. for various connectivity options to connect real devices.

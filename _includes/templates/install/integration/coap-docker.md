@@ -1,11 +1,11 @@
 Execute the following command to pull the image:
 
 ```bash
-docker pull thingsboard/tb-pe-coap-integration:{{ site.release.pe_full_ver }}
+docker pull sentient/tb-pe-coap-integration:{{ site.release.pe_full_ver }}
 ```
 {: .copy-code}
 
-Execute the following command to create volume for the integration logs (799 is the user id of ThingsBoard non-root docker user):
+Execute the following command to create volume for the integration logs (799 is the user id of SENTIENT non-root docker user):
 
 ```bash
 mkdir -p ~/.tb-pe-coap-integration-logs && sudo chown -R 799:799 ~/.tb-pe-coap-integration-logs
@@ -18,23 +18,23 @@ Execute the following command to run the integration:
 docker run -it -p 5683:5683/udp -v ~/.tb-pe-coap-integration-logs:/var/log/tb-coap-integration  \
 -e "RPC_HOST={{hostName}}" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
---name my-tb-pe-coap-integration --restart always thingsboard/tb-pe-coap-integration:{{ site.release.pe_full_ver }}
+--name my-tb-pe-coap-integration --restart always sentient/tb-pe-coap-integration:{{ site.release.pe_full_ver }}
 ```
 {: .copy-code}
 
 Where: 
     
-- `{{hostName}}` - is the host name of your ThingsBoard PE instance;
-- `9090` - is the port of your ThingsBoard PE instance. It is configured in thingsboard.yml using INTEGRATIONS_RPC_PORT env variable;    
-- `YOUR_ROUTING_KEY` - placeholder for your **integration key** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
-- `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in ThingsBoard](#create-remote-integration-in-thingsboard);
+- `{{hostName}}` - is the host name of your SENTIENT Professional Edition instance;
+- `9090` - is the port of your SENTIENT Professional Edition instance. It is configured in sentient.yml using INTEGRATIONS_RPC_PORT env variable;    
+- `YOUR_ROUTING_KEY` - placeholder for your **integration key** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
+- `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
-- `-it`                     - attach a terminal session with current ThingsBoard process output;
+- `-it`                     - attach a terminal session with current SENTIENT process output;
 - `-p 5683:5683/udp` - connect local udp port 5683 to exposed internal 5683 udp port for the integration.
-- `-v ~/.tb-pe-coap-integration-logs:/var/log/tb-coap-integration`   - mounts the host's dir `~/.tb-pe-coap-integration-logs` to ThingsBoard logs directory;
+- `-v ~/.tb-pe-coap-integration-logs:/var/log/tb-coap-integration`   - mounts the host's dir `~/.tb-pe-coap-integration-logs` to SENTIENT logs directory;
 - `--name tb-pe-coap-integration`             - friendly local name of this machine;
-- `--restart always`        - automatically start ThingsBoard Integration in case of system reboot and restart in case of failure.;
-- `thingsboard/tb-pe-coap-integration:{{ site.release.pe_full_ver }}`          - docker image.
+- `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
+- `sentient/tb-pe-coap-integration:{{ site.release.pe_full_ver }}`          - docker image.
 
 After executing this command you can open logs which are located here `~/.tb-pe-coap-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
@@ -46,7 +46,7 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 
 - **Reattaching, stop and start commands**
 
-To reattach to the terminal (to see ThingsBoard logs) run:
+To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
 docker attach tb-pe-coap-integration

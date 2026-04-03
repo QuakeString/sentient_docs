@@ -2,7 +2,7 @@
 {:toc}
 
 {% capture difference %}
-Before proceeding with this guide, it&#39;s recommended that you follow [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} guide to become familiar with ThingsBoard devices and dashboards. This will enhance your learning experience and understanding of the concepts presented here.
+Before proceeding with this guide, it&#39;s recommended that you follow [Getting Started](/docs/{{docsPrefix}}getting-started-guides/helloworld/){:target="_blank"} guide to become familiar with SENTIENT devices and dashboards. This will enhance your learning experience and understanding of the concepts presented here.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -38,7 +38,7 @@ Assets will represent our buildings and offices, while devices will represent ou
 For this tutorial, we will create two assets to represent buildings: **Building A** and **Building B**, and two more assets to represent office spaces: **Office A** and **Office B**.
 Let&#39;s get started.
 
-- Login to your ThingsBoard instance as [Tenant Administrator](/docs/{{docsPrefix}}user-guide/ui/tenants/){:target="_blank"};
+- Login to your SENTIENT instance as [Tenant Administrator](/docs/{{docsPrefix}}user-guide/ui/tenants/){:target="_blank"};
 - Go to the "Assets" page of the "Entities" section on the sidebar. By default, you&#39;ll be redirected to the "All" device group. We&#39;ll begin by adding new assets to this group;
 - Click the "plus" icon located in the top-right corner of the table. Select "Add new asset" from the drop-down menu to start adding your first asset;
 - In the asset name field, type "Building A". Type "building" in the "Asset profile" section and click on "Create a new one!" to establish a new profile for this asset;
@@ -55,11 +55,11 @@ Similarly, add the asset "Building B". Also, add the assets "Office A" and "Offi
 
 ### Adding devices
 
-[Devices](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"} are basic IoT objects that collect data from their environment and transmit it to the ThingsBoard platform, as well as respond to Remote Procedure Call (RPC) commands.
+[Devices](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"} are basic IoT objects that collect data from their environment and transmit it to the SENTIENT platform, as well as respond to Remote Procedure Call (RPC) commands.
 
-You can add devices manually, just like assets. However, ThingsBoard has the capability for [bulk provisioning](/docs/{{docsPrefix}}user-guide/bulk-provisioning/){:target="_blank"} of devices (and assets) using CSV files. This is very useful when you need to add multiple entities at once.
+You can add devices manually, just like assets. However, SENTIENT has the capability for [bulk provisioning](/docs/{{docsPrefix}}user-guide/bulk-provisioning/){:target="_blank"} of devices (and assets) using CSV files. This is very useful when you need to add multiple entities at once.
 
-For this tutorial, we need to add four devices: Indoor Air Quality Sensor, Energy Meter, Water Flow Meter, and IAQ Sensor. Later, we will simulate sending telemetry from these devices to ThingsBoard using emulators. 
+For this tutorial, we need to add four devices: Indoor Air Quality Sensor, Energy Meter, Water Flow Meter, and IAQ Sensor. Later, we will simulate sending telemetry from these devices to SENTIENT using emulators. 
 So, let&#39;s start:
 
 - Create a CSV file or [download a pre-made one](/docs/user-guide/advanced-guides-for-working-with-dashboard/files-from-tutorial/devices.csv){:target="_blank"}, where each row corresponds to the creation of a single device with specified parameters:
@@ -87,7 +87,7 @@ AM-307,air-sensor,IAQ Sensor
 - Click the "plus" icon located in the top-right corner of the table. Select "Import device" from the drop-down menu;
 - Drag the CSV file into the import window and click "Continue";
 - Select CSV delimiter and click "Continue";
-- Map the data between the columns of the uploaded file and the data types in the ThingsBoard platform. Click "Continue" and then click "OK".
+- Map the data between the columns of the uploaded file and the data types in the SENTIENT platform. Click "Continue" and then click "OK".
 
 Four new devices should be successfully created: "SD-001" (Indoor Air Quality Sensor), "EM-002" (Energy Meter), "WM-003" (Water Flow Meter), and "AM-307" (IAQ Sensor).
 

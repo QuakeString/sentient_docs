@@ -1,5 +1,5 @@
 #
-# Copyright © 2016-2020 The Thingsboard Authors
+# Copyright © 2016-2020 The Sentient Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,9 +22,9 @@ import json
 def collect_required_data():
     config = {}
     print("\n\n", "=" * 80, sep="")
-    print(" " * 20, "ThingsBoard one way RPC example script.", sep="")
+    print(" " * 20, "SENTIENT one way RPC example script.", sep="")
     print("=" * 80, "\n\n", sep="")
-    host = input("Please write your ThingsBoard host or leave it blank to use default (thingsboard.cloud): ")
+    host = input("Please write your SENTIENT host or leave it blank to use default (sentient.cloud): ")
     config["host"] = host if host else "{{mqttHostName}}"
     if config["host"] != "{{mqttHostName}}":
         ca_cert = input(

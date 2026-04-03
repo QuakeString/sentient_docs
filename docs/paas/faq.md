@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas
 title: Frequently Asked Questions
-description: ThingsBoard FAQ
+description: SENTIENT FAQ
 
 ---
 

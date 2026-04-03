@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Contact Tracing Badge to ThingsBoard?
+title: How to connect Contact Tracing Badge to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: Lansitec

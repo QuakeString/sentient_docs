@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-edge
 title: Building from sources
-description: Building ThingsBoard Edge from sources
+description: Building SENTIENT GATEWAY from sources
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to download and build ThingsBoard Edge from sources. Instructions listed below are tested on Ubuntu 22.04 LTS / 24.04 LTS
+This guide will help you to download and build SENTIENT GATEWAY from sources. Instructions listed below are tested on Ubuntu 22.04 LTS / 24.04 LTS
 and CentOS 8/9
 
 ## Required tools
@@ -17,11 +17,11 @@ This section contains installation instructions for build tools.
 
 ### Java
 
-ThingsBoard Edge is build using Java 17. You can use [following instructions](/docs/user-guide/install/linux#java) to install Java 17.
+SENTIENT GATEWAY is build using Java 17. You can use [following instructions](/docs/user-guide/install/linux#java) to install Java 17.
 
 ### Maven
 
-ThingsBoard build requires Maven 3.1.0+.
+SENTIENT build requires Maven 3.1.0+.
 
 {% capture tabspec %}maven-installation
 A,Ubuntu,shell,resources/maven-ubuntu-installation.sh,/docs/user-guide/install/resources/maven-ubuntu-installation.sh
@@ -33,18 +33,18 @@ Use java installation [instructions](#java) to fix this.
 
 ## Source code
 
-You can clone source code of the project from the official [github repo](https://github.com/thingsboard/thingsboard-edge).
+You can clone source code of the project from the official [github repo](https://github.com/sentient/sentient-gateway).
 
 ```bash
 # checkout latest release branch
-git clone -b {{ site.release.branch }} git@github.com:thingsboard/thingsboard-edge.git
-cd thingsboard-edge
+git clone -b {{ site.release.branch }} git@github.com:sentient/sentient-gateway.git
+cd sentient-gateway
 ```
 {: .copy-code}
 
 ## Build
 
-Run the following command from the thingsboard edge folder to build the project:
+Run the following command from the sentient edge folder to build the project:
 
 ```bash
 mvn clean install -DskipTests
@@ -70,7 +70,7 @@ application/target
 
 ## Tips and tricks
 
-Thingsboard Edge is quite easy to build from sources on a brand-new clear environment.
+Sentient Edge is quite easy to build from sources on a brand-new clear environment.
 
 Here are some tips and tricks to boost build experience: 
 

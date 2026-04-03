@@ -1,9 +1,9 @@
 #!/bin/sh
 
-# Set ThingsBoard host to "mqtt.thingsboard.cloud" for ThingsBoard Cloud (North America)
-# Set ThingsBoard host to "mqtt.eu.thingsboard.cloud" for ThingsBoard Cloud (Europe)
-# Set ThingsBoard host to "localhost" for local platform installation
-export THINGSBOARD_HOST=mqtt.thingsboard.cloud
+# Set SENTIENT host to "mqtt.sentient.cloud" for SENTIENT Cloud (North America)
+# Set SENTIENT host to "mqtt.eu.sentient.cloud" for SENTIENT Cloud (Europe)
+# Set SENTIENT host to "localhost" for local platform installation
+export SENTIENT_HOST=mqtt.sentient.cloud
 
 # Replace YOUR_ACCESS_TOKEN with one from Device details panel.
 export ACCESS_TOKEN=YOUR_ACCESS_TOKEN

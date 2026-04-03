@@ -22,7 +22,7 @@
     1:
       src: "/images/trainings/icon_hat-graduation.svg"
       text: "1 session"
-  title: "ThingsBoard administration"
+  title: "SENTIENT administration"
   description: "Basic understanding of installation, configuration, and maintenance for effective platform administration."
   linkLabel: "More about the course below"
   linkId: "administration"

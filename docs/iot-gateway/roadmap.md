@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
-title: ThingsBoard IoT Gateway Roadmap
-description: Architecture of ThingsBoard IoT Gateway
+title: SENTIENT IoT Gateway Roadmap
+description: Architecture of SENTIENT IoT Gateway
 
 ---
 

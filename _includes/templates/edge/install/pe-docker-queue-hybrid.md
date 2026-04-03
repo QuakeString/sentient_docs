@@ -15,7 +15,7 @@ version: '3.8'
 services:
   mytbedge:
     restart: always
-    image: "thingsboard/tb-edge-pe:{{ site.release.pe_edge_full_ver }}"
+    image: "sentient/tb-edge-pe:{{ site.release.pe_edge_full_ver }}"
     ports:
       - "8080:8080"
       - "1883:1883"
@@ -25,8 +25,8 @@ services:
       EDGE_LICENSE_INSTANCE_DATA_FILE: /data/instance-edge-license.data
       CLOUD_ROUTING_KEY: PUT_YOUR_EDGE_KEY_HERE # e.g. 19ea7ee8-5e6d-e642-4f32-05440a529015
       CLOUD_ROUTING_SECRET: PUT_YOUR_EDGE_SECRET_HERE # e.g. bztvkvfqsye7omv9uxlp
-      CLOUD_RPC_HOST: PUT_YOUR_CLOUD_IP # e.g. 192.168.1.1 or thingsboard.cloud
-      CLOUD_RPC_SSL_ENABLED: 'false' # set it to 'true' if you are connecting edge to thingsboard.cloud
+      CLOUD_RPC_HOST: PUT_YOUR_CLOUD_IP # e.g. 192.168.1.1 or sentient.cloud
+      CLOUD_RPC_SSL_ENABLED: 'false' # set it to 'true' if you are connecting edge to sentient.cloud
       TB_QUEUE_TYPE: "kafka"
       TB_KAFKA_SERVERS: "kafka:9092"
       DATABASE_TS_TYPE: "cassandra"
@@ -73,7 +73,7 @@ services:
     image: cassandra:4.0
     container_name: cassandra
     environment:
-      CASSANDRA_CLUSTER_NAME: "Thingsboard Edge Cluster"
+      CASSANDRA_CLUSTER_NAME: "Sentient Edge Cluster"
       CASSANDRA_KEYSPACE_NAME: "tb_edge"
       CASSANDRA_LOCAL_DATACENTER: "datacenter1"
     ports:

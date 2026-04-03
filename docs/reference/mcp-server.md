@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: MCP Server
-description: Provides a **natural language interface** for LLMs and AI agents to interact with your ThingsBoard IoT platform
+description: Provides a **natural language interface** for LLMs and AI agents to interact with your SENTIENT IoT platform
 
 ---
 

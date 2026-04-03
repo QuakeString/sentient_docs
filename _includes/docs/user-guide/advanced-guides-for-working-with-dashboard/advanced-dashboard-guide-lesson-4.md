@@ -28,7 +28,7 @@ For more information on [working with alarms](/docs/pe/user-guide/alarms/){:targ
 
 ## Adding alarm rules
 
-The **Indoor Air Quality** sensor device that sends telemetry data such as temperature, humidity, and CO₂ levels to ThingsBoard uses the **air-sensor** device profile. 
+The **Indoor Air Quality** sensor device that sends telemetry data such as temperature, humidity, and CO₂ levels to SENTIENT uses the **air-sensor** device profile. 
 
 Configure alarm rules for this profile to ensure they are applied to all sensors using the profile.
 
@@ -150,13 +150,13 @@ The **High temperature** alarm rule will be created and activated.
 
 {% include images-gallery.html imageCollection="high-temperature-alarm-rule-7" %}
 
-> You can download a [JSON configuration file containing predefined high-temperature alarm rules](/docs/user-guide/resources/alarm-rules/high_temperature_alarm_rule.json){:target="_blank" download="high_temperature_alarm_rule.json"} and [import](/docs/pe/user-guide/alarm-rules/#import-alarm-rule){:target="_blank"} it into your ThingsBoard instance.
+> You can download a [JSON configuration file containing predefined high-temperature alarm rules](/docs/user-guide/resources/alarm-rules/high_temperature_alarm_rule.json){:target="_blank" download="high_temperature_alarm_rule.json"} and [import](/docs/pe/user-guide/alarm-rules/#import-alarm-rule){:target="_blank"} it into your SENTIENT instance.
 
 ### Creating additional alarm rules
 
 Using the same approach, configure the remaining alarm rules on your own.
 
-> ⚠️ Alternatively, you can download the preconfigured alarm rule configurations and [import](/docs/pe/user-guide/alarm-rules/#import-alarm-rule){:target="_blank"} them into your ThingsBoard instance.   
+> ⚠️ Alternatively, you can download the preconfigured alarm rule configurations and [import](/docs/pe/user-guide/alarm-rules/#import-alarm-rule){:target="_blank"} them into your SENTIENT instance.   
 Make sure to set the **"air-sensor" device profile** as the target entity of the alarm rule.
 
 {% include images-gallery.html imageCollection="all-alarms-rules" %}
@@ -217,7 +217,7 @@ Now that we have defined all the alarm rules for the **air-sensor** device profi
 ## Adding alarms table widget
 
 Displaying alarms in a user-friendly format is essential for monitoring and managing them effectively. 
-The "Alarms table" widget in ThingsBoard provides a customizable interface for easy monitoring and interaction with alarms.
+The "Alarms table" widget in SENTIENT provides a customizable interface for easy monitoring and interaction with alarms.
 
 Steps to add the "Alarm table" widget:
 

@@ -204,7 +204,7 @@ If no acknowledgment is received after all retry attempts, the message is droppe
 
 **Configuration**:
 
-Retransmission parameters are configured globally in the `thingsboard.yml` file and apply to all MQTT clients on the platform:
+Retransmission parameters are configured globally in the `sentient.yml` file and apply to all MQTT clients on the platform:
 
 ```yaml
 mqtt:
@@ -403,7 +403,7 @@ Data:
   "host": "mqtt.cloud-provider.com",
   "port": 8883,
   "connectTimeoutSec": 10,
-  "clientId": "thingsboard-publisher",
+  "clientId": "sentient-publisher",
   "appendClientIdSuffix": true,
   "retainedMessage": false,
   "cleanSession": true,

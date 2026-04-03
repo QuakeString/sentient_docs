@@ -1,6 +1,6 @@
 ### Install and configure tools 
 
-To deploy ThingsBoard on EKS cluster you'll need to install [`kubectl`](https://kubernetes.io/docs/tasks/tools/), 
+To deploy SENTIENT on EKS cluster you'll need to install [`kubectl`](https://kubernetes.io/docs/tasks/tools/), 
  [`eksctl`](https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html) and 
  [`awscli`](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) tools.
 

@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - stitenko
 title: Microsoft Teams Settings
-description: ThingsBoard IoT platform Microsoft Teams settings
+description: SENTIENT IoT platform Microsoft Teams settings
 
 ---
 

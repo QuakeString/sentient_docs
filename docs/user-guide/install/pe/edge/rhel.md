@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: Installing ThingsBoard Edge on CentOS/RHEL Server
-description: Installing ThingsBoard Edge on CentOS/RHEL Server
+title: Installing SENTIENT GATEWAY on CentOS/RHEL Server
+description: Installing SENTIENT GATEWAY on CentOS/RHEL Server
 ---
 
 * TOC
@@ -13,11 +13,11 @@ description: Installing ThingsBoard Edge on CentOS/RHEL Server
 
 {% include templates/edge/install/compatibility-warning-general.md %}
 
-This guide provides step-by-step instructions for installing **ThingsBoard Edge** on **RHEL/CentOS 8/9**.
+This guide provides step-by-step instructions for installing **SENTIENT GATEWAY** on **RHEL/CentOS 8/9**.
 
 {% include templates/edge/install/prerequisites.md %}
 
-## Guided Installation Using ThingsBoard Server Pre-configured Instructions
+## Guided Installation Using SENTIENT Server Pre-configured Instructions
 
 {% include templates/edge/install/tb-server-pre-configured-install-instructions.md %}
 
@@ -34,40 +34,40 @@ sudo yum install -y nano wget && sudo yum install -y https://dl.fedoraproject.or
 
 {% include templates/install/rhel-java-install.md %}
 
-### Step 2. Configure ThingsBoard Database
+### Step 2. Configure SENTIENT Database
 
-**ThingsBoard Edge** supports **SQL** and **hybrid** database approaches. See the architecture [page](/docs/pe/reference/#sql-vs-nosql-vs-hybrid-database-approach){: target="_blank"} for details.
+**SENTIENT GATEWAY** supports **SQL** and **hybrid** database approaches. See the architecture [page](/docs/pe/reference/#sql-vs-nosql-vs-hybrid-database-approach){: target="_blank"} for details.
 
 {% capture contenttogglespec %}
 PostgreSQL <small>(recommended for < 5K msg/sec)</small>%,%postgresql%,%templates/edge/install/rhel-db-postgresql.md%br%
 Hybrid <br>PostgreSQL+Cassandra<br><small>(recommended for > 5K msg/sec)</small>%,%hybrid%,%templates/edge/install/rhel-db-hybrid.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="rhelThingsboardDatabase" toggle-spec=contenttogglespec %}
+{% include content-toggle.liquid content-toggle-id="rhelSentientDatabase" toggle-spec=contenttogglespec %}
 
 ### Step 3. Choose queue service
 
-**ThingsBoard Edge** is able to use different messaging systems/brokers for storing the messages and communication between ThingsBoard services. How to choose the right queue implementation?
+**SENTIENT GATEWAY** is able to use different messaging systems/brokers for storing the messages and communication between SENTIENT services. How to choose the right queue implementation?
 
 * **In Memory** queue implementation is built-in and default. It is useful for development(PoC) environments and is not suitable for production deployments or any sort of cluster deployments.
 
-* **Kafka** is recommended for production deployments. This queue is used on the most of ThingsBoard production environments now.
+* **Kafka** is recommended for production deployments. This queue is used on the most of SENTIENT production environments now.
 
 {% capture contenttogglespecqueue %}
 In Memory <small>(built-in and default)</small>%,%inmemory%,%templates/install/queue-in-memory.md%br%
 Kafka <small>(recommended for on-prem, production installations)</small> %,%kafka%,%templates/edge/install/rhel-queue-kafka.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="ubuntuThingsboardQueue" toggle-spec=contenttogglespecqueue %}
+{% include content-toggle.liquid content-toggle-id="ubuntuSentientQueue" toggle-spec=contenttogglespecqueue %}
 
-### Step 4. ThingsBoard Edge Service Installation
+### Step 4. SENTIENT GATEWAY Service Installation
 
 Download installation package.
 
 ```bash
-wget https://dist.thingsboard.io/tb-edge-{{ site.release.pe_edge_ver }}.rpm
+wget https://dist.docs.sentient.invenia.in/tb-edge-{{ site.release.pe_edge_ver }}.rpm
 ```
 {: .copy-code}
 
-Go to the download repository and install ThingsBoard Edge service
+Go to the download repository and install SENTIENT GATEWAY service
 
 ```bash
 sudo rpm -Uvh tb-edge-{{ site.release.pe_edge_ver }}.rpm
@@ -75,7 +75,7 @@ sudo rpm -Uvh tb-edge-{{ site.release.pe_edge_ver }}.rpm
 {: .copy-code}
 
 
-### Step 5. Configure ThingsBoard Edge
+### Step 5. Configure SENTIENT GATEWAY
 
 {% include templates/edge/install/linux-configure-edge.md %}
 
@@ -83,19 +83,19 @@ sudo rpm -Uvh tb-edge-{{ site.release.pe_edge_ver }}.rpm
 
 {% include templates/edge/install/run-edge-install.md %} 
 
-### Step 7. Restart ThingsBoard Edge Service
+### Step 7. Restart SENTIENT GATEWAY Service
 
 ```bash
 sudo service tb-edge restart
 ```
 
-### Step 8. Open ThingsBoard Edge UI
+### Step 8. Open SENTIENT GATEWAY UI
 
 {% include templates/edge/install/open-edge-ui.md %} 
 
 ## Troubleshooting
 
-ThingsBoard Edge logs are stored in the following directory:
+SENTIENT GATEWAY logs are stored in the following directory:
  
 ```bash
 /var/log/tb-edge

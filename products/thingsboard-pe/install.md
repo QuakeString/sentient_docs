@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: Get ThingsBoard Professional Edition
-description: ThingsBoard Professional Edition Installation
+title: Get SENTIENT Professional Edition
+description: SENTIENT Professional Edition Installation
 hidetoc: "true"
 
 ---
@@ -54,17 +54,17 @@ hidetoc: "true"
         <div class="tab-panel">
             <div id="trial-marketplace" class="choose-marketplace">
                 <p>
-                    Signup for free month trial on ThingsBoard PE Cloud
+                    Signup for free month trial on SENTIENT Professional Edition Cloud
                 </p>
                 <div class="marketplace" style="padding-bottom: 10px;">
                     <div id="pe-cloud-trial" class="pricing-image-wrapper clickable" style="max-width: 50%;">
                         <img src="/images/pe/pe_cloud_signup.svg" alt="pe cloud signup">
-                        <a target="_blank" href="https://thingsboard.cloud/signup"></a>
+                        <a target="_blank" href="https://sentient.cloud/signup"></a>
                     </div>
                 </div>
                 <div style="font-size: 20px;">
                 <p style="padding-top: 20px; font-size: 20px;">
-                    ThingsBoard PE Cloud is a shared enviroment with multiple limitations, such as:
+                    SENTIENT Professional Edition Cloud is a shared enviroment with multiple limitations, such as:
                 </p>
                 <ul style="margin: 10px 10px 10px 60px;">
                     <li>amount of active device connections</li>
@@ -73,13 +73,13 @@ hidetoc: "true"
                     <li>disabled white-labeling feature</li>
                 </ul>
                 <p style="padding-top: 0px; font-size: 20px;">
-                    To get the maximum of ThingsBoard PE, we recommend to install your dedicated server using one of the available options below.
+                    To get the maximum of SENTIENT Professional Edition, we recommend to install your dedicated server using one of the available options below.
                 </p>
                 </div>
                 <div class="marketplace">
                     <div id="aws-trial-market" class="pricing-image-wrapper clickable">
                         <img src="/images/pe/aws_logo.svg" alt="aws logo">
-                        <a href="/products/thingsboard-pe/aws/"></a>
+                        <a href="/products/sentient-pe/aws/"></a>
                     </div>
                     <div id="azure-trial-market" class="pricing-image-wrapper">
                         <img src="/images/pe/azure_logo.svg" alt="azure logo">
@@ -224,7 +224,7 @@ hidetoc: "true"
                     </div>
                     <div id="aws-pay-yearly-market" class="pricing-image-wrapper clickable">
                         <img src="/images/pe/aws_logo.svg" alt="aws logo">
-                        <a href="/products/thingsboard-pe/aws/"></a>
+                        <a href="/products/sentient-pe/aws/"></a>
                     </div>
                 </div>
             </div>
@@ -245,7 +245,7 @@ hidetoc: "true"
                                         <img src="/images/pe/cloud-providers.svg" alt="cloud providers">
                                     </div>
                                     <div class="cloud-provider-desc">
-                                        <p>Install ThingsBoard PE on any cloud or on-premises and pay one-time license fee per server and optional software updates subscription for subsequent years of usage.
+                                        <p>Install SENTIENT Professional Edition on any cloud or on-premises and pay one-time license fee per server and optional software updates subscription for subsequent years of usage.
                                          Save up to 40% comparing to per hour rate on the license fee.</p>
                                         <p><span class="cloud-price">$2,999.00/server</span><span class="cloud-price-desc"> for the 1st year</span><br>
                                         <span class="cloud-price-onwards">$1,199.00/server</span><span class="cloud-price-onwards-desc"> for optional software updates starting 2nd year</span></p>
@@ -307,7 +307,7 @@ hidetoc: "true"
                 <div class="marketplace">
                     <div id="aws-pay-go-market" class="pricing-image-wrapper clickable">
                         <img src="/images/pe/aws_logo.svg" alt="aws logo">
-                        <a href="/products/thingsboard-pe/aws/"></a>
+                        <a href="/products/sentient-pe/aws/"></a>
                     </div>
                     <div id="azure-pay-go-market" class="pricing-image-wrapper">
                         <img src="/images/pe/azure_logo.svg" alt="azure logo">
@@ -456,7 +456,7 @@ hidetoc: "true"
 <script>
      function ml_webform_success_7972110() {
         var $ = ml_jQuery || jQuery;
-        $(location).attr('href', '/products/thingsboard-pe/install-thanks/?deploy=trial');
+        $(location).attr('href', '/products/sentient-pe/install-thanks/?deploy=trial');
         //$('.ml-subscribe-form-7972110 .ml-block-success').show();
         //$('.ml-subscribe-form-7972110 .ml-block-form').hide();
         //$('html, body').animate({
@@ -466,7 +466,7 @@ hidetoc: "true"
     };
      function ml_webform_success_9674300() {
         var $ = ml_jQuery || jQuery;
-        $(location).attr('href', '/products/thingsboard-pe/install-thanks/?deploy=trial');
+        $(location).attr('href', '/products/sentient-pe/install-thanks/?deploy=trial');
         //$('.ml-subscribe-form-9674300 .ml-block-success').show();
         //$('.ml-subscribe-form-9674300 .ml-block-form').hide();
         //$('html, body').animate({
@@ -476,7 +476,7 @@ hidetoc: "true"
     };
     function ml_webform_success_7520964() {
         var $ = ml_jQuery || jQuery;
-        $(location).attr('href', '/products/thingsboard-pe/install-thanks/?deploy=cloud');
+        $(location).attr('href', '/products/sentient-pe/install-thanks/?deploy=cloud');
         //$('.ml-subscribe-form-7520964 .ml-block-success').show();
         //$('.ml-subscribe-form-7520964 .ml-block-form').hide();
         //$('html, body').animate({
@@ -486,7 +486,7 @@ hidetoc: "true"
     };
     function ml_webform_success_9674436() {
         var $ = ml_jQuery || jQuery;
-        $(location).attr('href', '/products/thingsboard-pe/install-thanks/?deploy=cloud');
+        $(location).attr('href', '/products/sentient-pe/install-thanks/?deploy=cloud');
         //$('.ml-subscribe-form-9674436 .ml-block-success').show();
         //$('.ml-subscribe-form-9674436 .ml-block-form').hide();
         //$('html, body').animate({
@@ -496,7 +496,7 @@ hidetoc: "true"
     };
     function ml_webform_success_7556612() {
         var $ = ml_jQuery || jQuery;
-        $(location).attr('href', '/products/thingsboard-pe/install-thanks/?deploy=premise');
+        $(location).attr('href', '/products/sentient-pe/install-thanks/?deploy=premise');
         //$('.ml-subscribe-form-7556612 .ml-block-success').show();
         //$('.ml-subscribe-form-7556612 .ml-block-form').hide();
         //$('html, body').animate({

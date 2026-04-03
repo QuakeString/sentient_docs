@@ -1,10 +1,10 @@
-You’ll need to set up PostgreSQL on Azure. ThingsBoard will use it as a main database to store devices, dashboards, rule chains and device telemetry.
+You’ll need to set up PostgreSQL on Azure. SENTIENT will use it as a main database to store devices, dashboards, rule chains and device telemetry.
 
 You may follow [this](https://docs.microsoft.com/en-us/azure/postgresql/flexible-server/quickstart-create-server-portal) guide, but take into account the following requirements:
    * Keep your postgresql password in a safe place. We will refer to it later in this guide using YOUR_RDS_PASSWORD;
    * Make sure your Azure Database for PostgreSQL version is latest 16.x;
-   * Make sure your Azure Database for PostgreSQL instance is accessible from the ThingsBoard cluster;
-   * Make sure you use “thingsboard” as initial database name;
+   * Make sure your Azure Database for PostgreSQL instance is accessible from the SENTIENT cluster;
+   * Make sure you use “sentient” as initial database name;
     
 and recomendations:
    * Use "High availability" enabled. It enables a lot of useful settings by default;
@@ -16,7 +16,7 @@ Another way by which you can create Azure Database for PostgreSQL is use az tool
 az postgres flexible-server create --location $AKS_LOCATION --resource-group $AKS_RESOURCE_GROUP \
   --name $TB_DATABASE_NAME --admin-user POSTGRESS_USER --admin-password POSTGRESS_PASS \
   --public-access 0.0.0.0 --storage-size 32 \
-  --version 12 -d thingsboard
+  --version 12 -d sentient
 ```
 {: .copy-code}
 
@@ -39,10 +39,10 @@ Example of response:
 ```
 {
   "connectionString": "postgresql://postgres:postgres@$tb-db.postgres.database.azure.com/postgres?sslmode=require",
-  "databaseName": "thingsboard",
+  "databaseName": "sentient",
   "firewallName": "AllowAllAzureServicesAndResourcesWithinAzureIps_2021-11-17_15-45-6",
   "host": "tb-db.postgres.database.azure.com",
-  "id": "/subscriptions/daff3288-1d5d-47c7-abf0-bfb7b738a18c/resourceGroups/myResourceGroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/thingsboard",
+  "id": "/subscriptions/daff3288-1d5d-47c7-abf0-bfb7b738a18c/resourceGroups/myResourceGroup/providers/Microsoft.DBforPostgreSQL/flexibleServers/sentient",
   "location": "East US",
   "password": "postgres",
   "resourceGroup": "myResourceGroup",

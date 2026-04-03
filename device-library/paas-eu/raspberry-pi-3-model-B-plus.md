@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Raspberry Pi 3 Model B+ to ThingsBoard?
+title: How to connect Raspberry Pi 3 Model B+ to SENTIENT?
 category: Single-board computers
 chip: Broadcom BCM2837B0
 connectivity: [HTTP, MQTT, WIFI]

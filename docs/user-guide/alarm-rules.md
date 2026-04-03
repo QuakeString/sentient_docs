@@ -71,7 +71,7 @@ step-4-creation-condition-add-filter-1:
 step-4-creation-condition-types-1:
     0:
         image: /images/user-guide/alarm-rules/step-4-creation-condition-types-1-ce.png
-        title: 'ThingsBoard supports three types of conditions:<br>- <b>Simple.</b> Triggers immediately when the expression becomes true. <br>- <b>Duration.</b> The condition must stay true continuously for a defined time period.<br>- <b>Repeating.</b> Triggers only after the condition occurs a specified number of times.'
+        title: 'SENTIENT supports three types of conditions:<br>- <b>Simple.</b> Triggers immediately when the expression becomes true. <br>- <b>Duration.</b> The condition must stay true continuously for a defined time period.<br>- <b>Repeating.</b> Triggers only after the condition occurs a specified number of times.'
 
 step-4-schedule-1:
     0:
@@ -119,7 +119,7 @@ step-5-clearing-condition-add-filter-1:
 step-5-clearing-condition-types-1:
     0:
         image: /images/user-guide/alarm-rules/step-5-clearing-condition-add-filter-5-ce.png
-        title: 'ThingsBoard supports three types of conditions:<br>- <b>Simple.</b> Clears immediately when the condition becomes true. <br>- <b>Duration.</b> Must remain true for a specified period before clearing.<br>- <b>Repeating.</b> The condition must be satisfied a certain number of times before clearing.'
+        title: 'SENTIENT supports three types of conditions:<br>- <b>Simple.</b> Clears immediately when the condition becomes true. <br>- <b>Duration.</b> Must remain true for a specified period before clearing.<br>- <b>Repeating.</b> The condition must be satisfied a certain number of times before clearing.'
 
 step-5-schedule-1:
     0:
@@ -150,7 +150,7 @@ step-7-save-rule-1:
         title: 'Click <b>Add</b> to save the rule configuration.'
     1:
         image: /images/user-guide/alarm-rules/step-7-save-rule-2-ce.png
-        title: 'After saving, ThingsBoard will automatically begin creating, updating, and processing alarms according to the conditions, schedule, and propagation settings you defined.'
+        title: 'After saving, SENTIENT will automatically begin creating, updating, and processing alarms according to the conditions, schedule, and propagation settings you defined.'
 
 alarm-rules-parameters-1:
     0:

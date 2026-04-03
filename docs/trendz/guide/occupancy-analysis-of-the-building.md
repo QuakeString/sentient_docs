@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Predictive occupancy monitoring for hotels
@@ -7,73 +7,73 @@ description: Analyze and predict occupancy of different zones, areas and spaces 
 
 building-occupancy-dashboard:
   0:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_dashboard.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_dashboard.png
     title: 'Real time occupancy tacking dashboard'
 
 building-occupancy-weakly-heatmap:
   0:
-    image: /images/trendz/guide/building_occupancy/hotel_hourly_occupansy_heatmap_create.png
-    title: 'Create heatmap view in Trendz'
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_hourly_occupansy_heatmap_create.png
+    title: 'Create heatmap view in SENTIENT ANALYTICS'
   1:
-    image: /images/trendz/guide/building_occupancy/hotel_hourly_occupansy_add_dates.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_hourly_occupansy_add_dates.png
     title: 'Add date fields into heatmap view to group data by hour and day'
   2:
-    image: /images/trendz/guide/building_occupancy/hotel_hourly_occupansy_calcualtion.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_hourly_occupansy_calcualtion.png
     title: 'Calculate occupancy rate for each hour of the day'
   3:
-    image: /images/trendz/guide/building_occupancy/hotel_hourly_occupansy_filtering.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_hourly_occupansy_filtering.png
     title: 'Add filtering options to focus on specific area of the hotel'
   4:
-    image: /images/trendz/guide/building_occupancy/hotel_weakly_occupansy_heatmap.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_weakly_occupansy_heatmap.png
     title: 'Hourly occupancy rate heatmap for the last 7 days'
 
 building-occupancy-forecast-configuration:
   0:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_forecast_create.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_forecast_create.png
     title: 'Create building occupancy line chart'
   1:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_forecast_configuration.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_forecast_configuration.png
     title: 'Enable prediction and configure forecast settings'
   2:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_forecast_for_next_weak.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_forecast_for_next_weak.png
     title: 'Building occupancy forecast for the next week'
 
 building-occupancy-top-crowded-areas:
   0:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancu_top_crowded_areas_sorting.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancu_top_crowded_areas_sorting.png
     title: 'Enable descending sorting by occupancy rate to find top crowded areas'
   1:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancu_top_crowded_areas.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancu_top_crowded_areas.png
     title: 'Top 5 overcrowded areas in the building'
 
 building-occupancy-dashboard-configuration:
   0:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_create_dashboard.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_create_dashboard.png
     title: 'Create dashboard for analyzing building occupancy'
   1:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_configure_aliases.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_configure_aliases.png
     title: 'Configure dashboard aliases to filter entities by building, floor and area'
   2:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_configure_filter_alias.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_configure_filter_alias.png
     title: 'Configure alias for showing all available buildings'
   3:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_add_hierarchy_widget.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_add_hierarchy_widget.png
     title: 'Add hierarchy widget to the dashboard'
   4:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_configure_hierarchy.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_configure_hierarchy.png
     title: 'Configure hierarchy widget to show all floors in the building'
   5:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_enable_rowclick.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_enable_rowclick.png
     title: 'Enable row click event to apply filtering by selected entity'
   6:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_configure_filter_by_building.png
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_configure_filter_by_building.png
     title: 'Configure row click event'    
   7:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_share_view.png
-    title: 'Add Trendz views on the occupancy dashboard'
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_share_view.png
+    title: 'Add SENTIENT ANALYTICS views on the occupancy dashboard'
   8:
-    image: /images/trendz/guide/building_occupancy/hotel_occupancy_add_on_dashboard.png
-    title: 'Configure Trendz views to show occupancy rate for the selected building'
+    image: /images/sentient-analytics/guide/building_occupancy/hotel_occupancy_add_on_dashboard.png
+    title: 'Configure SENTIENT ANALYTICS views to show occupancy rate for the selected building'
 
 ---
 
@@ -97,7 +97,7 @@ Additionally, they were interested in reducing their environmental impact by red
 * Show weekly heatmaps for each area/floor/building.
 * Display top-5 overcrowded areas.
 * Display top-5 underutilized areas.
-* Create occupancy analysis dashboard in ThingsBoard.
+* Create occupancy analysis dashboard in SENTIENT.
 
 ### Key outcomes
 * 12% reduction in utility costs.
@@ -109,14 +109,14 @@ Additionally, they were interested in reducing their environmental impact by red
 ### Prerequisites
 We are focusing and data analysis and visualization in this guide. So we will omit details about sensors installation and configuration. Here is a short description of the system that we will use in this guide:
 
-* Occupancy sensors already installed in each area of the hotel and connected to ThingsBoard via LoRaWAN integration. 
-* There are 3 asset types in ThingsBoard - building, floor, area. Building has relations to multiple floors, floor has relations to multiple areas and each area has related occupancy sensor. 
+* Occupancy sensors already installed in each area of the hotel and connected to SENTIENT via LoRaWAN integration. 
+* There are 3 asset types in SENTIENT - building, floor, area. Building has relations to multiple floors, floor has relations to multiple areas and each area has related occupancy sensor. 
 * Sensor reports how many people are currently in the area.
 * Occupancy sensor payload - `{"ts": 1651419204000, peopleCnt": 5}`
 * Each area has an attribute with maximum capacity. We will use this attribute to compute occupancy rate. Initial values are set during system provisioning.
 
 ### Step 1: Compute hourly occupancy rate as a percent from max capacity for each area
-Let's start with computing occupancy rate for each area. For doing that we are using Trendz calculated field where we define formula that is based on max area capacity and historical occupancy reported by sensor. 
+Let's start with computing occupancy rate for each area. For doing that we are using SENTIENT ANALYTICS calculated field where we define formula that is based on max area capacity and historical occupancy reported by sensor. 
 We use heatmap to visualize occupancy rate for each hour of the day for the last 7 days. User can change a time range to focus on real time data or historical period.
 
 * Create Heatmap view
@@ -143,7 +143,7 @@ return peopleCnt / maxCapacity * 100;
 Heatmap created in _Step 1_ contains filter fields. If no filers are selected, heatmap will show occupancy rate for the whole system. Data from all areas, floors and buildings will be aggregated and displayed on the heatmap.
 
 In real life case most probably we want to focus on specific building or area. To do that we can use filters. For example if user will select specific building in the filters - heatmap will show occupancy rate only for this building. 
-In the background Trendz will perform the following steps:
+In the background SENTIENT ANALYTICS will perform the following steps:
 * Fetch all floors for the selected building.
 * Then load all areas for each floor.
 * Load occupancy data for each sensor in the area.
@@ -153,7 +153,7 @@ In the background Trendz will perform the following steps:
 It means that if user wants to see occupancy rate for the whole floor or building - we can use same view and just select floor or building in the filters.
 
 ### Step 3: Predict an occupancy rate for the upcoming week with hourly breakdown
-Till that moment we worked with historical data. Now we will use Trendz prediction instruments to build a forecast for the upcoming week. First, we would create a line chart that shows occupancy rate for the last 7 days with hourly breakdown.
+Till that moment we worked with historical data. Now we will use SENTIENT ANALYTICS prediction instruments to build a forecast for the upcoming week. First, we would create a line chart that shows occupancy rate for the last 7 days with hourly breakdown.
 
 * Create Line chart view
 * Add **Date(Full Hour)** into `X-axis` section
@@ -207,17 +207,17 @@ Almost the same steps should be done for a bar chart with top-5 underutilized ar
 
 {% include images-gallery.html imageCollection="building-occupancy-top-crowded-areas" %}
 
-### Step 5: Create occupancy analysis dashboard in ThingsBoard
-All Trendz analytic charts are ready and we can create user dashboard in ThingsBoard. Note that user can have access to multiple hotels and we want to create a dashboard that will work for all of them. User should have an ability to select a hotel, floor and area.
-At first, we will add all Trendz views on the dashboard: 
+### Step 5: Create occupancy analysis dashboard in SENTIENT
+All SENTIENT ANALYTICS analytic charts are ready and we can create user dashboard in SENTIENT. Note that user can have access to multiple hotels and we want to create a dashboard that will work for all of them. User should have an ability to select a hotel, floor and area.
+At first, we will add all SENTIENT ANALYTICS views on the dashboard: 
 
-* In ThingsBoard create dashboard with name **Occupancy analysis**
-* In Trendz: for each widget that we created in previous steps:
-  * Click on `Share to ThingsBoard` button and copy `Add on Dashboard`.
+* In SENTIENT create dashboard with name **Occupancy analysis**
+* In SENTIENT ANALYTICS: for each widget that we created in previous steps:
+  * Click on `Share to SENTIENT` button and copy `Add on Dashboard`.
   * Select **Occupancy analysis** dashboard.
   * Enable **Create alias** checkbox.
   * Select **Area name** as a filter.
-* Return to ThingsBoard **Occupancy analysis** dashboard and tune dashboard layout.
+* Return to SENTIENT **Occupancy analysis** dashboard and tune dashboard layout.
 
 Then we would create dashboard aliases that will be used to filter data in the dashboard.
 
@@ -236,7 +236,7 @@ Then we would create dashboard aliases that will be used to filter data in the d
   * Asset types - **Area**
 
 Finally, we have to add hierarchy widget that will show all buildings/floors/areas in the hotel and allow user to select specific area. Once user would click on entity - **Filtered areas** alias will refresh and load all areas for the selected entity. 
-After that all Trendz widgets on the dashboard would be updated because they use **Filtered areas** alias as a datasource. As a result user will see occupancy data for the selected areas.
+After that all SENTIENT ANALYTICS widgets on the dashboard would be updated because they use **Filtered areas** alias as a datasource. As a result user will see occupancy data for the selected areas.
 
 * Add hierarchy widget `Cards` -> `Entities hierarchy` to the dashboard. It will show all buildings/floors/areas in the hotel.
   * Set datasource alias to **All buildings**
@@ -244,7 +244,7 @@ After that all Trendz widgets on the dashboard would be updated because they use
 * Add `On node selected` action for hierarchy widget. It will update `selectedEntity` parameter in the dashboard state.
   * Action type - **Update current dashboard state**
   * State entity parameter name - **selectedEntity**
-* For all Trendz widgets on the dashboard set datasource alias to **Filtered areas**.
+* For all SENTIENT ANALYTICS widgets on the dashboard set datasource alias to **Filtered areas**.
 * Save dashboard.
 
 {% include images-gallery.html imageCollection="building-occupancy-dashboard-configuration" %}

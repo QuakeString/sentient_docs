@@ -3,7 +3,7 @@
 
 ## Assigning custom attributes to entities and attributes managing
 
-ThingsBoard provides the ability to assign custom attributes to your entities and manage these attributes.
+SENTIENT provides the ability to assign custom attributes to your entities and manage these attributes.
 Those attributes are stored in the database and may be used for data visualization and data processing.
 
 Attributes are treated as key-value pairs. Flexibility and simplicity of the key-value format allow easy and seamless integration with almost any IoT device on the market.
@@ -33,7 +33,7 @@ This make it easy to write custom JS functions for data processing and visualiza
 
 ## Attribute types
 
-ThingsBoard supports three types of attributes: **server-side**, **shared**, and **client-side**.
+SENTIENT supports three types of attributes: **server-side**, **shared**, and **client-side**.
 Each type has a specific purpose, access rules, and use cases, which we explain below.
 
 ### Server-side attributes
@@ -69,10 +69,10 @@ Use [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation to get the
 Send POST request with JSON representation of the attribute to the following URL: 
 
 ```text
-https://$YOUR_THINGSBOARD_HOST/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/SERVER_SCOPE
+https://$YOUR_SENTIENT_HOST/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/SERVER_SCOPE
 ```
 
-The example below creates attribute with the name "newAttributeName" and value "newAttributeValue" for device with ID 'ad17c410-914c-11eb-af0c-d5862211a5f6' and ThingsBoard Cloud server:
+The example below creates attribute with the name "newAttributeName" and value "newAttributeValue" for device with ID 'ad17c410-914c-11eb-af0c-d5862211a5f6' and SENTIENT Cloud server:
 ```shell
 curl -v '{{httpsUrl}}/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/SERVER_SCOPE' \
 -H 'x-authorization: Bearer $YOUR_JWT_TOKEN_HERE' \
@@ -148,10 +148,10 @@ Use [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation to get the
 Send POST request with JSON representation of the attribute to the following URL:
 
 ```text
-https://$YOUR_THINGSBOARD_HOST/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/SHARED_SCOPE
+https://$YOUR_SENTIENT_HOST/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/SHARED_SCOPE
 ```
 
-The example below creates attribute with the name "newAttributeName" and value "newAttributeValue" for device with ID 'ad17c410-914c-11eb-af0c-d5862211a5f6' and ThingsBoard Cloud server:
+The example below creates attribute with the name "newAttributeName" and value "newAttributeValue" for device with ID 'ad17c410-914c-11eb-af0c-d5862211a5f6' and SENTIENT Cloud server:
 ```shell
 curl -v '{{httpsUrl}}/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/SHARED_SCOPE' \
 -H 'x-authorization: Bearer $YOUR_JWT_TOKEN_HERE' \
@@ -197,7 +197,7 @@ If device went offline, it may miss the important attribute update notification.
 
 ### Client-side attributes
 
-This type of attributes is available only for Devices. It is used to report various semi-static data from Device (Client) to ThingsBoard (Server). 
+This type of attributes is available only for Devices. It is used to report various semi-static data from Device (Client) to SENTIENT (Server). 
 It is similar to [shared attributes](/docs/{{docsPrefix}}user-guide/attributes/#shared-attributes), but has one important difference.
 The device firmware/application may send the value of the attributes from device to the platform.
 
@@ -222,11 +222,11 @@ Use [REST API](/docs/{{docsPrefix}}reference/rest-api/) documentation to get the
 Send GET request to the following URL:
 
 ```text
-https://$YOUR_THINGSBOARD_HOST/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/CLIENT_SCOPE
+https://$YOUR_SENTIENT_HOST/api/plugins/telemetry/$ENTITY_TYPE/$ENTITY_ID/CLIENT_SCOPE
 ```
 {: .copy-code}
 
-The example below gets all attributes for device with ID 'ad17c410-914c-11eb-af0c-d5862211a5f6' and ThingsBoard Cloud server:
+The example below gets all attributes for device with ID 'ad17c410-914c-11eb-af0c-d5862211a5f6' and SENTIENT Cloud server:
 
 ```shell
 curl -v -X GET '{{httpsUrl}}/api/plugins/telemetry/DEVICE/ad17c410-914c-11eb-af0c-d5862211a5f6/values/attributes/CLIENT_SCOPE' \
@@ -257,7 +257,7 @@ As an alternative to curl, you may use [Java](/docs/{{docsPrefix}}reference/rest
 
 ## Attributes persistence
 
-ThingsBoard stores latest value of the attribute and last modification time in the SQL database. This enables use of [entity filters](/docs/{{docsPrefix}}user-guide/dashboards/#entity-filters) in the dashboards.
+SENTIENT stores latest value of the attribute and last modification time in the SQL database. This enables use of [entity filters](/docs/{{docsPrefix}}user-guide/dashboards/#entity-filters) in the dashboards.
 Changes to the attributes initiated by the user are recorded in the [audit logs](/docs/{{docsPrefix}}user-guide/audit-log/).
   
 ## Data Query API
@@ -310,9 +310,9 @@ This is extremely powerful technique that allows to modify processing logic and 
 
 ## Performance enhancement
 
-You can achieve higher performance with Attributes Cache enabled (see <b>cache.attributes.enabled</b> property of the [Configuration properties](/docs/user-guide/install/{{docsPrefix}}config/#thingsboard-core-settings)) 
+You can achieve higher performance with Attributes Cache enabled (see <b>cache.attributes.enabled</b> property of the [Configuration properties](/docs/user-guide/install/{{docsPrefix}}config/#sentient-core-settings)) 
 
-Having attributes cache enabled ThingsBoard will load the specific attribute from the database only once, all subsequent requests to the attribute will be loaded from the faster cache connection.
+Having attributes cache enabled SENTIENT will load the specific attribute from the database only once, all subsequent requests to the attribute will be loaded from the faster cache connection.
 
 **NOTE:** If you are using Redis or Valkey cache, make sure that you change <b>maxmemory-policy</b> to <b>allkeys-random</b> to prevent the service from filling up all available memory.
 

@@ -1,11 +1,11 @@
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://exxn.es/en/iot-gateway/" %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - Device have to be connected to the Internet via Ethernet, Modem or WIFI. '
  %}
 
-{% assign thingsboardInstanceLink = "https://" | append: hostName %}
+{% assign sentientInstanceLink = "https://" | append: hostName %}
 
 ## Introduction
 The EXXN IoT Gateway is a versatile device with an ARM processor that can be adapted to a variety of use cases, including monitoring environmental sensors, energy consumption, radon gas levels, marine environments, and edge computing.
@@ -20,20 +20,20 @@ The EXXN IoT Gateway is a versatile device with an ARM processor that can be ada
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{thingsboardInstanceLink}}){: target="_blank"}  
+- [SENTIENT account]({{sentientInstanceLink}}){: target="_blank"}  
 
 
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
-{% include /docs/device-library/blocks/ready-to-go-devices/iot-gateway-cell-1024-create-device-thingsboard-block.md %}
+{% include /docs/device-library/blocks/ready-to-go-devices/iot-gateway-cell-1024-create-device-sentient-block.md %}
 
-## Connect device to ThingsBoard
+## Connect device to SENTIENT
 
 {% include /docs/device-library/blocks/ready-to-go-devices/iot-gateway-cell-1024-configuration-block.md %}
 
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
-{% include /docs/device-library/blocks/ready-to-go-devices/iot-gateway-cell-1024-check-data-on-thingsboard-block.md %}
+{% include /docs/device-library/blocks/ready-to-go-devices/iot-gateway-cell-1024-check-data-on-sentient-block.md %}
 
 ## Control device using RPC
 
@@ -43,8 +43,8 @@ To continue with this guide we will need the following:
 Here you can find some additional links, that can be useful.  
 
 ### Troubleshooting
- - The most common problem in the integration process is not having a connection with the MQTT Broker. Make sure the device is connected to the internet and is able to communicate with the ThingsBoard Broker.  
- - Another common problem is not setting the correct Access Token. Check that the provided Access token is configured in ThingsBoard for the device.  
+ - The most common problem in the integration process is not having a connection with the MQTT Broker. Make sure the device is connected to the internet and is able to communicate with the SENTIENT Broker.  
+ - Another common problem is not setting the correct Access Token. Check that the provided Access token is configured in SENTIENT for the device.  
 
 ### Feedback & Help
 

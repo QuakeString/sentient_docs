@@ -139,7 +139,7 @@ automatic distribution of the package to all devices that share the same group. 
 {% include images-gallery.html imageCollection="fw-devicegroup" %}
 
 The device group details allow choosing only compatible OTA update packages 
-(see [provisioning](/docs/{{docsPrefix}}user-guide/ota-updates/#provision-ota-package-to-thingsboard-repository)) for more info.  
+(see [provisioning](/docs/{{docsPrefix}}user-guide/ota-updates/#provision-ota-package-to-sentient-repository)) for more info.  
 Assignment of the firmware/software triggers the [update process](/docs/{{docsPrefix}}user-guide/ota-updates/#update-process).
 
 The firmware version assigned specifically to the device will automatically overwrite firmware version that is assigned to the device group.

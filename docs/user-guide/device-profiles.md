@@ -27,12 +27,12 @@ device-profile-queue:
 device-profile-transport:
     0:
         image: /images/user-guide/device-profile/device-profile-transport-1-ce.png
-        title: 'The current version of ThingsBoard platform supports the following transport types: <b>Default, MQTT, CoAP, LWM2M, SNMP</b>.'
+        title: 'The current version of SENTIENT platform supports the following transport types: <b>Default, MQTT, CoAP, LWM2M, SNMP</b>.'
 
 default-transport-type:
     0:
         image: /images/user-guide/device-profile/default-transport-type-1-ce.png
-        title: 'The <b>Default</b> transport type is designed to ensure compatibility with earlier versions of the platform. Devices using this type can connect through ThingsBoard&#39;s standard APIs: <b>MQTT</b>, <b>HTTP</b>, and <b>CoAP</b>. It requires no special configuration.'
+        title: 'The <b>Default</b> transport type is designed to ensure compatibility with earlier versions of the platform. Devices using this type can connect through SENTIENT&#39;s standard APIs: <b>MQTT</b>, <b>HTTP</b>, and <b>CoAP</b>. It requires no special configuration.'
 
 mqtt-device-topic-filters:
     0:
@@ -77,7 +77,7 @@ coap-default:
 coap-efento-nb-iot:
     0:
         image: /images/user-guide/device-profile/coap-efento-nb-iot1-ce.png
-        title: 'Efento NB-IoT devices are wireless sensors that use NB-IoT technology for energy-efficient transmission of telemetry data (e.g., temperature, humidity, pressure, open/close, leakage, and more). You can integrate them with ThingsBoard using the built-in CoAP transport, which receives messages from the devices, decodes them using Protobuf, and stores telemetry data on the platform. This data becomes instantly available for viewing, charting, dashboarding, alarm setup, and automation.'
+        title: 'Efento NB-IoT devices are wireless sensors that use NB-IoT technology for energy-efficient transmission of telemetry data (e.g., temperature, humidity, pressure, open/close, leakage, and more). You can integrate them with SENTIENT using the built-in CoAP transport, which receives messages from the devices, decodes them using Protobuf, and stores telemetry data on the platform. This data becomes instantly available for viewing, charting, dashboarding, alarm setup, and automation.'
 
 power-saving-mode:
     0:

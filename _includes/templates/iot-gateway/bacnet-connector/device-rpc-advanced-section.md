@@ -1,4 +1,4 @@
-Configuration, provided in this section is used for sending RPC requests from ThingsBoard to the device.
+Configuration, provided in this section is used for sending RPC requests from SENTIENT to the device.
 
 | **Parameter**  | **Description**                                                               |
 |----------------|-------------------------------------------------------------------------------|

@@ -15,7 +15,7 @@
           "layoutX": 344,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Under Threshold",
         "debugMode": false,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 904,
           "layoutY": 63
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "Create Alarm",
         "debugMode": false,
         "configuration": {
@@ -42,7 +42,7 @@
           "layoutX": 617,
           "layoutY": 222
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "Clear Alarm",
         "debugMode": false,
         "configuration": {
@@ -55,7 +55,7 @@
           "layoutX": 596,
           "layoutY": 63
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Add temperature to metadata",
         "debugMode": false,
         "configuration": {
@@ -67,7 +67,7 @@
           "layoutX": 1213,
           "layoutY": 64
         },
-        "type": "org.thingsboard.rule.engine.mail.TbMsgToEmailNode",
+        "type": "org.sentient.rule.engine.mail.TbMsgToEmailNode",
         "name": "Temperature Email",
         "debugMode": false,
         "configuration": {
@@ -84,7 +84,7 @@
           "layoutX": 1518,
           "layoutY": 67
         },
-        "type": "org.thingsboard.rule.engine.mail.TbSendEmailNode",
+        "type": "org.sentient.rule.engine.mail.TbSendEmailNode",
         "name": "SendGrid SMTP",
         "debugMode": false,
         "configuration": {

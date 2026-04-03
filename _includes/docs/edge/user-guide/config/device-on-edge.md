@@ -5,7 +5,7 @@
 
 The **Edge Devices** are basic IoT entities that can generate telemetry data and process RPC commands. They are physical objects, such as sensors, actuators, switches, etc. that can collect, process and transmit data locally or to a nearby network, rather than relying solely on a centralised Cloud system.
 
-To better understand **Devices** as entities in the context of the **ThingsBoard platform**, please refer to [this documentation](/docs/{{peDocsPrefix}}user-guide/ui/devices/){:target="_blank"}.
+To better understand **Devices** as entities in the context of the **SENTIENT platform**, please refer to [this documentation](/docs/{{peDocsPrefix}}user-guide/ui/devices/){:target="_blank"}.
 
 ## Device Management on Edge Instance
 

@@ -1,5 +1,5 @@
 
-Now it’s time to program the board to connect to ThingsBoard.  
+Now it’s time to program the board to connect to SENTIENT.  
 To do this, you can use the code below. It contains all required functionality for this guide.
 
 ```cpp
@@ -12,7 +12,7 @@ To do this, you can use the code below. It contains all required functionality f
 #include <Server_Side_RPC.h>
 #include <Attribute_Request.h>
 #include <Shared_Attribute_Update.h>
-#include <ThingsBoard.h>
+#include <SENTIENT.h>
 #include <esp_heap_caps.h>
 
 extern "C" {
@@ -22,14 +22,14 @@ extern "C" {
 constexpr char WIFI_SSID[] = "YOUR_WIFI_SSID";
 constexpr char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";
 
-// See https://thingsboard.io/docs/{{page.docsPrefix}}getting-started-guides/helloworld/
+// See https://docs.sentient.invenia.in/docs/{{page.docsPrefix}}getting-started-guides/helloworld/
 // to understand how to obtain an access token
 constexpr char TOKEN[] = "YOUR_ACCESS_TOKEN";
 
-// Thingsboard we want to establish a connection too
-constexpr char THINGSBOARD_SERVER[] = "{{hostName}}";
+// Sentient we want to establish a connection too
+constexpr char SENTIENT_SERVER[] = "{{hostName}}";
 // MQTT port used to communicate with the server, 1883 is the default unencrypted MQTT port.
-constexpr uint16_t THINGSBOARD_PORT = 1883U;
+constexpr uint16_t SENTIENT_PORT = 1883U;
 
 // Maximum size packets will ever be sent or received by the underlying MQTT client,
 // if the size is to small messages might not be sent or received messages will be discarded
@@ -39,7 +39,7 @@ constexpr size_t MAX_MESSAGE_SIZE = 100U * 1024;
 // If the Serial output is mangled, ensure to change the monitor speed accordingly to this variable
 constexpr uint32_t SERIAL_DEBUG_BAUD = 115200U;
 
-// Maximum amount of attributs we can request or subscribe, has to be set both in the ThingsBoard template list and Attribute_Request_Callback template list
+// Maximum amount of attributs we can request or subscribe, has to be set both in the SENTIENT template list and Attribute_Request_Callback template list
 // and should be the same as the amount of variables in the passed array. If it is less not all variables will be requested or subscribed
 constexpr size_t MAX_ATTRIBUTES = 3U;
 
@@ -87,8 +87,8 @@ const std::array<IAPI_Implementation*, 3U> apis = {
     &shared_update
 };
 
-// Initialize ThingsBoard instance with the maximum needed buffer size, stack size and the apis we want to use
-ThingsBoard tb(mqttClient, MAX_MESSAGE_SIZE, Default_Max_Stack_Size, apis);
+// Initialize SENTIENT instance with the maximum needed buffer size, stack size and the apis we want to use
+SENTIENT tb(mqttClient, MAX_MESSAGE_SIZE, Default_Max_Stack_Size, apis);
 
 // handle led state and mode changes
 volatile bool attributesChanged = false;
@@ -329,7 +329,7 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);
   delay(1000);
   InitWiFi();
-  tb.connect(THINGSBOARD_SERVER, TOKEN, THINGSBOARD_PORT);
+  tb.connect(SENTIENT_SERVER, TOKEN, SENTIENT_PORT);
   rpc.RPC_Subscribe(callbacks.cbegin(), callbacks.cend());
   shared_update.Shared_Attributes_Subscribe(attributes_callback);
   attr_request.Shared_Attributes_Request(attribute_shared_request_callback);
@@ -344,12 +344,12 @@ void loop() {
   }
 
   if (!tb.connected()) {
-      // Connect to the ThingsBoard
+      // Connect to the SENTIENT
       Serial.print("Connecting to: ");
-      Serial.print(THINGSBOARD_SERVER);
+      Serial.print(SENTIENT_SERVER);
       Serial.print(" with token ");
       Serial.println(TOKEN);
-    if (!tb.connect(THINGSBOARD_SERVER, TOKEN, THINGSBOARD_PORT)) {
+    if (!tb.connect(SENTIENT_SERVER, TOKEN, SENTIENT_PORT)) {
       Serial.println("Failed to connect");
       return;
     }
@@ -460,8 +460,8 @@ void loop() {
 {% endcapture %}
 
 {% capture messageSizeInfo %}
-Data, send by this device may require increasing of the allowed message size for MQTT on **your ThingsBoard instance**.  
-To do this you can modify parameter **NETTY_MAX_PAYLOAD_SIZE** in **thingsboard.yml** file, default value on regular setup is 65535 bytes.  
+Data, send by this device may require increasing of the allowed message size for MQTT on **your SENTIENT instance**.  
+To do this you can modify parameter **NETTY_MAX_PAYLOAD_SIZE** in **sentient.yml** file, default value on regular setup is 65535 bytes.  
 Required size depends on chosen resolution and quality.
 <br>
 <br>
@@ -478,7 +478,7 @@ Required size depends on chosen resolution and quality.
 
 
 {% capture replacePlaceholders %}
-Don’t forget to replace placeholders with your real WiFi network SSID, password, ThingsBoard device access token.
+Don’t forget to replace placeholders with your real WiFi network SSID, password, SENTIENT device access token.
 {% endcapture %}
 
 {% include templates/info-banner.md content=replacePlaceholders %}
@@ -489,9 +489,9 @@ Necessary variables for connection:
 |-|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
 | WIFI_SSID | **YOUR_WIFI_SSID**           | Your WiFi network name.                                                                                                                      | 
 | WIFI_PASSWORD | **YOUR_WIFI_PASSWORD**       | Your WiFi network password.                                                                                                                  |
-| TOKEN | **YOUR_DEVICE_ACCESS_TOKEN** | Access token from device. Obtaining process described in #connect-device-to-thingsboard                                                      | 
-| THINGSBOARD_SERVER | **{{hostName}}**             | Your ThingsBoard host or ip address.                                                                                                         |
-| THINGSBOARD_PORT | **1883U**                    | ThingsBoard server MQTT port. Can be default for this guide.                                                                                 |
+| TOKEN | **YOUR_DEVICE_ACCESS_TOKEN** | Access token from device. Obtaining process described in #connect-device-to-sentient                                                      | 
+| SENTIENT_SERVER | **{{hostName}}**             | Your SENTIENT host or ip address.                                                                                                         |
+| SENTIENT_PORT | **1883U**                    | SENTIENT server MQTT port. Can be default for this guide.                                                                                 |
 | MAX_MESSAGE_SIZE | **100U*1024**                | Maximal size of MQTT messages. Should be more than picture size + ~1024 or more.                                                             |
 | SERIAL_DEBUG_BAUD | **1883U**                    | Baud rate for serial port. Can be default for this guide.                                                                                    |
 
@@ -503,8 +503,8 @@ constexpr char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";
 
 constexpr char TOKEN[] = "YOUR_ACCESS_TOKEN";
 
-constexpr char THINGSBOARD_SERVER[] = "{{hostName}}";
-constexpr uint16_t THINGSBOARD_PORT = 1883U;
+constexpr char SENTIENT_SERVER[] = "{{hostName}}";
+constexpr uint16_t SENTIENT_PORT = 1883U;
 
 constexpr uint32_t MAX_MESSAGE_SIZE = 100U * 1024;
 constexpr uint32_t SERIAL_DEBUG_BAUD = 115200U;

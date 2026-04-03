@@ -5,7 +5,7 @@
 
 ## Overview
 
-CoAP Integration allows to stream data from devices that use a CoAP protocol to connect to ThingsBoard and converts payloads of these devices into the ThingsBoard format.
+CoAP Integration allows to stream data from devices that use a CoAP protocol to connect to SENTIENT and converts payloads of these devices into the SENTIENT format.
 
 Please review the integration diagram to learn more.
 
@@ -16,10 +16,10 @@ Please review the integration diagram to learn more.
 In this tutorial, we will show you how CoAP integration works as part of **tb-core** service with **NO SECURE** security mode selected. In order to do this we will use: 
 
 {% if docsPrefix == "pe/" %}
-- The instance of [ThingsBoard Professional Edition](https://thingsboard.io/docs/user-guide/install/pe/installation-options/) installed locally;
+- The instance of [SENTIENT Professional Edition](https://docs.sentient.invenia.in/docs/user-guide/install/pe/installation-options/) installed locally;
 {% endif %}
 {% if docsPrefix contains "paas/" %}
-- ThingsBoard Professional Edition instance — [{{hostName}}](https://{{hostName}});
+- SENTIENT Professional Edition instance — [{{hostName}}](https://{{hostName}});
 {% endif %}
 
 - [coap-client](https://manpages.ubuntu.com/manpages/focal/man5/coap-client.5.html) utility which is intended to simulate CoAP client that will connect to CoAP integration;
@@ -65,7 +65,7 @@ You can use payload type based on your device capabilities and business cases.
 
 ## Uplink Converter
 
-Before setting up an **CoAP integration**, you need to create an **Uplink Converter** that is a script for parsing and transforming the data received by CoAP integration to format that ThingsBoard uses. **deviceName** and **deviceType** are required, while attributes and telemetry are optional. attributes and telemetry are flat key-value objects. Nested objects are not supported.
+Before setting up an **CoAP integration**, you need to create an **Uplink Converter** that is a script for parsing and transforming the data received by CoAP integration to format that SENTIENT uses. **deviceName** and **deviceType** are required, while attributes and telemetry are optional. attributes and telemetry are flat key-value objects. Nested objects are not supported.
 
 To create an **Uplink Converter** go to **Data Converters** section and Click **Add new data converter —> Create new converter**.
 Name it **"CoAP Uplink Converter"** and select type **Uplink**. Use debug mode for now.

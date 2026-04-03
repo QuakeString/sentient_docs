@@ -1,14 +1,14 @@
-It's a good practice to create a dedicated namespace for your TBMQ cluster deployment:
+It's a good practice to create a dedicated namespace for your ST-RMQTT cluster deployment:
 
 ```bash
-kubectl create namespace tbmq
+kubectl create namespace st-rmqtt
 ```
 {: .copy-code}
 
 ```bash
-kubectl config set-context --current --namespace=tbmq
+kubectl config set-context --current --namespace=st-rmqtt
 ```
 {: .copy-code}
 
-This sets tbmq as the default namespace for your current context, so you don’t need to pass --namespace to every
+This sets st-rmqtt as the default namespace for your current context, so you don’t need to pass --namespace to every
 command.

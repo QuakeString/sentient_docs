@@ -1,15 +1,15 @@
 * TOC
 {:toc}
 
-A Gateway in ThingsBoard is a special type of device that acts as a bridge between external devices and the platform. 
-It maintains a single MQTT connection to ThingsBoard while proxying data for multiple physical devices connected behind it.
+A Gateway in SENTIENT is a special type of device that acts as a bridge between external devices and the platform. 
+It maintains a single MQTT connection to SENTIENT while proxying data for multiple physical devices connected behind it.
 
-The gateway itself is also a standard ThingsBoard device. It can use the [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/){:target="_blank"} to:
+The gateway itself is also a standard SENTIENT device. It can use the [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/){:target="_blank"} to:
 - Publish its own telemetry and attributes
 - Receive configuration updates
 - Execute RPC commands
 
-In addition, this API defines gateway-specific MQTT topics and payload formats and is used by the open-source [ThingsBoard IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}.
+In addition, this API defines gateway-specific MQTT topics and payload formats and is used by the open-source [SENTIENT IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}.
 
 {% capture difference %}
 For device-level MQTT details (authentication, QoS, payload format, etc.), refer to the [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/){:target="_blank"}.
@@ -41,7 +41,7 @@ MQTT<small>Windows</small>%,%mqtt-windows%,%templates/helloworld-pe/mqtt-windows
 
 ## Device connect API
 
-Use this API to inform ThingsBoard that a device behind the Gateway is now connected and ready to exchange data.
+Use this API to inform SENTIENT that a device behind the Gateway is now connected and ready to exchange data.
 
 **Topic:**
 
@@ -56,14 +56,14 @@ v1/gateway/connect
 {"device": "Device A", "type": "Sensor A"}
 ```
 {: .copy-code}
-- **device** - required. The device name in ThingsBoard.
+- **device** - required. The device name in SENTIENT.
 - **type** – optional. Name of the device profile. If omitted, the `default` device profile is used.
 
 **Behavior:**
 
-- If a device with the given name does not exist, ThingsBoard creates it automatically.
-- If the device profile name is provided and the profile does not exist, ThingsBoard creates it automatically.
-- Once connected, ThingsBoard routes the following events for this device through the Gateway:
+- If a device with the given name does not exist, SENTIENT creates it automatically.
+- If the device profile name is provided and the profile does not exist, SENTIENT creates it automatically.
+- Once connected, SENTIENT routes the following events for this device through the Gateway:
   - Updates to shared attributes.
   - RPC commands.
 
@@ -80,8 +80,8 @@ the corresponding [status code](/docs/{{docsPrefix}}reference/mqtt-v5-errors-cod
 
 {% unless docsPrefix contains "paas/" %}
 
-> ⚠️ In all examples on this page, the hostname refers to a **local** ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} installation.   
-If your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} instance is deployed on a different host, replace <code>localhost</code> with the appropriate hostname or IP address.
+> ⚠️ In all examples on this page, the hostname refers to a **local** SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} installation.   
+If your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} instance is deployed on a different host, replace <code>localhost</code> with the appropriate hostname or IP address.
 
 {% endunless %}
 
@@ -89,7 +89,7 @@ If your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Ed
 
 **Example 1.** Connect a device.
 
-In order to inform ThingsBoard that device is connected to the Gateway, one needs to publish following message:
+In order to inform SENTIENT that device is connected to the Gateway, one needs to publish following message:
 
 ```bash
 mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/connect" -u "$ACCESS_TOKEN" -m '{"device": "Device A"}'
@@ -98,7 +98,7 @@ mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/connect" -u "$ACCESS_TOKEN" -
 
 **Example 2.** Connect a device with a specific device profile.
 
-In order to inform ThingsBoard that device is connected to the Gateway with a specific device profile, one needs to 
+In order to inform SENTIENT that device is connected to the Gateway with a specific device profile, one needs to 
 publish following message:
 
 ```bash
@@ -110,7 +110,7 @@ mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/connect" -u "$ACCESS_TOKEN" -
 
 ## Device disconnect API
 
-Use this API to inform ThingsBoard that a device behind the Gateway is no longer active.
+Use this API to inform SENTIENT that a device behind the Gateway is no longer active.
 
 **Topic:**
 
@@ -128,8 +128,8 @@ v1/gateway/disconnect
 
 **Behavior:**
 
-- If the device with the given name does not exist, ThingsBoard ignores the message.
-- After processing this message, ThingsBoard stops sending attribute and RPC updates for that device to the Gateway.
+- If the device with the given name does not exist, SENTIENT ignores the message.
+- After processing this message, SENTIENT stops sending attribute and RPC updates for that device to the Gateway.
 
 {% capture difference %}
 **Only for MQTT v.5**
@@ -144,7 +144,7 @@ If something goes wrong during the disconnecting, the PUBACK will return with th
 
 Also, make sure that the device is connected before disconnecting it.
 
-In order to inform ThingsBoard that device is disconnected from the Gateway, one needs to publish following message:
+In order to inform SENTIENT that device is disconnected from the Gateway, one needs to publish following message:
 
 ```bash
 mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/disconnect" -u "$ACCESS_TOKEN" -m '{"device": "Device A"}'
@@ -155,24 +155,24 @@ mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/disconnect" -u "$ACCESS_TOKEN
 
 ## Attributes API
 
-ThingsBoard attributes API allows devices to:
+SENTIENT attributes API allows devices to:
 
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix contains "paas/" %}
 - Upload [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes to the server.
-- Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes from ThingsBoard platform.
-- Subscribe to [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes from ThingsBoard platform.
+- Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes from SENTIENT platform.
+- Subscribe to [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes from SENTIENT platform.
 {% endif %}
 {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
 - Upload [client-side](/docs/pe/user-guide/attributes/#attribute-types){:target="_blank"} device attributes to the server.
-- Request [client-side](/docs/pe/user-guide/attributes/#attribute-types){:target="_blank"} and [shared](/docs/pe/user-guide/attributes/#attribute-types){:target="_blank"} device attributes from ThingsBoard platform.
-- Subscribe to [shared](/docs/pe/user-guide/attributes/#attribute-types){:target="_blank"} device attributes from ThingsBoard platform.
+- Request [client-side](/docs/pe/user-guide/attributes/#attribute-types){:target="_blank"} and [shared](/docs/pe/user-guide/attributes/#attribute-types){:target="_blank"} device attributes from SENTIENT platform.
+- Subscribe to [shared](/docs/pe/user-guide/attributes/#attribute-types){:target="_blank"} device attributes from SENTIENT platform.
 {% endif %}
 
 <hr>
 
-### Publish attribute to ThingsBoard
+### Publish attribute to SENTIENT
 
-Use this topic to publish client-side device attributes to ThingsBoard platform. All attributes in the payload 
+Use this topic to publish client-side device attributes to SENTIENT platform. All attributes in the payload 
 are stored as client-side attributes for the corresponding devices.
 
 **Topic:**
@@ -200,7 +200,7 @@ v1/gateway/attributes
 
 **Behavior:**
 
-- If the device with the given name does not exist, ThingsBoard creates it automatically with `default` profile name.
+- If the device with the given name does not exist, SENTIENT creates it automatically with `default` profile name.
 - If the attribute does not exist, it is created.
 - If the attribute already exists, its value is updated.
 
@@ -215,7 +215,7 @@ If something goes wrong during the publishing, the PUBACK will return with the c
 
 > ⚠️ Replace <code>$ACCESS_TOKEN</code> with your gateway device access token.
 
-In order to publish client-side device attributes to ThingsBoard platform, one needs to publish following message:
+In order to publish client-side device attributes to SENTIENT platform, one needs to publish following message:
 
 ```bash
 mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/attributes" -u "$ACCESS_TOKEN" -m '{"Device A": { "fw_version": "1.0", "battery": 87 }}'
@@ -224,9 +224,9 @@ mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/attributes" -u "$ACCESS_TOKEN
 
 <hr>
 
-### Request attribute values from ThingsBoard
+### Request attribute values from SENTIENT
 
-Use this API to request client-side or shared device attributes from ThingsBoard platform. Make attention that you 
+Use this API to request client-side or shared device attributes from SENTIENT platform. Make attention that you 
 need to subscribe to the response topic first in order to receive the response.
 
 **Subscribe topic:**
@@ -257,13 +257,13 @@ v1/gateway/attributes/request
 
 Fields:
 - **id** – required. Your integer request identifier.
-- **device** – required. The device name in ThingsBoard.
+- **device** – required. The device name in SENTIENT.
 - **client** – optional. An array of client-side attribute keys to request.
 - **shared** – optional. An array of shared attribute keys to request.
 
 <hr>
 
-### Subscribe to attribute updates from ThingsBoard
+### Subscribe to attribute updates from SENTIENT
 
 Use this topic to subscribe to shared device attribute changes. Take attention that you need to subscribe to the topic 
 first in order to receive updates.
@@ -289,7 +289,7 @@ v1/gateway/attributes
 {: .copy-code}
 
 Fields:
-- **device** – the device name in ThingsBoard.
+- **device** – the device name in SENTIENT.
 - **data** – map of updated shared attributes.
 
 <hr>
@@ -339,13 +339,13 @@ v1/gateway/telemetry
 {: .copy-code}
 
 Fields:
-- **device** – required. The device name in ThingsBoard.
+- **device** – required. The device name in SENTIENT.
 - **ts** – Optional. Unix timestamp in milliseconds.
 - **values** – required. Key-value map of telemetry fields (e.g., temperature, humidity).
 
 **Behavior:**
 
-- If the device with the given name does not exist, ThingsBoard creates it automatically with `default` profile name.
+- If the device with the given name does not exist, SENTIENT creates it automatically with `default` profile name.
 - If the telemetry keys do not exist, they are created.
 - Telemetry data is stored with the provided timestamps.
 
@@ -360,7 +360,7 @@ If something goes wrong during the publishing, the PUBACK will return with the c
 
 > ⚠️ Replace <code>$ACCESS_TOKEN</code> with your gateway device access token.
 
-In order to publish device telemetry to ThingsBoard platform, one needs to publish following message:
+In order to publish device telemetry to SENTIENT platform, one needs to publish following message:
 
 ```bash
 mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/telemetry" -u "$ACCESS_TOKEN" -m '{"Device A": [{"ts": 1700000000000, "values": {"temperature": 23.5, "humidity": 61 }}]}'
@@ -373,7 +373,7 @@ mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/telemetry" -u "$ACCESS_TOKEN"
 
 ### Server-side RPC
 
-Use this API to receive and respond to RPC commands from ThingsBoard for devices behind the Gateway.
+Use this API to receive and respond to RPC commands from SENTIENT for devices behind the Gateway.
 
 **Subscribe topic:**
 
@@ -404,7 +404,7 @@ v1/gateway/rpc
 {: .copy-code}
 
 Fields:
-- **device** – the device name in ThingsBoard.
+- **device** – the device name in SENTIENT.
 - **id** – your integer request identifier.
 - **data** – response payload.
 
@@ -422,7 +422,7 @@ Make attention that the **id** in the response message should match the **id** f
 
 ## Claiming devices API
 
-ThingsBoard supports a claiming mechanism that allows end users to take ownership of pre-provisioned devices. For 
+SENTIENT supports a claiming mechanism that allows end users to take ownership of pre-provisioned devices. For 
 conceptual details, see [Claiming devices](/docs/{{docsPrefix}}user-guide/claiming-devices){:target="_blank"} guide.
 
 **Topic:**
@@ -451,7 +451,7 @@ v1/gateway/claim
 Per-device parameters:
 - **secretKey** – optional. The secret key assigned to the device for claiming. If omitted, an empty string is used.
 - **durationMs** – optional. Claiming duration in milliseconds. If omitted, the system parameter 
-**device.claim.duration** is used (in the file **/etc/thingsboard/conf/thingsboard.yml**).
+**device.claim.duration** is used (in the file **/etc/sentient/conf/sentient.yml**).
 
 **Example**
 
@@ -459,7 +459,7 @@ Per-device parameters:
 
 Also, make sure that the device is connected before testing claiming.
 
-In order to inform ThingsBoard platform to start claiming process for devices, one needs to publish following message:
+In order to inform SENTIENT platform to start claiming process for devices, one needs to publish following message:
 
 ```bash
 mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/claim" -u "$ACCESS_TOKEN" -m '{"Device A": {"secretKey": "mySecret", "durationMs": 60000}}'
@@ -470,7 +470,7 @@ mosquitto_pub -h "{{mqttHostName}}" -t "v1/gateway/claim" -u "$ACCESS_TOKEN" -m 
 
 ## Protocol customization
 
-MQTT transport can be fully customized for specific use-case by changing the corresponding [module](https://github.com/thingsboard/thingsboard/tree/master/transport/mqtt){:target="_blank"}.
+MQTT transport can be fully customized for specific use-case by changing the corresponding [module](https://github.com/sentient/sentient/tree/master/transport/mqtt){:target="_blank"}.
 
 <hr>
 

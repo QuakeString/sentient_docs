@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Microservices setup using AWS infrastructure
-description: ThingsBoard IoT platform microservices setup with Kubernetes in AWS EKS 
+description: SENTIENT IoT platform microservices setup with Kubernetes in AWS EKS 
 
 rdsSetup:
     0:
@@ -17,10 +17,10 @@ rdsSetup:
         title: 'Use "Provisioned IOPS" for better performance.'
     3:
         image: /images/install/cloud/aws/rds-4.png
-        title: 'Make sure your PostgreSQL RDS instance is accessible from the ThingsBoard cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-thingsboard-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
+        title: 'Make sure your PostgreSQL RDS instance is accessible from the SENTIENT cluster; The easiest way to achieve this is to deploy the PostgreSQL RDS instance in the same VPC and use "eksctl-sentient-cluster-ClusterSharedNodeSecurityGroup-*" security group.'
     4:
         image: /images/install/cloud/aws/rds-5.png
-        title: 'Make sure you use "thingsboard" as initial database name.'
+        title: 'Make sure you use "sentient" as initial database name.'
     5:
         image: /images/install/cloud/aws/rds-6.png
         title: 'Disable "auto minor version update".'  
@@ -36,7 +36,7 @@ mskSetup:
         title: 'Make sure your Apache Kafka version is 3.7.x.'
     1:
         image: /images/install/cloud/aws/msk-2.png
-        title: 'Make sure your MSK instance is accessible from the ThingsBoard cluster. The easiest way to achieve this is to deploy the MSK instance in the same VPC. We also recommend to use private subnets. This way it will be nearly impossible to accidentally expose it to the internet.'
+        title: 'Make sure your MSK instance is accessible from the SENTIENT cluster. The easiest way to achieve this is to deploy the MSK instance in the same VPC. We also recommend to use private subnets. This way it will be nearly impossible to accidentally expose it to the internet.'
     2:
         image: /images/install/cloud/aws/msk-3.png
         title: 'Use m5.large or similar instance types.'
@@ -61,7 +61,7 @@ redisSetup:
         title: 'Specify <b>Valkey Engine version 8.x</b> and node type with at least 1 GB of RAM.'
     1:
         image: /images/install/cloud/aws/valkey-3.png
-        title: 'Make sure your <b>Valkey cluster</b> is accessible from the <b>ThingsBoard cluster</b>. The easiest way to achieve this is by <b>deploying the Valkey cluster in the same VPC</b>. We also recommend using <b>private subnets</b>. Use your <b>group ID</b>.'
+        title: 'Make sure your <b>Valkey cluster</b> is accessible from the <b>SENTIENT cluster</b>. The easiest way to achieve this is by <b>deploying the Valkey cluster in the same VPC</b>. We also recommend using <b>private subnets</b>. Use your <b>group ID</b>.'
     2:
         image: /images/install/cloud/aws/valkey-2.png
         title: 'Disable the "<b>Enable automatic backups</b>" option.'
@@ -69,7 +69,7 @@ redisSetup:
 redisEndpointUrl:
     0:
         image: /images/install/cloud/aws/valkey-4.png
-        title: 'Once the <b>Valkey cluster</b> switches to the "<b>Available" state</b>, navigate to the "<b>Details</b>" section and copy the "<b>Endpoint</b>" field <b>without the ":6379" port suffix</b> – this is the <b>Valkey endpoint</b> for ThingsBoard.'
+        title: 'Once the <b>Valkey cluster</b> switches to the "<b>Available" state</b>, navigate to the "<b>Details</b>" section and copy the "<b>Endpoint</b>" field <b>without the ":6379" port suffix</b> – this is the <b>Valkey endpoint</b> for SENTIENT.'
 
 ---
 
@@ -78,21 +78,21 @@ redisEndpointUrl:
 
 {% assign tbServicesFile = "tb-services.yml" %}
 
-This guide will help you to setup ThingsBoard in microservices mode in AWS EKS. 
+This guide will help you to setup SENTIENT in microservices mode in AWS EKS. 
 
 ## Prerequisites
 
 {% include templates/install/aws/eks-prerequisites.md %}
 
-### Pull ThingsBoard PE images from docker hub
+### Pull SENTIENT Professional Edition images from docker hub
 
 {% include templates/install/dockerhub/checkout.md %}
 
-## Step 1. Clone ThingsBoard PE K8S scripts repository
+## Step 1. Clone SENTIENT Professional Edition K8S scripts repository
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-pe-k8s.git --depth 1
-cd thingsboard-pe-k8s/aws/microservices
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-pe-k8s.git --depth 1
+cd sentient-pe-k8s/aws/microservices
 ```
 {: .copy-code}
 
@@ -145,8 +145,8 @@ Recommended CPU/memory resources allocation:
 - TB Web UI: 0.3 CPU / 0.5Gi memory
 - JS Executor: 0.1 CPU / 0.3Gi memory
 - Zookeeper: 0.3 CPU / 1Gi memory
-- Trendz (Optional): 2 CPU / 4Gi memory
-- Trendz Python Executor (Optional): 1 CPU / 4Gi memory
+- SENTIENT ANALYTICS (Optional): 2 CPU / 4Gi memory
+- SENTIENT ANALYTICS Python Executor (Optional): 1 CPU / 4Gi memory
 
 ## Step 10. Installation
 
@@ -154,7 +154,7 @@ Recommended CPU/memory resources allocation:
 
 ## Step 11. Starting
 
-Execute the following command to deploy ThingsBoard services:
+Execute the following command to deploy SENTIENT services:
 
 ```
  ./k8s-deploy-resources.sh
@@ -191,19 +191,19 @@ Every pod should be in the `READY` state.
 
 {% include templates/install/k8s-configure-edge-load-balancer.md %}
 
-## Step 13. Configure Trendz (Optional)
+## Step 13. Configure SENTIENT ANALYTICS (Optional)
 
-### 13.1. Pull Trendz images from docker hub
+### 13.1. Pull SENTIENT ANALYTICS images from docker hub
 
-{% include templates/install/trendz/pull_trendz.md %}
+{% include templates/install/sentient-analytics/pull_sentient-analytics.md %}
 
-### 13.2. Create a Trendz database in the existing RDS instance
+### 13.2. Create a SENTIENT ANALYTICS database in the existing RDS instance
 
-{% include templates/install/trendz/eks/k8s-trendz-db-creating.md %}
+{% include templates/install/sentient-analytics/eks/k8s-sentient-analytics-db-creating.md %}
 
-### 13.3. Trendz starting
+### 13.3. SENTIENT ANALYTICS starting
 
-{% include templates/install/trendz/k8s-trendz-starting.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-starting.md %}
 
 ## Step 14. Validate the setup
 
@@ -211,13 +211,13 @@ Every pod should be in the `READY` state.
 
 ## Upgrading
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
 {% include templates/install/aws/eks-upgrading.md %}
 
-### Upgrading to new Trendz version (Optional)
+### Upgrading to new SENTIENT ANALYTICS version (Optional)
 
-{% include templates/install/trendz/k8s-trendz-upgrading.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-upgrading.md %}
 
 {% include templates/install/aws/eks-deletion.md %}
 

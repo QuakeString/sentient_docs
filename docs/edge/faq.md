@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Frequently Asked Questions
-description: ThingsBoard Edge FAQs
+description: SENTIENT GATEWAY FAQs
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Customize ThingsBoard PE Mobile Application
+title: Customize SENTIENT Professional Edition Mobile Application
 
 ---
 

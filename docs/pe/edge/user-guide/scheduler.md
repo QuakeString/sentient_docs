@@ -6,7 +6,7 @@ description: Edge Scheduler
 createSchedulerEvent:
   0:
     image: /images/pe/edge/user-guide/scheduler/1-scheduler.webp
-    title: 'Log in to the <b>ThingsBoard Platform</b> and go to the <b>Advanced features > Scheduler</b> section.'
+    title: 'Log in to the <b>SENTIENT Platform</b> and go to the <b>Advanced features > Scheduler</b> section.'
   1:
     image: /images/pe/edge/user-guide/scheduler/2-create-event.webp
     title: 'Click the <b>"+"</b> button, and fill in the fields in the pop-up window. For detailed instructions on how to configure a Scheduler event, see the  <a href="/docs/pe/user-guide/scheduler/#scheduler-event-dialog" target="_blank">Scheduler Event dialog documentation.</a>'
@@ -18,12 +18,12 @@ createSchedulerEvent:
     title: 'On the <b>Edge Scheduler Events</b> page, click the <b>"+"</b> button and assign the event(s) to the <b>Edge</b> instance in the pop-up window.'
   4:
     image: /images/pe/edge/user-guide/scheduler/5-see-on-edge.webp
-    title: 'To confirm that the <b>scheduler event</b> has been successfully assigned, log in to the <b>ThingsBoard Edge</b> and go the <b>Advanced features > Scheduler</b> section.'
+    title: 'To confirm that the <b>scheduler event</b> has been successfully assigned, log in to the <b>SENTIENT GATEWAY</b> and go the <b>Advanced features > Scheduler</b> section.'
 
 installTemplate:
   0:
     image: /images/pe/edge/user-guide/scheduler/install-template.webp
-    title: 'Log in to the <b>ThingsBoard Platform</b> and go to the <b>Solution templates</b> section. Click the <b>"Install"</b> button.'
+    title: 'Log in to the <b>SENTIENT Platform</b> and go to the <b>Solution templates</b> section. Click the <b>"Install"</b> button.'
     
 remoteFarmR1:
   0:
@@ -48,7 +48,7 @@ schedulerParameters:
     title: 'The <b>"Schedule"</b> tab displays event schedule configuration.'    
   5:
     image: /images/pe/edge/user-guide/scheduler/assigned-events-on-edge.webp
-    title: 'To confirm that <b>scheduler events</b> are assigned, log in to the <b>ThingsBoard Edge</b> and go to the <b>Advanced features > Scheduler</b> section.'
+    title: 'To confirm that <b>scheduler events</b> are assigned, log in to the <b>SENTIENT GATEWAY</b> and go to the <b>Advanced features > Scheduler</b> section.'
 
 ruleChainParameters:
   0:

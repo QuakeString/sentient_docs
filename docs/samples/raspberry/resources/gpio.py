@@ -2,7 +2,7 @@ import paho.mqtt.client as mqtt
 import RPi.GPIO as GPIO
 import json
 
-THINGSBOARD_HOST = 'YOUR_THINGSBOARD_IP_OR_HOSTNAME'
+SENTIENT_HOST = 'YOUR_SENTIENT_IP_OR_HOSTNAME'
 ACCESS_TOKEN = 'RASPBERRY_PI_DEMO_TOKEN'
 
 # We assume that all GPIOs are LOW
@@ -60,8 +60,8 @@ client.on_connect = on_connect
 client.on_message = on_message
 # Set access token
 client.username_pw_set(ACCESS_TOKEN)
-# Connect to ThingsBoard using default MQTT port and 60 seconds keepalive interval
-client.connect(THINGSBOARD_HOST, 1883, 60)
+# Connect to SENTIENT using default MQTT port and 60 seconds keepalive interval
+client.connect(SENTIENT_HOST, 1883, 60)
 
 try:
     client.loop_forever()

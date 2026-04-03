@@ -3,14 +3,14 @@
 
 ## Overview
 
-The ThingsBoard MCP Server provides a **natural language interface** for LLMs and AI agents to interact with your ThingsBoard IoT platform.
+The SENTIENT MCP Server provides a **natural language interface** for LLMs and AI agents to interact with your SENTIENT IoT platform.
 
-This server implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro){: target="_blank"}, which enables AI systems to access and manipulate data in ThingsBoard through natural language commands. With this integration, you can:
+This server implements the [Model Context Protocol (MCP)](https://modelcontextprotocol.io/docs/getting-started/intro){: target="_blank"}, which enables AI systems to access and manipulate data in SENTIENT through natural language commands. With this integration, you can:
 
 - Query entities (device, asset, customer, etc.) data and telemetry using conversational language
 - Manage entities through AI assistants
 - Analyze IoT data and create reports using AI tools
-- Automate ThingsBoard operations through AI-powered workflows
+- Automate SENTIENT operations through AI-powered workflows
 
 The server integrates seamlessly with MCP clients such as Claude Desktop, Cursor, and other AI applications that support the MCP protocol.
 
@@ -19,29 +19,29 @@ The server integrates seamlessly with MCP clients such as Claude Desktop, Cursor
 Before you begin, ensure you have the following:
 
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-- **ThingsBoard instance**:
-    - **Local/On-premise instance**: Self-hosted ThingsBoard installation on your own [infrastructure](/docs/{{docsPrefix}}user-guide/install/installation-options/){: target="_blank"}, or
+- **SENTIENT instance**:
+    - **Local/On-premise instance**: Self-hosted SENTIENT installation on your own [infrastructure](/docs/{{docsPrefix}}user-guide/install/installation-options/){: target="_blank"}, or
 {% endif %}
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-    - **ThingsBoard Cloud**: Fully managed cloud service available at [ThingsBoard Cloud](https://thingsboard.io/installations/){: target="_blank"}
+    - **SENTIENT Cloud**: Fully managed cloud service available at [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){: target="_blank"}
 {% endif %}
 {% if docsPrefix == "paas/" %}
-- **ThingsBoard Cloud**: Fully managed cloud service available at [thingsboard.cloud](https://thingsboard.cloud/signup){: target="_blank"}
+- **SENTIENT Cloud**: Fully managed cloud service available at [sentient.cloud](https://sentient.cloud/signup){: target="_blank"}
 {% endif %}
 {% if docsPrefix == "paas/eu/" %}
-- **EU ThingsBoard Cloud**: Fully managed cloud service available at [eu.thingsboard.cloud](https://eu.thingsboard.cloud/signup){: target="_blank"}
+- **EU SENTIENT Cloud**: Fully managed cloud service available at [eu.sentient.cloud](https://eu.sentient.cloud/signup){: target="_blank"}
 {% endif %}
 {% if docsPrefix contains "edge/" %}
-- **ThingsBoard Edge instance** [up and running](/docs/user-guide/install/{{docsPrefix}}installation-options/){: target="_blank"}
+- **SENTIENT GATEWAY instance** [up and running](/docs/user-guide/install/{{docsPrefix}}installation-options/){: target="_blank"}
 {% endif %}
-- **Authentication credentials** - Valid username and password with appropriate permissions on the ThingsBoard instance
+- **Authentication credentials** - Valid username and password with appropriate permissions on the SENTIENT instance
 
-Write down your ThingsBoard URL, username and password - we will use them as **your_thingsboard_url**, **your_username** and **your_password** in the next steps.
+Write down your SENTIENT URL, username and password - we will use them as **your_sentient_url**, **your_username** and **your_password** in the next steps.
 
 ## Quick Start Guide
 
-1. **Configure your MCP client**: Add the ThingsBoard MCP server to your client configuration (see [Client Configuration](#client-configuration))
-2. **Start using natural language**: Begin interacting with your ThingsBoard instance through your MCP client
+1. **Configure your MCP client**: Add the SENTIENT MCP server to your client configuration (see [Client Configuration](#client-configuration))
+2. **Start using natural language**: Begin interacting with your SENTIENT instance through your MCP client
 
 ## Features
 
@@ -76,20 +76,20 @@ Fetch alarms, alarm types, and severity information for specific entities.
 ## Installation
 
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix contains "paas/" %}
-This MCP server works with ThingsBoard IoT Platform. You'll need your ThingsBoard instance URL and valid credentials for the installation.
+This MCP server works with SENTIENT IoT Platform. You'll need your SENTIENT instance URL and valid credentials for the installation.
 {% endif %}
 {% if docsPrefix contains "edge/" %}
-This MCP server works with ThingsBoard Edge. You'll need your ThingsBoard Edge instance URL and valid credentials for the installation.
+This MCP server works with SENTIENT GATEWAY. You'll need your SENTIENT GATEWAY instance URL and valid credentials for the installation.
 {% endif %}
 
-### ThingsBoard Account
+### SENTIENT Account
 
 Before installing the MCP server, ensure you have:
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix contains "paas/" %}
-* Access to a ThingsBoard instance
+* Access to a SENTIENT instance
 {% endif %}
 {% if docsPrefix contains "edge/" %}
-* Access to a ThingsBoard Edge instance
+* Access to a SENTIENT GATEWAY instance
 {% endif %}
 * A user account with sufficient permissions
 * The username and password for this account
@@ -100,7 +100,7 @@ The easiest way to get started is with the pre-built Docker image from Docker Hu
 
 #### Server Modes
 
-The ThingsBoard MCP Server can run in two different modes:
+The SENTIENT MCP Server can run in two different modes:
 
 - **STDIO Mode (Standard Input/Output)**: The server communicates directly through standard input/output streams
 - **SSE Mode (Server-Sent Events)**: The server runs as an HTTP server that clients connect to
@@ -110,8 +110,8 @@ The ThingsBoard MCP Server can run in two different modes:
 For STDIO Mode, you must include the `-i` flag to keep stdin open:
 
 ```bash
-docker pull thingsboard/mcp
-docker run --rm -i -e THINGSBOARD_URL=<your_thingsboard_url> -e THINGSBOARD_USERNAME=<your_username> -e THINGSBOARD_PASSWORD=<your_password> thingsboard/mcp
+docker pull sentient/mcp
+docker run --rm -i -e SENTIENT_URL=<your_sentient_url> -e SENTIENT_USERNAME=<your_username> -e SENTIENT_PASSWORD=<your_password> sentient/mcp
 ```
 {: .copy-code}
 
@@ -120,14 +120,14 @@ docker run --rm -i -e THINGSBOARD_URL=<your_thingsboard_url> -e THINGSBOARD_USER
 In SSE Mode, you must expose port 8000 using the `-p` flag and explicitly override the default settings :
 
 ```bash
-docker pull thingsboard/mcp
-docker run --rm -p 8000:8000 -e THINGSBOARD_URL=<your_thingsboard_url> -e THINGSBOARD_USERNAME=<your_username> -e THINGSBOARD_PASSWORD=<your_password> -e SPRING_AI_MCP_SERVER_STDIO=false -e SPRING_WEB_APPLICATION_TYPE=servlet thingsboard/mcp
+docker pull sentient/mcp
+docker run --rm -p 8000:8000 -e SENTIENT_URL=<your_sentient_url> -e SENTIENT_USERNAME=<your_username> -e SENTIENT_PASSWORD=<your_password> -e SPRING_AI_MCP_SERVER_STDIO=false -e SPRING_WEB_APPLICATION_TYPE=servlet sentient/mcp
 ```
 {: .copy-code}
 
 ### Build from Sources
 
-You can also build the JAR file from sources and run the ThingsBoard MCP Server directly.
+You can also build the JAR file from sources and run the SENTIENT MCP Server directly.
 
 #### Prerequisites
 
@@ -136,7 +136,7 @@ You can also build the JAR file from sources and run the ThingsBoard MCP Server 
 
 #### Build Steps
 
-* Clone the [repository](https://github.com/thingsboard/thingsboard-mcp){: target="_blank"}
+* Clone the [repository](https://github.com/sentient/sentient-mcp){: target="_blank"}
 * Build the project:
 
 ```bash
@@ -147,20 +147,20 @@ mvn clean install -DskipTests
 * The JAR file will be available in the target folder:
 
 ```bash
-./target/thingsboard-mcp-server-1.0.0.jar
+./target/sentient-mcp-server-1.0.0.jar
 ```
 
 * Run the server using the JAR file:
 
 ```bash
 # For STDIO Mode
-java -jar ./target/thingsboard-mcp-server-1.0.0.jar
+java -jar ./target/sentient-mcp-server-1.0.0.jar
 ```
 {: .copy-code}
 
 ```bash
 # For SSE Mode
-java -Dspring.ai.mcp.server.stdio=false Dspring.main.web-application-type=servlet -jar ./target/thingsboard-mcp-server-1.0.0.jar
+java -Dspring.ai.mcp.server.stdio=false Dspring.main.web-application-type=servlet -jar ./target/sentient-mcp-server-1.0.0.jar
 ```
 {: .copy-code}
 
@@ -175,26 +175,26 @@ If you're using the Docker image, use this configuration in your `claude_desktop
 ```json
 {
   "mcpServers": {
-    "thingsboard": {
+    "sentient": {
       "command": "docker",
       "args": [
         "run",
         "-i",
         "--rm",
         "-e",
-        "THINGSBOARD_URL",
+        "SENTIENT_URL",
         "-e",
-        "THINGSBOARD_USERNAME",
+        "SENTIENT_USERNAME",
         "-e",
-        "THINGSBOARD_PASSWORD",
+        "SENTIENT_PASSWORD",
         "-e",
         "LOGGING_PATTERN_CONSOLE",
-        "thingsboard/mcp"
+        "sentient/mcp"
       ],
       "env": {
-        "THINGSBOARD_URL": "<thingsboard_url>",
-        "THINGSBOARD_USERNAME": "<thingsboard_username>",
-        "THINGSBOARD_PASSWORD": "<thingsboard_password>",
+        "SENTIENT_URL": "<sentient_url>",
+        "SENTIENT_USERNAME": "<sentient_username>",
+        "SENTIENT_PASSWORD": "<sentient_password>",
         "LOGGING_PATTERN_CONSOLE": ""
       }
     }
@@ -209,16 +209,16 @@ If you've built the JAR file from sources, use this configuration in your `claud
 ```json
 {
   "mcpServers": {
-    "thingsboard": {
+    "sentient": {
       "command": "java",
       "args": [
         "-jar",
-        "/absolute/path/to/thingsboard-mcp-server-1.0.0.jar"
+        "/absolute/path/to/sentient-mcp-server-1.0.0.jar"
       ],
       "env": {
-        "THINGSBOARD_URL": "<thingsboard_url>",
-        "THINGSBOARD_USERNAME": "<thingsboard_username>",
-        "THINGSBOARD_PASSWORD": "<thingsboard_password>",
+        "SENTIENT_URL": "<sentient_url>",
+        "SENTIENT_USERNAME": "<sentient_username>",
+        "SENTIENT_PASSWORD": "<sentient_password>",
         "LOGGING_PATTERN_CONSOLE": ""
       }
     }
@@ -228,14 +228,14 @@ If you've built the JAR file from sources, use this configuration in your `claud
 
 ## Environment Variables
 
-The MCP server requires the following environment variables to connect to your ThingsBoard instance:
+The MCP server requires the following environment variables to connect to your SENTIENT instance:
 
 | Variable | Description                                    | Default |
 |----------|------------------------------------------------|---------|
-| `THINGSBOARD_URL` | The base URL of your ThingsBoard instance      | |
-| `THINGSBOARD_USERNAME` | Username used to authenticate with ThingsBoard | |
-| `THINGSBOARD_PASSWORD` | Password used to authenticate with ThingsBoard | |
-| `THINGSBOARD_LOGIN_INTERVAL_SECONDS` | Login session refresh interval in seconds      | 1800 |
+| `SENTIENT_URL` | The base URL of your SENTIENT instance      | |
+| `SENTIENT_USERNAME` | Username used to authenticate with SENTIENT | |
+| `SENTIENT_PASSWORD` | Password used to authenticate with SENTIENT | |
+| `SENTIENT_LOGIN_INTERVAL_SECONDS` | Login session refresh interval in seconds      | 1800 |
 | `SPRING_WEB_APPLICATION_TYPE` | Spring application type (none or servlet)     | none |
 | `SPRING_AI_MCP_SERVER_STDIO` | Enable/disable standard I/O communication      | true |
 | `SPRING_AI_MCP_SERVER_SSE_ENDPOINT` | Server-Sent Events (SSE) endpoint URL          | /sse |
@@ -248,7 +248,7 @@ These variables can be set either:
 
 ## Available Tools
 
-The ThingsBoard MCP Server provides a wide range of tools that can be used through natural language commands. These tools are organized by category.
+The SENTIENT MCP Server provides a wide range of tools that can be used through natural language commands. These tools are organized by category.
 
 ### Device Tools
 

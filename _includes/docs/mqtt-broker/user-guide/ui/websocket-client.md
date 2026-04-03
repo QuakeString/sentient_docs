@@ -1,11 +1,11 @@
 * TOC
 {:toc}
 
-The TBMQ WebSocket Client is a browser-accessible tool aimed at simplifying the debugging process and testing of MQTT clients across various scenarios. 
+The ST-RMQTT WebSocket Client is a browser-accessible tool aimed at simplifying the debugging process and testing of MQTT clients across various scenarios. 
 Leveraging the [MQTT over WebSocket](/docs/{{docsPrefix}}mqtt-broker/user-guide/mqtt-over-ws/) feature, it's designed with principles of simplicity and ease of use in mind.
 It offers seamless management of MQTT clients, subscription to topics, and message reception or publication.
 
-TBMQ WebSocket Client utilizes the [MQTT.js](https://github.com/mqttjs/MQTT.js) library for communication between client and broker.
+ST-RMQTT WebSocket Client utilizes the [MQTT.js](https://github.com/mqttjs/MQTT.js) library for communication between client and broker.
 
 {% if docsPrefix == "pe/" %}
 ![image](/images/pe/mqtt-broker/user-guide/ui/ws-overview.png)
@@ -15,7 +15,7 @@ TBMQ WebSocket Client utilizes the [MQTT.js](https://github.com/mqttjs/MQTT.js) 
 
 ## Connections
 
-TBMQ WebSocket Client allows managing multiple MQTT client connections simultaneously.
+ST-RMQTT WebSocket Client allows managing multiple MQTT client connections simultaneously.
 It provides an interface where you can conveniently initiate, monitor and terminate multiple MQTT clients.
 
 ### Add connection
@@ -29,10 +29,10 @@ To add a new Connection, please follow these steps:
 
 ### Edit connection
 
-TBMQ enables modification of WebSocket Client connection parameters even after the connection has been established.
+ST-RMQTT enables modification of WebSocket Client connection parameters even after the connection has been established.
 It is important to understand that changes made to the connection parameters will have immediate effect.
 
-If the client is connected at the time of modifications, TBMQ will gracefully disconnect the current session first. After it will initiate a new session with the updated settings.
+If the client is connected at the time of modifications, ST-RMQTT will gracefully disconnect the current session first. After it will initiate a new session with the updated settings.
 This ensures that the changes you make are applied instantly, providing seamless adaptability while maintaining the integrity of the client's ongoing activities.
 
 In order to modify your WebSocket Client connection, please follow these steps:
@@ -59,7 +59,7 @@ WebSocket connections allow users to establish and configure various parameters,
 * **Name**. Name of the WebSocket Client connection, must be unique.
 * **URL**. Typically, contains the protocol (e.g., 'ws', 'wss'), followed by the hostname and port number of your MQTT broker. 
 /mqtt is standard path that should be used for MQTT over Websockets. Example: 'ws://localhost:8084/mqtt'.
-* **Authentication**. TBMQ allows to create websocket connection with different types of handling credentials details like clientID (required), username, password:
+* **Authentication**. ST-RMQTT allows to create websocket connection with different types of handling credentials details like clientID (required), username, password:
   * **Auto-generated credentials**. Credentials with random Client ID, random Username and empty Password. Please note that corresponding Credentials will be created.
   * **Custom authentication**. Credentials with custom Client ID, Username, Password.
   * **Use existing credentials**. User selects existing credentials of the [Basic](/docs/{{docsPrefix}}mqtt-broker/security/#basic-authentication) type and, if required, input Password.
@@ -107,7 +107,7 @@ In case you select MQTT Version 5, please configure additional features:
 
 ### Connection status
 
-In TBMQ, we provide a feature to store the temporary logs of the WebSocket Client statuses for your convenience. This allows you to monitor and troubleshoot the behavior of your client connections more effectively.
+In ST-RMQTT, we provide a feature to store the temporary logs of the WebSocket Client statuses for your convenience. This allows you to monitor and troubleshoot the behavior of your client connections more effectively.
 To access these logs, simply hover your cursor over the current status label. This action brings up a detailed status update history, providing vital insight into the sequence of connection-related events.
 
 The status of the WebSocket Client may be one of the following:
@@ -140,7 +140,7 @@ In order to add Subscription please follow next steps:
 To modify a subscription, select the edit icon located in the respective row to open the dialog _Edit subscription_.
 After making necessary changes,  remember to confirm by clicking on the _Save_ button.
 
-Please note that if you modify an existing subscription while the client is connected, TBMQ will first unsubscribe from the existing topic before subscribing to the updated one. 
+Please note that if you modify an existing subscription while the client is connected, ST-RMQTT will first unsubscribe from the existing topic before subscribing to the updated one. 
 After successfully resubscribing, the client will begin receiving messages published to the new topic.
 
 {% include images-gallery.html imageCollection="ws-subscription-edit" %}
@@ -200,7 +200,7 @@ The table messages can be filtered by:
 ### Publish a message
 
 The WebSocket Client page includes a user-friendly interface features that allow users to publish messages using the WebSocket MQTT protocol.
-In order to successfully publish a message using TBMQ, please make sure that:
+In order to successfully publish a message using ST-RMQTT, please make sure that:
 * **Client is connected**.
 * **Topic is specified**. The topic might not be specified in case the Topic Alias feature is used.
 * **Message is valid**, if selected JSON format.

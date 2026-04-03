@@ -15,7 +15,7 @@
                             <label for="sm-devices" class="label">
                                 Number of Devices
                                 <span class="tooltip"><img src="/images/pricing/info-icon.svg" alt="Hint icon">
-                                    <span class="tooltip-text">The total number of IoT devices that will connect to ThingsBoard</span>
+                                    <span class="tooltip-text">The total number of IoT devices that will connect to SENTIENT</span>
                                 </span>
                             </label>
                             <input id="sm-devices" type="number" value="10" min="1" max="150000" class="input input-right" data-sm-input="devices">
@@ -104,18 +104,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="addon-card" data-sm-addon="trendzAnalytics" id="smTrendzCard">
-                                <div class="addon-badge hidden" id="smTrendzBadge">100% OFF</div>
+                            <div class="addon-card" data-sm-addon="sentient-analyticsAnalytics" id="smSENTIENT ANALYTICSCard">
+                                <div class="addon-badge hidden" id="smSENTIENT ANALYTICSBadge">100% OFF</div>
                                 <div class="addon-header">
                                     <span class="addon-title">
-                                        Trendz Analytics
+                                        SENTIENT ANALYTICS
                                         <span class="tooltip">
                                             <img src="/images/pricing/info-icon.svg" alt="Hint icon">
                                             <span class="tooltip-text">Advanced analytics and visualization for your IoT data</span>
                                         </span>
                                     </span>
                                     <label class="toggle-switch">
-                                        <input type="checkbox" id="smTrendzAnalyticsToggle" data-sm-addon-toggle="trendzAnalytics">
+                                        <input type="checkbox" id="smSENTIENT ANALYTICSAnalyticsToggle" data-sm-addon-toggle="sentient-analyticsAnalytics">
                                         <span class="slider round"></span>
                                     </label>
                                 </div>
@@ -187,7 +187,7 @@
         devInstances: 0,
         addons: {
             edge: { enabled: false, count: 1 },
-            trendz: { enabled: false },
+            sentient-analytics: { enabled: false },
             mobile: { enabled: false }
         }
     };
@@ -217,17 +217,17 @@
         },
         toggles: {
             edge: document.getElementById('smEdgeComputingToggle'),
-            trendz: document.getElementById('smTrendzAnalyticsToggle'),
+            sentient-analytics: document.getElementById('smSENTIENT ANALYTICSAnalyticsToggle'),
             mobile: document.getElementById('smMobileAppToggle')
         },
         cards: {
             edge: document.getElementById('smEdgeCard'),
-            trendz: document.getElementById('smTrendzCard'),
+            sentient-analytics: document.getElementById('smSENTIENT ANALYTICSCard'),
             mobile: document.getElementById('smMobileAppCard')
         },
         badges: {
             edge: document.getElementById('smEdgeBadge'),
-            trendz: document.getElementById('smTrendzBadge')
+            sentient-analytics: document.getElementById('smSENTIENT ANALYTICSBadge')
         },
         wrappers: {
             wlPrompt: document.getElementById('smWhiteLabelingPrompt'),
@@ -350,7 +350,7 @@
         };
 
         updateAddonState('edge', tbSmUi.cards.edge, tbSmUi.badges.edge, tbSmUi.toggles.edge, tbSmUi.steppers.edge, tbSmUi.desc.edge);
-        updateAddonState('trendz', tbSmUi.cards.trendz, tbSmUi.badges.trendz, tbSmUi.toggles.trendz);
+        updateAddonState('sentient-analytics', tbSmUi.cards.sentient-analytics, tbSmUi.badges.sentient-analytics, tbSmUi.toggles.sentient-analytics);
 
         if (isMaker) {
             tbSmUi.cards.mobile.classList.add('addon-disabled');
@@ -442,20 +442,20 @@
             }
         }
 
-        if (tbSmState.addons.trendz.enabled || isMaker) {
+        if (tbSmState.addons.sentient-analytics.enabled || isMaker) {
             if (isMaker) {
-                breakdown.trendz = { isFree: true, cost: 0, includedDevices: plan.includedDevices };
+                breakdown.sentient-analytics = { isFree: true, cost: 0, includedDevices: plan.includedDevices };
             } else {
-                const trendzExtraCost = (isBusiness && extraDevices > 0 && plan.trendzExtraDevicePrice) ? extraDevices * plan.trendzExtraDevicePrice : 0;
-                const trendzTotal = plan.trendzMonthPrice + trendzExtraCost;
-                totalPrice += trendzTotal;
-                breakdown.trendz = {
+                const sentient-analyticsExtraCost = (isBusiness && extraDevices > 0 && plan.sentient-analyticsExtraDevicePrice) ? extraDevices * plan.sentient-analyticsExtraDevicePrice : 0;
+                const sentient-analyticsTotal = plan.sentient-analyticsMonthPrice + sentient-analyticsExtraCost;
+                totalPrice += sentient-analyticsTotal;
+                breakdown.sentient-analytics = {
                     isFree: false,
-                    base: plan.trendzMonthPrice,
+                    base: plan.sentient-analyticsMonthPrice,
                     includedDevices: plan.includedDevices,
                     extra: extraDevices,
-                    extraCost: trendzExtraCost,
-                    cost: trendzTotal
+                    extraCost: sentient-analyticsExtraCost,
+                    cost: sentient-analyticsTotal
                 };
             }
         }
@@ -482,14 +482,14 @@
         msg += `- Prod Instances: ${formatNumber(tbSmState.prodInstances)}\n`;
         msg += `- Development Instances: ${formatNumber(tbSmState.devInstances)}\n`;
 
-        const hasAddons = tbSmState.addons.edge.enabled || tbSmState.addons.trendz.enabled || tbSmState.addons.mobile.enabled;
+        const hasAddons = tbSmState.addons.edge.enabled || tbSmState.addons.sentient-analytics.enabled || tbSmState.addons.mobile.enabled;
         if (hasAddons) {
             msg += `\nAdd-ons:\n`;
             if (tbSmState.addons.edge.enabled) {
                 msg += `- Edge Computing: ${tbSmState.addons.edge.count} instance(s)\n`;
             }
-            if (tbSmState.addons.trendz.enabled) {
-                msg += `- Trendz Analytics: Enabled\n`;
+            if (tbSmState.addons.sentient-analytics.enabled) {
+                msg += `- SENTIENT ANALYTICS: Enabled\n`;
             }
             if (tbSmState.addons.mobile.enabled) {
                 msg += `- White-labeled Mobile App: Enabled\n`;
@@ -525,7 +525,7 @@
 
         const contactBtn = document.getElementById('smContactUs');
         if (contactBtn) {
-            const subject = 'ThingsBoard Products';
+            const subject = 'SENTIENT Products';
             contactBtn.href = `/docs/contact-us/?subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(msg)}`;
         }
 
@@ -571,7 +571,7 @@
         if (extraProdCost) tooltips.push(`${formatCurrency(extraProdCost)} (extra prod)`);
         if (devCost) tooltips.push(`${formatCurrency(devCost)} (dev)`);
         if (breakdown.edge?.cost) tooltips.push(`${formatCurrency(breakdown.edge.cost)} (Edge)`);
-        if (breakdown.trendz?.cost) tooltips.push(`${formatCurrency(breakdown.trendz.cost)} (Trendz)`);
+        if (breakdown.sentient-analytics?.cost) tooltips.push(`${formatCurrency(breakdown.sentient-analytics.cost)} (SENTIENT ANALYTICS)`);
         if (breakdown.mobile) tooltips.push(`${formatCurrency(breakdown.mobile.cost)} (Mobile)`);
 
         tbSmUi.results.innerHTML = `
@@ -603,7 +603,7 @@
                 </div>
                 <a id="smGetStarted" href="javascript:;" class="button" onClick="getLicense(event, '${plan.productId}', '${plan.planId}',
                 '${plan.name}', null, '${extraDevices}', null, null, '${extraProd}', '${tbSmState.devInstances}', '${tbSmState.addons.edge.enabled}',
-                '${tbSmState.addons.edge.extraEdgeCalc}', '${tbSmState.addons.trendz.enabled}')">Get started</a>
+                '${tbSmState.addons.edge.extraEdgeCalc}', '${tbSmState.addons.sentient-analytics.enabled}')">Get started</a>
             </div>`;
 
         tbSmInitExpandable();
@@ -627,7 +627,7 @@
             </div>`;
 
         const addButton = (id, cost) => {
-            const title = id === 'edgeComputing' ? 'Edge Computing' : id === 'trendzAnalytics' ? 'Trendz Analytics' : 'White-labeled Mobile App';
+            const title = id === 'edgeComputing' ? 'Edge Computing' : id === 'sentient-analyticsAnalytics' ? 'SENTIENT ANALYTICS' : 'White-labeled Mobile App';
             const isMobile = id === 'mobileApp';
             return `
             <div class="results-section inactive">
@@ -657,23 +657,23 @@
             html += addButton('edgeComputing', plan.edgeMonthPrice);
         }
 
-        if (tbSmState.addons.trendz.enabled && breakdown.trendz) {
-            const trendz = breakdown.trendz;
-            if (trendz.isFree) {
-                html += section('trendzAnalytics', 'Trendz Analytics', `<span class="section-value strikethrough">${formatCurrency(12)}<span class="tooltip">${infoIcon}<span class="tooltip-text">Free with Maker</span></span></span>`, true, `<div class="section-content">${tbSmCreateItem('Included Devices', plan.includedDevices)}</div>`);
+        if (tbSmState.addons.sentient-analytics.enabled && breakdown.sentient-analytics) {
+            const sentient-analytics = breakdown.sentient-analytics;
+            if (sentient-analytics.isFree) {
+                html += section('sentient-analyticsAnalytics', 'SENTIENT ANALYTICS', `<span class="section-value strikethrough">${formatCurrency(12)}<span class="tooltip">${infoIcon}<span class="tooltip-text">Free with Maker</span></span></span>`, true, `<div class="section-content">${tbSmCreateItem('Included Devices', plan.includedDevices)}</div>`);
             } else {
                 let content = `<div class="section-content">`;
-                content += tbSmCreateItem('Included Devices', formatNumber(trendz.includedDevices));
-                content += tbSmCreateItem('Add-on Base Price', formatCurrency(trendz.base), 'Monthly Trendz Analytics fee');
-                if (trendz.extra > 0) {
-                    content += tbSmCreateItem('Extra Devices', formatNumber(trendz.extra), 'Devices beyond included');
-                    content += tbSmCreateItem('Extra Devices Cost', formatCurrency(trendz.extraCost), `${formatNumber(trendz.extra)} × ${formatCurrency(plan.trendzExtraDevicePrice)}`);
+                content += tbSmCreateItem('Included Devices', formatNumber(sentient-analytics.includedDevices));
+                content += tbSmCreateItem('Add-on Base Price', formatCurrency(sentient-analytics.base), 'Monthly SENTIENT ANALYTICS fee');
+                if (sentient-analytics.extra > 0) {
+                    content += tbSmCreateItem('Extra Devices', formatNumber(sentient-analytics.extra), 'Devices beyond included');
+                    content += tbSmCreateItem('Extra Devices Cost', formatCurrency(sentient-analytics.extraCost), `${formatNumber(sentient-analytics.extra)} × ${formatCurrency(plan.sentient-analyticsExtraDevicePrice)}`);
                 }
                 content += '</div>';
-                html += section('trendzAnalytics', 'Trendz Analytics', `<span class="section-value">${formatCurrency(trendz.cost)}<span class="tooltip">${infoIcon}<span class="tooltip-text">Total Trendz Analytics cost</span></span></span>`, true, content);
+                html += section('sentient-analyticsAnalytics', 'SENTIENT ANALYTICS', `<span class="section-value">${formatCurrency(sentient-analytics.cost)}<span class="tooltip">${infoIcon}<span class="tooltip-text">Total SENTIENT ANALYTICS cost</span></span></span>`, true, content);
             }
         } else if (!isMaker) {
-            html += addButton('trendzAnalytics', plan.trendzMonthPrice);
+            html += addButton('sentient-analyticsAnalytics', plan.sentient-analyticsMonthPrice);
         }
 
         if (tbSmState.addons.mobile.enabled && breakdown.mobile) {
@@ -698,7 +698,7 @@
         tbSmUi.results.querySelectorAll('.add-to-plan-btn').forEach(btn => {
             btn.addEventListener('click', e => {
                 e.stopPropagation();
-                const key = btn.dataset.smAddon === 'edgeComputing' ? 'edge' : btn.dataset.smAddon === 'trendzAnalytics' ? 'trendz' : 'mobile';
+                const key = btn.dataset.smAddon === 'edgeComputing' ? 'edge' : btn.dataset.smAddon === 'sentient-analyticsAnalytics' ? 'sentient-analytics' : 'mobile';
                 tbSmUi.toggles[key].checked = true;
                 tbSmToggleAddon(key, true);
             });
@@ -713,7 +713,7 @@
         if (Object.keys(breakdown).length) {
             msg += '\nAdd-ons:\n';
             if (breakdown.edge) msg += breakdown.edge.isFree ? '- Edge: FREE\n' : `- Edge: ${formatCurrency(breakdown.edge.cost)} (Total: ${breakdown.edge.total})\n`;
-            if (breakdown.trendz) msg += breakdown.trendz.isFree ? '- Trendz: FREE\n' : `- Trendz: ${formatCurrency(breakdown.trendz.cost)}\n`;
+            if (breakdown.sentient-analytics) msg += breakdown.sentient-analytics.isFree ? '- SENTIENT ANALYTICS: FREE\n' : `- SENTIENT ANALYTICS: ${formatCurrency(breakdown.sentient-analytics.cost)}\n`;
             if (breakdown.mobile) msg += `- Mobile App: ${formatCurrency(breakdown.mobile.cost)}\n`;
         }
         tbSmState.clipboardMessage = msg + `\nTotal: ${formatCurrency(totalPrice)}`;
@@ -729,7 +729,7 @@
                 sm_calculator_prod: tbSmState.prodInstances,
                 sm_calculator_dev: tbSmState.devInstances,
                 sm_calculator_addon_edge: tbSmState.addons.edge.enabled,
-                sm_calculator_addon_trendz: tbSmState.addons.trendz.enabled
+                sm_calculator_addon_sentient-analytics: tbSmState.addons.sentient-analytics.enabled
             });
         }, 3000);
     };
@@ -757,7 +757,7 @@
                 devInstances: 0,
                 addons: {
                     edge: { enabled: false, count: 1 },
-                    trendz: { enabled: false },
+                    sentient-analytics: { enabled: false },
                     mobile: { enabled: false }
                 }
             };
@@ -767,7 +767,7 @@
             tbSmUi.inputs.dev.value = 0;
             tbSmUi.inputs.edge.value = 1;
             tbSmUi.toggles.edge.checked = false;
-            tbSmUi.toggles.trendz.checked = false;
+            tbSmUi.toggles.sentient-analytics.checked = false;
             tbSmUi.toggles.mobile.checked = false;
             sliderProgress(tbSmUi.inputs.slider);
             tbSmCalculate();
@@ -844,7 +844,7 @@
 
         tbSmUi.wrappers.chooseProto.addEventListener('click', () => onDevicesChange(100));
 
-        ['edge', 'trendz', 'mobile'].forEach(key => {
+        ['edge', 'sentient-analytics', 'mobile'].forEach(key => {
             tbSmUi.toggles[key].addEventListener('change', e => !e.target.disabled && tbSmToggleAddon(key, e.target.checked));
         });
 

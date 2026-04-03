@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: Native Calculation Fields
 description: Native Calculation Fields
 ---
@@ -20,7 +20,7 @@ The only rule is the required output format. The code must return an array of ti
 [{"ts": <ts>, "value": <value>}]
 ```
 
-This timeseries could be saved to ThingsBoard when a reprocess or refresh job is set up for the originator.
+This timeseries could be saved to SENTIENT when a reprocess or refresh job is set up for the originator.
 
 ## Parameters
 

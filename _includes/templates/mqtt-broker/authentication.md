@@ -9,7 +9,7 @@ To acquire the Access Token, you can execute the following command:
 curl --location --request POST 'http://localhost:8083/api/auth/login' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "username":"sysadmin@thingsboard.org",
+    "username":"sysadmin@sentient.org",
     "password":"sysadmin"
 }'
 ```
@@ -21,7 +21,7 @@ Moreover, ensure that port 8083 is accessible publicly to establish the necessar
 Additionally, remember to replace the "username" and "password" values in the command with the appropriate and valid credentials specific to your setup.
 
 Upon successful authorization, the response will include a valuable piece of information known as the **token**. 
-It is crucial to utilize this token for all subsequent administrative requests to TBMQ.
+It is crucial to utilize this token for all subsequent administrative requests to ST-RMQTT.
 To streamline the process, you can either assign the value of the token field to an environment variable named <i>ACCESS_TOKEN</i> 
 or directly replace occurrences of the <i>$ACCESS_TOKEN</i> string within the requests outlined in this tutorial.
 

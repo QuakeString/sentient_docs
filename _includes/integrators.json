@@ -28,7 +28,7 @@
     "country": ["Spain"],
     "name": "ACORDE",
     "contact": {
-      "href": "thingsboard@acorde.com"
+      "href": "sentient@acorde.com"
     },
     "site": {
       "href": "acorde.com",
@@ -355,7 +355,7 @@
       "href": "info@elbesoft-iot.com"
     },
     "site": {
-      "href": "elbesoft-iot.de/thingsboard",
+      "href": "elbesoft-iot.de/sentient",
       "target": "_blank"
     }
   },
@@ -796,7 +796,7 @@
     "country": ["Netherlands", "Belgium", "Luxembourg", "Germany"],
     "name": "REMATE",
     "contact": {
-      "href": "thingsboard@remate.nl"
+      "href": "sentient@remate.nl"
     },
     "site": {
       "href": "remate.nl",

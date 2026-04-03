@@ -15,7 +15,7 @@
           "layoutX": 336,
           "layoutY": 96
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "A1 Sensor emulator",
         "debugMode": false,
         "configuration": {
@@ -31,7 +31,7 @@
           "layoutX": 334,
           "layoutY": 205
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "A2 Sensor emulator",
         "debugMode": false,
         "configuration": {

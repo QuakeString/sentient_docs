@@ -1,17 +1,17 @@
 **MQTT** is a lightweight protocol commonly used for IoT communication. 
 
-To facilitate communication with **ThingsBoard Edge** using **MQTT**, we recommend installing the [MQTT Broker](/docs/{{peDocsPrefix}}reference/mqtt-api/?connectdevice=mqtt-linux#mqtt-connect){: target="_blank"}. This allows the device to **publish** telemetry or attribute messages and **subscribe** to topics for attribute updates.
+To facilitate communication with **SENTIENT GATEWAY** using **MQTT**, we recommend installing the [MQTT Broker](/docs/{{peDocsPrefix}}reference/mqtt-api/?connectdevice=mqtt-linux#mqtt-connect){: target="_blank"}. This allows the device to **publish** telemetry or attribute messages and **subscribe** to topics for attribute updates.
 
 #### Subscribe to the Changes in Shared Device Attributes
 
 To subscribe to shared device attribute changes, send the SUBSCRIBE message:
 ```bash
-mosquitto_sub -d -h $THINGSBOARD_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN"
+mosquitto_sub -d -h $SENTIENT_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN"
 ```
 {: .copy-code}
 
-* **v1/devices/me/attributes:** This is a topic on ThingsBoard Edge. It allows the device to listen for any updates related to its attributes from the cloud.
-* Replace the **$THINGSBOARD_HOST_NAME** with the actual hostname or IP address of your ThingsBoard Edge instance. 
+* **v1/devices/me/attributes:** This is a topic on SENTIENT GATEWAY. It allows the device to listen for any updates related to its attributes from the cloud.
+* Replace the **$SENTIENT_HOST_NAME** with the actual hostname or IP address of your SENTIENT GATEWAY instance. 
     
 {% assign accessTokenPE = '
   ===
@@ -35,23 +35,23 @@ mosquitto_sub -d -h $THINGSBOARD_HOST_NAME -t "v1/devices/me/attributes" -u "$AC
 
 #### Publish Time-Series or Attribute Message.
 
-To publish client-side device attributes to the **ThingsBoard Edge**, send a PUBLISH message. 
+To publish client-side device attributes to the **SENTIENT GATEWAY**, send a PUBLISH message. 
 
 You can publish the telemetry data:
 
 ```bash
-mosquitto_pub -d -h $THINGSBOARD_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN" -m "{"attribute1": "value1", "attribute2": true}"
+mosquitto_pub -d -h $SENTIENT_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN" -m "{"attribute1": "value1", "attribute2": true}"
 ```
 {: .copy-code}
 
 * **v1/devices/me/attributes:** The topic to which the telemetry data is published.
-* **$THINGSBOARD_HOST_NAME:** The actual hostname or IP address of your ThingsBoard Edge instance
+* **$SENTIENT_HOST_NAME:** The actual hostname or IP address of your SENTIENT GATEWAY instance
 * **$ACCESS_TOKEN:** The actual access token of the device.
 * **{"attribute1": "value1", "attribute2": true}** The telemetry data.
 
 You can also publish client-side attributes update using data from [**new-attributes-values.json**](/docs/reference/resources/new-attributes-values.json){: target="_blank"} file:
 
 ```bash
-mosquitto_pub -d -h $THINGSBOARD_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN" -f "new-attributes-values.json"
+mosquitto_pub -d -h $SENTIENT_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN" -f "new-attributes-values.json"
 ```
 {: .copy-code}

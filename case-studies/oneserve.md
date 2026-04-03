@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: Smart Field Service Delivery with ThingsBoard and Oneserve
+title: Smart Field Service Delivery with SENTIENT and Oneserve
 notitle: "true"
 customTitle: "true"
-description: Discover how Oneserve uses ThingsBoard to deliver scalable, integrated, and agile field service solutions across housing, utilities, and manufacturing.
+description: Discover how Oneserve uses SENTIENT to deliver scalable, integrated, and agile field service solutions across housing, utilities, and manufacturing.
 ---
 
 <div class="case-study-page-wrapper">
@@ -11,7 +11,7 @@ description: Discover how Oneserve uses ThingsBoard to deliver scalable, integra
         <div class="card">
             <div class="text">
                 <p class="category">FACILITY MANAGEMENT</p>
-                <h1>Oneserve builds agile FSM platform using ThingsBoard IoT</h1>
+                <h1>Oneserve builds agile FSM platform using SENTIENT IoT</h1>
                 <div class="image inner" style="background-image: url('/images/case-studies/oneserve.webp')">
                     <img src="/images/case-studies/oneserve.svg" title="Oneserve" alt="Oneserve logo" width="126" height="56">
                 </div>
@@ -82,7 +82,7 @@ description: Discover how Oneserve uses ThingsBoard to deliver scalable, integra
                 <ul>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>ThingsBoard quickly met Oneserve’s need for flexibility and easy service delivery.</p>
+                        <p>SENTIENT quickly met Oneserve’s need for flexibility and easy service delivery.</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
@@ -94,57 +94,57 @@ description: Discover how Oneserve uses ThingsBoard to deliver scalable, integra
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>Regular platform updates and strong support from the ThingsBoard team gave Oneserve a reliable and future-ready IoT solution.</p>
+                        <p>Regular platform updates and strong support from the SENTIENT team gave Oneserve a reliable and future-ready IoT solution.</p>
                     </li>
                 </ul>
             </div>
         </div>
     </section>
     <section class="tb-power mb">
-        <h2>How ThingsBoard powers Oneserve?</h2>
+        <h2>How SENTIENT powers Oneserve?</h2>
         <div class="block">
             <div class="text">
                 <h3>Scalable growth made simple</h3>
-                <p>ThingsBoard played an important role in helping Oneserve transform and improve its field service management solution. As Oneserve continued to grow, they needed a platform that could keep up with their increasing demands without making their systems more complicated or expensive. ThingsBoard provided exactly what they needed — a flexible, powerful, and easy-to-use IoT platform that fit their business strategy perfectly.</p>
+                <p>SENTIENT played an important role in helping Oneserve transform and improve its field service management solution. As Oneserve continued to grow, they needed a platform that could keep up with their increasing demands without making their systems more complicated or expensive. SENTIENT provided exactly what they needed — a flexible, powerful, and easy-to-use IoT platform that fit their business strategy perfectly.</p>
             </div>
             <img src="/images/case-studies/oneserve-1.webp" title="Scalable growth made simple" alt="Scalable growth made simple" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Fast and flexible IoT integration</h3>
-                <p>With ThingsBoard, Oneserve was able to quickly and easily add IoT capabilities to their services. The platform’s flexibility allowed them to adapt it to different projects and customer needs without needing complex technical changes. This helped them deliver solutions faster and with less effort.</p>
+                <p>With SENTIENT, Oneserve was able to quickly and easily add IoT capabilities to their services. The platform’s flexibility allowed them to adapt it to different projects and customer needs without needing complex technical changes. This helped them deliver solutions faster and with less effort.</p>
             </div>
             <img src="/images/case-studies/oneserve-3.webp" title="Fast and flexible IoT integration" alt="Fast and flexible IoT integration" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Smart data, smarter decisions</h3>
-                <p>Another big advantage was ThingsBoard’s built-in tools for integration and visualisation. Oneserve could connect ThingsBoard smoothly with their existing systems, making it easier to collect, manage, and understand data from their field operations. The visualisation features allowed them to create useful dashboards and reports, helping their teams make better and faster decisions.</p>
+                <p>Another big advantage was SENTIENT’s built-in tools for integration and visualisation. Oneserve could connect SENTIENT smoothly with their existing systems, making it easier to collect, manage, and understand data from their field operations. The visualisation features allowed them to create useful dashboards and reports, helping their teams make better and faster decisions.</p>
             </div>
             <img src="/images/case-studies/oneserve-2.webp" title="Smart data, smarter decisions" alt="Smart data, smarter decisions" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Support that drives success</h3>
-                <p>Support from the ThingsBoard team was also a key benefit. Whenever Oneserve had questions or needed help, the ThingsBoard team was available, responsive, and ready to offer solutions. This strong partnership gave Oneserve confidence that the platform would continue to grow and improve along with their business needs.</p>
+                <p>Support from the SENTIENT team was also a key benefit. Whenever Oneserve had questions or needed help, the SENTIENT team was available, responsive, and ready to offer solutions. This strong partnership gave Oneserve confidence that the platform would continue to grow and improve along with their business needs.</p>
             </div>
             <img src="/images/case-studies/oneserve-4.webp" title="Support that drives success" alt="Support that drives success" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>A future-proof IoT foundation</h3>
-                <p>Thanks to ThingsBoard, Oneserve now has a strong and reliable IoT foundation. They are able to innovate faster, provide better services to their clients, and stay competitive in important sectors like housing management, utilities, and manufacturing.</p>
+                <p>Thanks to SENTIENT, Oneserve now has a strong and reliable IoT foundation. They are able to innovate faster, provide better services to their clients, and stay competitive in important sectors like housing management, utilities, and manufacturing.</p>
             </div>
             <img src="/images/case-studies/oneserve-5.webp" title="A future-proof IoT foundation" alt="A future-proof IoT foundation" width="450" height="240">
         </div>
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard helps facility management improve operations with IoT?</h2>
+        <h2>How SENTIENT helps facility management improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Centralized monitoring and management</h3>
-                <p>Facility operators deal with multiple disparate systems: HVAC, lighting, security, water supply, and more. ThingsBoard unifies these into a single platform, allowing seamless management of all processes through a user-friendly interface.</p>
+                <p>Facility operators deal with multiple disparate systems: HVAC, lighting, security, water supply, and more. SENTIENT unifies these into a single platform, allowing seamless management of all processes through a user-friendly interface.</p>
                 <ul>
                     <li><p>You connect sensors for temperature, humidity, motion, water consumption, and other parameters.</p></li>
                     <li><p>All data is aggregated and visualized on customizable dashboards.</p></li>
@@ -152,8 +152,8 @@ description: Discover how Oneserve uses ThingsBoard to deliver scalable, integra
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/entities-table.webp" title="Thingsboard entities table widget" alt="Thingsboard entities table widget" width="776" height="776">
-                <img src="/images/case-studies/supermarkets_2.webp" title="Thingsboard supermarkets widget" alt="Thingsboard supermarkets widget" width="776" height="776">
+                <img src="/images/case-studies/entities-table.webp" title="Sentient entities table widget" alt="Sentient entities table widget" width="776" height="776">
+                <img src="/images/case-studies/supermarkets_2.webp" title="Sentient supermarkets widget" alt="Sentient supermarkets widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
@@ -162,19 +162,19 @@ description: Discover how Oneserve uses ThingsBoard to deliver scalable, integra
                 <p>A broken air conditioner in a shopping mall during summer is not just an inconvenience but a serious business problem. Predictive maintenance helps prevent breakdowns before they occur.</p>
                 <ul>
                     <li><p>Sensors track changes in equipment parameters (engine temperature, vibration, oil level).</p></li>
-                    <li><p>ThingsBoard analyzes data in real-time and detects anomalies.</p></li>
+                    <li><p>SENTIENT analyzes data in real-time and detects anomalies.</p></li>
                     <li><p>The system automatically creates notifications or service requests.</p></li>
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/line-chart.webp" title="Thingsboard line chart widget" alt="Thingsboard line chart widget" width="776" height="776">
-                <img src="/images/case-studies/alarms-table-3.webp" title="Thingsboard alarms widget" alt="Thingsboard alarms widget" width="776" height="776">
+                <img src="/images/case-studies/line-chart.webp" title="Sentient line chart widget" alt="Sentient line chart widget" width="776" height="776">
+                <img src="/images/case-studies/alarms-table-3.webp" title="Sentient alarms widget" alt="Sentient alarms widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Smart dashboards and data visualization</h3>
-                <p>Raw data is useless without proper visualization. ThingsBoard enables the creation of informative dashboards that help make faster decisions.</p>
+                <p>Raw data is useless without proper visualization. SENTIENT enables the creation of informative dashboards that help make faster decisions.</p>
                 <ul>
                     <li><p>You create dashboards for specific tasks (e.g., energy consumption monitoring, climate control, space utilization analysis).</p></li>
                     <li><p>Data is displayed using charts, graphs, tables, and maps.</p></li>
@@ -182,8 +182,8 @@ description: Discover how Oneserve uses ThingsBoard to deliver scalable, integra
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/donut-widget.webp" title="Thingsboard donut chart widget" alt="Thingsboard donut chart widget" width="776" height="776">
-                <img src="/images/case-studies/analogue-gauge.webp" title="Thingsboard analogue gauge widget" alt="Thingsboard analogue gauge widget" width="776" height="776">
+                <img src="/images/case-studies/donut-widget.webp" title="Sentient donut chart widget" alt="Sentient donut chart widget" width="776" height="776">
+                <img src="/images/case-studies/analogue-gauge.webp" title="Sentient analogue gauge widget" alt="Sentient analogue gauge widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
@@ -192,42 +192,42 @@ description: Discover how Oneserve uses ThingsBoard to deliver scalable, integra
                 <p>Energy costs are one of the largest expenses. IoT analytics helps reduce costs, identify overuse, and implement energy-saving scenarios.</p>
                 <ul>
                     <li><p>You connect energy meters, light sensors, and climate control systems.</p></li>
-                    <li><p>ThingsBoard analyzes consumption and identifies anomalies (e.g., electrical overloads or inefficient heating zones).</p></li>
+                    <li><p>SENTIENT analyzes consumption and identifies anomalies (e.g., electrical overloads or inefficient heating zones).</p></li>
                     <li><p>Automated scenarios can be configured, such as dimming lights at night or turning off air-conditioners in empty rooms.</p></li>
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/digital_gauges.webp" title="Thingsboard digital gauges widgets" alt="Thingsboard digital gauges widgets" width="776" height="776">
-                <img src="/images/case-studies/status-widget-1.webp" title="Thingsboard status widget" alt="Thingsboard status widget" width="776" height="776">
+                <img src="/images/case-studies/digital_gauges.webp" title="Sentient digital gauges widgets" alt="Sentient digital gauges widgets" width="776" height="776">
+                <img src="/images/case-studies/status-widget-1.webp" title="Sentient status widget" alt="Sentient status widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Process automation and BMS integration</h3>
-                <p>Building management should not be manual — ThingsBoard enables the automation of routine processes and seamless integration with Building Management Systems (BMS).</p>
+                <p>Building management should not be manual — SENTIENT enables the automation of routine processes and seamless integration with Building Management Systems (BMS).</p>
                 <ul>
                     <li><p>If CO₂ levels exceed the threshold, the system automatically turns on ventilation.</p></li>
-                    <li><p>If a water leakage sensor is triggered, ThingsBoard sends an emergency alert and shuts off the water supply.</p></li>
+                    <li><p>If a water leakage sensor is triggered, SENTIENT sends an emergency alert and shuts off the water supply.</p></li>
                     <li><p>Motion sensors ensure lights are only on in occupied areas.</p></li>
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/single-switch-widget.webp" title="Thingsboard single switch widget" alt="Thingsboard single switch widget" width="776" height="776">
-                <img src="/images/case-studies/power_button.webp" title="Thingsboard power button widget" alt="Thingsboard power button widget" width="776" height="776">
+                <img src="/images/case-studies/single-switch-widget.webp" title="Sentient single switch widget" alt="Sentient single switch widget" width="776" height="776">
+                <img src="/images/case-studies/power_button.webp" title="Sentient power button widget" alt="Sentient power button widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Enhancing facility security</h3>
-                <p>Modern buildings require intelligent security systems. ThingsBoard allows integration and monitoring of video surveillance, access control, smoke detectors, and motion sensors.</p>
+                <p>Modern buildings require intelligent security systems. SENTIENT allows integration and monitoring of video surveillance, access control, smoke detectors, and motion sensors.</p>
                 <ul>
                     <li><p>Sensors detect movement in restricted areas, triggering instant notifications.</p></li>
-                    <li><p>Security personnel can view live camera feeds directly within ThingsBoard.</p></li>
+                    <li><p>Security personnel can view live camera feeds directly within SENTIENT.</p></li>
                     <li><p>In case of fire or gas leaks, the system automatically sends an alarm and activates emergency protocols.</p></li>
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/alarm_widgets.webp" title="Thingsboard alarm widgets" alt="Thingsboard alarm widgets" width="776" height="776">
+                <img src="/images/case-studies/alarm_widgets.webp" title="Sentient alarm widgets" alt="Sentient alarm widgets" width="776" height="776">
                 <img src="/images/case-studies/supermarkets.webp" title="Supermarkets widget" alt="Supermarkets widget" width="776" height="776">
             </div>
         </div>
@@ -237,12 +237,12 @@ description: Discover how Oneserve uses ThingsBoard to deliver scalable, integra
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img src="/images/case-studies/oneserve.svg" title="Oneserve" alt="Oneserve logo" width="126" height="56">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_Oneserve_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us</a>
     </section>
 </div>

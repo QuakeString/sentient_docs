@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect ESP-EYE to ThingsBoard?
+title: How to connect ESP-EYE to SENTIENT?
 category: Microcontrollers
 chip: ESP32
 connectivity: [HTTP, MQTT, WIFI, Bluetooth]

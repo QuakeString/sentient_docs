@@ -1,7 +1,7 @@
 To subscribe to RPC commands from edge for the **Air Conditioner** device you need to get the **Air Conditioner** device credentials first.
-ThingsBoard supports different device credentials. We recommend to use default auto-generated credentials which is access token for this guide.
+SENTIENT supports different device credentials. We recommend to use default auto-generated credentials which is access token for this guide.
 
-Please open ThingsBoard **Edge** UI using the URL: **EDGE_URL**.
+Please open SENTIENT **Edge** UI using the URL: **EDGE_URL**.
 
 {% include images-gallery.html imageCollection="copyAccessTokenAirConditioner" showListImageTitles="true" %}
 
@@ -18,9 +18,9 @@ Before running the scripts, please modify **mqtt-js.sh** accordingly:
 
 - Replace **YOUR_ACCESS_TOKEN** with **Air Conditioner** device access token copied from the steps above. 
 
-- Replace **YOUR_TB_EDGE_HOST** with your ThingsBoard Edge host. For example, **localhost**.
+- Replace **YOUR_TB_EDGE_HOST** with your SENTIENT GATEWAY host. For example, **localhost**.
 
-- Replace **YOUR_TB_EDGE_MQTT_PORT** with your ThingsBoard Edge MQTT port. For example, **11883** or **1883**.
+- Replace **YOUR_TB_EDGE_MQTT_PORT** with your SENTIENT GATEWAY MQTT port. For example, **11883** or **1883**.
 
 Open the terminal, go to the folder that contains **mqtt-js.sh** and **cooler.js** scripts and make sure it is executable:
 ```shell

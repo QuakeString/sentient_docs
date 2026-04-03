@@ -29,13 +29,13 @@ create-loriot-application-output-2:
 
 create-loriot-application-output-3:
     0:
-        image: /images/user-guide/integrations/loriot/thingsboard_add_integration_output_basic.png
+        image: /images/user-guide/integrations/loriot/sentient_add_integration_output_basic.png
         title: 'Select the "Basic" credential type and enter your Loriot account credentials. Click "Add" to confirm creating integration.'
 
 endpoint-url:
     0:
         image: /images/user-guide/integrations/loriot/loriot-copy-http-endpoint-pe.png
-        title: 'Go to the "Integrations" page in ThingsBoard. Find your Loriot integration and click on it. There you can find the "HTTP endpoint URL".'
+        title: 'Go to the "Integrations" page in SENTIENT. Find your Loriot integration and click on it. There you can find the "HTTP endpoint URL".'
 
 downlink_server:
     0:
@@ -53,7 +53,7 @@ access_token:
     1:
         image: /images/user-guide/integrations/loriot/loriot_authentication_tokens.png
     2:
-        image: /images/user-guide/integrations/loriot/loriot_and_thingsboard_integration_application_access_token.png
+        image: /images/user-guide/integrations/loriot/loriot_and_sentient_integration_application_access_token.png
 
 uplink-tbel:
     0:
@@ -103,7 +103,7 @@ devices:
 
 send_downlink:
     0:
-        image: /images/user-guide/integrations/loriot/thingsboard_add_integration_send_downlink.png
+        image: /images/user-guide/integrations/loriot/sentient_add_integration_send_downlink.png
 
 loriot-output:
     0:
@@ -132,23 +132,23 @@ enable-security:
 
 security_token:
     0:
-        image: /images/user-guide/integrations/loriot/thingsboard_add_integration_output_security_token.png
+        image: /images/user-guide/integrations/loriot/sentient_add_integration_output_security_token.png
     1:
-        image: /images/user-guide/integrations/loriot/loriot_and_thingsboard_output_security_token_session.png
+        image: /images/user-guide/integrations/loriot/loriot_and_sentient_output_security_token_session.png
 
 rule_chain:
     0:
-        image: /images/user-guide/integrations/loriot/thingsboard_rule_chain_integration_downlink.png
+        image: /images/user-guide/integrations/loriot/sentient_rule_chain_integration_downlink.png
 
 shared_attributes:
     0:
-        image: /images/user-guide/integrations/loriot/thingsboard_devices_all_shared_attributes.png
+        image: /images/user-guide/integrations/loriot/sentient_devices_all_shared_attributes.png
     1:
-        image: /images/user-guide/integrations/loriot/thingsboard_devices_all_shared_attributes_update.png
+        image: /images/user-guide/integrations/loriot/sentient_devices_all_shared_attributes_update.png
 
 event_in:
     0:
-        image: /images/user-guide/integrations/loriot/thingsboard_downlink_converter_events_in.png
+        image: /images/user-guide/integrations/loriot/sentient_downlink_converter_events_in.png
 
 
 terminal:
@@ -162,10 +162,10 @@ terminal_1:
 device:
     0:
         image: /images/user-guide/integrations/loriot/loriot-device-attributes-1-pe.png
-        title: 'The created device and its data can be found on the "Devices" page in the "Entities" section. On the "Attributes" tab, you will find the attributes sent by the device to ThingsBoard.'
+        title: 'The created device and its data can be found on the "Devices" page in the "Entities" section. On the "Attributes" tab, you will find the attributes sent by the device to SENTIENT.'
     1:
         image: /images/user-guide/integrations/loriot/loriot-device-attributes-2-pe.png
-        title: 'On the "Latest telemetry" tab, you will find the telemetry data transmitted by the device to ThingsBoard.'
+        title: 'On the "Latest telemetry" tab, you will find the telemetry data transmitted by the device to SENTIENT.'
 
 uplink_events:
     0:
@@ -183,7 +183,7 @@ uplink_events:
 
 event_out:
     0:
-        image: /images/user-guide/integrations/loriot/thingsboard_downlink_converter_events_out.png
+        image: /images/user-guide/integrations/loriot/sentient_downlink_converter_events_out.png
     
 parameters:
     0:

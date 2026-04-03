@@ -1,1 +1,1 @@
-sudo rpm -Uvh thingsboard-1.0.3.rpm
+sudo rpm -Uvh sentient-1.0.3.rpm

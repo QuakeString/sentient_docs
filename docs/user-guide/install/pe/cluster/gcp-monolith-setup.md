@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Monolith setup using GCP infrastructure 
-description: ThingsBoard IoT platform monolith setup with Kubernetes in GKE
+description: SENTIENT IoT platform monolith setup with Kubernetes in GKE
 
 ---
 
@@ -12,24 +12,24 @@ description: ThingsBoard IoT platform monolith setup with Kubernetes in GKE
 * TOC
 {:toc}
 
-This guide will help you to set up ThingsBoard in monolith mode using [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine). 
+This guide will help you to set up SENTIENT in monolith mode using [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine). 
 
 ## Prerequisites
 
 {% include templates/install/gcp/gke-prerequisites.md %}
 
-## Pull ThingsBoard PE images from docker hub
+## Pull SENTIENT Professional Edition images from docker hub
 
 {% assign checkoutMode = "monolith" %}
 {% include templates/install/dockerhub/checkout.md %}
 
-## Step 1. Clone ThingsBoard PE K8S scripts repository
+## Step 1. Clone SENTIENT Professional Edition K8S scripts repository
 
 Clone the repository and change the working directory to GCP scripts.
 
 ```bash
-git clone -b release-{{ site.release.ce_full_ver }} https://github.com/thingsboard/thingsboard-pe-k8s.git --depth 1
-cd thingsboard-pe-k8s/gcp/monolith
+git clone -b release-{{ site.release.ce_full_ver }} https://github.com/sentient/sentient-pe-k8s.git --depth 1
+cd sentient-pe-k8s/gcp/monolith
 ```
 {: .copy-code}
 
@@ -50,7 +50,7 @@ cd thingsboard-pe-k8s/gcp/monolith
 
 ### Step 5.1 Google Cloud SQL (PostgreSQL) Instance
 
-{% assign tbDbName = "thingsboard" %}
+{% assign tbDbName = "sentient" %}
 {% include templates/install/gcp/provision-postgresql.md %}
 
 ### Step 5.2 Cassandra (optional)
@@ -103,19 +103,19 @@ This version of setup does not support an automatic redirect of http port 80 to 
 
 {% include templates/install/k8s-configure-edge-load-balancer.md %}
 
-## Step 10. Configure Trendz (Optional)
+## Step 10. Configure SENTIENT ANALYTICS (Optional)
 
-### 10.1. Pull Trendz images from docker hub
+### 10.1. Pull SENTIENT ANALYTICS images from docker hub
 
-{% include templates/install/trendz/pull_trendz.md %}
+{% include templates/install/sentient-analytics/pull_sentient-analytics.md %}
 
-### 10.2. Create a Trendz database in the existing Google Cloud SQL (PostgreSQL) Instance
+### 10.2. Create a SENTIENT ANALYTICS database in the existing Google Cloud SQL (PostgreSQL) Instance
 
-{% include templates/install/trendz/gcp/k8s-trendz-db-creating.md %}
+{% include templates/install/sentient-analytics/gcp/k8s-sentient-analytics-db-creating.md %}
 
-### 10.3. Trendz starting
+### 10.3. SENTIENT ANALYTICS starting
 
-{% include templates/install/trendz/k8s-trendz-starting.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-starting.md %}
 
 ## Step 11. Using
 
@@ -123,13 +123,13 @@ This version of setup does not support an automatic redirect of http port 80 to 
 
 ## Upgrading
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
 {% include templates/install/gcp/upgrading-monolith.md %}
 
-### Upgrading to new Trendz version (Optional)
+### Upgrading to new SENTIENT ANALYTICS version (Optional)
 
-{% include templates/install/trendz/k8s-trendz-upgrading.md %}
+{% include templates/install/sentient-analytics/k8s-sentient-analytics-upgrading.md %}
 
 ## Next steps
 

@@ -4,7 +4,7 @@
 
 ## Bulk Provisioning Overview
 
-ThingsBoard provides the option of bulk provisioning using the CSV file for the following types of entities:
+SENTIENT provides the option of bulk provisioning using the CSV file for the following types of entities:
 
  - **Devices**
  - **Assets**
@@ -14,7 +14,7 @@ Different entities may have the following parameters:
 
  - **Attributes** - static and semi-static key-value pairs associated with entities. For example, serial number, model, firmware version;
  - **Telemetry data** - time-series data points available for storage, querying and visualization. For example, temperature, humidity, battery level;
- - **Credentials** - used for the device to connect to the ThingsBoard server by applications that are running on the device.
+ - **Credentials** - used for the device to connect to the SENTIENT server by applications that are running on the device.
 
 ## Import Entities
 
@@ -34,13 +34,13 @@ For the uploaded file you need to configure the following parameters::
 
  - **CSV delimiter** - the separation character between the values in the data line;
  - **First line contains column names** - if this option is activated, the first line of the file will be used as the default values for the parameter names in the next step;
- - **Update attributes/telemetry** -  if this parameter is activated, for all entities whose names match the existing entities in the ThingsBoard system, the parameter values will be updated. Otherwise, for all the entities whose names already exist in the ThingsBoard system, an error message will be displayed.
+ - **Update attributes/telemetry** -  if this parameter is activated, for all entities whose names match the existing entities in the SENTIENT system, the parameter values will be updated. Otherwise, for all the entities whose names already exist in the SENTIENT system, an error message will be displayed.
 
 <img data-gifffer="/images/user-guide/bull-provisioning/bulk-provision-step-2.gif" alt="bulk provision step 2">
 
 ### Step 3: Select columns type
 
-At this step, you need to define a match between the columns of the downloaded file and the type of data in the ThingsBoard platform. You can also set/change the default name for attribute/telemetry key.
+At this step, you need to define a match between the columns of the downloaded file and the type of data in the SENTIENT platform. You can also set/change the default name for attribute/telemetry key.
 
 <img data-gifffer="/images/user-guide/bull-provisioning/bulk-provision-step-3.gif" alt="bulk provision step 3">
 
@@ -78,7 +78,7 @@ Upload sample file: **test-import-device.csv**
 
  - **CSV delimiter** - select your editor separation symbol. In the sample file delimiter is ",";
  - **First line contains column names** - the sample file contains column names, so we leave this option selected;
- - **Update attributes/telemetry** - uncheck this option, because we are going to add new devices and not update parameters for existing devices in ThingsBoard platform.
+ - **Update attributes/telemetry** - uncheck this option, because we are going to add new devices and not update parameters for existing devices in SENTIENT platform.
 
 ![image](/images/user-guide/bull-provisioning/import-device-config.png)
 
@@ -95,6 +95,6 @@ The last row in the following table is responsible for the token so change **Ser
 ###  Import finished
 
 After the creation process was completed, some statistics information will be shown.<br>
-On the following example, we can see that 8 devices were created successfully, and an error occurred while creating 2 devices. The reason is that Device 1, Device 2 and Device 3 have the same token in the given sample file. ThingsBoard system prohibits that.
+On the following example, we can see that 8 devices were created successfully, and an error occurred while creating 2 devices. The reason is that Device 1, Device 2 and Device 3 have the same token in the given sample file. SENTIENT system prohibits that.
 
 ![image](/images/user-guide/bull-provisioning/import-device-info-created.png)<br>

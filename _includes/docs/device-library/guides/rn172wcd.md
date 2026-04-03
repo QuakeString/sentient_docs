@@ -1,8 +1,8 @@
 
-{% assign deviceName = page.title | remove: "How to connect " | remove: "to ThingsBoard?" %}
+{% assign deviceName = page.title | remove: "How to connect " | remove: "to SENTIENT?" %}
 {% assign deviceVendorLink = "https://en.radionode365.com/kr/product/product_view.php?idx=111&part_idx=1" %}
 {% assign officialManualLink = "/docs/devices-library/resources/manuals/rn172wcd-user-manual-v1.01.pdf" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign prerequisites = '
 - <a href="' | append: deviceVendorLink | append: '" target="_blank">' | append: deviceName | append: '</a>
 - [RN172WCD user manual](' | append: officialManualLink | append: '){: target="_blank"}
@@ -20,13 +20,13 @@ The RN172WCD also supports remote configuration via Telnet and offers robust ala
 
 To continue with this guide we will need the following:  
 {{ prerequisites }}
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
 For simplicity, we will create the device manually using the UI.
-- Log in to your ThingsBoard instance and navigate to **Entities**. Then open the **Devices** page.
+- Log in to your SENTIENT instance and navigate to **Entities**. Then open the **Devices** page.
 - Click the **+** icon in the top right corner of the table and select **Add new device**. 
 - Enter a device name, for example, **My Device**. No other changes are required at this stage. 
 - Click **Add** to create the device.
@@ -37,7 +37,7 @@ Your device has been successfully added.
 
 ## Install required Payload decoders
 
-After adding the device we need to create an Integration for creating the device connection with the thingsboard platform.
+After adding the device we need to create an Integration for creating the device connection with the sentient platform.
 
 - Click the integrations tab and start to add an integration by pressing the “+” sign.
 
@@ -110,7 +110,7 @@ function parseUrlEncoded(payload) {
     return data;
 }
 
-// --- Main ThingsBoard Decode Function ---
+// --- Main SENTIENT Decode Function ---
 function decodePayload(payload, metadata) {
     var deviceName = "Unknown_Device";
     var attributes = {};
@@ -276,7 +276,7 @@ function decodePayload(payload, metadata) {
         result.telemetry[key] = attributes[key];
     }
     
-    // Return the formatted result for ThingsBoard.
+    // Return the formatted result for SENTIENT.
     return result;
 }
 
@@ -292,7 +292,7 @@ return decodePayload(payload, metadata);
 
 ![image](/images/devices-library/ready-to-go-devices/rn172wcd/rn172wcd-8.png)
 
-## Connect device to ThingsBoard
+## Connect device to SENTIENT
 
 - Download the [RadioNode terminal program](https://en.radionode365.com/kr/customer/download.php?cate=32){:target="_blank"}
 - Run the RadioNode terminal program
@@ -311,15 +311,15 @@ This means the data will be sent to the custom server V2.<br>
 
 ![image](/images/devices-library/ready-to-go-devices/rn172wcd/rn172wcd-11.png)
 
-- From the **Integration** tab of ThingsBoard, copy **HTTP endpoint URL** to set in the Radionode terminal program.
+- From the **Integration** tab of SENTIENT, copy **HTTP endpoint URL** to set in the Radionode terminal program.
 
 ![image](/images/devices-library/ready-to-go-devices/rn172wcd/rn172wcd-12.png)
 
 ![image](/images/devices-library/ready-to-go-devices/rn172wcd/rn172wcd-13.png)
 
-Go to the "4. HTTP Destination Setup" menu and select "A. Set Host URL:thingsboard.cloud" Select "D.Set HTTP DATAIN : endpoint from the integration", "E.Set HTTP TIMESTAMP:endpoint from the integration", "F.Set HTTP BACKUPIN :endpoint from the integration".
+Go to the "4. HTTP Destination Setup" menu and select "A. Set Host URL:sentient.cloud" Select "D.Set HTTP DATAIN : endpoint from the integration", "E.Set HTTP TIMESTAMP:endpoint from the integration", "F.Set HTTP BACKUPIN :endpoint from the integration".
 
-## Check data on ThingsBoard 
+## Check data on SENTIENT 
 
 Once the device is connected, On the devices page you can check the latest telemetry.
 
@@ -341,7 +341,7 @@ After creation, the dashboard will open automatically, and you can start adding 
 
 ![image](/images/devices-library/ready-to-go-devices/rn172wcd/rn172wcd-17.png)
 
-ThingsBoard provides many widget options to choose from. For example, select a **Time series chart** from the **Charts** widget bundle to visualize data from your device.
+SENTIENT provides many widget options to choose from. For example, select a **Time series chart** from the **Charts** widget bundle to visualize data from your device.
 
 ![image](/images/devices-library/ready-to-go-devices/rn172wcd/rn172wcd-18.png)
 
@@ -353,7 +353,7 @@ ThingsBoard provides many widget options to choose from. For example, select a *
 
 A sample dashboard featuring the Indoor temperature chart card, Indoor humidity chart card, and Temperature and Humidity history line chart.
 
-You can [download this dashboard in JSON format](/docs/devices-library/resources/dashboards/rn172plus/temp-and-rh-dashboard.json){:target="_blank" download="temp-and-rh-dashboard.json"} and [import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into your own ThingsBoard instance.
+You can [download this dashboard in JSON format](/docs/devices-library/resources/dashboards/rn172plus/temp-and-rh-dashboard.json){:target="_blank" download="temp-and-rh-dashboard.json"} and [import](/docs/{{docsPrefix}}user-guide/dashboards/#import-dashboard){:target="_blank"} it into your own SENTIENT instance.
 
 ![image](/images/devices-library/ready-to-go-devices/rn172wcd/rn172wcd-20.png)
 {% include add-device-banner.liquid %}

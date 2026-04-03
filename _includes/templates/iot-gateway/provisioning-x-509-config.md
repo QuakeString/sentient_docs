@@ -5,7 +5,7 @@ Using the following config, you can configure Gateway to use X.509 Certificate p
 | type                  | **X509_CERTIFICATE**     | Type of provisioning strategy.                                                 |
 | provisionDeviceKey    | **DEVICE_KEY**           | Provisioning device key, you should take it from configured device profile.    |
 | provisionDeviceSecret | **DEVICE_SECRET**        | Provisioning device secret, you should take it from configured device profile. |
-| caCert                | **ca-root.pem**  | Public key X509 for device in ThingsBoard.                                     |
+| caCert                | **ca-root.pem**  | Public key X509 for device in SENTIENT.                                     |
 | ---                   
 
 Provisioning subsection in configuration file will look like this:
@@ -15,7 +15,7 @@ Provisioning subsection in configuration file will look like this:
   "type": "X509_CERTIFICATE",
   "provisionDeviceKey": "PUT_YOUR_DEVICE_KEY_HERE",
   "provisionDeviceSecret": "PUT_YOUR_DEVICE_SECRET_HERE",
-  "caCert": "/etc/thingsboard-gateway/ca.pem"
+  "caCert": "/etc/sentient-gateway/ca.pem"
 },
 ...
 ```

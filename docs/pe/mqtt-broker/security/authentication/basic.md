@@ -27,12 +27,12 @@ authentication-provider-control:
     image: /images/pe/mqtt-broker/security/auth-providers/basic/basic-overview.png
     title: 'Open the Authentication > Providers page, select the Basic row, and click the "Edit" button to configure the provider.'
 
-tbmq-client-id-username-and-password:
+st-rmqtt-client-id-username-and-password:
   0:
     image: /images/pe/mqtt-broker/security/auth-providers/basic/auth-client-id-username-and-password.png
     title: ''
     
-tbmq-tls-client-id-username-and-password:
+st-rmqtt-tls-client-id-username-and-password:
   0:
     image: /images/pe/mqtt-broker/security/auth-providers/basic/tls-auth-client-id-username-and-password.png
     title: ''

@@ -1,4 +1,4 @@
-## Check data on ThingsBoard
+## Check data on SENTIENT
 
 So, the device was added and if it sends any data - it should appear in the [devices](/docs/{{docsPrefix}}user-guide/ui/devices/){:target="_blank"}.
 To check it you may open **Devices** page in **Entities** section. The device should be in devices list. You can check the data by click on it and open tab **Attributes** or **Latest telemetry**.
@@ -15,10 +15,10 @@ To check it you may open **Devices** page in **Entities** section. The device sh
 In order to get more user-friendly view - you can use [dashboards](/docs/{{docsPrefix}}user-guide/dashboards){:target="_blank"}.
 You can download a simple dashboard for this device, it is configured to display a data from "latitude" and "longitude" telemetry keys for device with name "*Devices*".
 
-ThingsBoard provides the ability to create and customize interactive visualizations (dashboards) for monitoring and managing data and devices.
-Through ThingsBoard dashboards, you can efficiently manage and monitor your IoT devices and data. So, we will create the dashboard, for our device.
+SENTIENT provides the ability to create and customize interactive visualizations (dashboards) for monitoring and managing data and devices.
+Through SENTIENT dashboards, you can efficiently manage and monitor your IoT devices and data. So, we will create the dashboard, for our device.
 
-To add the dashboard to ThingsBoard, we need to import it. To import a dashboard, follow these steps:
+To add the dashboard to SENTIENT, we need to import it. To import a dashboard, follow these steps:
 
 - First download the [Check and control device data dashboard](/docs/devices-library/resources/dashboards/lansitec-lorawan/cat1_check_and_control_device_data_dashboard.json){:target="_blank"} file.
 

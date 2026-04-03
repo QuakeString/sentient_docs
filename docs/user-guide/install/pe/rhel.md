@@ -2,8 +2,8 @@
 layout: docwithnav-pe
 assignees:
 - ashvayka
-title: Installing ThingsBoard PE on CentOS/RHEL
-description: Installing ThingsBoard PE on CentOS/RHEL
+title: Installing SENTIENT Professional Edition on CentOS/RHEL
+description: Installing SENTIENT Professional Edition on CentOS/RHEL
 
 ---
 
@@ -14,10 +14,10 @@ description: Installing ThingsBoard PE on CentOS/RHEL
 
 ## Prerequisites
 
-This guide describes how to install ThingsBoard on RHEL 8/9, CentOS 8/9, or their derivatives (Alma, Rocky, Oracle, etc). 
+This guide describes how to install SENTIENT on RHEL 8/9, CentOS 8/9, or their derivatives (Alma, Rocky, Oracle, etc). 
 Hardware requirements depend on chosen database and amount of devices connected to the system. 
-To run ThingsBoard and PostgreSQL on a single machine you will need at least 4Gb of RAM.
-To run ThingsBoard and Cassandra on a single machine you will need at least 8Gb of RAM.
+To run SENTIENT and PostgreSQL on a single machine you will need at least 4Gb of RAM.
+To run SENTIENT and Cassandra on a single machine you will need at least 8Gb of RAM.
 
 Before continue to installation execute the following commands in order to install necessary tools:
 
@@ -52,19 +52,19 @@ sudo dnf install -y harfbuzz fontconfig dejavu-sans-fonts
 
 {% include templates/install/rhel-java-install.md %}
 
-## Step 2. ThingsBoard service installation
+## Step 2. SENTIENT service installation
 
 Download installation package.
 
 ```bash
-wget https://dist.thingsboard.io/thingsboard-{{ site.release.pe_ver }}.rpm
+wget https://dist.docs.sentient.invenia.in/sentient-{{ site.release.pe_ver }}.rpm
 ```
 {: .copy-code}
 
-Install ThingsBoard as a service
+Install SENTIENT as a service
 
 ```bash
-sudo rpm -Uvh thingsboard-{{ site.release.pe_ver }}.rpm
+sudo rpm -Uvh sentient-{{ site.release.pe_ver }}.rpm
 ```
 {: .copy-code}
 
@@ -74,18 +74,18 @@ We assume you have already chosen your subscription plan or decided to purchase 
 If not, please navigate to [pricing](/pricing/) page to select the best license option for your case and get your license. 
 See [How-to get pay-as-you-go subscription](https://www.youtube.com/watch?v=dK-QDFGxWek){:target="_blank"} or [How-to get perpetual license](https://www.youtube.com/watch?v=GPe0lHolWek){:target="_blank"} for more details.
 
-Once you get the license secret, you should put it to the thingsboard configuration file. 
+Once you get the license secret, you should put it to the sentient configuration file. 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/thingsboard/conf/thingsboard.conf
+sudo nano /etc/sentient/conf/sentient.conf
 ``` 
 {: .copy-code}
 
 Locate the following configuration block:
 
 ```bash
-# License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+# License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 # export TB_LICENSE_SECRET=
 ```
@@ -93,12 +93,12 @@ Locate the following configuration block:
 and put your license secret. Please don't forget to uncomment the export statement. See example below: 
 
 ```bash
-# License secret obtained from ThingsBoard License Portal (https://license.thingsboard.io)
+# License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 export TB_LICENSE_SECRET=YOUR_LICENSE_SECRET_HERE
 ``` 
 
-## Step 4. Configure ThingsBoard database
+## Step 4. Configure SENTIENT database
 
 {% include templates/install/install-db.md %}
 
@@ -107,9 +107,9 @@ PostgreSQL <small>(recommended for < 5K msg/sec)</small>%,%postgresql%,%template
 Hybrid <br>PostgreSQL+Cassandra<br><small>(recommended for > 5K msg/sec)</small>%,%hybrid%,%templates/install/rhel-db-hybrid.md{% endcapture %}
 
 
-{% include content-toggle.liquid content-toggle-id="rhelThingsboardDatabase" toggle-spec=contenttogglespec %} 
+{% include content-toggle.liquid content-toggle-id="rhelSentientDatabase" toggle-spec=contenttogglespec %} 
 
-## Step 5. Choose ThingsBoard queue service
+## Step 5. Choose SENTIENT queue service
 
 {% include templates/install/install-queue.md %}
 
@@ -118,7 +118,7 @@ In Memory <small>(built-in and default)</small>%,%inmemory%,%templates/install/q
 Kafka <small>(recommended for on-prem, production installations)</small>%,%kafka%,%templates/install/rhel-queue-kafka.md%br%
 Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confluent-cloud%,%templates/install/ubuntu-queue-confluent-cloud.md{% endcapture %}
 
-{% include content-toggle.liquid content-toggle-id="ubuntuThingsboardQueue" toggle-spec=contenttogglespecqueue %} 
+{% include content-toggle.liquid content-toggle-id="ubuntuSentientQueue" toggle-spec=contenttogglespecqueue %} 
 
 ## Step 6. [Optional] Memory update for slow machines (4GB of RAM) 
 
@@ -128,9 +128,9 @@ Confluent Cloud <small>(Event Streaming Platform based on Kafka)</small>%,%confl
 {% include templates/run-install.md %} 
 
 
-## Step 8. Start ThingsBoard service
+## Step 8. Start SENTIENT service
 
-ThingsBoard UI is accessible on 8080 port by default. 
+SENTIENT UI is accessible on 8080 port by default. 
 Make sure that your 8080 port is accessible via firewall.
 In order to open 8080 port execute the following command:
 
@@ -145,12 +145,12 @@ sudo firewall-cmd --reload
 Please allow up to 90 seconds for the Web UI to start.{% endcapture %}
 {% include templates/info-banner.md content=90-sec-ui %}
 
-## Step 9. Install ThingsBoard WebReport component
+## Step 9. Install SENTIENT WebReport component
 
 {% capture contenttogglespecreport %}
 WebReport docker <small>(Recommended and simple installtion)</small>%,%dockerized%,%templates/install/rhel-webreport-docker.md%br%
 WebReport service <small>(Install service and dependencies manually)</small>%,%service%,%templates/install/rhel-webreport-service.md%br%{% endcapture %}
-{% include content-toggle.liquid content-toggle-id="rhelThingsboardWebreport" toggle-spec=contenttogglespecreport %} 
+{% include content-toggle.liquid content-toggle-id="rhelSentientWebreport" toggle-spec=contenttogglespecreport %} 
 
 ## Post-installation steps
 
@@ -158,9 +158,9 @@ WebReport service <small>(Install service and dependencies manually)</small>%,%s
 
 {% include templates/install/rhel-haproxy-postinstall.md %}
 
-### Upgrading to new ThingsBoard version
+### Upgrading to new SENTIENT version
 
-{% include templates/install/upgrade-thingsboard.md %}
+{% include templates/install/upgrade-sentient.md %}
 
 ## Troubleshooting
 

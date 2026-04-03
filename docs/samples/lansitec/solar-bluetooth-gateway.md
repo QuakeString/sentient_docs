@@ -20,7 +20,7 @@ To continue with this guide we will need the following:
 - [LoRaWAN Gateway](https://www.lansitec.com/products/outdoor-lorawan-gateway/){:target="_blank"}
 - [Bluetooth beacon](https://www.lansitec.com/products/bluetooth-beacon/){:target="_blank"}
 - [Network Server account](https://www.chirpstack.io/){:target="_blank"}
-- [ThingsBoard account](https://thingsboard.io/installations/choose-region/){:target="_blank"}
+- [SENTIENT account](https://docs.sentient.invenia.in/installations/choose-region/){:target="_blank"}
 
 ## Configuration
 
@@ -405,7 +405,7 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
         title: Fill in the device configuration parameters.
     ===
         image: /images/samples/lansitec/application-5.png,
-        title: Go to the **Variables** dection, enter the "ThingsBoardAccessToken" parameter, and then click the **Submit** button.
+        title: Go to the **Variables** dection, enter the "SENTIENTAccessToken" parameter, and then click the **Submit** button.
     ===
         image: /images/samples/lansitec/application-6.png,
         title: Enter your **Application key** in this field and click **Submit** button to save the device.
@@ -413,20 +413,20 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
 %}
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=solarApplication %}
 
-### Configure Application Integration with ThingsBoard
+### Configure Application Integration with SENTIENT
 
-{% assign solarThingsboard = '
+{% assign solarSentient = '
     ===
-        image: /images/samples/lansitec/thingsboard-1.png,
-        title: Go to the **Integrations** page and click on **ThingsBoard**.
+        image: /images/samples/lansitec/sentient-1.png,
+        title: Go to the **Integrations** page and click on **SENTIENT**.
     ===
-        image: /images/samples/lansitec/thingsboard-2.png,
-        title: Enter your **ThingsBoard server** address and click **Submit**.
+        image: /images/samples/lansitec/sentient-2.png,
+        title: Enter your **SENTIENT server** address and click **Submit**.
 '
 %}
-{% include images-gallery.liquid showListImageTitles="true" imageCollection=solarThingsboard %}
+{% include images-gallery.liquid showListImageTitles="true" imageCollection=solarSentient %}
 
-## Create device on ThingsBoard
+## Create device on SENTIENT
 
 {% assign solarDevices = '
     ===
@@ -453,6 +453,6 @@ To connect the gateway and transmit data to ChirpStack, follow these steps:
 
 ## Conclusion
 
-With the information provided in this guide, you can easily connect your Solar Bluetooth Gateway and transmit data to ThingsBoard.
+With the information provided in this guide, you can easily connect your Solar Bluetooth Gateway and transmit data to SENTIENT.
 
 For further learning about key concepts and features, explore the platform&#39;s [documentation](/docs/pe/){:target="_blank"}. You can also configure [alarm rules](/docs/pe/user-guide//device-profiles/#alarm-rules){:target="_blank"}{:target="_blank"} or set up [dashboards](/docs/pe/user-guide//dashboards/){:target="_blank"}.

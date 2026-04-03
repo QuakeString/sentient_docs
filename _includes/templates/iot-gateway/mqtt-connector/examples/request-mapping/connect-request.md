@@ -42,7 +42,7 @@ Follow these steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=deviceNameAndProfileTopicAndConstantJson %}
 
-After 10 minutes without sending telemetry, device `SN-001` is marked as inactive in ThingsBoard, as shown below:
+After 10 minutes without sending telemetry, device `SN-001` is marked as inactive in SENTIENT, as shown below:
 
 ![image](/images/gateway/mqtt-connector/examples/result-device-overview-1-connect.png)
 
@@ -57,7 +57,7 @@ mosquitto_pub -h 127.0.0.1 -p 1884 -t "sensor/connect" -m '{"serialNumber": "SN-
 ```
 {: .copy-code}
 
-After sending this message, ThingsBoard updates both the lastActivityTime and lastConnectTime of the `SN-001` device, and its status changes to `Active`:
+After sending this message, SENTIENT updates both the lastActivityTime and lastConnectTime of the `SN-001` device, and its status changes to `Active`:
 
 ![image](/images/gateway/mqtt-connector/examples/result-device-overview-connect-2.png)
 
@@ -82,7 +82,7 @@ use the following configuration:
   "broker": {
     "host": "127.0.0.1",
     "port": 1884,
-    "clientId": "ThingsBoard_gateway",
+    "clientId": "SENTIENT_gateway",
     "version": 5,
     "maxMessageNumberPerWorker": 10,
     "maxNumberOfWorkers": 100,

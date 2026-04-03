@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - stitenko
 title: Layouts
-description: ThingsBoard Dashboard Layouts
+description: SENTIENT Dashboard Layouts
 
 layout-1:
     0:

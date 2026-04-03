@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: Installing ThingsBoard Edge on Raspberry Pi
-description: Installing ThingsBoard Edge on Raspberry Pi
+title: Installing SENTIENT GATEWAY on Raspberry Pi
+description: Installing SENTIENT GATEWAY on Raspberry Pi
 
 ---
 
@@ -13,7 +13,7 @@ description: Installing ThingsBoard Edge on Raspberry Pi
 
 {% include templates/edge/install/compatibility-warning-general.md %}
 
-This guide provides step-by-step instructions for installing **ThingsBoard Edge** on **RaspberryPi**.
+This guide provides step-by-step instructions for installing **SENTIENT GATEWAY** on **RaspberryPi**.
 
 {% include templates/edge/install/prerequisites.md %}
 
@@ -21,29 +21,29 @@ This guide provides step-by-step instructions for installing **ThingsBoard Edge*
 
 {% include templates/install/ubuntu-java-install.md %}
 
-## Step 2. ThingsBoard Edge Service Installation
+## Step 2. SENTIENT GATEWAY Service Installation
 
 Download the installation package.
 
 ```bash
-wget https://dist.thingsboard.io/tb-edge-{{ site.release.pe_edge_ver }}.deb
+wget https://dist.docs.sentient.invenia.in/tb-edge-{{ site.release.pe_edge_ver }}.deb
 ```
 {: .copy-code}
 
-Go to the download repository and install **ThingsBoard Edge** service:
+Go to the download repository and install **SENTIENT GATEWAY** service:
 
 ```bash
 sudo dpkg -i tb-edge-{{ site.release.pe_edge_ver }}.deb
 ```
 {: .copy-code}
 
-## Step 3. Configure ThingsBoard Edge Database
+## Step 3. Configure SENTIENT GATEWAY Database
 
 {% include templates/edge/install/rpi-db-rpi-postgresql.md %}
 
 ## Step 4. The Queue Service
 
-By default, **ThingsBoard Edge** uses the built-in queue implementation, which requires no additional configuration.
+By default, **SENTIENT GATEWAY** uses the built-in queue implementation, which requires no additional configuration.
 
 It is useful for development or proof-of-concept (PoC) environments, but is not recommended for production or any type of clustered deployment due to limited scalability.
 
@@ -55,14 +55,14 @@ It is useful for development or proof-of-concept (PoC) environments, but is not 
 
 {% include templates/edge/install/run-edge-install.md %}
 
-## Step 7. Restart ThingsBoard Edge Service
+## Step 7. Restart SENTIENT GATEWAY Service
 
 ```bash
 sudo service tb-edge restart
 ```
 {: .copy-code}
 
-## Step 8. Open ThingsBoard Edge UI
+## Step 8. Open SENTIENT GATEWAY UI
 
 {% include templates/edge/install/open-edge-ui.md %}
 
@@ -70,7 +70,7 @@ sudo service tb-edge restart
 
 ## Troubleshooting
 
-**ThingsBoard Edge** logs stored in the following directory:
+**SENTIENT GATEWAY** logs stored in the following directory:
 
 ```bash
 /var/log/tb-edge

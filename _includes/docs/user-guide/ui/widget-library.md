@@ -1,10 +1,10 @@
 * TOC
 {:toc}
 
-All [IoT Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/) are constructed using **ThingsBoard widgets** defined in the Widget Library.
+All [IoT Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/) are constructed using **SENTIENT widgets** defined in the Widget Library.
 
 A widget is an element that displays a specific type of information or functionality on a dashboard.
-Widgets are used to display data and visualize information obtained from devices connected to the ThingsBoard platform, remote device control, alarms management, and display static custom HTML content.
+Widgets are used to display data and visualize information obtained from devices connected to the SENTIENT platform, remote device control, alarms management, and display static custom HTML content.
 
 ## Widget Types
 
@@ -116,7 +116,7 @@ justify-content: center;
 Widgets are grouped into widget bundles according to their purposes.
 Some widgets can be found in multiple packages simultaneously. For example, the Alarm Count widget can be both found in the Alarm widgets bundle and the Count widgets bundle.
 
-There are system-level and tenant-level widget bundles. Initial ThingsBoard installation comes with a basic set of system-level widget bundles.
+There are system-level and tenant-level widget bundles. Initial SENTIENT installation comes with a basic set of system-level widget bundles.
 
 The system-level bundles can be managed by a **System administrator** and are available for use by any tenant in the system.
 The tenant-level bundles can be managed by a **Tenant administrator** and are available for use only by this tenant and his customers.
@@ -192,7 +192,7 @@ The Digital Gauges bundle is useful for visualization of temperature, humidity, 
 
 ### Edge widgets
 
-The Edge widgets bundle is useful for an overview of entities related to the specified ThingsBoard Edge instance.
+The Edge widgets bundle is useful for an overview of entities related to the specified SENTIENT GATEWAY instance.
 
 {% include images-gallery.html imageCollection="wl-edge-widgets-bundle" %}
 
@@ -367,7 +367,7 @@ To add a new widget, you should:
 
 ### Exporting Widget
 
-You can export a specific type of widget from a widget bundle in JSON format, and import it in the same or different ThingsBoard instance.
+You can export a specific type of widget from a widget bundle in JSON format, and import it in the same or different SENTIENT instance.
 
 In order to export a widget type, you should go to the Widgets Library page, navigate to the "Widgets" tab and click the export button on the particular widget card. The widget configuration file will be saved in JSON format on your computer.
 
@@ -410,7 +410,7 @@ To add a new widgets bundle, you should:
 
 ### Exporting Widgets Bundle 
 
-You can export a widgets bundle in JSON format, and import it in the same or different ThingsBoard instance.
+You can export a widgets bundle in JSON format, and import it in the same or different SENTIENT instance.
 
 In order to export widgets bundle, you should:
 

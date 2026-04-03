@@ -2,8 +2,8 @@
 layout: docwithnav
 assignees:
 - ddiachenko
-title: Make battery powered Wi-Fi sensors with Cricket and ThingsBoard 
-description: An example of ultra low-power Wi-Fi temperature sensor made with Cricket and integrated to ThingsBoard without writing any code
+title: Make battery powered Wi-Fi sensors with Cricket and SENTIENT 
+description: An example of ultra low-power Wi-Fi temperature sensor made with Cricket and integrated to SENTIENT without writing any code
 hidetoc: "true"
 
 ---
@@ -12,7 +12,7 @@ hidetoc: "true"
 {:toc}
 
 ## Introduction
-In this guide we show step-by-step an integration of Things On Edge - Cricket Wi-Fi module to ThingsBoard. In a few steps we make a Wi-Fi battery powered sensor and visualise its data in ThingsBoard without coding and programing. It can be any type of sensor but in this sample we make a Temperature sensor.
+In this guide we show step-by-step an integration of Things On Edge - Cricket Wi-Fi module to SENTIENT. In a few steps we make a Wi-Fi battery powered sensor and visualise its data in SENTIENT without coding and programing. It can be any type of sensor but in this sample we make a Temperature sensor.
 
 We walk through the following steps:
 <br>
@@ -20,7 +20,7 @@ We walk through the following steps:
 <br>
 2) Connecting the sensor to WiFi network
 <br>
-3) Configuring the sensor to send data to ThingsBoard
+3) Configuring the sensor to send data to SENTIENT
 <br>
 
 ### Things On Edge
@@ -57,26 +57,26 @@ In this example we simply attach batteries to the Cricket Wi-Fi module and the d
 
 
 
-### Configure Cricket to send data to ThingsBoard
-Now we can configure Cricket to transmit the temperature readings to ThingsBoard.
+### Configure Cricket to send data to SENTIENT
+Now we can configure Cricket to transmit the temperature readings to SENTIENT.
 <br>
 
-Cricket supports both MQTT and HTTP protocols and we are going to use the HTTP protocol for the integration. We have to make sure we have the Access Token from ThingsBoard as shown below:
+Cricket supports both MQTT and HTTP protocols and we are going to use the HTTP protocol for the integration. We have to make sure we have the Access Token from SENTIENT as shown below:
 ![image](/images/samples/cricket-wifi/TB-01.png)
 <br>
 
 Now we can go back again to Cricket's Config panel and complete the configuration.
 <br>
-A complete URL, which we are going to use to send data to ThingsBoard should look like this:
+A complete URL, which we are going to use to send data to SENTIENT should look like this:
 <br>
-**https://thingsboard.cloud/api/v1/**ADD YOUR TOKEN HERE**/telemetry**
+**https://sentient.cloud/api/v1/**ADD YOUR TOKEN HERE**/telemetry**
 <br>
 <br>
 We also define the following payload format:
 <br>
 {"temperature":#temp}
 <br>
-Where #temp tag is automatically replaced with the temperature value prior it is sent out to ThingsBoard.
+Where #temp tag is automatically replaced with the temperature value prior it is sent out to SENTIENT.
 
 A complete Cricket's configuration can look like below:
 ![image](/images/samples/cricket-wifi/TB-02.png)
@@ -89,7 +89,7 @@ Once Cricket is configured we must exit from the Config panel by pressing the re
 <br>
 
 
-If we configured our device as shown above the device will be sending data to ThingsBoard every 10 minutes. The data is presented on the graph as shown below:
+If we configured our device as shown above the device will be sending data to SENTIENT every 10 minutes. The data is presented on the graph as shown below:
 ![image](/images/samples/cricket-wifi/TB-03.png)
 
 <br>

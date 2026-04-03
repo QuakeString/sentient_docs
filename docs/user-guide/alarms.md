@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
 - ashvayka
 title: Working with alarms
-description: IoT device alarm management using ThingsBoard alarms feature
+description: IoT device alarm management using SENTIENT alarms feature
 redirect_from: "/docs/samples/alarms/basic-rules/"
 
 alarm-type:

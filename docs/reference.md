@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: ThingsBoard architecture
-description: ThingsBoard architecture
+title: SENTIENT architecture
+description: SENTIENT architecture
 redirect_from: "/docs/user-guide/rule-engine-2-0/architecture/"
 
 ---

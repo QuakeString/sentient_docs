@@ -1,12 +1,12 @@
 ---
 layout: docwithnav-edge
 title: Manage alarms and RPC requests on edge devices
-description: ThingsBoard Edge use case #1
+description: SENTIENT GATEWAY use case #1
 
 configureAlarmRules:
     0:
         image: /images/edge/use-cases/manage-alarms/configure-rules-item-1.png
-        title: 'Login to your <b>ThingsBoard</b> instance and open <b>Device profiles</b> menu page.'
+        title: 'Login to your <b>SENTIENT</b> instance and open <b>Device profiles</b> menu page.'
     1:
         image: /images/edge/use-cases/manage-alarms/configure-rules-item-2.png
         title: 'Click the <b>("+")</b> icon to add new device profile.'
@@ -44,7 +44,7 @@ configureAlarmRules:
 configureAlarmRulesEdge:
     0:
         image: /images/edge/use-cases/manage-alarms/configure-rules-item-13.png
-        title: 'Login to your ThingsBoard <b>Edge</b> instance and open <b>Device profiles</b> menu page.'
+        title: 'Login to your SENTIENT <b>Edge</b> instance and open <b>Device profiles</b> menu page.'
     1:
         image: /images/edge/use-cases/manage-alarms/configure-rules-item-14.png
         title: 'Verify that <b>edge thermostat</b> was provisioned to edge as well.'
@@ -52,7 +52,7 @@ configureAlarmRulesEdge:
 provisionDevicesEdge:
     0:
         image: /images/edge/use-cases/manage-alarms/provision-devices-item-1.png
-        title: 'Login to your ThingsBoard <b>Edge</b> instance and open <b>Devices</b> menu page.'
+        title: 'Login to your SENTIENT <b>Edge</b> instance and open <b>Devices</b> menu page.'
     1:
         image: /images/edge/use-cases/manage-alarms/provision-devices-item-2.png
         title: 'Click on the <b>("+")</b> icon in the top right corner of the table.'
@@ -81,7 +81,7 @@ provisionDevicesEdge:
 provisionDevices:
     0:
         image: /images/edge/use-cases/manage-alarms/provision-devices-item-10.png
-        title: 'Login to your <b>ThingsBoard</b> instance and open <b>Devices</b> menu page.'
+        title: 'Login to your <b>SENTIENT</b> instance and open <b>Devices</b> menu page.'
     1:
         image: /images/edge/use-cases/manage-alarms/provision-devices-item-11.png
         title: 'Make sure that <b>DHT22</b> and <b>Air Conditioner</b> devices are in the devices list.'
@@ -96,7 +96,7 @@ rootRuleChainPreview:
 updateRootRuleChain:
     0:
         image: /images/edge/use-cases/manage-alarms/update-root-item-1.png
-        title: 'Login to your <b>ThingsBoard</b> instance and open <b>Rule chain templates</b> menu page.'
+        title: 'Login to your <b>SENTIENT</b> instance and open <b>Rule chain templates</b> menu page.'
     1:
         image: /images/edge/use-cases/manage-alarms/update-root-item-2.png
         title: 'Open default <b>Edge Root Rule Chain</b>.'
@@ -128,7 +128,7 @@ updateRootRuleChain:
 updateRootRuleChainEdge:
     0:
         image: /images/edge/use-cases/manage-alarms/update-root-item-11.png
-        title: 'Login to your ThingsBoard <b>Edge</b> instance and open <b>Rule chains</b> menu page.'
+        title: 'Login to your SENTIENT <b>Edge</b> instance and open <b>Rule chains</b> menu page.'
     1:
         image: /images/edge/use-cases/manage-alarms/update-root-item-12.png
         title: 'Open <b>Edge Root Rule Chain</b> to verify changes.'
@@ -136,7 +136,7 @@ updateRootRuleChainEdge:
 copyAccessTokenAirConditioner:
     0:
         image: /images/edge/use-cases/manage-alarms/copy-access-token-item-1.png
-        title: 'Open <b>Devices</b> menu page in the ThingsBoard <b>Edge</b> instance.'
+        title: 'Open <b>Devices</b> menu page in the SENTIENT <b>Edge</b> instance.'
     1:
         image: /images/edge/use-cases/manage-alarms/copy-access-token-item-2.png
         title: 'Click on the <b>Air Conditioner</b> device row in the table to open device details.'
@@ -147,7 +147,7 @@ copyAccessTokenAirConditioner:
 copyAccessTokenDht22:
     0:
         image: /images/edge/use-cases/manage-alarms/copy-access-token-item-1.png
-        title: 'Open <b>Devices</b> menu page in the ThingsBoard <b>Edge</b> instance.'
+        title: 'Open <b>Devices</b> menu page in the SENTIENT <b>Edge</b> instance.'
     2:
         image: /images/edge/use-cases/manage-alarms/copy-access-token-item-4.png
         title: 'Click on the <b>DHT22</b> device row in the table to open device details.'
@@ -176,7 +176,7 @@ mqttWindows:
 {:toc}
 
 {% assign docsPrefix = "edge/" %}
-{% assign appPrefix = "ThingsBoard" %}
+{% assign appPrefix = "SENTIENT" %}
 
 ## Use case
 

@@ -1,6 +1,6 @@
 | **Parameter**             | **Example value**                            | **Description**                                                                |
 |:-|:-
-| *deviceName*              | **DEVICE_NAME**                              | Device name in ThingsBoard.                                                    |
+| *deviceName*              | **DEVICE_NAME**                              | Device name in SENTIENT.                                                    |
 | *provisionDeviceKey*      | **PUT_PROVISION_KEY_HERE**                   | Provisioning device key, you should take it from configured device profile.    |
 | *provisionDeviceSecret*   | **PUT_PROVISION_SECRET_HERE**                | Provisioning device secret, you should take it from configured device profile. | 
 |-
@@ -42,8 +42,8 @@ RESULT_CODES = {
     }
 
 
-THINGSBOARD_HOST = "{{mqttHostName}}"  # ThingsBoard instance host
-THINGSBOARD_PORT = 1883  # ThingsBoard instance MQTT port
+SENTIENT_HOST = "{{mqttHostName}}"  # SENTIENT instance host
+SENTIENT_PORT = 1883  # SENTIENT instance MQTT port
 
 PROVISION_DEVICE_KEY = "PUT_PROVISION_KEY_HERE"  # Provision device key, replace this value with your value from device profile.
 PROVISION_DEVICE_SECRET = "PUT_PROVISION_SECRET_HERE"  # Provision device secret, replace this value with your value from device profile.
@@ -70,17 +70,17 @@ class ProvisionClient(Client):
 
     def __on_connect(self, client, userdata, flags, rc):  # Callback for connect
         if rc == 0:
-            print("[Provisioning client] Connected to ThingsBoard ")
+            print("[Provisioning client] Connected to SENTIENT ")
             client.subscribe(self.PROVISION_RESPONSE_TOPIC)  # Subscribe to provisioning response topic
             provision_request = dumps(self.__provision_request)
             print("[Provisioning client] Sending provisioning request %s" % provision_request)
             client.publish(self.PROVISION_REQUEST_TOPIC, provision_request)  # Publishing provisioning request topic
         else:
-            print("[Provisioning client] Cannot connect to ThingsBoard!, result: %s" % RESULT_CODES[rc])
+            print("[Provisioning client] Cannot connect to SENTIENT!, result: %s" % RESULT_CODES[rc])
 
     def __on_message(self, client, userdata, msg):
         decoded_payload = msg.payload.decode("UTF-8")
-        print("[Provisioning client] Received data from ThingsBoard: %s" % decoded_payload)
+        print("[Provisioning client] Received data from SENTIENT: %s" % decoded_payload)
         decoded_message = loads(decoded_payload)
         provision_device_status = decoded_message.get("status")
         if provision_device_status == "SUCCESS":
@@ -90,7 +90,7 @@ class ProvisionClient(Client):
         self.disconnect()
 
     def provision(self):
-        print("[Provisioning client] Connecting to ThingsBoard (provisioning client)")
+        print("[Provisioning client] Connecting to SENTIENT (provisioning client)")
         self.__clean_credentials()
         self.connect(self._host, self._port, 60)
         self.loop_forever()
@@ -128,18 +128,18 @@ class ProvisionClient(Client):
 
 def on_tb_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
     if rc == 0:
-        print("[ThingsBoard client] Connected to ThingsBoard with credentials: %s" % client._username)
+        print("[SENTIENT client] Connected to SENTIENT with credentials: %s" % client._username)
     else:
-        print("[ThingsBoard client] Cannot connect to ThingsBoard!, result: %s" % RESULT_CODES[rc])
+        print("[SENTIENT client] Cannot connect to SENTIENT!, result: %s" % RESULT_CODES[rc])
 
 
 if __name__ == '__main__':
-    provision_client = ProvisionClient(THINGSBOARD_HOST, THINGSBOARD_PORT, PROVISION_REQUEST)
+    provision_client = ProvisionClient(SENTIENT_HOST, SENTIENT_PORT, PROVISION_REQUEST)
     provision_client.provision()  # Request provisioned data
     tb_client = provision_client.get_new_client()  # Getting client with provisioned data
     if tb_client:
         tb_client.on_connect = on_tb_connected  # Setting callback for connect
-        tb_client.connect(THINGSBOARD_HOST, THINGSBOARD_PORT, 60)
+        tb_client.connect(SENTIENT_HOST, SENTIENT_PORT, 60)
         tb_client.loop_forever()  # Starting infinity loop
     else:
         print("Client was not created!")
@@ -168,7 +168,7 @@ if __name__ == '__main__':
 
 ### CoAP Example script
 
-To communicate with ThingsBoard we will use asyncio and aiocoap modules, so we should install it: <br><br>
+To communicate with SENTIENT we will use asyncio and aiocoap modules, so we should install it: <br><br>
 
 <b>pip3 install asyncio aiocoap --user</b>
 
@@ -183,8 +183,8 @@ import asyncio
 from aiocoap import Context, Message, Code
 from json import loads, dumps
 
-THINGSBOARD_HOST = "127.0.0.1"
-THINGSBOARD_PORT = "5683"
+SENTIENT_HOST = "127.0.0.1"
+SENTIENT_PORT = "5683"
 
 logging.basicConfig(level=logging.INFO)
 
@@ -196,7 +196,7 @@ to_publish = {"provisionDeviceKey": "u7piawkboq8v32dmcmpp",
 
 
 async def process():
-server_address = "coap://" + THINGSBOARD_HOST + ":" + str(THINGSBOARD_PORT)
+server_address = "coap://" + SENTIENT_HOST + ":" + str(SENTIENT_PORT)
 
     client_context = await Context.create_client_context()
     await asyncio.sleep(2)

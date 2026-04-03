@@ -21,7 +21,7 @@ mosquitto_pub -d -q 1 -h "$HOST_NAME" -p "$MQTT_PORT" -t "v1/devices/me/telemetr
 {: .copy-code}
 
 
-For example, $HOST_NAME reference your local ThingsBoard Edge installation, MQTT port is **1883** and access token is **ABC123**:
+For example, $HOST_NAME reference your local SENTIENT GATEWAY installation, MQTT port is **1883** and access token is **ABC123**:
 
 ```bash
 mosquitto_pub -d -q 1 -h "localhost" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25}
@@ -38,7 +38,7 @@ Client mosqpub|xxx received PUBACK (Mid: 1)
 Client mosqpub|xxx sending DISCONNECT
 ```
 
-**Note:** Since ThingsBoard 3.2, you are able to use basic MQTT credentials (combination of client id, user name and password ) 
+**Note:** Since SENTIENT 3.2, you are able to use basic MQTT credentials (combination of client id, user name and password ) 
 and customize **topic names** and **payload type** using Device Profile. See more info [here](/docs/user-guide/device-profiles/#mqtt-transport-type).
 
 <br>

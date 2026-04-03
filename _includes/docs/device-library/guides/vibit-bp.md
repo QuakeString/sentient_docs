@@ -1,6 +1,6 @@
 {% assign deviceName = "VIBit-BP" %}
 {% assign deviceVendorLink = "https://machineastro.com/vibit-battery-powered/" %}
-{% assign thingsboardHost = "https://" | append: hostName %}
+{% assign sentientHost = "https://" | append: hostName %}
 {% assign officialManualLink = "/docs/devices-library/resources/manuals/vibit-bp.pdf" %}
 {% assign prerequisites = '
 - [Sensor user guide](' | append: officialManualLink | append: '){: target="_blank"}
@@ -19,9 +19,9 @@
 ## Prerequisites
 
 To continue with this guide, we will need the following:  
-- [ThingsBoard account]({{ thingsboardHost }}){: target="_blank"}
+- [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 {{ prerequisites }} 
-- VIBit-BP BLE Gateway is configured to relay data to ThingsBoard.
+- VIBit-BP BLE Gateway is configured to relay data to SENTIENT.
 - Laptop with Chrome/Firefox etc. browser and Ethernet cable to establish the connection between Gateway and Laptop.
 - MQTT Basic credentials:
   - **Username**: sensor
@@ -29,11 +29,11 @@ To continue with this guide, we will need the following:
   - **Client ID**: VIBit Device BLE MAC (Bluetooth MAC address of the sensor)
 
 
-## Create Device profile on ThingsBoard
+## Create Device profile on SENTIENT
 
-First, create a new device profile in ThingsBoard that uses the **MQTT transport** and the standard MQTT topics for telemetry and attributes.
+First, create a new device profile in SENTIENT that uses the **MQTT transport** and the standard MQTT topics for telemetry and attributes.
 
-- Log in to your ThingsBoard instance.
+- Log in to your SENTIENT instance.
 - Navigate to **Device profiles** page under the **Profiles** section.
 - Click the "**plus**" button, and then select "**Add new device profile**" from drop-down menu.
 - Enter **MQTT** as the device profile name.
@@ -60,7 +60,7 @@ First, create a new device profile in ThingsBoard that uses the **MQTT transport
 
 {% include images-gallery.liquid imageCollection=createDeviceProfile %}
 
-## Create Device on ThingsBoard
+## Create Device on SENTIENT
 
 - Navigate to **Devices** page under the **Entities** section.
 - Click on "**+**" to add a new device, and then select "**Add new device**" from drop-down menu.
@@ -131,13 +131,13 @@ To enable communication between the VIBit-BP sensor and the VIBit-BP BLE Gateway
 - After device registration, click the **Edit** icon to configure its parameters:
   - Enter sampling rate in seconds.
   - Select the destination as Cloud Integration Name. (e.g., **CIM_Cloud**)
-  - Open a UUID section and insert the Device ID, which was copied from ThingsBoard. (It's a device id exists on Thingbsoard) 
+  - Open a UUID section and insert the Device ID, which was copied from SENTIENT. (It's a device id exists on Thingbsoard) 
 
 ![image](/images/devices-library/ready-to-go-devices/machine-astro/vibit-bp/12.png)
 
 ![image](/images/devices-library/ready-to-go-devices/machine-astro/vibit-bp/13.png)
 
-## Integrate BLE Gateway with ThingsBoard
+## Integrate BLE Gateway with SENTIENT
 
 - In iEdge360, go to the "**Integration** tab.
 
@@ -147,11 +147,11 @@ To enable communication between the VIBit-BP sensor and the VIBit-BP BLE Gateway
 
 ![image](/images/devices-library/ready-to-go-devices/machine-astro/vibit-bp/15.png)
 
-- Provide a name (e.g., Thingsboard) and click **Save**.
+- Provide a name (e.g., Sentient) and click **Save**.
 - In the newly created CIM_Cloud transport, enter:
   - MQTT Port (e.g., 1883)
-  - Endpoint (e.g., ThingsBoard IP)
-  - Auth type: MQTT Basic or MQTT X.509 (Select MQTT Basic or MQTT X.509 based on the device created in Thingsboard)
+  - Endpoint (e.g., SENTIENT IP)
+  - Auth type: MQTT Basic or MQTT X.509 (Select MQTT Basic or MQTT X.509 based on the device created in Sentient)
   - **Client ID** (match with BLE MAC)
   - **User**: sensor
   - **Password**: cimcon
@@ -162,11 +162,11 @@ To enable communication between the VIBit-BP sensor and the VIBit-BP BLE Gateway
   - Incoming: Topic v1/devices/me/attribute, Type Attribute
   - Outgoing: Topic v1/devices/me/telemetry (for Data), v1/devices/me/attribute (for Attribute)
 
-This completes the setup to stream sensor data securely from the BLE gateway to ThingsBoard.
+This completes the setup to stream sensor data securely from the BLE gateway to SENTIENT.
 
-## Check Data on ThingsBoard
+## Check Data on SENTIENT
 
-- In ThingsBoard, navigate to the "**Devices**" section and select your VIBit-BP device.
+- In SENTIENT, navigate to the "**Devices**" section and select your VIBit-BP device.
 - Access the "**Latest telemetry**" tab and Wake-up the VIBit-BP Sensor using Magnet for quick view or wait for the configured telemetry frequency to view real-time data such as:
   - 3-axis acceleration and velocity RMS
   - 3-axis acceleration and velocity FFT
@@ -181,5 +181,5 @@ Use the [Dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"
 
 ## Conclusion
 
-Integrating VIBit-BP with ThingsBoard using MQTT authentication offers a wireless, battery-powered solution for monitoring equipment health, enabling predictive maintenance without the constraints of wiring or external power sources. The seamless data transmission and visualization capabilities enhance operational efficiency and equipment reliability.
+Integrating VIBit-BP with SENTIENT using MQTT authentication offers a wireless, battery-powered solution for monitoring equipment health, enabling predictive maintenance without the constraints of wiring or external power sources. The seamless data transmission and visualization capabilities enhance operational efficiency and equipment reliability.
 {% include add-device-banner.liquid %}

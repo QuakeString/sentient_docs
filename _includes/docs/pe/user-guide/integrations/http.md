@@ -5,17 +5,17 @@
 
 ## Overview
 
-HTTP Integration allows converting existing protocols and payload formats to ThingsBoard message format and is useful in several deployment scenarios: 
+HTTP Integration allows converting existing protocols and payload formats to SENTIENT message format and is useful in several deployment scenarios: 
 
  - stream device and/or asset data from external system, IoT platform or connectivity provider back-end.
  - stream device and/or asset data from your custom application running in the cloud.
- - connect the existing device with custom HTTP based protocol to ThingsBoard.
+ - connect the existing device with custom HTTP based protocol to SENTIENT.
 
 <object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/http-integration.svg"></object>
 
 ## Create Uplink Converter
 
-Before creating the integration, you need to create an Uplink converter in Data converters. Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in ThingsBoard. 
+Before creating the integration, you need to create an Uplink converter in Data converters. Uplink is necessary in order to convert the incoming data from the device into the required format for displaying them in SENTIENT. 
 Click on the “plus” and on “Create new converter”. To view the events, enable Debug. 
 In the function decoder field, specify a script to parse and transform data.
 
@@ -111,7 +111,7 @@ The notification will contain an action button by clicking which you can go to t
 ![image](/images/user-guide/integrations/http/http-device-2-pe.png)
 
 <br>
-Here you will see information about the new device. As well as the telemetry which we sent from the device to the ThingsBoard.
+Here you will see information about the new device. As well as the telemetry which we sent from the device to the SENTIENT.
 
 ![image](/images/user-guide/integrations/http/http-device-1-pe.png)
 
@@ -131,7 +131,7 @@ The created device with data can be seen in the section "**Device groups**" -> "
 {% capture difference %}
 **NOTE**
 <br>
-If the "Allow create devices or assets" checkbox is unchecked, when sending a message to the ThingsBoard with any parameters of the device (or asset), if such a device (asset) does not exist, then device (asset) will not be created.
+If the "Allow create devices or assets" checkbox is unchecked, when sending a message to the SENTIENT with any parameters of the device (or asset), if such a device (asset) does not exist, then device (asset) will not be created.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -141,7 +141,7 @@ Also, sent and received data can be viewed in the Uplink converter. In the 'In' 
 
 <br>
 Use the [Dashboards](/docs/{{docsPrefix}}user-guide/dashboards/) to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.  
-ThingsBoard has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/{{docsPrefix}}solution-templates/overview/).
+SENTIENT has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/{{docsPrefix}}solution-templates/overview/).
 
 {% if docsPrefix == "pe/" %}
 ![image](/images/user-guide/integrations/http/http-solution-templates.png)
@@ -238,7 +238,7 @@ Then set the attribute name, its value (for example, the key name is 'firmware',
 {% endif %}
 
 <br>
-Send the uplink message again. We will receive a response from the ThingsBoard in the terminal:
+Send the uplink message again. We will receive a response from the SENTIENT in the terminal:
 
 {% include images-gallery.html imageCollection="downlink-terminal" %}
 

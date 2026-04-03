@@ -3,7 +3,7 @@
 
 ## Use case
 
-Assume your refrigeration equipment is fitted with a temperature sensor that periodically publishes telemetry data to ThingsBoard.
+Assume your refrigeration equipment is fitted with a temperature sensor that periodically publishes telemetry data to SENTIENT.
 
 The normal operating temperature range is between 2 °C and 5 °C.   
 If the reported temperature goes outside this range, it should be treated as an abnormal condition.
@@ -14,7 +14,7 @@ Your objective is to:
 
 Although this scenario is simplified, it demonstrates a **common telemetry monitoring pattern** applicable to real-world IoT deployments such as **cold storage**, **food logistics**, and **industrial refrigeration systems**.
 
-To keep the focus on platform capabilities rather than manual setup, the guide uses **predefined alarm rule configurations** that can be [imported](/docs/{{docsPrefix}}user-guide/alarm-rules/#export--import-alarm-rule){:target="_blank"} directly into ThingsBoard. 
+To keep the focus on platform capabilities rather than manual setup, the guide uses **predefined alarm rule configurations** that can be [imported](/docs/{{docsPrefix}}user-guide/alarm-rules/#export--import-alarm-rule){:target="_blank"} directly into SENTIENT. 
 This allows you to quickly understand how alarm rules work, examine their logic, and reuse or adapt them for your own IoT scenarios.
 
 <hr>
@@ -77,26 +77,26 @@ To verify that the alarm rules work correctly, publish several temperature value
 The easiest way is to use [Check connectivity](/docs/{{docsPrefix}}user-guide/ui/devices/#check-connectivity){:target="_blank"}. Alternatively, use the commands below.
 
 ⚠️ Replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;**$THINGSBOARD_HOST_NAME** with your ThingsBoard hostname or IP address.   
+&#8194;&#8226;&#8194;**$SENTIENT_HOST_NAME** with your SENTIENT hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}**$ACCESS_TOKEN** with the device access token.
 
 1. Trigger the High temperature alarm.   
    Publish a temperature value above the upper threshold (for example, 7 °C).
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:7}"
    ```
    {: .copy-code}
    {% endif %}
@@ -105,19 +105,19 @@ The easiest way is to use [Check connectivity](/docs/{{docsPrefix}}user-guide/ui
    Publish a temperature value within the normal range (for example, 4 °C).
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
    ```
    {: .copy-code}
    {% endif %}
@@ -127,19 +127,19 @@ The easiest way is to use [Check connectivity](/docs/{{docsPrefix}}user-guide/ui
    Publish a temperature value below the lower threshold (for example, 1 °C).
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:1}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:1}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:1}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:1}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:1}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:1}"
    ```
    {: .copy-code}
    {% endif %}
@@ -149,19 +149,19 @@ The easiest way is to use [Check connectivity](/docs/{{docsPrefix}}user-guide/ui
    Publish a temperature value within the acceptable range again (for example, 4 °C).
    {% if docsPrefix == null or docsPrefix == "pe/" %}
    ```bash
-   curl -v -X POST http://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
+   curl -v -X POST http://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/" %}
    ```bash
-   curl -v -X POST https://thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
+   curl -v -X POST https://sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
    ```
    {: .copy-code}
    {% endif %}
    {% if docsPrefix == "paas/eu/" %}
    ```bash
-   curl -v -X POST https://eu.thingsboard.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
+   curl -v -X POST https://eu.sentient.cloud/api/v1/$ACCESS_TOKEN/telemetry --header Content-Type:application/json --data "{temperature:4}"
    ```
    {: .copy-code}
    {% endif %}

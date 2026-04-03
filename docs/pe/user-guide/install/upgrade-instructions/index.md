@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
 title: Upgrade instructions
-description: ThingsBoard PE IoT platform upgrade instructions
+description: SENTIENT Professional Edition IoT platform upgrade instructions
 redirect_from: 
   - "/docs/user-guide/install/aws-marketplace-pe-upgrade/"
 table-of-contents: "false"
@@ -17,7 +17,7 @@ active-menu-item-click: "true"
 </div>
 
 <div id="upgrade-links" class="upgrade-links">
-  <p style="margin-bottom: 10px">Summary table of supported upgrade instructions for ThingsBoard Professional Edition. To upgrade from Community Edition to Professional Edition, use the <a href="/docs/pe/user-guide/install/upgrade-instructions/upgrade-from-ce">following instructions</a>.</p>
+  <p style="margin-bottom: 10px">Summary table of supported upgrade instructions for SENTIENT Professional Edition. To upgrade from Community Edition to Professional Edition, use the <a href="/docs/pe/user-guide/install/upgrade-instructions/upgrade-from-ce">following instructions</a>.</p>
 </div>
 
 <p id="upgrade-links-old" style="margin-bottom: 10px">Upgrade instructions for <a href="/docs/pe/user-guide/install/upgrade-instructions/old-upgrade-instructions/">versions older than 3.0</a>.</p>

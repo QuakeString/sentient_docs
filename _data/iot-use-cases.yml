@@ -3,133 +3,133 @@
   name: "Smart Energy"
   description: "Deliver and store data from smart meters in reliable and fault-tolerant way, visualize real-time and historical energy consumption data on customizable end-user dashboards, integrate with third-party analytics frameworks and solutions."
   media:
-    image: "https://img.thingsboard.io/usecases/smart-energy/video/smart-energy.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/smart-energy/video/smart-energy.png"
     alt: "Smart energy"
-    video: ["https://video.thingsboard.io/usecases/smart-energy.mp4", "https://video.thingsboard.io/usecases/smart-energy.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/smart-energy.mp4", "https://video.docs.sentient.invenia.in/usecases/smart-energy.webm"]
   href: "/use-cases/smart-energy/"
 1:
   type: "SCADA"
   name: "SCADA Swimming Pool System"
   description: "SCADA systems are generally divided into two types: Traditional and High-Performance. Monitor and control your industrial processes in real time with SCADA. Use SCADA symbols on dashboards to create and manage any workflow, offering full flexibility to design and oversee operations according to your requirements."
   media:
-    image: "https://img.thingsboard.io/usecases/scada/video/scada.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/scada/video/scada.png"
     alt: "See more about SCADA Swimming pool"
-    video: ["https://video.thingsboard.io/usecases/scada.mp4", "https://video.thingsboard.io/usecases/scada.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/scada.mp4", "https://video.docs.sentient.invenia.in/usecases/scada.webm"]
   href: "/use-cases/scada/"
 2:
   type: "SCADA"
   name: "SCADA Oil & Gas drilling system"
-  description: "Automate drilling operations with SCADA and ThingsBoard. Control rigs, pumps, and blowout preventers in real time, visualize key parameters, and enhance operational safety. Flexible SCADA symbol templates allow you to tailor the system to any production scenario."
+  description: "Automate drilling operations with SCADA and SENTIENT. Control rigs, pumps, and blowout preventers in real time, visualize key parameters, and enhance operational safety. Flexible SCADA symbol templates allow you to tailor the system to any production scenario."
   media:
-    image: "https://img.thingsboard.io/solutions/scada_drilling_system/hp-scada-systems-in-drilling-1.png"
+    image: "https://img.docs.sentient.invenia.in/solutions/scada_drilling_system/hp-scada-systems-in-drilling-1.png"
     alt: "See more about SCADA Oil & gas drilling system"
-    video: ["https://video.thingsboard.io/usecases/hp-drilling-scada-system.mp4", "https://video.thingsboard.io/usecases/hp-drilling-scada-system.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/hp-drilling-scada-system.mp4", "https://video.docs.sentient.invenia.in/usecases/hp-drilling-scada-system.webm"]
   href: "/use-cases/scada-oil-and-gas-drilling-system/"
 3:
   type: "SCADA"
   name: "SCADA Energy management"
-  description: "Gain a complete real-time view of energy consumption and generation. Use SCADA powered by ThingsBoard to monitor, analyze, and optimize energy flows — from generation to end use. Track efficiency, forecast demand peaks, and reduce costs with intuitive dashboards and seamless integration with industrial equipment."
+  description: "Gain a complete real-time view of energy consumption and generation. Use SCADA powered by SENTIENT to monitor, analyze, and optimize energy flows — from generation to end use. Track efficiency, forecast demand peaks, and reduce costs with intuitive dashboards and seamless integration with industrial equipment."
   media:
-    image: "https://img.thingsboard.io/solutions/scada_energy_management/scada-energy-management-1.png"
+    image: "https://img.docs.sentient.invenia.in/solutions/scada_energy_management/scada-energy-management-1.png"
     alt: "See more about SCADA Energy management"
-    video: ["https://video.thingsboard.io/usecases/scada-energy-management.mp4", "https://video.thingsboard.io/usecases/scada-energy-management.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/scada-energy-management.mp4", "https://video.docs.sentient.invenia.in/usecases/scada-energy-management.webm"]
   href: "/use-cases/scada-energy-management/"
 4:
   type: "General"
   name: "Environment Monitoring"
-  description: "Monitor and analyze indoor and outdoor environments using a wide range of sensors. ThingsBoard supports data acquisition using modern connectivity technologies and protocols: NB IoT, LoRaWAN, SigFox, MQTT, CoAP, HTTP, LwM2M, and others."
+  description: "Monitor and analyze indoor and outdoor environments using a wide range of sensors. SENTIENT supports data acquisition using modern connectivity technologies and protocols: NB IoT, LoRaWAN, SigFox, MQTT, CoAP, HTTP, LwM2M, and others."
   media:
-    image: "https://img.thingsboard.io/usecases/environment-monitoring/video/environment-monitoring.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/environment-monitoring/video/environment-monitoring.png"
     alt: "Environment monitoring dashboard"
-    video: ["https://video.thingsboard.io/usecases/environment-monitoring.mp4", "https://video.thingsboard.io/usecases/environment-monitoring.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/environment-monitoring.mp4", "https://video.docs.sentient.invenia.in/usecases/environment-monitoring.webm"]
   href: "/use-cases/environment-monitoring/"
 5:
   type: "General"
   name: "Smart Office"
-  description: "Ensure employee health and safety to boost organization productivity. Optimize resource consumption by monitoring and control of the office indoor climate. ThingsBoard provides rich data visualization, powerful processing engine, remote control and OTA updates capabilities."
+  description: "Ensure employee health and safety to boost organization productivity. Optimize resource consumption by monitoring and control of the office indoor climate. SENTIENT provides rich data visualization, powerful processing engine, remote control and OTA updates capabilities."
   media:
     image: "/images/usecases/smart-office/smart-office-1-v2.webp"
     alt: "See more about Smart Office"
-    video: ["https://video.thingsboard.io/usecases/smart-office-v3.mp4", "https://video.thingsboard.io/usecases/smart-office-v3.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/smart-office-v3.mp4", "https://video.docs.sentient.invenia.in/usecases/smart-office-v3.webm"]
   href: "/use-cases/smart-office/"
 6:
   type: "General"
   name: "Water Metering"
-  description: "Enable water consumption data collection, analysis and fraud detection using ThingsBoard. Use interactive dashboards that allow administrators and end-users to browse the state of the water meters and aggregated water consumption statistics. Enable alarms over SMS and email and integrate with external billing systems."
+  description: "Enable water consumption data collection, analysis and fraud detection using SENTIENT. Use interactive dashboards that allow administrators and end-users to browse the state of the water meters and aggregated water consumption statistics. Enable alarms over SMS and email and integrate with external billing systems."
   media:
-    image: "https://img.thingsboard.io/usecases/water-metering/video/water-metering.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/water-metering/video/water-metering.png"
     alt: "Water metering dashboard"
-    video: ["https://video.thingsboard.io/usecases/water-metering.mp4", "https://video.thingsboard.io/usecases/water-metering.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/water-metering.mp4", "https://video.docs.sentient.invenia.in/usecases/water-metering.webm"]
   href: "/use-cases/water-metering/"
 7:
   type: "General"
   name: "Smart Retail"
-  description: "Control quality of food storage by monitoring chillers and freezers. Ensure availability of the goods using smart shelves. Ensure safety using motion detection and fire alarms. ThingsBoard provides a solution template to monitor supermarket assets, browse historical data and generate alarms based on user-defined thresholds."
+  description: "Control quality of food storage by monitoring chillers and freezers. Ensure availability of the goods using smart shelves. Ensure safety using motion detection and fire alarms. SENTIENT provides a solution template to monitor supermarket assets, browse historical data and generate alarms based on user-defined thresholds."
   media:
-    image: "https://img.thingsboard.io/usecases/smart-retail/video/smart-retail.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/smart-retail/video/smart-retail.png"
     alt: "Smart retail dashboard"
-    video: ["https://video.thingsboard.io/usecases/smart-retail.mp4", "https://video.thingsboard.io/usecases/smart-retail.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/smart-retail.mp4", "https://video.docs.sentient.invenia.in/usecases/smart-retail.webm"]
   href: "/use-cases/smart-retail/"
 8:
   type: "General"
   name: "Smart Farming"
-  description: "Collect important indicators for your agricultural production such as soil conditions or facilities state via IoT sensors and visualize them using end-user customizable dashboards provided by ThingsBoard platform."
+  description: "Collect important indicators for your agricultural production such as soil conditions or facilities state via IoT sensors and visualize them using end-user customizable dashboards provided by SENTIENT platform."
   media:
-    image: "https://img.thingsboard.io/usecases/smart-farming/video/smart-farming.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/smart-farming/video/smart-farming.png"
     alt: "Smart farming dashboard"
-    video: ["https://video.thingsboard.io/usecases/smart-farming.mp4", "https://video.thingsboard.io/usecases/smart-farming.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/smart-farming.mp4", "https://video.docs.sentient.invenia.in/usecases/smart-farming.webm"]
   href: "/use-cases/smart-farming/"
 9:
   type: "General"
   name: "Site Fleet Tracking"
-  description: "Monitor excavators, haul trucks, and machinery across industrial or mining zones in real time using ThingsBoard. Leverage geofencing, calculated fields, and smart alarms to track fuel usage, detect zone violations, and optimize equipment efficiency — all without rule chains. Explore how this zero-code solution boosts operational safety and control."
+  description: "Monitor excavators, haul trucks, and machinery across industrial or mining zones in real time using SENTIENT. Leverage geofencing, calculated fields, and smart alarms to track fuel usage, detect zone violations, and optimize equipment efficiency — all without rule chains. Explore how this zero-code solution boosts operational safety and control."
   media:
     image: "/images/usecases/fleet-tracking/site-fleet-tracking-1.webp"
     alt: "Fleet tracking dashboard"
-    video: ["https://video.thingsboard.io/usecases/mine-site-monitoring.mp4", "https://video.thingsboard.io/use-cases/mine-site-monitoring.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/mine-site-monitoring.mp4", "https://video.docs.sentient.invenia.in/use-cases/mine-site-monitoring.webm"]
   href: "/use-cases/site-fleet-tracking/"
 10:
   type: "General"
   name: "Smart Metering"
   description: "Collect, store and aggregate data from smart meters in reliable and fault-tolerant way. Analyze resource consumption and raise alerts on leakage, anomaly or fraud. Present results of the analysis to end users."
   media:
-    image: "https://img.thingsboard.io/usecases/smart-metering/video/smart-metering.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/smart-metering/video/smart-metering.png"
     alt: "Fleet tracking dashboard"
-    video: ["https://video.thingsboard.io/usecases/smart-metering.mp4", "https://video.thingsboard.io/usecases/smart-metering.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/smart-metering.mp4", "https://video.docs.sentient.invenia.in/usecases/smart-metering.webm"]
   href: "/use-cases/smart-metering/"
 11:
   type: "General"
   name: "Health Care: Smart Assisted Living Solution"
   description: "Track patient health metrics in real time and immediately notify medical professionals of critical changes. This solution integrates connected devices, data analytics, and automated alerts to create a seamless experience for caregivers and administrators, ensuring timely responses and a higher quality of care."
   media:
-    image: "https://img.thingsboard.io/usecases/health-care/video/health-care.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/health-care/video/health-care.png"
     alt: "Health Care dashboard"
-    video: ["https://video.thingsboard.io/usecases/health-care.mp4", "https://video.thingsboard.io/usecases/health-care.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/health-care.mp4", "https://video.docs.sentient.invenia.in/usecases/health-care.webm"]
   href: "/use-cases/health-care/"
 12:
   type: "General"
   name: "Air Quality Monitoring"
   description: "Deliver and store data from smart meters in reliable and fault-tolerant way, visualize real-time and historical energy consumption data on customizable end-user dashboards, integrate with third-party analytics frameworks and solutions."
   media:
-    image: "https://img.thingsboard.io/usecases/air-quality/video/air-quality.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/air-quality/video/air-quality.png"
     alt: "Air quality dashboard"
-    video: ["https://video.thingsboard.io/usecases/air-quality.mp4", "https://video.thingsboard.io/usecases/air-quality.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/air-quality.mp4", "https://video.docs.sentient.invenia.in/usecases/air-quality.webm"]
   href: "/use-cases/air-quality-monitoring/"
 13:
   type: "General"
   name: "Smart Irrigation"
   description: "Monitor the irrigation system and respond in time to changes in field conditions. List the fields and monitor their soil moisture, location, statistics, etc."
   media:
-    image: "https://img.thingsboard.io/usecases/smart-irrigation/video/smart-irrigation.png"
+    image: "https://img.docs.sentient.invenia.in/usecases/smart-irrigation/video/smart-irrigation.png"
     alt: "Smart irrigation dashboard"
-    video: ["https://video.thingsboard.io/usecases/smart-irrigation.mp4", "https://video.thingsboard.io/usecases/smart-irrigation.webm"]
+    video: ["https://video.docs.sentient.invenia.in/usecases/smart-irrigation.mp4", "https://video.docs.sentient.invenia.in/usecases/smart-irrigation.webm"]
   href: "/use-cases/smart-irrigation/"
 14:
   type: "General"
   name: "Waste Management"
   description: "Optimize waste management operations with our solution. Streamline processes, monitor waste levels, and track data for efficient and sustainable practices."
   media:
-    image: "https://img.thingsboard.io/solutions/waste_monitoring/waste-monitoring-1.png"
+    image: "https://img.docs.sentient.invenia.in/solutions/waste_monitoring/waste-monitoring-1.png"
     alt: "Waste monitoring dashboard"
   href: "/use-cases/waste-management/"
 15:
@@ -137,6 +137,6 @@
   name: "Tank Level Monitoring"
   description: "Deliver and store data from smart meters in reliable and fault-tolerant way, visualize real-time and historical energy consumption data on customizable end-user dashboards, integrate with third-party analytics frameworks and solutions."
   media:
-    image: "https://img.thingsboard.io/solutions/fuel_level_monitoring/fuel-monitoring-1.png"
+    image: "https://img.docs.sentient.invenia.in/solutions/fuel_level_monitoring/fuel-monitoring-1.png"
     alt: "Fuel level monitoring"
   href: "/use-cases/tank-level-monitoring/"

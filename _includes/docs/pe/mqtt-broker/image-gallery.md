@@ -1,10 +1,10 @@
-{% assign feature = "Image gallery" %}{% include templates/mqtt-broker/pe-tbmq-feature-banner.md %}
+{% assign feature = "Image gallery" %}{% include templates/mqtt-broker/pe-st-rmqtt-feature-banner.md %}
 
 * TOC
 {:toc}
 
-The Image Gallery serves as a centralized repository for managing images in the TBMQ application.
-It provides the source for logo and favicon images used in the **White labeling** feature on the [application](/docs/pe/mqtt-broker/white-labeling/#customize-tbmq-web-interface) and [login](/docs/pe/mqtt-broker/white-labeling/#customize-the-login-page) pages.
+The Image Gallery serves as a centralized repository for managing images in the ST-RMQTT application.
+It provides the source for logo and favicon images used in the **White labeling** feature on the [application](/docs/pe/mqtt-broker/white-labeling/#customize-st-rmqtt-web-interface) and [login](/docs/pe/mqtt-broker/white-labeling/#customize-the-login-page) pages.
 
 ![image](/images/pe/mqtt-broker/user-guide/white-labeling/image-gallery.png)
 

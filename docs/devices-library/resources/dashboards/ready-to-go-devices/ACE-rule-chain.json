@@ -20,7 +20,7 @@
           "layoutX": 333,
           "layoutY": 153
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeFilterNode",
         "name": "Message type check",
         "debugMode": true,
         "singletonMode": false,
@@ -39,7 +39,7 @@
           "layoutX": 289,
           "layoutY": 302
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Convert incoming data to required format",
         "debugMode": true,
         "singletonMode": false,
@@ -57,7 +57,7 @@
           "layoutX": 627,
           "layoutY": 304
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeSwitchNode",
         "name": "Switch message type",
         "debugMode": true,
         "singletonMode": false,
@@ -73,7 +73,7 @@
           "layoutX": 950,
           "layoutY": 197
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgAttributesNode",
         "name": "Save attributes",
         "debugMode": false,
         "singletonMode": false,
@@ -92,7 +92,7 @@
           "layoutX": 954,
           "layoutY": 387
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save timeseries",
         "debugMode": false,
         "singletonMode": false,

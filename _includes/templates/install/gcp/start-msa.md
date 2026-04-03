@@ -1,4 +1,4 @@
-Execute the following command to deploy thirdparty compnents (zookeeper, kafka, redis) and main ThingsBoard microservices: *tb-node*, *tb-web-ui* and *js-executors*:
+Execute the following command to deploy thirdparty compnents (zookeeper, kafka, redis) and main SENTIENT microservices: *tb-node*, *tb-web-ui* and *js-executors*:
 
 ```
 ./k8s-deploy-resources.sh

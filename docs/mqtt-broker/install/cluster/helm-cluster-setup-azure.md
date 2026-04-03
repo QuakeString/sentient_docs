@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
-title: Deploy TBMQ Cluster on AKS with Helm
-description: TBMQ microservices setup with Helm on AKS
+title: Deploy ST-RMQTT Cluster on AKS with Helm
+description: ST-RMQTT microservices setup with Helm on AKS
 
 ---
 

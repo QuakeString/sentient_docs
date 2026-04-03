@@ -8,13 +8,13 @@
 
 
 {%- assign releases = site.pages | where_exp: "p", "p.path contains prefix" -%}
-{%- if docsPrefix == "trendz/" -%}
+{%- if docsPrefix == "sentient-analytics/" -%}
     {%- assign releases = releases | sort: "version_number" | reverse -%}
 {%- else -%}
     {%- assign releases = releases | sort: "path" | reverse -%}
 {%- endif -%}
 
-<div class="releases-table{% if docsPrefix == "pe/" %} pe-table{% elsif docsPrefix == "edge/" %} edge-table{% elsif docsPrefix == "pe/edge/" %} pe-edge-table{% elsif docsPrefix == "trendz/" %} trendz-table{% endif %}">
+<div class="releases-table{% if docsPrefix == "pe/" %} pe-table{% elsif docsPrefix == "edge/" %} edge-table{% elsif docsPrefix == "pe/edge/" %} pe-edge-table{% elsif docsPrefix == "sentient-analytics/" %} sentient-analytics-table{% endif %}">
     <div class="releases-table-content">
         <div class="releases-table-header">
             <div class="releases-table-header-item">Version</div>
@@ -22,8 +22,8 @@
             <div class="releases-table-header-item cur-patch">Current Patch</div>
             <div class="releases-table-header-item">Support</div>
             <div class="releases-table-header-item">End of Life</div>
-            {% if docsPrefix == "trendz/" %}
-                <div class="releases-table-header-item">ThingsBoard Support</div>
+            {% if docsPrefix == "sentient-analytics/" %}
+                <div class="releases-table-header-item">SENTIENT Support</div>
             {% endif %}
             <div class="releases-table-header-item">Release Notes & Highlights</div>
             <div class="releases-table-header-item">Instructions</div>
@@ -78,11 +78,11 @@
 
                                 <a href="/docs/{{ docsPrefix }}releases/release-policy/"
                                    class="releases-table-content-item version-link version-link-lts">
-                                    <span style="font-weight: 500; color: {% if docsPrefix == "pe/" %}#1F8B4D{% elsif docsPrefix == "edge/" %}#2260A7{% elsif docsPrefix == "pe/edge/" %}#009688{% elsif docsPrefix == "trendz/" %}#2696F3{% else %}#2a7dec{% endif %}">
+                                    <span style="font-weight: 500; color: {% if docsPrefix == "pe/" %}#1F8B4D{% elsif docsPrefix == "edge/" %}#2260A7{% elsif docsPrefix == "pe/edge/" %}#009688{% elsif docsPrefix == "sentient-analytics/" %}#2696F3{% else %}#2a7dec{% endif %}">
                                         {{ lts_label }}
                                     </span>
                                     <i class="fas fa-external-link-alt"
-                                       style="color: {% if docsPrefix == "pe/" %}#1F8B4D{% elsif docsPrefix == "edge/" %}#2260A7{% elsif docsPrefix == "pe/edge/" %}#009688{% elsif docsPrefix == "trendz/" %}#2696F3{% else %}#2a7dec{% endif %}">
+                                       style="color: {% if docsPrefix == "pe/" %}#1F8B4D{% elsif docsPrefix == "edge/" %}#2260A7{% elsif docsPrefix == "pe/edge/" %}#009688{% elsif docsPrefix == "sentient-analytics/" %}#2696F3{% else %}#2a7dec{% endif %}">
                                     </i>
                                 </a>
                             {% else %}
@@ -116,7 +116,7 @@
                                 {% endif %}
                             </div>
 
-                            {% if docsPrefix == "trendz/" %}
+                            {% if docsPrefix == "sentient-analytics/" %}
                                 <div class="releases-table-content-item">Up to v{{ page.tbVersion }}</div>
                             {% endif %}
 
@@ -130,7 +130,7 @@
                                 <a href="/docs/user-guide/install/{{ docsPrefix }}upgrade-instructions/?version={{ version }}" target="_blank">
                                     Upgrade
                                 </a>
-                            {% elsif docsPrefix == "trendz/" %}
+                            {% elsif docsPrefix == "sentient-analytics/" %}
                                 <a href="/docs/{{ docsPrefix }}install/upgrade-instructions/?version={{ version }}" target="_blank">
                                     Upgrade
                                 </a>

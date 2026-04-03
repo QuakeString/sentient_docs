@@ -13,11 +13,11 @@ title: IoT Gateway service methods and data types
 ### Core methods (TBGatewayService)
 
 Useful methods, that may be helpful for custom connector implementation, from the gateway service class.  
-*/thingsboard_gateway/gateway/tb_gateway_service.py*
+*/sentient_gateway/gateway/tb_gateway_service.py*
 
 #### send_to_storage
 
-This method allows you to send data to the ThingsBoard instance.
+This method allows you to send data to the SENTIENT instance.
 
 |Argument|Description|
 |-|-|
@@ -29,7 +29,7 @@ Returns True if data was sent successfully, otherwise False.
 
 #### send_rpc_reply
 
-This method allows you to send a response to the RPC request from the ThingsBoard instance.
+This method allows you to send a response to the RPC request from the SENTIENT instance.
 
 | Argument | Default value | Description |  
 |-|---------------|-|  
@@ -45,7 +45,7 @@ No return value.
 
 #### add_device
 
-This method allows you to add a device to the gateway, and it sends "CONNECT" to the ThingsBoard instance.
+This method allows you to add a device to the gateway, and it sends "CONNECT" to the SENTIENT instance.
 
 | Argument | Default value | Description |
 |-|-|-|
@@ -57,7 +57,7 @@ Returns True if the device was added successfully, otherwise False.
 
 #### del_device
 
-This method allows you to delete a device from the gateway, and it sends "DISCONNECT" to the ThingsBoard instance.
+This method allows you to delete a device from the gateway, and it sends "DISCONNECT" to the SENTIENT instance.
 
 | Argument | Default value | Description |
 |-|-|-|
@@ -68,7 +68,7 @@ No return value.
 ### Utility methods (TBUtility)
 
 Useful methods, that may be helpful for custom connector implementation, from the utility class.
-*/thingsboard_gateway/tb_utility/tb_utility.py*
+*/sentient_gateway/tb_utility/tb_utility.py*
 
 #### install_package
 
@@ -85,7 +85,7 @@ Returns result of calling check_call method from subprocess module.
 Usage example:
 
 ```python
-from thingsboard_gateway.tb_utility.tb_utility import TBUtility
+from sentient_gateway.tb_utility.tb_utility import TBUtility
 try:
     from pyserial import serial
 except ImportError:
@@ -297,14 +297,14 @@ converted_data.add_to_attributes(attribute_datapoint_key, received_value_attr)
 
 # ...
 
-# Send data to the ThingsBoard instance. (gateway is an instance of TBGatewayService, provided to connector on initialization)
+# Send data to the SENTIENT instance. (gateway is an instance of TBGatewayService, provided to connector on initialization)
 gateway.send_to_storage(connector_name, connector_id, converted_data)
 
 ```
 
 The result of the example above will be ConvertedData object with telemetry and attribute.  
-Data, collected in telemetry and attribute, will be sent to the ThingsBoard instance due to the report strategy configuration.  
-In the example, telemetry will be sent to the ThingsBoard instance on change or every 60 seconds, and attribute will be sent only on change.
+Data, collected in telemetry and attribute, will be sent to the SENTIENT instance due to the report strategy configuration.  
+In the example, telemetry will be sent to the SENTIENT instance on change or every 60 seconds, and attribute will be sent only on change.
 
 ### Attributes
 
@@ -425,7 +425,7 @@ Examples of ReportStrategyConfig object creation:
 
 This object is used to represent the interface for the connector.  
 This object should be inherited by the custom connector class.  
-*/thingsboard_gateway/connectors/connector.py*
+*/sentient_gateway/connectors/connector.py*
 
 | Method | Description |
 |-|-------------|
@@ -445,7 +445,7 @@ This object should be inherited by the custom connector class.
 
 This object is used to represent the interface for the converter.
 This object should be inherited by the custom converter class.
-*/thingsboard_gateway/connectors/converter.py*
+*/sentient_gateway/connectors/converter.py*
 
 | Method | Description                                                                                                     |
 |-|-----------------------------------------------------------------------------------------------------------------|
@@ -457,12 +457,12 @@ Realization of converter methods depends on it's type - **Uplink** or **Downlink
 
 ##### Uplink converter convert method
 
-This method is used to convert data from the device to the ThingsBoard instance.  
+This method is used to convert data from the device to the SENTIENT instance.  
 It is good to return [**ConvertedData**](#converteddata) object(Depends on realization, but send_to_storage method from gateway service expects [**ConvertedData**](#converteddata) object).  
 
 ##### Downlink converter convert method
 
-This method is used to convert data from the ThingsBoard instance to the device.  
+This method is used to convert data from the SENTIENT instance to the device.  
 Incoming data is a dictionary with key/value pairs that represent the data that should be sent to the device.  
 This type of converter usually used for converting RPC or attribute updates from the platform instance to the device.  
 Returned value may depend on realization of the converter.  

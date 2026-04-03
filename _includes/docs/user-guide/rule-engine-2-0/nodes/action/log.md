@@ -1,12 +1,12 @@
 Executes user-defined function to transform an incoming message into a string for logging purposes. The script can access the message data, metadata, and type to create custom log
-entries that are written to the ThingsBoard log file.
+entries that are written to the SENTIENT log file.
 Supports **TBEL** and **JavaScript**.
 
 ## Configuration
 
 The node provides a choice of scripting language and a code editor to write the logging logic.
 
-- **Language Selector** - choose between **TBEL** (ThingsBoard Expression Language) or **JavaScript**.
+- **Language Selector** - choose between **TBEL** (SENTIENT Expression Language) or **JavaScript**.
 - **Script Editor** - a text area where you write the body of the log formatting function.
 
 ### Log formatting function
@@ -18,7 +18,7 @@ script:
 - `metadata` - the metadata of the incoming message, as a key-value object where all values are strings.
 - `msgType` - the type of the incoming message, as a string.
 
-The function must **return** a string that will be written to the ThingsBoard log file using the INFO log level.
+The function must **return** a string that will be written to the SENTIENT log file using the INFO log level.
 
 ### JSON Schema
 
@@ -57,7 +57,7 @@ The function must **return** a string that will be written to the ThingsBoard lo
 
 1. The node executes the user-defined script, passing the incoming message's `msg`, `metadata`, and `msgType` as arguments.
 2. The script returns a string value that represents the log message.
-3. The returned string is written to the ThingsBoard log file using the INFO log level.
+3. The returned string is written to the SENTIENT log file using the INFO log level.
 4. After successful logging, the original message is passed through to the `Success` chain unchanged.
 5. If the script encounters an error during execution (e.g., a syntax error or runtime exception), the processing fails and message is routed to the `Failure` chain.
 
@@ -110,7 +110,7 @@ Same as incoming message, routed via `Success` connection.
 
 **Result**
 
-The script execution results in the following log entry in thingsboard.log:
+The script execution results in the following log entry in sentient.log:
 
 ```
 Message Type: POST_TELEMETRY_REQUEST | Device: Sensor-01 | Temperature: 24.3°C | Humidity: 58.7%

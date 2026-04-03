@@ -28,7 +28,7 @@ and a lot not required parameters(will use defaults values) few of them are:
   - ***node-vm-size (or -s)*** - Size of Virtual Machines to create as Kubernetes nodes (default value is Standard_DS2_v2);
   - ***generate-ssh-keys*** - Generate SSH public and private key files if missing. The keys will be stored in the ~/.ssh directory. 
 
-From the command above we add AKS addon for [ApplicationGateway](https://docs.microsoft.com/en-us/azure/application-gateway/). We will use this gateway as Path-Based Load Balancer for Thingsboard Infrastructure
+From the command above we add AKS addon for [ApplicationGateway](https://docs.microsoft.com/en-us/azure/application-gateway/). We will use this gateway as Path-Based Load Balancer for Sentient Infrastructure
 
 Full list af `az aks create` options you can see [here](https://docs.microsoft.com/en-us/cli/azure/aks?view=azure-cli-latest#az_aks_create)
 

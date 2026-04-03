@@ -1,4 +1,4 @@
-ThingsBoard service is running on Java 17. Follow this instructions to install OpenJDK 17:
+SENTIENT service is running on Java 17. Follow this instructions to install OpenJDK 17:
 
 ```bash
 sudo dnf install java-17-openjdk-headless

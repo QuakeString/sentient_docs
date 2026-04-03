@@ -1,5 +1,5 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Grouping and Aggregation
@@ -14,16 +14,16 @@ This guide describes how to prepare your dataset for visualization
 During Data Analysis it is a common task to define how a big dataset should be aggregated. 
 This task can be split into 2 phases - define groups that will be used during analysis and define aggregation function for groups.
 
-Before we continue we need to discuss important topic to understand how data resolved by Trendz:
+Before we continue we need to discuss important topic to understand how data resolved by SENTIENT ANALYTICS:
 
-## How Trendz resolve fields from different Business Entities
+## How SENTIENT ANALYTICS resolve fields from different Business Entities
 Let's assume that we have a Smart Building solution. Our topology contains Buildings, Apartments and different Meters that are connected with each other using relations.
 Here is how our topology will look like:
 
 ![image](/images/reference/pe-demo/smart-metering-model.svg)
 
 
-In fact, Trendz operates with this topology as with the flat table that has columns for all attributes/telemetry from all Devices/Assets in this topology.
+In fact, SENTIENT ANALYTICS operates with this topology as with the flat table that has columns for all attributes/telemetry from all Devices/Assets in this topology.
 The Relation between entities used to join fields from different Business Entities.
 
 **What it gives us:** when we are using only 2 fields from this topology: 
@@ -34,10 +34,10 @@ The Relation between entities used to join fields from different Business Entiti
 - time range - last month
 
 
-Trendz will find all available buildings in the ThingsBoard, then all Apartments for each Building and finally all Energy Meters that belong to the apartment.
-After that, for all Energy Meters for each building, Trendz will load all energy telemetry for the last month and sum it. As a result we can see how much energy was consumed by each building.
+SENTIENT ANALYTICS will find all available buildings in the SENTIENT, then all Apartments for each Building and finally all Energy Meters that belong to the apartment.
+After that, for all Energy Meters for each building, SENTIENT ANALYTICS will load all energy telemetry for the last month and sum it. As a result we can see how much energy was consumed by each building.
 
-It is not an exact algorithm description and there are a lot of optimizations performed in the background. But it allows to understand how much complexity handled inside Trendz, so you can focus on analytics but not on data fetching.
+It is not an exact algorithm description and there are a lot of optimizations performed in the background. But it allows to understand how much complexity handled inside SENTIENT ANALYTICS, so you can focus on analytics but not on data fetching.
 
 ## Grouping by time
 
@@ -54,7 +54,7 @@ Allowed values for **Group By** field are:
 * Hour
 * Minute 
 
-![image](/images/trendz/date-raw-group.png)
+![image](/images/sentient-analytics/date-raw-group.png)
 
 
 You can have more control on date intervals by selecting other available Date aggregation options:
@@ -75,21 +75,21 @@ You can have more control on date intervals by selecting other available Date ag
 
 ## Define Groups for analysis
 In this step, we want to define on what logical level we want to see our data. In the Energy Metering scenario, we can make analysis on different levels such as 
-city, region, building, apartment or concrete energy meter. The good news is that Trendz provides this grouping automatically in real-time. 
+city, region, building, apartment or concrete energy meter. The good news is that SENTIENT ANALYTICS provides this grouping automatically in real-time. 
 You don't need to explicitly define aggregation rules and pre-compute value for different levels before analysis.
 
 In this example we just add 2 fields - **Building name** and **Energy Consumption**. We do not have any aggregation rules in the Rule Engine. 
-Trendz knows what Energy Meters are registered in each building, so energy meters divided into a separate groups for each building.
+SENTIENT ANALYTICS knows what Energy Meters are registered in each building, so energy meters divided into a separate groups for each building.
 
-![image](/images/trendz/data-grouping-simple.png)
+![image](/images/sentient-analytics/data-grouping-simple.png)
 
 We see total consumption for the last year. Now let's group data by quarters - add **Date** field with **quarter** type:
 
-![image](/images/trendz/data-grouping-quarter.png)
+![image](/images/sentient-analytics/data-grouping-quarter.png)
 
 Finally lets deep dive and see total consumption separated by room number - add **Room Number** attribute from **Apartment** Business Entity:
 
-![image](/images/trendz/data-grouping-room.png)
+![image](/images/sentient-analytics/data-grouping-room.png)
 
 
 ## Aggregate telemetry and groups
@@ -104,21 +104,21 @@ The Next important step is to define how data should be aggregated. Here are sup
 * DELTA - special case described later in this guide
 
 For changing aggregation type - just click on the field and select required value.
-![image](/images/trendz/field-aggregation.png)
+![image](/images/sentient-analytics/field-aggregation.png)
 
 
 ## Work with pulse output telemetry
 Water meter is a good example of a device with pulse output - telemetry value always growing and during analysis, we want to convert it into delta values.
 Here is an example chart for such telemetry:
  
-![image](/images/trendz/pulse-before.png)
+![image](/images/sentient-analytics/pulse-before.png)
 
 Let's apply **DELTA** aggregation for this field and see how our data will look like:
 
-![image](/images/trendz/pulse-after.png)
+![image](/images/sentient-analytics/pulse-after.png)
 
-Trendz automatically computes delta for this field for defined time ranges with required granularity. 
-In case when **DELTA** aggregation applied for multiple devices - Trendz will apply **SUM** aggregation to the aggregate group - as the result, we can see total consumption on different levels (city, building, etc.)
+SENTIENT ANALYTICS automatically computes delta for this field for defined time ranges with required granularity. 
+In case when **DELTA** aggregation applied for multiple devices - SENTIENT ANALYTICS will apply **SUM** aggregation to the aggregate group - as the result, we can see total consumption on different levels (city, building, etc.)
 
 
 ## Next Steps

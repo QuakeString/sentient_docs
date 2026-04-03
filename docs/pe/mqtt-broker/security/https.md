@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: HTTP over SSL
-description: Launching TBMQ PE with secure HTTP web interface and REST API.
+description: Launching ST-RMQTT PE with secure HTTP web interface and REST API.
 
 ---
 

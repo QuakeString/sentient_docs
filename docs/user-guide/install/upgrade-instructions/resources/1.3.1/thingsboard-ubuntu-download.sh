@@ -1,1 +1,1 @@
-wget https://github.com/thingsboard/thingsboard/releases/download/v1.3.1/thingsboard-1.3.1.deb
+wget https://github.com/sentient/sentient/releases/download/v1.3.1/sentient-1.3.1.deb

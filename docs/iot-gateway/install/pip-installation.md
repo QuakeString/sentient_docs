@@ -6,7 +6,7 @@ title: IoT Gateway Pip installation.
 
 ## Package manager installation
 
-To install ThingsBoard Gateway as python module, you should follow steps below:  
+To install SENTIENT Gateway as python module, you should follow steps below:  
 
 **1. Install required libraries to the system with apt:**  
 
@@ -15,10 +15,10 @@ sudo apt install python3-dev python3-pip libglib2.0-dev
 ```
 {: .copy-code}
 
-**2. Install ThingsBoard Gateway module with pip:**  
+**2. Install SENTIENT Gateway module with pip:**  
 
 ```bash
-sudo pip3 install thingsboard-gateway
+sudo pip3 install sentient-gateway
 ```
 {: .copy-code}
 
@@ -27,25 +27,25 @@ sudo pip3 install thingsboard-gateway
 - Downloading configs example:  
 
   ```bash
-  wget https://github.com/thingsboard/thingsboard-gateway/releases/latest/download/configs.tar.gz
+  wget https://github.com/sentient/sentient-gateway/releases/latest/download/configs.tar.gz
   ```
   {: .copy-code}
 
 - Make directory for configs:  
   ```bash
-  sudo mkdir /etc/thingsboard-gateway
+  sudo mkdir /etc/sentient-gateway
   ```
   {: .copy-code}
 
 - Make directory for logs:  
   ```bash
-  sudo mkdir /var/log/thingsboard-gateway
+  sudo mkdir /var/log/sentient-gateway
   ```
   {: .copy-code}
 
 - Unpack configs:
   ```bash
-  sudo tar -xvzf configs.tar.gz -C /etc/thingsboard-gateway
+  sudo tar -xvzf configs.tar.gz -C /etc/sentient-gateway
   ```
   {: .copy-code}
 
@@ -54,13 +54,13 @@ sudo pip3 install thingsboard-gateway
 
 - For logs folder:
   ```bash
-  sudo chown YOUR_USER:YOUR_USER -R /var/log/thingsboard-gateway
+  sudo chown YOUR_USER:YOUR_USER -R /var/log/sentient-gateway
   ```
   {: .copy-code}
 
 - For configs folder:
   ```bash
-  sudo chown YOUR_USER:YOUR_USER -R /etc/thingsboard-gateway
+  sudo chown YOUR_USER:YOUR_USER -R /etc/sentient-gateway
   ```
   {: .copy-code}
 
@@ -74,7 +74,7 @@ Where `YOUR_USER` is a user who will run the gateway.
 
 **5. Configure gateway:**
 
-First, add a gateway device to your ThingsBoard instance by following these steps:
+First, add a gateway device to your SENTIENT instance by following these steps:
 
 {% assign createNewGatewayDevice = '
   ===
@@ -94,7 +94,7 @@ Now, we have to configure gateway using right host, port and credentials, for th
 - Open Terminal and execute the following command:
 
 ```text
-nano /etc/thingsboard-gateway/config/tb_gateway.json
+nano /etc/sentient-gateway/config/tb_gateway.json
 ```
 {: .copy-code}
 
@@ -110,7 +110,7 @@ nano /etc/thingsboard-gateway/config/tb_gateway.json
         title: Copy **Access token** on the "**General**" tab;
     ===
         image: /images/gateway/install/configure-gateway-3-ce.png,
-        title: Open Terminal and execute the following command: `nano /etc/thingsboard-gateway/config/tb_gateway.json`. Paste copied access token and replace platform&#39;s host and port with yours. Save changes and exit from nano.
+        title: Open Terminal and execute the following command: `nano /etc/sentient-gateway/config/tb_gateway.json`. Paste copied access token and replace platform&#39;s host and port with yours. Save changes and exit from nano.
 '
 %}
 
@@ -122,7 +122,7 @@ nano /etc/thingsboard-gateway/config/tb_gateway.json
 - Navigate to the "**Logs**" tab and replace the "**File path**" field value to:
 
 ```text
-/var/log/thingsboard-gateway 
+/var/log/sentient-gateway 
 ```
 {: .copy-code}
 
@@ -135,7 +135,7 @@ nano /etc/thingsboard-gateway/config/tb_gateway.json
         title: Click the "**General configuration**" button;
     ===
         image: /images/gateway/install/configure-gateway-5-ce.png,
-        title: Navigate to the "**Logs**" tab and replace the "**File path**" field value to `/var/log/thingsboard-gateway` in all tabs. Then, click "**Save**".
+        title: Navigate to the "**Logs**" tab and replace the "**File path**" field value to `/var/log/sentient-gateway` in all tabs. Then, click "**Save**".
 '
 %}
 
@@ -144,7 +144,7 @@ nano /etc/thingsboard-gateway/config/tb_gateway.json
 **7. You can check installation with this command**. *For configuration please use [Configuration guide](/docs/iot-gateway/configuration/):*
 
 ```bash
-thingsboard-gateway
+sentient-gateway
 ```
 {: .copy-code}
 
@@ -161,9 +161,9 @@ thingsboard-gateway
 
 ## Next steps
 
-Explore guides related to main ThingsBoard features:
+Explore guides related to main SENTIENT features:
 
- - [Getting Started](/docs/iot-gateway/getting-started/) with ThingsBoard IoT Gateway.
+ - [Getting Started](/docs/iot-gateway/getting-started/) with SENTIENT IoT Gateway.
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

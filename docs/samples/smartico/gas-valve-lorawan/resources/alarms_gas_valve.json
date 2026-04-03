@@ -18,7 +18,7 @@
           "layoutX": 572,
           "layoutY": 81
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "FLG_ERR_VALVE_OPEN",
         "debugMode": true,
         "configuration": {
@@ -31,7 +31,7 @@
           "layoutX": 1195,
           "layoutY": 164
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "create alarm critical",
         "debugMode": true,
         "configuration": {
@@ -49,7 +49,7 @@
           "layoutX": 951,
           "layoutY": 217
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "is the alarm should be clear or active (critical)",
         "debugMode": true,
         "configuration": {
@@ -62,7 +62,7 @@
           "layoutX": 1199,
           "layoutY": 266
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "clear alarm critical",
         "debugMode": true,
         "configuration": {
@@ -76,7 +76,7 @@
           "layoutX": 571,
           "layoutY": 246
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "FLG_MAGNET_DETECT",
         "debugMode": true,
         "configuration": {
@@ -89,7 +89,7 @@
           "layoutX": 574,
           "layoutY": 195
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "FLG_MOTION_DETECT",
         "debugMode": true,
         "configuration": {
@@ -102,7 +102,7 @@
           "layoutX": 575,
           "layoutY": 141
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "FLG_LOW_BAT",
         "debugMode": true,
         "configuration": {
@@ -115,7 +115,7 @@
           "layoutX": 574,
           "layoutY": 420
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "FLG_POWER_BAT",
         "debugMode": true,
         "configuration": {
@@ -128,7 +128,7 @@
           "layoutX": 573,
           "layoutY": 362
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "FLG_POWER_ON",
         "debugMode": true,
         "configuration": {
@@ -141,7 +141,7 @@
           "layoutX": 570,
           "layoutY": 302
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "FLG_TAMPER_DETECT",
         "debugMode": true,
         "configuration": {
@@ -154,7 +154,7 @@
           "layoutX": 575,
           "layoutY": 473
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "FLG_ERR_TIME",
         "debugMode": true,
         "configuration": {
@@ -167,7 +167,7 @@
           "layoutX": 1204,
           "layoutY": 475
         },
-        "type": "org.thingsboard.rule.engine.action.TbClearAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbClearAlarmNode",
         "name": "clear alarm warning severity",
         "debugMode": true,
         "configuration": {
@@ -181,7 +181,7 @@
           "layoutX": 576,
           "layoutY": 531
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "FLG_CFG_DONE",
         "debugMode": true,
         "configuration": {
@@ -194,7 +194,7 @@
           "layoutX": 1200,
           "layoutY": 388
         },
-        "type": "org.thingsboard.rule.engine.action.TbCreateAlarmNode",
+        "type": "org.sentient.rule.engine.action.TbCreateAlarmNode",
         "name": "create alarm warning severity",
         "debugMode": true,
         "configuration": {
@@ -212,7 +212,7 @@
           "layoutX": 952,
           "layoutY": 438
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "is the alarm should be clear or active (warning)",
         "debugMode": true,
         "configuration": {
@@ -225,7 +225,7 @@
           "layoutX": 132,
           "layoutY": 274
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetTelemetryNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetTelemetryNode",
         "name": "Alarms Gas Valve",
         "debugMode": true,
         "configuration": {

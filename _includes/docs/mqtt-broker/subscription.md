@@ -1,4 +1,4 @@
-TBMQ Professional Edition provides dedicated [Private Cloud](/pricing/?section=tbmq-options&product=tbmq-private-cloud) instances based on a **flexible, pay-as-you-go model**. 
+ST-RMQTT Professional Edition provides dedicated [Private Cloud](/pricing/?section=st-rmqtt-options&product=st-rmqtt-private-cloud) instances based on a **flexible, pay-as-you-go model**. 
 Our interactive calculator allows you to define your exact capacity, ensuring you only pay for the performance and scale you need. 
 Once your core capacity is set, your private broker instance operates under the following **default and configurable limits**. 
 The values are monthly limits, unless stated otherwise.
@@ -27,7 +27,7 @@ It does not include acknowledgment packets used in QoS 1 and 2 flows (such as `P
       <tr>
           <td>Monthly traffic</td>
           <td>From 200 GB to Unlimited</td>
-          <td>Monthly traffic refers to the total amount of data transmitted through the TBMQ broker, including both incoming and outgoing MQTT messages.
+          <td>Monthly traffic refers to the total amount of data transmitted through the ST-RMQTT broker, including both incoming and outgoing MQTT messages.
 Traffic is measured as the sum of all MQTT packet payloads sent and received by clients. If the monthly allowance is exceeded, additional usage is billed at $0.1 per GB</td>
       </tr>
       <tr>

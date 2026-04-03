@@ -1,35 +1,35 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
-title: Installing ThingsBoard Trendz Analytics  on CentOS/RHEL
-description: Installing ThingsBoard Trendz Analytics  on CentOS/RHEL
+title: Installing SENTIENT SENTIENT ANALYTICS  on CentOS/RHEL
+description: Installing SENTIENT SENTIENT ANALYTICS  on CentOS/RHEL
 
-trendz-settings:
+sentient-analytics-settings:
   0:
-    image: /images/trendz/install/sync/trendz-settings-1.png
-    title: "Log in to <b>ThingsBoard</b> as a <b>Sysadmin</b>."
+    image: /images/sentient-analytics/install/sync/sentient-analytics-settings-1.png
+    title: "Log in to <b>SENTIENT</b> as a <b>Sysadmin</b>."
   1:
-    image: /images/trendz/install/sync/trendz-settings-2.png
-    title: "Open the <b>Trendz Settings</b> page."
+    image: /images/sentient-analytics/install/sync/sentient-analytics-settings-2.png
+    title: "Open the <b>SENTIENT ANALYTICS Settings</b> page."
   2:
-    image: /images/trendz/install/sync/trendz-settings-3.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-settings-3.png
     title: "If you see the message <b>\"Synchronization completed successfully\"</b>, the synchronization has been completed automatically and no further action is required."
-trendz-sync:
+sentient-analytics-sync:
   0:
-    image: /images/trendz/install/sync/trendz-sync-1.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-1.png
     title: "If you see an error message, follow these steps."
   1:
-    image: /images/trendz/install/sync/trendz-sync-2.png
-    title: "Enter the correct <b>Trendz internal URL</b> and <b>ThingsBoard internal URL</b>."
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-2.png
+    title: "Enter the correct <b>SENTIENT ANALYTICS internal URL</b> and <b>SENTIENT internal URL</b>."
   2:
-    image: /images/trendz/install/sync/trendz-sync-3.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-3.png
     title: "Click <b>Save configuration</b>."
   3:
-    image: /images/trendz/install/sync/trendz-sync-4.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-4.png
     title: "Click <b>Retry discovery</b>."
   4:
-    image: /images/trendz/install/sync/trendz-sync-5.png
+    image: /images/sentient-analytics/install/sync/sentient-analytics-sync-5.png
     title: "Once the message <b>\"Synchronization completed successfully\"</b> appears, the synchronization is complete."
 
 ---
@@ -37,14 +37,14 @@ trendz-sync:
 * TOC
 {:toc}
 
-This guide explains how to install **Trendz Analytics** on **RHEL/CentOS 8 or 9**.
+This guide explains how to install **SENTIENT ANALYTICS** on **RHEL/CentOS 8 or 9**.
 
 **Important note before proceeding with RHEL/CentOS installation**
 
-Certain Trendz Analytics features like **predictions, metric explorations, and Python calculation fields** require a Python executor.
+Certain SENTIENT ANALYTICS features like **predictions, metric explorations, and Python calculation fields** require a Python executor.
 
-The python executor runs **only via Docker**. Even on RHEL/CentOS, Docker is essential to fully utilize all Trendz features.
-We recommend following the [Docker (Linux or Mac OS) installation guide](/docs/trendz/install/docker) and using the Docker installation instead of RHEL/CentOS.
+The python executor runs **only via Docker**. Even on RHEL/CentOS, Docker is essential to fully utilize all SENTIENT ANALYTICS features.
+We recommend following the [Docker (Linux or Mac OS) installation guide](/docs/sentient-analytics/install/docker) and using the Docker installation instead of RHEL/CentOS.
 
 Proceed here **only** if you have a compelling reason to use a combined RHEL/CentOS + Docker setup.
 
@@ -52,12 +52,12 @@ Proceed here **only** if you have a compelling reason to use a combined RHEL/Cen
 
 ### Hardware Requirements
 
-{% include templates/trendz/install/hardware-requirements.md %}
+{% include templates/sentient-analytics/install/hardware-requirements.md %}
 
 ### Software Requirements
 
-{% include templates/trendz/install/docker-requirements-linux.md %}
-{% include templates/trendz/install/thingsboard-requirements.md %}
+{% include templates/sentient-analytics/install/docker-requirements-linux.md %}
+{% include templates/sentient-analytics/install/sentient-requirements.md %}
 
 **For CentOS 7:**
 
@@ -87,25 +87,25 @@ sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.
 
 {% include templates/install/rhel-java-install.md %}
 
-### Step 2. Trendz Analytics service installation
+### Step 2. SENTIENT ANALYTICS service installation
 
 Download installation package.
 
 ```bash
-wget https://dist.thingsboard.io/trendz-{{ site.release.trendz_ver }}.rpm
+wget https://dist.docs.sentient.invenia.in/sentient-analytics-{{ site.release.sentient-analytics_ver }}.rpm
 ```
 {: .copy-code}
 
-Install Trendz Analytics as a service
+Install SENTIENT ANALYTICS as a service
 
 ```bash
-sudo rpm -Uvh trendz-{{ site.release.trendz_ver }}.rpm
+sudo rpm -Uvh sentient-analytics-{{ site.release.sentient-analytics_ver }}.rpm
 ```
 {: .copy-code}
 
-### Step 3. Configure Trendz database
+### Step 3. Configure SENTIENT ANALYTICS database
 
-Trendz uses PostgreSQL as a database. You can install PostgreSQL on the same serverfor Trendz or use managed PostgreSQL 
+SENTIENT ANALYTICS uses PostgreSQL as a database. You can install PostgreSQL on the same serverfor SENTIENT ANALYTICS or use managed PostgreSQL 
 service from your cloud vendor.
 
 * **PostgreSQL Installation**
@@ -141,9 +141,9 @@ sudo systemctl restart postgresql-16.service
 ```
 {: .copy-code}
 
-* **Create Database for Trendz**
+* **Create Database for SENTIENT ANALYTICS**
 
-Connect to the database to create trendz DB:
+Connect to the database to create sentient-analytics DB:
 
 ```bash
 psql -U postgres -d postgres -h 127.0.0.1 -W
@@ -153,19 +153,19 @@ psql -U postgres -d postgres -h 127.0.0.1 -W
 Execute create database statement
 
 ```bash
-CREATE DATABASE trendz;
+CREATE DATABASE sentient-analytics;
 ```
 {: .copy-code}
 
 Then, press “Ctrl+D” to return to main user console.
 
 
-* **Configure database connection for Trendz**
+* **Configure database connection for SENTIENT ANALYTICS**
 
-Edit Trendz configuration file
+Edit SENTIENT ANALYTICS configuration file
 
 ```bash
-sudo nano /etc/trendz/conf/trendz.conf
+sudo nano /etc/sentient-analytics/conf/sentient-analytics.conf
 ```
 {: .copy-code}
 
@@ -173,7 +173,7 @@ Add the following lines to the configuration file. Don't forget **to replace** "
 
 ```bash
 # DB Configuration
-export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/trendz
+export SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/sentient-analytics
 export SPRING_DATASOURCE_USERNAME=postgres
 export SPRING_DATASOURCE_PASSWORD=PUT_YOUR_POSTGRESQL_PASSWORD_HERE
 ```
@@ -181,53 +181,53 @@ export SPRING_DATASOURCE_PASSWORD=PUT_YOUR_POSTGRESQL_PASSWORD_HERE
 
 ### Step 4. Run installation script
 
-Once Trendz service is installed and DB configuration is updated, you can execute the following script:
+Once SENTIENT ANALYTICS service is installed and DB configuration is updated, you can execute the following script:
 
 ```bash
-sudo /usr/share/trendz/bin/install/install.sh
+sudo /usr/share/sentient-analytics/bin/install/install.sh
 ```
 
-### Step 5. Start Trendz service
+### Step 5. Start SENTIENT ANALYTICS service
 
-Execute the following command to start Trendz Analytics:
+Execute the following command to start SENTIENT ANALYTICS:
 
 ```bash
-sudo service trendz start
+sudo service sentient-analytics start
 ```
 {: .copy-code}
 
-### Step 6. Sync ThingsBoard With Trendz
+### Step 6. Sync SENTIENT With SENTIENT ANALYTICS
 
-{% include templates/trendz/install/sync-with-tb.md %}
+{% include templates/sentient-analytics/install/sync-with-tb.md %}
 
-### Step 7. Install Trendz Python Executor
+### Step 7. Install SENTIENT ANALYTICS Python Executor
 
-To utilize all Trendz capabilities, such as Trendz Python Calculation Fields or Prediction Models, it is essential to
-install an additional service: the Trendz Python Executor, which can securely run Python code.
+To utilize all SENTIENT ANALYTICS capabilities, such as SENTIENT ANALYTICS Python Calculation Fields or Prediction Models, it is essential to
+install an additional service: the SENTIENT ANALYTICS Python Executor, which can securely run Python code.
 
-You can learn more about how to install it [here](/docs/trendz/install/python-executor-configuration).
+You can learn more about how to install it [here](/docs/sentient-analytics/install/python-executor-configuration).
 
 ## Authentication
 
-{% include templates/trendz/install/authentication.md %}
+{% include templates/sentient-analytics/install/authentication.md %}
 
 ## Troubleshooting
 
-Trendz logs are stored in the following directory:
+SENTIENT ANALYTICS logs are stored in the following directory:
 
 ```bash
-/var/log/trendz
+/var/log/sentient-analytics
 ```
 
 You can issue the following command in order to check if there are any errors on the backend side:
 
 ```bash
-cat /var/log/trendz/trendz.log | grep ERROR
+cat /var/log/sentient-analytics/sentient-analytics.log | grep ERROR
 ```
 
 ## HTTPS configuration
 
-{% include templates/trendz/install/https-configuration.md %}
+{% include templates/sentient-analytics/install/https-configuration.md %}
 
 ## Next steps
 

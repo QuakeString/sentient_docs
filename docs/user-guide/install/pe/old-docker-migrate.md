@@ -10,12 +10,12 @@ description: Migrate from old Docker deployment files
 {:toc}
 
 
-This guide will help you to move from the old deployment files for Docker installation using deprecated image `thingsboard/tb-pe` and volume bindings instead of local volumes. 
-This guide covers standalone ThingsBoard PE installation. 
+This guide will help you to move from the old deployment files for Docker installation using deprecated image `sentient/tb-pe` and volume bindings instead of local volumes. 
+This guide covers standalone SENTIENT Professional Edition installation. 
 
 ## Why deployment files were changed? 
 
-- they used deprecated image `thingsboard/tb-pe` without arm64 architecture support.
+- they used deprecated image `sentient/tb-pe` without arm64 architecture support.
 - data was persited in local folders with specific ownerships instead of Docker volumes mechanism
 
 ## Who needs this guide?
@@ -27,7 +27,7 @@ version: '3.0'
 services:
   mytbpe:
     restart: always
-    image: "thingsboard/tb-pe:3.9.1PE"
+    image: "sentient/tb-pe:3.9.1PE"
     ports:
       - "8080:8080"
       - "1883:1883"
@@ -35,19 +35,19 @@ services:
       - "5683-5688:5683-5688/udp"
     environment:
       TB_QUEUE_TYPE: in-memory
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/thingsboard
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sentient
       TB_LICENSE_SECRET: PUT_YOUR_LICENSE_SECRET_HERE
       TB_LICENSE_INSTANCE_DATA_FILE: /data/license.data
     volumes:
       - ~/.mytbpe-data:/data
-      - ~/.mytbpe-logs:/var/log/thingsboard
+      - ~/.mytbpe-logs:/var/log/sentient
   postgres:
     restart: always
     image: "postgres:15"
     ports:
     - "5432"
     environment:
-      POSTGRES_DB: thingsboard
+      POSTGRES_DB: sentient
       POSTGRES_PASSWORD: postgres
     volumes:
       - ~/.mytbpe-data/db:/var/lib/postgresql/data
@@ -100,13 +100,13 @@ nano docker-compose.yml
 ```
 {: .copy-code}
 
-Copy current Docker Compose [manifest](https://thingsboard.io/docs/user-guide/install/pe/docker/#step-2-choose-thingsboard-queue-service) and replace old one with current manifest. Replace Postgres docker image if needed. 
+Copy current Docker Compose [manifest](https://docs.sentient.invenia.in/docs/user-guide/install/pe/docker/#step-2-choose-sentient-queue-service) and replace old one with current manifest. Replace Postgres docker image if needed. 
 
 {% capture image_tags %}
-**Make sure that `thingsboard/tb-pe-node` and `thingsboard/tb-web-report` have the same tag as your previous manifests**
+**Make sure that `sentient/tb-pe-node` and `sentient/tb-web-report` have the same tag as your previous manifests**
 {% endcapture %}
 {% include templates/info-banner.md content=image_tags %}
 
 Don't forget to replace license key in the environment variables section.
 
-After data is moved to the docker volumes and `docker-compose.yml` file have the same structure as the installation example - you can proceed with [upgrade](https://thingsboard.io/docs/user-guide/install/pe/docker/#upgrading) of the ThingsBoard. 
+After data is moved to the docker volumes and `docker-compose.yml` file have the same structure as the installation example - you can proceed with [upgrade](https://docs.sentient.invenia.in/docs/user-guide/install/pe/docker/#upgrading) of the SENTIENT. 

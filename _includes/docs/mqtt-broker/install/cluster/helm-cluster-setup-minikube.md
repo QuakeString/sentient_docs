@@ -1,9 +1,9 @@
 * TOC
 {:toc}
 
-This guide will help you to set up TBMQ Cluster using the official Helm [chart](https://artifacthub.io/packages/helm/tbmq-helm-chart/tbmq-cluster). 
+This guide will help you to set up ST-RMQTT Cluster using the official Helm [chart](https://artifacthub.io/packages/helm/st-rmqtt-helm-chart/st-rmqtt-cluster). 
 Minikube used as the reference environment for the self-hosted kubernetes deployment. 
-If you're deploying TBMQ in a self-managed cluster without cloud-specific load balancer integrations, Minikube provides a simple way to test the setup end-to-end.
+If you're deploying ST-RMQTT in a self-managed cluster without cloud-specific load balancer integrations, Minikube provides a simple way to test the setup end-to-end.
 
 ## Prerequisites
 
@@ -13,7 +13,7 @@ If you're deploying TBMQ in a self-managed cluster without cloud-specific load b
 
 {% include templates/mqtt-broker/install/helm/minikube/configure-deployment.md %}
 
-## Add the TBMQ Cluster Helm repository
+## Add the ST-RMQTT Cluster Helm repository
 
 {% include templates/mqtt-broker/install/helm/common/add-helm-repo.md %}
 
@@ -33,7 +33,7 @@ If you're deploying TBMQ in a self-managed cluster without cloud-specific load b
 
 {% include templates/mqtt-broker/install/helm/common/create-namespace.md %}
 
-## Install the TBMQ Helm chart
+## Install the ST-RMQTT Helm chart
 
 {% include templates/mqtt-broker/install/helm/common/install-chart.md %}
 
@@ -53,7 +53,7 @@ If you're deploying TBMQ in a self-managed cluster without cloud-specific load b
 
 {% include templates/mqtt-broker/install/helm/common/upgrading.md %}
 
-## Uninstalling TBMQ Helm chart
+## Uninstalling ST-RMQTT Helm chart
 
 {% include templates/mqtt-broker/install/helm/common/uninstall-chart.md %}
 

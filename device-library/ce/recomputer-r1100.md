@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect reComputer R1100 to ThingsBoard?
+title: How to connect reComputer R1100 to SENTIENT?
 category: Other devices
 connectivity: [LoRaWAN, Ethernet, WIFI, Bluetooth, 4G, Zigbee]
 chip: R1100

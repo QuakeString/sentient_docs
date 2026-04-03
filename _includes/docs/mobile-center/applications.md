@@ -1,12 +1,12 @@
 {% if docsPrefix == null %}
-{% assign MOBILE_APPLICATION_LINK = "[ThingsBoard Mobile Application](/docs/mobile/)" %}
-{% assign MOBILE_APPLICATION = "ThingsBoard Mobile Application" %}
-{% assign GETTING_STARTED = "[Getting started with the ThingsBoard Mobile Application](/docs/mobile/getting-started/)" %}
+{% assign MOBILE_APPLICATION_LINK = "[SENTIENT Mobile Application](/docs/mobile/)" %}
+{% assign MOBILE_APPLICATION = "SENTIENT Mobile Application" %}
+{% assign GETTING_STARTED = "[Getting started with the SENTIENT Mobile Application](/docs/mobile/getting-started/)" %}
 {% endif %}
 {% if (docsPrefix == "pe/") or (docsPrefix == "paas/") or (docsPrefix == "paas/eu/") %}
-{% assign MOBILE_APPLICATION_LINK = "[ThingsBoard PE Mobile Application](/docs/pe/mobile/)" %}
-{% assign MOBILE_APPLICATION = "ThingsBoard PE Mobile Application" %}
-{% assign GETTING_STARTED = "[Getting started with the ThingsBoard PE Mobile Application](/docs/pe/mobile/getting-started/)" %}
+{% assign MOBILE_APPLICATION_LINK = "[SENTIENT Professional Edition Mobile Application](/docs/pe/mobile/)" %}
+{% assign MOBILE_APPLICATION = "SENTIENT Professional Edition Mobile Application" %}
+{% assign GETTING_STARTED = "[Getting started with the SENTIENT Professional Edition Mobile Application](/docs/pe/mobile/getting-started/)" %}
 {% endif %}
 
 * TOC
@@ -14,9 +14,9 @@
 
 The "**Applications**" tab in the "**Mobile center**" serves as a control center for your [mobile applications](/docs/{{docsPrefix}}mobile/){:target="_blank"}. It allows you to:
 
-- **Add new applications**: Create configurations for new mobile apps to integrate with ThingsBoard.
+- **Add new applications**: Create configurations for new mobile apps to integrate with SENTIENT.
 - **Edit the existing applications**: Update application details, such as package names, statuses, versions, or store information.
-- **Delete applications**: Remove obsolete or unused application configurations from the ThingsBoard platform.
+- **Delete applications**: Remove obsolete or unused application configurations from the SENTIENT platform.
 
 ## Add application
 

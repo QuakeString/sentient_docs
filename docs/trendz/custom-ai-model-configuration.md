@@ -1,102 +1,102 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 title: Enable AI Features
-description: Step-by-step guide how to set uo AI Settings in Trendz
+description: Step-by-step guide how to set uo AI Settings in SENTIENT ANALYTICS
 
 ai-settings:
   0:
-    image: /images/trendz/ai/settings/ai-settings-1.png
+    image: /images/sentient-analytics/ai/settings/ai-settings-1.png
     title: "Navigate to <b>Settings → AI Assistant</b> tab."
   1:
-    image: /images/trendz/ai/settings/ai-settings-2.png
+    image: /images/sentient-analytics/ai/settings/ai-settings-2.png
     title: "The <b>AI Features</b> section."
   2:
-    image: /images/trendz/ai/settings/ai-settings-3.png
+    image: /images/sentient-analytics/ai/settings/ai-settings-3.png
     title: "The <b>AI Models</b> section."
 
 ai-models:
   0:
-    image: /images/trendz/ai/settings/ai-models-1.png
+    image: /images/sentient-analytics/ai/settings/ai-models-1.png
     title: "Click the <b>New AI Model</b> button."
   1:
-    image: /images/trendz/ai/settings/ai-models-2.png
+    image: /images/sentient-analytics/ai/settings/ai-models-2.png
     title: "Enter a <b>Name</b> (any label you wish to identify the model in the list)."
   2:
-    image: /images/trendz/ai/settings/ai-models-3.png
+    image: /images/sentient-analytics/ai/settings/ai-models-3.png
     title: "Choose a <b>Provider</b> (currently supported: `OPEN_AI`, `GOOGLE`, `AMAZON_BEDROCK`, `CUSTOM`)."
   3:
-    image: /images/trendz/ai/settings/ai-models-4.png
+    image: /images/sentient-analytics/ai/settings/ai-models-4.png
     title: "Enter the <b>Model Name</b> (specific to the provider)."
   4:
-    image: /images/trendz/ai/settings/ai-models-5.png
+    image: /images/sentient-analytics/ai/settings/ai-models-5.png
     title: "Provide additional parameters (like Base URL or API Key), depending on the provider."
   5:
-    image: /images/trendz/ai/settings/ai-models-6.png
+    image: /images/sentient-analytics/ai/settings/ai-models-6.png
     title: "Set the <b>Temperature</b> and <b>Top P</b> parameters."
   6:
-    image: /images/trendz/ai/settings/ai-models-7.png
+    image: /images/sentient-analytics/ai/settings/ai-models-7.png
     title: "Click <b>Save</b>."
   7:
-    image: /images/trendz/ai/settings/ai-models-8.png
+    image: /images/sentient-analytics/ai/settings/ai-models-8.png
     title: "If everything is set up correctly, you will see a success message."
 
 model-delete:
   0:
-    image: /images/trendz/ai/settings/model-delete-1.png
+    image: /images/sentient-analytics/ai/settings/model-delete-1.png
     title: "Actions → Delete."
   1:
-    image: /images/trendz/ai/settings/model-delete-2.png
+    image: /images/sentient-analytics/ai/settings/model-delete-2.png
     title: "Confirm."
     
 model-edit:
   0:
-    image: /images/trendz/ai/settings/model-edit-1.png
+    image: /images/sentient-analytics/ai/settings/model-edit-1.png
     title: "Actions → Edit."
   1:
-    image: /images/trendz/ai/settings/model-edit-2.png
+    image: /images/sentient-analytics/ai/settings/model-edit-2.png
     title: "Change Properties → Save."
 
 ai-features:
   0:
-    image: /images/trendz/ai/settings/ai-features-1.png
+    image: /images/sentient-analytics/ai/settings/ai-features-1.png
     title: "To enable AI features, toggle <b>Enable AI Features</b> on."
   1:
-    image: /images/trendz/ai/settings/ai-features-2.png
+    image: /images/sentient-analytics/ai/settings/ai-features-2.png
     title: "<b>Use Single Model:</b> apply a single AI model for all features."
   2:
-    image: /images/trendz/ai/settings/ai-features-3.png
+    image: /images/sentient-analytics/ai/settings/ai-features-3.png
     title: "<b>Custom per Feature Configuration:</b> assign different AI models to specific features."
   3:
-    image: /images/trendz/ai/settings/ai-features-4.png
+    image: /images/sentient-analytics/ai/settings/ai-features-4.png
     title: "To switch between options, enable or disable <b>Use Single Model</b> checkbox."
   4:
-    image: /images/trendz/ai/settings/ai-features-5.png
+    image: /images/sentient-analytics/ai/settings/ai-features-5.png
     title: "If a feature is disabled, neither you nor other users will be able to access AI capabilities related to it."
   5:
-    image: /images/trendz/ai/settings/ai-features-6.png
+    image: /images/sentient-analytics/ai/settings/ai-features-6.png
     title: "Once all configurations are completed, click <b>Save</b> to apply the changes."
 
 providers:
   0:
-    image: /images/trendz/ai/settings/providers-1.png
+    image: /images/sentient-analytics/ai/settings/providers-1.png
     title: "Open AI."
   1:
-    image: /images/trendz/ai/settings/providers-2.png
+    image: /images/sentient-analytics/ai/settings/providers-2.png
     title: "Google (Recommended)."
   2:
-    image: /images/trendz/ai/settings/providers-3.png
+    image: /images/sentient-analytics/ai/settings/providers-3.png
     title: "Amazon Bedrock."
   3:
-    image: /images/trendz/ai/settings/providers-4.png
+    image: /images/sentient-analytics/ai/settings/providers-4.png
     title: "Other Models (Custom)."
 
 ---
 * TOC
 {:toc}
 
-Trendz proposes a wide range of features that rely on large language models (AI models).
+SENTIENT ANALYTICS proposes a wide range of features that rely on large language models (AI models).
 
-For cloud installations, Trendz provides a default AI model with a limited number of requests available. To extend this 
+For cloud installations, SENTIENT ANALYTICS provides a default AI model with a limited number of requests available. To extend this 
 request limit or to enable additional AI features, you need to configure the **AI Settings** section.
 
 ## AI Settings
@@ -155,9 +155,9 @@ To switch between options, enable or disable **Use Single Model** checkbox.
 If you select the single model option, the same model will be used for all AI functions. For more flexibility, you can 
 assign different models to the following features:
 
-1. **Prompts** - used for AI View Summary (learn more [here](/docs/trendz/ai-widget-summary/#trendz-widgets)).
-2. **View Assistant** - used for View Assistant features (learn more [here](/docs/trendz/ai-assistance-overview/)).
-3. **Metric Code Assistant** - used for Metric Explorer feature (learn more [here](/docs/trendz/metric/overview/)).
+1. **Prompts** - used for AI View Summary (learn more [here](/docs/sentient-analytics/ai-widget-summary/#sentient-analytics-widgets)).
+2. **View Assistant** - used for View Assistant features (learn more [here](/docs/sentient-analytics/ai-assistance-overview/)).
+3. **Metric Code Assistant** - used for Metric Explorer feature (learn more [here](/docs/sentient-analytics/metric/overview/)).
 
 Different features may require different model configurations:
 
@@ -173,7 +173,7 @@ Once all configurations are completed, click **Save** to apply the changes.
 
 ## AI Model Providers Overview
 
-Currently, Trendz could be integrated with the following providers:
+Currently, SENTIENT ANALYTICS could be integrated with the following providers:
 
 * OPEN_AI
 * GOOGLE

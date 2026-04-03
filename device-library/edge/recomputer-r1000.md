@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to install ThingsBoard Edge on reComputer R1000?
+title: How to install SENTIENT GATEWAY on reComputer R1000?
 category: Other devices
 connectivity: [LoRaWAN, Ethernet, WIFI, Bluetooth, 4G]
 chip: R1000

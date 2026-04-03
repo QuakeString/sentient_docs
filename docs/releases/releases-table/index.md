@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
-title: ThingsBoard Releases
-description: ThingsBoard architecture
+title: SENTIENT Releases
+description: SENTIENT architecture
 table-of-contents: "false"
 ---
 {% include get-hosts-name.html docsPrefix=docsPrefix %}

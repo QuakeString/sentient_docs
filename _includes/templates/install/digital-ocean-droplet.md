@@ -16,7 +16,7 @@
 - Once "Create Droplets" page is loaded, select "Ubuntu 18.04 x64" as your image (see image below).
 - Choose your plan. For beginners we would like to recommend 2CPUs and 4GB of RAM plan. 
 
-  Note: Advanced ThingsBoard users may choose the plan that suites their workload best. 
+  Note: Advanced SENTIENT users may choose the plan that suites their workload best. 
     
 ![image](/images/user-guide/install/digital-ocean-pe/choose-plan.png)
 
@@ -32,7 +32,7 @@
 
 - Use existing or create new SSH Key that will be used to connect to your instance. Make sure you have access to the SSH Key you have chosen. We will use this key later in the guide to connect to this instance. 
 - Put a meaningful hostname
-- Add "thingsboard" tag, just-in-case, we are not going to use it in this instruction.
+- Add "sentient" tag, just-in-case, we are not going to use it in this instruction.
 - Finally, click the "Create Droplet" button.
 
 ![image](/images/user-guide/install/digital-ocean-pe/create-final.png)

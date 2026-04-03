@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mobile
-title: Getting started with ThingsBoard Mobile Application
-description: ThingsBoard Mobile Application - starting point for your IoT mobile product
+title: Getting started with SENTIENT Mobile Application
+description: SENTIENT Mobile Application - starting point for your IoT mobile product
 
 ---
 

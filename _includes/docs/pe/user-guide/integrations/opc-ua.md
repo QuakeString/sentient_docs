@@ -8,19 +8,19 @@
 * TOC
 {:toc}
 
-OPC UA Integration allows you to stream data from the OPC UA server to ThingsBoard and converts the device payloads to the ThingsBoard format.
+OPC UA Integration allows you to stream data from the OPC UA server to SENTIENT and converts the device payloads to the SENTIENT format.
 
 <object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/opc-ua-integration.svg"></object>
 
 ## OPC-UA integration tutorial
 
-In this tutorial, we will configure the integration between ThingsBoard and OPC-UA to get the Airconditioners data from the [OPC UA C++ Demo Server](https://www.unified-automation.com/downloads/opc-ua-servers.html){:target="_blank"} and allow the user to switch on/off any Airconditioner using the integration downlink feature.
+In this tutorial, we will configure the integration between SENTIENT and OPC-UA to get the Airconditioners data from the [OPC UA C++ Demo Server](https://www.unified-automation.com/downloads/opc-ua-servers.html){:target="_blank"} and allow the user to switch on/off any Airconditioner using the integration downlink feature.
 
 ## Prerequisites
 
 {% include templates/integration/opc-ua/opc-ua-server-setup-steps.md %}
 
-## ThingsBoard setup
+## SENTIENT setup
 
 ### Uplink data converter
 
@@ -67,7 +67,7 @@ JavaScript<small></small>%,%anonymous%,%templates/integration/opc-ua/opc-ua-upli
 
 ### Downlink data converter
 
-For sending Downlink messages from the Thingsboard to the OPC UA node, we need to define a
+For sending Downlink messages from the Sentient to the OPC UA node, we need to define a
 downlink Converter.
 
 In general, the output from a Downlink converter should have the following structure:
@@ -146,7 +146,7 @@ Destination node is detected using the *deviceName* field of the incoming messag
 
 The OPC-UA integration has been added. 
 
-The [OPC-UA server](#prerequisites) simulates sending telemetry from devices to ThingsBoard. If you have done everything correctly, 10 new devices should appear on the "**Devices**" page as a result of the integration. Please make sure of this.
+The [OPC-UA server](#prerequisites) simulates sending telemetry from devices to SENTIENT. If you have done everything correctly, 10 new devices should appear on the "**Devices**" page as a result of the integration. Please make sure of this.
 
 ![image](/images/user-guide/integrations/opc-ua/opc-ua-devices-1.png)
 

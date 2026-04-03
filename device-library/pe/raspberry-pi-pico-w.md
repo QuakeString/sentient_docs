@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Raspberry Pi Pico W to ThingsBoard?
+title: How to connect Raspberry Pi Pico W to SENTIENT?
 category: Microcontrollers
 chip: RP2040
 connectivity: [HTTP, MQTT, WIFI, Bluetooth]

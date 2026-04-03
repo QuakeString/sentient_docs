@@ -594,8 +594,8 @@
   url: "/docs/getting-started-guides/helloworld/"
   redirect_from:
   - "/docs/samples/"
-"/docs/getting-started-guides/what-is-thingsboard/":
-  url: "/docs/getting-started-guides/what-is-thingsboard/"
+"/docs/getting-started-guides/what-is-sentient/":
+  url: "/docs/getting-started-guides/what-is-sentient/"
   redirect_from:
   - "/docs/user-guide/overview/"
 "/docs/getting-started/":
@@ -696,8 +696,8 @@
 "/docs/iot-gateway/guides/how-to-connect-modbus-device/":
   url: "/docs/iot-gateway/guides/how-to-connect-modbus-device/"
   redirect_from: []
-"/docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-thingsboard-ce/":
-  url: "/docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-thingsboard-ce/"
+"/docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-sentient-ce/":
+  url: "/docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-sentient-ce/"
   redirect_from:
   - "/docs/iot-gateway/guides/how-to-connect-opcua-server/"
 "/docs/iot-gateway/guides/how-to-connect-opcua-server/":
@@ -849,8 +849,8 @@
 "/docs/mqtt-broker/faq/":
   url: "/docs/mqtt-broker/faq/"
   redirect_from: []
-"/docs/mqtt-broker/getting-started-guides/what-is-thingsboard-mqtt-broker/":
-  url: "/docs/mqtt-broker/getting-started-guides/what-is-thingsboard-mqtt-broker/"
+"/docs/mqtt-broker/getting-started-guides/what-is-sentient-mqtt-broker/":
+  url: "/docs/mqtt-broker/getting-started-guides/what-is-sentient-mqtt-broker/"
   redirect_from: []
 "/docs/mqtt-broker/getting-started/":
   url: "/docs/mqtt-broker/getting-started/"
@@ -897,14 +897,14 @@
 "/docs/mqtt-broker/install/cluster/minikube-cluster-setup/":
   url: "/docs/mqtt-broker/install/cluster/minikube-cluster-setup/"
   redirect_from: []
-"/docs/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-with-from-version/":
-  url: "/docs/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-with-from-version/"
+"/docs/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-with-from-version/":
+  url: "/docs/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-with-from-version/"
   redirect_from: []
-"/docs/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-without-from-version/":
-  url: "/docs/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-without-from-version/"
+"/docs/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-without-from-version/":
+  url: "/docs/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-without-from-version/"
   redirect_from: []
-"/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version/":
-  url: "/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version/"
+"/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version/":
+  url: "/docs/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version/"
   redirect_from: []
 "/docs/mqtt-broker/install/config/":
   url: "/docs/mqtt-broker/install/config/"
@@ -1005,8 +1005,8 @@
 "/docs/mqtt-broker/user-guide/clean-persistent-sessions/":
   url: "/docs/mqtt-broker/user-guide/clean-persistent-sessions/"
   redirect_from: []
-"/docs/mqtt-broker/user-guide/integrations/how-to-connect-thingsboard-to-tbmq/":
-  url: "/docs/mqtt-broker/user-guide/integrations/how-to-connect-thingsboard-to-tbmq/"
+"/docs/mqtt-broker/user-guide/integrations/how-to-connect-sentient-to-st-rmqtt/":
+  url: "/docs/mqtt-broker/user-guide/integrations/how-to-connect-sentient-to-st-rmqtt/"
   redirect_from: []
 "/docs/mqtt-broker/user-guide/keep-alive/":
   url: "/docs/mqtt-broker/user-guide/keep-alive/"
@@ -1829,11 +1829,11 @@
 "/docs/paas/eu/getting-started-guides/helloworld/":
   url: "/docs/paas/eu/getting-started-guides/helloworld/"
   redirect_from: []
-"/docs/paas/eu/getting-started-guides/what-is-thingsboard-cloud/":
-  url: "/docs/paas/eu/getting-started-guides/what-is-thingsboard-cloud/"
+"/docs/paas/eu/getting-started-guides/what-is-sentient-cloud/":
+  url: "/docs/paas/eu/getting-started-guides/what-is-sentient-cloud/"
   redirect_from: []
-"/docs/paas/eu/getting-started-guides/what-is-thingsboard/":
-  url: "/docs/paas/eu/getting-started-guides/what-is-thingsboard/"
+"/docs/paas/eu/getting-started-guides/what-is-sentient/":
+  url: "/docs/paas/eu/getting-started-guides/what-is-sentient/"
   redirect_from: []
 "/docs/paas/eu/guides/":
   url: "/docs/paas/eu/guides/"
@@ -2402,12 +2402,12 @@
 "/docs/paas/getting-started-guides/helloworld/":
   url: "/docs/paas/getting-started-guides/helloworld/"
   redirect_from: []
-"/docs/paas/getting-started-guides/what-is-thingsboard-cloud/":
-  url: "/docs/paas/getting-started-guides/what-is-thingsboard-cloud/"
+"/docs/paas/getting-started-guides/what-is-sentient-cloud/":
+  url: "/docs/paas/getting-started-guides/what-is-sentient-cloud/"
   redirect_from:
-  - "/products/paas/what-is-thingsboard-cloud/"
-"/docs/paas/getting-started-guides/what-is-thingsboard/":
-  url: "/docs/paas/getting-started-guides/what-is-thingsboard/"
+  - "/products/paas/what-is-sentient-cloud/"
+"/docs/paas/getting-started-guides/what-is-sentient/":
+  url: "/docs/paas/getting-started-guides/what-is-sentient/"
   redirect_from: []
 "/docs/paas/guides/":
   url: "/docs/paas/guides/"
@@ -3570,8 +3570,8 @@
 "/docs/pe/getting-started-guides/connectivity/":
   url: "/docs/pe/getting-started-guides/connectivity/"
   redirect_from: []
-"/docs/pe/getting-started-guides/what-is-thingsboard/":
-  url: "/docs/pe/getting-started-guides/what-is-thingsboard/"
+"/docs/pe/getting-started-guides/what-is-sentient/":
+  url: "/docs/pe/getting-started-guides/what-is-sentient/"
   redirect_from: []
 "/docs/pe/guides/":
   url: "/docs/pe/guides/"
@@ -3661,8 +3661,8 @@
 "/docs/pe/mqtt-broker/faq/":
   url: "/docs/pe/mqtt-broker/faq/"
   redirect_from: []
-"/docs/pe/mqtt-broker/getting-started-guides/what-is-thingsboard-mqtt-broker/":
-  url: "/docs/pe/mqtt-broker/getting-started-guides/what-is-thingsboard-mqtt-broker/"
+"/docs/pe/mqtt-broker/getting-started-guides/what-is-sentient-mqtt-broker/":
+  url: "/docs/pe/mqtt-broker/getting-started-guides/what-is-sentient-mqtt-broker/"
   redirect_from: []
 "/docs/pe/mqtt-broker/getting-started/":
   url: "/docs/pe/mqtt-broker/getting-started/"
@@ -3710,14 +3710,14 @@
 "/docs/pe/mqtt-broker/install/cluster/minikube-cluster-setup/":
   url: "/docs/pe/mqtt-broker/install/cluster/minikube-cluster-setup/"
   redirect_from: []
-"/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-with-from-version/":
-  url: "/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-with-from-version/"
+"/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-with-from-version/":
+  url: "/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-with-from-version/"
   redirect_from: []
-"/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-without-from-version/":
-  url: "/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-tbmq-without-from-version/"
+"/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-without-from-version/":
+  url: "/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/docker-compose-upgrade-st-rmqtt-without-from-version/"
   redirect_from: []
-"/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version/":
-  url: "/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-tbmq-with-from-version/"
+"/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version/":
+  url: "/docs/pe/mqtt-broker/install/cluster/resources/upgrade-options/k8s-upgrade-st-rmqtt-with-from-version/"
   redirect_from: []
 "/docs/pe/mqtt-broker/install/config/":
   url: "/docs/pe/mqtt-broker/install/config/"
@@ -3831,8 +3831,8 @@
 "/docs/pe/mqtt-broker/user-guide/clean-persistent-sessions/":
   url: "/docs/pe/mqtt-broker/user-guide/clean-persistent-sessions/"
   redirect_from: []
-"/docs/pe/mqtt-broker/user-guide/integrations/how-to-connect-thingsboard-to-tbmq/":
-  url: "/docs/pe/mqtt-broker/user-guide/integrations/how-to-connect-thingsboard-to-tbmq/"
+"/docs/pe/mqtt-broker/user-guide/integrations/how-to-connect-sentient-to-st-rmqtt/":
+  url: "/docs/pe/mqtt-broker/user-guide/integrations/how-to-connect-sentient-to-st-rmqtt/"
   redirect_from: []
 "/docs/pe/mqtt-broker/user-guide/keep-alive/":
   url: "/docs/pe/mqtt-broker/user-guide/keep-alive/"
@@ -4656,8 +4656,8 @@
 "/docs/pe/user-guide/ui/tenants/":
   url: "/docs/pe/user-guide/ui/tenants/"
   redirect_from: []
-"/docs/pe/user-guide/ui/trendz-settings/":
-  url: "/docs/pe/user-guide/ui/trendz-settings/"
+"/docs/pe/user-guide/ui/sentient-analytics-settings/":
+  url: "/docs/pe/user-guide/ui/sentient-analytics-settings/"
   redirect_from: []
 "/docs/pe/user-guide/ui/trip-animation-widget/":
   url: "/docs/pe/user-guide/ui/trip-animation-widget/"
@@ -4764,8 +4764,8 @@
 "/docs/reference/performance/tools/postgres-pgadmin-monitoring/":
   url: "/docs/reference/performance/tools/postgres-pgadmin-monitoring/"
   redirect_from: []
-"/docs/reference/performance/tools/thingsboard-performance-charts/":
-  url: "/docs/reference/performance/tools/thingsboard-performance-charts/"
+"/docs/reference/performance/tools/sentient-performance-charts/":
+  url: "/docs/reference/performance/tools/sentient-performance-charts/"
   redirect_from: []
 "/docs/reference/performance-aws-instances/":
   url: "/docs/reference/performance-aws-instances/"
@@ -4873,7 +4873,7 @@
 "/docs/samples/analytics/kafka-streams/":
   url: "/docs/samples/analytics/kafka-streams/"
   redirect_from:
-  - "/docs/samples/analytics/spark-integration-with-thingsboard/"
+  - "/docs/samples/analytics/spark-integration-with-sentient/"
 "/docs/samples/analytics/mcp-server-ai-insights/":
   url: "/docs/samples/analytics/mcp-server-ai-insights/"
   redirect_from: []
@@ -4892,8 +4892,8 @@
 "/docs/samples/demo-account/":
   url: "/docs/samples/demo-account/"
   redirect_from: []
-"/docs/samples/digicom/energy-meter-monitoring-with-thingsboard-iot-plaƞorm/":
-  url: "/docs/samples/digicom/energy-meter-monitoring-with-thingsboard-iot-plaƞorm/"
+"/docs/samples/digicom/energy-meter-monitoring-with-sentient-iot-plaƞorm/":
+  url: "/docs/samples/digicom/energy-meter-monitoring-with-sentient-iot-plaƞorm/"
   redirect_from: []
 "/docs/samples/exxn/exxn/":
   url: "/docs/samples/exxn/exxn/"
@@ -4970,8 +4970,8 @@
 "/docs/samples/sodaq/sodaq/":
   url: "/docs/samples/sodaq/sodaq/"
   redirect_from: []
-"/docs/samples/solandtec/thingsboard-guide-solandtec/":
-  url: "/docs/samples/solandtec/thingsboard-guide-solandtec/"
+"/docs/samples/solandtec/sentient-guide-solandtec/":
+  url: "/docs/samples/solandtec/sentient-guide-solandtec/"
   redirect_from: []
 "/docs/samples/syrus/syrus/":
   url: "/docs/samples/syrus/syrus/"
@@ -4985,395 +4985,395 @@
 "/docs/sitemap/":
   url: "/docs/sitemap/"
   redirect_from: []
-"/docs/trendz/activation/how-to/":
-  url: "/docs/trendz/activation/how-to/"
+"/docs/sentient-analytics/activation/how-to/":
+  url: "/docs/sentient-analytics/activation/how-to/"
   redirect_from: []
-"/docs/trendz/activation/private-cloud/":
-  url: "/docs/trendz/activation/private-cloud/"
+"/docs/sentient-analytics/activation/private-cloud/":
+  url: "/docs/sentient-analytics/activation/private-cloud/"
   redirect_from: []
-"/docs/trendz/activation/public-cloud/":
-  url: "/docs/trendz/activation/public-cloud/"
+"/docs/sentient-analytics/activation/public-cloud/":
+  url: "/docs/sentient-analytics/activation/public-cloud/"
   redirect_from: []
-"/docs/trendz/activation/self-managed/":
-  url: "/docs/trendz/activation/self-managed/"
+"/docs/sentient-analytics/activation/self-managed/":
+  url: "/docs/sentient-analytics/activation/self-managed/"
   redirect_from: []
-"/docs/trendz/ai-assistance-overview/":
-  url: "/docs/trendz/ai-assistance-overview/"
+"/docs/sentient-analytics/ai-assistance-overview/":
+  url: "/docs/sentient-analytics/ai-assistance-overview/"
   redirect_from: []
-"/docs/trendz/ai-assistance-prompts/":
-  url: "/docs/trendz/ai-assistance-prompts/"
+"/docs/sentient-analytics/ai-assistance-prompts/":
+  url: "/docs/sentient-analytics/ai-assistance-prompts/"
   redirect_from: []
-"/docs/trendz/ai-assistance-widget/":
-  url: "/docs/trendz/ai-assistance-widget/"
+"/docs/sentient-analytics/ai-assistance-widget/":
+  url: "/docs/sentient-analytics/ai-assistance-widget/"
   redirect_from: []
-"/docs/trendz/ai-widget-summary/":
-  url: "/docs/trendz/ai-widget-summary/"
+"/docs/sentient-analytics/ai-widget-summary/":
+  url: "/docs/sentient-analytics/ai-widget-summary/"
   redirect_from: []
-"/docs/trendz/anomaly/alarms/":
-  url: "/docs/trendz/anomaly/alarms/"
+"/docs/sentient-analytics/anomaly/alarms/":
+  url: "/docs/sentient-analytics/anomaly/alarms/"
   redirect_from: []
-"/docs/trendz/anomaly/build/":
-  url: "/docs/trendz/anomaly/build/"
+"/docs/sentient-analytics/anomaly/build/":
+  url: "/docs/sentient-analytics/anomaly/build/"
   redirect_from: []
-"/docs/trendz/anomaly/overview/":
-  url: "/docs/trendz/anomaly/overview/"
+"/docs/sentient-analytics/anomaly/overview/":
+  url: "/docs/sentient-analytics/anomaly/overview/"
   redirect_from: []
-"/docs/trendz/anomaly/refresh-reprocess/":
-  url: "/docs/trendz/anomaly/refresh-reprocess/"
+"/docs/sentient-analytics/anomaly/refresh-reprocess/":
+  url: "/docs/sentient-analytics/anomaly/refresh-reprocess/"
   redirect_from: []
-"/docs/trendz/anomaly/save-to-tb/":
-  url: "/docs/trendz/anomaly/save-to-tb/"
+"/docs/sentient-analytics/anomaly/save-to-tb/":
+  url: "/docs/sentient-analytics/anomaly/save-to-tb/"
   redirect_from: []
-"/docs/trendz/anomaly/visualization/":
-  url: "/docs/trendz/anomaly/visualization/"
+"/docs/sentient-analytics/anomaly/visualization/":
+  url: "/docs/sentient-analytics/anomaly/visualization/"
   redirect_from: []
-"/docs/trendz/background-jobs/":
-  url: "/docs/trendz/background-jobs/"
+"/docs/sentient-analytics/background-jobs/":
+  url: "/docs/sentient-analytics/background-jobs/"
   redirect_from: []
-"/docs/trendz/business-entities/":
-  url: "/docs/trendz/business-entities/"
+"/docs/sentient-analytics/business-entities/":
+  url: "/docs/sentient-analytics/business-entities/"
   redirect_from: []
-"/docs/trendz/cache-settings/":
-  url: "/docs/trendz/cache-settings/"
+"/docs/sentient-analytics/cache-settings/":
+  url: "/docs/sentient-analytics/cache-settings/"
   redirect_from: []
-"/docs/trendz/calculations/batch/":
-  url: "/docs/trendz/calculations/batch/"
+"/docs/sentient-analytics/calculations/batch/":
+  url: "/docs/sentient-analytics/calculations/batch/"
   redirect_from: []
-"/docs/trendz/calculations/native/":
-  url: "/docs/trendz/calculations/native/"
+"/docs/sentient-analytics/calculations/native/":
+  url: "/docs/sentient-analytics/calculations/native/"
   redirect_from: []
-"/docs/trendz/calculations/overview/":
-  url: "/docs/trendz/calculations/overview/"
+"/docs/sentient-analytics/calculations/overview/":
+  url: "/docs/sentient-analytics/calculations/overview/"
   redirect_from: []
-"/docs/trendz/calculations/save-to-thingsboard/":
-  url: "/docs/trendz/calculations/save-to-thingsboard/"
+"/docs/sentient-analytics/calculations/save-to-sentient/":
+  url: "/docs/sentient-analytics/calculations/save-to-sentient/"
   redirect_from: []
-"/docs/trendz/calculations/time-to-value/":
-  url: "/docs/trendz/calculations/time-to-value/"
+"/docs/sentient-analytics/calculations/time-to-value/":
+  url: "/docs/sentient-analytics/calculations/time-to-value/"
   redirect_from: []
-"/docs/trendz/configuration-properties/":
-  url: "/docs/trendz/configuration-properties/"
+"/docs/sentient-analytics/configuration-properties/":
+  url: "/docs/sentient-analytics/configuration-properties/"
   redirect_from: []
-"/docs/trendz/connect-thingsboard/":
-  url: "/docs/trendz/connect-thingsboard/"
+"/docs/sentient-analytics/connect-sentient/":
+  url: "/docs/sentient-analytics/connect-sentient/"
   redirect_from: []
-"/docs/trendz/custom-ai-model-configuration/":
-  url: "/docs/trendz/custom-ai-model-configuration/"
+"/docs/sentient-analytics/custom-ai-model-configuration/":
+  url: "/docs/sentient-analytics/custom-ai-model-configuration/"
   redirect_from: []
-"/docs/trendz/custom-translation/":
-  url: "/docs/trendz/custom-translation/"
+"/docs/sentient-analytics/custom-translation/":
+  url: "/docs/sentient-analytics/custom-translation/"
   redirect_from: []
-"/docs/trendz/data-filtering/":
-  url: "/docs/trendz/data-filtering/"
+"/docs/sentient-analytics/data-filtering/":
+  url: "/docs/sentient-analytics/data-filtering/"
   redirect_from: []
-"/docs/trendz/data-grouping-aggregation/":
-  url: "/docs/trendz/data-grouping-aggregation/"
+"/docs/sentient-analytics/data-grouping-aggregation/":
+  url: "/docs/sentient-analytics/data-grouping-aggregation/"
   redirect_from: []
-"/docs/trendz/embed-visuals/":
-  url: "/docs/trendz/embed-visuals/"
+"/docs/sentient-analytics/embed-visuals/":
+  url: "/docs/sentient-analytics/embed-visuals/"
   redirect_from: []
-"/docs/trendz/getting-started/":
-  url: "/docs/trendz/getting-started/"
+"/docs/sentient-analytics/getting-started/":
+  url: "/docs/sentient-analytics/getting-started/"
   redirect_from: []
-"/docs/trendz/group-by-category/":
-  url: "/docs/trendz/group-by-category/"
+"/docs/sentient-analytics/group-by-category/":
+  url: "/docs/sentient-analytics/group-by-category/"
   redirect_from: []
-"/docs/trendz/group-by-time/":
-  url: "/docs/trendz/group-by-time/"
+"/docs/sentient-analytics/group-by-time/":
+  url: "/docs/sentient-analytics/group-by-time/"
   redirect_from: []
-"/docs/trendz/guide/analyze-building-energy-usage-and-carbon-emissions/":
-  url: "/docs/trendz/guide/analyze-building-energy-usage-and-carbon-emissions/"
+"/docs/sentient-analytics/guide/analyze-building-energy-usage-and-carbon-emissions/":
+  url: "/docs/sentient-analytics/guide/analyze-building-energy-usage-and-carbon-emissions/"
   redirect_from: []
-"/docs/trendz/guide/detect-anomalies-in-heat-pumps/":
-  url: "/docs/trendz/guide/detect-anomalies-in-heat-pumps/"
+"/docs/sentient-analytics/guide/detect-anomalies-in-heat-pumps/":
+  url: "/docs/sentient-analytics/guide/detect-anomalies-in-heat-pumps/"
   redirect_from: []
-"/docs/trendz/guide/industrial-oee-score-monitoring/":
-  url: "/docs/trendz/guide/industrial-oee-score-monitoring/"
+"/docs/sentient-analytics/guide/industrial-oee-score-monitoring/":
+  url: "/docs/sentient-analytics/guide/industrial-oee-score-monitoring/"
   redirect_from: []
-"/docs/trendz/guide/occupancy-analysis-of-the-building/":
-  url: "/docs/trendz/guide/occupancy-analysis-of-the-building/"
+"/docs/sentient-analytics/guide/occupancy-analysis-of-the-building/":
+  url: "/docs/sentient-analytics/guide/occupancy-analysis-of-the-building/"
   redirect_from: []
-"/docs/trendz/guide/predict-next-maintenance-date-of-equipment/":
-  url: "/docs/trendz/guide/predict-next-maintenance-date-of-equipment/"
+"/docs/sentient-analytics/guide/predict-next-maintenance-date-of-equipment/":
+  url: "/docs/sentient-analytics/guide/predict-next-maintenance-date-of-equipment/"
   redirect_from: []
-"/docs/trendz/guides/":
-  url: "/docs/trendz/guides/"
+"/docs/sentient-analytics/guides/":
+  url: "/docs/sentient-analytics/guides/"
   redirect_from: []
-"/docs/trendz/":
-  url: "/docs/trendz/"
+"/docs/sentient-analytics/":
+  url: "/docs/sentient-analytics/"
   redirect_from: []
-"/docs/trendz/install/cloud/":
-  url: "/docs/trendz/install/cloud/"
+"/docs/sentient-analytics/install/cloud/":
+  url: "/docs/sentient-analytics/install/cloud/"
   redirect_from: []
-"/docs/trendz/install/docker-windows/":
-  url: "/docs/trendz/install/docker-windows/"
+"/docs/sentient-analytics/install/docker-windows/":
+  url: "/docs/sentient-analytics/install/docker-windows/"
   redirect_from: []
-"/docs/trendz/install/docker/":
-  url: "/docs/trendz/install/docker/"
+"/docs/sentient-analytics/install/docker/":
+  url: "/docs/sentient-analytics/install/docker/"
   redirect_from: []
-"/docs/trendz/install/installation-options/":
-  url: "/docs/trendz/install/installation-options/"
+"/docs/sentient-analytics/install/installation-options/":
+  url: "/docs/sentient-analytics/install/installation-options/"
   redirect_from: []
-"/docs/trendz/install/kubernetes/":
-  url: "/docs/trendz/install/kubernetes/"
+"/docs/sentient-analytics/install/kubernetes/":
+  url: "/docs/sentient-analytics/install/kubernetes/"
   redirect_from: []
-"/docs/trendz/install/old-docker-migrate/":
-  url: "/docs/trendz/install/old-docker-migrate/"
+"/docs/sentient-analytics/install/old-docker-migrate/":
+  url: "/docs/sentient-analytics/install/old-docker-migrate/"
   redirect_from: []
-"/docs/trendz/install/python-executor-configuration/":
-  url: "/docs/trendz/install/python-executor-configuration/"
+"/docs/sentient-analytics/install/python-executor-configuration/":
+  url: "/docs/sentient-analytics/install/python-executor-configuration/"
   redirect_from: []
-"/docs/trendz/install/rhel/":
-  url: "/docs/trendz/install/rhel/"
+"/docs/sentient-analytics/install/rhel/":
+  url: "/docs/sentient-analytics/install/rhel/"
   redirect_from: []
-"/docs/trendz/install/trndz-upgrade-instructions-kubernetes/":
-  url: "/docs/trendz/install/trndz-upgrade-instructions-kubernetes/"
+"/docs/sentient-analytics/install/trndz-upgrade-instructions-kubernetes/":
+  url: "/docs/sentient-analytics/install/trndz-upgrade-instructions-kubernetes/"
   redirect_from: []
-"/docs/trendz/install/trndz-upgrade-instructions/":
-  url: "/docs/trendz/install/trndz-upgrade-instructions/"
+"/docs/sentient-analytics/install/trndz-upgrade-instructions/":
+  url: "/docs/sentient-analytics/install/trndz-upgrade-instructions/"
   redirect_from: []
-"/docs/trendz/install/ubuntu/":
-  url: "/docs/trendz/install/ubuntu/"
+"/docs/sentient-analytics/install/ubuntu/":
+  url: "/docs/sentient-analytics/install/ubuntu/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/centos/v1-10-x/":
-  url: "/docs/trendz/install/upgrade-instructions/centos/v1-10-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/centos/v1-10-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/centos/v1-10-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/centos/v1-11-x/":
-  url: "/docs/trendz/install/upgrade-instructions/centos/v1-11-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/centos/v1-11-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/centos/v1-11-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/centos/v1-12-x/":
-  url: "/docs/trendz/install/upgrade-instructions/centos/v1-12-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/centos/v1-12-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/centos/v1-12-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/centos/v1-13-x/":
-  url: "/docs/trendz/install/upgrade-instructions/centos/v1-13-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/centos/v1-13-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/centos/v1-13-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/centos/v1-14-x/":
-  url: "/docs/trendz/install/upgrade-instructions/centos/v1-14-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/centos/v1-14-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/centos/v1-14-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/centos/v1-15-x/":
-  url: "/docs/trendz/install/upgrade-instructions/centos/v1-15-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/centos/v1-15-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/centos/v1-15-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/centos/v1-8-x/":
-  url: "/docs/trendz/install/upgrade-instructions/centos/v1-8-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/centos/v1-8-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/centos/v1-8-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/centos/v1-9-x/":
-  url: "/docs/trendz/install/upgrade-instructions/centos/v1-9-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/centos/v1-9-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/centos/v1-9-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/docker/v1-10-x/":
-  url: "/docs/trendz/install/upgrade-instructions/docker/v1-10-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/docker/v1-10-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/docker/v1-10-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/docker/v1-11-x/":
-  url: "/docs/trendz/install/upgrade-instructions/docker/v1-11-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/docker/v1-11-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/docker/v1-11-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/docker/v1-12-x/":
-  url: "/docs/trendz/install/upgrade-instructions/docker/v1-12-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/docker/v1-12-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/docker/v1-12-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/docker/v1-13-x/":
-  url: "/docs/trendz/install/upgrade-instructions/docker/v1-13-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/docker/v1-13-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/docker/v1-13-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/docker/v1-14-x/":
-  url: "/docs/trendz/install/upgrade-instructions/docker/v1-14-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/docker/v1-14-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/docker/v1-14-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/docker/v1-15-x/":
-  url: "/docs/trendz/install/upgrade-instructions/docker/v1-15-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/docker/v1-15-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/docker/v1-15-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/docker/v1-8-x/":
-  url: "/docs/trendz/install/upgrade-instructions/docker/v1-8-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/docker/v1-8-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/docker/v1-8-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/docker/v1-9-x/":
-  url: "/docs/trendz/install/upgrade-instructions/docker/v1-9-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/docker/v1-9-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/docker/v1-9-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/":
-  url: "/docs/trendz/install/upgrade-instructions/"
+"/docs/sentient-analytics/install/upgrade-instructions/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/ubuntu/v1-10-x/":
-  url: "/docs/trendz/install/upgrade-instructions/ubuntu/v1-10-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-10-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-10-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/ubuntu/v1-11-x/":
-  url: "/docs/trendz/install/upgrade-instructions/ubuntu/v1-11-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-11-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-11-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/ubuntu/v1-12-x/":
-  url: "/docs/trendz/install/upgrade-instructions/ubuntu/v1-12-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-12-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-12-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/ubuntu/v1-13-x/":
-  url: "/docs/trendz/install/upgrade-instructions/ubuntu/v1-13-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-13-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-13-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/ubuntu/v1-14-x/":
-  url: "/docs/trendz/install/upgrade-instructions/ubuntu/v1-14-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-14-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-14-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/ubuntu/v1-15-x/":
-  url: "/docs/trendz/install/upgrade-instructions/ubuntu/v1-15-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-15-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-15-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/ubuntu/v1-8-x/":
-  url: "/docs/trendz/install/upgrade-instructions/ubuntu/v1-8-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-8-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-8-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/ubuntu/v1-9-x/":
-  url: "/docs/trendz/install/upgrade-instructions/ubuntu/v1-9-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-9-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/ubuntu/v1-9-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/windows/v1-10-x/":
-  url: "/docs/trendz/install/upgrade-instructions/windows/v1-10-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/windows/v1-10-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/windows/v1-10-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/windows/v1-11-x/":
-  url: "/docs/trendz/install/upgrade-instructions/windows/v1-11-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/windows/v1-11-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/windows/v1-11-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/windows/v1-12-x/":
-  url: "/docs/trendz/install/upgrade-instructions/windows/v1-12-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/windows/v1-12-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/windows/v1-12-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/windows/v1-13-x/":
-  url: "/docs/trendz/install/upgrade-instructions/windows/v1-13-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/windows/v1-13-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/windows/v1-13-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/windows/v1-14-x/":
-  url: "/docs/trendz/install/upgrade-instructions/windows/v1-14-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/windows/v1-14-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/windows/v1-14-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/windows/v1-15-x/":
-  url: "/docs/trendz/install/upgrade-instructions/windows/v1-15-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/windows/v1-15-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/windows/v1-15-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/windows/v1-8-x/":
-  url: "/docs/trendz/install/upgrade-instructions/windows/v1-8-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/windows/v1-8-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/windows/v1-8-x/"
   redirect_from: []
-"/docs/trendz/install/upgrade-instructions/windows/v1-9-x/":
-  url: "/docs/trendz/install/upgrade-instructions/windows/v1-9-x/"
+"/docs/sentient-analytics/install/upgrade-instructions/windows/v1-9-x/":
+  url: "/docs/sentient-analytics/install/upgrade-instructions/windows/v1-9-x/"
   redirect_from: []
-"/docs/trendz/install/windows/":
-  url: "/docs/trendz/install/windows/"
+"/docs/sentient-analytics/install/windows/":
+  url: "/docs/sentient-analytics/install/windows/"
   redirect_from: []
-"/docs/trendz/metric/generate-new-metric/":
-  url: "/docs/trendz/metric/generate-new-metric/"
+"/docs/sentient-analytics/metric/generate-new-metric/":
+  url: "/docs/sentient-analytics/metric/generate-new-metric/"
   redirect_from: []
-"/docs/trendz/metric/overview/":
-  url: "/docs/trendz/metric/overview/"
+"/docs/sentient-analytics/metric/overview/":
+  url: "/docs/sentient-analytics/metric/overview/"
   redirect_from: []
-"/docs/trendz/metric/use-in-thingsboard/":
-  url: "/docs/trendz/metric/use-in-thingsboard/"
+"/docs/sentient-analytics/metric/use-in-sentient/":
+  url: "/docs/sentient-analytics/metric/use-in-sentient/"
   redirect_from: []
-"/docs/trendz/mix-sql-datasource/":
-  url: "/docs/trendz/mix-sql-datasource/"
+"/docs/sentient-analytics/mix-sql-datasource/":
+  url: "/docs/sentient-analytics/mix-sql-datasource/"
   redirect_from: []
-"/docs/trendz/post-installation-steps/":
-  url: "/docs/trendz/post-installation-steps/"
+"/docs/sentient-analytics/post-installation-steps/":
+  url: "/docs/sentient-analytics/post-installation-steps/"
   redirect_from: []
-"/docs/trendz/predict-remaining-time/":
-  url: "/docs/trendz/predict-remaining-time/"
+"/docs/sentient-analytics/predict-remaining-time/":
+  url: "/docs/sentient-analytics/predict-remaining-time/"
   redirect_from: []
-"/docs/trendz/predict-with-python-models/":
-  url: "/docs/trendz/predict-with-python-models/"
+"/docs/sentient-analytics/predict-with-python-models/":
+  url: "/docs/sentient-analytics/predict-with-python-models/"
   redirect_from: []
-"/docs/trendz/prediction-save-to-tb/":
-  url: "/docs/trendz/prediction-save-to-tb/"
+"/docs/sentient-analytics/prediction-save-to-tb/":
+  url: "/docs/sentient-analytics/prediction-save-to-tb/"
   redirect_from: []
-"/docs/trendz/prediction/":
-  url: "/docs/trendz/prediction/"
+"/docs/sentient-analytics/prediction/":
+  url: "/docs/sentient-analytics/prediction/"
   redirect_from: []
-"/docs/trendz/releases/release-policy/":
-  url: "/docs/trendz/releases/release-policy/"
+"/docs/sentient-analytics/releases/release-policy/":
+  url: "/docs/sentient-analytics/releases/release-policy/"
   redirect_from: []
-"/docs/trendz/releases/releases-table/":
-  url: "/docs/trendz/releases/releases-table/"
+"/docs/sentient-analytics/releases/releases-table/":
+  url: "/docs/sentient-analytics/releases/releases-table/"
   redirect_from: []
-"/docs/trendz/releases/releases-table/v1-10-x/":
-  url: "/docs/trendz/releases/releases-table/v1-10-x/"
+"/docs/sentient-analytics/releases/releases-table/v1-10-x/":
+  url: "/docs/sentient-analytics/releases/releases-table/v1-10-x/"
   redirect_from: []
-"/docs/trendz/releases/releases-table/v1-11-x/":
-  url: "/docs/trendz/releases/releases-table/v1-11-x/"
+"/docs/sentient-analytics/releases/releases-table/v1-11-x/":
+  url: "/docs/sentient-analytics/releases/releases-table/v1-11-x/"
   redirect_from: []
-"/docs/trendz/releases/releases-table/v1-12-x/":
-  url: "/docs/trendz/releases/releases-table/v1-12-x/"
+"/docs/sentient-analytics/releases/releases-table/v1-12-x/":
+  url: "/docs/sentient-analytics/releases/releases-table/v1-12-x/"
   redirect_from: []
-"/docs/trendz/releases/releases-table/v1-13-x/":
-  url: "/docs/trendz/releases/releases-table/v1-13-x/"
+"/docs/sentient-analytics/releases/releases-table/v1-13-x/":
+  url: "/docs/sentient-analytics/releases/releases-table/v1-13-x/"
   redirect_from: []
-"/docs/trendz/releases/releases-table/v1-14-x/":
-  url: "/docs/trendz/releases/releases-table/v1-14-x/"
+"/docs/sentient-analytics/releases/releases-table/v1-14-x/":
+  url: "/docs/sentient-analytics/releases/releases-table/v1-14-x/"
   redirect_from: []
-"/docs/trendz/releases/releases-table/v1-15-x/":
-  url: "/docs/trendz/releases/releases-table/v1-15-x/"
+"/docs/sentient-analytics/releases/releases-table/v1-15-x/":
+  url: "/docs/sentient-analytics/releases/releases-table/v1-15-x/"
   redirect_from: []
-"/docs/trendz/releases/releases-table/v1-8-x/":
-  url: "/docs/trendz/releases/releases-table/v1-8-x/"
+"/docs/sentient-analytics/releases/releases-table/v1-8-x/":
+  url: "/docs/sentient-analytics/releases/releases-table/v1-8-x/"
   redirect_from: []
-"/docs/trendz/releases/releases-table/v1-9-x/":
-  url: "/docs/trendz/releases/releases-table/v1-9-x/"
+"/docs/sentient-analytics/releases/releases-table/v1-9-x/":
+  url: "/docs/sentient-analytics/releases/releases-table/v1-9-x/"
   redirect_from: []
-"/docs/trendz/releases/":
-  url: "/docs/trendz/releases/"
+"/docs/sentient-analytics/releases/":
+  url: "/docs/sentient-analytics/releases/"
   redirect_from: []
-"/docs/trendz/rest-api/":
-  url: "/docs/trendz/rest-api/"
+"/docs/sentient-analytics/rest-api/":
+  url: "/docs/sentient-analytics/rest-api/"
   redirect_from: []
-"/docs/trendz/search/":
-  url: "/docs/trendz/search/"
+"/docs/sentient-analytics/search/":
+  url: "/docs/sentient-analytics/search/"
   redirect_from: []
-"/docs/trendz/settings/":
-  url: "/docs/trendz/settings/"
+"/docs/sentient-analytics/settings/":
+  url: "/docs/sentient-analytics/settings/"
   redirect_from: []
-"/docs/trendz/states/":
-  url: "/docs/trendz/states/"
+"/docs/sentient-analytics/states/":
+  url: "/docs/sentient-analytics/states/"
   redirect_from: []
-"/docs/trendz/tasks-service/":
-  url: "/docs/trendz/tasks-service/"
+"/docs/sentient-analytics/tasks-service/":
+  url: "/docs/sentient-analytics/tasks-service/"
   redirect_from: []
-"/docs/trendz/telemetry-aggregation/":
-  url: "/docs/trendz/telemetry-aggregation/"
+"/docs/sentient-analytics/telemetry-aggregation/":
+  url: "/docs/sentient-analytics/telemetry-aggregation/"
   redirect_from: []
-"/docs/trendz/trendz-bundle/":
-  url: "/docs/trendz/trendz-bundle/"
+"/docs/sentient-analytics/sentient-analytics-bundle/":
+  url: "/docs/sentient-analytics/sentient-analytics-bundle/"
   redirect_from: []
-"/docs/trendz/view-builder/":
-  url: "/docs/trendz/view-builder/"
+"/docs/sentient-analytics/view-builder/":
+  url: "/docs/sentient-analytics/view-builder/"
   redirect_from: []
-"/docs/trendz/view-collections/":
-  url: "/docs/trendz/view-collections/"
+"/docs/sentient-analytics/view-collections/":
+  url: "/docs/sentient-analytics/view-collections/"
   redirect_from: []
-"/docs/trendz/view-settings/":
-  url: "/docs/trendz/view-settings/"
+"/docs/sentient-analytics/view-settings/":
+  url: "/docs/sentient-analytics/view-settings/"
   redirect_from: []
-"/docs/trendz/visualizations-ai-card/":
-  url: "/docs/trendz/visualizations-ai-card/"
+"/docs/sentient-analytics/visualizations-ai-card/":
+  url: "/docs/sentient-analytics/visualizations-ai-card/"
   redirect_from: []
-"/docs/trendz/visualizations-bar/":
-  url: "/docs/trendz/visualizations-bar/"
+"/docs/sentient-analytics/visualizations-bar/":
+  url: "/docs/sentient-analytics/visualizations-bar/"
   redirect_from: []
-"/docs/trendz/visualizations-calendar/":
-  url: "/docs/trendz/visualizations-calendar/"
+"/docs/sentient-analytics/visualizations-calendar/":
+  url: "/docs/sentient-analytics/visualizations-calendar/"
   redirect_from: []
-"/docs/trendz/visualizations-card-with-line/":
-  url: "/docs/trendz/visualizations-card-with-line/"
+"/docs/sentient-analytics/visualizations-card-with-line/":
+  url: "/docs/sentient-analytics/visualizations-card-with-line/"
   redirect_from: []
-"/docs/trendz/visualizations-card/":
-  url: "/docs/trendz/visualizations-card/"
+"/docs/sentient-analytics/visualizations-card/":
+  url: "/docs/sentient-analytics/visualizations-card/"
   redirect_from: []
-"/docs/trendz/visualizations-heatmap/":
-  url: "/docs/trendz/visualizations-heatmap/"
+"/docs/sentient-analytics/visualizations-heatmap/":
+  url: "/docs/sentient-analytics/visualizations-heatmap/"
   redirect_from: []
-"/docs/trendz/visualizations-line/":
-  url: "/docs/trendz/visualizations-line/"
+"/docs/sentient-analytics/visualizations-line/":
+  url: "/docs/sentient-analytics/visualizations-line/"
   redirect_from: []
-"/docs/trendz/visualizations-overview/":
-  url: "/docs/trendz/visualizations-overview/"
+"/docs/sentient-analytics/visualizations-overview/":
+  url: "/docs/sentient-analytics/visualizations-overview/"
   redirect_from: []
-"/docs/trendz/visualizations-pie/":
-  url: "/docs/trendz/visualizations-pie/"
+"/docs/sentient-analytics/visualizations-pie/":
+  url: "/docs/sentient-analytics/visualizations-pie/"
   redirect_from: []
-"/docs/trendz/visualizations-scatter/":
-  url: "/docs/trendz/visualizations-scatter/"
+"/docs/sentient-analytics/visualizations-scatter/":
+  url: "/docs/sentient-analytics/visualizations-scatter/"
   redirect_from: []
-"/docs/trendz/visualizations-tables/":
-  url: "/docs/trendz/visualizations-tables/"
+"/docs/sentient-analytics/visualizations-tables/":
+  url: "/docs/sentient-analytics/visualizations-tables/"
   redirect_from: []
-"/docs/trendz/what-is-trendz/":
-  url: "/docs/trendz/what-is-trendz/"
+"/docs/sentient-analytics/what-is-sentient-analytics/":
+  url: "/docs/sentient-analytics/what-is-sentient-analytics/"
   redirect_from: []
-"/docs/trendz/white-labeling/":
-  url: "/docs/trendz/white-labeling/"
+"/docs/sentient-analytics/white-labeling/":
+  url: "/docs/sentient-analytics/white-labeling/"
   redirect_from: []
-"/docs/trendz/widget-actions/":
-  url: "/docs/trendz/widget-actions/"
+"/docs/sentient-analytics/widget-actions/":
+  url: "/docs/sentient-analytics/widget-actions/"
   redirect_from: []
-"/docs/trendz/widget-filter-by-alias/":
-  url: "/docs/trendz/widget-filter-by-alias/"
+"/docs/sentient-analytics/widget-filter-by-alias/":
+  url: "/docs/sentient-analytics/widget-filter-by-alias/"
   redirect_from: []
-"/docs/trendz/widget-settings/":
-  url: "/docs/trendz/widget-settings/"
+"/docs/sentient-analytics/widget-settings/":
+  url: "/docs/sentient-analytics/widget-settings/"
   redirect_from: []
 "/docs/tutorials/create-clear-alarms/":
   url: "/docs/tutorials/create-clear-alarms/"
@@ -5794,8 +5794,8 @@
   url: "/docs/user-guide/install/pe/aws-marketplace/"
   redirect_from:
   - "/docs/user-guide/install/aws-marketplace-pe/"
-  - "/products/thingsboard-pe/aws"
-  - "/products/thingsboard-pe/install/aws/"
+  - "/products/sentient-pe/aws"
+  - "/products/sentient-pe/install/aws/"
 "/docs/user-guide/install/pe/aws/":
   url: "/docs/user-guide/install/pe/aws/"
   redirect_from: []

@@ -15,7 +15,7 @@
           "layoutX": 353,
           "layoutY": 97
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Water Meter A1 emulator",
         "debugMode": false,
         "configuration": {
@@ -31,7 +31,7 @@
           "layoutX": 356,
           "layoutY": 199
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Water Meter A2 emulator",
         "debugMode": false,
         "configuration": {

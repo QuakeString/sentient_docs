@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: ThingsBoard API reference
-description: ThingsBoard API reference and supported IoT Protocols
+title: SENTIENT API reference
+description: SENTIENT API reference and supported IoT Protocols
 
 ---
 {% assign docsPrefix = "edge/" %}

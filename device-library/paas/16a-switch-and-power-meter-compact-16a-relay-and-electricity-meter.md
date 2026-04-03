@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect 16A Switch & Power Meter compact 16A relay and electricity meter to ThingsBoard?
+title: How to connect 16A Switch & Power Meter compact 16A relay and electricity meter to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: MClimate

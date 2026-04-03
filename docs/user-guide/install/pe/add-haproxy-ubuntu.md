@@ -1,14 +1,14 @@
 ---
 layout: docwithnav
-title: Install HAProxy Load Balancer for ThingsBoard on Ubuntu
-description: Install HAProxy Load Balancer for ThingsBoard on Ubuntu
+title: Install HAProxy Load Balancer for SENTIENT on Ubuntu
+description: Install HAProxy Load Balancer for SENTIENT on Ubuntu
 hidetoc: "true"
 redirect_from:
   - "/docs/user-guide/install/aws-marketplace-pe-upgrade-haproxy/"
 ---
 
 This guide describes how to install HAProxy with Let's Encrypt
-as a service. This is possible in case you are hosting ThingsBoard in the cloud and have a valid DNS name assigned to your instance.
+as a service. This is possible in case you are hosting SENTIENT in the cloud and have a valid DNS name assigned to your instance.
 
 * TOC
 {:toc}
@@ -17,7 +17,7 @@ as a service. This is possible in case you are hosting ThingsBoard in the cloud 
 
 Ubuntu 20.04 / 22.04 / 24.04 with valid DNS name assigned to the instance. Network settings should allow connections on Port 80 (HTTP) and 443 (HTTPS).
 
-### Step 1. Connect to your ThingsBoard instance over SSH
+### Step 1. Connect to your SENTIENT instance over SSH
 
 Below is example command for AWS as a reference:
 

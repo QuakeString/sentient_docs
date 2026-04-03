@@ -4,8 +4,8 @@ import random
 import time
 
 ACCESS_TOKEN = YOUR_ACCESS_TOKEN # REPLACE with your device access token, e.g. 'edge_vehicle'
-THINGSBOARD_EDGE_HOST = YOUR_TB_EDGE_HOST # REPLACE with your ThingsBoard Edge server installation IP address or hostname, e.g. 'localhost'
-THINGSBOARD_EDGE_MQTT_PORT = YOUR_TB_EDGE_MQTT_PORT # REPLACE with your ThingsBoard Edge MQTT port, e.g. 11883 or 1883
+SENTIENT_EDGE_HOST = YOUR_TB_EDGE_HOST # REPLACE with your SENTIENT GATEWAY server installation IP address or hostname, e.g. 'localhost'
+SENTIENT_EDGE_MQTT_PORT = YOUR_TB_EDGE_MQTT_PORT # REPLACE with your SENTIENT GATEWAY MQTT port, e.g. 11883 or 1883
 DISTANCE = 0
 
 # The callback for when the client receives a CONNACK response from the server
@@ -42,8 +42,8 @@ while(True):
     client.on_connect = on_connect
     # Set access token
     client.username_pw_set(ACCESS_TOKEN)
-    # Connect to ThingsBoard using default MQTT port and 60 seconds keep alive
-    client.connect(THINGSBOARD_EDGE_HOST, THINGSBOARD_EDGE_MQTT_PORT, 60)
+    # Connect to SENTIENT using default MQTT port and 60 seconds keep alive
+    client.connect(SENTIENT_EDGE_HOST, SENTIENT_EDGE_MQTT_PORT, 60)
     try:
         # Set timeout 5 second
         time.sleep(5)

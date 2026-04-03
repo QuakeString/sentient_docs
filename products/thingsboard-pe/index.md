@@ -1,12 +1,12 @@
 ---
-layout: thingsboard-pe
-title: ThingsBoard Professional Edition
+layout: sentient-pe
+title: SENTIENT Professional Edition
 description: 
 ---
 <main>
   <section id="intro">
     <div class="main-div">
-      <h1>Advanced ThingsBoard IoT Platform distribution</h1>
+      <h1>Advanced SENTIENT IoT Platform distribution</h1>
       <h2 class="sub-title clari">with value added features</h2>
     </div>
   </section>
@@ -19,7 +19,7 @@ description:
         <div class="block">
           <div class="feature-des">
             <h3 class="item-heading">White-labeling</h3>
-            <p>Rebrand ThingsBoard platform web interface with your company or product logo and color scheme in 2 minutes. No coding or service restart required. Allow your customers and their sub-customers to white-label their interface as well.</p>
+            <p>Rebrand SENTIENT platform web interface with your company or product logo and color scheme in 2 minutes. No coding or service restart required. Allow your customers and their sub-customers to white-label their interface as well.</p>
             <a class="read-more-button" href="/docs/user-guide/white-labeling/" aria-label="Read more about white labeling">Read more
               <i class="fas fa-chevron-right arrow first"></i>
               <i class="fas fa-chevron-right arrow second"></i>
@@ -290,7 +290,7 @@ description:
         <div class="hidden-space">&nbsp;</div>
         <div><img src="/images/pe/green-mark.svg" alt="Green checkmark"></div>
       </a>
-      <a href="https://github.com/thingsboard/data-converters" target="_blank" class="comparison-row">
+      <a href="https://github.com/sentient/data-converters" target="_blank" class="comparison-row">
         <p>Device Payload Codec Library (400+)</p>
         <div class="hidden-space">&nbsp;</div>
         <div><img src="/images/pe/green-mark.svg" alt="Green checkmark"></div>
@@ -300,17 +300,17 @@ description:
       <div class="comparison-row">
         <p>Deployment Options</p>
       </div>
-      <a href="/pricing/?product=thingsboard-pe" target="_blank" class="comparison-row">
+      <a href="/pricing/?product=sentient-pe" target="_blank" class="comparison-row">
         <p>Self-Managed (On-premise/Cloud)</p>
         <div><img src="/images/pe/blue-mark.svg" alt="Blue checkmark"></div>
         <div><img src="/images/pe/green-mark.svg" alt="Green checkmark"></div>
       </a>
-      <a href="/pricing/?product=thingsboard-cloud" target="_blank" class="comparison-row">
+      <a href="/pricing/?product=sentient-cloud" target="_blank" class="comparison-row">
         <p>Managed Public Cloud</p>
         <div class="hidden-space">&nbsp;</div>
         <div><img src="/images/pe/green-mark.svg" alt="Green checkmark"></div>
       </a>
-      <a href="/pricing/?product=thingsboard-private-cloud" target="_blank" class="comparison-row">
+      <a href="/pricing/?product=sentient-private-cloud" target="_blank" class="comparison-row">
         <p>Managed Private Cloud</p>
         <div class="hidden-space">&nbsp;</div>
         <div><img src="/images/pe/green-mark.svg" alt="Green checkmark"></div>
@@ -323,7 +323,7 @@ description:
       <div class="comparison-row">
         <p>Support Model</p>
         <p><a href="/services/support/?section=community-support" target="_blank">Community</a></p>
-        <p><a href="/pricing/?section=thingsboard-pe-options&product=thingsboard-pe&faqSection=supportAndAssistance#pe-pay-as-you-go-support-included" target="_blank">Advanced + SLA</a></p>
+        <p><a href="/pricing/?section=sentient-pe-options&product=sentient-pe&faqSection=supportAndAssistance#pe-pay-as-you-go-support-included" target="_blank">Advanced + SLA</a></p>
       </div>
     </div>
   </section>
@@ -332,13 +332,13 @@ description:
       <div class="item">
         <img src="/images/pe/cloud-premises.svg" alt="Flexible deployment options" loading="lazy" width="284" height="151">
         <h3 class="item-heading">Flexible deployment options</h3>
-        <p>Deploy ThingsBoard platform in the cloud or on-premises. Use commodity hardware to scale out horizontally by adding new nodes to your cluster. Single ThingsBoard server can support 10 000+ devices and 100M messages per hour, while simple cluster can support millions of devices and billions of messages.</p>
+        <p>Deploy SENTIENT platform in the cloud or on-premises. Use commodity hardware to scale out horizontally by adding new nodes to your cluster. Single SENTIENT server can support 10 000+ devices and 100M messages per hour, while simple cluster can support millions of devices and billions of messages.</p>
       </div>
       <div class="divider"></div>
       <div class="item">
         <img src="/images/pe/pricing-models.svg" alt="Simple and predictable pricing models" loading="lazy" width="254" height="151">
         <h3 class="item-heading">Simple and predictable pricing models</h3>
-        <p>Say "No!" to per message or per device pricing that turns to a monster bills in production system. ThingsBoard PE supports two simple and predictable pricing models depending on your product life-cycle stage.</p>
+        <p>Say "No!" to per message or per device pricing that turns to a monster bills in production system. SENTIENT Professional Edition supports two simple and predictable pricing models depending on your product life-cycle stage.</p>
       </div>
     </div>
   </section>

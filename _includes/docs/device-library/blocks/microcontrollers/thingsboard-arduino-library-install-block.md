@@ -1,12 +1,12 @@
-To install ThingsBoard Arduino SDK - we will need to do the following steps:  
+To install SENTIENT Arduino SDK - we will need to do the following steps:  
 
 {% assign libraryInstallation = '
     ===
         image: /images/devices-library/basic/arduino-ide/tools-manage-libraries.png
         title: Go to "**Tools**" tab and click on "**Manage libraries**".
     ===
-        image: /images/devices-library/basic/arduino-ide/manage-libraries-thingsboard.png
-        title: Put "**ThingsBoard**" into the search box and press "***INSTALL***" button for the found library.
+        image: /images/devices-library/basic/arduino-ide/manage-libraries-sentient.png
+        title: Put "**SENTIENT**" into the search box and press "***INSTALL***" button for the found library.
 ' 
 %}
 
@@ -14,7 +14,7 @@ To install ThingsBoard Arduino SDK - we will need to do the following steps:
 
 {% capture libraryVersion %}
 
-All provided code examples require ThingsBoard Library version {% if wifininaInstallationRequired == "true" %}**0.10.2**{% else %}**0.14.0**{% endif %}.  
+All provided code examples require SENTIENT Library version {% if wifininaInstallationRequired == "true" %}**0.10.2**{% else %}**0.14.0**{% endif %}.  
 
 {% endcapture %}
 

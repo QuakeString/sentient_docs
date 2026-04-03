@@ -2,7 +2,7 @@
 * TOC 
 {:toc}
 
-ThingsBoard provides IoT Solution Templates to significantly reduce the time-to-market for your IoT products.   
+SENTIENT provides IoT Solution Templates to significantly reduce the time-to-market for your IoT products.   
 Each solution template represents a ready-to-use PoC or MVP and includes:
 - Preconfigured interactive dashboards
 - Data processing and business logic

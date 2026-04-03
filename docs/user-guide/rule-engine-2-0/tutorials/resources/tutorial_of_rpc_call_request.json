@@ -15,7 +15,7 @@
           "layoutX": 273,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.filter.TbMsgTypeSwitchNode",
+        "type": "org.sentient.rule.engine.filter.TbMsgTypeSwitchNode",
         "name": "Message Type Switch",
         "debugMode": true,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 648,
           "layoutY": 196
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save Time Series",
         "debugMode": true,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 959,
           "layoutY": 318
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetRelatedAttributeNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetRelatedAttributeNode",
         "name": "Fetch Wind Sensor Telemetry",
         "debugMode": true,
         "configuration": {
@@ -66,7 +66,7 @@
           "layoutX": 1160,
           "layoutY": 146
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "New RPC Message",
         "debugMode": true,
         "configuration": {
@@ -78,7 +78,7 @@
           "layoutX": 1311,
           "layoutY": 305
         },
-        "type": "org.thingsboard.rule.engine.filter.TbJsFilterNode",
+        "type": "org.sentient.rule.engine.filter.TbJsFilterNode",
         "name": "Check Request Validity",
         "debugMode": true,
         "configuration": {
@@ -90,7 +90,7 @@
           "layoutX": 1336,
           "layoutY": 495
         },
-        "type": "org.thingsboard.rule.engine.rpc.TbSendRPCRequestNode",
+        "type": "org.sentient.rule.engine.rpc.TbSendRPCRequestNode",
         "name": "Rotating System",
         "debugMode": true,
         "configuration": {
@@ -102,7 +102,7 @@
           "layoutX": 942,
           "layoutY": 47
         },
-        "type": "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode",
+        "type": "org.sentient.rule.engine.transform.TbChangeOriginatorNode",
         "name": "Create New Telemetry",
         "debugMode": true,
         "configuration": {
@@ -126,7 +126,7 @@
           "layoutX": 1325,
           "layoutY": 47
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgTimeseriesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgTimeseriesNode",
         "name": "Save Time Series",
         "debugMode": true,
         "configuration": {

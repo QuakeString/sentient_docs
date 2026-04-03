@@ -2,14 +2,14 @@
 * TOC
 {:toc}
 
-This feature addresses how messages are delivered to MQTT subscribers in TBMQ. When a client subscribes to a topic and a new matching message is published, 
-TBMQ delivers the message to the subscriber using its underlying networking layer—**Netty**.
+This feature addresses how messages are delivered to MQTT subscribers in ST-RMQTT. When a client subscribes to a topic and a new matching message is published, 
+ST-RMQTT delivers the message to the subscriber using its underlying networking layer—**Netty**.
 
 Netty provides two main ways to send messages over a network channel:
 - `writeAndFlush()`: Sends the message and immediately flushes the channel, pushing data to the network right away.
 - `write()` (without `flush()`): Writes the message to the channel's buffer but does not send it immediately. It remains in the buffer until a separate `flush()` call is made.
 
-TBMQ leverages this capability to offer two **delivery strategies**:
+ST-RMQTT leverages this capability to offer two **delivery strategies**:
 - **Write and flush for each message**;
 - **Buffer messages and flush periodically or based on count**.
 
@@ -20,7 +20,7 @@ These strategies are configurable for [two types of clients](/docs/{{docsPrefix}
 
 ## Write and Flush for Each Message
 
-- **Behavior**: TBMQ calls `writeAndFlush()` for every message sent to a subscriber.
+- **Behavior**: ST-RMQTT calls `writeAndFlush()` for every message sent to a subscriber.
 - **Pros**:
     - Ensures low latency — messages are delivered as soon as they are available.
     - Simple and reliable, ideal for low-throughput environments.
@@ -30,7 +30,7 @@ These strategies are configurable for [two types of clients](/docs/{{docsPrefix}
 
 ## Buffered Delivery (Write without Flush)
 
-- **Behavior**: TBMQ calls `write()` to queue the message in the Netty channel buffer. A `flush()` is triggered:
+- **Behavior**: ST-RMQTT calls `write()` to queue the message in the Netty channel buffer. A `flush()` is triggered:
     - After a configured number of messages (`buffered-msg-count`) are buffered.
     - If a session becomes idle for the duration specified by `idle-session-flush-timeout-ms` (i.e., no new messages are sent to the subscriber during this time), the buffer is automatically flushed. This behavior applies only to Device clients.
 - **Pros**:
@@ -59,7 +59,7 @@ persistent-session.device.buffered-msg-count: "${MQTT_PERSISTENT_BUFFERED_MSG_CO
 
 ### Additional Buffered Delivery Settings (Device Clients)
 
-When message buffering is enabled, TBMQ maintains a cache of active client sessions to track buffered messages and determine when to flush them. 
+When message buffering is enabled, ST-RMQTT maintains a cache of active client sessions to track buffered messages and determine when to flush them. 
 The parameters below define the cache size, expiration policies, and scheduler behavior responsible for flushing message buffers based on activity or thresholds.
 
 ```yaml
@@ -99,7 +99,7 @@ buffered-msg-count: "${MQTT_APP_BUFFERED_MSG_COUNT:10}"
 When a **Device client** session is active and buffering is enabled:
 
 1. **Session Buffer Creation**  
-   TBMQ stores the session state in a cache with a `SessionFlushState` object that holds:
+   ST-RMQTT stores the session state in a cache with a `SessionFlushState` object that holds:
     - The count of buffered messages.
     - The timestamp of the last flush.
     - The client’s Netty channel context.
@@ -128,7 +128,7 @@ For **Application clients**, buffered delivery is applied during message process
 - Once the entire batch is processed, **any remaining unflushed messages are flushed explicitly**.
 - This approach avoids idle-time-based flushing and is optimized for high-throughput, batched delivery scenarios.
 
-This strategy is made possible because each Application client is processed in a dedicated thread (consumer) that polls messages from dedicated Kafka topic, allowing TBMQ to control flushing independently per client. 
+This strategy is made possible because each Application client is processed in a dedicated thread (consumer) that polls messages from dedicated Kafka topic, allowing ST-RMQTT to control flushing independently per client. 
 This design provides precise batching and flushing without requiring shared caches or background schedulers, leading to both scalability and consistency in message delivery.
 
 ## Recommendations
@@ -165,14 +165,14 @@ Choosing the right message delivery strategy depends on your workload characteri
 | Batch-based Application processing | Application buffering with custom count  |
 | Low-frequency messages             | Avoid buffering to prevent delays        |
 
-> In our 3 million messages per second (3M msg/sec) performance test on a single TBMQ node, buffered delivery was enabled to maximize throughput and overall system performance.
+> In our 3 million messages per second (3M msg/sec) performance test on a single ST-RMQTT node, buffered delivery was enabled to maximize throughput and overall system performance.
 > This configuration significantly reduced CPU overhead and improved latency, resulting in more efficient message processing under high load.
 > See the [performance test results](/docs/{{docsPrefix}}mqtt-broker/reference/3m-throughput-single-node-performance-test/) and 
-> [configuration details](https://github.com/thingsboard/tbmq/blob/3M-single-node-perf-test/k8s/aws/tb-broker-configmap.yml) for more information.
+> [configuration details](https://github.com/sentient/st-rmqtt/blob/3M-single-node-perf-test/k8s/aws/tb-broker-configmap.yml) for more information.
 
 ## Conclusion
 
-The Buffered Message Delivery mechanism provides a smart and flexible way to manage how messages are sent to MQTT subscribers in TBMQ. By leveraging Netty’s ability to defer flushing, TBMQ can significantly reduce I/O overhead and increase throughput in demanding environments.
+The Buffered Message Delivery mechanism provides a smart and flexible way to manage how messages are sent to MQTT subscribers in ST-RMQTT. By leveraging Netty’s ability to defer flushing, ST-RMQTT can significantly reduce I/O overhead and increase throughput in demanding environments.
 
 **Choose the delivery strategy that best matches your deployment needs:**
 - Use **write-and-flush** for low-latency, low-throughput scenarios.

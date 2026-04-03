@@ -8,7 +8,7 @@ description: Migrate from old Docker deployment files
 {:toc}
 
 This guide will help you to move from the old deployment files for Docker installation using volume bindings instead of local volumes.
-This guide covers standalone Trendz installation.
+This guide covers standalone SENTIENT ANALYTICS installation.
 
 ## Why deployment files were changed?
 
@@ -21,31 +21,31 @@ Customers who have docker compose file as below or similar:
 ```yml
 version: '3.0'
 services:
-  mytrendz:
+  mysentient-analytics:
     restart: always
-    image: "thingsboard/trendz:1.14.0"
+    image: "sentient/sentient-analytics:1.14.0"
     ports:
       - "8888:8888"
     environment:
       TB_API_URL: http://10.0.0.101:8080
       TRENDZ_LICENSE_INSTANCE_DATA_FILE: /data/license.data
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/trendz
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sentient-analytics
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
       SCRIPT_ENGINE_TIMEOUT: 30000
     volumes:
-      - ~/.mytrendz-data:/data
-      - ~/.mytrendz-logs:/var/log/trendz
+      - ~/.mysentient-analytics-data:/data
+      - ~/.mysentient-analytics-logs:/var/log/sentient-analytics
   postgres:
     restart: always
     image: "postgres:15"
     ports:
       - "5432"
     environment:
-      POSTGRES_DB: trendz
+      POSTGRES_DB: sentient-analytics
       POSTGRES_PASSWORD: postgres
     volumes:
-      - ~/.mytrendz-data/db:/var/lib/postgresql/data
+      - ~/.mysentient-analytics-data/db:/var/lib/postgresql/data
 ```
 {: .copy-code}
 
@@ -54,14 +54,14 @@ services:
 Create a named Docker volume:
 
 ```bash
-docker volume create --name trendz-postgres-data
+docker volume create --name sentient-analytics-postgres-data
 ```
 {: .copy-code}
 
 Run container with attached volumes to copy data from folder to newly created volume
 
 ```bash
-docker run --rm -v ~/.mytrendz-data/db:/source -v trendz-postgres-data:/destination alpine sh -c "cp -rp /source/* /destination/"
+docker run --rm -v ~/.mysentient-analytics-data/db:/source -v sentient-analytics-postgres-data:/destination alpine sh -c "cp -rp /source/* /destination/"
 ```
 {: .copy-code}
 
@@ -71,19 +71,19 @@ docker run --rm -v ~/.mytrendz-data/db:/source -v trendz-postgres-data:/destinat
 {% endcapture %}
 {% include templates/info-banner.md content=old_postgres_info %}
 
-## Move Trendz data to Docker volume
+## Move SENTIENT ANALYTICS data to Docker volume
 
 Create a named Docker volume:
 
 ```bash
-docker volume create --name trendz-data
+docker volume create --name sentient-analytics-data
 ```
 {: .copy-code}
 
 Run container with attached volumes to copy data from folder to newly created volume:
 
 ```bash
-docker run --rm -v ~/.mytrendz-data/:/source -v tb-pe-license-data:/destination alpine sh -c "cp -rp /source/* /destination/ && chown 799:799 /destination/license.data"
+docker run --rm -v ~/.mysentient-analytics-data/:/source -v tb-pe-license-data:/destination alpine sh -c "cp -rp /source/* /destination/ && chown 799:799 /destination/license.data"
 ```
 {: .copy-code}
 
@@ -96,6 +96,6 @@ nano docker-compose.yml
 ```
 {: .copy-code}
 
-Copy current Docker Compose [manifest](/docs/trendz/install/docker/#step-2-docker-compose-setup) and replace the old one with current manifest. Replace Postgres docker image if needed.
+Copy current Docker Compose [manifest](/docs/sentient-analytics/install/docker/#step-2-docker-compose-setup) and replace the old one with current manifest. Replace Postgres docker image if needed.
 
-After data is moved to the docker volumes and `docker-compose.yml` file have the same structure as the installation example - you can proceed with [upgrade](/docs/trendz/install/docker/#upgrade-trendz-service) of the Trendz. 
+After data is moved to the docker volumes and `docker-compose.yml` file have the same structure as the installation example - you can proceed with [upgrade](/docs/sentient-analytics/install/docker/#upgrade-sentient-analytics-service) of the SENTIENT ANALYTICS. 

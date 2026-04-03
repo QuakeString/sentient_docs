@@ -1,4 +1,4 @@
-{%- assign platform = "Trendz Analytics" -%}
+{%- assign platform = "SENTIENT ANALYTICS" -%}
 {%- assign current_version = include.version -%}
 {%- assign family = include.family -%}
 {%- assign patch_status = include.patch_status -%}
@@ -18,33 +18,33 @@
 ### Upgrading {{ platform }} to {{ current_version }}
 {% endif %}
 
-{%- assign platform_hash = "#upgrading-trendz-analytics-to-" -%}
+{%- assign platform_hash = "#upgrading-sentient-analytics-analytics-to-" -%}
 
 {% capture tb_haproxy_note %}
 **NOTE:**
 <br>
-If you are using Trendz behind **HAProxy**, make sure that the paths **`/trendz/`** and **`/apiTrendz/`** are routed to the Trendz backend instead of **`/trendz`** and **`/apiTrendz`**.
-Additionally, we highly recommend adding Trendz to the **ThingsBoard HAProxy configuration** so that Trendz is accessible from the **same domain as ThingsBoard**.
+If you are using SENTIENT ANALYTICS behind **HAProxy**, make sure that the paths **`/sentient-analytics/`** and **`/apiSENTIENT ANALYTICS/`** are routed to the SENTIENT ANALYTICS backend instead of **`/sentient-analytics`** and **`/apiSENTIENT ANALYTICS`**.
+Additionally, we highly recommend adding SENTIENT ANALYTICS to the **SENTIENT HAProxy configuration** so that SENTIENT ANALYTICS is accessible from the **same domain as SENTIENT**.
 {% endcapture %}
 {% include templates/warn-banner.md content=tb_haproxy_note %}
 
-#### Trendz Analytics package download
+#### SENTIENT ANALYTICS package download
 
-Download Trendz Analytics installation package for Windows: [trendz-windows-{{ current_version }}.zip](https://dist.thingsboard.io/trendz-windows-{{ current_version }}.zip).
+Download SENTIENT ANALYTICS installation package for Windows: [sentient-analytics-windows-{{ current_version }}.zip](https://dist.docs.sentient.invenia.in/sentient-analytics-windows-{{ current_version }}.zip).
 
-#### Trendz Analytics service upgrade
+#### SENTIENT ANALYTICS service upgrade
 
-* Stop Trendz service if it is running.
+* Stop SENTIENT ANALYTICS service if it is running.
 
 ```text
-net stop trendz
+net stop sentient-analytics
 ```
 {: .copy-code}
 
-* Make a backup of previous Trendz Analytics configuration located in \<Trendz install dir\>\conf (for ex. C:\trendz\conf).
-* Remove ThingsBoard install dir.
-* Unzip installation archive to ThingsBoard install dir.
-* Compare your old Trendz configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT ANALYTICS configuration located in \<SENTIENT ANALYTICS install dir\>\conf (for ex. C:\sentient-analytics\conf).
+* Remove SENTIENT install dir.
+* Unzip installation archive to SENTIENT install dir.
+* Compare your old SENTIENT ANALYTICS configuration files (from the backup you made in the first step) with new ones.
 
 {% assign base_version_parts = base_version | split: "." %}
 {% assign patch_part = base_version_parts[2] %}
@@ -56,22 +56,22 @@ If you are upgrading from version {{ family | append: "." | append: patch_part |
 {% include templates/info-banner.md content=update_note %}
 {% endif %}
 
-* Finally, run **upgrade.bat** script to upgrade Trendz to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT ANALYTICS to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role. 
 
 ```text
-C:\trendz>upgrade.bat
+C:\sentient-analytics>upgrade.bat
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```text
-net start trendz
+net start sentient-analytics
 ```
 {: .copy-code}
 
-#### Sync Trendz with ThingsBoard
+#### Sync SENTIENT ANALYTICS with SENTIENT
 
-After upgrade, it's necessary to sync Trendz with ThingsBoard. You can find out how to do it [here](/docs/trendz/install/windows#step-6-sync-thingsboard-with-trendz).
+After upgrade, it's necessary to sync SENTIENT ANALYTICS with SENTIENT. You can find out how to do it [here](/docs/sentient-analytics/install/windows#step-6-sync-sentient-with-sentient-analytics).

@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - vparomskiy
 title: Core/rule engine deployment parameters
-description: ThingsBoard configuration parameters and environment variables
+description: SENTIENT configuration parameters and environment variables
 redirect_from: "/docs/pe/user-guide/install/config/"
 
 ---

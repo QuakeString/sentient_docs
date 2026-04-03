@@ -1,36 +1,36 @@
 ---
 layout: docwithnav-mqtt-broker
-title: Deploy TBMQ Cluster on AWS with Kubernetes
-description: TBMQ microservices setup with Kubernetes in AWS EKS
+title: Deploy ST-RMQTT Cluster on AWS with Kubernetes
+description: ST-RMQTT microservices setup with Kubernetes in AWS EKS
 
-tbmq-rds-set-up:
+st-rmqtt-rds-set-up:
   0:
     image: /images/mqtt-broker/install-old/aws-rds-vpc.png
     title: 'AWS RDS Connectivity - choose VPC with the name of your cluster'
   1:
     image: /images/mqtt-broker/install-old/aws-rds-vpc-sg.png
-    title: 'AWS RDS SG - choose "eksctl-tbmq-cluster-ClusterSharedNodeSecurityGroup-*" security group'
+    title: 'AWS RDS SG - choose "eksctl-st-rmqtt-cluster-ClusterSharedNodeSecurityGroup-*" security group'
   2:
     image: /images/mqtt-broker/install-old/aws-rds-default-database.png
-    title: 'AWS RDS Additional config - type "thingsboard_mqtt_broker" for the initial database name'
+    title: 'AWS RDS Additional config - type "sentient_mqtt_broker" for the initial database name'
 
-tbmq-msk-set-up:
+st-rmqtt-msk-set-up:
   0:
     image: /images/mqtt-broker/install-old/aws-msk-creation.png
     title: 'AWS MSK - create cluster'
 
-tbmq-msk-configuration:
+st-rmqtt-msk-configuration:
   0:
     image: /images/mqtt-broker/install-old/aws-msk-vpc.png
-    title: 'AWS MSK - choose TBMQ cluster’s VPC'
+    title: 'AWS MSK - choose ST-RMQTT cluster’s VPC'
   1:
     image: /images/mqtt-broker/install-old/aws-msk-vpc-sg.png
-    title: 'AWS MSK - choose "eksctl-tbmq-cluster-ClusterSharedNodeSecurityGroup-*" security group'
+    title: 'AWS MSK - choose "eksctl-st-rmqtt-cluster-ClusterSharedNodeSecurityGroup-*" security group'
   2:
     image: /images/mqtt-broker/install-old/aws-msk-security.png
     title: 'AWS MSK - enable Plaintext communication between clients and brokers'
 
-tbmq-redis-set-up:
+st-rmqtt-redis-set-up:
   0:
     image: /images/mqtt-broker/install-old/aws-redis-create.png
     title: 'AWS ElastiCache - create Redis cluster'
@@ -39,27 +39,27 @@ tbmq-redis-set-up:
     title: 'AWS ElastiCache - choose 7.x engine version and appropriate Node type'
   2:
     image: /images/mqtt-broker/install-old/aws-redis-connectivity.png
-    title: 'AWS ElastiCache - choose TBMQ VPC and private subnets'  
+    title: 'AWS ElastiCache - choose ST-RMQTT VPC and private subnets'  
   3:
     image: /images/mqtt-broker/install-old/aws-redis-advanced.png
-    title: 'AWS ElastiCache - choose "eksctl-tbmq-cluster-ClusterSharedNodeSecurityGroup-*" security group'
+    title: 'AWS ElastiCache - choose "eksctl-st-rmqtt-cluster-ClusterSharedNodeSecurityGroup-*" security group'
 
-tbmq-rds-link-configure:
+st-rmqtt-rds-link-configure:
   0:
     image: /images/mqtt-broker/install-old/aws-rds-endpoint.png
     title: 'AWS RDS Details'
 
-tbmq-msk-link-configure:
+st-rmqtt-msk-link-configure:
   0:
     image: /images/mqtt-broker/install-old/aws-msk-arn.png
     title: 'AWS MSK Details'
     
-tbmq-redis-link-configure:
+st-rmqtt-redis-link-configure:
   0:
     image: /images/mqtt-broker/install-old/aws-redis-result.png
     title: 'AWS ElastiCache Details'
 
 ---
 
-{% assign tbmqSuffix = "CE" %}
+{% assign st-rmqttSuffix = "CE" %}
 {% include docs/mqtt-broker/install/cluster/aws-cluster-setup-old.md %}

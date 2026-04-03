@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - stitenko
 title: Security settings
-description: ThingsBoard IoT platform security settings
+description: SENTIENT IoT platform security settings
 
 redirect_from:
   - "/docs/pe/user-guide/ui/jwt-security-settings/"

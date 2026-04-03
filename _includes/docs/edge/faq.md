@@ -145,48 +145,48 @@ function resetEdgeLoadMore(categoryId) {
         <div class="edge-faq-answers">
             <div id="edge-faq-cat-general" class="edge-faq-category active">
                 <div class="edge-faq-question">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">What is ThingsBoard Edge {{edgeName}}?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">What is SENTIENT GATEWAY {{edgeName}}?</div>
                     <div class="edge-faq-answer">
                         {% if docsPrefix == "pe/edge/" %}
-                        <p>ThingsBoard Edge Professional Edition (PE) is the commercial version of ThingsBoard Edge, an advanced IoT platform designed for managing and processing IoT data at the edge in production-grade and enterprise environments.</p>
-                        <p>It offers comprehensive features including white-labeling, role-based access control (RBAC), advanced integrations, and enterprise-grade capabilities, while maintaining seamless synchronization with ThingsBoard Server.</p>
+                        <p>SENTIENT GATEWAY Professional Edition (PE) is the commercial version of SENTIENT GATEWAY, an advanced IoT platform designed for managing and processing IoT data at the edge in production-grade and enterprise environments.</p>
+                        <p>It offers comprehensive features including white-labeling, role-based access control (RBAC), advanced integrations, and enterprise-grade capabilities, while maintaining seamless synchronization with SENTIENT Server.</p>
                         {% else %}
-                        <p><b>ThingsBoard Edge Community Edition (CE)</b> is a free, open-source platform designed specifically for edge computing scenarios. It provides essential capabilities for managing and analyzing IoT data at the edge, while staying seamlessly synchronized with the ThingsBoard Server (Cloud or On-premise).</p>
+                        <p><b>SENTIENT GATEWAY Community Edition (CE)</b> is a free, open-source platform designed specifically for edge computing scenarios. It provides essential capabilities for managing and analyzing IoT data at the edge, while staying seamlessly synchronized with the SENTIENT Server (Cloud or On-premise).</p>
                         {% endif %}
                         <p><b>New to edge computing?</b> Edge computing means processing data where it's generated rather than sending everything to the cloud.</p> 
-                        <p>See <a href="/docs/{{docsPrefix}}getting-started-guides/what-is-edge/" target="_blank">What is Edge?</a> for a detailed introduction, or jump to our <a href="/docs/{{docsPrefix}}getting-started/" target="_blank">Getting Started</a> to begin working with ThingsBoard Edge.</p>
+                        <p>See <a href="/docs/{{docsPrefix}}getting-started-guides/what-is-edge/" target="_blank">What is Edge?</a> for a detailed introduction, or jump to our <a href="/docs/{{docsPrefix}}getting-started/" target="_blank">Getting Started</a> to begin working with SENTIENT GATEWAY.</p>
                     </div>
                 </div>
                 <div class="edge-faq-question">
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">I can deploy Server on-site. Why should I deploy Edge instead?</div>
                     <div class="edge-faq-answer">
-                        <p>If you only have <b>one site</b>, deploying ThingsBoard Server on-premises may be enough.</p>
-                        <p>Use ThingsBoard Edge when you <b>have multiple or remote locations</b> that need local processing, dashboards, and automation, but you don't want a full Server at each site.</p>
+                        <p>If you only have <b>one site</b>, deploying SENTIENT Server on-premises may be enough.</p>
+                        <p>Use SENTIENT GATEWAY when you <b>have multiple or remote locations</b> that need local processing, dashboards, and automation, but you don't want a full Server at each site.</p>
                         <p><b>Server</b> stays your <b>central hub</b>, while <b>Edge</b> runs on lightweight hardware at each site and <b>keeps working offline</b>, then syncs data and configuration back to Server.</p>
                     </div>
                 </div>
                 <div class="edge-faq-question">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">How do I get ThingsBoard Edge {{edgeName}}?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">How do I get SENTIENT GATEWAY {{edgeName}}?</div>
                     <div class="edge-faq-answer">
                         {% if docsPrefix == "pe/edge/" %}
-                        <p>Edge {{edgeName}} is an <b>add-on to your ThingsBoard PE subscription</b>. Your plan includes a base number of Edge instances, and you can purchase additional instances as needed.</p>
+                        <p>Edge {{edgeName}} is an <b>add-on to your SENTIENT Professional Edition subscription</b>. Your plan includes a base number of Edge instances, and you can purchase additional instances as needed.</p>
                         <p>See the <a href="/pricing/" target="_blank">Pricing Page</a> for details on what's included with each plan, or contact your System Administrator.</p>
                         {% else %}
-                        <p>Edge {{edgeName}} is <b>open-source</b> and <b>free to download</b>. Install it from our <a href="/docs/user-guide/install/{{docsPrefix}}installation-options/" target="_blank">documentation</a> or access the source code on <a href="https://github.com/thingsboard/thingsboard-edge" target="_blank">GitHub</a>.</p>
-                        <p>You'll need a ThingsBoard Server instance to connect Edge to. See our <a href="/docs/{{docsPrefix}}getting-started/" target="_blank">Getting Started</a> guide for complete setup instructions.</p> 
+                        <p>Edge {{edgeName}} is <b>open-source</b> and <b>free to download</b>. Install it from our <a href="/docs/user-guide/install/{{docsPrefix}}installation-options/" target="_blank">documentation</a> or access the source code on <a href="https://github.com/sentient/sentient-gateway" target="_blank">GitHub</a>.</p>
+                        <p>You'll need a SENTIENT Server instance to connect Edge to. See our <a href="/docs/{{docsPrefix}}getting-started/" target="_blank">Getting Started</a> guide for complete setup instructions.</p> 
                         {% endif %}
                     </div>
                 </div>
                 <div class="edge-faq-question">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Can I run ThingsBoard Edge on Raspberry Pi or other edge devices?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Can I run SENTIENT GATEWAY on Raspberry Pi or other edge devices?</div>
                     <div class="edge-faq-answer">
-                        <p>Yes, <b>ThingsBoard Edge</b> is specifically designed to run on a variety of Edge hardware platforms, including single-board computers like <b>Raspberry Pi</b> and other devices with sufficient processing power and memory.</p>
+                        <p>Yes, <b>SENTIENT GATEWAY</b> is specifically designed to run on a variety of Edge hardware platforms, including single-board computers like <b>Raspberry Pi</b> and other devices with sufficient processing power and memory.</p>
                     </div>
                 </div>
                 <div class="edge-faq-question">
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">What happens if my internet connection drops?</div>
                     <div class="edge-faq-answer">
-                        <p>Edge keeps running. <b>It processes data, triggers alarms, and updates dashboards locally — no cloud required</b>. When connectivity returns, Edge automatically syncs everything with your ThingsBoard Server. No data loss, no manual intervention.</p>
+                        <p>Edge keeps running. <b>It processes data, triggers alarms, and updates dashboards locally — no cloud required</b>. When connectivity returns, Edge automatically syncs everything with your SENTIENT Server. No data loss, no manual intervention.</p>
                     </div>
                 </div>
                 <div class="edge-faq-question">
@@ -200,7 +200,7 @@ function resetEdgeLoadMore(categoryId) {
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">I have devices that use proprietary protocols. Can Edge connect to them?</div>
                     <div class="edge-faq-answer">
                         <p>Yes. Edge natively supports <a href="/docs/{{docsPrefix}}reference/mqtt-api/" target="_blank">MQTT</a>, <a href="/docs/{{docsPrefix}}reference/coap-api/" target="_blank">CoAP</a>, <a href="/docs/{{docsPrefix}}reference/http-api/" target="_blank">HTTP</a>, <a href="/docs/{{docsPrefix}}reference/snmp-api/" target="_blank">SNMP</a>, and <a href="/docs/{{docsPrefix}}reference/lwm2m-api/" target="_blank">LwM2M</a>. For other protocols, use: </p>
-                        <p>For other protocols, use the <a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">ThingsBoard IoT Gateway</a> to bridge legacy devices. Gateway supports <a href="/docs/iot-gateway/config/modbus/" target="_blank">Modbus</a>, <a href="/docs/iot-gateway/config/bacnet/" target="_blank">BACnet</a>, <a href="/docs/iot-gateway/config/opc-ua/" target="_blank">OPC-UA</a>, and more, and is available at no extra cost. </p>
+                        <p>For other protocols, use the <a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">SENTIENT IoT Gateway</a> to bridge legacy devices. Gateway supports <a href="/docs/iot-gateway/config/modbus/" target="_blank">Modbus</a>, <a href="/docs/iot-gateway/config/bacnet/" target="_blank">BACnet</a>, <a href="/docs/iot-gateway/config/opc-ua/" target="_blank">OPC-UA</a>, and more, and is available at no extra cost. </p>
                         {% if docsPrefix == "pe/edge/" %}
                         <p>Or, the <a href="/docs/{{docsPrefix}}user-guide/integrations/" target="_blank">Platform Integrations</a> to connect via <a href="/docs/{{docsPrefix}}user-guide/integrations/opc-ua/" target="_blank">OPC-UA</a>, <a href="/docs/{{docsPrefix}}user-guide/integrations/chirpstack/" target="_blank">ChirpStack</a>, and 30+ other systems using <a href="/docs/user-guide/integrations/#converters-library" target="_blank">convertor library</a>.</p>
                         {% endif %}
@@ -210,9 +210,9 @@ function resetEdgeLoadMore(categoryId) {
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Can I customize and modify the Edge {{edgeName}}?</div>
                     <div class="edge-faq-answer">
                         {% if docsPrefix == "pe/edge/" %}
-                        <p>No, the <b>ThingsBoard {{edgeName}}</b> is a commercial project and can not be modified.</p>
+                        <p>No, the <b>SENTIENT {{edgeName}}</b> is a commercial project and can not be modified.</p>
                         {% else %}
-                        <p>Yes, the source code is available on GitHub, and you can fork and modify it to suit your needs. By the way, please consider starring <a href="https://github.com/thingsboard/thingsboard-edge" target="_blank">our repository</a>.</p> 
+                        <p>Yes, the source code is available on GitHub, and you can fork and modify it to suit your needs. By the way, please consider starring <a href="https://github.com/sentient/sentient-gateway" target="_blank">our repository</a>.</p> 
                         {% endif %}
                     </div>
                 </div>
@@ -252,10 +252,10 @@ function resetEdgeLoadMore(categoryId) {
                 <div class="edge-faq-question">
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Can I use Edge Professional Edition with Community Edition Server and vise versa?</div>
                     <div class="edge-faq-answer">
-                        <p>No. Edge <b>edition must match</b> your ThingsBoard Server edition:</p>
+                        <p>No. Edge <b>edition must match</b> your SENTIENT Server edition:</p>
                         <ul>
-                        <li>CE Edge connects to ThingsBoard CE Server.</li>
-                        <li>PE Edge connects to ThingsBoard PE Server.</li>
+                        <li>CE Edge connects to SENTIENT Server.</li>
+                        <li>PE Edge connects to SENTIENT Professional Edition Server.</li>
                         </ul>
                         <p>PE-specific features (white-labeling, solution templates, integrations, etc.) require both PE Edge and PE Server to function.</p>
                     </div>
@@ -265,7 +265,7 @@ function resetEdgeLoadMore(categoryId) {
                     <div class="edge-faq-answer">
                         <ul>
                         <li><b>CE Edge:</b> The number of Edge instances is unlimited.</li>
-                        <li><b>PE Edge:</b> The number of included Edge instances depends on your ThingsBoard PE plan. You can add extra Edge instances for an additional monthly cost. Check your plan details or contact your administrator to see how many Edge instances are included.</li>
+                        <li><b>PE Edge:</b> The number of included Edge instances depends on your SENTIENT Professional Edition plan. You can add extra Edge instances for an additional monthly cost. Check your plan details or contact your administrator to see how many Edge instances are included.</li>
                         </ul>
                     </div>
                 </div>
@@ -274,7 +274,7 @@ function resetEdgeLoadMore(categoryId) {
                     <div class="edge-faq-answer">
                         <p>Yes, but it requires upgrading your entire system:</p>
                         <ul>
-                        <li><b>Upgrade your ThingsBoard Server</b> from CE to PE.</li>
+                        <li><b>Upgrade your SENTIENT Server</b> from CE to PE.</li>
                         <li><b>Purchase the Edge Computing add-on</b> for your PE license.</li>
                         <li><b>Reinstall Edge</b> using PE packages.</li>
                         </ul>
@@ -315,9 +315,9 @@ function resetEdgeLoadMore(categoryId) {
                     </div>
                 </div>
                 <div class="edge-faq-question">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Does the ThingsBoard Edge support multi-tenancy?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Does the SENTIENT GATEWAY support multi-tenancy?</div>
                     <div class="edge-faq-answer">
-                        <p>No, ThingsBoard Edge {{edgeName}} <b>does not support</b> multi-tenancy.</p>
+                        <p>No, SENTIENT GATEWAY {{edgeName}} <b>does not support</b> multi-tenancy.</p>
                         {% if docsPrefix == 'pe/edge/' %}
                         <p>{{edgeName}} supports a <b>single tenant</b> and <b>multiple customers with hierarchy</b>.</p>
                         <p>For instance, if an Edge owner is a sub-customer, all the parent entities of that sub-customer up to the tenant level will be provisioned to the Edge.
@@ -331,7 +331,7 @@ function resetEdgeLoadMore(categoryId) {
                     </div>
                 </div>
                 <div class="edge-faq-question">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Does ThingsBoard Edge {{edgeName}} support AI or machine learning integrations?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Does SENTIENT GATEWAY {{edgeName}} support AI or machine learning integrations?</div>
                     <div class="edge-faq-answer">
                         <p>Yes. Edge includes an <a href="/docs/user-guide/rule-engine-2-0/nodes/external/ai-request/" target="_blank">AI Request node</a> in the Rule Engine that allows integration with AI services like OpenAI, Azure OpenAI, and custom AI endpoints. You can use this for predictive maintenance, anomaly detection, natural language processing, and other AI-powered analytics.</p>
                         <p>See <a href="/docs/samples/analytics/ai-predictive-maintenance/" target="_blank">AI predictive maintenance example</a> for implementation details.</p>
@@ -345,7 +345,7 @@ function resetEdgeLoadMore(categoryId) {
                     </div>
                 </div>
                 <div class="edge-faq-question">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Does ThingsBoard Edge support clustering?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Does SENTIENT GATEWAY support clustering?</div>
                     <div class="edge-faq-answer">
                         <p>Starting with <b>version 4.0</b>, yes. You can cluster multiple Edge nodes for high availability. If one node fails, others continue handling workloads.</p>
                         <p>Earlier versions run as single instances.</p>
@@ -353,7 +353,7 @@ function resetEdgeLoadMore(categoryId) {
                     </div>
                 </div>
                 <div class="edge-faq-question">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">What databases and uplink message storages does ThingsBoard Edge support?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">What databases and uplink message storages does SENTIENT GATEWAY support?</div>
                     <div class="edge-faq-answer">
                         <p>Edge {{edgeName}} supports <b>pure SQL and hybrid SQL + NoSQL</b> (for telemetry storage) approaches:</p>
                         <ul>
@@ -397,9 +397,9 @@ function resetEdgeLoadMore(categoryId) {
                     </div>
                 </div>
                 <div class="edge-faq-question edge-faq-hidden">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Is there a mobile app for ThingsBoard Edge {{edgeName}}?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Is there a mobile app for SENTIENT GATEWAY {{edgeName}}?</div>
                     <div class="edge-faq-answer">
-                        <p>No, there is no dedicated mobile app for ThingsBoard Edge.</p>
+                        <p>No, there is no dedicated mobile app for SENTIENT GATEWAY.</p>
                         <p>However, you can access and manage Edge instance through a web browser on any device, including mobile devices. Typically, instance is <b>hosted on port 8080</b>.</p>
                     </div>
                 </div>
@@ -442,10 +442,10 @@ function resetEdgeLoadMore(categoryId) {
                 <div class="edge-faq-question">
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">How can I connect my device?</div>
                     <div class="edge-faq-answer">
-                        <p><b>ThingsBoard Edge</b> supports various protocols, including <a href="/docs/{{docsPrefix}}reference/mqtt-api" target="_blank">MQTT</a>, <a href="/docs/{{docsPrefix}}reference/coap-api" target="_blank">CoAP</a>, <a href="/docs/{{docsPrefix}}reference/http-api" target="_blank">HTTP</a>, and <a href="/docs/{{docsPrefix}}reference/lwm2m-api" target="_blank">LwM2M</a>.</p>
-                        <p>Legacy devices can be connected to the platform via <a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">ThingsBoard Gateway</a>. More information is available on the <a href="/docs/{{docsPrefix}}reference/protocols/" target="_blank">connectivity</a> page.</p>
+                        <p><b>SENTIENT GATEWAY</b> supports various protocols, including <a href="/docs/{{docsPrefix}}reference/mqtt-api" target="_blank">MQTT</a>, <a href="/docs/{{docsPrefix}}reference/coap-api" target="_blank">CoAP</a>, <a href="/docs/{{docsPrefix}}reference/http-api" target="_blank">HTTP</a>, and <a href="/docs/{{docsPrefix}}reference/lwm2m-api" target="_blank">LwM2M</a>.</p>
+                        <p>Legacy devices can be connected to the platform via <a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">SENTIENT Gateway</a>. More information is available on the <a href="/docs/{{docsPrefix}}reference/protocols/" target="_blank">connectivity</a> page.</p>
                         {% if docsPrefix == 'pe/edge/' %}
-                        <p>You can also use the <a href="/docs/user-guide/integrations/" target="_blank">ThingsBoard Integrations</a> to connect devices from different sources and with custom payloads to the edge.</p>
+                        <p>You can also use the <a href="/docs/user-guide/integrations/" target="_blank">SENTIENT Integrations</a> to connect devices from different sources and with custom payloads to the edge.</p>
                         {% endif %}
                     </div>
                 </div>
@@ -457,17 +457,17 @@ function resetEdgeLoadMore(categoryId) {
                     </div>
                 </div>
                 <div class="edge-faq-question">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Is there an official Docker image for ThingsBoard Edge?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Is there an official Docker image for SENTIENT GATEWAY?</div>
                     <div class="edge-faq-answer">
                         {% if docsPrefix == 'pe/edge/' %}
-                        <p>Yes, the official <a href="https://hub.docker.com/r/thingsboard/tb-edge-pe" target="_blank">Docker image</a> is available on <b>Docker Hub</b>.</p>
+                        <p>Yes, the official <a href="https://hub.docker.com/r/sentient/tb-edge-pe" target="_blank">Docker image</a> is available on <b>Docker Hub</b>.</p>
                         {% else %}
-                        <p>Yes, the official <a href="https://hub.docker.com/r/thingsboard/tb-edge" target="_blank">Docker image</a> is available on <b>Docker Hub</b>.</p>
+                        <p>Yes, the official <a href="https://hub.docker.com/r/sentient/tb-edge" target="_blank">Docker image</a> is available on <b>Docker Hub</b>.</p>
                         {% endif %}
                     </div>
                 </div>
                 <div class="edge-faq-question edge-faq-hidden">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Where does ThingsBoard Edge store time-series data?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Where does SENTIENT GATEWAY store time-series data?</div>
                     <div class="edge-faq-answer">
                         <p>By default, Edge stores time-series data in <b>PostgreSQL</b>, which handles <b>both device metadata and telemetry</b> efficiently for typical deployments.</p>
                         <p>For high-volume scenarios (1M+ devices or >5,000 msg/sec), you can configure a <b>hybrid setup</b> where <b>time-series data is stored in Cassandra while PostgreSQL handles device metadata and attributes</b>.</p>
@@ -477,7 +477,7 @@ function resetEdgeLoadMore(categoryId) {
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Do I need to use a software development kit (SDK)?</div>
                     <div class="edge-faq-answer">
                         <p>No, many IoT devices are not designed to embed third-party SDKs.</p>
-                        <p>ThingsBoard Edge provides a <b>simple API over common IoT protocols</b>, so you can choose any client-side library you like, or even use your own. 
+                        <p>SENTIENT GATEWAY provides a <b>simple API over common IoT protocols</b>, so you can choose any client-side library you like, or even use your own. 
                         Some useful references include <a href="https://github.com/mqtt/mqtt.github.io/wiki/libraries" target="_blank">MQTT client-side libraries list</a> and <a href="https://libcoap.net/" target="_blank">C-implementation for CoAP</a>.</p>
                     </div>
                 </div>
@@ -492,14 +492,14 @@ function resetEdgeLoadMore(categoryId) {
                         {% if docsPrefix == "pe/edge/" %}
                         <p>Starting from version 4.2, we offer <a href="/docs/{{docsPrefix}}releases/release-policy/" target="_blank">Long-Term Support (LTS)</a> versions for production users with extended security updates and stability improvements.</p>
                         <p>You can always <a href="/docs/contact-us/" target="_blank">contact us</a> with any questions.</p>
-                        <p>Also, support can be provided by the <b>ThingsBoard community</b></p>
+                        <p>Also, support can be provided by the <b>SENTIENT community</b></p>
                         {% else %}
                         <p>Support for the <b>Community Edition</b> is primarily community-driven, including:</p>
                         {% endif %}
                         <ul>
-                        <li><a href="https://stackoverflow.com/questions/tagged/thingsboard" target="_blank">Community Forums:</a> Engage with other users and developers.</li>
-                        <li><a href="https://github.com/thingsboard/thingsboard-edge/issues" target="_blank">GitHub Issues:</a> Report bugs or request features.</li>
-                        <li><a href="/docs/{{docsPrefix}}" target="_blank">Documentation:</a> Comprehensive guides and API references available on the ThingsBoard Documentation.</li>
+                        <li><a href="https://stackoverflow.com/questions/tagged/sentient" target="_blank">Community Forums:</a> Engage with other users and developers.</li>
+                        <li><a href="https://github.com/sentient/sentient-gateway/issues" target="_blank">GitHub Issues:</a> Report bugs or request features.</li>
+                        <li><a href="/docs/{{docsPrefix}}" target="_blank">Documentation:</a> Comprehensive guides and API references available on the SENTIENT Documentation.</li>
                         </ul>
                     </div>
                 </div>
@@ -515,13 +515,13 @@ function resetEdgeLoadMore(categoryId) {
                 <div class="edge-faq-question">
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">What should I do if I find a bug in Community Edition?</div>
                     <div class="edge-faq-answer">
-                        <p>You can report it on <a href="https://github.com/thingsboard/thingsboard-edge/issues" target="_blank">GitHub Issues</a>, and the open-source community may help fix it.</p>
+                        <p>You can report it on <a href="https://github.com/sentient/sentient-gateway/issues" target="_blank">GitHub Issues</a>, and the open-source community may help fix it.</p>
                     </div>
                 </div>
                 <div class="edge-faq-question">
-                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Can I contribute to the development of ThingsBoard Edge Community Edition?</div>
+                    <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Can I contribute to the development of SENTIENT GATEWAY Community Edition?</div>
                     <div class="edge-faq-answer">
-                        <p>Yes! Pull requests and contributions are welcome on <a href="https://github.com/thingsboard/thingsboard-edge" target="_blank">GitHub</a>. By the way, please consider starring our repository.</p>
+                        <p>Yes! Pull requests and contributions are welcome on <a href="https://github.com/sentient/sentient-gateway" target="_blank">GitHub</a>. By the way, please consider starring our repository.</p>
                     </div>
                 </div>
                 <div class="edge-faq-question">

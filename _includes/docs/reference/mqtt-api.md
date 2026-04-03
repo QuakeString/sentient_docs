@@ -1,8 +1,8 @@
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-{% assign HOST_NAME = "$THINGSBOARD_HOST_NAME" %}
+{% assign HOST_NAME = "$SENTIENT_HOST_NAME" %}
 {% endif %}
 {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
-{% assign HOST_NAME = "$THINGSBOARD_EDGE_HOST_NAME" %}
+{% assign HOST_NAME = "$SENTIENT_EDGE_HOST_NAME" %}
 {% endif %}
 
 * TOC
@@ -10,7 +10,7 @@
 
 [MQTT](https://en.wikipedia.org/wiki/MQTT){:target="_blank"} is a lightweight publish/subscribe messaging protocol,probably making it the most suitable for various IoT devices. 
 
-ThingsBoard server nodes acts as an MQTT broker and supports:   
+SENTIENT server nodes acts as an MQTT broker and supports:   
 &#8194;**&#8226;**&#8194;QoS 0 (at most once)   
 &#8194;**&#8226;**&#8194;QoS 1 (at least once)   
 &#8194;**&#8226;**&#8194;Configurable MQTT topics via [Device profiles](/docs/{{docsPrefix}}user-guide/device-profiles/#mqtt-device-topic-filters){:target="_blank"}
@@ -42,7 +42,7 @@ MQTT<small>Windows</small>%,%mqtt-windows%,%templates/helloworld-pe/mqtt-windows
 
 ## Authentication methods
 
-ThingsBoard supports multiple authentication mechanisms to secure MQTT connections.
+SENTIENT supports multiple authentication mechanisms to secure MQTT connections.
 
 **Supported methods**:
 - [Access token](/docs/{{docsPrefix}}user-guide/access-token/){:target="_blank"}. Uses a unique **device access token** as the MQTT **username** in the <span class="code-light">CONNECT</span> packet.   
@@ -81,7 +81,7 @@ mosquitto_pub -d -q 1 -h "{{mqttHostName}}" -p "1883" -t "v1/devices/me/telemetr
 {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} 
 
 > ⚠️ **Don&#39;t forget to replace:**   
-> &#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+> &#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 > &#8194;&#8226;&#8194;<code>$ACCESS_TOKEN</code> with your device&#39;s access token.
 
 ```bash
@@ -90,7 +90,7 @@ mosquitto_pub -d -q 1 -h "{{HOST_NAME}}" -p "1883" -t "v1/devices/me/telemetry" 
 {: .copy-code}
 
 **Example**   
-In this example, <code>{{HOST_NAME}}</code> refers to your <code>local</code> ThingsBoard {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}Edge {% endif %}installation, and <code>$ACCESS_TOKEN</code> is set to <code>ABC123</code>.
+In this example, <code>{{HOST_NAME}}</code> refers to your <code>local</code> SENTIENT {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}Edge {% endif %}installation, and <code>$ACCESS_TOKEN</code> is set to <code>ABC123</code>.
 
 ```bash
 mosquitto_pub -d -q 1 -h "localhost" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25}
@@ -113,7 +113,7 @@ Client mosqpub|xxx sending DISCONNECT
 
 During the connection process, the MQTT broker may return the following response codes:
 
-* **0x00 Connected** - Successfully connected to ThingsBoard MQTT server.
+* **0x00 Connected** - Successfully connected to SENTIENT MQTT server.
 * **0x04 Connection Refused, bad username or password** - Username is empty.
 * **0x05 Connection Refused, not authorized** - Username contains invalid access token.
 
@@ -130,7 +130,7 @@ Using custom binary format or some serialization framework is also possible. See
 
 ## Telemetry upload API
 
-In order to publish telemetry data to ThingsBoard server node, send PUBLISH message to the following topic:
+In order to publish telemetry data to SENTIENT server node, send PUBLISH message to the following topic:
  
 ```shell
 v1/devices/me/telemetry
@@ -165,7 +165,7 @@ Where **1451649600512** is a [unix timestamp](https://en.wikipedia.org/wiki/Unix
 Below are the examples of commands for publishing different types of telemetry data.
 
 > ⚠️ Don&#39;t forget to replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> with your device&#39;s access token.
 
 **Example 1**.   
@@ -261,7 +261,7 @@ The content of the JSON file:
 
 ## Attributes API
 
-ThingsBoard attributes API allows devices to
+SENTIENT attributes API allows devices to
 
 * Upload [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes to the server.
 * Request [client-side](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} and [shared](/docs/{{docsPrefix}}user-guide/attributes/#attribute-types){:target="_blank"} device attributes from the server.
@@ -271,7 +271,7 @@ ThingsBoard attributes API allows devices to
 
 ### Publish attribute update to the server
 
-In order to publish client-side device attributes to ThingsBoard server node, send PUBLISH message to the following topic:
+In order to publish client-side device attributes to SENTIENT server node, send PUBLISH message to the following topic:
 
 ```shell
 v1/devices/me/attributes
@@ -282,7 +282,7 @@ v1/devices/me/attributes
 Below are the examples of how to publish client-side device attributes.
 
 > ⚠️ Don&#39;t forget to replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> with your device&#39;s access token.
 
 **Example 1**.   
@@ -339,7 +339,7 @@ B,MQTT.js,shell,resources/mqtt-js-attributes-publish.sh,/docs/reference/resource
 
 ### Request attribute values from the server
 
-In order to request client-side or shared device attributes to ThingsBoard server node, send PUBLISH message to the following topic:
+In order to request client-side or shared device attributes to SENTIENT server node, send PUBLISH message to the following topic:
 
 ```shell
 v1/devices/me/attributes/request/$request_id
@@ -361,8 +361,8 @@ Pure command-line examples are not available because subscribe and publish need 
 
 {% unless docsPrefix contains 'paas/' %}
 
-> ⚠️ In this example, the hostname refers to a **local ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} installation**.   
-> If your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
+> ⚠️ In this example, the hostname refers to a **local SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} installation**.   
+> If your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
 
 {% endunless %}
 
@@ -410,7 +410,7 @@ When a shared attribute is changed by one of the server-side components (such as
 ```
 
 > ⚠️ Don&#39;t forget to replace {% unless docsPrefix contains "paas/" %}   
-&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your ThingsBoard{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
+&#8194;&#8226;&#8194;<code>{{HOST_NAME}}</code> with your SENTIENT{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %} Edge{% endif %} hostname or IP address.   
 &#8194;&#8226;&#8194;{% endunless %}<code>$ACCESS_TOKEN</code> with your device&#39;s access token.
 
 Execute the command:
@@ -460,8 +460,8 @@ Pure command-line examples are not available because subscribe and publish need 
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
 **1.** Save the [mqtt-js-rpc-from-server.js](/docs/pe/reference/resources/mqtt-js-rpc-from-server.js){:target="_blank" download="mqtt-js-rpc-from-server.js"} file to your PC.
 
-> ⚠️ In this example, the hostname refers to a **local ThingsBoard installation**.   
-> If your ThingsBoard instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
+> ⚠️ In this example, the hostname refers to a **local SENTIENT installation**.   
+> If your SENTIENT instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
 
 {% endif %}
 {% if docsPrefix contains "paas/" %}
@@ -470,8 +470,8 @@ Pure command-line examples are not available because subscribe and publish need 
 {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
 **1.** Save the [mqtt-js-rpc-from-server.js](/docs/edge/reference/resources/mqtt-js-rpc-from-server.js){:target="_blank" download="mqtt-js-rpc-from-server.js"} file to your PC.
 
-> ⚠️ In this example, the hostname refers to a **local ThingsBoard Edge installation**.   
-> If your ThingsBoard Edge instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
+> ⚠️ In this example, the hostname refers to a **local SENTIENT GATEWAY installation**.   
+> If your SENTIENT GATEWAY instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
 
 {% endif %}
 
@@ -480,7 +480,7 @@ A,The content of the "mqtt-js-rpc-from-server.js" file,javascript,resources/mqtt
 {% include tabs.html %}
 
 **2.** Now, follow these steps:
-- Use **RPC debug terminal** widget in your ThingsBoard instance;
+- Use **RPC debug terminal** widget in your SENTIENT instance;
 - Execute the command to subscribe to RPC commands from the server using the command below. 
 
 > ⚠️ Replace <code>$ACCESS_TOKEN</code> with your device&#39;s access token.
@@ -498,7 +498,7 @@ node mqtt-js-rpc-from-server.js
 {% include images-gallery.html imageCollection="server-side-rpc" %}
 {% endunless %}
 
-In case your MQTT device is a gateway, ThingsBoard will send a server-side RPC (notification) about changes on provisioned device entities.  
+In case your MQTT device is a gateway, SENTIENT will send a server-side RPC (notification) about changes on provisioned device entities.  
 Your MQTT gateway device will receive a service RPC about removal or renaming of device to [properly resolve such events](/docs/iot-gateway/how-device-removing-renaming-works/){:target="_blank"}. 
 
 <hr>
@@ -527,8 +527,8 @@ Pure command-line examples are not available because subscribe and publish need 
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
 **1.** Save the [mqtt-js-rpc-from-client.js](/docs/pe/reference/resources/mqtt-js-rpc-from-client.js){:target="_blank" download="mqtt-js-rpc-from-client.js"} file to your PC. 
 
-> ⚠️ In this example, the hostname refers to a **local ThingsBoard installation**.   
-> If your ThingsBoard instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
+> ⚠️ In this example, the hostname refers to a **local SENTIENT installation**.   
+> If your SENTIENT instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
 
 {% endif %}
 {% if docsPrefix contains "paas/" %}
@@ -537,8 +537,8 @@ Pure command-line examples are not available because subscribe and publish need 
 {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
 **1.** Save the [mqtt-js-rpc-from-client.js](/docs/edge/reference/resources/mqtt-js-rpc-from-client.js){:target="_blank" download="mqtt-js-rpc-from-client.js"} file to your PC.
 
-> ⚠️ In this example, the hostname refers to a **local ThingsBoard Edge installation**.   
-> If your ThingsBoard Edge instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
+> ⚠️ In this example, the hostname refers to a **local SENTIENT GATEWAY installation**.   
+> If your SENTIENT GATEWAY instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
 
 {% endif %}
 
@@ -579,7 +579,7 @@ You should receive a response from the server:
 
 ### Get session limits RPC
 
-The **getSessionLimits** RPC method allows device manufacturers and developers to retrieve the **MQTT transport limits** enforced by ThingsBoard server.
+The **getSessionLimits** RPC method allows device manufacturers and developers to retrieve the **MQTT transport limits** enforced by SENTIENT server.
 
 Understanding these limits helps ensure that devices operate within supported parameters and prevents issues such as **message rejection, throttling**, or **connection loss**.
 
@@ -594,7 +594,7 @@ To request session limits, the device sends the following RPC request:
 ```
 
 <b><font size="3">Response format</font></b>   
-After processing the request, ThingsBoard returns the session limits in the RPC response using the following format:
+After processing the request, SENTIENT returns the session limits in the RPC response using the following format:
 
 ```json
 {
@@ -661,7 +661,7 @@ These limits help control load and ensure stable operation when multiple devices
 
 ## Claiming devices
 
-The Device Claiming feature allows end users to securely associate a device with their account after the device has been deployed and connected to ThingsBoard.
+The Device Claiming feature allows end users to securely associate a device with their account after the device has been deployed and connected to SENTIENT.
 For a detailed explanation of the device claiming workflow and supported scenarios, refer to the {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix contains "paas/" %}[Claiming devices](/docs/{{docsPrefix}}user-guide/claiming-devices){:target="_blank"}{% endif %}{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}[Claiming devices](/docs/user-guide/claiming-devices){:target="_blank"}{% endif %} documentation.
 
 In order to initiate claiming device, send PUBLISH message to the following topic:
@@ -679,7 +679,7 @@ The supported data format is:
 
 {% capture difference %}
 **Please note** that the above fields are optional. In case the **secretKey** is not specified, the empty string as a default value is used.
-In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/thingsboard/conf/thingsboard.yml**).
+In case the **durationMs** is not specified, the system parameter **device.claim.duration** is used (in the file **/etc/sentient/conf/sentient.yml**).
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -687,7 +687,7 @@ In case the **durationMs** is not specified, the system parameter **device.claim
 
 ## Device provisioning
 
-Device provisioning allows devices to be registered dynamically without manual creation in the ThingsBoard UI.
+Device provisioning allows devices to be registered dynamically without manual creation in the SENTIENT UI.
 For a detailed explanation of the provisioning process and supported scenarios, refer to the {% if docsPrefix == nil or docsPrefix == "pe/" or docsPrefix contains "paas/" %}[Device provisioning](/docs/{{docsPrefix}}user-guide/device-provisioning){:target="_blank"}{% endif %}{% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}[Device provisioning](/docs/user-guide/device-provisioning){:target="_blank"}{% endif %} documentation.
 
 **Provisioning request**   
@@ -713,16 +713,16 @@ The provisioning request must use the following JSON format:
 
 **Payload fields**
 - **deviceName** — the name of the device to be provisioned.
-- **provisionDeviceKey** — the provisioning key configured in ThingsBoard.
+- **provisionDeviceKey** — the provisioning key configured in SENTIENT.
 - **provisionDeviceSecret** — the provisioning secret associated with the provisioning key.
 
-If the provided credentials are valid, ThingsBoard automatically creates the device (if it does not already exist) and returns the device credentials, allowing the device to start communicating with the platform.
+If the provided credentials are valid, SENTIENT automatically creates the device (if it does not already exist) and returns the device credentials, allowing the device to start communicating with the platform.
 
 <hr>
 
 ## Firmware API
 
-When ThingsBoard initiates an MQTT device firmware update, it sets the fw_title, fw_version, fw_checksum, fw_checksum_algorithm shared attributes.
+When SENTIENT initiates an MQTT device firmware update, it sets the fw_title, fw_version, fw_checksum, fw_checksum_algorithm shared attributes.
 To receive the shared attribute updates, the device has to subscribe to 
 
 ```bash
@@ -762,7 +762,7 @@ Where
 
 ## Protocol customization
 
-MQTT transport can be fully customized for specific use-case by changing the corresponding [module](https://github.com/thingsboard/thingsboard/tree/master/transport/mqtt){:target="_blank"}.
+MQTT transport can be fully customized for specific use-case by changing the corresponding [module](https://github.com/sentient/sentient/tree/master/transport/mqtt){:target="_blank"}.
 
 <hr>
 

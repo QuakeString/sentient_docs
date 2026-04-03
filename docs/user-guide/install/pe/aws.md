@@ -4,7 +4,7 @@ assignees:
 - ashvayka
 title: AWS cluster setup
 notitle: "true"
-description: ThingsBoard IoT platform  AWS cluster setup guide
+description: SENTIENT IoT platform  AWS cluster setup guide
 
 ---
 
@@ -13,10 +13,10 @@ description: ThingsBoard IoT platform  AWS cluster setup guide
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <h1>ThingsBoard Setup options on AWS</h1>
+                <h1>SENTIENT Setup options on AWS</h1>
                 <div class="install-options-description">
                     <p>
-                        You may deploy ThingsBoard IoT Platform using different tools and platforms
+                        You may deploy SENTIENT IoT Platform using different tools and platforms
                     </p>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: Gas Shutoff Valve LoRaWAN "Smartico V-LR" telemetry upload
-description: ThingsBoard IoT Platform sample for valve state data upload over MQTT using Gas Shutoff Valve LoRaWAN "Smartico V-LR".
+description: SENTIENT IoT Platform sample for valve state data upload over MQTT using Gas Shutoff Valve LoRaWAN "Smartico V-LR".
 hidetoc: "true"
 ---
 
@@ -16,7 +16,7 @@ The Gas Shutoff Valve LoRaWAN “Smartico V-LR” was designed for remotely shut
 
 ## Prerequisites
 
-LoRaWAN technology is used to transfer data from the Gas Valve V-LR to the ThingsBoard platform. This is the wireless communication technology that allows small amounts of data to be exchanged over a long distance. First of all, you need to configure the LoRaWAN server and make sure that data from the device goes to the server. This guide uses [ChirpStack open-source LoRaWAN Network Server](https://www.chirpstack.io/application-server/). 
+LoRaWAN technology is used to transfer data from the Gas Valve V-LR to the SENTIENT platform. This is the wireless communication technology that allows small amounts of data to be exchanged over a long distance. First of all, you need to configure the LoRaWAN server and make sure that data from the device goes to the server. This guide uses [ChirpStack open-source LoRaWAN Network Server](https://www.chirpstack.io/application-server/). 
 After finishing the server configuration on the Applications page, an entry with the device type should appear in the table.
 
 ![image](/images/samples/smartico/gas-valve-lorawan/Lora1.PNG)
@@ -27,12 +27,12 @@ For example, we connected a device with the serial number 0000129. With the corr
 
 To be able to receive data via the MQTT protocol, you need to integrate the [LoRaWAN server and the Mosquitto MQTT broker](https://www.chirpstack.io/application-server/integrations/mqtt/).
 ## Step 1. Creation UpLink Data Converters.
-First, you should create the Uplink Data Converter according to the device protocol. The converter will decode incoming telemetry payload data from Gas Shutoff Valve LoRaWAN “Smartico V-LR” that contains in encoded Base64 string to human readable, simplified ThingsBoard data format. Import [uplink_gas_valve.json](/docs/samples/smartico/gas-valve-lorawan/resources/uplink_gas_valve.json) file with Uplink data converter .
+First, you should create the Uplink Data Converter according to the device protocol. The converter will decode incoming telemetry payload data from Gas Shutoff Valve LoRaWAN “Smartico V-LR” that contains in encoded Base64 string to human readable, simplified SENTIENT data format. Import [uplink_gas_valve.json](/docs/samples/smartico/gas-valve-lorawan/resources/uplink_gas_valve.json) file with Uplink data converter .
 
 ![image](/images/samples/smartico/gas-valve-lorawan/converter.PNG)
 
 ## Step 2. Integration configuration.
-To integrate Gas Shutoff Valve LoRaWAN “Smartico V-LR” into ThingsBoard platform you should create a new integration as shown on the figure.
+To integrate Gas Shutoff Valve LoRaWAN “Smartico V-LR” into SENTIENT platform you should create a new integration as shown on the figure.
 
 ![image](/images/samples/smartico/gas-valve-lorawan/integration.PNG)
 
@@ -110,7 +110,7 @@ To be able to display data in the dashboard, you should first create an asset an
 ![image](/images/samples/smartico/gas-valve-lorawan/asset2.PNG)
 
 ## Step 5. Rule chain import and configuration.
-In addition to meter readings, it is possible to monitor the status of the device. For example, you can get information about a low battery, opening the device case, exposure to a magnetic field, and others. This information is displayed in the Alarm widget. Therefore, you should set up Rule chain first. Import [alarms_gas_valve.json](/docs/samples/smartico/gas-valve-lorawan/resources/alarms_gas_valve.json) file with alarms  and save the configuration of the Rule chain in ThingsBoard.
+In addition to meter readings, it is possible to monitor the status of the device. For example, you can get information about a low battery, opening the device case, exposure to a magnetic field, and others. This information is displayed in the Alarm widget. Therefore, you should set up Rule chain first. Import [alarms_gas_valve.json](/docs/samples/smartico/gas-valve-lorawan/resources/alarms_gas_valve.json) file with alarms  and save the configuration of the Rule chain in SENTIENT.
 
 ![image](/images/samples/smartico/gas-valve-lorawan/alarm1.PNG)
 
@@ -131,7 +131,7 @@ If everything was done correctly, in DASHBOARD GROUPS → All you will see the n
 
 ## See also
 
-Browse other [samples](/docs/samples) or explore guides related to main ThingsBoard features:
+Browse other [samples](/docs/samples) or explore guides related to main SENTIENT features:
 
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

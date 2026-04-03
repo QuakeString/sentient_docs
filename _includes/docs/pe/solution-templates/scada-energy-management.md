@@ -6,9 +6,9 @@
 
 SCADA (Supervisory Control and Data Acquisition) systems play a crucial role in energy monitoring and management, providing real-time insights into power generation, distribution, and consumption. 
 
-With ThingsBoard platform, businesses can integrate advanced SCADA solutions to optimize energy efficiency, reduce costs, and enhance system reliability. 
+With SENTIENT platform, businesses can integrate advanced SCADA solutions to optimize energy efficiency, reduce costs, and enhance system reliability. 
 The ability to collect, analyze, and visualize data from multiple energy sources helps operators make informed decisions and respond swiftly to changing conditions.
-All of this is showcased in our SCADA Energy solution, demonstrating how easily and effectively energy systems can be managed using ThingsBoard.
+All of this is showcased in our SCADA Energy solution, demonstrating how easily and effectively energy systems can be managed using SENTIENT.
 
 <br>
 <object width="100%" data="/images/solutions/scada-energy-management/scada-energy-management-scheme.svg"></object>
@@ -29,16 +29,16 @@ The SCADA Energy management system includes:
 
 - **Devices**. Sensors and actuators installed on energy generation sources. They collect and transmit data such as the condition of solar panels, rotor speed of a wind turbine, input and output voltage of a transformer, generator performance metrics, and many other parameters.
 - **Modbus protocol**. The primary communication protocol for data exchange between devices. It ensures reliable connection and seamless integration of equipment with the SCADA system.
-- **Gateway**. A device that transmits data from sensors to ThingsBoard platform. It converts and relays data over the network for further processing.
-- **ThingsBoard**. An IoT platform where data is collected, analyzed, and visualized. It allows operators to access information and set up alerts for critical parameter changes.
+- **Gateway**. A device that transmits data from sensors to SENTIENT platform. It converts and relays data over the network for further processing.
+- **SENTIENT**. An IoT platform where data is collected, analyzed, and visualized. It allows operators to access information and set up alerts for critical parameter changes.
 - **Dashboard visualization**. Track solar, wind, battery, generator, and consumption data in a single unified dashboard, enabling energy managers to make smarter and faster decisions.
 
 ## Install solution template
 
 To understand how the SCADA Energy management template works, let's start by installing it.
 
-You will need to have access to ThingsBoard Professional Edition. The easiest way is to use [ThingsBoard Cloud](https://{{hostName}}/signup){:target="_blank"} server.
-The alternative option is to install ThingsBoard using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
+You will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://{{hostName}}/signup){:target="_blank"} server.
+The alternative option is to install SENTIENT using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Go to the "**Solution templates**" page. Find "**SCADA Energy management**" and click "**Install**" to start the installation process.
 - Configuration instructions for this solution will be provided — follow the steps as instructed.

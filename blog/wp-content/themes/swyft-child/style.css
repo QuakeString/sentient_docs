@@ -461,7 +461,7 @@ header .header-buttons{
 	top: 0;
 	left: 0;
 	transform: none;
-	background-image: url(https://img.thingsboard.io/thingsboard_logo_b.svg);
+	background-image: url(https://img.docs.sentient.invenia.in/sentient_logo_b.svg);
 	background-size: contain;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -814,7 +814,7 @@ header .header-buttons{
 	color: #FFFFFF !important;
 }
 
-.dark_styles .thingsboard-media-banner{
+.dark_styles .sentient-media-banner{
 	background: #262829;
 }
 
@@ -866,8 +866,8 @@ header .header-buttons{
 	color: rgba(0, 0, 0, 0.76); 
 }
 
-.dark_styles .thingsboard-media-banner-logo{
-	background: url('/blog/wp-content/uploads/2024/03/thingsboard_white.svg');
+.dark_styles .sentient-media-banner-logo{
+	background: url('/blog/wp-content/uploads/2024/03/sentient_white.svg');
 	background-size: contain;
     background-repeat: no-repeat;
 }
@@ -877,7 +877,7 @@ header .header-buttons{
 	background: #FFFFFF !important;
 }
 
-.dark_styles #home header .n-button.price:hover, #thingsboard-paas header .n-button.price:hover, #thingsboard-pe header .n-button.price:hover, #thingsboard-edge header .n-button.price:hover{
+.dark_styles #home header .n-button.price:hover, #sentient-paas header .n-button.price:hover, #sentient-pe header .n-button.price:hover, #sentient-gateway header .n-button.price:hover{
 	color: #2a7dec;
 	 background-color: #fff;
 }
@@ -1026,34 +1026,34 @@ header{
 }
 
 
-#home.flip-nav header .logo,#home.flip-nav header .burger,#thingsboard-paas.flip-nav header .logo,#thingsboard-paas.flip-nav header .burger,#thingsboard-pe.flip-nav header .logo,#thingsboard-pe.flip-nav header .burger,#trendz.flip-nav header .logo,#trendz.flip-nav header .burger,#partners.flip-nav header .logo,#partners.flip-nav header .burger,#thingsboard-edge.flip-nav header .logo,#thingsboard-edge.flip-nav header .burger {
+#home.flip-nav header .logo,#home.flip-nav header .burger,#sentient-paas.flip-nav header .logo,#sentient-paas.flip-nav header .burger,#sentient-pe.flip-nav header .logo,#sentient-pe.flip-nav header .burger,#sentient-analytics.flip-nav header .logo,#sentient-analytics.flip-nav header .burger,#partners.flip-nav header .logo,#partners.flip-nav header .burger,#sentient-gateway.flip-nav header .logo,#sentient-gateway.flip-nav header .burger {
     filter: unset
 }
 
-#home.flip-nav header .head-menu ul li.active a,#home.flip-nav header .head-menu ul li.active span.main-menu-link,#thingsboard-paas.flip-nav header .head-menu ul li.active a,#thingsboard-paas.flip-nav header .head-menu ul li.active span.main-menu-link,#thingsboard-pe.flip-nav header .head-menu ul li.active a,#thingsboard-pe.flip-nav header .head-menu ul li.active span.main-menu-link,#trendz.flip-nav header .head-menu ul li.active a,#trendz.flip-nav header .head-menu ul li.active span.main-menu-link,#partners.flip-nav header .head-menu ul li.active a,#partners.flip-nav header .head-menu ul li.active span.main-menu-link,#thingsboard-edge.flip-nav header .head-menu ul li.active a,#thingsboard-edge.flip-nav header .head-menu ul li.active span.main-menu-link {
+#home.flip-nav header .head-menu ul li.active a,#home.flip-nav header .head-menu ul li.active span.main-menu-link,#sentient-paas.flip-nav header .head-menu ul li.active a,#sentient-paas.flip-nav header .head-menu ul li.active span.main-menu-link,#sentient-pe.flip-nav header .head-menu ul li.active a,#sentient-pe.flip-nav header .head-menu ul li.active span.main-menu-link,#sentient-analytics.flip-nav header .head-menu ul li.active a,#sentient-analytics.flip-nav header .head-menu ul li.active span.main-menu-link,#partners.flip-nav header .head-menu ul li.active a,#partners.flip-nav header .head-menu ul li.active span.main-menu-link,#sentient-gateway.flip-nav header .head-menu ul li.active a,#sentient-gateway.flip-nav header .head-menu ul li.active span.main-menu-link {
     opacity: 1;
     color: #2a7dec
 }
 
-#home.flip-nav header .head-menu ul a,#home.flip-nav header .head-menu ul span.main-menu-link,#thingsboard-paas.flip-nav header .head-menu ul a,#thingsboard-paas.flip-nav header .head-menu ul span.main-menu-link,#thingsboard-pe.flip-nav header .head-menu ul a,#thingsboard-pe.flip-nav header .head-menu ul span.main-menu-link,#trendz.flip-nav header .head-menu ul a,#trendz.flip-nav header .head-menu ul span.main-menu-link,#partners.flip-nav header .head-menu ul a,#partners.flip-nav header .head-menu ul span.main-menu-link,#thingsboard-edge.flip-nav header .head-menu ul a,#thingsboard-edge.flip-nav header .head-menu ul span.main-menu-link {
+#home.flip-nav header .head-menu ul a,#home.flip-nav header .head-menu ul span.main-menu-link,#sentient-paas.flip-nav header .head-menu ul a,#sentient-paas.flip-nav header .head-menu ul span.main-menu-link,#sentient-pe.flip-nav header .head-menu ul a,#sentient-pe.flip-nav header .head-menu ul span.main-menu-link,#sentient-analytics.flip-nav header .head-menu ul a,#sentient-analytics.flip-nav header .head-menu ul span.main-menu-link,#partners.flip-nav header .head-menu ul a,#partners.flip-nav header .head-menu ul span.main-menu-link,#sentient-gateway.flip-nav header .head-menu ul a,#sentient-gateway.flip-nav header .head-menu ul span.main-menu-link {
     color: #212529
 }
 
-#home.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#thingsboard-paas.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#thingsboard-pe.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#trendz.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#partners.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#thingsboard-edge.flip-nav header .head-menu ul .centered-sub .sub-menu li a {
+#home.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#sentient-paas.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#sentient-pe.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#sentient-analytics.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#partners.flip-nav header .head-menu ul .centered-sub .sub-menu li a,#sentient-gateway.flip-nav header .head-menu ul .centered-sub .sub-menu li a {
     color: #212529
 }
 
-#home.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#thingsboard-paas.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#thingsboard-pe.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#trendz.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#partners.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#thingsboard-edge.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a {
+#home.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-paas.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-pe.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-analytics.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#partners.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-gateway.flip-nav header .head-menu ul .centered-sub .sub-menu li:hover a {
     color: #2a7dec
 }
 
-#home.flip-nav header .n-button.try,#thingsboard-paas.flip-nav header .n-button.try,#thingsboard-pe.flip-nav header .n-button.try,#trendz.flip-nav header .n-button.try,#partners.flip-nav header .n-button.try,#thingsboard-edge.flip-nav header .n-button.try {
+#home.flip-nav header .n-button.try,#sentient-paas.flip-nav header .n-button.try,#sentient-pe.flip-nav header .n-button.try,#sentient-analytics.flip-nav header .n-button.try,#partners.flip-nav header .n-button.try,#sentient-gateway.flip-nav header .n-button.try {
     border: solid 1px #ebebeb;
     color: #212529;
     background-color: unset
 }
 
-#home.flip-nav header .n-button.try:hover,#thingsboard-paas.flip-nav header .n-button.try:hover,#thingsboard-pe.flip-nav header .n-button.try:hover,#trendz.flip-nav header .n-button.try:hover,#partners.flip-nav header .n-button.try:hover,#thingsboard-edge.flip-nav header .n-button.try:hover {
+#home.flip-nav header .n-button.try:hover,#sentient-paas.flip-nav header .n-button.try:hover,#sentient-pe.flip-nav header .n-button.try:hover,#sentient-analytics.flip-nav header .n-button.try:hover,#partners.flip-nav header .n-button.try:hover,#sentient-gateway.flip-nav header .n-button.try:hover {
     border: solid 2px #212529;
     padding: 9px 10px
 }
@@ -1062,7 +1062,7 @@ header{
     opacity: 0
 }
 
-#thingsboard-pe:not(.open-nav):not(.flip-nav) header::after {
+#sentient-pe:not(.open-nav):not(.flip-nav) header::after {
     opacity: 0
 }
 
@@ -1094,51 +1094,51 @@ dl {
 	margin-bottom: 0;
 }
 
-#home header .head-menu ul li.active a,#home header .head-menu ul li.active a:hover,#home header .head-menu ul li.active span.main-menu-link:hover,#thingsboard-paas header .head-menu ul li.active a,#thingsboard-paas header .head-menu ul li.active a:hover,#thingsboard-paas header .head-menu ul li.active span.main-menu-link:hover,#thingsboard-pe header .head-menu ul li.active a,#thingsboard-pe header .head-menu ul li.active a:hover,#thingsboard-pe header .head-menu ul li.active span.main-menu-link:hover,#thingsboard-edge header .head-menu ul li.active a,#thingsboard-edge header .head-menu ul li.active a:hover,#thingsboard-edge header .head-menu ul li.active span.main-menu-link:hover {
+#home header .head-menu ul li.active a,#home header .head-menu ul li.active a:hover,#home header .head-menu ul li.active span.main-menu-link:hover,#sentient-paas header .head-menu ul li.active a,#sentient-paas header .head-menu ul li.active a:hover,#sentient-paas header .head-menu ul li.active span.main-menu-link:hover,#sentient-pe header .head-menu ul li.active a,#sentient-pe header .head-menu ul li.active a:hover,#sentient-pe header .head-menu ul li.active span.main-menu-link:hover,#sentient-gateway header .head-menu ul li.active a,#sentient-gateway header .head-menu ul li.active a:hover,#sentient-gateway header .head-menu ul li.active span.main-menu-link:hover {
     color: #2a7dec
 }
 
-#home header .head-menu ul a,#thingsboard-paas header .head-menu ul a,#thingsboard-pe header .head-menu ul a,#thingsboard-edge header .head-menu ul a {
+#home header .head-menu ul a,#sentient-paas header .head-menu ul a,#sentient-pe header .head-menu ul a,#sentient-gateway header .head-menu ul a {
     color: #000000;
 }
 
-#home header .head-menu ul a:not([href]),#home header .head-menu ul span.main-menu-link,#thingsboard-paas header .head-menu ul a:not([href]),#thingsboard-paas header .head-menu ul span.main-menu-link,#thingsboard-pe header .head-menu ul a:not([href]),#thingsboard-pe header .head-menu ul span.main-menu-link,#thingsboard-edge header .head-menu ul a:not([href]),#thingsboard-edge header .head-menu ul span.main-menu-link {
+#home header .head-menu ul a:not([href]),#home header .head-menu ul span.main-menu-link,#sentient-paas header .head-menu ul a:not([href]),#sentient-paas header .head-menu ul span.main-menu-link,#sentient-pe header .head-menu ul a:not([href]),#sentient-pe header .head-menu ul span.main-menu-link,#sentient-gateway header .head-menu ul a:not([href]),#sentient-gateway header .head-menu ul span.main-menu-link {
     color: #000000;
 }
 
-#home header .n-button.try:hover,#thingsboard-paas header .n-button.try:hover,#thingsboard-pe header .n-button.try:hover,#thingsboard-edge header .n-button.try:hover {
+#home header .n-button.try:hover,#sentient-paas header .n-button.try:hover,#sentient-pe header .n-button.try:hover,#sentient-gateway header .n-button.try:hover {
     text-decoration: none;
     color: #212529;
     background-color: #fff
 }
 
-.dark_styles #home header .n-button.price:hover,#thingsboard-paas header .n-button.price:hover,#thingsboard-pe header .n-button.price:hover,#thingsboard-edge header .n-button.price:hover {
+.dark_styles #home header .n-button.price:hover,#sentient-paas header .n-button.price:hover,#sentient-pe header .n-button.price:hover,#sentient-gateway header .n-button.price:hover {
     color: #2a7dec;
     box-shadow: unset;
     background-color: #fff
 }
 
-#home header .head-menu ul a:not([href]):hover,#home header .head-menu ul span.main-menu-link:hover,#thingsboard-paas header .head-menu ul a:not([href]):hover,#thingsboard-paas header .head-menu ul span.main-menu-link:hover,#thingsboard-pe header .head-menu ul a:not([href]):hover,#thingsboard-pe header .head-menu ul span.main-menu-link:hover,#thingsboard-edge header .head-menu ul a:not([href]):hover,#thingsboard-edge header .head-menu ul span.main-menu-link:hover {
+#home header .head-menu ul a:not([href]):hover,#home header .head-menu ul span.main-menu-link:hover,#sentient-paas header .head-menu ul a:not([href]):hover,#sentient-paas header .head-menu ul span.main-menu-link:hover,#sentient-pe header .head-menu ul a:not([href]):hover,#sentient-pe header .head-menu ul span.main-menu-link:hover,#sentient-gateway header .head-menu ul a:not([href]):hover,#sentient-gateway header .head-menu ul span.main-menu-link:hover {
     color: #fff
 }
 
-#home header .head-menu ul .centered-sub .sub-menu li a,#thingsboard-paas header .head-menu ul .centered-sub .sub-menu li a,#thingsboard-pe header .head-menu ul .centered-sub .sub-menu li a,#thingsboard-edge header .head-menu ul .centered-sub .sub-menu li a {
+#home header .head-menu ul .centered-sub .sub-menu li a,#sentient-paas header .head-menu ul .centered-sub .sub-menu li a,#sentient-pe header .head-menu ul .centered-sub .sub-menu li a,#sentient-gateway header .head-menu ul .centered-sub .sub-menu li a {
     color: #212529
 }
 
-#home header .head-menu ul .centered-sub .sub-menu li:hover a,#thingsboard-paas header .head-menu ul .centered-sub .sub-menu li:hover a,#thingsboard-pe header .head-menu ul .centered-sub .sub-menu li:hover a,#thingsboard-edge header .head-menu ul .centered-sub .sub-menu li:hover a {
+#home header .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-paas header .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-pe header .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-gateway header .head-menu ul .centered-sub .sub-menu li:hover a {
     color: #2a7dec
 }
 
 
 
-/* #home header .n-button.try:hover,#thingsboard-paas header .n-button.try:hover,#thingsboard-pe header .n-button.try:hover,#thingsboard-edge header .n-button.try:hover {
+/* #home header .n-button.try:hover,#sentient-paas header .n-button.try:hover,#sentient-pe header .n-button.try:hover,#sentient-gateway header .n-button.try:hover {
     text-decoration: none;
     background-color: #2a7dec;
 	box-shadow: 0 18px 16px -10px rgba(42,125,236,.25);
 } */
 
-#home header .n-button.price:hover,#thingsboard-paas header .n-button.price:hover,#thingsboard-pe header .n-button.price:hover,#thingsboard-edge header .n-button.price:hover {
+#home header .n-button.price:hover,#sentient-paas header .n-button.price:hover,#sentient-pe header .n-button.price:hover,#sentient-gateway header .n-button.price:hover {
 	text-decoration: none;
 	background-color: #2a7dec;
 	box-shadow: 0 18px 16px -10px rgba(42,125,236,.25);
@@ -1327,7 +1327,7 @@ header .head-menu .sub-menu-container .centered-sub .sub-menu a.gateway-lnk:hove
     color: #7A4DC3
 }
 
-header .head-menu .sub-menu-container .centered-sub .sub-menu a.trendz-lnk:hover .sub-text h1,header .head-menu .sub-menu-container .centered-sub .sub-menu a.trendz-lnk:hover .sub-text span.item-heading,header .head-menu ul .centered-sub .sub-menu a.trendz-lnk:hover .sub-text h1,header .head-menu ul .centered-sub .sub-menu a.trendz-lnk:hover .sub-text span.item-heading {
+header .head-menu .sub-menu-container .centered-sub .sub-menu a.sentient-analytics-lnk:hover .sub-text h1,header .head-menu .sub-menu-container .centered-sub .sub-menu a.sentient-analytics-lnk:hover .sub-text span.item-heading,header .head-menu ul .centered-sub .sub-menu a.sentient-analytics-lnk:hover .sub-text h1,header .head-menu ul .centered-sub .sub-menu a.sentient-analytics-lnk:hover .sub-text span.item-heading {
     color: #2696F3
 }
 
@@ -1458,7 +1458,7 @@ header .logo {
     top: 0;
     left: 0;
     transform: none;
-    background-image: url(https://img.thingsboard.io/thingsboard_logo_b.svg);
+    background-image: url(https://img.docs.sentient.invenia.in/sentient_logo_b.svg);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1576,18 +1576,18 @@ header .logo {
     transition-duration: 0s
 }
 
-#home.flip-nav header .n-button.try,#thingsboard-paas.flip-nav header .n-button.try,#thingsboard-pe.flip-nav header .n-button.try,#trendz.flip-nav header .n-button.try,#partners.flip-nav header .n-button.try,#thingsboard-edge.flip-nav header .n-button.try {
+#home.flip-nav header .n-button.try,#sentient-paas.flip-nav header .n-button.try,#sentient-pe.flip-nav header .n-button.try,#sentient-analytics.flip-nav header .n-button.try,#partners.flip-nav header .n-button.try,#sentient-gateway.flip-nav header .n-button.try {
     border: solid 1px #ebebeb;
     color: #212529;
     background-color: unset
 }
 
-#home.flip-nav header .n-button.try:hover,#thingsboard-paas.flip-nav header .n-button.try:hover,#thingsboard-pe.flip-nav header .n-button.try:hover,#trendz.flip-nav header .n-button.try:hover,#partners.flip-nav header .n-button.try:hover,#thingsboard-edge.flip-nav header .n-button.try:hover {
+#home.flip-nav header .n-button.try:hover,#sentient-paas.flip-nav header .n-button.try:hover,#sentient-pe.flip-nav header .n-button.try:hover,#sentient-analytics.flip-nav header .n-button.try:hover,#partners.flip-nav header .n-button.try:hover,#sentient-gateway.flip-nav header .n-button.try:hover {
     border: solid 2px #212529;
     padding: 9px 10px
 }
 
-#home.flip-nav header .n-button.price:hover,#thingsboard-paas.flip-nav header .n-button.price:hover,#thingsboard-pe.flip-nav header .n-button.price:hover,#trendz.flip-nav header .n-button.price:hover,#partners.flip-nav header .n-button.price:hover,#thingsboard-edge.flip-nav header .n-button.price:hover {
+#home.flip-nav header .n-button.price:hover,#sentient-paas.flip-nav header .n-button.price:hover,#sentient-pe.flip-nav header .n-button.price:hover,#sentient-analytics.flip-nav header .n-button.price:hover,#partners.flip-nav header .n-button.price:hover,#sentient-gateway.flip-nav header .n-button.price:hover {
     color: #fff;
     background-color: #2a7dec;
     box-shadow: 0 18px 16px -10px rgba(42,125,236,.25)
@@ -1708,8 +1708,8 @@ header .logo {
 }
 
 @media screen and (max-width: 1280px) and (max-width:1024px) {
-    #home .opened-burger .burger,#docs .opened-burger .burger,#common .opened-burger .burger,#thingsboard-paas .opened-burger .burger,#thingsboard-pe .opened-burger .burger,#trendz .opened-burger .burger,#thingsboard-edge .opened-burger .burger {
-        background-image:url(https://img.thingsboard.io/s-close-icon.svg)
+    #home .opened-burger .burger,#docs .opened-burger .burger,#common .opened-burger .burger,#sentient-paas .opened-burger .burger,#sentient-pe .opened-burger .burger,#sentient-analytics .opened-burger .burger,#sentient-gateway .opened-burger .burger {
+        background-image:url(https://img.docs.sentient.invenia.in/s-close-icon.svg)
     }
 }
 
@@ -1812,11 +1812,11 @@ header .logo {
 		height: 135px;
 	}
 	
-    #home .opened-burger .support-ukraine p,#docs .opened-burger .support-ukraine p,#common .opened-burger .support-ukraine p,#thingsboard-paas .opened-burger .support-ukraine p,#thingsboard-pe .opened-burger .support-ukraine p,#trendz .opened-burger .support-ukraine p,#thingsboard-edge .opened-burger .support-ukraine p {
+    #home .opened-burger .support-ukraine p,#docs .opened-burger .support-ukraine p,#common .opened-burger .support-ukraine p,#sentient-paas .opened-burger .support-ukraine p,#sentient-pe .opened-burger .support-ukraine p,#sentient-analytics .opened-burger .support-ukraine p,#sentient-gateway .opened-burger .support-ukraine p {
         color:#000
     }
 
-    #home .opened-burger .head-menu,#docs .opened-burger .head-menu,#common .opened-burger .head-menu,#thingsboard-paas .opened-burger .head-menu,#thingsboard-pe .opened-burger .head-menu,#trendz .opened-burger .head-menu,#thingsboard-edge .opened-burger .head-menu {
+    #home .opened-burger .head-menu,#docs .opened-burger .head-menu,#common .opened-burger .head-menu,#sentient-paas .opened-burger .head-menu,#sentient-pe .opened-burger .head-menu,#sentient-analytics .opened-burger .head-menu,#sentient-gateway .opened-burger .head-menu {
         display: block;
         margin: 70px -30px 0;
         padding: 16px 30px 0
@@ -1887,48 +1887,48 @@ header .logo {
 		width: 50%;
 	}
 
-    #home .opened-burger .head-menu ul a,#home .opened-burger .head-menu ul a:not([href]),#home .opened-burger .head-menu ul span.main-menu-link,#docs .opened-burger .head-menu ul a,#docs .opened-burger .head-menu ul a:not([href]),#docs .opened-burger .head-menu ul span.main-menu-link,#common .opened-burger .head-menu ul a,#common .opened-burger .head-menu ul a:not([href]),#common .opened-burger .head-menu ul span.main-menu-link,#thingsboard-paas .opened-burger .head-menu ul a,#thingsboard-paas .opened-burger .head-menu ul a:not([href]),#thingsboard-paas .opened-burger .head-menu ul span.main-menu-link,#thingsboard-pe .opened-burger .head-menu ul a,#thingsboard-pe .opened-burger .head-menu ul a:not([href]),#thingsboard-pe .opened-burger .head-menu ul span.main-menu-link,#trendz .opened-burger .head-menu ul a,#trendz .opened-burger .head-menu ul a:not([href]),#trendz .opened-burger .head-menu ul span.main-menu-link,#thingsboard-edge .opened-burger .head-menu ul a,#thingsboard-edge .opened-burger .head-menu ul a:not([href]),#thingsboard-edge .opened-burger .head-menu ul span.main-menu-link {
+    #home .opened-burger .head-menu ul a,#home .opened-burger .head-menu ul a:not([href]),#home .opened-burger .head-menu ul span.main-menu-link,#docs .opened-burger .head-menu ul a,#docs .opened-burger .head-menu ul a:not([href]),#docs .opened-burger .head-menu ul span.main-menu-link,#common .opened-burger .head-menu ul a,#common .opened-burger .head-menu ul a:not([href]),#common .opened-burger .head-menu ul span.main-menu-link,#sentient-paas .opened-burger .head-menu ul a,#sentient-paas .opened-burger .head-menu ul a:not([href]),#sentient-paas .opened-burger .head-menu ul span.main-menu-link,#sentient-pe .opened-burger .head-menu ul a,#sentient-pe .opened-burger .head-menu ul a:not([href]),#sentient-pe .opened-burger .head-menu ul span.main-menu-link,#sentient-analytics .opened-burger .head-menu ul a,#sentient-analytics .opened-burger .head-menu ul a:not([href]),#sentient-analytics .opened-burger .head-menu ul span.main-menu-link,#sentient-gateway .opened-burger .head-menu ul a,#sentient-gateway .opened-burger .head-menu ul a:not([href]),#sentient-gateway .opened-burger .head-menu ul span.main-menu-link {
         color: #212529
     }
 
-    #home .opened-burger .head-menu ul .centered-sub,#docs .opened-burger .head-menu ul .centered-sub,#common .opened-burger .head-menu ul .centered-sub,#thingsboard-paas .opened-burger .head-menu ul .centered-sub,#thingsboard-pe .opened-burger .head-menu ul .centered-sub,#trendz .opened-burger .head-menu ul .centered-sub,#thingsboard-edge .opened-burger .head-menu ul .centered-sub {
+    #home .opened-burger .head-menu ul .centered-sub,#docs .opened-burger .head-menu ul .centered-sub,#common .opened-burger .head-menu ul .centered-sub,#sentient-paas .opened-burger .head-menu ul .centered-sub,#sentient-pe .opened-burger .head-menu ul .centered-sub,#sentient-analytics .opened-burger .head-menu ul .centered-sub,#sentient-gateway .opened-burger .head-menu ul .centered-sub {
         margin: 0;
         width: 100%
     }
 
-    #home .opened-burger .head-menu ul .centered-sub .sub-menu,#docs .opened-burger .head-menu ul .centered-sub .sub-menu,#common .opened-burger .head-menu ul .centered-sub .sub-menu,#thingsboard-paas .opened-burger .head-menu ul .centered-sub .sub-menu,#thingsboard-pe .opened-burger .head-menu ul .centered-sub .sub-menu,#trendz .opened-burger .head-menu ul .centered-sub .sub-menu,#thingsboard-edge .opened-burger .head-menu ul .centered-sub .sub-menu {
+    #home .opened-burger .head-menu ul .centered-sub .sub-menu,#docs .opened-burger .head-menu ul .centered-sub .sub-menu,#common .opened-burger .head-menu ul .centered-sub .sub-menu,#sentient-paas .opened-burger .head-menu ul .centered-sub .sub-menu,#sentient-pe .opened-burger .head-menu ul .centered-sub .sub-menu,#sentient-analytics .opened-burger .head-menu ul .centered-sub .sub-menu,#sentient-gateway .opened-burger .head-menu ul .centered-sub .sub-menu {
         background-color: unset
     }
 
-    #home .opened-burger .head-menu ul .centered-sub .sub-menu li a,#docs .opened-burger .head-menu ul .centered-sub .sub-menu li a,#common .opened-burger .head-menu ul .centered-sub .sub-menu li a,#thingsboard-paas .opened-burger .head-menu ul .centered-sub .sub-menu li a,#thingsboard-pe .opened-burger .head-menu ul .centered-sub .sub-menu li a,#trendz .opened-burger .head-menu ul .centered-sub .sub-menu li a,#thingsboard-edge .opened-burger .head-menu ul .centered-sub .sub-menu li a {
+    #home .opened-burger .head-menu ul .centered-sub .sub-menu li a,#docs .opened-burger .head-menu ul .centered-sub .sub-menu li a,#common .opened-burger .head-menu ul .centered-sub .sub-menu li a,#sentient-paas .opened-burger .head-menu ul .centered-sub .sub-menu li a,#sentient-pe .opened-burger .head-menu ul .centered-sub .sub-menu li a,#sentient-analytics .opened-burger .head-menu ul .centered-sub .sub-menu li a,#sentient-gateway .opened-burger .head-menu ul .centered-sub .sub-menu li a {
         color: #212529
     }
 
-    #home .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#docs .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#common .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#thingsboard-paas .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#thingsboard-pe .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#trendz .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#thingsboard-edge .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a {
+    #home .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#docs .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#common .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-paas .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-pe .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-analytics .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a,#sentient-gateway .opened-burger .head-menu ul .centered-sub .sub-menu li:hover a {
         color: #2a7dec
     }
 
-    #home .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#docs .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#common .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#thingsboard-paas .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#thingsboard-pe .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#trendz .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#thingsboard-edge .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group {
+    #home .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#docs .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#common .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#sentient-paas .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#sentient-pe .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#sentient-analytics .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group,#sentient-gateway .opened-burger .head-menu ul .centered-sub .sub-menu .bottom-group {
         width: calc(100% + 94px)
     }
 
-    #home .opened-burger .n-button,#docs .opened-burger .n-button,#common .opened-burger .n-button,#thingsboard-paas .opened-burger .n-button,#thingsboard-pe .opened-burger .n-button,#trendz .opened-burger .n-button,#thingsboard-edge .opened-burger .n-button {
+    #home .opened-burger .n-button,#docs .opened-burger .n-button,#common .opened-burger .n-button,#sentient-paas .opened-burger .n-button,#sentient-pe .opened-burger .n-button,#sentient-analytics .opened-burger .n-button,#sentient-gateway .opened-burger .n-button {
         display: flex;
 		width: 100%;
     }
 
-    #home .opened-burger .n-button.try,#docs .opened-burger .n-button.try,#common .opened-burger .n-button.try,#thingsboard-paas .opened-burger .n-button.try,#thingsboard-pe .opened-burger .n-button.try,#trendz .opened-burger .n-button.try,#thingsboard-edge .opened-burger .n-button.try {
+    #home .opened-burger .n-button.try,#docs .opened-burger .n-button.try,#common .opened-burger .n-button.try,#sentient-paas .opened-burger .n-button.try,#sentient-pe .opened-burger .n-button.try,#sentient-analytics .opened-burger .n-button.try,#sentient-gateway .opened-burger .n-button.try {
         border: solid 1px #ebebeb;
         color: #212529;
         background-color: unset
     }
 
-    #home .opened-burger .n-button.try:hover,#docs .opened-burger .n-button.try:hover,#common .opened-burger .n-button.try:hover,#thingsboard-paas .opened-burger .n-button.try:hover,#thingsboard-pe .opened-burger .n-button.try:hover,#trendz .opened-burger .n-button.try:hover,#thingsboard-edge .opened-burger .n-button.try:hover {
+    #home .opened-burger .n-button.try:hover,#docs .opened-burger .n-button.try:hover,#common .opened-burger .n-button.try:hover,#sentient-paas .opened-burger .n-button.try:hover,#sentient-pe .opened-burger .n-button.try:hover,#sentient-analytics .opened-burger .n-button.try:hover,#sentient-gateway .opened-burger .n-button.try:hover {
         border: solid 2px #212529;
         padding: 9px 10px
     }
 
-    #home .opened-burger .n-button.price:hover,#docs .opened-burger .n-button.price:hover,#common .opened-burger .n-button.price:hover,#thingsboard-paas .opened-burger .n-button.price:hover,#thingsboard-pe .opened-burger .n-button.price:hover,#trendz .opened-burger .n-button.price:hover,#thingsboard-edge .opened-burger .n-button.price:hover {
+    #home .opened-burger .n-button.price:hover,#docs .opened-burger .n-button.price:hover,#common .opened-burger .n-button.price:hover,#sentient-paas .opened-burger .n-button.price:hover,#sentient-pe .opened-burger .n-button.price:hover,#sentient-analytics .opened-burger .n-button.price:hover,#sentient-gateway .opened-burger .n-button.price:hover {
         color: #fff;
         background-color: #2a7dec;
         box-shadow: 0 18px 16px -10px rgba(42,125,236,.25)
@@ -1964,7 +1964,7 @@ header .logo {
     }
 
     header.opened-burger .burger {
-        background-image: url(https://img.thingsboard.io/close-icon.svg)
+        background-image: url(https://img.docs.sentient.invenia.in/close-icon.svg)
     }
 	
 	header .head-menu ul li .centered-sub .sub-menu.open-sub .sub-groups .group .column:not(:first-child) .group-name {
@@ -1989,7 +1989,7 @@ header .logo {
 
 @media screen and (max-width: 1280px) and (max-width:1024px) {
     header.opened-burger .burger {
-        background-image:url(https://img.thingsboard.io/s-close-icon.svg)
+        background-image:url(https://img.docs.sentient.invenia.in/s-close-icon.svg)
     }
 }
 
@@ -2153,7 +2153,7 @@ header .logo {
     right: 22px;
     display: none;
     filter: unset;
-    background-image: url(https://img.thingsboard.io/burger-icon.svg);
+    background-image: url(https://img.docs.sentient.invenia.in/burger-icon.svg);
 	background-color: unset;
     height: 47px;
     width: 47px;
@@ -2164,7 +2164,7 @@ header .logo {
     .burger {
         height: 37px;
         width: 37px;
-        background-image: url(https://img.thingsboard.io/s-burger-icon.svg)
+        background-image: url(https://img.docs.sentient.invenia.in/s-burger-icon.svg)
     }
 }
 
@@ -2215,7 +2215,7 @@ footer main .deeper,footer div.main-div .deeper {
 }
 
 footer main .deeper .footer-logo,footer div.main-div .deeper .footer-logo {
-    background-image: url(https://img.thingsboard.io/thingsboard_logo_b.svg);
+    background-image: url(https://img.docs.sentient.invenia.in/sentient_logo_b.svg);
     filter: invert(100%) sepia(68%) saturate(0%) hue-rotate(350deg) brightness(113%) contrast(101%);
     width: 180px;
     height: 60px;
@@ -2460,7 +2460,7 @@ section {
 }
 
 #home #hero div:nth-child(1) {
-    background-image: url(https://img.thingsboard.io/tb-cover.webp)!important
+    background-image: url(https://img.docs.sentient.invenia.in/tb-cover.webp)!important
 }
 
 #home #hero .video-cover {
@@ -2475,7 +2475,7 @@ section {
     background-color: #000;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-image: url(https://img.thingsboard.io/tb-cover.webp)
+    background-image: url(https://img.docs.sentient.invenia.in/tb-cover.webp)
 }
 
 #home #hero #hero-content {
@@ -3660,7 +3660,7 @@ hr {
     position: absolute;
     filter: invert(100%) sepia(74%) saturate(108%) hue-rotate(175deg) brightness(90%) contrast(96%);
     outline: none;
-    background-image: url(https://img.thingsboard.io/slider-arrow.svg);
+    background-image: url(https://img.docs.sentient.invenia.in/slider-arrow.svg);
     background-color: transparent;
     width: 17px;
     height: 50px;
@@ -4691,7 +4691,7 @@ blockquote p{
 	top: -160px;
 }
 
-.thingsboard-media-banner-wrapper{
+.sentient-media-banner-wrapper{
 	padding-bottom: 32px;
 	border-bottom: 1px solid #0000001F;
 	margin-bottom: 32px;
@@ -4758,7 +4758,7 @@ blockquote p{
 }
 
 
-.thingsboard-media-banner{
+.sentient-media-banner{
 	background: #F0F7FB;
 	border-radius: 12px;
 	padding: 36px;
@@ -4767,16 +4767,16 @@ blockquote p{
 }
 
 
-.thingsboard-media-banner-text{
+.sentient-media-banner-text{
 	margin-bottom: 20px;
 	font-family: Poppins;
 }
 
-.thingsboard-media-banner-logo{
+.sentient-media-banner-logo{
 	margin-bottom: 20px;
 	width: 258px;
 	height: 48px;
-	background: url('/blog/wp-content/uploads/2024/03/thingsboard_logo_blue.svg');
+	background: url('/blog/wp-content/uploads/2024/03/sentient_logo_blue.svg');
 	background-size: contain;
     background-repeat: no-repeat;
 }
@@ -5094,7 +5094,7 @@ blockquote p{
 	box-shadow: 0px 0px 18.188px 0px #CECECE;
 }
 
-.tbmq-block {
+.st-rmqtt-block {
 	padding: 32px;
 	border-radius: 12px;
 	border: 1px solid rgba(31, 139, 77, 0.24);
@@ -5105,29 +5105,29 @@ blockquote p{
 	);
 }
 
-.tbmq-block p {
+.st-rmqtt-block p {
 	margin-bottom: 0px;
 }
 
-.tbmq-block .tbmq-block-title, .tbmq-block-text {
+.st-rmqtt-block .st-rmqtt-block-title, .st-rmqtt-block-text {
 	color: #343434;
 }
 
-.tbmq-block .tbmq-block-title {
+.st-rmqtt-block .st-rmqtt-block-title {
 	font-size: 24px;
 	font-weight: 500;
 	line-height: 27.429px;
 	letter-spacing: 0.06px;
 }
 
-.tbmq-block .tbmq-block-text {
+.st-rmqtt-block .st-rmqtt-block-text {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
 	letter-spacing: 0.04px;
 }
 
-.tbmq-button-primary, .tbmq-button-secondary {
+.st-rmqtt-button-primary, .st-rmqtt-button-secondary {
 	padding: 10px 16px;
 	border: 1px solid #1F8B4D;
 	border-radius: 6px;
@@ -5140,34 +5140,34 @@ blockquote p{
 	transition: ease-in-out 0.3s;
 }
 
-.tbmq-button-primary {
+.st-rmqtt-button-primary {
 	text-decoration-color: #FFF;
 	background: #1F8B4D;
 	color: #FFF;
 }
 
-.tbmq-button-primary:hover, .tbmq-button-secondary:hover {
+.st-rmqtt-button-primary:hover, .st-rmqtt-button-secondary:hover {
 	text-decoration: none;
 }
 
-.tbmq-button-primary:hover {
+.st-rmqtt-button-primary:hover {
 	color: #1F8B4D;
 	background: transparent;
 }
 
-.tbmq-button-secondary:hover {
+.st-rmqtt-button-secondary:hover {
 	color: #FFF;
 	background: #1F8B4D;
 }
 
-.tbmq-button-secondary {
+.st-rmqtt-button-secondary {
 	background: transparent;
 	color: #1F8B4D;
 	text-decoration-color: #1F8B4D;
 }
 
 @media (max-width: 500px) {
-	.tbmq-button-primary, .tbmq-button-secondary {
+	.st-rmqtt-button-primary, .st-rmqtt-button-secondary {
 		width: 100%;
 	}
 }
@@ -5539,7 +5539,7 @@ blockquote p{
 	}
 }	
 @media(max-width: 440px){
-	.thingsboard-media-banner{
+	.sentient-media-banner{
 		margin-top: 0px;
 	}
 	.cs-main-content{
@@ -5564,7 +5564,7 @@ blockquote p{
 	.cs-read-next article{
 		width: 300px;
 	}
-	.thingsboard-media-banner-logo{
+	.sentient-media-banner-logo{
 		width: 208px;
 		height: 38px;
 	}

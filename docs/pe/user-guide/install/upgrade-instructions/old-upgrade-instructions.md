@@ -3,7 +3,7 @@ layout: docwithnav-pe
 assignees:
 - ashvayka
 title: Upgrade instructions
-description: ThingsBoard PE IoT platform upgrade instructions
+description: SENTIENT Professional Edition IoT platform upgrade instructions
 hidetoc: "true"
 
 ---
@@ -123,18 +123,18 @@ hidetoc: "true"
 
 
 
-## Prepare for upgrading ThingsBoard (CentOS, Ubuntu)
+## Prepare for upgrading SENTIENT (CentOS, Ubuntu)
 
-**Stop ThingsBoard**
-Check if ThingsBoard and database services are running 
-Initially ThingsBoard, check status to ensure it is stopped and then databases.  
+**Stop SENTIENT**
+Check if SENTIENT and database services are running 
+Initially SENTIENT, check status to ensure it is stopped and then databases.  
 ```bash
-sudo systemctl stop thingsboard
+sudo systemctl stop sentient
 ```
 {: .copy-code}
 
 ```bash
-sudo systemctl status thingsboard
+sudo systemctl status sentient
 ```
 {: .copy-code}
 
@@ -149,7 +149,7 @@ sudo systemctl status postgresql
 ***Make sure you have enough space to place a backup of the database***  
 Check database size
 ```bash
-sudo -u postgres psql -c "SELECT pg_size_pretty( pg_database_size('thingsboard') );"
+sudo -u postgres psql -c "SELECT pg_size_pretty( pg_database_size('sentient') );"
 ```
 {: .copy-code}
 
@@ -161,7 +161,7 @@ df -h /
 
 If there is enough free space - make a backup.
 ```bash
-sudo -Hiu postgres pg_dump thingsboard > thingsboard.sql.bak
+sudo -Hiu postgres pg_dump sentient > sentient.sql.bak
 ```
 {: .copy-code}
 Check backup file being created.
@@ -230,36 +230,36 @@ Do nothing, postgresql is already running.
 
 ## Upgrading to 2.4.1PE
 
-These steps are applicable for 2.4.0PE ThingsBoard Professional Edition version.
+These steps are applicable for 2.4.0PE SENTIENT Professional Edition version.
 
 ### Ubuntu/CentOS
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-4-1
-thingsboard-download-2-4-1-ubuntu,Ubuntu,shell,resources/2.4.1pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.4.1pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-4-1-centos,CentOS,shell,resources/2.4.1pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.4.1pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-4-1
+sentient-download-2-4-1-ubuntu,Ubuntu,shell,resources/2.4.1pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.4.1pe/sentient-ubuntu-download.sh
+sentient-download-2-4-1-centos,CentOS,shell,resources/2.4.1pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.4.1pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-4-1
-thingsboard-installation-2-4-1-ubuntu,Ubuntu,shell,resources/2.4.1pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.4.1pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-4-1-centos,CentOS,shell,resources/2.4.1pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.4.1pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-4-1
+sentient-installation-2-4-1-ubuntu,Ubuntu,shell,resources/2.4.1pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.4.1pe/sentient-ubuntu-installation.sh
+sentient-installation-2-4-1-centos,CentOS,shell,resources/2.4.1pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.4.1pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
-Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **/etc/thingsboard/conf/thingsboard.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **/etc/sentient/conf/sentient.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
  
 ```
     database:
@@ -271,36 +271,36 @@ Please make sure that you set **database.entities.type** and **database.ts.type*
 
 Execute upgrade script
 ```bash
-sudo /usr/share/thingsboard/bin/install/upgrade.sh --fromVersion=2.4.0 
+sudo /usr/share/sentient/bin/install/upgrade.sh --fromVersion=2.4.0 
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.4.1pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.4.1pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.4.1pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.4.1pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
  
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.4.1pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
-* Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **\<ThingsBoard install dir\>\conf\thingsboard.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.4.1pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
+* Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **\<SENTIENT install dir\>\conf\sentient.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
   
   ```
   database:
@@ -310,54 +310,54 @@ net stop thingsboard
       type: "${DATABASE_TS_TYPE:cassandra}" # cassandra OR sql (for hybrid mode, only this value should be cassandra)
   ```       
 
-* Run **upgrade.bat** script to upgrade ThingsBoard to the new version.
+* Run **upgrade.bat** script to upgrade SENTIENT to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\thingsboard>upgrade.bat --fromVersion=2.4.0
+C:\sentient>upgrade.bat --fromVersion=2.4.0
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 
 ## Upgrading to 2.4.2.1PE
 
-These steps are applicable for 2.4.1PE and 2.4.2PE ThingsBoard Professional Edition versions.
+These steps are applicable for 2.4.1PE and 2.4.2PE SENTIENT Professional Edition versions.
 
 ### Ubuntu/CentOS
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-4-2
-thingsboard-download-2-4-2-ubuntu,Ubuntu,shell,resources/2.4.2.1pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.4.2.1pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-4-2-centos,CentOS,shell,resources/2.4.2.1pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.4.2.1pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-4-2
+sentient-download-2-4-2-ubuntu,Ubuntu,shell,resources/2.4.2.1pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.4.2.1pe/sentient-ubuntu-download.sh
+sentient-download-2-4-2-centos,CentOS,shell,resources/2.4.2.1pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.4.2.1pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-4-2
-thingsboard-installation-2-4-2-ubuntu,Ubuntu,shell,resources/2.4.2.1pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.4.2.1pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-4-2-centos,CentOS,shell,resources/2.4.2.1pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.4.2.1pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-4-2
+sentient-installation-2-4-2-ubuntu,Ubuntu,shell,resources/2.4.2.1pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.4.2.1pe/sentient-ubuntu-installation.sh
+sentient-installation-2-4-2-centos,CentOS,shell,resources/2.4.2.1pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.4.2.1pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
-Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **/etc/thingsboard/conf/thingsboard.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **/etc/sentient/conf/sentient.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
  
 ```
     database:
@@ -369,36 +369,36 @@ Please make sure that you set **database.entities.type** and **database.ts.type*
 
 Execute upgrade script:
 ```bash
-sudo /usr/share/thingsboard/bin/install/upgrade.sh --fromVersion=2.4.1
+sudo /usr/share/sentient/bin/install/upgrade.sh --fromVersion=2.4.1
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.4.2.1pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.4.2.1pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.4.2.1pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.4.2.1pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
  
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.4.2.1pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
-* Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **\<ThingsBoard install dir\>\conf\thingsboard.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.4.2.1pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
+* Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **\<SENTIENT install dir\>\conf\sentient.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
   
 ```
       database:
@@ -408,53 +408,53 @@ net stop thingsboard
           type: "${DATABASE_TS_TYPE:cassandra}" # cassandra OR sql (for hybrid mode, only this value should be cassandra)
 ```
 
-* Run **upgrade.bat** script to upgrade ThingsBoard to the new version.
+* Run **upgrade.bat** script to upgrade SENTIENT to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\thingsboard>upgrade.bat --fromVersion=2.4.1
+C:\sentient>upgrade.bat --fromVersion=2.4.1
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```text
-net start thingsboard
+net start sentient
 ```
 
 ## Upgrading to 2.4.3PE
 
-These steps are applicable for 2.4.2PE and 2.4.2.1PE ThingsBoard Professional Edition versions.
+These steps are applicable for 2.4.2PE and 2.4.2.1PE SENTIENT Professional Edition versions.
 
 ### Ubuntu/CentOS
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-4-3
-thingsboard-download-2-4-3-ubuntu,Ubuntu,shell,resources/2.4.3pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.4.3pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-4-3-centos,CentOS,shell,resources/2.4.3pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.4.3pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-4-3
+sentient-download-2-4-3-ubuntu,Ubuntu,shell,resources/2.4.3pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.4.3pe/sentient-ubuntu-download.sh
+sentient-download-2-4-3-centos,CentOS,shell,resources/2.4.3pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.4.3pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-4-3
-thingsboard-installation-2-4-3-ubuntu,Ubuntu,shell,resources/2.4.3pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.4.3pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-4-3-centos,CentOS,shell,resources/2.4.3pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.4.3pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-4-3
+sentient-installation-2-4-3-ubuntu,Ubuntu,shell,resources/2.4.3pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.4.3pe/sentient-ubuntu-installation.sh
+sentient-installation-2-4-3-centos,CentOS,shell,resources/2.4.3pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.4.3pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
-Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **/etc/thingsboard/conf/thingsboard.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **/etc/sentient/conf/sentient.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
  
 ```
     database:
@@ -466,36 +466,36 @@ Please make sure that you set **database.entities.type** and **database.ts.type*
 
 Execute upgrade script:
 ```bash
-sudo /usr/share/thingsboard/bin/install/upgrade.sh --fromVersion=2.4.2
+sudo /usr/share/sentient/bin/install/upgrade.sh --fromVersion=2.4.2
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.4.3pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.4.3pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.4.3pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.4.3pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
  
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.4.3pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
-* Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **\<ThingsBoard install dir\>\conf\thingsboard.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.4.3pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
+* Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **\<SENTIENT install dir\>\conf\sentient.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
 
 ```
       database:
@@ -505,61 +505,61 @@ net stop thingsboard
           type: "${DATABASE_TS_TYPE:cassandra}" # cassandra OR sql (for hybrid mode, only this value should be cassandra)
 ```       
 
-* Run **upgrade.bat** script to upgrade ThingsBoard to the new version.
+* Run **upgrade.bat** script to upgrade SENTIENT to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\thingsboard>upgrade.bat --fromVersion=2.4.2
+C:\sentient>upgrade.bat --fromVersion=2.4.2
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 
 ## Upgrading to 2.5PE
 
-These steps are applicable for 2.4.3PE ThingsBoard Professional Edition version.
+These steps are applicable for 2.4.3PE SENTIENT Professional Edition version.
 
 ### Ubuntu/CentOS
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-5
-thingsboard-download-2-5-ubuntu,Ubuntu,shell,resources/2.5pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.5pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-5-centos,CentOS,shell,resources/2.5pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.5pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-5
+sentient-download-2-5-ubuntu,Ubuntu,shell,resources/2.5pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.5pe/sentient-ubuntu-download.sh
+sentient-download-2-5-centos,CentOS,shell,resources/2.5pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.5pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-5
-thingsboard-installation-2-5-ubuntu,Ubuntu,shell,resources/2.5pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-5-centos,CentOS,shell,resources/2.5pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.5pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-5
+sentient-installation-2-5-ubuntu,Ubuntu,shell,resources/2.5pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5pe/sentient-ubuntu-installation.sh
+sentient-installation-2-5-centos,CentOS,shell,resources/2.5pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.5pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Upgrading ThingsBoard PE from 2.4.3 to 2.5 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
+**NOTE:** Upgrading SENTIENT Professional Edition from 2.4.3 to 2.5 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
 
 Please refer to the guides below that will describe how to upgrade your PostgreSQL service on:
 
  - [Ubuntu](https://gist.github.com/ShvaykaD/1f0e6c1321a0a2b4b9f3b9ea9ab3e8d3)
  - [CentOS](https://gist.github.com/ShvaykaD/313745d31a9af6db3d6a01ec9f16aac8)
  
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
-Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **/etc/thingsboard/conf/thingsboard.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.  
+Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **/etc/sentient/conf/sentient.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
  
 ```
     database:
@@ -575,8 +575,8 @@ Please make sure that you set **database.entities.type** and **database.ts.type*
 **NOTE:** If you are using **PostgreSql(Sql)** for time-series data storage before executing the upgrade script, go to the PostgreSQL terminal(psql) and follow the instructions below: 
 
 ```bash
-    # Connect to thingsboard database:
-    \c thingsboard
+    # Connect to sentient database:
+    \c sentient
 
     # Execute the next commands:
 
@@ -596,37 +596,37 @@ Please make sure that you set **database.entities.type** and **database.ts.type*
 
 Finally, execute upgrade script:
 ```bash
-sudo /usr/share/thingsboard/bin/install/upgrade.sh --fromVersion=2.4.3
+sudo /usr/share/sentient/bin/install/upgrade.sh --fromVersion=2.4.3
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.5pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.5pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
  
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.5pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
-* Please note that upgrading ThingsBoard PE from 2.4.3 to 2.5 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
-* Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **\<ThingsBoard install dir\>\conf\thingsboard.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.5pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
+* Please note that upgrading SENTIENT Professional Edition from 2.4.3 to 2.5 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
+* Please make sure that you set **database.entities.type** and **database.ts.type** parameters values (in the file **\<SENTIENT install dir\>\conf\sentient.yml**) to "cassandra" instead of "sql" in order to upgrade your cassandra database:
 
 ```
     database:
@@ -642,8 +642,8 @@ net stop thingsboard
 **NOTE:** If you are using **PostgreSql(Sql)** for time-series data storage before executing the upgrade script, you need to access the psql terminal. Once you will be logged to the psql terminal, please follow the instructions below:
 
 ```bash
-    # Connect to thingsboard database:
-    \c thingsboard
+    # Connect to sentient database:
+    \c sentient
 
     # Execute the next commands:
 
@@ -662,64 +662,64 @@ net stop thingsboard
 ```
 {: .copy-code}
 
-* Finally, run **upgrade.bat** script to upgrade ThingsBoard to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\thingsboard>upgrade.bat --fromVersion=2.4.3
+C:\sentient>upgrade.bat --fromVersion=2.4.3
 ```
 {: .copy-code}
 
 #### Start the service
 
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 
 ## Upgrading to 2.5.1PE
 
-These steps are applicable for 2.4.3PE ThingsBoard Professional Edition version.
+These steps are applicable for 2.4.3PE SENTIENT Professional Edition version.
 
 ### Ubuntu/CentOS {#ubuntucentos-251}
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-5
-thingsboard-download-2-5-1-ubuntu,Ubuntu,shell,resources/2.5.1pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.1pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-5-1-centos,CentOS,shell,resources/2.5.1pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.5.1pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-5
+sentient-download-2-5-1-ubuntu,Ubuntu,shell,resources/2.5.1pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.1pe/sentient-ubuntu-download.sh
+sentient-download-2-5-1-centos,CentOS,shell,resources/2.5.1pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.5.1pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-5-1
-thingsboard-installation-2-5-1-ubuntu,Ubuntu,shell,resources/2.5.1pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.1pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-5-1-centos,CentOS,shell,resources/2.5.1pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.5.1pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-5-1
+sentient-installation-2-5-1-ubuntu,Ubuntu,shell,resources/2.5.1pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.1pe/sentient-ubuntu-installation.sh
+sentient-installation-2-5-1-centos,CentOS,shell,resources/2.5.1pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.5.1pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Upgrading ThingsBoard PE from 2.4.3 to 2.5.1 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
+**NOTE:** Upgrading SENTIENT Professional Edition from 2.4.3 to 2.5.1 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
 
 Please refer to the guides below that will describe how to upgrade your PostgreSQL service on:
 
 - [Ubuntu](https://gist.github.com/ShvaykaD/1f0e6c1321a0a2b4b9f3b9ea9ab3e8d3)
 - [CentOS](https://gist.github.com/ShvaykaD/313745d31a9af6db3d6a01ec9f16aac8)
 
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 Finally, execute upgrade script:
 ```bash
-sudo /usr/share/thingsboard/bin/install/upgrade.sh --fromVersion=2.4.3
+sudo /usr/share/sentient/bin/install/upgrade.sh --fromVersion=2.4.3
 ```
 {: .copy-code}
 
@@ -728,36 +728,36 @@ sudo /usr/share/thingsboard/bin/install/upgrade.sh --fromVersion=2.4.3
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows {#windows-251}
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.5.1pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.5.1pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.1pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.1pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.5.1pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
-* Please note that upgrading ThingsBoard PE from 2.4.3 to 2.5.1 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.5.1pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
+* Please note that upgrading SENTIENT Professional Edition from 2.4.3 to 2.5.1 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
 
-* Finally, run **upgrade.bat** script to upgrade ThingsBoard to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\thingsboard>upgrade.bat --fromVersion=2.4.3
+C:\sentient>upgrade.bat --fromVersion=2.4.3
 ```
 {: .copy-code}
 
@@ -766,7 +766,7 @@ C:\thingsboard>upgrade.bat --fromVersion=2.4.3
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 
@@ -774,78 +774,78 @@ net start thingsboard
 
 ### Ubuntu/CentOS {#ubuntucentos-252}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.1PE. In order to upgrade to 2.5.2PE you need to [**upgrade to 2.5.1PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-251).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.1PE. In order to upgrade to 2.5.2PE you need to [**upgrade to 2.5.1PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-251).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-5-2
-thingsboard-download-2-5-2-ubuntu,Ubuntu,shell,resources/2.5.2pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.2pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-5-2-centos,CentOS,shell,resources/2.5.2pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.5.2pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-5-2
+sentient-download-2-5-2-ubuntu,Ubuntu,shell,resources/2.5.2pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.2pe/sentient-ubuntu-download.sh
+sentient-download-2-5-2-centos,CentOS,shell,resources/2.5.2pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.5.2pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-5-2
-thingsboard-installation-2-5-2-ubuntu,Ubuntu,shell,resources/2.5.2pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.2pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-5-2-centos,CentOS,shell,resources/2.5.2pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.5.2pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-5-2
+sentient-installation-2-5-2-ubuntu,Ubuntu,shell,resources/2.5.2pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.2pe/sentient-ubuntu-installation.sh
+sentient-installation-2-5-2-centos,CentOS,shell,resources/2.5.2pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.5.2pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Upgrading ThingsBoard to 2.5.2 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
+**NOTE:** Upgrading SENTIENT to 2.5.2 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
 
 Please refer to the guides below that will describe how to upgrade your PostgreSQL service on:
 
 - [Ubuntu](https://gist.github.com/ShvaykaD/1f0e6c1321a0a2b4b9f3b9ea9ab3e8d3)
 - [CentOS](https://gist.github.com/ShvaykaD/313745d31a9af6db3d6a01ec9f16aac8)
 
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 #### Start the service
 
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows {#windows-252}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.1PE. In order to upgrade to 2.5.2PE you need to [**upgrade to 2.5.1PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-251).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.1PE. In order to upgrade to 2.5.2PE you need to [**upgrade to 2.5.1PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-251).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.5.2pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.5.2pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.2pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.2pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.5.2pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
-* Please note that upgrading ThingsBoard PE from 2.4.3 to 2.5.1 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.5.2pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
+* Please note that upgrading SENTIENT Professional Edition from 2.4.3 to 2.5.1 version in case of using PostgreSQL database require to upgrade the PostgreSQL service to 11.x version.
 
-* Finally, run **upgrade.bat** script to upgrade ThingsBoard to the new version.
+* Finally, run **upgrade.bat** script to upgrade SENTIENT to the new version.
 
 **NOTE** Scripts listed above should be executed using Administrator Role.
 
 ```text
-C:\thingsboard>upgrade.bat --fromVersion=2.4.3
+C:\sentient>upgrade.bat --fromVersion=2.4.3
 ```
 {: .copy-code}
 
@@ -854,7 +854,7 @@ C:\thingsboard>upgrade.bat --fromVersion=2.4.3
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 
@@ -862,70 +862,70 @@ net start thingsboard
 
 ### Ubuntu/CentOS {#ubuntucentos-253}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.2PE. In order to upgrade to 2.5.3PE you need to [**upgrade to 2.5.2PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-252).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.2PE. In order to upgrade to 2.5.3PE you need to [**upgrade to 2.5.2PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-252).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-5-3
-thingsboard-download-2-5-3-ubuntu,Ubuntu,shell,resources/2.5.3pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.3pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-5-3-centos,CentOS,shell,resources/2.5.3pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.5.3pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-5-3
+sentient-download-2-5-3-ubuntu,Ubuntu,shell,resources/2.5.3pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.3pe/sentient-ubuntu-download.sh
+sentient-download-2-5-3-centos,CentOS,shell,resources/2.5.3pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.5.3pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-8-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-5-3
-thingsboard-installation-2-5-3-ubuntu,Ubuntu,shell,resources/2.5.3pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.3pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-5-3-centos,CentOS,shell,resources/2.5.3pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.5.3pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-5-3
+sentient-installation-2-5-3-ubuntu,Ubuntu,shell,resources/2.5.3pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.3pe/sentient-ubuntu-installation.sh
+sentient-installation-2-5-3-centos,CentOS,shell,resources/2.5.3pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.5.3pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 #### Start the service
 
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows {#windows-253}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.2PE. In order to upgrade to 2.5.3PE you need to [**upgrade to 2.5.2PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-252).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.2PE. In order to upgrade to 2.5.3PE you need to [**upgrade to 2.5.2PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-252).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.5.3pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.5.3pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.3pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.3pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.5.3pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.5.3pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
 
 #### Start the service
 
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 
@@ -933,70 +933,70 @@ net start thingsboard
 
 ### Ubuntu/CentOS {#ubuntucentos-254}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.3PE. In order to upgrade to 2.5.4PE you need to [**upgrade to 2.5.3PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-253).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.3PE. In order to upgrade to 2.5.4PE you need to [**upgrade to 2.5.3PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-253).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-5-4
-thingsboard-download-2-5-4-ubuntu,Ubuntu,shell,resources/2.5.4pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.4pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-5-4-centos,CentOS,shell,resources/2.5.4pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.5.4pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-5-4
+sentient-download-2-5-4-ubuntu,Ubuntu,shell,resources/2.5.4pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.4pe/sentient-ubuntu-download.sh
+sentient-download-2-5-4-centos,CentOS,shell,resources/2.5.4pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.5.4pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-9-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-9-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-5-4
-thingsboard-installation-2-5-4-ubuntu,Ubuntu,shell,resources/2.5.4pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.4pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-5-4-centos,CentOS,shell,resources/2.5.4pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.5.4pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-5-4
+sentient-installation-2-5-4-ubuntu,Ubuntu,shell,resources/2.5.4pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.4pe/sentient-ubuntu-installation.sh
+sentient-installation-2-5-4-centos,CentOS,shell,resources/2.5.4pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.5.4pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 #### Start the service
 
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows {#windows-254}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.3PE. In order to upgrade to 2.5.4PE you need to [**upgrade to 2.5.3PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-253).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.3PE. In order to upgrade to 2.5.4PE you need to [**upgrade to 2.5.3PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-253).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.5.4pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.5.4pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.4pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.4pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.5.4pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.5.4pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
 
 #### Start the service
 
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 
@@ -1004,70 +1004,70 @@ net start thingsboard
 
 ### Ubuntu/CentOS {#ubuntucentos-255}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.4PE. In order to upgrade to 2.5.5PE you need to [**upgrade to 2.5.4PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-254).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.4PE. In order to upgrade to 2.5.5PE you need to [**upgrade to 2.5.4PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-254).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-5-5
-thingsboard-download-2-5-5-ubuntu,Ubuntu,shell,resources/2.5.5pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.5pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-5-5-centos,CentOS,shell,resources/2.5.5pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.5.5pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-5-5
+sentient-download-2-5-5-ubuntu,Ubuntu,shell,resources/2.5.5pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.5pe/sentient-ubuntu-download.sh
+sentient-download-2-5-5-centos,CentOS,shell,resources/2.5.5pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.5.5pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-9-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-9-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-5-5
-thingsboard-installation-2-5-5-ubuntu,Ubuntu,shell,resources/2.5.5pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.5pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-5-5-centos,CentOS,shell,resources/2.5.5pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.5.5pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-5-5
+sentient-installation-2-5-5-ubuntu,Ubuntu,shell,resources/2.5.5pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.5pe/sentient-ubuntu-installation.sh
+sentient-installation-2-5-5-centos,CentOS,shell,resources/2.5.5pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.5.5pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 #### Start the service
 
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows {#windows-255}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.4PE. In order to upgrade to 2.5.5PE you need to [**upgrade to 2.5.4PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-254).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.4PE. In order to upgrade to 2.5.5PE you need to [**upgrade to 2.5.4PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-254).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.5.5pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.5.5pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.5pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.5pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.5.5pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.5.5pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
 
 #### Start the service
 
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 
@@ -1075,70 +1075,70 @@ net start thingsboard
 
 ### Ubuntu/CentOS {#ubuntucentos-256}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.5PE. In order to upgrade to 2.5.6PE you need to [**upgrade to 2.5.5PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-255).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.5PE. In order to upgrade to 2.5.6PE you need to [**upgrade to 2.5.5PE first**](/docs/user-guide/install/pe/upgrade-instructions/#ubuntucentos-255).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-{% capture tabspec %}thingsboard-download-2-5-6
-thingsboard-download-2-5-6-ubuntu,Ubuntu,shell,resources/2.5.6pe/thingsboard-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.6pe/thingsboard-ubuntu-download.sh
-thingsboard-download-2-5-6-centos,CentOS,shell,resources/2.5.6pe/thingsboard-centos-download.sh,/docs/user-guide/install/resources/2.5.6pe/thingsboard-centos-download.sh{% endcapture %}  
+{% capture tabspec %}sentient-download-2-5-6
+sentient-download-2-5-6-ubuntu,Ubuntu,shell,resources/2.5.6pe/sentient-ubuntu-download.sh,/docs/user-guide/install/resources/2.5.6pe/sentient-ubuntu-download.sh
+sentient-download-2-5-6-centos,CentOS,shell,resources/2.5.6pe/sentient-centos-download.sh,/docs/user-guide/install/resources/2.5.6pe/sentient-centos-download.sh{% endcapture %}  
 {% include tabs.html %}
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```bash
-sudo service thingsboard stop
+sudo service sentient stop
 ```
 {: .copy-code}
 
-* Install Thingsboard Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-9-install-thingsboard-webreport-component).
+* Install Sentient Web Report component as described [here](/docs/user-guide/install/pe/ubuntu/#step-9-install-sentient-webreport-component).
 
 
-{% capture tabspec %}thingsboard-installation-2-5-6
-thingsboard-installation-2-5-6-ubuntu,Ubuntu,shell,resources/2.5.6pe/thingsboard-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.6pe/thingsboard-ubuntu-installation.sh
-thingsboard-installation-2-5-6-centos,CentOS,shell,resources/2.5.6pe/thingsboard-centos-installation.sh,/docs/user-guide/install/resources/2.5.6pe/thingsboard-centos-installation.sh{% endcapture %}  
+{% capture tabspec %}sentient-installation-2-5-6
+sentient-installation-2-5-6-ubuntu,Ubuntu,shell,resources/2.5.6pe/sentient-ubuntu-installation.sh,/docs/user-guide/install/resources/2.5.6pe/sentient-ubuntu-installation.sh
+sentient-installation-2-5-6-centos,CentOS,shell,resources/2.5.6pe/sentient-centos-installation.sh,/docs/user-guide/install/resources/2.5.6pe/sentient-centos-installation.sh{% endcapture %}  
 {% include tabs.html %}
 
-**NOTE:** Package installer will ask you to merge your thingsboard configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
+**NOTE:** Package installer will ask you to merge your sentient configuration. It is preferred to use **merge option** to make sure that all your previous parameters will not be overwritten.
 
 #### Start the service
 
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```bash
-sudo service thingsboard start
+sudo service sentient start
 ```
 {: .copy-code}
 
 ### Windows {#windows-256}
 
-**NOTE**: These upgrade steps are applicable for ThingsBoard version 2.5.5PE. In order to upgrade to 2.5.6PE you need to [**upgrade to 2.5.5PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-255).
+**NOTE**: These upgrade steps are applicable for SENTIENT version 2.5.5PE. In order to upgrade to 2.5.6PE you need to [**upgrade to 2.5.5PE first**](/docs/user-guide/install/pe/upgrade-instructions/#windows-255).
 
-#### ThingsBoard PE package download
+#### SENTIENT Professional Edition package download
 
-Download ThingsBoard PE installation package for Windows: [thingsboard-windows-setup-2.5.6pe.exe](https://dist.thingsboard.io/thingsboard-windows-setup-2.5.6pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.6pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.6pe.exe).
 
-#### ThingsBoard PE service upgrade
+#### SENTIENT Professional Edition service upgrade
 
-* Stop ThingsBoard service if it is running.
+* Stop SENTIENT service if it is running.
 
 ```text
-net stop thingsboard
+net stop sentient
 ```
 {: .copy-code}
 
-* Make a backup of previous ThingsBoard PE configuration located in \<ThingsBoard install dir\>\conf (for ex. C:\thingsboard\conf).
-* Run installation package **thingsboard-windows-setup-2.5.6pe.exe**.
-* Compare your old ThingsBoard configuration files (from the backup you made in the first step) with new ones.
+* Make a backup of previous SENTIENT Professional Edition configuration located in \<SENTIENT install dir\>\conf (for ex. C:\sentient\conf).
+* Run installation package **sentient-windows-setup-2.5.6pe.exe**.
+* Compare your old SENTIENT configuration files (from the backup you made in the first step) with new ones.
 
 #### Start the service
 
 {% include templates/redis-post-upgrade-notice.md %}
 
 ```text
-net start thingsboard
+net start sentient
 ```
 {: .copy-code}
 

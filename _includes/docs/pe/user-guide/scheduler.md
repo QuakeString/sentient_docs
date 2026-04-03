@@ -3,8 +3,8 @@
 
 ## Overview
 
-ThingsBoard allows you to schedule various types of events with flexible schedule configuration.
-ThingsBoard Scheduler fires configured scheduler events according to their schedule.
+SENTIENT allows you to schedule various types of events with flexible schedule configuration.
+SENTIENT Scheduler fires configured scheduler events according to their schedule.
 When scheduler event is fired the [Rule Engine Message](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/overview/#rule-engine-message) is generated
 from the event configuration which has a similar structure with a Rule Engine Message.
 Generated message is then forwarded to [Rule Engine](/docs/{{docsPrefix}}user-guide/rule-engine-2-0/re-getting-started/) and processed starting from
@@ -27,7 +27,7 @@ See video tutorial below for step-by-step instruction how to use this feature.
 
 ## Scheduler Administration
 
-Tenant administrator and customer users are able to configure **Scheduler events** in ThingsBoard.
+Tenant administrator and customer users are able to configure **Scheduler events** in SENTIENT.
 
 ![image](/images/user-guide/ui/scheduler.png)
 
@@ -95,7 +95,7 @@ Allows to schedule reports generation supported by [Reporting](/docs/{{docsPrefi
 ![image](/images/user-guide/ui/scheduler-generate-report-event-type-email-config.png)
 
 - **Report configuration**:
-    - **Base URL** - base URL of ThingsBoard UI that should be accessible by Report Server.
+    - **Base URL** - base URL of SENTIENT UI that should be accessible by Report Server.
     - **Dashboard** - dashboard that will be used for report generation.
     - **Dashboard state parameter value** - used to specify target dashboard state for report generation. Can be set automatically by clicking on right most button of the field and invoking **Select dashboard state** dialog.
     - **Timezone** - timezone in which target dashboard will be presented in report.
@@ -139,7 +139,7 @@ Allows to schedule command ([RPC call](/docs/{{docsPrefix}}user-guide/rpc/#serve
 
 ## Scheduler widget
 
-ThingsBoard provides ability to manage scheduler events via **Scheduler events** or **Reports schedule** Widgets which is part of **Scheduling** Widgets Bundle.
+SENTIENT provides ability to manage scheduler events via **Scheduler events** or **Reports schedule** Widgets which is part of **Scheduling** Widgets Bundle.
 
 ![image](/images/user-guide/ui/scheduler-scheduler-events-widget.png)
 

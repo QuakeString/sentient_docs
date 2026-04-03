@@ -1,11 +1,11 @@
 version: '3.1'
 services:
-  thingsboard_website:
-    container_name: thingsboard_website
+  sentient_website:
+    container_name: sentient_website
     restart: always
-    image: "thingsboard/website"
+    image: "sentient/website"
     environment:
-      PAGES_REPO_NWO: "thingsboard/thingsboard.github.io"
+      PAGES_REPO_NWO: "sentient/sentient.github.io"
     ports:
       - "4000:4000"
     volumes:

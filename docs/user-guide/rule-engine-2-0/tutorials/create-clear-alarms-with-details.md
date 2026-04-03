@@ -12,10 +12,10 @@ description: Create and Clear Alarms with details
 
 This tutorial is based on the [create & clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/#use-case) tutorial and it's use case.
 We will reuse the rule chains from the above-mentioned tutorial and will configure the Alarm Details function in the Create and Clear Alarm nodes.
-Let's assume your device is using DHT22 sensor to collect and push temperature readings to ThingsBoard.
+Let's assume your device is using DHT22 sensor to collect and push temperature readings to SENTIENT.
 DHT22 sensor is good for -40 to 80°C temperature readings. We want generate Alarms if temperature is out of good range.
 
-In this tutorial we will configure ThingsBoard Rule Engine to:
+In this tutorial we will configure SENTIENT Rule Engine to:
 
 - Count number of critical temperature updates for each device and save this info in Alarm details.
 - Save latest critical temperature value in Alarm details.

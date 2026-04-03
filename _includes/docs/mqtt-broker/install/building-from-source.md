@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-This guide will help you download and build TBMQ from sources. Instructions listed below are tested on Ubuntu 20.04 LTS / 22.04 LTS / 24.04 LTS.
+This guide will help you download and build ST-RMQTT from sources. Instructions listed below are tested on Ubuntu 20.04 LTS / 22.04 LTS / 24.04 LTS.
 
 ## Required tools
 
@@ -9,7 +9,7 @@ This section contains installation instructions for build tools.
 
 ### Java
 
-TBMQ is build using Java 17. Follow these instructions to install OpenJDK 17:
+ST-RMQTT is build using Java 17. Follow these instructions to install OpenJDK 17:
 
 ```bash
 sudo apt update
@@ -42,7 +42,7 @@ OpenJDK 64-Bit Server VM (build ...)
 
 ### Maven
 
-TBMQ build requires Maven 3.6.3+.
+ST-RMQTT build requires Maven 3.6.3+.
 
 ```bash
 sudo apt install maven
@@ -54,17 +54,17 @@ Use java installation [instructions](#java) to fix this.
 
 ## Source code
 
-You can clone source code of the project from the official [GitHub repo](https://github.com/thingsboard/tbmq).
+You can clone source code of the project from the official [GitHub repo](https://github.com/sentient/st-rmqtt).
 
 ```bash
-git clone -b {{ site.release.broker_branch }} https://github.com/thingsboard/tbmq.git
-cd tbmq
+git clone -b {{ site.release.broker_branch }} https://github.com/sentient/st-rmqtt.git
+cd st-rmqtt
 ```
 {: .copy-code}
 
 ## Build
 
-Run the following command from the TBMQ folder to build the project:
+Run the following command from the ST-RMQTT folder to build the project:
 
 ```bash
 mvn clean install -DskipTests
@@ -106,7 +106,7 @@ mvn clean install
 
 ## Tips and tricks
 
-TBMQ is quite easy to build from sources on a brand-new clear environment.
+ST-RMQTT is quite easy to build from sources on a brand-new clear environment.
 
 Here are some tips and tricks to boost build experience: 
 

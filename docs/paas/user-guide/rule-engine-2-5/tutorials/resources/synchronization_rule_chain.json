@@ -15,7 +15,7 @@
           "layoutX": 288,
           "layoutY": 304
         },
-        "type": "org.thingsboard.rule.engine.flow.TbCheckpointNode",
+        "type": "org.sentient.rule.engine.flow.TbCheckpointNode",
         "name": "CheckPoint",
         "debugMode": false,
         "configuration": {
@@ -27,7 +27,7 @@
           "layoutX": 53,
           "layoutY": 246
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Generator",
         "debugMode": false,
         "configuration": {
@@ -43,7 +43,7 @@
           "layoutX": 52,
           "layoutY": 374
         },
-        "type": "org.thingsboard.rule.engine.debug.TbMsgGeneratorNode",
+        "type": "org.sentient.rule.engine.debug.TbMsgGeneratorNode",
         "name": "Generator",
         "debugMode": false,
         "configuration": {
@@ -59,7 +59,7 @@
           "layoutX": 548,
           "layoutY": 307
         },
-        "type": "org.thingsboard.rule.engine.metadata.TbGetAttributesNode",
+        "type": "org.sentient.rule.engine.metadata.TbGetAttributesNode",
         "name": "Originator Attributes",
         "debugMode": true,
         "configuration": {
@@ -78,7 +78,7 @@
           "layoutX": 808,
           "layoutY": 306
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "Counter Script",
         "debugMode": true,
         "configuration": {
@@ -90,7 +90,7 @@
           "layoutX": 1065,
           "layoutY": 309
         },
-        "type": "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode",
+        "type": "org.sentient.rule.engine.telemetry.TbMsgAttributesNode",
         "name": "Save Attributes",
         "debugMode": true,
         "configuration": {

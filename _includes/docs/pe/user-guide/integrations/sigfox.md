@@ -5,7 +5,7 @@
 
 ## Overview
 
-Sigfox Integration allows to stream data from Sigfox Backend to ThingsBoard and converts binary device payloads to the ThingsBoard format.
+Sigfox Integration allows to stream data from Sigfox Backend to SENTIENT and converts binary device payloads to the SENTIENT format.
 
 Please review the integration diagram to learn more.
 
@@ -16,10 +16,10 @@ Please review the integration diagram to learn more.
 In this tutorial, we will use:
 
 {% if docsPrefix == "pe/" %}
- - The instance of [ThingsBoard Professional Edition](https://thingsboard.io/docs/user-guide/install/pe/installation-options/) installed locally;
+ - The instance of [SENTIENT Professional Edition](https://docs.sentient.invenia.in/docs/user-guide/install/pe/installation-options/) installed locally;
   {% endif %}
   {% if docsPrefix contains "paas/" %}
- - ThingsBoard Professional Edition instance — [{{hostName}}](https://{{hostName}});
+ - SENTIENT Professional Edition instance — [{{hostName}}](https://{{hostName}});
   {% endif %}
 
  - a [Sigfox](https://www.sigfox.com/) account;
@@ -31,7 +31,7 @@ Let’s assume that we have a device *Sigfox-2216792*. Our sensor device publish
 
 ### Create Uplink Converter
 
-You can сreate an uplink converter in the Data converters page or directly in the integration. Uplink converter is necessary in order to convert the incoming data from the device into the required format for displaying them in ThingsBoard.
+You can сreate an uplink converter in the Data converters page or directly in the integration. Uplink converter is necessary in order to convert the incoming data from the device into the required format for displaying them in SENTIENT.
 
 Go to the **Integration center** -> **Data converters** page and click "plus" button to create a new converter. Name it "**SigFox Uplink Converter**" and select type **Uplink**. To view the events, enable **debug mode**. In the function decoder field, specify a script to parse and transform data.
 
@@ -67,7 +67,7 @@ JavaScript<small></small>%,%anonymous%,%templates/integration/sigfox/sigfox-upli
 {% capture difference %}
 **NOTE**
 <br>
-If the "Allow create devices or assets" checkbox is unchecked, when sending a message to thingsboard with any parameters of the device (or asset), if such a device (asset) does not exist, then device (asset) will not be created.
+If the "Allow create devices or assets" checkbox is unchecked, when sending a message to sentient with any parameters of the device (or asset), if such a device (asset) does not exist, then device (asset) will not be created.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -88,7 +88,7 @@ If the "Allow create devices or assets" checkbox is unchecked, when sending a me
 
 ## SigFox Configuration
 
-Now we need to set up a **Sigfox account** so that data from our device is sent to the ThingsBoard platform.
+Now we need to set up a **Sigfox account** so that data from our device is sent to the SENTIENT platform.
 
 Go to your **Sigfox account** -> **Device type** -> enter your device type edit mode. In my case, this is "**thermostats**".
 
@@ -102,7 +102,7 @@ Then go to the **Callbacks** tab.
 
 A **callback** is a custom http request containing your device data, along with other variables, sent to a given platform when the aforesaid device message is received by Sigfox cloud.
 
-Create a callback to connect the Sigfox cloud to your ThingsBoard platform. In the upper right corner, click on the "**New**" button, and select "**Custom callback**".
+Create a callback to connect the Sigfox cloud to your SENTIENT platform. In the upper right corner, click on the "**New**" button, and select "**Custom callback**".
 
 ![image](/images/user-guide/integrations/sigfox/sigfox-device-callbacks-2-pe.png)
 
@@ -128,9 +128,9 @@ Make the downlink callback active. Click on the "**Downlink**" icon.
 
 ![image](/images/user-guide/integrations/sigfox/sigfox-device-callbacks-3-pe.png)
 
-After this, the device is ready to send data to Thingsboard. Send an uplink message from the device. 
+After this, the device is ready to send data to Sentient. Send an uplink message from the device. 
 
-After you sent the uplink message a new device was created in Thingsboard. You should receive a **notification** about it. To view notification click on the "bell" icon in the upper right corner of the screen.
+After you sent the uplink message a new device was created in Sentient. You should receive a **notification** about it. To view notification click on the "bell" icon in the upper right corner of the screen.
 The notification will contain link to the *Sigfox-2216792* device provisioned by the integration (your device name may differ from the one shown in this example). Learn more about notifications and how to configure them [here](/docs/{{docsPrefix}}user-guide/notifications/). 
 
 Navigate to this device.

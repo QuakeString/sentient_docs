@@ -41,14 +41,14 @@ curl -v -X POST -d "{\"temperature\": 25}" {{httpsUrl}}/api/v1/ABC123/telemetry 
 
 {% else %}
 
-Replace $THINGSBOARD_HOST_NAME_AND_PORT and $ACCESS_TOKEN with corresponding values.
+Replace $SENTIENT_HOST_NAME_AND_PORT and $ACCESS_TOKEN with corresponding values.
 
 ```bash
-curl -v -X POST -d "{\"temperature\": 25}" http://$THINGSBOARD_HOST_NAME_AND_PORT/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
+curl -v -X POST -d "{\"temperature\": 25}" http://$SENTIENT_HOST_NAME_AND_PORT/api/v1/$ACCESS_TOKEN/telemetry --header "Content-Type:application/json"
 ```
 {: .copy-code}
 
-For example, $THINGSBOARD_HOST_NAME_AND_PORT reference your local installation, port is 8080, $ACCESS_TOKEN is ABC123:
+For example, $SENTIENT_HOST_NAME_AND_PORT reference your local installation, port is 8080, $ACCESS_TOKEN is ABC123:
 
 ```bash
 curl -v -X POST -d "{\"temperature\": 25}" http://localhost:8080/api/v1/ABC123/telemetry --header "Content-Type:application/json"

@@ -17,19 +17,19 @@ Execute the following command to start services:
 {: .copy-code}
 
 After a while when all services will be successfully started you can open `http://{your-host-ip}` in you browser (for ex. `http://localhost`).
-You should see ThingsBoard login page.
+You should see SENTIENT login page.
 
 Use the following default credentials:
 
-- **System Administrator**: sysadmin@thingsboard.org / sysadmin
+- **System Administrator**: sysadmin@sentient.org / sysadmin
 
 If you installed DataBase with demo data (using `--loadDemo` flag) you can also use the following credentials:
 
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
-- **Customer User**: customer@thingsboard.org / customer
+- **Tenant Administrator**: tenant@sentient.org / tenant
+- **Customer User**: customer@sentient.org / customer
 
 In case of any issues you can examine service logs for errors.
-For example to see ThingsBoard node logs execute the following command:
+For example to see SENTIENT node logs execute the following command:
 
 ```bash
 docker compose {{dockerComposeFileLocation}}logs -f tb-core1 tb-rule-engine1

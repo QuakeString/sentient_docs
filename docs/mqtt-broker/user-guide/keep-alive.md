@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
 title: Keep Alive
-description: TBMQ Keep Alive guide
+description: ST-RMQTT Keep Alive guide
 
 ---
 

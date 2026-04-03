@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Configure Self-registration in ThingsBoard PE Mobile Application
+title: Configure Self-registration in SENTIENT Professional Edition Mobile Application
 
 self-registration:
  0:
@@ -21,7 +21,7 @@ self-registration:
 
 ---
 
-Self-registration in ThingsBoard PE Mobile Application allows new users to create accounts independently, directly through the app.
+Self-registration in SENTIENT Professional Edition Mobile Application allows new users to create accounts independently, directly through the app.
 This feature provides a registration form that enables new users to sign up and access the platform with predefined permissions.
 
 The configuration of this feature is managed by the Tenant Administrator through the [Mobile center](/docs/pe/mobile-center/mobile-center/){:target="_blank"}.
@@ -32,8 +32,8 @@ The configuration of this feature is managed by the Tenant Administrator through
     <div class="mobile-frame ios">
         <div class="frame-video">
             <video autoplay loop preload="auto" muted playsinline>
-                 <source src="https://video.thingsboard.io/mobile/pe/self-registration.mp4" type="video/mp4">
-                 <source src="https://video.thingsboard.io/mobile/pe/self-registration.webm" type="video/webm">
+                 <source src="https://video.docs.sentient.invenia.in/mobile/pe/self-registration.mp4" type="video/mp4">
+                 <source src="https://video.docs.sentient.invenia.in/mobile/pe/self-registration.webm" type="video/webm">
             </video>
         </div>
     </div>

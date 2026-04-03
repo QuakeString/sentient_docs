@@ -1,15 +1,15 @@
-# ThingsBoard Community Edition vs Professional Edition: What’s the Difference
+# SENTIENT vs Professional Edition: What’s the Difference
 
-## Unlocking IoT Potential with ThingsBoard
+## Unlocking IoT Potential with SENTIENT
 
-ThingsBoard was originally created to help organizations worldwide unlock the full potential of IoT. Established with a vision to simplify and speed up IoT adoption, our mission is to make this technology accessible, scalable, and flexible for organizations of all sizes. We empower businesses to optimize operations, reduce costs, and discover new opportunities using cutting-edge tools.
+SENTIENT was originally created to help organizations worldwide unlock the full potential of IoT. Established with a vision to simplify and speed up IoT adoption, our mission is to make this technology accessible, scalable, and flexible for organizations of all sizes. We empower businesses to optimize operations, reduce costs, and discover new opportunities using cutting-edge tools.
 
-To achieve this, we offer two powerful editions of our platform: Community Edition (CE) and Professional Edition (PE). Whether you start with the CE or the advanced features of PE, ThingsBoard provides a clear path to build, launch, and scale your IoT solution.
+To achieve this, we offer two powerful editions of our platform: Community Edition (CE) and Professional Edition (PE). Whether you start with the CE or the advanced features of PE, SENTIENT provides a clear path to build, launch, and scale your IoT solution.
 
 
-## ThingsBoard Community Edition (CE): The Open-Source Powerhouse
+## SENTIENT (CE): The Open-Source Powerhouse
 
-ThingsBoard CE is the most feature-rich, open-source IoT platform in the world, and we are committed to keeping it that way. It is a fully-functional, scalable, and fault-tolerant solution that can be deployed in a cluster and used in commercial projects. CE provides a robust foundation for building anything from a small proof-of-concept to a large-scale IoT solution.
+SENTIENT is the most feature-rich, open-source IoT platform in the world, and we are committed to keeping it that way. It is a fully-functional, scalable, and fault-tolerant solution that can be deployed in a cluster and used in commercial projects. CE provides a robust foundation for building anything from a small proof-of-concept to a large-scale IoT solution.
 
 
 :gear: **CE Features:**
@@ -21,11 +21,11 @@ ThingsBoard CE is the most feature-rich, open-source IoT platform in the world, 
 - *Data Visualization*: Use real-time, interactive dashboards to visualize telemetry data.
 - *High Scalability*: A fault-tolerant clustering architecture supports millions of devices.
 
-:pushpin: Learn more: [Community Edition](https://thingsboard.io/docs/)
+:pushpin: Learn more: [Community Edition](https://docs.sentient.invenia.in/docs/)
 
-## ThingsBoard Professional Edition (PE): Enterprise-Grade Features & Support
+## SENTIENT Professional Edition (PE): Enterprise-Grade Features & Support
 
-ThingsBoard PE is built for enterprises and businesses that want to reduce time-to-market, cut development costs, and access more features out-of-the-box. Including all the powerful features of the Community Edition, we believe PE is the most feature-rich commercial IoT platform available. Our development model reflects our commitment to the open-source community, with 80% of our code changes contributed directly to CE, while PE receives additional enterprise-focused features and dedicated support.
+SENTIENT Professional Edition is built for enterprises and businesses that want to reduce time-to-market, cut development costs, and access more features out-of-the-box. Including all the powerful features of the Community Edition, we believe PE is the most feature-rich commercial IoT platform available. Our development model reflects our commitment to the open-source community, with 80% of our code changes contributed directly to CE, while PE receives additional enterprise-focused features and dedicated support.
 
 
 :rocket: **PE Features:**
@@ -40,7 +40,7 @@ ThingsBoard PE is built for enterprises and businesses that want to reduce time-
 - *Support & SLA*: Get dedicated support and a guaranteed uptime SLA, key for our managed cloud offerings.
 
 
-:pushpin: Learn more: [Professional Edition](https://thingsboard.io/docs/pe/)
+:pushpin: Learn more: [Professional Edition](https://docs.sentient.invenia.in/docs/pe/)
 
 ---
 
@@ -81,14 +81,14 @@ ThingsBoard PE is built for enterprises and businesses that want to reduce time-
 
 ## Migration From CE to PE
 
-One of the most powerful advantages of the ThingsBoard ecosystem is the **seamless migration path from CE to PE**.
+One of the most powerful advantages of the SENTIENT ecosystem is the **seamless migration path from CE to PE**.
 You can start your project on CE to prove its value, and when your business is ready to scale, you can upgrade to PE without changing your core platform.
 
 This reduces both technological and business risks, accelerates time-to-market, and enables building IoT solutions with a focus on **growth**.
 
 ---
 
-## How to start using ThingsBoard CE and PE
+## How to start using SENTIENT and PE
 
 Choosing the right edition is only half the job. It’s equally important to select the **right model** to match your goals, resources, and infrastructure strategy.
 
@@ -96,27 +96,27 @@ Choosing the right edition is only half the job. It’s equally important to sel
 
 1. **Self-managed (On-premise)**
    Full control in your own or isolated data centers, or offline/on-premise setups.
-   :link: [Self-managed](https://thingsboard.io/docs/user-guide/install/installation-options/)
+   :link: [Self-managed](https://docs.sentient.invenia.in/docs/user-guide/install/installation-options/)
 
 ---
 
 ### :rocket: Getting started with Professional Edition
 
-Depending on your control, responsibility, and time-to-market requirements, ThingsBoard PE offers multiple deployment paths:
+Depending on your control, responsibility, and time-to-market requirements, SENTIENT Professional Edition offers multiple deployment paths:
 
-1. **ThingsBoard Cloud (Europe & North America)**
-   The fastest way to start. Managed by the ThingsBoard team — just connect your devices and start.
-   :link: [ThingsBoard Cloud](https://thingsboard.io/installations/)
+1. **SENTIENT Cloud (Europe & North America)**
+   The fastest way to start. Managed by the SENTIENT team — just connect your devices and start.
+   :link: [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/)
 
-2. **ThingsBoard Private Cloud (EU, US, APAC)**
+2. **SENTIENT Private Cloud (EU, US, APAC)**
    A dedicated and fully managed cluster with SLA guarantees.
    Ideal for scaling to hundreds of thousands or millions of devices.
-   :link: [Private Cloud](https://thingsboard.io/pricing/?product=thingsboard-private-cloud)
+   :link: [Private Cloud](https://docs.sentient.invenia.in/pricing/?product=sentient-private-cloud)
 
 3. **Self-managed (On-premise PE)**
    Full control in your own data centers.
-   ThingsBoard provides remote support for self-managed installations.
-   :link: [Self-managed](https://thingsboard.io/pricing/?product=thingsboard-pe&solution=pe-pay-as-you-go)
+   SENTIENT provides remote support for self-managed installations.
+   :link: [Self-managed](https://docs.sentient.invenia.in/pricing/?product=sentient-pe&solution=pe-pay-as-you-go)
 
 ---
 

@@ -6,7 +6,7 @@ description: Edge Dashboards Overview
 dashboard-provision:
     0:
         image: /images/edge/user-guide/dashboards/1-server-edge-dashboards.png
-        title: 'Ensure that you have previously created and configured Dashboards on the <b>ThingsBoard Server</b> and then go to the <b>Edge management > Instances</b> section and open the <b>"Manage dashboard"</b> page. View all Dashboards already deployed, or click the <b>"+"</b> icon to deploy the Dashboard to the <b>Edge</b> instance.'
+        title: 'Ensure that you have previously created and configured Dashboards on the <b>SENTIENT Server</b> and then go to the <b>Edge management > Instances</b> section and open the <b>"Manage dashboard"</b> page. View all Dashboards already deployed, or click the <b>"+"</b> icon to deploy the Dashboard to the <b>Edge</b> instance.'
     1:
         image: /images/edge/user-guide/dashboards/2-edge-edge-dashboards.png
         title: 'To verify that the Dashboards are available, log in to your <b>Edge</b> instance and go to the <b>Dashboards</b> section.'
@@ -14,7 +14,7 @@ dashboard-provision:
 create-dashboard:
     0:
         image: /images/edge/user-guide/dashboards/5-create-new-dashboard.png
-        title: 'Log in to your <b>ThingsBoard Edge</b> instance and navigate to the <b>“Dashboards”</b> section, then click the <b>“+”</b> icon and select the <b>“Create new dashboard”</b> option.'
+        title: 'Log in to your <b>SENTIENT GATEWAY</b> instance and navigate to the <b>“Dashboards”</b> section, then click the <b>“+”</b> icon and select the <b>“Create new dashboard”</b> option.'
     1:
         image: /images/edge/user-guide/dashboards/6-new-dashboard-dialog.png
         title: 'In the pop-up window, enter a dashboard <b>title</b>. Other fields are optional. Click the <b>"Add"</b> button to proceed'
@@ -28,12 +28,12 @@ changes-from-edge-to-server:
         title: 'Create, configure or make any changes to the Dashboard on the <b>Edge</b> instance.'
     1:
         image: /images/edge/user-guide/dashboards/4-new-dashboard-on-server.png
-        title: 'Log in to your <b>ThingsBoard Server</b> and go to the <b>Dashboards</b> section to see that the changes have been applied to the <b>ThingsBoard Server</b>. Make sure you are connected to the internet.'
+        title: 'Log in to your <b>SENTIENT Server</b> and go to the <b>Dashboards</b> section to see that the changes have been applied to the <b>SENTIENT Server</b>. Make sure you are connected to the internet.'
 
 assign-customer:
     0:
         image: /images/edge/user-guide/dashboards/8-assign-customers.png
-        title: 'Log in to your <b>ThingsBoard Edge</b> instance and go to the <b>Dashboards</b> section. Click the <b>“Manage assigned customers”</b> button for the dashboard you want to assign a customer to.'
+        title: 'Log in to your <b>SENTIENT GATEWAY</b> instance and go to the <b>Dashboards</b> section. Click the <b>“Manage assigned customers”</b> button for the dashboard you want to assign a customer to.'
     1:
         image: /images/edge/user-guide/dashboards/9-add-customers-dialog.png
         title: 'Select the customers from the drop-down list to assign them or click the <b>“x”</b> icon to remove them from the dashboard. Click the <b>"Update"</b> button to confirm the assignment or removal.'

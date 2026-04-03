@@ -6,12 +6,12 @@ Install Docker for [Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 
 {% include templates/install/queue-kafka-in-docker.md %}
 
-##### ThingsBoard Configuration
+##### SENTIENT Configuration
 
-Edit ThingsBoard configuration file
+Edit SENTIENT configuration file
 
 ```text
-sudo nano /etc/thingsboard/conf/thingsboard.conf
+sudo nano /etc/sentient/conf/sentient.conf
 ```
 {: .copy-code}
 

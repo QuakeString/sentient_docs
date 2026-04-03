@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
 title: Upgrade instructions
-description: TBMQ upgrade instructions
+description: ST-RMQTT upgrade instructions
 notitle: "true"
 ---
 

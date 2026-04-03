@@ -15,7 +15,7 @@
           "layoutX": 650,
           "layoutY": 150
         },
-        "type": "org.thingsboard.rule.engine.transform.TbChangeOriginatorNode",
+        "type": "org.sentient.rule.engine.transform.TbChangeOriginatorNode",
         "name": "Change Originator",
         "debugMode": false,
         "configuration": {
@@ -39,7 +39,7 @@
           "layoutX": 342,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.filter.TbCheckRelationNode",
+        "type": "org.sentient.rule.engine.filter.TbCheckRelationNode",
         "name": "Check Relation",
         "debugMode": false,
         "configuration": {
@@ -54,7 +54,7 @@
           "layoutX": 973,
           "layoutY": 151
         },
-        "type": "org.thingsboard.rule.engine.transform.TbTransformMsgNode",
+        "type": "org.sentient.rule.engine.transform.TbTransformMsgNode",
         "name": "New RPC message",
         "debugMode": false,
         "configuration": {
@@ -66,7 +66,7 @@
           "layoutX": 1298,
           "layoutY": 149
         },
-        "type": "org.thingsboard.rule.engine.rpc.TbSendRPCRequestNode",
+        "type": "org.sentient.rule.engine.rpc.TbSendRPCRequestNode",
         "name": "Fire Alarm System",
         "debugMode": false,
         "configuration": {

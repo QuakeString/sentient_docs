@@ -1,14 +1,14 @@
 * TOC
 {:toc}
 
-TBMQ offers various options for managing MQTT client credentials via both its Web UI and [REST API](/docs/{{docsPrefix}}mqtt-broker/mqtt-client-credentials-management/). 
+ST-RMQTT offers various options for managing MQTT client credentials via both its Web UI and [REST API](/docs/{{docsPrefix}}mqtt-broker/mqtt-client-credentials-management/). 
 
-TBMQ supports the following types of client credentials to authenticate client connections:
+ST-RMQTT supports the following types of client credentials to authenticate client connections:
 - [Basic](/docs/{{docsPrefix}}mqtt-broker/security/#basic-authentication) - basic security measures based on combinations of client ID, username and password.
   - **Advantages:** Simple and easy to implement. Widely supported by applications and services. Low network overhead.
   - **Disadvantages:** Limited security.
 - [X.509 Certificate Chain](/docs/{{docsPrefix}}mqtt-broker/security/#tls-authentication) - advanced security measures based on X509 certificate chain that helps in verifying the identity of clients.
-  - **Advantages:** Enhanced security compared to the basic client credentials type. With SSL client credentials, both the client and TBMQ can authenticate each other. 
+  - **Advantages:** Enhanced security compared to the basic client credentials type. With SSL client credentials, both the client and ST-RMQTT can authenticate each other. 
   The SSL client credentials type provides more flexibility in terms of access control, as it allows for more granular access control policies based on the certificate subject name and other attributes.
   - **Disadvantages:** Complexity and increased cost. Setting up and managing SSL client credentials can be more complex and requires more expertise. SSL encryption and decryption require more computing resources.
 - **SCRAM** - advanced security measure using Salted Challenge Response Authentication Mechanism (SCRAM) that provides secure, password-based authentication (MQTT 5.0 Enhanced authentication feature).
@@ -27,7 +27,7 @@ To add new client credentials, please follow these steps:
 2. Fill in the Name field (which does not need to be unique).
 3. Select the appropriate _Client Type_:
    - **Device**. Use for clients that usually publish a lot of messages, but subscribe to a few topics with low message rate, i.e. IoT devices.
-   - **Applications**. Use for clients that subscribe to topics with high message rates and require message persistence when the client is offline, such as applications like **ThingsBoard, AWS IoT Core** etc.
+   - **Applications**. Use for clients that subscribe to topics with high message rates and require message persistence when the client is offline, such as applications like **SENTIENT, AWS IoT Core** etc.
    
    For more information on client types, please refer to the [docs](/docs/{{docsPrefix}}mqtt-broker/user-guide/mqtt-client-type/).
 
@@ -66,7 +66,7 @@ Broker administrators can modify the password for MQTT Basic client credentials.
 #### Authentication
 
 There are two authentication options based on the "Use certificate CN regex" parameter in the credentials. 
-Depending on this parameter, TBMQ can either authenticate clients by exact match using the certificate's Common Name (CN) or apply specific regex patterns to match and authorize clients, 
+Depending on this parameter, ST-RMQTT can either authenticate clients by exact match using the certificate's Common Name (CN) or apply specific regex patterns to match and authorize clients, 
 providing flexibility for client verification.
 
 * The **Certificate common name (CN)** should **exactly** match the client's or, if present, one of the parent's certificate CN. 
@@ -108,7 +108,7 @@ Please consider the following examples:
 
 ## Delete client credentials
 
-Broker administrators can remove client credentials from TBMQ system using the Web UI or [REST API](/docs/{{docsPrefix}}mqtt-broker/mqtt-client-credentials-management/).
+Broker administrators can remove client credentials from ST-RMQTT system using the Web UI or [REST API](/docs/{{docsPrefix}}mqtt-broker/mqtt-client-credentials-management/).
 
 There are a few ways of deleting client credentials:
 1. **Delete single**.
@@ -138,8 +138,8 @@ If the client credentials include a password, please ensure you replace "$YOUR_P
 Below are examples of the generated commands for the credentials with password:
 
 ```bash
-mosquitto_sub -d -q 1 -h localhost -p 1883 -t tbmq/demo/+ -i "tbmq_eJzCIh6r" -u "tbmq_un_VxUVPaF8" -P "$YOUR_PASSWORD" -v
-mosquitto_pub -d -q 1 -h localhost -p 1883 -t tbmq/demo/topic -i "tbmq_eJzCIh6r" -u "tbmq_un_VxUVPaF8" -P "$YOUR_PASSWORD" -m 'Hello World'
+mosquitto_sub -d -q 1 -h localhost -p 1883 -t st-rmqtt/demo/+ -i "st-rmqtt_eJzCIh6r" -u "st-rmqtt_un_VxUVPaF8" -P "$YOUR_PASSWORD" -v
+mosquitto_pub -d -q 1 -h localhost -p 1883 -t st-rmqtt/demo/topic -i "st-rmqtt_eJzCIh6r" -u "st-rmqtt_un_VxUVPaF8" -P "$YOUR_PASSWORD" -m 'Hello World'
 ```
 
 Also, if the client has configured subscribe/publish **Authorization rule patterns** that differ from the default value `.*` (any topic allowed), it indicates that the client has specific topic restrictions for publishing or subscribing. 

@@ -1,5 +1,5 @@
 ---
 layout: docwithnav
-title: "How to connect Valve Positioning Sensor to ThingsBoard?"
+title: "How to connect Valve Positioning Sensor to SENTIENT?"
 redirect_to: "/device-library/ce/valve-positioning-sensor/"
 ---

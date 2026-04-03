@@ -1,10 +1,10 @@
 ---
 layout: docwithnav-mqtt-broker
-title: Deploy TBMQ Cluster on Azure with Kubernetes
-description: TBMQ microservices setup with Kubernetes in AKS
+title: Deploy ST-RMQTT Cluster on Azure with Kubernetes
+description: ST-RMQTT microservices setup with Kubernetes in AKS
 
 ---
 
-{% assign tbmqSuffix = "CE" %}
+{% assign st-rmqttSuffix = "CE" %}
 {% assign deployment = "azure" %}
 {% include docs/mqtt-broker/install/cluster/azure-cluster-setup-old.md %}

@@ -3,11 +3,11 @@
 * Have a proxy server (**HTTP** or **HTTPS**) with its address, port, and credentials (if required).
 * Consider the addresses that should bypass the proxy (e.g., internal resources).
 * Have **Java 17** installed.
-* **ThingsBoard Edge** is installed and running.
+* **SENTIENT GATEWAY** is installed and running.
 
 #### Step 1. Modify Configuration File
 
-To configure **ThingsBoard Edge** behind proxy running on debian-based installation (e.g., Ubuntu), modify the **tb-edge.conf** file:
+To configure **SENTIENT GATEWAY** behind proxy running on debian-based installation (e.g., Ubuntu), modify the **tb-edge.conf** file:
 
 ```bash
 sudo tee -a /etc/tb-edge/conf/tb-edge.conf > /dev/null <<EOL
@@ -46,7 +46,7 @@ cat /etc/tb-edge/conf/tb-edge.conf
 ```
 {: .copy-code}
 
-#### Step 2. Restart ThingsBoard Edge
+#### Step 2. Restart SENTIENT GATEWAY
 
 For the changes to take effect, restart the service after modifying the **tb-edge.conf** file:
 
@@ -58,13 +58,13 @@ sudo service tb-edge restart
 Once the **Edge** service is started, open the **Edge UI** at [http://localhost:8080](http://localhost:8080){: target="_blank"}. Use the **tenant credentials** to log in.
 
 {% capture docker-deployment %}
-If the Edge HTTP bind port was changed to **18080** during Edge installation, access the **ThingsBoard Edge** instance at [http://localhost:18080](http://localhost:18080){: target="_blank"}.
+If the Edge HTTP bind port was changed to **18080** during Edge installation, access the **SENTIENT GATEWAY** instance at [http://localhost:18080](http://localhost:18080){: target="_blank"}.
 {% endcapture %}
 {% include templates/info-banner.md content=docker-deployment %}
 
 #### Troubleshooting
 
-**ThingsBoard Edge** logs stored in the following directory:
+**SENTIENT GATEWAY** logs stored in the following directory:
 
 ```bash
 /var/log/tb-edge

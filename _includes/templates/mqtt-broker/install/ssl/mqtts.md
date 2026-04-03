@@ -1,6 +1,6 @@
 ## Enabling MQTTS (MQTT over SSL/TLS)
 
-To enable **MQTT over SSL/TLS (MQTTS)** in TBMQ, you need to provide valid SSL certificates and configure TBMQ to use them.
+To enable **MQTT over SSL/TLS (MQTTS)** in ST-RMQTT, you need to provide valid SSL certificates and configure ST-RMQTT to use them.
 
 For details on supported formats and configuration options, see the [MQTT over SSL](/docs/{{docsPrefix}}mqtt-broker/security/mqtts/) guide.
 
@@ -23,7 +23,7 @@ volumes:
 ```
 {: .copy-code}
 
-Replace `PATH_TO_CERTS` with the path to your certificate files. Ensure TBMQ has read access to these files.
+Replace `PATH_TO_CERTS` with the path to your certificate files. Ensure ST-RMQTT has read access to these files.
 
 **Configure Environment Variables**
 
@@ -49,12 +49,12 @@ ports:
 ```
 {: .copy-code}
 
-**Restart TBMQ**
+**Restart ST-RMQTT**
 
-Apply the changes by restarting TBMQ:
+Apply the changes by restarting ST-RMQTT:
 
 ```bash
-./tbmq-install-and-run.sh
+./st-rmqtt-install-and-run.sh
 ```
 {: .copy-code}
 

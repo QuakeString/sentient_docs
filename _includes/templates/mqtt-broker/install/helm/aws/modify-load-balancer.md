@@ -1,11 +1,11 @@
-By default, the Helm chart deploys a standard NGINX Ingress Controller for HTTP and MQTT traffic when installing TBMQ on Kubernetes.
+By default, the Helm chart deploys a standard NGINX Ingress Controller for HTTP and MQTT traffic when installing ST-RMQTT on Kubernetes.
 
 ```yaml
 loadbalancer:
   type: "nginx"
 ```
 
-Since you are deploying the TBMQ cluster on AWS EKS, you need to change this value to:
+Since you are deploying the ST-RMQTT cluster on AWS EKS, you need to change this value to:
 
 ```yaml
 loadbalancer:
@@ -41,10 +41,10 @@ loadbalancer:
 ##### TLS termination (One-way TLS)
 
 The simplest way to configure MQTTS is to make your MQTT load balancer (AWS NLB) to act as a TLS termination point.
-This way we set up the one-way TLS connection, where the traffic between your devices and load balancers is encrypted, and the traffic between your load balancer and TBMQ is not encrypted.
+This way we set up the one-way TLS connection, where the traffic between your devices and load balancers is encrypted, and the traffic between your load balancer and ST-RMQTT is not encrypted.
 There should be no security issues, since the ALB/NLB is running in your VPC.
 The only major disadvantage of this option is that you can’t use “X.509 certificate” MQTT client credentials,
-since information about client certificate is not transferred from the load balancer to the TBMQ.
+since information about client certificate is not transferred from the load balancer to the ST-RMQTT.
 
 Use [AWS Certificate Manager](https://aws.amazon.com/certificate-manager/) to create or import SSL certificate. Note your certificate ARN.
 
@@ -65,10 +65,10 @@ loadbalancer:
 
 ##### Mutual TLS (Two-Way TLS or mTLS)
 
-The more complex way to enable MQTTS is to obtain valid (signed) TLS certificate and configure it in the TBMQ.
+The more complex way to enable MQTTS is to obtain valid (signed) TLS certificate and configure it in the ST-RMQTT.
 The main advantage of this option is that you may use it in combination with “X.509 certificate” MQTT client credentials.
 
-Please refer to the TBMQ Helm chart documentation for [details](https://artifacthub.io/packages/helm/tbmq-helm-chart/tbmq-cluster#configuring-mutual-tls-mtls-for-mqtt) on configuring Two-Way TLS.
+Please refer to the ST-RMQTT Helm chart documentation for [details](https://artifacthub.io/packages/helm/st-rmqtt-helm-chart/st-rmqtt-cluster#configuring-mutual-tls-mtls-for-mqtt) on configuring Two-Way TLS.
 
 {% capture tls-termination %}
 

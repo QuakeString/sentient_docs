@@ -1,9 +1,9 @@
 ---
-layout: docwithnav-trendz
+layout: docwithnav-sentient-analytics
 assignees:
 - vparomskiy
 title: Calendar heatmap
-description: Trendz Calendar 
+description: SENTIENT ANALYTICS Calendar 
 ---
 
 * TOC
@@ -11,7 +11,7 @@ description: Trendz Calendar
 
 Heatmap Calendar widget shows quick overview how metric changed over a year with day by day breakdown.
 
-![image](/images/trendz/calendar_heatmap.png)
+![image](/images/sentient-analytics/calendar_heatmap.png)
 
 ## Single field configuration
 
@@ -24,17 +24,17 @@ You can change color schema and View Settings.
 
 You can add multiple fields into **Value** section. In this case you can switch between fields using radio button.
 
-![image](/images/trendz/calendar_heatmap_multiple.png)
+![image](/images/sentient-analytics/calendar_heatmap_multiple.png)
 
 ## Select date action
 
-Trendz calendar view supports date click events. Is is useful when you want to select date of interest and drill down for further analysis.
+SENTIENT ANALYTICS calendar view supports date click events. Is is useful when you want to select date of interest and drill down for further analysis.
 
-For example you can create a dashboard in ThingsBoard that contains multiple widgets. All widgets take time range from the dashboard.
+For example you can create a dashboard in SENTIENT that contains multiple widgets. All widgets take time range from the dashboard.
 By configuring date click event on the calendar widget you can set required time range on the dashboard, so all other widgets would automatically update 
 and show data for the selected date.
 
-* Add Trendz calendar view on the ThingsBoard dashboard
+* Add SENTIENT ANALYTICS calendar view on the SENTIENT dashboard
 * Open widget edit mode and switch to **Actions** tab.
 * Press **Add action** button.
 * In **Action source** field select **date-selected**.
@@ -77,9 +77,9 @@ With this custom action we will change dashboard time range to selected date and
 ## Switch field action
 
 Switch field selector activated when multiple fields are added to the **Value** section. In this cae user can select from the widget what field is shown.
-Trendz View trigger special event when user switch fields. You can trigger required action when switch event triggered.
+SENTIENT ANALYTICS View trigger special event when user switch fields. You can trigger required action when switch event triggered.
 
-* Add Trendz calendar view on the ThingsBoard dashboard
+* Add SENTIENT ANALYTICS calendar view on the SENTIENT dashboard
 * Open widget edit mode and switch to **Actions** tab.
 * Press **Add action** button.
 * In **Action source** field select **changed-radio-button**.

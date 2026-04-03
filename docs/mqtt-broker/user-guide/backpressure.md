@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
 title: Backpressure
-description: TBMQ Backpressure guide
+description: ST-RMQTT Backpressure guide
 
 ---
 

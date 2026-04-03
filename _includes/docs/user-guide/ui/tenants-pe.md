@@ -3,9 +3,9 @@
 
 ## Introduction
 
-ThingsBoard supports [Multi-tenancy](https://en.wikipedia.org/wiki/Multitenancy) right out of the box. 
+SENTIENT supports [Multi-tenancy](https://en.wikipedia.org/wiki/Multitenancy) right out of the box. 
 
-You can think of the ThingsBoard tenant as a separate business entity. This is the individual or organization that owns or manufactures the devices and assets.
+You can think of the SENTIENT tenant as a separate business entity. This is the individual or organization that owns or manufactures the devices and assets.
 
 {% if docsPrefix == "pe/" %}
 Tenant may have multiple tenant administrator users, enormous number of [customers](/docs/{{docsPrefix}}user-guide/ui/customers), and an unlimited number of [users](/docs/{{docsPrefix}}user-guide/ui/users), assets, and devices.

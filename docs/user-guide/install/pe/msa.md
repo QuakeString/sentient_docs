@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe
-title: Installing ThingsBoard PE in a cluster mode using microservices architecture
-description: Installing ThingsBoard PE in a cluster mode using microservices architecture
+title: Installing SENTIENT Professional Edition in a cluster mode using microservices architecture
+description: Installing SENTIENT Professional Edition in a cluster mode using microservices architecture
 
 ---
 

@@ -1,5 +1,5 @@
 
-Configure HTTP(S) Load Balancer to access web interface of your ThingsBoard instance. Basically you have 2 possible options of configuration:
+Configure HTTP(S) Load Balancer to access web interface of your SENTIENT instance. Basically you have 2 possible options of configuration:
 
 * http - Load Balancer without HTTPS support. Recommended **for development.**
   The only advantage is simple configuration and minimum costs. May be good option for development server but definitely not suitable for production.
@@ -15,9 +15,9 @@ See links/instructions below on how to configure each of the suggested options.
 Now, you may use the address (the one you see instead of 34.111.24.134 in the command output) to access HTTP web UI (port 80) and connect your devices via [HTTP API](/docs/{{docsPrefix}}reference/http-api/)
 Use the following default credentials:
 
-- **System Administrator**: sysadmin@thingsboard.org / sysadmin
-- **Tenant Administrator**: tenant@thingsboard.org / tenant
-- **Customer User**: customer@thingsboard.org / customer
+- **System Administrator**: sysadmin@sentient.org / sysadmin
+- **Tenant Administrator**: tenant@sentient.org / tenant
+- **Customer User**: customer@sentient.org / customer
 
 #### HTTPS Load Balancer
 

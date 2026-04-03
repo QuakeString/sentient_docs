@@ -1,4 +1,4 @@
-Configure the Edge load balancer if you plan to connect Edge instances to your ThingsBoard server.
+Configure the Edge load balancer if you plan to connect Edge instances to your SENTIENT server.
 
 To create a TCP Edge load balancer, apply the provided YAML file using the following command:
 
@@ -9,7 +9,7 @@ kubectl apply -f receipts/edge-load-balancer.yml
 
 The load balancer will forward all TCP traffic on port 7070.
 
-After the Edge load balancer is provisioned, you can connect Edge instances to your ThingsBoard server.
+After the Edge load balancer is provisioned, you can connect Edge instances to your SENTIENT server.
 
 Before connecting Edge instances, you need to obtain the external IP address of the Edge load balancer. To retrieve this IP address, execute the following command:
 

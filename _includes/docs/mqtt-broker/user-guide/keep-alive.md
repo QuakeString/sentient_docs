@@ -32,7 +32,7 @@ If the client fails to do so, the broker assumes the client is disconnected, and
 Normally, when the client sends a `PINGREQ` to maintain the connection, the broker responds with a `PINGRESP`, confirming that the connection is still alive and the client is functioning properly. 
 This exchange ensures the connection remains healthy even when no data is being transmitted.
 
-In TBMQ, the `MQTT_KEEP_ALIVE_MONITORING_DELAY_MS` environment variable defines the interval at which the broker checks for inactive client connections. 
+In ST-RMQTT, the `MQTT_KEEP_ALIVE_MONITORING_DELAY_MS` environment variable defines the interval at which the broker checks for inactive client connections. 
 By default, this check occurs every second. If a dead connection is detected, the broker terminates the connection, providing "KEEP_ALIVE_TIMEOUT" as the reason.
 
 ## When to turn off Keep Alive

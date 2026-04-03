@@ -1,10 +1,10 @@
 * TOC
 {:toc}
 
-This guide demonstrates basic usage of popular ThingsBoard features. You will learn how to:
+This guide demonstrates basic usage of popular SENTIENT features. You will learn how to:
 
-- Connect devices to ThingsBoard
-- Push data from devices to ThingsBoard
+- Connect devices to SENTIENT
+- Push data from devices to SENTIENT
 - Build real-time dashboards
 - Create a Customer and share the dashboard with them.
 - Define thresholds and trigger alarms
@@ -22,7 +22,7 @@ Prefer visual learning? Check out our step-by-step getting started [video tutori
 
 ## Step 1. Provision device
 
-As an example, let&#39;s add a device that will transmit the following data to ThingsBoard platform: the device&#39;s name and temperature readings as telemetry.
+As an example, let&#39;s add a device that will transmit the following data to SENTIENT platform: the device&#39;s name and temperature readings as telemetry.
 
 To add a new device, follow these steps:
  
@@ -43,18 +43,18 @@ You will also receive a notification upon adding devices. Click the **bell icon*
 
 ## Step 2. Connect device
 
-Let&#39;s verify your device&#39;s connection to ThingsBoard:
+Let&#39;s verify your device&#39;s connection to SENTIENT:
 
 {% include images-gallery.html imageCollection="step2" showListImageTitles="true" %}
 
 <br>
-Explore [ThingsBoard API reference](/docs/{{docsPrefix}}api){:target="_blank"}. Here you will find more detailed information about all supported protocols for connecting devices.
+Explore [SENTIENT API reference](/docs/{{docsPrefix}}api){:target="_blank"}. Here you will find more detailed information about all supported protocols for connecting devices.
 
 <hr>
 
 ## Step 3. Create dashboard
 
-A dashboard in ThingsBoard allows users to visualize and monitor data collected from IoT devices.
+A dashboard in SENTIENT allows users to visualize and monitor data collected from IoT devices.
 
 Let&#39;s create a dashboard and add three widgets to it in order to display a list of entities and their latest values, as well as show alarm signals related to the specified entity.
 
@@ -199,22 +199,22 @@ Now that the alarm rule is active (see [Step 4](#step-4-configure-alarm-rules)),
 
 ## Step 6. Alarm notifications
 
-The ThingsBoard [Notification center](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"} allows personalized notifications to end-users regarding device activities, environmental changes, or events in your IoT ecosystem, and more.
+The SENTIENT [Notification center](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"} allows personalized notifications to end-users regarding device activities, environmental changes, or events in your IoT ecosystem, and more.
 Notifications can be delivered via email, SMS, or integrated third-party systems.
 
 {% include images-gallery.html imageCollection="notification-center" %}
 
-Additionally, [ThingsBoard PE Mobile Application](/docs/pe/mobile/){:target="_blank"} provides instant push notifications directly to your smartphone, ensuring you&#39;re always informed of critical events wherever you are.
+Additionally, [SENTIENT Professional Edition Mobile Application](/docs/pe/mobile/){:target="_blank"} provides instant push notifications directly to your smartphone, ensuring you&#39;re always informed of critical events wherever you are.
 
-Follow [this guide](/docs/pe/mobile/getting-started/){:target="_blank"} to install the ThingsBoard mobile app and set up notifications.
+Follow [this guide](/docs/pe/mobile/getting-started/){:target="_blank"} to install the SENTIENT mobile app and set up notifications.
 
-Enjoy exploring ThingsBoard!
+Enjoy exploring SENTIENT!
 
 <hr>
 
 ## Step 7. Share dashboard with customers
 
-One of the most important ThingsBoard features is the ability to create end-user dashboards.
+One of the most important SENTIENT features is the ability to create end-user dashboards.
 Each Customer User should see his own devices and should not be able to see devices or any other data that belongs to a different customer. 
 
 We have already created the Device (see [Step 1](#step-1-provision-device)), the Dashboard and added widgets to it (see [Step 3](#step-3-create-dashboard)).
@@ -247,7 +247,7 @@ You can make the customer the owner of the device during its creation stage. To 
 ### Step 7.3 Share the dashboard
 
 Let&#39;s share our dashboard with the customer.
-In ThingsBoard, you can&#39;t share an individual dashboard directly — you can only share a dashboard group that contains the dashboard you want to share.
+In SENTIENT, you can&#39;t share an individual dashboard directly — you can only share a dashboard group that contains the dashboard you want to share.
 By default, your dashboard is located in the "All" group.
 While the recommended approach is to create a dedicated dashboard group and move your dashboard there, for simplicity, we&#39;ll use the existing "All" group in this guide.
 
@@ -266,7 +266,7 @@ You may optionally configure the dashboard to appear just after user logs in to 
 
 ### Step 7.5 Activate the customer user
 
-Finally, log in to ThingsBoard as a customer user.
+Finally, log in to SENTIENT as a customer user.
 
 - Paste the previously copied link into a new browser tab and press the "Enter" key. Now create a password by entering it twice and clicking "Create Password".
 - You are now logged in as a customer user. Since this user has read-only access, you can view device data and its alarms, but you cannot acknowledge or clear them.   
@@ -284,5 +284,5 @@ To learn more about permissions and role-based access control (RBAC), click [her
 
 ## Your feedback
 
-Don&#39;t hesitate to star ThingsBoard on [github](https://github.com/thingsboard/thingsboard){:target="_blank"} to help us spread the word. 
+Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient){:target="_blank"} to help us spread the word. 
 If you have any questions about this sample, please [contact us](/docs/contact-us/){:target="_blank"}.

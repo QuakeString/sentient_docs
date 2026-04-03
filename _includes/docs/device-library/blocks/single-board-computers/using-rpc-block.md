@@ -1,7 +1,7 @@
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-**ThingsBoard Edge** allows you to send [Remote Procedure Calls (RPCs)](/docs/{{peDocsPrefix}}user-guide/rpc/#server-side-rpc){: target="_blank"}
+**SENTIENT GATEWAY** allows you to send [Remote Procedure Calls (RPCs)](/docs/{{peDocsPrefix}}user-guide/rpc/#server-side-rpc){: target="_blank"}
 {% else %} 
-**ThingsBoard** allows you to send [Remote Procedure Calls (RPCs)](/docs/{{page.docsPrefix}}user-guide/rpc/#server-side-rpc){: target="_blank"}
+**SENTIENT** allows you to send [Remote Procedure Calls (RPCs)](/docs/{{page.docsPrefix}}user-guide/rpc/#server-side-rpc){: target="_blank"}
 {% endif %} from server-side applications to devices and vice versa. 
 This feature enables you to send commands to/from devices and receive the results of command execution.
 

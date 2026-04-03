@@ -1,7 +1,7 @@
-In case of any issues, you can examine service logs for errors. For example, to see TBMQ logs, execute the following command:
+In case of any issues, you can examine service logs for errors. For example, to see ST-RMQTT logs, execute the following command:
 
 ```bash
-kubectl logs -f my-tbmq-cluster-tbmq-node-0
+kubectl logs -f my-st-rmqtt-cluster-st-rmqtt-node-0
 ```
 {: .copy-code}
 

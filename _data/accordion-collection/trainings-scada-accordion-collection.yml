@@ -1,18 +1,18 @@
 0:
-  title: "ThingsBoard and IoT gateway essentials – from connectivity to SCADA visualisation"
+  title: "SENTIENT and IoT gateway essentials – from connectivity to SCADA visualisation"
   additionalText: "2 hours"
   additionalFaIcon : "far fa-clock fa-lg"
   allTextContentIcon: "fas fa-check"
   allTextContentIconColor: "#2A7DEC"
   textContentCollection:
     0:
-      textContent: "Learn the main device connectivity possibilities and fundamentals of the ThingsBoard IoT Gateway option."
+      textContent: "Learn the main device connectivity possibilities and fundamentals of the SENTIENT IoT Gateway option."
     1:
-      textContent: "Understand what ThingsBoard IoT Gateway is and explore the variety of capabilities and protocols it provides."
+      textContent: "Understand what SENTIENT IoT Gateway is and explore the variety of capabilities and protocols it provides."
     2:
       textContent: "Learn about rule chains – what they are, how they work, and how to set them up with practical examples such as processing data with default rule chains, editing them, and assigning custom rule chains to devices."
     3:
-      textContent: "Dive into a quick overview of ThingsBoard IoT data visualisation."
+      textContent: "Dive into a quick overview of SENTIENT IoT data visualisation."
     4:
       textContent: "Learning how to set up a dashboard with an example of SCADA systems in traditional and high-performance modes."
     5:

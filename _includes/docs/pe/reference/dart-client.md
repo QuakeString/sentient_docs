@@ -4,29 +4,29 @@
 
 ## Overview
 
-[Dart ThingsBoard PE API Client](https://pub.dev/packages/thingsboard_pe_client) package is a [Dart](https://dart.dev/) library
-providing model objects and services to communicate with ThingsBoard PE platform using [RESTful APIs](/docs/{{docsPrefix}}reference/rest-api/) and WebSocket protocol.
-With Dart Client you can programmatically access ThingsBoard PE API to manage [entities](/docs/{{docsPrefix}}user-guide/entities-and-relations/),
+[Dart SENTIENT Professional Edition API Client](https://pub.dev/packages/sentient_pe_client) package is a [Dart](https://dart.dev/) library
+providing model objects and services to communicate with SENTIENT Professional Edition platform using [RESTful APIs](/docs/{{docsPrefix}}reference/rest-api/) and WebSocket protocol.
+With Dart Client you can programmatically access SENTIENT Professional Edition API to manage [entities](/docs/{{docsPrefix}}user-guide/entities-and-relations/),
 query [telemetry data](/docs/{{docsPrefix}}user-guide/telemetry/) and get real-time updates via [WebSocket API](/docs/{{docsPrefix}}user-guide/telemetry/#websocket-api).
-The Dart ThingsBoard PE API Client is also a part of ThingsBoard PE Mobile Application.
+The Dart SENTIENT Professional Edition API Client is also a part of SENTIENT Professional Edition Mobile Application.
 
-The version of the Dart ThingsBoard PE API Client depends on the version of the platform that you are using.
+The version of the Dart SENTIENT Professional Edition API Client depends on the version of the platform that you are using.
 
-## Installing Dart ThingsBoard API Client (Professional Edition)
+## Installing Dart SENTIENT API Client (Professional Edition)
 
-To use Dart ThingsBoard PE API Client package in your Dart/Flutter project run this command:
+To use Dart SENTIENT Professional Edition API Client package in your Dart/Flutter project run this command:
 
 With Dart:
 
 ```bash
-dart pub add thingsboard_pe_client
+dart pub add sentient_pe_client
 ```
 {: .copy-code}
 
 With Flutter:
 
 ```bash
-flutter pub add thingsboard_pe_client
+flutter pub add sentient_pe_client
 ```
 {: .copy-code}
 
@@ -34,7 +34,7 @@ This will add a line like this to your package's pubspec.yaml (and run an implic
 
 ```yaml
 dependencies:
-  thingsboard_pe_client: ^{{dartClientVer}}
+  sentient_pe_client: ^{{dartClientVer}}
 ```
 {: .copy-code}
 
@@ -43,28 +43,28 @@ Alternatively, your editor might support `dart pub get` or `flutter pub get`. Ch
 Now in your Dart code, you can use:
 
 ```dart
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 ```
 {: .copy-code}
 
 ### Basic Usage
 
-The next sample code shows how to instantiate ThingsBoard Client, perform login and get user details of current logged in user.
+The next sample code shows how to instantiate SENTIENT Client, perform login and get user details of current logged in user.
 
 ```dart
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
-    var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
+    // Create instance of SENTIENT API Client
+    var tbClient = SentientClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     print('isAuthenticated=${tbClient.isAuthenticated()}');
 
@@ -91,19 +91,19 @@ void main() async {
 The following sample code shows how to get allowed permissions of current logged in user and then check sample permission.
 
 ```dart
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
-    var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
+    // Create instance of SENTIENT API Client
+    var tbClient = SentientClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     // Get allowed user permissions
     var allowedUserPermissions =
@@ -130,19 +130,19 @@ void main() async {
 The following sample code shows how to fetch user devices via page link.
 
 ```dart
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
-    var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
+    // Create instance of SENTIENT API Client
+    var tbClient = SentientClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     var pageLink = PageLink(10);
     PageData<Device> devices;
@@ -168,19 +168,19 @@ void main() async {
 The following sample code shows how to fetch user dashboards via page link.
 
 ```dart
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
-    var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
+    // Create instance of SENTIENT API Client
+    var tbClient = SentientClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     var pageLink = PageLink(10);
     PageData<DashboardInfo> dashboards;
@@ -206,19 +206,19 @@ void main() async {
 The following sample code shows how to fetch entity groups.
 
 ```dart
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
-    var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
+    // Create instance of SENTIENT API Client
+    var tbClient = SentientClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     // Iterate over all available entity group types
     for (var groupType in [
@@ -251,19 +251,19 @@ void main() async {
 The following sample code shows how to use Entity Data Query API to count total devices, total active devices and total inactive devices.
 
 ```dart
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
-    var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
+    // Create instance of SENTIENT API Client
+    var tbClient = SentientClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     // Create entity filter to get all devices
     var entityFilter = EntityTypeFilter(entityType: EntityType.DEVICE);
@@ -319,19 +319,19 @@ void main() async {
 The following sample code shows how to use Entity Data Query API to get all active devices.
 
 ```dart
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
-    var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
+    // Create instance of SENTIENT API Client
+    var tbClient = SentientClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     // Create entity filter to get only devices
     var entityFilter = EntityTypeFilter(entityType: EntityType.DEVICE);
@@ -398,19 +398,19 @@ void main() async {
 The following sample code demonstrates basic concepts of device management API (add/get/delete device, get/save device attributes).
 
 ```dart
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
-    var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
+    // Create instance of SENTIENT API Client
+    var tbClient = SentientClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     var deviceName = 'My test device';
 
@@ -463,19 +463,19 @@ Finally post sample telemetry and get data updates by listening data stream of s
 ```dart
 import 'dart:math';
 
-import 'package:thingsboard_pe_client/thingsboard_client.dart';
+import 'package:sentient_pe_client/sentient_client.dart';
 
-// ThingsBoard REST API URL
+// SENTIENT REST API URL
 const thingsBoardApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
-    // Create instance of ThingsBoard API Client
-    var tbClient = ThingsboardClient(thingsBoardApiEndpoint);
+    // Create instance of SENTIENT API Client
+    var tbClient = SentientClient(thingsBoardApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@thingsboard.org', 'tenant'));
+    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     var deviceName = 'My test device';
 
@@ -575,6 +575,6 @@ void main() async {
 
 #### More examples
 
-You can find more examples to learn how to use Dart ThingsBoard PE API Client **[here](https://github.com/thingsboard/dart_thingsboard_pe_client/tree/master/example)**.
+You can find more examples to learn how to use Dart SENTIENT Professional Edition API Client **[here](https://github.com/sentient/dart_sentient_pe_client/tree/master/example)**.
 
 

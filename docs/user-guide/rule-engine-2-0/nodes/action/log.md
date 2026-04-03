@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: log
-description: Executes a user-defined script to transform message data, metadata, and type into a custom formatted string and logs that string to the ThingsBoard log file.
+description: Executes a user-defined script to transform message data, metadata, and type into a custom formatted string and logs that string to the SENTIENT log file.
 breadcrumbs: "true"
 breadcrumbs-steps: "2"
 hidetoc: "true"

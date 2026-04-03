@@ -44,7 +44,7 @@ customize-login-page:
 verify-result-customize-login-page:
     0:
         image: /images/user-guide/white-labeling/login-tab-3.png
-        title: 'Now, use your custom domain name to access the ThingsBoard web interface login page and verify the result of your configuration.'
+        title: 'Now, use your custom domain name to access the SENTIENT web interface login page and verify the result of your configuration.'
 
 ---
 

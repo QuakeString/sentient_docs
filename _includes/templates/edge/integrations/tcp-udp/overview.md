@@ -1,2 +1,2 @@
-**{{integrationName}} Integration** allows data to be streamed to **ThingsBoard Edge** from devices that use a {{integrationName}} transport protocol, 
-and converts payloads from these devices to the **ThingsBoard Edge** format.
+**{{integrationName}} Integration** allows data to be streamed to **SENTIENT GATEWAY** from devices that use a {{integrationName}} transport protocol, 
+and converts payloads from these devices to the **SENTIENT GATEWAY** format.

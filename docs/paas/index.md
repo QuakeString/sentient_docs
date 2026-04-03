@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-paas
-title: ThingsBoard Cloud
-description: ThingsBoard Cloud documentation - learn about the platform and get your IoT projects running on ThingsBoard
+title: SENTIENT Cloud
+description: SENTIENT Cloud documentation - learn about the platform and get your IoT projects running on SENTIENT
 ---
 
 {% assign docsPrefix = "paas/" %}

@@ -1,12 +1,12 @@
 {% if docsPrefix == null %}
-{% assign MOBILE_APPLICATION_LINK = "[ThingsBoard Mobile Application](/docs/mobile/)" %}
-{% assign MOBILE_APPLICATION = "ThingsBoard Mobile Application" %}
-{% assign GETTING_STARTED = "[Getting started with the ThingsBoard Mobile Application](/docs/mobile/getting-started/)" %}
+{% assign MOBILE_APPLICATION_LINK = "[SENTIENT Mobile Application](/docs/mobile/)" %}
+{% assign MOBILE_APPLICATION = "SENTIENT Mobile Application" %}
+{% assign GETTING_STARTED = "[Getting started with the SENTIENT Mobile Application](/docs/mobile/getting-started/)" %}
 {% endif %}
 {% if (docsPrefix == "pe/") or (docsPrefix == "paas/") or (docsPrefix == "paas/eu/") %}
-{% assign MOBILE_APPLICATION_LINK = "[ThingsBoard PE Mobile Application](/docs/pe/mobile/)" %}
-{% assign MOBILE_APPLICATION = "ThingsBoard PE Mobile Application" %}
-{% assign GETTING_STARTED = "[Getting started with the ThingsBoard PE Mobile Application](/docs/pe/mobile/getting-started/)" %}
+{% assign MOBILE_APPLICATION_LINK = "[SENTIENT Professional Edition Mobile Application](/docs/pe/mobile/)" %}
+{% assign MOBILE_APPLICATION = "SENTIENT Professional Edition Mobile Application" %}
+{% assign GETTING_STARTED = "[Getting started with the SENTIENT Professional Edition Mobile Application](/docs/pe/mobile/getting-started/)" %}
 {% endif %}
 
 * TOC
@@ -15,13 +15,13 @@
 {% assign sinceVersion = "3.9.0" %}
 {% include templates/since.md %}
 
-The **Mobile сenter** is your one-stop hub for building, configuring, and managing mobile apps in ThingsBoard. Whether you&#39;re starting from scratch or preparing to publish your {{MOBILE_APPLICATION}} to the Google Play Store or App Store, this tool walks you through every step of the process.
+The **Mobile сenter** is your one-stop hub for building, configuring, and managing mobile apps in SENTIENT. Whether you&#39;re starting from scratch or preparing to publish your {{MOBILE_APPLICATION}} to the Google Play Store or App Store, this tool walks you through every step of the process.
 
 The Mobile center is divided into tabs for convenient creation and management of mobile applications:
 
 - [Bundle](#bundle): Manage settings for mobile applications included in the bundle. These settings include configuring secure authentication methods for your clients{% if docsPrefix == null %}, and defining the layout{% endif %}{% if docsPrefix == "pe/" or docsPrefix == "paas/" or docsPrefix == "paas/eu/" %}, defining the layout, and managing options for user self-registration{% endif %} within the mobile application.
 - [Applications](/docs/{{docsPrefix}}mobile-center/applications/){:target="_blank"}: Manage your mobile applications - add new ones, edit existing ones, or remove outdated versions.
-- [QR code widget](/docs/{{docsPrefix}}user-guide/ui/mobile-qr-code/){:target="_blank"}: Set up a QR code widget on the ThingsBoard "Home" page to give users easy access to the mobile app.
+- [QR code widget](/docs/{{docsPrefix}}user-guide/ui/mobile-qr-code/){:target="_blank"}: Set up a QR code widget on the SENTIENT "Home" page to give users easy access to the mobile app.
 
 ## Bundle
 
@@ -92,10 +92,10 @@ To add new menu item, follow these steps:
 - Click the "**+ Add specific page**" button at the bottom of the page or between existing menu items;
 - Enter the **name for new menu page**;
 - Select the **page type** from the list:
-  - *Dashboard* - link to a ThingsBoard dashboard.
+  - *Dashboard* - link to a SENTIENT dashboard.
   - *Webview* - link to an external webpage.
-  - *Custom* - link to built-in ThingsBoard pages.
-- Depending on the selected page type, specify a dashboard, or link to an external webpage or ThingsBoard menu item;
+  - *Custom* - link to built-in SENTIENT pages.
+- Depending on the selected page type, specify a dashboard, or link to an external webpage or SENTIENT menu item;
 
 {% if docsPrefix == null %}
 - Click "Add";
@@ -128,7 +128,7 @@ The following routes are available for the "Custom" page type:
 | ---                 
 
 {% unless docsPrefix == null %}
-The menu configuration algorithm for the mobile application is similar to menu customization in the desktop ThingsBoard. Refer to [this documentation](/docs/{{docsPrefix}}user-guide/custom-menu/){:target="_blank"} for a deeper understanding of menu customization.
+The menu configuration algorithm for the mobile application is similar to menu customization in the desktop SENTIENT. Refer to [this documentation](/docs/{{docsPrefix}}user-guide/custom-menu/){:target="_blank"} for a deeper understanding of menu customization.
 {% endunless %}
 
 **"More" page**
@@ -142,7 +142,7 @@ Items that do not fit in the bottom navigation menu will be available under the 
 
 ### Self registration
 
-The **self registration** feature allows the tenant to configure a sign-up page for their clients, allowing them to easily sign up and log in to ThingsBoard with predefined permission configurations.
+The **self registration** feature allows the tenant to configure a sign-up page for their clients, allowing them to easily sign up and log in to SENTIENT with predefined permission configurations.
 
 Configure the self registration form for new clients:
 
@@ -150,7 +150,7 @@ Configure the self registration form for new clients:
 - **Notification recipient**. Specify the recipients that will receive notifications about new user registrations. Learn more about notifications and how to add a new notification recipient [here](/docs/{{docsPrefix}}user-guide/notifications/){:target="_blank"}.
 - **Redirect settings**:
   - **Application URL scheme**: Defines the custom URL scheme used for redirecting users after successful registration. For example, *tbscheme*.
-  - **Application URL hostname**: The hostname component of the URL used in redirection, e.g., *app.pe.thingsboard.org*.
+  - **Application URL hostname**: The hostname component of the URL used in redirection, e.g., *app.pe.sentient.org*.
 
 {% include images-gallery.html imageCollection="self-registration-1" %}
 
@@ -159,16 +159,16 @@ Configure the self registration form for new clients:
 {% include images-gallery.html imageCollection="self-registration-2" %}
 
 - **Captcha properties**. Captcha (Completely Automated Public Turing test to tell Computers and Humans Apart) is an automated test used to distinguish between human users and bots. 
-Using Captcha in ThingsBoard helps prevent the automated creation of fake accounts in the system.
+Using Captcha in SENTIENT helps prevent the automated creation of fake accounts in the system.
 
 To **generate the Captcha**, navigate to the [Google ReCaptcha admin console](https://www.google.com/recaptcha/intro/v3.html){:target="_blank"}:
 - Select which version of reCAPTCHA you will use: v2, v3, or Enterprise.
-- Specify the domain name of your ThingsBoard instance.
+- Specify the domain name of your SENTIENT instance.
 - Copy and securely store the the site key and secret key.
 
 {% include images-gallery.html imageCollection="captcha" %}
 
-**In ThingsBoard**:
+**In SENTIENT**:
 - Select the **Captcha version** to be used.
 - Specify **Captcha site key** - the public key used to render the CAPTCHA on the site.
 - Specify **Captcha secret key** - the private key used for verifying CAPTCHA responses on the server.

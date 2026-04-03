@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect Indoor Bluetooth Gateway to ThingsBoard?
+title: How to connect Indoor Bluetooth Gateway to SENTIENT?
 category: Other devices
 connectivity: [Bluetooth, LoRaWAN]
 vendor: Lansitec

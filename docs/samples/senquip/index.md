@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: Senquip Telemetry Devices
-description: Integrating Senquip telemetry devices into the ThingsBoard.
+description: Integrating Senquip telemetry devices into the SENTIENT.
 
 ---
 
@@ -12,7 +12,7 @@ description: Integrating Senquip telemetry devices into the ThingsBoard.
 
 ## Samples
 
- - [Connecting a Senquip telemetry device to the ThingsBoard](/docs/samples/senquip/senquip/)
+ - [Connecting a Senquip telemetry device to the SENTIENT](/docs/samples/senquip/senquip/)
  
 ## Documentation
 

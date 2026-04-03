@@ -2,9 +2,9 @@
 layout: docwithnav
 assignees:
 - ashvayka
-title: Installing ThingsBoard CE on GCP
+title: Installing SENTIENT on GCP
 notitle: "true"
-description: Installing ThingsBoard CE on Google Cloud Platform
+description: Installing SENTIENT on Google Cloud Platform
 
 ---
 
@@ -13,10 +13,10 @@ description: Installing ThingsBoard CE on Google Cloud Platform
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <h1>ThingsBoard Setup options on GCP</h1>
+                <h1>SENTIENT Setup options on GCP</h1>
                 <div class="install-options-description">
                     <p>
-                        You may deploy ThingsBoard IoT Platform using different tools and platforms
+                        You may deploy SENTIENT IoT Platform using different tools and platforms
                     </p>
                 </div>
             </div>

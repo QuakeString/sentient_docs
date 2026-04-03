@@ -5,9 +5,9 @@ psql -U postgres -d postgres -h 127.0.0.1 -W
 ```
 {: .copy-code}
 
-Create the ThingsBoard database named "thingsboard" :
+Create the SENTIENT database named "sentient" :
 ```bash
-CREATE DATABASE thingsboard;
+CREATE DATABASE sentient;
 ```
 {: .copy-code}
 

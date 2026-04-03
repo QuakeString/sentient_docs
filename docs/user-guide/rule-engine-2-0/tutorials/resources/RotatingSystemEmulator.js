@@ -1,14 +1,14 @@
 var mqtt = require('mqtt');
 
 // Don't forget to update accessToken constant with your device access token
-const thingsboardHost = "mqtt.thingsboard.cloud";
+const sentientHost = "mqtt.sentient.cloud";
 const ACCESS_TOKEN = "jSuvzrURCbw7q4LGtygc";
 const minDirection = 0, maxDirection = 360;
 
 
-// Initialization of mqtt client using Thingsboard host and device access token
-console.log('Connecting to: %s using access token: %s', thingsboardHost, ACCESS_TOKEN);
-var client  = mqtt.connect('mqtt://'+ thingsboardHost, { username: ACCESS_TOKEN });
+// Initialization of mqtt client using Sentient host and device access token
+console.log('Connecting to: %s using access token: %s', sentientHost, ACCESS_TOKEN);
+var client  = mqtt.connect('mqtt://'+ sentientHost, { username: ACCESS_TOKEN });
 
 var value = 350;
 var spinFlag = {method: "spinRight", params: 0};
@@ -34,7 +34,7 @@ client.on('message', function (topic, message) {
 
 });
 
-// Triggers when client is successfully connected to the Thingsboard server
+// Triggers when client is successfully connected to the Sentient server
 client.on('connect', function () {
     console.log('Client connected!');
     client.subscribe('v1/devices/me/rpc/request/+');

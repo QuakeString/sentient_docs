@@ -2,27 +2,27 @@
 {% if page.description %}{% assign description=page.description %}{% endif %}
 {% assign docsTag = include.docsTag %}
 {% assign productTag = include.productTag %}
-{% assign githubLink = "https://github.com/thingsboard/thingsboard" %}
-{% assign githubLabel = "Star thingsboard/thingsboard on GitHub" %}
+{% assign githubLink = "https://github.com/sentient/sentient" %}
+{% assign githubLabel = "Star sentient/sentient on GitHub" %}
 {% assign platformQuery = "" %}
 {% if docsTag %}
     {% assign platformQuery = "?platform=ce" %}
     {% if docsTag == "mqtt-broker" %}
-        {% assign githubLink = "https://github.com/thingsboard/tbmq" %}
-        {% assign githubLabel = "Star thingsboard/tbmq on GitHub" %}
+        {% assign githubLink = "https://github.com/sentient/st-rmqtt" %}
+        {% assign githubLabel = "Star sentient/st-rmqtt on GitHub" %}
     {% elsif docsTag == "mqtt-broker-pe" %}
-        {% assign githubLink = "https://github.com/thingsboard/tbmq" %}
-        {% assign githubLabel = "Star thingsboard/tbmq on GitHub" %}
+        {% assign githubLink = "https://github.com/sentient/st-rmqtt" %}
+        {% assign githubLabel = "Star sentient/st-rmqtt on GitHub" %}
     {% elsif docsTag == "gw" %}
-        {% assign githubLink = "https://github.com/thingsboard/thingsboard-gateway" %}
-        {% assign githubLabel = "Star thingsboard/thingsboard-gateway on GitHub" %}
+        {% assign githubLink = "https://github.com/sentient/sentient-gateway" %}
+        {% assign githubLabel = "Star sentient/sentient-gateway on GitHub" %}
     {% elsif docsTag == "edge" %}
-        {% assign githubLink = "https://github.com/thingsboard/thingsboard-edge" %}
-        {% assign githubLabel = "Star thingsboard/thingsboard-edge on GitHub" %}
+        {% assign githubLink = "https://github.com/sentient/sentient-gateway" %}
+        {% assign githubLabel = "Star sentient/sentient-gateway on GitHub" %}
         {% assign platformQuery = platformQuery | replace: "ce", "edge" %}
     {% elsif docsTag == "edge-pe" %}
-        {% assign githubLink = "https://github.com/thingsboard/thingsboard-edge" %}
-        {% assign githubLabel = "Star thingsboard/thingsboard-edge on GitHub" %}
+        {% assign githubLink = "https://github.com/sentient/sentient-gateway" %}
+        {% assign githubLabel = "Star sentient/sentient-gateway on GitHub" %}
         {% assign platformQuery = platformQuery | replace: "ce", "pe-edge" %}
     {% endif %}
     {% if docsTag == "pe" or docsTag == "mobile-pe" %}
@@ -47,11 +47,11 @@
 {% endif %}
 {% if productTag %}
     {% if productTag == "mqtt-broker" %}
-        {% assign githubLink = "https://github.com/thingsboard/tbmq" %}
-        {% assign githubLabel = "Star thingsboard/tbmq on GitHub" %}
+        {% assign githubLink = "https://github.com/sentient/st-rmqtt" %}
+        {% assign githubLabel = "Star sentient/st-rmqtt on GitHub" %}
     {% elsif productTag == "edge" %}
-        {% assign githubLink = "https://github.com/thingsboard/thingsboard-edge" %}
-        {% assign githubLabel = "Star thingsboard/thingsboard-edge on GitHub" %}
+        {% assign githubLink = "https://github.com/sentient/sentient-gateway" %}
+        {% assign githubLabel = "Star sentient/sentient-gateway on GitHub" %}
     {% endif %}
 {% endif %}
 <head>
@@ -69,9 +69,9 @@
     <meta name="twitter:description" content="{{ description }}">
     {% endif %}
     {% if !page.no_canonical %}
-    <link rel="canonical" href="https://thingsboard.io{{page.url}}">
+    <link rel="canonical" href="https://docs.sentient.invenia.in{{page.url}}">
     {% endif %}
-    <link rel="shortcut icon" type="image/png" href="https://img.thingsboard.io/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="https://img.docs.sentient.invenia.in/favicon.png">
     {% if page.url == '/' %}
     <link href="/css/critical.css" rel="stylesheet">
     {% elsif page.url contains '/docs/' or cssTag == 'docs' %}
@@ -728,9 +728,9 @@
                 const links = document.links;
 
                 const allowedDomains = [
-                    'https://thingsboard.cloud',
-                    'https://eu.thingsboard.cloud',
-                    'https://license.thingsboard.io'
+                    'https://sentient.cloud',
+                    'https://eu.sentient.cloud',
+                    'https://license.docs.sentient.invenia.in'
                 ];
 
                 Array.from(links).forEach(link => {
@@ -812,7 +812,7 @@
                             <div class="column">
                                 <p class="group-name">IoT platforms</p>
                                 <a class="com-lnk" href="/">
-                                    <img src="/images/thingsboard-cm-icon.svg" alt="Community Edition icon" width="32" height="32" loading="lazy">
+                                    <img src="/images/sentient-cm-icon.svg" alt="Community Edition icon" width="32" height="32" loading="lazy">
                                     <div class="sub-text">
                                         <span class="item-heading">Community Edition</span>
                                         <p>Open-source platform</p>
@@ -821,8 +821,8 @@
                             </div>
                             <div class="column">
                                 <p class="group-name">&nbsp;</p>
-                                <a class="prof-lnk" href="/products/thingsboard-pe/">
-                                    <img src="/images/thingsboard-p-icon.svg" alt="Professional Edition icon" width="32" height="32" loading="lazy">
+                                <a class="prof-lnk" href="/products/sentient-pe/">
+                                    <img src="/images/sentient-p-icon.svg" alt="Professional Edition icon" width="32" height="32" loading="lazy">
                                     <div class="sub-text">
                                         <span class="item-heading">Professional Edition</span>
                                         <p>Advanced IoT platform</p>
@@ -832,7 +832,7 @@
                             <div class="column">
                                 <p class="group-name">&nbsp;</p>
                                 <a class="cloud-lnk" href="/products/paas/">
-                                    <img src="/images/thingsboard-c-icon.svg" alt="Cloud icon" width="32" height="32" loading="lazy">
+                                    <img src="/images/sentient-c-icon.svg" alt="Cloud icon" width="32" height="32" loading="lazy">
                                     <div class="sub-text">
                                         <span class="item-heading">Cloud</span>
                                         <p>Platform as a service</p>
@@ -843,8 +843,8 @@
                         <div class="group">
                             <div class="column">
                                 <p class="group-name">Product ecosystem</p>
-                                <a class="edge-lnk" href="/products/thingsboard-edge/">
-                                    <img src="/images/thingsboard-e-icon.svg" alt="Edge icon" width="32" height="32" loading="lazy">
+                                <a class="edge-lnk" href="/products/sentient-gateway/">
+                                    <img src="/images/sentient-e-icon.svg" alt="Edge icon" width="32" height="32" loading="lazy">
                                     <div class="sub-text">
                                         <span class="item-heading">Edge</span>
                                         <p>Edge computing</p>
@@ -861,14 +861,14 @@
                             <div class="column">
                                 <p class="group-name">&nbsp;</p>
                                 <a class="mobile-lnk" href="/products/mobile/">
-                                    <img src="/images/tb-mobile-icon.svg" alt="Device icon" width="32" height="32" loading="lazy">
+                                    <img src="/images/sentient-mobile-icon.svg" alt="Device icon" width="32" height="32" loading="lazy">
                                     <div class="sub-text">
                                         <span class="item-heading">Mobile Application</span>
                                         <p>IoT mobile product</p>
                                     </div>
                                 </a>
                                 <a class="mobile-pe-lnk" href="/products/mobile-pe/">
-                                    <img src="/images/tb-pe-mobile-icon.svg" alt="PE Mobile Application icon" width="32" height="32" loading="lazy">
+                                    <img src="/images/sentient-pe-mobile-icon.svg" alt="PE Mobile Application icon" width="32" height="32" loading="lazy">
                                     <div class="sub-text">
                                         <span class="item-heading">PE Mobile Application</span>
                                         <p>Advanced IoT mobile product</p>
@@ -878,16 +878,16 @@
                             <div class="column">
                                 <p class="group-name">&nbsp;</p>
                                 <a class="mqtt-broker-lnk" href="/products/mqtt-broker/">
-                                    <img src="/images/tbmq-icon.svg" alt="MQTT Broker icon" width="32" height="32" loading="lazy">
+                                    <img src="/images/st-rmqtt-icon.svg" alt="MQTT Broker icon" width="32" height="32" loading="lazy">
                                     <div class="sub-text">
-                                        <span class="item-heading">TBMQ</span>
+                                        <span class="item-heading">ST-RMQTT</span>
                                         <p>Scalable MQTT broker</p>
                                     </div>
                                 </a>
-                                <a class="trendz-lnk" href="/products/trendz/">
-                                    <img src="/images/trendz-icon.svg" alt="Trendz Analytics icon" width="32" height="32" loading="lazy">
+                                <a class="sentient-analytics-lnk" href="/products/sentient-analytics/">
+                                    <img src="/images/sentient-analytics-icon.svg" alt="SENTIENT ANALYTICS icon" width="32" height="32" loading="lazy">
                                     <div class="sub-text">
-                                        <span class="item-heading">Trendz Analytics</span>
+                                        <span class="item-heading">SENTIENT ANALYTICS</span>
                                         <p>Data analytics and Prediction</p>
                                     </div>
                                 </a>
@@ -919,7 +919,7 @@
                                     <img src="/images/train-icon.svg" alt="Trainings icon" width="24" height="24" loading="lazy">
                                     <div class="sub-text">
                                         <span class="item-heading">Trainings</span>
-                                        <p>ThingsBoard education courses</p>
+                                        <p>SENTIENT education courses</p>
                                     </div>
                                 </a>
                             </div>
@@ -1221,13 +1221,13 @@
                                 <p class="group-name">&nbsp;</p>
                                 <a class="mqtt-broker-lnk" href="/docs/mqtt-broker/">
                                     <div class="sub-text">
-                                        <span class="item-heading">TBMQ</span>
+                                        <span class="item-heading">ST-RMQTT</span>
                                         <p>Scalable MQTT broker</p>
                                     </div>
                                 </a>
-                                <a class="trendz-lnk" href="/docs/trendz/">
+                                <a class="sentient-analytics-lnk" href="/docs/sentient-analytics/">
                                     <div class="sub-text">
-                                        <span class="item-heading">Trendz Analytics</span>
+                                        <span class="item-heading">SENTIENT ANALYTICS</span>
                                         <p>Data analytics and Prediction</p>
                                     </div>
                                 </a>

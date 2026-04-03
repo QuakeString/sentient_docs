@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-mqtt-broker
 title: Building from sources
-description: Building TBMQ from sources
+description: Building ST-RMQTT from sources
 
 ---
 

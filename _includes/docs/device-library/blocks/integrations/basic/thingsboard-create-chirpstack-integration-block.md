@@ -45,16 +45,16 @@ Now we need to configure application on the Chirpstack. To do this please follow
         title: Put some name for the API key and click on the "**Submit**" button.
     ===
         image: /images/devices-library/basic/integrations/chirpstack/api-key-created.png,
-        title: Copy the created API key and save it, we will need it for integration on ThingsBoard.
+        title: Copy the created API key and save it, we will need it for integration on SENTIENT.
 '%}
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=addIntegrationSteps %}
 
-Now we can move to ThingsBoard to configure integration.  
+Now we can move to SENTIENT to configure integration.  
 
-### Create integration in ThingsBoard
+### Create integration in SENTIENT
 
-Next, we will create an integration with Chirpstack inside the ThingsBoard and configure the integration on Chirpstack.
+Next, we will create an integration with Chirpstack inside the SENTIENT and configure the integration on Chirpstack.
 
 At first, copy the code, we will need it to create the uplink converter:
 

@@ -4,11 +4,11 @@ time series, using specific byte positions for data extraction.
 | **Parameter** | **Default value** | **Description**                                                                                                      |
 |:--------------|:------------------|----------------------------------------------------------------------------------------------------------------------|
 | telemetry     |                   | This subsection contains parameters of the incoming message, that will be interpreted as telemetry for the device.   |
-| ... key       | **temp**          | Name for telemetry in ThingsBoard.                                                                                   |
+| ... key       | **temp**          | Name for telemetry in SENTIENT.                                                                                   |
 | ... byteFrom  | **0**             | Used to slice received data from the specific index.                                                                 |
 | ... byteTo    | **-1**            | Used to slice received data to the specific index.                                                                   |
 | attributes    |                   | This subsection contains parameters of the incoming requests, that will be interpreted as attributes for the device. |
-| ... key       | **hum**           | Name for attribute in ThingsBoard.                                                                                   |
+| ... key       | **hum**           | Name for attribute in SENTIENT.                                                                                   |
 | ... byteFrom  | **2**             | Used to slice received data from the specific index.                                                                 |
 | ... byteTo    | **4**             | Used to slice received data to the specific index.                                                                   |
 | ---           |                   |                                                                                                                      |

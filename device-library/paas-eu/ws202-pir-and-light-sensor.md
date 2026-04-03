@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to connect WS202 PIR & Light LoRaWAN® Sensor to ThingsBoard?
+title: How to connect WS202 PIR & Light LoRaWAN® Sensor to SENTIENT?
 category: Other devices
 connectivity: LoRaWAN
 vendor: Milesight

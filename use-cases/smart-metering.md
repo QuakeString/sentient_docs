@@ -1,7 +1,7 @@
 ---
 layout: use-case
-title: ThingsBoard Smart Metering for Cities, Industry & Business
-description: Explore how ThingsBoard enables powerful IoT smart metering solutions with real-time dashboards, protocol support, and multi-industry applications.
+title: SENTIENT Smart Metering for Cities, Industry & Business
+description: Explore how SENTIENT enables powerful IoT smart metering solutions with real-time dashboards, protocol support, and multi-industry applications.
 notitle: "true"
 customTitle: "true"
 includeAdvantages: "true"
@@ -17,14 +17,14 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">In today's world of growing urban infrastructure, energy efficiency and water management have become top priorities. Smart metering solutions powered by the ThingsBoard IoT platform offer a transformative approach to utility monitoring, enabling stakeholders to access accurate, real-time insights into consumption patterns.</p>
+                <p class="text">In today's world of growing urban infrastructure, energy efficiency and water management have become top priorities. Smart metering solutions powered by the SENTIENT IoT platform offer a transformative approach to utility monitoring, enabling stakeholders to access accurate, real-time insights into consumption patterns.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_SmartMetering_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="button gtm_button">View live demo</a>            </div>
+                <a id="UseCases_SmartMetering_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="button gtm_button">View live demo</a>            </div>
             </div>
         <div class="long">
-            <p>With enhanced visibility, municipalities, facilities managers, and utility providers can make faster, data-driven decisions that optimize resource use, reduce waste, and lower operational costs. ThingsBoard plays an important role in this evolution by offering flexible, open-source tools to collect, process, and visualize telemetry data across distributed assets such as meters, sensors, and edge devices. Its modular architecture and rich feature set enable seamless integration of diverse devices, ensuring reliable real-time monitoring and control of utility infrastructure.</p>
-            <p>This use case showcases how ThingsBoard empowers organizations to build robust, end-to-end smart metering solutions. By combining protocol versatility, intuitive dashboards, and powerful rule engines, ThingsBoard makes it easy to monitor energy and water usage across residential, commercial, and municipal environments—enhancing sustainability and operational control.</p>
+            <p>With enhanced visibility, municipalities, facilities managers, and utility providers can make faster, data-driven decisions that optimize resource use, reduce waste, and lower operational costs. SENTIENT plays an important role in this evolution by offering flexible, open-source tools to collect, process, and visualize telemetry data across distributed assets such as meters, sensors, and edge devices. Its modular architecture and rich feature set enable seamless integration of diverse devices, ensuring reliable real-time monitoring and control of utility infrastructure.</p>
+            <p>This use case showcases how SENTIENT empowers organizations to build robust, end-to-end smart metering solutions. By combining protocol versatility, intuitive dashboards, and powerful rule engines, SENTIENT makes it easy to monitor energy and water usage across residential, commercial, and municipal environments—enhancing sustainability and operational control.</p>
         </div>
     </div>
 </section>
@@ -40,11 +40,11 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">The ThingsBoard solution is designed to seamlessly integrate with smart meters and environmental sensors using a broad set of IoT protocols including MQTT, CoAP, and HTTP. These protocols enable low-latency, efficient data transmission even over constrained networks.</p>
+                <p class="text">The SENTIENT solution is designed to seamlessly integrate with smart meters and environmental sensors using a broad set of IoT protocols including MQTT, CoAP, and HTTP. These protocols enable low-latency, efficient data transmission even over constrained networks.</p>
             </div>
         </div>
         <div class="long">
-            <p>Smart meters transmit electricity, water, and temperature data to ThingsBoard via lightweight, efficient protocols. The platform processes this data through its rule engine, enabling alarms, storage, or forwarding.</p>
+            <p>Smart meters transmit electricity, water, and temperature data to SENTIENT via lightweight, efficient protocols. The platform processes this data through its rule engine, enabling alarms, storage, or forwarding.</p>
             <p>Telemetry is securely stored and visualized on customizable dashboards. Built-in widgets help display trends, real-time usage, and alarms — forming a scalable, reliable system from device to dashboard.</p>
         </div>
     </div>
@@ -57,7 +57,7 @@ contactUsModal: "true"
     <div class="section-header">
         <h2>Smart metering dashboard structure</h2>
         <p>
-            The ThingsBoard smart metering dashboard is structured hierarchically for clear navigation across different locations and asset levels. Each level is designed to provide intuitive, real-time visualization of data, ensuring stakeholders can act quickly and effectively.
+            The SENTIENT smart metering dashboard is structured hierarchically for clear navigation across different locations and asset levels. Each level is designed to provide intuitive, real-time visualization of data, ensuring stakeholders can act quickly and effectively.
         </p>
     </div>
     <div class="dashboard-structure-block">
@@ -216,7 +216,7 @@ contactUsModal: "true"
 <section class="summary">
     <div class="summary-text">
         <h2>Summary of smart metering</h2>
-        <p>IoT smart metering with ThingsBoard provides a scalable, flexible way to monitor utilities. Through sensor integration and protocol support, data is collected and visualized across districts, buildings, and apartments. ThingsBoard enables tracking of energy use, alarms, and temperature trends—helping users make timely decisions and meet sustainability goals across industries. With ThingsBoard, organizations can build future-ready smart metering systems that scale, adapt, and drive sustainable impact.</p>
+        <p>IoT smart metering with SENTIENT provides a scalable, flexible way to monitor utilities. Through sensor integration and protocol support, data is collected and visualized across districts, buildings, and apartments. SENTIENT enables tracking of energy use, alarms, and temperature trends—helping users make timely decisions and meet sustainability goals across industries. With SENTIENT, organizations can build future-ready smart metering systems that scale, adapt, and drive sustainable impact.</p>
     </div>
     <div class="summary-icon">
         <img src="/images/usecases/health-care/summary.svg" alt="Text summary icon" title="Text summary icon">
@@ -317,7 +317,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_SmartMetering_ViewLiveDemo" target="_blank" href="https://demo.thingsboard.io/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="button gtm_button">View live demo</a>
+                <a id="UseCases_SmartMetering_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="button gtm_button">View live demo</a>
                 <a id="UseCases_SmartMetering_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
     

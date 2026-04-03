@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-mqtt-broker
-title: TBMQ Professional Edition Release Notes
-description: TBMQ Professional Edition Releases
+title: ST-RMQTT Professional Edition Release Notes
+description: ST-RMQTT Professional Edition Releases
 
 ---
 
@@ -10,16 +10,16 @@ description: TBMQ Professional Edition Releases
 
 ## v2.2.0 (January 20, 2026) {#v220PE}
 
-This release includes all features, improvements, and bug fixes from [TBMQ CE v2.2](/docs/mqtt-broker/releases/#v220-september-1-2025), along with the following Professional Edition exclusive updates:
+This release includes all features, improvements, and bug fixes from [ST-RMQTT CE v2.2](/docs/mqtt-broker/releases/#v220-september-1-2025), along with the following Professional Edition exclusive updates:
 
 **Main Features**
 
 * **Single Sign-On / OAuth 2.0:**
-  * Enable seamless integration with corporate identity providers (IdPs) via Single Sign-On (SSO) and the OAuth 2.0 framework. This centralizes user management, enforces strong authentication, and improves the overall security posture for TBMQ users and administrators.
+  * Enable seamless integration with corporate identity providers (IdPs) via Single Sign-On (SSO) and the OAuth 2.0 framework. This centralizes user management, enforces strong authentication, and improves the overall security posture for ST-RMQTT users and administrators.
 * **Role-Based Access Control (RBAC):**
   * Introduce a robust RBAC system allowing administrators to define fine-grained access permissions based on roles. This ensures users only have access to the specific administrative functions and resources necessary for their job, which is crucial for compliance and security segmentation.
 * **White Labeling (Custom Branding):**
-  * Provide the ability to fully customize the TBMQ user interface (UI) with custom logos, color schemes, and branding elements. This allows partners and enterprise users to integrate the broker management UI seamlessly into their own product ecosystem.
+  * Provide the ability to fully customize the ST-RMQTT user interface (UI) with custom logos, color schemes, and branding elements. This allows partners and enterprise users to integrate the broker management UI seamlessly into their own product ecosystem.
 
 **Core System and Operational Improvements**
 

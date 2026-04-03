@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-mobile-pe
-title: Customize device icons in ThingsBoard PE Mobile Application
+title: Customize device icons in SENTIENT Professional Edition Mobile Application
 
 device-image:
  0:

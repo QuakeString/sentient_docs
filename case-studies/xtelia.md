@@ -1,9 +1,9 @@
 ---
 layout: case-studies
-title: Smart City Parking - X-TELIA Scales Fast with ThingsBoard
+title: Smart City Parking - X-TELIA Scales Fast with SENTIENT
 notitle: "true"
 customTitle: "true"
-description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart signage system using solar LoRaWAN™ “No Parking” signs and real-time dashboards.
+description: Discover how X-TELIA partnered with SENTIENT to deliver a smart signage system using solar LoRaWAN™ “No Parking” signs and real-time dashboards.
 ---
 
 <div class="case-study-page-wrapper">
@@ -11,7 +11,7 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
         <div class="card">
             <div class="text">
                 <p class="category">SMART CITY</p>
-                <h1>Smart signage at scale: X-TELIA deploys LoRaWAN™ parking management with ThingsBoard</h1>
+                <h1>Smart signage at scale: X-TELIA deploys LoRaWAN™ parking management with SENTIENT</h1>
                 <div class="image inner" style="background-image: url('/images/case-studies/x-telia.webp')">
                     <img src="/images/case-studies/x-telia.svg" title="X-TELIA" alt="X-TELIA logo" width="126" height="56">
                 </div>
@@ -88,7 +88,7 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
                 <ul>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>Developed a robust MQTT-based protocol between X-TELIA's network and ThingsBoard</p>
+                        <p>Developed a robust MQTT-based protocol between X-TELIA's network and SENTIENT</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
@@ -96,7 +96,7 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>Successfully deployed a ThingsBoard PE instance tailored for the use case</p>
+                        <p>Successfully deployed a SENTIENT Professional Edition instance tailored for the use case</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
@@ -111,43 +111,43 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
         </div>
     </section>
     <section class="tb-power mb">
-        <h2>How ThingsBoard powers X-TELIA?</h2>
+        <h2>How SENTIENT powers X-TELIA?</h2>
         <div class="block">
             <div class="text">
                 <h3>Seamless MQTT integration</h3>
-                <p>ThingsBoard engineers collaborated directly with X-TELIA’s developers to build a resilient MQTT-based communication protocol. This enabled fast, real-time data exchange between the LoRaWAN™ infrastructure and the IoT platform.</p>
+                <p>SENTIENT engineers collaborated directly with X-TELIA’s developers to build a resilient MQTT-based communication protocol. This enabled fast, real-time data exchange between the LoRaWAN™ infrastructure and the IoT platform.</p>
             </div>
             <img src="/images/case-studies/x-telia-1.webp" title="Seamless MQTT integration" alt="Seamless MQTT integration" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Custom widget development</h3>
-                <p>The ThingsBoard team created a purpose-built dashboard widget for intuitive signage control. This allowed operators to activate or deactivate “No Parking” signs across the city with a single click and full visibility.</p>
+                <p>The SENTIENT team created a purpose-built dashboard widget for intuitive signage control. This allowed operators to activate or deactivate “No Parking” signs across the city with a single click and full visibility.</p>
             </div>
             <img src="/images/case-studies/x-telia-2.webp" title="Custom widget development" alt="Custom widget development" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Turnkey PE instance deployment</h3>
-                <p>ThingsBoard Professional Edition was deployed under tight deadlines with production-grade reliability. Its scalable architecture allowed rapid deployment without compromising stability or performance.</p>
+                <p>SENTIENT Professional Edition was deployed under tight deadlines with production-grade reliability. Its scalable architecture allowed rapid deployment without compromising stability or performance.</p>
             </div>
             <img src="/images/case-studies/x-telia-3.webp" title="Turnkey PE instance deployment" alt="Turnkey PE instance deployment" width="450" height="240">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Expert technical support</h3>
-                <p>Throughout the project, the ThingsBoard team provided high-touch technical assistance. Their dedication and close cooperation were key to the successful and timely launch of the solution.</p>
+                <p>Throughout the project, the SENTIENT team provided high-touch technical assistance. Their dedication and close cooperation were key to the successful and timely launch of the solution.</p>
             </div>
             <img src="/images/case-studies/x-telia-4.webp" title="Expert technical support" alt="Expert technical support" width="450" height="240">
         </div>
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How ThingsBoard helps smart city solutions improve operations with IoT?</h2>
+        <h2>How SENTIENT helps smart city solutions improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Smart street lighting</h3>
-                <p>Street lighting is one of the most energy-consuming services in a city. Smart lighting systems connected via ThingsBoard can reduce energy consumption, maintenance costs, and carbon emissions while improving public safety.</p>
+                <p>Street lighting is one of the most energy-consuming services in a city. Smart lighting systems connected via SENTIENT can reduce energy consumption, maintenance costs, and carbon emissions while improving public safety.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>IoT-enabled streetlights report status, brightness, energy usage, and faults.</p></li>
@@ -156,30 +156,30 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/maps-widgets.webp" title="Thingsboard maps widgets widget" alt="Thingsboard maps widgets widget" width="776" height="776">
-                <img src="/images/case-studies/hp-scada-energy.webp" title="Thingsboard HP SCADA energy widgets" alt="Thingsboard HP SCADA energy widgets" width="388" height="388">
+                <img src="/images/case-studies/maps-widgets.webp" title="Sentient maps widgets widget" alt="Sentient maps widgets widget" width="776" height="776">
+                <img src="/images/case-studies/hp-scada-energy.webp" title="Sentient HP SCADA energy widgets" alt="Sentient HP SCADA energy widgets" width="388" height="388">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Smart waste management</h3>
-                <p>Efficient waste collection is critical to sanitation, fuel savings, and environmental health. ThingsBoard helps cities deploy smart bins that signal when they’re full and optimize collection routes.</p>
+                <p>Efficient waste collection is critical to sanitation, fuel savings, and environmental health. SENTIENT helps cities deploy smart bins that signal when they’re full and optimize collection routes.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Ultrasonic or weight sensors detect bin fill levels.</p></li>
-                    <li><p>ThingsBoard triggers alerts when bins reach thresholds.</p></li>
+                    <li><p>SENTIENT triggers alerts when bins reach thresholds.</p></li>
                     <li><p>Integrates with route optimization software to improve collection efficiency.</p></li>
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/time-series-chart.webp" title="Thingsboard time series chart widget" alt="Thingsboard time series chart widget" width="776" height="776">
-                <img src="/images/case-studies/hp-scada-energy.webp" title="Thingsboard HP SCADA energy widgets" alt="Thingsboard HP SCADA energy widgets" width="388" height="388">
+                <img src="/images/case-studies/time-series-chart.webp" title="Sentient time series chart widget" alt="Sentient time series chart widget" width="776" height="776">
+                <img src="/images/case-studies/hp-scada-energy.webp" title="Sentient HP SCADA energy widgets" alt="Sentient HP SCADA energy widgets" width="388" height="388">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Traffic & Parking Management</h3>
-                <p>Urban mobility depends on efficient traffic and parking systems. ThingsBoard supports real-time tracking of vehicle movement, traffic density, and parking space availability.</p>
+                <p>Urban mobility depends on efficient traffic and parking systems. SENTIENT supports real-time tracking of vehicle movement, traffic density, and parking space availability.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Connect road sensors, ANPR cameras, and parking spot detectors.</p></li>
@@ -188,14 +188,14 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/entities-table-3.webp" title="Thingsboard entities table widget" alt="Thingsboard entities table widget" width="776" height="776">
-                <img src="/images/case-studies/parking-status-widget.webp" title="Thingsboard parking-status-widget" alt="Thingsboard parking-status-widget" width="582" height="582">
+                <img src="/images/case-studies/entities-table-3.webp" title="Sentient entities table widget" alt="Sentient entities table widget" width="776" height="776">
+                <img src="/images/case-studies/parking-status-widget.webp" title="Sentient parking-status-widget" alt="Sentient parking-status-widget" width="582" height="582">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Environmental & air quality monitoring</h3>
-                <p>To create healthier urban spaces, cities must monitor air quality, noise, and weather conditions. ThingsBoard provides real-time visibility and long-term trend analysis for environmental health.</p>
+                <p>To create healthier urban spaces, cities must monitor air quality, noise, and weather conditions. SENTIENT provides real-time visibility and long-term trend analysis for environmental health.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>IoT stations monitor CO₂, PM2.5, NO₂, temperature, humidity, and noise.</p></li>
@@ -204,14 +204,14 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/digital_gauges.webp" title="Thingsboard digital gauges widgets" alt="Thingsboard digital gauges widgets" width="776" height="776">
-                <img src="/images/case-studies/hp-curcuit-breaker.webp" title="Thingsboard HP curcuit breaker widget" alt="Thingsboard HP curcuit breaker widget" width="582" height="582">
+                <img src="/images/case-studies/digital_gauges.webp" title="Sentient digital gauges widgets" alt="Sentient digital gauges widgets" width="776" height="776">
+                <img src="/images/case-studies/hp-curcuit-breaker.webp" title="Sentient HP curcuit breaker widget" alt="Sentient HP curcuit breaker widget" width="582" height="582">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Smart water & utility management</h3>
-                <p>Water is a critical resource. ThingsBoard supports remote monitoring of water infrastructure, helping cities reduce leakage, improve billing accuracy, and conserve resources.</p>
+                <p>Water is a critical resource. SENTIENT supports remote monitoring of water infrastructure, helping cities reduce leakage, improve billing accuracy, and conserve resources.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>IoT meters track flow rate, pressure, consumption, and quality.</p></li>
@@ -220,14 +220,14 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/bar-chart.webp" title="Thingsboard bar chart widget" alt="Thingsboard bar chart widget" width="776" height="776">
-                <img src="/images/case-studies/hp-centrifugal-pump.webp" title="Thingsboard HP centrifugal-pump widget" alt="Thingsboard HP centrifugal-pump widget" width="776" height="776">
+                <img src="/images/case-studies/bar-chart.webp" title="Sentient bar chart widget" alt="Sentient bar chart widget" width="776" height="776">
+                <img src="/images/case-studies/hp-centrifugal-pump.webp" title="Sentient HP centrifugal-pump widget" alt="Sentient HP centrifugal-pump widget" width="776" height="776">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Public safety & emergency response</h3>
-                <p>Cities need real-time situational awareness for emergencies, disasters, and security threats. ThingsBoard enables centralized alerting and device coordination for public safety operations.</p>
+                <p>Cities need real-time situational awareness for emergencies, disasters, and security threats. SENTIENT enables centralized alerting and device coordination for public safety operations.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Connect fire sensors, panic buttons, CCTV, public alarms.</p></li>
@@ -236,14 +236,14 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/notification-widget.webp" title="Thingsboard notification widget" alt="Thingsboard notification widget" width="776" height="776">
-                <img src="/images/case-studies/map-widget.webp" title="Thingsboard map widget" alt="Thingsboard map widget" width="582" height="582">
+                <img src="/images/case-studies/notification-widget.webp" title="Sentient notification widget" alt="Sentient notification widget" width="776" height="776">
+                <img src="/images/case-studies/map-widget.webp" title="Sentient map widget" alt="Sentient map widget" width="582" height="582">
             </div>
         </div>
         <div class="block">
             <div class="text">
                 <h3>Citizen & building engagement</h3>
-                <p>Cities can offer interactive dashboards and services to residents, businesses, and building operators—built on the same ThingsBoard backend.</p>
+                <p>Cities can offer interactive dashboards and services to residents, businesses, and building operators—built on the same SENTIENT backend.</p>
                 <p>How It Works:</p>
                 <ul>
                     <li><p>Each building or stakeholder can access custom dashboards with relevant data.</p></li>
@@ -252,8 +252,8 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
                 </ul>
             </div>
             <div class="image-container">
-                <img src="/images/case-studies/hierarchy-widget.webp" title="Thingsboard hierarchy widget" alt="Thingsboard hierarchy widget" width="776" height="776">
-                <img src="/images/case-studies/roles-table.webp" title="Thingsboard roles table widget" alt="Thingsboard roles table widget" width="776" height="776">
+                <img src="/images/case-studies/hierarchy-widget.webp" title="Sentient hierarchy widget" alt="Sentient hierarchy widget" width="776" height="776">
+                <img src="/images/case-studies/roles-table.webp" title="Sentient roles table widget" alt="Sentient roles table widget" width="776" height="776">
             </div>
         </div>
         {% include services-banner.liquid %}
@@ -262,12 +262,12 @@ description: Discover how X-TELIA partnered with ThingsBoard to deliver a smart 
         <div class="bg-wrap" style="background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%), url(/images/case-studies/handshake.webp)">
             <div class="outer-frame">
                 <div class="inner-frame">
-                    <img src="/images/case-studies/thingsboard.svg" title="ThingsBoard logo" alt="ThingsBoard logo" width="298" height="56">
+                    <img src="/images/case-studies/sentient.svg" title="SENTIENT logo" alt="SENTIENT logo" width="298" height="56">
                     <img src="/images/case-studies/x-telia.svg" title="X-TELIA" alt="X-TELIA logo" width="126" height="56">
                 </div>
             </div>
         </div>
-        <p>Real stories, real impact — share your experience with ThingsBoard!</p>
+        <p>Real stories, real impact — share your experience with SENTIENT!</p>
         <a id="CaseStudy_Xtelia_ContactUs" target="_blank" href="/docs/contact-us/" class="button gtm_button">Contact us</a>
     </section>
 </div>

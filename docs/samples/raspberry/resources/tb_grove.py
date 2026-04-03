@@ -1,5 +1,5 @@
 #
-# Copyright © 2019-2024 The Thingsboard Authors
+# Copyright © 2019-2024 The Sentient Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ logging.basicConfig(level=logging.INFO,
 
 log = logging.getLogger(__name__)
 
-THINGSBOARD_SERVER = 'THINGSBOARD_HOST'
+SENTIENT_SERVER = 'SENTIENT_HOST'
 ACCESS_TOKEN = 'ACCESS_TOKEN'
 
 
@@ -76,8 +76,8 @@ def main():
         elif request_body['method'] == 'getServoAngle':
             client.send_rpc_reply(request_id, servo_angle)
 
-    # Connecting to ThingsBoard
-    client = TBDeviceMqttClient(THINGSBOARD_SERVER, username=ACCESS_TOKEN)
+    # Connecting to SENTIENT
+    client = TBDeviceMqttClient(SENTIENT_SERVER, username=ACCESS_TOKEN)
     client.set_server_side_rpc_request_handler(on_server_side_rpc_request)
     client.connect()
 
@@ -127,7 +127,7 @@ def main():
 
             log.debug('light: {}'.format(light_sensor.light))
 
-            # Formatting the data for sending to ThingsBoard
+            # Formatting the data for sending to SENTIENT
             telemetry = {'distance': distance,
                          'temperature': temperature,
                          'humidity': humidity,

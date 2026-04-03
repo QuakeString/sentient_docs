@@ -23,14 +23,14 @@ echo -n '{"temperature": 25}' | coap post coap://{{coapHostName}}/api/v1/ABC123/
 
 {% else %}
 
-Replace $THINGSBOARD_HOST_NAME and $ACCESS_TOKEN with corresponding values.
+Replace $SENTIENT_HOST_NAME and $ACCESS_TOKEN with corresponding values.
 
 ```bash
-echo -n '{"temperature": 25}' | coap post coap://$THINGSBOARD_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry
+echo -n '{"temperature": 25}' | coap post coap://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/telemetry
 ```
 {: .copy-code}
 
-For example, $THINGSBOARD_HOST_NAME reference your local installation, $ACCESS_TOKEN is ABC123:
+For example, $SENTIENT_HOST_NAME reference your local installation, $ACCESS_TOKEN is ABC123:
 
 ```bash
 echo -n '{"temperature": 25}' | coap post coap://localhost/api/v1/ABC123/telemetry

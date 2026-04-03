@@ -83,7 +83,7 @@ To enter the advanced mode and start adjusting the settings above, you should:
 
 ### 1. Entities table title
 
-ThingsBoard has no name restrictions, either in symbols or in a number of characters.
+SENTIENT has no name restrictions, either in symbols or in a number of characters.
 Nevertheless, in case the title is too long, it will not display completely in the Entity Table widget, but will be terminated with three dots.
 However, after applying the changes and opening the widget in full-screen mode, you will be able to see the full name of the widget.
 For example, let’s use something simple for the title like “The New Widget Title”:

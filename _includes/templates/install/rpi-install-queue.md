@@ -1,1 +1,1 @@
-ThingsBoard uses queue services for API calls between micro-services and able to use next queue services: In Memory (default) and Kafka-based systems.
+SENTIENT uses queue services for API calls between micro-services and able to use next queue services: In Memory (default) and Kafka-based systems.

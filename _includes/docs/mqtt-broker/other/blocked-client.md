@@ -2,7 +2,7 @@
 * TOC
 {:toc}
 
-The **Blocked Clients** feature in TBMQ allows administrators to restrict access to the broker based on specific client identifiers or pattern-based rules.
+The **Blocked Clients** feature in ST-RMQTT allows administrators to restrict access to the broker based on specific client identifiers or pattern-based rules.
 It strengthens security, helps conserve system resources, and provides fine-grained control over who can initiate and maintain connections with the MQTT broker.
 
 Blocked Clients are stored in memory for fast and efficient matching and are synchronized across all broker nodes in the cluster using Kafka.

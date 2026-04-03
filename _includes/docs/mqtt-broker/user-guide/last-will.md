@@ -88,9 +88,9 @@ The **Retain Flag** is used to keep the Last Will message on the broker, so that
 If a client disconnects unexpectedly, its Last Will message indicates an important state change. By using the **Retain Flag = true**, this message will be **stored** by the broker and **sent to any future subscribers** of the topic. 
 For example, if a new device joins a network after a client disconnects, it will still receive the "offline" or "disconnected" Last Will message.
 
-## Last Will guide with TBMQ WebSocket Client
+## Last Will guide with ST-RMQTT WebSocket Client
 
-In this guide, we will demonstrate how the Last Will feature works in the TBMQ using a WebSocket client. 
+In this guide, we will demonstrate how the Last Will feature works in the ST-RMQTT using a WebSocket client. 
 By simulating an ungraceful disconnection, you'll see how the broker publishes the Last Will message to inform other connected clients.
 
 ### Step 1. Add client "Security Camera"
@@ -117,7 +117,7 @@ Now let's add another connection, **Security Hub**, which will receive the Last 
 
 ### Step 3. Trigger an ungraceful disconnection
 
-To publish the Last Will message, the connection between the client and the broker must be terminated ungracefully. To do this in TBMQ, follow these steps:
+To publish the Last Will message, the connection between the client and the broker must be terminated ungracefully. To do this in ST-RMQTT, follow these steps:
 
 1. Click on _Select Connection_ icon and open the _Security Camera_ session details window.
 2. Click _Disconnect client_ to forcefully terminate the connection.

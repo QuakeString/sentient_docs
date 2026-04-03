@@ -136,7 +136,7 @@ tb-gw-extensions
 **Daemon:**
 
 ```bash
-/var/lib/thingsboard_gateway/extensions
+/var/lib/sentient_gateway/extensions
 ```
 {: .copy-code}
 
@@ -144,8 +144,8 @@ tb-gw-extensions
 
 | **Installation command** | **Path** | **Description** |
 |-|-|
-| **sudo pip3 install thingsboard-gateway** | `/usr/lib/python3/site-packages/thingsboard_gateway/extensions` | Package installed on system layer, for every user. |
-| **pip3 install thingsboard-gateway** | `/usr/local/lib/python3/dist-packages/thingsboard-gateway` | Package installed only for current user. |
+| **sudo pip3 install sentient-gateway** | `/usr/lib/python3/site-packages/sentient_gateway/extensions` | Package installed on system layer, for every user. |
+| **pip3 install sentient-gateway** | `/usr/local/lib/python3/dist-packages/sentient-gateway` | Package installed only for current user. |
 
 
 ### Step 3. Define Connector Implementation
@@ -163,7 +163,7 @@ from typing import List, TYPE_CHECKING
 
 import serial.tools
 import serial.tools.list_ports
-from thingsboard_gateway.tb_utility.tb_utility import TBUtility
+from sentient_gateway.tb_utility.tb_utility import TBUtility
 from time import monotonic, sleep
 
 try:
@@ -173,13 +173,13 @@ except ImportError:
     TBUtility.install_package("pyserial")
     import serial
 
-from thingsboard_gateway.connectors.connector import Connector
-from thingsboard_gateway.tb_utility.tb_loader import TBModuleLoader
-from thingsboard_gateway.tb_utility.tb_logger import init_logger
+from sentient_gateway.connectors.connector import Connector
+from sentient_gateway.tb_utility.tb_loader import TBModuleLoader
+from sentient_gateway.tb_utility.tb_logger import init_logger
 
 if TYPE_CHECKING:
     #  necessary for type checking to avoid circular import
-    from thingsboard_gateway.gateway.tb_gateway_service import TBGatewayService
+    from sentient_gateway.gateway.tb_gateway_service import TBGatewayService
 
 
 class SerialDevice(Thread):
@@ -593,13 +593,13 @@ You can find complete list of methods of Converter interface - [here](/docs/iot-
 from typing import Any, Tuple
 from simplejson import loads
 
-from thingsboard_gateway.connectors.converter import Converter
-from thingsboard_gateway.gateway.constants import REPORT_STRATEGY_PARAMETER, TELEMETRY_PARAMETER, TIMESERIES_PARAMETER
-from thingsboard_gateway.gateway.entities.converted_data import ConvertedData
-from thingsboard_gateway.gateway.entities.datapoint_key import DatapointKey
-from thingsboard_gateway.gateway.entities.report_strategy_config import ReportStrategyConfig
-from thingsboard_gateway.gateway.entities.telemetry_entry import TelemetryEntry
-from thingsboard_gateway.tb_utility.tb_utility import TBUtility
+from sentient_gateway.connectors.converter import Converter
+from sentient_gateway.gateway.constants import REPORT_STRATEGY_PARAMETER, TELEMETRY_PARAMETER, TIMESERIES_PARAMETER
+from sentient_gateway.gateway.entities.converted_data import ConvertedData
+from sentient_gateway.gateway.entities.datapoint_key import DatapointKey
+from sentient_gateway.gateway.entities.report_strategy_config import ReportStrategyConfig
+from sentient_gateway.gateway.entities.telemetry_entry import TelemetryEntry
+from sentient_gateway.tb_utility.tb_utility import TBUtility
 
 
 class SerialUplinkConverter(Converter):
@@ -741,7 +741,7 @@ You can find complete list of methods of Converter interface - [here](/docs/iot-
 from math import ceil
 from struct import pack, unpack
 
-from thingsboard_gateway.connectors.converter import Converter
+from sentient_gateway.connectors.converter import Converter
 
 
 class SerialDownlinkConverter(Converter):
@@ -806,25 +806,25 @@ To run the gateway you should execute following command, it depends on type of i
  -  If you install the IoT gateway as daemon, you should restart it with following command to apply changes to the configuration:  
 
 ```bash
-sudo systemctl restart thingsboard-gateway
+sudo systemctl restart sentient-gateway
 ```
 {: .copy-code}
  - If you install the IoT gateway as Python module, you should run it from the folder with tb_gateway.json (or change path to the tb_gateway.json file) with the following command to apply changes to the configuration:  
 
 ```bash
-sudo python3 -c 'from thingsboard_gateway.gateway.tb_gateway_service import TBGatewayService; TBGatewayService("./tb_gateway.json")'
+sudo python3 -c 'from sentient_gateway.gateway.tb_gateway_service import TBGatewayService; TBGatewayService("./tb_gateway.json")'
 ```
 {: .copy-code}
 
 You can check a status of the IoT Gateway by watch the logs in a folder that you provide in logs.json file.  
 Default locations of logs folder depending on installation option:  
 Docker compose - "tb-gw-logs" volume  
-Daemon - "/var/log/thingsboard-gateway/"  
+Daemon - "/var/log/sentient-gateway/"  
 Python module (pip) - "./logs/"  
 
-### Step 6. Check a result on the ThingsBoard instance
+### Step 6. Check a result on the SENTIENT instance
 
-To check the result, you should connect device, and go to the ThingsBoard UI into "Devices" tab.  
+To check the result, you should connect device, and go to the SENTIENT UI into "Devices" tab.  
 If device connected correctly and has sent some data, you will see device with a name - "SerialDevice1".  
 To check the data - open device and go to the telemetry tab.  
 You should see the telemetry from config (humidity) with some value 48 (Value from example, your value can be different).  
@@ -978,7 +978,7 @@ If configuration in section attributesUpdates like following, connector will sen
 ```json
       "attributeUpdates": [
         {
-          "attributeOnThingsBoard": "attr1",
+          "attributeOnSENTIENT": "attr1",
           "stringToDevice": "value = ${attr1}\n"
         }
       ]

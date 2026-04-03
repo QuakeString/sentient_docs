@@ -1,23 +1,23 @@
-{% capture tbmqPaygPricing %}{% include pricing/prices/tbmq-payg.json %}{% endcapture %}
-<div class="embedded-calculator" id="tbmqSmCalculator">
+{% capture st-rmqttPaygPricing %}{% include pricing/prices/st-rmqtt-payg.json %}{% endcapture %}
+<div class="embedded-calculator" id="st-rmqttSmCalculator">
     <div class="calculator-body">
         <div class="card calculator">
             <div class="calculator-header">
-                <h2>TBMQ Self-managed subscription calculator</h2>
+                <h2>ST-RMQTT Self-managed subscription calculator</h2>
             </div>
             <div class="input-parameters">
                 <div class="input-group">
                     <div class="input-label-group xs-row">
-                        <label for="tbmq-sessions" class="label">
+                        <label for="st-rmqtt-sessions" class="label">
                             Sessions
                             <span class="tooltip"><img src="/images/pricing/info-icon.svg" alt="Hint icon">
                                 <span class="tooltip-text">Total unique logical states managed by the broker (identified by Client ID). Active connections and disconnected clients with persistent sessions both occupy quota slots.</span>
                             </span>
                         </label>
-                        <input id="tbmq-sessions" type="number" value="100" min="100" class="input input-right">
+                        <input id="st-rmqtt-sessions" type="number" value="100" min="100" class="input input-right">
                     </div>
                     <div class="slider-container">
-                        <input type="range" id="tbmq-sessionsSlider" min="0" max="6" step="0.001" value="0" class="slider">
+                        <input type="range" id="st-rmqtt-sessionsSlider" min="0" max="6" step="0.001" value="0" class="slider">
                         <div class="tick-marks">
                             <div class="tick-mark" data-index="0"><span class="tick"></span><span class="tick-label">100</span></div>
                             <div class="tick-mark" data-index="1"><span class="tick"></span><span class="tick-label">1K</span></div>
@@ -32,16 +32,16 @@
 
                 <div class="input-group">
                     <div class="input-label-group xs-row">
-                        <label for="tbmq-throughput" class="label">
+                        <label for="st-rmqtt-throughput" class="label">
                             Throughput (msg/sec)
                             <span class="tooltip"><img src="/images/pricing/info-icon.svg" alt="Hint icon">
                                 <span class="tooltip-text">Combined number of MQTT PUBLISH packets processed per second, including both incoming (publisher) and outgoing (subscriber) messages.</span>
                             </span>
                         </label>
-                        <input id="tbmq-throughput" type="number" value="100" min="100" class="input input-right">
+                        <input id="st-rmqtt-throughput" type="number" value="100" min="100" class="input input-right">
                     </div>
                     <div class="slider-container">
-                        <input type="range" id="tbmq-throughputSlider" min="0" max="6" step="0.001" value="0" class="slider">
+                        <input type="range" id="st-rmqtt-throughputSlider" min="0" max="6" step="0.001" value="0" class="slider">
                         <div class="tick-marks">
                             <div class="tick-mark" data-index="0"><span class="tick"></span><span class="tick-label">100</span></div>
                             <div class="tick-mark" data-index="1"><span class="tick"></span><span class="tick-label">1K</span></div>
@@ -65,9 +65,9 @@
                             </h4>
                             <p>1 instance included. Add more for high availability (HA) and reliability.</p>
                         </div>
-                        <div class="stepper-control unset-width" id="tbmqProdStepper">
+                        <div class="stepper-control unset-width" id="st-rmqttProdStepper">
                             <button type="button" class="stepper-btn minus" data-action="decrement" disabled aria-label="Decrease production instances">−</button>
-                            <input type="number" value="1" min="1" id="tbmqProdInstances" aria-label="Production instances count">
+                            <input type="number" value="1" min="1" id="st-rmqttProdInstances" aria-label="Production instances count">
                             <button type="button" class="stepper-btn plus" data-action="increment" aria-label="Increase production instances">+</button>
                         </div>
                     </div>
@@ -81,9 +81,9 @@
                             </h4>
                             <p>Add dedicated instances for your dev, test, and CI/CD workflows. Keep your production data clean.</p>
                         </div>
-                        <div class="stepper-control unset-width" id="tbmqDevStepper">
+                        <div class="stepper-control unset-width" id="st-rmqttDevStepper">
                             <button type="button" class="stepper-btn minus" data-action="decrement" disabled aria-label="Decrease development instances">−</button>
-                            <input type="number" value="0" min="0" id="tbmqDevInstances" aria-label="Development instances count">
+                            <input type="number" value="0" min="0" id="st-rmqttDevInstances" aria-label="Development instances count">
                             <button type="button" class="stepper-btn plus" data-action="increment" aria-label="Increase development instances">+</button>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
                         </span>
                     </p>
                     <div class="add-ons-grid">
-                        <div class="addon-card" id="tbmqWlCard">
+                        <div class="addon-card" id="st-rmqttWlCard">
                             <div class="addon-header">
                                 <span class="addon-title">
                                     White Labeling
@@ -108,13 +108,13 @@
                                     </span>
                                 </span>
                                 <label class="toggle-switch">
-                                    <input type="checkbox" id="tbmqWlToggle">
+                                    <input type="checkbox" id="st-rmqttWlToggle">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
                             <p class="addon-description">Customize UI to match your corporate branding.</p>
                         </div>
-                        <div class="addon-card" id="tbmqHelpDeskCard">
+                        <div class="addon-card" id="st-rmqttHelpDeskCard">
                             <div class="addon-header">
                                 <span class="addon-title">
                                     Priority Help Desk
@@ -124,7 +124,7 @@
                                     </span>
                                 </span>
                                 <label class="toggle-switch">
-                                    <input type="checkbox" id="tbmqHelpDeskToggle">
+                                    <input type="checkbox" id="st-rmqttHelpDeskToggle">
                                     <span class="slider round"></span>
                                 </label>
                             </div>
@@ -135,23 +135,23 @@
             </div>
             <div class="actions-container">
                 <div class="reset-container">
-                    <button id="tbmqResetBtn" class="button reset">Reset</button>
+                    <button id="st-rmqttResetBtn" class="button reset">Reset</button>
                 </div>
             </div>
         </div>
-        <div id="tbmqResultsCard" class="card results"></div>
+        <div id="st-rmqttResultsCard" class="card results"></div>
     </div>
 </div>
 
 <script>
-    const tbmqPaygPlan = {{ tbmqPaygPricing }};
+    const st-rmqttPaygPlan = {{ st-rmqttPaygPricing }};
     const TB_MQ_MIN = 100;
     const TB_MQ_MAX = 1000000;
 
     const TB_MQ_SESSION_MARKS = [100, 1000, 2000, 5000, 10000, 100000, TB_MQ_MAX];
     const TB_MQ_THROUGHPUT_MARKS = [100, 1000, 2000, 5000, 10000, 20000, TB_MQ_MAX];
 
-    let tbmqPaygState = {
+    let st-rmqttPaygState = {
         clipboardMessage: '',
         debounceTimer: null,
         sessions: 100,
@@ -164,43 +164,43 @@
         }
     };
 
-    const tbmqPaygUi = {
-        calculator: document.getElementById('tbmqSmCalculator'),
-        results: document.getElementById('tbmqResultsCard'),
-        resetBtn: document.getElementById('tbmqResetBtn'),
+    const st-rmqttPaygUi = {
+        calculator: document.getElementById('st-rmqttSmCalculator'),
+        results: document.getElementById('st-rmqttResultsCard'),
+        resetBtn: document.getElementById('st-rmqttResetBtn'),
         inputs: {
-            sessions: document.getElementById('tbmq-sessions'),
-            sessionsSlider: document.getElementById('tbmq-sessionsSlider'),
-            throughput: document.getElementById('tbmq-throughput'),
-            throughputSlider: document.getElementById('tbmq-throughputSlider'),
-            prod: document.getElementById('tbmqProdInstances'),
-            dev: document.getElementById('tbmqDevInstances')
+            sessions: document.getElementById('st-rmqtt-sessions'),
+            sessionsSlider: document.getElementById('st-rmqtt-sessionsSlider'),
+            throughput: document.getElementById('st-rmqtt-throughput'),
+            throughputSlider: document.getElementById('st-rmqtt-throughputSlider'),
+            prod: document.getElementById('st-rmqttProdInstances'),
+            dev: document.getElementById('st-rmqttDevInstances')
         },
         steppers: {
-            prod: document.getElementById('tbmqProdStepper'),
-            dev: document.getElementById('tbmqDevStepper')
+            prod: document.getElementById('st-rmqttProdStepper'),
+            dev: document.getElementById('st-rmqttDevStepper')
         },
         toggles: {
-            whiteLabeling: document.getElementById('tbmqWlToggle'),
-            priorityHelpDesk: document.getElementById('tbmqHelpDeskToggle')
+            whiteLabeling: document.getElementById('st-rmqttWlToggle'),
+            priorityHelpDesk: document.getElementById('st-rmqttHelpDeskToggle')
         },
         cards: {
-            whiteLabeling: document.getElementById('tbmqWlCard'),
-            priorityHelpDesk: document.getElementById('tbmqHelpDeskCard')
+            whiteLabeling: document.getElementById('st-rmqttWlCard'),
+            priorityHelpDesk: document.getElementById('st-rmqttHelpDeskCard')
         }
     };
 
-    const tbmqPaygCopy = (btn) => copyToClipboard(btn, tbmqPaygState.clipboardMessage);
-    const tbmqPaygDownload = () => typeof downloadSummary === 'function' && downloadSummary(tbmqPaygState);
+    const st-rmqttPaygCopy = (btn) => copyToClipboard(btn, st-rmqttPaygState.clipboardMessage);
+    const st-rmqttPaygDownload = () => typeof downloadSummary === 'function' && downloadSummary(st-rmqttPaygState);
 
-    const tbmqPaygSliderToValue = (sliderVal, marks) => {
+    const st-rmqttPaygSliderToValue = (sliderVal, marks) => {
         const idx = Math.floor(sliderVal);
         const frac = sliderVal - idx;
         if (idx >= marks.length - 1) return marks[marks.length - 1];
         return Math.round(marks[idx] + frac * (marks[idx + 1] - marks[idx]));
     };
 
-    const tbmqPaygValueToSlider = (value, marks) => {
+    const st-rmqttPaygValueToSlider = (value, marks) => {
         const clampedValue = Math.max(marks[0], Math.min(marks[marks.length - 1], value));
 
         for (let i = 0; i < marks.length - 1; i++) {
@@ -211,9 +211,9 @@
         return marks.length - 1;
     };
 
-    function tbmqPaygInitTicks() {
+    function st-rmqttPaygInitTicks() {
         requestAnimationFrame(() => {
-            tbmqPaygUi.calculator.querySelectorAll('.slider-container').forEach(container => {
+            st-rmqttPaygUi.calculator.querySelectorAll('.slider-container').forEach(container => {
                 const sliderInput = container.querySelector('input.slider');
                 if (!sliderInput) return;
 
@@ -230,38 +230,38 @@
         });
     }
 
-    const tbmqPaygUpdateUI = () => {
-        tbmqPaygUi.steppers.prod.querySelector('[data-action="decrement"]').disabled = tbmqPaygState.prodInstances <= tbmqPaygPlan.includedProdInstances;
-        tbmqPaygUi.steppers.dev.querySelector('[data-action="decrement"]').disabled = tbmqPaygState.devInstances <= 0;
+    const st-rmqttPaygUpdateUI = () => {
+        st-rmqttPaygUi.steppers.prod.querySelector('[data-action="decrement"]').disabled = st-rmqttPaygState.prodInstances <= st-rmqttPaygPlan.includedProdInstances;
+        st-rmqttPaygUi.steppers.dev.querySelector('[data-action="decrement"]').disabled = st-rmqttPaygState.devInstances <= 0;
 
-        tbmqPaygUi.cards.whiteLabeling.classList.toggle('active', tbmqPaygState.addons.whiteLabeling);
-        tbmqPaygUi.cards.priorityHelpDesk.classList.toggle('active', tbmqPaygState.addons.priorityHelpDesk);
+        st-rmqttPaygUi.cards.whiteLabeling.classList.toggle('active', st-rmqttPaygState.addons.whiteLabeling);
+        st-rmqttPaygUi.cards.priorityHelpDesk.classList.toggle('active', st-rmqttPaygState.addons.priorityHelpDesk);
     };
 
-    const tbmqPaygHandleStepper = (type, action) => {
+    const st-rmqttPaygHandleStepper = (type, action) => {
         if (type === 'prod') {
-            const min = tbmqPaygPlan.includedProdInstances;
-            tbmqPaygState.prodInstances = action === 'increment' ? tbmqPaygState.prodInstances + 1 : Math.max(min, tbmqPaygState.prodInstances - 1);
-            tbmqPaygUi.inputs.prod.value = tbmqPaygState.prodInstances;
+            const min = st-rmqttPaygPlan.includedProdInstances;
+            st-rmqttPaygState.prodInstances = action === 'increment' ? st-rmqttPaygState.prodInstances + 1 : Math.max(min, st-rmqttPaygState.prodInstances - 1);
+            st-rmqttPaygUi.inputs.prod.value = st-rmqttPaygState.prodInstances;
         } else if (type === 'dev') {
-            tbmqPaygState.devInstances = action === 'increment' ? tbmqPaygState.devInstances + 1 : Math.max(0, tbmqPaygState.devInstances - 1);
-            tbmqPaygUi.inputs.dev.value = tbmqPaygState.devInstances;
+            st-rmqttPaygState.devInstances = action === 'increment' ? st-rmqttPaygState.devInstances + 1 : Math.max(0, st-rmqttPaygState.devInstances - 1);
+            st-rmqttPaygUi.inputs.dev.value = st-rmqttPaygState.devInstances;
         }
-        tbmqPaygCalculate();
-        tbmqPaygSendGTM();
+        st-rmqttPaygCalculate();
+        st-rmqttPaygSendGTM();
     };
 
-    const tbmqPaygCalculate = () => {
-        const plan = tbmqPaygPlan;
-        tbmqPaygUpdateUI();
+    const st-rmqttPaygCalculate = () => {
+        const plan = st-rmqttPaygPlan;
+        st-rmqttPaygUpdateUI();
 
-        const extraSessions = Math.max(0, tbmqPaygState.sessions - plan.includedSessions);
-        const extraThroughput = Math.max(0, tbmqPaygState.throughput - plan.includedThroughput);
-        const extraProd = Math.max(0, tbmqPaygState.prodInstances - plan.includedProdInstances);
-        const extraDev = tbmqPaygState.devInstances;
+        const extraSessions = Math.max(0, st-rmqttPaygState.sessions - plan.includedSessions);
+        const extraThroughput = Math.max(0, st-rmqttPaygState.throughput - plan.includedThroughput);
+        const extraProd = Math.max(0, st-rmqttPaygState.prodInstances - plan.includedProdInstances);
+        const extraDev = st-rmqttPaygState.devInstances;
 
         const isInitialState = extraSessions === 0 && extraThroughput === 0 && extraProd === 0 && extraDev === 0 &&
-            !tbmqPaygState.addons.whiteLabeling && !tbmqPaygState.addons.priorityHelpDesk;
+            !st-rmqttPaygState.addons.whiteLabeling && !st-rmqttPaygState.addons.priorityHelpDesk;
 
         const extraSessionsCost = extraSessions * plan.extraSessionsPrice;
         const extraThroughputCost = extraThroughput * plan.extraThroughputPrice;
@@ -274,24 +274,24 @@
 
         const breakdown = { addons: {} };
 
-        if (tbmqPaygState.addons.whiteLabeling) {
+        if (st-rmqttPaygState.addons.whiteLabeling) {
             totalPrice += plan.whiteLabelingPrice;
             breakdown.addons.whiteLabeling = plan.whiteLabelingPrice;
         }
 
-        if (tbmqPaygState.addons.priorityHelpDesk) {
+        if (st-rmqttPaygState.addons.priorityHelpDesk) {
             totalPrice += plan.priorityHelpDeskPrice;
             breakdown.addons.priorityHelpDesk = plan.priorityHelpDeskPrice;
         }
 
         let supportLevel = 'Community';
-        if (tbmqPaygState.addons.priorityHelpDesk) {
+        if (st-rmqttPaygState.addons.priorityHelpDesk) {
             supportLevel = 'Priority Help Desk';
         } else if (totalPrice >= 300) {
             supportLevel = 'Help Desk';
         }
 
-        tbmqPaygDisplay({
+        st-rmqttPaygDisplay({
             plan,
             isInitialState,
             subscriptionCost,
@@ -309,7 +309,7 @@
         });
     };
 
-    const tbmqPaygCreateItem = (label, value, tooltip, noTooltip) => `
+    const st-rmqttPaygCreateItem = (label, value, tooltip, noTooltip) => `
         <div class="result-item">
             <span class="result-label">${label}:</span>
             <span class="result-value${noTooltip ? ' no-tooltip' : ''}">
@@ -317,7 +317,7 @@
             </span>
         </div>`;
 
-    const tbmqPaygDisplay = ({ plan, isInitialState, subscriptionCost, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, breakdown, totalPrice, supportLevel }) => {
+    const st-rmqttPaygDisplay = ({ plan, isInitialState, subscriptionCost, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, breakdown, totalPrice, supportLevel }) => {
         const subscriptionValueClass = isInitialState ? 'section-value strikethrough' : 'section-value';
         const supportClass = supportLevel === 'Priority Help Desk' ? 'support-priority' : '';
 
@@ -335,32 +335,32 @@
                     </span>
                 </div>
                 <div class="section-content">
-                    ${tbmqPaygCreateItem('Included Sessions', formatNumber(plan.includedSessions), 'Number of sessions covered by this subscription plan\'s base price.')}
-                    ${tbmqPaygCreateItem('Included Throughput', formatNumber(plan.includedThroughput), 'Amount of throughput covered by this subscription plan\'s base price.')}
-                    ${tbmqPaygCreateItem('Included Prod Instances', formatNumber(plan.includedProdInstances), 'Number of production instances covered by this subscription plan\'s base price.')}
-                    ${tbmqPaygCreateItem('Support', `<span class="${supportClass}">${supportLevel}</span>`, supportLevel === 'Community' ? 'Self-service access to public knowledge base, documentation, and community forums.' : supportLevel === 'Help Desk' ? 'Help Desk access to the dedicated TBMQ expert team for technical resolution.' : 'Prioritized ticket handling via a high-priority queue managed by the expert team.')}
-                    ${tbmqPaygCreateItem('Base Price', `<span class="${basePriceClass}">${formatCurrency(plan.basePrice)}</span>`, 'Monthly subscription fee before extras and add-ons.')}`;
+                    ${st-rmqttPaygCreateItem('Included Sessions', formatNumber(plan.includedSessions), 'Number of sessions covered by this subscription plan\'s base price.')}
+                    ${st-rmqttPaygCreateItem('Included Throughput', formatNumber(plan.includedThroughput), 'Amount of throughput covered by this subscription plan\'s base price.')}
+                    ${st-rmqttPaygCreateItem('Included Prod Instances', formatNumber(plan.includedProdInstances), 'Number of production instances covered by this subscription plan\'s base price.')}
+                    ${st-rmqttPaygCreateItem('Support', `<span class="${supportClass}">${supportLevel}</span>`, supportLevel === 'Community' ? 'Self-service access to public knowledge base, documentation, and community forums.' : supportLevel === 'Help Desk' ? 'Help Desk access to the dedicated ST-RMQTT expert team for technical resolution.' : 'Prioritized ticket handling via a high-priority queue managed by the expert team.')}
+                    ${st-rmqttPaygCreateItem('Base Price', `<span class="${basePriceClass}">${formatCurrency(plan.basePrice)}</span>`, 'Monthly subscription fee before extras and add-ons.')}`;
 
         if (extraSessions > 0) {
-            detailsHtml += tbmqPaygCreateItem('Extra Sessions', formatNumber(extraSessions), 'Sessions exceeding the subscription plan\'s included number.');
-            detailsHtml += tbmqPaygCreateItem('Extra Sessions Cost', formatCurrency(extraSessionsCost), `${formatNumber(extraSessions)} extra sessions × ${formatCurrency(plan.extraSessionsPrice)}/session`);
+            detailsHtml += st-rmqttPaygCreateItem('Extra Sessions', formatNumber(extraSessions), 'Sessions exceeding the subscription plan\'s included number.');
+            detailsHtml += st-rmqttPaygCreateItem('Extra Sessions Cost', formatCurrency(extraSessionsCost), `${formatNumber(extraSessions)} extra sessions × ${formatCurrency(plan.extraSessionsPrice)}/session`);
         }
         if (extraThroughput > 0) {
-            detailsHtml += tbmqPaygCreateItem('Extra Throughput', formatNumber(extraThroughput), 'Throughput exceeding the subscription plan\'s included number.');
-            detailsHtml += tbmqPaygCreateItem('Extra Throughput Cost', formatCurrency(extraThroughputCost), `${formatNumber(extraThroughput)} extra msg/sec × ${formatCurrency(plan.extraThroughputPrice)} per msg/sec`);
+            detailsHtml += st-rmqttPaygCreateItem('Extra Throughput', formatNumber(extraThroughput), 'Throughput exceeding the subscription plan\'s included number.');
+            detailsHtml += st-rmqttPaygCreateItem('Extra Throughput Cost', formatCurrency(extraThroughputCost), `${formatNumber(extraThroughput)} extra msg/sec × ${formatCurrency(plan.extraThroughputPrice)} per msg/sec`);
         }
         if (extraProd > 0) {
-            detailsHtml += tbmqPaygCreateItem('Extra Prod Instances', formatNumber(extraProd), 'Production instances added beyond the subscription plan\'s included number.');
-            detailsHtml += tbmqPaygCreateItem('Extra Prod Instances Cost', formatCurrency(extraProdCost), `${formatNumber(extraProd)} extra prod instance × ${formatCurrency(plan.extraProdInstancesPrice)}/prod instance`);
+            detailsHtml += st-rmqttPaygCreateItem('Extra Prod Instances', formatNumber(extraProd), 'Production instances added beyond the subscription plan\'s included number.');
+            detailsHtml += st-rmqttPaygCreateItem('Extra Prod Instances Cost', formatCurrency(extraProdCost), `${formatNumber(extraProd)} extra prod instance × ${formatCurrency(plan.extraProdInstancesPrice)}/prod instance`);
         }
         if (extraDev > 0) {
-            detailsHtml += tbmqPaygCreateItem('Extra Dev Instances', formatNumber(extraDev), 'Development instances added beyond the subscription plan\'s included number.');
-            detailsHtml += tbmqPaygCreateItem('Extra Dev Instances Cost', formatCurrency(extraDevCost), `${formatNumber(extraDev)} extra dev instance × ${formatCurrency(plan.extraDevInstancesPrice)}/dev instance`);
+            detailsHtml += st-rmqttPaygCreateItem('Extra Dev Instances', formatNumber(extraDev), 'Development instances added beyond the subscription plan\'s included number.');
+            detailsHtml += st-rmqttPaygCreateItem('Extra Dev Instances Cost', formatCurrency(extraDevCost), `${formatNumber(extraDev)} extra dev instance × ${formatCurrency(plan.extraDevInstancesPrice)}/dev instance`);
         }
 
         detailsHtml += '</div></div>';
 
-        const addonsHtml = tbmqPaygGenAddons(breakdown, plan);
+        const addonsHtml = st-rmqttPaygGenAddons(breakdown, plan);
 
         let tooltips = [];
         if (!isInitialState) {
@@ -375,13 +375,13 @@
 
         const tooltipText = tooltips.length ? tooltips.join(' + ') : 'Free 30-day trial';
 
-        tbmqPaygUi.results.innerHTML = `
+        st-rmqttPaygUi.results.innerHTML = `
             <div class="card-header">
                 <div class="header-top">
                     <h3>Calculation summary</h3>
                     <div class="header-actions">
-                        <div id="tbmqCopyBtn" class="icon-button" title="Copy">${copyIcon}</div>
-                        <div id="tbmqDownloadBtn" class="icon-button" title="Download">${downloadIcon}</div>
+                        <div id="st-rmqttCopyBtn" class="icon-button" title="Copy">${copyIcon}</div>
+                        <div id="st-rmqttDownloadBtn" class="icon-button" title="Download">${downloadIcon}</div>
                     </div>
                 </div>
             </div>
@@ -398,30 +398,30 @@
                         <span class="tooltip">${infoIcon}<span class="tooltip-text">${tooltipText}</span></span>
                     </span>
                 </div>
-                <a id="tbmqGetStarted" href="javascript:;" class="button" onClick="getLicense(event,
-                '${plan.productId}', '${plan.planId}', 'TBMQ-SM', 'CFQJ30PWTB', null, '${extraSessions}',
-                '${extraThroughput}', '${extraProd}', '${extraDev}', null, null, null, '${tbmqPaygState.addons.whiteLabeling}',
-                '${tbmqPaygState.addons.priorityHelpDesk}' )">${buttonLabel}</a>
+                <a id="st-rmqttGetStarted" href="javascript:;" class="button" onClick="getLicense(event,
+                '${plan.productId}', '${plan.planId}', 'ST-RMQTT-SM', 'CFQJ30PWTB', null, '${extraSessions}',
+                '${extraThroughput}', '${extraProd}', '${extraDev}', null, null, null, '${st-rmqttPaygState.addons.whiteLabeling}',
+                '${st-rmqttPaygState.addons.priorityHelpDesk}' )">${buttonLabel}</a>
             </div>`;
 
-        tbmqPaygInitExpandable();
-        document.getElementById('tbmqCopyBtn')?.addEventListener('click', e => tbmqPaygCopy(e.currentTarget));
-        document.getElementById('tbmqDownloadBtn')?.addEventListener('click', tbmqPaygDownload);
-        tbmqPaygUpdateClipboard({ plan, subscriptionCost, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, breakdown, totalPrice, supportLevel });
+        st-rmqttPaygInitExpandable();
+        document.getElementById('st-rmqttCopyBtn')?.addEventListener('click', e => st-rmqttPaygCopy(e.currentTarget));
+        document.getElementById('st-rmqttDownloadBtn')?.addEventListener('click', st-rmqttPaygDownload);
+        st-rmqttPaygUpdateClipboard({ plan, subscriptionCost, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, breakdown, totalPrice, supportLevel });
     };
 
-    const tbmqPaygGenAddons = (breakdown, plan) => {
+    const st-rmqttPaygGenAddons = (breakdown, plan) => {
         let html = '';
 
         const addButton = (id, title, cost) => `
             <div class="results-section inactive">
                 <div class="section-header">
                     <span class="section-title">${title}</span>
-                    <span class="add-to-plan-btn" data-tbmq-addon="${id}">Add to plan (${formatCurrency(cost)})</span>
+                    <span class="add-to-plan-btn" data-st-rmqtt-addon="${id}">Add to plan (${formatCurrency(cost)})</span>
                 </div>
             </div>`;
 
-        if (tbmqPaygState.addons.whiteLabeling) {
+        if (st-rmqttPaygState.addons.whiteLabeling) {
             html += `<div class="results-section">
                 <div class="section-header">
                     <span class="section-title">White Labeling</span>
@@ -432,7 +432,7 @@
             html += addButton('whiteLabeling', 'White Labeling', plan.whiteLabelingPrice);
         }
 
-        if (tbmqPaygState.addons.priorityHelpDesk) {
+        if (st-rmqttPaygState.addons.priorityHelpDesk) {
             html += `<div class="results-section">
                 <div class="section-header">
                     <span class="section-title">Priority Help Desk</span>
@@ -446,8 +446,8 @@
         return html;
     };
 
-    const tbmqPaygInitExpandable = () => {
-        tbmqPaygUi.results.querySelectorAll('.expandable .section-header').forEach(header => {
+    const st-rmqttPaygInitExpandable = () => {
+        st-rmqttPaygUi.results.querySelectorAll('.expandable .section-header').forEach(header => {
             header.addEventListener('click', () => {
                 const section = header.closest('.results-section');
                 section.classList.toggle('collapsed');
@@ -455,24 +455,24 @@
                 if (chevron) chevron.outerHTML = section.classList.contains('collapsed') ? chevronDownIcon : chevronUpIcon;
             });
         });
-        tbmqPaygUi.results.querySelectorAll('.add-to-plan-btn').forEach(btn => {
+        st-rmqttPaygUi.results.querySelectorAll('.add-to-plan-btn').forEach(btn => {
             btn.addEventListener('click', e => {
                 e.stopPropagation();
-                const key = btn.dataset.tbmqAddon;
-                tbmqPaygState.addons[key] = true;
-                tbmqPaygUi.toggles[key].checked = true;
-                tbmqPaygCalculate();
-                tbmqPaygSendGTM();
+                const key = btn.dataset.st-rmqttAddon;
+                st-rmqttPaygState.addons[key] = true;
+                st-rmqttPaygUi.toggles[key].checked = true;
+                st-rmqttPaygCalculate();
+                st-rmqttPaygSendGTM();
             });
         });
     };
 
-    const tbmqPaygUpdateClipboard = ({ plan, subscriptionCost, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, breakdown, totalPrice, supportLevel }) => {
-        let msg = `TBMQ Self-managed Subscription\n`;
-        msg += `- Sessions: ${formatNumber(tbmqPaygState.sessions)}\n`;
-        msg += `- Throughput: ${formatNumber(tbmqPaygState.throughput)} msg/sec\n`;
-        msg += `- Prod Instances: ${formatNumber(tbmqPaygState.prodInstances)}\n`;
-        msg += `- Dev Instances: ${formatNumber(tbmqPaygState.devInstances)}\n`;
+    const st-rmqttPaygUpdateClipboard = ({ plan, subscriptionCost, extraSessions, extraSessionsCost, extraThroughput, extraThroughputCost, extraProd, extraProdCost, extraDev, extraDevCost, breakdown, totalPrice, supportLevel }) => {
+        let msg = `ST-RMQTT Self-managed Subscription\n`;
+        msg += `- Sessions: ${formatNumber(st-rmqttPaygState.sessions)}\n`;
+        msg += `- Throughput: ${formatNumber(st-rmqttPaygState.throughput)} msg/sec\n`;
+        msg += `- Prod Instances: ${formatNumber(st-rmqttPaygState.prodInstances)}\n`;
+        msg += `- Dev Instances: ${formatNumber(st-rmqttPaygState.devInstances)}\n`;
         msg += `- Support: ${supportLevel}\n`;
         msg += `\nSubscription: ${formatCurrency(subscriptionCost)}\n`;
         if (extraSessions) msg += `- Extra Sessions: ${formatNumber(extraSessions)} (${formatCurrency(extraSessionsCost)})\n`;
@@ -485,36 +485,36 @@
             if (breakdown.addons.whiteLabeling) msg += `- White Labeling: ${formatCurrency(breakdown.addons.whiteLabeling)}\n`;
             if (breakdown.addons.priorityHelpDesk) msg += `- Priority Help Desk: ${formatCurrency(breakdown.addons.priorityHelpDesk)}\n`;
         }
-        tbmqPaygState.clipboardMessage = msg + `\nTotal: ${formatCurrency(totalPrice)}/month`;
+        st-rmqttPaygState.clipboardMessage = msg + `\nTotal: ${formatCurrency(totalPrice)}/month`;
     };
 
-    const tbmqPaygSendGTM = () => {
-        clearTimeout(tbmqPaygState.debounceTimer);
-        tbmqPaygState.debounceTimer = setTimeout(() => {
+    const st-rmqttPaygSendGTM = () => {
+        clearTimeout(st-rmqttPaygState.debounceTimer);
+        st-rmqttPaygState.debounceTimer = setTimeout(() => {
             window.dataLayer?.push({
-                event: 'tbmq_sm_calculator_interaction',
-                tbmq_sessions: tbmqPaygState.sessions,
-                tbmq_throughput: tbmqPaygState.throughput,
-                tbmq_prod: tbmqPaygState.prodInstances,
-                tbmq_dev: tbmqPaygState.devInstances,
-                tbmq_addon_wl: tbmqPaygState.addons.whiteLabeling,
-                tbmq_addon_helpdesk: tbmqPaygState.addons.priorityHelpDesk
+                event: 'st-rmqtt_sm_calculator_interaction',
+                st-rmqtt_sessions: st-rmqttPaygState.sessions,
+                st-rmqtt_throughput: st-rmqttPaygState.throughput,
+                st-rmqtt_prod: st-rmqttPaygState.prodInstances,
+                st-rmqtt_dev: st-rmqttPaygState.devInstances,
+                st-rmqtt_addon_wl: st-rmqttPaygState.addons.whiteLabeling,
+                st-rmqtt_addon_helpdesk: st-rmqttPaygState.addons.priorityHelpDesk
             });
         }, 3000);
     };
 
-    const tbmqPaygInit = () => {
-        if (!tbmqPaygUi.calculator) return;
+    const st-rmqttPaygInit = () => {
+        if (!st-rmqttPaygUi.calculator) return;
 
         setTimeout(() => {
-            tbmqPaygInitTicks();
-            sliderProgress(tbmqPaygUi.inputs.sessionsSlider);
-            sliderProgress(tbmqPaygUi.inputs.throughputSlider);
-            tbmqPaygCalculate();
+            st-rmqttPaygInitTicks();
+            sliderProgress(st-rmqttPaygUi.inputs.sessionsSlider);
+            sliderProgress(st-rmqttPaygUi.inputs.throughputSlider);
+            st-rmqttPaygCalculate();
         }, 300);
 
-        tbmqPaygUi.resetBtn.addEventListener('click', () => {
-            tbmqPaygState = {
+        st-rmqttPaygUi.resetBtn.addEventListener('click', () => {
+            st-rmqttPaygState = {
                 clipboardMessage: '',
                 debounceTimer: null,
                 sessions: 100,
@@ -523,18 +523,18 @@
                 devInstances: 0,
                 addons: { whiteLabeling: false, priorityHelpDesk: false }
             };
-            tbmqPaygUi.inputs.sessions.value = 100;
-            tbmqPaygUi.inputs.sessionsSlider.value = 0;
-            tbmqPaygUi.inputs.throughput.value = 100;
-            tbmqPaygUi.inputs.throughputSlider.value = 0;
-            tbmqPaygUi.inputs.prod.value = 1;
-            tbmqPaygUi.inputs.dev.value = 0;
-            tbmqPaygUi.toggles.whiteLabeling.checked = false;
-            tbmqPaygUi.toggles.priorityHelpDesk.checked = false;
-            sliderProgress(tbmqPaygUi.inputs.sessionsSlider);
-            sliderProgress(tbmqPaygUi.inputs.throughputSlider);
-            tbmqPaygCalculate();
-            tbmqPaygSendGTM();
+            st-rmqttPaygUi.inputs.sessions.value = 100;
+            st-rmqttPaygUi.inputs.sessionsSlider.value = 0;
+            st-rmqttPaygUi.inputs.throughput.value = 100;
+            st-rmqttPaygUi.inputs.throughputSlider.value = 0;
+            st-rmqttPaygUi.inputs.prod.value = 1;
+            st-rmqttPaygUi.inputs.dev.value = 0;
+            st-rmqttPaygUi.toggles.whiteLabeling.checked = false;
+            st-rmqttPaygUi.toggles.priorityHelpDesk.checked = false;
+            sliderProgress(st-rmqttPaygUi.inputs.sessionsSlider);
+            sliderProgress(st-rmqttPaygUi.inputs.throughputSlider);
+            st-rmqttPaygCalculate();
+            st-rmqttPaygSendGTM();
         });
 
 
@@ -542,114 +542,114 @@
             let calcVal = parseInt(val);
             if(isNaN(calcVal)) calcVal = TB_MQ_MIN;
 
-            tbmqPaygState.sessions = Math.max(TB_MQ_MIN, calcVal);
-            tbmqPaygUi.inputs.sessionsSlider.value = tbmqPaygValueToSlider(tbmqPaygState.sessions, TB_MQ_SESSION_MARKS);
-            sliderProgress(tbmqPaygUi.inputs.sessionsSlider);
-            tbmqPaygCalculate();
-            tbmqPaygSendGTM();
+            st-rmqttPaygState.sessions = Math.max(TB_MQ_MIN, calcVal);
+            st-rmqttPaygUi.inputs.sessionsSlider.value = st-rmqttPaygValueToSlider(st-rmqttPaygState.sessions, TB_MQ_SESSION_MARKS);
+            sliderProgress(st-rmqttPaygUi.inputs.sessionsSlider);
+            st-rmqttPaygCalculate();
+            st-rmqttPaygSendGTM();
         };
 
         const onSessionsBlur = (e) => {
             let val = parseInt(e.target.value) || TB_MQ_MIN;
             val = Math.max(TB_MQ_MIN, val);
-            tbmqPaygState.sessions = val;
+            st-rmqttPaygState.sessions = val;
             e.target.value = val;
 
-            tbmqPaygUi.inputs.sessionsSlider.value = tbmqPaygValueToSlider(val, TB_MQ_SESSION_MARKS);
-            sliderProgress(tbmqPaygUi.inputs.sessionsSlider);
-            tbmqPaygCalculate();
+            st-rmqttPaygUi.inputs.sessionsSlider.value = st-rmqttPaygValueToSlider(val, TB_MQ_SESSION_MARKS);
+            sliderProgress(st-rmqttPaygUi.inputs.sessionsSlider);
+            st-rmqttPaygCalculate();
         };
 
-        tbmqPaygUi.inputs.sessions.addEventListener('input', e => onSessionsInput(e.target.value));
-        tbmqPaygUi.inputs.sessions.addEventListener('change', onSessionsBlur);
+        st-rmqttPaygUi.inputs.sessions.addEventListener('input', e => onSessionsInput(e.target.value));
+        st-rmqttPaygUi.inputs.sessions.addEventListener('change', onSessionsBlur);
 
         const onThroughputInput = (val) => {
             let calcVal = parseInt(val);
             if(isNaN(calcVal)) calcVal = TB_MQ_MIN;
 
-            tbmqPaygState.throughput = Math.max(TB_MQ_MIN, calcVal);
-            tbmqPaygUi.inputs.throughputSlider.value = tbmqPaygValueToSlider(tbmqPaygState.throughput, TB_MQ_THROUGHPUT_MARKS);
-            sliderProgress(tbmqPaygUi.inputs.throughputSlider);
-            tbmqPaygCalculate();
-            tbmqPaygSendGTM();
+            st-rmqttPaygState.throughput = Math.max(TB_MQ_MIN, calcVal);
+            st-rmqttPaygUi.inputs.throughputSlider.value = st-rmqttPaygValueToSlider(st-rmqttPaygState.throughput, TB_MQ_THROUGHPUT_MARKS);
+            sliderProgress(st-rmqttPaygUi.inputs.throughputSlider);
+            st-rmqttPaygCalculate();
+            st-rmqttPaygSendGTM();
         };
 
         const onThroughputBlur = (e) => {
             let val = parseInt(e.target.value) || TB_MQ_MIN;
             val = Math.max(TB_MQ_MIN, val);
-            tbmqPaygState.throughput = val;
+            st-rmqttPaygState.throughput = val;
             e.target.value = val;
 
-            tbmqPaygUi.inputs.throughputSlider.value = tbmqPaygValueToSlider(val, TB_MQ_THROUGHPUT_MARKS);
-            sliderProgress(tbmqPaygUi.inputs.throughputSlider);
-            tbmqPaygCalculate();
+            st-rmqttPaygUi.inputs.throughputSlider.value = st-rmqttPaygValueToSlider(val, TB_MQ_THROUGHPUT_MARKS);
+            sliderProgress(st-rmqttPaygUi.inputs.throughputSlider);
+            st-rmqttPaygCalculate();
         };
 
-        tbmqPaygUi.inputs.throughput.addEventListener('input', e => onThroughputInput(e.target.value));
-        tbmqPaygUi.inputs.throughput.addEventListener('change', onThroughputBlur);
+        st-rmqttPaygUi.inputs.throughput.addEventListener('input', e => onThroughputInput(e.target.value));
+        st-rmqttPaygUi.inputs.throughput.addEventListener('change', onThroughputBlur);
 
-        tbmqPaygUi.inputs.prod.addEventListener('input', e => {
+        st-rmqttPaygUi.inputs.prod.addEventListener('input', e => {
             let val = parseInt(e.target.value);
-            tbmqPaygState.prodInstances = isNaN(val) ? tbmqPaygPlan.includedProdInstances : Math.max(1, val);
+            st-rmqttPaygState.prodInstances = isNaN(val) ? st-rmqttPaygPlan.includedProdInstances : Math.max(1, val);
 
-            tbmqPaygCalculate();
-            tbmqPaygSendGTM();
+            st-rmqttPaygCalculate();
+            st-rmqttPaygSendGTM();
         });
-        tbmqPaygUi.inputs.prod.addEventListener('change', e => {
-            let val = parseInt(e.target.value) || tbmqPaygPlan.includedProdInstances;
-            tbmqPaygState.prodInstances = Math.max(tbmqPaygPlan.includedProdInstances, val);
-            e.target.value = tbmqPaygState.prodInstances;
-            tbmqPaygCalculate();
+        st-rmqttPaygUi.inputs.prod.addEventListener('change', e => {
+            let val = parseInt(e.target.value) || st-rmqttPaygPlan.includedProdInstances;
+            st-rmqttPaygState.prodInstances = Math.max(st-rmqttPaygPlan.includedProdInstances, val);
+            e.target.value = st-rmqttPaygState.prodInstances;
+            st-rmqttPaygCalculate();
         });
 
-        tbmqPaygUi.inputs.dev.addEventListener('input', e => {
+        st-rmqttPaygUi.inputs.dev.addEventListener('input', e => {
             let val = parseInt(e.target.value);
-            tbmqPaygState.devInstances = isNaN(val) ? 0 : Math.max(0, val);
-            tbmqPaygCalculate();
-            tbmqPaygSendGTM();
+            st-rmqttPaygState.devInstances = isNaN(val) ? 0 : Math.max(0, val);
+            st-rmqttPaygCalculate();
+            st-rmqttPaygSendGTM();
         });
-        tbmqPaygUi.inputs.dev.addEventListener('change', e => {
+        st-rmqttPaygUi.inputs.dev.addEventListener('change', e => {
             let val = parseInt(e.target.value) || 0;
-            tbmqPaygState.devInstances = Math.max(0, val);
-            e.target.value = tbmqPaygState.devInstances;
-            tbmqPaygCalculate();
+            st-rmqttPaygState.devInstances = Math.max(0, val);
+            e.target.value = st-rmqttPaygState.devInstances;
+            st-rmqttPaygCalculate();
         });
 
-        tbmqPaygUi.inputs.sessionsSlider.addEventListener('input', e => {
-            tbmqPaygState.sessions = tbmqPaygSliderToValue(parseFloat(e.target.value), TB_MQ_SESSION_MARKS);
-            tbmqPaygUi.inputs.sessions.value = tbmqPaygState.sessions;
+        st-rmqttPaygUi.inputs.sessionsSlider.addEventListener('input', e => {
+            st-rmqttPaygState.sessions = st-rmqttPaygSliderToValue(parseFloat(e.target.value), TB_MQ_SESSION_MARKS);
+            st-rmqttPaygUi.inputs.sessions.value = st-rmqttPaygState.sessions;
             sliderProgress(e.target);
-            tbmqPaygCalculate();
-            tbmqPaygSendGTM();
+            st-rmqttPaygCalculate();
+            st-rmqttPaygSendGTM();
         });
 
-        tbmqPaygUi.inputs.throughputSlider.addEventListener('input', e => {
-            tbmqPaygState.throughput = tbmqPaygSliderToValue(parseFloat(e.target.value), TB_MQ_THROUGHPUT_MARKS);
-            tbmqPaygUi.inputs.throughput.value = tbmqPaygState.throughput;
+        st-rmqttPaygUi.inputs.throughputSlider.addEventListener('input', e => {
+            st-rmqttPaygState.throughput = st-rmqttPaygSliderToValue(parseFloat(e.target.value), TB_MQ_THROUGHPUT_MARKS);
+            st-rmqttPaygUi.inputs.throughput.value = st-rmqttPaygState.throughput;
             sliderProgress(e.target);
-            tbmqPaygCalculate();
-            tbmqPaygSendGTM();
+            st-rmqttPaygCalculate();
+            st-rmqttPaygSendGTM();
         });
 
         const bindStepper = (stepper, type) => {
             stepper.querySelectorAll('.stepper-btn').forEach(btn => {
-                btn.addEventListener('click', () => !btn.disabled && tbmqPaygHandleStepper(type, btn.dataset.action));
+                btn.addEventListener('click', () => !btn.disabled && st-rmqttPaygHandleStepper(type, btn.dataset.action));
             });
         };
-        bindStepper(tbmqPaygUi.steppers.prod, 'prod');
-        bindStepper(tbmqPaygUi.steppers.dev, 'dev');
+        bindStepper(st-rmqttPaygUi.steppers.prod, 'prod');
+        bindStepper(st-rmqttPaygUi.steppers.dev, 'dev');
 
 
         ['whiteLabeling', 'priorityHelpDesk'].forEach(key => {
-            tbmqPaygUi.toggles[key].addEventListener('input', e => {
-                tbmqPaygState.addons[key] = e.target.checked;
-                tbmqPaygCalculate();
-                tbmqPaygSendGTM();
+            st-rmqttPaygUi.toggles[key].addEventListener('input', e => {
+                st-rmqttPaygState.addons[key] = e.target.checked;
+                st-rmqttPaygCalculate();
+                st-rmqttPaygSendGTM();
             });
         });
 
-        window.addEventListener('resize', tbmqPaygInitTicks);
+        window.addEventListener('resize', st-rmqttPaygInitTicks);
     };
 
-    tbmqPaygInit();
+    st-rmqttPaygInit();
 </script>

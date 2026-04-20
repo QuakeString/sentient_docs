@@ -1,6 +1,6 @@
 **MQTT** is a lightweight protocol commonly used for IoT communication. 
 
-To facilitate communication with **SENTIENT GATEWAY** using **MQTT**, we recommend installing the [MQTT Broker](/docs/{{peDocsPrefix}}reference/mqtt-api/?connectdevice=mqtt-linux#mqtt-connect){: target="_blank"}. This allows the device to **publish** telemetry or attribute messages and **subscribe** to topics for attribute updates.
+To facilitate communication with **SENTIENT Edge** using **MQTT**, we recommend installing the [MQTT Broker](/docs/{{peDocsPrefix}}reference/mqtt-api/?connectdevice=mqtt-linux#mqtt-connect){: target="_blank"}. This allows the device to **publish** telemetry or attribute messages and **subscribe** to topics for attribute updates.
 
 #### Subscribe to the Changes in Shared Device Attributes
 
@@ -10,8 +10,8 @@ mosquitto_sub -d -h $SENTIENT_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCES
 ```
 {: .copy-code}
 
-* **v1/devices/me/attributes:** This is a topic on SENTIENT GATEWAY. It allows the device to listen for any updates related to its attributes from the cloud.
-* Replace the **$SENTIENT_HOST_NAME** with the actual hostname or IP address of your SENTIENT GATEWAY instance. 
+* **v1/devices/me/attributes:** This is a topic on SENTIENT Edge. It allows the device to listen for any updates related to its attributes from the cloud.
+* Replace the **$SENTIENT_HOST_NAME** with the actual hostname or IP address of your SENTIENT Edge instance. 
     
 {% assign accessTokenPE = '
   ===
@@ -35,7 +35,7 @@ mosquitto_sub -d -h $SENTIENT_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCES
 
 #### Publish Time-Series or Attribute Message.
 
-To publish client-side device attributes to the **SENTIENT GATEWAY**, send a PUBLISH message. 
+To publish client-side device attributes to the **SENTIENT Edge**, send a PUBLISH message. 
 
 You can publish the telemetry data:
 
@@ -45,7 +45,7 @@ mosquitto_pub -d -h $SENTIENT_HOST_NAME -t "v1/devices/me/attributes" -u "$ACCES
 {: .copy-code}
 
 * **v1/devices/me/attributes:** The topic to which the telemetry data is published.
-* **$SENTIENT_HOST_NAME:** The actual hostname or IP address of your SENTIENT GATEWAY instance
+* **$SENTIENT_HOST_NAME:** The actual hostname or IP address of your SENTIENT Edge instance
 * **$ACCESS_TOKEN:** The actual access token of the device.
 * **{"attribute1": "value1", "attribute2": true}** The telemetry data.
 

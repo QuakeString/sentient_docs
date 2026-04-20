@@ -18,7 +18,7 @@ createSchedulerEvent:
     title: 'On the <b>Edge Scheduler Events</b> page, click the <b>"+"</b> button and assign the event(s) to the <b>Edge</b> instance in the pop-up window.'
   4:
     image: /images/pe/edge/user-guide/scheduler/5-see-on-edge.webp
-    title: 'To confirm that the <b>scheduler event</b> has been successfully assigned, log in to the <b>SENTIENT GATEWAY</b> and go the <b>Advanced features > Scheduler</b> section.'
+    title: 'To confirm that the <b>scheduler event</b> has been successfully assigned, log in to the <b>SENTIENT Edge</b> and go the <b>Advanced features > Scheduler</b> section.'
 
 installTemplate:
   0:
@@ -48,7 +48,7 @@ schedulerParameters:
     title: 'The <b>"Schedule"</b> tab displays event schedule configuration.'    
   5:
     image: /images/pe/edge/user-guide/scheduler/assigned-events-on-edge.webp
-    title: 'To confirm that <b>scheduler events</b> are assigned, log in to the <b>SENTIENT GATEWAY</b> and go to the <b>Advanced features > Scheduler</b> section.'
+    title: 'To confirm that <b>scheduler events</b> are assigned, log in to the <b>SENTIENT Edge</b> and go to the <b>Advanced features > Scheduler</b> section.'
 
 ruleChainParameters:
   0:

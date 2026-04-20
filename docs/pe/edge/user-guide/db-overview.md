@@ -36,7 +36,7 @@ changes-from-edge-to-server:
 assign-customer:
     0:
         image: /images/pe/edge/user-guide/dashboards/11-edge-dashboards.png
-        title: 'Log in to your <b>SENTIENT GATEWAY</b> instance and go to the <b>“Dashboards”</b> section. Then, click the <b>"Dashboard details"</b> button.'
+        title: 'Log in to your <b>SENTIENT Edge</b> instance and go to the <b>“Dashboards”</b> section. Then, click the <b>"Dashboard details"</b> button.'
     1:
         image: /images/pe/edge/user-guide/dashboards/12-manage-owner-groups.png
         title: 'Click the <b>"Manage owner and groups"</b> button on the Dashboard details page'

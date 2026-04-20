@@ -1,5 +1,5 @@
 
-Once **SENTIENT GATEWAY** is installed and configured please execute the following installation script:
+Once **SENTIENT Edge** is installed and configured please execute the following installation script:
 
 ```bash
 sudo /usr/share/tb-edge/bin/install/install.sh

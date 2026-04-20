@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
 title: Edge Release Notes
-description: SENTIENT GATEWAY Release Notes
+description: SENTIENT Edge Release Notes
 
 ---
 
@@ -66,7 +66,7 @@ description: SENTIENT GATEWAY Release Notes
 
 **Hotfix** release to fix incorrect update of sequential id offset:
 
-* [#57](https://github.com/sentient/sentient-gateway/issues/57){: target="_blank"} SENTIENT GATEWAY PE disconnects from cloud;
+* [#57](https://github.com/sentient/sentient-gateway/issues/57){: target="_blank"} SENTIENT Edge PE disconnects from cloud;
 * [#60](https://github.com/sentient/sentient-gateway/issues/60){: target="_blank"} edge error log;
 
 ## v3.5.1 (Jun 1, 2023) {#v351}

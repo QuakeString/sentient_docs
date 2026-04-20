@@ -1,5 +1,5 @@
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-{% assign deviceName = page.title | remove: "How to install SENTIENT GATEWAY on " | remove: "?" %}
+{% assign deviceName = page.title | remove: "How to install SENTIENT Edge on " | remove: "?" %}
 {% assign prerequisites = "
 - [" | append: deviceName | append: "](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/){:target='_blank' rel='noopener'}
 - [tb-mqtt-client library](https://pypi.org/project/tb-mqtt-client/){:target='_blank' rel='noopener'}
@@ -32,7 +32,7 @@ productivity and database hosting.
 {% endif %}
 
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-## Create device on SENTIENT GATEWAY {#create-device-on-sentient-gateway}
+## Create device on SENTIENT Edge {#create-device-on-sentient-gateway}
 {% else %}
 ## Create device on SENTIENT {#create-device-on-sentient}
 {% endif %}
@@ -45,7 +45,7 @@ productivity and database hosting.
 
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
 {% assign hostName = "RPi_4_IP_ADDRESS" %}
-## Connect device to SENTIENT GATEWAY {#connect-device-to-sentient-gateway}
+## Connect device to SENTIENT Edge {#connect-device-to-sentient-gateway}
 {% else %}
 ## Connect device to SENTIENT {#connect-device-to-sentient}
 {% endif %}
@@ -59,7 +59,7 @@ productivity and database hosting.
 {% include /docs/device-library/blocks/single-board-computers/sentient-synchronize-device-state-using-attribute-requests-block.md %}
 
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-## Check data on SENTIENT GATEWAY {#check-data-on-sentient-gateway}
+## Check data on SENTIENT Edge {#check-data-on-sentient-gateway}
 {% else %}
 ## Check data on SENTIENT {#check-data-on-sentient}
 {% endif %}

@@ -1,7 +1,7 @@
 In **SENTIENT**, the **device** is the key entity that generates telemetry data, which is stored and processed for dashboards and analytics. 
 **SENTIENT** also provides a **virtual device shell** for sending telemetry on behalf of the physical device for testing purposes.
 
-To add a new device on the **Edge**, log in to your **SENTIENT GATEWAY** instance at **EDGE_URL** and follow these steps:
+To add a new device on the **Edge**, log in to your **SENTIENT Edge** instance at **EDGE_URL** and follow these steps:
 
 {% include images-gallery.html imageCollection="step1" showListImageTitles="true" %}
 

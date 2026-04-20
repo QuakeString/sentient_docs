@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
-title: How to enable remote shell feature on SENTIENT IoT Gateway
-description: How to enable remote shell feature on SENTIENT IoT Gateway
+title: How to enable remote shell feature on SENTIENT Gateway
+description: How to enable remote shell feature on SENTIENT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to enable a remote shell feature and control the operating system with SENTIENT IoT Gateway
+This guide will help you to enable a remote shell feature and control the operating system with SENTIENT Gateway
 from your SENTIENT platform instance. With this functionality, you can access the underlying machine, execute
 commands, and perform maintenance tasks directly from the platform. It provides a convenient way to monitor system
 health, troubleshoot issues, and automate administrative operations without needing direct physical access. Before
@@ -28,7 +28,7 @@ prerequisites outlined in this documentation.
 ## Prerequisites
 
 1. Ensure that the SENTIENT server is up and running. The simplest approach is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){:target="_blank"}. Alternatively, you can install SENTIENT manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
-2. Installed and configured SENTIENT IoT Gateway ([Installation guide](/docs/iot-gateway/installation/), [Getting Started](/docs/iot-gateway/getting-started/)).
+2. Installed and configured SENTIENT Gateway ([Installation guide](/docs/iot-gateway/installation/), [Getting Started](/docs/iot-gateway/getting-started/)).
 
 ## Step 1. Remote shell activation
 

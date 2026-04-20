@@ -14,17 +14,17 @@ Attributes are categorized into three types:
 
 For more detailed information and examples, please refer to the SENTIENT documentation on [Working with IoT Device Attributes](/docs/{{peDocsPrefix}}user-guide/attributes/){: target="_blank"}.
 
-The following guide explains real-time, bidirectional communication between your device and the **SENTIENT Cloud** via **SENTIENT GATEWAY**.
+The following guide explains real-time, bidirectional communication between your device and the **SENTIENT Cloud** via **SENTIENT Edge**.
 
 ## Prerequisites
 
 * The **SENTIENT Cloud** or locally hosted [Server](/docs/{{peDocsPrefix}}user-guide/install/installation-options/){: target="_blank"}.
-* The installed **SENTIENT GATEWAY** with network access.
-* A **Device** capable of connecting to **SENTIENT GATEWAY** via [MQTT](/docs/{{peDocsPrefix}}reference/mqtt-api/){: target="_blank"}, [HTTP](/docs/{{peDocsPrefix}}reference/http-api/){: target="_blank"}, or [CoAP](/docs/{{peDocsPrefix}}reference/coap-api/){: target="_blank"}.
+* The installed **SENTIENT Edge** with network access.
+* A **Device** capable of connecting to **SENTIENT Edge** via [MQTT](/docs/{{peDocsPrefix}}reference/mqtt-api/){: target="_blank"}, [HTTP](/docs/{{peDocsPrefix}}reference/http-api/){: target="_blank"}, or [CoAP](/docs/{{peDocsPrefix}}reference/coap-api/){: target="_blank"}.
 
 ## Step 1. Configure a Rule Chain for the Edge
 
-To automatically route messages (data or attributes) from the device to the **SENTIENT Cloud**, configure the rule chain for the **SENTIENT GATEWAY**:
+To automatically route messages (data or attributes) from the device to the **SENTIENT Cloud**, configure the rule chain for the **SENTIENT Edge**:
 
 {% include images-gallery.html imageCollection="routeMessagesToCloud" showListImageTitles="true" %}
 

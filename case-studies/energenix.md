@@ -3,7 +3,7 @@ layout: case-studies
 title: Energenix Scales Solar SCADA & Analytics on SENTIENT
 notitle: "true"
 customTitle: "true"
-description: Energenix unifies 80+ sites and monitors 120+ MW on an AWS-hosted SENTIENT Cloud + SENTIENT GATEWAY setup—real-time KPI dashboards, rule-engine alarms, on-site monitoring and control, and automated reporting.
+description: Energenix unifies 80+ sites and monitors 120+ MW on an AWS-hosted SENTIENT Cloud + SENTIENT Edge setup—real-time KPI dashboards, rule-engine alarms, on-site monitoring and control, and automated reporting.
 ---
 
 <div class="case-study-page-wrapper">
@@ -139,16 +139,16 @@ description: Energenix unifies 80+ sites and monitors 120+ MW on an AWS-hosted S
         </div>
         <div class="block">
             <div class="text">
-                <h3>Fast on-site control with SENTIENT GATEWAY</h3>
-                <p>SENTIENT GATEWAY enables Energenix to deliver low-latency monitoring and control directly at plant sites, allowing operational staff to respond instantly to events without reliance on cloud connectivity. This improves response times, enhances operational control, and ensures uninterrupted plant monitoring even during network disruptions.</p>
+                <h3>Fast on-site control with SENTIENT Edge</h3>
+                <p>SENTIENT Edge enables Energenix to deliver low-latency monitoring and control directly at plant sites, allowing operational staff to respond instantly to events without reliance on cloud connectivity. This improves response times, enhances operational control, and ensures uninterrupted plant monitoring even during network disruptions.</p>
                 <p><i>Photo: Energenix Solution at 10MW Solar power plant control room in Sri Lanka</i></p>
             </div>
-            <img src="/images/case-studies/energenix-4.webp" title="Fast on-site control with SENTIENT GATEWAY" alt="Fast on-site control with SENTIENT GATEWAY" width="450" height="250">
+            <img src="/images/case-studies/energenix-4.webp" title="Fast on-site control with SENTIENT Edge" alt="Fast on-site control with SENTIENT Edge" width="450" height="250">
         </div>
         <div class="block">
             <div class="text">
                 <h3>Edge + Cloud for mission-critical reliability</h3>
-                <p>SENTIENT GATEWAY enables Energenix to maintain continuous monitoring and control at plant level, while AWS-hosted SENTIENT Cloud provides centralized analytics, dashboards, and long-term storage. This architecture significantly improves system resilience, reduces downtime risk, and ensures reliable operations across large renewable portfolios.</p>
+                <p>SENTIENT Edge enables Energenix to maintain continuous monitoring and control at plant level, while AWS-hosted SENTIENT Cloud provides centralized analytics, dashboards, and long-term storage. This architecture significantly improves system resilience, reduces downtime risk, and ensures reliable operations across large renewable portfolios.</p>
                 <p><i>Photo: Energenix Solution was presented to the president of Sri Lanka at the Disrupt Asia Summit 2025</i></p>
             </div>
             <img src="/images/case-studies/energenix-5.webp" title="Edge + Cloud for mission-critical reliability" alt="Edge + Cloud for mission-critical reliability" width="450" height="240">

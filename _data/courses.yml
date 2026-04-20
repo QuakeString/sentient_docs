@@ -138,9 +138,9 @@
       sessionLengthInHours: 2
       sessionTopics:
         0:
-          textContent: "Learn the main device connectivity possibilities and fundamentals of the SENTIENT IoT Gateway option."
+          textContent: "Learn the main device connectivity possibilities and fundamentals of the SENTIENT Gateway option."
         1:
-          textContent: "Understand what SENTIENT IoT Gateway is and explore the variety of capabilities and protocols it provides."
+          textContent: "Understand what SENTIENT Gateway is and explore the variety of capabilities and protocols it provides."
         2:
           textContent: "Learn about rule chains – what they are, how they work, and how to set them up with practical examples such as processing data with default rule chains, editing them, and assigning custom rule chains to devices."
         3:

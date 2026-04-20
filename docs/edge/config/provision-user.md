@@ -9,18 +9,18 @@ description: User Access management
 
 ### User Access management
 
-SENTIENT GATEWAY user access managements depends on the cloud version.
+SENTIENT Edge user access managements depends on the cloud version.
  
 #### SENTIENT User Access management
 ##### Tenant Administrator users
-Once SENTIENT GATEWAY connected to SENTIENT cloud every tenant administrator user will be transferred to edge and any of these users will be able to login into SENTIENT GATEWAY UI.
+Once SENTIENT Edge connected to SENTIENT cloud every tenant administrator user will be transferred to edge and any of these users will be able to login into SENTIENT Edge UI.
 
 Tenant Administrator user is able to create or remove devices on the edge. 
 
 Tenant Administrator has **read** access to all other entities that are available on the edge.   
 
 ##### Customer users
-If **Edge** entity has been assigned to customer on the cloud then every customer user entity will be transferred to edge and any of these users will be able to login into SENTIENT GATEWAY UI.
+If **Edge** entity has been assigned to customer on the cloud then every customer user entity will be transferred to edge and any of these users will be able to login into SENTIENT Edge UI.
 
 Customer user is able to view devices on the edge he has access to on the cloud. 
 

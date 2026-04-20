@@ -39,7 +39,7 @@ Most of the protocols above support JSON, Protobuf or own data format. This is t
 
 ## IoT Gateway
 
-SENTIENT IoT Gateway helps to connect devices that are located in the local network and do not have access to the internet or use specific non-IP protocols.
+SENTIENT Gateway helps to connect devices that are located in the local network and do not have access to the internet or use specific non-IP protocols.
 IoT Gateway supports MQTT, OPC-UA, Modbus, BLE, HTTP, CAN, BACnet, ODBC, SNMP and other protocols.
 The gateway converts the data from devices to internal SENTIENT format and upload it over MQTT to the platform.
 See [What is IoT Gateway?](/docs/iot-gateway/what-is-iot-gateway/) for more info.

@@ -19,7 +19,7 @@
 </ul>
 
 <p class="learn-more">
-  Learn how Edge handles offline operation, local alarms, and data synchronization → <a href="/docs/{{docsPrefix}}edge/getting-started-guides/what-is-edge/" target="_blank">What is SENTIENT GATEWAY?</a>
+  Learn how Edge handles offline operation, local alarms, and data synchronization → <a href="/docs/{{docsPrefix}}edge/getting-started-guides/what-is-edge/" target="_blank">What is SENTIENT Edge?</a>
 </p>
 
 <h2>IoT Edge Computing Documentation & Guides</h2>

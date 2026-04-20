@@ -1,18 +1,18 @@
 ---
 layout: docwithnav-gw
-title: How to enable remote logging feature on SENTIENT IoT Gateway
-description: How to enable remote logging feature on SENTIENT IoT Gateway
+title: How to enable remote logging feature on SENTIENT Gateway
+description: How to enable remote logging feature on SENTIENT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to enable remote logging and read logs from SENTIENT IoT Gateway on your SENTIENT platform instance.  
+This guide will help you to enable remote logging and read logs from SENTIENT Gateway on your SENTIENT platform instance.  
 
 For purpose of this guide, we will use following things:
 1. Locally installed instance of SENTIENT platform (How to install you can [read here](/docs/user-guide/install/installation-options/)).
-2. SENTIENT IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
+2. SENTIENT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
 
 ## Step 1. Remote logging activation and setting the logging level
 

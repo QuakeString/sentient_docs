@@ -21,7 +21,7 @@ mosquitto_pub -d -q 1 -h "$HOST_NAME" -p "$MQTT_PORT" -t "v1/devices/me/telemetr
 {: .copy-code}
 
 
-For example, $HOST_NAME reference your local SENTIENT GATEWAY installation, MQTT port is **1883** and access token is **ABC123**:
+For example, $HOST_NAME reference your local SENTIENT Edge installation, MQTT port is **1883** and access token is **ABC123**:
 
 ```bash
 mosquitto_pub -d -q 1 -h "localhost" -p "1883" -t "v1/devices/me/telemetry" -u "ABC123" -m {"temperature":25}

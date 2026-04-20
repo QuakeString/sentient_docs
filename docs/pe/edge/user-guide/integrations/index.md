@@ -33,7 +33,7 @@ placeholderFeature:
         title: 'To assign the Integration to the Edge, click the <b>"Assign to edge"</b> button and select it from the drop-down menu. To proceed, click the <b>"Assign"</b> button.'
     4:
         image: /images/pe/edge/integrations/placeholder-feature-step-5.webp
-        title: 'To confirm that the placeholder is replaced by the attribute value, log in to your <b>SENTIENT GATEWAY</b> instance, go to the <b>Integration center > Integrations</b> section and click the integration.'
+        title: 'To confirm that the placeholder is replaced by the attribute value, log in to your <b>SENTIENT Edge</b> instance, go to the <b>Integration center > Integrations</b> section and click the integration.'
 
 missingPlaceholder:
     0:
@@ -69,14 +69,14 @@ This way, a single **Integration template** could be used by multiple **Edges**,
 
 #### Embedded integrations
 
-**Embedded integration** runs in the main **SENTIENT GATEWAY** process. 
+**Embedded integration** runs in the main **SENTIENT Edge** process. 
 
 **Pros**:
 * Simplifies deployment of new integration (just a few clicks on the SENTIENT UI);
 * Minimizes latency for message delivery;
 
 **Cons**:
-* Consumes resources allocated to the main **SENTIENT GATEWAY** process (_network connections, OS threads, and CPU cycles_);
+* Consumes resources allocated to the main **SENTIENT Edge** process (_network connections, OS threads, and CPU cycles_);
 * Low level of isolation;
 
 <object width="60%" data="/images/user-guide/integrations/embeded-integrations-overview.svg" style="display: block; margin: auto"></object>
@@ -86,14 +86,14 @@ This way, a single **Integration template** could be used by multiple **Edges**,
 It is possible to install the **remote integration** on the local network and to stream the data to the edge over the network.
 
 Let's assume you have local MQTT broker or OPC-UA server deployed on-premises.
-Those brokers and/or servers don't have a dedicated external IP address, so SENTIENT GATEWAY can't connect to them directly.
+Those brokers and/or servers don't have a dedicated external IP address, so SENTIENT Edge can't connect to them directly.
 However, you can install remote integration close to this edge, in the same local network.
 This integration will connect to the broker/edge, pull the data and store it in the local file system.
-Remote integration will stream the data to the SENTIENT GATEWAY deployed in the network once the network connection is available.
+Remote integration will stream the data to the SENTIENT Edge deployed in the network once the network connection is available.
 
 Pros:
 * Enables integration with servers deployed on the local network; 
-* Isolates the integration process from the main **SENTIENT GATEWAY** process.
+* Isolates the integration process from the main **SENTIENT Edge** process.
 
 Cons:
 * Requires the installation of a separate package;

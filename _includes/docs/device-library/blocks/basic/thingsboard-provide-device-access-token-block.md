@@ -1,5 +1,5 @@
 To connect your device, you'll first need to get its credentials. 
-While {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}**SENTIENT GATEWAY**{% else %}**SENTIENT**{% endif %} supports a variety of device credentials, for this guide, 
+While {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}**SENTIENT Edge**{% else %}**SENTIENT**{% endif %} supports a variety of device credentials, for this guide, 
 we will use the default auto-generated credentials, which is an access token.  
 
 {% assign provisionDeviceCE = '

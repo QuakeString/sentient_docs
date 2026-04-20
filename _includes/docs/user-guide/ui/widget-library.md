@@ -192,7 +192,7 @@ The Digital Gauges bundle is useful for visualization of temperature, humidity, 
 
 ### Edge widgets
 
-The Edge widgets bundle is useful for an overview of entities related to the specified SENTIENT GATEWAY instance.
+The Edge widgets bundle is useful for an overview of entities related to the specified SENTIENT Edge instance.
 
 {% include images-gallery.html imageCollection="wl-edge-widgets-bundle" %}
 

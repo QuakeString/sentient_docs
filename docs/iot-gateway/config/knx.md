@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: KNX Connector Configuration
-description: KNX API support for SENTIENT IoT Gateway
+description: KNX API support for SENTIENT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with KNX Connector configuration for SENTIENT IoT Gateway.
+This guide will help you get familiar with KNX Connector configuration for SENTIENT Gateway.
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector. The purpose of this 
 Connector is to connect KNX-based devices to SENTIENT, allowing to process data from KNX devices and control 
 KNX automation systems.

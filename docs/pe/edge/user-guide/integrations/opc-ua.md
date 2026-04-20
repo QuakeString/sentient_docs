@@ -71,7 +71,7 @@ assignIntegration:
         title: 'Assign the <b>Integration</b> to the <b>Edge</b>.'
     3:
         image: /images/pe/edge/integrations/opc-ua/assign-integration-step-4.webp
-        title: 'Login to your <b>SENTIENT GATEWAY</b> instance and open the <b>Integrations</b> page. The placeholder is going to be replaced by the attribute value'
+        title: 'Login to your <b>SENTIENT Edge</b> instance and open the <b>Integrations</b> page. The placeholder is going to be replaced by the attribute value'
 
 device:
     0:
@@ -108,11 +108,11 @@ rpcDownlink:
 
 ### Overview
 
-**OPC UA Integration** allows you to stream data from the OPC UA server to SENTIENT GATEWAY and converts the device payloads to the SENTIENT GATEWAY format.
+**OPC UA Integration** allows you to stream data from the OPC UA server to SENTIENT Edge and converts the device payloads to the SENTIENT Edge format.
 
 <object width="100%" style="display: block; margin: auto; max-width: max-content" data="/images/user-guide/integrations/opc-ua-integration.svg"></object>
 
-In this tutorial, we will configure the integration between **SENTIENT GATEWAY** and **OPC-UA** 
+In this tutorial, we will configure the integration between **SENTIENT Edge** and **OPC-UA** 
 to get the air conditioners data from the [OPC UA C++ Demo Server](https://www.unified-automation.com/downloads/opc-ua-servers.html){: target="_blank"} 
 and allow the user to switch on/off any air conditioner using the **Integration downlink** feature.
 
@@ -129,7 +129,7 @@ Converter and Integration templates are created on the **Cloud**, so please log 
 Before creating the **Integration template**, create an Uplink and Downlink converter templates on the **Converters templates** page.
 
 * **Uplink Converter** is a script that parses and transforms the data received by the OPC UA integration.
-* **Downlink Converter** parses and transforms the data sent from SENTIENT GATEWAY to the format that is consumed by the existing device(s).
+* **Downlink Converter** parses and transforms the data sent from SENTIENT Edge to the format that is consumed by the existing device(s).
 
 First, we need to create the **Uplink Data converter** that will be used to receive the messages from the OPC UA server. 
 The converter should transform the incoming payload into the required message format.
@@ -211,7 +211,7 @@ return result;
 ```
 {: .copy-code.expandable-10}
 
-The purpose of the decoder function is to parse the incoming data and metadata into a format that **SENTIENT GATEWAY** can consume.
+The purpose of the decoder function is to parse the incoming data and metadata into a format that **SENTIENT Edge** can consume.
 * **deviceName** and **deviceType** are required, while **attributes** and **telemetry** are optional.
 * **Attributes** and **telemetry** are flat key-value objects. Nested objects are not supported.
 
@@ -226,7 +226,7 @@ The decoder function can be changed during converter creation or later.
 
 #### Downlink Converter template
 
-To send **Downlink messages** from the **SENTIENT GATEWAY** to the **OPC UA node**, we need to define a **Downlink converter**.
+To send **Downlink messages** from the **SENTIENT Edge** to the **OPC UA node**, we need to define a **Downlink converter**.
 
 In general, the output of the **Downlink converter** should have the following structure:
 

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Data filtering and traffic reduce
-description: SENTIENT GATEWAY use case #2
+description: SENTIENT Edge use case #2
 
 provisionDevicesEdge:
     0:

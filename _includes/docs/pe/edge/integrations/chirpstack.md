@@ -8,7 +8,7 @@
 ### Overview
 
 [ChirpStack](https://www.chirpstack.io/){: target="_blank"} is an **open-source LoRaWAN Network Server** which can be used to setup LoRaWAN networks.
-After integrating ChirpStack with **SENTIENT GATEWAY**, you can locally connect, process, and visualize device data at the edge, ensuring low-latency insights and offline capabilities.
+After integrating ChirpStack with **SENTIENT Edge**, you can locally connect, process, and visualize device data at the edge, ensuring low-latency insights and offline capabilities.
 
 To learn more, please see the integration diagram.
 
@@ -16,7 +16,7 @@ To learn more, please see the integration diagram.
 
 ### Prerequisites
 
-* **SENTIENT GATEWAY Professional Edition** up and running.
+* **SENTIENT Edge Professional Edition** up and running.
 * Install **ChirpStack Network Server** via [Docker Compose](https://www.chirpstack.io/project/guides/docker-compose/){: target="_blank"} or [Ubuntu](https://www.chirpstack.io/project/guides/debian-ubuntu/){: target="_blank"}.
 * Have a device connected to the network. Read how to connect the **LoRaWAN device** with [ChirpStack](https://www.chirpstack.io/project/guides/connect-device/){: target="_blank"}.
 
@@ -164,7 +164,7 @@ However, the device itself will send data through the gateway. To add the gatewa
 Once the **integration template** is created and the **ChirpStack Application Integration** is configured, assign the **integration template** to the **Edge** instance:
 * Go to the **Edge management > Instances** section and click the **"Manage edge integrations"** button.
 * On the **"Integration"** page, click the **"Assign to edge"** button. In the **"Assign the Integration to the Edge"** pop-up window, select the integration from the drop-down menu and click the **"Assign"** button.
-* To confirm the **ChirpStack** integration on the **Edge**, login to your **SENTIENT GATEWAY** instance and go to the **Integrations center > Integrations** section. 
+* To confirm the **ChirpStack** integration on the **Edge**, login to your **SENTIENT Edge** instance and go to the **Integrations center > Integrations** section. 
 
 {% include images-gallery.html imageCollection="assign-to-edge" %}
 
@@ -237,7 +237,7 @@ Where:
 
 In production environments, devices **automatically** send uplink messages at regular intervals or in response to events, without manual intervention.
 
-After the message is sent, a new device will be created in the **SENTIENT GATEWAY** user interface. 
+After the message is sent, a new device will be created in the **SENTIENT Edge** user interface. 
 * To view the received time-series data, go to the **Entities > Devices** section, click the **device** and select the **"Latest telemetry"** tab.
 
 {% include images-gallery.html imageCollection="device" %}

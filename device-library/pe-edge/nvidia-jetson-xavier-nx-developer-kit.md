@@ -1,7 +1,7 @@
 ---
 docsTag: "edge-pe"
 layout: device
-title: How to install SENTIENT GATEWAY on NVIDIA Jetson Xavier NX Developer Kit?
+title: How to install SENTIENT Edge on NVIDIA Jetson Xavier NX Developer Kit?
 category: Single-board computers
 chip: NVIDIA CUDA
 connectivity: [Ethernet, WIFI, Bluetooth]

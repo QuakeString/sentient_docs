@@ -16,22 +16,22 @@
   guides: /docs/paas/guides/
   getStarted: /docs/paas/getting-started-guides/helloworld/
   docsPrefix: /docs/paas/
-- title: SENTIENT GATEWAY
-  fulltitle: SENTIENT GATEWAY
-  description: SENTIENT GATEWAY Documentation
+- title: SENTIENT Edge
+  fulltitle: SENTIENT Edge
+  description: SENTIENT Edge Documentation
   tag: edge
   icon: /images/sentient-gw-icon.svg
   path: /docs/edge/
   docsPrefix: /docs/edge/
-- title: PE SENTIENT GATEWAY
-  fulltitle: SENTIENT PE GATEWAY
-  description: SENTIENT PE GATEWAY Documentation
+- title: PE SENTIENT Edge
+  fulltitle: SENTIENT PE Edge
+  description: SENTIENT PE Edge Documentation
   tag: edge-pe
   icon: /images/sentient-gw-icon.svg
   path: /docs/pe/edge/
   docsPrefix: /docs/pe/edge/
-- title: IoT Gateway
-  fulltitle: SENTIENT IoT Gateway
+- title: SENTIENT Gateway
+  fulltitle: SENTIENT Gateway
   description: SENTIENT Documentation
   tag: gw
   icon: /images/gateway-icon.svg

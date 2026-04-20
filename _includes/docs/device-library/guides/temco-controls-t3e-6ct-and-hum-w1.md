@@ -20,7 +20,7 @@ The outputs are available in dry contacts 1amp/output, 0-10V analog, and PNP sin
 
 To continue with this guide, we will need the following:  
 {{ prerequisites }}
-- [SENTIENT IoT Gateway](/docs/iot-gateway/installation/){: target="_blank"} installed
+- [SENTIENT Gateway](/docs/iot-gateway/installation/){: target="_blank"} installed
 - [SENTIENT account]({{sentientInstanceLink}}){: target="_blank"}
 
 
@@ -47,7 +47,7 @@ over Ethernet. For this purpose, use the following steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=configuringDevice %}
 
-## Creating and configuring SENTIENT IoT Gateway
+## Creating and configuring SENTIENT Gateway
 
 {% capture configuringgatewaytogglespec %}
 Basic%,%basicConfig%,%templates/device-library/ready-to-go-devices/temco-controls-t3e-6ct-configuring-gateway-basic.md%br%

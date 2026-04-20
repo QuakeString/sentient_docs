@@ -51,7 +51,7 @@ sudo systemctl restart tb-edge
 In Docker setups, make sure the **CLOUD_RPC_SSL_ENABLED** variable in the `docker-compose.yml` file is set to 'true'. 
 If using self-signed certificates, also set **CLOUD_RPC_SSL_CERT** accordingly.
 
-After making these changes, restart the SENTIENT GATEWAY docker container with the command:
+After making these changes, restart the SENTIENT Edge docker container with the command:
 
 ```bash
 docker compose restart mytbedge

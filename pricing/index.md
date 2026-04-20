@@ -1501,9 +1501,9 @@ defaultActivePricingSection: sentient-pe-options
                     </div>
                 </div>
                 <div id="faq-sentient-ce-edge" class="pi-accordion">
-                    <div class="item" data-tag="h4" data-item-id="edge-community-what-is" data-title="What is SENTIENT GATEWAY Community Edition?">
+                    <div class="item" data-tag="h4" data-item-id="edge-community-what-is" data-title="What is SENTIENT Edge Community Edition?">
                         <div class="container">
-                            <p>The Community Edition of SENTIENT GATEWAY is a free, open-source platform. It offers essential features for managing and analyzing IoT data at the edge.</p>
+                            <p>The Community Edition of SENTIENT Edge is a free, open-source platform. It offers essential features for managing and analyzing IoT data at the edge.</p>
                         </div>
                     </div>
                     <div class="item" data-tag="h4" data-item-id="edge-community-intended-for" data-title="Who is the Community Edition intended for?">
@@ -1511,17 +1511,17 @@ defaultActivePricingSection: sentient-pe-options
                             <p>It is ideal for individuals, startups, educational purposes, and organizations conducting small to medium-sized IoT projects without the need for advanced enterprise features.</p>
                         </div>
                     </div>
-                    <div class="item" data-tag="h4" data-item-id="edge-community-commercial-use" data-title="Can I use SENTIENT GATEWAY Community Edition for commercial projects?">
+                    <div class="item" data-tag="h4" data-item-id="edge-community-commercial-use" data-title="Can I use SENTIENT Edge Community Edition for commercial projects?">
                         <div class="container">
-                            <p>Yes, SENTIENT GATEWAY Community Edition can be used for commercial purposes. You can develop and deploy IoT solutions based on the Community Edition as part of your business operations. It is distributed under the Apache 2.0 license, which allows commercial use without the license or royalty fees.</p>
+                            <p>Yes, SENTIENT Edge Community Edition can be used for commercial purposes. You can develop and deploy IoT solutions based on the Community Edition as part of your business operations. It is distributed under the Apache 2.0 license, which allows commercial use without the license or royalty fees.</p>
                         </div>
                     </div>
-                    <div class="item" data-tag="h4" data-item-id="edge-community-compatibility" data-title="What SENTIENT GATEWAY compatibility means?">
+                    <div class="item" data-tag="h4" data-item-id="edge-community-compatibility" data-title="What SENTIENT Edge compatibility means?">
                         <div class="container">
-                            <p>SENTIENT GATEWAY Community Edition is able to connect only to SENTIENT server.<br>SENTIENT GATEWAY Professional Edition is able to connect only to SENTIENT Professional Edition server (it can be SENTIENT Cloud or on-premise instances).<br>SENTIENT GATEWAY Community Edition cannot be connected to SENTIENT Professional Edition and vice versa.</p>
+                            <p>SENTIENT Edge Community Edition is able to connect only to SENTIENT server.<br>SENTIENT Edge Professional Edition is able to connect only to SENTIENT Professional Edition server (it can be SENTIENT Cloud or on-premise instances).<br>SENTIENT Edge Community Edition cannot be connected to SENTIENT Professional Edition and vice versa.</p>
                         </div>
                     </div>
-                    <div class="item" data-tag="h4" data-item-id="edge-community-installation" data-title="How can I install SENTIENT GATEWAY Community Edition?">
+                    <div class="item" data-tag="h4" data-item-id="edge-community-installation" data-title="How can I install SENTIENT Edge Community Edition?">
                         <div class="container">
                             <p>You can install the Community Edition following the <a target="_blank" href="https://docs.sentient.invenia.in/docs/user-guide/install/edge/installation-options/">installation guides</a> available in the official documentation.</p>
                         </div>
@@ -1536,7 +1536,7 @@ defaultActivePricingSection: sentient-pe-options
                     </div>
                     <div class="item hidden" data-tag="h4" data-item-id="edge-community-docker-support" data-title="Does the Community Edition support Docker deployment?">
                         <div class="container">
-                            <p>Yes, SENTIENT GATEWAY Community Edition supports Docker. Detailed instructions for Docker-based installation are provided in the <a target="_blank" href="https://docs.sentient.invenia.in/docs/user-guide/install/edge/docker/">Docker deployment</a> guide.</p>
+                            <p>Yes, SENTIENT Edge Community Edition supports Docker. Detailed instructions for Docker-based installation are provided in the <a target="_blank" href="https://docs.sentient.invenia.in/docs/user-guide/install/edge/docker/">Docker deployment</a> guide.</p>
                         </div>
                     </div>
                     <div class="item hidden" data-tag="h4" data-item-id="edge-community-core-features" data-title="What core features are available in the Community Edition?">
@@ -1995,7 +1995,7 @@ defaultActivePricingSection: sentient-pe-options
                 <div id="faq-sentient-cloud-edge" class="pi-accordion">
                     <div class="item" data-tag="h4" data-item-id="edge-addon-cloud-what-is" data-title="What is Edge Computing add-on?">
                         <div class="container">
-                            <p>The Edge Computing add-on enables local data processing at remote sites through SENTIENT GATEWAY PE instances. Edge runs independently with offline capability and automatically syncs with your central SENTIENT Professional Edition Server when connectivity returns.</p>
+                            <p>The Edge Computing add-on enables local data processing at remote sites through SENTIENT Edge PE instances. Edge runs independently with offline capability and automatically syncs with your central SENTIENT Professional Edition Server when connectivity returns.</p>
                             <p>It is available for all SENTIENT Professional Edition deployments: Cloud, Private Cloud, and self-managed.</p>
                         </div>
                     </div>
@@ -2068,7 +2068,7 @@ defaultActivePricingSection: sentient-pe-options
                         <div class="container">
                             <p>Yes. Edge natively supports MQTT, CoAP, HTTP, SNMP, and LwM2M. For other protocols, use:</p>
                             <ul>
-                                <li>The <b>SENTIENT IoT Gateway</b> to bridge legacy devices. The Gateway supports Modbus, BACnet, OPC-UA, and more, and is available at no extra cost.</li>
+                                <li>The <b>SENTIENT Gateway</b> to bridge legacy devices. The Gateway supports Modbus, BACnet, OPC-UA, and more, and is available at no extra cost.</li>
                                 <li>The <b>Platform Integrations</b> to connect via OPC-UA, ChirpStack, and 30+ other systems using the converter library.</li>
                             </ul>
                         </div>
@@ -2593,7 +2593,7 @@ defaultActivePricingSection: sentient-pe-options
                     </div>
                     <div class="item" data-tag="h4" data-item-id="tb-private-cloud-edge-addon-cloud-what-is" data-title="What is Edge Computing add-on?">
                         <div class="container">
-                            <p>The Edge Computing add-on enables local data processing at remote sites through SENTIENT GATEWAY PE instances. Edge runs independently with offline capability and automatically syncs with your central SENTIENT Professional Edition Server when connectivity returns.</p>
+                            <p>The Edge Computing add-on enables local data processing at remote sites through SENTIENT Edge PE instances. Edge runs independently with offline capability and automatically syncs with your central SENTIENT Professional Edition Server when connectivity returns.</p>
                             <p>It is available for all SENTIENT Professional Edition deployments: Cloud, Private Cloud, and self-managed.</p>
                         </div>
                     </div>
@@ -2950,7 +2950,7 @@ defaultActivePricingSection: sentient-pe-options
                 <div id="faq-pe-pay-as-you-go-edge" class="pi-accordion">
                     <div class="item" data-tag="h4" data-item-id="edge-addon-payg-what-is" data-title="What is Edge Computing add-on?">
                         <div class="container">
-                            <p>The Edge Computing add-on enables local data processing at remote sites through SENTIENT GATEWAY PE instances. Edge runs independently with offline capability and automatically syncs with your central SENTIENT Professional Edition Server when connectivity returns.</p>
+                            <p>The Edge Computing add-on enables local data processing at remote sites through SENTIENT Edge PE instances. Edge runs independently with offline capability and automatically syncs with your central SENTIENT Professional Edition Server when connectivity returns.</p>
                             <p>It is available for all SENTIENT Professional Edition deployments: Cloud, Private Cloud, and self-managed.</p>
                         </div>
                     </div>
@@ -3023,7 +3023,7 @@ defaultActivePricingSection: sentient-pe-options
                         <div class="container">
                             <p>Yes. Edge natively supports MQTT, CoAP, HTTP, SNMP, and LwM2M. For other protocols, use:</p>
                             <ul>
-                                <li>The <b>SENTIENT IoT Gateway</b> to bridge legacy devices. The Gateway supports Modbus, BACnet, OPC-UA, and more, and is available at no extra cost.</li>
+                                <li>The <b>SENTIENT Gateway</b> to bridge legacy devices. The Gateway supports Modbus, BACnet, OPC-UA, and more, and is available at no extra cost.</li>
                                 <li>The <b>Platform Integrations</b> to connect via OPC-UA, ChirpStack, and 30+ other systems using the converter library.</li>
                             </ul>
                         </div>

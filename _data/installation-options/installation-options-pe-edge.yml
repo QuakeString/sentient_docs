@@ -1,64 +1,64 @@
 peEdge:
   0:
     title: Docker (Linux or Mac OS)
-    description: This guide provides step-by-step instructions for running SENTIENT GATEWAY on Linux or Mac OS using Docker.
+    description: This guide provides step-by-step instructions for running SENTIENT Edge on Linux or Mac OS using Docker.
     link: /docs/user-guide/install/pe/edge/docker/
     icon: /images/install/platform/docker-linux-macos.svg
     alt: Docker logo with Linux and macOS icons
-    imageTitleAttribute: Install SENTIENT GATEWAY using Docker on Linux or macOS
+    imageTitleAttribute: Install SENTIENT Edge using Docker on Linux or macOS
     imageWidth: 170
     imageHeight: 36
   1:
     title: Docker (Windows)
-    description: This guide will help you to install and start SENTIENT GATEWAY using Docker on Windows.
+    description: This guide will help you to install and start SENTIENT Edge using Docker on Windows.
     link: /docs/user-guide/install/pe/edge/docker-windows/
     icon: /images/install/platform/docker-windows.svg
     alt: Docker logo with Windows icon
-    imageTitleAttribute: Install SENTIENT GATEWAY using Docker on Windows
+    imageTitleAttribute: Install SENTIENT Edge using Docker on Windows
     imageWidth: 96
     imageHeight: 36
   2:
     title: Ubuntu Server
-    description: This guide provides step-by-step instructions for installing SENTIENT GATEWAY on Ubuntu 18.04 LTS and 20.04 LTS.
+    description: This guide provides step-by-step instructions for installing SENTIENT Edge on Ubuntu 18.04 LTS and 20.04 LTS.
     link: /docs/user-guide/install/pe/edge/deb-installation/
     icon: /images/install/platform/ubuntu.svg
     alt: Ubuntu logo
-    imageTitleAttribute: Install SENTIENT GATEWAY on Ubuntu Server
+    imageTitleAttribute: Install SENTIENT Edge on Ubuntu Server
     imageWidth: 36
     imageHeight: 36
   3:
     title: CentOS/RHEL Server
-    description: This guide provides step-by-step instructions for installing SENTIENT GATEWAY on RHEL/CentOS 7 and 8.
+    description: This guide provides step-by-step instructions for installing SENTIENT Edge on RHEL/CentOS 7 and 8.
     link: /docs/user-guide/install/pe/edge/rhel/
     icon: /images/install/platform/centos-redhat.svg
     alt: CentOS and Red Hat logos
-    imageTitleAttribute: Install SENTIENT GATEWAY on CentOS, RHEL.
+    imageTitleAttribute: Install SENTIENT Edge on CentOS, RHEL.
     imageWidth: 94
     imageHeight: 36
   4:
     title: Windows
-    description: This guide provides instructions for installing SENTIENT GATEWAY on Windows.
+    description: This guide provides instructions for installing SENTIENT Edge on Windows.
     link: /docs/user-guide/install/pe/edge/windows/
     icon: /images/install/platform/windows.svg
     alt: Windows logo
-    imageTitleAttribute: Install SENTIENT GATEWAY on Windows.
+    imageTitleAttribute: Install SENTIENT Edge on Windows.
     imageWidth: 35
     imageHeight: 36
   5:
     title: Raspberry Pi
-    description: This guide provides step-by-step instructions for installing SENTIENT GATEWAY on RaspberryPi.
+    description: This guide provides step-by-step instructions for installing SENTIENT Edge on RaspberryPi.
     link: /docs/user-guide/install/pe/edge/rpi/
     icon: /images/install/platform/rpi3.svg
     alt: Raspberry Pi logo
-    imageTitleAttribute: Install SENTIENT GATEWAY on Raspberry Pi
+    imageTitleAttribute: Install SENTIENT Edge on Raspberry Pi
     imageWidth: 36
     imageHeight: 36
   6:
     title: Docker Cluster setup
-    description: This guide will help you to setup SENTIENT GATEWAY in cluster mode using Docker Compose tool.
+    description: This guide will help you to setup SENTIENT Edge in cluster mode using Docker Compose tool.
     link: /docs/pe/edge/config/edge-cluster-setup/
     icon: /images/install/cluster/docker-compose.svg
     alt: Docker Compose logo
-    imageTitleAttribute: Set up SENTIENT GATEWAY in cluster mode using Docker Compose
+    imageTitleAttribute: Set up SENTIENT Edge in cluster mode using Docker Compose
     imageWidth: 36
     imageHeight: 36

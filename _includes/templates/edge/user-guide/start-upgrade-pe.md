@@ -4,7 +4,7 @@ docker compose stop mytbedge
 ```
 {: .copy-code}
 
-Modify the main docker compose file (docker-compose.yml) for **SENTIENT GATEWAY** and update the image version:
+Modify the main docker compose file (docker-compose.yml) for **SENTIENT Edge** and update the image version:
 
 ```text
 sed -i 's|sentient/tb-edge-pe:{{previousVersion}}|sentient/tb-edge-pe:{{versionName}}|' docker-compose.yml

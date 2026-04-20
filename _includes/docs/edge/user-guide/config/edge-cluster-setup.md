@@ -28,7 +28,7 @@ Before starting, make sure that [Docker CE](https://docs.docker.com/install/){: 
 
 {% include templates/install/docker-install-note.md %}
 
-### Step 1. Pull the SENTIENT GATEWAY image
+### Step 1. Pull the SENTIENT Edge image
 
 [Log in](https://docs.docker.com/engine/reference/commandline/login/){: target="_blank"} to Docker Hub and use the command to pull the image:
 
@@ -58,7 +58,7 @@ cd tb-edge-pe-docker-compose
 
 {% else %}
 
-### Step 2. Clone the SENTIENT GATEWAY CE repository
+### Step 2. Clone the SENTIENT Edge CE repository
 
 ```bash
 git clone -b release-4.0 https://github.com/sentient/sentient-gateway.git --depth 1
@@ -68,15 +68,15 @@ cd sentient-gateway/docker-edge
 
 {% endif %}
 
-### Step 3. Configure SENTIENT GATEWAY database and queue service
+### Step 3. Configure SENTIENT Edge database and queue service
 
-Before performing the initial installation, configure the type of database to be used with **SENTIENT GATEWAY**. To set the database type, change the value of the **DATABASE** variable in the **environment file (.env)** file.
+Before performing the initial installation, configure the type of database to be used with **SENTIENT Edge**. To set the database type, change the value of the **DATABASE** variable in the **environment file (.env)** file.
 
-**SENTIENT GATEWAY** currently supports two messaging systems/brokers for storing the messages:
+**SENTIENT Edge** currently supports two messaging systems/brokers for storing the messages:
 * **In Memory** queue implementation is not suitable for any sort of cluster deployments.
 * **Kafka** is recommended for production deployments and used by default. This queue is used on most of the SENTIENT production environments now.
 
-To edit the **SENTIENT GATEWAY .env** file, run the following command:
+To edit the **SENTIENT Edge .env** file, run the following command:
 ```bash
 nano .env
 ```
@@ -161,7 +161,7 @@ Once deployed, you can reach **Prometheus** at [http://localhost:9090](http://lo
 
 {% include templates/install/docker/docker-compose-setup-volumes.md %}
 
-### Step 5. Install and run SENTIENT GATEWAY
+### Step 5. Install and run SENTIENT Edge
 
 To run the installation, execute the following command:
 ```bash 
@@ -176,13 +176,13 @@ To start the service, execute the following command:
 {: .copy-code}
 
 {% capture install-and-run-edge %}
-It will take a few minutes to start the services. Once all services are successfully started, open the **SENTIENT GATEWAY** service
+It will take a few minutes to start the services. Once all services are successfully started, open the **SENTIENT Edge** service
 at **```http://{your-host-ip}```** in the browser (_e.g., [http://localhost](http://localhost){: target="_blank"}_).
 To log in, use **the credentials** from the **SENTIENT** account.
 {% endcapture %}
 {% include templates/info-banner.md content=install-and-run-edge %}
 
-Examine edge service logs for errors in case of any issues. To see **SENTIENT GATEWAY** node logs, execute the following command:
+Examine edge service logs for errors in case of any issues. To see **SENTIENT Edge** node logs, execute the following command:
 ```bash 
 docker-compose logs -f tb-edge1 tb-edge2 tb-edge3
 ```

@@ -4827,7 +4827,7 @@
 			<td>edge_license.instance_data_file</td>
 			<td>EDGE_LICENSE_INSTANCE_DATA_FILE</td>
 			<td>instance-edge-license.data</td>
-			<td> Instance data is auto-generated and is used to identify particular SENTIENT GATEWAY Instance.
+			<td> Instance data is auto-generated and is used to identify particular SENTIENT Edge Instance.
  Instance data is periodically updated and stored into the specified file which can be set to absolute or relative path.
  Please make sure that sentient edge process has access to the instance data file, in case you use absolute path.</td>
 		</tr>

@@ -1,7 +1,7 @@
 ---
 docsTag: "edge-pe"
 layout: device
-title: How to install SENTIENT GATEWAY on Raspberry Pi 4?
+title: How to install SENTIENT Edge on Raspberry Pi 4?
 category: Single-board computers
 chip: Broadcom BCM2711
 connectivity: [HTTP, MQTT, WIFI, BLE]

@@ -5,7 +5,7 @@
 
 In **SENTIENT**, an **entity** is a core component that represents a physical object or a concept within the platform. You can view the list of SENTIENT entities [here](/docs/{{peDocsPrefix}}user-guide/entities-and-relations/){: target="_blank"}.
 
-**SENTIENT GATEWAY** supports entities that are relevant for edge computing.
+**SENTIENT Edge** supports entities that are relevant for edge computing.
 
 ### Available Edge Entities
 
@@ -49,7 +49,7 @@ Example:
 ```
 You can learn more about working with telemetry data [here](/{{peDocsPrefix}}docs/user-guide/telemetry/){: target="_blank"}.
 
-By default, **SENTIENT GATEWAY** synchronizes telemetry data with the **SENTIENT Cloud**. 
+By default, **SENTIENT Edge** synchronizes telemetry data with the **SENTIENT Cloud**. 
 During an internet outage, telemetry is stored **locally** and sent to the **Cloud** once the connection is restored.
 
 ### Relations

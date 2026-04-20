@@ -14,7 +14,7 @@ dashboard-provision:
 create-dashboard:
     0:
         image: /images/edge/user-guide/dashboards/5-create-new-dashboard.png
-        title: 'Log in to your <b>SENTIENT GATEWAY</b> instance and navigate to the <b>“Dashboards”</b> section, then click the <b>“+”</b> icon and select the <b>“Create new dashboard”</b> option.'
+        title: 'Log in to your <b>SENTIENT Edge</b> instance and navigate to the <b>“Dashboards”</b> section, then click the <b>“+”</b> icon and select the <b>“Create new dashboard”</b> option.'
     1:
         image: /images/edge/user-guide/dashboards/6-new-dashboard-dialog.png
         title: 'In the pop-up window, enter a dashboard <b>title</b>. Other fields are optional. Click the <b>"Add"</b> button to proceed'
@@ -33,7 +33,7 @@ changes-from-edge-to-server:
 assign-customer:
     0:
         image: /images/edge/user-guide/dashboards/8-assign-customers.png
-        title: 'Log in to your <b>SENTIENT GATEWAY</b> instance and go to the <b>Dashboards</b> section. Click the <b>“Manage assigned customers”</b> button for the dashboard you want to assign a customer to.'
+        title: 'Log in to your <b>SENTIENT Edge</b> instance and go to the <b>Dashboards</b> section. Click the <b>“Manage assigned customers”</b> button for the dashboard you want to assign a customer to.'
     1:
         image: /images/edge/user-guide/dashboards/9-add-customers-dialog.png
         title: 'Select the customers from the drop-down list to assign them or click the <b>“x”</b> icon to remove them from the dashboard. Click the <b>"Update"</b> button to confirm the assignment or removal.'

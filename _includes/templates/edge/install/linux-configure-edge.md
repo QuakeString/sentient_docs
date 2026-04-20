@@ -6,7 +6,7 @@
 
 {% include templates/edge/install/copy-edge-credentials.md %}
 
-Edit the **SENTIENT GATEWAY** configuration file.
+Edit the **SENTIENT Edge** configuration file.
 
 {% if docsPrefix == 'pe/edge/' %}
 

@@ -5,7 +5,7 @@
 
 **Public dashboard configuration** allows access to the dashboard without authentication, i.e., the dashboard can be viewed by anyone who has the URL link. 
 
-In **SENTIENT GATEWAY**, **public dashboards** work similarly to how they do on the **SENTIENT Server**. 
+In **SENTIENT Edge**, **public dashboards** work similarly to how they do on the **SENTIENT Server**. 
 
 **Edge-Specific Considerations:**
 
@@ -35,7 +35,7 @@ To have access to the data of the devices, assets and entity views through the p
 {% include templates/info-banner.md content=local-deployment %}
 
 {% if docsPrefix == "pe/edge/" %}
-**Dashboard groups** are managed on the **SENTIENT Server**. The dashboard group must first be created on the **SENTIENT Server** and then assigned to the **SENTIENT GATEWAY** instance.
+**Dashboard groups** are managed on the **SENTIENT Server**. The dashboard group must first be created on the **SENTIENT Server** and then assigned to the **SENTIENT Edge** instance.
 {% endif %}
 {% include images-gallery.html imageCollection="makePublic" showListImageTitles="true" %}
 

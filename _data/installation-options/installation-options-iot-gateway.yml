@@ -19,7 +19,7 @@ iotGateway:
     imageHeight: 36
   2:
     title: Ubuntu Server
-    description: This guide will help you to install SENTIENT IoT Gateway on Ubuntu 18.04 LTS / Ubuntu 20.04 LTS.
+    description: This guide will help you to install SENTIENT Gateway on Ubuntu 18.04 LTS / Ubuntu 20.04 LTS.
     link: /docs/iot-gateway/install/deb-installation/
     icon: /images/install/platform/ubuntu.svg
     alt: Ubuntu logo
@@ -28,7 +28,7 @@ iotGateway:
     imageHeight: 36
   3:
     title: AlmaLinux/RHEL Server
-    description: This guide will help you to install SENTIENT IoT Gateway on AlmaLinux or RHEL.
+    description: This guide will help you to install SENTIENT Gateway on AlmaLinux or RHEL.
     link: /docs/iot-gateway/install/rpm-installation/
     icon: /images/install/platform/alma-linux-redhat.svg
     alt:  AlmaLinux and Red Hat logos
@@ -37,7 +37,7 @@ iotGateway:
     imageHeight: 36
   4:
     title: Raspberry Pi
-    description: This guide will help you to install SENTIENT IoT Gateway on Ubuntu 18.04 LTS / Ubuntu 20.04 LTS.
+    description: This guide will help you to install SENTIENT Gateway on Ubuntu 18.04 LTS / Ubuntu 20.04 LTS.
     link: /docs/iot-gateway/install/deb-installation/
     icon: /images/install/platform/rpi3.svg
     alt: Raspberry Pi logo

@@ -72,7 +72,7 @@
                 {%- for page in pages_in_dir -%}
                     {% assign pageFile = page.path | split: "/" | last %}
                     {% if pageFile != 'guidelines.md' %}
-                        {% assign deviceName = page.title | replace: "How to connect ", "" | replace: "How to install SENTIENT GATEWAY on ", "" | replace: " to SENTIENT?", "" | replace: "?", "" %}
+                        {% assign deviceName = page.title | replace: "How to connect ", "" | replace: "How to install SENTIENT Edge on ", "" | replace: " to SENTIENT?", "" | replace: "?", "" %}
                         {% assign deviceImg = "/images/devices-library/" | append: page.deviceImageFileName %}
                         <a href="{{ page.url }}" class="card"  data-hardware-types="{{ page.hardwareType | join: '|' }}" data-connectivity="{{ page.connectivity | join: '|' }}" data-industry="{{ page.industry | join: '|' }}" data-use-cases="{{ page.useCase | join: '|' }}"{% if page.vendor %} data-vendor="{{ page.vendor }}"{% endif %}>
                             <div class="card-wrapper">

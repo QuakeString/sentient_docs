@@ -10,7 +10,7 @@ http(s)://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes/updates
 {: .copy-code}
 
 * **/attributes/updates** The endpoint that is used to fetch the updates of device attributes.
-* Replace the **$SENTIENT_HOST_NAME** with the actual hostname or IP address of your SENTIENT GATEWAY instance.
+* Replace the **$SENTIENT_HOST_NAME** with the actual hostname or IP address of your SENTIENT Edge instance.
 
 {% assign accessTokenPE = '
     ===
@@ -42,14 +42,14 @@ curl -v -X GET http(s)://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes/upd
 
 #### Publish Time-Series or Attribute Message.
 
-To publish client-side device attributes to the **SENTIENT GATEWAY**, send a POST request to the following URL:
+To publish client-side device attributes to the **SENTIENT Edge**, send a POST request to the following URL:
 
 ```bash
 http(s)://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
-* **$SENTIENT_HOST_NAME:** The actual hostname or IP address of your SENTIENT GATEWAY instance
+* **$SENTIENT_HOST_NAME:** The actual hostname or IP address of your SENTIENT Edge instance
 * **$ACCESS_TOKEN:** The actual access token of the device.
 
 Publish client-side attributes update

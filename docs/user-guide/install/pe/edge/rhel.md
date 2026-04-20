@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: Installing SENTIENT GATEWAY on CentOS/RHEL Server
-description: Installing SENTIENT GATEWAY on CentOS/RHEL Server
+title: Installing SENTIENT Edge on CentOS/RHEL Server
+description: Installing SENTIENT Edge on CentOS/RHEL Server
 ---
 
 * TOC
@@ -13,7 +13,7 @@ description: Installing SENTIENT GATEWAY on CentOS/RHEL Server
 
 {% include templates/edge/install/compatibility-warning-general.md %}
 
-This guide provides step-by-step instructions for installing **SENTIENT GATEWAY** on **RHEL/CentOS 8/9**.
+This guide provides step-by-step instructions for installing **SENTIENT Edge** on **RHEL/CentOS 8/9**.
 
 {% include templates/edge/install/prerequisites.md %}
 
@@ -36,7 +36,7 @@ sudo yum install -y nano wget && sudo yum install -y https://dl.fedoraproject.or
 
 ### Step 2. Configure SENTIENT Database
 
-**SENTIENT GATEWAY** supports **SQL** and **hybrid** database approaches. See the architecture [page](/docs/pe/reference/#sql-vs-nosql-vs-hybrid-database-approach){: target="_blank"} for details.
+**SENTIENT Edge** supports **SQL** and **hybrid** database approaches. See the architecture [page](/docs/pe/reference/#sql-vs-nosql-vs-hybrid-database-approach){: target="_blank"} for details.
 
 {% capture contenttogglespec %}
 PostgreSQL <small>(recommended for < 5K msg/sec)</small>%,%postgresql%,%templates/edge/install/rhel-db-postgresql.md%br%
@@ -46,7 +46,7 @@ Hybrid <br>PostgreSQL+Cassandra<br><small>(recommended for > 5K msg/sec)</small>
 
 ### Step 3. Choose queue service
 
-**SENTIENT GATEWAY** is able to use different messaging systems/brokers for storing the messages and communication between SENTIENT services. How to choose the right queue implementation?
+**SENTIENT Edge** is able to use different messaging systems/brokers for storing the messages and communication between SENTIENT services. How to choose the right queue implementation?
 
 * **In Memory** queue implementation is built-in and default. It is useful for development(PoC) environments and is not suitable for production deployments or any sort of cluster deployments.
 
@@ -58,7 +58,7 @@ Kafka <small>(recommended for on-prem, production installations)</small> %,%kafk
 
 {% include content-toggle.liquid content-toggle-id="ubuntuSentientQueue" toggle-spec=contenttogglespecqueue %}
 
-### Step 4. SENTIENT GATEWAY Service Installation
+### Step 4. SENTIENT Edge Service Installation
 
 Download installation package.
 
@@ -67,7 +67,7 @@ wget https://dist.docs.sentient.invenia.in/tb-edge-{{ site.release.pe_edge_ver }
 ```
 {: .copy-code}
 
-Go to the download repository and install SENTIENT GATEWAY service
+Go to the download repository and install SENTIENT Edge service
 
 ```bash
 sudo rpm -Uvh tb-edge-{{ site.release.pe_edge_ver }}.rpm
@@ -75,7 +75,7 @@ sudo rpm -Uvh tb-edge-{{ site.release.pe_edge_ver }}.rpm
 {: .copy-code}
 
 
-### Step 5. Configure SENTIENT GATEWAY
+### Step 5. Configure SENTIENT Edge
 
 {% include templates/edge/install/linux-configure-edge.md %}
 
@@ -83,19 +83,19 @@ sudo rpm -Uvh tb-edge-{{ site.release.pe_edge_ver }}.rpm
 
 {% include templates/edge/install/run-edge-install.md %} 
 
-### Step 7. Restart SENTIENT GATEWAY Service
+### Step 7. Restart SENTIENT Edge Service
 
 ```bash
 sudo service tb-edge restart
 ```
 
-### Step 8. Open SENTIENT GATEWAY UI
+### Step 8. Open SENTIENT Edge UI
 
 {% include templates/edge/install/open-edge-ui.md %} 
 
 ## Troubleshooting
 
-SENTIENT GATEWAY logs are stored in the following directory:
+SENTIENT Edge logs are stored in the following directory:
  
 ```bash
 /var/log/tb-edge

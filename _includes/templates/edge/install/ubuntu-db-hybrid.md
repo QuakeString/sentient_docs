@@ -1,6 +1,6 @@
 {% capture hybrid-info %}
 The SENTIENT team recommends using a **hybrid database approach** if you plan to manage 1M+ devices in production or handle **high data ingestion rate (more than 5000 msg/sec)**.
-In this case, **SENTIENT GATEWAY** stores time-series data in Cassandra while continuing to use PostgreSQL for primary entities such as devices, assets, dashboards, and customers.  
+In this case, **SENTIENT Edge** stores time-series data in Cassandra while continuing to use PostgreSQL for primary entities such as devices, assets, dashboards, and customers.  
 {% endcapture %}
 {% include templates/info-banner.md content=hybrid-info %}
 
@@ -21,9 +21,9 @@ Press **"Ctrl+D"** twice to quit PostgreSQL.
 
 {% include templates/edge/install/cassandra-ubuntu-install.md %}
 
-##### SENTIENT GATEWAY Configuration
+##### SENTIENT Edge Configuration
 
-Edit **SENTIENT GATEWAY** configuration file:
+Edit **SENTIENT Edge** configuration file:
 
 ```bash 
 sudo nano /etc/tb-edge/conf/tb-edge.conf

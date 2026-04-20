@@ -1,4 +1,4 @@
-Now let's start the SENTIENT GATEWAY service!
+Now let's start the SENTIENT Edge service!
 Open the command prompt as an Administrator and execute the following command:
 
 ```shell
@@ -9,11 +9,11 @@ net start tb-edge
 Expected output:
 
 ```text
-The SENTIENT GATEWAY Server Application service is starting.
-The SENTIENT GATEWAY Server Application service was started successfully.
+The SENTIENT Edge Server Application service is starting.
+The SENTIENT Edge Server Application service was started successfully.
 ```
 
-In order to restart the SENTIENT GATEWAY service you can execute following commands:
+In order to restart the SENTIENT Edge service you can execute following commands:
 
 ```shell
 net stop tb-edge

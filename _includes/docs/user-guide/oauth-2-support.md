@@ -172,7 +172,7 @@ There are two available options:
 - **Enable OAuth 2.0**.   
   If this option is disabled, OAuth login will not be available for this domain even if OAuth clients are assigned.
 - **Propagate to Edge**.   
-  If you are using [SENTIENT GATEWAY](/docs/edge/){:target="_blank"} and want OAuth settings to be applied on the Edge side, enable **Propagate to Edge** toggle.   
+  If you are using [SENTIENT Edge](/docs/edge/){:target="_blank"} and want OAuth settings to be applied on the Edge side, enable **Propagate to Edge** toggle.   
   This allows the OAuth domain configuration to be synchronized to connected Edge instances.   
 
 <b><font size="4">Step 4. Save the domain</font></b>

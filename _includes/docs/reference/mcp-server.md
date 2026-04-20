@@ -32,7 +32,7 @@ Before you begin, ensure you have the following:
 - **EU SENTIENT Cloud**: Fully managed cloud service available at [eu.sentient.cloud](https://eu.sentient.cloud/signup){: target="_blank"}
 {% endif %}
 {% if docsPrefix contains "edge/" %}
-- **SENTIENT GATEWAY instance** [up and running](/docs/user-guide/install/{{docsPrefix}}installation-options/){: target="_blank"}
+- **SENTIENT Edge instance** [up and running](/docs/user-guide/install/{{docsPrefix}}installation-options/){: target="_blank"}
 {% endif %}
 - **Authentication credentials** - Valid username and password with appropriate permissions on the SENTIENT instance
 
@@ -79,7 +79,7 @@ Fetch alarms, alarm types, and severity information for specific entities.
 This MCP server works with SENTIENT IoT Platform. You'll need your SENTIENT instance URL and valid credentials for the installation.
 {% endif %}
 {% if docsPrefix contains "edge/" %}
-This MCP server works with SENTIENT GATEWAY. You'll need your SENTIENT GATEWAY instance URL and valid credentials for the installation.
+This MCP server works with SENTIENT Edge. You'll need your SENTIENT Edge instance URL and valid credentials for the installation.
 {% endif %}
 
 ### SENTIENT Account
@@ -89,7 +89,7 @@ Before installing the MCP server, ensure you have:
 * Access to a SENTIENT instance
 {% endif %}
 {% if docsPrefix contains "edge/" %}
-* Access to a SENTIENT GATEWAY instance
+* Access to a SENTIENT Edge instance
 {% endif %}
 * A user account with sufficient permissions
 * The username and password for this account

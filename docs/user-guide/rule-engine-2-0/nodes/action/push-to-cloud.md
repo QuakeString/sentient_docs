@@ -1,7 +1,7 @@
 ---
 layout: docwithnav
 title: push to cloud
-description: Sends the incoming message from SENTIENT GATEWAY instance to cloud ThinsBoard instance for further processing.
+description: Sends the incoming message from SENTIENT Edge instance to cloud ThinsBoard instance for further processing.
 breadcrumbs: "true"
 breadcrumbs-steps: "2"
 hidetoc: "true"

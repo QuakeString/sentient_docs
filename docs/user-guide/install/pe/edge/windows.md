@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: Installing SENTIENT GATEWAY on Windows
-description: Installing SENTIENT GATEWAY on Windows
+title: Installing SENTIENT Edge on Windows
+description: Installing SENTIENT Edge on Windows
 ---
 
 * TOC
@@ -14,7 +14,7 @@ description: Installing SENTIENT GATEWAY on Windows
 
 {% include templates/install/windows-warning-note.md %}
 
-This guide provides instructions for installing **SENTIENT GATEWAY** on **Windows**
+This guide provides instructions for installing **SENTIENT Edge** on **Windows**
 
 The steps below apply to:
 * 32-bit or 64-bit systems
@@ -32,7 +32,7 @@ The steps below apply to:
 
 {% include templates/edge/install/windows-db-postgresql.md %}
 
-### Step 3. SENTIENT GATEWAY service installation
+### Step 3. SENTIENT Edge service installation
 
 Download and extract the package.
 
@@ -43,7 +43,7 @@ https://dist.docs.sentient.invenia.in/tb-edge-windows-{{ site.release.pe_edge_ve
 
 **Note:** We assume you have unzipped package to default location: *C:\Program Files (x86)\tb-edge*
 
-### Step 4. Configure SENTIENT GATEWAY
+### Step 4. Configure SENTIENT Edge
 
 {% include templates/edge/install/windows-configure-edge.md %}
 
@@ -51,11 +51,11 @@ https://dist.docs.sentient.invenia.in/tb-edge-windows-{{ site.release.pe_edge_ve
 
 {% include templates/edge/install/run-edge-install-windows.md %} 
 
-### Step 6. Start SENTIENT GATEWAY service
+### Step 6. Start SENTIENT Edge service
 
 {% include templates/edge/install/windows-start-service.md %}
 
-### Step 7. Open SENTIENT GATEWAY UI
+### Step 7. Open SENTIENT Edge UI
 
 {% include templates/edge/install/open-edge-ui.md %} 
 

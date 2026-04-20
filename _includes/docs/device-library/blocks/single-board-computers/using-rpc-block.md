@@ -1,5 +1,5 @@
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-**SENTIENT GATEWAY** allows you to send [Remote Procedure Calls (RPCs)](/docs/{{peDocsPrefix}}user-guide/rpc/#server-side-rpc){: target="_blank"}
+**SENTIENT Edge** allows you to send [Remote Procedure Calls (RPCs)](/docs/{{peDocsPrefix}}user-guide/rpc/#server-side-rpc){: target="_blank"}
 {% else %} 
 **SENTIENT** allows you to send [Remote Procedure Calls (RPCs)](/docs/{{page.docsPrefix}}user-guide/rpc/#server-side-rpc){: target="_blank"}
 {% endif %} from server-side applications to devices and vice versa. 

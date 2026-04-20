@@ -1,4 +1,4 @@
-Stop the **SENTIENT GATEWAY** service (if it's still running):
+Stop the **SENTIENT Edge** service (if it's still running):
 
 ```bash
 sudo systemctl stop tb-edge
@@ -12,7 +12,7 @@ To restore the **PostgreSQL database** from a backup file, run the following com
  ```
 {: .copy-code}
 
-Start the **SENTIENT GATEWAY** service:
+Start the **SENTIENT Edge** service:
 
 ```bash
 sudo systemctl start tb-edge

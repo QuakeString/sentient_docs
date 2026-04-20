@@ -75,16 +75,16 @@ device:
 
 ### Introduction
 
-It is possible to run any **SENTIENT Integration** remotely from the main **SENTIENT GATEWAY** instance.
+It is possible to run any **SENTIENT Integration** remotely from the main **SENTIENT Edge** instance.
 This guide provides step-by-step instructions for launching **SENTIENT integration remotely**.
 
-We'll demonstrate how to **set up a remote HTTP integration** to push data to **SENTIENT GATEWAY**.
+We'll demonstrate how to **set up a remote HTTP integration** to push data to **SENTIENT Edge**.
 
 For more general details, see the [deployment options](/docs/pe/edge/user-guide/integrations/#deployment-options){: target="_blank"}.
 
 #### Prerequisites
 
-* A running **SENTIENT GATEWAY** instance, already connected to the **Server**, with access as a **Tenant administrator**.
+* A running **SENTIENT Edge** instance, already connected to the **Server**, with access as a **Tenant administrator**.
 
 ### SENTIENT Server configuration steps
 
@@ -94,7 +94,7 @@ Before creating the **Integration template**, create an **Uplink converter templ
 
 #### Step 1. Create Uplink Converter
 
-The **uplink data converter** is needed to convert the incoming data from the device into the format required for display on **SENTIENT GATEWAY**.
+The **uplink data converter** is needed to convert the incoming data from the device into the format required for display on **SENTIENT Edge**.
 * Log in to the **Cloud** and go to the **Edge management > Converter templates** section. To create a Converter template, click the **"Add data converter"** button (the **+** icon) and select the **"Create new converter"** option.
 * In the **"Add data converter"** pop-up window:
     * **Name:** Enter the name of the data converter.
@@ -200,7 +200,7 @@ CentOS/RHEL Server%,%centos%,%templates/edge/integrations/resources/centos-rhel.
 ### Remote HTTP integration validation
 
 To send an uplink message, you need an HTTP endpoint URL from the integration.  
-Let's log in to the **SENTIENT GATEWAY** and go to the **Integrations** section. 
+Let's log in to the **SENTIENT Edge** and go to the **Integrations** section. 
 Find the HTTP integration and click it. There you can find the HTTP endpoint URL. Click the icon to copy the URL.
 
 {% capture local-deployment %}

@@ -1,4 +1,4 @@
-For **SENTIENT GATEWAY** service, create a docker compose file:
+For **SENTIENT Edge** service, create a docker compose file:
 
 ```bash
 nano docker-compose.yml

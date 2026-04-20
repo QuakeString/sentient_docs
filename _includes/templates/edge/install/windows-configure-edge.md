@@ -74,9 +74,9 @@ cloud:
 {% endif %}
 
 {% capture local-deployment %}
-If SENTIENT GATEWAY is set to run on the same machine where the **{{appPrefix}}** server is operating, you need to update additional configuration parameters to prevent port collision between the SENTIENT server and SENTIENT GATEWAY.
+If SENTIENT Edge is set to run on the same machine where the **{{appPrefix}}** server is operating, you need to update additional configuration parameters to prevent port collision between the SENTIENT server and SENTIENT Edge.
 
-Please locate and change next parameters in SENTIENT GATEWAY configuration file (**C:\Program Files (x86)\tb-edge\conf\tb-edge.yml**):
+Please locate and change next parameters in SENTIENT Edge configuration file (**C:\Program Files (x86)\tb-edge\conf\tb-edge.yml**):
 <br>
 <br>**...**
 <br>**port: "${HTTP_BIND_PORT:18080}"**

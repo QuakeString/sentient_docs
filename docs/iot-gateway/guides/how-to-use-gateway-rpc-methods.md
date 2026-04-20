@@ -10,13 +10,13 @@ description: Service RPC Methods
 {:toc}
 
 
-This guide explains how to use RPC API in SENTIENT IoT Gateway.  
+This guide explains how to use RPC API in SENTIENT Gateway.  
 
 For the purpose of this tutorial, you need:  
 1. Locally installed instance of SENTIENT platform (In case you are new with SENTIENT [use this 'how to install' documentation](/docs/user-guide/install/installation-options/)).
-2. [Installed](/docs/iot-gateway/installation/) and [configured](/docs/iot-gateway/configuration/) SENTIENT IoT Gateway. 
+2. [Installed](/docs/iot-gateway/installation/) and [configured](/docs/iot-gateway/configuration/) SENTIENT Gateway. 
 
-## Step 1. Create a dashboard to use RPC API in SENTIENT IoT Gateway
+## Step 1. Create a dashboard to use RPC API in SENTIENT Gateway
 
 To use the debug terminal we have to add **RPC debug terminal** widget from **Control widget** bundle.<br>
 To do this we use following steps:

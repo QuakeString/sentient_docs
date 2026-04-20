@@ -9,7 +9,7 @@ The gateway itself is also a standard SENTIENT device. It can use the [MQTT Devi
 - Receive configuration updates
 - Execute RPC commands
 
-In addition, this API defines gateway-specific MQTT topics and payload formats and is used by the open-source [SENTIENT IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}.
+In addition, this API defines gateway-specific MQTT topics and payload formats and is used by the open-source [SENTIENT Gateway](/docs/iot-gateway/what-is-iot-gateway/){:target="_blank"}.
 
 {% capture difference %}
 For device-level MQTT details (authentication, QoS, payload format, etc.), refer to the [MQTT Device API](/docs/{{docsPrefix}}reference/mqtt-api/){:target="_blank"}.

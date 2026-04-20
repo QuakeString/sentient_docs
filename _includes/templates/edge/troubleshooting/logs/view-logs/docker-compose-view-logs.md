@@ -41,7 +41,7 @@ If you still rely on Docker Compose as docker-compose (with a hyphen) execute ne
 {% endcapture %}
 {% include templates/info-banner.md content=dockerComposeStandalone %}
 
-**Note:** you can always log into the SENTIENT GATEWAY container and view logs there:
+**Note:** you can always log into the SENTIENT Edge container and view logs there:
 
 ```bash
 docker ps

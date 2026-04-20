@@ -35,7 +35,7 @@ push-to-edge:
 push-to-cloud:
     0:
         image: /images/pe/edge/user-guide/manage-alarms/push-from-edge-to-cloud/0-device-profile.png
-        title: 'Log in to the <b>SENTIENT GATEWAY</b> and go to the <b>Profiles > Device profiles</b> section to create or edit the <b>Device profile</b>. Select the appropriate <b>Default rule chain</b>. Set the Alarm Rule.'
+        title: 'Log in to the <b>SENTIENT Edge</b> and go to the <b>Profiles > Device profiles</b> section to create or edit the <b>Device profile</b>. Select the appropriate <b>Default rule chain</b>. Set the Alarm Rule.'
     1:
         image: /images/pe/edge/user-guide/manage-alarms/push-from-edge-to-cloud/1-assign-profile.png
         title: 'Go to the <b>Entities > Devices</b> section. By default, you will be taken to the <b>"All"</b> tab. If you want assign the <b>Device</b> to a specific group, navigate to the <b>"Groups"</b> tab. You can create a new <b>Device</b> or edit the existing one. On the <b>"Device details"</b> page, assign newly created (or updated) <b>Device profile</b> to this <b>Device</b>. Click the <b>“Apply changes”</b> button.'

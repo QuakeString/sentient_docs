@@ -1,6 +1,6 @@
 ---
 layout: sentient-gateway
-title: SENTIENT GATEWAY
+title: SENTIENT Edge
 description: Comprehensive software solutions for edge computing, providing data analysis and management at the source of data creation.
 ---
 
@@ -49,7 +49,7 @@ description: Comprehensive software solutions for edge computing, providing data
             </div>
             <div class="scenario-tab active" onclick="switchProductTab('edge', event)">
                 <div class="tab-header">
-                    <h3 class="tab-name">SENTIENT GATEWAY</h3>
+                    <h3 class="tab-name">SENTIENT Edge</h3>
                     <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none">
                       <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
@@ -60,7 +60,7 @@ description: Comprehensive software solutions for edge computing, providing data
                   <span class="tag">Low latency</span>
                   <span class="tag">Remote sites</span>
                   <span class="tag">On-premises analytics</span>
-                  <p>SENTIENT GATEWAY processes and visualizes data locally at the network edge, enabling autonomous operation during connectivity outages. It reduces bandwidth costs by filtering data before cloud transmission while maintaining sub-second response times for critical automation.</p>
+                  <p>SENTIENT Edge processes and visualizes data locally at the network edge, enabling autonomous operation during connectivity outages. It reduces bandwidth costs by filtering data before cloud transmission while maintaining sub-second response times for critical automation.</p>
                 </div>
             </div>
             <div class="scenario-tab" onclick="switchProductTab('server', event)">
@@ -97,7 +97,7 @@ description: Comprehensive software solutions for edge computing, providing data
                     <div class="image-background"></div>
                     <div class="image-background"></div>
                     <div class="image">
-                        <img src="/images/edge/tb-edge.webp" alt="SENTIENT GATEWAY block" loading="lazy">
+                        <img src="/images/edge/tb-edge.webp" alt="SENTIENT Edge block" loading="lazy">
                     </div>
                 </div>
                 <a href="/docs/edge/getting-started/" target="_blank" class="cta-button gtm_button">Try Edge Now</a>
@@ -256,7 +256,7 @@ description: Comprehensive software solutions for edge computing, providing data
                 <img src="/images/edge/data-filtering.svg" alt="data filtering">
             </div>
             <div class="feature-des"><h3 class="item-heading">Data Filtering</h3>
-                <p>Use the SENTIENT GATEWAY service to filter data from local (edge) devices and forward only a subset of data to the server for further processing or storage.</p>
+                <p>Use the SENTIENT Edge service to filter data from local (edge) devices and forward only a subset of data to the server for further processing or storage.</p>
                 <a class="read-more-button" href="/docs/edge/getting-started-guides/what-is-edge/">Edge CE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
                 <a class="read-more-button" href="/docs/pe/edge/getting-started-guides/what-is-edge/">Edge PE<img class="arrow first" src="/images/pe/read-more-arrow.svg" alt="arrow first"><img class="arrow second" src="/images/pe/read-more-arrow.svg" alt="arrow second"><img class="arrow third" src="/images/pe/read-more-arrow.svg" alt="arrow third"></a>
             </div>

@@ -4,7 +4,7 @@ Many cloud providers offer managed **PostgreSQL** services, making it a cost-eff
 {% endcapture %}
 {% include templates/info-banner.md content=postgresql-info %}
 
-**SENTIENT GATEWAY** uses **PostgreSQL** database as a local storage.
+**SENTIENT Edge** uses **PostgreSQL** database as a local storage.
 
 {% include templates/install/postgres-install-rpi.md %}
 
@@ -17,7 +17,7 @@ echo "CREATE DATABASE tb_edge;" | psql -U postgres -d postgres -h 127.0.0.1 -W
 
 ### SENTIENT Configuration
 
-Edit **SENTIENT GATEWAY** configuration file: 
+Edit **SENTIENT Edge** configuration file: 
 
 ```bash 
 sudo bash -c 'echo "export DATABASE_TS_TYPE=sql

@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-edge
 title: Building from sources
-description: Building SENTIENT GATEWAY from sources
+description: Building SENTIENT Edge from sources
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to download and build SENTIENT GATEWAY from sources. Instructions listed below are tested on Ubuntu 22.04 LTS / 24.04 LTS
+This guide will help you to download and build SENTIENT Edge from sources. Instructions listed below are tested on Ubuntu 22.04 LTS / 24.04 LTS
 and CentOS 8/9
 
 ## Required tools
@@ -17,7 +17,7 @@ This section contains installation instructions for build tools.
 
 ### Java
 
-SENTIENT GATEWAY is build using Java 17. You can use [following instructions](/docs/user-guide/install/linux#java) to install Java 17.
+SENTIENT Edge is build using Java 17. You can use [following instructions](/docs/user-guide/install/linux#java) to install Java 17.
 
 ### Maven
 

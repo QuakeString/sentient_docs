@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Edge Cluster Setup
-description: Detailed instructions on how to set up SENTIENT GATEWAY in a cluster
+description: Detailed instructions on how to set up SENTIENT Edge in a cluster
 
 ---
 {% assign docsPrefix = "edge/" %}

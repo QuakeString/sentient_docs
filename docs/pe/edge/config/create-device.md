@@ -15,7 +15,7 @@ create-device:
         title: 'To check connectivity, send telemetry on behalf of the <b>Device</b> using shell by following the on-screen instructions.'
     3:
         image: /images/pe/edge/config/devices/3-confirm-on-cloud.webp
-        title: 'To check if the new <b>Device</b> has been deployed to the <b>Cloud (Server)</b>, log in to your <b>Cloud (Server)</b> and navigate to the <b>Entities > Devices</b> section.<br>For the <b>SENTIENT GATEWAY Professional Edition</b>:<ul><li>A new <b>Device entity group</b> will be created with the <b>"[Edge] {NAME_OF_EDGE} All"</b> template name;</li><li>A newly created <b>Device</b> will be assigned to the <b>Cloud (Server)</b> automatically and added to group above;</li><li>This newly created <b>Group</b> will be assigned to the <b>Edge</b> automatically.</li></ul>'
+        title: 'To check if the new <b>Device</b> has been deployed to the <b>Cloud (Server)</b>, log in to your <b>Cloud (Server)</b> and navigate to the <b>Entities > Devices</b> section.<br>For the <b>SENTIENT Edge Professional Edition</b>:<ul><li>A new <b>Device entity group</b> will be created with the <b>"[Edge] {NAME_OF_EDGE} All"</b> template name;</li><li>A newly created <b>Device</b> will be assigned to the <b>Cloud (Server)</b> automatically and added to group above;</li><li>This newly created <b>Group</b> will be assigned to the <b>Edge</b> automatically.</li></ul>'
 
 assignment-from-cloud:
     0:

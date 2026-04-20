@@ -1,10 +1,10 @@
 ### What Is an Edge Rule Chain Template?
 
-An **Edge Rule Chain template** is a predefined [Rule Chain](/docs/user-guide/rule-engine-2-0/overview/#rule-chain){: target="_blank"} in **SENTIENT**, designed specifically for use with **SENTIENT GATEWAY**. 
+An **Edge Rule Chain template** is a predefined [Rule Chain](/docs/user-guide/rule-engine-2-0/overview/#rule-chain){: target="_blank"} in **SENTIENT**, designed specifically for use with **SENTIENT Edge**. 
 The **Rule Chain template** does not run on the **Server**. 
 Instead, it serves merely as a template. 
 
-For the **older versions of SENTIENT GATEWAY**, the **Rule chain** has to be assigned to an **Edge** instance before use. Only then will it work and process data from devices according to its configuration.
+For the **older versions of SENTIENT Edge**, the **Rule chain** has to be assigned to an **Edge** instance before use. Only then will it work and process data from devices according to its configuration.
 
 Starting with **Edge version 4.0**, the **Rule chain** can be created and edited right on the **Edge** instance.
 
@@ -16,7 +16,7 @@ Starting with **Edge version 4.0**, the **Rule chain** can be created and edited
 {% assign createRuleChainTemplatePE = '
     ===
         image: /images/pe/edge/rule-engine/1-edge-rule-chain.webp,
-        title: Sign in to your <b>SENTIENT GATEWAY PE</b> instance and go to the <b>Rule chains</b> section. To add a new <b>Rule chain</b>, click the <b>"+"</b> button in the top right corner, and choose the <b>"Create new rule chain"</b> option.
+        title: Sign in to your <b>SENTIENT Edge PE</b> instance and go to the <b>Rule chains</b> section. To add a new <b>Rule chain</b>, click the <b>"+"</b> button in the top right corner, and choose the <b>"Create new rule chain"</b> option.
     ===
         image: /images/pe/edge/rule-engine/2-create-rule-chain-template.webp,
         title: In the pop-up window, enter a <b>name</b> for the new rule chain and click the <b>"Add"</b> button to continue configuring the rule chain.
@@ -31,7 +31,7 @@ Starting with **Edge version 4.0**, the **Rule chain** can be created and edited
 {% assign createRuleChainTemplateCE = '
     ===
         image: /images/edge/rule-engine/1-edge-rule-chain.webp,
-        title: Sign in to your <b>SENTIENT GATEWAY CE</b> instance and go to the <b>Rule chains</b> section. To add a new <b>Rule chain</b>, click the <b>"+"</b> button in the top right corner, and choose the <b>"Create new rule chain"</b> option.
+        title: Sign in to your <b>SENTIENT Edge CE</b> instance and go to the <b>Rule chains</b> section. To add a new <b>Rule chain</b>, click the <b>"+"</b> button in the top right corner, and choose the <b>"Create new rule chain"</b> option.
     ===
         image: /images/edge/rule-engine/2-create-rule-chain-template.webp,
         title: In the pop-up window, enter a <b>name</b> for the new rule chain and click the <b>"Add"</b> button to continue configuring the rule chain.
@@ -130,7 +130,7 @@ Starting with **Edge version 4.0**, the **Rule chain** can be created and edited
 {% assign verifyRuleChainPE = '
     ===
         image: /images/pe/edge/rule-engine/verify-rule-chain-template-step-1.webp,
-        title: Sign in to your <b>SENTIENT GATEWAY PE</b> instance and go to the <b>Rule chains</b> section. To view the Rule chain configuration, click on the rule chain.
+        title: Sign in to your <b>SENTIENT Edge PE</b> instance and go to the <b>Rule chains</b> section. To view the Rule chain configuration, click on the rule chain.
     ===
         image: /images/pe/edge/rule-engine/verify-rule-chain-template-step-2.webp,
         title: Verify that all settings and configurations are accurately reflected.
@@ -139,7 +139,7 @@ Starting with **Edge version 4.0**, the **Rule chain** can be created and edited
 {% assign verifyRuleChainCE = '
     ===
         image: /images/edge/rule-engine/verify-rule-chain-template-step-1.webp,
-        title: Sign in to your <b>SENTIENT GATEWAY PE</b> instance and go to the <b>Rule chains</b> section. To view the Rule chain configuration, click on the rule chain.
+        title: Sign in to your <b>SENTIENT Edge PE</b> instance and go to the <b>Rule chains</b> section. To view the Rule chain configuration, click on the rule chain.
     ===
         image: /images/edge/rule-engine/verify-rule-chain-template-step-2.webp,
         title: Verify that all settings and configurations are accurately reflected.

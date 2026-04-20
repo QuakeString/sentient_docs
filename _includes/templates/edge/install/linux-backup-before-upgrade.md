@@ -5,7 +5,7 @@ Make sure your system has enough free space to store the backup.
 {% endcapture %}
 {% include templates/info-banner.md content=check-space %}
 
-Stop the SENTIENT GATEWAY service to prevent data writes during the upgrade:
+Stop the SENTIENT Edge service to prevent data writes during the upgrade:
 
 ```bash
 sudo systemctl stop tb-edge

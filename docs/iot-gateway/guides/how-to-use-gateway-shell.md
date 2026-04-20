@@ -16,7 +16,7 @@ from the Gateway. Refer to the usage examples outlined in this guide to effectiv
 
 For the purpose of this tutorial, you need:  
 1. Locally installed instance of SENTIENT platform (In case you are new with SENTIENT [use this 'how to install' documentation](/docs/user-guide/install/installation-options/)).
-2. [Installed](/docs/iot-gateway/installation/) and [configured](/docs/iot-gateway/configuration/) SENTIENT IoT Gateway.
+2. [Installed](/docs/iot-gateway/installation/) and [configured](/docs/iot-gateway/configuration/) SENTIENT Gateway.
 
 ### Storage Command
 The `storage` command provides functionality related to storage operations.

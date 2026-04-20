@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: SNMP Connector Configuration
-description: SNMP monitoring support for SENTIENT IoT Gateway
+description: SNMP monitoring support for SENTIENT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with SNMP Connector configuration for SENTIENT IoT Gateway.  
+This guide will help you to get familiar with SNMP Connector configuration for SENTIENT Gateway.  
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector.  
 The purpose of this Connector is to get data from SNMP manager objects and write some data to them.  
 

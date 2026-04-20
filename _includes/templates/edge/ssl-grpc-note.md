@@ -1,8 +1,8 @@
 <br>
 {% capture grpc_ssl_note %}
-**Important note for securing communication between SENTIENT GATEWAY and SENTIENT Professional/Community Edition server**
- - SENTIENT GATEWAY and SENTIENT Professional/Community Edition server instance are communicating over gRPC protocol
- - gRPC channel is not secured with TLS/SSL mechanism dy default and binary messages that are transferring between SENTIENT GATEWAY and SENTIENT Professional/Community Edition server instance could be stolen by non-authorized persons
+**Important note for securing communication between SENTIENT Edge and SENTIENT Professional/Community Edition server**
+ - SENTIENT Edge and SENTIENT Professional/Community Edition server instance are communicating over gRPC protocol
+ - gRPC channel is not secured with TLS/SSL mechanism dy default and binary messages that are transferring between SENTIENT Edge and SENTIENT Professional/Community Edition server instance could be stolen by non-authorized persons
  - gRPC messages contain sensitive data like user passwords and device credentials, and theft of this data could lead to serious consequences 
  - SENTIENT team strongly recommends secure gRPC with TLS/SSL for production environments and environments with sensitive data
  - Please follow this [guide](/docs/edge/user-guide/grpc-over-ssl/) to configure gRPC with TLS/SSL 

@@ -1,9 +1,9 @@
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-In this guide, you will learn how to [install SENTIENT GATEWAY on a {{deviceName}}](#starting-edge-on-device), [create a device](#create-device-on-sentient-gateway), 
+In this guide, you will learn how to [install SENTIENT Edge on a {{deviceName}}](#starting-edge-on-device), [create a device](#create-device-on-sentient-gateway), 
 [install the required libraries and tools](#install-required-libraries-and-tools).  
 After this, we will [modify our code and upload it to the device](#connect-device-to-sentient-gateway), 
-and [check the results of our coding and check data on SENTIENT GATEWAY using imported dashboard](#check-data-on-sentient-gateway).
-The device will synchronize with SENTIENT GATEWAY using [client and shared attributes requests functionality](#synchronize-device-state-using-client-and-shared-attribute-requests).      
+and [check the results of our coding and check data on SENTIENT Edge using imported dashboard](#check-data-on-sentient-gateway).
+The device will synchronize with SENTIENT Edge using [client and shared attributes requests functionality](#synchronize-device-state-using-client-and-shared-attribute-requests).      
 Additionally, you’ll learn how to control the device using platform features such as [shared attributes](#control-device-using-shared-attributes) and [RPC requests](#control-device-using-rpc).
 
 ### Prerequisites

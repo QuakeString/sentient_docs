@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
-title: SENTIENT IoT Gateway Roadmap
-description: Architecture of SENTIENT IoT Gateway
+title: SENTIENT Gateway Roadmap
+description: Architecture of SENTIENT Gateway
 
 ---
 

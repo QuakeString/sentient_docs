@@ -3,7 +3,7 @@
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
-The example code includes functionality to retrieve the device state from {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}**SENTIENT GATEWAY**{% else %}**SENTIENT**{% endif %}
+The example code includes functionality to retrieve the device state from {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}**SENTIENT Edge**{% else %}**SENTIENT**{% endif %}
 during boot. The relevant code sections are shown below.
 
 Attribute callback:
@@ -28,7 +28,7 @@ def main():
 {:.copy-code}
 
 In order for the callback to receive the shared attribute data from 
-{% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}**SENTIENT GATEWAY**{% else %}**SENTIENT**{% endif %}, 
+{% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}**SENTIENT Edge**{% else %}**SENTIENT**{% endif %}, 
 the device must explicitly request it after connecting. 
 This functionality allows the device to restore the correct attribute values after a reboot, preserving the actual state.
 

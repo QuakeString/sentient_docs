@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-pe-edge
-title: SENTIENT GATEWAY Use Cases
+title: SENTIENT Edge Use Cases
 
 ---
 

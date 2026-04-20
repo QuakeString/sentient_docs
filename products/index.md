@@ -25,12 +25,12 @@ notitle: "true"
     </a>
     <a href="/products/sentient-gateway/" class="card sentient-gateway">
         <img src="/images/sentient-e-icon.svg" alt="Edge">
-        <h5 class="title">SENTIENT GATEWAY</h5>
+        <h5 class="title">SENTIENT Edge</h5>
         <p>Edge computing</p>
     </a>
     <a href="/docs/iot-gateway/what-is-iot-gateway/" class="card gateway">
         <img src="/images/gateway-icon.svg" alt="Gateway">
-        <h5 class="title">SENTIENT IoT Gateway</h5>
+        <h5 class="title">SENTIENT Gateway</h5>
         <p>Connect legacy protocols</p>
     </a>
     <a href="/products/license-server/" class="card license">

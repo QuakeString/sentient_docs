@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: BACnet Connector Configuration
-description: BACnet protocol support for SENTIENT IoT Gateway
+description: BACnet protocol support for SENTIENT Gateway
 
 ---
 
@@ -10,13 +10,13 @@ description: BACnet protocol support for SENTIENT IoT Gateway
 
 ## Overview
 
-This documentation will help you set up the BACnet connector for the SENTIENT IoT Gateway. We’ll explain the
+This documentation will help you set up the BACnet connector for the SENTIENT Gateway. We’ll explain the
 configuration parameters in simple terms to make it easy for you to understand and follow. The BACnet protocol is
 widely used in building automation and control systems for applications such as heating, ventilation, air conditioning 
 (HVAC), lighting control, access control, and fire detection systems. Use
 [general configuration](/docs/iot-gateway/configuration/){:target="_blank"} to enable this extension.
 
-The BACnet connector allows the SENTIENT IoT Gateway to communicate with BACnet devices, enabling data exchange and 
+The BACnet connector allows the SENTIENT Gateway to communicate with BACnet devices, enabling data exchange and 
 control capabilities. The connector can be configured via the user interface form, which helps you set up a connection 
 to the BACnet devices, collect data and write data to devices. Let’s look at all the available settings and explain 
 each one clearly. This will help you understand how everything works.
@@ -32,7 +32,7 @@ backward compatibility.
 
 The BACnet connector can be configured in two modes: **Basic** and **Advanced**.
 
-- **Basic** mode is designed for users who are new to SENTIENT IoT Gateway and want to quickly set up the connector
+- **Basic** mode is designed for users who are new to SENTIENT Gateway and want to quickly set up the connector
   with minimal configuration. It provides a simplified interface with essential settings.
 - **Advanced** mode is intended for experienced users who need more control over the configuration. It offers additional
   options and flexibility for advanced use cases.

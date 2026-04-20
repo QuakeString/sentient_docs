@@ -5,14 +5,14 @@
 {% endif %}
 
 Where:    
-- **restart: always:** SENTIENT GATEWAY automatically starts on system reboot or after a failure.
+- **restart: always:** SENTIENT Edge automatically starts on system reboot or after a failure.
 - **8080:8080:** Connect local port 8080 to the container's internal HTTP port 8080.
 - **1883:1883:** Connect local port 1883 to the container's internal MQTT port 1883.
 - **5683-5688:5683-5688/udp:** Connect local UDP ports 5683–5688 to the container’s internal CoAP and LwM2M ports.
 {% if docsPrefix == 'pe/edge/' %}
-- **sentient/tb-edge-pe:{{ site.release.pe_edge_full_ver }}:** The SENTIENT GATEWAY PE Docker image.
+- **sentient/tb-edge-pe:{{ site.release.pe_edge_full_ver }}:** The SENTIENT Edge PE Docker image.
 {% else %}
-- **sentient/tb-edge:{{ site.release.edge_full_ver }}:** The SENTIENT GATEWAY Docker image.
+- **sentient/tb-edge:{{ site.release.edge_full_ver }}:** The SENTIENT Edge Docker image.
 {% endif %}
 - **CLOUD_ROUTING_KEY:** Enter the actual Edge key.
 - **CLOUD_ROUTING_SECRET:** Enter the actual Edge secret.
@@ -36,7 +36,7 @@ Please change **CLOUD_RPC_SSL_ENABLED** to **true** as well.
 {% include templates/info-banner.md content=cloud_rpc_host %}
 
 {% capture local-deployment %}
-If **SENTIENT GATEWAY** is set to run on the **same machine** where the **{{appPrefix}}** server is operating, you need to update port configuration to prevent port collision between the SENTIENT server and SENTIENT GATEWAY.
+If **SENTIENT Edge** is set to run on the **same machine** where the **{{appPrefix}}** server is operating, you need to update port configuration to prevent port collision between the SENTIENT server and SENTIENT Edge.
 
 Ensure that the ports **18080, 11883, 15683-15688** are not used by any other application.
 

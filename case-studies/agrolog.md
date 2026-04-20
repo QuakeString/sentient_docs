@@ -176,7 +176,7 @@ description: Discover how Supertech Agroline, a leading Romanian AgTech innovato
         <div class="block">
             <div class="text">
                 <h3>Edge computing for remote reliability</h3>
-                <p>For deployments in remote or low-connectivity areas, SENTIENT GATEWAY provides local processing and storage capabilities. With centralised edge device management, users can deploy rule chains, dashboards, and updates to field sites, even when operating in disconnected or intermittently connected environments.</p>
+                <p>For deployments in remote or low-connectivity areas, SENTIENT Edge provides local processing and storage capabilities. With centralised edge device management, users can deploy rule chains, dashboards, and updates to field sites, even when operating in disconnected or intermittently connected environments.</p>
             </div>
             <div class="image-container">
                 <img src="/images/case-studies/alarms-table-2.webp" title="Sentient alarms table widget" alt="Sentient alarms table widget" width="776" height="776">

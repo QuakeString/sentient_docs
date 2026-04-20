@@ -10,12 +10,12 @@
 
 ## Introduction
 
-This article provides a high-level overview of SENTIENT GATEWAY architecture, including a diagram, a description of the data flow among the various components, and explanations of the key architectural choices.
+This article provides a high-level overview of SENTIENT Edge architecture, including a diagram, a description of the data flow among the various components, and explanations of the key architectural choices.
 
-SENTIENT GATEWAY components are initiated within a single Java Virtual Machine (JVM) and utilize shared OS resources.
-You can deploy and run the SENTIENT GATEWAY process with as little as 256 or 512 MB of RAM in a constrained environment.
+SENTIENT Edge components are initiated within a single Java Virtual Machine (JVM) and utilize shared OS resources.
+You can deploy and run the SENTIENT Edge process with as little as 256 or 512 MB of RAM in a constrained environment.
 
-SENTIENT GATEWAY is designed to be:
+SENTIENT Edge is designed to be:
 
 * **Scalable**: Distribute computations and data analysis across thousands of edges.
 * **Robust and efficient**: A single edge can handle up to 1000 devices, depending on the [use-case](/docs/{{docsPrefix}}use-cases/overview/) and the deployed hardware.
@@ -42,10 +42,10 @@ For enhanced security, a **gRPC** connection can be established on top of **SSL/
 
 ## Transport Components
 
-SENTIENT GATEWAY offers MQTT, HTTP, and CoAP-based APIs available for your device applications/firmware. 
-Each protocol API is provided by a distinct component within SENTIENT GATEWAY's "Transport Layer".
+SENTIENT Edge offers MQTT, HTTP, and CoAP-based APIs available for your device applications/firmware. 
+Each protocol API is provided by a distinct component within SENTIENT Edge's "Transport Layer".
 
-SENTIENT GATEWAY supports standard SENTIENT/PE device communication protocols:
+SENTIENT Edge supports standard SENTIENT/PE device communication protocols:
 
 * The HTTP Transport component provides device APIs as described [here](/docs/{{docsPrefix}}reference/http-api/);
 * The MQTT Transport component provides device APIs as explained [here](/docs/{{docsPrefix}}reference/mqtt-api/), and it also enables gateway APIs as detailed [here](/docs/{{docsPrefix}}reference/gateway-mqtt-api/);
@@ -55,27 +55,27 @@ Each transport component pushes data to the rule engine, and some may also utili
 
 ## Rule Engine Component
 
-The SENTIENT GATEWAY rule engine is responsible for processing incoming messages according to user-defined logic and flow. 
+The SENTIENT Edge rule engine is responsible for processing incoming messages according to user-defined logic and flow. 
 The rule engine leverages an Actor System to create actors for primary entities, such as rule chains and rule nodes.
-The architecture of the SENTIENT GATEWAY engine mirrors that of the Server rule engine, though the configuration differs slightly - Edge utilizes rule chain templates in place of standard rule chains. 
+The architecture of the SENTIENT Edge engine mirrors that of the Server rule engine, though the configuration differs slightly - Edge utilizes rule chain templates in place of standard rule chains. 
 For more detailed information on Edge rule chain templates, please refer to the [documentation page](/docs/{{docsPrefix}}rule-engine/rule-chain-templates/).
 
 ## Core Services
 
-SENTIENT GATEWAY Core handles [REST API](/docs/{{cloudDocsPrefix}}reference/rest-api/) calls and WebSocket [subscriptions](/docs/{{cloudDocsPrefix}}user-guide/telemetry/#websocket-api).
+SENTIENT Edge Core handles [REST API](/docs/{{cloudDocsPrefix}}reference/rest-api/) calls and WebSocket [subscriptions](/docs/{{cloudDocsPrefix}}user-guide/telemetry/#websocket-api).
 Additionally, it maintains up-to-date information about active device sessions and monitors device [connectivity state](/docs/{{cloudDocsPrefix}}user-guide/device-connectivity-status/).
-SENTIENT GATEWAY Core employs an Actor System to implement actors for key entities, including tenants and devices.
+SENTIENT Edge Core employs an Actor System to implement actors for key entities, including tenants and devices.
 
-## SENTIENT GATEWAY Web UI
+## SENTIENT Edge Web UI
 
-SENTIENT GATEWAY includes a lightweight component, developed using the Express.js framework, to host static web UI content.
+SENTIENT Edge includes a lightweight component, developed using the Express.js framework, to host static web UI content.
 These components are entirely stateless, with minimal configuration needed.
-The static web UI contains an application bundle; once loaded, the application begins using the REST API and WebSockets API provided by SENTIENT GATEWAY Core.
+The static web UI contains an application bundle; once loaded, the application begins using the REST API and WebSockets API provided by SENTIENT Edge Core.
 
 ## External Systems
 
-Messages from SENTIENT GATEWAY can be pushed to external systems via the Rule Engine.
-It's possible to transmit data to an external system, process that data, and then relay the processing results back to SENTIENT GATEWAY for visualization.
+Messages from SENTIENT Edge can be pushed to external systems via the Rule Engine.
+It's possible to transmit data to an external system, process that data, and then relay the processing results back to SENTIENT Edge for visualization.
 Please review the rule engine documentation and guides for further details.
 
 ### Next Steps

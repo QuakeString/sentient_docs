@@ -81,7 +81,7 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
                 <ul>
                     <li>
                         <i class="far fa-check-circle"></i>
-                        <p>By leveraging the country-wide private fiber network and SENTIENT GATEWAY, ÖBB-Infrastruktur AG has created a secure internal communications channel that keeps data within its IT network, minimizes security risks, and enables local systems to connect securely without bridging firewalls or using the public Internet.</p>
+                        <p>By leveraging the country-wide private fiber network and SENTIENT Edge, ÖBB-Infrastruktur AG has created a secure internal communications channel that keeps data within its IT network, minimizes security risks, and enables local systems to connect securely without bridging firewalls or using the public Internet.</p>
                     </li>
                     <li>
                         <i class="far fa-check-circle"></i>
@@ -96,14 +96,14 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
         </div>
     </section>
     <section class="tb-power">
-        <h2>How SENTIENT and SENTIENT GATEWAY power ÖBB-Infrastruktur AG?</h2>
+        <h2>How SENTIENT and SENTIENT Edge power ÖBB-Infrastruktur AG?</h2>
         <div class="block">
             <div class="text">
                 <h3>Digital Twin initiative</h3>
                 <p>ÖBB-Infrastruktur AG uses a Digital Twin to evaluate current conditions, make predictions, and simulate possible situations. Digital Twin is a digital representation of a physical system, in this case, the railway infrastructure. The approach requires accessing real-time asset condition data as well as time-series records. SENTIENT acts as one major enabling technology of this initiative, offering a unified platform for IoT data ingestion, processing, visualization, and analysis:</p>
                 <ul>
                     <li><p>SENTIENT enables seamless integration of diverse IoT devices deployed via communication protocols (e.g., MQTT, CoAP, HTTP) across the rail infrastructure for real-time data collection.</p></li>
-                    <li><p>SENTIENT GATEWAY allows on-premise data processing, keeping critical data within ÖBB’s private network and facilitates secure integration with internal systems without exposing them to the public internet as well as prevent data loss in situations of network separation between cloud and on-premise.</p></li>
+                    <li><p>SENTIENT Edge allows on-premise data processing, keeping critical data within ÖBB’s private network and facilitates secure integration with internal systems without exposing them to the public internet as well as prevent data loss in situations of network separation between cloud and on-premise.</p></li>
                     <li><p>SENTIENT Cloud provides powerful visualization tools through customizable dashboards, enabling internal stakeholders to monitor assets, track performance, and analyze trends.</p></li>
                     <li><p>SENTIENT enables condition monitoring and predictive maintenance through the analysis of sensor data and environmental parameters, reducing unplanned downtime by generating alerts based on predefined thresholds and conditions.</p></li>
                     <li><p>Assessing current asset conditions ("What now?") and forecasting future developments ("What next?") based on data processed in the Digital Twin.</p></li>
@@ -114,7 +114,7 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
         <div class="block">
             <div class="text">
                 <h3>Secure and resilient data flow for ÖBB-Infrastruktur AG</h3>
-                <p>SENTIENT GATEWAY instances, strategically deployed  on-premises within ÖBB-Infrastruktur AG's infrastructure, ensure secure data flow entirely within the internal IT network, avoiding exposure to the public Internet and firewall bridging. By caching IoT data locally until a successful transmission to the SENTIENT Professional Edition instance in the ÖBB Azure Cloud Tenant, this setup achieves:</p>
+                <p>SENTIENT Edge instances, strategically deployed  on-premises within ÖBB-Infrastruktur AG's infrastructure, ensure secure data flow entirely within the internal IT network, avoiding exposure to the public Internet and firewall bridging. By caching IoT data locally until a successful transmission to the SENTIENT Professional Edition instance in the ÖBB Azure Cloud Tenant, this setup achieves:</p>
                 <ul>
                     <li><p>Network Decoupling: Efficiently separates on-premises and cloud environments, reducing dependencies and potential disruptions.</p></li>
                     <li><p>Resilience to Network Issues: Maintains data integrity and operational continuity during Internet slowdowns, VPN issues, or cloud connectivity problems.</p></li>
@@ -130,11 +130,11 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How SENTIENT GATEWAY helps smart rail infrastructure management improve operations with IoT?</h2>
+        <h2>How SENTIENT Edge helps smart rail infrastructure management improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Smart railway infrastructure management</h3>
-                <p>SENTIENT GATEWAY can play a crucial role in smart railway infrastructure management. Due to specifics of edge computing, the data remains within the network, enhancing security by eliminating the need to expose internal systems to the public internet. By caching IoT data locally until a successful connection with the SENTIENT Professional Edition instance, SENTIENT GATEWAY ensures both data integrity and operational continuity.</p>
+                <p>SENTIENT Edge can play a crucial role in smart railway infrastructure management. Due to specifics of edge computing, the data remains within the network, enhancing security by eliminating the need to expose internal systems to the public internet. By caching IoT data locally until a successful connection with the SENTIENT Professional Edition instance, SENTIENT Edge ensures both data integrity and operational continuity.</p>
             </div>
             <div class="image-container">
                 <img src="/images/case-studies/status-widget.webp" title="Sentient status widget" alt="Sentient status widget" width="776" height="776">
@@ -154,7 +154,7 @@ description: Discover how ÖBB-Infrastruktur AG enhanced railway efficiency and 
         <div class="block">
             <div class="text">
                 <h3>Enabling predictive maintenance and operational efficiency</h3>
-                <p>Additionally, by analyzing collected sensor data from railway assets, SENTIENT GATEWAY enables support for the predictive maintenance strategies, helping to reduce unplanned downtime and improve the overall efficiency of operations.</p>
+                <p>Additionally, by analyzing collected sensor data from railway assets, SENTIENT Edge enables support for the predictive maintenance strategies, helping to reduce unplanned downtime and improve the overall efficiency of operations.</p>
             </div>
             <div class="image-container">
                 <img src="/images/case-studies/value-card.webp" title="Sentient value card widget" alt="Sentient value card widget" width="776" height="776">

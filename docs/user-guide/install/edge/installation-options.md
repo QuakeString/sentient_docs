@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-edge
-title: SENTIENT GATEWAY installation options
+title: SENTIENT Edge installation options
 notitle: "true"
 
 ---
@@ -10,10 +10,10 @@ notitle: "true"
        <div class="install-options-hero">
           <div class="container">
             <div class="install-options-hero-content">
-                <h1>SENTIENT GATEWAY installation options</h1>
+                <h1>SENTIENT Edge installation options</h1>
                 <div class="install-options-description">
                     <p>
-                        SENTIENT GATEWAY installation instructions for various operation systems
+                        SENTIENT Edge installation instructions for various operation systems
                     </p>
                 </div>
             </div>

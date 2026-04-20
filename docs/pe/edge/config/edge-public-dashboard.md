@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
 title: Edge Public Dashboard Configuration Guide
-description: Detailed configuration instructions for the public dashboard on SENTIENT GATEWAY
+description: Detailed configuration instructions for the public dashboard on SENTIENT Edge
 
 makePublic:
   0:

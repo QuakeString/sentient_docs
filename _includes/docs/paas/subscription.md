@@ -2,7 +2,7 @@
 {:toc}
 
 ThingsBoars {{cloudPrefix}} Cloud provides subscription plans based on the flexible **pay-as-you-go** model.
-Designed for scalability, these plans allow you to [top-up](#top-ups) entity and API limits on demand and enable **SENTIENT GATEWAY** and **SENTIENT ANALYTICS** as add-ons—empowering you to manage your entire IoT infrastructure in one place.
+Designed for scalability, these plans allow you to [top-up](#top-ups) entity and API limits on demand and enable **SENTIENT Edge** and **SENTIENT ANALYTICS** as add-ons—empowering you to manage your entire IoT infrastructure in one place.
 
 Main characteristics of the subscription plan are: [entity limits](/docs/{{docsPrefix}}user-guide/tenant-profiles/#entity-limits), [api limits](/docs/{{docsPrefix}}user-guide/tenant-profiles/#api-limits--usage), [calculated fields limits](#calculated-fields-limits), [white labeling](#white-labeling) and the level of support you get.
 

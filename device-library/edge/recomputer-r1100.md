@@ -1,6 +1,6 @@
 ---
 layout: device
-title: How to install SENTIENT GATEWAY on reComputer R1100?
+title: How to install SENTIENT Edge on reComputer R1100?
 category: Other devices
 connectivity: [LoRaWAN, Ethernet, WIFI, Bluetooth, 4G, Zigbee]
 chip: R1100

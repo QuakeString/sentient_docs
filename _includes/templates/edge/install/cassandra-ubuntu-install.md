@@ -18,7 +18,7 @@ sudo apt install openjdk-11-jdk-headless
 ```
 {: .copy-code}
 
-Set **Java 17** as the default version (required for **SENTIENT GATEWAY**):
+Set **Java 17** as the default version (required for **SENTIENT Edge**):
 ```bash
 sudo update-alternatives --config java
 ```

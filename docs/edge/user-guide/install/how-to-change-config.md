@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Configuration properties
-description: SENTIENT GATEWAY configuration properties and environment variables
+description: SENTIENT Edge configuration properties and environment variables
 
 ---
 

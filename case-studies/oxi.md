@@ -153,7 +153,7 @@ description: Discover how OXI TRADE optimized its alternative energy operations 
     </section>
     {% include contact-us-banner.liquid linkLabel='Use cases' link='/iot-use-cases/' %}
     <section class="tb-help">
-        <h2>How SENTIENT GATEWAY helps alternative energy management improve operations with IoT?</h2>
+        <h2>How SENTIENT Edge helps alternative energy management improve operations with IoT?</h2>
         <div class="block">
             <div class="text">
                 <h3>Real-time energy monitoring</h3>

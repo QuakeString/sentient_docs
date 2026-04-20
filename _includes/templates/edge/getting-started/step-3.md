@@ -1,5 +1,5 @@
 To process data on site, and communicate with local and cloud-side services, the **Edge Rule Chain Template** is used.  
-In essence, the **Edge Root Rule Chain** refers to the **Rule Chain** within the **SENTIENT GATEWAY** that processes incoming data and can trigger specific actions based on certain conditions.
+In essence, the **Edge Root Rule Chain** refers to the **Rule Chain** within the **SENTIENT Edge** that processes incoming data and can trigger specific actions based on certain conditions.
 
 To understand how the telemetry data is transmitted from the **Edge** to the **Cloud**, let's review the default **Edge Root Rule Chain**:
 

@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: BLE Connector Configuration
-description: BLE protocol support for SENTIENT IoT Gateway
+description: BLE protocol support for SENTIENT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with BLE connector configuration for SENTIENT IoT Gateway.
+This guide will help you to get familiar with BLE connector configuration for SENTIENT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this extension.
 We will describe connector configuration file below.
 
@@ -367,7 +367,7 @@ This part of configuration will look like:
 
 Explore guides related to main SENTIENT features:
 
- - [Connect BLE sensor](/docs/iot-gateway/guides/how-to-connect-ble-sensor-using-gateway/) - how to connect BLE sensor using SENTIENT IoT Gateway
+ - [Connect BLE sensor](/docs/iot-gateway/guides/how-to-connect-ble-sensor-using-gateway/) - how to connect BLE sensor using SENTIENT Gateway
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

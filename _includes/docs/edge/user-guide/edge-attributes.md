@@ -5,7 +5,7 @@
 
 **Custom attributes** are the structured data that can be assigned to the entities. They are stored in the database and can be used for visualization, analysis, logic configuration, and integration with other services.
 
-In **SENTIENT GATEWAY**, attributes work similarly to the **SENTIENT** platform. For a comprehensive understanding of the **SENTIENT Attributes**, please refer to the [Working with IoT Attributes](/docs/{{peDocsPrefix}}user-guide/attributes/){: target="_blank"} documentation.
+In **SENTIENT Edge**, attributes work similarly to the **SENTIENT** platform. For a comprehensive understanding of the **SENTIENT Attributes**, please refer to the [Working with IoT Attributes](/docs/{{peDocsPrefix}}user-guide/attributes/){: target="_blank"} documentation.
 
 ## Assigning Attributes to the Edge Entities
 
@@ -92,7 +92,7 @@ To use **Edge** attributes as placeholders in the **Rule Chain template**:
 
 ## Using Attributes in Edge Rule Chains
 
-In **SENTIENT GATEWAY**, **Rule Chains** can leverage **edge attributes** to create dynamic, real-time data processing logic. 
+In **SENTIENT Edge**, **Rule Chains** can leverage **edge attributes** to create dynamic, real-time data processing logic. 
 
 Let's consider a situation in which it is necessary to be notified whenever any device attribute undergoes a change. 
 

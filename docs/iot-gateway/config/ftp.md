@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: FTP Connector Configuration
-description: FTP protocol support for SENTIENT IoT Gateway
+description: FTP protocol support for SENTIENT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with FTP Connector configuration for SENTIENT IoT Gateway.
+This guide will help you to get familiar with FTP Connector configuration for SENTIENT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this Connector. 
 The purpose of this Connector is to connect to an external FTP server and get data from files from specific paths. 
 The connector is also able to push data to FTP server files based on the updates/commands from SENTIENT.

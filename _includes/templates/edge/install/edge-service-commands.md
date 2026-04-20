@@ -1,23 +1,23 @@
 
-Start the **SENTIENT GATEWAY** service:
+Start the **SENTIENT Edge** service:
 ```bash
 sudo service tb-edge start
 ```
 {: .copy-code}
 
-Stop the **SENTIENT GATEWAY** service:
+Stop the **SENTIENT Edge** service:
 ```bash
 sudo service tb-edge stop
 ```
 {: .copy-code}
 
-Restart the **SENTIENT GATEWAY** service:
+Restart the **SENTIENT Edge** service:
 ```bash
 sudo service tb-edge restart
 ```
 {: .copy-code}
 
-Check the status of the **SENTIENT GATEWAY** service:
+Check the status of the **SENTIENT Edge** service:
 ```bash
 sudo service tb-edge status
 ```

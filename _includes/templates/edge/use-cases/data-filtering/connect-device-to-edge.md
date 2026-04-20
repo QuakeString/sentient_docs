@@ -14,9 +14,9 @@ Before running the scripts, please modify **mqtt-generator.py** as follows:
 
 - Replace **YOUR_ACCESS_TOKEN** with the access token of the **"In-vehicle monitoring system"** device copied from the previous steps.
 
-- Replace **YOUR_TB_EDGE_HOST** with your SENTIENT GATEWAY host address. For example, **localhost**.
+- Replace **YOUR_TB_EDGE_HOST** with your SENTIENT Edge host address. For example, **localhost**.
 
-- Replace **YOUR_TB_EDGE_MQTT_PORT** with your SENTIENT GATEWAY MQTT port number. For example, **11883** or **1883**.
+- Replace **YOUR_TB_EDGE_MQTT_PORT** with your SENTIENT Edge MQTT port number. For example, **11883** or **1883**.
 
 Open the terminal and install the MQTT Python library using the following command:
 

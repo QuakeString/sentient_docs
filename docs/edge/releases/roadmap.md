@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-edge
-title: SENTIENT GATEWAY Roadmap
+title: SENTIENT Edge Roadmap
 description: Upcoming releases
 
 ---

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
 title: Troubleshooting
-description: SENTIENT GATEWAY troubleshooting
+description: SENTIENT Edge troubleshooting
 
 how-to-import-dashboard:
   0:

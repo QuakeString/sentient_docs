@@ -407,9 +407,9 @@ function resetLoadMore(categoryId) {
                     </div>
                 </div>
                 <div class="tb-faq-question">
-                    <div class="tb-faq-question-title" onclick="toggleTbFaq(this)">What is SENTIENT GATEWAY?</div>
+                    <div class="tb-faq-question-title" onclick="toggleTbFaq(this)">What is SENTIENT Edge?</div>
                     <div class="tb-faq-answer">
-                        <p>SENTIENT GATEWAY is an <b>edge computing solution</b> that runs locally at remote sites, processing data with reduced latency while maintaining sync with your central SENTIENT server. It operates offline and automatically syncs when connectivity returns.</p>
+                        <p>SENTIENT Edge is an <b>edge computing solution</b> that runs locally at remote sites, processing data with reduced latency while maintaining sync with your central SENTIENT server. It operates offline and automatically syncs when connectivity returns.</p>
                         <p>Edge Professional Edition, included as an add-on to SENTIENT Professional Edition subscriptions, adds enterprise features such as white-labeling, solution templates, platform integrations, scheduler, and customer hierarchy management to edge computing core capabilities.</p>
                         <p>The number of included Edge instances <b>depends on your subscription plan</b>. Additional instances can be purchased separately. Check your plan details or <a href="/docs/contact-us/" target="_blank">contact us</a> for specifics.</p>
                         <p>See <a href="/docs/pe/edge/" target="_blank">Edge documentation</a> for setup and configuration details.</p>

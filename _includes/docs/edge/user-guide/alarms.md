@@ -11,7 +11,7 @@ Although the **Alarm** feature for the **Edge** is designed similarly to that of
 * The Alarm data can be pushed from the **Edge** to the **Cloud** and can also be sent back from the **Cloud** to the **Edge**. This setup enables real-time monitoring and management of alarms across different locations.
 * Edge Alarms can be integrated with other local systems or software solutions for further processing, notifications, or actions.
 
-In essence, the **SENTIENT GATEWAY Alarms** provide real-time, localized alarm management that can operate independently of **Cloud** connectivity.
+In essence, the **SENTIENT Edge Alarms** provide real-time, localized alarm management that can operate independently of **Cloud** connectivity.
 
 ## Create an Alarm on the Edge Instance
 

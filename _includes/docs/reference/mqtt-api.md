@@ -470,8 +470,8 @@ Pure command-line examples are not available because subscribe and publish need 
 {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
 **1.** Save the [mqtt-js-rpc-from-server.js](/docs/edge/reference/resources/mqtt-js-rpc-from-server.js){:target="_blank" download="mqtt-js-rpc-from-server.js"} file to your PC.
 
-> ⚠️ In this example, the hostname refers to a **local SENTIENT GATEWAY installation**.   
-> If your SENTIENT GATEWAY instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
+> ⚠️ In this example, the hostname refers to a **local SENTIENT Edge installation**.   
+> If your SENTIENT Edge instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
 
 {% endif %}
 
@@ -537,8 +537,8 @@ Pure command-line examples are not available because subscribe and publish need 
 {% if docsPrefix == "edge/" or docsPrefix == "pe/edge/" %}
 **1.** Save the [mqtt-js-rpc-from-client.js](/docs/edge/reference/resources/mqtt-js-rpc-from-client.js){:target="_blank" download="mqtt-js-rpc-from-client.js"} file to your PC.
 
-> ⚠️ In this example, the hostname refers to a **local SENTIENT GATEWAY installation**.   
-> If your SENTIENT GATEWAY instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
+> ⚠️ In this example, the hostname refers to a **local SENTIENT Edge installation**.   
+> If your SENTIENT Edge instance is deployed on a different host, make sure to replace <code>localhost</code> with the appropriate hostname or IP address.
 
 {% endif %}
 

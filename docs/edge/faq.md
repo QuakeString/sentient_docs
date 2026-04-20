@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Frequently Asked Questions
-description: SENTIENT GATEWAY FAQs
+description: SENTIENT Edge FAQs
 
 ---
 

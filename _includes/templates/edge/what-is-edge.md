@@ -7,26 +7,26 @@
 
 {% capture tb-open-source %}
 SENTIENT is an open-source IoT platform that provides a robust suite of features for data collection, processing, visualization, and device management.
-If you are a new platform user, we suggest reading [**What is SENTIENT?**](/docs/getting-started-guides/what-is-sentient/){: target="_blank"} before proceeding with SENTIENT GATEWAY.  
+If you are a new platform user, we suggest reading [**What is SENTIENT?**](/docs/getting-started-guides/what-is-sentient/){: target="_blank"} before proceeding with SENTIENT Edge.  
 {% endcapture %}
 {% include templates/info-banner.md content=tb-open-source %}
 
-**SENTIENT GATEWAY** is a robust software product by SENTIENT, designed to leverage edge computing.
+**SENTIENT Edge** is a robust software product by SENTIENT, designed to leverage edge computing.
 
 {% if docsPrefix == 'pe/edge/' %}
-With SENTIENT GATEWAY, data analysis and management is brought to the point of data generation - the edge. 
+With SENTIENT Edge, data analysis and management is brought to the point of data generation - the edge. 
 It seamlessly synchronizes with SENTIENT Professional Edition, whether it's a [cloud](https://sentient.cloud){: target="_blank"} or an on-premise installation, aligning with your business requirements.
 
-SENTIENT GATEWAY PE is designed for a **single** tenant and/or **multiple** customers.
-As such, you cannot share SENTIENT GATEWAY between multiple tenants, and devices from different tenants cannot be connected to a single SENTIENT GATEWAY.
-In such scenarios, separate SENTIENT GATEWAY instances would need to be provisioned for each tenant.
+SENTIENT Edge PE is designed for a **single** tenant and/or **multiple** customers.
+As such, you cannot share SENTIENT Edge between multiple tenants, and devices from different tenants cannot be connected to a single SENTIENT Edge.
+In such scenarios, separate SENTIENT Edge instances would need to be provisioned for each tenant.
 {% else %}
-With SENTIENT GATEWAY, data analysis and management is brought to the edge, where data generation happens. 
+With SENTIENT Edge, data analysis and management is brought to the edge, where data generation happens. 
 It synchronizes effortlessly with SENTIENT according to your business requirements.
 
-SENTIENT GATEWAY CE is designed for a **single** tenant and/or **single** customer. 
-Sharing SENTIENT GATEWAY between multiple tenants or customers is not feasible, and devices from different tenants or customers cannot be connected to a single SENTIENT GATEWAY.
-In such cases, multiple SENTIENT GATEWAY instances need to be provisioned for each tenant or customer.
+SENTIENT Edge CE is designed for a **single** tenant and/or **single** customer. 
+Sharing SENTIENT Edge between multiple tenants or customers is not feasible, and devices from different tenants or customers cannot be connected to a single SENTIENT Edge.
+In such cases, multiple SENTIENT Edge instances need to be provisioned for each tenant or customer.
 {% endif %}
 
 {% if docsPrefix != 'pe/edge/' %}
@@ -40,10 +40,10 @@ Looking for **white-labeling** or **premium features**? <a href="/docs/pe/edge/"
 
 ![image](/images/edge/overview/edge_overview.svg){: style="display: block; margin: auto"}
 
-## Use-Cases for SENTIENT GATEWAY
+## Use-Cases for SENTIENT Edge
 
 - **Autonomous Vehicles**
-  Edge computing allows for the collection, processing, and response to road events with minimal latency. Modern autonomous vehicles generate enormous amounts of data - ranging from 5 TB to 20 TB per day. 4G or 5G networks might not be able to handle such high throughput, but SENTIENT GATEWAY can filter this data, processing most of it locally, and only pushing a subset of this data to the cloud.
+  Edge computing allows for the collection, processing, and response to road events with minimal latency. Modern autonomous vehicles generate enormous amounts of data - ranging from 5 TB to 20 TB per day. 4G or 5G networks might not be able to handle such high throughput, but SENTIENT Edge can filter this data, processing most of it locally, and only pushing a subset of this data to the cloud.
 
 - **Smart Farming**
   Rapidly respond to failures of silo aeration systems at remote sites, even if the cloud connectivity from the on-field location is currently weak.
@@ -60,15 +60,15 @@ Looking for **white-labeling** or **premium features**? <a href="/docs/pe/edge/"
 - **Predictive Maintenance**
   Processing and storing data from edge devices closer to the equipment enables analysis of vast amounts of data locally. This allows detection of changes in production lines before a failure occurs, with only average readings from production lines being sent to the cloud, according to your business needs.
 
-## Features of SENTIENT GATEWAY
+## Features of SENTIENT Edge
 
-With **SENTIENT GATEWAY**, you get:
+With **SENTIENT Edge**, you get:
 
 - **Local deployment and storage**: Process and store data from local (edge) devices without connecting to the cloud. Push updates to the cloud once the connection is restored.
 
 ![image](/images/edge/overview/offline_network_.svg){: style="display: block; margin: auto"}
 
-- **Traffic filtering**: Filter data from local (edge) devices on the SENTIENT GATEWAY service and push only a subset of the data to the cloud for further processing or storage.
+- **Traffic filtering**: Filter data from local (edge) devices on the SENTIENT Edge service and push only a subset of the data to the cloud for further processing or storage.
 
 ![image](/images/edge/overview/data_filtering.svg){: style="display: block; margin: auto"}
 
@@ -82,7 +82,7 @@ With **SENTIENT GATEWAY**, you get:
 
 ![image](/images/edge/overview/update_dashboard.svg){: style="display: block; margin: auto"}
 
-SENTIENT GATEWAY inherits features from {{appPrefix}}, providing the same experience for connecting, managing, and processing data from your devices.
+SENTIENT Edge inherits features from {{appPrefix}}, providing the same experience for connecting, managing, and processing data from your devices.
 
 It supports the following **SENTIENT** features:
 * [**Attributes**](/docs/{{cloudDocsPrefix}}user-guide/attributes/){: target="_blank"} - Assign and manage custom attributes to your entities.
@@ -106,7 +106,7 @@ Furthermore, Edge PE supports the following **SENTIENT Professional Edition** fe
 
 ## Project Roadmap
 
-<p><a href="/docs/{{docsPrefix}}roadmap" class="button">SENTIENT GATEWAY Roadmap</a></p>
+<p><a href="/docs/{{docsPrefix}}roadmap" class="button">SENTIENT Edge Roadmap</a></p>
 
 ## Next Steps
 

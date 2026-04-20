@@ -16,7 +16,7 @@ export EDGES_RPC_KEEP_ALIVE_TIMEOUT_SEC=25
 
 #### Edge
 
-Then, edit the **SENTIENT GATEWAY configuration file:**
+Then, edit the **SENTIENT Edge configuration file:**
 ```bash
 sudo nano /etc/tb-edge/conf/tb-edge.conf
 ```

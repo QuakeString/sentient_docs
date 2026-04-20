@@ -17,7 +17,7 @@ To continue with this guide we will need the following:
 - [Multi IO Extension Shutter 592](https://weinzierl.de/en/products/multi-io-extension-shutter-592/){: target="_blank"}
 - Coupling relay for Multi IO
 - [ETS software](https://support.knx.org/hc/en-us/articles/4409114300178-ETS-v5-7-7){: target="_blank"} installed
-- [SENTIENT IoT Gateway](https://docs.sentient.invenia.in/docs/iot-gateway/installation/){: target="_blank"} installed
+- [SENTIENT Gateway](https://docs.sentient.invenia.in/docs/iot-gateway/installation/){: target="_blank"} installed
 - [SENTIENT account]({{ sentientHost }}){: target="_blank"}
 
 
@@ -155,7 +155,7 @@ The last thing that we need to do is set group objects ability to read and write
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=KnxIpMultiScreenshot5_2 %}
 
-## Creating and configuring SENTIENT IoT Gateway
+## Creating and configuring SENTIENT Gateway
 
 {% assign creatingGatewayCE = '
     ===

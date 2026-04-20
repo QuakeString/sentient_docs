@@ -1,5 +1,5 @@
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-{% assign deviceName = page.title | remove: "How to install SENTIENT GATEWAY on " | remove: "?" %}
+{% assign deviceName = page.title | remove: "How to install SENTIENT Edge on " | remove: "?" %}
 {% assign prerequisites = "
 - " | append: deviceName | append: "
 - [tb-mqtt-client library](https://pypi.org/project/tb-mqtt-client/){:target='_blank' rel='noopener'}
@@ -30,7 +30,7 @@ The NVIDIA Jetson Xavier NX Developer Kit is a powerful, compact AI computer tha
 {% endif %}
 
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-## Create device on SENTIENT GATEWAY {#create-device-on-sentient-gateway}
+## Create device on SENTIENT Edge {#create-device-on-sentient-gateway}
 {% else %}
 ## Create device on SENTIENT {#create-device-on-sentient}
 {% endif %}
@@ -43,7 +43,7 @@ The NVIDIA Jetson Xavier NX Developer Kit is a powerful, compact AI computer tha
 
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
 {% assign hostName = "NVIDIA_JETSON_XAVIER_NX_IP_ADDRESS" %}
-## Connect device to SENTIENT GATEWAY {#connect-device-to-sentient-gateway}
+## Connect device to SENTIENT Edge {#connect-device-to-sentient-gateway}
 {% else %}
 ## Connect device to SENTIENT {#connect-device-to-sentient}
 {% endif %}
@@ -56,7 +56,7 @@ The NVIDIA Jetson Xavier NX Developer Kit is a powerful, compact AI computer tha
 {% include /docs/device-library/blocks/single-board-computers/sentient-synchronize-device-state-using-attribute-requests-block.md %}
 
 {% if page.docsPrefix == "pe/edge/" or page.docsPrefix == "edge/" %}
-## Check data on SENTIENT GATEWAY {#check-data-on-sentient-gateway}
+## Check data on SENTIENT Edge {#check-data-on-sentient-gateway}
 {% else %}
 ## Check data on SENTIENT {#check-data-on-sentient}
 {% endif %}

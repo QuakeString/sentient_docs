@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: Installing SENTIENT GATEWAY on Ubuntu Server
-description: Installing SENTIENT GATEWAY on Ubuntu Server
+title: Installing SENTIENT Edge on Ubuntu Server
+description: Installing SENTIENT Edge on Ubuntu Server
 
 ---
 
@@ -12,7 +12,7 @@ description: Installing SENTIENT GATEWAY on Ubuntu Server
 
 {% assign docsPrefix = "edge/" %}
 
-This guide provides step-by-step instructions for installing **SENTIENT GATEWAY** on **Ubuntu 22.04 LTS and 24.04 LTS**.
+This guide provides step-by-step instructions for installing **SENTIENT Edge** on **Ubuntu 22.04 LTS and 24.04 LTS**.
 
 {% include templates/edge/install/prerequisites.md %}
 
@@ -26,9 +26,9 @@ This guide provides step-by-step instructions for installing **SENTIENT GATEWAY*
 
 {% include templates/install/ubuntu-java-install.md %}
 
-### Step 2. Configure the SENTIENT GATEWAY database
+### Step 2. Configure the SENTIENT Edge database
 
-**SENTIENT GATEWAY** supports **SQL** and **hybrid** database approaches. See the architecture [page](/docs/reference/#sql-vs-nosql-vs-hybrid-database-approach){: target="_blank"} for details.
+**SENTIENT Edge** supports **SQL** and **hybrid** database approaches. See the architecture [page](/docs/reference/#sql-vs-nosql-vs-hybrid-database-approach){: target="_blank"} for details.
 
 {% capture contenttogglespec %}
 PostgreSQL <small>(recommended for < 5K msg/sec)</small>%,%postgresql%,%templates/edge/install/ubuntu-db-postgresql.md%br%
@@ -37,7 +37,7 @@ Hybrid <br>PostgreSQL+Cassandra<br><small>(recommended for > 5K msg/sec)</small>
 
 ### Step 3. Select the Queue service
 
-**SENTIENT GATEWAY** can use different messaging systems and brokers for storing messages and enabling communication between its services. Choose the appropriate queue implementation based on your specific business needs:
+**SENTIENT Edge** can use different messaging systems and brokers for storing messages and enabling communication between its services. Choose the appropriate queue implementation based on your specific business needs:
 
 * **In Memory**: The built-in and default queue implementation. It is useful for development or proof-of-concept (PoC) environments, but is not recommended for production or any type of clustered deployments due to limited scalability.
 
@@ -49,7 +49,7 @@ Kafka <small>(recommended for on-prem, production installations)</small>%,%kafka
 
 {% include content-toggle.liquid content-toggle-id="ubuntuSentientQueue" toggle-spec=contenttogglespecqueue %}
 
-### Step 4. SENTIENT GATEWAY service installation
+### Step 4. SENTIENT Edge service installation
 
 Download the installation package:
 
@@ -58,14 +58,14 @@ wget https://github.com/sentient/sentient-gateway/releases/download/{{ site.rele
 ```
 {: .copy-code}
 
-Go to the download repository and install SENTIENT GATEWAY service
+Go to the download repository and install SENTIENT Edge service
 
 ```bash
 sudo dpkg -i tb-edge-{{ site.release.edge_ver }}.deb
 ```
 {: .copy-code}
 
-### Step 5. Configure the SENTIENT GATEWAY
+### Step 5. Configure the SENTIENT Edge
 
 {% include templates/edge/install/linux-configure-edge.md %}
 
@@ -73,20 +73,20 @@ sudo dpkg -i tb-edge-{{ site.release.edge_ver }}.deb
 
 {% include templates/edge/install/run-edge-install.md %} 
 
-### Step 7. Start the SENTIENT GATEWAY service
+### Step 7. Start the SENTIENT Edge service
 
 ```bash
 sudo service tb-edge start
 ```
 {: .copy-code}
 
-### Step 8. Open the SENTIENT GATEWAY UI
+### Step 8. Open the SENTIENT Edge UI
 
 {% include templates/edge/install/open-edge-ui.md %} 
 
 ## Troubleshooting
 
-The **SENTIENT GATEWAY** logs are stored in the following directory:
+The **SENTIENT Edge** logs are stored in the following directory:
  
 ```bash
 /var/log/tb-edge

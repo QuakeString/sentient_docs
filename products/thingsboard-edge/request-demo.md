@@ -5,11 +5,11 @@ hidetoc: "true"
 
 ---
 
-<h4 class="text-center pt-2 pb-2" style="width: 100%">SENTIENT GATEWAY Demo Request</h4>
+<h4 class="text-center pt-2 pb-2" style="width: 100%">SENTIENT Edge Demo Request</h4>
 <div style="display: flex;">
     <div style="width: 50%; margin: 30px 10px 0;">
         <div class="pricing-square-description">
-            <p>Connect devices to SENTIENT GATEWAY and start processing data locally without internet connection:</p>
+            <p>Connect devices to SENTIENT Edge and start processing data locally without internet connection:</p>
         </div>
         <ul>
             <li class="pricing-square-item">Operate with local devices without connection to cloud</li>

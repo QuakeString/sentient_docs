@@ -1,9 +1,9 @@
-bigheader: "SENTIENT GATEWAY Documentation"
+bigheader: "SENTIENT Edge Documentation"
 abstract: "Distribute data processing and analysis using edge computing."
 toc:
-- title: SENTIENT GATEWAY
+- title: SENTIENT Edge
   path: /docs/edge/
-- title: What is SENTIENT GATEWAY?
+- title: What is SENTIENT Edge?
   path: /docs/edge/getting-started-guides/what-is-edge/
 - title: Key concepts
   section:

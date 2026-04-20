@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Edge Core/Rule engine deployment parameters
-description: SENTIENT GATEWAY configuration properties and environment variables
+description: SENTIENT Edge configuration properties and environment variables
 
 ---
 

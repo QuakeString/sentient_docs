@@ -1,4 +1,4 @@
-Stop the **SENTIENT GATEWAY** container (if it's still running):
+Stop the **SENTIENT Edge** container (if it's still running):
 
 ```bash
 docker compose stop
@@ -12,7 +12,7 @@ docker run --rm -v tb-edge-postgres-data-backup:/source -v tb-edge-postgres-data
  ```
 {: .copy-code}
 
-Start the **SENTIENT GATEWAY** container:
+Start the **SENTIENT Edge** container:
 
 ```bash
 docker compose up -d 

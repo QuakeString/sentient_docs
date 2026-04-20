@@ -163,7 +163,7 @@ sentient-gateway
 
 Explore guides related to main SENTIENT features:
 
- - [Getting Started](/docs/iot-gateway/getting-started/) with SENTIENT IoT Gateway.
+ - [Getting Started](/docs/iot-gateway/getting-started/) with SENTIENT Gateway.
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

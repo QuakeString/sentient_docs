@@ -38,7 +38,7 @@ In the pop-up window, fill in the following fields:
 
 ### Verify the OTA Update Package on the Edge Instance
 
-Log in to the **SENTIENT GATEWAY** instance using your credentials and navigate to the **Advanced features > OTA updates** section. This is to confirm that the firmware package has been **successfully provisioned** on the **Edge** instance.
+Log in to the **SENTIENT Edge** instance using your credentials and navigate to the **Advanced features > OTA updates** section. This is to confirm that the firmware package has been **successfully provisioned** on the **Edge** instance.
   
 {% include images-gallery.html imageCollection="verifyFirmware" %}
 

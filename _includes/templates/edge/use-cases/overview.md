@@ -1,8 +1,8 @@
 * TOC
 {:toc}
 
-**SENTIENT GATEWAY** offers the flexibility to address the variety of challenges faced in IoT deployments, from connectivity and latency concerns to security and regulatory compliance.
-The choice of deploying **SENTIENT GATEWAY** depends on the specific business needs and constraints.
+**SENTIENT Edge** offers the flexibility to address the variety of challenges faced in IoT deployments, from connectivity and latency concerns to security and regulatory compliance.
+The choice of deploying **SENTIENT Edge** depends on the specific business needs and constraints.
 
 ## Deployment Scenarios
 
@@ -16,13 +16,13 @@ The choice of deploying **SENTIENT GATEWAY** depends on the specific business ne
 
 * **Firmware Updates:** Edge can facilitate firmware updates for IoT devices. In environments with numerous devices, managing updates can be challenging. Edge deployment can help streamline this process.
 
-* **Integration with Local Systems:** In some scenarios, IoT data might need to be integrated with local databases or systems. SENTIENT GATEWAY can serve as an integration point, communicating with both IoT devices and local systems.
+* **Integration with Local Systems:** In some scenarios, IoT data might need to be integrated with local databases or systems. SENTIENT Edge can serve as an integration point, communicating with both IoT devices and local systems.
 
-* **Distributed Architecture:** For organizations with multiple locations or branches, deploying SENTIENT GATEWAY at each location ensures local processing and management while maintaining a connection to the central server for consolidated data views and management.
+* **Distributed Architecture:** For organizations with multiple locations or branches, deploying SENTIENT Edge at each location ensures local processing and management while maintaining a connection to the central server for consolidated data views and management.
 
 ## Edge Use Cases
 
-The following guides can help you learn about the **use cases of SENTIENT GATEWAY functionality**:
+The following guides can help you learn about the **use cases of SENTIENT Edge functionality**:
 
 * [**Manage alarms and RPC requests on edge devices**](/docs/{{docsPrefix}}use-cases/manage-alarms-rpc-requests/){: target="_blank"}: Learn how to manage local work environments, even without an Internet connection to the Cloud.
 

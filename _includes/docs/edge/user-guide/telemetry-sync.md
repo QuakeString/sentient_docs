@@ -1,7 +1,7 @@
 * TOC
 {:toc}
 
-> **SENTIENT GATEWAY** does not automatically sync telemetry data. 
+> **SENTIENT Edge** does not automatically sync telemetry data. 
 Instead, it's **a rule-based process**. The ["push to cloud"](/docs/user-guide/rule-engine-2-0/nodes/action/push-to-cloud/){:target="_blank"}
 and ["push to edge"](/docs/user-guide/rule-engine-2-0/nodes/action/push-to-edge/){:target="_blank"} rule nodes are responsible for 
 the synchronization process.

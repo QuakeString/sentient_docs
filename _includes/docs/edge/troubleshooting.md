@@ -30,7 +30,7 @@ After this, you can find the following messages in your [logs](#logs):
 
 ### Read logs
 
-Regardless of the deployment type, SENTIENT GATEWAY logs are stored in the following directory:
+Regardless of the deployment type, SENTIENT Edge logs are stored in the following directory:
 
 ```bash
 /var/log/tb-edge
@@ -181,7 +181,7 @@ This helps reduce unexpected disconnects during temporary network disruptions.
 
 Read more about **Edge parameters for Cloud** [here](/docs/{{peDocsPrefix}}user-guide/install/config/#edges-parameters){:target="_blank"}
 
-**On the SENTIENT GATEWAY (gRPC client):**
+**On the SENTIENT Edge (gRPC client):**
 
 * **CLOUD_RPC_KEEP_ALIVE_TIME_SEC:** The amount of time in seconds that the client waits in an idle state (with no read operations on the connection) before sending a keepalive ping to the server. This setting is crucial for ensuring that the connection remains alive during periods of inactivity and helps prevent the server from closing the connection due to a timeout. It's used to probe the server periodically to check if it is still responsive and maintain the connection through potential network devices that might drop inactive connections (like NATs and load balancers). **10 seconds by default.**
 
@@ -224,7 +224,7 @@ and **downlink** (Cloud → Edge) message flows.
 
 ### The telemetry keys for statistics monitoring
 
-SENTIENT GATEWAY exposes a set of telemetry keys that allow you to monitor message statistics between Edge and Cloud.
+SENTIENT Edge exposes a set of telemetry keys that allow you to monitor message statistics between Edge and Cloud.
 
 #### Uplink
 * **uplinkMsgsAdded:** The number of messages added to the queue.

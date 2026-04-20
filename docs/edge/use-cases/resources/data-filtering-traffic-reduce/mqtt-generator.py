@@ -4,8 +4,8 @@ import random
 import time
 
 ACCESS_TOKEN = YOUR_ACCESS_TOKEN # REPLACE with your device access token, e.g. 'edge_vehicle'
-SENTIENT_EDGE_HOST = YOUR_TB_EDGE_HOST # REPLACE with your SENTIENT GATEWAY server installation IP address or hostname, e.g. 'localhost'
-SENTIENT_EDGE_MQTT_PORT = YOUR_TB_EDGE_MQTT_PORT # REPLACE with your SENTIENT GATEWAY MQTT port, e.g. 11883 or 1883
+SENTIENT_EDGE_HOST = YOUR_TB_EDGE_HOST # REPLACE with your SENTIENT Edge server installation IP address or hostname, e.g. 'localhost'
+SENTIENT_EDGE_MQTT_PORT = YOUR_TB_EDGE_MQTT_PORT # REPLACE with your SENTIENT Edge MQTT port, e.g. 11883 or 1883
 DISTANCE = 0
 
 # The callback for when the client receives a CONNACK response from the server

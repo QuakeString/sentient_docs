@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
 title: Manage alarms and RPC requests on edge devices
-description: SENTIENT GATEWAY use case #1
+description: SENTIENT Edge use case #1
 
 configureAlarmRules:
     0:

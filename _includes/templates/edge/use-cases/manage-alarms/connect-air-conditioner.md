@@ -18,9 +18,9 @@ Before running the scripts, please modify **mqtt-js.sh** accordingly:
 
 - Replace **YOUR_ACCESS_TOKEN** with **Air Conditioner** device access token copied from the steps above. 
 
-- Replace **YOUR_TB_EDGE_HOST** with your SENTIENT GATEWAY host. For example, **localhost**.
+- Replace **YOUR_TB_EDGE_HOST** with your SENTIENT Edge host. For example, **localhost**.
 
-- Replace **YOUR_TB_EDGE_MQTT_PORT** with your SENTIENT GATEWAY MQTT port. For example, **11883** or **1883**.
+- Replace **YOUR_TB_EDGE_MQTT_PORT** with your SENTIENT Edge MQTT port. For example, **11883** or **1883**.
 
 Open the terminal, go to the folder that contains **mqtt-js.sh** and **cooler.js** scripts and make sure it is executable:
 ```shell

@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: Socket Connector Configuration
-description: Socket API support for SENTIENT IoT Gateway
+description: Socket API support for SENTIENT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with Socket Connector configuration for SENTIENT IoT Gateway. 
+This guide will help you get familiar with Socket Connector configuration for SENTIENT Gateway. 
 Use the [general configuration guide](/docs/iot-gateway/configuration/) to enable this connector. 
 A Socket connector runs a server on the local machine to which other devices can connect. This connector is useful 
 when you have devices that can send data over TCP or UDP protocols. 

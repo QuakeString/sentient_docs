@@ -43,7 +43,7 @@ Temperature & Humidity sensors template includes:
 - **Device Profile and Logic**. A predefined Temperature Sensor device profile is included with built-in logic and preconfigured alarms for high temperature and low humidity conditions. 
 - **Customers and Users**. The system contains one demo customer (Customer D) and two read-only customer users with predefined role-based access control.
 
-**Edge Support.** The solution can optionally be deployed to [SENTIENT GATEWAY](/docs/edge/){:target="_blank"} for local data processing and reduced latency.
+**Edge Support.** The solution can optionally be deployed to [SENTIENT Edge](/docs/edge/){:target="_blank"} for local data processing and reduced latency.
 
 ## Dashboard
 

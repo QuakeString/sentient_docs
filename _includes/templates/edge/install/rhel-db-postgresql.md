@@ -4,7 +4,7 @@ Many cloud providers offer managed **PostgreSQL** services, making it a cost-eff
 {% endcapture %}
 {% include templates/info-banner.md content=postgresql-info %}
 
-SENTIENT GATEWAY uses **PostgreSQL** database as a local storage.
+SENTIENT Edge uses **PostgreSQL** database as a local storage.
 
 {% include templates/edge/install/postgres-install-rhel.md %}
 

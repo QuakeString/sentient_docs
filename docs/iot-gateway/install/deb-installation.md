@@ -1,11 +1,11 @@
 ---
 layout: docwithnav-gw
-title: Install SENTIENT IoT Gateway as package.
+title: Install SENTIENT Gateway as package.
 redirect_from: 
  - "/docs/iot-gateway/install/rpi/"
 ---
 
-This guide will help you to install SENTIENT IoT Gateway on Ubuntu 22.04 LTS / 24.04 LTS.
+This guide will help you to install SENTIENT Gateway on Ubuntu 22.04 LTS / 24.04 LTS.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ wget https://github.com/sentient/sentient-gateway/releases/latest/download/pytho
 
 ## Step 2. Install the gateway using apt
 
-Install SENTIENT IoT Gateway as package and run it as daemon uses the following command:<br><br>
+Install SENTIENT Gateway as package and run it as daemon uses the following command:<br><br>
 
 ```bash
 sudo apt install ./python3-sentient-gateway.deb -y
@@ -104,7 +104,7 @@ wget https://github.com/sentient/sentient-gateway/releases/latest/download/pytho
 
 #### Step 2. Install the gateway using apt
 
-Install SENTIENT IoT Gateway as package and run it as daemon uses the following command:<br><br>
+Install SENTIENT Gateway as package and run it as daemon uses the following command:<br><br>
 
 ```bash
 sudo apt install ./python3.11-sentient-gateway-offline.deb -y
@@ -123,7 +123,7 @@ systemctl status sentient-gateway
 - **Wrong Python version**
 
   The installer will show a detailed guide for installing the required version.
-- **Need to remove installed SENTIENT IoT Gateway after fixing Python**
+- **Need to remove installed SENTIENT Gateway after fixing Python**
 
   When the required Python version is installed, remove the previously installed Gateway package using:
 

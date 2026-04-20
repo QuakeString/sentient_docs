@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: REST Connector Configuration
-description: REST API enpoints support for SENTIENT IoT Gateway
+description: REST API enpoints support for SENTIENT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with REST Connector configuration for SENTIENT IoT Gateway.  
+This guide will help you to get familiar with REST Connector configuration for SENTIENT Gateway.  
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector.  
 The purpose of this Connector is to create API endpoints and get data from received requests.  
 Connector is also able to push data to external HTTP(S) API based on the updates/commands from SENTIENT.    

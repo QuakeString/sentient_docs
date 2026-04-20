@@ -22,7 +22,7 @@ createFirmware:
 verifyFirmware:
       0:
         image: /images/pe/edge/user-guide/ota-update/4-verify-on-edge-pe.png
-        title: 'Log in to the SENTIENT GATEWAY instance, go to the Advanced features > OTA updates section and confirm that the firmware package has been successfully provisioned on the Edge instance.'
+        title: 'Log in to the SENTIENT Edge instance, go to the Advanced features > OTA updates section and confirm that the firmware package has been successfully provisioned on the Edge instance.'
 
 ---
 

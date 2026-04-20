@@ -16,7 +16,7 @@ Compare:
 
 Using a proxy server allows enhancing security by filtering and monitoring internet traffic. In restricted environments, direct internet access is often deliberately blocked, making proxy configurations a necessity for maintaining security protocols. 
 
-Beyond security, proxies can cache resources that can substantially reduce overall network consumption and improve performance for distributed systems like SENTIENT GATEWAY.
+Beyond security, proxies can cache resources that can substantially reduce overall network consumption and improve performance for distributed systems like SENTIENT Edge.
 
 ### The Installation Guide
 

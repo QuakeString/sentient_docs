@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: Installing SENTIENT GATEWAY using Docker (Windows)
-description: Installing SENTIENT GATEWAY using Docker (Windows)
+title: Installing SENTIENT Edge using Docker (Windows)
+description: Installing SENTIENT Edge using Docker (Windows)
 ---
 
 * TOC
@@ -11,7 +11,7 @@ description: Installing SENTIENT GATEWAY using Docker (Windows)
 
 {% assign docsPrefix = "edge/" %}
 
-This guide provides step-by-step instructions for installing **SENTIENT GATEWAY** on **Windows** using **Docker**.
+This guide provides step-by-step instructions for installing **SENTIENT Edge** on **Windows** using **Docker**.
 
 {% include templates/edge/install/prerequisites.md %}
 
@@ -21,11 +21,11 @@ This guide provides step-by-step instructions for installing **SENTIENT GATEWAY*
 
 ## Installation and Configuration
 
-### Step 1. Running SENTIENT GATEWAY
+### Step 1. Running SENTIENT Edge
 
 {% include templates/edge/install/docker-images-location.md %}
 
-Windows users should use docker managed volume for SENTIENT GATEWAY DataBase. 
+Windows users should use docker managed volume for SENTIENT Edge DataBase. 
 Create docker volume (for ex. `mytb-edge-data`) before executing docker run command:
 Open "Docker Quickstart Terminal". Execute the following command to create docker volume:
 
@@ -38,7 +38,7 @@ docker volume create mytb-edge-data-db
 
 {% include templates/edge/install/copy-edge-credentials.md %}
 
-Create docker compose file for SENTIENT GATEWAY service:
+Create docker compose file for SENTIENT Edge service:
 
 ```text
 docker-compose.yml
@@ -91,14 +91,14 @@ volumes:
 Where:
 - `C:\Program Files\Oracle\VirtualBox` - path to your VirtualBox installation directory
 
-### Step 2. Open SENTIENT GATEWAY UI
+### Step 2. Open SENTIENT Edge UI
 
 {% include templates/edge/install/open-edge-ui.md %}
 
 ### Step 3. Detaching, stop and start commands
 
 {% assign serviceName = "tbedge" %}
-{% assign serviceFullName = "SENTIENT GATEWAY" %}
+{% assign serviceFullName = "SENTIENT Edge" %}
 {% include templates/install/docker/detaching-stop-start-commands.md %}
 
 ## Troubleshooting

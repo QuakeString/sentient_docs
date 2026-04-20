@@ -5,7 +5,7 @@
 **Legacy Content**: This page documents subscription plans for accounts created prior to **January 20, 2026**. 
 
 **Why upgrade?** Our new subscription plans offer greater flexibility, allowing you to [top-up](/docs/{{docsPrefix}}subscriptions/#top-ups) entity and API limits on demand. 
-They also let you enable SENTIENT GATEWAY and SENTIENT ANALYTICS as [add-ons](/docs/{{docsPrefix}}subscriptions/#add-ons), so you can manage your entire IoT infrastructure in one place.
+They also let you enable SENTIENT Edge and SENTIENT ANALYTICS as [add-ons](/docs/{{docsPrefix}}subscriptions/#add-ons), so you can manage your entire IoT infrastructure in one place.
 
 Ready to switch? Please refer to the [how-to switch to the new subscription plans](#how-to-switch-to-the-new-subscription-plans) page.
 

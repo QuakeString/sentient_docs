@@ -8,7 +8,7 @@ coap://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
-* Replace the **$SENTIENT_HOST_NAME** with the actual hostname or IP address of your SENTIENT GATEWAY instance.
+* Replace the **$SENTIENT_HOST_NAME** with the actual hostname or IP address of your SENTIENT Edge instance.
 
 {% assign accessTokenPE = '
     ===
@@ -40,14 +40,14 @@ Once shared attribute will be changed by one of the server-side components (REST
 
 #### Publish Time-Series or Attribute Message.
 
-To publish client-side device attributes to the **SENTIENT GATEWAY**, send a POST request to the following URL:
+To publish client-side device attributes to the **SENTIENT Edge**, send a POST request to the following URL:
 
 ```bash
 coap://$SENTIENT_HOST_NAME/api/v1/$ACCESS_TOKEN/attributes
 ```
 {: .copy-code}
 
-* **$SENTIENT_HOST_NAME:** The actual hostname or IP address of your SENTIENT GATEWAY instance
+* **$SENTIENT_HOST_NAME:** The actual hostname or IP address of your SENTIENT Edge instance
 * **$ACCESS_TOKEN:** The actual access token of the device.
 
 Publish client-side attributes update using data from [**new-attributes-values.json**](/docs/reference/resources/new-attributes-values.json){: target="_blank"} file:

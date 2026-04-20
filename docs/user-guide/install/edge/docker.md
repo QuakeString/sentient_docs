@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: Installing SENTIENT GATEWAY using Docker (Linux or Mac OS)
-description: Installing SENTIENT GATEWAY using Docker (Linux or Mac OS)
+title: Installing SENTIENT Edge using Docker (Linux or Mac OS)
+description: Installing SENTIENT Edge using Docker (Linux or Mac OS)
 
 ---
 
@@ -12,7 +12,7 @@ description: Installing SENTIENT GATEWAY using Docker (Linux or Mac OS)
 
 {% assign docsPrefix = "edge/" %}
 
-This guide provides step-by-step instructions for running **SENTIENT GATEWAY** on **Linux or Mac OS** using **Docker**.
+This guide provides step-by-step instructions for running **SENTIENT Edge** on **Linux or Mac OS** using **Docker**.
 
 {% include templates/edge/install/prerequisites.md %}
 
@@ -36,7 +36,7 @@ We strongly recommend **upgrading to and using Docker Compose V2**, as Docker no
 
 {% include templates/edge/install/manual-install-instructions-intro.md %}
 
-### Step 1. Running SENTIENT GATEWAY
+### Step 1. Running SENTIENT Edge
 
 {% include templates/edge/install/docker-images-location.md %}
 
@@ -44,7 +44,7 @@ We strongly recommend **upgrading to and using Docker Compose V2**, as Docker no
 
 ### Step 2. Choose Queue and/or Database Services
 
-**SENTIENT GATEWAY** is able to use different messaging systems/brokers for storing the messages and communication between SENTIENT services. How to choose the right queue implementation?
+**SENTIENT Edge** is able to use different messaging systems/brokers for storing the messages and communication between SENTIENT services. How to choose the right queue implementation?
 
 * **In Memory** queue implementation is built-in and default. It is useful for development (PoC) environments and is not suitable for production deployments or any sort of cluster deployments.
 
@@ -52,7 +52,7 @@ We strongly recommend **upgrading to and using Docker Compose V2**, as Docker no
 
 * **Hybrid** implementation combines PostgreSQL and Cassandra databases with Kafka queue service. It is recommended if you plan to manage 1M+ devices in production or handle high data ingestion rate (more than 5000 msg/sec).
 
-Create a docker compose file for the **SENTIENT GATEWAY** service:
+Create a docker compose file for the **SENTIENT Edge** service:
 
 {% capture contenttogglespecqueue %}
 In Memory <small>(built-in and default)</small>%,%inmemory%,%templates/edge/docker-queue-in-memory.md%br%
@@ -61,13 +61,13 @@ Hybrid <small>(PostgreSQL+Cassandra with Kafka queue service)</small>%,%hybrid%,
 
 {% include content-toggle.liquid content-toggle-id="ubuntuSentientQueue" toggle-spec=contenttogglespecqueue %}
 
-### Step 3. Open SENTIENT GATEWAY UI
+### Step 3. Open SENTIENT Edge UI
 
 {% include templates/edge/install/open-edge-ui.md %}
 
 ### Step 4. Detaching, Stop and Start Commands
 
-{% assign serviceFullName = "SENTIENT GATEWAY" %}
+{% assign serviceFullName = "SENTIENT Edge" %}
 {% include templates/edge/detaching-stop-start-edge.md %}
 
 ## Troubleshooting

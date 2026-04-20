@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: IoT Gateway Configuration
-description: Installation structure and configuration of SENTIENT IoT Gateway 
+description: Installation structure and configuration of SENTIENT Gateway 
 
 ---
 
@@ -60,7 +60,7 @@ environment variables within a Docker Compose file. Here’s how you can achieve
 ```yaml
 version: '3.4'
 services:
-  # SENTIENT IoT Gateway Service Configuration
+  # SENTIENT Gateway Service Configuration
   tb-gateway:
     image: sentient/tb-gateway
     container_name: tb-gateway
@@ -77,7 +77,7 @@ In the example above, we set the "**host.docker.internal**" as a host, **1883** 
 as an access token for the gateway using the "**TB_GW_HOST**", "**TB_GW_PORT**" and "**TB_GW_ACCESS_TOKEN**" 
 environment variables, respectively.
 
-The following environmental variables can be used to configure the SENTIENT IoT Gateway:
+The following environmental variables can be used to configure the SENTIENT Gateway:
 
 | **ENV variable**     | **Default value**             | **Description**                                                                   |
 |----------------------|-------------------------------|-----------------------------------------------------------------------------------|

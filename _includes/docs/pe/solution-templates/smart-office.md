@@ -43,7 +43,7 @@ Smart office template includes:
 - **Assets**. An Office asset is created to represent the facility structure, with all devices logically associated to reflect real-world relationships.
 - **Device Profiles and Logic**. Dedicated device profiles are provided for smart-sensor, hvac, energy-meter, and water-meter devices, including built-in logic and preconfigured alarm rules for environmental monitoring.
 
-**Edge Support**. The solution can optionally be deployed to [SENTIENT GATEWAY](/docs/edge/){:target="_blank"} for local data processing and control.
+**Edge Support**. The solution can optionally be deployed to [SENTIENT Edge](/docs/edge/){:target="_blank"} for local data processing and control.
 
 ## Dashboard
 

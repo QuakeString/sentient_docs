@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: CAN Connector Configuration
-description: CAN protocol support for SENTIENT Gateway
+description: CAN protocol support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with CAN connector configuration for SENTIENT Gateway.  
+This guide will help you to get familiar with CAN connector configuration for SENTIENT IoT Gateway.  
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this connector.  
 We will describe connector configuration file below.
 

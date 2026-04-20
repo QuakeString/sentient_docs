@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-edge
-title: Deploying SENTIENT Edge Alongside SENTIENT Gateway
-description: Deploying SENTIENT Edge alongside SENTIENT Gateway
+title: Deploying SENTIENT Edge Alongside SENTIENT IoT Gateway
+description: Deploying SENTIENT Edge alongside SENTIENT IoT Gateway
 
 startEdge:
   0:
@@ -31,10 +31,10 @@ provisionGW:
         title: 'Log into your Cloud, navigate to the <b>Edge Management > Instances</b> section, and click the <b>“Manage dashboards”</b> button.'
     1:
         image: /images/devices-library/edge/recomputer-r1000/2-assign-dashboard.webp
-        title: 'Click the <b>“+”</b> button. Select the <b>“SENTIENT Gateways”</b> dashboard from the drop-down menu in the pop-up window. Click the <b>“Assign”</b> button to assign it to the <b>Edge instance</b>. The <b>“SENTIENT Gateways”</b> dashboard is one of the pre-created, out-of-the-box dashboards available.'
+        title: 'Click the <b>“+”</b> button. Select the <b>“SENTIENT IoT Gateways”</b> dashboard from the drop-down menu in the pop-up window. Click the <b>“Assign”</b> button to assign it to the <b>Edge instance</b>. The <b>“SENTIENT IoT Gateways”</b> dashboard is one of the pre-created, out-of-the-box dashboards available.'
     2:
         image: /images/devices-library/edge/recomputer-r1000/3-login-to-edge.webp
-        title: 'Use <a href="http://127.0.0.1:8080" target="_blank">http://127.0.0.1:8080</a> to open the <b>Edge instance</b>, log in with your credentials, and go to the <b>Dashboards</b> section to open the <b>“SENTIENT Gateways”</b> dashboard.'
+        title: 'Use <a href="http://127.0.0.1:8080" target="_blank">http://127.0.0.1:8080</a> to open the <b>Edge instance</b>, log in with your credentials, and go to the <b>Dashboards</b> section to open the <b>“SENTIENT IoT Gateways”</b> dashboard.'
     3:
         image: /images/devices-library/edge/recomputer-r1000/4-add-gw.webp
         title: 'Click the <b>“+”</b> button to add a new <b>IoT Gateway</b> device. Enter the gateway name in the <b>“Name”</b> field, and select the <b>“default”</b> device profile. Click the <b>“Create”</b> button.'

@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-pe-edge
-title: Deploying SENTIENT Edge Alongside SENTIENT Gateway
-description: Deploying SENTIENT Edge alongside SENTIENT Gateway
+title: Deploying SENTIENT Edge Alongside SENTIENT IoT Gateway
+description: Deploying SENTIENT Edge alongside SENTIENT IoT Gateway
 
 startEdge:
   0:
@@ -31,7 +31,7 @@ provisionGW:
     title: 'Log in to your Cloud, navigate to the <b>Dashboards</b> section, and select the <b>"Group"</b> tab. Click the <b>"+"</b> button to add a new group. In the <b>"Add entity group"</b> pop-up window, enter the group name in the <b>"Name"</b> field and click the <b>"Add"</b> button.'
   1:
     image: /images/devices-library/edge/recomputer-r1000/1.2-click-details-dashboard-pe.webp
-    title: 'Select the <b>"All"</b> tab and find the <b>"SENTIENT Gateways"</b> dashboard. The <b>"SENTIENT Gateways"</b> dashboard is one of the pre-created, out-of-the-box dashboards available. Click the <b>"Dashboard details"</b> button.'
+    title: 'Select the <b>"All"</b> tab and find the <b>"SENTIENT IoT Gateways"</b> dashboard. The <b>"SENTIENT IoT Gateways"</b> dashboard is one of the pre-created, out-of-the-box dashboards available. Click the <b>"Dashboard details"</b> button.'
   2:
     image: /images/devices-library/edge/recomputer-r1000/1.3-manage-owners-pe.webp
     title: 'On the <b>"Dashboard details"</b> page, click the <b>"Manage owner and groups"</b> button.'
@@ -46,7 +46,7 @@ provisionGW:
     title: 'On the <b>“Dashboard groups”</b> page, click the <b>“+”</b> icon to assign the newly created group to the <b>Edge instance</b>. Click the <b>“Assign”</b> button. The group and all dashboards within it will be assigned to the <b>Edge instance</b>.'
   6:
     image: /images/devices-library/edge/recomputer-r1000/3-login-to-edge-pe.webp
-    title: 'Use <a href="http://127.0.0.1:8080" target="_blank">http://127.0.0.1:8080</a> to open the <b>Edge instance</b>, log in with your credentials, and go to the <b>Dashboards</b> section to open the <b>“SENTIENT Gateways”</b> dashboard.'
+    title: 'Use <a href="http://127.0.0.1:8080" target="_blank">http://127.0.0.1:8080</a> to open the <b>Edge instance</b>, log in with your credentials, and go to the <b>Dashboards</b> section to open the <b>“SENTIENT IoT Gateways”</b> dashboard.'
   7:
     image: /images/devices-library/edge/recomputer-r1000/4-add-gw-pe.webp
     title: 'Click the <b>“+”</b> button to add a new <b>IoT Gateway</b> device. Enter the gateway name in the <b>“Name”</b> field, and select the <b>“default”</b> device profile. Click the <b>“Create”</b> button.'

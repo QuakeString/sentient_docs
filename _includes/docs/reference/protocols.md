@@ -14,6 +14,6 @@ See protocol specific documentation for more details. More protocols are coming 
 
 **Note** You can also connect **existing** devices to the platform using:
 
-- **[SENTIENT Gateway](/docs/iot-gateway/what-is-iot-gateway/)**
+- **[SENTIENT IoT Gateway](/docs/iot-gateway/what-is-iot-gateway/)**
 or design your own gateway using **[Gateway MQTT API](/docs/{{docsPrefix}}reference/gateway-mqtt-api/)**.
 

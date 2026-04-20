@@ -243,7 +243,7 @@ function resetLoadMore(categoryId) {
                 <div class="tb-faq-question tb-faq-hidden">
                     <div class="tb-faq-question-title" onclick="toggleTbFaq(this)">How to connect my device?</div>
                     <div class="tb-faq-answer">
-                        <p>SENTIENT provides <a href="/docs/{{docsPrefix}}reference/mqtt-api" target="_blank">MQTT</a>, <a href="/docs/{{docsPrefix}}reference/coap-api" target="_blank">CoAP</a>, <a href="/docs/{{docsPrefix}}reference/http-api" target="_blank">HTTP</a>, and <a href="/docs/{{docsPrefix}}reference/lwm2m-api" target="_blank">LwM2M</a> protocols support. <b>Existing</b> devices may be connected to the platform using <b><a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">SENTIENT Gateway</a></b>. You can find more information on the <a href="/docs/{{docsPrefix}}reference/protocols/" target="_blank">connectivity</a> page.</p>
+                        <p>SENTIENT provides <a href="/docs/{{docsPrefix}}reference/mqtt-api" target="_blank">MQTT</a>, <a href="/docs/{{docsPrefix}}reference/coap-api" target="_blank">CoAP</a>, <a href="/docs/{{docsPrefix}}reference/http-api" target="_blank">HTTP</a>, and <a href="/docs/{{docsPrefix}}reference/lwm2m-api" target="_blank">LwM2M</a> protocols support. <b>Existing</b> devices may be connected to the platform using <b><a href="/docs/iot-gateway/what-is-iot-gateway/" target="_blank">SENTIENT IoT Gateway</a></b>. You can find more information on the <a href="/docs/{{docsPrefix}}reference/protocols/" target="_blank">connectivity</a> page.</p>
                     </div>
                 </div>
                 <div class="tb-faq-question tb-faq-hidden">

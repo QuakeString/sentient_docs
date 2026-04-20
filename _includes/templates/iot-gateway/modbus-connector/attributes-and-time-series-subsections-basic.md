@@ -50,7 +50,7 @@ Additional information about the report strategy can be found [here](/docs/iot-g
 ##### Enum mapping
 
 {% capture difference %}
-Feature available since SENTIENT Gateway v.3.8.1 and only in advanced configuration mode.
+Feature available since SENTIENT IoT Gateway v.3.8.1 and only in advanced configuration mode.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 
@@ -136,7 +136,7 @@ More usage examples can be found in the [Example usage](/docs/iot-gateway/config
 ##### Batch reading
 
 {% capture difference %}
-Feature available since SENTIENT Gateway v.3.7.9 and only in advanced configuration mode.
+Feature available since SENTIENT IoT Gateway v.3.7.9 and only in advanced configuration mode.
 {% endcapture %}
 {% include templates/info-banner.md content=difference %}
 

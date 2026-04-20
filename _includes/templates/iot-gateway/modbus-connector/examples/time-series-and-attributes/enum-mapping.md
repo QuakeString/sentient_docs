@@ -1,6 +1,6 @@
 Modbus devices can have registers that represent enumerated values, for example operational modes, status codes, or
 error states. To make these values more understandable, you can map them to human-readable strings using the enum
-mapping feature in SENTIENT Gateway Modbus connector. This feature works for all register types and can be used
+mapping feature in SENTIENT IoT Gateway Modbus connector. This feature works for all register types and can be used
 in both uplink data (attributes and time series) and uplink RPC to Device calls. Let's explore how to set up enum
 mapping in your Modbus connector configuration.
 

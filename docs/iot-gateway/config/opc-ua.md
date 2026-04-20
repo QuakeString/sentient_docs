@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: OPC-UA Connector Configuration
-description: OPC-UA protocol support for SENTIENT Gateway
+description: OPC-UA protocol support for SENTIENT IoT Gateway
 
 ---
 
@@ -10,14 +10,14 @@ description: OPC-UA protocol support for SENTIENT Gateway
 
 ## Overview
 
-This documentation will help you set up the OPC-UA connector for the SENTIENT Gateway. We'll explain the configuration 
+This documentation will help you set up the OPC-UA connector for the SENTIENT IoT Gateway. We'll explain the configuration 
 parameters in simple terms to make it easy for you to understand and follow. The OPC-UA (Open Platform Communications 
 Unified Architecture) is a machine-to-machine communication protocol for industrial automation, and this connector 
 allows seamless integration with the SENTIENT platform. Use 
 [general configuration](/docs/iot-gateway/configuration/){:target="_blank"} to enable this connector.
 
-Also, if you are new to SENTIENT Gateway, we recommend you to read the [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=opcua){:target="_blank"} 
-guide to understand the basic concepts of SENTIENT Gateway and how it works with OPC-UA protocol.
+Also, if you are new to SENTIENT IoT Gateway, we recommend you to read the [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=opcua){:target="_blank"} 
+guide to understand the basic concepts of SENTIENT IoT Gateway and how it works with OPC-UA protocol.
 
 The connector can be configured via the user interface form, which helps you set up a connection to the OPC-UA server, 
 collect data and write data to nodes. Let's look at all the available settings and explain each one clearly. 
@@ -32,7 +32,7 @@ To access the actual UI for the gateway - you need to a have connected gateway b
 ## Configuration modes
 
 The OPC-UA connector can be configured in two modes: **Basic** and **Advanced**.
-- **Basic** mode is designed for users who are new to SENTIENT Gateway and want to quickly set up the connector with minimal configuration. It provides a simplified interface with essential settings.
+- **Basic** mode is designed for users who are new to SENTIENT IoT Gateway and want to quickly set up the connector with minimal configuration. It provides a simplified interface with essential settings.
 - **Advanced** mode is intended for experienced users who need more control over the configuration. It offers additional options and flexibility for advanced use cases.
 
 {% capture difference %}
@@ -171,7 +171,7 @@ OPC-UA connector supports the following requests mapping:
   OPC-UA connector supports different types of RPC methods, such as:
   - **Reserved GET/SET methods** - these methods are automatically created for each attribute and time series parameter. 
     You can use them to get or set values of the OPC-UA nodes.
-  - **RPC method to connector** - this method allows you to send a command to the connector from the SENTIENT Gateway UI. 
+  - **RPC method to connector** - this method allows you to send a command to the connector from the SENTIENT IoT Gateway UI. 
     The command will be processed by the connector, and the result will be sent back to the SENTIENT platform instance.
   - **Configurable RPC methods to device** - these methods allow you to configure custom RPC commands in connector configuration that can be sent to the devices.
 
@@ -605,8 +605,8 @@ byte string (`b`), and GUID (`g`). Below is an explanation of each identifier ty
 ## Next steps
 
 Explore guides related to main SENTIENT features:
- - [How to connect OPC-UA device to SENTIENT using SENTIENT Gateway](/docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-sentient-ce/)
- - [SENTIENT Gateway Features](/docs/iot-gateway/features/)
+ - [How to connect OPC-UA device to SENTIENT using SENTIENT IoT Gateway](/docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-sentient-ce/)
+ - [SENTIENT IoT Gateway Features](/docs/iot-gateway/features/)
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

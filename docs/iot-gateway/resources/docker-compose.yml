@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  # SENTIENT Gateway Service Configuration
+  # SENTIENT IoT Gateway Service Configuration
   tb-gateway:
     image: sentient/tb-gateway:3.7-latest
     container_name: tb-gateway

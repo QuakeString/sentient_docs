@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: How to connect OPC-UA device to SENTIENT?
-description: Understand how to connect OPC-UA device to SENTIENT using SENTIENT Gateway
+description: Understand how to connect OPC-UA device to SENTIENT using SENTIENT IoT Gateway
 redirect_from: "/docs/iot-gateway/guides/how-to-connect-opcua-server/"
 
 ---
@@ -11,13 +11,13 @@ redirect_from: "/docs/iot-gateway/guides/how-to-connect-opcua-server/"
 
 ## Overview
 
-In this guide, we will describe how to connect an OPC-UA device to SENTIENT using SENTIENT Gateway. 
+In this guide, we will describe how to connect an OPC-UA device to SENTIENT using SENTIENT IoT Gateway. 
 Whether you are just starting with OPC-UA integration or looking to streamline your existing setup, this guide will 
 provide you with the essential knowledge to get up and running quickly.
 
-**What is SENTIENT Gateway?**
+**What is SENTIENT IoT Gateway?**
 
-The SENTIENT Gateway is an open-source solution that serves as a bridge between IoT devices connected to 
+The SENTIENT IoT Gateway is an open-source solution that serves as a bridge between IoT devices connected to 
 legacy or third-party systems and the SENTIENT platform. It enables seamless integration of devices that cannot 
 communicate with SENTIENT directly, ensuring data can be collected, processed, and visualized in real time. With 
 the IoT Gateway, you can connect multiple devices, aggregate telemetry, and manage configurations centrally. It 
@@ -35,7 +35,7 @@ make it a standard choice for industries that require consistent, real-time, and
 **What will You Learn?**
 
 In this guide, we will walk step by step through the process of integrating an OPC-UA device with SENTIENT. You 
-will learn how to install and configure the SENTIENT Gateway, set up the OPC-UA connector, and establish a 
+will learn how to install and configure the SENTIENT IoT Gateway, set up the OPC-UA connector, and establish a 
 connection to your OPC-UA server. We will also demonstrate how to map data points, send telemetry to SENTIENT. 
 By the end of this guide, you will have a working setup that allows you to seamlessly monitor and analyze your OPC-UA 
 device data in SENTIENT.
@@ -249,7 +249,7 @@ To review the data uploaded from your gateway, use the following steps:
 
 ## Conclusion
 
-In this guide, we demonstrated how to connect an OPC-UA device to SENTIENT using the SENTIENT Gateway. 
+In this guide, we demonstrated how to connect an OPC-UA device to SENTIENT using the SENTIENT IoT Gateway. 
 By configuring the gateway, setting up the OPC-UA connector, and mapping both telemetry data (such as humidity, 
 temperature, and pressure) and device attributes (like firmware version and update date), we established a complete 
 data flow from the OPC-UA server into SENTIENT.

@@ -6,7 +6,7 @@ title: IoT Gateway Pip installation.
 
 ## Package manager installation
 
-To install SENTIENT Gateway as python module, you should follow steps below:  
+To install SENTIENT IoT Gateway as python module, you should follow steps below:  
 
 **1. Install required libraries to the system with apt:**  
 
@@ -15,7 +15,7 @@ sudo apt install python3-dev python3-pip libglib2.0-dev
 ```
 {: .copy-code}
 
-**2. Install SENTIENT Gateway module with pip:**  
+**2. Install SENTIENT IoT Gateway module with pip:**  
 
 ```bash
 sudo pip3 install sentient-gateway
@@ -163,7 +163,7 @@ sentient-gateway
 
 Explore guides related to main SENTIENT features:
 
- - [Getting Started](/docs/iot-gateway/getting-started/) with SENTIENT Gateway.
+ - [Getting Started](/docs/iot-gateway/getting-started/) with SENTIENT IoT Gateway.
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

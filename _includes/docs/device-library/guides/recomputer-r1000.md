@@ -20,12 +20,12 @@ The [reComputer R1000]({{deviceVendorLink}}){: target="_blank"} edge IoT control
 
 ## Configuring the ModBus Connector
 
-The new **IoT Gateway device** will be featured at the top of the **“SENTIENT Gateways”** dashboard list, allowing us to add a **ModBus Connector**. For example, we can use the ModBus Connector to fetch temperature data from the to fetch temperature data from the [Siemens LOGO!]({{controllerVendorLink}}){: target="_blank"} device:
+The new **IoT Gateway device** will be featured at the top of the **“SENTIENT IoT Gateways”** dashboard list, allowing us to add a **ModBus Connector**. For example, we can use the ModBus Connector to fetch temperature data from the to fetch temperature data from the [Siemens LOGO!]({{controllerVendorLink}}){: target="_blank"} device:
 
 {% assign modbusConnectorPE = '
     ===
         image: /images/devices-library/edge/recomputer-r1000/5-connectors-button-pe.webp,
-        title: On the **“SENTIENT Gateways”** dashboards page, click the **“Connectors”** button.
+        title: On the **“SENTIENT IoT Gateways”** dashboards page, click the **“Connectors”** button.
     ===
         image: /images/devices-library/edge/recomputer-r1000/6-add-connector-pe.webp,
         title: To add a **Connector**, click the **“+”** button. In the pop-up window, select the **MODBUS** option in the **“Type”** field and enter the  name of the connector in the **“Name”** field. Click the **“Add”** button to proceed.
@@ -38,7 +38,7 @@ The new **IoT Gateway device** will be featured at the top of the **“SENTIENT 
 {% assign modbusConnectorCE = '
     ===
         image: /images/devices-library/edge/recomputer-r1000/5-connectors-button.webp,
-        title: On the **“SENTIENT Gateways”** dashboards page, click the **“Connectors”** button.
+        title: On the **“SENTIENT IoT Gateways”** dashboards page, click the **“Connectors”** button.
     ===
         image: /images/devices-library/edge/recomputer-r1000/6-add-connector.webp,
         title: To add a **Connector**, click the **“+”** button. In the pop-up window, select the **MODBUS** option in the **“Type”** field and enter the  name of the connector in the **“Name”** field. Click the **“Add”** button to proceed.
@@ -133,14 +133,14 @@ The new **IoT Gateway device** will be featured at the top of the **“SENTIENT 
 ```
 {:.copy-code.expandable-15}
 
-## Installing the SENTIENT Gateway on the reComputer R1000
+## Installing the SENTIENT IoT Gateway on the reComputer R1000
 
 Start installation of the **IoT Gateway** on the **reComputer R1000**:
 
 {% assign downloadYMLPE = '
     ===
         image: /images/devices-library/edge/recomputer-r1000/8-back-to-iot-dasboard-pe.webp,
-        title: Go back to the **“SENTIENT Gateways”** dashboard page and click on the newly added **Gateway device** (reComputer R1000).
+        title: Go back to the **“SENTIENT IoT Gateways”** dashboard page and click on the newly added **Gateway device** (reComputer R1000).
     ===
         image: /images/devices-library/edge/recomputer-r1000/9-download-yml-pe.webp,
         title: On the **Gateway device** page, click the **“Launch command”** button and download **docker-compose.yml** for your gateway.
@@ -150,7 +150,7 @@ Start installation of the **IoT Gateway** on the **reComputer R1000**:
 {% assign downloadYMLCE = '
     ===
         image: /images/devices-library/edge/recomputer-r1000/8-back-to-iot-dasboard.webp,
-        title: Go back to the **“SENTIENT Gateways”** dashboard page and click on the newly added **Gateway device** (reComputer R1000).
+        title: Go back to the **“SENTIENT IoT Gateways”** dashboard page and click on the newly added **Gateway device** (reComputer R1000).
     ===
         image: /images/devices-library/edge/recomputer-r1000/9-download-yml.webp,
         title: On the **Gateway device** page, click the **“Launch command”** button and download **docker-compose.yml** for your gateway.

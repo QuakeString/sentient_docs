@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
-title: What is SENTIENT Gateway?
-description: Features and advantages of SENTIENT Gateway
+title: What is SENTIENT IoT Gateway?
+description: Features and advantages of SENTIENT IoT Gateway
 
 ---
 
@@ -13,7 +13,7 @@ SENTIENT is an open-source IoT platform for data collection, processing, visuali
 
 ## Gateway features
 
-The SENTIENT Gateway provides the following features:
+The SENTIENT IoT Gateway provides the following features:
 
  - [**MQTT** connector](/docs/iot-gateway/config/mqtt/) to control, configure and collect data from IoT devices that are connected to external MQTT brokers using existing protocols.
  - [**OPC-UA** connector](/docs/iot-gateway/config/opc-ua/) to collect data from IoT devices that are connected to OPC-UA servers.
@@ -39,7 +39,7 @@ The SENTIENT Gateway provides the following features:
 ## Architecture
 
 The IoT Gateway is a software component that is designed to run on a Linux based microcomputers that support **Python 3.7+**.
-The main components of SENTIENT Gateway are listed below.
+The main components of SENTIENT IoT Gateway are listed below.
 
 **Connector**
 

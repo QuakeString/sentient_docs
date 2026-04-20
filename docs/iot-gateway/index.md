@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: IoT Gateway
-description: SENTIENT Gateway to connect existing and legacy IoT devices to the platform
+description: SENTIENT IoT Gateway to connect existing and legacy IoT devices to the platform
 
 ---
 
@@ -13,7 +13,7 @@ For example, you can extract data from devices that are connected to external **
     <div class="col-12 col-sm-6 col-lg col-xxl-6 col-4xl mb-4">
         <a class="feature-card" href="/docs/iot-gateway/what-is-iot-gateway/">
             <img class="feature-logo" src="/images/feature-logo/gateway-logo.svg" alt="Gateway logo">
-            <div class="feature-title">What is SENTIENT Gateway?</div>
+            <div class="feature-title">What is SENTIENT IoT Gateway?</div>
             <div class="feature-text">
                 <ul>
                     <li>Features</li>
@@ -36,7 +36,7 @@ For example, you can extract data from devices that are connected to external **
             <img class="feature-logo" src="/images/feature-logo/install.svg" alt="Install icon">
             <div class="feature-title">Installation</div>
             <div class="feature-text">
-                Learn how to install and upgrade SENTIENT Gateway.
+                Learn how to install and upgrade SENTIENT IoT Gateway.
             </div>
         </a>
     </div>

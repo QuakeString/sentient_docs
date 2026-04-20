@@ -8,13 +8,13 @@ description:  IoT Gateway Remote Configuration
 * TOC
 {:toc}
 
-Remote Configuration is a powerful feature of SENTIENT Gateway that allows you to manage and configure your 
+Remote Configuration is a powerful feature of SENTIENT IoT Gateway that allows you to manage and configure your 
 gateway directly from the SENTIENT web interface. This feature is especially useful for managing multiple 
 gateways or when physical access to the gateway is limited.
 
 For purpose of this guide, we will use following things:
 1. Locally installed instance of SENTIENT platform (How to install you can [read here](/docs/user-guide/install/installation-options/)).
-2. SENTIENT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
+2. SENTIENT IoT Gateway (How to install you can [read here](/docs/iot-gateway/installation/)).
 
 {% capture info %}
 <div>

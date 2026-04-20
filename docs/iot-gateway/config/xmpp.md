@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: XMPP Connector Configuration
-description: XMPP protocol support for SENTIENT Gateway
+description: XMPP protocol support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with XMPP Connector configuration for SENTIENT Gateway.
+This guide will help you get familiar with XMPP Connector configuration for SENTIENT IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this Connector.
 The purpose of this connector is to collect data from IoT devices using XMPP protocol.
 

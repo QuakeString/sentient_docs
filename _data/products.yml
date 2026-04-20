@@ -30,8 +30,8 @@
   icon: /images/sentient-gw-icon.svg
   path: /docs/pe/edge/
   docsPrefix: /docs/pe/edge/
-- title: SENTIENT Gateway
-  fulltitle: SENTIENT Gateway
+- title: SENTIENT IoT Gateway
+  fulltitle: SENTIENT IoT Gateway
   description: SENTIENT Documentation
   tag: gw
   icon: /images/gateway-icon.svg

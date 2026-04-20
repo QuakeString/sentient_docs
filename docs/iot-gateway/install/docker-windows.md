@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-gw
-title: Install SENTIENT Gateway using Docker
+title: Install SENTIENT IoT Gateway using Docker
 redirect_from: 
  - "/docs/iot-gateway/install/windows/"
 ---
@@ -8,7 +8,7 @@ redirect_from:
 * TOC
 {:toc}
 
-This guide will help you to install and start SENTIENT Gateway using Docker on Windows.
+This guide will help you to install and start SENTIENT IoT Gateway using Docker on Windows.
 
 ## Prerequisites
 
@@ -84,7 +84,7 @@ docker compose up
 
 Explore guides related to main SENTIENT features:
 
- - [Getting Started](/docs/iot-gateway/getting-started/) with SENTIENT Gateway.
+ - [Getting Started](/docs/iot-gateway/getting-started/) with SENTIENT IoT Gateway.
  - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

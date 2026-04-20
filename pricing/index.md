@@ -2068,7 +2068,7 @@ defaultActivePricingSection: sentient-pe-options
                         <div class="container">
                             <p>Yes. Edge natively supports MQTT, CoAP, HTTP, SNMP, and LwM2M. For other protocols, use:</p>
                             <ul>
-                                <li>The <b>SENTIENT Gateway</b> to bridge legacy devices. The Gateway supports Modbus, BACnet, OPC-UA, and more, and is available at no extra cost.</li>
+                                <li>The <b>SENTIENT IoT Gateway</b> to bridge legacy devices. The Gateway supports Modbus, BACnet, OPC-UA, and more, and is available at no extra cost.</li>
                                 <li>The <b>Platform Integrations</b> to connect via OPC-UA, ChirpStack, and 30+ other systems using the converter library.</li>
                             </ul>
                         </div>
@@ -3023,7 +3023,7 @@ defaultActivePricingSection: sentient-pe-options
                         <div class="container">
                             <p>Yes. Edge natively supports MQTT, CoAP, HTTP, SNMP, and LwM2M. For other protocols, use:</p>
                             <ul>
-                                <li>The <b>SENTIENT Gateway</b> to bridge legacy devices. The Gateway supports Modbus, BACnet, OPC-UA, and more, and is available at no extra cost.</li>
+                                <li>The <b>SENTIENT IoT Gateway</b> to bridge legacy devices. The Gateway supports Modbus, BACnet, OPC-UA, and more, and is available at no extra cost.</li>
                                 <li>The <b>Platform Integrations</b> to connect via OPC-UA, ChirpStack, and 30+ other systems using the converter library.</li>
                             </ul>
                         </div>

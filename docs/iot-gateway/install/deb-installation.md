@@ -1,11 +1,11 @@
 ---
 layout: docwithnav-gw
-title: Install SENTIENT Gateway as package.
+title: Install SENTIENT IoT Gateway as package.
 redirect_from: 
  - "/docs/iot-gateway/install/rpi/"
 ---
 
-This guide will help you to install SENTIENT Gateway on Ubuntu 22.04 LTS / 24.04 LTS.
+This guide will help you to install SENTIENT IoT Gateway on Ubuntu 22.04 LTS / 24.04 LTS.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ wget https://github.com/sentient/sentient-gateway/releases/latest/download/pytho
 
 ## Step 2. Install the gateway using apt
 
-Install SENTIENT Gateway as package and run it as daemon uses the following command:<br><br>
+Install SENTIENT IoT Gateway as package and run it as daemon uses the following command:<br><br>
 
 ```bash
 sudo apt install ./python3-sentient-gateway.deb -y
@@ -62,7 +62,7 @@ systemctl restart sentient-gateway
 
 ## Offline Build Version
 
-The Offline Build is a special variant of the SENTIENT Gateway package designed for installation and execution without 
+The Offline Build is a special variant of the SENTIENT IoT Gateway package designed for installation and execution without 
 internet access. Also, the offline build allows you to use any connector without installing dependencies in runtime. 
 It contains all necessary dependencies bundled in advance, including:
 - A prebuilt Python virtual environment.
@@ -73,7 +73,7 @@ This ensures seamless deployment in air-gapped, offline, or restricted-network e
 
 ### Example of usage
 
-A company runs all their infrastructure inside a private datacenter. Their SENTIENT Gateway needs to connect to 
+A company runs all their infrastructure inside a private datacenter. Their SENTIENT IoT Gateway needs to connect to 
 OPC-UA and MQTT sources inside the network but cannot access the internet due to strict firewall rules.
 
 ### Prerequisites
@@ -104,7 +104,7 @@ wget https://github.com/sentient/sentient-gateway/releases/latest/download/pytho
 
 #### Step 2. Install the gateway using apt
 
-Install SENTIENT Gateway as package and run it as daemon uses the following command:<br><br>
+Install SENTIENT IoT Gateway as package and run it as daemon uses the following command:<br><br>
 
 ```bash
 sudo apt install ./python3.11-sentient-gateway-offline.deb -y
@@ -123,7 +123,7 @@ systemctl status sentient-gateway
 - **Wrong Python version**
 
   The installer will show a detailed guide for installing the required version.
-- **Need to remove installed SENTIENT Gateway after fixing Python**
+- **Need to remove installed SENTIENT IoT Gateway after fixing Python**
 
   When the required Python version is installed, remove the previously installed Gateway package using:
 

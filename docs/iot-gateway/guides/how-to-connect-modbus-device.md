@@ -3,7 +3,7 @@ layout: docwithnav
 assignees:
   - samson0v
 title: How to connect Modbus device to SENTIENT?
-description: Understand how to connect Modbus device to SENTIENT using the SENTIENT Gateway
+description: Understand how to connect Modbus device to SENTIENT using the SENTIENT IoT Gateway
 
 ---
 
@@ -12,13 +12,13 @@ description: Understand how to connect Modbus device to SENTIENT using the SENTI
 
 ## Overview
 
-In this guide, we will describe how to connect an Modbus device to SENTIENT using SENTIENT Gateway.
+In this guide, we will describe how to connect an Modbus device to SENTIENT using SENTIENT IoT Gateway.
 Whether you are just starting with Modbus protocol or looking to streamline your existing setup, this guide will
 provide you with the essential knowledge to get up and running quickly.
 
-**What is SENTIENT Gateway?**
+**What is SENTIENT IoT Gateway?**
 
-The SENTIENT Gateway is an open-source solution that serves as a bridge between IoT devices connected to
+The SENTIENT IoT Gateway is an open-source solution that serves as a bridge between IoT devices connected to
 legacy or third-party systems and the SENTIENT platform. It enables seamless integration of devices that cannot
 communicate with SENTIENT directly, ensuring data can be collected, processed, and visualized in real time. With
 the IoT Gateway, you can connect multiple devices, aggregate telemetry, and manage configurations centrally. It
@@ -39,7 +39,7 @@ monitoring, and control in applications ranging from manufacturing plants to bui
 In this guide, we will walk you through the steps to connect a Modbus device to SENTIENT using the SENTIENT
 IoT Gateway. You will learn how to configure the gateway, set up the Modbus connector and map data points and send them
 to SENTIENT. By the end of this guide, you will have a solid understanding of how to leverage the power of
-SENTIENT Gateway to integrate Modbus devices into your IoT ecosystem. By the end of this guide, you will have a
+SENTIENT IoT Gateway to integrate Modbus devices into your IoT ecosystem. By the end of this guide, you will have a
 working setup that allows you to seamlessly monitor and analyze your Modbus device data in SENTIENT.
 
 ## Prerequisites
@@ -263,20 +263,20 @@ To review the data uploaded from your gateway, use the following step:
 ## Conclusion
 
 In this guide, we have walked you through the process of connecting a Modbus device to SENTIENT using the
-SENTIENT Gateway. By following the steps outlined in this guide, you have successfully set up the gateway,
+SENTIENT IoT Gateway. By following the steps outlined in this guide, you have successfully set up the gateway,
 configured the Modbus connector, and mapped data points to send telemetry and attributes to SENTIENT. You have also
 learned how to monitor and visualize the data from your Modbus device in SENTIENT.
-With the SENTIENT Gateway acting as a bridge between your Modbus device and SENTIENT, you can now leverage
+With the SENTIENT IoT Gateway acting as a bridge between your Modbus device and SENTIENT, you can now leverage
 the powerful features of SENTIENT to analyze and manage your device data effectively. Whether you are monitoring
 environmental conditions, tracking energy consumption, or managing industrial processes, the integration of Modbus
 devices with SENTIENT opens up new possibilities for data-driven decision-making and automation.
 
-As you continue to explore the capabilities of SENTIENT and the SENTIENT Gateway, you can further enhance your
+As you continue to explore the capabilities of SENTIENT and the SENTIENT IoT Gateway, you can further enhance your
 IoT solutions by adding more devices, implementing advanced data processing, and creating custom dashboards to visualize
 your data. The flexibility and scalability of SENTIENT make it an ideal platform for building robust IoT
 applications.
 
-We encourage you to experiment with different configurations, explore additional features of SENTIENT Gateway,
+We encourage you to experiment with different configurations, explore additional features of SENTIENT IoT Gateway,
 and leverage the power of Modbus devices in your IoT projects. With the knowledge gained from this guide, you are
 well-equipped to take your IoT initiatives to the next level.
 

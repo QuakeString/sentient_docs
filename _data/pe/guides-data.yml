@@ -90,7 +90,7 @@
       pe: false
       video: false
     - path: /docs/iot-gateway/getting-started/
-      title: Connect devices through SENTIENT Gateway
+      title: Connect devices through SENTIENT IoT Gateway
       subtitle: Learn how to deploy IoT Gateway in your local network and route messages from your devices to the cloud.
       keywords: gateway connect
       pe: false

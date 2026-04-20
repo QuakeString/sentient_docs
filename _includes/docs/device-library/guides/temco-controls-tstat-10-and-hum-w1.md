@@ -24,7 +24,7 @@ Wi-Fi version supports Bacnet IP and Modbus IP.
 
 To continue with this guide, we will need the following:  
 {{ prerequisites }}
-- [SENTIENT Gateway](/docs/iot-gateway/installation/){: target="_blank"} installed
+- [SENTIENT IoT Gateway](/docs/iot-gateway/installation/){: target="_blank"} installed
 - [SENTIENT account]({{sentientInstanceLink}}){: target="_blank"}
 
 
@@ -54,7 +54,7 @@ over Wi-Fi or Ethernet. For this purpose, use the following steps:
 
 {% include images-gallery.liquid showListImageTitles="true" imageCollection=configuringDevice %}
 
-## Creating and configuring SENTIENT Gateway
+## Creating and configuring SENTIENT IoT Gateway
 
 {% capture configuringgatewaytogglespec %}
 Basic%,%basicConfig%,%templates/device-library/ready-to-go-devices/temco-controls-tstat10-configuring-gateway-basic.md%br%

@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: ODBC Connector Configuration
-description: ODBC support for SENTIENT Gateway
+description: ODBC support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with ODBC connector configuration for SENTIENT Gateway.
+This guide will help you get familiar with ODBC connector configuration for SENTIENT IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this connector.
 We will describe the connector configuration file below.
 

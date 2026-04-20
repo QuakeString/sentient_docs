@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: MQTT Connector Configuration
-description: MQTT protocol support for SENTIENT Gateway
+description: MQTT protocol support for SENTIENT IoT Gateway
 redirect_from: 
   - "/docs/iot-gateway/mqtt/"  
   - "/docs/iot-gateway/resources/mqtt-gui-extension-configuration.json"
@@ -13,14 +13,14 @@ redirect_from:
 
 ## Overview
 
-This documentation will help you set up the MQTT connector for the SENTIENT Gateway. We'll explain the configuration 
+This documentation will help you set up the MQTT connector for the SENTIENT IoT Gateway. We'll explain the configuration 
 parameters in simple terms to make it easy for you to understand and follow. The MQTT(Message Queuing Telemetry Transport)
 is a lightweight publish-subscribe, machine-to-machine network protocol that is widely used for connections with remote 
 locations with devices that have resource constraints or network transfer rate.
 Use [general configuration](/docs/iot-gateway/configuration/){:target="_blank"} to enable this connector. 
 
-Also, if you are new to SENTIENT Gateway, we recommend you to read the [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=mqtt){:target="_blank"} 
-guide to understand the basic concepts of SENTIENT Gateway and how it works with MQTT protocol.
+Also, if you are new to SENTIENT IoT Gateway, we recommend you to read the [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=mqtt){:target="_blank"} 
+guide to understand the basic concepts of SENTIENT IoT Gateway and how it works with MQTT protocol.
 
 The connector can be configured via the user interface form, which helps you set up a connection to an MQTT broker and
 read/write data by subscribing/publishing to MQTT topics, that can be defined statically or generated on the fly. 
@@ -36,7 +36,7 @@ To access the actual UI for the gateway - you need to a have connected gateway b
 ## Configuration modes 
 
 The MQTT connector can be configured in two modes: **Basic** and **Advanced**.
-- **Basic** mode is designed for users who are new to SENTIENT Gateway and want to quickly set up the connector with minimal configuration. It provides a simplified interface with essential settings.
+- **Basic** mode is designed for users who are new to SENTIENT IoT Gateway and want to quickly set up the connector with minimal configuration. It provides a simplified interface with essential settings.
 - **Advanced** mode is intended for experienced users who need more control over the configuration. It offers additional options and flexibility for advanced use cases.
 
 {% capture difference %}

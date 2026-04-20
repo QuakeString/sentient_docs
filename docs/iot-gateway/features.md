@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
-title: SENTIENT Gateway Features
-description: SENTIENT Gateway features 
+title: SENTIENT IoT Gateway Features
+description: SENTIENT IoT Gateway features 
 notitle: true
 
 ---

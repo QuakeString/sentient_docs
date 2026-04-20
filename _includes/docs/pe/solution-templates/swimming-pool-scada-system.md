@@ -65,7 +65,7 @@ Traditional<small>SCADA system</small>%,%traditional%,%templates/solutions/scada
 
 For further customization of the Swimming Pool SCADA system dashboard refer to the [dashboard](/docs/{{docsPrefix}}user-guide/dashboards/){:target="_blank"} development guide.
 
-For real-time monitoring of device data received from Modbus servers, you can access the **SENTIENT Gateways** dashboard to view the status and data of connected devices.
+For real-time monitoring of device data received from Modbus servers, you can access the **SENTIENT IoT Gateways** dashboard to view the status and data of connected devices.
 
 ## System components
 
@@ -93,7 +93,7 @@ The data is then visualized on the dashboard, allowing users to interact with an
 
 ### Gateway
 
-The SENTIENT Gateway integrates devices into the SCADA system in SENTIENT, ensuring seamless connectivity and data transmission. 
+The SENTIENT IoT Gateway integrates devices into the SCADA system in SENTIENT, ensuring seamless connectivity and data transmission. 
 The "Pool System Gateway" gateway configuration is accessible on the **Gateways** page in the **Entities** section.
 
 {% include images-gallery.html imageCollection="select-pool-system-gateway-1" %}

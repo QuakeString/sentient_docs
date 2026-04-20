@@ -1,6 +1,6 @@
 ---
 layout: docwithnav-gw
-title: Getting started with SENTIENT Gateway
+title: Getting started with SENTIENT IoT Gateway
 description: Configure MQTT, OPC-UA, and Modbus connectors to establish connections with their respective demo servers in the Docker container and retrieve data.
 
 ---
@@ -8,7 +8,7 @@ description: Configure MQTT, OPC-UA, and Modbus connectors to establish connecti
 * TOC
 {:toc}
 
-The SENTIENT Gateway is an open-source solution, designed to serve as a bridge between IoT devices connected to 
+The SENTIENT IoT Gateway is an open-source solution, designed to serve as a bridge between IoT devices connected to 
 legacy and third-party systems with SENTIENT.
 
 This guide covers initial IoT Gateway installation and configuration, we will do the following things:
@@ -133,7 +133,7 @@ connect to different devices. You can find more information about connectors in 
  - [**SNMP** connector](/docs/iot-gateway/config/snmp/)
  - [**Custom** connector](/docs/iot-gateway/custom/)
 
-More about *SENTIENT Gateways* Dashboard, you can [read here](/docs/iot-gateway/guides/how-to-enable-remote-configuration/).
+More about *SENTIENT IoT Gateways* Dashboard, you can [read here](/docs/iot-gateway/guides/how-to-enable-remote-configuration/).
 
 ## Next steps
 

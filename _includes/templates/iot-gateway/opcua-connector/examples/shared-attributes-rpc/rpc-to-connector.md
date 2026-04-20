@@ -1,4 +1,4 @@
-RPC To Connector allows you to send a command to the connector from the SENTIENT Gateway UI.
+RPC To Connector allows you to send a command to the connector from the SENTIENT IoT Gateway UI.
 It is important to note that the method you are calling must be defined on the OPC-UA server.
 
 {% capture difference %}

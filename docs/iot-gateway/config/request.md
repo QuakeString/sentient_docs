@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: Request Connector Configuration
-description: HTTP protocol support for SENTIENT Gateway
+description: HTTP protocol support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you to get familiar with Request Connector configuration for SENTIENT Gateway.  
+This guide will help you to get familiar with Request Connector configuration for SENTIENT IoT Gateway.  
 Use [general configuration guide](/docs/iot-gateway/configuration/) to enable this Connector.  
 The purpose of this Connector is to connect to external HTTP(S) API endpoints and get data from them.  
 Connector is also able to push data to external HTTP(S) API based on the updates/commands from SENTIENT.    

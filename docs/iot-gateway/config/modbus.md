@@ -1,7 +1,7 @@
 ---
 layout: docwithnav-gw
 title: Modbus Connector Configuration
-description: Modbus protocol support for SENTIENT Gateway
+description: Modbus protocol support for SENTIENT IoT Gateway
 redirect_from: "/docs/iot-gateway/guides/how-to-use-rpc-modbus-connector/"
 
 ---
@@ -11,15 +11,15 @@ redirect_from: "/docs/iot-gateway/guides/how-to-use-rpc-modbus-connector/"
 
 ## Overview
 
-This documentation will help you set up the Modbus connector for the SENTIENT Gateway. We’ll explain the
+This documentation will help you set up the Modbus connector for the SENTIENT IoT Gateway. We’ll explain the
 configuration parameters in simple terms to make it easy for you to understand and follow. The Modbus is a widely used
 protocol for industrial automation and control systems, allowing devices to communicate with each other over a network,
 and this connector allows seamless integration with the SENTIENT platform. Use
 [general configuration](/docs/iot-gateway/configuration/){:target="_blank"} to enable this extension.
 
-Also, if you are new to SENTIENT Gateway, we recommend you to read the
+Also, if you are new to SENTIENT IoT Gateway, we recommend you to read the
 [Getting Started](/docs/iot-gateway/getting-started/?connectorsCreation=modbus){:target="_blank"}
-guide to understand the basic concepts of SENTIENT Gateway and how it works with Modbus protocol.
+guide to understand the basic concepts of SENTIENT IoT Gateway and how it works with Modbus protocol.
 
 The connector can be configured via the user interface form, which helps you set up a connection to the Modbus server,
 collect data and write data to slaves (devices). Let’s look at all the available settings and explain each one clearly. This will
@@ -43,7 +43,7 @@ backward compatibility.
 
 The Modbus connector can be configured in two modes: **Basic** and **Advanced**.
 
-- **Basic** mode is designed for users who are new to SENTIENT Gateway and want to quickly set up the connector
+- **Basic** mode is designed for users who are new to SENTIENT IoT Gateway and want to quickly set up the connector
   with minimal configuration. It provides a simplified interface with essential settings.
 - **Advanced** mode is intended for experienced users who need more control over the configuration. It offers additional
   options and flexibility for advanced use cases.
@@ -822,7 +822,7 @@ A list and description of the supported data types for reading/writing data.
 
 Explore guides related to main SENTIENT features:
 
-- [How to connect Modbus device to SENTIENT using SENTIENT Gateway](/docs/iot-gateway/guides/how-to-connect-modbus-device/)
+- [How to connect Modbus device to SENTIENT using SENTIENT IoT Gateway](/docs/iot-gateway/guides/how-to-connect-modbus-device/)
 - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
 - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
 - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.

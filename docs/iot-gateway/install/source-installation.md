@@ -6,7 +6,7 @@ title: IoT Gateway installation from sources.
 
 ## Installation from sources
 
-To install SENTIENT Gateway from sources, you should follow steps below:    
+To install SENTIENT IoT Gateway from sources, you should follow steps below:    
   
 **1.** Install required libraries to the system with apt:
 ```bash

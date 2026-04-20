@@ -170,7 +170,7 @@ wl-maps-bundle:
 wl-gateway-bundle:
     0:
         image: /images/user-guide/ui/widgets/widget-library/wl-gateway-bundle-pe.png
-        title: 'The Gateway widgets bundle is useful to manage SENTIENT Gateway instances.'
+        title: 'The Gateway widgets bundle is useful to manage SENTIENT IoT Gateway instances.'
 
 wl-indoor-environment-bundle:
     0:

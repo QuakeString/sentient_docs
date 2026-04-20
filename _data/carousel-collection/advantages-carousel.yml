@@ -26,7 +26,7 @@
   src: "/images/usecases/scada/connectivity.svg"
   alt: "Connectivity icon"
   title: "Connectivity"
-  description: "Connect devices directly to the platform via the following built-in protocols: HTTP, CoAP, MQTT, LwM2M, and SNMP. Connect devices in your local network to the cloud using SENTIENT Gateway via Modbus, BLE, BACnet, OPC-UA, and other protocols."
+  description: "Connect devices directly to the platform via the following built-in protocols: HTTP, CoAP, MQTT, LwM2M, and SNMP. Connect devices in your local network to the cloud using SENTIENT IoT Gateway via Modbus, BLE, BACnet, OPC-UA, and other protocols."
   linkLabel: "Learn more"
   href: "/docs/getting-started-guides/connectivity/"
   imageWidth: 92

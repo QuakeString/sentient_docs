@@ -1,14 +1,14 @@
 ---
 layout: docwithnav-gw
 title: OCPP Connector Configuration
-description: OCPP protocol support for SENTIENT Gateway
+description: OCPP protocol support for SENTIENT IoT Gateway
 
 ---
 
 * TOC
 {:toc}
 
-This guide will help you get familiar with OCPP Connector configuration for SENTIENT Gateway.
+This guide will help you get familiar with OCPP Connector configuration for SENTIENT IoT Gateway.
 Use [general configuration](/docs/iot-gateway/configuration/) to enable this Connector.
 The purpose of this connector is to communicate between Charge Point and Central System using OCPP protocol.
 

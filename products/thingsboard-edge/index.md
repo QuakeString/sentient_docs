@@ -85,7 +85,7 @@ description: Comprehensive software solutions for edge computing, providing data
                     <div class="image-background"></div>
                     <div class="image-background"></div>
                     <div class="image">
-                        <img src="/images/edge/tb-edge-gw.webp" alt="SENTIENT Gateway block" width="615" height="719" loading="lazy">
+                        <img src="/images/edge/tb-edge-gw.webp" alt="SENTIENT IoT Gateway block" width="615" height="719" loading="lazy">
                     </div>
                 </div>
                 <a href="/docs/iot-gateway/getting-started/" target="_blank" class="cta-button gtm_button">Connect Your Devices</a>

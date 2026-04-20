@@ -1,12 +1,10 @@
-version: '3.1'
 services:
-  sentient_website:
-    container_name: sentient_website
-    restart: always
-    image: "sentient/website"
-    environment:
-      PAGES_REPO_NWO: "sentient/sentient.github.io"
+  sentient_docs:
+    container_name: sentient_docs
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: sentient/docs:latest
+    restart: unless-stopped
     ports:
-      - "4000:4000"
-    volumes:
-      - .:/website
+      - "8080:80"

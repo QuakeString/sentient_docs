@@ -1,0 +1,12 @@
+# Exclude build artifacts and dev-only files from the Docker build context
+.git
+.gitignore
+.github
+_site
+.jekyll-cache
+.jekyll-metadata
+node_modules
+staging-container
+vendor/bundle
+.DS_Store
+*.log

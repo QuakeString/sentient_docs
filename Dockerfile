@@ -17,6 +17,9 @@ RUN bundle config set --local deployment 'true' \
 
 COPY . .
 
+ENV PAGES_REPO_NWO=QuakeString/sentient_docs
+ENV JEKYLL_ENV=production
+
 RUN bundle exec jekyll build --destination /site/_site
 
 # ============================================

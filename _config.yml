@@ -37,6 +37,14 @@ incremental: true
 
 exclude:
   - .idea
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+  - Dockerfile
+  - docker-compose.yaml
+  - nginx.conf
+  - Makefile
+  - node_modules
 #  - docs
 #  - blog
 #  - careers

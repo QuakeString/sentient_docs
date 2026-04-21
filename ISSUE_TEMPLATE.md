@@ -14,7 +14,7 @@
 
 
 **Page to Update:**
-https://docs.sentient.invenia.in/...
+https://sentient.invenia.in/...
 
 <!--Optional Information (remove the comment tags around information you would like to include)-->
 <!--SENTIENT Version:-->

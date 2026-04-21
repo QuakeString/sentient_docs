@@ -331,7 +331,7 @@ More usage examples can be found in the [Usage examples](/docs/iot-gateway/confi
 
 Server side RPC commands are used for delivering remote procedure call (RPC) commands from SENTIENT to a device connected via the Gateway.
 
-SENTIENT allows sending [RPC commands](https://docs.sentient.invenia.in/docs/user-guide/rpc/) to devices connected directly to SENTIENT or via Gateway.
+SENTIENT allows sending [RPC commands](https://sentient.invenia.in/docs/user-guide/rpc/) to devices connected directly to SENTIENT or via Gateway.
 The following parameters are used to configure RPC methods:
 - **Request type** - set to RPC command. Can be with response (`Two Way`) or without response (`One Way`).
 - **Device name filter** - regular expression device name filter, used to determine which devices should receive RPC commands.

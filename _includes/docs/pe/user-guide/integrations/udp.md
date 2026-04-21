@@ -24,7 +24,7 @@ Please review the integration diagram to learn more.
 In this tutorial, we will use:
 
 {% if docsPrefix == "pe/" %}
-- The instance of the [SENTIENT Professional Edition](https://docs.sentient.invenia.in/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
+- The instance of the [SENTIENT Professional Edition](https://sentient.invenia.in/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
 - UDP integration, running externally and connected to the SENTIENT Professional Edition instance;
 {% endif %}
 {% if docsPrefix contains "paas/" %}

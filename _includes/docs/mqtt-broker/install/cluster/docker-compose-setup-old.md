@@ -273,8 +273,8 @@ Locate and update the _haproxy.cfg_ file:
   timeout server 3h
   option tcplog
   balance leastconn
-  server tbMqtt1 st-rmqtt1:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
-  server tbMqtt2 st-rmqtt2:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
+  server stRmqtt1 st-rmqtt1:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
+  server stRmqtt2 st-rmqtt2:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
 ```
 {: .copy-code}
 

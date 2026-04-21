@@ -88,7 +88,7 @@ See [Architecture](#architecture) for more details.
 
 ### Prerequisites
 
-The License Server Client (e.g. your SENTIENT Professional Edition instance) requires an internet connection to the host: license.docs.sentient.invenia.in to issue license check requests. 
+The License Server Client (e.g. your SENTIENT Professional Edition instance) requires an internet connection to the host: license.sentient.invenia.in to issue license check requests. 
 In case internet connection to the host is not available for more than 24 hours, License Server Client may shutdown SENTIENT instance.  
 
 ### Architecture  

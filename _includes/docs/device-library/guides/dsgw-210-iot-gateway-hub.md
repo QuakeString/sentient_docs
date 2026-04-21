@@ -50,7 +50,7 @@ To continue with this guide we will need the following:
 ### SENTIENT configuration
 
 The configuration steps in SENTIENT are shown below, we will demonstrate on the {{hostName}} server.
-You can use [SENTIENT Cloud](https://{{hostName}}/signup){:target="_blank"} or [install](https://docs.sentient.invenia.in/docs/user-guide/install/pe/installation-options/){:target="_blank"} your own platform instance.
+You can use [SENTIENT Cloud](https://{{hostName}}/signup){:target="_blank"} or [install](https://sentient.invenia.in/docs/user-guide/install/pe/installation-options/){:target="_blank"} your own platform instance.
 
 * [Step 1.1] Register and log in [SENTIENT Cloud](https://{{hostName}}/signup){:target="_blank"};
 

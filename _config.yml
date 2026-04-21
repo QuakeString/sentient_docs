@@ -2,7 +2,7 @@ title: SENTIENT
 name: SENTIENT
 author: sentient
 logo: /images/sentient_logo.png
-url: https://docs.sentient.invenia.in
+url: https://sentient.invenia.in
 
 twitter:
   username: sentient
@@ -120,4 +120,4 @@ release:
   broker_branch: release-2.2.0
   pe_broker_full_ver: 2.2.0PE
   # <<< ST-RMQTT
-  trendz_ver: 1.15.0.4
+  sentient-analytics_ver: 1.15.0.4

@@ -11,7 +11,7 @@ description: ROLTEK guide
 ## Introduction
 
 This article contains instructions on how to configure SENTIENT IoT platform and connect Roltek DC620 device. 
-[SENTIENT IoT](https://docs.sentient.invenia.in/) platform is an open-source IoT platform for data collection, processing, visualization, and device management. 
+[SENTIENT IoT](https://sentient.invenia.in/) platform is an open-source IoT platform for data collection, processing, visualization, and device management. 
 It enables device connectivity via industry standard IoT protocols - MQTT, CoAP and HTTP and supports both cloud and on-premises deployments. 
 SENTIENT combines scalability, fault-tolerance and performance so you will never lose your data.
 

@@ -119,7 +119,7 @@ Go to "Device group" and click "plus" button to add a new device.
 
 ![image](/images/samples/monoz/monoZero-11.png)
 
-Enter device name, select existing or create a new [device profile](https://docs.sentient.invenia.in/docs/user-guide/device-profiles/) and click on "Add" button.
+Enter device name, select existing or create a new [device profile](https://sentient.invenia.in/docs/user-guide/device-profiles/) and click on "Add" button.
 
 ![image](/images/samples/monoz/monoZero-12.png)
 
@@ -144,7 +144,7 @@ Select the "**OpenStreetMap**" widget from the "**Maps**" widgets bundle. Click 
 
 ![image](/images/samples/monoz/monoZero-18.png)
 
-Select an existing [dashboard](https://docs.sentient.invenia.in/docs/pe/user-guide/dashboards) if you have it or create a new one if you don't have an existing dashboard. Click on "Add" button to add widget to the dashboard.
+Select an existing [dashboard](https://sentient.invenia.in/docs/pe/user-guide/dashboards) if you have it or create a new one if you don't have an existing dashboard. Click on "Add" button to add widget to the dashboard.
 
 ![image](/images/samples/monoz/monoZero-19.png)
 

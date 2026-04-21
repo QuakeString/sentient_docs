@@ -37,7 +37,7 @@ The steps below apply to:
 Download and extract the package.
 
 ```bash
-https://dist.docs.sentient.invenia.in/tb-edge-windows-{{ site.release.pe_edge_ver }}.zip
+https://dist.sentient.invenia.in/tb-edge-windows-{{ site.release.pe_edge_ver }}.zip
 ```
 {: .copy-code}
 

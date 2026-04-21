@@ -40,7 +40,7 @@ In order to download the REST Client dependency, you should add the following re
 <repositories>
     <repository>
         <id>sentient</id>
-        <url>https://repo.docs.sentient.invenia.in/artifactory/libs-release-public</url>
+        <url>https://repo.sentient.invenia.in/artifactory/libs-release-public</url>
     </repository>
 </repositories>
 ```

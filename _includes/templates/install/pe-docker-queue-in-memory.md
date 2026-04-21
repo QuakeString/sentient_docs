@@ -42,7 +42,7 @@ services:
       TB_LICENSE_INSTANCE_DATA_FILE: /data/license.data
       REPORTS_SERVER_ENDPOINT_URL: http://tb-web-report:8383
       SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/sentient
-      DEFAULT_TRENDZ_URL: http://sentient-analytics:8888
+      DEFAULT_SENTIENT_ANALYTICS_URL: http://sentient-analytics:8888
       DEFAULT_TB_URL: http://sentient-pe:8080
     volumes:
       - license-data:/data

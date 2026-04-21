@@ -157,7 +157,7 @@ step5Edge:
 
 Congratulations! You have successfully completed the initial configuration steps for **SENTIENT Edge**. Now you can send new telemetry readings and they will appear on the dashboard immediately.
 
-Help us improve by providing your feedback at [GitHub/Issues](https://github.com/sentient/sentient-gateway/issues){: target="_blank"} or through the ["Contact us"](https://docs.sentient.invenia.in/docs/contact-us/){: target="_blank"} form.
+Help us improve by providing your feedback at [GitHub/Issues](https://github.com/sentient/sentient-gateway/issues){: target="_blank"} or through the ["Contact us"](https://sentient.invenia.in/docs/contact-us/){: target="_blank"} form.
 We would also greatly appreciate it if you could star our project on [GitHub](https://github.com/sentient/sentient-gateway){: target="_blank"}!
 
 ## Next steps

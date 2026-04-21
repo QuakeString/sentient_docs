@@ -112,10 +112,10 @@ nano .env
 ```
 {: .copy-code}
 
-You'll need to make sure that `TRENDZ_ENABLED` variable set to `true`:
+You'll need to make sure that `SENTIENT_ANALYTICS_ENABLED` variable set to `true`:
 
 ```bash
-TRENDZ_ENABLED=true
+SENTIENT_ANALYTICS_ENABLED=true
 ```
 
 You can read about SENTIENT ANALYTICS [here](/docs/sentient-analytics/what-is-sentient-analytics/).
@@ -141,7 +141,7 @@ You can read about SENTIENT ANALYTICS [here](/docs/sentient-analytics/what-is-se
 
 SENTIENT ANALYTICS have different version system, and should be updated separately from SENTIENT platform main services.
 
-To update SENTIENT ANALYTICS, it's necessary to edit .env file to set "TRENDZ_VERSION" to target version (e.g. set it to {{ site.release.sentient-analytics_ver }} if you are upgrading to the latest). Then, execute the following commands:
+To update SENTIENT ANALYTICS, it's necessary to edit .env file to set "SENTIENT_ANALYTICS_VERSION" to target version (e.g. set it to {{ site.release.sentient-analytics_ver }} if you are upgrading to the latest). Then, execute the following commands:
 
 ```bash
 ./docker-stop-services.sh

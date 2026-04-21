@@ -1,7 +1,7 @@
 Download installation package:
 
 ```bash
-wget https://dist.docs.sentient.invenia.in/tb-opc-ua-integration-{{ site.release.pe_ver }}.rpm
+wget https://dist.sentient.invenia.in/tb-opc-ua-integration-{{ site.release.pe_ver }}.rpm
 ```
 {: .copy-code}
 

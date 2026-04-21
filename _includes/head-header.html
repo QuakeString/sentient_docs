@@ -69,9 +69,9 @@
     <meta name="twitter:description" content="{{ description }}">
     {% endif %}
     {% if !page.no_canonical %}
-    <link rel="canonical" href="https://docs.sentient.invenia.in{{page.url}}">
+    <link rel="canonical" href="https://sentient.invenia.in{{page.url}}">
     {% endif %}
-    <link rel="shortcut icon" type="image/png" href="https://img.docs.sentient.invenia.in/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png">
     {% if page.url == '/' %}
     <link href="/css/critical.css" rel="stylesheet">
     {% elsif page.url contains '/docs/' or cssTag == 'docs' %}
@@ -730,7 +730,7 @@
                 const allowedDomains = [
                     'https://sentient.cloud',
                     'https://eu.sentient.cloud',
-                    'https://license.docs.sentient.invenia.in'
+                    'https://license.sentient.invenia.in'
                 ];
 
                 Array.from(links).forEach(link => {
@@ -760,15 +760,8 @@
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header>
     <div class="logo-burger">
-        <a href="https://u24.gov.ua/" target="_blank" class="support-ukraine">
-            <img src="/images/support-ukraine-banner.webp" alt="Stand with Ukraine flag" width="48" height="31">
-        </a>
         <a href="/" class="logo" aria-label="Link to homepage"></a>
         <button onclick="Burger()" class="burger"  aria-label="Burger menu"></button>
-        <div id="githubButtonContainer" style="width: 110px;">
-            <a class="github-button" href="{{ githubLink }}" data-show-count="true"
-               aria-label="{{ githubLabel }}">Star</a>
-        </div>
     </div>
     <nav class="head-menu">
         <ul>
@@ -844,7 +837,7 @@
                             <div class="column">
                                 <p class="group-name">Product ecosystem</p>
                                 <a class="edge-lnk" href="/products/sentient-gateway/">
-                                    <img src="/images/sentient-e-icon.svg" alt="Edge icon" width="32" height="32" loading="lazy">
+                                    <img src="/images/sentient-gw-icon.svg" alt="Edge icon" width="32" height="32" loading="lazy">
                                     <div class="sub-text">
                                         <span class="item-heading">Edge</span>
                                         <p>Edge computing</p>

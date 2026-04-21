@@ -58,4 +58,4 @@ We implement reasonable security measures to protect your account information. A
 
 **7. Contact Us**
 
-If you have any questions about this Privacy Policy or your data, please contact us at sales@docs.sentient.invenia.in.
+If you have any questions about this Privacy Policy or your data, please contact us at sales@sentient.invenia.in.

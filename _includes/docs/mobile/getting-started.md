@@ -16,7 +16,7 @@ Welcome! This guide walks you through creating and configuring your own {{appPre
 
 ## Prerequisites
 
-- Access to a {{appPrefix}} instance. The easiest way is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/). Alternatively, install {{appPrefix}} using the official [installation guide](/docs/user-guide/install/{{docsPrefix}}installation-options/){:target="_blank"}.
+- Access to a {{appPrefix}} instance. The easiest way is to use [SENTIENT Cloud](https://sentient.invenia.in/installations/). Alternatively, install {{appPrefix}} using the official [installation guide](/docs/user-guide/install/{{docsPrefix}}installation-options/){:target="_blank"}.
 - Prepare the environment for building the {{appPrefix}} mobile application:
   - [Install the Flutter SDK](https://flutter.dev/docs/get-started/install){:target="_blank"} version that corresponds to your app version (see the [compatibility matrix](/docs/{% if docsPrefix == 'pe/' %}pe/{% endif %}mobile/#compatibility-table){:target="_blank"}).
   - (Recommended) [Configure your IDE (e.g., Visual Studio Code)](https://flutter.dev/docs/get-started/editor){:target="_blank"} for Flutter development.

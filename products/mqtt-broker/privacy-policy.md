@@ -68,4 +68,4 @@ description: ST-RMQTT Privacy Policy
 
 <br>
 <p> <b>9. Contact</b> </p>
-<p> 9.1 If you have questions about how ST-RMQTT processes your data in this instance, please contact: <a href="mailto:info@docs.sentient.invenia.in">info@docs.sentient.invenia.in</a>.</p>
+<p> 9.1 If you have questions about how ST-RMQTT processes your data in this instance, please contact: <a href="mailto:info@sentient.invenia.in">info@sentient.invenia.in</a>.</p>

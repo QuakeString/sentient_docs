@@ -24,7 +24,7 @@ notitle: "true"
         <p>Open-source platform</p>
     </a>
     <a href="/products/sentient-gateway/" class="card sentient-gateway">
-        <img src="/images/sentient-e-icon.svg" alt="Edge">
+        <img src="/images/sentient-gw-icon.svg" alt="Edge">
         <h5 class="title">SENTIENT Edge</h5>
         <p>Edge computing</p>
     </a>

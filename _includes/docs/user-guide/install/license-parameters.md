@@ -9,7 +9,7 @@
             <td>license.secret</td>
             <td>TB_LICENSE_SECRET</td>
             <td></td>
-            <td>License secret obtained from <a href="https://license.docs.sentient.invenia.in">SENTIENT License Portal</a></td>
+            <td>License secret obtained from <a href="https://license.sentient.invenia.in">SENTIENT License Portal</a></td>
         </tr>
         <tr>
             <td>license.instance_data_file</td>

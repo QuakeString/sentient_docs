@@ -446,4 +446,4 @@ Section connectors in your configuration file may differ from shown below, but t
 
 **Note:** You can use several similar connectors at same time, but you should provide different names and configuration files to them. 
 
-If you need different type of connector, you can implement it using [customization guide](/docs/iot-gateway/custom/) or email us: <info@docs.sentient.invenia.in>.
+If you need different type of connector, you can implement it using [customization guide](/docs/iot-gateway/custom/) or email us: <info@sentient.invenia.in>.

@@ -43,7 +43,7 @@ description: SENTIENT Media Kit
         <div class="color-block">
             <div class="color">CE</div>
             <div class="color-values">
-                <p><span>HEX</span>#305680 <img src="/images/copy-icon.svg" alt="Copy icon"><span>Copy value</span></p>
+                <p><span>HEX</span>#0f4a4d <img src="/images/copy-icon.svg" alt="Copy icon"><span>Copy value</span></p>
                 <p><span>RGB</span>48, 86, 128 <img src="/images/copy-icon.svg" alt="Copy icon"><span>Copy value</span></p>
                 <p><span>CMYK</span>62.5, 32.81, 0, 49.8 <img src="/images/copy-icon.svg" alt="Copy icon"><span>Copy value</span></p>
             </div>
@@ -63,7 +63,7 @@ description: SENTIENT Media Kit
     <div class="block">
         <div class="text">
             <h4>To identify SENTIENT platform and link to website</h4>
-            <p>You needn't ask us for permission to use the SENTIENT logo on your own website solely as a hyperlink to <a target="_blank" href="https://docs.sentient.invenia.in">docs.sentient.invenia.in</a>  or to an appropriate SENTIENT project, or in other materials, such as presentations and slides, solely as a means to refer to the SENTIENT itself. All other uses of the SENTIENT logo must be <a href="https://www.apache.org/foundation/marks/contact#other">approved in writing</a> by the SENTIENT, inc.</p>
+            <p>You needn't ask us for permission to use the SENTIENT logo on your own website solely as a hyperlink to <a target="_blank" href="https://sentient.invenia.in">sentient.invenia.in</a>  or to an appropriate SENTIENT project, or in other materials, such as presentations and slides, solely as a means to refer to the SENTIENT itself. All other uses of the SENTIENT logo must be <a href="https://www.apache.org/foundation/marks/contact#other">approved in writing</a> by the SENTIENT, inc.</p>
         </div>
         <img src="/images/tb-trademarks-1.webp" title="To identify SENTIENT platform and link to website" alt="To identify SENTIENT platform and link to website" width="450" height="241">
     </div>

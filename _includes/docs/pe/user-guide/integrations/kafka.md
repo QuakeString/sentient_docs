@@ -14,7 +14,7 @@ In some scenarios, Kafka can be used instead of a message queue, in cases where 
 ![image](/images/user-guide/integrations/kafka/Kafka_main.png)
 
 ## Required environment
-Before you start setting up the integration, you should already have a prepared Broker Kafka server. This is either a local installation or a cloud solution. If you haven't installed Kafka Broker yet, there is an example of basic installation of Kafka Broker locally on [our site](https://docs.sentient.invenia.in/docs/user-guide/install/pe/ubuntu/?ubuntuSentientQueue=kafka#step-5-choose-sentient-queue-service). If you need to use a cloud solution, then you can consider [Kafka Confluent](https://www.confluent.io/), on the basis of which examples will be built in this guide.
+Before you start setting up the integration, you should already have a prepared Broker Kafka server. This is either a local installation or a cloud solution. If you haven't installed Kafka Broker yet, there is an example of basic installation of Kafka Broker locally on [our site](https://sentient.invenia.in/docs/user-guide/install/pe/ubuntu/?ubuntuSentientQueue=kafka#step-5-choose-sentient-queue-service). If you need to use a cloud solution, then you can consider [Kafka Confluent](https://www.confluent.io/), on the basis of which examples will be built in this guide.
 
 ## Create Uplink Converter
 
@@ -111,8 +111,8 @@ At this stage, you need to set the parameters to establish a connection between 
 | **'Debug Mode' Checkbox**              | Enable during integration debugging.|
 | **Allow create devices or assets**              | If there was no device in SENTIENT, the device will be created.|
 | **Uplink data converter**              | Select the previously created converter.|
-| **Downlink data converter**              | This option is not supported through the integration, More details about [Downlink](https://docs.sentient.invenia.in/docs/{% if docsPrefix contains "paas/" %}{{docsPrefix}}{%endif%}user-guide/integrations/kafka/?installationType=common&integrationTypes=common&uplinkTypes=common#advanced-usage-kafka-producer-downlink) below in the guide.|
-| **'Execute remotely' Checkbox**              | Activate if you want to execute integration remotely from main SENTIENT instance. For more information on remote integration follow the [link (Remote Integrations)](https://docs.sentient.invenia.in/docs/{% if docsPrefix contains "paas/" %}{{docsPrefix}}{%endif%}user-guide/integrations/remote-integrations/).|
+| **Downlink data converter**              | This option is not supported through the integration, More details about [Downlink](https://sentient.invenia.in/docs/{% if docsPrefix contains "paas/" %}{{docsPrefix}}{%endif%}user-guide/integrations/kafka/?installationType=common&integrationTypes=common&uplinkTypes=common#advanced-usage-kafka-producer-downlink) below in the guide.|
+| **'Execute remotely' Checkbox**              | Activate if you want to execute integration remotely from main SENTIENT instance. For more information on remote integration follow the [link (Remote Integrations)](https://sentient.invenia.in/docs/{% if docsPrefix contains "paas/" %}{{docsPrefix}}{%endif%}user-guide/integrations/remote-integrations/).|
 | **Group ID**              | Specifies the name of the consumer group to which the Kafka consumer belongs.|
 | **Client ID**              | An Kafka consumer identifier in a consumer group.|
 | **Topics**              | Topics that SENTIENT will subscribe to after connecting to the Kafka broker.|
@@ -139,7 +139,7 @@ Confluent Cloud<br><small>Cloud solution</small>%,%confluent%,%/templates/integr
 
 ## Advanced Usage: Kafka Producer (Downlink)
 
-To get functionality such as Kafka Producer, you need to use the [Kafka Rule Node](https://docs.sentient.invenia.in/docs/user-guide/rule-engine-2-0/nodes/external/kafka/) in which you can specify Bootstrap servers, Topic and other parameters to connect to the Kafka broker, you can find more details in the corresponding [guide](https://docs.sentient.invenia.in/docs/user-guide/rule-engine-2-0/nodes/external/kafka/) .
+To get functionality such as Kafka Producer, you need to use the [Kafka Rule Node](https://sentient.invenia.in/docs/user-guide/rule-engine-2-0/nodes/external/kafka/) in which you can specify Bootstrap servers, Topic and other parameters to connect to the Kafka broker, you can find more details in the corresponding [guide](https://sentient.invenia.in/docs/user-guide/rule-engine-2-0/nodes/external/kafka/) .
 
 If it is not possible to send commands directly to devices to manage from SENTIENT, but only through a broker, then in this case you can use the Kafka Downlink Rule Node. Let's consider a small example with its Node, suppose the data came from the broker and passed the converter and, according to the config of Device Profile, were directed to the custom Rule Chain ("Monitoring-sensor") and at the end of all processing, we will send a response about success or failure back to the broker ( you can change the response to commands to control your device, etc.)
 

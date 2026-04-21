@@ -2155,7 +2155,7 @@
 		<tr>
 			<td>security.jwt.tokenIssuer</td>
 			<td>JWT_TOKEN_ISSUER</td>
-			<td>docs.sentient.invenia.in</td>
+			<td>sentient.invenia.in</td>
 			<td> User JWT Token issuer</td>
 		</tr>
 		<tr>
@@ -3012,7 +3012,7 @@
 			<td>license.secret</td>
 			<td>ST-RMQTT_LICENSE_SECRET</td>
 			<td></td>
-			<td> License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)</td>
+			<td> License secret obtained from SENTIENT License Portal (https://license.sentient.invenia.in)</td>
 		</tr>
 		<tr>
 			<td>license.instance_data_file</td>
@@ -3099,13 +3099,13 @@
 		<tr>
 			<td>swagger.contact.url</td>
 			<td>SWAGGER_CONTACT_URL</td>
-			<td>https://docs.sentient.invenia.in/products/mqtt-broker/</td>
+			<td>https://sentient.invenia.in/products/mqtt-broker/</td>
 			<td> The contact URL on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.email</td>
 			<td>SWAGGER_CONTACT_EMAIL</td>
-			<td>info@docs.sentient.invenia.in</td>
+			<td>info@sentient.invenia.in</td>
 			<td> The contact email on the API doc UI page</td>
 		</tr>
 		<tr>

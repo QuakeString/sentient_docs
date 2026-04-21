@@ -286,7 +286,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.4.1pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.4.1pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.4.1pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.4.1pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 
@@ -384,7 +384,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.4.2.1pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.4.2.1pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.4.2.1pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.4.2.1pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 
@@ -481,7 +481,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.4.3pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.4.3pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.4.3pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.4.3pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 
@@ -611,7 +611,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.5pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 
@@ -736,7 +736,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.1pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.1pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.1pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.5.1pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 
@@ -824,7 +824,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.2pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.2pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.2pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.5.2pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 
@@ -905,7 +905,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.3pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.3pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.3pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.5.3pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 
@@ -976,7 +976,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.4pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.4pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.4pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.5.4pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 
@@ -1047,7 +1047,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.5pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.5pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.5pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.5.5pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 
@@ -1118,7 +1118,7 @@ sudo service sentient start
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.6pe.exe](https://dist.docs.sentient.invenia.in/sentient-windows-setup-2.5.6pe.exe).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-setup-2.5.6pe.exe](https://dist.sentient.invenia.in/sentient-windows-setup-2.5.6pe.exe).
 
 #### SENTIENT Professional Edition service upgrade
 

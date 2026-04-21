@@ -21,7 +21,7 @@ SENTIENT is the most feature-rich, open-source IoT platform in the world, and we
 - *Data Visualization*: Use real-time, interactive dashboards to visualize telemetry data.
 - *High Scalability*: A fault-tolerant clustering architecture supports millions of devices.
 
-:pushpin: Learn more: [Community Edition](https://docs.sentient.invenia.in/docs/)
+:pushpin: Learn more: [Community Edition](https://sentient.invenia.in/docs/)
 
 ## SENTIENT Professional Edition (PE): Enterprise-Grade Features & Support
 
@@ -40,7 +40,7 @@ SENTIENT Professional Edition is built for enterprises and businesses that want 
 - *Support & SLA*: Get dedicated support and a guaranteed uptime SLA, key for our managed cloud offerings.
 
 
-:pushpin: Learn more: [Professional Edition](https://docs.sentient.invenia.in/docs/pe/)
+:pushpin: Learn more: [Professional Edition](https://sentient.invenia.in/docs/pe/)
 
 ---
 
@@ -96,7 +96,7 @@ Choosing the right edition is only half the job. It’s equally important to sel
 
 1. **Self-managed (On-premise)**
    Full control in your own or isolated data centers, or offline/on-premise setups.
-   :link: [Self-managed](https://docs.sentient.invenia.in/docs/user-guide/install/installation-options/)
+   :link: [Self-managed](https://sentient.invenia.in/docs/user-guide/install/installation-options/)
 
 ---
 
@@ -106,17 +106,17 @@ Depending on your control, responsibility, and time-to-market requirements, SENT
 
 1. **SENTIENT Cloud (Europe & North America)**
    The fastest way to start. Managed by the SENTIENT team — just connect your devices and start.
-   :link: [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/)
+   :link: [SENTIENT Cloud](https://sentient.invenia.in/installations/)
 
 2. **SENTIENT Private Cloud (EU, US, APAC)**
    A dedicated and fully managed cluster with SLA guarantees.
    Ideal for scaling to hundreds of thousands or millions of devices.
-   :link: [Private Cloud](https://docs.sentient.invenia.in/pricing/?product=sentient-private-cloud)
+   :link: [Private Cloud](https://sentient.invenia.in/pricing/?product=sentient-private-cloud)
 
 3. **Self-managed (On-premise PE)**
    Full control in your own data centers.
    SENTIENT provides remote support for self-managed installations.
-   :link: [Self-managed](https://docs.sentient.invenia.in/pricing/?product=sentient-pe&solution=pe-pay-as-you-go)
+   :link: [Self-managed](https://sentient.invenia.in/pricing/?product=sentient-pe&solution=pe-pay-as-you-go)
 
 ---
 

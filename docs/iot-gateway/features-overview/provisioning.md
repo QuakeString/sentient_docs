@@ -7,7 +7,7 @@ description: Learn how to use SENTIENT IoT Gateway's device provisioning feature
 * TOC
 {:toc}
 
-The **SENTIENT IoT Gateway** supports the [device provisioning](https://docs.sentient.invenia.in/docs/user-guide/device-provisioning/){:target="_blank"} feature, allowing it to **automatically register itself** on the SENTIENT platform and obtain credentials without manual setup.
+The **SENTIENT IoT Gateway** supports the [device provisioning](https://sentient.invenia.in/docs/user-guide/device-provisioning/){:target="_blank"} feature, allowing it to **automatically register itself** on the SENTIENT platform and obtain credentials without manual setup.
 
 This is especially useful for:  
 - **Device manufacturers** — enabling mass deployment with minimal configuration.

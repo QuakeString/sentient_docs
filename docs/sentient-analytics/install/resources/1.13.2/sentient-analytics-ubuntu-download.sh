@@ -1,0 +1,1 @@
+wget https://dist.sentient.invenia.in/sentient-analytics-1.13.2.deb

@@ -68,7 +68,7 @@ Before you begin, ensure you have the following:
     - **Local/On-premise instance**: Self-hosted SENTIENT installation on your own [infrastructure](/docs/{{docsPrefix}}user-guide/install/installation-options/){: target="_blank"}, or
 {% endif %}
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-    - **SENTIENT Cloud**: Fully managed cloud service available [here](https://docs.sentient.invenia.in/installations/choose-region/){: target="_blank"}
+    - **SENTIENT Cloud**: Fully managed cloud service available [here](https://sentient.invenia.in/installations/choose-region/){: target="_blank"}
 {% endif %}
 {% if docsPrefix == "paas/" %}
 - **SENTIENT Cloud**: Fully managed cloud service available at [sentient.cloud](https://sentient.cloud/signup){: target="_blank"}
@@ -690,7 +690,7 @@ You just built a completely reusable workflow. Change the input from "Refrigerat
 
 ## API Reference
 
-The SENTIENT n8n node is built on top of the SENTIENT REST API. For detailed information about API endpoints, request/response formats, and additional parameters, refer to the [SENTIENT REST API documentation](https://docs.sentient.invenia.in/docs/{{docsPrefix}}reference/rest-api/){: target="_blank"}.
+The SENTIENT n8n node is built on top of the SENTIENT REST API. For detailed information about API endpoints, request/response formats, and additional parameters, refer to the [SENTIENT REST API documentation](https://sentient.invenia.in/docs/{{docsPrefix}}reference/rest-api/){: target="_blank"}.
 
 ## Links
 
@@ -705,7 +705,7 @@ The SENTIENT n8n node is built on top of the SENTIENT REST API. For detailed inf
 If you encounter issues or have questions about the SENTIENT n8n node:
 
 - **GitHub Issues**: [Report bugs or request features](https://github.com/sentient/sentient-n8n-node/issues){: target="_blank"}
-- **SENTIENT Community**: [Get help from the community](https://docs.sentient.invenia.in/community/){: target="_blank"}
+- **SENTIENT Community**: [Get help from the community](https://sentient.invenia.in/community/){: target="_blank"}
 - **n8n Community**: [n8n community](https://community.n8n.io/){: target="_blank"}
 
 ## License

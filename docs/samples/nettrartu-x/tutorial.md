@@ -39,7 +39,7 @@ Once you complete this sample/tutorial, you will see your sensor data on a dashb
 
 ### Software
  - [RTU-X Configuration Interface](http://wiki.nettra.tech/en/downloads).
- - You will need to have SENTIENT server up and running. Use either [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){:target="_blank"} or [Installation Guide](https://docs.sentient.invenia.in/docs/user-guide/install/ubuntu/) to install SENTIENT.
+ - You will need to have SENTIENT server up and running. Use either [SENTIENT Cloud](https://sentient.invenia.in/installations/){:target="_blank"} or [Installation Guide](https://sentient.invenia.in/docs/user-guide/install/ubuntu/) to install SENTIENT.
 
 ## Connection diagram
 
@@ -51,7 +51,7 @@ The following picture summarizes the connections for this simple project:
 
 This step contains instructions that are necessary to connect your device to SENTIENT.
 
-See [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/) page for more details how to get your account.
+See [SENTIENT Cloud](https://sentient.invenia.in/installations/) page for more details how to get your account.
 
 ### Device
 
@@ -67,7 +67,7 @@ See [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/) page for m
 ### Dashboard
 
 Download the dashboard file (.json) using this [link](/docs/samples/nettrartu-x/resources/rtu_x_dashboard.json).
-Use import/export [instructions](https://docs.sentient.invenia.in/docs/user-guide/dashboards/#import-dashboard) to import the dashboard to your SENTIENT instance.
+Use import/export [instructions](https://sentient.invenia.in/docs/user-guide/dashboards/#import-dashboard) to import the dashboard to your SENTIENT instance.
 
 ## Connect RTU-X to PC
 
@@ -167,11 +167,11 @@ As a result, you will see an analog gauge (similar to dashboard image in the int
 
 ## See also
 
-Browse other [samples](https://docs.sentient.invenia.in/docs/samples/) or explore guides related to main SENTIENT features:
+Browse other [samples](https://sentient.invenia.in/docs/samples/) or explore guides related to main SENTIENT features:
 
- - [Device attributes](https://docs.sentient.invenia.in/docs/user-guide/attributes/) - how to use device attributes.
- - [Data Visualization](https://docs.sentient.invenia.in/docs/guides/#AnchorIDDataVisualization) - how to visualize collected data.
- - [Data Analytics](https://docs.sentient.invenia.in/docs/guides/#AnchorIDDataAnalytics) - how to collect telemetry data.
- - [Rule Engine](https://docs.sentient.invenia.in/docs/user-guide/rule-engine-2-0/re-getting-started/) - how to use rule engine to analyze data from devices.
- - [Using RPC capabilities](https://docs.sentient.invenia.in/docs/user-guide/rule-engine-2-0/tutorials/rpc-request-tutorial/) - how to send commands to/from devices.
+ - [Device attributes](https://sentient.invenia.in/docs/user-guide/attributes/) - how to use device attributes.
+ - [Data Visualization](https://sentient.invenia.in/docs/guides/#AnchorIDDataVisualization) - how to visualize collected data.
+ - [Data Analytics](https://sentient.invenia.in/docs/guides/#AnchorIDDataAnalytics) - how to collect telemetry data.
+ - [Rule Engine](https://sentient.invenia.in/docs/user-guide/rule-engine-2-0/re-getting-started/) - how to use rule engine to analyze data from devices.
+ - [Using RPC capabilities](https://sentient.invenia.in/docs/user-guide/rule-engine-2-0/tutorials/rpc-request-tutorial/) - how to send commands to/from devices.
 

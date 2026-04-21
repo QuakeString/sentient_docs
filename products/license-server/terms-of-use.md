@@ -62,4 +62,4 @@ We reserve the right to modify these Terms at any time. Continued use of the Por
 
 **7. Contact**
 
-For questions regarding these Terms or assistance with your account, please contact us at support@docs.sentient.invenia.in. For billing-related questions, please use sales@docs.sentient.invenia.in
+For questions regarding these Terms or assistance with your account, please contact us at support@sentient.invenia.in. For billing-related questions, please use sales@sentient.invenia.in

@@ -237,5 +237,5 @@ can communicate with your Ollama endpoint and the specified model is available.
 ## Using Ollama in SENTIENT
 
 For a practical example of using AI models in SENTIENT, including Ollama, check out
-our [Predictive Maintenance with AI guide](https://docs.sentient.invenia.in/docs/samples/analytics/ai-predictive-maintenance/){:target="_blank"}. This guide demonstrates how to use AI for
+our [Predictive Maintenance with AI guide](https://sentient.invenia.in/docs/samples/analytics/ai-predictive-maintenance/){:target="_blank"}. This guide demonstrates how to use AI for
 anomaly detection and predictive maintenance scenarios, showcasing real-world applications of AI integration in IoT systems.

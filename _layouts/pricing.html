@@ -250,7 +250,7 @@
                         extraDevInstanceCount, edgeEnabled, extraEdgeCount, sentient-analyticsEnabled, whiteLabelingAddonEnabled, priorityHelpDeskEnabled,
                         offlineLicenseEnabled) {
         event.preventDefault();
-        let url = "https://license.docs.sentient.invenia.in/signup?createSubscription=true";
+        let url = "https://license.sentient.invenia.in/signup?createSubscription=true";
         url += "&productId="+productId;
         url += "&planId="+planId;
         if (coupon) {
@@ -582,7 +582,7 @@
 
     const sliderProgress = (slider) => {
         const progress = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
-        slider.style.background = `linear-gradient(to right, #2A7DEC ${progress}%, #E0E1E2 ${progress}%)`;
+        slider.style.background = `linear-gradient(to right, #187074 ${progress}%, #E0E1E2 ${progress}%)`;
     };
 
     const copyToClipboard = (button, message) => {

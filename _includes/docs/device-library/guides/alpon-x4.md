@@ -241,5 +241,5 @@ Verify that telemetry data is received and displayed in SENTIENT:
 
 This guide demonstrated how to integrate the ALPON X4 with SENTIENT using MQTT for real-time data collection and device control. By following the steps, you created a device in SENTIENT, deployed an MQTT client on Sixfab Connect, and verified telemetry data.
 
-For further assistance, refer to the [SENTIENT documentation](https://docs.sentient.invenia.in/docs/){:.copy-code} or contact [Sixfab support](https://sixfab.com/contact/){:.copy-code}.
+For further assistance, refer to the [SENTIENT documentation](https://sentient.invenia.in/docs/){:.copy-code} or contact [Sixfab support](https://sixfab.com/contact/){:.copy-code}.
 {% include add-device-banner.liquid %}

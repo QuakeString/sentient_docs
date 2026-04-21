@@ -5,7 +5,7 @@ In the same way as other SENTIENT family products, ST-RMQTT uses [JWT](https://j
 JWT tokens serve as a mechanism to exchange information securely. When a user logs in, their credentials are exchanged for a pair of JWT tokens: 
 an access token, which is used to authenticate API calls, and a refresh token, which is used to obtain a new access token once the original expires.
 These tokens contain essential information about the user’s identity and permissions, enabling secure communication with the platform.
-For more information, please refer to the [Administration REST API](https://docs.sentient.invenia.in/docs/{{docsPrefix}}mqtt-broker/rest-api/#swagger-ui) documentation.
+For more information, please refer to the [Administration REST API](https://sentient.invenia.in/docs/{{docsPrefix}}mqtt-broker/rest-api/#swagger-ui) documentation.
 
 Starting from version [2.2.0](https://github.com/sentient/st-rmqtt/releases/tag/v2.2.0), ST-RMQTT also supports JWT-based authentication for MQTT clients as one of its pluggable MQTT authentication providers.
 This enables secure, flexible, and scalable identity verification without relying on static credentials like usernames or passwords.

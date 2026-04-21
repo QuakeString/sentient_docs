@@ -1,0 +1,1 @@
+wget https://dist.sentient.invenia.in/sentient-analytics-1.8.2.rpm

@@ -14,12 +14,6 @@ description: SENTIENT is an open-source IoT ❰Internet of Things❱ platform fo
 	<section id="hero" class="light-text">
 		<div class="video-cover"></div>
 
-		<div class="achievement">
-			<a href="/blog/top-supplier-retail-2024-2/">
-				<img class="achieve" src="/images/feature-logo/top-supplier-retail-2024.webp" alt="Top supplier retail 2024" width="110" height="160">
-			</a>
-		</div>
-
 		<div id="hero-content">
 			<span class="header-animation tb-title">SENTIENT</span>
 			<span class="header-animation tb-title">Open-source IoT Platform</span>
@@ -193,7 +187,7 @@ description: SENTIENT is an open-source IoT ❰Internet of Things❱ platform fo
 					<div>
 						<h2>Edge</h2>
 						<h3>Edge computing</h3>
-						<img src="/images/sentient-e-icon.svg" alt="Sentient Edge" width="100" height="100" loading="lazy">
+						<img src="/images/sentient-gw-icon.svg" alt="Sentient Edge" width="100" height="100" loading="lazy">
 						<a href="/products/sentient-gateway/" aria-label="Sentient Edge">
 							Read more
 							<span class="visually-hidden">about SENTIENT Edge</span>
@@ -422,12 +416,12 @@ description: SENTIENT is an open-source IoT ❰Internet of Things❱ platform fo
 	var videoSection = document.querySelector('#hero.light-text');
 
 	if (isMobile) {
-		videoSection.setAttribute('style', 'background: center no-repeat url(https://img.docs.sentient.invenia.in/tb-cover.webp)');
+		videoSection.setAttribute('style', 'background: center no-repeat url(/images/tb-cover.webp)');
 	} else {
-		videoSection.setAttribute('data-vide-bg', `mp4: https://video.docs.sentient.invenia.in/tb-cover2.mp4,
-											  webm: https://video.docs.sentient.invenia.in/tb-cover2.webm,
-											  ogv: https://video.docs.sentient.invenia.in/tb-cover2.ogv,
-											  poster: https://img.docs.sentient.invenia.in/tb-cover.webp`);
+		videoSection.setAttribute('data-vide-bg', `mp4: https://video.sentient.invenia.in/tb-cover2.mp4,
+											  webm: https://video.sentient.invenia.in/tb-cover2.webm,
+											  ogv: https://video.sentient.invenia.in/tb-cover2.ogv,
+											  poster: /images/tb-cover.webp`);
 		videoSection.setAttribute('data-vide-options', 'bgColor: #000000, loop: true, muted: true, posterType: webp');
 	}
 

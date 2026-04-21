@@ -27,7 +27,7 @@ prerequisites outlined in this documentation.
 
 ## Prerequisites
 
-1. Ensure that the SENTIENT server is up and running. The simplest approach is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){:target="_blank"}. Alternatively, you can install SENTIENT manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
+1. Ensure that the SENTIENT server is up and running. The simplest approach is to use [SENTIENT Cloud](https://sentient.invenia.in/installations/){:target="_blank"}. Alternatively, you can install SENTIENT manually by following the steps outlined in the [Installation Guide](/docs/user-guide/install/installation-options/).
 2. Installed and configured SENTIENT IoT Gateway ([Installation guide](/docs/iot-gateway/installation/), [Getting Started](/docs/iot-gateway/getting-started/)).
 
 ## Step 1. Remote shell activation

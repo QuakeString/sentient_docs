@@ -40,7 +40,7 @@ sudo apt update && sudo apt install -y libharfbuzz0b fontconfig fonts-dejavu-cor
 Download installation package.
 
 ```bash
-wget https://dist.docs.sentient.invenia.in/sentient-{{ site.release.pe_ver }}.deb
+wget https://dist.sentient.invenia.in/sentient-{{ site.release.pe_ver }}.deb
 ```
 {: .copy-code}
 
@@ -68,7 +68,7 @@ sudo nano /etc/sentient/conf/sentient.conf
 Locate the following configuration block:
 
 ```bash
-# License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
+# License secret obtained from SENTIENT License Portal (https://license.sentient.invenia.in)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 # export TB_LICENSE_SECRET=
 ```
@@ -76,7 +76,7 @@ Locate the following configuration block:
 and put your license secret. Please don't forget to uncomment the export statement. See example below: 
 
 ```bash
-# License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
+# License secret obtained from SENTIENT License Portal (https://license.sentient.invenia.in)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 export TB_LICENSE_SECRET=YOUR_LICENSE_SECRET_HERE
 ``` 

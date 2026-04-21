@@ -34,7 +34,7 @@ reporting-getting-started-save-report-2:
         title: 'Let&#39;s add another notification delivery method — <b>Email</b>.'
     2:
         image: /images/user-guide/reporting/attaching-report-to-notification/example-attach-report-9-pe.png
-        title: 'Enable the "<b>Attach report</b>" option. Select the previously created <b>New alarm</b> template.<br> Specify the user account on whose behalf the report will be generated: <b>john.doe@docs.sentient.invenia.in</b> (John Doe — Tenant Administrator). Click "<b>Next</b>".'
+        title: 'Enable the "<b>Attach report</b>" option. Select the previously created <b>New alarm</b> template.<br> Specify the user account on whose behalf the report will be generated: <b>john.doe@sentient.invenia.in</b> (John Doe — Tenant Administrator). Click "<b>Next</b>".'
     3:
         image: /images/user-guide/reporting/attaching-report-to-notification/example-attach-report-10-pe.png
         title: 'Enter the subject and message that will be sent via email along with the attached PDF report. Save the changes to the template by clicking the "<b>Save</b>" button.'

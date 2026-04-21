@@ -1,28 +1,28 @@
 0:
-  src: "https://img.docs.sentient.invenia.in/customers/clear/prosegur.svg"
+  src: "/images/customers/clear/prosegur.svg"
   aria-label: "Prosegur logo"
   href: "https://www.prosegur.com/"
 1:
-  src: "https://img.docs.sentient.invenia.in/customers/clear/engie.svg"
+  src: "/images/customers/clear/engie.svg"
   aria-label: "Engie logo"
   href: "https://www.engie.sk/en/kontakt"
 2:
-  src: "https://img.docs.sentient.invenia.in/customers/clear/t-mobile.svg"
+  src: "/images/customers/clear/t-mobile.svg"
   aria-label: "T-mobile logo"
   href: "/industries/telecom/#tmobile"
 3:
-  src: "https://img.docs.sentient.invenia.in/customers/clear/intel.svg"
+  src: "/images/customers/clear/intel.svg"
   aria-label: "Intel logo"
   href: "https://www.intel.com/"
 4:
-  src: "https://img.docs.sentient.invenia.in/customers/clear/schwarz-gruppe.svg"
+  src: "/images/customers/clear/schwarz-gruppe.svg"
   aria-label: "Schwarz logo"
   href: "https://gruppe.schwarz/en"
 5:
-  src: "https://img.docs.sentient.invenia.in/customers/clear/bosch.svg"
+  src: "/images/customers/clear/bosch.svg"
   aria-label: "Bosch logo"
   href: "https://www.bosch.com/"
 6:
-  src: "https://img.docs.sentient.invenia.in/customers/clear/tektelic.svg"
+  src: "/images/customers/clear/tektelic.svg"
   aria-label: "Tektelic logo"
   href: "/industries/telecom/#tektelic"

@@ -12,8 +12,8 @@ description: SENTIENT IoT Platform Live Demo Server
 * TOC
 {:toc}
 
-The Live Demo is a pre-configured, single-node instance designed for rapid evaluation and testing. You can access the environment immediately at [**demo.docs.sentient.invenia.in**](https://demo.docs.sentient.invenia.in).
+The Live Demo is a pre-configured, single-node instance designed for rapid evaluation and testing. You can access the environment immediately at [**demo.sentient.invenia.in**](https://demo.sentient.invenia.in).
 Once logged in, you'll have full access to our "Hello World" resources to jumpstart your project.
 
-**Note:** New user registration is now directed to [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/), which offers a permanent free-tier account with better reliability.
+**Note:** New user registration is now directed to [SENTIENT Cloud](https://sentient.invenia.in/installations/), which offers a permanent free-tier account with better reliability.
 

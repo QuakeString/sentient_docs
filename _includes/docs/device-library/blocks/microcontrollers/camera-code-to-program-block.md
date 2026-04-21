@@ -22,7 +22,7 @@ extern "C" {
 constexpr char WIFI_SSID[] = "YOUR_WIFI_SSID";
 constexpr char WIFI_PASSWORD[] = "YOUR_WIFI_PASSWORD";
 
-// See https://docs.sentient.invenia.in/docs/{{page.docsPrefix}}getting-started-guides/helloworld/
+// See https://sentient.invenia.in/docs/{{page.docsPrefix}}getting-started-guides/helloworld/
 // to understand how to obtain an access token
 constexpr char TOKEN[] = "YOUR_ACCESS_TOKEN";
 

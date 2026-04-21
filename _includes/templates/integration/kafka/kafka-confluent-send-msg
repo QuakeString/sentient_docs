@@ -1,4 +1,4 @@
-You can simulate a message from the Confluent cloud to ThingsBoard, for this use the available Confluent functionality.
+You can simulate a message from the Confluent cloud to SENTIENT, for this use the available Confluent functionality.
 Navigate to the topics in the cluster, the Messages tab, and select the **Produce a new message to this topic**.
 
 {% include images-gallery.html imageCollection="kafka_confluent_send_payload_to_tb" %}

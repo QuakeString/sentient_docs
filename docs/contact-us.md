@@ -5,9 +5,9 @@ notitle: "true"
 ---
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('encyclopedia').style.backgroundColor = '#F4F8FE';
+        document.getElementById('encyclopedia').style.backgroundColor = '#e8f4f4';
         const header = document.getElementsByTagName('header')[0];
-        header.style.backgroundColor = '#F4F8FE';
+        header.style.backgroundColor = '#e8f4f4';
         header.style.boxShadow = 'none';
         const contentEl = document.getElementById('content');
         contentEl.style.backgroundImage = "url('/images/contact-us-bg.svg')";

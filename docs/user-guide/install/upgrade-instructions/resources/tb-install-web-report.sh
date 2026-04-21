@@ -4,7 +4,7 @@ if [ -f /tmp/tb-web-report.deb ]; then
     sudo rm /tmp/tb-web-report.deb
 fi
 instance_id=`wget -q -O - http://169.254.169.254/latest/meta-data/instance-id`
-wget --quiet -O /tmp/tb-web-report.deb https://pm.docs.sentient.invenia.in/sentient-pm/api/aws/${instance_id}/tb-web-report/latest
+wget --quiet -O /tmp/tb-web-report.deb https://pm.sentient.invenia.in/sentient-pm/api/aws/${instance_id}/tb-web-report/latest
 if [ -s /tmp/tb-web-report.deb ]; then
     echo Installing SENTIENT Web Report Server package...
     sudo dpkg -i /tmp/tb-web-report.deb

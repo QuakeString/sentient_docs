@@ -7,7 +7,7 @@
 @media (max-width: 690px) { .tb-faq-tabs { width: 100%; } }
 .tb-faq-tab { width: 100%; font-size: 24px; font-weight: 500; line-height: 36px; padding: 24px 32px; border: 1.5px solid transparent; border-radius: 24px; cursor: pointer; color: #757575; }
 .tb-faq-tab:hover { color: #757575; }
-.tb-faq-tab.active { color: #000000DE; border-bottom: 1.5px solid #E6F0FC; background: #F4F8FE; }
+.tb-faq-tab.active { color: #000000DE; border-bottom: 1.5px solid #E6F0FC; background: #e8f4f4; }
 .tb-faq-answers { flex: 1.5; }
 .tb-faq-category { display: none; }
 .tb-faq-category.active { display: block; }
@@ -44,7 +44,7 @@
 }
 .tb-faq-question.open .tb-faq-answer { display: block; }
 .tb-faq-answer p, .tb-faq-answer li { font-size: 14px; color: #3D3D3D; line-height: 24px; }
-.tb-faq-answer a { color: #2A7DEC; text-decoration: none; }
+.tb-faq-answer a { color: #187074; text-decoration: none; }
 .tb-faq-answer a:hover { text-decoration: underline; }
 .tb-faq-answer ul { margin: 20px 0; padding-left: 30px; list-style: disc; }
 .tb-faq-answer li { margin-bottom: .75em; }
@@ -59,7 +59,7 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 30px;
-    color: #2A7DEC;
+    color: #187074;
     padding: 22px 37px 22px 7px;
     margin: 0;
     cursor: pointer;
@@ -69,7 +69,7 @@
     color: #1e5fb8;
 }
 .tb-faq-load-more .title:after {
-    color: #2A7DEC;
+    color: #187074;
     content: "+";
     position: absolute;
     right: 8px;

@@ -31,12 +31,12 @@
     var videoSection = document.querySelector('#hero.light-text');
 
     if (isMobile) {
-        videoSection.setAttribute('style', 'background: center no-repeat url(https://img.docs.sentient.invenia.in/st-rmqtt-cover.webp)');
+        videoSection.setAttribute('style', 'background: center no-repeat url(/images/st-rmqtt-cover.webp)');
     } else {
-        videoSection.setAttribute('data-vide-bg', `mp4: https://video.docs.sentient.invenia.in/st-rmqtt-cover.mp4,
-                                                    webm: https://video.docs.sentient.invenia.in/st-rmqtt-cover.webm,
-                                                    ogv: https://video.docs.sentient.invenia.in/st-rmqtt-cover.ogv,
-                                                    poster: https://img.docs.sentient.invenia.in/st-rmqtt-cover.webp`);
+        videoSection.setAttribute('data-vide-bg', `mp4: https://video.sentient.invenia.in/st-rmqtt-cover.mp4,
+                                                    webm: https://video.sentient.invenia.in/st-rmqtt-cover.webm,
+                                                    ogv: https://video.sentient.invenia.in/st-rmqtt-cover.ogv,
+                                                    poster: /images/st-rmqtt-cover.webp`);
         videoSection.setAttribute('data-vide-options', 'bgColor: #000000, loop: true, muted: true, posterType: webp');
     }
 </script>

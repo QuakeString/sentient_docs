@@ -41,7 +41,7 @@ contactUsModal: "true"
     <div class="about-text">
         <div class="short">
             <div class="block">
-                <p class="text">The <a href="https://docs.sentient.invenia.in/docs/pe/solution-templates/fuel-level-monitoring/">tank level monitoring</a> solution integrates IoT sensors — such as level, temperature, and battery — with the SENTIENT platform. Data is transmitted via standard protocols: MQTT for real-time telemetry, HTTP for periodic updates, and CoAP for low-power environments. This ensures reliable, efficient communication across a wide range of devices and conditions.</p>
+                <p class="text">The <a href="https://sentient.invenia.in/docs/pe/solution-templates/fuel-level-monitoring/">tank level monitoring</a> solution integrates IoT sensors — such as level, temperature, and battery — with the SENTIENT platform. Data is transmitted via standard protocols: MQTT for real-time telemetry, HTTP for periodic updates, and CoAP for low-power environments. This ensures reliable, efficient communication across a wide range of devices and conditions.</p>
             </div>
         </div>
         <div class="long">

@@ -95,7 +95,7 @@ And you should be able to see some live data. It might take a while until new li
 
 ## Log in to SENTIENT
 
-Log in to **SENTIENT** by following [this link](https://docs.sentient.invenia.in/installations/choose-region/){: target="_blank"} and selecting your region.
+Log in to **SENTIENT** by following [this link](https://sentient.invenia.in/installations/choose-region/){: target="_blank"} and selecting your region.
 
 ![image](/images/devices-library/ready-to-go-devices/s26x-lorawan/image-20250917-113937.png)
 
@@ -203,6 +203,6 @@ Try adding other widgets showing other telemetry data like RSSI, SNR or the used
 
 Now you can easily connect your RS26x LoRaWAN temperature sensor and start sending data to **SENTIENT**.  
 
-To go further, explore the [SENTIENT documentation](https://docs.sentient.invenia.in/docs/pe/){:target="_blank"} to learn more about key features, such as creating more [dashboards](https://docs.sentient.invenia.in/docs/pe/user-guide/dashboards/){:target="_blank"} and leveragin additional widgets to visualize your telemetry, or setting up [alarm rules](https://docs.sentient.invenia.in/docs/pe/user-guide/alarm-rules/){:target="_blank"} to monitor device behavior in real time.
+To go further, explore the [SENTIENT documentation](https://sentient.invenia.in/docs/pe/){:target="_blank"} to learn more about key features, such as creating more [dashboards](https://sentient.invenia.in/docs/pe/user-guide/dashboards/){:target="_blank"} and leveragin additional widgets to visualize your telemetry, or setting up [alarm rules](https://sentient.invenia.in/docs/pe/user-guide/alarm-rules/){:target="_blank"} to monitor device behavior in real time.
 
 {% include add-device-banner.liquid %}

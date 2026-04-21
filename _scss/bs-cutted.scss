@@ -1,4 +1,4 @@
-$blue: #007bff;
+$blue: #187074;
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #e83e8c;
@@ -11,7 +11,7 @@ $cyan: #17a2b8;
 $white: #fff;
 $gray: #6c757d;
 $gray-dark: #343a40;
-$primary: #007bff;
+$primary: #187074;
 $secondary: #6c757d;
 $success: #28a745;
 $info: #17a2b8;
@@ -19,8 +19,8 @@ $warning: #ffc107;
 $danger: #dc3545;
 $light: #f8f9fa;
 $dark: #343a40;
-$tb-main-color: #2A7DEC;
-$tb-main-background: rgba(48, 86, 128, 0.08);
+$tb-main-color: #187074;
+$tb-main-background: rgba(15, 74, 77, 0.08);
 $tb-main-color-filter: invert(37%) sepia(84%) saturate(891%) hue-rotate(184deg) brightness(105%) contrast(88%);
 $breakpoint-xs: 0;
 $breakpoint-sm: 576px;
@@ -735,7 +735,7 @@ a.btn.disabled,fieldset:disabled a.btn {
 .btn-primary:hover {
     color: $white;
     background-color: #0069d9;
-    border-color: #0062cc
+    border-color: #0f4a4d
 }
 
 .btn-primary.focus,.btn-primary:focus {
@@ -750,7 +750,7 @@ a.btn.disabled,fieldset:disabled a.btn {
 
 .btn-primary:not(:disabled):not(.disabled).active,.btn-primary:not(:disabled):not(.disabled):active,.show>.btn-primary.dropdown-toggle {
     color: $white;
-    background-color: #0062cc;
+    background-color: #0f4a4d;
     border-color: #005cbf
 }
 

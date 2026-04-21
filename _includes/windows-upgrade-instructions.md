@@ -121,7 +121,7 @@ In order to upgrade to {{ current_version_with_platform | upcase }} you need to 
 {% else %}
 {% assign upgrade_package = upgrade_package | append: "setup-" | append: current_version | append: "pe.exe" %}
 {% endif %}
-Download SENTIENT Professional Edition installation package for Windows: [{{ upgrade_package }}](https://dist.docs.sentient.invenia.in/{{ upgrade_package }}).
+Download SENTIENT Professional Edition installation package for Windows: [{{ upgrade_package }}](https://dist.sentient.invenia.in/{{ upgrade_package }}).
 {% else %}
 Download SENTIENT installation file for Windows: [sentient-windows-{{ current_version }}.zip](https://github.com/sentient/sentient/releases/download/v{{ current_version }}/sentient-windows-{{ current_version }}.zip).
 {% endif %}

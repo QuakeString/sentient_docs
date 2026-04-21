@@ -54,4 +54,4 @@ description: ST-RMQTT Terms of Use
 
 <br>
 <p> <b>8. Contact</b> </p>
-<p> 8.1 For inquiries regarding this Service, please contact: <a href="mailto:info@docs.sentient.invenia.in">info@docs.sentient.invenia.in</a>.</p>
+<p> 8.1 For inquiries regarding this Service, please contact: <a href="mailto:info@sentient.invenia.in">info@sentient.invenia.in</a>.</p>

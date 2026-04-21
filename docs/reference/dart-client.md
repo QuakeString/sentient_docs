@@ -61,13 +61,13 @@ The next sample code shows how to instantiate SENTIENT Client, perform login and
 import 'package:sentient_client/sentient_client.dart';
 
 // SENTIENT REST API URL
-const thingsBoardApiEndpoint = 'http://localhost:8080';
+const sentientApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(thingsBoardApiEndpoint);
+    var tbClient = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
     await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
@@ -94,13 +94,13 @@ void main() async {
 ### API key authentication (from SENTIENT 4.3+)
 The following code sample demonstrates how to use API key authentication with SENTIENT REST API.
 Make sure you have created an API key for your user before running the example. Also, ensure to replace
-`'tb_your_api_key'` with your actual API key value and the `thingsBoardApiEndpoint` variable with your SENTIENT instance URL.
+`'tb_your_api_key'` with your actual API key value and the `sentientApiEndpoint` variable with your SENTIENT instance URL.
 ``` dart
-const thingsBoardApiEndpoint = 'http://localhost:8080';
+const sentientApiEndpoint = 'http://localhost:8080';
 const apiKey = 'tb_your_api_key';
 void main() async {
   try {
-    final tbClient = SentientClient(thingsBoardApiEndpoint, apiKey: apiKey);
+    final tbClient = SentientClient(sentientApiEndpoint, apiKey: apiKey);
 
     var deviceName = getRandomString(30);
 
@@ -129,13 +129,13 @@ The following sample code shows how to fetch tenant devices via page link.
 import 'package:sentient_client/sentient_client.dart';
 
 // SENTIENT REST API URL
-const thingsBoardApiEndpoint = 'http://localhost:8080';
+const sentientApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(thingsBoardApiEndpoint);
+    var tbClient = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
     await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
@@ -167,13 +167,13 @@ The following sample code shows how to fetch tenant dashboards via page link.
 import 'package:sentient_client/sentient_client.dart';
 
 // SENTIENT REST API URL
-const thingsBoardApiEndpoint = 'http://localhost:8080';
+const sentientApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(thingsBoardApiEndpoint);
+    var tbClient = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
     await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
@@ -205,13 +205,13 @@ The following sample code shows how to fetch customer devices via page link.
 import 'package:sentient_client/sentient_client.dart';
 
 // SENTIENT REST API URL
-const thingsBoardApiEndpoint = 'http://localhost:8080';
+const sentientApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(thingsBoardApiEndpoint);
+    var tbClient = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Customer User credentials
     await tbClient.login(LoginRequest('customer@sentient.org', 'customer'));
@@ -245,13 +245,13 @@ The following sample code shows how to use Entity Data Query API to count total 
 import 'package:sentient_client/sentient_client.dart';
 
 // SENTIENT REST API URL
-const thingsBoardApiEndpoint = 'http://localhost:8080';
+const sentientApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(thingsBoardApiEndpoint);
+    var tbClient = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
     await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
@@ -313,13 +313,13 @@ The following sample code shows how to use Entity Data Query API to get all acti
 import 'package:sentient_client/sentient_client.dart';
 
 // SENTIENT REST API URL
-const thingsBoardApiEndpoint = 'http://localhost:8080';
+const sentientApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(thingsBoardApiEndpoint);
+    var tbClient = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
     await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
@@ -392,13 +392,13 @@ The following sample code demonstrates basic concepts of device management API (
 import 'package:sentient_client/sentient_client.dart';
 
 // SENTIENT REST API URL
-const thingsBoardApiEndpoint = 'http://localhost:8080';
+const sentientApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(thingsBoardApiEndpoint);
+    var tbClient = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
     await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
@@ -457,13 +457,13 @@ import 'dart:math';
 import 'package:sentient_client/sentient_client.dart';
 
 // SENTIENT REST API URL
-const thingsBoardApiEndpoint = 'http://localhost:8080';
+const sentientApiEndpoint = 'http://localhost:8080';
 
 void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(thingsBoardApiEndpoint);
+    var tbClient = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
     await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));

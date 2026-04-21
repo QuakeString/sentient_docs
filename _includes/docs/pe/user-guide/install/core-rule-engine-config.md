@@ -358,7 +358,7 @@
 		<tr>
 			<td>security.jwt.tokenIssuer</td>
 			<td>JWT_TOKEN_ISSUER</td>
-			<td>docs.sentient.invenia.in</td>
+			<td>sentient.invenia.in</td>
 			<td> User JWT Token issuer</td>
 		</tr>
 		<tr>
@@ -541,7 +541,7 @@
 		<tr>
 			<td>ui.solution_templates.docs_base_url</td>
 			<td>UI_SOLUTION_TEMPLATES_DOCS_BASE_URL</td>
-			<td>https://docs.sentient.invenia.in/docs/pe</td>
+			<td>https://sentient.invenia.in/docs/pe</td>
 			<td> Base URL for solution templates docs</td>
 		</tr>
 	</tbody>
@@ -2265,13 +2265,13 @@
 		</tr>
 		<tr>
 			<td>cache.specs.sentient-analyticsSettings.timeToLiveInMinutes</td>
-			<td>CACHE_SPECS_TRENDZ_SETTINGS_TTL</td>
+			<td>CACHE_SPECS_SENTIENT_ANALYTICS_SETTINGS_TTL</td>
 			<td>1440</td>
 			<td> SENTIENT ANALYTICS settings cache TTL</td>
 		</tr>
 		<tr>
 			<td>cache.specs.sentient-analyticsSettings.maxSize</td>
-			<td>CACHE_SPECS_TRENDZ_SETTINGS_MAX_SIZE</td>
+			<td>CACHE_SPECS_SENTIENT_ANALYTICS_SETTINGS_MAX_SIZE</td>
 			<td>10000</td>
 			<td> 0 means the cache is disabled</td>
 		</tr>
@@ -4756,7 +4756,7 @@
 	<tbody>
 		<tr>
 			<td>sentient-analytics.enabled</td>
-			<td>TRENDZ_ENABLED</td>
+			<td>SENTIENT_ANALYTICS_ENABLED</td>
 			<td>true</td>
 			<td> Enable/disable SENTIENT ANALYTICS synchronization</td>
 		</tr>
@@ -4768,19 +4768,19 @@
 		</tr>
 		<tr>
 			<td>sentient-analytics.default_sentient-analytics_url</td>
-			<td>DEFAULT_TRENDZ_URL</td>
+			<td>DEFAULT_SENTIENT_ANALYTICS_URL</td>
 			<td></td>
 			<td> Default SENTIENT ANALYTICS URL used for startup synchronization</td>
 		</tr>
 		<tr>
 			<td>sentient-analytics.request_timeout_ms</td>
-			<td>TRENDZ_REQUEST_TIMEOUT_MS</td>
+			<td>SENTIENT_ANALYTICS_REQUEST_TIMEOUT_MS</td>
 			<td>15000</td>
 			<td> Request timeout in ms</td>
 		</tr>
 		<tr>
 			<td>sentient-analytics.usage_request_timeout_ms</td>
-			<td>TRENDZ_USAGE_REQUEST_TIMEOUT_MS</td>
+			<td>SENTIENT_ANALYTICS_USAGE_REQUEST_TIMEOUT_MS</td>
 			<td>3000</td>
 			<td> Usage request timeout in ms</td>
 		</tr>
@@ -4867,13 +4867,13 @@
 		<tr>
 			<td>swagger.contact.url</td>
 			<td>SWAGGER_CONTACT_URL</td>
-			<td>https://docs.sentient.invenia.in</td>
+			<td>https://sentient.invenia.in</td>
 			<td> The contact URL on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.email</td>
 			<td>SWAGGER_CONTACT_EMAIL</td>
-			<td>info@docs.sentient.invenia.in</td>
+			<td>info@sentient.invenia.in</td>
 			<td> The contact email on the API doc UI page</td>
 		</tr>
 		<tr>

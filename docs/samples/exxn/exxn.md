@@ -52,7 +52,7 @@ Open your platform instance or SENTIENT [cloud](https://sentient.cloud/) in brow
 
 Go to "**Device groups**" tab -> "**All**" and click "plus" button to add a new device.
 
-Enter device name, select existing or create a new [device profile](https://docs.sentient.invenia.in/docs/user-guide/device-profiles/) and click on "Add" button.
+Enter device name, select existing or create a new [device profile](https://sentient.invenia.in/docs/user-guide/device-profiles/) and click on "Add" button.
 
 ![image](/images/samples/exxn/exxn-create-device-cell-1.png)
 
@@ -123,13 +123,13 @@ All the information to configure the device correctly through this JSON File can
 
 ### Data Visualization
 
-Create a [dashboard](https://docs.sentient.invenia.in/docs/pe/user-guide/dashboards/) to visualize telemetry values in widgets.
+Create a [dashboard](https://sentient.invenia.in/docs/pe/user-guide/dashboards/) to visualize telemetry values in widgets.
 
  - Go to the **Dashboard groups** tab -> **All**. Creat new dashboard by clicking the "plus" button in the upper right corner of the dashboards page. Enter dashboard name and click on "Add" button.
 
 ![image](/images/samples/exxn/exxn-create-dashboard-1.png)
 
- - Create **Radial gauge** widget from the **Analohue gauges** bundle. Read more about widgets and their creation in [this guide](https://docs.sentient.invenia.in/docs/pe/user-guide/dashboards/#widgets).
+ - Create **Radial gauge** widget from the **Analohue gauges** bundle. Read more about widgets and their creation in [this guide](https://sentient.invenia.in/docs/pe/user-guide/dashboards/#widgets).
 
 All the measures that are 'enabled' in the device's JSON configuration file will be found as metrics with the name specified in the same file.
 

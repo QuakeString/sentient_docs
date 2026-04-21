@@ -33,7 +33,7 @@ Once you complete this sample/tutorial, you will see your sensor data on a dashb
 
 ### Software
  - [RTU+ Configuration Interface](https://nettra.tech).
- - You will need to have SENTIENT server up and running. Use either [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/) or [Installation Guide](/docs/user-guide/install/installation-options/) to install SENTIENT.
+ - You will need to have SENTIENT server up and running. Use either [SENTIENT Cloud](https://sentient.invenia.in/installations/) or [Installation Guide](/docs/user-guide/install/installation-options/) to install SENTIENT.
 
 ## Connection diagram
 

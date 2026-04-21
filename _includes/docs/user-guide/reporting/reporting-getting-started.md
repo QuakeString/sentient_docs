@@ -237,7 +237,7 @@ The report will be generated on behalf of <b>Jane Smith</b>, the administrator f
 
   - <b>Event type</b> – always set to <b>Create report</b>.
   - <b>Report template</b> – select the previously created Daily Devices Alarm Report template.
-  - <b>User</b> – specify the user account on whose behalf the report will be generated: <b>janesmith@docs.sentient.invenia.in</b> (Jane Smith — Customer A administrator).
+  - <b>User</b> – specify the user account on whose behalf the report will be generated: <b>janesmith@sentient.invenia.in</b> (Jane Smith — Customer A administrator).
 
 {% include images-gallery.html imageCollection="scheduler-event-customer-a-1" %}
 
@@ -282,7 +282,7 @@ This report will be generated on behalf of <b>Emma Johnson</b> — the administr
   {:.copy-code}
 
 - Select the same template used for Customer A — <b>Daily Device Alarm Report.
-- Set the user account to <b>emmajohnson@docs.sentient.invenia.in</b> (Emma Johnson – Customer B Administrator). 
+- Set the user account to <b>emmajohnson@sentient.invenia.in</b> (Emma Johnson – Customer B Administrator). 
   > The report will be generated on behalf of this user, containing only the data accessible to Customer B.
 
 - In the "<b>Recipients</b>" field, click "<b>Create new</b>" to create a new recipient group.

@@ -14,7 +14,7 @@ Additionally, you must connect your device to the network. You can find detailed
 
 ## Create ChirpStack integration
 
-You will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
+You will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
 The alternative option is to install SENTIENT using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 <br>

@@ -1,7 +1,7 @@
 
 **Configure kafka integration**
 
-So in ThingsBoard instance open the Integration menu, select Add integration or Edit action - Details tab.
+So in SENTIENT instance open the Integration menu, select Add integration or Edit action - Details tab.
 
 Set Name, Choose type and select your Uplink data converter from dropdown menu. And fill other required fields:  Topics, Bootstrap server, properties.
 

@@ -24,7 +24,7 @@ Please review the integration diagram to learn more.
 In this tutorial, we will use:
 
 {% if docsPrefix == "pe/" %}
- - The instance of [SENTIENT Professional Edition](https://docs.sentient.invenia.in/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
+ - The instance of [SENTIENT Professional Edition](https://sentient.invenia.in/docs/user-guide/install/pe/installation-options/){:target="_blank"} installed locally;
 {% endif %}
 {% if docsPrefix contains "paas/" %}
  - SENTIENT Professional Edition instance — [{{hostName}}](https://{{hostName}}){:target="_blank"};

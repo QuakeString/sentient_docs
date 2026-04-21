@@ -1,1 +1,0 @@
-wget https://dist.docs.sentient.invenia.in/sentient-2.4.1pe.rpm

@@ -139,7 +139,7 @@ description:
 	</main>
   <p class="table-description">
     * - Additional fees may apply
-    <br>** - Tenant administrator account on SENTIENT Professional Edition instance deployed in the cloud and dedicated to PoCs and Sales demos (partner.docs.sentient.invenia.in)
+    <br>** - Tenant administrator account on SENTIENT Professional Edition instance deployed in the cloud and dedicated to PoCs and Sales demos (partner.sentient.invenia.in)
     <br>*** - Custom logos, color schemes, login pages, translations and domains on a system, tenant and customer levels
   </p>
 </section>

@@ -177,4 +177,4 @@ mqtt.mycompany.com. 3600 IN A 203.0.113.45
 
 ### Contact Support
 
-If the configuration appears correct but the issue persists, please [contact us](https://docs.sentient.invenia.in/docs/pe/mqtt-broker/help/){:target="_blank"} for further assistance.
+If the configuration appears correct but the issue persists, please [contact us](https://sentient.invenia.in/docs/pe/mqtt-broker/help/){:target="_blank"} for further assistance.

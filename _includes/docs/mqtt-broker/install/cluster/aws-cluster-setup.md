@@ -338,7 +338,7 @@ The main advantage of this option is that you may use it in combination with “
 
 To enable the two-way TLS:
 
-Follow [this guide](https://docs.sentient.invenia.in/docs/user-guide/mqtt-over-ssl/) to create a .pem file with the SSL certificate. Store the file as _server.pem_ in the working directory.
+Follow [this guide](https://sentient.invenia.in/docs/user-guide/mqtt-over-ssl/) to create a .pem file with the SSL certificate. Store the file as _server.pem_ in the working directory.
 
 You’ll need to create a config-map with your PEM file, you can do it by calling command:
 

@@ -56,7 +56,7 @@ We&#39;ll add a single component to the template — an Alarm Table — to displ
 - Let&#39;s add another notification delivery method — <b>Email</b>.
 - Enable the "<b>Attach report</b>" option. 
   - Select the previously created <b>New alarm</b> template.
-  - Specify the user account on whose behalf the report will be generated: <b>john.doe@docs.sentient.invenia.in</b> (John Doe — Tenant Administrator). 
+  - Specify the user account on whose behalf the report will be generated: <b>john.doe@sentient.invenia.in</b> (John Doe — Tenant Administrator). 
   - Click "<b>Next</b>".
 - Enter the <b>subject and message</b> that will be sent via email along with the attached PDF report. 
 - Save the changes to the template by clicking the "<b>Save</b>" button.
@@ -66,12 +66,12 @@ We&#39;ll add a single component to the template — an Alarm Table — to displ
 <br><b><font size="3">After making changes to the "New alarm notification" template, it&#39;s a good idea to test that everything works as expected.</font></b>
 
 First, make sure that you have an alarm creation rule configured for your device.
-You can find instructions for setting up such a rule in the relevant section of the documentation ([see the link](https://docs.sentient.invenia.in/docs/getting-started-guides/helloworld-pe/#step-4-configure-alarm-rules){:target="_blank"}).
+You can find instructions for setting up such a rule in the relevant section of the documentation ([see the link](https://sentient.invenia.in/docs/getting-started-guides/helloworld-pe/#step-4-configure-alarm-rules){:target="_blank"}).
 
 {% include images-gallery.html imageCollection="alarm-rule" %}
 
 Trigger the alarm by publishing telemetry for your device that exceeds the threshold value defined in the alarm creation rule.
-The easiest way to do this is by using the [Check connectivity](https://docs.sentient.invenia.in/docs/getting-started-guides/helloworld-pe/#step-2-connect-device){:target="_blank"} feature in SENTIENT.
+The easiest way to do this is by using the [Check connectivity](https://sentient.invenia.in/docs/getting-started-guides/helloworld-pe/#step-2-connect-device){:target="_blank"} feature in SENTIENT.
 
 {% include images-gallery.html imageCollection="check-connectivity-feature" %}
 

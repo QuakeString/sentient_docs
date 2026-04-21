@@ -12,7 +12,7 @@ Before proceeding, ensure you have the following requirements in place:
 {{ prerequisites }} {% if page.docsPrefix == "pe/edge/" %}
 - SENTIENT Cloud account in ([Europe](https://eu.sentient.cloud/signup){: target="_blank"} or [North America](https://sentient.cloud/signup){: target="_blank"}), or a [local server](/docs/user-guide/install/pe/installation-options/){: target="_blank"} installed on-premises
 {% else %}
-- [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){: target="_blank"} account or a [local server](/docs/user-guide/install/installation-options/){: target="_blank"} installed on-premises
+- [SENTIENT Cloud](https://sentient.invenia.in/installations/){: target="_blank"} account or a [local server](/docs/user-guide/install/installation-options/){: target="_blank"} installed on-premises
 {% endif %}
 
 {% else %}
@@ -30,7 +30,7 @@ To continue with this guide, we will need the following:
 {{ prerequisites }} {% if page.docsPrefix == "pe/" %}
 - [SENTIENT Cloud (Europe)](https://eu.sentient.cloud/signup){: target="_blank"} or [SENTIENT Cloud (America)](https://sentient.cloud/signup){: target="_blank"}
 {% else %}
-- [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){: target="_blank"} account or a [local server](/docs/user-guide/install/installation-options/){: target="_blank"} installed on-premises
+- [SENTIENT Cloud](https://sentient.invenia.in/installations/){: target="_blank"} account or a [local server](/docs/user-guide/install/installation-options/){: target="_blank"} installed on-premises
 {% endif %}
 
 {% endif %}

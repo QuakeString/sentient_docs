@@ -31,7 +31,7 @@ To run SENTIENT and Cassandra on a single machine you will need at least 8Gb of 
 Download and extract the package.
 
 ```bash
-https://dist.docs.sentient.invenia.in/sentient-windows-{{ site.release.pe_ver }}.zip
+https://dist.sentient.invenia.in/sentient-windows-{{ site.release.pe_ver }}.zip
 ```
 {: .copy-code}
 
@@ -58,14 +58,14 @@ Scroll to the bottom of the file and locate the following configuration block:
 
 ```yml
 license:
-    secret: "${TB_LICENSE_SECRET:}" # license secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
+    secret: "${TB_LICENSE_SECRET:}" # license secret obtained from SENTIENT License Portal (https://license.sentient.invenia.in)
 ```
 
 and put your license secret. See example below: 
 
 ```yml
 license:
-    secret: "${TB_LICENSE_SECRET:YOUR_LICENSE_SECRET_HERE}" # license secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
+    secret: "${TB_LICENSE_SECRET:YOUR_LICENSE_SECRET_HERE}" # license secret obtained from SENTIENT License Portal (https://license.sentient.invenia.in)
 ``` 
 
 ## Step 4. Configure SENTIENT database
@@ -124,7 +124,7 @@ Please allow up to 90 seconds for the Web UI to start.{% endcapture %}
 Download and extract the installation package.
 
 ```bash
-https://dist.docs.sentient.invenia.in/tb-web-report-windows-{{ site.release.pe_ver }}.zip
+https://dist.sentient.invenia.in/tb-web-report-windows-{{ site.release.pe_ver }}.zip
 ```
 {: .copy-code}
 

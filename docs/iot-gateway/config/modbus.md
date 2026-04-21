@@ -161,7 +161,7 @@ This subsection contains configuration for attribute updates request from SENTIE
 
 SENTIENT allows provisioning device attributes and fetches some of them from the device application. You can treat
 this as a remote configuration for devices. Your devices are able to request shared attributes from SENTIENT.
-See [user guide](https://docs.sentient.invenia.in/docs/user-guide/attributes/) for more details.
+See [user guide](https://sentient.invenia.in/docs/user-guide/attributes/) for more details.
 
 The following parameters are used to configure attribute updates:
 
@@ -188,7 +188,7 @@ More usage examples can be found in the [Example usage](/docs/iot-gateway/config
 
 #### Subsection "RPC requests"
 
-SENTIENT allows sending [RPC commands](https://docs.sentient.invenia.in/docs/user-guide/rpc/) to the device that is connected
+SENTIENT allows sending [RPC commands](https://sentient.invenia.in/docs/user-guide/rpc/) to the device that is connected
 to SENTIENT directly or via Gateway.
 Configuration, provided in this section is used for sending RPC requests from SENTIENT to device. The following
 parameters are used to configure RPC methods:

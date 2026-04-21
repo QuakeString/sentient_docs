@@ -164,7 +164,7 @@ mycompany.sentient.space. 3600 IN	CNAME	eu.sentient.cloud
 ...
 ```
 
-If all the things are correct, but some issue still persists - please [contact us](https://docs.sentient.invenia.in/docs/contact-us/){:target="_blank"} for further support.
+If all the things are correct, but some issue still persists - please [contact us](https://sentient.invenia.in/docs/contact-us/){:target="_blank"} for further support.
 
 ## Next step
 

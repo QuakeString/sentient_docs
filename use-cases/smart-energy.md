@@ -19,7 +19,7 @@ contactUsModal: "true"
                 <p class="text">Smart energy is intelligent energy resource management using IoT to improve efficiency, reduce costs, and automate processes. SENTIENT is a perfect platform for these tasks, providing scalable data collection, analytics, and real-time remote control.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_SmartEnergy_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>            </div>
+                <a id="UseCases_SmartEnergy_ViewLiveDemo" target="_blank" href="https://demo.sentient.invenia.in/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>            </div>
             </div>
         <div class="long">
             <p>IoT is radically transforming the approach to energy management. IoT sensors capture the consumption of electricity, water, heat, as well as environmental parameters such as pressure, temperature, and more. This data is used to make automated decisions — from shutting down systems in case of failures to optimizing consumption and preventing losses.</p>
@@ -325,7 +325,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_SmartEnergy_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
+                <a id="UseCases_SmartEnergy_ViewLiveDemo" target="_blank" href="https://demo.sentient.invenia.in/dashboard/e8e409c0-f2b5-11e6-a6ee-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>
                 <a id="UseCases_SmartEnergy_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
     

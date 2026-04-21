@@ -1294,8 +1294,8 @@ return entityName + temp;
 }
 
 .blue-box {
-  background: #2196F31A;
-  border: 2px solid #2196F3;
+  background: #1870741A;
+  border: 2px solid #187074;
   border-radius: 10px;
   padding: 10px;
   margin: 8px 0;

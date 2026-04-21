@@ -33,8 +33,8 @@ description:
                         </div>
                         <div class="frame-video">
                             <video autoplay loop preload="auto" muted playsinline>
-                                 <source src="https://video.docs.sentient.invenia.in/mobile/browse-dashboards.mp4" type="video/mp4">
-                                 <source src="https://video.docs.sentient.invenia.in/mobile/browse-dashboards.webm" type="video/webm">
+                                 <source src="https://video.sentient.invenia.in/mobile/browse-dashboards.mp4" type="video/mp4">
+                                 <source src="https://video.sentient.invenia.in/mobile/browse-dashboards.webm" type="video/webm">
                             </video>
                         </div>
                     </div>
@@ -51,8 +51,8 @@ description:
                         </div>
                         <div class="frame-video">
                             <video autoplay loop preload="auto" muted playsinline>
-                                 <source src="https://video.docs.sentient.invenia.in/mobile/manage-alarms.mp4" type="video/mp4">
-                                 <source src="https://video.docs.sentient.invenia.in/mobile/manage-alarms.webm" type="video/webm">
+                                 <source src="https://video.sentient.invenia.in/mobile/manage-alarms.mp4" type="video/mp4">
+                                 <source src="https://video.sentient.invenia.in/mobile/manage-alarms.webm" type="video/webm">
                             </video>
                         </div>
                     </div>
@@ -87,8 +87,8 @@ description:
                         </div>
                         <div class="frame-video">
                             <video autoplay loop preload="auto" muted playsinline>
-                                 <source src="https://video.docs.sentient.invenia.in/mobile/navigate-devices.mp4" type="video/mp4">
-                                 <source src="https://video.docs.sentient.invenia.in/mobile/navigate-devices.webm" type="video/webm">
+                                 <source src="https://video.sentient.invenia.in/mobile/navigate-devices.mp4" type="video/mp4">
+                                 <source src="https://video.sentient.invenia.in/mobile/navigate-devices.webm" type="video/webm">
                             </video>
                         </div>
                     </div>
@@ -105,8 +105,8 @@ description:
                         </div>
                         <div class="frame-video">
                             <video autoplay loop preload="auto" muted playsinline>
-                                 <source src="https://video.docs.sentient.invenia.in/mobile/mobile-actions.mp4" type="video/mp4">
-                                 <source src="https://video.docs.sentient.invenia.in/mobile/mobile-actions.webm" type="video/webm">
+                                 <source src="https://video.sentient.invenia.in/mobile/mobile-actions.mp4" type="video/mp4">
+                                 <source src="https://video.sentient.invenia.in/mobile/mobile-actions.webm" type="video/webm">
                             </video>
                         </div>
                     </div>

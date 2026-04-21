@@ -19,7 +19,7 @@ contactUsModal: "true"
                 <p class="text">Modern agriculture is undergoing a digital transformation driven by the need for sustainability, efficiency, and resilience. Farmers and agricultural enterprises face increasing pressure to optimize yield, reduce resource consumption, and mitigate risks related to climate and storage. SENTIENT easily handles this task by providing real-time data collection, automation, and intuitive visualization tailored for smart farming needs.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_SmartFarming_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>     
+                <a id="UseCases_SmartFarming_ViewLiveDemo" target="_blank" href="https://demo.sentient.invenia.in/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>     
             </div>
         </div>
         <div class="long">
@@ -306,7 +306,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_SmartFarming_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>     
+                <a id="UseCases_SmartFarming_ViewLiveDemo" target="_blank" href="https://demo.sentient.invenia.in/dashboard/1f9828d0-058e-11e7-87f7-bb0136cc33d0?publicId=963ab470-34c9-11e7-a7ce-bb0136cc33d0" class="button gtm_button">View live demo</a>     
                 <a id="UseCases_SmartFarming_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
     

@@ -8,9 +8,9 @@ cleanup_dirs=( "user-guide" "reference" "edge" "lwm2m")
 for ext in "${extensions[@]}"
 do
   echo "Replacing the image url in $ext files"
-  find . -type f -iname "$ext" -exec sed -i -e '/https/! s/\/images\//https:\/\/img.docs.sentient.invenia.in\//g' {} \;
-  find . -type f -iname "$ext" -exec sed -i -e 's/https:\/\/docs.sentient.invenia.in\/images\//https:\/\/img.docs.sentient.invenia.in\//g' {} \;
-  find . -type f -iname "$ext" -exec sed -i -e '/https:\/\/img.docs.sentient.invenia.in\/partners\/map-of-distributors\.svg/ s/https:\/\/img.docs.sentient.invenia.in\/partners\/map-of-distributors\.svg/\/images\/partners\/map-of-distributors.svg/g' {} \;
+  find . -type f -iname "$ext" -exec sed -i -e '/https/! s/\/images\//https:\/\/img.sentient.invenia.in\//g' {} \;
+  find . -type f -iname "$ext" -exec sed -i -e 's/https:\/\/sentient.invenia.in\/images\//https:\/\/img.sentient.invenia.in\//g' {} \;
+  find . -type f -iname "$ext" -exec sed -i -e '/https:\/\/img.sentient.invenia.in\/partners\/map-of-distributors\.svg/ s/https:\/\/img.sentient.invenia.in\/partners\/map-of-distributors\.svg/\/images\/partners\/map-of-distributors.svg/g' {} \;
 done
 
 echo "$(date +"%H:%M") Replacing image urls.. done."

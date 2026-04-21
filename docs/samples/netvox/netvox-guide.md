@@ -90,7 +90,7 @@ Turn on the device and make sure it is connected to the Network Server.
 
 ### Create Integration in SENTIENT
 
-You will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
+You will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
 The alternative option is to install SENTIENT using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 - Sign up and log in to SENTIENT;

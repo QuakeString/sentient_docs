@@ -25,7 +25,7 @@ Each zone group maintains its own INSIDE/OUTSIDE state. This enables simultaneou
 When zones are discovered dynamically, multiple physical polygons can be treated as one logical group. If an entity moves between adjacent zones within the same group, the field preserves a continuous INSIDE status and does not generate false ENTERED/LEFT events.
 
 <b><font size="3">Standardized outputs for alarms and dashboards</font></b>   
-For each zone group, the field produces consistent output keys (&lt;zoneGroupName&gt;Status and &lt;zoneGroupName&gt;Event) that can be used directly in [alarm rules](https://docs.sentient.invenia.in/docs/pe/user-guide/alarm-rules/){:target="_blank"}, dashboards, automation, or analytics.
+For each zone group, the field produces consistent output keys (&lt;zoneGroupName&gt;Status and &lt;zoneGroupName&gt;Event) that can be used directly in [alarm rules](https://sentient.invenia.in/docs/pe/user-guide/alarm-rules/){:target="_blank"}, dashboards, automation, or analytics.
 
 <hr>
 

@@ -63,7 +63,7 @@ redirect_from: "docs/services/trainings/"
                             <span>Enhance your <b>experience</b> with SENTIENT. </span>
                         </li>
                         <li>
-                            <i class="far fa-question-circle fa-lg" style="color: #2A7DEC"></i>
+                            <i class="far fa-question-circle fa-lg" style="color: #187074"></i>
                             <span>Answer <b>practical questions</b> related to your specific use cases. </span>
                         </li>
                         <li>
@@ -86,7 +86,7 @@ redirect_from: "docs/services/trainings/"
             <div class="trainings-cards-wrapper">
                 <div class="trainings-card">
                     <span class="trainings-card-icon">
-                        <i class="fas fa-users fa-5x" style="color: #2A7DEC"></i>
+                        <i class="fas fa-users fa-5x" style="color: #187074"></i>
                     </span>
                     <div class="trainings-card-title-text">
                         <span class="trainings-card-title" style="display: flex">
@@ -98,7 +98,7 @@ redirect_from: "docs/services/trainings/"
                 </div>       
                 <div class="trainings-card">
                     <div class="trainings-card-icon">
-                        <i class="fas fa-comments fa-5x" style="color: #2A7DEC"></i>
+                        <i class="fas fa-comments fa-5x" style="color: #187074"></i>
                     </div>
                     <div class="trainings-card-title-text">
                         <span class="trainings-card-title" style="display: flex">

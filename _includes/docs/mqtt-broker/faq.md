@@ -7,7 +7,7 @@
 @media (max-width: 690px) { .st-rmqtt-faq-tabs { width: 100%; } }
 .st-rmqtt-faq-tab { width: 100%; font-size: 24px; font-weight: 500; line-height: 36px; padding: 24px 32px; border: 1.5px solid transparent; border-radius: 24px; cursor: pointer; color: #757575; }
 .st-rmqtt-faq-tab:hover { color: #757575; }
-.st-rmqtt-faq-tab.active { color: #000000DE; border-bottom: 1.5px solid #E6F0FC; background: #F4F8FE; }
+.st-rmqtt-faq-tab.active { color: #000000DE; border-bottom: 1.5px solid #E6F0FC; background: #e8f4f4; }
 .st-rmqtt-faq-answers { flex: 1.5; }
 .st-rmqtt-faq-category { display: none; }
 .st-rmqtt-faq-category.active { display: block; }
@@ -44,19 +44,19 @@
 }
 .st-rmqtt-faq-question.open .st-rmqtt-faq-answer { display: block; }
 .st-rmqtt-faq-answer p, .st-rmqtt-faq-answer li { font-size: 14px; color: #3D3D3D; line-height: 24px; }
-.st-rmqtt-faq-answer a { color: #2A7DEC; text-decoration: none; }
+.st-rmqtt-faq-answer a { color: #187074; text-decoration: none; }
 .st-rmqtt-faq-answer a:hover { text-decoration: underline; }
 .st-rmqtt-faq-answer ul { margin: 20px 0; padding-left: 30px; list-style: disc; }
 .st-rmqtt-faq-answer li { margin-bottom: .75em; }
 </style>
 
 <script>
-function toggleTbmqFaq(element) {
+function toggleStRmqttFaq(element) {
     var question = element.closest('.st-rmqtt-faq-question');
     question.classList.toggle('open');
 }
 
-function switchTbmqFaqTab(tabId) {
+function switchStRmqttFaqTab(tabId) {
     // Remove active from all tabs
     var tabs = document.querySelectorAll('.st-rmqtt-faq-tab');
     tabs.forEach(function(tab) {
@@ -83,20 +83,20 @@ function switchTbmqFaqTab(tabId) {
 <div class="st-rmqtt-faq-wrapper">
     <div class="st-rmqtt-faq-sections">
         <div class="st-rmqtt-faq-tabs">
-            <div class="st-rmqtt-faq-tab active" onclick="switchTbmqFaqTab('start')">Getting Started</div>
-            <div class="st-rmqtt-faq-tab" onclick="switchTbmqFaqTab('configuration')">Configuration & Deployment</div>
-            <div class="st-rmqtt-faq-tab" onclick="switchTbmqFaqTab('connectivity')">Connectivity</div>
-            <div class="st-rmqtt-faq-tab" onclick="switchTbmqFaqTab('usage')">Usage and Capabilities</div>
-            <div class="st-rmqtt-faq-tab" onclick="switchTbmqFaqTab('security')">Security and Reliability</div>
-            <div class="st-rmqtt-faq-tab" onclick="switchTbmqFaqTab('subscriptions')">Subscriptions & Messaging</div>
-            <div class="st-rmqtt-faq-tab" onclick="switchTbmqFaqTab('performance')">Performance and Scalability</div>
-            <div class="st-rmqtt-faq-tab" onclick="switchTbmqFaqTab('licensing')">Licensing and Support</div>
+            <div class="st-rmqtt-faq-tab active" onclick="switchStRmqttFaqTab('start')">Getting Started</div>
+            <div class="st-rmqtt-faq-tab" onclick="switchStRmqttFaqTab('configuration')">Configuration & Deployment</div>
+            <div class="st-rmqtt-faq-tab" onclick="switchStRmqttFaqTab('connectivity')">Connectivity</div>
+            <div class="st-rmqtt-faq-tab" onclick="switchStRmqttFaqTab('usage')">Usage and Capabilities</div>
+            <div class="st-rmqtt-faq-tab" onclick="switchStRmqttFaqTab('security')">Security and Reliability</div>
+            <div class="st-rmqtt-faq-tab" onclick="switchStRmqttFaqTab('subscriptions')">Subscriptions & Messaging</div>
+            <div class="st-rmqtt-faq-tab" onclick="switchStRmqttFaqTab('performance')">Performance and Scalability</div>
+            <div class="st-rmqtt-faq-tab" onclick="switchStRmqttFaqTab('licensing')">Licensing and Support</div>
         </div>
         <div class="st-rmqtt-faq-answers">
             <div id="st-rmqtt-faq-cat-start" class="st-rmqtt-faq-category active">
                {% if docsPrefix == null %}
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">What is ST-RMQTT Community Edition (CE)?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">What is ST-RMQTT Community Edition (CE)?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT is a high-performance MQTT broker developed by SENTIENT. It enables efficient, reliable, and scalable communication between MQTT clients and IoT applications. ST-RMQTT supports <b>MQTT 3.x</b> and <b>MQTT 5.0</b>, ensuring compatibility with a wide range of devices and industry use cases.</p>
                         <p>The broker is available in two editions: <b>Community Edition (CE)</b> and <b>Professional Edition (PE)</b>.</p>
@@ -107,7 +107,7 @@ function switchTbmqFaqTab(tabId) {
                 {% endif %}
                 {% if docsPrefix == "pe/" %}
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">What is ST-RMQTT Professional Edition (PE)?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">What is ST-RMQTT Professional Edition (PE)?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT is a high-performance MQTT broker developed by SENTIENT. It enables efficient, reliable, and scalable communication between MQTT clients and IoT applications. ST-RMQTT supports <b>MQTT 3.x</b> and <b>MQTT 5.0</b>, ensuring compatibility with a wide range of devices and industry use cases.</p>
                         <p>The broker is available in two editions: <b>Community Edition (CE)</b> and <b>Professional Edition (PE)</b>.</p>
@@ -124,19 +124,19 @@ function switchTbmqFaqTab(tabId) {
                 </div>
                 {% endif %}
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How do I get started?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How do I get started?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>We recommend <a href="/docs/{{docsPrefix}}mqtt-broker/install/installation-options/" target="_blank">installing</a> ST-RMQTT locally on your laptop or PC using <b>Docker</b> and following the <a href="/docs/{{docsPrefix}}mqtt-broker/getting-started/" target="_blank">Getting Started Guide</a>. The guide walks you through installation, configuration, and initial testing, helping you establish your first MQTT connections quickly and reliably.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How do I install ST-RMQTT?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How do I install ST-RMQTT?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>You can install ST-RMQTT locally or in the cloud using <b>Docker</b>, <b>Kubernetes scripts</b>, or <b>Helm</b>. Detailed step-by-step guides are available in the <a href="/docs/{{docsPrefix}}mqtt-broker/install/installation-options/" target="_blank">Installation Guide</a>, including configuration of Kafka, Redis, and PostgreSQL dependencies.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How can I start ST-RMQTT using Docker or Helm?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How can I start ST-RMQTT using Docker or Helm?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>To start ST-RMQTT with <b>Docker</b>, run the provided Docker Compose file, which launches all required services (Kafka, Redis, PostgreSQL, and the MQTT broker) in a single command.
                             For <b>Kubernetes</b>, use the official Helm chart to deploy ST-RMQTT as a scalable, fault-tolerant cluster. The Helm chart includes configurable parameters for persistence, resource limits, and monitoring.
@@ -144,7 +144,7 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">What are the system requirements for ST-RMQTT?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">What are the system requirements for ST-RMQTT?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT can run on modest hardware for testing or small-scale evaluation. The <b>minimum requirements</b> to start ST-RMQTT are:</p>
                         <ul>
@@ -163,7 +163,7 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How can I upgrade ST-RMQTT to a newer version?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How can I upgrade ST-RMQTT to a newer version?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>Upgrading ST-RMQTT is straightforward. <a href="/docs/{{docsPrefix}}mqtt-broker/install/upgrade-instructions/" target="_blank">The Upgrade Guide</a>
                             provides version-specific instructions and notes about compatibility changes or configuration updates introduced in each release.</p>
@@ -172,7 +172,7 @@ function switchTbmqFaqTab(tabId) {
             </div>
             <div id="st-rmqtt-faq-cat-configuration" class="st-rmqtt-faq-category">
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How do I configure ST-RMQTT for production use?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How do I configure ST-RMQTT for production use?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>For production environments, ST-RMQTT should be configured for performance, security, and fault tolerance. It is recommended to:</p>
                         <ul>
@@ -184,20 +184,20 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">Can I deploy ST-RMQTT in Kubernetes?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">Can I deploy ST-RMQTT in Kubernetes?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>Yes. ST-RMQTT fully supports <b>Kubernetes deployments</b> through the official <b>Helm chart</b> or k8s manifests. This approach provides easy scaling, automatic recovery, and rolling updates. You can configure node roles, persistence volumes, and monitoring integrations directly through Helm values, making it suitable for cloud or hybrid environments.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How do I set up clustering in ST-RMQTT?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How do I set up clustering in ST-RMQTT?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT supports <b>horizontal scaling</b> through clustering. Each node in the cluster handles a portion of MQTT clients and message flow, ensuring reliability and load balancing. Cluster coordination is achieved using <b>Kafka</b> for message routing.</p>
                         <p>To enable clustering, deploy multiple ST-RMQTT instances connected to the same Kafka, Redis, and PostgreSQL services, and configure a unique broker ID (<code>TB_SERVICE_ID</code>) in the environment variables per node.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">What ports does ST-RMQTT use?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">What ports does ST-RMQTT use?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>By default, ST-RMQTT listens on the following ports:</p>
                         <ul>
@@ -211,13 +211,13 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How can I enable TLS/SSL for secure connections?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How can I enable TLS/SSL for secure connections?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>You can enable SSL/TLS by providing a valid <b>server certificate</b> and <b>private key</b> in the ST-RMQTT configuration. ST-RMQTT supports both server-side encryption and <b>client certificate authentication (X.509)</b> for stronger security. Certificates can be issued by a trusted CA or generated internally for testing. Once configured, restart the broker to apply the changes.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How can I configure authentication providers in ST-RMQTT?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How can I configure authentication providers in ST-RMQTT?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT uses a <b>pluggable authentication model</b>, allowing you to define how clients are authenticated. You can choose between:</p>
                         <ul>
@@ -230,7 +230,7 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">Where does ST-RMQTT store data?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">Where does ST-RMQTT store data?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT integrates with <a href="https://kafka.apache.org/" target="_blank">Kafka</a>, <a href="https://redis.io/" target="_blank">Redis</a>, and <a href="https://www.postgresql.org/" target="_blank">PostgreSQL</a> to ensure reliable, high-performance data storage:</p>
                         <ul>
@@ -244,13 +244,13 @@ function switchTbmqFaqTab(tabId) {
             </div>
             <div id="st-rmqtt-faq-cat-connectivity" class="st-rmqtt-faq-category">
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">Which MQTT protocol versions are supported?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">Which MQTT protocol versions are supported?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT fully supports <b>MQTT 3.1.1</b> and <b>MQTT 5.0</b>, ensuring compatibility with all major MQTT clients and libraries. Support for MQTT 5.0 introduces advanced features such as <b>shared subscriptions</b>, <b>user properties</b>, <b>topic aliases</b>, <b>enhanced authentication</b>, and <b>reason codes</b>, giving developers greater flexibility and control over client interactions.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">Does ST-RMQTT support MQTT over WebSocket?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">Does ST-RMQTT support MQTT over WebSocket?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>Yes, ST-RMQTT supports <b>MQTT over WebSocket</b> and <b>Secure WebSocket (WSS)</b>, allowing browser-based applications and web dashboards to publish and subscribe to topics in real time. You can enable the WebSocket endpoints by default on:</p>
                         <ul>
@@ -261,7 +261,7 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How can I configure Keep Alive and Clean Start options?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How can I configure Keep Alive and Clean Start options?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT supports <b>Keep Alive</b> and <b>Clean Start</b> according to the MQTT specification.</p>
                         <ul>
@@ -274,19 +274,19 @@ function switchTbmqFaqTab(tabId) {
             </div>
             <div id="st-rmqtt-faq-cat-usage" class="st-rmqtt-faq-category">
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">What can I do with ST-RMQTT?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">What can I do with ST-RMQTT?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT enables seamless communication between MQTT clients, ensuring secure and efficient message exchange. It supports advanced MQTT 5.0 features such as <b>shared subscriptions</b>, <b>enhanced authentication</b>, <b>topic aliasing</b>, and <b>flow control</b>, providing flexibility for IoT applications of any scale. ST-RMQTT is built for performance and scalability — whether you’re running a single instance for testing or a clustered setup serving thousands of clients.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">Where can I host ST-RMQTT?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">Where can I host ST-RMQTT?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>You can host ST-RMQTT in <b>cloud environments</b>, <b>on-premises setups</b>, or <b>locally</b> on your laptop or PC. For the fastest setup, we recommend using the <a href="/docs/{{docsPrefix}}mqtt-broker/install/docker/" target="_blank">Docker installation guide</a>. If you plan to deploy ST-RMQTT for production or cluster environments, refer to the <a href="/docs/{{docsPrefix}}mqtt-broker/install/cluster/docker-compose-setup/" target="_blank">Cluster Setup Guide</a> for step-by-step instructions on configuring multi-node deployments using Docker Compose.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">Can I replace the default ST-RMQTT logo in the menu?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">Can I replace the default ST-RMQTT logo in the menu?</div>
                     <div class="st-rmqtt-faq-answer">
                         {% if docsPrefix == null %}
                         <p>The <b>Community Edition</b> of ST-RMQTT does not include a built-in white-labeling feature. However, it is technically possible to replace the default logo by modifying the source code and rebuilding the platform. This approach requires <b>development experience</b> and <b>familiarity with the ST-RMQTT front-end codebase</b>.</p>
@@ -308,13 +308,13 @@ function switchTbmqFaqTab(tabId) {
             </div>
             <div id="st-rmqtt-faq-cat-security" class="st-rmqtt-faq-category">
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">What about security?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">What about security?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT ensures secure message exchange by supporting <b>MQTT over SSL/TLS encryption</b>, preventing unauthorized access and data tampering. It allows creating custom <b>authentication providers</b> for validating client credentials, and supports <b>enhanced authentication (MQTT 5.0)</b> for more flexible security models. You can integrate ST-RMQTT with your existing certificate authority or use username/password-based authentication. These features provide a strong foundation for building secure and reliable IoT communication networks.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">What authentication methods does ST-RMQTT support?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">What authentication methods does ST-RMQTT support?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT supports multiple authentication mechanisms to ensure secure and flexible client validation. The available methods include:</p>
                         <ul>
@@ -327,7 +327,7 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How can I enable client certificate authentication (SSL)?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How can I enable client certificate authentication (SSL)?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT supports <b>SSL/TLS encryption</b> and <b>client certificate authentication</b> (X.509 certificate chain). To enable this feature:</p>
                         <ol>
@@ -339,19 +339,19 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">Does ST-RMQTT support JWT authentication?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">Does ST-RMQTT support JWT authentication?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>Yes, ST-RMQTT supports <b>JWT (JSON Web Token)</b>-based authentication through authentication providers. This approach enables clients to connect securely using signed tokens instead of static credentials. JWT support is ideal for dynamic or short-lived sessions where credentials are issued by an external identity service.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How are unauthorized client connections handled?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How are unauthorized client connections handled?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT automatically detects and logs unauthorized connection attempts. When a client fails authentication, the broker records details such as <b>client ID</b>, <b>IP address</b>, <b>username</b>, and <b>TLS status</b>. This data can be reviewed in the <b>Unauthorized Clients</b> dashboard or queried via API for further analysis.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How can I monitor and block unauthorized clients?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How can I monitor and block unauthorized clients?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT provides tools to monitor unauthorized clients directly through the web interface or REST API. Administrators can filter, inspect, and delete recorded entries. You can also apply blocking rules to reject future connection attempts from known malicious IP addresses or repeated offenders. This feature helps maintain system integrity and visibility into potential security risks.</p>
                     </div>
@@ -359,7 +359,7 @@ function switchTbmqFaqTab(tabId) {
             </div>
             <div id="st-rmqtt-faq-cat-subscriptions" class="st-rmqtt-faq-category">
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How does ST-RMQTT manage subscriptions?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How does ST-RMQTT manage subscriptions?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT manages client subscriptions using a <b>Trie-based data structure</b>, which provides fast and memory-efficient topic lookups. All client subscriptions are consumed from a Kafka topic and stored in memory within the Trie, where each node represents a level in the topic filter hierarchy.</p>
                         <p>The Trie structure enables <b>prefix-based matching</b>, allowing ST-RMQTT to quickly identify all clients subscribed to topics that match a published message. When a <b>PUBLISH</b> message is read from Kafka, ST-RMQTT uses the Trie to determine the set of clients with relevant subscriptions and forwards the message to each of them.</p>
@@ -367,31 +367,31 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">Does ST-RMQTT support shared subscriptions?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">Does ST-RMQTT support shared subscriptions?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>Yes, ST-RMQTT supports <b>shared subscriptions</b> as defined by the MQTT 5.0 specification. Shared subscriptions allow multiple clients to consume messages from the same topic group in a <b>load-balanced</b> manner. This feature is especially useful for scaling message processing horizontally — for example, distributing telemetry data processing among several backend services.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How are retained messages handled in ST-RMQTT?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How are retained messages handled in ST-RMQTT?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT supports <b>retained messages</b>, which ensure that newly connected subscribers immediately receive the most recent message published on a topic. When a client publishes a retained message, ST-RMQTT stores it and delivers it automatically to any future subscribers of that topic. If a retained message with an empty payload is received, ST-RMQTT clears the retained message for that topic, following the MQTT specification.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">What is the difference between persistent and non-persistent sessions?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">What is the difference between persistent and non-persistent sessions?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>A <b>persistent session</b> stores the client’s subscriptions and undelivered QoS 1/2 messages, allowing message delivery to resume after reconnecting. A <b>non-persistent session</b> (Clean Start = true) is temporary — all subscriptions and queued messages are discarded when the client disconnects. ST-RMQTT fully supports both modes and automatically handles session recovery for persistent clients after reconnecting.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How does ST-RMQTT handle Last Will and Testament (LWT)?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How does ST-RMQTT handle Last Will and Testament (LWT)?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT follows the MQTT standard for <b>Last Will and Testament (LWT)</b> messages. When a client connects, it can specify an LWT message that the broker will publish automatically if the client disconnects unexpectedly. This feature helps notify other clients or monitoring systems about abnormal disconnections, improving visibility and reliability in IoT systems.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How can I monitor the number of messages published and received?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How can I monitor the number of messages published and received?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT provides detailed metrics on message throughput, including the number of <b>published</b>, <b>received</b>, and <b>dropped</b> messages. These statistics are available through the built-in <b>monitoring dashboard</b>. Administrators can use these insights to track broker performance and optimize system configuration.</p>
                     </div>
@@ -399,13 +399,13 @@ function switchTbmqFaqTab(tabId) {
             </div>
             <div id="st-rmqtt-faq-cat-performance" class="st-rmqtt-faq-category">
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How many clients and messages per second can ST-RMQTT support?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How many clients and messages per second can ST-RMQTT support?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT offers <b>horizontal scalability</b>, meaning it can grow seamlessly with your workload. Each broker node in a cluster handles a portion of the load, ensuring balanced message processing and uninterrupted performance. Actual throughput depends on hardware, configuration, and message characteristics (size, QoS level, persistence). Optimized setups can handle <b>millions of simultaneous client connections</b> and <b>millions of messages per second</b>. For detailed metrics and benchmarks, visit the <a href="/docs/{{docsPrefix}}mqtt-broker/reference/100m-connections-performance-test/" target="_blank">Performance Test Page</a>.</p>
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How can I monitor ST-RMQTT performance?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How can I monitor ST-RMQTT performance?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT exposes detailed performance metrics through its <b>monitoring dashboard</b> and <b>Prometheus endpoint</b>. You can track key indicators such as:</p>
                         <ul>
@@ -418,7 +418,7 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How does ST-RMQTT handle backpressure when clients are slow?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How does ST-RMQTT handle backpressure when clients are slow?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>ST-RMQTT implements an internal <b>backpressure management mechanism</b> to maintain stable performance when clients are unable to consume messages quickly. When a client’s network channel becomes non-writable, ST-RMQTT temporarily pauses message delivery for that client. Once the channel becomes writable again, queued messages are delivered in the correct order. This design prevents slow consumers from impacting other clients, ensuring consistent throughput across the cluster.</p>
                     </div>
@@ -426,7 +426,7 @@ function switchTbmqFaqTab(tabId) {
             </div>
             <div id="st-rmqtt-faq-cat-licensing" class="st-rmqtt-faq-category">
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">What license type does ST-RMQTT use?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">What license type does ST-RMQTT use?</div>
                     <div class="st-rmqtt-faq-answer">
                         {% if docsPrefix == null %}
                         <p>ST-RMQTT CE is distributed under the <b>Apache 2.0 License</b>, allowing both personal and commercial usage. You can freely deploy, modify, and distribute it in any environment without additional licensing costs.</p>
@@ -437,7 +437,7 @@ function switchTbmqFaqTab(tabId) {
                     </div>
                 </div>
                 <div class="st-rmqtt-faq-question">
-                    <div class="st-rmqtt-faq-question-title" onclick="toggleTbmqFaq(this)">How to get support?</div>
+                    <div class="st-rmqtt-faq-question-title" onclick="toggleStRmqttFaq(this)">How to get support?</div>
                     <div class="st-rmqtt-faq-answer">
                         <p>You can access community-driven troubleshooting guides and documentation, or <a href="/docs/{{docsPrefix}}mqtt-broker/help" target="_blank">contact us</a> directly for technical assistance. Learn more about <a href="/services/" target="_blank">services</a> we provide.</p>
                     </div>

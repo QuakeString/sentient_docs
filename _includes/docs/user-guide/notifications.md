@@ -337,7 +337,7 @@ Available template parameters contain all parameters available for the [General]
 * *userFirstName* - first name of the user who made the action;
 * *userLastName* - last name of the user who made the action.
 
-Let's consider an example with the following event: user johndoe@docs.sentient.invenia.in added new device 'Compressor AO-99'.
+Let's consider an example with the following event: user johndoe@sentient.invenia.in added new device 'Compressor AO-99'.
 
 The notification in SENTIENT may look like this:
 
@@ -384,7 +384,7 @@ Available template parameters contain all parameters available for the [Alarm](#
   * *userLastName* - last name of the user who made the action;
   * *action* - one of: 'assigned', 'unassigned'.
 
-Let's consider an example with the following event: johndoe@docs.sentient.invenia.in assigned the 'High Temperature' alarm of the device 'Compressor BJ-66' to janesmith@docs.sentient.invenia.in.
+Let's consider an example with the following event: johndoe@sentient.invenia.in assigned the 'High Temperature' alarm of the device 'Compressor BJ-66' to janesmith@sentient.invenia.in.
 
 The notification in SENTIENT may look like this:
 

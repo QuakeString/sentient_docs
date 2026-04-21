@@ -13,8 +13,8 @@ This guide will help you to install and start SENTIENT IoT Gateway using Docker 
 ## Prerequisites
 
 - [Install Docker Compose for Windows](https://docs.docker.com/desktop/setup/install/windows-install/){:target="_blank"};
-- You will need to have access to SENTIENT. The easiest way is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){:target="_blank"}.
-The alternative option is to install the SENTIENT locally using the [installation guide](https://docs.sentient.invenia.in/docs/user-guide/install/installation-options/){:target="_blank"}.
+- You will need to have access to SENTIENT. The easiest way is to use [SENTIENT Cloud](https://sentient.invenia.in/installations/){:target="_blank"}.
+The alternative option is to install the SENTIENT locally using the [installation guide](https://sentient.invenia.in/docs/user-guide/install/installation-options/){:target="_blank"}.
 
 ## Download a docker-compose file
 

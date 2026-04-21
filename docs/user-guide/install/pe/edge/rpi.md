@@ -26,7 +26,7 @@ This guide provides step-by-step instructions for installing **SENTIENT Edge** o
 Download the installation package.
 
 ```bash
-wget https://dist.docs.sentient.invenia.in/tb-edge-{{ site.release.pe_edge_ver }}.deb
+wget https://dist.sentient.invenia.in/tb-edge-{{ site.release.pe_edge_ver }}.deb
 ```
 {: .copy-code}
 

@@ -20,7 +20,7 @@ contactUsModal: "true"
                 <p class="text">In today's world of growing urban infrastructure, energy efficiency and water management have become top priorities. Smart metering solutions powered by the SENTIENT IoT platform offer a transformative approach to utility monitoring, enabling stakeholders to access accurate, real-time insights into consumption patterns.</p>
             </div>
             <div class="demo-button">
-                <a id="UseCases_SmartMetering_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="button gtm_button">View live demo</a>            </div>
+                <a id="UseCases_SmartMetering_ViewLiveDemo" target="_blank" href="https://demo.sentient.invenia.in/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="button gtm_button">View live demo</a>            </div>
             </div>
         <div class="long">
             <p>With enhanced visibility, municipalities, facilities managers, and utility providers can make faster, data-driven decisions that optimize resource use, reduce waste, and lower operational costs. SENTIENT plays an important role in this evolution by offering flexible, open-source tools to collect, process, and visualize telemetry data across distributed assets such as meters, sensors, and edge devices. Its modular architecture and rich feature set enable seamless integration of diverse devices, ensuring reliable real-time monitoring and control of utility infrastructure.</p>
@@ -317,7 +317,7 @@ contactUsModal: "true"
                 <div class=image>${getImage(0)}</div>
             </div>
             <div class="buttons-block">
-                <a id="UseCases_SmartMetering_ViewLiveDemo" target="_blank" href="https://demo.docs.sentient.invenia.in/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="button gtm_button">View live demo</a>
+                <a id="UseCases_SmartMetering_ViewLiveDemo" target="_blank" href="https://demo.sentient.invenia.in/dashboard/3a1026e0-83f6-11e7-b56d-c7f326cba909?publicId=322a2330-7c36-11e7-835d-c7f326cba909" class="button gtm_button">View live demo</a>
                 <a id="UseCases_SmartMetering_ContactUs" target="_blank" href="/docs/contact-us/?subject=Custom%20Development" class="button contact-us gtm_button">Contact us</a>
             </div>`;
     

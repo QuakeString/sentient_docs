@@ -20,7 +20,7 @@ To continue with this guide we will need the following:
 - [LoRaWAN Gateway](https://www.lansitec.com/products/outdoor-lorawan-gateway/){:target="_blank"}
 - [Bluetooth beacon](https://www.lansitec.com/products/bluetooth-beacon/){:target="_blank"}
 - [Network Server account](https://www.chirpstack.io/){:target="_blank"}
-- [SENTIENT account](https://docs.sentient.invenia.in/installations/choose-region/){:target="_blank"}
+- [SENTIENT account](https://sentient.invenia.in/installations/choose-region/){:target="_blank"}
 
 ## Configuration
 

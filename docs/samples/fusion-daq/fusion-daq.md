@@ -45,7 +45,7 @@ Open your [SENTIENT Cloud server](https://sentient.cloud/) in browser and sign i
 
 Go to "**Device groups**" tab -> "**All**" and click "plus" button to add a new device.
 
-Enter device name, select existing or create a new [device profile](https://docs.sentient.invenia.in/docs/user-guide/device-profiles/) and click on "Add" button.
+Enter device name, select existing or create a new [device profile](https://sentient.invenia.in/docs/user-guide/device-profiles/) and click on "Add" button.
 
 ![image](/images/samples/fusion-daq/fusion-daq-mi-8-create-device-1.png)
 

@@ -100,7 +100,7 @@ nano docker-compose.yml
 ```
 {: .copy-code}
 
-Copy current Docker Compose [manifest](https://docs.sentient.invenia.in/docs/user-guide/install/pe/docker/#step-2-choose-sentient-queue-service) and replace old one with current manifest. Replace Postgres docker image if needed. 
+Copy current Docker Compose [manifest](https://sentient.invenia.in/docs/user-guide/install/pe/docker/#step-2-choose-sentient-queue-service) and replace old one with current manifest. Replace Postgres docker image if needed. 
 
 {% capture image_tags %}
 **Make sure that `sentient/tb-pe-node` and `sentient/tb-web-report` have the same tag as your previous manifests**
@@ -109,4 +109,4 @@ Copy current Docker Compose [manifest](https://docs.sentient.invenia.in/docs/use
 
 Don't forget to replace license key in the environment variables section.
 
-After data is moved to the docker volumes and `docker-compose.yml` file have the same structure as the installation example - you can proceed with [upgrade](https://docs.sentient.invenia.in/docs/user-guide/install/pe/docker/#upgrading) of the SENTIENT. 
+After data is moved to the docker volumes and `docker-compose.yml` file have the same structure as the installation example - you can proceed with [upgrade](https://sentient.invenia.in/docs/user-guide/install/pe/docker/#upgrading) of the SENTIENT. 

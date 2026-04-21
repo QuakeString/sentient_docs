@@ -172,8 +172,8 @@ listen mqtt-in
  timeout server 3h
  option tcplog
  balance leastconn
- server tbMqtt1 tb-mqtt-transport1:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
- server tbMqtt2 tb-mqtt-transport2:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
+ server stRmqtt1 tb-mqtt-transport1:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
+ server stRmqtt2 tb-mqtt-transport2:1883 check inter 5s resolvers docker_resolver resolve-prefer ipv4
 
 frontend http-in
  bind *:${HTTP_PORT}

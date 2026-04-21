@@ -23,7 +23,7 @@ Before you begin, ensure you have the following:
     - **Local/On-premise instance**: Self-hosted SENTIENT installation on your own [infrastructure](/docs/{{docsPrefix}}user-guide/install/installation-options/){: target="_blank"}, or
 {% endif %}
 {% if docsPrefix == nil or docsPrefix == "pe/" %}
-    - **SENTIENT Cloud**: Fully managed cloud service available at [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){: target="_blank"}
+    - **SENTIENT Cloud**: Fully managed cloud service available at [SENTIENT Cloud](https://sentient.invenia.in/installations/){: target="_blank"}
 {% endif %}
 {% if docsPrefix == "paas/" %}
 - **SENTIENT Cloud**: Fully managed cloud service available at [sentient.cloud](https://sentient.cloud/signup){: target="_blank"}

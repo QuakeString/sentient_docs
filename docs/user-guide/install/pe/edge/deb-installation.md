@@ -56,7 +56,7 @@ Kafka <small>(recommended for on-prem, production installations)</small>%,%kafka
 Download the installation package.
 
 ```bash
-wget https://dist.docs.sentient.invenia.in/tb-edge-{{ site.release.pe_edge_ver }}.deb
+wget https://dist.sentient.invenia.in/tb-edge-{{ site.release.pe_edge_ver }}.deb
 ```
 {: .copy-code}
 

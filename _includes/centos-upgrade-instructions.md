@@ -126,7 +126,7 @@ sudo dnf install -y postgresql16-contrib
 
 {% if docsPrefix == "pe/" %}
 ```bash
-wget https://dist.docs.sentient.invenia.in/sentient-{{ current_version_with_platform }}.rpm
+wget https://dist.sentient.invenia.in/sentient-{{ current_version_with_platform }}.rpm
 ```
 {: .copy-code}
 {% else %}

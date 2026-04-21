@@ -13,7 +13,7 @@ In this tutorial we will use Elastel EG500 as edge gateway to collect data from 
 
 ## Prerequisites
 
-To continue with this guide, you will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
+To continue with this guide, you will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://sentient.invenia.in/installations/choose-region/){:target="_blank"} server.
 The alternative option is to install SENTIENT using [installation guide](/docs/user-guide/install/pe/installation-options/){:target="_blank"}.
 
 Also, you will require the following items:
@@ -138,5 +138,5 @@ Now we have a visualizing dashboard for displaying data and controlling the DO (
 By following this guide, you can easily integrate Elastel IIoT gateways with SENTIENT. Elastel’s easy-to-use web UI and SENTIENT’s powerful visualization tools make the edge-to-cloud connection seamless.
 
 - Learn more about [**Elastel Edge Devices**](https://www.elastel.com/products/){:target="_blank"}.
-- Explore SENTIENT [**Documentation**](https://docs.sentient.invenia.in/docs/pe/){:target="_blank"} for advanced features and concepts.
+- Explore SENTIENT [**Documentation**](https://sentient.invenia.in/docs/pe/){:target="_blank"} for advanced features and concepts.
 {% include add-device-banner.liquid %}

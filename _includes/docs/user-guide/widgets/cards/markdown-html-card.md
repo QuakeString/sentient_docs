@@ -192,8 +192,8 @@ These rules apply only inside this widget’s container, so they won’t leak in
 }
 
 .blue-box {
-  background: #2196F31A;
-  border: 2px solid #2196F3;
+  background: #1870741A;
+  border: 2px solid #187074;
   border-radius: 10px;
   padding: 10px;
   margin: 8px 0;
@@ -399,7 +399,7 @@ if (data.length) {
     position: relative;
     align-items: center;
     padding: 8px;
-    border: 1px solid var(--tb-primary-100, #305680);
+    border: 1px solid var(--tb-primary-100, #0f4a4d);
     border-radius: 4px;
 }
 
@@ -408,7 +408,7 @@ if (data.length) {
     z-index: 0;
     position: absolute;
     opacity: 0.1;
-    background-color: var(--tb-primary-200, #305680);
+    background-color: var(--tb-primary-200, #0f4a4d);
     width: 100%;
     height: 100%;
     left: 0;

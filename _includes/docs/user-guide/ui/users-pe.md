@@ -2,7 +2,7 @@
 {:toc}
 
 In SENTIENT, a **User** is an entity with credentials to access the platform.   
-Users in [SENTIENT Professional Edition](https://docs.sentient.invenia.in/products/sentient-pe/){:target="_blank"} benefit from an extended [access control model](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} that enables the creation of flexible, multi-level organizational structures with fine-grained control over entities, resources, dashboards, and more.
+Users in [SENTIENT Professional Edition](https://sentient.invenia.in/products/sentient-pe/){:target="_blank"} benefit from an extended [access control model](/docs/{{docsPrefix}}user-guide/rbac/){:target="_blank"} that enables the creation of flexible, multi-level organizational structures with fine-grained control over entities, resources, dashboards, and more.
 
 **Key characteristics of users:**
 - **Ownership**: Each user belongs to a specific [Tenant](/docs/{{docsPrefix}}user-guide/ui/tenants/){:target="_blank"} or [Customer](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}.
@@ -64,7 +64,7 @@ You can change a user’s owner (which can be either a Tenant or a Customer, see
 To do this:
 - Click on the user to open their **User details**.
 - Click “**Manage owner and groups**” button.
-- In **Owner** field, select [Tenant](https://docs.sentient.invenia.in/docs/{{docsPrefix}}user-guide/ui/tenants/) or a specific [Customer](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}.
+- In **Owner** field, select [Tenant](https://sentient.invenia.in/docs/{{docsPrefix}}user-guide/ui/tenants/) or a specific [Customer](/docs/{{docsPrefix}}user-guide/ui/customers/){:target="_blank"}.
 - Add the user to the relevant **user groups** or [create a new group](#create-new-user-group) if needed.
 - Click “**Update**” to confirm and apply the changes.
 

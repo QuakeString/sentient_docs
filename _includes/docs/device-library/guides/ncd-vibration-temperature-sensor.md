@@ -35,7 +35,7 @@ The Industrial IoT Wireless Vibration and Temperature Sensor captures critical f
 
 To transmit data from NCD Industrial IoT sensors to SENTIENT, certain prerequisites must be met.
 
-- [SENTIENT Cloud](https://docs.sentient.invenia.in/installations/){:target="_blank"} account 
+- [SENTIENT Cloud](https://sentient.invenia.in/installations/){:target="_blank"} account 
 - NCD Industrial IoT Wireless Vibration Temperature Sensor V3
 - NCD Enterprise IIoT Gateway Standard or Lite version:
   - [Enterprise IIoT Gateway](https://store.ncd.io/product/enterprise-iiot-gateway/){:target="_blank"}
@@ -125,8 +125,8 @@ In this tutorial, our primary focus will be on transmitting **RUN sensor mode** 
 
 You can find the documentation to help you get started with SENTIENT Professional Edition, as well as the MQTT Gateway API Reference, available here:
 
-- [Getting Started with SENTIENT Professional Edition](https://docs.sentient.invenia.in/docs/paas/eu/getting-started-guides/helloworld/){:target="_blank"}
-- [MQTT Gateway API Reference](https://docs.sentient.invenia.in/docs/reference/gateway-mqtt-api/){:target="_blank"}
+- [Getting Started with SENTIENT Professional Edition](https://sentient.invenia.in/docs/paas/eu/getting-started-guides/helloworld/){:target="_blank"}
+- [MQTT Gateway API Reference](https://sentient.invenia.in/docs/reference/gateway-mqtt-api/){:target="_blank"}
 
 The first step is to [sign in using your SENTIENT account](https://sentient.cloud/login){:target="_blank"}. 
 

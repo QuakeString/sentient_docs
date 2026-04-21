@@ -1,0 +1,1 @@
+wget https://dist.sentient.invenia.in/sentient-2.5.2pe.deb

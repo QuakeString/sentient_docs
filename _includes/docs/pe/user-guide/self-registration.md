@@ -47,7 +47,7 @@ Copy-paste the site key and secret to the safe place.
 ### Prerequisites summary
 
 We have prepared a SENTIENT Prototype instance running on DigitalOcean. 
-Specific domain name: srd.docs.sentient.invenia.in (srd stands for “self registration demo”) to server’s IP address: 46.101.146.242.
+Specific domain name: srd.sentient.invenia.in (srd stands for “self registration demo”) to server’s IP address: 46.101.146.242.
 
 ![image](/images/user-guide/self-registration/digitalocean.png)
 

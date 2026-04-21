@@ -118,7 +118,7 @@ In order to upgrade to {{ current_version_with_platform | upcase }} you need to 
 
 {% if docsPrefix == "pe/" %}
 ```bash
-wget https://dist.docs.sentient.invenia.in/sentient-{{ current_version_with_platform }}.deb
+wget https://dist.sentient.invenia.in/sentient-{{ current_version_with_platform }}.deb
 ```
 {: .copy-code}
 {% else %}

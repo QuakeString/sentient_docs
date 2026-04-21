@@ -32,8 +32,8 @@ The configuration of this feature is managed by the Tenant Administrator through
     <div class="mobile-frame ios">
         <div class="frame-video">
             <video autoplay loop preload="auto" muted playsinline>
-                 <source src="https://video.docs.sentient.invenia.in/mobile/pe/self-registration.mp4" type="video/mp4">
-                 <source src="https://video.docs.sentient.invenia.in/mobile/pe/self-registration.webm" type="video/webm">
+                 <source src="https://video.sentient.invenia.in/mobile/pe/self-registration.mp4" type="video/mp4">
+                 <source src="https://video.sentient.invenia.in/mobile/pe/self-registration.webm" type="video/webm">
             </video>
         </div>
     </div>

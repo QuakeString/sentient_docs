@@ -97,9 +97,9 @@ We will use it in our next steps.
 ## Step 4. Obtain your license secret
 
 In order to activate your SENTIENT instance you will need to get the license secret. 
-SENTIENT Licenses are managed by [SENTIENT License Portal](https://license.docs.sentient.invenia.in/signup).   
+SENTIENT Licenses are managed by [SENTIENT License Portal](https://license.sentient.invenia.in/signup).   
 
-Please register on [SENTIENT License Portal](https://license.docs.sentient.invenia.in/signup) to get your license. 
+Please register on [SENTIENT License Portal](https://license.sentient.invenia.in/signup) to get your license. 
 See [How-to get pay-as-you-go subscription](https://www.youtube.com/watch?v=dK-QDFGxWek){:target="_blank"} or [How-to get perpetual license](https://www.youtube.com/watch?v=GPe0lHolWek){:target="_blank"} for more details.
  
 Please save your license secret to a safe place. We will use them later in this guide.
@@ -126,7 +126,7 @@ sudo nano /etc/sentient/conf/sentient.conf
 Locate the following configuration block:
 
 ```bash
-# License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
+# License secret obtained from SENTIENT License Portal (https://license.sentient.invenia.in)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 # export TB_LICENSE_SECRET=
 ```
@@ -134,7 +134,7 @@ Locate the following configuration block:
 and put your license secret. Please don't forget to uncomment the export statement. See example below: 
 
 ```bash
-# License secret obtained from SENTIENT License Portal (https://license.docs.sentient.invenia.in)
+# License secret obtained from SENTIENT License Portal (https://license.sentient.invenia.in)
 # UNCOMMENT NEXT LINE AND PUT YOUR LICENSE SECRET:
 export TB_LICENSE_SECRET=YOUR_LICENSE_SECRET_HERE
 ```

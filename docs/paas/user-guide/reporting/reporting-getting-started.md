@@ -132,7 +132,7 @@ scheduler-event-customer-a-1:
         title: 'Go to the "<b>Scheduling</b>" tab on the "<b>Reporting</b>" page and click the "<b>+ Scheduled report</b>" button in the top-right corner.'
     1:
         image: /images/user-guide/reporting/reporting-getting-started/scheduler-event-customer-a-2-pe.png
-        title: 'In the scheduling dialog: give your schedule event a clear title, e.g., <b>Daily Devices Alarm Report for Customer A</b><br>. – Select the previously created <b>Daily Devices Alarm Report</b> template.<br> – Specify the user account on whose behalf the report will be generated: <b>janesmith@docs.sentient.invenia.in</b> (Jane Smith — Customer A administrator).'
+        title: 'In the scheduling dialog: give your schedule event a clear title, e.g., <b>Daily Devices Alarm Report for Customer A</b><br>. – Select the previously created <b>Daily Devices Alarm Report</b> template.<br> – Specify the user account on whose behalf the report will be generated: <b>janesmith@sentient.invenia.in</b> (Jane Smith — Customer A administrator).'
 
 scheduler-event-customer-a-2:
     0:
@@ -165,7 +165,7 @@ scheduler-event-customer-b:
         title: 'Click "<b>+ Scheduled report</b>" in the top right corner of the "<b>Template</b>" page to create a new scheduler event.'
     1:
         image: /images/user-guide/reporting/reporting-getting-started/scheduler-event-customer-b-2-pe.png
-        title: '- Give your schedule a descriptive name, for example: <b>Daily Device Alarm Report for Customer B</b>.<br>- Select the same template used for Customer A — <b>Daily Device Alarm Report</b>.<br>- Set the user account to <b>emmajohnson@docs.sentient.invenia.in</b> (Emma Johnson – Customer B Administrator). The report will be generated on behalf of this user, containing only the data accessible to Customer B.'
+        title: '- Give your schedule a descriptive name, for example: <b>Daily Device Alarm Report for Customer B</b>.<br>- Select the same template used for Customer A — <b>Daily Device Alarm Report</b>.<br>- Set the user account to <b>emmajohnson@sentient.invenia.in</b> (Emma Johnson – Customer B Administrator). The report will be generated on behalf of this user, containing only the data accessible to Customer B.'
     2:
         image: /images/user-guide/reporting/reporting-getting-started/scheduler-event-customer-b-3-pe.png
         title: 'In the "<b>Recipients</b>" field, click <b>Create new</b> to create a new recipient group.'

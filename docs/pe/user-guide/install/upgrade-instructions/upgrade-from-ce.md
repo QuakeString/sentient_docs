@@ -36,7 +36,7 @@ These upgrade steps are applicable for the latest SENTIENT version. In order to 
 #### SENTIENT Professional Edition package download
 
 ```bash
-wget https://dist.docs.sentient.invenia.in/sentient-{{ site.release.pe_ver }}.deb
+wget https://dist.sentient.invenia.in/sentient-{{ site.release.pe_ver }}.deb
 ```
 {: .copy-code}
 
@@ -91,7 +91,7 @@ These upgrade steps are applicable for the latest SENTIENT version. In order to 
 #### SENTIENT Professional Edition package download
 
 ```bash
-wget https://dist.docs.sentient.invenia.in/sentient-{{ site.release.pe_ver }}.rpm
+wget https://dist.sentient.invenia.in/sentient-{{ site.release.pe_ver }}.rpm
 ```
 {: .copy-code}
 
@@ -145,7 +145,7 @@ These upgrade steps are applicable for the latest SENTIENT version. In order to 
 
 #### SENTIENT Professional Edition package download
 
-Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-{{ site.release.pe_ver }}.zip](https://dist.docs.sentient.invenia.in/sentient-windows-{{ site.release.pe_ver }}.zip).
+Download SENTIENT Professional Edition installation package for Windows: [sentient-windows-{{ site.release.pe_ver }}.zip](https://dist.sentient.invenia.in/sentient-windows-{{ site.release.pe_ver }}.zip).
 
 #### SENTIENT Professional Edition service upgrade
 

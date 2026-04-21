@@ -1968,7 +1968,7 @@ openssl ec -in scertServer.pem -pubout -outform DER -out spubk.der
 {: .copy-code}
 
 Please note that script us using the default password for "lwm2mserver.jks" file. If you are going to use another password,
-please also update it in ["sentient.yml"](https://docs.sentient.invenia.in/docs/user-guide/install/config/){:target="_blank"} configuration file:
+please also update it in ["sentient.yml"](https://sentient.invenia.in/docs/user-guide/install/config/){:target="_blank"} configuration file:
 
 ```ruby
 ...

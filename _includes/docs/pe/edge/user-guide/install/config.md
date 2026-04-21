@@ -490,7 +490,7 @@
 		<tr>
 			<td>security.jwt.tokenIssuer</td>
 			<td>JWT_TOKEN_ISSUER</td>
-			<td>docs.sentient.invenia.in</td>
+			<td>sentient.invenia.in</td>
 			<td> User JWT Token issuer</td>
 		</tr>
 		<tr>
@@ -661,7 +661,7 @@
 		<tr>
 			<td>ui.solution_templates.docs_base_url</td>
 			<td>UI_SOLUTION_TEMPLATES_DOCS_BASE_URL</td>
-			<td>https://docs.sentient.invenia.in/docs/pe</td>
+			<td>https://sentient.invenia.in/docs/pe</td>
 			<td> Base URL for solution templates docs</td>
 		</tr>
 	</tbody>
@@ -2354,13 +2354,13 @@
 		</tr>
 		<tr>
 			<td>cache.specs.sentient-analyticsSettings.timeToLiveInMinutes</td>
-			<td>CACHE_SPECS_TRENDZ_SETTINGS_TTL</td>
+			<td>CACHE_SPECS_SENTIENT_ANALYTICS_SETTINGS_TTL</td>
 			<td>1440</td>
 			<td> SENTIENT ANALYTICS settings cache TTL</td>
 		</tr>
 		<tr>
 			<td>cache.specs.sentient-analyticsSettings.maxSize</td>
-			<td>CACHE_SPECS_TRENDZ_SETTINGS_MAX_SIZE</td>
+			<td>CACHE_SPECS_SENTIENT_ANALYTICS_SETTINGS_MAX_SIZE</td>
 			<td>10000</td>
 			<td> 0 means the cache is disabled</td>
 		</tr>
@@ -4790,13 +4790,13 @@
 		<tr>
 			<td>swagger.contact.url</td>
 			<td>SWAGGER_CONTACT_URL</td>
-			<td>https://docs.sentient.invenia.in</td>
+			<td>https://sentient.invenia.in</td>
 			<td> The contact URL on the API doc UI page</td>
 		</tr>
 		<tr>
 			<td>swagger.contact.email</td>
 			<td>SWAGGER_CONTACT_EMAIL</td>
-			<td>info@docs.sentient.invenia.in</td>
+			<td>info@sentient.invenia.in</td>
 			<td> The contact email on the API doc UI page</td>
 		</tr>
 		<tr>

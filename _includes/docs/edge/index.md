@@ -123,7 +123,7 @@
   top: -10px; 
   background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
   border: 1px solid #e3f2fd;
-  border-left: 4px solid #1976D2;
+  border-left: 4px solid #187074;
   border-radius: 8px;
   padding: 8px 12px;
   margin: 0 0 0 0;
@@ -136,7 +136,7 @@
 }
 
 .ce-banner a {
-  color: #1976D2;
+  color: #187074;
   text-decoration: none;
   font-weight: 500;
 }
@@ -163,11 +163,11 @@
 }
 
 .banner-close:hover {
-  color: #1976D2;
+  color: #187074;
 }
 
 .banner-close:focus {
-  outline: 2px solid #1976D2;
+  outline: 2px solid #187074;
   outline-offset: 2px;
 }
 
@@ -201,7 +201,7 @@
 
 .learn-more a {
 {% if docsPrefix != 'pe/' %}
-  color: #1976D2;
+  color: #187074;
 {% else %}
   color: #009688;
 {% endif %}
@@ -241,7 +241,7 @@ h2 {
 .commercial-banner {
   background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
   border: 1px solid #e3f2fd;
-  border-left: 4px solid #1976D2;
+  border-left: 4px solid #187074;
   border-radius: 8px;
   padding: 15px;
   margin: 5px 0;
@@ -281,9 +281,9 @@ h2 {
 }
 
 .btn-secondary {
-  color: #1976D2;
+  color: #187074;
   background: white;
-  border: 1px solid #1976D2;
+  border: 1px solid #187074;
 }
 
 .btn-secondary:hover {
@@ -292,8 +292,8 @@ h2 {
 
 .btn-primary {
   color: white;
-  background: #1976D2;
-  border: 1px solid #1976D2;
+  background: #187074;
+  border: 1px solid #187074;
 }
 
 .btn-primary:hover {

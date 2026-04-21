@@ -62,7 +62,7 @@ As a System or Tenant administrator you can configure app login screen logo and 
 **Note:**  By default system level login white-labeling is applied (configured by System administrator). Each tenant can override these settings by specifying
 **Domain name** in the **Login White Labeling** form.
 In this case tenant level settings will be applied according to the domain name of api endpoint configured in the mobile app
-(value of **thingsBoardApiEndpoint** constant in **lib/constants/app_constants.dart**).
+(value of **sentientApiEndpoint** constant in **lib/constants/app_constants.dart**).
 {% endcapture %}
 {% include templates/info-banner.md content=login_white_labeling_levels %}
 

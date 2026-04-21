@@ -107,8 +107,8 @@ To demonstrate multi-tenancy and data isolation, the solution creates a sample c
 **Customer users**
 
 The following users are created and assigned to Customer D:
-- Toni Collier (toni.collier@docs.sentient.invenia.in)
-- Sheri Addison (sheri.addison@docs.sentient.invenia.in)
+- Toni Collier (toni.collier@sentient.invenia.in)
+- Sheri Addison (sheri.addison@sentient.invenia.in)
 
 These users:
 - Have read-only access to the dashboard

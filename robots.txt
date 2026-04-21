@@ -16,4 +16,4 @@ Allow: /*.svg
 Allow: /*.jpeg
 Allow: /*.gif
 
-SITEMAP: https://docs.sentient.invenia.in/sitemap.xml
+SITEMAP: https://sentient.invenia.in/sitemap.xml

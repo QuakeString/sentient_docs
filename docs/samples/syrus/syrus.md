@@ -19,7 +19,7 @@ Here&#39;s a detailed integration example between Syrus 4G IoT Telematics Gatewa
 
 [Syrus 4G IoT Telematics Gateway.](https://syrus.pegasusgateway.com/syrdocs/syrus4/getting-started/)
 
-[SENTIENT Cloud](https://docs.sentient.invenia.in/installations/)
+[SENTIENT Cloud](https://sentient.invenia.in/installations/)
 
 ## Provisioning the device for Sentient
 

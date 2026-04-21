@@ -1,3 +1,12 @@
+- title: Community Edition
+  fulltitle: SENTIENT Community Edition
+  description: SENTIENT Documentation
+  tag: ce
+  icon: /images/sentient-c-icon.svg
+  path: /docs/
+  guides: /docs/guides/
+  getStarted: /docs/getting-started-guides/helloworld/
+  docsPrefix: /docs/
 - title: Professional Edition
   fulltitle: SENTIENT Professional Edition
   description: SENTIENT Documentation

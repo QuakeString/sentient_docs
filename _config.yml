@@ -43,6 +43,7 @@ exclude:
   - Dockerfile
   - docker-compose.yaml
   - nginx.conf
+  - wrangler.jsonc
   - Makefile
   - node_modules
 #  - docs

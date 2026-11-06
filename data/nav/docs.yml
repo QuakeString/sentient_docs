@@ -28,7 +28,6 @@ toc:
       path: /docs/installation/windows/
     - title: Windows with ClickHouse (WSL2)
       path: /docs/installation/windows-clickhouse/
-      planned: true
     - title: Docker
       path: /docs/installation/docker/
     - title: Linux
@@ -39,7 +38,6 @@ toc:
     section:
     - title: Overview
       path: /docs/operations/
-      planned: true
     - title: Back up and restore
       path: /docs/operations/backup-restore/
     - title: Upgrade and roll back

@@ -10,7 +10,6 @@ toc:
     path: /docs/getting-started-guides/what-is-sentient/
   - title: Sign in for the first time
     path: /docs/getting-started-guides/first-login/
-    planned: true
   - title: First device to dashboard
     path: /docs/getting-started-guides/helloworld/
   - title: How to connect your device
@@ -482,7 +481,6 @@ toc:
     planned: true
   - title: Installation and upgrade errors
     path: /docs/troubleshooting/install-errors/
-    planned: true
   - title: Licence errors
     path: /docs/troubleshooting/licence-errors/
   - title: Devices do not connect

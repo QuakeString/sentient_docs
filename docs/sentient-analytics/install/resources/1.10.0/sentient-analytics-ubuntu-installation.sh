@@ -1,1 +1,0 @@
-sudo dpkg -i sentient-analytics-1.10.0-HF1.deb

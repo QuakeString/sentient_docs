@@ -1,1 +1,0 @@
-wget https://github.com/sentient/sentient/releases/download/v1.3/sentient-1.3.deb

@@ -1,0 +1,34 @@
+# SENTIENT documentation site (Zola). Copyright © 2016-2025 The SENTIENT Authors
+# Root-relative links so the same build works online, offline and under /v/<version>/.
+base_url = "/"
+title = "SENTIENT Docs"
+description = "Documentation for the SENTIENT industrial IoT and SCADA platform."
+default_language = "en"
+compile_sass = false
+minify_html = false
+build_search_index = false   # Pagefind builds the offline index after Zola
+generate_feeds = false
+ignored_content = ["*.sh", "*.json", "*.yml"]
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+render_emoji = false
+external_links_target_blank = true
+external_links_no_referrer = true
+smart_punctuation = false
+bottom_footnotes = true
+
+[slugify]
+paths = "safe"
+anchors = "on"
+
+[link_checker]
+internal_level = "warn"
+skip_prefixes = ["http://", "https://"]
+
+[extra]
+# The docs version this build describes. tools/build.sh overrides it per version branch.
+version = "4.3.0.57"
+versions_url = "/versions.json"
+repo_edit_url = "https://github.com/QuakeString/sentient_docs/edit/master/content/"

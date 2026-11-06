@@ -1,1 +1,0 @@
-sudo dpkg -i sentient-analytics-1.9.2-HF3.deb

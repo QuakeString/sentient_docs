@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} · SENTIENT Docs{% endblock title %}
+{% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
+{% block content %}
+<article class="article" data-pagefind-body data-pagefind-filter="area:{{ area }}">
+  {% include "partials/crumbs.html" %}
+  <h1>{{ page.title }}</h1>
+  {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+  {% include "partials/meta.html" %}
+  <div class="prose">{{ page.content | safe }}</div>
+</article>
+{% include "partials/after.html" %}
+{% endblock content %}
+{% block toc %}{% set toc = page.toc %}{% include "partials/toc.html" %}{% endblock toc %}

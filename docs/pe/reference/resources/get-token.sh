@@ -1,1 +1,0 @@
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"username":"tenant@sentient.org", "password":"tenant"}' 'http://SENTIENT_URL/api/auth/login'

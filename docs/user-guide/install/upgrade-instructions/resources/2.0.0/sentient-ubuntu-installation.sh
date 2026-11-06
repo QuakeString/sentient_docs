@@ -1,1 +1,0 @@
-sudo dpkg -i sentient-2.0.deb

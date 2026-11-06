@@ -1,6 +1,0 @@
-bigheader: "SENTIENT ANALYTICS guides"
-abstract: "Tutorials and guides for analysing data with SENTIENT ANALYTICS."
-hidetoc: "true"
-toc:
-- title: Guides overview
-  path: /docs/sentient-analytics/guides/

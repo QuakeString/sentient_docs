@@ -1,1 +1,0 @@
-mqtt pub -v -q 1 -h "{{mqttHostName}}" -t "v1/devices/me/telemetry" -u '$ACCESS_TOKEN' -m "{"temperature":42}"

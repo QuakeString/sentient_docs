@@ -1,0 +1,48 @@
++++
+title = "Demo Account"
+description = "SENTIENT default demo accounts"
+
+[extra]
+status = "imported"
+checked = ""
+source = "docs/samples/demo-account.md"
++++
+SENTIENT installation contains single tenant account that is used in sample applications and contains a lot of pre-provisioned entities for demonstration purposes.
+
+## System Administrator
+ 
+Default system administrator account:
+
+ - login - **sysadmin@sentient.org**.
+ - password - **sysadmin**.
+ 
+## Demo Tenant
+
+Default tenant administrator account:
+
+ - login - **tenant@sentient.org**.
+ - password - **tenant**.
+ 
+Demo tenant customers:
+
+ - Customer A users -  **customer@sentient.org** or **customerA@sentient.org**.
+ - Customer B users -  **customerB@sentient.org**.
+ - Customer C users -  **customerC@sentient.org**.
+ - all users have **"customer"** password. 
+ 
+## Tenant devices
+
+ - Test Device A1, A2, A3 - belong to Customer A. Access tokens: A1_TEST_TOKEN, A2_TEST_TOKEN and A3_TEST_TOKEN.
+ - Test Device B1 - belong to Customer B. Access token: B1_TEST_TOKEN.
+ - Test Device C1 - belong to Customer C. Access token: C1_TEST_TOKEN.
+ 
+ - DHT11 Demo Device - Access token: DHT11_DEMO_TOKEN
+ - Raspberry Pi Demo Device - Access token: RASPBERRY_PI_DEMO_TOKEN
+ 
+## Rule Chains
+There is predefined Rule Chain for storing all incoming telemetry and attribute updates. All other incoming requests just logged.
+For adding additional Rule Nodes, like Send Email, Create Alarms, etc. please read related articles:
+
+- [Rule Engine Getting Started](/docs/user-guide/rule-engine-2-0/re-getting-started/)
+- [Rule Engine Overview](/docs/user-guide/rule-engine-2-0/overview/)
+- [Rule Engine Tutorials](/docs/user-guide/rule-engine-2-0/overview/#tutorials)

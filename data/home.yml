@@ -1,0 +1,26 @@
+headline: How can we help you run your plant?
+lede: Step-by-step guides for SENTIENT, from installing the platform to connecting PLCs, building SCADA screens and fixing common errors.
+popular: [Modbus, Backup, Alarm rules, OPC UA, Dashboard]
+tiles:
+  - {title: Get started, icon: i-rocket, path: /docs/getting-started/, text: "Sign in, add your first device and see live values."}
+  - {title: Install and upgrade, icon: i-server, path: /docs/user-guide/install/, text: "Platform Manager on Windows, Docker, licence, backup and upgrade."}
+  - {title: Connect equipment, icon: i-chip, path: /docs/iot-gateway/, text: "Gateway, Modbus, OPC UA, S7, BACnet and MQTT devices."}
+  - {title: Dashboards and SCADA, icon: i-dash, path: /docs/user-guide/dashboards/, text: "Widgets, SCADA symbols and the dashboard editor."}
+  - {title: Alarms and notifications, icon: i-bell, path: /docs/user-guide/alarms/, text: "Alarm rules, the notification centre and delivery channels."}
+  - {title: Rule engine, icon: i-gear, path: /docs/user-guide/rule-engine-2-0/overview/, text: "Process, route and enrich incoming data."}
+help:
+  title: Troubleshooting
+  path: /docs/user-guide/troubleshooting/
+  more: All troubleshooting
+  items:
+    - {code: GUIDE, title: Troubleshooting guide, text: "Common problems and how to find their cause", path: /docs/user-guide/troubleshooting/}
+    - {code: GATEWAY, title: Gateway problems, text: "Connector logs and remote troubleshooting", path: /docs/iot-gateway/troubleshooting/}
+    - {code: LIMITS, title: API limits, text: "Rate limits and what to do when you hit one", path: /docs/user-guide/api-limits/}
+changes:
+  title: About this manual
+  path: /docs/
+  more: Overview
+  items:
+    - {title: Versioned docs, path: /docs/, text: "pick your release from the version menu at the top"}
+    - {title: Offline search, path: /docs/, text: "search works without internet access"}
+    - {title: Review in progress, path: /docs/, text: "pages marked as carried over are being checked against SENTIENT"}

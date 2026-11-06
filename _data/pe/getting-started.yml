@@ -1,6 +1,0 @@
-bigheader: "Getting Started"
-abstract: "Getting Started with SENTIENT Professional Edition IoT Platform."
-hidetoc: "true"
-toc:
-- title: Getting Started
-  path: /docs/getting-started-guides/helloworld-pe/

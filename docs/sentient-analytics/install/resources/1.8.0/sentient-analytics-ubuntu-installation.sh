@@ -1,1 +1,0 @@
-sudo dpkg -i sentient-analytics-1.8.2.deb

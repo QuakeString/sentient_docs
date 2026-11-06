@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Page not found · SENTIENT Docs{% endblock title %}
+{% block content %}
+<article class="article">
+  <h1>Page not found</h1>
+  <p class="lede">This page does not exist in the {{ config.extra.version }} manual. It may have moved, or it may not exist in this version.</p>
+  <p><button class="big-search" id="bigSearch" type="button"><svg class="icon"><use href="#i-search"/></svg><span>Search the docs</span><kbd>Ctrl K</kbd></button></p>
+  <p><a href="/docs/">Go to the documentation home</a></p>
+</article>
+{% endblock content %}

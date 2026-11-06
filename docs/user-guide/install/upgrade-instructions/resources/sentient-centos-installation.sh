@@ -1,1 +1,0 @@
-sudo rpm -Uvh sentient-{{ site.release.ce_ver }}.rpm

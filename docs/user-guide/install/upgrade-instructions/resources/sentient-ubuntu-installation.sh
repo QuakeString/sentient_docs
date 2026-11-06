@@ -1,1 +1,0 @@
-sudo dpkg -i sentient-{{ site.release.ce_ver }}.deb

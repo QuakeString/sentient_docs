@@ -1,1 +1,0 @@
-sudo dpkg -i sentient-2.4.3pe.deb

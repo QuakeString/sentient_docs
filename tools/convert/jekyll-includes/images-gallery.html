@@ -1,0 +1,8 @@
+{% if include.showListImageTitles %}
+{% for image in page[include.imageCollection] %}
+1. {{ image[1].title | strip_newlines }}
+{% endfor %}
+{% endif %}
+
+<div class="st-gallery">{% for image in page[include.imageCollection] %}<figure><img src="{{ image[1].image }}" alt="{{ image[1].title | strip_html | replace: '"', "&quot;" }}" loading="lazy"><figcaption>{{ image[1].title | strip_newlines }}</figcaption></figure>{% endfor %}</div>
+

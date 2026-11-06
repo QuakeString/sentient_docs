@@ -1,0 +1,267 @@
++++
+title = "How to connect OPC-UA device to SENTIENT?"
+description = "Understand how to connect OPC-UA device to SENTIENT using SENTIENT IoT Gateway"
+
+
+[extra]
+status = "imported"
+checked = ""
+source = "docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-sentient-ce.md"
++++
+## Overview
+
+In this guide, we will describe how to connect an OPC-UA device to SENTIENT using SENTIENT IoT Gateway. 
+Whether you are just starting with OPC-UA integration or looking to streamline your existing setup, this guide will 
+provide you with the essential knowledge to get up and running quickly.
+
+**What is SENTIENT IoT Gateway?**
+
+The SENTIENT IoT Gateway is an open-source solution that serves as a bridge between IoT devices connected to 
+legacy or third-party systems and the SENTIENT platform. It enables seamless integration of devices that cannot 
+communicate with SENTIENT directly, ensuring data can be collected, processed, and visualized in real time. With 
+the IoT Gateway, you can connect multiple devices, aggregate telemetry, and manage configurations centrally. It 
+supports flexible deployment scenarios, making it especially suitable for industrial automation, monitoring, and smart 
+energy systems where OPC-UA is widely used.
+
+**What is OPC-UA?**
+
+OPC Unified Architecture (OPC-UA) is a machine-to-machine communication protocol widely adopted in industrial 
+automation. It provides a platform-independent, secure, and reliable framework for exchanging data between devices, 
+servers, and applications. Unlike older OPC standards, OPC-UA supports modern technologies, allows structured data 
+modeling, and is designed for scalability across different platforms and networks. Its robustness and interoperability 
+make it a standard choice for industries that require consistent, real-time, and vendor-neutral communication.
+
+**What will You Learn?**
+
+In this guide, we will walk step by step through the process of integrating an OPC-UA device with SENTIENT. You 
+will learn how to install and configure the SENTIENT IoT Gateway, set up the OPC-UA connector, and establish a 
+connection to your OPC-UA server. We will also demonstrate how to map data points, send telemetry to SENTIENT. 
+By the end of this guide, you will have a working setup that allows you to seamlessly monitor and analyze your OPC-UA 
+device data in SENTIENT.
+
+## Prerequisites
+
+- Before initiating the Gateway setup, ensure that the SENTIENT server is up and running. You can install SENTIENT
+  CE manually by following the steps outlined in
+  the [Installation Guide](/docs/user-guide/install/installation-options/).
+- Before moving forward, ensure Docker is installed and properly configured on your machine. If you haven't installed
+  Docker yet, you can download it from the [official Docker website](https://docs.docker.com/engine/install/) and follow
+  their installation guide for your specific operating system.
+
+## OPC-UA Server Structure Overview
+
+For this guide, we’ll use the Prosys OPC-UA Simulation Server as our example OPC-UA device. It’s available at:
+
+```bash
+opc.tcp://0.0.0.0:53530/OPCUA/SimulationServer
+```
+
+
+<div class="st-callout info">
+
+
+We will use `host.docker.internal` instead of `0.0.0.0` in our Gateway connector configuration to allow the Docker 
+container to access the host machine's network.
+
+
+</div>
+
+
+This simulation server provides a predefined set of nodes that we can use to mimic a real industrial device. 
+Its structure looks like this:
+
+![image](/images/gateway/opc-ua-connector/guides/opc-ua-server-structure-overview.webp)
+
+In our example, we’ll focus on the following nodes:
+
+- `Root.Objects.OPC-UA_PLC` - the parent device node that contains all related data points:
+    - Root.Objects.OPC-UA_PLC.`Humidity` - represents humidity value. We’ll map this node to SENTIENT as a
+      time-series value.
+    - Root.Objects.OPC-UA_PLC.`Temperature` - represents temperature value. We’ll also send this value to SENTIENT
+      as a time-series value.
+    - Root.Objects.OPC-UA_PLC.`Pressure` - represents pressure measurements, which will be stored in SENTIENT as a
+      time-series value.
+    - Root.Objects.OPC-UA_PLC.`FirmwareInformation` - a child node that holds metadata about the device firmware:
+      - Root.Objects.OPC-UA_PLC.FirmwareInformation.`Version` - the firmware version number. We’ll map this to SENTIENT
+        CE as a device attribute.
+      - Root.Objects.OPC-UA_PLC.FirmwareInformation.`UpdatedDate` - the last time the firmware was updated. This will also
+        be sent to SENTIENT as a device attribute.
+
+By working with these nodes, you’ll see how to extract both real-time telemetry data (Humidity, Temperature, Pressure)
+and static attributes (firmware details) from an OPC-UA device, and then forward them into SENTIENT for 
+monitoring and visualization.
+
+## Step 1. Create a new gateway device on SENTIENT
+
+First, add a gateway device to your SENTIENT instance by following these steps:
+
+
+1. Go to "**Entities**" > "**Gateways**" tab.
+
+1. Click the "**+**" button, enter the gateway device name (e.g., "My Gateway"), and select the device profile. Click on "**Create**" button.
+
+
+<div class="st-gallery"><figure><img src="/images/gateway/dashboard/gateway-getting-started-1-ce.webp" alt="Go to &quot;**Entities**&quot; > &quot;**Gateways**&quot; tab." loading="lazy"><figcaption>Go to "**Entities**" > "**Gateways**" tab.</figcaption></figure><figure><img src="/images/gateway/dashboard/gateway-getting-started-2-ce.webp" alt="Click the &quot;**+**&quot; button, enter the gateway device name (e.g., &quot;My Gateway&quot;), and select the device profile. Click on &quot;**Create**&quot; button." loading="lazy"><figcaption>Click the "**+**" button, enter the gateway device name (e.g., "My Gateway"), and select the device profile. Click on "**Create**" button.</figcaption></figure></div>
+
+ 
+
+To launch the gateway, use the following steps:
+
+
+1. Select and click on newly created gateway, click on **"Launch command"** button in the top right corner.
+
+1. Click to download `docker-compose.yml` file to your PC, copy command and execute it in your terminal.
+
+
+<div class="st-gallery"><figure><img src="/images/gateway/dashboard/gateway-getting-started-3-ce.webp" alt="Select and click on newly created gateway, click on **&quot;Launch command&quot;** button in the top right corner." loading="lazy"><figcaption>Select and click on newly created gateway, click on **"Launch command"** button in the top right corner.</figcaption></figure><figure><img src="/images/gateway/dashboard/gateway-getting-started-4-ce.webp" alt="Click to download `docker-compose.yml` file to your PC, copy command and execute it in your terminal." loading="lazy"><figcaption>Click to download `docker-compose.yml` file to your PC, copy command and execute it in your terminal.</figcaption></figure></div>
+
+
+After running gateway docker image, you can see the following logs in your terminal:
+
+![](/images/gateway/dashboard/launch-gateway-docker.webp)
+
+## Step 2. Add new OPC-UA connector
+
+Let’s add an OPC-UA connector, which will read described before data from a simulated OPC-UA device to the 
+created gateway. To create a connector, follow these steps:
+
+
+1. Click on "**Connectors configuration**" button on the right panel;
+
+1. Click the "**+ Add connector**" button;
+
+1. Choose "**OPCUA**" connector type from the dropdown, fill in "**Name**" field, choose "**Logging level**" to "**INFO**", turn off the "**Fill configuration with default values**" option and click on "**Add**" button;
+
+1. Choose “**Advanced**” configuration mode, click on “**Configuration**” tab and paste connector configuration (_you can find it under these steps_).
+
+1. Click on “**Save**” button to apply changes.
+
+
+<div class="st-gallery"><figure><img src="/images/gateway/dashboard/gateway-getting-started-7-ce.webp" alt="Click on &quot;**Connectors configuration**&quot; button on the right panel;" loading="lazy"><figcaption>Click on "**Connectors configuration**" button on the right panel;</figcaption></figure><figure><img src="/images/gateway/dashboard/gateway-getting-started-8-ce.webp" alt="Click the &quot;**+ Add connector**&quot; button;" loading="lazy"><figcaption>Click the "**+ Add connector**" button;</figcaption></figure><figure><img src="/images/gateway/dashboard/gateway-getting-started-opc-ua-9-ce.webp" alt="Choose &quot;**OPCUA**&quot; connector type from the dropdown, fill in &quot;**Name**&quot; field, choose &quot;**Logging level**&quot; to &quot;**INFO**&quot;, turn off the &quot;**Fill configuration with default values**&quot; option and click on &quot;**Add**&quot; button;" loading="lazy"><figcaption>Choose "**OPCUA**" connector type from the dropdown, fill in "**Name**" field, choose "**Logging level**" to "**INFO**", turn off the "**Fill configuration with default values**" option and click on "**Add**" button;</figcaption></figure><figure><img src="/images/gateway/opc-ua-connector/guides/connector-configuration.webp" alt="Choose “**Advanced**” configuration mode, click on “**Configuration**” tab and paste connector configuration (_you can find it under these steps_)." loading="lazy"><figcaption>Choose “**Advanced**” configuration mode, click on “**Configuration**” tab and paste connector configuration (_you can find it under these steps_).</figcaption></figure><figure><img src="/images/gateway/opc-ua-connector/guides/connector-configuration-save.webp" alt="Click on “**Save**” button to apply changes." loading="lazy"><figcaption>Click on “**Save**” button to apply changes.</figcaption></figure></div>
+
+ 
+
+**OPC-UA configuration:**
+
+```json
+{
+  "server": {
+    "url": "opc.tcp://host.docker.internal:53530/OPCUA/SimulationServer",
+    "timeoutInMillis": 5000,
+    "scanPeriodInMillis": 3600000,
+    "pollPeriodInMillis": 5000,
+    "enableSubscriptions": false,
+    "subCheckPeriodInMillis": 100,
+    "showMap": false,
+    "security": "Basic128Rsa15",
+    "identity": {
+      "type": "anonymous"
+    }
+  },
+  "mapping": [
+    {
+      "deviceNodeSource": "path",
+      "deviceNodePattern": "Root\\.Objects\\.OPC-UA_PLC",
+      "deviceInfo": {
+        "deviceNameExpression": "OPC-UA PLC",
+        "deviceNameExpressionSource": "constant",
+        "deviceProfileExpressionSource": "constant",
+        "deviceProfileExpression": "default"
+      },
+      "attributes": [
+        {
+          "key": "Firmware Version",
+          "type": "path",
+          "value": "${FirmwareInformation\\.Version}"
+        },
+        {
+          "key": "Updated",
+          "type": "path",
+          "value": "${FirmwareInformation\\.UpdatedDate}"
+        }
+      ],
+      "timeseries": [
+        {
+          "key": "Humidity",
+          "type": "path",
+          "value": "${Humidity}"
+        },
+        {
+          "key": "Temperature",
+          "type": "path",
+          "value": "${Temperature}"
+        },
+        {
+          "key": "Pressure",
+          "type": "path",
+          "value": "${Pressure}"
+        }
+      ],
+      "rpc_methods": [],
+      "attributes_updates": []
+    }
+  ]
+}
+```
+
+
+Let’s break our connector configuration into smaller pieces and provide an explanation:
+
+**Server** - defines how the gateway connects and interacts with your OPC-UA server. From all parameters for us 
+the following is important:
+- **`url`** - specifies the server’s TCP endpoint. In this case, it's pointing to a local Prosys simulation at `opc.tcp://host.docker.internal:53530/OPCUA/SimulationServer`.
+- **`pollPeriodInMillis`** - sets the interval for polling node values when subscriptions aren't used (every 5 seconds in our example).
+- **`security`** - sets the OPC-UA security policy. Options include `Basic128Rsa15`, `Basic256`, and `Basic256Sha256`. Depends on your OPC-UA server settings.
+- **`identity`** - defines how the gateway authenticates to the server: here, anonymous for simplicity.
+
+**Mapping** - defines how node data from the OPC-UA server maps to SENTIENT devices:
+- **`deviceNodeSource`** & **`deviceNodePattern`** - the source type is path, and the pattern matches the root node (`Root.Objects.OPC-UA_PLC`) that represents our device.
+- **`deviceInfo`** - define SENTIENT device name and device profile. In our example, we use constant values for this purpose.
+- **`attributes`** - these values are pushed to SENTIENT attributes and are typically static or change infrequently. We use a relative path for configuring attributes data mapping.
+- **`timeseries`** -  these gauge readings will appear under the "**Latest Telemetry**" tab in the device's page. We use a relative path for configuring time series data mapping too.
+
+
+<div class="st-callout info">
+
+
+Additional information about the OPC-UA connector can be found [here](/docs/iot-gateway/config/opc-ua).
+
+
+</div>
+
+
+## Step 3. Check device data
+
+To review the data uploaded from your gateway, use the following steps:
+
+
+1. Navigate to the **Entities** > **Devices** page and click on the created device "**OPC-UA PLC**" as we named it in the “**deviceNameExpression**” field . This will open the device details page. From there, switch to the **"Attributes"** tab to view the attributes that were configured in the connector.
+
+1. To view real-time telemetry data from the device, navigate to the “**Latest Telemetry**” tab. Here, you will find the telemetry data being sent by the device, including metrics like “**humidity**”, “**temperature**” and “**pressure**”. This tab provides real-time device telemetry updates.
+
+
+<div class="st-gallery"><figure><img src="/images/gateway/opc-ua-connector/guides/review-device-data-1.webp" alt="Navigate to the **Entities** > **Devices** page and click on the created device &quot;**OPC-UA PLC**&quot; as we named it in the “**deviceNameExpression**” field . This will open the device details page. From there, switch to the **&quot;Attributes&quot;** tab to view the attributes that were configured in the connector." loading="lazy"><figcaption>Navigate to the **Entities** > **Devices** page and click on the created device "**OPC-UA PLC**" as we named it in the “**deviceNameExpression**” field . This will open the device details page. From there, switch to the **"Attributes"** tab to view the attributes that were configured in the connector.</figcaption></figure><figure><img src="/images/gateway/opc-ua-connector/guides/review-device-data-2.webp" alt="To view real-time telemetry data from the device, navigate to the “**Latest Telemetry**” tab. Here, you will find the telemetry data being sent by the device, including metrics like “**humidity**”, “**temperature**” and “**pressure**”. This tab provides real-time device telemetry updates." loading="lazy"><figcaption>To view real-time telemetry data from the device, navigate to the “**Latest Telemetry**” tab. Here, you will find the telemetry data being sent by the device, including metrics like “**humidity**”, “**temperature**” and “**pressure**”. This tab provides real-time device telemetry updates.</figcaption></figure></div>
+
+
+## Conclusion
+
+In this guide, we demonstrated how to connect an OPC-UA device to SENTIENT using the SENTIENT IoT Gateway. 
+By configuring the gateway, setting up the OPC-UA connector, and mapping both telemetry data (such as humidity, 
+temperature, and pressure) and device attributes (like firmware version and update date), we established a complete 
+data flow from the OPC-UA server into SENTIENT.
+
+With this setup, you can now monitor your device data in real time, visualize it on dashboards, and use 
+SENTIENT’s powerful features—such as alarms, rule chains—to build advanced IoT solutions. The same approach 
+can be extended to real industrial OPC-UA devices, enabling seamless integration of systems into modern IoT platforms.
+
+This example using the Prosys Simulation Server is just the beginning. You can now adapt the configuration to 
+your own devices, scale up to multiple servers, and customize data mappings based on your project’s needs.
+
+## Next steps
+
+Explore guides related to main SENTIENT features:
+ - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
+ - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
+ - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.
+ - [Using RPC capabilities](/docs/user-guide/rpc/) - how to send commands to/from devices.
+ - [Rule Engine](/docs/user-guide/rule-engine/) - how to use rule engine to analyze data from devices.

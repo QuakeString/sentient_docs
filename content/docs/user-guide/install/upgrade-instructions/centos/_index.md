@@ -1,0 +1,4 @@
++++
+title = "Centos"
+transparent = true
++++

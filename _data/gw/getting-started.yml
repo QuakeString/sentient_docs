@@ -1,6 +1,0 @@
-bigheader: "Getting Started"
-abstract: "Getting Started with SENTIENT IoT Gateway."
-hidetoc: "true"
-toc:
-- title: Getting Started
-  path: /docs/iot-gateway/getting-started/

@@ -1,0 +1,11 @@
+{%- if toc | length > 0 %}
+<h5>On this page</h5>
+{%- for h in toc %}
+<a href="#{{ h.id }}" data-target="{{ h.id }}">{{ h.title }}</a>
+{%- for c in h.children %}<a href="#{{ c.id }}" data-target="{{ c.id }}" class="l3">{{ c.title }}</a>{% endfor %}
+{%- endfor %}
+<div class="side-actions">
+  {%- if page.relative_path %}<a href="{{ config.extra.repo_edit_url | safe }}{{ page.relative_path | safe }}" target="_blank" rel="noopener"><svg class="icon" style="width:14px;height:14px"><use href="#i-pen"/></svg>Suggest an edit</a>{% endif %}
+  <a href="#" id="copyLink"><svg class="icon" style="width:14px;height:14px"><use href="#i-hash"/></svg>Copy link to page</a>
+</div>
+{%- endif %}

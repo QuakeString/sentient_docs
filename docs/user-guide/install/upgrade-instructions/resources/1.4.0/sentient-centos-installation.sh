@@ -1,1 +1,0 @@
-sudo rpm -Uvh sentient-1.4.rpm

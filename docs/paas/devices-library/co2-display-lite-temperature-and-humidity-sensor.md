@@ -1,5 +1,0 @@
----
-layout: docwithnav-paas
-title: "How to connect CO2 Display lite Temperature and humidity sensor to SENTIENT?"
-redirect_to: "/device-library/paas/co2-display-lite-temperature-and-humidity-sensor/"
----

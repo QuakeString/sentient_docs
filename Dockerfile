@@ -1,49 +1,19 @@
-# SENTIENT docs site — production multi-stage build.
-#
-# Stage 1 runs Jekyll in a Ruby image to produce the static
-# `_site/` directory. Stage 2 ships only that output behind nginx,
-# so the runtime image carries no Ruby, no Gemfile, no Bundler,
-# no inotify watcher — just nginx serving static files.
-#
-# Build:  docker build -t quakestring/sentient_docs:latest .
-# Run:    docker run -d -p 4001:80 --name sentient_docs_prod quakestring/sentient_docs:latest
-
-# ── Stage 1: Jekyll build ───────────────────────────────────────────
-FROM ruby:3.3-slim AS builder
-
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        build-essential ca-certificates git \
-    && rm -rf /var/lib/apt/lists/*
-
+# SENTIENT docs: one version, fully offline. Copyright © 2016-2025 The SENTIENT Authors
+#   docker build -t quakestring/sentient-docs:4.3.0.57 .
+#   docker run -d -p 8090:80 quakestring/sentient-docs:4.3.0.57   -> http://localhost:8090/docs/
+FROM debian:bookworm-slim AS build
+ARG ZOLA_VERSION=0.19.2
+ARG PAGEFIND_VERSION=1.3.0
+RUN apt-get update && apt-get install -y --no-install-recommends curl ca-certificates python3 && rm -rf /var/lib/apt/lists/* \
+ && curl -fsSL https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz | tar xz -C /usr/local/bin \
+ && curl -fsSL https://github.com/CloudCannon/pagefind/releases/download/v${PAGEFIND_VERSION}/pagefind-v${PAGEFIND_VERSION}-x86_64-unknown-linux-musl.tar.gz | tar xz -C /usr/local/bin
 WORKDIR /site
-
-# Install gems first so `bundle install` is cached across source edits.
-COPY Gemfile Gemfile.lock ./
-RUN gem install bundler:2.5.23 \
- && bundle config set --local without 'development test' \
- && bundle install --jobs=4 --retry=3
-
-# Copy the rest of the repo. .dockerignore strips out _site/, .git, etc.
 COPY . .
+RUN tools/build.sh --out /public
 
-# `PAGES_REPO_NWO` lets the github-pages plugin generate metadata
-# without an authenticated GitHub API call. `JEKYLL_ENV=production`
-# enables long-cache asset fingerprinting and disables drafts.
-ENV JEKYLL_ENV=production \
-    PAGES_REPO_NWO=QuakeString/sentient_docs
-
-RUN bundle exec jekyll build --destination /build
-
-# ── Stage 2: nginx serve ────────────────────────────────────────────
 FROM nginx:1.27-alpine
-
-# Strip the default site so our config is the only one nginx loads.
 RUN rm /etc/nginx/conf.d/default.conf
-
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /build /usr/share/nginx/html
-
+COPY --from=build /public /usr/share/nginx/html
 EXPOSE 80
-
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD wget -q --spider http://127.0.0.1/ || exit 1
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 CMD wget -q --spider http://127.0.0.1/docs/ || exit 1

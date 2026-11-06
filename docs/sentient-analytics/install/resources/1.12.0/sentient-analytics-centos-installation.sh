@@ -1,1 +1,0 @@
-sudo rpm -Uvh sentient-analytics-1.12.0.rpm

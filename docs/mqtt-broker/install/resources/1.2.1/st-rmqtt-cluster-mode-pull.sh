@@ -1,1 +1,0 @@
-docker pull sentient/st-rmqtt-node:1.2.1

@@ -1,1 +1,0 @@
-sudo dpkg -i sentient-analytics-1.11.1.deb

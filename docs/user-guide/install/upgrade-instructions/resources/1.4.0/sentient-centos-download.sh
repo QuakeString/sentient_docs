@@ -1,1 +1,0 @@
-wget https://github.com/sentient/sentient/releases/download/v1.4/sentient-1.4.rpm

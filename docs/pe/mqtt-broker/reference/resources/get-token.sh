@@ -1,1 +1,0 @@
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"username":"sysadmin@sentient.org", "password":"sysadmin"}' 'http://SENTIENT_MQTT_BROKER_URL/api/auth/login'

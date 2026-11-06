@@ -475,7 +475,6 @@ toc:
   section:
   - title: Overview
     path: /docs/troubleshooting/
-    planned: true
   - title: API error codes
     path: /docs/troubleshooting/error-codes/
   - title: Installation and upgrade errors
@@ -484,10 +483,8 @@ toc:
     path: /docs/troubleshooting/licence-errors/
   - title: Devices do not connect
     path: /docs/troubleshooting/device-connection/
-    planned: true
   - title: Gateway errors
     path: /docs/troubleshooting/gateway-errors/
-    planned: true
   - title: Collect logs for support
     path: /docs/troubleshooting/logs/
   - title: Server troubleshooting

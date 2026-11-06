@@ -6,3 +6,6 @@
 {%- if page.extra.status | default(value="") == "imported" %}
 <div class="status-note" data-pagefind-ignore><svg class="icon"><use href="#i-warn"/></svg><span>This page was carried over from the previous documentation and has not been checked against SENTIENT {{ config.extra.version }} yet. Screens and steps may differ.</span></div>
 {%- endif %}
+{%- if page.extra.status | default(value="") == "planned" %}
+<div class="status-note planned" data-pagefind-ignore><svg class="icon"><use href="#i-pen"/></svg><span>This page is being written for SENTIENT {{ config.extra.version }}. The outline below shows what it will cover.</span></div>
+{%- endif %}

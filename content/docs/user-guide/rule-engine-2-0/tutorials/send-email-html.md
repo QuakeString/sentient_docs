@@ -203,6 +203,6 @@ We got the next message:
 
 ## See Also
 
-- [Send email](/docs/user-guide/rule-engine-2-0/tutorials/send-email/).
+- [Send email](/docs/tutorials/send-email/).
 
 ## Next steps

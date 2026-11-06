@@ -216,8 +216,8 @@ Please refer to the first two links under the **See Also** section to see how to
 
 ## See Also
 
-- [Create & Clear Alarms: configure dashboard](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/#configure-device-and-dashboard) guide - to learn how to add an Alarm widget to the dashboard.
-- [Send Email](/docs/user-guide/rule-engine-2-0/tutorials/send-email/) guide.
+- [Create & Clear Alarms: configure dashboard](/docs/tutorials/create-clear-alarms/#configure-device-and-dashboard) guide - to learn how to add an Alarm widget to the dashboard.
+- [Send Email](/docs/tutorials/send-email/) guide.
 - [Device Connectivity Status](/docs/user-guide/device-connectivity-status/) guide.
 
 ## Next steps

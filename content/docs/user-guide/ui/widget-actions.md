@@ -12,7 +12,7 @@ Actions allow quickly and easily configuring the transition to created state, tr
 Depending on the widget, the action sources differ. However, the type of action you are able to choose will be the same for all widgets.
 Actions can be configured both when editing and creating the required widget.
 
-In this guide, we will configure actions in the editing mode using the Entities table widget as an example. Please, [learn here](/docs/getting-started-guides/helloworld-pe/#step-32-add-an-entities-table-widget) how to add an Entity table widget to your dashboard.
+In this guide, we will configure actions in the editing mode using the Entities table widget as an example. Please, [learn here](/docs/getting-started-guides/helloworld/#step-32-add-an-entities-table-widget) how to add an Entity table widget to your dashboard.
 
 To fully understand how to use Actions, you have to add a State to your dashboard. [You can find information on how to do this here](/docs/user-guide/dashboards/#states).
 
@@ -1107,7 +1107,7 @@ Action sources are specific actions that need to be performed to achieve a goal 
 Action sources will be explained separately for each widget type, separately using an example of the most commonly used type of action "[Navigate to new dashboard state](/docs/user-guide/ui/widget-actions/#navigate-to-new-dashboard-state)". 
 
 Next, we will demonstrate how to utilize each action source using the "Entities table" widget as an example.
-If you're unfamiliar with adding an Entity table widget to your dashboard, you can [learn how to do so here](/docs/getting-started-guides/helloworld-pe/#step-32-add-an-entities-table-widget).
+If you're unfamiliar with adding an Entity table widget to your dashboard, you can [learn how to do so here](/docs/getting-started-guides/helloworld/#step-32-add-an-entities-table-widget).
 
 ### Action cell button
 
@@ -1346,7 +1346,7 @@ After saving, SENTIENT "listens" for clicks on the element with an id that match
 1. Add a [Markdown/HTML Card](/docs/user-guide/widgets/cards/markdown-html-card/) widget to your dashboard using the HTML and CSS provided below.  
 2. [Create a new dashboard state](/docs/user-guide/dashboards/#states) with device **temperature details**.
 
-**Alternative:** You can [download a pre-configured dashboard](/docs/pe/user-guide/widgets/resources/smart_device_details.json) with the Markdown/HTML Card widget and the details state already set up, then [import](/docs/user-guide/dashboards/#import-dashboard) it into your SENTIENT instance.
+**Alternative:** You can [download a pre-configured dashboard](/docs/user-guide/widgets/resources/smart_device_details.json) with the Markdown/HTML Card widget and the details state already set up, then [import](/docs/user-guide/dashboards/#import-dashboard) it into your SENTIENT instance.
 
 
 <div class="st-callout info">
@@ -1457,7 +1457,7 @@ Clicking the **blue block with the current temperature** will execute the config
 
 Map widget has unique action sources that need to be considered separately. 
 
-Let&#39;s start by adding a map widget, namely OpenStreetMap widget. We have a separate guide on [how to create and configure a map widget](/docs/user-guide/ui/trip-animation-widget/). Please, familiarize yourself with it first.
+Let&#39;s start by adding a map widget, namely OpenStreetMap widget. We have a separate guide on [how to create and configure a map widget](/docs/user-guide/widgets/map-widgets/). Please, familiarize yourself with it first.
 
 
 ![image](/images/user-guide/ui/widgets/actions/guide/map-widget-action-sources-1-ce.webp)
@@ -1469,7 +1469,7 @@ All further explanations concerning actions assume that you have already added [
 #### On circle click
 
 Circle is a plane figure, boundary points of which are always the same distance away from a fixed central point. We use circle which is based on coordinates that are specified within the device we use.
-Learn how to add a circle on the Map widget, by reading [here](/docs/user-guide/ui/trip-animation-widget/#circle-settings).
+Learn how to add a circle on the Map widget, by reading [here](/docs/user-guide/widgets/map-widgets/#circle-settings).
 
 
 <div class="st-gallery"><figure><img src="/images/user-guide/ui/widgets/actions/guide/on-circle-click-1-ce.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
@@ -1521,7 +1521,7 @@ Clicking on the marker on the map will take you to the specified state.
 
 Polygon is a plane figure that’s described by a finite number of dots. We use polygon which is based on coordinates specified within the device we use, but you can use any other entity.
 You may mark your assets and any other entities with a polygon option.
-Learn how to add a polygon on the Map widget, by reading [here](/docs/user-guide/ui/trip-animation-widget/#polygon-settings).
+Learn how to add a polygon on the Map widget, by reading [here](/docs/user-guide/widgets/map-widgets/#polygon-settings).
 
 
 <div class="st-gallery"><figure><img src="/images/user-guide/ui/widgets/actions/guide/on-polygon-click-1-ce.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
@@ -1550,7 +1550,7 @@ To execute an action click anywhere inside the polygon.
 
 You can configure the map widget settings so that when you click on a marker, a tooltip appears. The tooltip can contain a link that will execute the configured action.
 Please note, in this manual explains only the basic usage of the tooltip tag action source. It is possible to configure several links for various devices/assets that return different values.
-Use [the tooltip function](/docs/user-guide/ui/trip-animation-widget/#tooltip-function) in the advanced mode of the map widget to accomplish this.
+Use [the tooltip function](/docs/user-guide/widgets/map-widgets/#tooltip-function) in the advanced mode of the map widget to accomplish this.
 
 - Enter edit widget mode and open "Add action" window;
 - Select "Tooltip tag action" as the action source;

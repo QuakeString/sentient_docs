@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/tuya.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -108,8 +108,8 @@ Uplink is necessary in order to convert the incoming data from the device into t
 - To view the events, enable debug mode. 
 - In the **Main decoding configuration** section, provide your own script or use the script below.
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">

@@ -960,3 +960,9 @@ img{max-width:100%}
 .doc-features .feature-logo,.prose img[src$='.svg']{filter:var(--st-docs-icon-filter)}
 html,body{height:auto;min-height:100%}
 .st-gallery figcaption{display:block}
+
+/* planned pages (outline only) */
+.nav .soon{margin-left:auto;font-size:10px;font-weight:500;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 6px;line-height:16px;flex:none}
+.child-list .soon{font-size:10px;font-weight:500;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 6px;line-height:16px;margin-left:6px;vertical-align:2px}
+.status-note.planned{background:var(--st-docs-tint)}
+.status-note.planned .icon{color:var(--accent-text)}

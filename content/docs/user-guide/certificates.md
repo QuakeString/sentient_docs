@@ -36,7 +36,7 @@ Follow the [MQTT over SSL](/docs/user-guide/mqtt-over-ssl/) guide to provision s
 
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by mqtt client to validate the server certificate.
 Save the CA root certificate to your working directory as "**ca-root.pem**".
-An example of CA root certificate for *localhost* is located [here](/docs/paas/user-guide/resources/mqtt-over-ssl/ca-root.pem).
+An example of CA root certificate for *localhost* is located [here](/docs/user-guide/resources/mqtt-over-ssl/ca-root.pem).
 
 ### Step 2. Generate Client certificate chain
 
@@ -250,7 +250,7 @@ Follow the [MQTT over SSL](/docs/user-guide/mqtt-over-ssl/) guide to provision s
 
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by mqtt client to validate the server certificate.
 Save the CA root certificate to your working directory as "**ca-root.pem**".
-An example of CA root certificate for *localhost* is located [here](/docs/paas/user-guide/resources/mqtt-over-ssl/ca-root.pem).
+An example of CA root certificate for *localhost* is located [here](/docs/user-guide/resources/mqtt-over-ssl/ca-root.pem).
 
 ### Step 2. Generate Client certificate
 

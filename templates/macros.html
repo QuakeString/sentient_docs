@@ -12,7 +12,7 @@
 </div></details>
     {%- endif %}
   {%- elif it.path %}
-<a href="{{ it.path | safe }}"{% if current == it.path %} aria-current="page"{% endif %}>{{ it.title }}{% if it.new %} <span class="new">NEW</span>{% endif %}</a>
+<a href="{{ it.path | safe }}"{% if current == it.path %} aria-current="page"{% endif %}>{{ it.title }}{% if it.new %} <span class="new">NEW</span>{% endif %}{% if it.planned %} <span class="soon">SOON</span>{% endif %}</a>
   {%- endif %}
 {%- endfor %}
 {% endmacro nav_items %}

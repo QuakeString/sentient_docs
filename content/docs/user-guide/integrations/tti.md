@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/tti.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -253,7 +253,7 @@ With this integration you can also configure Downlink converters and trigger req
 - [Integration Overview](/docs/user-guide/integrations/)
 - [Uplink Converters](/docs/user-guide/integrations/#uplink-data-converter)
 - [Downlink Converters](/docs/user-guide/integrations/#downlink-data-converter)
-- [Rule Engine](/docs/pe/user-guide/rule-engine-2-0/re-getting-started/)
+- [Rule Engine](/docs/user-guide/rule-engine-2-0/re-getting-started/)
 
 
 ## Next steps

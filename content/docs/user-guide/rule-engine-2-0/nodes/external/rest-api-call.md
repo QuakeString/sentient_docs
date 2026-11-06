@@ -194,7 +194,7 @@ Certificate-based authentication using PEM-encoded files. This provides mutual T
 <div class="st-callout info">
 
 
-**Note**: Certificate and key files can be uploaded directly or referenced from [Secrets storage](/docs/pe/user-guide/secrets-storage/) for enhanced security.
+**Note**: Certificate and key files can be uploaded directly or referenced from [Secrets storage](/docs/administration/secrets/) for enhanced security.
 
 
 </div>

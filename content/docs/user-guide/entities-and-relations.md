@@ -55,7 +55,7 @@ The following diagram explains how those entities are configured and stored in S
 ![image](/images/user-guide/entities-and-relations.svg)
 
 
-See ["add and delete assets"](/docs/pe/user-guide/ui/assets/#add-and-delete-assets) and ["manage asset relations"](/docs/pe/user-guide/ui/assets/#manage-asset-relations)
+See ["add and delete assets"](/docs/user-guide/ui/assets/#add-and-delete-assets) and ["manage asset relations"](/docs/user-guide/ui/assets/#manage-asset-relations)
 to learn how to configure this entities via Administration UI. You may also use [REST API](/docs/reference/rest-client/) to create entities and relations programmatically.
 
 ## Next steps

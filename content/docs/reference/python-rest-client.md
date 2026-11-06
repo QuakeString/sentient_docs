@@ -469,4 +469,4 @@ python3 load_all_entities_from_vcs_ce.py -H YOUR_SENTIENT_HOST -p YOUR_SENTIENT_
 In output you will receive information about how many entities were loaded.
 
 
-**The Professional Edition Python REST Client example you can find [here](/docs/pe/reference/python-rest-client/#professional-edition-python-rest-client-example).**
+**The Professional Edition Python REST Client example you can find [here](/docs/reference/python-rest-client/#professional-edition-python-rest-client-example).**

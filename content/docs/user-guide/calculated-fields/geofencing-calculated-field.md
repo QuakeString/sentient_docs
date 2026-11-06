@@ -373,7 +373,7 @@ This calculated field evaluates whether each dog is inside its own <span class="
 <br><b><font size="3">3. Import the demo dashboard</font></b>   
 Import the dashboard JSON to monitor devices:
 - [Download the dashboard configuration file](/docs/user-guide/resources/calculated-fields/geofencing/pets-tracking-dashboard.json).
-- Go to the **Dashboards** page and [import](/docs/pe/user-guide/dashboards/#import-dashboard/) the JSON file with dashboard configuration.
+- Go to the **Dashboards** page and [import](/docs/user-guide/dashboards/#import-dashboard/) the JSON file with dashboard configuration.
 
 The dashboard includes:
 - A map widget showing dog locations.
@@ -480,7 +480,7 @@ This calculated field resolves the warehouse zone via relations and generates st
 <br><b><font size="3">5. Import the dashboard</font></b>   
 Import the dashboard to monitor forklifts in real time.
 - [Download the dashboard configuration file](/docs/user-guide/resources/calculated-fields/geofencing/warehouse_equipment_tracking_dashboard.json).
-- Go to the **Dashboards** page and [import](/docs/pe/user-guide/dashboards/#import-dashboard/) the JSON file with dashboard configuration.
+- Go to the **Dashboards** page and [import](/docs/user-guide/dashboards/#import-dashboard/) the JSON file with dashboard configuration.
 
 The dashboard includes:
 - a **Map widget** showing the current position of each fork lift
@@ -602,7 +602,7 @@ Apply the calculated field to this profile so it runs for all trucks using it.
 <br><b><font size="3">5. Import the dashboard</font></b>   
 Import the dashboard for real-time monitoring.
 - [Download the dashboard configuration file](/docs/user-guide/resources/calculated-fields/geofencing/fleet_trucks_tracking_dashboard.json).
-- Go to the "Dashboards" page and [import](/docs/pe/user-guide/dashboards/#import-dashboard/) the JSON file with dashboard configuration.
+- Go to the "Dashboards" page and [import](/docs/user-guide/dashboards/#import-dashboard/) the JSON file with dashboard configuration.
 
 The dashboard includes:
 - Map widget showing truck positions and zone overlays
@@ -631,4 +631,4 @@ As you move truck markers across zone boundaries:
 ## Your feedback
 
 Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient) to help us spread the word.
-If you have any questions about this sample, please [contact us](/docs/contact-us/).
+If you have any questions about this sample, please contact us.

@@ -1,6 +1,6 @@
 +++
 title = "Widgets development guide"
-aliases = ["docs/user-guide/contribution/widgets-development-before-3.0/"]
+aliases = ["docs/user-guide/contribution/widgets-development-before-3.0/", "/docs/user-guide/contribution/how-to-contribute-your-device-integration-guide/", "/docs/user-guide/contribution/how-to-contribute/", "/docs/user-guide/contribution/rule-node-development/"]
 
 [extra]
 status = "imported"
@@ -43,7 +43,7 @@ It consists of [top toolbar](#widget-editor-toolbar) and four main sections:
 Widget Editor Toolbar consists of the following items:
 
  - **Widget Title** field - used to specify title of the widget definition
- - **Widget Type** selector -  used to specify [type](/docs/user-guide/contribution/ui/widget-library/#widget-types) of the widget definition
+ - **Widget Type** selector -  used to specify [type](/docs/user-guide/ui/widget-library/#widget-types) of the widget definition
  - **Run** button - used to run widget code and view result in **Widget preview** section
  - **Undo** button - reverts all editor sections to latest saved state
  - **Save** button - saves widget definition

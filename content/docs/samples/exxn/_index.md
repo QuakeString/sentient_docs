@@ -1,4 +1,0 @@
-+++
-title = "Exxn"
-transparent = true
-+++

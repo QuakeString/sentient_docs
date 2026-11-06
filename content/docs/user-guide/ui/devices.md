@@ -197,7 +197,7 @@ To make the device private again, follow these steps:
 
 You can assign the device to a specific [customer](/docs/user-guide/ui/customers/). This ensures that only users associated with that customer will have access to the device and its data.
 
-> This step is crucial for ensuring data [access control](/docs/user-guide/rbac/). Each customer user will only see their own devices and will not have access to devices or data assigned to other customers.
+> This step is crucial for ensuring data [access control](/docs/administration/roles/). Each customer user will only see their own devices and will not have access to devices or data assigned to other customers.
 
 
 1. Open "Device details" window and click the "Assign device to customer" button;
@@ -275,4 +275,4 @@ Enables exporting and restoring SENTIENT entities using the built-in Git-based [
 ## Your feedback
 
 Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient) to help us spread the word.
-If you have any questions about this sample, please [contact us](/docs/contact-us/).
+If you have any questions about this sample, please contact us.

@@ -2,6 +2,7 @@
 title = "Platform Integrations"
 description = "Platform Integrations Documentation"
 
+aliases = ["/docs/user-guide/integrations/ibm-watson-iot/"]
 [extra]
 status = "imported"
 checked = ""
@@ -10,8 +11,8 @@ source = "docs/user-guide/integrations/index.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -42,8 +43,8 @@ The message is basically transformed from device and platform specific payload t
 
 Since TB PE v2.0, Rule Engine is also able to push Downlink messages to the integrations. The example of such message may be:
  
- - notification about [shared attribute](/docs/pe/user-guide/attributes/#device-specific-attribute-types) (configuration) update;
- - notification about [oneway RPC call](/docs/pe/user-guide/rpc/#server-side-rpc-api) to trigger some action on the device;
+ - notification about [shared attribute](/docs/user-guide/attributes/#device-specific-attribute-types) (configuration) update;
+ - notification about [oneway RPC call](/docs/user-guide/rpc/#server-side-rpc-api) to trigger some action on the device;
  - any custom message from the rule engine.
  
 The most common use cases are:
@@ -107,8 +108,8 @@ Debug mode settings can be combined or disabled entirely.
 
 - In the **Main decoding configuration** section, define the decoding logic: use the provided default script or enter your custom script to parse and transform the incoming data.
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 ![image](/images/user-guide/integrations/overview/adding-uplink-converter-1.webp)
 
@@ -131,8 +132,8 @@ To create the Uplink data converter for an integration that supports the **new u
   > The Entity name field is mandatory, so it cannot be left empty. By default, the entity name follows the pattern **Device $eui** (or **Asset $eui**). Here you need to underline the pattern **$** in the device name. As you type **$**, a list of available keys from the Loriot message will appear. This list is standardized and does not depend on the specific message content. The **$eui** pattern will dynamically fetch the device&#39;s unique identifier from the Loriot message.
 - In the **Main decoding configuration** section, define the decoding logic: use the provided default script or enter your custom script to parse and transform the incoming data.
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 ![image](/images/user-guide/integrations/overview/uplink-converter-20-1.webp)
 
@@ -279,8 +280,8 @@ Debug mode settings can be combined or disabled entirely.
 
 - In the **Main encoding configuration** section, define the decoding logic: enter **script** for parsing and transforming the output data.
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 - Click the "**Add**" button to create and save your new converter.
 
@@ -297,7 +298,7 @@ where
 
 ㅤ**&#42; msg** - JSON with rule engine msg<br>
 ㅤ**&#42; metadata** - list of key-value pairs with additional data about the message (produced by the rule engine)<br>
-ㅤ**&#42; msgType** - Rule Engine message type. See [predefined message types](/docs/pe/user-guide/rule-engine-2-0/overview/#predefined-message-types) for more details<br>
+ㅤ**&#42; msgType** - Rule Engine message type. See [predefined message types](/docs/user-guide/rule-engine-2-0/overview/#predefined-message-types) for more details<br>
 ㅤ**&#42; integrationMetadata** - key-value map with some integration specific fields. You can configure additional metadata for each integration in the integration details
   
 ### Converter output
@@ -336,8 +337,8 @@ you would like to push this update to an external MQTT broker (TTN, Mosquitto, A
 You may also want to include the "firmwareVersion" attribute value that was configured long time ago and is not present in this particular request.
 The topic to push the update should contain the device name.
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
@@ -570,7 +571,7 @@ We plan to provide specific integrations for different platforms, and also for d
 We plan to collect and maintain data converters for most popular devices on the market to simplify integration path even more. 
 Please note that you can share your converters with community and send them to us to make part of official SENTIENT distributive.   
 
-[Contact us](/docs/contact-us/) to suggest missing feature for your use case.
+Contact us to suggest missing feature for your use case.
 
 ## See also
 

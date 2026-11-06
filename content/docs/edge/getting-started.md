@@ -13,13 +13,13 @@ This tutorial will guide you through the fundamentals of the **SENTIENT Edge** p
 * Transmit data from the device to the **Edge** and then from the **Edge** to the **SENTIENT Cloud**.
 * Create and configure real-time dashboards.
 
-To keep it simple, we will skip over lengthy descriptions. However, if you need more detailed information, check out the [“What is SENTIENT Edge” article](/docs/getting-started-guides/what-is-edge/) and explore our other documentation. 
+To keep it simple, we will skip over lengthy descriptions. However, if you need more detailed information, check out the [“What is SENTIENT Edge” article](/docs/edge/getting-started-guides/what-is-edge/) and explore our other documentation. 
 
 
 <div class="st-callout info">
 
 
-Looking for **white-labeling** or **premium features**? <a href="/docs/pe/edge/" target="_blank">Explore Edge Professional Edition documentation →</a>
+Looking for **white-labeling** or **premium features**? <a href="/docs/" target="_blank">Explore Edge Professional Edition documentation →</a>
 
 
 </div>
@@ -224,7 +224,7 @@ To understand how the telemetry data is transmitted from the **Edge** to the **C
 <div class="st-callout info">
 
 
-To edit the **Edge Rule Chain Template** or create a new one, log in to your **SENTIENT Server** instance at **SERVER_URL** and navigate to the **Edge management > Rule chain templates** section and follow [these instructions](/docs/rule-engine/rule-chain-templates/).
+To edit the **Edge Rule Chain Template** or create a new one, log in to your **SENTIENT Server** instance at **SERVER_URL** and navigate to the **Edge management > Rule chain templates** section and follow [these instructions](/docs/edge/rule-engine/rule-chain-templates/).
 
 
 </div>

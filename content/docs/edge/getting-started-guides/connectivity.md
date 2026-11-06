@@ -11,7 +11,7 @@ source = "docs/edge/getting-started-guides/connectivity.md"
 
 
 SENTIENT provides a lot of device connectivity options. The diagram below is designed to provide a visual overview of existing options and help you to choose the correct option for your devices. 
-In case you have not found out how to connect your device using the diagram or something is not clear, please [contact us](/docs/contact-us/) and help us to improve this guide.
+In case you have not found out how to connect your device using the diagram or something is not clear, please contact us and help us to improve this guide.
 
 
 </div>
@@ -22,7 +22,7 @@ In case you have not found out how to connect your device using the diagram or s
 
 ## Connecting well-known devices
 
-You can check the [Device Library](/docs/device-library) section to explore how to connect widely used devices to SENTIENT.
+You can check the [Device Library](/docs/getting-started-guides/connectivity/) section to explore how to connect widely used devices to SENTIENT.
 
 ## Built-in transport protocols
 
@@ -48,7 +48,7 @@ See [What is IoT Gateway?](/docs/iot-gateway/what-is-iot-gateway/) for more info
 
 It is possible to integrate ChirpStack network server with SENTIENT using this [guide](https://www.chirpstack.io/application-server/integrations/sentient/).
 
-[SENTIENT Professional Edition](/products/sentient-pe/) supports ChirpStack and many other network servers via [Integrations](/docs/user-guide/integrations/).
+SENTIENT Professional Edition supports ChirpStack and many other network servers via [Integrations](/docs/user-guide/integrations/).
 For example: [TheThingsStack](/docs/user-guide/integrations/ttn/), [TheThingsIndustries](/docs/user-guide/integrations/tti/),
 [LORIOT](/docs/user-guide/integrations/loriot/),
 [Actility ThingPark](/docs/user-guide/integrations/thingpark/) or any other network server that supports the [webhooks](/docs/user-guide/integrations/http/) or [mqtt](/docs/user-guide/integrations/mqtt/).
@@ -56,9 +56,9 @@ Big advantage of SENTIENT Professional Edition integrations is the ability to de
 
 ## Sigfox
 
-[SENTIENT Professional Edition](/products/sentient-pe/) supports Sigfox [integration](/docs/user-guide/integrations/sigfox/) out-of-the-box.
+SENTIENT Professional Edition supports Sigfox [integration](/docs/user-guide/integrations/sigfox/) out-of-the-box.
 
 ## NB IoT and other protocols
 
-[SENTIENT Professional Edition](/products/sentient-pe/) supports many [Integrations](/docs/user-guide/integrations/) that cover most of the devices on the market.
-Please [contact us](/docs/contact-us/) if you need help to connect your device.
+SENTIENT Professional Edition supports many [Integrations](/docs/user-guide/integrations/) that cover most of the devices on the market.
+Please contact us if you need help to connect your device.

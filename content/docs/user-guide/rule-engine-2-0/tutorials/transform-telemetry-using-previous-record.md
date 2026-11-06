@@ -37,7 +37,7 @@ We assume you have completed the following guides and reviewed the articles list
 
   * [Getting Started](/docs/getting-started-guides/helloworld/) guide.
   * [Rule Engine Overview](/docs/user-guide/rule-engine-2-0/overview/).
-  * [Transform Incoming Telemetry](/docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/) guide.
+  * [Transform Incoming Telemetry](/docs/user-guide/rule-engine-2-0/tutorials/transform-telemetry-using-previous-record/) guide.
 
 ## Step 1: Adding enrichment node
 

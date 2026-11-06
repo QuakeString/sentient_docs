@@ -111,4 +111,4 @@ You can use the following links to check out the related guides:
 ## Your feedback
 
 Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient) to help us spread the word.
-If you have any questions about this sample, please [contact us](/docs/contact-us/).
+If you have any questions about this sample, please contact us.

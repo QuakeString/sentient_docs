@@ -3,6 +3,7 @@ title = "SENTIENT Architecture"
 description = "SENTIENT IoT Platform architecture"
 
 
+aliases = ["/docs/reference/iot-platform-deployment-scenarios/", "/docs/reference/mcp-server/", "/docs/reference/monolithic/", "/docs/reference/msa/", "/docs/reference/performance/", "/docs/reference/performance/tools/java-jmx-monitoring/", "/docs/reference/performance/tools/postgres-pgadmin-monitoring/", "/docs/reference/performance/tools/sentient-performance-charts/", "/docs/reference/performance-aws-instances/", "/docs/reference/1m-devices-test/", "/docs/reference/20k-devices-test/", "/docs/reference/performance-tests/", "/docs/reference/performance-tools/"]
 [extra]
 status = "imported"
 checked = ""
@@ -22,7 +23,7 @@ It is possible to plugin support of different protocols or customize existing im
 
 #### Rule Engine
 
-SENTIENT [Rule Engine](/docs/user-guide/rule-engine/) allows to process messages from devices and trigger configurable processing modules called Plugins.
+SENTIENT [Rule Engine](/docs/user-guide/rule-engine-2-0/overview/) allows to process messages from devices and trigger configurable processing modules called Plugins.
 
 #### Core Services
 

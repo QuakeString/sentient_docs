@@ -14,7 +14,7 @@ and configure your SENTIENT rule engine to be able to send notifications to Tele
 
 ## Use case
 
-This tutorial is based on the [create & clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/#use-case) tutorial and it's use case. 
+This tutorial is based on the [create & clear alarms](/docs/tutorials/create-clear-alarms/#use-case) tutorial and it's use case. 
 We will reuse the rule chains from above mentioned tutorial and will add few more rule nodes to integrate with Telegram   
 
 Let's assume your device is using DHT22 sensor to collect and push temperature readings to SENTIENT. 
@@ -31,7 +31,7 @@ We assume you have completed the following guides and reviewed the articles list
 
   * [Getting Started](/docs/getting-started-guides/helloworld/) guide.
   * [Rule Engine Overview](/docs/user-guide/rule-engine-2-0/overview/).
-  * [Create & clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/) guide.
+  * [Create & clear alarms](/docs/tutorials/create-clear-alarms/) guide.
 
 ## Message flow  
 
@@ -97,7 +97,7 @@ After that, you can start to configure Rule engine to use Rest API Call extensio
 
 ## Configure Rule Chains
 
-In this tutorial, we used Rule Chains from [create & clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/) tutorial.
+In this tutorial, we used Rule Chains from [create & clear alarms](/docs/tutorials/create-clear-alarms/) tutorial.
 We modified Rule Chain **Create & Clear Alarms** by adding nodes that was described above in the section [Message flow](#message-flow)<br>
  and renamed this rule chain to: **Create/Clear Alarms & send notifications to Telegram**.
 
@@ -233,6 +233,6 @@ Please refer to the links under the **See Also** section to see how to do this.
 
 - [Create & Clear Alarms: alarm details:](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms-with-details/#step-2-createupdate-alarm) guide - to learn how to configure Alarm Details function in Alarm nodes.
 - [Create & Clear Alarms: configure dashboard](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms-with-details/#configure-device-and-dashboard) guide - to learn how to add an Alarm widget to the dashboard.
-- [Send Email](/docs/user-guide/rule-engine-2-0/tutorials/send-email/) tutorial.
+- [Send Email](/docs/tutorials/send-email/) tutorial.
 
 ## Next steps

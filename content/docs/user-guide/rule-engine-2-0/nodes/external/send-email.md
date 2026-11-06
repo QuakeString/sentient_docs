@@ -42,7 +42,7 @@ Controls whether to use platform-wide SMTP settings or node-specific configurati
 <div class="st-callout info">
 
 
-**Note**: SMTP credentials can be stored in [Secrets storage](/docs/pe/user-guide/secrets-storage/) for enhanced security.
+**Note**: SMTP credentials can be stored in [Secrets storage](/docs/administration/secrets/) for enhanced security.
 
 
 </div>
@@ -62,7 +62,7 @@ Controls whether to use platform-wide SMTP settings or node-specific configurati
 <div class="st-callout info">
 
 
-**Note**: Proxy credentials can be stored in [Secrets storage](/docs/pe/user-guide/secrets-storage/) for enhanced security.
+**Note**: Proxy credentials can be stored in [Secrets storage](/docs/administration/secrets/) for enhanced security.
 
 
 </div>

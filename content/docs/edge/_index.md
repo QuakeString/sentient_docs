@@ -2,13 +2,14 @@
 title = "SENTIENT Edge"
 description = "Run SENTIENT locally at the edge to process data near its source, reduce cloud costs, and maintain operations during connectivity issues"
 
+aliases = ["/docs/edge/user-guide/install/config/", "/docs/edge/user-guide/install/how-to-change-config/"]
 [extra]
 status = "imported"
 checked = ""
 source = "docs/edge/index.md"
 +++
 <div class="ce-banner" id="ceBanner">
-  <span>Looking for white-labeling or premium features? <a href="/docs/pe/edge/" target="_blank">Explore Edge Professional Edition documentation →</a></span>
+  <span>Looking for white-labeling or premium features? <a href="/docs/" target="_blank">Explore Edge Professional Edition documentation →</a></span>
   <button class="banner-close" aria-label="Close banner">×</button>
 </div>
 
@@ -70,7 +71,7 @@ source = "docs/edge/index.md"
   <h2>Need more opportunities?</h2>
   <p>Start with pre-built solution templates, connect legacy equipment via 30+ integration protocols, and white-label everything as your own product.</p>
   <div class="banner-actions">
-    <a href="/docs/contact-us/?subject=SENTIENT%20Products" class="btn-primary" target="_blank">Contact us</a>
+    Contact us
   </div>
 </div>
 

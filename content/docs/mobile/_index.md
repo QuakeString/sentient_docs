@@ -2,6 +2,7 @@
 title = "SENTIENT Mobile Application Documentation"
 description = "SENTIENT Mobile Application - starting point for your IoT mobile product"
 
+aliases = ["/docs/mobile/app-icon-splash-screen-before-v1.7/", "/docs/mobile/app-icon-splash-screen/", "/docs/mobile/customization/", "/docs/mobile/customize-dashboards/", "/docs/mobile/customize-devices/", "/docs/mobile/localization/", "/docs/mobile/qr-code-settings-before-v1.7/", "/docs/mobile/release-before-v1.7/", "/docs/mobile/release/"]
 [extra]
 status = "imported"
 checked = ""

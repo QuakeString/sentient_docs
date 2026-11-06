@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/http.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -49,8 +49,8 @@ Starting from **SENTIENT 3.9**, the platform stores the full set of debug events
 
 Debug mode settings can be combined or disabled entirely.
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
@@ -237,7 +237,7 @@ Here you will see information about the new device. As well as the telemetry whi
 ![image](/images/user-guide/integrations/http/http-device-1-pe.webp)
 
 <br>
-Learn more about **notifications** and how to configure them [here](/docs/pe/user-guide/notifications/).
+Learn more about **notifications** and how to configure them [here](/docs/user-guide/notifications/).
 
 
 <div class="st-callout info">
@@ -258,8 +258,8 @@ Also, sent and received data can be viewed in the Uplink converter. In the 'In' 
 
 
 <br>
-Use the [Dashboards](/docs/pe/user-guide/dashboards/) to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.  
-SENTIENT has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/pe/solution-templates/overview/).
+Use the [Dashboards](/docs/user-guide/dashboards/) to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.  
+SENTIENT has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/solution-hub/).
 
 
 ![image](/images/user-guide/integrations/http/http-solution-templates.webp)
@@ -294,8 +294,8 @@ curl -v -X POST -d "{\"deviceName\":\"$DEVICE_NAME\",\"deviceType\":\"$DEVICE_TY
 
 Create downlink converter in the "**Data converters**" page. To see events enable 'Debug mode'.
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="tb-content-toggle" id="httpdownlinkconverterconfig">

@@ -34,7 +34,7 @@ Watch this practical video course to learn how to configure and manage SENTIENT 
 
 ## How to create, edit, and delete asset
 
-Tenant administrators and users with appropriate [permissions](/docs/user-guide/rbac/) can create, edit, or delete assets in SENTIENT.
+Tenant administrators and users with appropriate [permissions](/docs/administration/roles/) can create, edit, or delete assets in SENTIENT.
 
 ### Creating asset
 
@@ -242,4 +242,4 @@ From the Assets page, you can create, view, edit, and delete relations between a
 ## Your feedback
 
 Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient) to help us spread the word.
-If you have any questions about this sample, please [contact us](/docs/contact-us/).
+If you have any questions about this sample, please contact us.

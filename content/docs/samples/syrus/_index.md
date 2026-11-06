@@ -1,4 +1,0 @@
-+++
-title = "Syrus"
-transparent = true
-+++

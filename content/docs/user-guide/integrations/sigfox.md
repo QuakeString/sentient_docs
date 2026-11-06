@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/sigfox.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -76,8 +76,8 @@ Let’s review sample uplink message from SigFox device:
  - the "*data*" is a telemetry concatenation by two characters, where value "02af" - temperature, "21" - humidity*, "0246" - co2, "2a" - co2Baseline.
 <br><br>
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
@@ -315,7 +315,7 @@ Make the downlink callback active. Click on the "**Downlink**" icon.
 After this, the device is ready to send data to Sentient. Send an uplink message from the device. 
 
 After you sent the uplink message a new device was created in Sentient. You should receive a **notification** about it. To view notification click on the "bell" icon in the upper right corner of the screen.
-The notification will contain link to the *Sigfox-2216792* device provisioned by the integration (your device name may differ from the one shown in this example). Learn more about notifications and how to configure them [here](/docs/pe/user-guide/notifications/). 
+The notification will contain link to the *Sigfox-2216792* device provisioned by the integration (your device name may differ from the one shown in this example). Learn more about notifications and how to configure them [here](/docs/user-guide/notifications/). 
 
 Navigate to this device.
 

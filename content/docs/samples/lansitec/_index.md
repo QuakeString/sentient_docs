@@ -1,4 +1,0 @@
-+++
-title = "Lansitec"
-transparent = true
-+++

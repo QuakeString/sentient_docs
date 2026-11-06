@@ -181,7 +181,7 @@ v1/gateway/connect
 
 It is recommended to wait for the PUBACK response to ensure that the device connection was successful.
 If something goes wrong during the connection, for example, the device limit is exceeded, the PUBACK will return with 
-the corresponding [status code](/docs/edge/reference/mqtt-v5-errors-code/).
+the corresponding [status code](/docs/reference/mqtt-v5-errors-code/).
 
 
 </div>
@@ -246,7 +246,7 @@ v1/gateway/disconnect
 
 **Only for MQTT v.5**
 
-If something goes wrong during the disconnecting, the PUBACK will return with the corresponding [status code](/docs/edge/reference/mqtt-v5-errors-code/).
+If something goes wrong during the disconnecting, the PUBACK will return with the corresponding [status code](/docs/reference/mqtt-v5-errors-code/).
 
 
 </div>
@@ -272,9 +272,9 @@ mosquitto_pub -h "localhost" -t "v1/gateway/disconnect" -u "$ACCESS_TOKEN" -m '{
 SENTIENT attributes API allows devices to:
 
 
-- Upload [client-side](/docs/pe/user-guide/attributes/#attribute-types) device attributes to the server.
-- Request [client-side](/docs/pe/user-guide/attributes/#attribute-types) and [shared](/docs/pe/user-guide/attributes/#attribute-types) device attributes from SENTIENT platform.
-- Subscribe to [shared](/docs/pe/user-guide/attributes/#attribute-types) device attributes from SENTIENT platform.
+- Upload [client-side](/docs/user-guide/attributes/#attribute-types) device attributes to the server.
+- Request [client-side](/docs/user-guide/attributes/#attribute-types) and [shared](/docs/user-guide/attributes/#attribute-types) device attributes from SENTIENT platform.
+- Subscribe to [shared](/docs/user-guide/attributes/#attribute-types) device attributes from SENTIENT platform.
 
 
 <hr>
@@ -319,7 +319,7 @@ v1/gateway/attributes
 
 **Only for MQTT v.5**
 
-If something goes wrong during the publishing, the PUBACK will return with the corresponding [status code](/docs/edge/reference/mqtt-v5-errors-code/).
+If something goes wrong during the publishing, the PUBACK will return with the corresponding [status code](/docs/reference/mqtt-v5-errors-code/).
 
 
 </div>
@@ -469,7 +469,7 @@ Fields:
 
 **Only for MQTT v.5**
 
-If something goes wrong during the publishing, the PUBACK will return with the corresponding [status code](/docs/edge/reference/mqtt-v5-errors-code/).
+If something goes wrong during the publishing, the PUBACK will return with the corresponding [status code](/docs/reference/mqtt-v5-errors-code/).
 
 
 </div>
@@ -547,7 +547,7 @@ Make attention that the **id** in the response message should match the **id** f
 ## Claiming devices API
 
 SENTIENT supports a claiming mechanism that allows end users to take ownership of pre-provisioned devices. For 
-conceptual details, see [Claiming devices](/docs/edge/user-guide/claiming-devices) guide.
+conceptual details, see [Claiming devices](/docs/user-guide/claiming-devices/) guide.
 
 **Topic:**
 

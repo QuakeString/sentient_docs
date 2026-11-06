@@ -159,13 +159,13 @@ More details about the used products are available on their pages and manuals th
 Please feel free to get in touch with Decode Team if you have any additional questions.
 ## See also
 
-Browse other [samples](/device-library/) or explore guides related to main SENTIENT features:
+Browse other [samples](/docs/getting-started-guides/connectivity/) or explore guides related to main SENTIENT features:
 
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.
  - [Using RPC capabilities](/docs/user-guide/rpc/) - how to send commands to/from devices.
- - [Rule Engine](/docs/user-guide/rule-engine/) - how to use rule engine to analyze data from devices.
- - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
+ - [Rule Engine](/docs/user-guide/rule-engine-2-0/overview/) - how to use rule engine to analyze data from devices.
+ - [Data Visualization](/docs/user-guide/dashboards/) - how to visualize collected data.
 
 
 ## Next steps

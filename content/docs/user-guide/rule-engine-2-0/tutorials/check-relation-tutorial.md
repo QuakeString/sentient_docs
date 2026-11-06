@@ -321,9 +321,9 @@ Please refer to the third and fourth links under the **See Also** section to see
 ## See Also
 
 - [Switch Node](/docs/user-guide/rule-engine-2-0/nodes/filter/switch/) guide - for more information about how to use Switch Node in Thignsboard.
-- [Validate incoming telemetry](/docs/user-guide/rule-engine-2-0/tutorials/validate-incoming-telemetry/#step-1-adding-temperature-validation-node) tutorial - for more information about how to validate an incoming telemetry using the Script Filter node.
-- [Create & Clear Alarms: configure dashboard](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/#configure-device-and-dashboard) guide - to learn how to add an Alarm widget to the dashboard.
-- [Send Email](/docs/user-guide/rule-engine-2-0/tutorials/send-email/) tutorial.
+- [Validate incoming telemetry](/docs/tutorials/validate-incoming-telemetry/#step-1-adding-temperature-validation-node) tutorial - for more information about how to validate an incoming telemetry using the Script Filter node.
+- [Create & Clear Alarms: configure dashboard](/docs/tutorials/create-clear-alarms/#configure-device-and-dashboard) guide - to learn how to add an Alarm widget to the dashboard.
+- [Send Email](/docs/tutorials/send-email/) tutorial.
 - [RPC capabilities](/docs/user-guide/rpc/#server-side-rpc-api) guide - for more information about how RPC works in Thignsboard, please refer to the RPC capabilities guide.
 
 ## Next steps

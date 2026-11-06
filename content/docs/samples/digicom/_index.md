@@ -1,4 +1,0 @@
-+++
-title = "Digicom"
-transparent = true
-+++

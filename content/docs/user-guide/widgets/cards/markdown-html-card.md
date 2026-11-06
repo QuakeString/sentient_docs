@@ -92,7 +92,7 @@ Use the following **Markdown/HTML pattern**:
 
 ![image](/images/user-guide/widgets/cards/markdown-html-card/markdown-html-pattern.webp)
 
-[Download this widget](/docs/pe/user-guide/widgets/resources/markdown_html_card_temperature_value_card.json) and [import](/docs/user-guide/widgets/#import-widget) it into your dashboard.
+[Download this widget](/docs/user-guide/widgets/resources/markdown_html_card_temperature_value_card.json) and [import](/docs/user-guide/widgets/#import-widget) it into your dashboard.
 
 <hr>
 
@@ -143,7 +143,7 @@ return entityName + temp;
 
 ![image](/images/user-guide/widgets/cards/markdown-html-card/markdown-html-value-function.webp)
 
-[Download this widget](/docs/pe/user-guide/widgets/resources/markdown_html_card_temperature_value_card_2.json) and [import](/docs/user-guide/widgets/#import-widget) it into your dashboard.
+[Download this widget](/docs/user-guide/widgets/resources/markdown_html_card_temperature_value_card_2.json) and [import](/docs/user-guide/widgets/#import-widget) it into your dashboard.
 
 <hr>
 
@@ -237,7 +237,7 @@ These rules apply only inside this widget’s container, so they won’t leak in
 
 ![image](/images/user-guide/widgets/cards/markdown-html-card/content-styling-css.webp)
 
-[Download this widget](/docs/pe/user-guide/widgets/resources/markdown_html_card_with_css.json) and [import](/docs/user-guide/widgets/#import-widget) it into your dashboard.
+[Download this widget](/docs/user-guide/widgets/resources/markdown_html_card_with_css.json) and [import](/docs/user-guide/widgets/#import-widget) it into your dashboard.
 
 <hr>
 
@@ -275,7 +275,7 @@ Create the [Asset](/docs/user-guide/ui/assets/) named "**Office A**" with the fo
 - **phone**: +1 121 333 4455 
 - **email**: office.a@mail.com
 
-(You can also [import](/docs/user-guide/bulk-provisioning/#import-entities) a prefilled Asset from [CSV](/docs/pe/user-guide/widgets/resources/office_a_asset.csv)).
+(You can also [import](/docs/user-guide/bulk-provisioning/#import-entities) a prefilled Asset from [CSV](/docs/user-guide/widgets/resources/office_a_asset.csv)).
 
 
 <div class="st-gallery"><figure><img src="/images/user-guide/widgets/cards/markdown-html-card/example-markdown-html-card-1-ce.webp" alt="Create an Asset named &quot;Office A&quot; with the required attributes." loading="lazy"><figcaption>Create an Asset named "<b>Office A</b>" with the required attributes.</figcaption></figure></div>
@@ -489,6 +489,6 @@ You&#39;ll see a compact, clean office contact card on the dashboard. Missing at
 
 <br><b><font size="4">Download the configured widget</font></b>
 
-You can download the configured [Office information card](/docs/pe/user-guide/widgets/resources/markdown_html_card_office_information_card.json) and reuse it on your dashboards.
+You can download the configured [Office information card](/docs/user-guide/widgets/resources/markdown_html_card_office_information_card.json) and reuse it on your dashboards.
 
 **Important:** After importing, update the **target entity** and **data keys** in the **entity alias**.

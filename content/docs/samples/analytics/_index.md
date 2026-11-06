@@ -1,4 +1,0 @@
-+++
-title = "Analytics"
-transparent = true
-+++

@@ -1,4 +1,0 @@
-+++
-title = "Kingpigeon"
-transparent = true
-+++

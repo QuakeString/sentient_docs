@@ -9,7 +9,7 @@ source = "docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms-with-det
 +++
 ## Use case
 
-This tutorial is based on the [create & clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/#use-case) tutorial and it's use case.
+This tutorial is based on the [create & clear alarms](/docs/tutorials/create-clear-alarms/#use-case) tutorial and it's use case.
 We will reuse the rule chains from the above-mentioned tutorial and will configure the Alarm Details function in the Create and Clear Alarm nodes.
 Let's assume your device is using DHT22 sensor to collect and push temperature readings to SENTIENT.
 DHT22 sensor is good for -40 to 80°C temperature readings. We want generate Alarms if temperature is out of good range.
@@ -25,7 +25,7 @@ We assume you have completed the following guides and reviewed the articles list
 
   * [Getting Started](/docs/getting-started-guides/helloworld/) guide.
   * [Rule Engine Overview](/docs/user-guide/rule-engine-2-0/overview/).
-  * [Create & clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/) guide.
+  * [Create & clear alarms](/docs/tutorials/create-clear-alarms/) guide.
 
 ## Message flow
 
@@ -237,7 +237,7 @@ Also, you can see how to:
 
 ## See Also
 
- - [Send Email](/docs/user-guide/rule-engine-2-0/tutorials/send-email/) guide.
- - [Notifications and Alarms on your smartphone using Telegram Bot](/docs/iot-gateway/integration-with-telegram-bot/) guide.
+ - [Send Email](/docs/tutorials/send-email/) guide.
+ - [Notifications and Alarms on your smartphone using Telegram Bot](/docs/user-guide/rule-engine-2-0/tutorials/integration-with-telegram-bot/) guide.
 
 ## Next steps

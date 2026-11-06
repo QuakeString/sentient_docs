@@ -985,4 +985,4 @@ frontend https_in
 
 ## Your feedback
 
-If you have any questions about this sample, please [contact us](/docs/contact-us/).
+If you have any questions about this sample, please contact us.

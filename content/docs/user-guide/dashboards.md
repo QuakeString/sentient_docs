@@ -33,7 +33,7 @@ Dashboards in SENTIENT provide users with the following capabilities:
  - **Device Management**: Dashboards can be used to perform management operations on devices, such as turning devices on or off, changing parameters, and so on. Users can set actions and respond to real-time data from devices.
  - **Interactivity**: Dashboards can be designed with interactive elements such as buttons, switches, allowing users to interact with devices and data.
  - **Display Customization**: Users can customize the arrangement and size of widgets, choose color palettes, fonts, and other visualization aspects to create a user-friendly and informative interface.
- - **Role-Based Access**: SENTIENT allows controlling access to dashboards with different levels of privileges based on user [roles](/docs/user-guide/rbac/). This ensures data security and confidentiality.
+ - **Role-Based Access**: SENTIENT allows controlling access to dashboards with different levels of privileges based on user [roles](/docs/administration/roles/). This ensures data security and confidentiality.
 
 
 This guide covers main concepts and various dashboard settings.

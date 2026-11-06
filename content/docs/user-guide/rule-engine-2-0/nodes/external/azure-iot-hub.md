@@ -69,7 +69,7 @@ most common authentication method for Azure IoT Hub.
 <div class="st-callout info">
 
 
-**Note**: The SAS key and CA certificate file can be uploaded directly or referenced from [Secrets storage](/docs/pe/user-guide/secrets-storage/) for enhanced
+**Note**: The SAS key and CA certificate file can be uploaded directly or referenced from [Secrets storage](/docs/administration/secrets/) for enhanced
 security.
 
 
@@ -92,7 +92,7 @@ This provides enhanced security through certificate-based mutual [TLS authentica
 <div class="st-callout info">
 
 
-**Note**: Certificate and key files can be uploaded directly or referenced from [Secrets storage](/docs/pe/user-guide/secrets-storage/) for enhanced security.
+**Note**: Certificate and key files can be uploaded directly or referenced from [Secrets storage](/docs/administration/secrets/) for enhanced security.
 
 
 </div>

@@ -57,8 +57,8 @@ npm install coap-cli -g
 SENTIENT supports two authentication mechanisms to secure COAP connections.
 
 **Supported methods**:
-- [Access token](/docs/edge/user-guide/ssl/coap-access-token/). Uses a unique device access token included as a path parameter in each CoAP request.
-- [X.509 certificates](/docs/edge/user-guide/ssl/coap-x509-certificates/). Uses digital certificates to authenticate devices and establish secure communication based on **public key infrastructure (PKI)**.
+- [Access token](/docs/user-guide/ssl/coap-access-token/). Uses a unique device access token included as a path parameter in each CoAP request.
+- [X.509 certificates](/docs/user-guide/ssl/coap-x509-certificates/). Uses digital certificates to authenticate devices and establish secure communication based on **public key infrastructure (PKI)**.
 
 > The examples in this guide use **access token–based authentication**.
 
@@ -90,7 +90,7 @@ For example:
 
 
 However, it is also possible to send data via [Protocol Buffers](https://developers.google.com/protocol-buffers).
-Please refer to the [CoAP transport type](/docs/edge/user-guide/device-profiles/#coap-transport-type) configuration section in device profile article for more details.
+Please refer to the [CoAP transport type](/docs/user-guide/device-profiles/#coap-transport-type) configuration section in device profile article for more details.
 
 Using custom binary format or some serialization framework is also possible. See [protocol customization](#protocol-customization) for more details.
 
@@ -287,9 +287,9 @@ The content of the JSON file:
 
 SENTIENT attributes API allows devices to
 
-* Upload [client-side](/docs/edge/user-guide/attributes/#attribute-types) device attributes to the server.
-* Request [client-side](/docs/edge/user-guide/attributes/#attribute-types) and [shared](/docs/edge/user-guide/attributes/#attribute-types) device attributes from the server.
-* Subscribe to [shared](/docs/edge/user-guide/attributes/#attribute-types) device attributes from the server.
+* Upload [client-side](/docs/user-guide/attributes/#attribute-types) device attributes to the server.
+* Request [client-side](/docs/user-guide/attributes/#attribute-types) and [shared](/docs/user-guide/attributes/#attribute-types) device attributes from the server.
+* Subscribe to [shared](/docs/user-guide/attributes/#attribute-types) device attributes from the server.
 
 <hr>
 

@@ -1,4 +1,0 @@
-+++
-title = "Monoz"
-transparent = true
-+++

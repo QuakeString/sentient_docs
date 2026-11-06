@@ -281,7 +281,7 @@ To add new behavior item for the SCADA symbol, do the following:
 <div class="st-gallery"><figure><img src="/images/user-guide/scada/symbols-dev-guide/add-behavior-1-ce.webp" alt="Navigate to the &quot;Behavior&quot; tab and click the &quot;Add behavior&quot; button;" loading="lazy"><figcaption>Navigate to the "Behavior" tab and click the "Add behavior" button;</figcaption></figure><figure><img src="/images/user-guide/scada/symbols-dev-guide/add-behavior-2-ce.webp" alt="Fill in the required fields and click &quot;Add&quot;." loading="lazy"><figcaption>Fill in the required fields and click "Add".</figcaption></figure></div>
 
 
-Fields like "Name", "Hint", and "Group title" support internationalization using the 'i18n' tag. For instance: `{i18n:scada.fan.turn-on}`. For more details on setting up custom translations, see [Localization](/docs/pe/user-guide/custom-translation/).
+Fields like "Name", "Hint", and "Group title" support internationalization using the 'i18n' tag. For instance: `{i18n:scada.fan.turn-on}`. For more details on setting up custom translations, see [Localization](/docs/administration/translations/).
 
 ### Behavior types
 

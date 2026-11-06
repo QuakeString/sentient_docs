@@ -3,6 +3,7 @@ title = "Getting Started with SENTIENT"
 description = "Getting started with SENTIENT open-source IoT platform and simulated IoT devices"
 
 
+aliases = ["/docs/getting-started/"]
 [extra]
 status = "imported"
 checked = ""
@@ -25,7 +26,7 @@ For simplicity, we&#39;ll visualize data from a temperature sensor.
 
 You will need a SENTIENT server up and running:
 
-* **SENTIENT Cloud:** The fastest way to start with zero setup. Click for the [North America](/docs/paas/getting-started-guides/helloworld/) or [Europe](/docs/paas/eu/getting-started-guides/helloworld/) region (these links lead to a separate "Getting Started" guide for our managed service).
+* **SENTIENT Cloud:** The fastest way to start with zero setup. Click for the [North America](/docs/getting-started-guides/helloworld/) or [Europe](/docs/getting-started-guides/helloworld/) region (these links lead to a separate "Getting Started" guide for our managed service).
 * **Self-Managed Installation:** Alternatively, you can manually install SENTIENT using our guides for [Windows (Docker)](/docs/user-guide/install/docker-windows/) or [Linux and MacOS (Docker)](/docs/user-guide/install/docker/).
 
 <hr>
@@ -446,4 +447,4 @@ Finally, log in to SENTIENT as a customer user.
 ## Your feedback
 
 Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient) to help us spread the word. 
-If you have any questions about this sample, please [contact us](/docs/contact-us/).
+If you have any questions about this sample, please contact us.

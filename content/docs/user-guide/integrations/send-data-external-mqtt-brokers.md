@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/send-data-external-mqtt-brokers.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -42,8 +42,8 @@ In this tutorial we will configure SENTIENT Rule Engine to automatically send me
 
 We assume you have completed the following guides and reviewed the articles listed below:
 
-  * [Getting Started](/docs/pe/getting-started-guides/helloworld/) guide.
-  * [Rule Engine Overview](/docs/pe/user-guide/rule-engine-2-0/overview/).
+  * [Getting Started](/docs/getting-started-guides/helloworld/) guide.
+  * [Rule Engine Overview](/docs/user-guide/rule-engine-2-0/overview/).
   * [MQTT Integration](/docs/user-guide/integrations/mqtt/).
   * [Data converters](/docs/user-guide/integrations/#data-converters).
 
@@ -184,7 +184,7 @@ Integration should look like this:
 
 ### Setting up dashboard
 
-Download and [**import**](/docs/pe/user-guide/ui/dashboards/#dashboard-import) attached
+Download and [**import**](/docs/user-guide/ui/dashboards/#dashboard-import) attached
 json [**file**](/docs/user-guide/resources/temperature_control_dashboard.json) with a dashboard for this tutorial.
 
 ### Turning on device emulator
@@ -228,7 +228,7 @@ Note: device emulator should be put in the folder where node-modules is situated
 Using a control widget (in this case, a knob) leads to value change on the dashboard.
 
 Dashboard can be found [**here**](/docs/user-guide/resources/temperature_control_dashboard.json) and
-imported like [**this**](/docs/pe/user-guide/ui/dashboards/#dashboard-import).
+imported like [**this**](/docs/user-guide/ui/dashboards/#dashboard-import).
 
 ## Message Flow
 
@@ -256,7 +256,7 @@ In this section, we explain the purpose of each node in this tutorial.
     
     ![image](/images/user-guide/rule-engine-2-0/tutorials/mqtt-downlink/mqtt-downlink-node-C.webp) 
 
-You can download and [**import**](/docs/pe/user-guide/ui/rule-chains/#rule-chains-importexport) attached
+You can download and [**import**](/docs/user-guide/ui/rule-chains/#rule-chains-importexport) attached
  json [**file**](/docs/user-guide/resources/mqtt-downlink-root-rule-chain.json) with a rule chain for this tutorial.
  It should be marked as root.
  

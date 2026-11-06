@@ -12,7 +12,7 @@ source = "docs/edge/reference/mqtt-api.md"
 SENTIENT server nodes acts as an MQTT broker and supports:   
 &#8194;**&#8226;**&#8194;QoS 0 (at most once)   
 &#8194;**&#8226;**&#8194;QoS 1 (at least once)   
-&#8194;**&#8226;**&#8194;Configurable MQTT topics via [Device profiles](/docs/edge/user-guide/device-profiles/#mqtt-device-topic-filters)
+&#8194;**&#8226;**&#8194;Configurable MQTT topics via [Device profiles](/docs/user-guide/device-profiles/#mqtt-device-topic-filters)
 
 Learn more about MQTT at [mqtt.org](https://mqtt.org/).
 
@@ -139,10 +139,10 @@ To add the Mosquitto directory to the "Path" variable, follow these steps:
 SENTIENT supports multiple authentication mechanisms to secure MQTT connections.
 
 **Supported methods**:
-- [Access token](/docs/edge/user-guide/access-token/). Uses a unique **device access token** as the MQTT **username** in the <span class="code-light">CONNECT</span> packet.   
+- [Access token](/docs/user-guide/access-token/). Uses a unique **device access token** as the MQTT **username** in the <span class="code-light">CONNECT</span> packet.   
   This method provides a simple and secure way to authenticate devices without requiring certificates or additional credentials.
-- [X.509 certificates](/docs/edge/user-guide/certificates/). Uses digital certificates to authenticate devices and establish secure communication based on **public key infrastructure (PKI)**.
-- [Basic MQTT credentials](/docs/edge/user-guide/basic-mqtt/) Uses authentication data—a combination of the optional client ID, username, and password—sent in the MQTT <span class="code-light">CONNECT</span> packet. 
+- [X.509 certificates](/docs/user-guide/certificates/). Uses digital certificates to authenticate devices and establish secure communication based on **public key infrastructure (PKI)**.
+- [Basic MQTT credentials](/docs/user-guide/basic-mqtt/) Uses authentication data—a combination of the optional client ID, username, and password—sent in the MQTT <span class="code-light">CONNECT</span> packet. 
 
 Topic names and payload formats for MQTT communication are configured via the **Device profile**. For more details, see [here](/docs/user-guide/device-profiles/#mqtt-transport-type).
 
@@ -215,7 +215,7 @@ For example:
 
 
 However, it is also possible to send data via [Protocol Buffers](https://developers.google.com/protocol-buffers).
-Please refer to the [MQTT transport type](/docs/edge/user-guide/device-profiles/#mqtt-transport-type) configuration section in device profile article for more details.
+Please refer to the [MQTT transport type](/docs/user-guide/device-profiles/#mqtt-transport-type) configuration section in device profile article for more details.
 
 Using custom binary format or some serialization framework is also possible. See [protocol customization](#protocol-customization) for more details.
 
@@ -445,9 +445,9 @@ The content of the JSON file:
 
 SENTIENT attributes API allows devices to
 
-* Upload [client-side](/docs/edge/user-guide/attributes/#attribute-types) device attributes to the server.
-* Request [client-side](/docs/edge/user-guide/attributes/#attribute-types) and [shared](/docs/edge/user-guide/attributes/#attribute-types) device attributes from the server.
-* Subscribe to [shared](/docs/edge/user-guide/attributes/#attribute-types) device attributes from the server.
+* Upload [client-side](/docs/user-guide/attributes/#attribute-types) device attributes to the server.
+* Request [client-side](/docs/user-guide/attributes/#attribute-types) and [shared](/docs/user-guide/attributes/#attribute-types) device attributes from the server.
+* Subscribe to [shared](/docs/user-guide/attributes/#attribute-types) device attributes from the server.
 
 <hr>
 

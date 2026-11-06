@@ -21,7 +21,7 @@ In Sentient Community Edition a customer user cannot create their own customers,
 <br>
 In **Sentient Professional Edition** customer user can create other customers, users and subcustomers.
 To try this functionality, use the [SENTIENT Cloud](https://localhost/signup) server.
-The alternative option is to install SENTIENT locally using this [installation guide](/docs/user-guide/install/pe/installation-options/)
+The alternative option is to install SENTIENT locally using this [installation guide](/docs/installation/)
 
 
 </div>
@@ -203,4 +203,4 @@ Allows exporting and restoring customer-related entities using the Git-based [ve
 ## Your feedback
 
 Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient) to help us spread the word.
-If you have any questions about this sample, please [contact us](/docs/contact-us/).
+If you have any questions about this sample, please contact us.

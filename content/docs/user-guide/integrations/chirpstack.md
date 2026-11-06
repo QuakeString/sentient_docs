@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/chirpstack.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -28,7 +28,7 @@ Additionally, you must connect your device to the network. You can find detailed
 ## Create ChirpStack integration
 
 You will need to have access to SENTIENT Professional Edition. The easiest way is to use [SENTIENT Cloud](https://sentient.invenia.in/installations/choose-region/) server.
-The alternative option is to install SENTIENT using [installation guide](/docs/user-guide/install/pe/installation-options/).
+The alternative option is to install SENTIENT using [installation guide](/docs/installation/).
 
 <br>
 Let's move on to setting up the integration between the SENTIENT platform and ChirpStack.
@@ -87,8 +87,8 @@ Starting from **SENTIENT 4.0**, we have simplified the process of writing conver
 </div>
 
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
@@ -391,8 +391,8 @@ Received data can be viewed in the uplink converter. In the "In" and "Out" block
 
 
 <br>
-Use the [Dashboards](/docs/pe/user-guide/dashboards/) to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.  
-SENTIENT has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/pe/solution-templates/overview/).
+Use the [Dashboards](/docs/user-guide/dashboards/) to work with data. Dashboards are a modern format for collecting and visualizing data sets. Visibility of data presentation is achieved through a variety of widgets.  
+SENTIENT has examples of several types of dashboards that you can use. Learn more about **Solution templates** [here](/docs/solution-hub/).
 
 
 <div class="st-gallery"><figure><img src="/images/user-guide/integrations/http/http-solution-templates.webp" alt="Outgoing data from converter." loading="lazy"><figcaption>Outgoing data from converter.</figcaption></figure></div>
@@ -406,8 +406,8 @@ For sending downlink messages from the Sentient to the device, we need to define
 
 Let's consider an example where we send an attribute update message. 
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">

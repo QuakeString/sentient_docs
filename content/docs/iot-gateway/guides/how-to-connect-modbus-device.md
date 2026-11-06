@@ -278,8 +278,8 @@ well-equipped to take your IoT initiatives to the next level.
 ## Next steps
 
 Explore guides related to main SENTIENT features:
- - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
+ - [Data Visualization](/docs/user-guide/dashboards/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.
  - [Using RPC capabilities](/docs/user-guide/rpc/) - how to send commands to/from devices.
- - [Rule Engine](/docs/user-guide/rule-engine/) - how to use rule engine to analyze data from devices.
+ - [Rule Engine](/docs/user-guide/rule-engine-2-0/overview/) - how to use rule engine to analyze data from devices.

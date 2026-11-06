@@ -35,7 +35,7 @@ This group of settings allows the System Administrator to configure a maximum nu
 
 **[SENTIENT](/docs/user-guide/install/installation-options/)** supports limits for the following entities: devices, dashboards, assets, users, customers, and rule chains.
 
-**[SENTIENT Professional Edition](/docs/user-guide/install/pe/installation-options/)** supports limits for everything listed above and as well additional constraint support for the following entities: integrations, converters, and scheduler events.
+**[SENTIENT Professional Edition](/docs/installation/)** supports limits for everything listed above and as well additional constraint support for the following entities: integrations, converters, and scheduler events.
 
 
 <div class="st-gallery"><figure><img src="/images/user-guide/tenant-profile/sentient-ce-tenant-profiles-entity-limits.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>

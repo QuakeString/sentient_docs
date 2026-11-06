@@ -1,29 +1,29 @@
-bigheader: "SENTIENT Mobile Application Documentation"
-abstract: "SENTIENT Mobile Application - starting point for your IoT mobile product."
 toc:
-  - title: Mobile Application
+- title: Mobile app
+  section:
+  - title: Overview
     path: /docs/mobile/
-  - title: Customize mobile app
-    section:
-      - title: Overview
-        path: /docs/mobile/customization/
-      - title: Home screen
-        path: /docs/mobile/customize-dashboards/
-      - title: Device icons
-        path: /docs/mobile/customize-devices/
-      - title: Device details dashboard
-        path: /docs/mobile/device-dashboard/
-      - title: Alarm details dashboard
-        path: /docs/mobile/alarm-dashboard/
-      - title: Mobile actions
-        path: /docs/mobile/mobile-actions/
-      - title: OAuth 2.0
-        path: /docs/mobile/oauth2/
-      - title: QR code settings 
-        path: /docs/mobile/qr-code-settings/
-      - title: App icon and splash screen
-        path: /docs/mobile/app-icon-splash-screen/
-  - title: Add custom localization
-    path: /docs/mobile/localization/
-  - title: Build and release mobile app
-    path: /docs/mobile/release/
+  - title: Install the mobile app
+    path: /docs/mobile/install-apk/
+    planned: true
+  - title: Sign in
+    path: /docs/mobile/sign-in/
+    planned: true
+  - title: Getting started
+    path: /docs/mobile/getting-started/
+- title: Configure the app from SENTIENT
+  section:
+  - title: Mobile center
+    path: /docs/mobile-center/mobile-center/
+  - title: Applications
+    path: /docs/mobile-center/applications/
+  - title: QR code settings
+    path: /docs/mobile/qr-code-settings/
+  - title: Device details dashboard
+    path: /docs/mobile/device-dashboard/
+  - title: Alarm details dashboard
+    path: /docs/mobile/alarm-dashboard/
+  - title: Mobile actions
+    path: /docs/mobile/mobile-actions/
+  - title: OAuth 2.0
+    path: /docs/mobile/oauth2/

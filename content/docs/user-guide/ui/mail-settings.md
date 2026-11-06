@@ -18,7 +18,7 @@ SENTIENT system administrator defines global mail server settings, which apply t
 <div class="st-callout info">
 
 
-**Note:** The tenant administrator can [configure the email rule node](/docs/user-guide/rule-engine-2-0/tutorials/send-email/) to send emails using the [rule engine](/docs/user-guide/rule-engine-2-0/re-getting-started/).
+**Note:** The tenant administrator can [configure the email rule node](/docs/tutorials/send-email/) to send emails using the [rule engine](/docs/user-guide/rule-engine-2-0/re-getting-started/).
 
 
 </div>

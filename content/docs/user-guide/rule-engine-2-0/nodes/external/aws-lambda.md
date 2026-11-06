@@ -53,7 +53,7 @@ The secret access key corresponding to your access key ID. This field is require
 <div class="st-callout info">
 
 
-**Note**: If you use Professional Edition, we highly recommend using [Secrets storage](/docs/pe/user-guide/secrets-storage/) to securely store your secret key.
+**Note**: If you use Professional Edition, we highly recommend using [Secrets storage](/docs/administration/secrets/) to securely store your secret key.
 
 
 </div>

@@ -1,4 +1,0 @@
-+++
-title = "Cluster"
-transparent = true
-+++

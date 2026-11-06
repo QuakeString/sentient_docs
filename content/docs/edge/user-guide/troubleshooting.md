@@ -449,4 +449,4 @@ SENTIENT Edge exposes a set of telemetry keys that allow you to monitor message 
 
 If your problem isn't answered by any of the guides above, feel free to contact SENTIENT team.
 
-<a class="button" href="/docs/contact-us/">Contact us</a>
+Contact us

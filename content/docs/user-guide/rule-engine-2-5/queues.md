@@ -1,7 +1,7 @@
 +++
 title = "Queues"
 description = "Rule Engine Queues"
-aliases = ["/docs/user-guide/queue"]
+aliases = ["/docs/user-guide/queue", "/docs/user-guide/rule-engine-2-5/tutorials/queues-for-message-reprocessing/", "/docs/user-guide/rule-engine-2-5/tutorials/queues-for-synchronization/"]
 
 [extra]
 status = "imported"

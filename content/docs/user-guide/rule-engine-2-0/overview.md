@@ -2,6 +2,7 @@
 title = "Rule Engine overview"
 description = "Rule Engine overview"
 
+aliases = ["/docs/user-guide/ui/rule-chains/"]
 [extra]
 status = "imported"
 checked = ""
@@ -239,14 +240,14 @@ List of the predefined Message Types is presented in the following table:
       <tr>
           <td>ADDED_TO_ENTITY_GROUP</td>
           <td><b>Added to Group</b></td>
-          <td>Event produced when entity was added to <a href="/docs/user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/sentient-pe/">SENTIENT Professional Edition</a>.</td>
+          <td>Event produced when entity was added to <a href="/docs/administration/entity-groups/">Entity Group</a>. This Message Type is specific to SENTIENT Professional Edition.</td>
           <td><b>userName</b> - name of the user who performed assignment operation,<br><b>userId</b> - the user Id,<br><b>addedToEntityGroupName</b> - entity group name,<br><b>addedToEntityGroupId</b> - Id of entity group</td>
           <td>empty json payload</td>
       </tr>
       <tr>
           <td>REMOVED_FROM_ENTITY_GROUP</td>
           <td><b>Removed from Group</b></td>
-          <td>Event produced when entity was removed from <a href="/docs/user-guide/groups/">Entity Group</a>. This Message Type is specific to <a href="/products/sentient-pe/">SENTIENT Professional Edition</a>.</td>
+          <td>Event produced when entity was removed from <a href="/docs/administration/entity-groups/">Entity Group</a>. This Message Type is specific to SENTIENT Professional Edition.</td>
           <td><b>userName</b> - name of the user who performed unassignment operation,<br><b>userId</b> - the user Id,<br><b>removedFromEntityGroupName</b> - entity group name,<br><b>removedFromEntityGroupId</b> - Id of entity group</td>
           <td>empty json payload</td>
       </tr>
@@ -584,8 +585,8 @@ To learn more about internals of the Rule Engine, see [architecture](/docs/refer
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Custom Rule Engine REST API calls** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Custom Rule Engine REST API calls** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -608,10 +609,10 @@ To execute the REST API call, you may use rule-engine-controller [REST APIs](/do
 
 SENTIENT authors have prepared several tutorials to help you get started with designing rule chains by example:
 
-  * [**Transform incoming messages from device**](/docs/user-guide/rule-engine-2-0/tutorials/transform-incoming-telemetry/) 
+  * [**Transform incoming messages from device**](/docs/user-guide/rule-engine-2-0/tutorials/transform-telemetry-using-previous-record/) 
   * [**Transform incoming messages using previous messages from device**](/docs/user-guide/rule-engine-2-0/tutorials/transform-telemetry-using-previous-record/) 
-  * [**Create and clear alarms on incoming device messages**](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/)
-  * [**Send emails to customer on device alarm**](/docs/user-guide/rule-engine-2-0/tutorials/send-email/) 
+  * [**Create and clear alarms on incoming device messages**](/docs/tutorials/create-clear-alarms/)
+  * [**Send emails to customer on device alarm**](/docs/tutorials/send-email/) 
   * [**Send messages between related devices**](/docs/user-guide/rule-engine-2-0/tutorials/rpc-reply-tutorial/)
   
 See more tutorials [here](/docs/guides/).

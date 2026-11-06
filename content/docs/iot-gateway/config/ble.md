@@ -418,8 +418,8 @@ This part of configuration will look like:
 Explore guides related to main SENTIENT features:
 
  - [Connect BLE sensor](/docs/iot-gateway/guides/how-to-connect-ble-sensor-using-gateway/) - how to connect BLE sensor using SENTIENT IoT Gateway
- - [Data Visualization](/docs/user-guide/visualization/) - how to visualize collected data.
+ - [Data Visualization](/docs/user-guide/dashboards/) - how to visualize collected data.
  - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
  - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.
  - [Using RPC capabilities](/docs/user-guide/rpc/) - how to send commands to/from devices.
- - [Rule Engine](/docs/user-guide/rule-engine/) - how to use rule engine to analyze data from devices.
+ - [Rule Engine](/docs/user-guide/rule-engine-2-0/overview/) - how to use rule engine to analyze data from devices.

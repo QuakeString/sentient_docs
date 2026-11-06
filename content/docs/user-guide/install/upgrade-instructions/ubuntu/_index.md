@@ -1,4 +1,0 @@
-+++
-title = "Ubuntu"
-transparent = true
-+++

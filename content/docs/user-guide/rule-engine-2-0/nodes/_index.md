@@ -1,7 +1,7 @@
 +++
 title = "Rule nodes"
 description = "Rule Node is a basic component of Rule Engine that process single incoming message at a time and produce one or more outgoing messages."
-aliases = ["/docs/reference/plugins/messaging/", "/docs/reference/plugins/time/"]
+aliases = ["/docs/reference/plugins/messaging/", "/docs/reference/plugins/time/", "/docs/user-guide/rule-engine-2-0/nodes/action/add-to-group/", "/docs/user-guide/rule-engine-2-0/nodes/action/change-owner/", "/docs/user-guide/rule-engine-2-0/nodes/action/generate-dashboard-report/", "/docs/user-guide/rule-engine-2-0/nodes/action/generate-report/", "/docs/user-guide/rule-engine-2-0/nodes/action/remove-from-group/", "/docs/user-guide/rule-engine-2-0/nodes/action/save-to-custom-table/", "/docs/user-guide/rule-engine-2-0/nodes/analytics/aggregate-latest/", "/docs/user-guide/rule-engine-2-0/nodes/analytics/aggregate-stream/", "/docs/user-guide/rule-engine-2-0/nodes/analytics/alarms-count-deprecated/", "/docs/user-guide/rule-engine-2-0/nodes/analytics/alarms-count/", "/docs/user-guide/rule-engine-2-0/nodes/external/gcp-pubsub/", "/docs/user-guide/rule-engine-2-0/nodes/external/twilio-sms/", "/docs/user-guide/rule-engine-2-0/nodes/external/twilio-voice/", "/docs/user-guide/rule-engine-2-0/nodes/transformation/duplicate-to-group-by-name/", "/docs/user-guide/rule-engine-2-0/nodes/transformation/duplicate-to-group/", "/docs/user-guide/rule-engine-2-0/nodes/transformation/duplicate-to-related/"]
 
 [extra]
 status = "imported"

@@ -1,4 +1,0 @@
-+++
-title = "Samples"
-transparent = true
-+++

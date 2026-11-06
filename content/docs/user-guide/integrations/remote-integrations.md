@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/remote-integrations.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -36,7 +36,7 @@ You can find additional information about the SENTIENT Platform integrations fea
 
 ## SENTIENT configuration
 
-We assume you already have a tenant administrator account on your own [SENTIENT Professional Edition instance](/docs/user-guide/install/pe/installation-options/) or [SENTIENT Cloud](https://localhost/signup).
+We assume you already have a tenant administrator account on your own [SENTIENT Professional Edition instance](/docs/installation/) or [SENTIENT Cloud](https://localhost/signup).
 
 ### Create remote integration in SENTIENT
 

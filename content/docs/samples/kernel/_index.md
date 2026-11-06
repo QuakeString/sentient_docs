@@ -1,4 +1,0 @@
-+++
-title = "Kernel"
-transparent = true
-+++

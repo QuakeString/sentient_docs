@@ -1,4 +1,0 @@
-+++
-title = "Centos"
-transparent = true
-+++

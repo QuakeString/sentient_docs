@@ -25,7 +25,7 @@ The **Edge Alarms** are created and configured in the same way as the **Cloud Al
 
 The easiest way to create an Alarm is to use the [Alarm Rules within the Device profile](/docs/user-guide/device-profiles/#alarm-rules). The majority of tasks can be configured with **Alarm Rules** with minimal effort.
 
-If more complex logic is required, we suggest using the alternative option, namely the ["Create Alarm"](/docs/user-guide/rule-engine-2-0/nodes/action/create-alarm/) and ["Clear Alarm"](/docs/user-guide/rule-engine-2-0/nodes/action/clear-alarm/) rule nodes in the [Rule Engine](/docs/user-guide/rule-engine-2-0/re-getting-started/). This is a more advanced option that requires a certain level of programming expertise. Please refer to the [corresponding example](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/).
+If more complex logic is required, we suggest using the alternative option, namely the ["Create Alarm"](/docs/user-guide/rule-engine-2-0/nodes/action/create-alarm/) and ["Clear Alarm"](/docs/user-guide/rule-engine-2-0/nodes/action/clear-alarm/) rule nodes in the [Rule Engine](/docs/user-guide/rule-engine-2-0/re-getting-started/). This is a more advanced option that requires a certain level of programming expertise. Please refer to the [corresponding example](/docs/tutorials/create-clear-alarms/).
 
 ## Alarms Pushing from the Cloud to the Edge
 

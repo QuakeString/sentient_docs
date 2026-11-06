@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/azure-service-bus.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -65,8 +65,8 @@ Let’s review sample uplink message from Service Bus topic:
 ```
 
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
@@ -209,7 +209,7 @@ Here you will see information about the new device. As well as the telemetry whi
 
 ![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-device-2-pe.webp)
 
-Learn more about **notifications** and how to configure them [here](/docs/pe/user-guide/notifications/).
+Learn more about **notifications** and how to configure them [here](/docs/user-guide/notifications/).
 
 ## Advanced usage: Downlink Messaging
 

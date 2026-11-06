@@ -1,6 +1,7 @@
 +++
 title = "IoT Gateway Installation options"
 
+aliases = ["/docs/iot-gateway/install/deb-installation/", "/docs/iot-gateway/install/rpi/", "/docs/iot-gateway/install/docker-installation/", "/docs/iot-gateway/install/docker-windows/", "/docs/iot-gateway/install/windows/", "/docs/iot-gateway/install/pip-installation/", "/docs/iot-gateway/install/rpm-installation/", "/docs/iot-gateway/install/source-installation/", "/docs/iot-gateway/install/upgrade-instructions/"]
 [extra]
 status = "imported"
 checked = ""

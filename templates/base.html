@@ -2,7 +2,7 @@
 {%- set cur = current_path | default(value="/") -%}
 {%- if cur is starting_with("/docs/edge/") -%}{%- set navfile = "data/nav/edge.yml" -%}{%- set area = "edge" -%}
 {%- elif cur is starting_with("/docs/iot-gateway/") -%}{%- set navfile = "data/nav/gateway.yml" -%}{%- set area = "gateway" -%}
-{%- elif cur is starting_with("/docs/mobile/") -%}{%- set navfile = "data/nav/mobile.yml" -%}{%- set area = "mobile" -%}
+{%- elif cur is starting_with("/docs/mobile/") or cur is starting_with("/docs/mobile-center/") -%}{%- set navfile = "data/nav/mobile.yml" -%}{%- set area = "mobile" -%}
 {%- else -%}{%- set navfile = "data/nav/docs.yml" -%}{%- set area = "docs" -%}{%- endif -%}
 {%- set nav = load_data(path=navfile) -%}
 <!doctype html>
@@ -28,11 +28,11 @@
       SENTIENT <small>Docs</small>
     </a>
     <nav class="sections" aria-label="Sections">
-      <a href="/docs/"{% if area == "docs" %} aria-current="page"{% endif %}>Platform</a>
+      <a href="/docs/"{% if area == "docs" and not cur is starting_with("/docs/troubleshooting/") %} aria-current="page"{% endif %}>Platform</a>
       <a href="/docs/iot-gateway/"{% if area == "gateway" %} aria-current="page"{% endif %}>Gateway</a>
       <a href="/docs/edge/"{% if area == "edge" %} aria-current="page"{% endif %}>Edge</a>
       <a href="/docs/mobile/"{% if area == "mobile" %} aria-current="page"{% endif %}>Mobile</a>
-      <a href="/docs/user-guide/troubleshooting/">Troubleshooting</a>
+      <a href="/docs/troubleshooting/"{% if cur is starting_with("/docs/troubleshooting/") %} aria-current="page"{% endif %}>Troubleshooting</a>
     </nav>
     <div class="spacer"></div>
     <button class="search-btn" id="searchBtn" aria-label="Search the docs"><svg class="icon"><use href="#i-search"/></svg><span>Search docs</span><kbd>Ctrl K</kbd></button>

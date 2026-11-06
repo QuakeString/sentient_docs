@@ -32,7 +32,7 @@ In such cases, multiple SENTIENT Edge instances need to be provisioned for each 
 <div class="st-callout info">
 
 
-Looking for **white-labeling** or **premium features**? <a href="/docs/pe/edge/" target="_blank">Explore Edge Professional Edition documentation →</a>
+Looking for **white-labeling** or **premium features**? <a href="/docs/" target="_blank">Explore Edge Professional Edition documentation →</a>
 
 
 </div>

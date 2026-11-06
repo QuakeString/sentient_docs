@@ -3,6 +3,7 @@ title = "SENTIENT"
 template = "home.html"
 description = "SENTIENT documentation - learn about the platform and get your IoT projects running on SENTIENT"
 
+aliases = ["/docs/guides/", "/docs/iot-video-tutorials/", "/docs/samples/abeeway/tracker/", "/docs/samples/analytics/ai-models/", "/docs/samples/analytics/ai-predictive-maintenance/", "/docs/samples/analytics/kafka-streams/", "/docs/samples/analytics/spark-integration-with-sentient/", "/docs/samples/analytics/mcp-server-ai-insights/", "/docs/samples/analytics/n8n-node/", "/docs/samples/analytics/ollama/", "/docs/samples/analytics/ollama/nginx/", "/docs/samples/cricket-wifi/cricket-wifi/", "/docs/samples/demo-account/", "/docs/samples/digicom/energy-meter-monitoring-with-sentient-iot-plaƞorm/", "/docs/samples/exxn/exxn/", "/docs/samples/fusion-daq/fusion-daq/", "/docs/samples/kernel/kernel/", "/docs/samples/kingpigeon/kingpigeon/", "/docs/samples/lansitec/solar-bluetooth-gateway/", "/docs/samples/moko-smart/moko-smart-guide/", "/docs/samples/monoz/LPWA_GPS_Tracker_with_monoZ/", "/docs/samples/nettrartu+/", "/docs/samples/nettrartu+/rtu_temp_sensor/", "/docs/samples/nettrartu-x/tutorial/", "/docs/samples/netvox/netvox-guide/", "/docs/samples/raspberry/grove/", "/docs/samples/roltek/roltek/", "/docs/samples/senquip/", "/docs/samples/senquip/senquip/", "/docs/samples/sia-connect/", "/docs/samples/smartico/", "/docs/samples/smartico/elec-meter-lorawan/Electricity_Meter_LoRaWAN/", "/docs/samples/smartico/gas-meter-lorawan/Gas_Meter_LoRaWAN/", "/docs/samples/smartico/gas-valve-lorawan/Gas_Valve_LoRaWAN/", "/docs/samples/smartico/leaks-detector-lorawan/Leaks_Detector_LoRaWAN/", "/docs/samples/smartico/pulse-sensor-lorawan/Pulse_Sensor_LoRaWAN/", "/docs/samples/smartico/wm-bus-lorawan/wMBus_Reader_LoRaWAN/", "/docs/samples/sodaq/sodaq-udp/", "/docs/samples/sodaq/sodaq/", "/docs/samples/solandtec/sentient-guide-solandtec/", "/docs/samples/syrus/syrus/", "/docs/samples/tektelic/", "/docs/user-guide/live-demo/"]
 [extra]
 status = "imported"
 checked = ""
@@ -61,7 +62,7 @@ source = "docs/index.md"
         </a>
     </div>
     <div class="col-12 col-sm-6 col-lg-3 col-xxl-6 col-4xl-3 mb-4">
-        <a class="feature-card" href="/device-library/?platform=ce">
+        <a class="feature-card" href="/docs/getting-started-guides/connectivity/?platform=ce">
             <img class="feature-logo" src="/images/feature-logo/devices-library.svg" alt="Guides icon">
             <div class="feature-title">Device Library</div>
             <div class="feature-text">

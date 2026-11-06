@@ -209,9 +209,9 @@ The content of the JSON file:
 
 SENTIENT attributes API allows devices to
 
-* Upload [client-side](/docs/edge/user-guide/attributes/#attribute-types) device attributes to the server.
-* Request [client-side](/docs/edge/user-guide/attributes/#attribute-types) and [shared](/docs/edge/user-guide/attributes/#attribute-types) device attributes from the server.
-* Subscribe to [shared](/docs/edge/user-guide/attributes/#attribute-types) device attributes from the server.
+* Upload [client-side](/docs/user-guide/attributes/#attribute-types) device attributes to the server.
+* Request [client-side](/docs/user-guide/attributes/#attribute-types) and [shared](/docs/user-guide/attributes/#attribute-types) device attributes from the server.
+* Subscribe to [shared](/docs/user-guide/attributes/#attribute-types) device attributes from the server.
 
 <hr>
 

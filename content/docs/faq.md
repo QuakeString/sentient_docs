@@ -185,8 +185,8 @@ function resetLoadMore(categoryId) {
                     <div class="tb-faq-question-title" onclick="toggleTbFaq(this)">What's the difference between Community and Professional Edition?</div>
                     <div class="tb-faq-answer">
                         <p><b>Community Edition (CE)</b> is a free, open-source platform suitable for development, testing, and production use without licensing costs. It includes essential features for IoT device management, data collection, visualization, and rule processing.</p>
-                        <p><b>Professional Edition (PE)</b> includes all CE features and offers advanced capabilities such as <a href="/docs/pe/user-guide/white-labeling/" target="_blank">white-labeling</a>, <a href="/docs/pe/user-guide/rbac/" target="_blank">role-based access control (RBAC)</a>, <a href="/docs/user-guide/integrations/" target="_blank">platform integrations</a>, <a href="/docs/pe/solution-templates/overview/" target="_blank">solution templates</a>, <a href="/docs/pe/user-guide/scheduler/" target="_blank">scheduler</a>, and enterprise support.</p>
-                        <p>See the <a href="/products/sentient-pe/" target="_blank">PE product page</a> for a detailed <b>feature comparison table</b>.</p>
+                        <p><b>Professional Edition (PE)</b> includes all CE features and offers advanced capabilities such as <a href="/docs/pe/user-guide/white-labeling/" target="_blank">white-labeling</a>, <a href="/docs/administration/roles/" target="_blank">role-based access control (RBAC)</a>, <a href="/docs/user-guide/integrations/" target="_blank">platform integrations</a>, <a href="/docs/solution-hub/" target="_blank">solution templates</a>, <a href="/docs/user-guide/scheduler/" target="_blank">scheduler</a>, and enterprise support.</p>
+                        <p>See the PE product page for a detailed <b>feature comparison table</b>.</p>
                     </div>
                 </div>
                 <div class="tb-faq-question">
@@ -292,7 +292,7 @@ function resetLoadMore(categoryId) {
                     <div class="tb-faq-answer">
                         
                         <p>The Community Edition does not include a built-in white-labeling feature. However, it is technically possible to replace the default SENTIENT logo by modifying the source code and rebuilding the platform. This requires development expertise and familiarity with SENTIENT’s codebase. Please note that such changes will need to be reapplied after each upgrade of the platform.</p>
-                        <p>If you need a more streamlined and configurable option, we recommend considering the Professional Edition. With Professional Edition, you can effortlessly upload your own logo and favicon, customize login and system pages, adjust colors and branding palettes, and even tailor <a href="/docs/pe/user-guide/mail-templates/" target="_blank">email templates</a>, <a href="/docs/pe/user-guide/custom-translation/" target="_blank">translations</a>, and <a href="/docs/pe/user-guide/custom-menu/" target="_blank">custom menus</a> - all directly from the user interface, without touching the code. This empowers your organization to deliver a fully branded, professional-grade experience to your customers and tenants in just a few clicks.</p>
+                        <p>If you need a more streamlined and configurable option, we recommend considering the Professional Edition. With Professional Edition, you can effortlessly upload your own logo and favicon, customize login and system pages, adjust colors and branding palettes, and even tailor <a href="/docs/pe/user-guide/mail-templates/" target="_blank">email templates</a>, <a href="/docs/administration/translations/" target="_blank">translations</a>, and <a href="/docs/pe/user-guide/custom-menu/" target="_blank">custom menus</a> - all directly from the user interface, without touching the code. This empowers your organization to deliver a fully branded, professional-grade experience to your customers and tenants in just a few clicks.</p>
                         <p>More details: <a href="/docs/pe/user-guide/white-labeling/#customize-sentient-web-interface" target="_blank">PE White-Labeling Guide</a>.</p>
                         
                     </div>
@@ -438,7 +438,7 @@ function resetLoadMore(categoryId) {
                     <div class="tb-faq-question-title" onclick="toggleTbFaq(this)">Is there a mobile app for SENTIENT?</div>
                     <div class="tb-faq-answer">
                         
-                        <p>Yes. SENTIENT <a href="/products/mobile/" target="_blank">Mobile Application</a> is free and open-source (Apache 2.0 license). It's available for iOS and Android and works with SENTIENT Server.</p>
+                        <p>Yes. SENTIENT Mobile Application is free and open-source (Apache 2.0 license). It's available for iOS and Android and works with SENTIENT Server.</p>
                         
                     </div>
                 </div>
@@ -533,7 +533,7 @@ function resetLoadMore(categoryId) {
                 <div class="tb-faq-question">
                     <div class="tb-faq-question-title" onclick="toggleTbFaq(this)">Do you offer professional services?</div>
                     <div class="tb-faq-answer">
-                        <p>Yes, SENTIENT offers consulting, <a href="/services/development-services/" target="_blank">custom development</a>, <a href="/services/trainings/" target="_blank">learning resources</a>, and deployment assistance. <a href="/docs/contact-us/" target="_blank">Contact us</a> to discuss your requirements.</p>
+                        <p>Yes, SENTIENT offers consulting, custom development, learning resources, and deployment assistance. Contact us to discuss your requirements.</p>
                     </div>
                 </div>
                 <div class="tb-faq-question">
@@ -547,13 +547,13 @@ function resetLoadMore(categoryId) {
                 <div class="tb-faq-question">
                     <div class="tb-faq-question-title" onclick="toggleTbFaq(this)">Are there training resources?</div>
                     <div class="tb-faq-answer">
-                        <p>Yes, comprehensive documentation, video tutorials, and sample projects are available. Professional services include custom training programs. See <a href="/services/trainings/" target="_blank">learning resources</a> for more.</p>
+                        <p>Yes, comprehensive documentation, video tutorials, and sample projects are available. Professional services include custom training programs. See learning resources for more.</p>
                     </div>
                 </div>
                 <div class="tb-faq-question">
                     <div class="tb-faq-question-title" onclick="toggleTbFaq(this)">Can I get help with deployment?</div>
                     <div class="tb-faq-answer">
-                        <p>Yes, professional services include deployment assistance, architecture review, and production setup. <a href="/docs/contact-us/" target="_blank">Contact us</a> to discuss your deployment needs.</p>
+                        <p>Yes, professional services include deployment assistance, architecture review, and production setup. Contact us to discuss your deployment needs.</p>
                     </div>
                 </div>
             </div>

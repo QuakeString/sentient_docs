@@ -12,7 +12,7 @@ This tutorial is to show you how to send an email to the customer using the Rule
 <div class="st-callout info">
 
 
-**Note:** this tutorial is based on the [send email on alarm](/docs/user-guide/rule-engine-2-0/tutorials/send-email/#use-case) tutorial and it's use case. We will reuse the rule chains from the above-mentioned tutorial and will add a few more rule nodes to send email to the customer of the assigned device.
+**Note:** this tutorial is based on the [send email on alarm](/docs/tutorials/send-email/#use-case) tutorial and it's use case. We will reuse the rule chains from the above-mentioned tutorial and will add a few more rule nodes to send email to the customer of the assigned device.
 
 
 </div>
@@ -35,8 +35,8 @@ We assume you have completed the following guides and reviewed the articles list
 
   * [Getting Started](/docs/getting-started-guides/helloworld/) guide.
   * [Rule Engine Overview](/docs/user-guide/rule-engine-2-0/overview/).
-  * [Create & Clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/) guide.
-  * [Send email on alarm](/docs/user-guide/rule-engine-2-0/tutorials/send-email/) guide.
+  * [Create & Clear alarms](/docs/tutorials/create-clear-alarms/) guide.
+  * [Send email on alarm](/docs/tutorials/send-email/) guide.
 
 ## Create customer and assign device
 
@@ -46,7 +46,7 @@ First of all, we need to create Customer and assign device to customer. The foll
 
 <br>
 
-Customer created. Now we need to assign device **Thermostat Home**(the creation of which was described in the [Create & clear alarms](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms/#adding-the-device) tutorial) to the customer.<br> Go to **Manage devices** on Customer page and select our device
+Customer created. Now we need to assign device **Thermostat Home**(the creation of which was described in the [Create & clear alarms](/docs/tutorials/create-clear-alarms/#adding-the-device) tutorial) to the customer.<br> Go to **Manage devices** on Customer page and select our device
 
 ![image](/images/user-guide/rule-engine-2-0/tutorials/email/manage-devices.webp)
 <br>
@@ -86,7 +86,7 @@ In this section, we explain the purpose of each node that was added or modified 
 
 ## Configure Rule Chains
 
-In this tutorial, we used Rule Chains from [send email on alarm](/docs/user-guide/rule-engine-2-0/tutorials/send-email/) tutorial.
+In this tutorial, we used Rule Chains from [send email on alarm](/docs/tutorials/send-email/) tutorial.
 We modified Rule Chain **Create/Clear Alarm & Send Email** by adding nodes that was described above in the section [Message flow](/docs/user-guide/rule-engine-2-0/tutorials/send-email-to-customer/#message-flow)<br>
  and renamed this rule chain to: **Create/Clear Alarm & Send Email to Customer**.
 
@@ -237,7 +237,7 @@ Please refer to the links under the **See Also** section to see how to do this.
 
 ## See Also
 
-- [Notifications and Alarms on your smartphone using Telegram Bot](/docs/iot-gateway/integration-with-telegram-bot/) guide
+- [Notifications and Alarms on your smartphone using Telegram Bot](/docs/user-guide/rule-engine-2-0/tutorials/integration-with-telegram-bot/) guide
 - [Create alarm with details](/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms-with-details/) guide.
 - [Create Alarm when the Device is offline](/docs/user-guide/rule-engine-2-0/tutorials/create-inactivity-alarm/) guide.
 

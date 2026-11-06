@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/sigfox-example.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -29,8 +29,8 @@ SigFox backend will be simulated using Postman.
 
 We assume you have completed the following guides and reviewed the articles listed below:
 
-  * [Getting Started](/docs/pe/getting-started-guides/helloworld/) guide.
-  * [Rule Engine Overview](/docs/pe/user-guide/rule-engine-2-0/overview/).
+  * [Getting Started](/docs/getting-started-guides/helloworld/) guide.
+  * [Rule Engine Overview](/docs/user-guide/rule-engine-2-0/overview/).
   * [SigFox Integration](/docs/user-guide/integrations/sigfox/).
   * [Data converters](/docs/user-guide/integrations/#data-converters).
 
@@ -132,7 +132,7 @@ The following screenshots show how the above Rule Chains should look like:
 
 ![image](/images/user-guide/integrations/sigfox/sigfox-root-rule-chain.webp)
 
-Download and [**import**](/docs/pe/user-guide/ui/rule-chains/#rule-import) the attached json
+Download and [**import**](/docs/user-guide/ui/rule-chains/#rule-import) the attached json
  [**file**](/docs/user-guide/integrations/tutorials/resources/sigfox/to-sigfox-integration.json) for the
   **To SigFox integration** rule chain.
   

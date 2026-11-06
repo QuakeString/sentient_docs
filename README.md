@@ -40,12 +40,15 @@ title = "Connect a Modbus PLC"
 description = "Read registers from a PLC and show them as telemetry."
 
 [extra]
-status = "checked"          # "imported" = carried over, not yet checked
+status = "checked"          # "imported" = carried over, not yet checked; "planned" = outline only
 checked = "4.3.0.57"        # SENTIENT version the page was verified against
 changed_in = "4.3.0.57"     # optional: shows a "Changed in" badge
 +++
 ```
 
+- A new sidebar entry goes in `data/nav/*.yml`; add `planned: true` while the
+  page is only an outline (shown as SOON, left out of search). `tools/check.py`
+  fails when a sidebar entry does not open a page.
 - Write from the current SENTIENT UI and code, never from the old text alone.
 - Use UI labels exactly as SENTIENT shows them.
 - Screenshots come from our own instance (see `tools/screenshots/`, phase 2).
@@ -71,3 +74,9 @@ changed_in = "4.3.0.57"     # optional: shows a "Changed in" badge
 The site began as the ThingsBoard docs fork (Jekyll). `tools/convert/` holds
 the one-time conversion (run against commit `78bb93d2`). Pages that still need
 review carry `status = "imported"` and show a note at the top.
+
+The content audit (`tools/audit.py` → `audit/pages.csv`, `audit/SUMMARY.md`)
+gives every page a verdict and the wave that rewrites it. Pages that did not
+apply to SENTIENT were removed with `tools/convert/prune.py` (list in
+`audit/deleted.txt`); their old URLs redirect to the nearest SENTIENT page, and
+every help link in the SENTIENT UI (`audit/ui-help-links.txt`) opens a page.

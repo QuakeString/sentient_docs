@@ -277,7 +277,7 @@ function resetEdgeLoadMore(categoryId) {
                         <li><b>Purchase the Edge Computing add-on</b> for your PE license.</li>
                         <li><b>Reinstall Edge</b> using PE packages.</li>
                         </ul>
-                        <p><b>Before upgrading:</b> Back up any custom dashboards, rule chains, or configurations. <a href="/docs/contact-us/" target="_blank">Consult</a> our support team for assistance or see our <a href="/docs/pe/user-guide/install/upgrade-instructions/upgrade-from-ce/" target="_blank">migration guide</a> for step-by-step instructions.</p>
+                        <p><b>Before upgrading:</b> Back up any custom dashboards, rule chains, or configurations. Consult our support team for assistance or see our <a href="/docs/pe/user-guide/install/upgrade-instructions/upgrade-from-ce/" target="_blank">migration guide</a> for step-by-step instructions.</p>
                     </div>
                 </div>
                 <div class="edge-faq-question">
@@ -325,7 +325,7 @@ function resetEdgeLoadMore(categoryId) {
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Can I integrate devices that are connected via third-party systems such as LoRAWAN?</div>
                     <div class="edge-faq-answer">
                         <p>Not out-of-the-box for Community Edition. To connect with third-party platforms like LoRaWAN networks, you would need to develop custom integration code.</p>
-                        <p>Professional Edition provides <b>ready-to-use Platform Integrations</b> for LoRaWAN networks (ChirpStack, TTN, Loriot), OPC-UA servers, and 30+ other platforms. See <a href="/docs/pe/edge/user-guide/integrations/" target="_blank">Edge Integrations documentation</a> for more details.</p>
+                        <p>Professional Edition provides <b>ready-to-use Platform Integrations</b> for LoRaWAN networks (ChirpStack, TTN, Loriot), OPC-UA servers, and 30+ other platforms. See <a href="/docs/user-guide/integrations/" target="_blank">Edge Integrations documentation</a> for more details.</p>
                     </div>
                 </div>
                 <div class="edge-faq-question">

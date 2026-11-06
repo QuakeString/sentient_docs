@@ -10,8 +10,8 @@ source = "docs/user-guide/integrations/particle.md"
 <div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
 
 
-Only [**Professional Edition**](/products/sentient-pe/) supports **Platform Integrations** feature.<br>
-Use [**SENTIENT Cloud**](/installations/choose-region/) or [**install**](/docs/user-guide/install/pe/installation-options/) your own platform instance.
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
 
 
 </div>
@@ -77,8 +77,8 @@ Starting from **SENTIENT 3.9**, the platform stores the full set of debug events
 
 Debug mode settings can be combined or disabled entirely.
 
-> One can use either [TBEL](/docs/pe/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/pe/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [TBEL](/docs/user-guide/tbel/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [TBEL](/docs/user-guide/tbel/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="tb-content-toggle" id="particleuplink">
@@ -504,6 +504,6 @@ If no - check that your device is connected to Particle and connection is stable
 <div class="st-gallery"><figure><img src="/images/user-guide/integrations/particle/particle-add-widget-1.webp" alt="Go to the &quot;**Dashboards**&quot; page, create a new dashboard and select &quot;**Switch Control**&quot; widget from the &quot;**Control Widgets**&quot; bundle." loading="lazy"><figcaption>Go to the "**Dashboards**" page, create a new dashboard and select "**Switch Control**" widget from the "**Control Widgets**" bundle.</figcaption></figure><figure><img src="/images/user-guide/integrations/particle/particle-add-widget-2.webp" alt="Add new alias with previously created device. Then navigate to the &quot;**Appearance**&quot; tab." loading="lazy"><figcaption>Add new alias with previously created device. Then navigate to the "**Appearance**" tab.</figcaption></figure><figure><img src="/images/user-guide/integrations/particle/particle-add-widget-3.webp" alt="Change retrieve value to &quot;**Don&#39;t retrieve**&quot; and change &quot;***RPC set value method***&quot; to &quot;**led**&quot;. Then paste the convert value function copied from the documentation. Click &quot;**Add**&quot;, then save dashboard." loading="lazy"><figcaption>Change retrieve value to "**Don&#39;t retrieve**" and change "***RPC set value method***" to "**led**". Then paste the convert value function copied from the documentation. Click "**Add**", then save dashboard.</figcaption></figure><figure><img src="/images/user-guide/integrations/particle/particle-add-widget-5.webp" alt="Now toggle the button and LED on your Photon should change it&#39;s led state." loading="lazy"><figcaption>Now toggle the button and LED on your Photon should change it&#39;s led state.</figcaption></figure></div>
 
 
-Read more about dashboards [here](/docs/pe/user-guide/dashboards/).
+Read more about dashboards [here](/docs/user-guide/dashboards/).
 
 ## Next steps

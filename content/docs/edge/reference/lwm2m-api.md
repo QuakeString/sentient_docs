@@ -7,7 +7,7 @@ status = "imported"
 checked = ""
 source = "docs/edge/reference/lwm2m-api.md"
 +++
-> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/edge/getting-started-guides/helloworld/) to become familiar with SENTIENT basics. Additionally, it is advisable to explore the [Device profiles](/docs/edge/user-guide/device-profiles/) documentation.
+> Before proceeding, we recommend reviewing the general [Getting Started guide](/docs/edge/getting-started-guides/helloworld/) to become familiar with SENTIENT basics. Additionally, it is advisable to explore the [Device profiles](/docs/user-guide/device-profiles/) documentation.
 
 ## LwM2M basics
 
@@ -232,7 +232,7 @@ Once uploaded, you should see the new models listed in the Resources library.
 ### Step 2. Define LwM2M device profile
 
 Once you&#39;ve uploaded the LwM2M models, you can use them to configure a device profile for LwM2M devices.
-For general information about device profiles, [read here](/docs/edge/user-guide/device-profiles/).
+For general information about device profiles, [read here](/docs/user-guide/device-profiles/).
 
 #### Step 2.1 Create the LwM2M profile.
 
@@ -380,7 +380,7 @@ SENTIENT supports four types of credentials:
 
 
 For simplicity, we&#39;ll connect the device over **plain UDP** using the "**No Security**" mode:
-- Start [creating a new device](/docs/edge/user-guide/ui/devices/#adding-a-new-device) and assign it the [previously created LwM2M device profile](#step-21-create-the-lwm2m-profile).
+- Start [creating a new device](/docs/user-guide/ui/devices/#adding-a-new-device) and assign it the [previously created LwM2M device profile](#step-21-create-the-lwm2m-profile).
 - Go to the "**Credentials**" tab.
 - Choose "**No Security**" as the credential type.
 - Enter the **Endpoint Client Name** — this will be used to identify the device on the network.
@@ -454,7 +454,7 @@ SENTIENT provides full support for both an LwM2M Server and a Bootstrap Server, 
 - **Plain UDP**
 - **DTLS** (secure transport over UDP)
 
-As a platform user, you are able to provision LwM2M devices and define the mapping between the LwM2M resources and SENTIENT device [attributes](/docs/edge/user-guide/attributes/) and [telemetry](/docs/edge/user-guide/telemetry/) (time series data).
+As a platform user, you are able to provision LwM2M devices and define the mapping between the LwM2M resources and SENTIENT device [attributes](/docs/user-guide/attributes/) and [telemetry](/docs/user-guide/telemetry/) (time series data).
 These mappings are configured within the corresponding **LwM2M device profile**.
 
 > For step-by-step instructions on creating a device profile, refer to the [getting started guide](#getting-started).
@@ -488,12 +488,12 @@ With this setup, the *timezone* attribute in SENTIENT will always contain the la
 
 ### Write LwM2M resource via SENTIENT attributes update
 
-SENTIENT enables configuration updates to be pushed to LwM2M devices using [Shared attributes](/docs/edge/user-guide/attributes/#shared-attributes). 
+SENTIENT enables configuration updates to be pushed to LwM2M devices using [Shared attributes](/docs/user-guide/attributes/#shared-attributes). 
 These updates can be initiated from various sources, such as:
 - The administration UI
-- A dashboard [widget](/docs/edge/user-guide/widgets/)
-- [The REST API](/docs/edge/reference/rest-api/)
-- [A Rule Engine node](/docs/edge/user-guide/rule-engine-2-0/overview/#rule-node)
+- A dashboard [widget](/docs/user-guide/widgets/)
+- [The REST API](/docs/reference/rest-api/)
+- [A Rule Engine node](/docs/user-guide/rule-engine-2-0/overview/#rule-node)
 
 Once you change the shared attribute, SENTIENT will search for the mapping between the attribute key and LwM2M resource in the device profile.
 If the resource is marked as an attribute, platform will send the LwM2M Write operation to the LwM2M client device.
@@ -502,7 +502,7 @@ If the resource is marked as an attribute, platform will send the LwM2M Write op
 
 ### Read LwM2M resources to time series data
 
-You may configure the device profile to read and observe specific LwM2M resources and store their values as telemetry [time series data](/docs/edge/user-guide/telemetry/) data in SENTIENT.
+You may configure the device profile to read and observe specific LwM2M resources and store their values as telemetry [time series data](/docs/user-guide/telemetry/) data in SENTIENT.
 
 To store resource as the telemetry:
 - Navigate to the "**Transport configuration**" tab of your LwM2M device profile.
@@ -519,11 +519,11 @@ SENTIENT supports **on-demand execution of LwM2M operations** using its **Remote
 
 You can send these commands using:
 - The **REST API**
-- A dashboard [widget](/docs/edge/user-guide/widgets/)
-- [A Rule Engine node](/docs/edge/user-guide/rule-engine-2-0/overview/#rule-node)
+- A dashboard [widget](/docs/user-guide/widgets/)
+- [A Rule Engine node](/docs/user-guide/rule-engine-2-0/overview/#rule-node)
 - A **custom script**
 
-> ⚠️ **Note**: The structure and format of RPC commands for LwM2M devices are well-defined and standardized within the platform. Refer to [this documentation](/docs/edge/user-guide/rpc/#server-side-rpc) for full details.
+> ⚠️ **Note**: The structure and format of RPC commands for LwM2M devices are well-defined and standardized within the platform. Refer to [this documentation](/docs/user-guide/rpc/#server-side-rpc) for full details.
 
 **Command structure**
 
@@ -567,11 +567,11 @@ We&#39;ve prepared a simple dashboard that demonstrates how to:
 
 You can [import the dashboard from a Gist](https://gist.github.com/ashvayka/2374b1b6ebd8be5dca3d5252dee4c212#file-lwm2m_operations-json) after completing the [getting started guide](#getting-started).
 
-> ⚠️ Don&#39;t forget to adjust the [dashboard alias](/docs/edge/user-guide/dashboards/#entity-aliases) to match your device or asset.
+> ⚠️ Don&#39;t forget to adjust the [dashboard alias](/docs/user-guide/dashboards/#entity-aliases) to match your device or asset.
 
 ## RPC Commands
 
-LwM2M transport supports [RPC](/docs/edge/user-guide/rpc/) commands that reflect subset of
+LwM2M transport supports [RPC](/docs/user-guide/rpc/) commands that reflect subset of
 [Device Management and Service Enablement Interface](http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/HTML-Version/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.html#6-3-0-63-Device-Management-and-Service-Enablement-Interface)
 and
 [Information Reporting interface](http://www.openmobilealliance.org/release/LightweightM2M/V1_1_1-20190617-A/HTML-Version/OMA-TS-LightweightM2M_Core-V1_1_1-20190617-A.html#6-4-0-64-Information-Reporting-Interface).

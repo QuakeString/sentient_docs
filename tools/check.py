@@ -54,6 +54,14 @@ for p in sorted(pages):
         if not imported:
             strict_fail.append(url)
 
+# every sidebar entry must open a real page (not a redirect)
+nav_fail = []
+for nav in sorted((Path(__file__).resolve().parents[1] / "data" / "nav").glob("*.yml")):
+    for path in re.findall(r"^\s*path:\s*(\S+)", nav.read_text(encoding="utf-8"), re.M):
+        f = site / path.strip("/") / "index.html"
+        if not f.exists() or 'http-equiv="refresh"' in f.read_text(encoding="utf-8", errors="replace")[:600]:
+            nav_fail.append(f"{nav.name}: {path}")
+
 kinds = Counter(k for v in problems.values() for k, _ in v)
 print(f"pages: {len(pages)}  carried over (not yet checked): {imported_pages}")
 for k, n in kinds.most_common():
@@ -64,8 +72,13 @@ for url, found in (worst if show_all else worst[:10]):
     if show_all:
         for k, v in found:
             print(f"          {k}: {v}")
+if nav_fail:
+    print("\nSidebar entries that do not open a page:")
+    for u in nav_fail:
+        print("  " + u)
 if strict_fail:
     print("\nChecked pages with problems (these fail the build):")
     for u in strict_fail:
         print("  " + u)
+if strict_fail or nav_fail:
     sys.exit(1)

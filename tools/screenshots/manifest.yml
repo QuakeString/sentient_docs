@@ -1,0 +1,92 @@
+# Screenshot manifest: every screenshot in the manual comes from here.
+# Run: tools/screenshots/run.sh   (see README.md in this folder)
+#
+# Each shot:
+#   id       file name: static/images/st/<id>.webp (and <id>-dark.webp)
+#   as       sysadmin | tenant | none        (default tenant = docs@demo.plant)
+#   url      path in the SENTIENT UI; {device:Name}, {asset:Name},
+#            {dashboard:Title} and {ruleChain:Name} are replaced by ids
+#   steps    optional list: {click: sel} {fill: [sel, text]} {press: key}
+#            {hover: sel} {wait: ms} {waitFor: sel} {scroll: sel}
+#   capture  optional selector to crop to (default: whole viewport)
+#   pad      pixels around the cropped element (default 8)
+#   mask     optional selectors to blank out (tokens, keys, addresses)
+#   themes   [light] (default) or [light, dark]
+#   size     [width, height] (default [1440, 900])
+#   page     docs page that shows it (for review only)
+defaults:
+  as: tenant
+  themes: [light]
+  size: [1440, 900]
+shots:
+  - id: login
+    as: none
+    url: /login
+    page: /docs/getting-started-guides/first-login/
+    themes: [light, dark]
+  - id: home-tenant
+    url: /home
+    page: /docs/getting-started-guides/first-login/
+    themes: [light, dark]
+  - id: devices-list
+    url: /entities/devices
+    page: /docs/user-guide/ui/devices/
+  - id: device-details-telemetry
+    url: /entities/devices/{device:Feed pump P-101}
+    steps:
+      - click: "div[role=tab]:has-text('Latest telemetry')"
+      - wait: 800
+    page: /docs/user-guide/telemetry/
+  - id: device-credentials
+    url: /entities/devices/{device:Feed pump P-101}
+    steps:
+      - click: "button:has-text('Manage credentials')"
+      - waitFor: mat-dialog-container
+    capture: mat-dialog-container
+    mask: ["input[formcontrolname=credentialsId]"]
+    page: /docs/user-guide/device-credentials/
+  - id: assets-list
+    url: /entities/assets
+    page: /docs/user-guide/ui/assets/
+  - id: alarms-list
+    url: /alarms/alarms
+    page: /docs/user-guide/alarms/
+    themes: [light, dark]
+  - id: alarm-rules
+    url: /alarms/alarm-rules
+    page: /docs/user-guide/alarm-rules/
+  - id: dashboards-list
+    url: /dashboards
+    page: /docs/user-guide/dashboards/
+  - id: rule-chains-list
+    url: /ruleChains
+    page: /docs/user-guide/rule-engine-2-0/overview/
+  - id: rule-chain-root
+    url: /ruleChains/{ruleChain:Root Rule Chain}
+    page: /docs/user-guide/rule-engine-2-0/overview/
+  - id: calculated-fields
+    url: /calculatedFields
+    page: /docs/user-guide/calculated-fields/
+  - id: gateways-list
+    url: /entities/gateways
+    page: /docs/iot-gateway/
+  - id: notification-inbox
+    url: /notification/inbox
+    page: /docs/user-guide/notifications/
+  - id: report-templates
+    url: /reporting/templates
+    page: /docs/reports/templates/
+  - id: solution-hub
+    url: /solutions
+    page: /docs/solution-hub/
+  - id: api-usage
+    url: /usage
+    page: /docs/administration/api-usage/
+  - id: sysadmin-licence
+    as: sysadmin
+    url: /license
+    page: /docs/installation/licence/
+  - id: sysadmin-translations
+    as: sysadmin
+    url: /settings/translations
+    page: /docs/administration/translations/

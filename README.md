@@ -51,7 +51,7 @@ changed_in = "4.3.0.57"     # optional: shows a "Changed in" badge
   fails when a sidebar entry does not open a page.
 - Write from the current SENTIENT UI and code, never from the old text alone.
 - Use UI labels exactly as SENTIENT shows them.
-- Screenshots come from our own instance (see `tools/screenshots/`, phase 2).
+- Screenshots come from our own instance: add them to `tools/screenshots/manifest.yml`, never by hand.
 - Callouts: `<div class="st-callout info">` or `warn`, with a blank line before
   and after the Markdown inside. Tabs: `<div class="st-tabs">` holding
   `<div class="st-tab" data-label="Windows">` blocks. Image galleries:

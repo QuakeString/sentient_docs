@@ -142,7 +142,8 @@ def main():
                 used.update(re.findall(r"/images/([^\s\"')\]>?#]+)", f.read_text(encoding="utf-8", errors="replace")))
     dropped = size = 0
     for img in IMAGES.rglob("*"):
-        if img.is_file() and str(img.relative_to(IMAGES)) not in used:
+        rel = str(img.relative_to(IMAGES))
+        if img.is_file() and rel not in used and not rel.startswith("st/"):  # st/ = tools/screenshots output
             size += img.stat().st_size
             dropped += 1
             if not DRY:

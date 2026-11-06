@@ -14,7 +14,7 @@
 <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
 <meta name="st-docs-version" content="{{ config.extra.version }}">
 <meta name="st-docs-base" content="">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="/css/site.css">
 <script>try{var t=localStorage.getItem("st-docs-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
@@ -24,8 +24,9 @@
   <div class="top-in">
     <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation"><svg class="icon"><use href="#i-menu"/></svg></button>
     <a class="brand" href="/docs/" aria-label="SENTIENT Docs home">
-      <span class="mark"><svg viewBox="0 0 24 24"><path d="M4 16c3-8 5-8 8 0s5 8 8 0"/></svg></span>
-      SENTIENT <small>Docs</small>
+      <img class="mark mk-l" src="/images/brand/mark-on-light.svg" alt="">
+      <img class="mark mk-d" src="/images/brand/mark-on-dark.svg" alt="">
+      <span class="wordmark" role="img" aria-label="SENTIENT"></span> <small>Docs</small>
     </a>
     <nav class="sections" aria-label="Sections">
       <a href="/docs/"{% if area == "docs" and not cur is starting_with("/docs/troubleshooting/") %} aria-current="page"{% endif %}>Platform</a>

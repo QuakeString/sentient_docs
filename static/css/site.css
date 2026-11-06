@@ -633,8 +633,13 @@ button{font:inherit;color:inherit}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.06em;color:var(--fg)}
 .brand:hover{text-decoration:none}
 .brand small{font-weight:500;letter-spacing:0;color:var(--muted);font-size:14px;border-left:1px solid var(--line-strong);padding-left:10px}
-.mark{width:26px;height:26px;border-radius:7px;background:var(--accent);display:grid;place-items:center}
-.mark svg{width:16px;height:16px;stroke:var(--on-accent);fill:none;stroke-width:2.2}
+.brand .mark{height:28px;width:calc(28px * 1.1138);flex:none}
+.brand .mk-d{display:none}
+.brand .wordmark{display:block;height:14px;width:calc(14px * 8.2853);background:linear-gradient(90deg,#187074,#1a8a7f);-webkit-mask:url(/images/brand/wordmark.svg) center/100% 100% no-repeat;mask:url(/images/brand/wordmark.svg) center/100% 100% no-repeat}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .brand .mk-l{display:none}:root:not([data-theme="light"]) .brand .mk-d{display:block}:root:not([data-theme="light"]) .brand .wordmark{background:linear-gradient(90deg,#4fb8bb,#4cc4b1)}}
+:root[data-theme="dark"] .brand .mk-l{display:none}
+:root[data-theme="dark"] .brand .mk-d{display:block}
+:root[data-theme="dark"] .brand .wordmark{background:linear-gradient(90deg,#4fb8bb,#4cc4b1)}
 .sections{display:flex;gap:2px;margin-left:8px}
 .sections a{color:var(--muted);padding:6px 10px;border-radius:6px;font-size:14px;font-weight:500}
 .sections a:hover{background:var(--sunken);color:var(--fg);text-decoration:none}
@@ -966,3 +971,5 @@ html,body{height:auto;min-height:100%}
 .child-list .soon{font-size:10px;font-weight:500;letter-spacing:.04em;color:var(--muted);border:1px solid var(--line);border-radius:999px;padding:0 6px;line-height:16px;margin-left:6px;vertical-align:2px}
 .status-note.planned{background:var(--st-docs-tint)}
 .status-note.planned .icon{color:var(--accent-text)}
+@media (max-width:480px){.brand .mark{height:24px;width:calc(24px * 1.1138)}.brand .wordmark{height:11px;width:calc(11px * 8.2853)}}
+@media (max-width:380px){.brand .wordmark{display:none}}

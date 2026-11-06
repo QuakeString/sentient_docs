@@ -1,7 +1,7 @@
 {% macro nav_items(items, current, depth) %}
 {%- for it in items %}
   {%- if it.section %}
-    {%- set open = false %}
+    {%- set_global open = false %}
     {%- for c in it.section %}{% if c.path and current is starting_with(c.path) %}{% set_global open = true %}{% endif %}{% if c.section %}{% for g in c.section %}{% if g.path and current is starting_with(g.path) %}{% set_global open = true %}{% endif %}{% endfor %}{% endif %}{% endfor %}
     {%- if depth == 0 %}
 <div class="group-title">{{ it.title }}</div>

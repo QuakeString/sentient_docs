@@ -478,7 +478,6 @@ toc:
     planned: true
   - title: API error codes
     path: /docs/troubleshooting/error-codes/
-    planned: true
   - title: Installation and upgrade errors
     path: /docs/troubleshooting/install-errors/
   - title: Licence errors
@@ -491,7 +490,6 @@ toc:
     planned: true
   - title: Collect logs for support
     path: /docs/troubleshooting/logs/
-    planned: true
   - title: Server troubleshooting
     path: /docs/user-guide/troubleshooting/
   - title: FAQ

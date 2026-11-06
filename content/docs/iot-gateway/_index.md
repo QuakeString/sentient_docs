@@ -2,7 +2,7 @@
 title = "SENTIENT Gateway"
 description = "SENTIENT IoT Gateway to connect existing and legacy IoT devices to the platform"
 
-aliases = ["/docs/iot-gateway/custom/", "/docs/iot-gateway/custom/methods-and-datatypes/", "/docs/iot-gateway/custom/serial-connector/", "/docs/iot-gateway/guides/how-to-enable-remote-shell/", "/docs/iot-gateway/guides/how-to-use-gateway-shell/", "/docs/iot-gateway/guides/how-to-use-remote-converter-update/", "/docs/iot-gateway/roadmap/"]
+aliases = ["/docs/iot-gateway/custom/", "/docs/iot-gateway/custom/methods-and-datatypes/", "/docs/iot-gateway/custom/serial-connector/", "/docs/iot-gateway/guides/how-to-use-remote-converter-update/", "/docs/iot-gateway/roadmap/"]
 [extra]
 status = "imported"
 checked = ""

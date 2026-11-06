@@ -34,6 +34,8 @@ toc:
     path: /docs/iot-gateway/guides/how-to-enable-remote-configuration/
   - title: Remote logging
     path: /docs/iot-gateway/guides/how-to-enable-remote-logging/
+  - title: Remote shell
+    path: /docs/iot-gateway/guides/how-to-enable-remote-shell/
 - title: Connectors
   section:
   - title: BACnet

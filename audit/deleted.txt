@@ -25,8 +25,6 @@ docs/installation.md
 docs/iot-gateway/custom/_index.md
 docs/iot-gateway/custom/methods-and-datatypes.md
 docs/iot-gateway/custom/serial-connector.md
-docs/iot-gateway/guides/how-to-enable-remote-shell.md
-docs/iot-gateway/guides/how-to-use-gateway-shell.md
 docs/iot-gateway/guides/how-to-use-remote-converter-update.md
 docs/iot-gateway/install/_index.md
 docs/iot-gateway/install/deb-installation.md

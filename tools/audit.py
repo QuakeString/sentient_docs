@@ -40,7 +40,7 @@ RULES = [
     (r"^docs/edge/(.*install|getting-started-guides/.*pe)", "delete", "-", "ThingsBoard Edge installation"),
     (r"^docs/(live-demo|domains)\.md|^docs/user-guide/live-demo", "delete", "-", "ThingsBoard cloud / live demo"),
     (r"^docs/user-guide/rule-engine-2-5/(?!queues)", "delete", "-", "ThingsBoard Kafka queue internals"),
-    (r"^docs/iot-gateway/(install/|custom/|roadmap|guides/how-to-use-remote-converter-update|guides/how-to-enable-remote-shell|guides/how-to-use-gateway-shell)", "delete", "-", "Python gateway install, customization and shell; SENTIENT Gateway is a Rust binary"),
+    (r"^docs/iot-gateway/(install/|custom/|roadmap|guides/how-to-use-remote-converter-update)", "delete", "-", "Python gateway install, customization and shell; SENTIENT Gateway is a Rust binary"),
     (r"^docs/user-guide/integrations/ibm-watson", "delete", "-", "Integration type not available in SENTIENT"),
     (r"^docs/user-guide/edge-computing", "delete", "-", "Duplicate of the SENTIENT Edge section"),
     (r"^docs/(guides|getting-started)\.md$", "delete", "-", "ThingsBoard landing page (edition picker / video gallery)"),

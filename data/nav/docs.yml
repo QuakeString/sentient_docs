@@ -22,13 +22,11 @@ toc:
     section:
     - title: Choose an installation
       path: /docs/installation/
-      planned: true
     - title: System requirements
       path: /docs/installation/requirements/
       planned: true
     - title: Windows with Platform Manager
       path: /docs/installation/windows/
-      planned: true
     - title: Windows with ClickHouse (WSL2)
       path: /docs/installation/windows-clickhouse/
       planned: true
@@ -36,7 +34,6 @@ toc:
       path: /docs/installation/docker/
     - title: Linux
       path: /docs/installation/linux/
-      planned: true
     - title: Activate your licence
       path: /docs/installation/licence/
   - title: Operate
@@ -46,13 +43,10 @@ toc:
       planned: true
     - title: Back up and restore
       path: /docs/operations/backup-restore/
-      planned: true
     - title: Upgrade and roll back
       path: /docs/operations/upgrade/
-      planned: true
     - title: Move to a new server
       path: /docs/operations/move-server/
-      planned: true
     - title: Environment settings
       path: /docs/operations/settings/
     - title: Ports and firewall
@@ -62,7 +56,6 @@ toc:
       planned: true
     - title: Uninstall
       path: /docs/operations/uninstall/
-      planned: true
 
 - title: Devices and data
   section:

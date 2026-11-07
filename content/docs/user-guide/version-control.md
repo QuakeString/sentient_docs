@@ -18,7 +18,7 @@ Telemetry is not stored in Git; only configuration.
 
 The tenant administrator sets the repository under **Settings > Repository**.
 
-**Local only** needs no Git server at all: SENTIENT keeps the versions in a repository on its own disk, with no network access or sign-in. It is the simplest choice for an offline plant, and you can add a remote address later to copy the history there. Back up the SENTIENT data folder to keep the versions safe.
+**Local only** needs no Git server at all: SENTIENT keeps the versions in a repository on its own disk, with no network access or sign-in. It is the simplest choice for an offline plant, and you can add a remote address later to copy the history there. The versions are kept in the folder set by `VC_REPOS_PATH` (`/var/lib/sentient/vc-repos` in Docker); back it up with the database.
 
 For a shared or remote repository, create an empty one first on GitHub, GitLab, Gitea, Azure DevOps or your own Git server, then switch **Local only** off and fill in:
 

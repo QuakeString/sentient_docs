@@ -119,6 +119,7 @@ for (const s of manifest.shots) {
         await settle(page);
       }
       const opts = { mask: (s.mask || []).map((m) => page.locator(m)), maskColor: "#9e9e9e" };
+      if (s.clip) opts.clip = { x: s.clip[0], y: s.clip[1], width: s.clip[2], height: s.clip[3] };
       if (s.capture) {
         const box = await page.locator(s.capture).first().boundingBox();
         const pad = s.pad ?? 8;

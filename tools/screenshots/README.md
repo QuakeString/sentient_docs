@@ -22,3 +22,4 @@ tools/screenshots/run.sh --no-seed --only devices-list,alarms-list
   was taken or failed; the run fails when any shot fails.
 - In a page: `![Devices list](/images/st/devices-list.webp)`.
 - Hide secrets with `mask:` (access tokens, keys, IP addresses).
+- Crop with `capture:` (a selector, plus `pad:` pixels) or `clip: [x, y, width, height]` when the screen has empty space.

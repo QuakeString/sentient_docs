@@ -29,6 +29,8 @@ DEVICES = [
 ASSETS = [("Plant", "Site"), ("Boiler house", "Area"), ("Packing line", "Area"), ("Utilities", "Area"), ("Tank farm", "Area"), ("Main incomer", "Area")]
 ATTRIBUTES = {"Pump": {"ratedFlow": 50, "maker": "KSB", "commissioned": "2021-03-14"},
               "Compressor": {"ratedPressure": 8, "maker": "Atlas Copco"}}
+GATEWAY = "Plant gateway GW-1"
+DASHBOARDS = ["Boiler house overview", "Utilities energy", "Packing line OEE"]
 ALARMS = [("Feed pump P-102", "High vibration", "MAJOR"), ("Air compressor C-201", "High temperature", "WARNING"),
           ("Tank level LT-301", "Level low", "MINOR")]
 
@@ -123,6 +125,33 @@ def main():
                                          method="POST", headers={"Content-Type": "application/json"})
             urllib.request.urlopen(req, timeout=30).read()
         print(f"  {name}: {len(points)} points")
+
+    # A gateway, so the Gateways page is not empty.
+    if not api.call("GET", "/api/tenant/devices?deviceName=" + urllib.request.quote(GATEWAY), ok404=True):
+        api.call("POST", "/api/device", {"name": GATEWAY, "type": "Gateway", "label": "Control room",
+                                         "additionalInfo": {"gateway": True, "description": "Modbus and OPC UA"}})
+
+    # Dashboards (empty layouts; their names fill the list).
+    have = {d["title"] for d in api.call("GET", "/api/tenant/dashboards?pageSize=100&page=0")["data"]}
+    for title in DASHBOARDS:
+        if title not in have:
+            api.call("POST", "/api/dashboard", {"title": title, "configuration": {}})
+
+    # A calculated field on each pump: flow per amp of motor current.
+    for name, typ, _, _ in DEVICES:
+        if typ != "Pump":
+            continue
+        dev = api.call("GET", "/api/tenant/devices?deviceName=" + urllib.request.quote(name))
+        listed = api.call("GET", f"/api/DEVICE/{dev['id']['id']}/calculatedFields?pageSize=50&page=0", ok404=True) or {}
+        if any(f.get("name") == "Flow per amp" for f in listed.get("data", [])):
+            continue
+        api.call("POST", "/api/calculatedField", {
+            "entityId": dev["id"], "type": "SIMPLE", "name": "Flow per amp", "configurationVersion": 1,
+            "configuration": {"type": "SIMPLE",
+                              "arguments": {"flow": {"refEntityKey": {"key": "flow", "type": "TS_LATEST"}},
+                                            "current": {"refEntityKey": {"key": "motorCurrent", "type": "TS_LATEST"}}},
+                              "expression": "flow / current",
+                              "output": {"type": "TIME_SERIES", "name": "flowPerAmp", "decimalsByDefault": 2}}})
 
     for dname, atype, sev in ALARMS:
         dev = api.call("GET", "/api/tenant/devices?deviceName=" + urllib.request.quote(dname))

@@ -38,6 +38,7 @@ shots:
     steps:
       - click: "div[role=tab]:has-text('Latest telemetry')"
       - wait: 800
+    clip: [0, 0, 904, 900]   # the details page fills only the left part
     page: /docs/user-guide/telemetry/
   - id: device-credentials
     url: /entities/devices/{device:Feed pump P-101}

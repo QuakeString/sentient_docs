@@ -1,7 +1,7 @@
 +++
 title = "Asset profiles"
 description = "IoT Asset profiles"
-aliases = ["/docs/user-guide/ui/asset-profiles"]
+aliases = ["/docs/user-guide/ui/asset-profiles", "/docs/user-guide/ui/asset-profiles/"]
 
 [extra]
 status = "imported"

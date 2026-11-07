@@ -20,7 +20,7 @@ Open **Entities > Devices** in the left menu.
 | **Name** | Unique within the tenant |
 | **Device profile** | Decides the transport settings, the rule chain and the queue used for its data |
 | **Label** | Free text shown beside the name, for example the plant area |
-| **State** | **Active** while the device sends data, **Inactive** after the profile's inactivity timeout passes without data |
+| **State** | **Active** while the device sends data, **Inactive** after 10 minutes without data. See [Device connectivity status](/docs/user-guide/device-connectivity-status/) to change the timeout |
 | **Customer** | The customer that owns the device, if any |
 | **Groups** | The device groups it belongs to |
 | **Is gateway** | Ticked for a SENTIENT Gateway or another gateway that reports for several devices |

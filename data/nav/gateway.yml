@@ -43,7 +43,6 @@ toc:
     path: /docs/iot-gateway/config/can/
   - title: DNP3
     path: /docs/iot-gateway/config/dnp3/
-    planned: true
   - title: EtherCAT
     path: /docs/iot-gateway/config/ethercat/
     planned: true

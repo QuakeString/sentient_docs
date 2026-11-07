@@ -295,10 +295,8 @@ toc:
     section:
     - title: Overview
       path: /docs/solution-hub/
-      planned: true
     - title: Data pipelines
       path: /docs/solution-hub/pipelines/
-      planned: true
   - title: Integrations
     section:
     - title: Overview

@@ -130,8 +130,6 @@ toc:
       path: /docs/user-guide/ssl/coap-access-token/
     - title: CoAP X.509 certificates
       path: /docs/user-guide/ssl/coap-x509-certificates/
-    - title: LwM2M over DTLS
-      path: /docs/user-guide/ssl/lwm2m-over-dtls/
 
 - title: Gateway
   section:

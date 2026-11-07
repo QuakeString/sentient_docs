@@ -13,23 +13,18 @@ toc:
     path: /docs/iot-gateway/installation/
   - title: Windows
     path: /docs/iot-gateway/install-windows/
-    planned: true
   - title: Linux and Docker
     path: /docs/iot-gateway/install-linux/
-    planned: true
 - title: Configure
   section:
-  - title: Admin UI
+  - title: Local web page
     path: /docs/iot-gateway/admin-ui/
-    planned: true
   - title: General configuration
     path: /docs/iot-gateway/configuration/
   - title: Key sheets
     path: /docs/iot-gateway/key-sheets/
-    planned: true
   - title: Write values to devices
     path: /docs/iot-gateway/rpc-write/
-    planned: true
   - title: Remote configuration
     path: /docs/iot-gateway/guides/how-to-enable-remote-configuration/
   - title: Remote logging

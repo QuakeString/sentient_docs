@@ -1,110 +1,50 @@
 +++
-title = "SENTIENT Architecture"
-description = "SENTIENT IoT Platform architecture"
+title = "Architecture"
+description = "How SENTIENT is built: one server program with its database, the optional services around it, and the path a value takes from a device to a dashboard."
 
 
 aliases = ["/docs/reference/iot-platform-deployment-scenarios/", "/docs/reference/mcp-server/", "/docs/reference/monolithic/", "/docs/reference/msa/", "/docs/reference/performance/", "/docs/reference/performance/tools/java-jmx-monitoring/", "/docs/reference/performance/tools/postgres-pgadmin-monitoring/", "/docs/reference/performance/tools/sentient-performance-charts/", "/docs/reference/performance-aws-instances/", "/docs/reference/1m-devices-test/", "/docs/reference/20k-devices-test/", "/docs/reference/performance-tests/", "/docs/reference/performance-tools/"]
 [extra]
-status = "imported"
-checked = ""
-source = "docs/reference/architecture.md"
+status = "checked"
+checked = "4.3.0.57"
 +++
-SENTIENT is designed to distribute workload across multiple nodes without a single point of failure.
-Each SENTIENT node is identical and can handle request from both device and server-side applications.
- 
-## High-level overview
+SENTIENT is one server program, written in Rust, with its database next to it. The web UI, the REST API, the device connections, the rule engine and every background job run inside that program, so a plant runs SENTIENT on one machine without a cluster to look after.
 
- ![image](/images/reference/architecture-in-brief.svg)
+## The parts
 
-#### Device Connectivity
+| Part | What it does | Runs as |
+|---|---|---|
+| **SENTIENT server** | Web UI, REST and WebSocket API, device transports, rule engine, alarms, notifications, reports, scheduler, analytics | One program: `sentient` container, or the SENTIENT service on Windows and Linux |
+| **PostgreSQL** | Devices, assets, dashboards, users, alarms, attributes and all other configuration. Also telemetry, unless ClickHouse holds it | Its own container or service |
+| **TimescaleDB** (optional) | PostgreSQL extension that compresses telemetry history | Inside PostgreSQL |
+| **ClickHouse** (optional) | Column store for telemetry history and latest values at high rates | Its own container; on Windows inside WSL2 |
+| **SENTIENT translator** (optional) | Offline translation of your dashboards' texts | Its own container, on this or another machine |
+| **SENTIENT Gateway** | Reads PLCs and other equipment over industrial protocols and forwards their data | Separate program near the equipment |
+| **Platform Manager** | Installs, updates, backs up and repairs the server | Desktop program on the server |
 
-SENTIENT supports [**MQTT**](/docs/reference/mqtt-api/), [**LwM2M**](/docs/reference/lwm2m-api/) , [**CoAP**](/docs/reference/coap-api/) and [**HTTP**](/docs/reference/http-api/) protocols for device connectivity.
-It is possible to plugin support of different protocols or customize existing implementations.
+The licence server at `license.invenia.in` is contacted to activate the [licence](/docs/installation/licence/).
 
-#### Rule Engine
+## From a device to a dashboard
 
-SENTIENT [Rule Engine](/docs/user-guide/rule-engine-2-0/overview/) allows to process messages from devices and trigger configurable processing modules called Plugins.
+1. **Transport.** A device or gateway connects over MQTT (port 1883, or 8883 with TLS), HTTP (port 8080), CoAP (5683, or 5684 with DTLS) or SNMP, or data arrives from a cloud [integration](/docs/user-guide/integrations/). The transport checks the device's credentials, the [rate limits](/docs/user-guide/api-limits/) and the tenant's [quotas](/docs/administration/api-usage/), and turns the payload into a message.
+2. **Device.** Each device has an actor inside the server that tracks whether it is active, its sessions and pending commands.
+3. **Queue.** The message goes to a rule engine queue: **Main** by default, or another queue such as **HighPriority** chosen in the device profile. Queues set how messages are retried and in what order. See [Queues](/docs/user-guide/rule-engine-2-5/queues/).
+4. **Rule chain.** The device profile's rule chain processes the message: it filters, transforms and enriches it, saves telemetry and attributes, raises [alarms](/docs/user-guide/alarms/), sends notifications and calls other systems. [Calculated fields](/docs/user-guide/calculated-fields/) and [alarm rules](/docs/user-guide/alarm-rules/) run on the values too.
+5. **Storage.** Values are written in batches: history to PostgreSQL, TimescaleDB or ClickHouse; latest values to PostgreSQL, or to ClickHouse with a memory cache. See [Performance tuning](/docs/operations/tuning/).
+6. **Dashboard.** Open dashboards keep a WebSocket connection to the server and subscribe to the values their widgets show. A new value, or an alarm change, is pushed to them at once; nothing polls.
 
-#### Core Services
+Commands go the other way: a widget or a [scheduler](/docs/user-guide/scheduler/) event sends an [RPC](/docs/user-guide/rpc/) or writes a shared attribute, the rule chain passes it on, and the transport delivers it to the device or gateway.
 
-SENTIENT contains set of core services that allow managing the following entities:
+## Tenants and isolation
 
- * Devices and their credentials
- * Rule Chains and Rule Nodes
- * Tenants and customers
- * Widgets and Dashboard
- * Alarms and Events
- 
-Rules are able to invoke a certain subset of this APIs. For example, a rule can create an alarm for certain device.
+All data belongs to a [tenant](/docs/user-guide/ui/tenants/). Each tenant has its own devices, rule chains, dashboards, users and limits, and cannot see another tenant's data. Inside a tenant, [customers](/docs/user-guide/ui/customers/), [roles](/docs/administration/roles/) and [entity groups](/docs/administration/entity-groups/) decide which user sees what.
 
-#### Server-side API Gateway
+## Compatibility
 
-Every SENTIENT server provides REST API for registered users. 
-System Telemetry service allows to manage attributes and fetch timeseries data using websockets and REST API.
-System RPC service provides REST API to push custom commands to devices.
-Learn more about SENTIENT REST APIs [here](/docs/reference/rest-api/)
+SENTIENT uses widely supported open device protocols and a documented REST API, so existing devices, gateways and client libraries for that API work with it unchanged. See the [device APIs](/docs/reference/protocols/) and the [REST API](/docs/reference/rest-api/).
 
-## Actor model
+## Related
 
-[Actor model](https://en.wikipedia.org/wiki/Actor_model) enables high performance concurrent processing of messages from devices as long as server-side API calls.
-SENTIENT uses own Actor System implementation (sharpened for our use cases) with following actor hierarchies.
-
- ![image](/images/reference/actor-system-hierarchies.svg)
-
-The brief description of each actor's functionality is listed below:
-
- * **App Actor** - responsible for management of tenant actors. 
- An instance of this actor is always present in memory.
- * **Tenant Actor** - responsible for management of tenant device & rule chain actors. 
- An instance of this actor is always present in memory.
- * **Device Actor** - maintain state of the device: active sessions, subscriptions, pending RPC commands, etc. 
- Caches current device attributes in memory for performance reasons.
- An actor is created when the first message from the device is processed. The actor is stopped when there is no messages from devices for a certain time.
- * **Rule Chain Actor** - process incoming messages and dispatches them to rule node actors. 
- An instance of this actor is always present in memory.
- * **Rule Node Actor** - process incoming messages, and report results back to rule chain actor. 
- An instance of this actor is always present in memory.
- 
-## Clustering mode
-
-###### Service Discovery
-
-SENTIENT uses Zookeeper for service discovery.
-All SENTIENT nodes are identical and registered as ephemeral in Zookeeper. Apache Curator [path cache receipt](http://curator.apache.org/curator-recipes/path-cache.html) is used to keep track of all available sibling nodes.
-
-###### Consistent Hashing
-
-SENTIENT adopts [consistent hashing](https://en.wikipedia.org/wiki/Consistent_hashing) to ensure scalability and availability.
-Message from Device A that is received on a particular node may be forwarded to the other node based on the hash of the device ID.
-Although this introduces certain networking overhead, it allows to process all messages from a particular device using corresponding device actor on a determined server, which introduces the following advantages:
-
- * improve cache hit rate. Device attributes and other device related data are fetched by device actor on a specific server.
- * avoid race conditions. All messages for a particular device are processed on a determined server.
- * allows targeting server-side api calls based on the device id.
-   
-The illustration below demonstrates how SENTIENT handles RPC request to Device D1.
-In this case, the request arrives at Server A, but D1 is connected using MQTT to Server C. 
-In the worst-case scenario, D1 Device Actor will be located on another server B that obviously does not match either A or C.
-
- ![image](/images/reference/cluster-mode-rpc-request.svg)
-
-## Security
-
-### Transport encryption
-
-As a system administrator, you are able to configure SENTIENT to use secure sockets layer for HTTP(s) and MQTT transports.
-DTLS for CoAP is not supported yet.
-
-### Device authentication
-
-SENTIENT is designed to support many types of device credentials.
-Current release provides support of token based credentials for all [protocols](/docs/reference/protocols/) 
-and support of X.509 certificate based credentials for MQTT protocol. See [MQTT over SSL](/docs/user-guide/mqtt-over-ssl/) guide for more details.
-
-## Third-party tools
-
-SENTIENT uses following main third-party projects:
- 
- * Zookeeper - for services coordination
- * Cassandra - as a scalable and reliable database
- * Kafka (or RabbitMQ, AWS SQS, Azure Event Hub, Google PubSub) - as a scalable message queue
+- [System requirements](/docs/installation/requirements/)
+- [Ports and firewall](/docs/operations/ports/)
+- [Environment settings](/docs/operations/settings/)

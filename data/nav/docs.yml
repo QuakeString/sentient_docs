@@ -509,10 +509,7 @@ toc:
     path: /docs/reference/architecture/
   - title: Keyboard shortcuts
     path: /docs/reference/keyboard-shortcuts/
-    planned: true
   - title: Glossary
     path: /docs/reference/glossary/
-    planned: true
   - title: Release notes
     path: /docs/reference/release-notes/
-    planned: true

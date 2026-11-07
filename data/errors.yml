@@ -175,11 +175,12 @@ areas:
     messages:
     - Account locked due to too many failed login attempts. Please try again later.
     cause: |
-      The account reached the number of failed attempts set under **Security > Security settings**. The lockout protects against password guessing. It ends by itself after 5 minutes.
+      The account reached the maximum number of failed sign-ins in a row, 5 by default. The lockout protects against password guessing. It ends by itself after 5 minutes.
+
+      In 4.3.0.57 the limit is always 5. From the release after 4.3.0.57, the **Maximum number of failed login attempts** in **Security settings** sets it.
     fix: |
       - Wait 5 minutes, then sign in with the right password.
       - If the password is forgotten, use **Forgot password?**.
-      - An administrator can change the number of attempts in [Security settings](/docs/user-guide/ui/security-settings/).
 
       If you did not cause the failed attempts, someone may be guessing the password: check the [audit log](/docs/user-guide/audit-log/) for failed logins.
     check: Sign-in works after 5 minutes.
@@ -194,7 +195,7 @@ areas:
     - User password expired!
     - The entered password violates the password policy. Set a new password.
     cause: |
-      The password policy under **Security > Security settings** has an expiration period that has passed, or **Force to reset password if not valid** is on and the current password no longer meets the policy, for example after the minimum length was raised.
+      From the release after 4.3.0.57. The password policy under **Security settings** has an expiration period that has passed, or **Force to reset password if not valid** is on and the current password no longer meets the policy, for example after the minimum length was raised. In 4.3.0.57 the policy is not applied, so this error does not occur.
     fix: |
       Set a new password on the page that opens. It must meet the policy shown there. For REST clients, the error body carries a `resetToken` to set the new password with.
     check: You are signed in with the new password.
@@ -202,19 +203,22 @@ areas:
     - "Security settings|/docs/user-guide/ui/security-settings/"
 
   - id: ST-AUTH-005
-    title: New password does not meet the policy
-    summary: A new or changed password is refused because it breaks the password policy.
-    where: Change password, reset password and activation pages
+    title: New password does not meet the rules
+    summary: A new or changed password is refused because it is too short or too simple.
+    where: Change password, reset password and activation pages; an administrator's **Set password**
     http: 400
     messages:
-    - Password must be at least N characters long.
-    - Password must contain at least N uppercase letters.
-    - Password must not contain spaces.
+    - Password must be at least 8 characters
+    - "Password must contain at least three of: lowercase letter, uppercase letter, digit, special character"
     cause: |
-      The password policy under **Security > Security settings** sets a minimum and maximum length, how many uppercase letters, lowercase letters, digits and special characters a password needs, and whether spaces are allowed.
+      In 4.3.0.57 every password must have 8 to 72 characters and at least three of: a lowercase letter, an uppercase letter, a digit, a special character. The password policy fields in **Security settings** are not applied yet.
+
+      From the release after 4.3.0.57, the password policy applies instead, with messages such as `Password must be at least N characters long.` or `Password must not contain spaces.`, listing every rule the password breaks.
     fix: |
-      Choose a password that meets every rule in the message. The message lists all the rules the password breaks.
+      Choose a password that meets the rules in the message. `Plant2025` meets the 4.3.0.57 rule; `plant2025` does not.
     check: The password is saved.
+    related:
+    - "Security settings|/docs/user-guide/ui/security-settings/#password-policy"
 
   - id: ST-AUTH-006
     title: Session ended

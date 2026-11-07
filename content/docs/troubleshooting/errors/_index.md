@@ -34,7 +34,7 @@ Each page shows the message as you see it, where it appears, why it happens, how
 | [ST-AUTH-002](/docs/troubleshooting/errors/st-auth-002/) | [User account is disabled](/docs/troubleshooting/errors/st-auth-002/) |
 | [ST-AUTH-003](/docs/troubleshooting/errors/st-auth-003/) | [Account locked after failed sign-ins](/docs/troubleshooting/errors/st-auth-003/) |
 | [ST-AUTH-004](/docs/troubleshooting/errors/st-auth-004/) | [Password expired or violates the policy](/docs/troubleshooting/errors/st-auth-004/) |
-| [ST-AUTH-005](/docs/troubleshooting/errors/st-auth-005/) | [New password does not meet the policy](/docs/troubleshooting/errors/st-auth-005/) |
+| [ST-AUTH-005](/docs/troubleshooting/errors/st-auth-005/) | [New password does not meet the rules](/docs/troubleshooting/errors/st-auth-005/) |
 | [ST-AUTH-006](/docs/troubleshooting/errors/st-auth-006/) | [Session ended](/docs/troubleshooting/errors/st-auth-006/) |
 | [ST-AUTH-007](/docs/troubleshooting/errors/st-auth-007/) | [Permission denied](/docs/troubleshooting/errors/st-auth-007/) |
 | [ST-AUTH-008](/docs/troubleshooting/errors/st-auth-008/) | [Invalid two-factor verification code](/docs/troubleshooting/errors/st-auth-008/) |

@@ -16,13 +16,14 @@ error_id = "ST-AUTH-003"
 
 ## Why it happens
 
-The account reached the number of failed attempts set under **Security > Security settings**. The lockout protects against password guessing. It ends by itself after 5 minutes.
+The account reached the maximum number of failed sign-ins in a row, 5 by default. The lockout protects against password guessing. It ends by itself after 5 minutes.
+
+In 4.3.0.57 the limit is always 5. From the release after 4.3.0.57, the **Maximum number of failed login attempts** in **Security settings** sets it.
 
 ## Fix it
 
 - Wait 5 minutes, then sign in with the right password.
 - If the password is forgotten, use **Forgot password?**.
-- An administrator can change the number of attempts in [Security settings](/docs/user-guide/ui/security-settings/).
 
 If you did not cause the failed attempts, someone may be guessing the password: check the [audit log](/docs/user-guide/audit-log/) for failed logins.
 

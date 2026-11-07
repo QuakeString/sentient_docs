@@ -18,7 +18,7 @@ error_id = "ST-AUTH-004"
 
 ## Why it happens
 
-The password policy under **Security > Security settings** has an expiration period that has passed, or **Force to reset password if not valid** is on and the current password no longer meets the policy, for example after the minimum length was raised.
+From the release after 4.3.0.57. The password policy under **Security settings** has an expiration period that has passed, or **Force to reset password if not valid** is on and the current password no longer meets the policy, for example after the minimum length was raised. In 4.3.0.57 the policy is not applied, so this error does not occur.
 
 ## Fix it
 

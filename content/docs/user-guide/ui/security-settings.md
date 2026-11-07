@@ -13,7 +13,7 @@ The system administrator sets platform-wide sign-in security under **Settings > 
 
 | Setting | Default | What it does |
 |---|---|---|
-| **Maximum number of failed login attempts, before account is locked** | 5 | After this many wrong passwords in a row, the account is locked for 5 minutes. It unlocks by itself; the user does not need an administrator |
+| **Maximum number of failed login attempts, before account is locked** | 5 | After this many wrong passwords in a row, the account is locked for 5 minutes. It unlocks by itself; the user does not need an administrator. In 4.3.0.57 the limit is always 5; the field applies from the release after 4.3.0.57 |
 | **In case user account lockout, send notification to email** | `admin@sentient.local` | Who is told when an account locks. Change it to a mailbox someone reads; it needs working [mail settings](/docs/user-guide/ui/mail-settings/) |
 | **User activation link TTL in hours** | 24 | How long a new user's activation link works. See [Users](/docs/user-guide/ui/users/) |
 | **Password reset link TTL in hours** | 24 | How long a **Forgot password?** link works |
@@ -28,8 +28,10 @@ The password policy holds the rules for user passwords: minimum and maximum leng
 > **Note for 4.3.0.57:** the server does not yet check passwords against these fields. Whatever the policy says, SENTIENT requires a password of **8 to 72 characters** that contains at least **three of**: a lowercase letter, an uppercase letter, a digit, a special character. A password such as `Plant2025` meets it; `plant2025` does not.
 >
 > The same rule applies when a user activates their account, resets a password, or an administrator uses **Set password**.
+>
+> From the release after 4.3.0.57 the password policy is applied: new passwords must meet it, the password pages show it, and expired passwords must be changed at sign-in. Until a policy is saved, a password needs at least 8 characters with an uppercase letter, a lowercase letter and a digit. Password reuse is saved but not checked yet.
 
-**Force to reset password if not valid** is meant to make users whose password breaks the policy set a new one through a reset email. Like the policy fields, it has no effect yet in 4.3.0.57.
+**Force to reset password if not valid** is meant to make users whose password breaks the policy set a new one through a reset email. Like the policy fields, it has no effect yet in 4.3.0.57; from the release after 4.3.0.57, such users are sent to set a new password when they sign in.
 
 ## JWT security settings
 
@@ -44,7 +46,7 @@ After sign-in, the browser holds a token instead of the password. These settings
 
 **Changing the signing key signs everyone out**, including API clients and the mobile app, once the server restarts: the server reads the key when it starts. Do it after a suspected leak, at a quiet time, and restart SENTIENT afterwards.
 
-> **Note for 4.3.0.57:** the server does not yet apply the two expiration fields. Sign-in tokens last 15 minutes and are renewed silently, and a user stays signed in for 7 days without activity, whatever the fields say.
+> **Note for 4.3.0.57:** the server does not yet apply the two expiration fields. Sign-in tokens last 15 minutes and are renewed silently, and a user stays signed in for 7 days without activity, whatever the fields say. From the release after 4.3.0.57 both fields are applied, and a new signing key takes effect when saved, without a restart.
 
 ## Recommendations for plants
 

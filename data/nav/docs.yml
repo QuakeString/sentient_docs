@@ -355,19 +355,14 @@ toc:
   section:
   - title: Overview
     path: /docs/asset-health/
-    planned: true
   - title: Set up a machine
     path: /docs/asset-health/machine-setup/
-    planned: true
   - title: Vibration analysis
     path: /docs/asset-health/vibration-analysis/
-    planned: true
   - title: Waterfall views
     path: /docs/asset-health/waterfall/
-    planned: true
   - title: Work orders
     path: /docs/asset-health/work-orders/
-    planned: true
 
 - title: AI features
   section:

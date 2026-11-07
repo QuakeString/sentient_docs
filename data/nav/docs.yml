@@ -368,15 +368,12 @@ toc:
   section:
   - title: Overview
     path: /docs/ai/
-    planned: true
   - title: AI models
     path: /docs/ai/models/
   - title: AI assistant
     path: /docs/ai/assistant/
-    planned: true
-  - title: MCP settings
+  - title: MCP server
     path: /docs/ai/mcp/
-    planned: true
 
 - title: Administration
   section:

@@ -176,3 +176,22 @@ shots:
       - click: "button:has-text('Edit mode')"
       - wait: 2000
     page: /docs/user-guide/dashboards/
+  - id: widgets-bundles
+    url: /resources/widgets-library/widgets-bundles
+    page: /docs/user-guide/ui/widget-library/
+  - id: scada-symbols
+    url: /resources/scada-symbols
+    steps:
+      - click: "mat-slide-toggle:has-text('Include system symbols')"
+      - wait: 1500
+    page: /docs/user-guide/scada/
+  - id: device-profile-details
+    url: /profiles/deviceProfiles
+    steps:
+      - click: "mat-row:has-text('default')"
+      - waitFor: "tb-entity-details-panel"
+      - wait: 1000
+    page: /docs/user-guide/device-profiles/
+  - id: notification-rules
+    url: /notification/rules
+    page: /docs/user-guide/notifications/

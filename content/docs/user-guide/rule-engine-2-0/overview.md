@@ -62,7 +62,7 @@ Change the Root Rule Chain with care: a broken chain stops data from being store
 
 ## Scripts
 
-Script nodes (filters, transformations, switches) run small scripts in **JavaScript** or **Rhai**. Choose the language at the top of the script editor. Scripts written for ThingsBoard in TBEL run as Rhai. **Test script function** runs the script with a message you type, before you save.
+Script nodes (filters, transformations, switches) run small scripts in **JavaScript** or **Rhai**. Choose the language at the top of the script editor. Scripts written in TBEL run as Rhai. **Test script function** runs the script with a message you type, before you save.
 
 A script that removes a reading above 1000:
 

@@ -1,114 +1,40 @@
 +++
 title = "Asset profiles"
-description = "IoT Asset profiles"
+description = "Group the settings that many assets share: rule chain, queue, mobile dashboard, alarm rules and calculated fields."
 aliases = ["/docs/user-guide/ui/asset-profiles", "/docs/user-guide/ui/asset-profiles/"]
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/asset-profiles.md"
+status = "checked"
+checked = "4.3.0.57"
 +++
-## Overview
+An **asset profile** does for [assets](/docs/user-guide/ui/assets/) what a [device profile](/docs/user-guide/device-profiles/) does for devices: it holds the settings that a kind of asset has in common. Make one per kind, for example `Plant`, `Production line` or `Boiler house`. Every asset has exactly one profile; new assets get `default` unless you choose another.
 
-Since SENTIENT 3.4.2, the Tenant administrator is able to configure common settings for multiple assets using Asset Profiles.
-Each Asset has one and only profile at a single point in time.
-Experienced SENTIENT users can notice that the asset type has been deprecated in favor of the Asset Profile.
-The update script will automatically create Asset Profiles based on unique Asset Types and assign them to the appropriate assets.
+The tenant administrator manages them under **Profiles > Asset profiles** in the left menu.
 
-Asset Profile allows you to select the [Rule Chain](/docs/user-guide/rule-engine-2-0/overview/#rule-chain) and [Queue](/docs/user-guide/rule-engine-2-5/queues/) to be used by the [Rule Engine](/docs/user-guide/rule-engine-2-0/overview) for processing of the asset data.
-Let's take a look at the settings available in the asset profile.
+## Add a profile
 
-## Create Asset Profile
+Click **+**, then **Create new asset profile**, fill in the settings below and click **Add**. **Import asset profile** loads a profile exported from another SENTIENT as a JSON file.
 
-To create an asset profile, go to the Asset Profiles on the Profiles tab and click on the plus button to add a new asset profile.
+| Setting | What it does |
+|---|---|
+| **Name** | Unique within the tenant |
+| **Default rule chain** | The [rule chain](/docs/user-guide/rule-engine-2-0/overview/) for messages that come from these assets, for example values written by a calculated field. Empty means the **Root Rule Chain** |
+| **Mobile dashboard** | The dashboard the mobile app opens for one of these assets |
+| **Queue** | The queue those messages go through. Keep `Main` unless you set up [queues](/docs/user-guide/rule-engine-2-5/queues/) |
+| **Default edge rule chain** | The rule chain used on an [Edge](/docs/edge/) |
+| **Image** | Shown for the profile in lists and widgets |
+| **Description** | Free text |
 
+## Tabs
 
-![image](/images/user-guide/asset-profile/asset-profile-add-1-ce.webp)
+Click a profile to open it. Besides **Details**, it has **Calculated fields** and **Alarm rules** that apply to every asset of the profile, for example a plant's total power from its meters, or an alarm when a line's output drops. **Audit logs** and **Version control** show its history.
 
+## Default and delete
 
-## Asset Profile settings
+**Make asset profile default** in a profile's row makes it the one new assets get. To delete a profile, click the bin in its row. SENTIENT refuses with "The asset profile referenced by the assets cannot be deleted!" while assets still use it; move them to another profile first.
 
-### Rule Chain
+## Related
 
-By default, the [Root Rule Chain](/docs/user-guide/rule-engine-2-0/overview/#rule-chain) processes all incoming messages and events for any asset.
-However, the more different asset types you have, the more complex your Root Rule Chain may become.
-Many platform users create their Root Rule Chain for the sole purpose of sending messages to specific rule chains depending on the asset type.
-
-To avoid this painful and mundane activity, since SENTIENT 3.4.2, you can specify a custom Rule Chain for your assets.
-The new Rule Chain will receive asset attributes updates, and asset lifecycle(Created/Updated/Deleted) events.
-This setting is available in the Asset Profile details.
-
-
-![image](/images/user-guide/asset-profile/asset-profile-rule-chain-1-ce.webp)
-
-
-![image](/images/user-guide/asset-profile/asset-profile-rule-chain-2-ce.webp)
-
-
-### Queue
-
-By default, the [Main](/docs/user-guide/rule-engine-2-5/queues/) queue will be used to store all incoming events from any asset.
-The API layer will submit messages to this queue and Rule Engine will poll the queue for new messages.
-However, for multiple use cases, you might want to use different queues for different assets.
-For example, you might want to isolate data processing for urgent asset data and other assets or devices.
-This way, even if your system has a peak load produced by millions of water meters, whenever the important asset configuration changes will be processed without delay.
-Separation of the queues also allows you to customize different [submit](/docs/user-guide/rule-engine-2-5/queues/#queue-submit-strategy) and [processing](/docs/user-guide/rule-engine-2-5/queues/#queue-processing-strategy) strategies.
-
-This setting is available when you create an Asset Profile and in the Asset Profile details.
-
-
-![image](/images/user-guide/asset-profile/asset-profile-queue-1-ce.webp)
-
-
-![image](/images/user-guide/asset-profile/asset-profile-queue-2-ce.webp)
-
-
-## Asset profile details
-
-Clicking an asset profile opens a detailed view where you can access and manage all aspects of that profile.
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/asset-profile/asset-profile-details-page-1-ce.webp" alt="Clicking an asset profile opens a detailed view where you can access and manage all aspects of that profile." loading="lazy"><figcaption>Clicking an asset profile opens a detailed view where you can access and manage all aspects of that profile.</figcaption></figure></div>
-
-
-<b><font size="3">Details</font></b>   
-This tab contains the core configuration of the asset profile — general settings that define behavior and default parameters for all assets using this profile. Here you can configure the profile name, default dashboard, default rule chain, visual settings, and metadata that apply to all associated assets.
-
-<b><font size="3">Calculated fields</font></b>   
-Displays fields whose values are automatically computed using formulas based on asset attributes or telemetry. Calculated fields defined at the profile level are inherited by all assets using this profile, enabling consistent generation of derived metrics without modifying data sources.
-
-<b><font size="3">Alarm rules</font></b>   
-Contains alarm rules configured for the asset profile. These rules define:
-
-- trigger conditions
-- severity levels
-- alarm creation and clearing logic
-- propagation and optional automated actions
-
-All assets assigned to this profile follow the same alarm logic, simplifying monitoring and management.
-
-<b><font size="3">Audit log</font></b>   
-Shows a list of all user actions related to this asset profile — configuration changes, rule updates, and other modifications. Useful for traceability, compliance, and reviewing history of changes at the profile level.
-
-<b><font size="3">Version control</font></b>   
-Provides Git-based versioning features for the asset profile. You can export, commit, and restore profile configurations, allowing structured change management, backups, and collaboration.
-
-## Related guides
-
-You can use the following links to check out the related guides:
-
-
- - [Rule Chains](/docs/user-guide/ui/rule-chains/)
- - [Queues](/docs/user-guide/rule-engine-2-5/queues/)
- - [Assets](/docs/user-guide/ui/assets/)
- - [Entities and Relations](/docs/user-guide/entities-and-relations/)
-  
-  
-  
-
-<hr>
-
-## Your feedback
-
-Don&#39;t hesitate to star SENTIENT on [github](https://github.com/sentient/sentient) to help us spread the word.
-If you have any questions about this sample, please contact us.
+- [Assets](/docs/user-guide/ui/assets/)
+- [Device profiles](/docs/user-guide/device-profiles/)
+- [Calculated fields](/docs/user-guide/calculated-fields/)

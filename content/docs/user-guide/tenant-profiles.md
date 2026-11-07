@@ -1,178 +1,63 @@
 +++
-title = "Tenant Profiles"
-description = "IoT tenant profiles"
+title = "Tenant profiles"
+description = "Set what each tenant may use: entity counts, monthly quotas, data retention, rate limits, files, WebSocket sessions and AI."
 aliases = ["/docs/user-guide/ui/tenant-profiles", "/docs/user-guide/ui/tenant-profiles/"]
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/tenant-profiles.md"
+status = "checked"
+checked = "4.3.0.57"
 +++
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 3.2</em></strong></td>
-     </tr>
-   </thead>
-</table> 
+A **tenant profile** sets the limits for the [tenants](/docs/user-guide/ui/tenants/) that use it: how many devices they may add, how long their data is kept, how fast their devices may send. A single-plant installation can keep the `Default` profile, which is unlimited. Use profiles when one SENTIENT serves several plants or customers that must not slow each other down.
 
+The system administrator manages them under **Tenant profiles** in the left menu. Each tenant has one profile, chosen in the tenant's details. A change to a profile applies to all its tenants at once.
 
-A System Administrator is able to configure common settings for multiple tenants using Tenant Profiles. 
-Each Tenant has the one and only profile at a single point in time.
+## The licence comes first
 
-Let's review the settings available in the tenant profile, one-by-one.
+Your SENTIENT [licence](/docs/installation/licence/) can also set limits, for example the number of devices. Where it does, the licence value replaces the profile's value for every tenant: you cannot raise a limit above the licence in a profile.
 
-## Profile configuration
+## Values
 
-These settings allow the system administrator to configure limitations on the number of entities created by a tenant, set limits on the maximum number of messages, API calls, per month, configure the maximum number of requests the platform should process for a specific device (device-level) or for all devices belonging to a single tenant (tenant-level), etc.
+In every number field, **0 means unlimited**. Monthly quotas count from the first of the month and start again each month. When a tenant reaches 80 % of a quota, its state turns to warning; at 100 % that feature stops for the tenant until the next month or until you raise the quota. The tenant's [API usage](/docs/administration/api-usage/) page shows how far each counter is.
 
-Let's consider more about these settings below.
+## Sections
 
-### Entities limits
+| Section | What you set |
+|---|---|
+| **Entities** | The maximum number of devices, dashboards, assets, users, customers, rule chains and edges. At the limit, adding one more fails with, for example, "Devices limit reached" |
+| **Rule Engine** | Monthly quotas for rule engine executions, transport messages, transport data points, JavaScript and Rhai script executions, and how many rule nodes one message may pass through |
+| **Calculated fields** | Calculated fields per entity, arguments per field, data points in a rolling argument, and the size of a field's state |
+| **Time-to-live** | How many days SENTIENT keeps time-series data (**Storage TTL days by default**), alarms, RPC commands, queue statistics and rule engine errors. Older data is deleted. **Data points storage days maximum number** is a monthly quota of stored data point-days |
+| **Alarms and notifications** | Whether the tenant may send SMS, and monthly quotas for SMS, emails and created alarms |
+| **Debug** | How long debug mode stays on for a rule node or calculated field before it switches off by itself |
+| **Files** | Total size of resource files (images, JavaScript modules, SCADA symbols) and of [OTA packages](/docs/user-guide/ota-updates/), and the size of one resource file, in bytes |
+| **WS** | WebSocket sessions and subscriptions per tenant, per customer and per user. Each open dashboard uses a session; each widget's data uses subscriptions |
+| **Rate limits** | How fast devices, gateways, the REST API and other parts may go, below |
+| **Report limits** | The number of [report](/docs/reports/) templates and schedules |
+| **Data keys limits** | The number of different telemetry keys and attribute keys |
+| **AI** | Whether the tenant may add its own AI models, use the system's models (with monthly token and per-minute request limits), and use the AI assistant, also for customer users |
 
-This group of settings allows the System Administrator to configure a maximum number of entities that each Tenant is able to create.
+## Rate limits
 
+A rate limit is one or more pairs of **number of messages** per **seconds**, for example `100` per `1` and `1000` per `60`: at most 100 in any second and at most 1,000 in any minute. Click a limit to edit it, **Add limit** for another pair. Empty means no limit.
 
-**[SENTIENT](/docs/user-guide/install/installation-options/)** supports limits for the following entities: devices, dashboards, assets, users, customers, and rule chains.
+The most used:
 
-**[SENTIENT Professional Edition](/docs/installation/)** supports limits for everything listed above and as well additional constraint support for the following entities: integrations, converters, and scheduler events.
+| Limit | Applies to |
+|---|---|
+| **Transport tenant messages** | All messages from all the tenant's devices together |
+| **Transport device messages** | Messages from one device |
+| **Transport gateway messages** | Messages from one gateway, for all the devices behind it |
+| **Transport tenant telemetry data points** | Values per second across the tenant |
+| **REST requests for tenant** / **for customer** | Calls to the REST API by the tenant's users and API clients |
 
+Over a transport limit, MQTT messages are dropped (the server logs a warning) and HTTP calls get `429 Too Many Requests`. See [Rate limits](/docs/user-guide/api-limits/).
 
-<div class="st-gallery"><figure><img src="/images/user-guide/tenant-profile/sentient-ce-tenant-profiles-entity-limits.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
+## Add, default and delete
 
+Click **+** to add a profile; give it a **Name** and set the sections. **Make tenant profile default** in a profile's row makes it the one new tenants get. A profile can only be deleted when no tenant uses it ("Cannot delete tenant profile. 2 tenant(s) are using this profile.") and it is not the default.
 
- 
-### API Limits & Usage
+## Related
 
-This group of settings allows a System Administrator to configure a maximum number of messages, API calls, etc., per month that each Tenant would like to perform. 
-SENTIENT constantly collects and analyzes statistics about API Usage. The typical update interval of the statistics is 1 minute
-
-SENTIENT tracks API usage for six main components: Transport, Rule Engine, JS functions, Telemetry persistence, Email, and SMS services. The platform will disable the component if one of the related API Limits reaches a threshold. 
-For example, if Tenant devices produce more than 100M messages per a month, the platform will disable all connections for devices that belong to this Tenant. 
-When the API usage is disabled or reaches a certain threshold (typically 80%) SENTIENT will notify the Tenant Administrator via email.  
-
-Let's review each limit separately:
-
-**Rule Engine executions** mean any execution of the rule node that belongs to the current Tenant. Processing of a single telemetry message may cause multiple Rule Engine executions.
-The platform will also count periodic messages produced by Generator nodes, etc.
-
-
-**Transport Messages** means any message that your device sends to the server. This may be telemetry, attribute update, RPC call, etc.
-
-**Transport Data Points** means a number of the Key-Value pairs that your telemetry or attribute messages contain. 
-For example, the message listed below contains 5 data points, because the “jsonKey” corresponds to one data point.  
-
-```json
-{
- "stringKey":"value1", 
- "booleanKey":true, 
- "doubleKey":42.0, 
- "longKey":73, 
- "jsonKey": {
-    "someNumber": 42,
-    "someArray": [1,2,3],
-    "someNestedObject": {"key": "value"}
- }
-}
-```
-
-
-<div class="st-callout info">
-
-
-**Note**: If the value of a String or JSON key is larger than 512 characters, the platform will count it as multiple data points.
-
-
-</div>
-
-
-**JavaScript executions** mean any execution of the custom function defined by Tenant Administrators. For example, processing of the “Script” filter or a transformation node, an invocation of the data converter, etc.       
-
-**Data points storage days** are calculated for all time-series data points that are stored in the database. 
-Platform multiplies the number of data points by the number of days those data points will be stored. The TTL parameter is used to extract the number of days to store the data. 
-For example, if you store 3 data points for 30 days, this is 90 data point storage days.
-A System Administrator is able to configure default TTL using the "**Default Storage TTL Days**" parameter in the tenant profile.
-A Tenant Administrator is able to overwrite default TTL using the "**Save Timeseries**" ule node configuration or using the “TTL” parameter in the post telemetry request.
-
-**Alarms TTL** means how many days to store alarms in the database.
-
-**Alarms sent** means the total number of alarms created per the period (one month by default).
-
-**Emails sent** means the number of emails that are sent from the rule engine using system SMTP provider (settings). 
-Please note that the Tenant Administrator is able to define custom SMTP settings in both Community and Professional Editions of the platform. 
-Emails sent with custom SMTP settings do not affect API limits.  
-
-**SMS sent** means the number of SMSes that are sent from the rule engine using the system SMS provider. 
-Please note that the Tenant Administrator is able to define custom SMS provider settings in both Community and Professional Editions of the platform. 
-SMS sent with custom SMTP settings do not affect API limits.
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/tenant-profile/sentient-ce-api-limits.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
-
-
-#### API Usage dashboard
-
-As a Tenant Administrator, you can review the API Usage dashboard. 
-The dashboard below allows Tenant Administrators to learn more about their hourly/daily/monthly API usage and instantly review the status of the API limits. 
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/tenant-profile/sentient-ce-tenant-profiles-api-limits-dashboard.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
-
-
-### Files limits
-
-The System Administrator can configure the maximum size of an individual file, the maximum total size of image files in the "[Image gallery](/docs/user-guide/image-gallery/)" and resource files in the "Resource Library," as well as the maximum total size of [OTA package files](/docs/user-guide/ota-updates/) that the platform can store in the database.
-
-Values are specified in **bytes**.
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/tenant-profile/sentient-ce-files.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
-
-
-### Rate Limits
-
-This group of settings allows a System Administrator to configure a maximum number of
-requests the platform should process for a specific device (device-level) or for all devices belonging to a single tenant (tenant-level).
-The implementation of rate limits is based on the [token bucket](https://en.wikipedia.org/wiki/Token_bucket) algorithm.
-
-The rate limit definition consists of the value and time interval. For example, "1000:60" means "no more than 1000 messages per 60 seconds". 
-You can define multiple intervals with ",". For example, "100:1,1000:60" means "bursts of 100 messages per second but no more than 1000 times per 60 seconds".
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/tenant-profile/sentient-ce-rate-limits.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
-
-
-## Processing in isolated SENTIENT Rule Engine queues
-
-SENTIENT Rule Engine is the main "worker" in the cluster and is responsible for processing incoming messages.
-
-By default, all messages (such as telemetry, connectivity, and lifecycle events) are pushed to the same message queue/topic (powered by Kafka, RabbitMQ, AWS SQS, Azure Service Bus, Google Pub/Sub).
-SENTIENT pushes messages for all Tenants to a common queue when isolated processing is disabled (default). 
-
-SENTIENT pushes messages to a separate queue when you select processing to be isolated for a particular tenant. 
-This provides a better level of isolation for those tenants. You need to create tenant profile with enabled "Use isolated SENTIENT Rule Engine queues" box 
-and assign for a particular Tenant, or update existing tenant profile. 
-This will instruct Rule Engine to subscribe to specific message queue topics that contain data for corresponding tenants.
-
-You might as well set up a separate Rule Engine instance that will be responsible for tenants of specific tenant profiles only.
-See [configuration parameters](/docs/user-guide/install/config/#sentient-service-parameters).
-
-### Queue configuration for isolated tenants
-
-
-1. Step 1. Open tenant profile menu and add new tenant profile. Click "isolated SENTIENT RuleEngine" box, Main queue added by default and can not be renamed or deleted.
-
-1. Step 2. Click "Add Queue" if you need to add new custom queue.
-
-1. Step 3. Configure submit and processing settings.
-
-1. Step 4. Now tenant profile is ready to assign for particular tenants.
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/tenant-profile/queue-tenant-profile-1-ce.webp" alt="Step 1. Open tenant profile menu and add new tenant profile. Click &quot;isolated SENTIENT RuleEngine&quot; box, Main queue added by default and can not be renamed or deleted." loading="lazy"><figcaption>Step 1. Open tenant profile menu and add new tenant profile. Click "isolated SENTIENT RuleEngine" box, Main queue added by default and can not be renamed or deleted.</figcaption></figure><figure><img src="/images/user-guide/tenant-profile/queue-tenant-profile-2-ce.webp" alt="Step 2. Click &quot;Add Queue&quot; if you need to add new custom queue." loading="lazy"><figcaption>Step 2. Click "Add Queue" if you need to add new custom queue.</figcaption></figure><figure><img src="/images/user-guide/tenant-profile/queue-tenant-profile-3-ce.webp" alt="Step 3. Configure submit and processing settings." loading="lazy"><figcaption>Step 3. Configure submit and processing settings.</figcaption></figure><figure><img src="/images/user-guide/tenant-profile/queue-tenant-profile-4-ce.webp" alt="Step 4. Now tenant profile is ready to assign for particular tenants." loading="lazy"><figcaption>Step 4. Now tenant profile is ready to assign for particular tenants.</figcaption></figure></div>
-
-
-After assigning tenant profile for a particular tenant configured queues automatically created and started, and ready
-for using in rule chain or device profile.
-
-More about queue settings in [guide](/docs/user-guide/rule-engine-2-5/queues/#queue-settings)
+- [Tenants](/docs/user-guide/ui/tenants/)
+- [API usage](/docs/administration/api-usage/)
+- [Licence](/docs/installation/licence/)

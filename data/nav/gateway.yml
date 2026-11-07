@@ -37,7 +37,6 @@ toc:
     path: /docs/iot-gateway/config/bacnet/
   - title: Beckhoff ADS
     path: /docs/iot-gateway/config/ads/
-    planned: true
   - title: BLE
     path: /docs/iot-gateway/config/ble/
   - title: CAN
@@ -50,7 +49,6 @@ toc:
     planned: true
   - title: EtherNet/IP
     path: /docs/iot-gateway/config/ethernet-ip/
-    planned: true
   - title: FTP
     path: /docs/iot-gateway/config/ftp/
   - title: IEC 61850
@@ -60,7 +58,6 @@ toc:
     path: /docs/iot-gateway/config/knx/
   - title: Mitsubishi MC protocol
     path: /docs/iot-gateway/config/mcprotocol/
-    planned: true
   - title: Modbus
     path: /docs/iot-gateway/config/modbus/
   - title: MQTT
@@ -71,7 +68,6 @@ toc:
     path: /docs/iot-gateway/config/odbc/
   - title: Omron FINS
     path: /docs/iot-gateway/config/fins/
-    planned: true
   - title: OPC UA
     path: /docs/iot-gateway/config/opc-ua/
   - title: PROFINET

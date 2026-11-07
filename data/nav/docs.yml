@@ -390,7 +390,6 @@ toc:
     planned: true
   - title: AI models
     path: /docs/ai/models/
-    planned: true
   - title: AI assistant
     path: /docs/ai/assistant/
     planned: true
@@ -427,7 +426,6 @@ toc:
       path: /docs/user-guide/oauth-2-support/
     - title: Domains
       path: /docs/administration/domains/
-      planned: true
     - title: API keys
       path: /docs/user-guide/security/api-keys/
     - title: Secrets

@@ -15,6 +15,9 @@ They are [SCADA symbols](/docs/user-guide/scada/), so they work on any dashboard
 
 In edit mode, click **Add widget** and open one of these bundles, or type the equipment's name in the search box.
 
+![The Rotating Equipment bundle in the widgets library](/images/st/industrial-widgets-bundle.webp)
+
+
 | Bundle | Widgets |
 |---|---|
 | **Rotating Equipment** | **Pump** (12 types: centrifugal end suction, vertical inline, multistage, split case, gear, progressive cavity, diaphragm metering, plunger, submersible, vertical turbine, lobe, peristaltic), **Fan** (8 types: ID, FD, axial, cooling tower, roof exhaust, belt-driven blower, roots blower), **Electric Motor** (foot mounted, flange, vertical, gearmotor, explosion-proof, slip-ring, DC) |

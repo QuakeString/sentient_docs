@@ -14,6 +14,9 @@ You need a gateway device in SENTIENT first: open **Entities > Gateways**, click
 ## Docker
 
 1. In SENTIENT, open the gateway and click **Launch command** at the top right.
+
+   ![The Launch command dialog with the Download button for docker-compose.yml](/images/st/gateway-launch-command.webp)
+
 2. Under **Download configuration file**, click **Download**, and copy `docker-compose.yml` to the gateway machine. The file holds the gateway's access token, so keep it private.
 3. In the folder with the file, run:
 

@@ -21,6 +21,9 @@ A rule belongs to one of these:
 - **Alarms > Alarm rules** in the left menu lists every rule. **Alarm rule filter** narrows it by alarm type and entity.
 - The **Alarm rules** tab of a device, asset, customer, device profile or asset profile lists the rules on it.
 
+![The Alarm rules list with one rule on the Pump device profile](/images/st/alarm-rules.webp)
+
+
 Click **+** and choose **Add alarm rule**. **Import alarm rule** reads a rule exported earlier, and **Add from solution hub** takes a ready-made one from the [solution hub](/docs/solution-hub/).
 
 ## 1. General
@@ -92,6 +95,10 @@ Under **Advanced settings**, choose who else sees the alarm: **Propagate alarm t
 Click **Add**. The rule works at once, for every entity it applies to.
 
 ## Manage rules
+
+Click a rule to open its details.
+
+![The details of an alarm rule: its arguments, severities and clear condition](/images/st/alarm-rule-dialog.webp)
 
 Each row in the list shows the alarm type, the entity, the severities and whether there is a clear condition. Its buttons:
 

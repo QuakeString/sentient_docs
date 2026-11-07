@@ -15,6 +15,9 @@ SENTIENT's built-in symbols cover most plant equipment (see [Industrial equipmen
 2. Click **+** and **Upload SCADA symbol**, and choose the SVG file. Or click an existing symbol. With **Include system symbols** on, the built-in symbols are listed too; open one to study how it is made.
 3. The editor opens with the drawing on the left and its settings on the right.
 
+![The SCADA symbol editor with a built-in symbol open](/images/st/scada-symbol-editor.webp)
+
+
 The drawing can be shown as the picture (**SVG**) or as its code (**XML**). **Show hidden elements** reveals parts that are hidden until the data says otherwise, for example a fault outline.
 
 ## The settings

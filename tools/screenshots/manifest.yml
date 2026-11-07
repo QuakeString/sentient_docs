@@ -34,6 +34,7 @@ shots:
   - id: devices-list
     url: /entities/devices
     page: /docs/user-guide/ui/devices/
+    clip: [56, 50, 1384, 600]   # drop the empty rows below the list
   - id: device-details-telemetry
     url: /entities/devices/{device:Feed pump P-101}
     steps:
@@ -52,6 +53,7 @@ shots:
   - id: assets-list
     url: /entities/assets
     page: /docs/user-guide/ui/assets/
+    clip: [56, 50, 1384, 600]   # drop the empty rows below the list
   - id: alarms-list
     url: /alarms/alarms
     page: /docs/user-guide/alarms/

@@ -58,9 +58,6 @@ shots:
     url: /alarms/alarms
     page: /docs/user-guide/alarms/
     themes: [light, dark]
-  - id: alarm-rules
-    url: /alarms/alarm-rules
-    page: /docs/user-guide/alarm-rules/
   - id: dashboards-list
     url: /dashboards
     page: /docs/user-guide/dashboards/
@@ -196,19 +193,22 @@ shots:
   - id: notification-rules
     url: /notification/rules
     page: /docs/user-guide/notifications/
+    themes: [light, dark]
   # Wave 2 — round 4: alarm rules, SCADA editor, industrial widgets, gateway
   - id: alarm-rules
     url: /alarms/alarm-rules
     clip: [56, 50, 1384, 400]   # the toolbar and the seeded rule
     page: /docs/user-guide/alarm-rules/
+    themes: [light, dark]
   - id: alarm-rule-dialog
     url: /alarms/alarm-rules
     size: [1440, 1400]
     steps:
       - click: "mat-row:has-text('High bearing vibration')"
-      - waitFor: "mat-dialog-container"
+      - waitFor: "tb-entity-details-panel"   # a row opens the details panel, not a dialog
       - wait: 1200
-    capture: "mat-dialog-container"
+    capture: "tb-entity-details-panel"
+    pad: 0   # the panel touches the table, so padding shows a strip of it
     page: /docs/user-guide/alarm-rules/
     themes: [light, dark]
   - id: scada-symbol-editor
@@ -224,8 +224,12 @@ shots:
   - id: industrial-widgets-bundle
     url: /resources/widgets-library/widgets-bundles
     steps:
+      - click: ".mat-mdc-table-toolbar button:has(mat-icon:text-is('search')) >> visible=true"   # the bundle is not on the first page
+      - fill: ["input[placeholder='Search widget bundles']", "Rotating"]
+      - wait: 1500
       - click: "mat-row:has-text('Rotating Equipment')"
       - wait: 3000
+      - hover: "text=Rotating Equipment: Widgets"   # move the pointer off the row, or the Edit widget tooltip shows
     page: /docs/dashboards/industrial-widgets/
     themes: [light, dark]
   - id: gateway-launch-command
@@ -239,19 +243,23 @@ shots:
     capture: "mat-dialog-container"
     mask: ["mat-dialog-container pre", "mat-dialog-container code"]   # the commands hold the access token
     page: /docs/iot-gateway/install-windows/
+    themes: [light, dark]
   - id: gateway-connectors
     url: /entities/gateways
     steps:
       - click: "mat-row:has-text('Plant gateway GW-1')"
       - wait: 2500
       - click: "button:has-text('Connectors'), a:has-text('Connectors')"
-      - wait: 2500
+      - waitFor: "text=Select connector to display config"
+      - wait: 3000   # the connectors table header renders after the panels
     page: /docs/iot-gateway/
+    themes: [light, dark]
   # Round 5 — after the 2026-11-07 fixes (image master-326d028a)
   - id: scheduler-events
-    url: /scheduler
+    url: /features/scheduler   # /scheduler redirects to the home page
     page: /docs/user-guide/scheduler/
     themes: [light, dark]
   - id: ota-updates
     url: /otaUpdates
     page: /docs/user-guide/ota-updates/
+    themes: [light, dark]

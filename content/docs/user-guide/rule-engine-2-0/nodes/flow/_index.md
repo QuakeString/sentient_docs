@@ -1,21 +1,20 @@
 +++
 title = "Flow nodes"
-description = "Rule engine flow nodes"
+description = "Move a message between rule chains and queues."
 aliases = ["/docs/paas/eu/user-guide/rule-engine-2-0/flow-nodes/", "/docs/paas/user-guide/rule-engine-2-0/flow-nodes/", "/docs/pe/user-guide/rule-engine-2-0/flow-nodes/", "/docs/user-guide/rule-engine-2-0/flow-nodes/"]
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/rule-engine-2-0/nodes/flow/index.md"
+status = "checked"
+checked = "4.3.0.57"
+hide_children = true
 +++
-Flow nodes control how messages move between different parts of the rule engine.
+| Node | What it does | Outputs |
+|---|---|---|
+| [rule chain](/docs/user-guide/rule-engine-2-0/nodes/flow/rule-chain/) | Sends the message to another rule chain | Success |
+| [output](/docs/user-guide/rule-engine-2-0/nodes/flow/output/) | Ends a rule chain that another chain called, and returns the message to it through the output's name | Names of the output nodes |
+| [checkpoint](/docs/user-guide/rule-engine-2-0/nodes/flow/checkpoint/) | **Not working yet in 4.3.0.57:** a rule chain that uses it does not load. Moves the message to another queue | Success |
+| [acknowledge](/docs/user-guide/rule-engine-2-0/nodes/flow/acknowledge/) | Marks the message as processed so the queue does not retry it | Success |
 
-These nodes can transfer messages between queues to enable sequential processing or separate different workloads, forward messages to other rule chains, and return results back 
-to the calling rule chain.
+Every node also has a **Failure** output, used when the node cannot do its job. Nodes without a link do not have their own page yet.
 
-This allows you to build modular workflows by breaking complex logic into reusable rule chains.
-
-- [acknowledge](/docs/user-guide/rule-engine-2-0/nodes/flow/acknowledge) — acknowledges the incoming message and forwards it to the next nodes in the rule chain.
-- [checkpoint](/docs/user-guide/rule-engine-2-0/nodes/flow/checkpoint) — transfers incoming messages to a specified queue.
-- [rule chain](/docs/user-guide/rule-engine-2-0/nodes/flow/rule-chain) — forwards incoming messages to a specified rule chain.
-- [output](/docs/user-guide/rule-engine-2-0/nodes/flow/output) — Used in combination with the rule chain node. Allows to publish result of the message processing to the caller rule chain.
+Related: [All rule nodes](/docs/user-guide/rule-engine-2-0/nodes/), [Script language (Rhai)](/docs/user-guide/rhai/), [Getting started with rule chains](/docs/user-guide/rule-engine-2-0/re-getting-started/)

@@ -1,33 +1,32 @@
 +++
 title = "External nodes"
-description = "Rule engine external nodes"
+description = "Send a message to another system: e-mail, SMS, chat, message brokers, cloud services, databases and AI models."
 aliases = ["/docs/paas/eu/user-guide/rule-engine-2-0/external-nodes/", "/docs/paas/user-guide/rule-engine-2-0/external-nodes/", "/docs/pe/user-guide/rule-engine-2-0/external-nodes/", "/docs/user-guide/rule-engine-2-0/external-nodes/"]
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/rule-engine-2-0/nodes/external/index.md"
+status = "checked"
+checked = "4.3.0.57"
+hide_children = true
 +++
-External nodes are the integration components of SENTIENT's rule engine that send messages to third-party services and external systems.
+| Node | What it does | Outputs |
+|---|---|---|
+| [rest api call](/docs/user-guide/rule-engine-2-0/nodes/external/rest-api-call/) | Calls an HTTP endpoint and passes on the answer | Success |
+| [mqtt](/docs/user-guide/rule-engine-2-0/nodes/external/mqtt/) | Publishes to an MQTT broker | Success |
+| [kafka](/docs/user-guide/rule-engine-2-0/nodes/external/kafka/) | Publishes to a Kafka topic | Success |
+| [rabbitmq](/docs/user-guide/rule-engine-2-0/nodes/external/rabbitmq/) | **Not working yet in 4.3.0.57:** a rule chain that uses it does not load. Publishes to a RabbitMQ exchange | Success |
+| [send email](/docs/user-guide/rule-engine-2-0/nodes/external/send-email/) | Sends an e-mail built by the to email node | Success |
+| [send sms](/docs/user-guide/rule-engine-2-0/nodes/external/send-sms/) | Sends an SMS through the configured provider | Success |
+| [send notification](/docs/user-guide/rule-engine-2-0/nodes/external/send-notification/) | Sends a SENTIENT notification to users | Success |
+| [send slack](/docs/user-guide/rule-engine-2-0/nodes/external/send-to-slack/) | Posts to a Slack channel | Success |
+| microsoft teams | Posts to a Microsoft Teams channel through a webhook | Success |
+| database query | Runs SQL on an external PostgreSQL database, never SENTIENT's own. Values are passed as `$1`, `$2` parameters, and the query is read-only unless you allow writes | Success |
+| [AI request](/docs/user-guide/rule-engine-2-0/nodes/external/ai-request/) | Sends a prompt to an AI model; the answer replaces the message | Success |
+| [aws sns](/docs/user-guide/rule-engine-2-0/nodes/external/aws-sns/) | Publishes to an AWS SNS topic | Success |
+| [aws sqs](/docs/user-guide/rule-engine-2-0/nodes/external/aws-sqs/) | Sends to an AWS SQS queue | Success |
+| [aws lambda](/docs/user-guide/rule-engine-2-0/nodes/external/aws-lambda/) | **Not working yet in 4.3.0.57:** a rule chain that uses it does not load. Calls an AWS Lambda function | Success |
+| [azure iot hub](/docs/user-guide/rule-engine-2-0/nodes/external/azure-iot-hub/) | **Not working yet in 4.3.0.57:** a rule chain that uses it does not load. Sends device-to-cloud messages to Azure IoT Hub | Success |
+| [push to cloud](/docs/user-guide/rule-engine-2-0/nodes/action/push-to-cloud/) | **Not working yet in 4.3.0.57:** a rule chain that uses it does not load. On a SENTIENT Edge: sends the message to the main server | Success |
 
-These nodes publish or transmit data to destinations outside SENTIENT, including cloud platforms (AWS, Azure, GCP), messaging systems (MQTT, Kafka, RabbitMQ), 
-communication services (email, SMS, Slack), AI services, and REST APIs.
+Every node also has a **Failure** output, used when the node cannot do its job. Nodes without a link do not have their own page yet.
 
-This allows rule chains to integrate with external infrastructure and services as part of automated workflows.
-
-- [AI request](/docs/user-guide/rule-engine-2-0/nodes/external/ai-request) — sends a request to a large language model with customizable prompts and optional file attachments, returning the AI-generated response as the outgoing message data.
-- [aws lambda](/docs/user-guide/rule-engine-2-0/nodes/external/aws-lambda) — invokes AWS Lambda function with incoming message data as the payload and returns the function's response as outgoing message data.
-- [aws sns](/docs/user-guide/rule-engine-2-0/nodes/external/aws-sns) — publishes incoming message data to AWS SNS topic and returns response metadata in the outgoing message.
-- [aws sqs](/docs/user-guide/rule-engine-2-0/nodes/external/aws-sqs) — publishes incoming message data to AWS Simple Queue Service (SQS) queue and returns response metadata in the outgoing message.
-- [azure iot hub](/docs/user-guide/rule-engine-2-0/nodes/external/azure-iot-hub) — publishes incoming message data to [Azure IoT Hub](https://azure.microsoft.com/en-us/products/iot-hub) using MQTT protocol with QoS 1 and support for SAS token and X.509 certificate authentication.
-- [gcp pubsub](/docs/user-guide/rule-engine-2-0/nodes/external/gcp-pubsub) — publishes incoming message data to [Google Cloud Pub/Sub](https://cloud.google.com/pubsub) topic and return response metadata in the outgoing message.
-- [kafka](/docs/user-guide/rule-engine-2-0/nodes/external/kafka) — publishes messages to [Apache Kafka](https://kafka.apache.org/) topic, sending the incoming message data as the record value.
-- [mqtt](/docs/user-guide/rule-engine-2-0/nodes/external/mqtt) — publishes incoming message data to an external MQTT broker using QoS 1 (at least once), with support for dynamic topic patterns, multiple authentication methods, and TLS/SSL encryption.
-- [rabbitmq](/docs/user-guide/rule-engine-2-0/nodes/external/rabbitmq) — publishes messages to [RabbitMQ](https://www.rabbitmq.com/) exchanges, sending the incoming message data as the message body.
-- [rest api call](/docs/user-guide/rule-engine-2-0/nodes/external/rest-api-call) — sends HTTP requests to external endpoints using configurable methods, authentication, and proxy settings, returning the response as outgoing message data.
-- [send email](/docs/user-guide/rule-engine-2-0/nodes/external/send-email) — sends email messages via SMTP server with support for TLS encryption and proxy configuration.
-- [send notification](/docs/user-guide/rule-engine-2-0/nodes/external/send-notification) — sends notifications to specified recipients using notification templates through the [notification center](/docs/user-guide/notifications/).
-- [send sms](/docs/user-guide/rule-engine-2-0/nodes/external/send-sms) — sends SMS messages to specified phone numbers via AWS SNS, Twilio, or SMPP providers with templatization support.
-- [send to slack](/docs/user-guide/rule-engine-2-0/nodes/external/send-to-slack) — sends messages to [Slack](https://slack.com/) public channels, private channels, or direct messages via Slack API.
-- <span class="item-pe product-label-padding">[twilio sms](/docs/user-guide/rule-engine-2-0/nodes/external/twilio-sms)</span> — sends incoming message data as SMS to specified phone numbers via [Twilio](https://www.twilio.com/messaging/channels/sms).
-- <span class="item-pe product-label-padding">[twilio voice](/docs/user-guide/rule-engine-2-0/nodes/external/twilio-voice)</span> — sends incoming message data as voice messages to specified phone numbers via [Twilio](https://www.twilio.com/voice) text-to-speech service.
+Related: [All rule nodes](/docs/user-guide/rule-engine-2-0/nodes/), [Script language (Rhai)](/docs/user-guide/rhai/), [Getting started with rule chains](/docs/user-guide/rule-engine-2-0/re-getting-started/)

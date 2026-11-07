@@ -1,29 +1,30 @@
 +++
 title = "Enrichment nodes"
-description = "Rule engine enrichment nodes"
+description = "Add data to a message: attributes, latest values, history, or details of the originator and the entities around it."
 aliases = ["/docs/paas/eu/user-guide/rule-engine-2-0/enrichment-nodes/", "/docs/paas/user-guide/rule-engine-2-0/enrichment-nodes/", "/docs/pe/user-guide/rule-engine-2-0/enrichment-nodes/", "/docs/user-guide/rule-engine-2-0/enrichment-nodes/"]
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/rule-engine-2-0/nodes/enrichment/index.md"
+status = "checked"
+checked = "4.3.0.57"
+hide_children = true
 +++
-Enrichment nodes are used to include additional information about the message originator, entities related to originator, and other contextual data into the outgoing message 
-for further processing steps within the rule chain. 
+| Node | What it does | Outputs |
+|---|---|---|
+| [originator attributes](/docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-attributes/) | Adds attributes and latest values of the originator | Success |
+| [originator fields](/docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-fields/) | Adds fields of the originator, such as name, type or label | Success |
+| [originator telemetry](/docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-telemetry/) | Adds the originator's values over a time range | Success |
+| [calculate delta](/docs/user-guide/rule-engine-2-0/nodes/enrichment/calculate-delta/) | Adds the difference between this value and the previous one, for meters and counters | Success |
+| [customer attributes](/docs/user-guide/rule-engine-2-0/nodes/enrichment/customer-attributes/) | Adds attributes or latest values of the originator's customer | Success |
+| [customer details](/docs/user-guide/rule-engine-2-0/nodes/enrichment/customer-details/) | Adds the customer's details, such as e-mail, phone and address | Success |
+| [tenant attributes](/docs/user-guide/rule-engine-2-0/nodes/enrichment/tenant-attributes/) | Adds attributes or latest values of the tenant | Success |
+| [tenant details](/docs/user-guide/rule-engine-2-0/nodes/enrichment/tenant-details/) | Adds the tenant's details, such as e-mail, phone and address | Success |
+| [related entity data](/docs/user-guide/rule-engine-2-0/nodes/enrichment/related-entity-data/) | Adds attributes, latest values or fields of a related entity | Success |
+| [related device attributes](/docs/user-guide/rule-engine-2-0/nodes/enrichment/related-device-attributes/) | Adds attributes or latest values of a related device | Success |
+| [fetch device credentials](/docs/user-guide/rule-engine-2-0/nodes/enrichment/fetch-device-credentials/) | Adds the device's credentials | Success |
+| entity details | Adds the originator's name, type and label | Success |
+| asset details | Adds details of an asset originator | Success |
+| entity data | Adds data from an entity query, with filters and sorting | Success |
 
-These nodes can enrich messages with attributes, latest time series values, historical time series data, and entity details fetched from various sources including 
-the message originator, related entities, current tenant, or customer.
+Every node also has a **Failure** output, used when the node cannot do its job. Nodes without a link do not have their own page yet.
 
-This enrichment allows subsequent rule nodes to make context-aware decisions and apply processing logic based on configuration settings and contextual data.
-
-- [calculate delta](/docs/user-guide/rule-engine-2-0/nodes/enrichment/calculate-delta) — calculates the delta (difference) between the current value in an incoming message and the previous value from the same originator, optionally including the time elapsed between messages.
-- [customer attributes](/docs/user-guide/rule-engine-2-0/nodes/enrichment/customer-attributes) — enriches messages by adding [server-side attributes](/docs/user-guide/attributes/) or [latest time series values](/docs/user-guide/telemetry/) from the message originator's customer.
-- [customer details](/docs/user-guide/rule-engine-2-0/nodes/enrichment/customer-details) — enriches messages by adding details (such as name, email, country, address, etc.) from the message originator's customer.
-- [fetch device credentials](/docs/user-guide/rule-engine-2-0/nodes/enrichment/fetch-device-credentials) — enriches messages by adding credentials (type and value) of the originator device.
-- [originator attributes](/docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-attributes) — enriches messages by adding attributes (client, shared, server) and/or latest time series values from the message originator.
-- [originator fields](/docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-fields) — enriches messages by adding details (such as name, label, profile name, etc.) from the message originator.
-- [originator telemetry](/docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-telemetry) — enriches messages by adding [historical time series data](/docs/user-guide/telemetry/) from the message originator within a specified time interval using configurable fetch strategies and optional aggregation functions.
-- [related device attributes](/docs/user-guide/rule-engine-2-0/nodes/enrichment/related-device-attributes) — enriches messages by adding attributes and/or latest time series values from a [related](/docs/user-guide/entities-and-relations/#relations) device found through configurable relation queries (direction, type, device profiles).
-- [related entity data](/docs/user-guide/rule-engine-2-0/nodes/enrichment/related-entity-data) — enriches messages by adding attributes, latest time series values, or entity fields from a related entity found through configurable relation queries (direction, type and entity filters).
-- [tenant attributes](/docs/user-guide/rule-engine-2-0/nodes/enrichment/tenant-attributes) — enriches messages by adding server-side attributes or latest time series values from the message originator's tenant.
-- [tenant details](/docs/user-guide/rule-engine-2-0/nodes/enrichment/tenant-details) — enriches messages by adding details (such as name, email, country, address, etc.) from the message originator's tenant.
+Related: [All rule nodes](/docs/user-guide/rule-engine-2-0/nodes/), [Script language (Rhai)](/docs/user-guide/rhai/), [Getting started with rule chains](/docs/user-guide/rule-engine-2-0/re-getting-started/)

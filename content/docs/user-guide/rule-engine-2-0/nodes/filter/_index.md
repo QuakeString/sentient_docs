@@ -1,29 +1,28 @@
 +++
 title = "Filter nodes"
-description = "Rule engine filter nodes"
+description = "Check a message and send it on through True or False, or through a named output. Filter nodes never change the message."
 aliases = ["/docs/paas/eu/user-guide/rule-engine-2-0/filter-nodes/", "/docs/paas/user-guide/rule-engine-2-0/filter-nodes/", "/docs/pe/user-guide/rule-engine-2-0/filter-nodes/", "/docs/user-guide/rule-engine-2-0/filter-nodes/"]
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/rule-engine-2-0/nodes/filter/index.md"
+status = "checked"
+checked = "4.3.0.57"
+hide_children = true
 +++
-Filter nodes are the routing and conditional logic components of SENTIENT's rule engine that examine messages and determine how they should be routed to downstream nodes 
-based on various criteria.
+| Node | What it does | Outputs |
+|---|---|---|
+| [script](/docs/user-guide/rule-engine-2-0/nodes/filter/script/) | Runs a JavaScript or [Rhai](/docs/user-guide/rhai/) script that gives back true or false | True, False |
+| [switch](/docs/user-guide/rule-engine-2-0/nodes/filter/switch/) | Runs a script that gives back the names of the outputs to use | Names you choose |
+| [message type filter](/docs/user-guide/rule-engine-2-0/nodes/filter/message-type-filter/) | Checks the message type, for example telemetry or attributes | True, False |
+| [message type switch](/docs/user-guide/rule-engine-2-0/nodes/filter/message-type-switch/) | Sends each message type through its own output | One per message type, Other |
+| [entity type filter](/docs/user-guide/rule-engine-2-0/nodes/filter/entity-type-filter/) | Checks the originator's entity type: device, asset, customer and so on | True, False |
+| [entity type switch](/docs/user-guide/rule-engine-2-0/nodes/filter/entity-type-switch/) | Sends each entity type through its own output | One per entity type |
+| [device profile switch](/docs/user-guide/rule-engine-2-0/nodes/filter/device-profile-switch/) | Sends the message through the output named after the device's profile | Profile names |
+| [asset profile switch](/docs/user-guide/rule-engine-2-0/nodes/filter/asset-profile-switch/) | Sends the message through the output named after the asset's profile | Profile names |
+| [check fields presence](/docs/user-guide/rule-engine-2-0/nodes/filter/check-fields-presence/) | Checks that given keys exist in the message or its metadata | True, False |
+| [check relation presence](/docs/user-guide/rule-engine-2-0/nodes/filter/check-relation-presence/) | Checks that the originator has a given relation to another entity | True, False |
+| [alarm status filter](/docs/user-guide/rule-engine-2-0/nodes/filter/alarm-status-filter/) | Checks an alarm's status: active or cleared, acknowledged or not | True, False |
+| [gps geofencing filter](/docs/user-guide/rule-engine-2-0/nodes/filter/gps-geofencing-filter/) | Checks whether a latitude and longitude are inside an area | True, False |
 
-These nodes do not modify messages or perform any actions in the system - they are purely for determining which processing path a message should take. 
-Filter nodes typically have multiple output relations like "True/False" for boolean evaluations or named connections corresponding to the filtering criteria, 
-allowing messages to flow to different processing paths based on the evaluation results.
+Every node also has a **Failure** output, used when the node cannot do its job. Nodes without a link do not have their own page yet.
 
-- [alarm status filter](/docs/user-guide/rule-engine-2-0/nodes/filter/alarm-status-filter) — routes messages based on whether the alarm status matches configured statuses.
-- [asset profile switch](/docs/user-guide/rule-engine-2-0/nodes/filter/asset-profile-switch) — routes messages based on the profile name of the originator asset.
-- [check fields presence](/docs/user-guide/rule-engine-2-0/nodes/filter/check-fields-presence) — routes messages based on whether specified fields are present in the message data or metadata.
-- [check relation presence](/docs/user-guide/rule-engine-2-0/nodes/filter/check-relation-presence) — routes messages based on whether a specified relation exists between the message originator and a target entity.
-- [device profile switch](/docs/user-guide/rule-engine-2-0/nodes/filter/device-profile-switch) — routes messages based on the profile name of the originator device.
-- [entity type filter](/docs/user-guide/rule-engine-2-0/nodes/filter/entity-type-filter) — routes messages based on whether the originator entity type matches configured types.
-- [entity type switch](/docs/user-guide/rule-engine-2-0/nodes/filter/entity-type-switch) — routes messages to different connections based on the originator entity type.
-- [gps geofencing filter](/docs/user-guide/rule-engine-2-0/nodes/filter/gps-geofencing-filter) — routes messages based on whether GPS coordinates fall within a configured geofence boundary.
-- [message type filter](/docs/user-guide/rule-engine-2-0/nodes/filter/message-type-filter) — routes messages based on whether the originator entity type matches configured types.
-- [message type switch](/docs/user-guide/rule-engine-2-0/nodes/filter/message-type-switch) — routes messages to different connections based on the message type.
-- [script](/docs/user-guide/rule-engine-2-0/nodes/filter/script) — routes messages based on the result of a boolean script.
-- [switch](/docs/user-guide/rule-engine-2-0/nodes/filter/switch) — routes messages to one or more connections returned by a script.
+Related: [All rule nodes](/docs/user-guide/rule-engine-2-0/nodes/), [Script language (Rhai)](/docs/user-guide/rhai/), [Getting started with rule chains](/docs/user-guide/rule-engine-2-0/re-getting-started/)

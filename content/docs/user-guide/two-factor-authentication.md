@@ -53,6 +53,7 @@ From the next sign-in, SENTIENT asks for a code after the password.
 
 - The user signs in with a **backup code**, then turns off the old authenticator on the **Security** tab and sets up the new phone.
 - **Without backup codes or another method, the user cannot sign in.** SENTIENT 4.3.0.57 has no button for an administrator to remove another user's 2FA. Give every user backup codes, or a second method such as email, when you turn 2FA on.
+- From the next SENTIENT release, the user's details have **Reset two-factor authentication** for administrators: it removes all of the user's methods, so they sign in with their password and set 2FA up again.
 
 ## Related
 

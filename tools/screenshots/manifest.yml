@@ -164,3 +164,15 @@ shots:
     capture: "mat-card.settings-card >> nth=0"
     pad: 16
     page: /docs/user-guide/notification-channels/
+  - id: dashboard-view
+    url: /dashboards/{dashboard:Boiler house overview}
+    steps:
+      - wait: 3000
+    page: /docs/user-guide/dashboards/
+    themes: [light, dark]
+  - id: dashboard-edit-mode
+    url: /dashboards/{dashboard:Boiler house overview}
+    steps:
+      - click: "button:has-text('Edit mode')"
+      - wait: 2000
+    page: /docs/user-guide/dashboards/

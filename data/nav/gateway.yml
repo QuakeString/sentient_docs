@@ -79,7 +79,6 @@ toc:
     path: /docs/iot-gateway/config/rest/
   - title: Serial
     path: /docs/iot-gateway/config/serial/
-    planned: true
   - title: Siemens S7
     path: /docs/iot-gateway/config/s7/
   - title: SNMP

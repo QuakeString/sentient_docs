@@ -703,7 +703,9 @@ This JS function defines a logic for on click handler, and accepts three paramet
 
 * *ctx* is an instance of [ScadaSymbolContext](#scadasymbolcontext);
 * *element* is an [SVG.js](https://svgjs.dev/) element;
-* *event* is an on click event that may be extended to other events in the future releases;
+* *event* is the pointer event.
+
+Besides **On click action**, a tag can have an **On press action** and an **On release action**. They run when the pointer goes down and comes up. Together they make a momentary push button: press writes ON, release writes OFF.
 
 
 <div class="st-gallery"><figure><img src="/images/user-guide/scada/symbols-dev-guide/on-click-action-1-ce.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/scada/symbols-dev-guide/on-click-action-2-ce.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
@@ -1370,6 +1372,52 @@ The `ScadaSymbolApi` (referred to as `api` when accessed via `ScadaSymbolContext
   - **unit**: Unit specification, either a string representing the source unit or a TbUnitMapping object for system-based conversion.
 
   **Returns**: The converted numeric value. Returns the original value if conversion fails or no conversion is needed.
+  <br/><br/>
+
+* **connectorAnimate**, **connectorAnimation**, **resetConnectorAnimation**, **finishConnectorAnimation**: The same as the CSS animation methods, for flow along a connector (pipe or line) symbol. `connectorAnimate` takes the path to animate along and its reversed path, and returns a [ConnectorScadaSymbolAnimation](#connectorscadasymbolanimation).
+   ```javascript
+   connectorAnimate: (element: Element, path: string, reversedPath: string) => ConnectorScadaSymbolAnimation
+   connectorAnimation: (element: Element) => ConnectorScadaSymbolAnimation | undefined
+   resetConnectorAnimation: (element: Element) => void
+   finishConnectorAnimation: (element: Element) => void
+   ```
+  <br/>
+
+* **operate**: For switchgear symbols (breakers, disconnectors). Opens the operate dialog with the given operations, when the symbol's **Operate from a dialog** property is on. Each operation names the action behavior that performs it.
+   ```javascript
+   operate: (event: Event, operations: {id: string, action: string, current?: boolean, enabled?: boolean}[]) => boolean
+   ```
+
+  **Parameters**:
+    - **event**: The click event.
+    - **operations**: The operations to offer. `current: true` marks the position the device is in now; it is shown as the state, not offered. `enabled: false` hides an operation for now, for example *trip* while the breaker is open.
+
+  **Returns**: `false` when no dialog was shown. The symbol should then perform the action on the click itself.
+  <br/><br/>
+
+* **resolveColor**: Turns a colour that has a light and a dark variant (`{light, dark}`) into the colour for the current theme. Plain colours pass through. The symbol renders again when the user switches theme.
+   ```javascript
+   resolveColor: (value: any) => any
+   ```
+  <br/>
+
+* **symbolScale**: The factor by which the symbol is drawn larger or smaller than its design size. Multiply a stroke width by it so borders scale with the dashboard like other symbols.
+   ```javascript
+   symbolScale: () => number
+   ```
+  <br/>
+
+* **symbolStretch**: For a symbol that stretches to fill its widget, how much it is stretched in each direction (`{x: 1, y: 1}` for a symbol that keeps its shape). Use it to counter-scale a part, such as an arrowhead, so it keeps its shape.
+   ```javascript
+   symbolStretch: () => {x: number, y: number}
+   ```
+  <br/>
+
+* **measureText**, **measureTextBox**: Measure text without asking the browser to lay out the page. Use them instead of `getComputedTextLength()` or `getBBox()` in render functions that wrap or fit text: those force a page layout on each call and slow a live dashboard down. `measureTextBox` may be missing or return null; fall back to `getBBox()` then.
+   ```javascript
+   measureText: (text: string, font: Partial<Font>) => number
+   measureTextBox?: (text: string, font: Partial<Font>) => {width: number, ascent: number, descent: number}
+   ```
   <br/><br/>
 
 ### ScadaSymbolAnimation

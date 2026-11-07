@@ -29,7 +29,9 @@ The total size of a tenant's packages may be limited in its [tenant profile](/do
 ## Assign a package
 
 - **To all devices of a profile:** open the [device profile](/docs/user-guide/device-profiles/) and set **Assigned firmware** or **Assigned software**.
-- **To one device:** open the device's details and set **Assigned firmware** or **Assigned software** there. It takes the place of the profile's package for that device.
+- **To one device:** open the device's details and set **Assigned firmware** or **Assigned software** there.
+
+In 4.3.0.57 the CoAP download serves only a package assigned to the device itself; a package set only on the profile is not served. Assign packages per device until this is fixed.
 
 ## Download over CoAP
 

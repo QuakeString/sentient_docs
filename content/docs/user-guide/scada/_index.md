@@ -47,6 +47,18 @@ Click a symbol's pencil in edit mode. Most symbols have the same settings:
 
 Commands go to the device as [RPC](/docs/user-guide/rpc/) or as a shared attribute that the device or gateway writes to the PLC. Give operators confirmation dialogs for commands that move equipment.
 
+## Operate switchgear
+
+The IEC switchgear symbols (circuit breakers, ACBs, contactors, changeover switches, disconnectors and similar, 32 in all) can be operated from the screen with **select before operate**, the way a control panel works:
+
+1. The operator clicks the symbol. A dialog shows the device, its state and the operations that are set up, for example **Close**, **Open** or **Trip**.
+2. They choose one. The dialog asks *Close Feeder 3?* and counts down: **Selection expires in 10 s.**
+3. They confirm with **Close now** before the time runs out. Otherwise nothing is sent.
+
+The dialog then shows whether the command was sent or failed, with **Try again**.
+
+To set it up, connect the symbol's **Close breaker**, **Open breaker** and **Trip breaker** behaviors (or the switch's own operations) to an RPC or an attribute, and **Local / remote** to the value that says where the switchgear is controlled from. In local control the dialog refuses to operate: *operate it at the switchgear panel*. Under **Properties**, **Operate from a dialog**, **Ask to confirm before sending**, **Time to confirm** and **Block operations in local control** change this behaviour; turning the dialog off makes a click operate at once.
+
 ## Your own symbols
 
 The tenant administrator manages symbols under **Resources > SCADA symbols**. **Include system symbols** shows the built-in ones too.
@@ -55,7 +67,7 @@ The tenant administrator manages symbols under **Resources > SCADA symbols**. **
 - **Edit SCADA symbol**: name the parts of the drawing, then define the **Properties** (the settings users will see) and the **State render function** that changes the drawing from the data, and try it in **Preview**.
 - **Create widget**: turns the symbol into a widget, so it appears in **Add widget** on dashboards.
 
-See [SCADA symbol development](/docs/user-guide/scada/scada-symbols-dev-guide/) for the details.
+See [SCADA symbol editor](/docs/dashboards/scada-editor/) and [SCADA symbol development](/docs/user-guide/scada/scada-symbols-dev-guide/) for the details.
 
 ## Related
 

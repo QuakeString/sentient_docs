@@ -187,7 +187,6 @@ toc:
       path: /docs/user-guide/scada/
     - title: SCADA symbol editor
       path: /docs/dashboards/scada-editor/
-      planned: true
     - title: Symbol development guide
       path: /docs/user-guide/scada/scada-symbols-dev-guide/
   - title: Image gallery

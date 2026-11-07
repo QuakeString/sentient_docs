@@ -104,10 +104,8 @@ toc:
     path: /docs/user-guide/entity-views/
   - title: Recipes
     path: /docs/user-guide/recipes/
-    planned: true
   - title: Scheduler
     path: /docs/user-guide/scheduler/
-    planned: true
   - title: Advanced filters
     path: /docs/user-guide/advanced-filters/
   - title: PSM and eDRX

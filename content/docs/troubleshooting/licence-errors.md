@@ -11,6 +11,8 @@ Licence errors appear as a dialog in the web UI or as an API error with an `erro
 
 ## No active license (code 50)
 
+Error ID: [ST-LIC-001](/docs/troubleshooting/errors/st-lic-001/)
+
 ```
 No active license. Please activate a license to continue.
 ```
@@ -20,6 +22,8 @@ No active license. Please activate a license to continue.
 **Fix:** sign in as the system administrator and activate a key. See [Activate your licence](/docs/installation/licence/).
 
 ## License has expired (code 50)
+
+Error ID: [ST-LIC-002](/docs/troubleshooting/errors/st-lic-002/)
 
 ```
 License has expired. Please renew your license to continue.
@@ -31,11 +35,15 @@ License has expired. Please renew your license to continue.
 
 ## License limit exceeded (code 51)
 
+Error ID: [ST-LIC-003](/docs/troubleshooting/errors/st-lic-003/)
+
 **HTTP 400.** You tried to create something beyond a licence limit, for example one device more than the licence allows. Nothing was created.
 
 **Fix:** delete what you no longer need, or ask your supplier for a larger licence. The **License** page lists every limit next to its current use.
 
 ## Over the licence limits (warnings)
+
+Error ID: [ST-LIC-004](/docs/troubleshooting/errors/st-lic-004/)
 
 ```
 Your system exceeds the current license limits. Please acquire a license to continue using all features.
@@ -48,6 +56,8 @@ The system has more of something than the licence allows, so the grace period is
 
 ## System blocked (code 52)
 
+Error ID: [ST-LIC-005](/docs/troubleshooting/errors/st-lic-005/)
+
 ```
 System blocked: license grace period has ended. Please acquire a license to continue.
 ```
@@ -57,6 +67,8 @@ System blocked: license grace period has ended. Please acquire a license to cont
 **Fix:** delete entities until you are under every limit, or activate a licence with higher limits. The block clears straight away.
 
 ## License runtime blocked
+
+Error ID: [ST-LIC-006](/docs/troubleshooting/errors/st-lic-006/)
 
 ```
 License runtime blocked: Hardware fingerprint disagrees with this license (N/6 match). This license was activated on a different machine…
@@ -73,6 +85,8 @@ License runtime blocked: Hardware fingerprint disagrees with this license (N/6 m
 The same message can also come from the licence server when your supplier has revoked the key. In that case, contact your supplier.
 
 ## Failed to activate license
+
+Error ID: [ST-LIC-007](/docs/troubleshooting/errors/st-lic-007/)
 
 ```
 Failed to activate license. Please check your license key.

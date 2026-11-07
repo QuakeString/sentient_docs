@@ -21,6 +21,8 @@ On Linux the service is `sentient-gateway.service`: read its log with `journalct
 
 ## The gateway shows offline
 
+Error ID: [ST-GW-001](/docs/troubleshooting/errors/st-gw-001/)
+
 The gateway cannot reach SENTIENT, or it was never commissioned.
 
 **In the log:**
@@ -72,6 +74,8 @@ To make a key writable, add it to the connector's RPC section. You can create it
 
 ## The storage queue is full
 
+Error ID: [ST-GW-010](/docs/troubleshooting/errors/st-gw-010/)
+
 The log shows `storage full — dropping new events until the backlog drains`.
 
 The gateway stores readings while SENTIENT is unreachable. By default it keeps up to 10 files of 10,000 records each, 1 GB at most, and discards readings older than 7 days. Once the queue is full, **new** readings are dropped. Readings already stored are kept and sent first.
@@ -83,6 +87,8 @@ The gateway stores readings while SENTIENT is unreachable. By default it keeps u
 - Reduce the polling rate of connectors that do not need fast values.
 
 ## Sign-in to the local web page fails
+
+Error ID: [ST-GW-011](/docs/troubleshooting/errors/st-gw-011/)
 
 The page at `http://<gateway>:8642` is protected by its own password, separate from SENTIENT.
 

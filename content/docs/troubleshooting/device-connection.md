@@ -11,6 +11,8 @@ A device that sends nothing shows **Inactive** in the device list and has no rec
 
 ## 1. The port is not reachable
 
+Error ID: [ST-DEV-007](/docs/troubleshooting/errors/st-dev-007/)
+
 SENTIENT listens for devices on these ports by default:
 
 | Protocol | Port | Notes |
@@ -31,11 +33,15 @@ SENTIENT listens for devices on these ports by default:
 
 ## 2. MQTTs does not start
 
+Error ID: [ST-DEV-008](/docs/troubleshooting/errors/st-dev-008/)
+
 MQTT over TLS needs a certificate and its key. They are read from the environment variables `MQTT_SSL_PEM_CERT` and `MQTT_SSL_PEM_KEY` (and `MQTT_SSL_PEM_CA` for client certificates). When MQTTs is switched on but either file is missing, port 8883 stays closed.
 
 **Fix:** set both variables to readable PEM files and restart the server.
 
 ## 3. Wrong credentials
+
+Error ID: [ST-DEV-001](/docs/troubleshooting/errors/st-dev-001/)
 
 The device must present the credentials shown on its **Manage credentials** dialog. Which field carries them depends on the credential type:
 
@@ -60,6 +66,8 @@ What you see when they are wrong:
 After you correct a token, allow up to five minutes: a token that was tried and not found is remembered as invalid for that long. Restarting the device does not shorten this, but restarting the server does.
 
 ## 4. Payload format errors
+
+Error ID: [ST-DEV-003](/docs/troubleshooting/errors/st-dev-003/)
 
 The device connects but no values arrive.
 

@@ -9,6 +9,8 @@ checked = "4.3.0.57"
 +++
 ## SENTIENT is not installed (Docker)
 
+Error ID: [ST-INS-003](/docs/troubleshooting/errors/st-ins-003/)
+
 ```
 ✗ Nothing to upgrade: this database is EMPTY — SENTIENT is not installed.
 ```
@@ -26,6 +28,8 @@ If you did run the installer, it stopped before it created the schema. Scroll up
 
 ## PostgreSQL does not initialise (Windows)
 
+Error ID: [ST-INS-002](/docs/troubleshooting/errors/st-ins-002/)
+
 Platform Manager stops while it creates the PostgreSQL database, and `initdb` crashes.
 
 **Cause:** PostgreSQL 18 needs Visual C++ runtime 14.44 or newer, and the computer has an older one.
@@ -33,6 +37,8 @@ Platform Manager stops while it creates the PostgreSQL database, and `initdb` cr
 **Fix:** Setup 0.8.0-rc9 and later install the runtime themselves. With an older Setup, run `vc_redist.x64.exe` from the SENTIENT release page, then click **Retry**.
 
 ## Port already in use
+
+Error ID: [ST-INS-001](/docs/troubleshooting/errors/st-ins-001/)
 
 ```
 Already in use: 8080. Choose another port, or stop what is listening on it.
@@ -48,6 +54,8 @@ This happened with Setup up to 0.8.0-rc5: the chosen port was not written to `po
 
 ## ClickHouse: connection refused although PostgreSQL is running
 
+Error ID: [ST-DB-004](/docs/troubleshooting/errors/st-db-004/)
+
 During `--backfill-clickhouse` or a hybrid install, you get *connection refused* for PostgreSQL even though PostgreSQL is up.
 
 **Cause:** ClickHouse opens that connection itself. A `DATABASE_URL` with `localhost` then points at ClickHouse's own container, not at PostgreSQL.
@@ -56,23 +64,29 @@ During `--backfill-clickhouse` or a hybrid install, you get *connection refused*
 
 ## ClickHouse reports healthy but every client gets "connection reset"
 
+Error ID: [ST-DB-004](/docs/troubleshooting/errors/st-db-004/)
+
 **Cause:** a custom ClickHouse configuration was mounted as the whole `config.d` folder. That hides the file that makes ClickHouse listen on the network, so it listens only inside its own container.
 
 **Fix:** mount your settings as a single file inside `config.d`, as the SENTIENT compose files do, and never as the whole folder.
 
 ## The upgrade stopped halfway
 
+Error ID: [ST-INS-006](/docs/troubleshooting/errors/st-ins-006/)
+
 - **Platform Manager:** it has already put the previous version and database copy back. Open **Logs** to see which step failed, then send the log to support.
 - **Docker:** the log shows the step that failed (`docker compose -f <file> logs sentient`). Go back to the previous image tag and restore the backup you made before the upgrade. See [Upgrade and roll back](/docs/operations/upgrade/).
 
 ## Not enough disk space
+
+Error ID: [ST-INS-005](/docs/troubleshooting/errors/st-ins-005/)
 
 Platform Manager's **System check** reports **Disk space** as a blocker, or the database stops with *No space left on device*.
 
 **Fix:** free space or add a disk before you continue. Common space users on a running system:
 
 - update copies and old history kept after a database change: remove them under **Kept after earlier changes** in the Platform Manager
-- ClickHouse's own system logs on older installations: see the ClickHouse notes in [Performance tuning](/docs/operations/tuning/)
+- ClickHouse's own system logs on older installations: see [ClickHouse's own logs](/docs/operations/tuning/#clickhouse-s-own-logs)
 - old Docker images: `docker image prune`
 
 ## The licence is refused after installation

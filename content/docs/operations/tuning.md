@@ -76,6 +76,25 @@ The latest-value cache works only with ClickHouse history. SENTIENT refuses to s
 
 Moving an existing installation to ClickHouse needs a data migration: use **Migration** in Platform Manager. See [System requirements](/docs/installation/requirements/#disk) to choose a database for a new installation.
 
+## ClickHouse's own logs
+
+ClickHouse writes logs about itself into its `system` database all the time, even when idle. On a plant server these logs can outgrow the telemetry: one installation had 1.4 GB of logs next to 0.6 GB of data. SENTIENT's ClickHouse settings, in the compose file and in Platform Manager installations, therefore switch most of them off and keep only `query_log` and `part_log` for 7 days and `error_log` for 30 days. They also limit ClickHouse's caches to suit an 8 GB machine.
+
+Installations set up before these settings may still hold the old log tables. The settings stop new rows but leave the old ones. To free the space, empty the tables that are switched off, for example:
+
+```bash
+docker exec sentient-clickhouse clickhouse-client -q "TRUNCATE TABLE IF EXISTS system.metric_log"
+docker exec sentient-clickhouse clickhouse-client -q "TRUNCATE TABLE IF EXISTS system.asynchronous_metric_log"
+docker exec sentient-clickhouse clickhouse-client -q "TRUNCATE TABLE IF EXISTS system.trace_log"
+docker exec sentient-clickhouse clickhouse-client -q "TRUNCATE TABLE IF EXISTS system.text_log"
+```
+
+To see which tables use the space:
+
+```bash
+docker exec sentient-clickhouse clickhouse-client -q "SELECT database, table, formatReadableSize(sum(bytes_on_disk)) AS size FROM system.parts WHERE active GROUP BY database, table ORDER BY sum(bytes_on_disk) DESC LIMIT 10"
+```
+
 ## Rule chains and scripts
 
 The rule engine often costs more than storage. On every message:

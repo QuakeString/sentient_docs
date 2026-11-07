@@ -436,6 +436,8 @@ toc:
   section:
   - title: Overview
     path: /docs/troubleshooting/
+  - title: Error catalogue
+    path: /docs/troubleshooting/errors/
   - title: API error codes
     path: /docs/troubleshooting/error-codes/
   - title: Installation and upgrade errors

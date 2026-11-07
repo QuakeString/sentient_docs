@@ -150,13 +150,10 @@ toc:
     section:
     - title: Overview
       path: /docs/dashboards/
-      planned: true
     - title: Drafts and crash recovery
       path: /docs/dashboards/crash-recovery/
-      planned: true
     - title: Industrial equipment widgets
       path: /docs/dashboards/industrial-widgets/
-      planned: true
     - title: Matrix widget
       path: /docs/dashboards/matrix-widget/
       planned: true
@@ -190,9 +187,6 @@ toc:
       path: /docs/user-guide/scada/
     - title: SCADA symbol editor
       path: /docs/dashboards/scada-editor/
-      planned: true
-    - title: New renderer for SCADA symbols
-      path: /docs/dashboards/renderer/
       planned: true
     - title: Symbol development guide
       path: /docs/user-guide/scada/scada-symbols-dev-guide/

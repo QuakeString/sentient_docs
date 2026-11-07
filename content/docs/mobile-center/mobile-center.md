@@ -1,170 +1,24 @@
 +++
 title = "Mobile center"
-description = "Mobile center"
+description = "Register your own builds of the SENTIENT mobile app, group them in bundles, and set the QR code widget."
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/mobile-center/mobile-center.md"
+status = "checked"
+checked = "4.3.0.57"
 +++
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 3.9.0</em></strong></td>
-     </tr>
-   </thead>
-</table> 
+**Mobile center** is for organisations that build their own version of the SENTIENT mobile app, for example with their own name and icon. **The standard SENTIENT app needs nothing here**: install it and sign in, or scan the [QR code](/docs/user-guide/ui/mobile-qr-code/) on the home page.
 
+The system administrator opens **Mobile center** in the left menu. It has three parts:
 
-The **Mobile сenter** is your one-stop hub for building, configuring, and managing mobile apps in SENTIENT. Whether you&#39;re starting from scratch or preparing to publish your SENTIENT Mobile Application to the Google Play Store or App Store, this tool walks you through every step of the process.
+| Part | Holds |
+|---|---|
+| [Applications](/docs/mobile-center/applications/) | Each app build: its package name and secret, per platform |
+| **Bundles** | An Android and an iOS application that belong together, with the **Layout** of the app's menu (which pages it shows, in which order, and your own pages) and the **OAuth 2.0 clients** offered in the app |
+| **QR code widget** | What the QR code card on the home page shows, see [Mobile app QR code](/docs/user-guide/ui/mobile-qr-code/) |
 
-The Mobile center is divided into tabs for convenient creation and management of mobile applications:
+> **Note for 4.3.0.57:** the app does not yet receive the OAuth 2.0 clients of a bundle, so OAuth sign-in in the app is not available. **Enable Self registration** has no effect yet.
 
-- [Bundle](#bundle): Manage settings for mobile applications included in the bundle. These settings include configuring secure authentication methods for your clients, and defining the layout within the mobile application.
-- [Applications](/docs/mobile-center/applications/): Manage your mobile applications - add new ones, edit existing ones, or remove outdated versions.
-- [QR code widget](/docs/user-guide/ui/mobile-qr-code/): Set up a QR code widget on the SENTIENT "Home" page to give users easy access to the mobile app.
+## Related
 
-## Bundle
-
-A **Bundle** groups together configurations like OAuth 2.0 settings and layout design for one or more mobile apps—allowing you to manage Android and iOS versions all in one place.
-
-The following settings are available for the applications bundle:
-
-1. **Basic settings**: Define the bundle name and link your apps. Don&#39;t have an app yet? You can create one right here.
-2. **OAuth 2.0**: Enable Single Sign-On (SSO) for users by integrating with third-party identity providers that support OAuth 2.0.
-3. **Layout**: Customize the app’s navigation menu to match your use cases.
-
-
-<br><b><font size="4">How to add a new bundle</font></b>
-
-- Go to the "**Mobile center**" page.
-- On the "**Bundle**" tab, click the "**+ Add bundle**" button in the upper-right corner of the window.
-
-A new settings dialog will open.
-
-
-<div class="st-gallery"><figure><img src="/images/mobile-center/add-new-bundle-1-ce.webp" alt="To add a new bundle, navigate to the &quot;Mobile center&quot; page and click the &quot;+ Add bundle&quot; button in the upper-right corner of the window." loading="lazy"><figcaption>To add a new bundle, navigate to the "Mobile center" page and click the "+ Add bundle" button in the upper-right corner of the window.</figcaption></figure></div>
-
-
-### Basic settings
-
-Enter a name for your bundle and select existing Android/iOS apps, or [create new ones](#create-new-application) directly from this window.
-
-
-<div class="st-gallery"><figure><img src="/images/mobile-center/basic-settings-1-ce.webp" alt="Enter the bundle name and specify an existing Android/iOS mobile application(s), or create a new one. Then, click &quot;Next&quot;." loading="lazy"><figcaption>Enter the bundle name and specify an existing Android/iOS mobile application(s), or create a new one. Then, click "Next".</figcaption></figure></div>
-
-
-> You can add applications even after the bundle with configurations is created.
-
-#### Create new application
-
-- Click "**Create new**" in the corresponding section (Android Application or iOS Application).
-- Enter the **application package** name.
-- An **Application Secret** will be generated automatically. Remember it or replace with your own.
-- Set the **application status**:
-  - **Draft**: For applications still in development. You can add store information (e.g., Google Play Store or App Store link, and SHA256 certificate fingerprints or App ID) later after the application is created and published.
-  - **Published**: For applications that are ready to be launched and used by end users.
-  - **Deprecated**: For older applications that are no longer actively supported but still available.
-  - **Suspended**: For applications that are temporarily disabled or restricted from use.
-- (Optional) Specify minimum/latest app versions and release notes.
-- Add **store information**:
-  - **Android**: **Google Play Store link** and **SHA256 certificate fingerprints**.
-  - **iOS**: **App Store link** and **App ID**.
-- Click "**Add**" to save your application and complete the process.
-
-
-<div class="st-gallery"><figure><img src="/images/mobile-center/add-application-1-ce.webp" alt="Click &quot;Create new&quot; in the appropriate section (Android Application or iOS Application);" loading="lazy"><figcaption>Click "Create new" in the appropriate section (Android Application or iOS Application);</figcaption></figure><figure><img src="/images/mobile-center/android-application-2-ce.webp" alt="Android Application. Enter the application package name. Remember autogenerated &quot;Application Secret&quot; or input your own. Specify application statuses. Optionally, specify the minimum and latest application versions along with release notes for each. Specify store information: link to the SENTIENT Professional Edition Mobile Application in the Google Play Store, and SHA256 certificate fingerprints. Click &quot;Add&quot;." loading="lazy"><figcaption>Android Application. Enter the application package name. Remember autogenerated "Application Secret" or input your own. Specify application statuses. Optionally, specify the minimum and latest application versions along with release notes for each. Specify store information: link to the SENTIENT Professional Edition Mobile Application in the Google Play Store, and SHA256 certificate fingerprints. Click "Add".</figcaption></figure><figure><img src="/images/mobile-center/ios-application-2-ce.webp" alt="iOS Application. Enter the application package name. Remember autogenerated &quot;Application Secret&quot; or input your own. Specify application statuses. Optionally, specify the minimum and latest application versions along with release notes for each. Specify store information: link to the SENTIENT Professional Edition Mobile Application in the App Store, and App ID. Click &quot;Add&quot;." loading="lazy"><figcaption>iOS Application. Enter the application package name. Remember autogenerated "Application Secret" or input your own. Specify application statuses. Optionally, specify the minimum and latest application versions along with release notes for each. Specify store information: link to the SENTIENT Professional Edition Mobile Application in the App Store, and App ID. Click "Add".</figcaption></figure></div>
-
-
-Then, click "**Next**".
-
-### OAuth 2.0
-
-Add an authentication feature for your users in the SENTIENT Mobile Application through an external provider that supports the [OAuth 2.0](/docs/user-guide/oauth-2-support/) protocol.
-In order to do this, specify an already configured OAuth 2.0 client(s) or [configure a new one](/docs/user-guide/oauth-2-support/#operations-with-oauth-20-client). After completing the OAuth 2.0 configuration, click "Next".
-
-You can also disable the use of OAuth 2.0 for mobile devices.
-
-
-<div class="st-gallery"><figure><img src="/images/mobile-center/specify-oauth-clients-1-ce.webp" alt="Specify an already configured OAuth 2.0 client(s) or configure a new one;" loading="lazy"><figcaption>Specify an already configured OAuth 2.0 client(s) or configure a new one;</figcaption></figure><figure><img src="/images/mobile-center/specify-oauth-clients-2-ce.webp" alt="After completing the OAuth 2.0 configuration, click &quot;Next&quot;." loading="lazy"><figcaption>After completing the OAuth 2.0 configuration, click "Next".</figcaption></figure></div>
-
-
-### Layout
-
-Set up quick access to the features and dashboards you use most frequently.
-Add new menu items, change icons and item names, and reorganize the navigation menu of the SENTIENT Mobile Application according to your needs.
-
-
-<div class="st-gallery"><figure><img src="/images/mobile-center/mobile-layout-1-ce.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/mobile-center/mobile-layout-2-ce.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
-
-
-To add new menu item, follow these steps:
-
-- Click the "**+ Add specific page**" button at the bottom of the page or between existing menu items;
-- Enter the **name for new menu page**;
-- Select the **page type** from the list:
-  - *Dashboard* - link to a SENTIENT dashboard.
-  - *Webview* - link to an external webpage.
-  - *Custom* - link to built-in SENTIENT pages.
-- Depending on the selected page type, specify a dashboard, or link to an external webpage or SENTIENT menu item;
-- Click "Add";
-- After configuring layout, click "**Add**" to complete the bundle creation.
-
-
-<div class="st-gallery"><figure><img src="/images/mobile-center/custom-page-type-1-ce.webp" alt="Click the &quot;+ Add specific page&quot; button at the bottom of the page or between existing menu items;" loading="lazy"><figcaption>Click the "+ Add specific page" button at the bottom of the page or between existing menu items;</figcaption></figure><figure><img src="/images/mobile-center/custom-page-type-2-ce.webp" alt="Enter the name for new menu page, and select the page type. Depending on the selected page type, specify a dashboard, path, or external URL. Click &quot;Add&quot;." loading="lazy"><figcaption>Enter the name for new menu page, and select the page type. Depending on the selected page type, specify a dashboard, path, or external URL. Click "Add".</figcaption></figure><figure><img src="/images/mobile-center/custom-page-type-3-ce.webp" alt="After configuring layout, click &quot;Add&quot; to complete the bundle creation." loading="lazy"><figcaption>After configuring layout, click "Add" to complete the bundle creation.</figcaption></figure></div>
-
-
-<br>
-The following routes are available for the "Custom" page type:
-
-| **Page name**      | **Routes**     | **Dicription**                      |
-|:-------------------|:---------------|:------------------------------------|
-| Home               | /home          | Displays the "Home" page            |
-| Assets             | /assets        | Displays the "Assets" page          |
-| Device profiles    | /devices       | Displays the "Device profiles" page |
-| All devices        | /deviceList    | Displays the list of all devices    |
-| Alarms             | /alarms        | Displays the list of alarms         |
-| Dashboards         | /dashboards    | Displays the list of dashboards     |
-| Specific dashboard | /dashboard/:id | Displays the specified dashboard    |
-| Audit logs         | /auditLogs     | Displays the "Audit logs" page      |
-| Customers          | /customers     | Displays the list of customers      |
-| Specific customer  | /customer/:id  | Displays the specified customer     |
-| Notifications      | /notifications | Displays the list of notifications  |
-| Custom URL link    | /url/:link     | Displays the "Assets" page          |
-| ---                 
-
-
-**"More" page**
-
-The number of menu items displayed in the navigation menu of the mobile app depends on the screen size of your mobile device.
-Items that do not fit in the bottom navigation menu will be available under the "More" page.
-
-
-<div class="st-gallery"><figure><img src="/images/mobile-center/mobile-layout-3-ce.webp" alt="The number of menu items displayed in the navigation menu of the mobile app depends on the screen size of your mobile device. Items that do not fit in the bottom navigation menu will be available under the &quot;More&quot; page." loading="lazy"><figcaption>The number of menu items displayed in the navigation menu of the mobile app depends on the screen size of your mobile device. Items that do not fit in the bottom navigation menu will be available under the "More" page.</figcaption></figure><figure><img src="/images/mobile-center/mobile-layout-4-ce.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
-
-
-### Configuration dialog
-
-Next, a configuration dialog will open. Continue configuring your new mobile app using the provided instructions.
-Or skip this step if you already have a SENTIENT Mobile Application. Click "**Close**".
-
-
-<div class="st-gallery"><figure><img src="/images/mobile-center/add-new-bundle-2-ce.webp" alt="Next, a configuration dialog will open, which contains the basic configuration settings for the SENTIENT Mobile Application." loading="lazy"><figcaption>Next, a configuration dialog will open, which contains the basic configuration settings for the SENTIENT Mobile Application.</figcaption></figure></div>
-
-
-<div class="st-callout info">
-
-
-For more information on launching your new app, refer to the "[Getting started with the SENTIENT Mobile Application](/docs/mobile/getting-started/)" documentation.
-
-
-</div>
-
-
-Bundle has been added. The applications specified in the bundle now use the defined settings.
-
-
-<div class="st-gallery"><figure><img src="/images/mobile-center/add-new-bundle-3-ce.webp" alt="Bundle has been added. The applications specified in the bundle now use the defined settings." loading="lazy"><figcaption>Bundle has been added. The applications specified in the bundle now use the defined settings.</figcaption></figure></div>
-
-
-## Next steps
+- [Mobile app](/docs/mobile/)
+- [Mobile app QR code](/docs/user-guide/ui/mobile-qr-code/)

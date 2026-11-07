@@ -72,6 +72,7 @@ shots:
     page: /docs/user-guide/rule-engine-2-0/overview/
   - id: calculated-fields
     url: /calculatedFields
+    clip: [0, 0, 1440, 300]   # the toolbar and rows, not the empty table below
     page: /docs/user-guide/calculated-fields/
   - id: gateways-list
     url: /entities/gateways

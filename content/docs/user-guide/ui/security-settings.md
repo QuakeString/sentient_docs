@@ -1,73 +1,56 @@
 +++
 title = "Security settings"
-description = "SENTIENT IoT platform security settings"
+description = "Account lockout, link lifetimes, password rules and sign-in token lifetimes."
 aliases = ["/docs/user-guide/ui/jwt-security-settings/"]
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/ui/security-settings.md"
+status = "checked"
+checked = "4.3.0.57"
 +++
-Users log into SENTIENT using a username and password. To improve account security, you can adjust your security settings. To configure these settings, sign in to **SENTIENT** with a **System Administrator** account.
-
-
-![image](/images/user-guide/ui/security-settings/security-settings-general-ce.webp)
-
+The system administrator sets platform-wide sign-in security under **Settings > Security settings**. The page has three parts: **General policy**, **Password policy** and **JWT security settings**.
 
 ## General policy
 
-In this section, you can configure the overall security rules for user accounts:
-
-- **Maximum number of failed login attempts** – sets the number of unsuccessful login attempts allowed before the account is locked.
-- **Notification on account lockout** – specify an email address to receive a notification if a user's account gets locked.
-- **User activation link TTL** – defines the time-to-live for activation links(in hours) sent to new users. After this period, the link will expire.
-- **Password reset link TTL** – sets the expiration time(in hours) for password reset links sent via email.
-- **Mobile secret key length** – determines the length of the secret key used for mobile authentication.
-
-
-<div class="st-callout info">
-
-
-**Note**:
-The **TTL** value for **User Activation** and **Password Reset** links can be configured within the range of 1 to 24 hours. This range is fixed and cannot be modified.
-
-
-</div>
-
+| Setting | Default | What it does |
+|---|---|---|
+| **Maximum number of failed login attempts, before account is locked** | 5 | After this many wrong passwords in a row, the account is locked for 5 minutes. It unlocks by itself; the user does not need an administrator |
+| **In case user account lockout, send notification to email** | `admin@sentient.local` | Who is told when an account locks. Change it to a mailbox someone reads; it needs working [mail settings](/docs/user-guide/ui/mail-settings/) |
+| **User activation link TTL in hours** | 24 | How long a new user's activation link works. See [Users](/docs/user-guide/ui/users/) |
+| **Password reset link TTL in hours** | 24 | How long a **Forgot password?** link works |
+| **Mobile secret key length** | 32 | Length of the secret used by the mobile app's QR sign-in |
 
 ## Password policy
 
-The password policy sets the rules that passwords for the SENTIENT must meet. You can specify the following options:
+The password policy holds the rules for user passwords: minimum and maximum length, how many uppercase letters, lowercase letters, digits and special characters a password needs, whether spaces are allowed, how many days a password stays valid, and how soon an old password may be reused.
 
-- **Minimum password length** - the parameter determines the minimum number of characters in the password. Minimum password length should be in a range from 6 to 50;
-- **Maximum password length** - the parameter determines the maximum number of characters in the password. Maximum password length should be greater than minimum length;
-- **Minimum number of uppercase letters** - set the minimum number of uppercase letters in the password;
-- **Minimum number of lowercase letters** - set the minimum number of lowercase letters in the password;
-- **Minimum number of digits** - specify minimum number of digits in the password;
-- **Minimum number of special characters** - specify the minimum number of special characters in the password;
-- **Password expiration period in days** - force expiration of the password. After the password expires, SENTIENT will require the user to change it. This ensures users regularly update their passwords;
-- **Password reuse frequency in days** - disallow to use the same password for the defined number of days;
-- **Allow whitespace** - if the checkbox is checked, spaces are allowed in the password;
-- **Force to reset password if not valid** - users with a password that fails the validation will need to reset their password via email.
+> **Note for 4.3.0.57:** the server does not yet check passwords against these fields. Whatever the policy says, SENTIENT requires a password of **8 to 72 characters** that contains at least **three of**: a lowercase letter, an uppercase letter, a digit, a special character. A password such as `Plant2025` meets it; `plant2025` does not.
+>
+> The same rule applies when a user activates their account, resets a password, or an administrator uses **Set password**.
 
-After the settings, apply the changes by pressing the **Save** button.
+**Force to reset password if not valid** is meant to make users whose password breaks the policy set a new one through a reset email. Like the policy fields, it has no effect yet in 4.3.0.57.
 
-## JWT Security Settings
+## JWT security settings
 
-In this section, you can configure the **JSON Web Token** (JWT) parameters used by **SENTIENT** for authentication and session management. The settings allow you to control token generation, expiration, and signing.
+After sign-in, the browser holds a token instead of the password. These settings control those tokens.
 
-- **Issuer name** – specify the name of the issuer for JWT tokens. This value will be included in all generated tokens and can be used to validate their source.
-- **Signing key** – enter a Base64-encoded string representing at least 512 bits of data. This key is used to sign JWT tokens and verify their integrity. You can also generate a new key using the "Generate key" button.
-- **Token expiration time** – set the lifetime of JWT tokens in seconds. After this period, the token will expire and the user will need to authenticate again.The default value is 9000 seconds. The minimal value is 60 seconds.
-- **Refresh token expiration time** – set the lifetime of refresh tokens in seconds. Refresh tokens allow users to obtain new JWT tokens without re-authenticating.The default value is 604800 seconds. The minimal value is 900 seconds.
+| Setting | Default | What it does |
+|---|---|---|
+| **Issuer name** | `sentient` | Written into every token |
+| **Signing key** | Generated at installation | The secret that signs tokens. Keep it secret. **Generate key** makes a new one |
+| **Token expiration time (sec)** | 9000 (2.5 hours) | How long a token is valid before the browser renews it |
+| **Refresh token expiration time (sec)** | 604800 (7 days) | How long a user stays signed in without activity. After this, they sign in again |
 
+**Changing the signing key signs everyone out**, including API clients and the mobile app, once the server restarts: the server reads the key when it starts. Do it after a suspected leak, at a quiet time, and restart SENTIENT afterwards.
 
-![image](/images/user-guide/ui/security-settings/security-settings-JWT-ce.webp)
+> **Note for 4.3.0.57:** the server does not yet apply the two expiration fields. Sign-in tokens last 15 minutes and are renewed silently, and a user stays signed in for 7 days without activity, whatever the fields say.
 
+## Recommendations for plants
 
-After the settings, apply the changes by pressing the **Save** button.
+- Keep the lockout on. Five attempts stop password guessing without bothering operators.
+- Use [two-factor authentication](/docs/user-guide/two-factor-authentication/) for administrator accounts that can be reached from outside the plant network.
 
-## Practical recommendations
+## Related
 
-- Configure the system so that users utilize strong passwords that contain uppercase and lowercase letters, numbers, and special characters;
-- Implement [two-factor authentication](/docs/user-guide/two-factor-authentication/) to enhance security.
+- [Users](/docs/user-guide/ui/users/)
+- [Two-factor authentication](/docs/user-guide/two-factor-authentication/)
+- [API error codes](/docs/troubleshooting/error-codes/)

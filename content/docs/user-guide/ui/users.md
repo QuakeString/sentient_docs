@@ -32,7 +32,7 @@ The list shows each user's **Created time**, **First name**, **Last name**, **Em
    - **Display activation link**: SENTIENT shows the link for you to copy and send yourself. Use this on an offline server or when mail is not set up.
 5. Click **Add**.
 
-The user opens the link, chooses a password and signs in. Until then the account is not active. The link is valid for 24 hours; **Resend activation** in the user's details sends or shows a new one.
+The user opens the link, chooses a password and signs in. Until then the account is not active. The link is valid for 24 hours by default (see [Security settings](/docs/user-guide/ui/security-settings/)); **Resend activation** in the user's details sends or shows a new one.
 
 ## Set or reset a password
 

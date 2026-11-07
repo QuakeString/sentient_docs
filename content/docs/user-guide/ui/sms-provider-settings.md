@@ -1,32 +1,85 @@
 +++
-title = "SMS Provider Settings"
-description = "SENTIENT IoT platform SMS provider settings"
+title = "SMS provider"
+description = "Connect SENTIENT to an SMS service so it can text alarm notifications and two-factor codes."
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/ui/sms-provider-settings.md"
+status = "checked"
+checked = "4.3.0.57"
 +++
-SENTIENT System Administrator is able to configure SMS provider that will be used the SMS gateway to send text messages to your customers or users.
-For example, you can set up sending an SMS alert to the user when the sensor detects an abnormal condition.
+SENTIENT sends text messages for [notifications](/docs/user-guide/notifications/), such as alarms, and for [two-factor authentication](/docs/user-guide/two-factor-authentication/) codes. It does not send SMS itself: it hands each message to an SMS service you have an account with.
 
+The system administrator sets the service under **Settings > Notifications**, in the **SMS provider settings** card. One provider serves the whole platform.
 
-Tenant administrator is able to setup [**sms rule node**](/docs/user-guide/rule-engine-2-0/nodes/external/send-sms/) to distribute alarms produced by [**rule engine**](/docs/user-guide/rule-engine-2-0/re-getting-started/).  
+**On an offline plant network**, the SENTIENT server must still reach the provider over the internet. Without that, use a provider with a server on your network that offers an HTTP interface, through **Custom HTTP**.
 
-To configure SMS provider settings in Sentient, follow these steps:
+## Providers
 
+| Provider | Enter |
+|---|---|
+| **Amazon SNS** | **AWS Access Key ID**, **AWS Secret Access Key** and **AWS Region**, for example `ap-south-1`. The key needs permission to publish SMS (`sns:Publish`) |
+| **Twilio** | **Phone Number From** (your Twilio number in E.164 format, a phone number SID `PN…` or a messaging service SID `MG…`), **Twilio Account SID** and **Twilio Account Token** |
+| **Custom HTTP** | The request your SMS service expects, see below. Use it for local and regional services such as Fast2SMS, MSG91, TextLocal or Gupshup |
+| **SMPP** | Listed, but **not supported in 4.3.0.57**: saving works, sending fails with "SMPP SMS provider is not implemented in SENTIENT". Use Custom HTTP if your operator also offers an HTTP interface |
 
-1. Login to SENTIENT UI. Navigate to the "Settings" page. Now, go to the "Notificatons" tab. In this window, choose one of the available providers: AWS SNS Twilio or SMPP;
+Secrets are stored encrypted and shown masked after you save.
 
-1. If you have chosen AWS SNS, populate AWS Access Key ID and Secret access key. Click "Save" button;
+## Custom HTTP
 
-1. If you have chosen Twilio, populate the Twilio account SID and Token. Specify phone number that will be used as a "sender". Click "Save" button;
+Describe the request your service's documentation shows. In the URL, headers and body you can use these placeholders, which SENTIENT fills in for each message:
 
-1. If you have chosen SMPP, Populate System ID and Password. Specify SMPP version, SMPP host and port. Click "Save" button.
+| Placeholder | Becomes |
+|---|---|
+| `${to}` | The recipient's phone number, in E.164 format, for example `+919123456789` |
+| `${message}` | The text of the message |
+| `${apiKey}` | The value of **API key / token** |
+| `${name}` | Any value from **Extra params (JSON)**, for example `${senderId}` |
 
+| Setting | What to enter |
+|---|---|
+| **HTTP method** | `GET` or `POST` |
+| **Request URL** | The service address. Placeholders are URL-encoded |
+| **API key / token** | The secret the service gave you |
+| **Content-Type (POST)** | `application/json` or `application/x-www-form-urlencoded` |
+| **Body template (POST)** | The request body. Placeholders are escaped to suit the content type |
+| **Headers (JSON)** | Optional headers, for example `{"Authorization":"Bearer ${apiKey}"}` |
+| **Extra params (JSON)** | Optional values that are not secret, for example `{"senderId":"PLANTA"}` |
+| **Success marker (optional)** | Text that a successful response always contains, for example `"return":true`. Many services answer HTTP 200 even when the message was refused; with a marker, SENTIENT treats such answers as failures |
 
-<div class="st-gallery"><figure><img src="/images/user-guide/ui/sms/sms-provider-settings-step-2-ce.webp" alt="Login to SENTIENT UI. Navigate to the &quot;Settings&quot; page. Now, go to the &quot;Notificatons&quot; tab. In this window, choose one of the available providers: AWS SNS Twilio or SMPP;" loading="lazy"><figcaption>Login to SENTIENT UI. Navigate to the "Settings" page. Now, go to the "Notificatons" tab. In this window, choose one of the available providers: AWS SNS Twilio or SMPP;</figcaption></figure><figure><img src="/images/user-guide/ui/sms/sms-provider-settings-step-3-ce.webp" alt="If you have chosen AWS SNS, populate AWS Access Key ID and Secret access key. Click &quot;Save&quot; button;" loading="lazy"><figcaption>If you have chosen AWS SNS, populate AWS Access Key ID and Secret access key. Click "Save" button;</figcaption></figure><figure><img src="/images/user-guide/ui/sms/sms-provider-settings-step-4-ce.webp" alt="If you have chosen Twilio, populate the Twilio account SID and Token. Specify phone number that will be used as a &quot;sender&quot;. Click &quot;Save&quot; button;" loading="lazy"><figcaption>If you have chosen Twilio, populate the Twilio account SID and Token. Specify phone number that will be used as a "sender". Click "Save" button;</figcaption></figure><figure><img src="/images/user-guide/ui/sms/sms-provider-settings-step-5-ce.webp" alt="If you have chosen SMPP, Populate System ID and Password. Specify SMPP version, SMPP host and port. Click &quot;Save&quot; button." loading="lazy"><figcaption>If you have chosen SMPP, Populate System ID and Password. Specify SMPP version, SMPP host and port. Click "Save" button.</figcaption></figure></div>
+An example for a service that takes JSON:
 
+```text
+HTTP method:   POST
+Request URL:   https://sms.example.com/api/send
+Content-Type:  application/json
+Body template: {"to":"${to}","text":"${message}","sender":"${senderId}"}
+Headers:       {"Authorization":"Bearer ${apiKey}"}
+Extra params:  {"senderId":"PLANTA"}
+```
 
-<br>
-Please use [AWS SNS](https://docs.aws.amazon.com/sns/latest/dg/sms_publish-to-phone.html), [Twilio](https://www.twilio.com/docs/sms) or [SMPP](https://smpp.org/) documentation to learn more how to use the corresponding system.
+The request times out after 15 seconds.
+
+## Test and save
+
+Click **Send test SMS**, type a phone number in E.164 format and a message, and send. When the text arrives, click **Save**.
+
+## Phone numbers
+
+SENTIENT sends to the phone number in each user's profile. It must be in **E.164 format**: a `+`, the country code and the number, without spaces, for example `+919123456789`. Numbers in other formats are skipped with "Phone number must be in E.164 format".
+
+A message longer than 1,600 characters is cut. The [API usage](/docs/administration/api-usage/) page counts every 70 characters as one SMS.
+
+## Common errors
+
+| Error | Cause | Fix |
+|---|---|---|
+| invalid SMS provider credentials | The service answered 401 or 403 | Check the key, token or account SID |
+| SMS rate-limited | The service answered 429 | Wait, or ask the provider for a higher limit |
+| SMS provider error *code*: *text* | The service refused the message; the text is its reason | Often an unregistered sender ID, a template not approved by the operator (DLT in India), or no credit |
+| response missing success marker | The answer did not contain the **Success marker** | The service refused the message; the error shows its answer |
+| SMS transport error | SENTIENT could not reach the service | Check that the server can reach the internet or the provider's host |
+
+## Related
+
+- [Notification channels](/docs/user-guide/notification-channels/)
+- [Notification center](/docs/user-guide/notifications/)
+- [Two-factor authentication](/docs/user-guide/two-factor-authentication/)

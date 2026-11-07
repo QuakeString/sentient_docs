@@ -209,7 +209,6 @@ toc:
     path: /docs/user-guide/notifications/
   - title: Notification channels
     path: /docs/user-guide/notification-channels/
-    planned: true
   - title: Mail server
     path: /docs/user-guide/ui/mail-settings/
   - title: SMS provider

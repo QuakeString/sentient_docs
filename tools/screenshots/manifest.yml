@@ -128,3 +128,38 @@ shots:
       - wait: 1500
     clip: [484, 0, 956, 760]   # the picker panel, above the row with the gateway preview
     page: /docs/getting-started-guides/helloworld/
+  # Security and notification settings — round 3
+  - id: sysadmin-security-settings
+    as: sysadmin
+    url: /security-settings/general
+    page: /docs/user-guide/ui/security-settings/
+  - id: sysadmin-2fa-settings
+    as: sysadmin
+    url: /security-settings/2fa
+    page: /docs/user-guide/two-factor-authentication/
+  - id: account-security
+    url: /account/security
+    page: /docs/user-guide/two-factor-authentication/
+    themes: [light, dark]
+  - id: sysadmin-mail-settings
+    as: sysadmin
+    url: /settings/outgoing-mail
+    mask: ["input[type=password]"]
+    page: /docs/user-guide/ui/mail-settings/
+  - id: sysadmin-sms-provider
+    as: sysadmin
+    url: /settings/notifications
+    capture: "mat-card.settings-card >> nth=0"
+    pad: 16
+    page: /docs/user-guide/ui/sms-provider-settings/
+  - id: sysadmin-telegram-settings
+    as: sysadmin
+    url: /settings/notifications
+    capture: "mat-card.settings-card >> nth=1"
+    pad: 16
+    page: /docs/user-guide/notification-channels/
+  - id: account-linked-accounts
+    url: /account/notificationSettings
+    capture: "mat-card.settings-card >> nth=0"
+    pad: 16
+    page: /docs/user-guide/notification-channels/

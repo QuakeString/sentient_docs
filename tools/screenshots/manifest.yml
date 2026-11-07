@@ -9,6 +9,7 @@
 #   steps    optional list: {click: sel} {fill: [sel, text]} {press: key}
 #            {hover: sel} {wait: ms} {waitFor: sel} {scroll: sel}
 #   capture  optional selector to crop to (default: whole viewport)
+#   clip     optional [x, y, width, height] crop
 #   pad      pixels around the cropped element (default 8)
 #   mask     optional selectors to blank out (tokens, keys, addresses)
 #   themes   [light] (default) or [light, dark]
@@ -98,3 +99,29 @@ shots:
     as: sysadmin
     url: /settings/translations
     page: /docs/administration/translations/
+  # First device to dashboard (helloworld) — round 2
+  - id: add-device-wizard
+    url: /entities/devices
+    steps:
+      - click: "mat-toolbar button:has(mat-icon:text-is('add'))"
+      - click: "button[role=menuitem]:has-text('Add new device')"
+      - waitFor: "mat-dialog-container"
+      - fill: ["mat-dialog-container input[formcontrolname=name]", "Feed pump P-103"]
+    capture: "mat-dialog-container"
+    page: /docs/getting-started-guides/helloworld/
+  - id: check-connectivity
+    url: /entities/devices/{device:Feed pump P-101}
+    steps:
+      - click: "button:has-text('Check connectivity')"
+      - waitFor: "mat-dialog-container"
+      - wait: 1500
+    capture: "mat-dialog-container"
+    mask: ["mat-dialog-container pre", "mat-dialog-container code"]
+    page: /docs/getting-started-guides/helloworld/
+  - id: dashboard-add-widget
+    url: /dashboards/{dashboard:Boiler house overview}
+    steps:
+      - click: "button:has-text('Add new widget'), button:has-text('Add widget')"
+      - waitFor: "mat-dialog-container, tb-dashboard-widget-select"
+      - wait: 1000
+    page: /docs/getting-started-guides/helloworld/

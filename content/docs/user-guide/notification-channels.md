@@ -19,7 +19,7 @@ A **notification** always appears in the bell at the top of SENTIENT. Notificati
 | **Telegram** | System administrator, below | The user's linked Telegram account | No |
 | **WhatsApp** | System administrator, below | The user's linked WhatsApp number | No |
 | **Mobile app** | System administrator, below | A push message on the phone | No |
-| **Slack**, **Microsoft Teams** | | Not available in 4.3.0.57, see [Slack](/docs/user-guide/ui/slack-settings/) | |
+| **Slack**, **Microsoft Teams** | | From the release after 4.3.0.57, see [Slack](/docs/user-guide/ui/slack-settings/) and [Microsoft Teams](/docs/user-guide/ui/microsoft-teams-settings/) | |
 
 **For an offline plant**, rely on the web channel on control-room screens, and on email through a mail server inside the plant network.
 

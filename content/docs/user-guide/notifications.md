@@ -26,7 +26,7 @@ Every notification for you appears in the bell at the top right of SENTIENT as s
 | **SMS** | At the phone number in the user's profile | [SMS provider](/docs/user-guide/ui/sms-provider-settings/) |
 | **Telegram**, **WhatsApp** | At the account the user linked | [Notification channels](/docs/user-guide/notification-channels/) |
 | **Mobile app** | As a push message | [Notification channels](/docs/user-guide/notification-channels/#mobile-app-push) |
-| **Slack**, **Microsoft Teams** | Not available in 4.3.0.57 | [Slack](/docs/user-guide/ui/slack-settings/) |
+| **Slack**, **Microsoft Teams** | In a channel or direct message. From the release after 4.3.0.57 | [Slack](/docs/user-guide/ui/slack-settings/), [Microsoft Teams](/docs/user-guide/ui/microsoft-teams-settings/) |
 
 A method that is not set up cannot be chosen. Each user can switch methods off for each kind of notification under their initials › **Account** › **Notification settings**.
 

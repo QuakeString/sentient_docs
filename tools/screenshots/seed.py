@@ -11,7 +11,7 @@ never empty. Credentials come from --sysadmin or ST_DOCS_SYSADMIN
 ("email:password"). The docs user is docs@demo.plant / ST_DOCS_PASSWORD
 (default "DocsDemo#2025"); keep this tenant for screenshots only.
 """
-import argparse, json, math, os, random, sys, time, urllib.error, urllib.request
+import argparse, json, math, os, random, sys, time, urllib.error, urllib.request, uuid
 
 TENANT = "Demo Plant"
 DOCS_USER = "docs@demo.plant"
@@ -65,6 +65,60 @@ class Api:
             return True
         except urllib.error.HTTPError:
             return False
+
+
+def dash_widget(api, fqn, title, pos, sources, ktype="timeseries", extra=None, settings=None):
+    """A widget built from the type's own default config. sources: [(alias id, label prefix, keys)]."""
+    desc = api.call("GET", "/api/widgetType?fqn=" + fqn)["descriptor"]
+    cfg = json.loads(desc["defaultConfig"]) if isinstance(desc["defaultConfig"], str) else dict(desc["defaultConfig"])
+    colors = ["#26A69A", "#EF6C00", "#1565C0", "#AD1457"]  # readable on light and dark
+    n = 0
+    cfg["datasources"] = []
+    for alias, prefix, keys in sources:
+        data_keys = []
+        for key in keys:
+            data_keys.append({"name": key, "type": ktype, "label": (prefix + " " + key).strip(), "color": colors[n % 4], "settings": {}})
+            n += 1
+        cfg["datasources"].append({"type": "entity", "name": "", "entityAliasId": alias, "filterId": None, "dataKeys": data_keys})
+    cfg.update({"title": title, "useDashboardTimewindow": True}, **(extra or {}))
+    cfg["settings"].update(settings or {})
+    wid = str(uuid.uuid5(uuid.NAMESPACE_URL, fqn + title))
+    row, col, sx, sy = pos
+    return wid, {"id": wid, "typeFullFqn": fqn, "type": desc["type"], "isSystemType": True, "sizeX": sx, "sizeY": sy, "row": row, "col": col, "config": cfg}
+
+
+def overview_config(api, title, devices):
+    """Live cards and 24-hour charts for the two feed pumps."""
+    aliases = {}
+    for name in devices:
+        aid = str(uuid.uuid5(uuid.NAMESPACE_URL, "alias" + name))
+        dev = api.call("GET", "/api/tenant/devices?deviceName=" + urllib.request.quote(name))
+        aliases[aid] = {"id": aid, "alias": name, "filter": {"type": "singleEntity", "singleEntity": dev["id"]}, "resolveMultiple": False}
+    a, b = list(aliases)[:2]
+    def card(title, pos, alias, key, units, icon):
+        wid, w = dash_widget(api, "system.cards.value_card", title, pos, [(alias, "", [key])],
+                             extra={"showTitle": False, "units": units, "decimals": 1},
+                             settings={"icon": icon, "showDate": False})
+        w["config"]["datasources"][0]["dataKeys"][0]["label"] = title
+        return wid, w
+
+    def chart(title, pos, key, units):
+        return dash_widget(api, "system.time_series_chart", title, pos, [(a, "P-101", [key]), (b, "P-102", [key])],
+                           extra={"showTitle": True, "units": units}, settings={"legendLabelColor": "#7F8C8D"})
+
+    widgets = dict([
+        card("P-101 flow", (0, 0, 6, 3), a, "flow", "m³/h", "water_drop"),
+        card("P-101 pressure", (0, 6, 6, 3), a, "pressure", "bar", "speed"),
+        card("P-102 flow", (0, 12, 6, 3), b, "flow", "m³/h", "water_drop"),
+        card("P-102 vibration", (0, 18, 6, 3), b, "vibration", "mm/s", "vibration"),
+        chart("Flow, last 24 hours", (3, 0, 12, 9), "flow", "m³/h"),
+        chart("Motor current, last 24 hours", (3, 12, 12, 9), "motorCurrent", "A"),
+    ])
+    layout = {w: {k: v[k] for k in ("sizeX", "sizeY", "row", "col")} for w, v in widgets.items()}
+    return {"widgets": widgets, "entityAliases": aliases, "filters": {}, "settings": {},
+            "states": {"default": {"name": title, "root": True, "layouts": {"main": {"widgets": layout, "gridSettings": {"columns": 24, "margin": 8, "outerMargin": True, "backgroundColor": "#eeeeee"}}}}},
+            "timewindow": {"selectedTab": 0, "realtime": {"realtimeType": 0, "timewindowMs": 86_400_000, "interval": 300_000},
+                           "aggregation": {"type": "NONE", "limit": 2000}}}
 
 
 def find(items, name):
@@ -136,6 +190,12 @@ def main():
     for title in DASHBOARDS:
         if title not in have:
             api.call("POST", "/api/dashboard", {"title": title, "configuration": {}})
+    # Boiler house overview shows real widgets; the others stay empty (an empty dashboard opens in edit mode).
+    listed = api.call("GET", "/api/tenant/dashboards?pageSize=100&page=0&textSearch=" + urllib.request.quote(DASHBOARDS[0]))["data"]
+    board = api.call("GET", "/api/dashboard/" + find(listed, DASHBOARDS[0])["id"]["id"])
+    if not (board.get("configuration") or {}).get("widgets"):
+        board["configuration"] = overview_config(api, DASHBOARDS[0], ["Feed pump P-101", "Feed pump P-102"])
+        api.call("POST", "/api/dashboard", board)
 
     # A calculated field on each pump: flow per amp of motor current.
     for name, typ, _, _ in DEVICES:

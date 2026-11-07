@@ -122,7 +122,7 @@ shots:
     mask: ["mat-dialog-container pre >> nth=1"]   # the curl command holds the access token
     page: /docs/getting-started-guides/helloworld/
   - id: dashboard-add-widget
-    url: /dashboards/{dashboard:Boiler house overview}
+    url: /dashboards/{dashboard:Packing line OEE}   # still empty, so it opens in edit mode
     steps:
       - click: "button:has-text('Add new widget'), button:has-text('Add widget')"
       - waitFor: "text=Select widgets bundle"
@@ -151,18 +151,18 @@ shots:
     as: sysadmin
     url: /settings/notifications
     capture: "mat-card.settings-card >> nth=0"
-    pad: 16
+    pad: 6
     page: /docs/user-guide/ui/sms-provider-settings/
   - id: sysadmin-telegram-settings
     as: sysadmin
     url: /settings/notifications
     capture: "mat-card.settings-card >> nth=1"
-    pad: 16
+    pad: 6
     page: /docs/user-guide/notification-channels/
   - id: account-linked-accounts
     url: /account/notificationSettings
     capture: "mat-card.settings-card >> nth=0"
-    pad: 16
+    pad: 6
     page: /docs/user-guide/notification-channels/
   - id: dashboard-view
     url: /dashboards/{dashboard:Boiler house overview}
@@ -174,6 +174,7 @@ shots:
     url: /dashboards/{dashboard:Boiler house overview}
     steps:
       - click: "button:has-text('Edit mode')"
+      - hover: "tb-dashboard-toolbar"   # park the pointer on the empty middle of the toolbar, or a button tooltip shows
       - wait: 2000
     page: /docs/user-guide/dashboards/
   - id: widgets-bundles
@@ -188,7 +189,7 @@ shots:
   - id: device-profile-details
     url: /profiles/deviceProfiles
     steps:
-      - click: "mat-row:has-text('default')"
+      - click: "mat-row:has(:text-is('default'))"
       - waitFor: "tb-entity-details-panel"
       - wait: 1000
     page: /docs/user-guide/device-profiles/

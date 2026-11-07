@@ -20,7 +20,7 @@ Open **Features > Scheduler** in the left menu. **Reporting > Scheduling** shows
 | **Send Recipe to Device** | Sends a [recipe](/docs/user-guide/recipes/) data record to its device |
 | **Generate Report** | Generates a report and sends it to people. See [Schedule and send reports](/docs/reports/scheduling/) |
 | **Custom** | Sends a message with your own message type, body and metadata into the rule engine, for logic you build in a [rule chain](/docs/user-guide/rule-engine-2-0/re-getting-started/) |
-| **Update Firmware** | Listed, but in 4.3.0.57 the event does not run yet. Use [OTA updates](/docs/user-guide/ota-updates/) on the device or profile instead |
+| **Update Firmware** | Assigns a firmware package and starts the [OTA update](/docs/user-guide/ota-updates/) on each device whose firmware changes. *From the release after 4.3.0.57; in 4.3.0.57 the event does not run, so assign firmware on the device or profile instead* |
 
 Update Attributes, Send RPC Request and Custom events pass through the rule engine with the metadata `schedulerEventId`, `schedulerEventName` and `schedulerEventType`, so a rule chain can tell scheduled messages apart.
 
@@ -34,7 +34,8 @@ Update Attributes, Send RPC Request and Custom events pass through the rule engi
 3. Fill in what to do:
    - Update Attributes: the **Entity attributes scope** (**Server attributes** or **Shared attributes**), then **Add attribute** for each key and value.
    - Send RPC Request: the **RPC method** and **RPC parameters (JSON)**, for example method `setValue` with `{"value": 75}`.
-   - Send Recipe to Device: the device, the recipe and the recipe data record.
+   - Send Recipe to Device: the device, the **Recipe** and the **Recipe data**. The recipe always goes to the recipe's own device.
+   - Update Firmware: the package, by title and version. For a device profile target the profile's firmware is set, and the devices that follow the profile update.
    - Custom: the **Message type**, **Message body (JSON)** and **Metadata**.
 4. On the **Schedule** tab, set when it runs.
 5. Turn on **Enable scheduler** and save.
@@ -43,7 +44,7 @@ Update Attributes, Send RPC Request and Custom events pass through the rule engi
 
 Set the **Start time**, turn on **Repeat** and choose how it **Repeats**: **Once**, **Daily**, **Every N days**, **Weekly** (on chosen days), **Every N weeks**, **Monthly**, **Yearly**, or **Timer-based** (every so many seconds, minutes or hours). **Ends on** stops it at a date.
 
-The **Trigger** option, which runs an event when a value crosses a limit, works only for **Generate Report** in 4.3.0.57: see [By a trigger](/docs/reports/scheduling/#by-a-trigger). An event of another type with **Trigger** on does not run, so use **Repeat** for those.
+The **Trigger** option runs an event when a value crosses a limit; see [By a trigger](/docs/reports/scheduling/#by-a-trigger). It works for every event type, and it reacts to values that devices send over MQTT, HTTP or CoAP. *This is from the release after 4.3.0.57.* In 4.3.0.57, **Trigger** works only for **Generate Report** and only for values posted through the REST API; an event of another type with **Trigger** on does not run, so use **Repeat** for those.
 
 ## Table and calendar
 

@@ -15,8 +15,9 @@ error_id = "ST-APP-004"
 ## Why it happens
 
 - **Enable scheduler** is off for the event.
-- The event's type is **Update Firmware**, which does not run in 4.3.0.57.
-- **Trigger** is on for an event that is not **Generate Report**. In 4.3.0.57 triggers run only reports, and such an event does not run at all.
+- The event's type is **Update Firmware**, which does not run in 4.3.0.57. It runs from the release after.
+- **Trigger** is on for an event that is not **Generate Report**. In 4.3.0.57 triggers run only reports, and such an event does not run at all. From the release after, triggers run every event type.
+- In 4.3.0.57 a trigger reacts only to values posted through the REST API, not to values devices send over MQTT, HTTP or CoAP.
 - The start time is in another timezone than you expect.
 
 ## Fix it

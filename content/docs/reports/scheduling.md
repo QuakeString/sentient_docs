@@ -29,6 +29,8 @@ For a daily shift report at 06:00, choose **Daily** with start time 06:00 in the
 
 Turn on **Trigger** instead to generate the report when a value crosses a limit, for example a batch report when a batch ends. Choose the device or alias, then add **Trigger conditions**: a key, an operator (**Equals**, **Not equals**, **Greater than**, **Less than**, **Greater or equal**, **Less or equal**) and a **Constant** or **Another key** to compare with. With several conditions, any one of them fires the trigger.
 
+In 4.3.0.57 a trigger reacts only to values posted through the REST API. From the release after 4.3.0.57 it also reacts to values that devices send over MQTT, HTTP or CoAP.
+
 A schedule runs either by time or by trigger, not both.
 
 ## How people receive it

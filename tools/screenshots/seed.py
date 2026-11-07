@@ -55,6 +55,15 @@ class Api:
     def login(self, user, pw):
         self.token = self.call("POST", "/api/auth/login", {"username": user, "password": pw})["token"]
 
+    def can_login(self, user, pw):
+        req = urllib.request.Request(self.url + "/api/auth/login", data=json.dumps({"username": user, "password": pw}).encode(),
+                                     method="POST", headers={"Content-Type": "application/json"})
+        try:
+            urllib.request.urlopen(req, timeout=30).read()
+            return True
+        except urllib.error.HTTPError:
+            return False
+
 
 def find(items, name):
     return next((x for x in items if x.get("name") == name or x.get("title") == name or x.get("email") == name), None)
@@ -76,12 +85,11 @@ def main():
     tenant = find(tenants, TENANT) or api.call("POST", "/api/tenant", {"title": TENANT, "country": "India", "city": "Pune"})
     tid = tenant["id"]["id"]
     users = api.call("GET", f"/api/tenant/{tid}/users?pageSize=100&page=0")["data"]
-    if not find(users, DOCS_USER):
-        u = api.call("POST", "/api/user?sendActivationMail=false", {
-            "email": DOCS_USER, "firstName": "Docs", "lastName": "Demo", "authority": "TENANT_ADMIN",
-            "tenantId": {"id": tid, "entityType": "TENANT"}})
-        link = api.call("GET", f"/api/user/{u['id']['id']}/activationLink")
-        link = link if isinstance(link, str) else link.get("value", "")
+    u = find(users, DOCS_USER) or api.call("POST", "/api/user?sendActivationMail=false", {
+        "email": DOCS_USER, "firstName": "Docs", "lastName": "Demo", "authority": "TENANT_ADMIN",
+        "tenantId": {"id": tid, "entityType": "TENANT"}})
+    if not api.can_login(DOCS_USER, pw):  # new, or left unactivated by an interrupted run
+        link = api.call("GET", f"/api/user/{u['id']['id']}/activationLinkInfo")["value"]
         token = link.split("activateToken=")[-1]
         api.token = None
         api.call("POST", "/api/noauth/activate?sendActivationMail=false", {"activateToken": token, "password": pw})

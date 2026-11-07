@@ -84,11 +84,14 @@ shots:
   - id: api-usage
     url: /usage
     page: /docs/administration/api-usage/
-  - id: sysadmin-licence
+  # static/images/st/sysadmin-licence.webp (the activation form) needs an
+  # unlicensed instance, so it is not retaken here.
+  - id: sysadmin-licence-active
     as: sysadmin
     url: /license
     capture: "tb-license mat-card, tb-license .mat-mdc-card"
     pad: 16
+    mask: [".lic-key"]
     page: /docs/installation/licence/
   - id: sysadmin-translations
     as: sysadmin

@@ -1,6 +1,7 @@
 +++
 title = "Entity views"
 description = "Entity views in SENTIENT 4.3.0.57: what they are meant for, their current state, and how to share part of a device's data with a customer meanwhile."
+aliases = ["/docs/user-guide/ui/entity-views", "/docs/user-guide/ui/entity-views/"]
 
 [extra]
 status = "checked"

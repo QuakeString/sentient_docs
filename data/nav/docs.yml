@@ -244,8 +244,8 @@ toc:
       path: /docs/user-guide/rule-engine-2-0/nodes/flow/
   - title: Queues
     path: /docs/user-guide/rule-engine-2-5/queues/
-  - title: Expression language (TBEL)
-    path: /docs/user-guide/tbel/
+  - title: Script language (Rhai)
+    path: /docs/user-guide/rhai/
   - title: Templatization
     path: /docs/user-guide/templatization/
   - title: Tutorials

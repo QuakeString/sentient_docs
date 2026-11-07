@@ -107,7 +107,7 @@ We will update “Edge Root Rule Chain” that will be saving on the edge 10 sen
 <div class="st-gallery"><figure><img src="/images/edge/use-cases/data-filtering/root-rule-chain.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
 
 
-In the next steps, we will create a [TBEL](https://sentient.invenia.in/docs/user-guide/tbel/) node to filter data. The [TBEL](https://sentient.invenia.in/docs/user-guide/tbel/) script language node will create an empty object *newMsg*, 
+In the next steps, we will create a [TBEL](https://sentient.invenia.in/docs/user-guide/rhai/) node to filter data. The [TBEL](https://sentient.invenia.in/docs/user-guide/rhai/) script language node will create an empty object *newMsg*, 
 add a property named “distance” with the corresponding value from the “In-vehicle monitoring system”, and then send the *newMsg* object as a new message.
 
 <figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">newMsg</span> <span class="o">=</span> <span class="p">{};</span>

@@ -67,7 +67,7 @@ Two modes are available:
 
 The sequence of actions is as follows:
 - Configure the arguments that will provide input data  from the selected entity for further processing.
-- Provide a [TBEL](/docs/user-guide/tbel/) script that will calculate a new value based on the defined arguments.
+- Provide a [TBEL](/docs/user-guide/rhai/) script that will calculate a new value based on the defined arguments.
 - The computed result is then propagated to the related entity.
 
 > The variable name that stores the computed result must be defined directly in the function body.
@@ -80,7 +80,7 @@ The sequence of actions is as follows:
 
 <b><font size="4">Script</font></b>
 
-Define the calculation logic using a [TBEL](/docs/user-guide/tbel/) function based on the variables configured in [Arguments](/docs/user-guide/calculated-fields/?calculatedfieldsargumenttype=attribute#arguments).
+Define the calculation logic using a [TBEL](/docs/user-guide/rhai/) function based on the variables configured in [Arguments](/docs/user-guide/calculated-fields/?calculatedfieldsargumenttype=attribute#arguments).
 
 Script calculated fields must implement:
 

@@ -215,19 +215,14 @@ toc:
   section:
   - title: Overview
     path: /docs/reports/
-    planned: true
   - title: Report templates
     path: /docs/reports/templates/
-    planned: true
   - title: Report builder
     path: /docs/reports/builder/
-    planned: true
   - title: Schedule and send
     path: /docs/reports/scheduling/
-    planned: true
   - title: PDF and spreadsheet export
     path: /docs/reports/export/
-    planned: true
 
 - title: Rule engine and solution hub
   section:

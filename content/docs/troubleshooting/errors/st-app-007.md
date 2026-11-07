@@ -14,11 +14,15 @@ error_id = "ST-APP-007"
 
 ## Why it happens
 
-In 4.3.0.57 the "missing for" (no data) condition of alarm rules is not evaluated, so it never fires.
+- In 4.3.0.57 the "missing for" (no data) condition of alarm rules is not evaluated, so it never fires. This is fixed in the release after 4.3.0.57.
+- From the release after: the argument has never had a value. An argument with no value at all does not count as missing.
+- From the release after: the alarm is already active and has not been cleared, so no new alarm is raised.
 
 ## Fix it
 
-Raise the alarm from the device's inactivity instead. See [Alarm when a device is offline](/docs/user-guide/rule-engine-2-0/tutorials/create-inactivity-alarm/).
+- In 4.3.0.57, raise the alarm from the device's inactivity instead. See [Alarm when a device is offline](/docs/user-guide/rule-engine-2-0/tutorials/create-inactivity-alarm/).
+- Make sure the device has sent the argument at least once.
+- Add a clear rule, for example "the argument has any value", so the alarm clears when data comes back and the next silence raises a new one.
 
 ## Check that it worked
 

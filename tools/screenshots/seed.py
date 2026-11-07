@@ -143,10 +143,11 @@ def main():
             continue
         dev = api.call("GET", "/api/tenant/devices?deviceName=" + urllib.request.quote(name))
         listed = api.call("GET", f"/api/DEVICE/{dev['id']['id']}/calculatedFields?pageSize=50&page=0", ok404=True) or {}
-        if any(f.get("name") == "Flow per amp" for f in listed.get("data", [])):
+        cf_name = "Flow per amp " + name.split()[-1]  # names are unique across the tenant
+        if any(f.get("name") == cf_name for f in listed.get("data", [])):
             continue
         api.call("POST", "/api/calculatedField", {
-            "entityId": dev["id"], "type": "SIMPLE", "name": "Flow per amp", "configurationVersion": 1,
+            "entityId": dev["id"], "type": "SIMPLE", "name": cf_name, "configurationVersion": 1,
             "configuration": {"type": "SIMPLE",
                               "arguments": {"flow": {"refEntityKey": {"key": "flow", "type": "TS_LATEST"}},
                                             "current": {"refEntityKey": {"key": "motorCurrent", "type": "TS_LATEST"}}},
@@ -155,6 +156,9 @@ def main():
 
     for dname, atype, sev in ALARMS:
         dev = api.call("GET", "/api/tenant/devices?deviceName=" + urllib.request.quote(dname))
+        active = api.call("GET", f"/api/alarm/DEVICE/{dev['id']['id']}?searchStatus=ACTIVE&pageSize=50&page=0")["data"]
+        if any(x.get("type") == atype for x in active):
+            continue
         api.call("POST", "/api/alarm", {"originator": dev["id"], "type": atype, "severity": sev,
                                          "details": {"source": "docs demo"}})
     print(f"Demo Plant ready: sign in as {DOCS_USER}")

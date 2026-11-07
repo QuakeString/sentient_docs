@@ -118,12 +118,13 @@ shots:
       - waitFor: "mat-dialog-container"
       - wait: 1500
     capture: "mat-dialog-container"
-    mask: ["mat-dialog-container pre", "mat-dialog-container code"]
+    mask: ["mat-dialog-container pre >> nth=1"]   # the curl command holds the access token
     page: /docs/getting-started-guides/helloworld/
   - id: dashboard-add-widget
     url: /dashboards/{dashboard:Boiler house overview}
     steps:
       - click: "button:has-text('Add new widget'), button:has-text('Add widget')"
-      - waitFor: "mat-dialog-container, tb-dashboard-widget-select"
-      - wait: 1000
+      - waitFor: "text=Select widgets bundle"
+      - wait: 1500
+    clip: [484, 0, 956, 760]   # the picker panel, above the row with the gateway preview
     page: /docs/getting-started-guides/helloworld/

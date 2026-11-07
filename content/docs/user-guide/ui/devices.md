@@ -37,13 +37,18 @@ In each row, the shield icon opens the device's credentials and the bin deletes 
 ## Add a device
 
 1. Click **+**, then **Add new device**.
-2. Type a **Name**. Optionally add a **Label** and a **Description**.
+2. Type a **Name**. Optionally add a **Label**.
 3. Choose a **Device profile**. Use `default` if you have no profile of your own yet.
-4. Tick **Is gateway** for a gateway. For a gateway, **Overwrite activity time for connected device** lets the gateway's own activity keep its devices marked active.
-5. Optionally open the **Credentials** step to set your own access token, an X.509 certificate or MQTT Basic credentials. Without it, SENTIENT generates an access token.
-6. Click **Add**.
+4. Switch on **Is gateway** for a gateway. For a gateway, **Overwrite activity time for connected device** lets the gateway's own activity keep its devices marked active.
+5. Under **Owner and groups**, keep yourself (the tenant) as the **Owner** or pick a customer, and optionally add the device to **Groups**.
+6. Optionally click **Next: Credentials** to set your own access token, an X.509 certificate or MQTT Basic credentials. Without it, SENTIENT generates an access token.
+7. Click **Add**.
+
+![The Add new device window](/images/st/add-device-wizard.webp)
 
 SENTIENT then opens **Check connectivity**, which shows ready-to-copy commands for HTTP, MQTT and CoAP with the device's own token. Select **Do not show again** to skip it next time; the same window opens from the **Check connectivity** button in the device's details.
+
+![Check connectivity, with the command that contains the token hidden](/images/st/check-connectivity.webp)
 
 To add many devices at once, click **+**, then **Import device**, and load a CSV file. See [Bulk provisioning](/docs/user-guide/bulk-provisioning/).
 

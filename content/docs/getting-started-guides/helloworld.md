@@ -22,9 +22,13 @@ You need:
 3. Type a **Name**, for example `Feed pump P-101`. The name must be unique in your tenant.
 4. Leave **Device profile** at `default` and click **Add**.
 
-SENTIENT creates the device and opens the **Check connectivity** window. Keep it open for the next step, or close it: you can open it again from the device's details.
+![The Add new device window: name, label, device profile, gateway switch, owner and groups](/images/st/add-device-wizard.webp)
 
-![The devices list with seven pumps, conveyors and meters](/images/st/devices-list.webp)
+SENTIENT creates the device and opens the **Check connectivity** window. It shows ready-made commands for HTTP, MQTT and CoAP, for Windows, macOS and Linux, with this device's token already filled in. Copy the command, run it, and the values appear at the bottom of the window. You can close it and open it again from the device's details.
+
+![Check connectivity: install curl, then run the command shown (hidden here, it contains the token)](/images/st/check-connectivity.webp)
+
+The steps below do the same by hand, so you know where each part comes from.
 
 ## Step 2. Copy the access token
 
@@ -77,6 +81,9 @@ Values appear here within a second of arriving. If nothing appears, the reading 
 1. In the left menu, open **Dashboards**, click **+**, then **Create new dashboard**.
 2. Type a **Title**, for example `Pump P-101`, and click **Add**. The new, empty dashboard opens in edit mode.
 3. Click **Add new widget**. Open the **Cards** bundle and choose **Value card**.
+
+   ![Select widgets bundle: Cards, Charts, gauges, buttons and more](/images/st/dashboard-add-widget.webp)
+
 4. Under **Datasource**, pick your device. Under the key, pick `flow`. Click **Add**.
 5. Click **Add new widget** again. Open the **Charts** bundle and choose **Time series chart**, with the same device and the keys `flow` and `pressure`. Click **Add**.
 6. Drag the widgets into place and resize them by their corners. Click **Save**.

@@ -50,7 +50,7 @@ SENTIENT then opens **Check connectivity**, which shows ready-to-copy commands f
 
 ![Check connectivity, with the command that contains the token hidden](/images/st/check-connectivity.webp)
 
-To add many devices at once, click **+**, then **Import device**, and load a CSV file. See [Bulk provisioning](/docs/user-guide/bulk-provisioning/).
+To add many devices at once, see [Bulk provisioning](/docs/user-guide/bulk-provisioning/). The **Import device** item under **+** does not import CSV files correctly in 4.3.0.57; do not use it.
 
 ## Credentials
 

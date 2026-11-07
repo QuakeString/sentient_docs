@@ -12,7 +12,7 @@ hide_children = true
 |---|---|---|
 | [rule chain](/docs/user-guide/rule-engine-2-0/nodes/flow/rule-chain/) | Sends the message to another rule chain | Success |
 | [output](/docs/user-guide/rule-engine-2-0/nodes/flow/output/) | Ends a rule chain that another chain called, and returns the message to it through the output's name | Names of the output nodes |
-| [checkpoint](/docs/user-guide/rule-engine-2-0/nodes/flow/checkpoint/) | **Not working yet in 4.3.0.57:** a rule chain that uses it does not load. Moves the message to another queue | Success |
+| [checkpoint](/docs/user-guide/rule-engine-2-0/nodes/flow/checkpoint/) | Passes the message straight on. Kept for imported rule chains. **In 4.3.0.57 this node does not run** and a rule chain that uses it does not load; it works from the release after | Success |
 | [acknowledge](/docs/user-guide/rule-engine-2-0/nodes/flow/acknowledge/) | Marks the message as processed so the queue does not retry it | Success |
 
 Every node also has a **Failure** output, used when the node cannot do its job. Nodes without a link do not have their own page yet.

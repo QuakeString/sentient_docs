@@ -17,7 +17,7 @@ hide_children = true
 | [delete key-value pairs](/docs/user-guide/rule-engine-2-0/nodes/transformation/delete-key-value-pairs/) | Removes keys from the message, the metadata or both | Success |
 | [extract with JSONPath](/docs/user-guide/rule-engine-2-0/nodes/transformation/json-path/) | Picks values out of the message with a JSONPath expression | Success |
 | [split array msg](/docs/user-guide/rule-engine-2-0/nodes/transformation/split-array-msg/) | Turns a message holding an array into one message per element | Success |
-| [deduplication](/docs/user-guide/rule-engine-2-0/nodes/transformation/deduplication/) | Keeps one message per originator within a time window | Success |
+| [deduplication](/docs/user-guide/rule-engine-2-0/nodes/transformation/deduplication/) | Keeps the first or last message per originator within an interval, or joins them all into one | Success |
 | [to email](/docs/user-guide/rule-engine-2-0/nodes/transformation/to-email/) | Builds an e-mail from the message, for the send email node | Success |
 
 Every node also has a **Failure** output, used when the node cannot do its job. Nodes without a link do not have their own page yet.

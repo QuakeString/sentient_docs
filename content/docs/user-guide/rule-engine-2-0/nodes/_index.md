@@ -18,7 +18,7 @@ Every message has three parts that nodes read and change:
 | Metadata | Text values about the message, for example `deviceName`, `deviceType`, `ts` |
 | Type | What the message is, for example `POST_TELEMETRY_REQUEST` or `ATTRIBUTES_UPDATED` |
 
-Nodes are grouped as in the editor's node list. Some nodes in the list do not work yet in 4.3.0.57; the group pages mark them.
+Nodes are grouped as in the editor's node list. Some nodes in the list do not run in 4.3.0.57; the group pages mark them.
 
 | Group | Use it to |
 |---|---|

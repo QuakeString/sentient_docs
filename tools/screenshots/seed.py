@@ -214,6 +214,33 @@ def main():
                               "expression": "flow / current",
                               "output": {"type": "TIME_SERIES", "name": "flowPerAmp", "decimalsByDefault": 2}}})
 
+    # An alarm rule on the Pump profile, so the alarm rules page is not empty.
+    pump = api.call("GET", "/api/tenant/devices?deviceName=" + urllib.request.quote("Feed pump P-101"))
+    prof = pump["deviceProfileId"]
+    listed = api.call("GET", f"/api/DEVICE_PROFILE/{prof['id']}/calculatedFields?pageSize=50&page=0&type=ALARM", ok404=True) or {}
+    if not any(f.get("name") == "High bearing vibration" for f in listed.get("data", [])):
+        def numeric(arg, op, value=None, dyn=None):
+            v = {"staticValue": value} if dyn is None else {"dynamicValueArgument": dyn}
+            return {"type": "SIMPLE", "operation": "AND", "filters": [
+                {"argument": arg, "valueType": "NUMERIC", "operation": "AND",
+                 "predicates": [{"type": "NUMERIC", "operation": op, "value": v}]}]}
+        api.call("POST", "/api/calculatedField", {
+            "entityId": prof, "type": "ALARM", "name": "High bearing vibration", "configurationVersion": 1,
+            "configuration": {
+                "type": "ALARM",
+                "arguments": {"vibration": {"refEntityKey": {"key": "vibration", "type": "TS_LATEST"}},
+                              "maxVibration": {"refEntityKey": {"key": "maxVibration", "type": "ATTRIBUTE", "scope": "SERVER_SCOPE"},
+                                               "defaultValue": "4.5"}},
+                "createRules": {
+                    "MAJOR": {"condition": {"type": "DURATION", "expression": numeric("vibration", "GREATER", dyn="maxVibration"),
+                                            "unit": "MINUTES", "value": {"staticValue": 2}},
+                              "alarmDetails": "Vibration ${vibration} mm/s, limit ${maxVibration} mm/s. Check the bearings."},
+                    "CRITICAL": {"condition": {"type": "SIMPLE",
+                                               "expression": {"type": "RHAI", "expression": "vibration > maxVibration + 2.5"}}}},
+                "clearRule": {"condition": {"type": "SIMPLE",
+                                            "expression": {"type": "RHAI", "expression": "vibration <= maxVibration - 0.5"}}},
+                "propagate": True, "propagateToOwner": False, "propagateToTenant": False}})
+
     for dname, atype, sev in ALARMS:
         dev = api.call("GET", "/api/tenant/devices?deviceName=" + urllib.request.quote(dname))
         active = api.call("GET", f"/api/alarm/DEVICE/{dev['id']['id']}?searchStatus=ACTIVE&pageSize=50&page=0")["data"]

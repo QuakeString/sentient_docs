@@ -196,3 +196,54 @@ shots:
   - id: notification-rules
     url: /notification/rules
     page: /docs/user-guide/notifications/
+  # Wave 2 — round 4: alarm rules, SCADA editor, industrial widgets, gateway
+  - id: alarm-rules
+    url: /alarms/alarm-rules
+    clip: [56, 50, 1384, 400]   # the toolbar and the seeded rule
+    page: /docs/user-guide/alarm-rules/
+  - id: alarm-rule-dialog
+    url: /alarms/alarm-rules
+    size: [1440, 1400]
+    steps:
+      - click: "mat-row:has-text('High bearing vibration')"
+      - waitFor: "mat-dialog-container"
+      - wait: 1200
+    capture: "mat-dialog-container"
+    page: /docs/user-guide/alarm-rules/
+    themes: [light, dark]
+  - id: scada-symbol-editor
+    url: /resources/scada-symbols
+    steps:
+      - click: "mat-slide-toggle:has-text('Include system symbols')"
+      - wait: 1500
+      - click: "mat-row >> nth=0"
+      - waitFor: "tb-scada-symbol-editor"
+      - wait: 2500
+    page: /docs/dashboards/scada-editor/
+    themes: [light, dark]
+  - id: industrial-widgets-bundle
+    url: /resources/widgets-library/widgets-bundles
+    steps:
+      - click: "mat-row:has-text('Rotating Equipment')"
+      - wait: 3000
+    page: /docs/dashboards/industrial-widgets/
+    themes: [light, dark]
+  - id: gateway-launch-command
+    url: /entities/gateways
+    steps:
+      - click: "mat-row:has-text('Plant gateway GW-1')"
+      - wait: 2500
+      - click: "button:has-text('Launch command')"
+      - waitFor: "mat-dialog-container"
+      - wait: 1000
+    capture: "mat-dialog-container"
+    mask: ["mat-dialog-container pre", "mat-dialog-container code"]   # the commands hold the access token
+    page: /docs/iot-gateway/install-windows/
+  - id: gateway-connectors
+    url: /entities/gateways
+    steps:
+      - click: "mat-row:has-text('Plant gateway GW-1')"
+      - wait: 2500
+      - click: "button:has-text('Connectors'), a:has-text('Connectors')"
+      - wait: 2500
+    page: /docs/iot-gateway/

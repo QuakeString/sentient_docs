@@ -23,7 +23,6 @@ toc:
       path: /docs/installation/
     - title: System requirements
       path: /docs/installation/requirements/
-      planned: true
     - title: Windows with Platform Manager
       path: /docs/installation/windows/
     - title: Windows with ClickHouse (WSL2)
@@ -50,7 +49,6 @@ toc:
       path: /docs/operations/ports/
     - title: Performance tuning
       path: /docs/operations/tuning/
-      planned: true
     - title: Uninstall
       path: /docs/operations/uninstall/
 

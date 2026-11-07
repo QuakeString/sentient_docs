@@ -86,7 +86,6 @@ toc:
     planned: true
   - title: Siemens S7
     path: /docs/iot-gateway/config/s7/
-    planned: true
   - title: SNMP
     path: /docs/iot-gateway/config/snmp/
   - title: Socket

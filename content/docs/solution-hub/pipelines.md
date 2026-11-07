@@ -9,7 +9,7 @@ checked = "4.3.0.57"
 +++
 A **data pipeline** takes a device's telemetry through a chain of processing steps and writes the results back as new telemetry, attributes or alarms. Use one when a [calculated field](/docs/user-guide/calculated-fields/) is not enough: smoothing a noisy signal, a vibration spectrum, an OEE figure, a trend or a forecast.
 
-Open **Analytics > Data Pipelines** in the left menu. Ready-made pipelines are in the [solution hub](/docs/solution-hub/) under **Templates › Analytics pipelines**.
+Open **Analytics > Data Pipelines** in the left menu. Ready-made pipelines are in the [solution hub](/docs/solution-hub/) under **Templates › Analytics pipelines**. In 4.3.0.57 the menu entry **Analytics > Solution Templates** shows an empty list; open the Solution hub instead. From the release after 4.3.0.57 that entry opens the Solution hub's **Analytics pipelines** tab, and clicking **Analytics** itself opens **Data Pipelines**.
 
 ## Make a pipeline
 

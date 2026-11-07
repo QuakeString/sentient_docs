@@ -31,9 +31,9 @@ You can set a home dashboard in three places:
 | A customer's details, **Home dashboard** | The customer's users |
 | A user's details, **Home dashboard** | That user |
 
-> In 4.3.0.57 only the **user's** home dashboard is used. The tenant and customer settings are saved but the Home page does not read them yet, so set the home dashboard on each user for now.
+The Home page uses the first one that applies: the user's own, then (for customer users) the customer's, then the tenant's. A dashboard the user is not allowed to open is skipped, so share the tenant's home dashboard with a customer if its users should see it. If none applies, the user sees the built-in home page.
 
-The user must be allowed to open the dashboard. If they are not, they see the built-in home page.
+> **In 4.3.0.57** only the **user's** home dashboard is used: the tenant and customer settings are saved but not read, so set the home dashboard on each user there. The order above applies from the release after 4.3.0.57.
 
 ## A default dashboard
 

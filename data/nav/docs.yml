@@ -390,10 +390,8 @@ toc:
     path: /docs/user-guide/ui/users/
   - title: Roles and permissions
     path: /docs/administration/roles/
-    planned: true
   - title: Entity groups
     path: /docs/administration/entity-groups/
-    planned: true
   - title: Security
     section:
     - title: Security settings

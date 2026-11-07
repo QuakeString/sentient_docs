@@ -247,3 +247,11 @@ shots:
       - click: "button:has-text('Connectors'), a:has-text('Connectors')"
       - wait: 2500
     page: /docs/iot-gateway/
+  # Round 5 — after the 2026-11-07 fixes (image master-326d028a)
+  - id: scheduler-events
+    url: /scheduler
+    page: /docs/user-guide/scheduler/
+    themes: [light, dark]
+  - id: ota-updates
+    url: /otaUpdates
+    page: /docs/user-guide/ota-updates/

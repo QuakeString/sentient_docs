@@ -45,14 +45,12 @@ toc:
     path: /docs/iot-gateway/config/dnp3/
   - title: EtherCAT
     path: /docs/iot-gateway/config/ethercat/
-    planned: true
   - title: EtherNet/IP
     path: /docs/iot-gateway/config/ethernet-ip/
   - title: FTP
     path: /docs/iot-gateway/config/ftp/
   - title: IEC 61850
     path: /docs/iot-gateway/config/iec61850/
-    planned: true
   - title: KNX
     path: /docs/iot-gateway/config/knx/
   - title: Mitsubishi MC protocol
@@ -71,7 +69,6 @@ toc:
     path: /docs/iot-gateway/config/opc-ua/
   - title: PROFINET
     path: /docs/iot-gateway/config/profinet/
-    planned: true
   - title: Request
     path: /docs/iot-gateway/config/request/
   - title: REST

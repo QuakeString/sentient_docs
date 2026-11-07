@@ -29,6 +29,8 @@ The system administrator sets up SMS, Telegram, WhatsApp and the mobile app unde
 
 You need a Telegram bot. In Telegram, talk to **@BotFather**, send `/newbot`, and copy the token it gives you.
 
+![Telegram settings: bot token, bot username and how bot updates arrive](/images/st/sysadmin-telegram-settings.webp)
+
 1. In the **Telegram settings** card, switch on **Enable Telegram channel**.
 2. Paste the **Bot token**. **Bot username** fills itself in when you save.
 3. Under **Receive bot updates via**, keep **Long-polling**. It works behind a firewall, since SENTIENT asks Telegram for new messages. Choose **Webhook** only if Telegram can reach SENTIENT at a public HTTPS address, and enter that **Webhook URL**.
@@ -55,6 +57,8 @@ Push messages to the SENTIENT mobile app go through Google Firebase. In the **Mo
 ## Link a Telegram or WhatsApp account (each user)
 
 SENTIENT can only message users who have linked their account:
+
+![Linked notification accounts on the user's account page, with Link Telegram and Link WhatsApp](/images/st/account-linked-accounts.webp)
 
 1. Click your initials at the bottom of the left menu, choose **Account**, then open the **Notification settings** tab.
 2. Under **Linked notification accounts**:

@@ -36,6 +36,8 @@ Open **Resources > Widgets library** in the left menu. It has two lists:
 | Maps and navigation | Maps, Navigation widgets |
 | Platform | Alarm widgets, Entity widgets, Entity admin widgets, Gateway widgets, Edge widgets, Home page widgets, Report widgets, HTML widgets, Utilities |
 
+![Resources > Widgets library > Widgets bundles: the system bundles, 44 in all](/images/st/widgets-bundles.webp)
+
 System bundles belong to the system administrator. Tenants use them but cannot change them; to change one, make your own copy (below).
 
 ## Find a widget

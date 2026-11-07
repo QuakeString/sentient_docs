@@ -28,6 +28,8 @@ The version at the bottom of the page, for example **SENTIENT 4.3.0.57**, is the
 - If you installed with the **Platform Manager**, use the email and password you entered in the wizard's **Administrator** step.
 - If you installed with **Docker**, use `admin@sentient.local` with the password `admin123`. Change the password right away: click your initials at the bottom of the menu, choose **Account**, then open the **Security** tab and use **Change password**.
 
+![Account > Security: copy the JWT token, change the password, and the password requirements](/images/st/account-security.webp)
+
 If no licence is active yet, SENTIENT asks for one first. See [Activate your licence](/docs/installation/licence/).
 
 ## 3. Create a tenant

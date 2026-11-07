@@ -27,6 +27,8 @@ The system administrator sets the server under **Settings > Mail server**. A ten
 | **Username** / **Password** | The mailbox account. For Gmail and Microsoft 365 with multi-factor sign-in, use an *app password* |
 | **Enable proxy** | Sends mail through an HTTP proxy, with its host, port and optional user name and password. Use it when the server reaches the internet only through a proxy |
 
+![Settings > Mail server: sender, SMTP provider, connection and authentication](/images/st/sysadmin-mail-settings.webp)
+
 > **Note for 4.3.0.57:** sign-in to the mail server with OAuth2 (the Microsoft and Google options) is not supported yet. Use a user name and password, or an app password.
 
 Click **Save**, then **Send test mail**. SENTIENT sends a message to your own address. If it fails, the error says why.

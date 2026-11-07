@@ -19,6 +19,8 @@ The system administrator sets platform-wide sign-in security under **Settings > 
 | **Password reset link TTL in hours** | 24 | How long a **Forgot password?** link works |
 | **Mobile secret key length** | 32 | Length of the secret used by the mobile app's QR sign-in |
 
+![Security > General: the general and password policies](/images/st/sysadmin-security-settings.webp)
+
 ## Password policy
 
 The password policy holds the rules for user passwords: minimum and maximum length, how many uppercase letters, lowercase letters, digits and special characters a password needs, whether spaces are allowed, how many days a password stays valid, and how soon an old password may be reused.

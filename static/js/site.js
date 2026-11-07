@@ -10,11 +10,21 @@
   /* ---------- theme ---------- */
   function isDark() { return root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; }
   function syncIcon() { var i = $("#themeIcon"); if (i) i.setAttribute("href", isDark() ? "#i-sun" : "#i-moon"); }
-  syncIcon();
+  /* screenshots with a -dark twin follow the theme */
+  function syncShots() {
+    var d = isDark();
+    document.querySelectorAll("img[data-dark]").forEach(function (im) {
+      var src = im.getAttribute("src"), dark = /-dark\.(webp|png)$/.test(src);
+      if (d && !dark) im.setAttribute("src", src.replace(/\.(webp|png)$/, "-dark.$1"));
+      if (!d && dark) im.setAttribute("src", src.replace(/-dark\.(webp|png)$/, ".$1"));
+    });
+  }
+  syncIcon(); syncShots();
+  matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { syncIcon(); syncShots(); });
   $("#themeBtn").addEventListener("click", function () {
     root.dataset.theme = isDark() ? "light" : "dark";
     try { localStorage.setItem("st-docs-theme", root.dataset.theme); } catch (e) {}
-    syncIcon();
+    syncIcon(); syncShots();
   });
 
   /* ---------- mobile nav ---------- */

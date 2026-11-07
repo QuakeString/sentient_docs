@@ -35,6 +35,8 @@ The tenant administrator manages profiles under **Profiles > Device profiles** i
 
 Click a profile to open it. The tabs are:
 
+![A device profile open on the Details tab, with the tabs Transport configuration, Calculated fields, Alarm rules and Device provisioning](/images/st/device-profile-details.webp)
+
 | Tab | What it holds |
 |---|---|
 | **Details** | The settings above |

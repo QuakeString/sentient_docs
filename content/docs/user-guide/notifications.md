@@ -64,6 +64,8 @@ Add `:upperCase`, `:lowerCase` or `:capitalize` to change the case, for example 
 
 A **rule** sends a template to recipients when its trigger fires. Click **+** in the **Rules** tab, choose the **Trigger**, the **Template** and the recipients, and set the trigger's filter:
 
+![The Rules tab of the notification center, with the default rules every tenant gets](/images/st/notification-rules.webp)
+
 | Trigger | Fires when | Filter |
 |---|---|---|
 | **Alarm** | An alarm is created, changes severity, is acknowledged or cleared (**Notify on**) | Alarm types and severities. Empty means all |

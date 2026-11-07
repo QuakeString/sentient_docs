@@ -8,7 +8,7 @@ checked = "4.3.0.57"
 +++
 **Bulk provisioning** means adding many devices or assets at once, for example the 200 meters of a new building, instead of one by one.
 
-> **Note for 4.3.0.57:** CSV import does not work yet. **Import device** under **Entities > Devices** does not read the rows of your file, and **Import assets** fails. Do not use them in 4.3.0.57: the device import can add test devices named `csv-device-1` to `csv-device-5`; delete them if you see them. A later version will add CSV import. Use one of the ways below meanwhile.
+> **Note for 4.3.0.57:** CSV import does not work yet. **Import device** under **Entities > Devices** does not read the rows of your file, and **Import assets** fails. Do not use them in 4.3.0.57: the device import can add test devices named `csv-device-1` to `csv-device-5`; delete them if you see them. A later version will add CSV import. Use one of the ways below meanwhile. CSV import of devices and assets is fixed for the release after 4.3.0.57: it reads your rows through the column mapping (name, type, label, description, gateway flag, attributes, time series and access token, MQTT basic or X.509 credentials), can update entities with the same name, and lists failed rows by line.
 
 ## Ways that work
 

@@ -19,11 +19,15 @@ Open **Dashboards** in the left menu. The list shows each dashboard's title, its
 2. Type a **Title**, and optionally a description and an image for the list.
 3. Click **Add**. The new, empty dashboard opens in edit mode.
 
+![A dashboard in view mode: four value cards and two 24-hour charts, with Edit mode at the top right](/images/st/dashboard-view.webp)
+
 **Import dashboard** loads a dashboard exported as JSON; **Add from hub** takes a ready-made one from the [Solution hub](/docs/solution-hub/).
 
 ## Edit mode
 
 Open a dashboard and click **Edit mode** (the pencil) at the top right. In edit mode:
+
+![Edit mode: States and Layouts on the left; Add widget, settings, undo history, Close and Save on the right](/images/st/dashboard-edit-mode.webp)
 
 - **Add widget** opens the widget library at the side. Search it, or open a bundle, and click a widget to add it. Then choose its data source, see [Widgets](/docs/user-guide/ui/widget-library/).
 - Drag a widget to move it; drag its corner to resize it. Click a widget's pencil to change its data and appearance.

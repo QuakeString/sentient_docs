@@ -18,6 +18,7 @@ done
 ZOLA=${ZOLA:-zola} PAGEFIND=${PAGEFIND:-pagefind}
 start=$(date +%s)
 "$ZOLA" build --output-dir "$OUT" --force
+python3 tools/darkimg.py "$OUT"
 if [ -n "$PREFIX" ]; then
   python3 tools/prefix.py "$OUT" "$PREFIX"
 fi

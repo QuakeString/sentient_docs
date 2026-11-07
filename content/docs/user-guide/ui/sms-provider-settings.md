@@ -21,6 +21,8 @@ The system administrator sets the service under **Settings > Notifications**, in
 | **Custom HTTP** | The request your SMS service expects, see below. Use it for local and regional services such as Fast2SMS, MSG91, TextLocal or Gupshup |
 | **SMPP** | Listed, but **not supported in 4.3.0.57**: saving works, sending fails with "SMPP SMS provider is not implemented in SENTIENT". Use Custom HTTP if your operator also offers an HTTP interface |
 
+![SMS provider settings, before a provider type is chosen](/images/st/sysadmin-sms-provider.webp)
+
 Secrets are stored encrypted and shown masked after you save.
 
 ## Custom HTTP

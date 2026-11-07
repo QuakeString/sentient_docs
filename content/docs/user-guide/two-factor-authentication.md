@@ -27,6 +27,8 @@ Setting it up has two parts: an administrator chooses which kinds of code are al
 
 The system administrator opens **Security > Two-factor authentication** in the left menu. A tenant administrator can use the system settings or set the tenant's own (switch off **Use system two factor auth settings**).
 
+![Security > Two-factor authentication: the methods and the verification limits](/images/st/sysadmin-2fa-settings.webp)
+
 1. Under **Available providers**, add each method you allow, and set its options:
    - **Authenticator app:** the **Issuer name** shown in the app, for example `SENTIENT Plant A`.
    - **Email, SMS, Telegram, WhatsApp:** the **Verification message template** and the **Verification code lifetime (sec)**.

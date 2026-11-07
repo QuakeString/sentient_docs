@@ -1,187 +1,68 @@
 +++
 title = "Users"
-description = "SENTIENT Users management"
+description = "Add users, activate them, set or reset their password and control what they see first."
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/ui/users.md"
+status = "checked"
+checked = "4.3.0.57"
 +++
-## User overview
+Every person who signs in to SENTIENT has a **user** account, identified by an email address. There are three levels:
 
-In SENTIENT, a **User** is an entity with credentials to access the platform.
+| Level | Created by | Sees |
+|---|---|---|
+| **System administrator** | Installation | Tenants, licence and platform settings, not plant data |
+| **Tenant administrator** | System administrator, under **Tenants** | Everything in their tenant |
+| **Customer user** | Tenant administrator, under **Customers** | Only what belongs to their customer |
 
-SENTIENT supports a three-level role hierarchy:
+What a user may do within their level is set by the **groups** they belong to and the roles of those groups. See [Roles](/docs/administration/roles/).
 
-1) **System administrator**. 
-- Has full access to the entire platform instance.
-- Can create and manage Tenant Administrators.
+The tenant administrator manages users under **Users** in the left menu. Customer users are also reached from a customer's **Manage customer users** button.
 
-2) **Tenant administrator**.
-- Has full control over a specific tenant environment.
-- Can create and manage:
-  - Customers
-  - Customer Users
-- Responsible for assigning access to dashboards, devices, assets, and other resources.
+## The users list
 
-3) **Customer user**.
-- Has limited access to view dashboards, entities, and their data assigned by the Tenant Administrator.
-- Cannot create other customers or sub-customers.
+The list shows each user's **Created time**, **First name**, **Last name**, **Email**, **Customer** (for customer users) and **Groups**.
 
+## Add a user
 
-<div class="st-callout info">
+1. Click **+**, then **Add new user**.
+2. Type the **Email**, and optionally the first and last name, phone and description.
+3. Choose the **groups** the user belongs to.
+4. Choose an **Activation method**:
+   - **Send activation mail**: SENTIENT emails a link. Needs working [mail settings](/docs/user-guide/ui/mail-settings/).
+   - **Display activation link**: SENTIENT shows the link for you to copy and send yourself. Use this on an offline server or when mail is not set up.
+5. Click **Add**.
 
+The user opens the link, chooses a password and signs in. Until then the account is not active. The link is valid for 24 hours; **Resend activation** in the user's details sends or shows a new one.
 
-**Important:**
-<br>
-In Sentient Professional Edition, the Customer can create other customer users and subcustomers.
+## Set or reset a password
 
+The user can reset their own password from **Forgot password?** on the sign-in page, when mail is set up.
 
-</div>
+Without mail, an administrator opens the user and clicks **Set password**. The new password must meet the password policy in [Security settings](/docs/user-guide/ui/security-settings/). Tell the user to change it after signing in.
 
+## What the user sees first
 
-The instructions below give an overview of adding the user on each level.
+In the user's details:
 
-### System administrator
+- **Default dashboard** opens right after sign-in instead of the home page.
+- **Always fullscreen** shows that dashboard without the menu, for wall screens and control-room displays.
 
-If you are the **System administrator,** you can create the user in [Tenant](/docs/user-guide/ui/tenants) by the following steps.
+A customer's own **Home dashboard** applies to all its users who have no default dashboard of their own.
 
-1. Go to Tenants on the left-hand menu. Navigate to Tenant admins, and click plus icon to add a new user.
+## Disable a user
 
-   ![image](/images/user-guide/ui/users/ce/tenant-user-add.webp)
+**Disable User Account** in the user's details stops the user from signing in, without deleting anything. **Enable User Account** lets them in again. Use it for staff who leave or for shared accounts that are no longer needed.
 
-2. Fill in the email and select the activation method in the Add User window. 
-The system administrator can also add the name and description optionally. Afterward click Add.
+## Sign in as another user
 
-   ![image](/images/user-guide/ui/users/ce/user-add-window.webp)
+The system administrator can click **Login as Tenant Admin** on a tenant administrator, and a tenant administrator can click **Login as Customer User** on a customer user. You then see SENTIENT exactly as that user does, which helps when a user reports something missing. To return, sign out and sign in again with your own account.
 
-3. If you selected the **activation link method,** click the arrow to copy this link and insert it in the browser or to any messenger used by the user. An example of an activation link is provided below.
+## Delete a user
 
-   ![image](/images/user-guide/ui/users/ce/user-activation-link.webp)
+Click the bin in the user's row. The user can no longer sign in. Dashboards and devices they created stay. It cannot be undone.
 
-4. If you selected send **activation mail option,** then you need to check your email box and find the message about the Sentient account activation. 
-Click Activate Your Account, and follow the easy password-creating process.
+## Related
 
-   ![image](/images/user-guide/ui/users/ce/account-activation-email.webp)
-
-
-<div class="st-callout info">
-
-
-**NOTE:**
-<br>
-To receive an email from SENTIENT, you should set up a mail server at the system administrator level in advance.
-Check out the [mail settings](/docs/user-guide/ui/mail-settings) instructions.
-
-
-</div>
-
-
-After a user is created, the system administrator can use the action tabs on the tenant details page.
-
-They are as follows:
-
-1) **Disable the User account**.
-
-2) **Display activation link** will show the activation link for the Tenant administrator user.
-
-3) **Resend activation** will resend the account activation email to the user's email box.
-
-4) **Login as Tenant administrator** opens the Sentient platform from the Tenant administrator UI. 
-
-5) The System Administrator can also **delete** the Tenant administrator from the tenants' users list.
-
-   ![image](/images/user-guide/ui/users/ce/user-tenant-tabs.webp)
-
-When the admin clicks Disable User Account, he will see a message in the top left corner saying that the user account has been successfully disabled, and the tab will change to Enable User Account. 
-See the picture below.
-
-   ![image](/images/user-guide/ui/users/ce/user-account-disabled.webp)
-
-If the user with a disabled account tries to access the platform, he will see the following error message.
-
-   ![image](/images/user-guide/ui/users/ce/error-message.webp)
-
-Similarly, when the admin clicks Enable User Account, he will see the message in the top left corner that the user account has been successfully enabled. The tab will change to Disable User Account. See the picture below.
-
-   ![image](/images/user-guide/ui/users/ce/user-account-enabled.webp)
-
-### Tenant administrator
-
-As a **Tenant administrator**, you can add a new user using the following steps.
-
-1. Go to Customers. Navigate to Customer Users, and click the plus icon to add a new user. 
-
-   ![image](/images/user-guide/ui/users/ce/customer-user-add.webp)
-
-2. Be sure to fill in the email and select the activation method in the Add User window.
-The Tenant administrator can add the name and description optionally. When done, click Add.
-
-   ![image](/images/user-guide/ui/users/ce/customer-user-add-window.webp)
-
-3. When the user is created, the Tenant Administrator can use the action tabs on the user details page. 
-
-They are as follows:
-
-1) **Disable the User account.** How to disable the account was mentioned above.  
-
-2) **Display activation link** will show the activation link for the Customer user.
-
-3) **Resend activation** will resend the account activation email to the user's email box. 
-
-4) **Login as a Customer user** lets the Tenant administrator open the Sentient platform from the user UI. 
-
-5) The Tenant Administrator can also **delete the Customer user** from the customers’ list.
-
-
-   ![image](/images/user-guide/ui/users/ce/customer-user-account-disable.webp)
-
-The Tenant administrator can optionally assign the default dashboard and set the fullscreen mode, as shown in the picture below.
-
-
-   ![image](/images/user-guide/ui/users/ce/default-dashboard-assigned.webp)
-
-Likewise, the Tenant administrator can optionally assign the home dashboard for the Customer user and hide the dashboard toolbar, as shown in the picture below.
-
-
-   ![image](/images/user-guide/ui/users/ce/home-dashboard-assigned.webp) 
-
-**IMPORTANT**: There is no need to assign a default dashboard and home dashboard together since the default dashboard will be the first one a user sees when he logs into his account.
-
-If any questions arise, click the Question mark in the upper right corner.
-
-### Customer User UI
-
-#### Default dashboard as the home page
-
-When the Customer user logs into his account, the default dashboard is the first he sees. If the Tenant administrator sets the fullscreen default dashboard, the Customer user will see the dashboard without the lefthand menu, as in the example below. 
-The dashboard toolbar will always be available for the user, and he can switch to another dashboard, if one is assigned, and set realtime ranges for himself.
-Additionally, there is an option to export this dashboard.
-
-   ![image](/images/user-guide/ui/users/ce/default-dashboard.webp) 
-
-
-Customer users can switch between the left-hand menu tabs to view all the assets, devices, entities, edges, and dashboards assigned by the Tenant administrator if the fullscreen mode is not check-marked.
-The dashboard example is shown below.
-
-   ![image](/images/user-guide/ui/users/ce/default-dashboard-not-fullscreen-1.webp) 
-
-
-#### Home dashboard as the home page
-
-If the Tenant administrator assigns the dashboard as the home dashboard, then the Customer user will see this dashboard on his home page.
-If Hide home dashboard toolbar is selected, then the Customer user will see the home dashboard without the toolbar.
-The dashboard with the disabled toolbar is shown below.
-
-  ![image](/images/user-guide/ui/users/ce/home-dashboard-no-toolbar.webp)    
-
-The dashboard with the enabled toolbar is shown in the picture below. The user can set real-time ranges and export the dashboard.
-
-
-   ![image](/images/user-guide/ui/users/ce/home-dashboard-toolbar.webp)
-
-The Customer user can also optionally hide the home dashboard toolbar or change the home dashboard in his profile settings.
-   
-   ![image](/images/user-guide/ui/users/ce/profile-window.webp)  
-
-## Next steps
+- [Customers](/docs/user-guide/ui/customers/)
+- [Security settings](/docs/user-guide/ui/security-settings/)
+- [Sign in for the first time](/docs/getting-started-guides/first-login/)

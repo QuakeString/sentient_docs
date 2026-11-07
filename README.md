@@ -1,155 +1,82 @@
-## Instructions for Contributing to the Docs/Website
+# SENTIENT documentation
 
-* [Fork this repository](https://help.github.com/articles/fork-a-repo/)
-* [Deploy the site locally](#deploy-the-site-locally)
-* [Deploy the site in docker (recommended)](#deploy-the-site-in-docker-recommended)
-* Add your changes
-* [Generate image preview](#image-preview-generator)
-* [Create Pull Request](https://help.github.com/articles/creating-a-pull-request/)
+The SENTIENT manual, built with [Zola](https://www.getzola.org/) and searched
+offline with [Pagefind](https://pagefind.app/). It builds in seconds, needs no
+Ruby or Node, and the output is plain static files.
 
-## Deploy the site locally
+## Layout
 
->Note: the local deployment are not preferable as the local gems can affect transitive dependencies or even collisions on bundle install.
-The recommended approach is to use a docker container provided with all dependency installed.
+| Path | What it holds |
+|---|---|
+| `content/docs/` | The pages (Markdown with TOML front matter). The URL follows the path: `content/docs/user-guide/ui/devices.md` is `/docs/user-guide/ui/devices/`. |
+| `data/nav/*.yml` | Left-hand navigation for each area (platform, gateway, edge, mobile). |
+| `data/home.yml` | Text and tiles of the docs home page. |
+| `templates/` | Page layout (Tera templates). |
+| `static/` | CSS (SENTIENT design-system tokens), JS, fonts, images. |
+| `tools/` | Build, version, check and one-time conversion scripts. |
+| `versions.json` | Every docs version and the SENTIENT releases it covers. |
 
-The below commands set up your environment for running GitHub pages locally. 
-Any edits you make will be viewable on a lightweight webserver that runs on your local machine.
-
-Install Ruby **3.2.2**. If you're on Ubuntu, run this commands:
-
-```bash
-sudo apt-get install ruby-full build-essential zlib1g-dev git
-sudo gem install bundler
-```
-
->Note: Ruby <b>2.7.x</b> is not supported since github-pages 232
-
-* If you're on a Mac, follow [these instructions](https://gorails.com/setup/osx/) and choose a Ruby version (**3.2.2**).  
-* If you're on a Windows machine you can use the [Ruby Installer](https://rubyinstaller.org/downloads/). During the installation make sure to check the option for *Add Ruby executables to your PATH*.  
-
-Clone our site:
+## Build and preview
 
 ```bash
-git clone https://github.com/thingsboard/thingsboard.github.io.git
+# zola 0.19.x and pagefind 1.3.x on PATH
+tools/build.sh --out public          # one version, ~15 s
+python3 -m http.server -d public 8090   # open http://localhost:8090/docs/
+python3 tools/check.py public        # broken links, missing images, old names
 ```
 
-Make any changes you want. Then, to see your changes locally:  
+Or as an offline Docker image:
 
 ```bash
-cd thingsboard.github.io
-sudo bundle install
-bundle exec jekyll serve --host 0.0.0.0
-```
-	
-If you are struggling with `bundle install` please try to delete the dependency lock file or use a Docker approach
-
-```bash
-rm -rf Gemfile.lock
+docker build -t quakestring/sentient-docs:4.3.0.57 .
+docker run -d -p 8090:80 quakestring/sentient-docs:4.3.0.57
 ```
 
-In case you change the layout or website structure you might need to cleanup the cache:
+## Writing a page
 
-```bash
-rm -rf _site .jekyll-metadata
-```
-        
-or execute the below script from the project root directory:
+```toml
++++
+title = "Connect a Modbus PLC"
+description = "Read registers from a PLC and show them as telemetry."
 
-```bash        
-./restart.sh
-```
-
-Your copy of the site will then be viewable at: [http://localhost:4000](http://localhost:4000)
-(or wherever Jekyll tells you).
-
-## Deploy the site in Docker (RECOMMENDED)
-
-These instructions will help to run the thingsboard/thingsboard.github.io project in the docker. You do not need to install additional dependencies and packages, everything is already built into the docker image.
-
-If you do not have docker installed, you need to install it. You can do this by following the installation instructions: [Docker Engine installation overview](https://docs.docker.com/engine/install/)
-
-If you do not have a local thingsboard.github.io repository, you need to clone project into the "website" directory.
-
-```bash
-git clone https://github.com/thingsboard/thingsboard.github.io.git website
+[extra]
+status = "checked"          # "imported" = carried over, not yet checked; "planned" = outline only
+checked = "4.3.0.57"        # SENTIENT version the page was verified against
+changed_in = "4.3.0.57"     # optional: shows a "Changed in" badge
++++
 ```
 
-### Build and run the site using the Docker
+- A new sidebar entry goes in `data/nav/*.yml`; add `planned: true` while the
+  page is only an outline (shown as SOON, left out of search). `tools/check.py`
+  fails when a sidebar entry does not open a page.
+- Write from the current SENTIENT UI and code, never from the old text alone.
+- Use UI labels exactly as SENTIENT shows them.
+- Screenshots come from our own instance: add them to `tools/screenshots/manifest.yml`, never by hand.
+- Callouts: `<div class="st-callout info">` or `warn`, with a blank line before
+  and after the Markdown inside. Tabs: `<div class="st-tabs">` holding
+  `<div class="st-tab" data-label="Windows">` blocks. Image galleries:
+  `<div class="st-gallery">` with `<figure>` elements.
 
-Please replace the `THINGSBOARD_WEBSITE_DIR` with the full path to your local thingsboard.github.io repository.
->To deploy a fork, you need to replace the environment variable PAGES_REPO_NWO with the name of your repository.
-As example: \
-`PAGES_REPO_NWO="your_github_nickname/thingsboard.github.io"`
+## Versions
 
-```bash
-docker pull thingsboard/website
-docker run --rm -p 4000:4000 --name thingsboard_website -e PAGES_REPO_NWO="thingsboard/thingsboard.github.io" --volume="THINGSBOARD_WEBSITE_DIR:/website" thingsboard/website
-```
+- `master` is the newest docs version (`versions.json` → `latest`).
+- When a SENTIENT release changes the docs, the previous state is kept on a
+  branch `v<version>` (for example `v4.3.0.57`) and added to `versions.json`.
+  A release without doc changes is added to the `releases` list of the
+  version it shares.
+- `tools/build-all.sh site` builds the online site: the latest version at the
+  root and every version under `/v/<version>/`. Images live once in `/images/`
+  and are shared by all versions, so a changed screenshot gets a new file name.
+- The offline image and help pack carry one version only.
 
-### Deploy the site using the docker-compose file
+## History
 
->To deploy a fork, you need to replace the environment variable PAGES_REPO_NWO (in `docker-compose.yaml`) with the name of your repository.
-As example:\
-`PAGES_REPO_NWO: "your_github_nickname/thingsboard.github.io"`
+The site began as the ThingsBoard docs fork (Jekyll). `tools/convert/` holds
+the one-time conversion (run against commit `78bb93d2`). Pages that still need
+review carry `status = "imported"` and show a note at the top.
 
-To start the docker container with docker-compose, run the command:
-
-```bash
-docker compose up - d
-```
-
-You can rebuild the website with:
-
-```bash
-docker compose restart
-```
-
-In about 2-7 minutes (depending on PC performance and cache), your copy of the site will be available for viewing at <http://localhost:4000>
-
-## Image preview generator
-
-For new *.png images preview is required along with original images.
-
-To create a previews use the script
-````bash
-#run once
-#install mogrify utility to perform resize 
-sudo apt install graphicsmagick-imagemagick-compat
-````
-Usage:
-```bash
-./generate-previews.sh path file_mask*.png
-```
-Example:
-```bash
-./generate-previews.sh images/solution-templates *.png
-```
-
-### Image preview generator in docker
-
-Usage:
-```bash
-docker exec thingsboard_website bash -c "./generate-previews.sh path file_mask*.png"
-
-```
-
-Example:
-```bash
-docker exec thingsboard_website bash -c "./generate-previews.sh images/solution-templates *.png"
-
-```
-> **_NOTE:_** This command must be executed with the running container
-
-## Linkchecker
-
-Use the following command to check the broken links.
-
-```bash
-docker run -it --rm --network=host ghcr.io/linkchecker/linkchecker --check-extern http://0.0.0.0:4000/
-```
-
-## Update pages in _includes/docs/pe/user-guide/install directory in accordance with thingsboard/thingsborad-pe repositories: 
-
-Use the following command from the project root directory to regenerate configuration pages (first script parameter is TB version: 'ce' or 'pe', second parameter is relative path to TB repository):
-    
-    python3 generate_config_pages.py ce ../thingsboard
+The content audit (`tools/audit.py` → `audit/pages.csv`, `audit/SUMMARY.md`)
+gives every page a verdict and the wave that rewrites it. Pages that did not
+apply to SENTIENT were removed with `tools/convert/prune.py` (list in
+`audit/deleted.txt`); their old URLs redirect to the nearest SENTIENT page, and
+every help link in the SENTIENT UI (`audit/ui-help-links.txt`) opens a page.

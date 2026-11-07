@@ -1,0 +1,18 @@
+{% macro nav_items(items, current, depth) %}
+{%- for it in items %}
+  {%- if it.section %}
+    {%- set_global open = false %}
+    {%- for c in it.section %}{% if c.path and current is starting_with(c.path) %}{% set_global open = true %}{% endif %}{% if c.section %}{% for g in c.section %}{% if g.path and current is starting_with(g.path) %}{% set_global open = true %}{% endif %}{% endfor %}{% endif %}{% endfor %}
+    {%- if depth == 0 %}
+<div class="group-title">{{ it.title }}</div>
+{{ self::nav_items(items=it.section, current=current, depth=1) }}
+    {%- else %}
+<details{% if open %} open{% endif %}><summary>{{ it.title }}{% if it.new %} <span class="new">NEW</span>{% endif %}</summary><div class="sub">
+{{ self::nav_items(items=it.section, current=current, depth=depth + 1) }}
+</div></details>
+    {%- endif %}
+  {%- elif it.path %}
+<a href="{{ it.path | safe }}"{% if current == it.path %} aria-current="page"{% endif %}>{{ it.title }}{% if it.new %} <span class="new">NEW</span>{% endif %}{% if it.planned %} <span class="soon">SOON</span>{% endif %}</a>
+  {%- endif %}
+{%- endfor %}
+{% endmacro nav_items %}

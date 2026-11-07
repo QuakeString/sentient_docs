@@ -1,1 +1,0 @@
-wget https://github.com/thingsboard/thingsboard/releases/download/v1.2/thingsboard-1.2.deb

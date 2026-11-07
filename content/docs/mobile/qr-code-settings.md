@@ -1,0 +1,66 @@
++++
+title = "Configure mobile application QR code settings"
+
+[extra]
+status = "imported"
+checked = ""
+source = "docs/mobile/qr-code-settings.md"
++++
+This guide provides instructions on how to configure a custom mobile application to launch directly from a [QR code scan](/docs/user-guide/ui/mobile-qr-code/) using your phone's camera.
+
+In application version 1.7.0+, we have made QR code settings configuration much easier by using configuration file.
+
+ 
+<div class="st-callout info">
+
+ 
+Important Notice: Please use [this guide](/docs/mobile/qr-code-settings-before-v1.7/) for pre 1.7.x qr code configuration 
+
+
+</div>
+
+
+## Platform Configuration
+
+### iOS Application Setup
+
+Navigate to **Mobile Center → Applications → Your custom iOS app** in the SENTIENT platform.
+
+#### App Site Association ID
+
+Provide the **App Site Association ID** in your app store info settings:
+
+![App Site Association ID Configuration](/images/mobile/qr-code-settings-ios-store-info.webp)
+
+The App Site Association ID consists of two parts separated by a dot:
+
+**1. App Store Team ID**
+- Get your Team ID from [Apple Developer Account](https://developer.apple.com/account)
+- Look for it in the "Membership details" block
+
+![Team ID Location](/images/mobile/qr-code-settings-team-id.webp)
+
+**2. App Bundle ID**
+- Must be the same as the Application package in your app settings
+- This is your app's unique identifier
+
+### Android Application Setup
+
+Navigate to **Mobile Center → Applications → Your custom Android app** in the SENTIENT platform.
+
+#### SHA-256 Fingerprint
+
+Provide the **SHA-256 fingerprint** of your app's signing key:
+
+![SHA-256 Fingerprint Configuration](/images/mobile/qr-code-settings-sha256.webp)
+
+**For Google Play distributed apps:**
+Use the SHA-256 certificate fingerprint located in your Google Play Console under:
+**Release → Setup → App Integrity → App Signing tab**
+
+![Google Play SHA-256 Fingerprint](/images/mobile/sha256-fingerprint.webp)
+
+**For locally distributed apps:**
+Use the SHA-256 key that your APK is signed with.
+
+For more detailed information, read the guide "[Set up app links for Android](https://docs.flutter.dev/cookbook/navigation/set-up-app-links)" in the official Flutter documentation.

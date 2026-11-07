@@ -1,0 +1,12 @@
+{% assign tabsraw = tabspec | newline_to_br | split: '<br />' %}
+
+<div class="st-tabs">
+{% for tab in tabsraw offset:1 %}{% assign thisTab = tab | split: ',' %}{% assign tabLang=thisTab[2] | strip %}{% assign tabFile=thisTab[3] | strip %}
+<div class="st-tab" data-label="{{ thisTab[1] | strip }}">
+
+{% include code.html language=tabLang file=tabFile %}
+
+</div>
+{% endfor %}
+</div>
+

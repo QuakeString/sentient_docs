@@ -1,0 +1,83 @@
+{% import "macros.html" as m -%}
+{%- set cur = current_path | default(value="/") -%}
+{%- if cur is starting_with("/docs/edge/") -%}{%- set navfile = "data/nav/edge.yml" -%}{%- set area = "edge" -%}
+{%- elif cur is starting_with("/docs/iot-gateway/") -%}{%- set navfile = "data/nav/gateway.yml" -%}{%- set area = "gateway" -%}
+{%- elif cur is starting_with("/docs/mobile/") or cur is starting_with("/docs/mobile-center/") -%}{%- set navfile = "data/nav/mobile.yml" -%}{%- set area = "mobile" -%}
+{%- else -%}{%- set navfile = "data/nav/docs.yml" -%}{%- set area = "docs" -%}{%- endif -%}
+{%- set nav = load_data(path=navfile) -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{% block title %}{{ config.title }}{% endblock title %}</title>
+<meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+<meta name="st-docs-version" content="{{ config.extra.version }}">
+<meta name="st-docs-base" content="">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="/css/site.css">
+<script>try{var t=localStorage.getItem("st-docs-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body data-area="{{ area }}">
+{% include "partials/icons.html" %}
+<header class="top">
+  <div class="top-in">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <a class="brand" href="/docs/" aria-label="SENTIENT Docs home">
+      <img class="mark mk-l" src="/images/brand/mark-on-light.svg" alt="">
+      <img class="mark mk-d" src="/images/brand/mark-on-dark.svg" alt="">
+      <span class="wordmark" role="img" aria-label="SENTIENT"></span> <small>Docs</small>
+    </a>
+    <nav class="sections" aria-label="Sections">
+      <a href="/docs/"{% if area == "docs" and not cur is starting_with("/docs/troubleshooting/") %} aria-current="page"{% endif %}>Platform</a>
+      <a href="/docs/iot-gateway/"{% if area == "gateway" %} aria-current="page"{% endif %}>Gateway</a>
+      <a href="/docs/edge/"{% if area == "edge" %} aria-current="page"{% endif %}>Edge</a>
+      <a href="/docs/mobile/"{% if area == "mobile" %} aria-current="page"{% endif %}>Mobile</a>
+      <a href="/docs/troubleshooting/"{% if cur is starting_with("/docs/troubleshooting/") %} aria-current="page"{% endif %}>Troubleshooting</a>
+    </nav>
+    <div class="spacer"></div>
+    <button class="search-btn" id="searchBtn" aria-label="Search the docs"><svg class="icon"><use href="#i-search"/></svg><span>Search docs</span><kbd>Ctrl K</kbd></button>
+    <div class="version">
+      <button class="ver-btn" id="verBtn" aria-haspopup="true" aria-expanded="false"><span class="vl">v</span><span id="verLabel">{{ config.extra.version }}</span><svg class="icon" style="width:14px;height:14px"><use href="#i-chev"/></svg></button>
+      <div class="ver-menu" id="verMenu" role="menu">
+        <div class="hint">Showing the manual for release {{ config.extra.version }}</div>
+        <div id="verList"><button disabled><span class="v">{{ config.extra.version }}</span><span class="note">This version</span><span class="sel">✓</span></button></div>
+      </div>
+    </div>
+    <button class="icon-btn" id="themeBtn" aria-label="Switch between light and dark"><svg class="icon"><use href="#i-moon" id="themeIcon"/></svg></button>
+  </div>
+</header>
+
+<div class="shell{% block shellclass %}{% endblock shellclass %}">
+  <aside class="nav" id="nav" aria-label="Documentation" data-pagefind-ignore>
+    {{ m::nav_items(items=nav.toc, current=cur, depth=0) }}
+  </aside>
+  <main id="main">
+    {% block content %}{% endblock content %}
+    <footer class="footer" data-pagefind-ignore>
+      <span>SENTIENT documentation {{ config.extra.version }}</span>
+      <span>Works offline</span>
+      <span>Based on the ThingsBoard documentation (Apache 2.0)</span>
+    </footer>
+  </main>
+  <aside class="toc" id="toc" aria-label="On this page" data-pagefind-ignore>{% block toc %}{% endblock toc %}</aside>
+</div>
+
+<div class="scrim" id="scrim" role="dialog" aria-modal="true" aria-label="Search">
+  <div class="dlg">
+    <div class="dlg-in"><svg class="icon" style="color:var(--faint)"><use href="#i-search"/></svg><input id="q" placeholder="Search {{ config.extra.version }} docs" autocomplete="off" aria-label="Search"><kbd>Esc</kbd></div>
+    <div class="scope" id="scope">
+      <button aria-pressed="true" data-s="">All</button>
+      <button aria-pressed="false" data-s="docs">Platform</button>
+      <button aria-pressed="false" data-s="gateway">Gateway</button>
+      <button aria-pressed="false" data-s="edge">Edge</button>
+      <button aria-pressed="false" data-s="mobile">Mobile</button>
+    </div>
+    <div class="results" id="results"><div class="empty">Type to search. Try "modbus", "backup" or "alarm rules".</div></div>
+    <div class="dlg-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span class="off"><svg class="icon" style="width:14px;height:14px"><use href="#i-wifi-off"/></svg>Search runs offline</span></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Image"><img alt=""></div>
+<script src="/js/site.js" defer></script>
+</body>
+</html>

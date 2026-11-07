@@ -1,10 +1,6 @@
-**/.DS_Store
-**/desktop.ini
-.jekyll-metadata
-_site/**
-.sass-cache/**
-CNAME
-.idea/**
-**/*.iml
-_config.yml
-.claude
+public/
+site/
+_site/
+.DS_Store
+.idea/
+/shots/

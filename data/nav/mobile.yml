@@ -1,0 +1,29 @@
+toc:
+- title: Mobile app
+  section:
+  - title: Overview
+    path: /docs/mobile/
+  - title: Install the mobile app
+    path: /docs/mobile/install-apk/
+    planned: true
+  - title: Sign in
+    path: /docs/mobile/sign-in/
+    planned: true
+  - title: Getting started
+    path: /docs/mobile/getting-started/
+- title: Configure the app from SENTIENT
+  section:
+  - title: Mobile center
+    path: /docs/mobile-center/mobile-center/
+  - title: Applications
+    path: /docs/mobile-center/applications/
+  - title: QR code settings
+    path: /docs/mobile/qr-code-settings/
+  - title: Device details dashboard
+    path: /docs/mobile/device-dashboard/
+  - title: Alarm details dashboard
+    path: /docs/mobile/alarm-dashboard/
+  - title: Mobile actions
+    path: /docs/mobile/mobile-actions/
+  - title: OAuth 2.0
+    path: /docs/mobile/oauth2/

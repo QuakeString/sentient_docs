@@ -1,1 +1,0 @@
-coap get -o coap://{{coapHostName}}/api/v1/$ACCESS_TOKEN/attributes

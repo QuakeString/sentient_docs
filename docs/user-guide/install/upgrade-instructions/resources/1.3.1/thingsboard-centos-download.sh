@@ -1,1 +1,0 @@
-wget https://github.com/thingsboard/thingsboard/releases/download/v1.3.1/thingsboard-1.3.1.rpm

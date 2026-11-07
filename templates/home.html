@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}SENTIENT Docs{% endblock title %}
+{% block shellclass %} is-home{% endblock shellclass %}
+{% block content %}
+{% set home = load_data(path="data/home.yml") %}
+<section data-pagefind-ignore>
+  <div class="hero">
+    <div class="eyebrow">Manual · {{ config.extra.version }} · works offline</div>
+    <h1>{{ home.headline }}</h1>
+    <p class="lede">{{ home.lede }}</p>
+    <button class="big-search" id="bigSearch" type="button"><svg class="icon"><use href="#i-search"/></svg><span>Search guides, settings or an error code</span><kbd>Ctrl K</kbd></button>
+    <div class="popular">Popular:
+      {% for q in home.popular %}<button type="button" data-q="{{ q }}">{{ q }}</button>{% endfor %}
+    </div>
+  </div>
+  <div class="grid">
+    {% for t in home.tiles %}
+    <a class="tile" href="{{ t.path | safe }}"><span class="ti"><svg class="icon"><use href="#{{ t.icon }}"/></svg></span><b>{{ t.title }}</b><span>{{ t.text }}</span></a>
+    {% endfor %}
+  </div>
+  <div class="split">
+    <div class="panel">
+      <div class="panel-h">{{ home.help.title }} <a href="{{ home.help.path | safe }}">{{ home.help.more }}</a></div>
+      <div class="err-list">
+        {% for e in home.help.items %}<a href="{{ e.path | safe }}"><code>{{ e.code }}</code><span>{{ e.title }}<small>{{ e.text }}</small></span></a>{% endfor %}
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-h">{{ home.changes.title }} <a href="{{ home.changes.path | safe }}">{{ home.changes.more }}</a></div>
+      <ul class="changes">
+        {% for c in home.changes.items %}<li><a href="{{ c.path | safe }}">{{ c.title }}</a>: {{ c.text }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock content %}

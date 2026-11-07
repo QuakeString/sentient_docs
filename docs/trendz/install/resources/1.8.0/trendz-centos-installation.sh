@@ -1,1 +1,0 @@
-sudo rpm -Uvh trendz-1.8.2.rpm

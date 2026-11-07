@@ -1,0 +1,9 @@
+.git
+.github
+public
+site
+node_modules
+images
+_site
+*.log
+**/node_modules

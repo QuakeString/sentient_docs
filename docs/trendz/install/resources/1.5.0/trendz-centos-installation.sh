@@ -1,1 +1,0 @@
-sudo rpm -Uvh trendz-1.5.0.rpm

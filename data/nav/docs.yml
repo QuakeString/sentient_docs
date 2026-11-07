@@ -379,7 +379,6 @@ toc:
   section:
   - title: Overview
     path: /docs/administration/
-    planned: true
   - title: Tenants
     path: /docs/user-guide/ui/tenants/
   - title: Tenant profiles
@@ -406,27 +405,22 @@ toc:
       path: /docs/user-guide/security/api-keys/
     - title: Secrets
       path: /docs/administration/secrets/
-      planned: true
     - title: Enable HTTPS
       path: /docs/user-guide/ssl/http-over-ssl/
   - title: Translations
     path: /docs/administration/translations/
-    planned: true
   - title: Audit log
     path: /docs/user-guide/audit-log/
   - title: API usage and limits
     path: /docs/administration/api-usage/
-    planned: true
   - title: Rate limits
     path: /docs/user-guide/api-limits/
   - title: Version control
     path: /docs/user-guide/version-control/
   - title: Task manager
     path: /docs/administration/task-manager/
-    planned: true
   - title: Home page settings
     path: /docs/administration/home-page/
-    planned: true
   - title: Mobile app QR code
     path: /docs/user-guide/ui/mobile-qr-code/
   - title: Customization

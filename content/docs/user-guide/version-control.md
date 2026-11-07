@@ -1,153 +1,61 @@
 +++
 title = "Version control"
-description = "Version control"
+description = "Keep dashboards, rule chains, device profiles and other configuration in a Git repository: commit versions, compare, restore and move them between SENTIENT servers."
 
 [extra]
-status = "imported"
-checked = ""
-source = "docs/user-guide/version-control.md"
+status = "checked"
+checked = "4.3.0.57"
 +++
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 3.4</em></strong></td>
-     </tr>
-   </thead>
-</table> 
+**Version control** stores your SENTIENT configuration in a **Git** repository: dashboards, rule chains, device profiles, devices, assets, customers, entity views and widget bundles. You can then:
 
+- see who changed a dashboard and when, and go back to an earlier version;
+- compare a version with what is in SENTIENT now;
+- move a tested configuration from a test server to the plant server, by committing on one and restoring on the other.
 
-SENTIENT Version control service provides the ability to export and restore SENTIENT Entities using Git.
-As a Tenant administrator, you can configure access to the Git repository using UI or REST API.
-As a platform user, you can export single or multiple SENTIENT Entities, browse version history and restore entities to the specific version.
+Telemetry is not stored in Git; only configuration.
 
-This feature improves user experience when multiple engineers design the same Rule Chain or Dashboard and simplifies CI/CD. 
-It also allows you to easily clone the solution between tenants or platform instances. 
+## Connect a repository
 
-## Architecture
+The tenant administrator sets the repository under **Settings > Repository**.
 
-### Entity External ID
+**Local only** needs no Git server at all: SENTIENT keeps the versions in a repository on its own disk, with no network access or sign-in. It is the simplest choice for an offline plant, and you can add a remote address later to copy the history there. Back up the SENTIENT data folder to keep the versions safe.
 
-Every SENTIENT entity has the "id" field, which is the unique identifier of the entity in scope of a particular SENTIENT environment.
-Every exportable SENTIENT entity contains new filed "externalId". 
-The field is used to identify the same Entity in case of import and export between multiple environments.
-Both "id" and "externalId" fields is of type [UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier).
+For a shared or remote repository, create an empty one first on GitHub, GitLab, Gitea, Azure DevOps or your own Git server, then switch **Local only** off and fill in:
 
-The "externalId" is also used to automatically substitute entity ids in the rule chains (rule nodes) and dashboards (aliases and widget actions).
-So, if you decide to import rule chain that is referencing some devices or assets, make sure you have exported/imported the corresponding devices or assets as well.
+| Setting | What to enter |
+|---|---|
+| **Repository URL** | For example `https://git.example.com/plant/sentient-config.git`, or `git@git.example.com:plant/sentient-config.git` for SSH |
+| **Default branch name** | The branch SENTIENT uses unless you choose another, usually `main` |
+| **Read-only** | SENTIENT only reads: you can restore but not commit. Use it on a production server that should only receive tested versions |
+| **Authentication method** | **Password / access token**: a user name and a password or access token (for GitHub and GitLab, a token with write access to the repository). **Private key**: an SSH key, with its passphrase if it has one |
 
-### Exportable Entities and settings
+Click **Check access**, then **Save**. Each tenant uses its own repository. **Show merge commits** also lists merges in the version history.
 
+## Commit a version
 
-Initial release of this feature supports following entities: Device, Asset, Entity View, Customer, Dashboard, Widget Bundle, Rule Chain, Entity group, Role, Converter and Integration.
+- **One entity:** open it (for example a dashboard, or a rule chain's details) and its **Version control** tab, then **Create version**. Choose the branch and type a name for the version, such as `Boiler house: new trend chart`.
+- **Many entities:** open **Advanced features > Version control** in the left menu and click **Create entities version**. Choose **All entities** or the entity types to include, and for each whether to include its **relations**, **attributes**, **credentials** and **calculated fields**.
 
+Include credentials only if the repository is as private as the devices' tokens should be.
 
-We intentionally omit support of the User entity, since user email is unique in scope of the platform instance. It seems wrong to export user emails and credentials to Git.
+**Auto-commit** commits an entity by itself every time it is saved. Choose the entity types under **Settings > Auto-commit**. It does not work with a read-only repository.
 
-While exporting the entity, we store the JSON representation of the entity in Git. It is also possible to export entity attributes, relations and credentials (device only).
+## Restore a version
 
-### Repository structure
+- **One entity:** in its **Version control** tab, click a version and **Restore version**. **Compare with current** first shows what would change.
+- **Many entities:** under **Advanced features > Version control**, click a version, then **Restore entities from version**. Choose the entity types, and per type the **Sync strategy**:
+  - **Merge** updates and adds entities, and leaves entities that are not in the version alone.
+  - **Overwrite** also deletes entities of that type that are not in the version (**Remove other entities**).
 
-When you first export the entity to Git, the entity "id" is used to name the file inside git repository. 
-Then, when you import entities from Git to SENTIENT, the "id" from the file name becomes "externalId" of the entity.
-The "externalId" is unique in scope of Tenant. So, you may import/export entities between tenants of the same platform instance, or between different instances.
-Any time you perform export and import operations, the "externalId" is used to find the right entity to update.
-See example below.
+## Move a configuration between servers
 
-Let's assume you have a development SENTIENT instance and exported a single dashboard with the name "Dashboard 1" and id "4864b750-da7d-11ec-a496-97fa2815d2fe". 
-Then the repository will have a single file with the following full name and path:
+1. On the test server, commit **All entities** to a branch, for example `release-2025-06`.
+2. On the plant server, connect the same repository, read-only if you like.
+3. Restore that version there with **Merge**.
 
-```bash
-dashboard/4864b750-da7d-11ec-a496-97fa2815d2fe.json
-```
+Devices keep their own credentials on each server unless you included credentials.
 
-Let's assume you have imported the dashboard "D1" to the production SENTIENT instance. The "externalId" filed is set when you first import the entity to the new SENTIENT instance. 
-In such a case, the dashboard entity in production environment will have different id, but the "externalId" of the dashboard will be set to the same "4864b750-da7d-11ec-a496-97fa2815d2fe".
+## Related
 
-
-Customer hierarchy is stored in the 'hierarchy' folder which is recursive and similar to the 'Customer hierarchy' page in the UI.
-Entity groups are stored in the 'groups' folder. Each group has 'id.json' file which stores group entity and 'id_entities.json' file which stores list of entity ids in the group. 
-Reserved group 'All' does not contain the 'id_entities.json' file because group 'All' contains all entities.
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/version-control/version-control-4-ce.webp" alt="Git repository structure" loading="lazy"><figcaption>Git repository structure</figcaption></figure></div>
-
-
-### Sync strategy
-
-Platform supports two sync strategies for export to Git: Merge and Overwrite. 
-"Merge" is the default sync strategy which simply appends the selected entities to the repository. This strategy is useful when you want to save one or multiple files without deleting all other files from the repository.
-"Overwrite" strategy completely rewrite the corresponding repository files. This strategy is useful when you want to completely synchronize the list of entities (e.g. Dashboards) in your instance and your Git repository. 
-All entities that were previously save to the Git but are not present in your platform instance will be deleted from the Git repository in the corresponding commit.
-
-### Scalability
-
-SENTIENT Version Control service is available as part of a monolithic SENTIENT instance or as a separate microservice for horizontal scalability.
-Every instance of the Version Control service is responsible for handling synchronization tasks for the specific partition(s) of the Tenants in the cluster.
-Each "commit" API call may take some time. Concurrent "commit" API calls in scope of the same Tenant are not supported. 
-The system will cancel the "commit" API call if it is in progress and the new "commit" API call arrives.
-
-## Usage
-
-### Git Settings configuration
-
-As a Tenant administrator, you can navigate to the "Version control" page of the "Advanced features" section. The page allows you to provision Git repository URL, default branch name and authentication settings.
-We expect you to provide URL to the empty Git repository.
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/version-control/version-control-1-ce.webp" alt="Configure Git settings" loading="lazy"><figcaption>Configure Git settings</figcaption></figure></div>
-
-
-### Export to Git
-
-#### Single Entity Export
-
-Navigate to entity details and open the "Version control" tab. 
-Rule Chains and Dashboards have built-in version control button and popup widget to the corresponding editors.
-See screenshots below.
-
-**Device:**
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/version-control/version-control-devices-1-ce.webp" alt="Entity export" loading="lazy"><figcaption>Entity export</figcaption></figure><figure><img src="/images/user-guide/version-control/version-control-devices-2-ce.webp" alt="Entity version history" loading="lazy"><figcaption>Entity version history</figcaption></figure></div>
-
-
-**Rule Chain:**
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/version-control/version-control-rule-chain-1-ce.webp" alt="Rule Chain export" loading="lazy"><figcaption>Rule Chain export</figcaption></figure><figure><img src="/images/user-guide/version-control/version-control-rule-chain-2-ce.webp" alt="Rule Chain version history" loading="lazy"><figcaption>Rule Chain version history</figcaption></figure></div>
-
-
-**Dashboard:**
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/version-control/version-control-dashboard-1-ce.webp" alt="Dashboard export" loading="lazy"><figcaption>Dashboard export</figcaption></figure><figure><img src="/images/user-guide/version-control/version-control-dashboard-2-ce.webp" alt="Dashboard version history" loading="lazy"><figcaption>Dashboard version history</figcaption></figure></div>
-
-
-#### Multiple Entity Export
-
-Navigate to version control page. You may select one or more entity types to restore. By default, all entity types are selected.
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/version-control/version-control-2-ce.webp" alt="Entity export" loading="lazy"><figcaption>Entity export</figcaption></figure><figure><img src="/images/user-guide/version-control/version-control-3-ce.webp" alt="Entity version history" loading="lazy"><figcaption>Entity version history</figcaption></figure></div>
-
-
-#### Auto-commit
-
-Auto-commit is a useful feature to automatically commit the Dashboard and Rule Chains when we save the entity via UI or REST API call. 
-The auto-commit happens asynchronously to improve UI experience. 
-The auto-commit does not happen when you assign entity to the customer (change entity owner). 
-In such case you should commit all entities of the specific entity type with the overwrite strategy.
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/version-control/auto-commit-settings-1-ce.webp" alt="Git auto commit settings" loading="lazy"><figcaption>Git auto commit settings</figcaption></figure></div>
-
-
-### Restore from Git
-
-Navigate to version control page. Select the commit and specify restore settings.
-
-
-<div class="st-gallery"><figure><img src="/images/user-guide/version-control/version-control-5-ce.webp" alt="Restore specific version" loading="lazy"><figcaption>Restore specific version</figcaption></figure></div>
-
-
-## Next steps
+- [Dashboards](/docs/user-guide/dashboards/)
+- [Rule engine](/docs/user-guide/rule-engine-2-0/overview/)

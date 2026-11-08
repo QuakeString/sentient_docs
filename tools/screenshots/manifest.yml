@@ -1,0 +1,265 @@
+# Screenshot manifest: every screenshot in the manual comes from here.
+# Run: tools/screenshots/run.sh   (see README.md in this folder)
+#
+# Each shot:
+#   id       file name: static/images/st/<id>.webp (and <id>-dark.webp)
+#   as       sysadmin | tenant | none        (default tenant = docs@demo.plant)
+#   url      path in the SENTIENT UI; {device:Name}, {asset:Name},
+#            {dashboard:Title} and {ruleChain:Name} are replaced by ids
+#   steps    optional list: {click: sel} {fill: [sel, text]} {press: key}
+#            {hover: sel} {wait: ms} {waitFor: sel} {scroll: sel}
+#   capture  optional selector to crop to (default: whole viewport)
+#   clip     optional [x, y, width, height] crop
+#   pad      pixels around the cropped element (default 8)
+#   mask     optional selectors to blank out (tokens, keys, addresses)
+#   themes   [light] (default) or [light, dark]
+#   size     [width, height] (default [1440, 900])
+#   page     docs page that shows it (for review only)
+defaults:
+  as: tenant
+  themes: [light]
+  size: [1440, 900]
+shots:
+  - id: login
+    as: none
+    url: /login
+    capture: "form.st-login-card"
+    pad: 24
+    page: /docs/getting-started-guides/first-login/
+    themes: [light, dark]
+  - id: home-tenant
+    url: /home
+    page: /docs/getting-started-guides/first-login/
+    themes: [light, dark]
+  - id: devices-list
+    url: /entities/devices
+    page: /docs/user-guide/ui/devices/
+    clip: [56, 50, 1384, 600]   # drop the empty rows below the list
+  - id: device-details-telemetry
+    url: /entities/devices/{device:Feed pump P-101}
+    steps:
+      - click: "div[role=tab]:has-text('Latest telemetry')"
+      - wait: 800
+    clip: [0, 0, 904, 900]   # the details page fills only the left part
+    page: /docs/user-guide/telemetry/
+  - id: device-credentials
+    url: /entities/devices/{device:Feed pump P-101}
+    steps:
+      - click: "button:has-text('Manage credentials')"
+      - waitFor: mat-dialog-container
+    capture: mat-dialog-container
+    mask: ["input[formcontrolname=credentialsId]"]
+    page: /docs/user-guide/device-credentials/
+  - id: assets-list
+    url: /entities/assets
+    page: /docs/user-guide/ui/assets/
+    clip: [56, 50, 1384, 600]   # drop the empty rows below the list
+  - id: alarms-list
+    url: /alarms/alarms
+    page: /docs/user-guide/alarms/
+    themes: [light, dark]
+  - id: dashboards-list
+    url: /dashboards
+    page: /docs/user-guide/dashboards/
+  - id: rule-chains-list
+    url: /ruleChains
+    page: /docs/user-guide/rule-engine-2-0/overview/
+  - id: rule-chain-root
+    url: /ruleChains/{ruleChain:Root Rule Chain}
+    page: /docs/user-guide/rule-engine-2-0/overview/
+  - id: calculated-fields
+    url: /calculatedFields
+    clip: [0, 0, 1440, 300]   # the toolbar and rows, not the empty table below
+    page: /docs/user-guide/calculated-fields/
+  - id: gateways-list
+    url: /entities/gateways
+    page: /docs/iot-gateway/
+  - id: notification-inbox
+    url: /notification/inbox
+    page: /docs/user-guide/notifications/
+  - id: report-templates
+    url: /reporting/templates
+    page: /docs/reports/templates/
+  - id: solution-hub
+    url: /solutions
+    page: /docs/solution-hub/
+  - id: api-usage
+    url: /usage
+    page: /docs/administration/api-usage/
+  # static/images/st/sysadmin-licence.webp (the activation form) needs an
+  # unlicensed instance, so it is not retaken here.
+  - id: sysadmin-licence-active
+    as: sysadmin
+    url: /license
+    capture: "tb-license mat-card, tb-license .mat-mdc-card"
+    pad: 16
+    mask: [".lic-key"]
+    page: /docs/installation/licence/
+  - id: sysadmin-translations
+    as: sysadmin
+    url: /settings/translations
+    page: /docs/administration/translations/
+  # First device to dashboard (helloworld) — round 2
+  - id: add-device-wizard
+    url: /entities/devices
+    steps:
+      - click: "mat-toolbar button:has(mat-icon:text-is('add'))"
+      - click: "button[role=menuitem]:has-text('Add new device')"
+      - waitFor: "mat-dialog-container"
+      - fill: ["mat-dialog-container input[formcontrolname=name]", "Feed pump P-103"]
+    capture: "mat-dialog-container"
+    page: /docs/getting-started-guides/helloworld/
+  - id: check-connectivity
+    url: /entities/devices/{device:Feed pump P-101}
+    steps:
+      - click: "button:has-text('Check connectivity')"
+      - waitFor: "mat-dialog-container"
+      - wait: 1500
+    capture: "mat-dialog-container"
+    mask: ["mat-dialog-container pre >> nth=1"]   # the curl command holds the access token
+    page: /docs/getting-started-guides/helloworld/
+  - id: dashboard-add-widget
+    url: /dashboards/{dashboard:Packing line OEE}   # still empty, so it opens in edit mode
+    steps:
+      - click: "button:has-text('Add new widget'), button:has-text('Add widget')"
+      - waitFor: "text=Select widgets bundle"
+      - wait: 1500
+    clip: [484, 0, 956, 760]   # the picker panel, above the row with the gateway preview
+    page: /docs/getting-started-guides/helloworld/
+  # Security and notification settings — round 3
+  - id: sysadmin-security-settings
+    as: sysadmin
+    url: /security-settings/general
+    page: /docs/user-guide/ui/security-settings/
+  - id: sysadmin-2fa-settings
+    as: sysadmin
+    url: /security-settings/2fa
+    page: /docs/user-guide/two-factor-authentication/
+  - id: account-security
+    url: /account/security
+    page: /docs/user-guide/two-factor-authentication/
+    themes: [light, dark]
+  - id: sysadmin-mail-settings
+    as: sysadmin
+    url: /settings/outgoing-mail
+    mask: ["input[type=password]"]
+    page: /docs/user-guide/ui/mail-settings/
+  - id: sysadmin-sms-provider
+    as: sysadmin
+    url: /settings/notifications
+    capture: "mat-card.settings-card >> nth=0"
+    pad: 6
+    page: /docs/user-guide/ui/sms-provider-settings/
+  - id: sysadmin-telegram-settings
+    as: sysadmin
+    url: /settings/notifications
+    capture: "mat-card.settings-card >> nth=1"
+    pad: 6
+    page: /docs/user-guide/notification-channels/
+  - id: account-linked-accounts
+    url: /account/notificationSettings
+    capture: "mat-card.settings-card >> nth=0"
+    pad: 6
+    page: /docs/user-guide/notification-channels/
+  - id: dashboard-view
+    url: /dashboards/{dashboard:Boiler house overview}
+    steps:
+      - wait: 3000
+    page: /docs/user-guide/dashboards/
+    themes: [light, dark]
+  - id: dashboard-edit-mode
+    url: /dashboards/{dashboard:Boiler house overview}
+    steps:
+      - click: "button:has-text('Edit mode')"
+      - hover: "tb-dashboard-toolbar"   # park the pointer on the empty middle of the toolbar, or a button tooltip shows
+      - wait: 2000
+    page: /docs/user-guide/dashboards/
+  - id: widgets-bundles
+    url: /resources/widgets-library/widgets-bundles
+    page: /docs/user-guide/ui/widget-library/
+  - id: scada-symbols
+    url: /resources/scada-symbols
+    steps:
+      - click: "mat-slide-toggle:has-text('Include system symbols')"
+      - wait: 1500
+    page: /docs/user-guide/scada/
+  - id: device-profile-details
+    url: /profiles/deviceProfiles
+    steps:
+      - click: "mat-row:has(:text-is('default'))"
+      - waitFor: "tb-entity-details-panel"
+      - wait: 1000
+    page: /docs/user-guide/device-profiles/
+  - id: notification-rules
+    url: /notification/rules
+    page: /docs/user-guide/notifications/
+    themes: [light, dark]
+  # Wave 2 — round 4: alarm rules, SCADA editor, industrial widgets, gateway
+  - id: alarm-rules
+    url: /alarms/alarm-rules
+    clip: [56, 50, 1384, 400]   # the toolbar and the seeded rule
+    page: /docs/user-guide/alarm-rules/
+    themes: [light, dark]
+  - id: alarm-rule-dialog
+    url: /alarms/alarm-rules
+    size: [1440, 1400]
+    steps:
+      - click: "mat-row:has-text('High bearing vibration')"
+      - waitFor: "tb-entity-details-panel"   # a row opens the details panel, not a dialog
+      - wait: 1200
+    capture: "tb-entity-details-panel"
+    pad: 0   # the panel touches the table, so padding shows a strip of it
+    page: /docs/user-guide/alarm-rules/
+    themes: [light, dark]
+  - id: scada-symbol-editor
+    url: /resources/scada-symbols
+    steps:
+      - click: "mat-slide-toggle:has-text('Include system symbols')"
+      - wait: 1500
+      - click: "mat-row >> nth=0"
+      - waitFor: "tb-scada-symbol-editor"
+      - wait: 2500
+    page: /docs/dashboards/scada-editor/
+    themes: [light, dark]
+  - id: industrial-widgets-bundle
+    url: /resources/widgets-library/widgets-bundles
+    steps:
+      - click: ".mat-mdc-table-toolbar button:has(mat-icon:text-is('search')) >> visible=true"   # the bundle is not on the first page
+      - fill: ["input[placeholder='Search widget bundles']", "Rotating"]
+      - wait: 1500
+      - click: "mat-row:has-text('Rotating Equipment')"
+      - wait: 3000
+      - hover: "text=Rotating Equipment: Widgets"   # move the pointer off the row, or the Edit widget tooltip shows
+    page: /docs/dashboards/industrial-widgets/
+    themes: [light, dark]
+  - id: gateway-launch-command
+    url: /entities/gateways
+    steps:
+      - click: "mat-row:has-text('Plant gateway GW-1')"
+      - wait: 2500
+      - click: "button:has-text('Launch command')"
+      - waitFor: "mat-dialog-container"
+      - wait: 1000
+    capture: "mat-dialog-container"
+    mask: ["mat-dialog-container pre", "mat-dialog-container code"]   # the commands hold the access token
+    page: /docs/iot-gateway/install-windows/
+    themes: [light, dark]
+  - id: gateway-connectors
+    url: /entities/gateways
+    steps:
+      - click: "mat-row:has-text('Plant gateway GW-1')"
+      - wait: 2500
+      - click: "button:has-text('Connectors'), a:has-text('Connectors')"
+      - waitFor: "text=Select connector to display config"
+      - wait: 3000   # the connectors table header renders after the panels
+    page: /docs/iot-gateway/
+    themes: [light, dark]
+  # Round 5 — after the 2026-11-07 fixes (image master-326d028a)
+  - id: scheduler-events
+    url: /features/scheduler   # /scheduler redirects to the home page
+    page: /docs/user-guide/scheduler/
+    themes: [light, dark]
+  - id: ota-updates
+    url: /otaUpdates
+    page: /docs/user-guide/ota-updates/
+    themes: [light, dark]

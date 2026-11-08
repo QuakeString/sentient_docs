@@ -1,0 +1,2 @@
+{#- Copyright © 2016-2025 The SENTIENT Authors. Inline diagram from data/diagrams/<name>.svg; colours follow the site theme. -#}
+<figure class="st-diagram">{{ load_data(path="data/diagrams/" ~ name ~ ".svg", format="plain") | safe }}{% set cap = caption | default(value="") %}{% if cap %}<figcaption>{{ cap }}</figcaption>{% endif %}</figure>

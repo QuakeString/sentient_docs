@@ -1,1 +1,0 @@
-cat new-attributes-values.json | coap post coap://{{coapHostName}}/api/v1/$ACCESS_TOKEN/attributes

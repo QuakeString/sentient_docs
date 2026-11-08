@@ -1,0 +1,28 @@
+headline: अपने प्लांट को चलाने में हम आपकी कैसे मदद करें?
+lede: SENTIENT के लिए चरण-दर-चरण गाइड, प्लेटफ़ॉर्म इंस्टॉल करने से लेकर PLC जोड़ने, SCADA स्क्रीन बनाने और आम त्रुटियाँ ठीक करने तक।
+popular: [Modbus, बैकअप, अलार्म नियम, OPC UA, डैशबोर्ड]
+tiles:
+  - {title: शुरू करें, icon: i-rocket, path: /docs/getting-started-guides/helloworld/, text: "साइन इन करें, अपना पहला डिवाइस जोड़ें और लाइव मान देखें।"}
+  - {title: इंस्टॉल और अपग्रेड, icon: i-server, path: /docs/installation/, text: "Windows पर Platform Manager, Docker, लाइसेंस, बैकअप और अपग्रेड।"}
+  - {title: उपकरण जोड़ें, icon: i-chip, path: /docs/iot-gateway/, text: "गेटवे, Modbus, OPC UA, S7, BACnet और MQTT डिवाइस।"}
+  - {title: डैशबोर्ड और SCADA, icon: i-dash, path: /docs/user-guide/dashboards/, text: "विजेट, SCADA सिंबल और डैशबोर्ड एडिटर।"}
+  - {title: अलार्म और सूचनाएँ, icon: i-bell, path: /docs/user-guide/alarms/, text: "अलार्म नियम, सूचना केंद्र और डिलीवरी चैनल।"}
+  - {title: रूल इंजन, icon: i-gear, path: /docs/user-guide/rule-engine-2-0/overview/, text: "आने वाले डेटा को प्रोसेस, रूट और समृद्ध करें।"}
+help:
+  title: समस्या निवारण
+  path: /docs/troubleshooting/
+  more: सभी समस्या निवारण
+  items:
+    - {code: API, title: API त्रुटि कोड, text: "हर त्रुटि कोड का अर्थ और उसे ठीक करने का तरीका", path: /docs/troubleshooting/error-codes/}
+    - {code: LICENCE, title: लाइसेंस त्रुटियाँ, text: "समाप्त, हार्डवेयर बदला गया या हार्टबीट विफल", path: /docs/troubleshooting/licence-errors/}
+    - {code: GATEWAY, title: गेटवे त्रुटियाँ, text: "कनेक्टर PLC तक नहीं पहुँचता, लिखना विफल होता है", path: /docs/troubleshooting/gateway-errors/}
+    - {code: DEVICE, title: डिवाइस कनेक्ट नहीं होते, text: "क्रेडेंशियल, पोर्ट और पेलोड फ़ॉर्मैट", path: /docs/troubleshooting/device-connection/}
+changes:
+  title: इस मैनुअल के बारे में
+  path: /docs/
+  more: अवलोकन
+  items:
+    - {title: संस्करण के अनुसार दस्तावेज़, path: /docs/, text: "ऊपर संस्करण मेनू से अपना रिलीज़ चुनें"}
+    - {title: ऑफ़लाइन खोज, path: /docs/, text: "खोज इंटरनेट के बिना काम करती है"}
+    - {title: समीक्षा जारी है, path: /docs/, text: "पिछले दस्तावेज़ों से लिए गए पृष्ठों को SENTIENT के अनुसार जाँचा जा रहा है"}
+    - {title: जल्द आ रहा है, path: /docs/troubleshooting/, text: "जल्द चिह्नित पृष्ठ लिखे जा रहे पृष्ठ की रूपरेखा दिखाते हैं"}

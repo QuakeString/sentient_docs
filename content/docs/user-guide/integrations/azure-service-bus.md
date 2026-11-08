@@ -1,0 +1,338 @@
++++
+title = "Azure Service Bus Integration"
+description = "Azure Service Bus Integration Guide"
+
+[extra]
+status = "imported"
+checked = ""
+source = "docs/user-guide/integrations/azure-service-bus.md"
++++
+<div class="st-callout info"><p class="st-callout-title">SENTIENT Professional Edition feature</p>
+
+
+Only **Professional Edition** supports **Platform Integrations** feature.<br>
+Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform instance.
+
+
+</div>
+
+## Overview
+
+Azure Service Bus Integration allows to stream data from Azure Service bus to SENTIENT and converts device payloads to the SENTIENT format.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-overview.webp)
+
+## Configure Azure Service Bus
+
+To create SENTIENT Service Bus integration you will need two things created in Azure portal: **topic** and **subscription** to the topic. 
+You will also need to find and save **connection string** for your Servise Bus namespace, you will need it later.
+- [Create Topic and subscription to the topic](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal)
+- [Find connection string for the service bus namespace](https://azurelessons.com/azure-service-bus-connection-string/)
+
+## Create Uplink Converter
+
+You can сreate an **Uplink converter** in the **Data converters** section or directly in the integration. Uplink is necessary in order to convert the incoming 
+data from the device into the required format for displaying them in SENTIENT. Click on the “plus” and on “Create new converter”. To view the events, enable Debug. 
+In the function decoder field, specify a script to parse and transform data.
+
+<b><font size="3">Debug mode</font></b>
+
+Enabling debug mode allows you to track events, states, and potential errors related to the execution of integrations. This greatly simplifies development and troubleshooting.
+
+
+<div class="st-callout info">
+
+
+**Note:** Debug mode can quickly increase disk usage because all debug events are stored in the database.
+Starting from **SENTIENT 3.9**, the platform stores the full set of debug events only during the first **15 minutes** after the integrations is created; afterward, only error events are retained.
+
+
+</div>
+
+
+Debug mode settings can be combined or disabled entirely.
+
+Let’s review sample uplink message from Service Bus topic:
+
+```json
+{
+   "devName": "Sensor A1",
+   "msg": {
+      "temp": 23,
+      "humidity": 40
+   }
+}
+```
+
+
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+
+
+<div class="st-tabs">
+
+<div class="st-tab" data-label="RhaiRecommended">
+
+You can use the following code, copy it to the decoder function section:
+
+```javascript
+/** Decoder **/
+
+// decode payload to string
+var data = decodeToJson(payload);
+var deviceName = data.devName;
+var deviceType = 'thermostat';
+
+var result = {
+    deviceName: deviceName,
+    deviceType: deviceType,
+    telemetry: {
+        temperature: data.msg.temp,
+        humidity: data.msg.humidity
+    }
+};
+
+/** Helper functions 'decodeToString' and 'decodeToJson' are already built-in **/
+return result;
+```
+
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-uplink-converter-rhai-1-pe.webp)
+
+</div>
+
+<div class="st-tab" data-label="JavaScript">
+
+You can use the following code, copy it to the decoder function section:
+
+```javascript
+/** Decoder **/
+
+// decode payload to string
+var data = decodeToJson(payload);
+var deviceName = data.devName;
+var deviceType = 'thermostat';
+
+var result = {
+    deviceName: deviceName,
+    deviceType: deviceType,
+    telemetry: {
+        temperature: data.msg.temp,
+        humidity: data.msg.humidity
+    }
+};
+
+function decodeToString(payload) {
+    return String.fromCharCode.apply(String, payload);
+}
+
+function decodeToJson(payload) {
+    var str = decodeToString(payload);
+    var data = JSON.parse(str);
+    return data;
+}
+
+return result;
+```
+
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-uplink-converter-java-1-pe.webp)
+
+</div>
+
+</div>
+
+
+## Create Integration in Sentient
+
+Now that we have a topic created in Azure Portal and an Uplink converter created, it is possible to create an integration.
+
+1) Go to **Integrations center** section -> **Integrations** page and click "plus" button to create new integration. Name it **Azure Service Bus Integration**, select type **Azure Service Bus**. Click "Next";
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-integration-1-pe.webp)
+
+2) At this step, you can select a previously created or create a new upnlink converter right in this window. Select the previously created **Service Bus Uplink Converter**. Click "Next";
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-integration-2-pe.webp)
+
+3) At the step of adding a downlink converter, you can also select a previously created or create a new downlink converter. But for now, leave the "Downlink data converter" field empty. Click "Skip";
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-integration-3-pe.webp)
+
+4) Fill in **connection string** for your Service Bus namespace, **topic** and **subscription** names;
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-integration-4-pe.webp)
+
+5) [Optional] Click on **Check connection** button to check connection to your Service Bus topic. Click **Add** button to create the integration.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-integration-5-pe.webp)
+
+## Test it up!
+
+To send a test message, use the additional functionality of Azure Service bus, Service Bus Explorer.
+
+Sign-in to **Azure** portal and select your **namespace**. Choose **topic** to uplink.
+On the left blade select '**Service Bus Explorer**' tab.
+Click on '**Send message**', choose type of payload according to uplink converter and send test message.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-send-uplink-message-1-pe.webp)
+
+Example of payload:
+```ruby
+{
+    "devName": "Sensor A1",
+    "msg": {
+        "temp": 23,
+        "humidity": 40
+    }
+}
+```
+
+
+To check if the message has arrived at Service Bus integration open the '**Events**' tab of integration.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-send-check-uplink-1-pe.webp)
+
+<br>
+Received data can be viewed in the Uplink converter. In the '**In**' and '**Out**' blocks of the '**Events**' tab:
+
+
+<div class="st-gallery"><figure><img src="/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-send-check-uplink-2-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-send-check-uplink-3-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-send-check-uplink-4-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
+
+
+After you sent uplink message a new device was created. You should receive a notification about it. To view notification click on the bell icon in the upper right corner of the screen.
+The notification will contain link to created device. Go to this device.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-device-1-pe.webp)
+
+Here you will see information about the new device. As well as the telemetry which we sent to the device.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-device-2-pe.webp)
+
+Learn more about **notifications** and how to configure them [here](/docs/user-guide/notifications/).
+
+## Advanced usage: Downlink Messaging
+
+To send messages to device you need to configure downlink settings, such as downlink converter and information about Service Bus topic that will receive mesages.
+[Create topic](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal#create-a-topic-using-the-azure-portal) for downlink messaging in Azure portal.
+(We advise also to create [subscription](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-quickstart-topics-subscriptions-portal#create-subscriptions-to-the-topic) to the topic so that you can check messages later in Azure portal).
+
+Now, create **downlink converter** (You need to do same steps like when was creating Uplink but choose Downlink and specify another function).
+
+
+<div class="st-tabs">
+
+<div class="st-tab" data-label="RhaiRecommended">
+
+You can use our example of downlink converter or write your own according to your configuration:
+
+```javascript
+// Encode downlink data from incoming Rule Engine message
+// msg - JSON message payload downlink message json
+// msgType - type of message, for ex. 'ATTRIBUTES_UPDATED', 'POST_TELEMETRY_REQUEST', etc.
+// Result object with encoded downlink payload
+var result = {
+    contentType: "JSON",
+    data: JSON.stringify(msg),
+    metadata: {
+        deviceId: 'Sensor A1'
+    }
+};
+
+return result;
+```
+
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-downlink-converter-rhai-1-pe.webp)
+
+</div>
+
+<div class="st-tab" data-label="JavaScript">
+
+You can use our example of downlink converter or write your own according to your configuration:
+
+```javascript
+// Encode downlink data from incoming Rule Engine message
+// msg - JSON message payload downlink message json
+// Result object with encoded downlink payload
+var result = {
+    contentType: "JSON",
+    data: JSON.stringify(msg),
+    metadata: {
+        deviceId: 'Sensor A1'
+    }
+};
+
+return result;
+```
+
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-downlink-converter-java-1-pe.webp)
+
+</div>
+
+</div>
+
+
+<div class="st-callout info">
+
+
+**NOTE**
+<br>
+If you used another name of device (not **Sensor A1**) you have to specify in the Downlink converter your device name for **deviceId** field
+
+
+</div>
+
+
+Go to integration and specify created **downlink converter**. Then open **Advanced settings** to specify **Downlink topic** and **Downlink connection string** for your Service Bus namespace
+(copy connection string from uplink settings if you use the same namespace for downlink).
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-add-downlink-converter-1-pe.webp)
+
+<br>
+Ok, downlink converter ready, integration ready. Let's test integration with help of downlink node.
+
+After test uplink message was sent integration has created the device inside Sentient. Let`s check with which Rule Chain it is connected.
+For this go to **Entities** -> **Devices** page in Sentient menu and find the device with the name that we have used in the uplink. Find and navigate to the **device profile** used by the device.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-find-device-profile-1-pe.webp)
+
+Find the name of **rule chain** that device profile uses.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-find-device-profile-2-pe.webp)
+
+Go to the **Rule chains** page. In 'Search nodes' field type 'downlink' and choose in the menu '**integration downlink**' node and drag it to the canvas. 
+In pop-up you need to specify the name of rule node and choose your integration.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-downlink-rule-chain-1-pe.webp)
+
+Then we need to tap on a right grey circle of '**message type switch**' rule node and drag this circle to left side of '**integration downlink**' node, here choose '**Post attribute**' and '**Attributes update**', tap "Add" link and save Rule chain.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-downlink-rule-chain-2-pe.webp)
+
+Let's go to **'Entities'** -> **'Devices'** page and choose our device. Switch to **Attributes** tab. In 'Entity attributes scope' list choose **Shared attributes**.
+Tap on 'plus' to create a new attribute. Specify in pop-up the key name of attribute, type of value and some value and tap 'Add'.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-add-downlink-attribute-1-pe.webp)
+
+Go to the **Integrations** page to check the result of downlink.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-send-check-downlink-message-1-pe.webp)
+
+As you can see we have an event that downlink message was successfully generated by Integration and was sent to Azure Service Bus.
+
+To check it in Azure Service Bus you need to go to Azure Portal, choose topic you have used for downlink and subscription to the topic. 
+Select **Receive mode**, then click on **Receive messages**. In pop-up click '**Receive**' button.
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-send-uplink-message-2-pe.webp)
+
+<br>
+
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-send-uplink-message-3-pe.webp)
+
+## Conclusion
+
+That's it! Good luck in configuring of you IoT devices and dashboards!
+
+## Next steps

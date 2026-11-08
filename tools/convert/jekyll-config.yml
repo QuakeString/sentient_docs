@@ -1,0 +1,7 @@
+title: SENTIENT
+markdown_ext: "mdx"
+safe: false
+incremental: false
+include: ["_redirects"]
+exclude: [".git", "vendor", "_site"]
+plugins: []

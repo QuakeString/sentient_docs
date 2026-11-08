@@ -1,1 +1,0 @@
-sudo dpkg -i thingsboard-1.3.deb

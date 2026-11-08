@@ -1,1 +1,0 @@
-mosquitto_pub -d -h "{{mqttHostName}}" -t "v1/devices/me/attributes" -u "$ACCESS_TOKEN" -f "new-attributes-values.json"

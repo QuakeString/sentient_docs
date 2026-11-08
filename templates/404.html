@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}{{ trans(key="not_found", lang=lang) }} · SENTIENT Docs{% endblock title %}
+{% block content %}
+<article class="article">
+  <h1>{{ trans(key="not_found", lang=lang) }}</h1>
+  <p class="lede">{{ trans(key="not_found_text", lang=lang) | replace(from="{v}", to=config.extra.version) }}</p>
+  <p><button class="big-search" id="bigSearch" type="button"><svg class="icon"><use href="#i-search"/></svg><span>{{ trans(key="search_aria", lang=lang) }}</span><kbd>Ctrl K</kbd></button></p>
+  <p><a href="/docs/">{{ trans(key="go_home", lang=lang) }}</a></p>
+</article>
+{% endblock content %}

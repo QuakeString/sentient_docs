@@ -1,0 +1,28 @@
+headline: Chúng tôi có thể giúp gì cho việc vận hành nhà máy của bạn?
+lede: Hướng dẫn từng bước cho SENTIENT, từ cài đặt nền tảng đến kết nối PLC, xây dựng màn hình SCADA và khắc phục các lỗi thường gặp.
+popular: [Modbus, Sao lưu, Quy tắc cảnh báo, OPC UA, Bảng điều khiển]
+tiles:
+  - {title: Bắt đầu, icon: i-rocket, path: /docs/getting-started-guides/helloworld/, text: "Đăng nhập, thêm thiết bị đầu tiên và xem giá trị trực tiếp."}
+  - {title: Cài đặt và nâng cấp, icon: i-server, path: /docs/installation/, text: "Platform Manager trên Windows, Docker, giấy phép, sao lưu và nâng cấp."}
+  - {title: Kết nối thiết bị, icon: i-chip, path: /docs/iot-gateway/, text: "Gateway, thiết bị Modbus, OPC UA, S7, BACnet và MQTT."}
+  - {title: Bảng điều khiển và SCADA, icon: i-dash, path: /docs/user-guide/dashboards/, text: "Widget, ký hiệu SCADA và trình chỉnh sửa bảng điều khiển."}
+  - {title: Cảnh báo và thông báo, icon: i-bell, path: /docs/user-guide/alarms/, text: "Quy tắc cảnh báo, trung tâm thông báo và các kênh gửi."}
+  - {title: Rule engine, icon: i-gear, path: /docs/user-guide/rule-engine-2-0/overview/, text: "Xử lý, định tuyến và bổ sung dữ liệu đến."}
+help:
+  title: Khắc phục sự cố
+  path: /docs/troubleshooting/
+  more: Tất cả khắc phục sự cố
+  items:
+    - {code: API, title: Mã lỗi API, text: "Ý nghĩa của từng mã lỗi và cách khắc phục", path: /docs/troubleshooting/error-codes/}
+    - {code: LICENCE, title: Lỗi giấy phép, text: "Hết hạn, đổi phần cứng hoặc heartbeat thất bại", path: /docs/troubleshooting/licence-errors/}
+    - {code: GATEWAY, title: Lỗi gateway, text: "Connector không kết nối được PLC, ghi thất bại", path: /docs/troubleshooting/gateway-errors/}
+    - {code: DEVICE, title: Thiết bị không kết nối, text: "Thông tin xác thực, cổng và định dạng payload", path: /docs/troubleshooting/device-connection/}
+changes:
+  title: Về tài liệu này
+  path: /docs/
+  more: Tổng quan
+  items:
+    - {title: Tài liệu theo phiên bản, path: /docs/, text: "chọn phiên bản của bạn từ menu phiên bản ở trên cùng"}
+    - {title: Tìm kiếm ngoại tuyến, path: /docs/, text: "tìm kiếm hoạt động không cần internet"}
+    - {title: Đang rà soát, path: /docs/, text: "các trang chuyển từ tài liệu cũ đang được kiểm tra với SENTIENT"}
+    - {title: Sắp có, path: /docs/troubleshooting/, text: "các trang đánh dấu SẮP CÓ hiển thị dàn ý của trang đang được viết"}

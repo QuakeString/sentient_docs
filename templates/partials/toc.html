@@ -1,0 +1,11 @@
+{%- if toc | length > 0 %}
+<h5>{{ trans(key="on_this_page", lang=lang) }}</h5>
+{%- for h in toc %}
+<a href="#{{ h.id }}" data-target="{{ h.id }}">{{ h.title }}</a>
+{%- for c in h.children %}<a href="#{{ c.id }}" data-target="{{ c.id }}" class="l3">{{ c.title }}</a>{% endfor %}
+{%- endfor %}
+<div class="side-actions">
+  {%- if page.relative_path %}<a href="{{ config.extra.repo_edit_url | safe }}{% if page.extra.fallback | default(value=false) %}{{ page.relative_path | replace(from="." ~ lang ~ ".md", to=".md") | safe }}{% else %}{{ page.relative_path | safe }}{% endif %}" target="_blank" rel="noopener"><svg class="icon" style="width:14px;height:14px"><use href="#i-pen"/></svg>{{ trans(key="suggest_edit", lang=lang) }}</a>{% endif %}
+  <a href="#" id="copyLink"><svg class="icon" style="width:14px;height:14px"><use href="#i-hash"/></svg>{{ trans(key="copy_link", lang=lang) }}</a>
+</div>
+{%- endif %}

@@ -22,8 +22,16 @@
   syncIcon(); syncShots();
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function () { syncIcon(); syncShots(); });
   $("#themeBtn").addEventListener("click", function () {
-    root.dataset.theme = isDark() ? "light" : "dark";
-    try { localStorage.setItem("st-docs-theme", root.dataset.theme); } catch (e) {}
+    /* picking the theme the system already uses goes back to following the system */
+    var want = isDark() ? "light" : "dark";
+    var sys = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    if (want === sys) {
+      delete root.dataset.theme;
+      try { localStorage.removeItem("st-docs-theme"); } catch (e) {}
+    } else {
+      root.dataset.theme = want;
+      try { localStorage.setItem("st-docs-theme", want); } catch (e) {}
+    }
     syncIcon(); syncShots();
   });
 

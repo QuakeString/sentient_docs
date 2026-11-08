@@ -30,7 +30,7 @@ UDP Integration allows to stream data from devices which use a UDP protocol to S
 
 Please review the integration diagram to learn more.
 
-![image](/images/user-guide/integrations/udp-integration.svg)
+{{ diagram(name="udp-integration") }}
 
 ## Prerequisites
 

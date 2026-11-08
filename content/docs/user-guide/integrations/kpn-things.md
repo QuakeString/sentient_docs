@@ -22,7 +22,7 @@ KPN Things is an IoT (Internet of Things) platform provided by KPN, a telecommun
 This platform allows users to connect and manage their IoT devices, facilitating communication and data exchange between these devices and the cloud.  
 After integrating KPN Things with the SENTIENT, you can connect, manage, communicate, process and visualize data from your devices in the SENTIENT IoT platform.
 
-<object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/http-integration.svg"></object>
+{{ diagram(name="http-integration") }}
 
 ## Create integration
 

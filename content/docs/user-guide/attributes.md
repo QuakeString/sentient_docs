@@ -49,7 +49,7 @@ Server-side attributes are the ones that you may configure via Administration UI
 The device firmware can't access the server-side attribute.
 
 
-![image](/images/user-guide/server-side-attributes.svg)
+{{ diagram(name="server-side-attributes") }}
 
 
 Let's assume you would like to build a building monitoring solution and review few examples:
@@ -141,7 +141,7 @@ The method for receiving updates typically depends on the communication protocol
 * Periodic Polling (e.g., HTTP): Devices that use request-response protocols like [HTTP](/docs/reference/http-api/#attributes-api) can periodically poll the server to fetch the latest values of their shared attributes.
 
 
-![image](/images/user-guide/shared-attributes.svg)
+{{ diagram(name="shared-attributes") }}
 
 
 The most common use case of shared attributes is to store device settings.
@@ -239,7 +239,7 @@ It is similar to [shared attributes](/docs/user-guide/attributes/#shared-attribu
 The device firmware/application may send the value of the attributes from device to the platform.
 
 
-![image](/images/user-guide/client-side-attributes.svg)
+{{ diagram(name="client-side-attributes") }}
 
 
 The most common use case of client attributes is to report device state.

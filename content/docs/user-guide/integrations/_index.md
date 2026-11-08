@@ -57,7 +57,7 @@ Once message is pushed by the rule engine, SENTIENT invokes assigned [**Downlink
 
 <br>
 
-<object width="100%" data="/images/user-guide/integrations/integrations-overview.svg"></object>
+{{ diagram(name="integrations-overview") }}
  
 ## Uplink data converter
 
@@ -521,7 +521,7 @@ Cons:
 * low level of isolation;
 * can&#39;t access local MQTT brokers or OPC-UA servers if SENTIENT is deployed in the cloud.
 
-<object width="100%" data="/images/user-guide/integrations/embeded-integrations-overview.svg"></object>
+{{ diagram(name="embedded-integrations-overview") }}
 
 ### Remote integrations
 
@@ -543,7 +543,7 @@ Cons:
 
 Learn how to configure integration to run remotely using [this guide](/docs/user-guide/integrations/remote-integrations).
 
-<object width="100%" data="/images/user-guide/integrations/remote-integrations-overview.svg"></object>
+{{ diagram(name="remote-integrations-overview") }}
 
 ## Platform Integrations vs IoT Gateway
 

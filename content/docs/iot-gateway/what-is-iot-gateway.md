@@ -11,7 +11,7 @@ The SENTIENT **IoT Gateway** is an open-source solution that allows you to integ
 
 SENTIENT is an open-source IoT platform for data collection, processing, visualization, and device management. See [**What is SENTIENT?**](/docs/getting-started-guides/what-is-sentient/) if you are new platform user.
 
-<object width="95%" data="/images/gateway/python-gateway-animd-ff.svg"></object>
+{{ diagram(name="gateway-overview") }}
 
 ## Gateway features
 

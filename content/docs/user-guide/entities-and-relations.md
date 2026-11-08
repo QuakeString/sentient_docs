@@ -52,7 +52,7 @@ Let’s also assume we want to support multiple fields with hundreds of sensors.
 
 The following diagram explains how those entities are configured and stored in SENTIENT:
 
-![image](/images/user-guide/entities-and-relations.svg)
+{{ diagram(name="entities-and-relations") }}
 
 
 See ["add and delete assets"](/docs/user-guide/ui/assets/#add-and-delete-assets) and ["manage asset relations"](/docs/user-guide/ui/assets/#manage-asset-relations)

@@ -30,7 +30,7 @@ TCP Integration allows to stream data from devices which use a TCP transport pro
 
 Please review the integration diagram to learn more.
 
-![image](/images/user-guide/integrations/tcp-integration.svg)
+{{ diagram(name="tcp-integration") }}
 
 ## Prerequisites
 

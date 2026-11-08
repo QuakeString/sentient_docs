@@ -20,7 +20,7 @@ Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform i
 
 Azure IoT Hub Integration allows to stream data from AWS IoT Backend to SENTIENT and converts device payloads to the SENTIENT format.
 
-  <object width="80%" data="/images/user-guide/integrations/azure/iot-hub-integration.svg"></object>
+{{ diagram(name="azure-iot-hub-integration") }}
 
 ## Create and configure Azure IoT Hub account
 

@@ -22,7 +22,7 @@ CoAP Integration allows to stream data from devices that use a CoAP protocol to 
 
 Please review the integration diagram to learn more.
 
-![image](/images/user-guide/integrations/coap-integration.svg)
+{{ diagram(name="coap-integration") }}
 
 ## Prerequisites
 

@@ -36,7 +36,7 @@ In this tutorial we will configure SENTIENT Rule Engine to automatically send me
   
  Please review the integration diagram to learn more. 
  
-  ![image](/images/user-guide/integrations/mqtt-integration.svg)
+{{ diagram(name="mqtt-integration") }}
 
 ## Prerequisites 
 

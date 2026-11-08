@@ -22,7 +22,7 @@ Sigfox Integration allows to stream data from Sigfox Backend to SENTIENT and con
 
 Please review the integration diagram to learn more.
 
- ![image](/images/user-guide/integrations/sigfox-integration.svg)
+{{ diagram(name="sigfox-integration") }}
 
 ## Prerequisites
 

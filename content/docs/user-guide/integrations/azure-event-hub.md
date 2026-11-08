@@ -20,7 +20,7 @@ Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform i
 
 Azure Event Hub Integration allows to stream data from Azure Event Hub to SENTIENT and converts device payloads to the SENTIENT format.
 
-![image](/images/user-guide/integrations/azure-event-hub-integration.svg)
+{{ diagram(name="azure-event-hub-integration") }}
  
 ## Create IoT hub using the Azure portal.
 

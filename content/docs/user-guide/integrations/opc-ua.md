@@ -18,7 +18,7 @@ Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform i
 
 OPC UA Integration allows you to stream data from the OPC UA server to SENTIENT and converts the device payloads to the SENTIENT format.
 
-<object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/opc-ua-integration.svg"></object>
+{{ diagram(name="opc-ua-integration") }}
 
 ## OPC-UA integration tutorial
 

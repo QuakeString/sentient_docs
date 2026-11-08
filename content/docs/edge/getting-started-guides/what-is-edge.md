@@ -40,7 +40,7 @@ Looking for **white-labeling** or **premium features**? <a href="/docs/" target=
 
 <br>
 
-![image](/images/edge/overview/edge_overview.svg)
+{{ diagram(name="edge-overview") }}
 
 ## Use-Cases for SENTIENT Edge
 
@@ -68,21 +68,21 @@ With **SENTIENT Edge**, you get:
 
 - **Local deployment and storage**: Process and store data from local (edge) devices without connecting to the cloud. Push updates to the cloud once the connection is restored.
 
-![image](/images/edge/overview/offline_network_.svg)
+{{ diagram(name="edge-offline") }}
 
 - **Traffic filtering**: Filter data from local (edge) devices on the SENTIENT Edge service and push only a subset of the data to the cloud for further processing or storage.
 
-![image](/images/edge/overview/data_filtering.svg)
+{{ diagram(name="edge-filtering") }}
 
 - **Local alarms**: Instantly respond to critical situations on site, without the need for a cloud connection.
 
-![image](/images/edge/overview/alarm.svg)
+{{ diagram(name="edge-alarm") }}
 
 - **Real-time dashboards**: Monitor local events and time series data.
 - **Local storage**: Store data from edge devices on the edge if the cloud connection is inactive and push updates to the cloud once the connection is restored.
 - **Batch Update**: Update thousands of edge configurations with a single click.
 
-![image](/images/edge/overview/update_dashboard.svg)
+{{ diagram(name="edge-dashboards") }}
 
 SENTIENT Edge inherits features from SENTIENT, providing the same experience for connecting, managing, and processing data from your devices.
 

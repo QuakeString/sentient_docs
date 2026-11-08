@@ -19,7 +19,7 @@ Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform i
 
 ThingPark Integration allows to stream data from Actility ThingPark servers to SENTIENT and converts binary device payloads to the SENTIENT format.
 
-<object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/thingpark-integration.svg"></object>
+{{ diagram(name="thingpark-integration") }}
 
 Configuration steps:
 - Review official  ThingPark DX Dataflow API reference documentation:

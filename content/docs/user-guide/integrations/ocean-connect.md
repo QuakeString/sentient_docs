@@ -19,7 +19,7 @@ Use **SENTIENT Cloud** or [**install**](/docs/installation/) your own platform i
 Huawei OceanConnect Integration allows to stream data from OceanConnect platform to SENTIENT and converts binary device payloads to the SENTIENT format.
 
 
- ![image](/images/user-guide/integrations/ocean-connect-integration.svg)
+{{ diagram(name="ocean-connect-integration") }}
 
 Configuration steps:
   

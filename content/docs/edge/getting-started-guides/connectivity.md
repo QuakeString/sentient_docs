@@ -17,7 +17,7 @@ In case you have not found out how to connect your device using the diagram or s
 </div>
 
 
-  <object width="100%" style="max-width: max-content;" data="/images/connectivity.svg">Decision tree showing how to connect devices to SENTIENT. If the device is IP enabled with custom firmware, use MQTT, HTTP, CoAP, Sparkplug, or the MQTT Gateway native SENTIENT API depending on protocol. If already connected to a backend like Azure, AWS, IBM Watson, or OPC-UA, use relevant integrations. Non-IP devices such as LoRaWAN, SigFox, NB-IoT, SMS, or industrial protocols like OPC-UA, Modbus, BLE, CAN, REST, or SNMP can be connected via IoT Gateway. For other protocols - use "Contact Us" form.</object>
+{{ diagram(name="connectivity") }}
 
 
 ## Connecting well-known devices

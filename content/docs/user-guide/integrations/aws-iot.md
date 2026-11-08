@@ -23,7 +23,7 @@ to the SENTIENT format. AWS IoT will be primarily responsible for receiving all 
 messaging server), filtering them, deciding who is interested, and then sending the message to all 
 subscribers, in our case of integration.
 
-<object width="100%" style="max-width: max-content;" data="/images/user-guide/integrations/aws-iot-integration.svg"></object>
+{{ diagram(name="aws-iot-integration") }}
 
 ## AWS IOT
 

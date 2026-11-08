@@ -25,7 +25,7 @@ SENTIENT Edge is designed to be:
 
 The diagram below depicts the key components of the edge and the interfaces they provide.
 
-<object width="80%" data="/images/reference/edge-architecture.svg"></object>
+{{ diagram(name="edge-architecture") }}
 
 ## Cloud Manager Service
 

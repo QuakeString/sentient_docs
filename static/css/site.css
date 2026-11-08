@@ -775,7 +775,7 @@ figcaption em{font-style:normal;font-family:var(--font-mono);font-size:11px;colo
 .big-search{display:flex;align-items:center;gap:10px;height:52px;margin:20px 0 10px;padding:0 10px 0 18px;border-radius:26px;border:1px solid var(--line-strong);background:var(--surface);cursor:text;width:100%;max-width:640px;color:var(--faint);font-size:16px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 .big-search:hover{border-color:var(--accent)}
 .big-search span{flex:1;text-align:left}
-.popular{display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--muted);align-items:center}
+.popular{margin-top:14px;display:flex;flex-wrap:wrap;gap:8px;font-size:13px;color:var(--muted);align-items:center}
 .popular button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:3px 12px;cursor:pointer;font-size:13px;color:var(--fg)}
 .popular button:hover{border-color:var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:28px 0}

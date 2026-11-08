@@ -8,7 +8,6 @@
     <div class="eyebrow">{{ trans(key="manual", lang=lang) }} · {{ config.extra.version }} · {{ trans(key="works_offline_lc", lang=lang) }}</div>
     <h1>{{ home.headline }}</h1>
     <p class="lede">{{ home.lede }}</p>
-    <button class="big-search" id="bigSearch" type="button"><svg class="icon"><use href="#i-search"/></svg><span>{{ trans(key="big_search", lang=lang) }}</span><kbd>Ctrl K</kbd></button>
     <div class="popular">{{ trans(key="popular", lang=lang) }}
       {% for q in home.popular %}<button type="button" data-q="{{ q }}">{{ q }}</button>{% endfor %}
     </div>

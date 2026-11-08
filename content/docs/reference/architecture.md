@@ -10,6 +10,8 @@ checked = "4.3.0.57"
 +++
 SENTIENT is one server program, written in Rust, with its database next to it. The web UI, the REST API, the device connections, the rule engine and every background job run inside that program, so a plant runs SENTIENT on one machine without a cluster to look after.
 
+{{ diagram(name="architecture") }}
+
 ## The parts
 
 | Part | What it does | Runs as |

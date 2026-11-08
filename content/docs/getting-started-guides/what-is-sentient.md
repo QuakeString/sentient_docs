@@ -25,26 +25,13 @@ With SENTIENT, you are able to:
  - Push device data to other systems.
  - Much more...
  
-See [**SENTIENT features list**](/docs/#features) for more features and useful links to the specific feature documentation. 
-
-
-<object width="100%" data="/images/reference/sentient-architecture.svg"></object>
-
+See [**SENTIENT features list**](/docs/#features) for more features and useful links to the specific feature documentation.
 
 ## Architecture
 
-SENTIENT is designed to be:
+{{ diagram(name="architecture") }}
 
-* **scalable**: the horizontally scalable platform, built using leading open-source technologies.
-* **fault-tolerant**: no single-point-of-failure, every node in the cluster is identical.
-* **robust and efficient**: a single server node can handle tens or even hundreds of thousands of devices, depending on the use-case. 
-SENTIENT cluster can handle millions of devices.
-* **customizable**: adding new functionality is easy with customizable widgets and rule engine nodes.
-* **durable**: never lose your data.
-
-
-See [**SENTIENT Architecture**](/docs/reference) for more details.
-
+SENTIENT is one server program with its database next to it. Device connections, the rule engine, alarms, reports and the web UI all run inside it, so a plant runs SENTIENT on one machine without a cluster to look after. Gateways connect PLCs and meters, and history goes to PostgreSQL, TimescaleDB or ClickHouse. See [Architecture](/docs/reference/architecture/) for how a value travels from a device to a dashboard.
 
 ## Ready to get started?
 

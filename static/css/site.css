@@ -975,3 +975,7 @@ html,body{height:auto;min-height:100%}
 .status-note.planned .icon{color:var(--accent-text)}
 @media (max-width:480px){.brand .mark{height:24px;width:calc(24px * 1.1138)}.brand .wordmark{height:11px;width:calc(11px * 8.2853)}}
 @media (max-width:380px){.brand .wordmark{display:none}}
+/* inline diagrams (data/diagrams/*.svg via the diagram shortcode) */
+.st-diagram{margin:20px 0;padding:16px;border:1px solid var(--line);border-radius:8px;background:var(--bg);overflow-x:auto}
+.st-diagram svg{display:block;min-width:640px}
+.st-diagram figcaption{margin-top:8px;font-size:13px;color:var(--muted)}

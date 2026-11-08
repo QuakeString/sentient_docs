@@ -997,26 +997,31 @@ html,body{height:auto;min-height:100%}
 :lang(hi) body,:lang(hi) .prose{line-height:1.75}
 /* diagram shapes (tools/diagrams.py) */
 .st-diagram-svg{width:100%;height:auto;font-family:var(--font-sans)}
-.st-diagram-svg text{text-anchor:middle;font-size:15px;fill:var(--fg)}
-.st-diagram-svg .dg-h{font-size:13px;font-weight:600;fill:var(--muted);letter-spacing:.04em;text-transform:uppercase;text-anchor:start}
-.st-diagram-svg .dg-h2{font-size:12.5px;font-weight:600;fill:var(--muted);text-anchor:start}
-.st-diagram-svg .dg-gh{font-size:16px;font-weight:700;fill:var(--accent-text);text-anchor:start}
-.st-diagram-svg .dg-gh.dg-gn{font-size:13px;font-weight:600;fill:var(--muted)}
-.st-diagram-svg .dg-gs{text-anchor:end;font-size:12.5px;fill:var(--muted)}
-.st-diagram-svg .dg-t{font-weight:600}
-.st-diagram-svg .dg-sm{font-size:14px}
-.st-diagram-svg .dg-ct{font-size:13.5px}
+.st-diagram-svg text{text-anchor:middle;font-size:14px;fill:var(--fg)}
+.st-diagram-svg .dg-h{font-size:11.5px;font-weight:700;fill:var(--muted);letter-spacing:.08em;text-transform:uppercase;text-anchor:start}
+.st-diagram-svg .dg-h2{font-size:11.5px;font-weight:600;fill:var(--muted);letter-spacing:.04em;text-transform:uppercase;text-anchor:start}
+.st-diagram-svg .dg-gh{font-size:13px;font-weight:700;fill:var(--accent-text);letter-spacing:.02em}
+.st-diagram-svg .dg-ghgd{fill:var(--muted)}
+.st-diagram-svg .dg-gs{font-size:12px;fill:var(--muted)}
+.st-diagram-svg .dg-t{font-weight:600;letter-spacing:-.005em}
 .st-diagram-svg .dg-u{font-size:12px;fill:var(--muted)}
-.st-diagram-svg .dg-ta{font-weight:600;fill:var(--on-accent)}
-.st-diagram-svg .dg-ua{font-size:12.5px;fill:var(--on-accent);opacity:.85}
-.st-diagram-svg .dg-ts{font-weight:600;fill:var(--accent-text)}
-.st-diagram-svg .dg-lbl{font-size:12px;fill:var(--muted)}
-.st-diagram-svg .dg-b{fill:var(--surface);stroke:var(--line-strong);stroke-width:1.2}
-.st-diagram-svg .dg-o{fill:var(--surface);stroke:var(--line-strong);stroke-width:1.2;stroke-dasharray:5 4}
-.st-diagram-svg .dg-a{fill:var(--accent)}
-.st-diagram-svg .dg-s,.st-diagram-svg .dg-chip{fill:var(--accent-tint);stroke:var(--accent);stroke-width:1}
-.st-diagram-svg .dg-g{fill:var(--sunken);stroke:var(--accent);stroke-width:1.5}
-.st-diagram-svg .dg-gd{fill:none;stroke:var(--line-strong);stroke-width:1.2;stroke-dasharray:5 4}
-.st-diagram-svg .dg-ar,.st-diagram-svg .dg-ln{fill:none;stroke:var(--muted);stroke-width:1.5}
-.st-diagram-svg .dg-dl{fill:none;stroke:var(--muted);stroke-width:1.2;stroke-dasharray:4 4}
-.st-diagram-svg .dg-ah{fill:var(--muted)}
+.st-diagram-svg .dg-ct{font-size:12.5px;font-weight:600;fill:var(--accent-text)}
+.st-diagram-svg .dg-lbl{font-size:11.5px;font-weight:500;fill:var(--muted)}
+.st-diagram-svg .dg-pill{fill:var(--bg);stroke:var(--line);stroke-width:1}
+.st-diagram-svg .dg-n{fill:var(--surface);stroke:var(--line-strong);stroke-width:1}
+.st-diagram-svg .dg-na{fill:var(--accent-tint);stroke:var(--accent);stroke-width:1.2}
+.st-diagram-svg .dg-ns{fill:var(--surface);stroke:var(--accent);stroke-width:1.2}
+.st-diagram-svg .dg-no{fill:var(--surface);stroke:var(--line-strong);stroke-width:1;stroke-dasharray:4 3}
+.st-diagram-svg .dg-ghost{opacity:.55}
+.st-diagram-svg .dg-tile{fill:var(--accent-tint)}
+.st-diagram-svg .dg-tilea{fill:var(--accent)}
+.st-diagram-svg .dg-tileo{fill:var(--sunken)}
+.st-diagram-svg .dg-ic{fill:none;stroke:var(--accent-text);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.st-diagram-svg .dg-ica{stroke:var(--on-accent)}
+.st-diagram-svg .dg-ico{stroke:var(--muted)}
+.st-diagram-svg .dg-chip{fill:var(--accent-tint);stroke:none}
+.st-diagram-svg .dg-g{fill:var(--sunken);stroke:var(--line);stroke-width:1}
+.st-diagram-svg .dg-gd{fill:none;stroke:var(--line-strong);stroke-width:1;stroke-dasharray:4 4}
+.st-diagram-svg .dg-ar,.st-diagram-svg .dg-ln{fill:none;stroke:var(--line-strong);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.st-diagram-svg .dg-dl{fill:none;stroke:var(--line-strong);stroke-width:1.3;stroke-dasharray:3 4;stroke-linecap:round}
+.st-diagram-svg .dg-ah{fill:var(--line-strong)}

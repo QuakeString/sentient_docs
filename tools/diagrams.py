@@ -19,58 +19,154 @@ from xml.sax.saxutils import escape
 OUT = Path(__file__).resolve().parents[1] / "data" / "diagrams"
 
 
+ICONS = {
+    "server": '<rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01M6 18h.01"/>',
+    "cpu": '<rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/>',
+    "router": '<rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6.01 18H6M10.01 18H10M15 10v4M17.84 7.17a4 4 0 0 0-5.66 0M20.66 4.34a8 8 0 0 0-11.31 0"/>',
+    "database": '<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/>',
+    "cloud": '<path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>',
+    "user": '<path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+    "bell": '<path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/>',
+    "mail": '<rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>',
+    "clock": '<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+    "file": '<path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M16 13H8M16 17H8M10 9H8"/>',
+    "workflow": '<rect x="3" y="3" width="8" height="8" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect x="13" y="13" width="8" height="8" rx="2"/>',
+    "chart": '<path d="M3 3v18h18M18 17V9M13 17V5M8 17v-3"/>',
+    "layers": '<path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83ZM22 17.65l-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65M22 12.65l-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>',
+    "plug": '<path d="M12 22v-5M9 8V2M15 8V2M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/>',
+    "code": '<path d="m16 18 6-6-6-6M8 6l-6 6 6 6"/>',
+    "key": '<circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6M15.5 7.5l3 3L22 7l-3-3"/>',
+    "wrench": '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>',
+    "languages": '<path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/>',
+    "globe": '<circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/>',
+    "activity": '<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+    "refresh": '<path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8M21 3v5h-5M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16M8 16H3v5"/>',
+    "gauge": '<path d="m12 14 4-4M3.34 19a10 10 0 1 1 17.32 0"/>',
+    "factory": '<path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2ZM17 18h1M12 18h1M7 18h1"/>',
+    "box": '<path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16ZM3.3 7l8.7 5 8.7-5M12 22V12"/>',
+    "check": '<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1zM9 12l2 2 4-4"/>',
+    "filter": '<path d="M22 3H2l8 9.46V19l4 2v-8.54Z"/>',
+    "help": '<circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/>',
+    "fan": '<path d="M10.83 8.4c-1.2-2.7.3-6.4 3.37-6.4 2.13 0 3.8 1.9 2.8 4.5M15.6 10.83c2.7-1.2 6.4.3 6.4 3.37 0 2.13-1.9 3.8-4.5 2.8M13.17 15.6c1.2 2.7-.3 6.4-3.37 6.4-2.13 0-3.8-1.9-2.8-4.5M8.4 13.17C5.7 14.37 2 12.87 2 9.8 2 7.67 3.9 6 6.5 7"/><circle cx="12" cy="12" r="2"/>',
+    "thermo": '<path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"/>',
+    "send": '<path d="m22 2-7 20-4-9-9-4ZM22 2 11 13"/>',
+    "lock": '<rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>',
+    "monitor": '<rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>',
+    "smartphone": '<rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/>',
+}
+
+# keyword -> icon, first match wins (used when a box does not name its icon)
+AUTO_ICON = [
+    ("server", "server"), ("edge", "server"), ("gateway", "router"), ("postgres", "database"), ("timescale", "database"),
+    ("clickhouse", "database"), ("database", "database"), ("storage", "database"), ("rule engine", "workflow"),
+    ("dashboard", "chart"), ("alarm", "bell"), ("notification", "mail"), ("scheduler", "clock"), ("report", "file"),
+    ("operator", "user"), ("other systems", "code"), ("application", "code"), ("converter", "refresh"),
+    ("integration", "plug"), ("cloud", "cloud"), ("aws", "cloud"), ("azure", "cloud"), ("plc", "factory"),
+    ("translator", "languages"), ("platform manager", "wrench"), ("licence", "key"), ("queue", "layers"),
+    ("actor", "activity"), ("web ui", "globe"), ("analytics", "chart"), ("fan", "fan"), ("temperature", "thermo"),
+    ("moisture", "gauge"), ("irrigation", "gauge"), ("sensor", "gauge"), ("device", "cpu"), ("region", "box"),
+    ("field", "box"), ("asset", "box"), ("broker", "send"), ("opc ua", "server"), ("sigfox", "cloud"),
+    ("thingpark", "cloud"), ("oceanconnect", "cloud"), ("platform", "cloud"), ("checks", "check"), ("creates", "check"),
+    ("saves", "lock"), ("filter", "filter"), ("custom", "code"), ("meters", "gauge"), ("databases", "database"),
+    ("brokers", "send"), ("local web", "monitor"), ("ask us", "help"),
+]
+
+
+def auto_icon(title):
+    t = title.lower()
+    for k, ic in AUTO_ICON:
+        if k in t:
+            return ic
+    return None
+
+
+def tw(s, size=14, bold=True):
+    """Rough text width for layout."""
+    return len(s) * size * (0.5 if bold else 0.45)
+
+
 class D:
+    R = 10        # node corner radius
+    BEND = 10     # connector corner radius
+
     def __init__(self, name, w, h, title):
         self.name, self.w, self.h, self.title = name, w, h, title
-        self.el, self.boxes = [], {}
+        self.el, self.boxes, self.labels = [], {}, []
 
     # ---------- shapes ----------
-    def box(self, key, x, y, w, h, title, sub=None, k="b", small=False):
+    def icon(self, name, x, y, size, cls):
+        s = size / 24
+        self.el.append(f'<g class="{cls}" transform="translate({x:.1f} {y:.1f}) scale({s:.3f})">{ICONS[name]}</g>')
+
+    def box(self, key, x, y, w, h, title, sub=None, k="b", small=False, icon=None):
         self.boxes[key] = (x, y, w, h)
-        r = 6 if k in ("s", "chip") else 8
-        self.el.append(f'<rect class="dg-{k}" x="{x}" y="{y}" width="{w}" height="{h}" rx="{r}"/>')
-        tc = {"a": "dg-ta", "s": "dg-ts", "b": "dg-t", "o": "dg-t", "chip": "dg-ts dg-ct"}[k]
-        sc = "dg-ua" if k == "a" else "dg-u"
-        if small:
-            tc += " dg-sm"
         lines = title.split("\n")
-        cx = x + w / 2
+        if k == "chip":
+            self.el.append(f'<rect class="dg-chip" x="{x}" y="{y}" width="{w}" height="{h}" rx="{h / 2}"/>')
+            self.el.append(f'<text class="dg-ct" x="{x + w / 2}" y="{y + h / 2 + 4.5}">{escape(title)}</text>')
+            return self
+        self.el.append(f'<rect class="dg-n dg-n{k}" x="{x}" y="{y}" width="{w}" height="{h}" rx="{self.R}"/>')
+        ic = icon if icon is not None else auto_icon(title.replace("\n", " "))
+        if ic is False:
+            ic = None
+        tsize = 13.5 if small or w < 170 else 14.5
+        title_w = max(tw(t, tsize) for t in lines)
+        sub_w = tw(sub, 12, False) if sub else 0
+        tile = 32 if h >= 52 else 26
+        lh = tsize + 3
         n = len(lines) + (1 if sub else 0)
-        lh = 17
-        y0 = y + h / 2 - (n - 1) * lh / 2 + 5
-        for i, t in enumerate(lines):
-            self.el.append(f'<text class="{tc}" x="{cx}" y="{y0 + i * lh}">{escape(t)}</text>')
-        if sub:
-            self.el.append(f'<text class="{sc}" x="{cx}" y="{y0 + len(lines) * lh - 1}">{escape(sub)}</text>')
+        if ic and w >= 30 + tile + max(title_w, sub_w) and h >= 36:
+            # icon tile on the left, text left-aligned
+            tx, ty = x + 12, y + (h - tile) / 2
+            self.el.append(f'<rect class="dg-tile dg-tile{k}" x="{tx}" y="{ty}" width="{tile}" height="{tile}" rx="8"/>')
+            isz = tile * 0.56
+            self.icon(ic, tx + (tile - isz) / 2, ty + (tile - isz) / 2, isz, f"dg-ic dg-ic{k}")
+            x0 = tx + tile + 11
+            y0 = y + h / 2 - (n - 1) * lh / 2 + 4.5
+            for i, t in enumerate(lines):
+                self.el.append(f'<text class="dg-t dg-t{k}" style="text-anchor:start;font-size:{tsize}px" x="{x0}" y="{y0 + i * lh}">{escape(t)}</text>')
+            if sub:
+                self.el.append(f'<text class="dg-u" style="text-anchor:start" x="{x0}" y="{y0 + len(lines) * lh}">{escape(sub)}</text>')
+        elif ic and h >= 80:
+            # narrow and tall: icon on top, text centred below
+            tx, ty = x + (w - tile) / 2, y + 12
+            self.el.append(f'<rect class="dg-tile dg-tile{k}" x="{tx}" y="{ty}" width="{tile}" height="{tile}" rx="8"/>')
+            isz = tile * 0.56
+            self.icon(ic, tx + (tile - isz) / 2, ty + (tile - isz) / 2, isz, f"dg-ic dg-ic{k}")
+            y0 = ty + tile + 18
+            for i, t in enumerate(lines):
+                self.el.append(f'<text class="dg-t dg-t{k}" style="font-size:{tsize}px" x="{x + w / 2}" y="{y0 + i * lh}">{escape(t)}</text>')
+            if sub:
+                self.el.append(f'<text class="dg-u" x="{x + w / 2}" y="{y0 + len(lines) * lh}">{escape(sub)}</text>')
+        else:
+            y0 = y + h / 2 - (n - 1) * lh / 2 + 4.5
+            for i, t in enumerate(lines):
+                self.el.append(f'<text class="dg-t dg-t{k}" style="font-size:{tsize}px" x="{x + w / 2}" y="{y0 + i * lh}">{escape(t)}</text>')
+            if sub:
+                self.el.append(f'<text class="dg-u" x="{x + w / 2}" y="{y0 + len(lines) * lh}">{escape(sub)}</text>')
         return self
 
-    def stack(self, key, x, y, w, h, title, sub=None, k="b"):
-        """A box drawn as a pile of several (many devices, many assets)."""
+    def stack(self, key, x, y, w, h, title, sub=None, k="b", icon=None):
+        """A card drawn as a pile of several (many devices, many assets)."""
         for d in (8, 4):
-            self.el.append(f'<rect class="dg-{k}" x="{x + d}" y="{y - d}" width="{w}" height="{h}" rx="8"/>')
-        return self.box(key, x, y, w, h, title, sub, k)
+            self.el.append(f'<rect class="dg-n dg-n{k} dg-ghost" x="{x + d}" y="{y - d}" width="{w}" height="{h}" rx="{self.R}"/>')
+        return self.box(key, x, y, w, h, title, sub, k, icon=icon)
 
     def cyl(self, key, x, y, w, h, title, sub=None):
-        self.boxes[key] = (x, y, w, h)
-        e, r = 8, w / 2
-        self.el.append(f'<path class="dg-b" d="M{x} {y + e} A{r} {e} 0 0 1 {x + w} {y + e} V{y + h - e} A{r} {e} 0 0 1 {x} {y + h - e} Z"/>'
-                       f'<path class="dg-ln" d="M{x} {y + e} A{r} {e} 0 0 0 {x + w} {y + e}"/>')
-        cx = x + w / 2
-        if sub:
-            self.el.append(f'<text class="dg-t" x="{cx}" y="{y + h / 2 + 2}">{escape(title)}</text><text class="dg-u" x="{cx}" y="{y + h / 2 + 18}">{escape(sub)}</text>')
-        else:
-            self.el.append(f'<text class="dg-t" x="{cx}" y="{y + h / 2 + 8}">{escape(title)}</text>')
-        return self
+        return self.box(key, x, y, w, h, title, sub, "b", icon="database")
 
     def group(self, x, y, w, h, title=None, k="g", right=None):
-        self.el.append(f'<rect class="dg-{k}" x="{x}" y="{y}" width="{w}" height="{h}" rx="12"/>')
+        self.el.append(f'<rect class="dg-{k}" x="{x}" y="{y}" width="{w}" height="{h}" rx="16"/>')
         if title:
-            self.el.append(f'<text class="dg-gh{"" if k == "g" else " dg-gn"}" x="{x + 16}" y="{y + 26}">{escape(title)}</text>')
+            self.el.append(f'<text class="dg-gh dg-gh{k}" style="text-anchor:start" x="{x + 18}" y="{y + 27}">{escape(title)}</text>')
         if right:
-            self.el.append(f'<text class="dg-gs" x="{x + w - 16}" y="{y + 26}">{escape(right)}</text>')
+            self.el.append(f'<text class="dg-gs" style="text-anchor:end" x="{x + w - 18}" y="{y + 27}">{escape(right)}</text>')
         return self
 
     def text(self, x, y, s, cls="dg-lbl", anchor="start"):
+        if cls == "dg-lbl":
+            self.labels.append((x, y, s, anchor))
+            return self
         self.el.append(f'<text class="{cls}" style="text-anchor:{anchor}" x="{x}" y="{y}">{escape(s)}</text>')
         return self
 
@@ -78,18 +174,36 @@ class D:
         return self.text(x, y, s, "dg-h")
 
     # ---------- lines ----------
+    def _rounded(self, pts):
+        pts = [(float(a), float(b)) for a, b in pts]
+        d = f"M{pts[0][0]:.1f} {pts[0][1]:.1f}"
+        for i in range(1, len(pts) - 1):
+            (x0, y0), (x1, y1), (x2, y2) = pts[i - 1], pts[i], pts[i + 1]
+            l1 = abs(x1 - x0) + abs(y1 - y0)
+            l2 = abs(x2 - x1) + abs(y2 - y1)
+            r = min(self.BEND, l1 / 2, l2 / 2)
+            if r <= 0.5:
+                d += f" L{x1:.1f} {y1:.1f}"
+                continue
+            ax = x1 - (x1 - x0) / l1 * r if l1 else x1
+            ay = y1 - (y1 - y0) / l1 * r if l1 else y1
+            bx = x1 + (x2 - x1) / l2 * r if l2 else x1
+            by = y1 + (y2 - y1) / l2 * r if l2 else y1
+            d += f" L{ax:.1f} {ay:.1f} Q{x1:.1f} {y1:.1f} {bx:.1f} {by:.1f}"
+        d += f" L{pts[-1][0]:.1f} {pts[-1][1]:.1f}"
+        return d
+
     def path(self, pts, end=True, start=False, dash=False, label=None, at=None, anchor="middle"):
-        d = "M" + " L".join(f"{px} {py}" for px, py in pts)
         cls = "dg-dl" if dash else "dg-ar"
         m = ""
         if end:
             m += f' marker-end="url(#{self.name}-a)"'
         if start:
             m += f' marker-start="url(#{self.name}-a)"'
-        self.el.append(f'<path class="{cls}" d="{d}"{m}/>')
+        self.el.append(f'<path class="{cls}" d="{self._rounded(pts)}"{m}/>')
         if label:
             lx, ly = at if at else ((pts[0][0] + pts[1][0]) / 2, (pts[0][1] + pts[1][1]) / 2 - 7)
-            self.text(lx, ly, label, "dg-lbl", anchor)
+            self.labels.append((lx, ly, label, anchor))
         return self
 
     def side(self, key, s, f=0.5):
@@ -99,26 +213,19 @@ class D:
     def link(self, a, b, label=None, sa="r", sb="l", fa=0.5, fb=0.5, mid=None, **kw):
         """Elbow line from one box to another (right side to left side by default)."""
         p, q = self.side(a, sa, fa), self.side(b, sb, fb)
-        gap = 3
-        if sb == "l":
-            q = (q[0] - gap, q[1])
-        elif sb == "r":
-            q = (q[0] + gap, q[1])
-        elif sb == "t":
-            q = (q[0], q[1] - gap)
-        else:
-            q = (q[0], q[1] + gap)
+        gap = 2
+        q = {"l": (q[0] - gap, q[1]), "r": (q[0] + gap, q[1]), "t": (q[0], q[1] - gap), "b": (q[0], q[1] + gap)}[sb]
         if sa in "lr" and sb in "lr":
             mx = mid if mid is not None else (p[0] + q[0]) / 2
             pts = [p, (mx, p[1]), (mx, q[1]), q] if p[1] != q[1] else [p, q]
             if label and "at" not in kw:
-                kw["at"] = (q[0] - 8, q[1] - 7)
+                kw["at"] = (q[0] - 10, q[1] - 9)
                 kw.setdefault("anchor", "end")
         elif sa in "tb" and sb in "tb":
             my = mid if mid is not None else (p[1] + q[1]) / 2
             pts = [p, (p[0], my), (q[0], my), q] if p[0] != q[0] else [p, q]
             if label and "at" not in kw:
-                kw["at"] = (q[0] + 8, (p[1] + q[1]) / 2 + 4)
+                kw["at"] = (q[0] + 10, (p[1] + q[1]) / 2 + 4)
                 kw.setdefault("anchor", "start")
         elif sa in "lr":
             pts = [p, (q[0], p[1]), q]
@@ -127,11 +234,17 @@ class D:
         return self.path(pts, label=label, **kw)
 
     def svg(self):
+        out = []
+        for x, y, s, anchor in self.labels:   # labels sit on small pills above the lines
+            w = tw(s, 11.5, False) + 14
+            lx = x - w / 2 if anchor == "middle" else (x - w + 7 if anchor == "end" else x - 7)
+            out.append(f'<rect class="dg-pill" x="{lx:.1f}" y="{y - 12.5:.1f}" width="{w:.1f}" height="18" rx="9"/>'
+                       f'<text class="dg-lbl" style="text-anchor:{anchor}" x="{x}" y="{y}">{escape(s)}</text>')
         head = (f'<svg class="st-diagram-svg" viewBox="0 0 {self.w} {self.h}" role="img" aria-labelledby="{self.name}-t" xmlns="http://www.w3.org/2000/svg">'
                 f'<title id="{self.name}-t">{escape(self.title)}</title>'
-                f'<defs><marker id="{self.name}-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">'
-                f'<path class="dg-ah" d="M0 0 10 5 0 10z"/></marker></defs>')
-        return head + "".join(self.el) + "</svg>\n"
+                f'<defs><marker id="{self.name}-a" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">'
+                f'<path class="dg-ah" d="M1 1.5 9 5 1 8.5 2.6 5Z"/></marker></defs>')
+        return head + "".join(self.el) + "".join(out) + "</svg>\n"
 
 
 ALL = []
@@ -145,45 +258,58 @@ def diagram(fn):
 # ====================================================================== platform
 @diagram
 def architecture():
-    d = D("architecture", 1040, 600, "SENTIENT architecture: equipment connects to the SENTIENT server, which keeps its data in PostgreSQL and optionally TimescaleDB or ClickHouse, and serves operators and other systems")
-    d.heading(20, 62, "Equipment").heading(800, 62, "Storage").heading(800, 384, "People and systems")
-    d.box("dev", 20, 92, 200, 60, "Devices and sensors", "MQTT · HTTP · CoAP · SNMP")
-    d.box("plc", 20, 220, 200, 56, "PLCs, meters, drives", "Modbus · OPC UA · S7 · BACnet")
-    d.box("gw", 20, 334, 200, 56, "SENTIENT Gateway", "next to the equipment", "s")
-    d.box("cloud", 20, 452, 200, 56, "Cloud services", "AWS IoT · Azure · TCP · UDP")
-    d.group(290, 40, 470, 442, "SENTIENT server", right="one program, service or container")
-    d.el.append('<rect class="dg-b" x="305" y="84" width="440" height="78" rx="8"/>')
-    d.text(316, 102, "Device connections", "dg-h2")
+    d = D("architecture", 1160, 680, "SENTIENT architecture: equipment connects to the SENTIENT server, which keeps its data in PostgreSQL and optionally TimescaleDB or ClickHouse, and serves operators and other systems")
+    EX, EW = 24, 256          # equipment column
+    GX, GW = 336, 500         # server group
+    IX, IW = GX + 20, GW - 40  # inside the group
+    RX, RW = 892, 244         # right column
+    d.group(GX, 44, GW, 508, "SENTIENT server", right="one program, service or container")
+    d.heading(EX, 70, "Equipment").heading(RX, 70, "Storage").heading(RX, 390, "People and systems")
+    d.box("dev", EX, 96, EW, 64, "Devices and sensors", "MQTT · HTTP · CoAP · SNMP")
+    d.box("plc", EX, 200, EW, 64, "PLCs, meters, drives", "Modbus · OPC UA · S7 · BACnet", icon="factory")
+    d.box("gw", EX, 320, EW, 64, "SENTIENT Gateway", "near the equipment, sends MQTT", "s")
+    d.box("cloud", EX, 440, EW, 64, "Cloud services", "AWS IoT · Azure · TCP · UDP")
+    # device connections panel
+    d.el.append(f'<rect class="dg-n" x="{IX}" y="88" width="{IW}" height="86" rx="10"/>')
+    d.text(IX + 16, 112, "Device connections", "dg-h2")
     for i, n in enumerate(["MQTT", "HTTP", "CoAP", "SNMP", "Integrations"]):
-        d.box(f"t{i}", 316 + i * 85, 114, 78, 36, n, k="chip")
+        cw = 104 if i == 4 else 74
+        cx = IX + 16 + i * 84
+        d.box(f"t{i}", cx, 126, cw, 30, n, k="chip")
     d.link("plc", "gw", sa="b", sb="t")
-    d.path([(220, 118), (303, 118)])
-    d.path([(220, 362), (265, 362), (265, 130), (303, 130)], label="MQTT", at=(224, 354), anchor="start")
-    d.path([(220, 480), (280, 480), (280, 142), (303, 142)])
-    d.box("act", 305, 190, 210, 52, "Device actors", "sessions, activity, commands")
-    d.cyl("q", 545, 186, 200, 60, "Queues", "Main · HighPriority")
-    d.path([(410, 162), (410, 186)]).path([(515, 216), (541, 216)])
-    d.box("re", 305, 268, 440, 56, "Rule engine", "rule chains · alarm rules · calculated fields", "a")
-    d.path([(645, 246), (645, 264)])
-    for i, (t, s) in enumerate([("Alarms", "live push"), ("Notifications", "email · SMS"), ("Scheduler", "timed jobs"), ("Reports", "PDF · CSV")]):
-        d.box(f"r{i}", 305 + i * 113, 348, 101, 52, t, s, small=True)
-    d.path([(525, 324), (525, 344)])
-    d.box("web", 305, 418, 440, 48, "Web UI · REST API · WebSocket", k="a")
-    d.cyl("pg", 800, 72, 220, 64, "PostgreSQL", "configuration, alarms, telemetry")
-    d.cyl("ts", 800, 150, 220, 64, "TimescaleDB", "optional: compressed history")
-    d.cyl("ch", 800, 228, 220, 64, "ClickHouse", "optional: high-rate history")
-    d.path([(745, 296), (784, 296), (784, 104)], end=False)
-    for y in (104, 182, 260):
-        d.path([(784, y), (797, y)])
-    d.box("op", 800, 396, 220, 48, "Operators", "browser · mobile app")
-    d.box("ext", 800, 456, 220, 48, "Other systems", "ERP · MES · scripts")
-    d.path([(745, 442), (780, 442)], end=False).path([(780, 420), (780, 480)], end=False)
-    d.path([(780, 420), (797, 420)]).path([(780, 480), (797, 480)])
-    d.heading(20, 550, "Around the server")
-    for i, (t, s) in enumerate([("SENTIENT translator", "offline translation"), ("Platform Manager", "install · update"), ("Licence server", "activation")]):
-        x = 305 + i * 150
-        d.path([(x + 70, 482), (x + 70, 522)], end=False, dash=True)
-        d.box(f"o{i}", x, 522, 140, 52, t, s, "o", small=True)
+    E = EX + EW
+    d.path([(E, 128), (IX - 2, 128)])
+    d.path([(E, 352), (E + 26, 352), (E + 26, 144), (IX - 2, 144)])
+    d.path([(E, 472), (E + 42, 472), (E + 42, 160), (IX - 2, 160)])
+    # processing
+    d.box("act", IX, 200, 218, 60, "Device actors", "sessions · commands")
+    d.box("q", IX + IW - 218, 200, 218, 60, "Queues", "Main · HighPriority")
+    d.path([(IX + 109, 174), (IX + 109, 198)])
+    d.path([(IX + 218, 230), (IX + IW - 220, 230)])
+    d.box("re", IX, 286, IW, 64, "Rule engine", "rule chains · alarm rules · calculated fields", "a")
+    d.path([(IX + IW - 109, 260), (IX + IW - 109, 284)])
+    cw = (IW - 3 * 12) / 4
+    for i, (t, sub) in enumerate([("Alarms", "live push"), ("Notifications", "email · SMS"), ("Scheduler", "timed jobs"), ("Reports", "PDF · CSV")]):
+        x = IX + i * (cw + 12)
+        d.box(f"r{i}", x, 376, cw, 90, t, sub, small=True)
+        d.path([(x + cw / 2, 350), (x + cw / 2, 374)])
+    d.box("web", IX, 482, IW, 50, "Web UI · REST API · WebSocket", k="s", icon="globe")
+    # storage
+    for i, (key, t, sub) in enumerate([("pg", "PostgreSQL", "configuration, alarms, telemetry"), ("ts", "TimescaleDB", "optional: compressed history"), ("ch", "ClickHouse", "optional: high-rate history")]):
+        d.cyl(key, RX, 92 + i * 80, RW, 64, t, sub)
+    B = GX + GW + 28
+    d.path([(IX + IW, 318), (B, 318), (B, 124), (RX - 2, 124)])
+    d.path([(B, 204), (RX - 2, 204)]).path([(B, 284), (RX - 2, 284)])
+    d.box("op", RX, 411, RW, 56, "Operators", "browser · mobile app")
+    d.box("ext", RX, 479, RW, 56, "Other systems", "ERP · MES · scripts")
+    d.path([(IX + IW, 507), (B, 507), (B, 439), (RX - 2, 439)])
+    d.path([(B, 507), (RX - 2, 507)])
+    # around the server
+    d.heading(EX, 612, "Around the server")
+    for i, (t, sub, ic) in enumerate([("SENTIENT translator", "offline translation", "languages"), ("Platform Manager", "install · update · backup", "wrench"), ("Licence server", "activation", "key")]):
+        x = IX + i * 256
+        d.path([(GX + GW / 2, 552), (GX + GW / 2, 566), (x + 116, 566), (x + 116, 584)], dash=True)
+        d.box(f"o{i}", x, 586, 232, 60, t, sub, "o", icon=ic)
     return d
 
 

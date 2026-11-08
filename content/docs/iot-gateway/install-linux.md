@@ -102,7 +102,7 @@ Remove the package (`sudo apt remove sentient-gateway`, or `dnf` or `pacman`), o
 |---|---|
 | The log says `NOT COMMISSIONED` | The gateway has no host or token. Run `--install` with the connection, or use the local web page |
 | The gateway connects and drops every few seconds | Another gateway uses the same token. Stop it |
-| `--install` refuses while `thingsboard-gateway.service` runs | Run `sudo systemctl disable --now thingsboard-gateway`, then `--install` again |
+| `--install` refuses because an older gateway service is running | Find it with `systemctl list-units '*gateway*'`, stop it with `sudo systemctl disable --now <service name>`, then run `--install` again |
 | The program stops with exit code 2 | It got an option it does not know, or `--host` without `--install`. Check the service definition or the compose `command:` |
 
 ## Related

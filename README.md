@@ -71,7 +71,7 @@ changed_in = "4.3.0.57"     # optional: shows a "Changed in" badge
 
 ## History
 
-The site began as the ThingsBoard docs fork (Jekyll). `tools/convert/` holds
+The site began as a Jekyll site. `tools/convert/` holds
 the one-time conversion (run against commit `78bb93d2`). Pages that still need
 review carry `status = "imported"` and show a note at the top.
 

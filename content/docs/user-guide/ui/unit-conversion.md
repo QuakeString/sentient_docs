@@ -7,13 +7,6 @@ status = "imported"
 checked = ""
 source = "docs/user-guide/ui/unit-conversion.md"
 +++
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 4.1</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 Starting from SENTIENT 4.1, widgets support automatic data conversion and unit switching based on the selected unit system. 

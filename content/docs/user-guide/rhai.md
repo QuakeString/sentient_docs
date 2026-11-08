@@ -21,7 +21,7 @@ Where both are offered, a language switch above the script editor picks one.
 
 <div class="st-callout info">
 
-Scripts written for TBEL, the expression language of other IoT platforms, work in **calculated fields** without changes: SENTIENT translates them to Rhai when they run. Rule node and converter scripts are **not** translated. An imported TBEL rule node opens with its script in the Rhai editor, and you rewrite it in Rhai syntax using the table in [Coming from TBEL or JavaScript](#coming-from-tbel-or-javascript).
+Scripts written for Rhai, the expression language of other IoT platforms, work in **calculated fields** without changes: SENTIENT translates them to Rhai when they run. Rule node and converter scripts are **not** translated. An imported Rhai rule node opens with its script in the Rhai editor, and you rewrite it in Rhai syntax using the table in [Coming from Rhai or JavaScript](#coming-from-tbel-or-javascript).
 
 </div>
 
@@ -219,16 +219,16 @@ A script is stopped with an error when it runs more than 1,000,000 operations (2
 
 Each Rhai run counts toward the tenant's **Rhai executions** in [API usage](/docs/administration/api-usage/).
 
-## Coming from TBEL or JavaScript
+## Coming from Rhai or JavaScript
 
-| TBEL or JavaScript | Rhai |
+| Rhai or JavaScript | Rhai |
 |---|---|
 | `var x = 1;` | `let x = 1;` |
 | `{"a": 1}` | `#{a: 1}` or `#{"a": 1}` |
 | `foreach (v : list) { … }`, `for (var i = 0; i < n; i++)` | `for v in list { … }`, `for i in 0..n { … }` |
 | `list.size()`, `list.length` | `list.len()` |
 | `Math.sqrt(x)`, `Math.PI` | `sqrt(x)`, `pi()` |
-| `x ^ 2` (TBEL power) | `x ** 2` or `pow(x, 2)` |
+| `x ^ 2` (Rhai power) | `x ** 2` or `pow(x, 2)` |
 | `x === null`, `x == null` | `x == ()` |
 | `x || 0` for a missing value | `x ?? 0` |
 | `JSON.stringify(v)`, `JSON.parse(s)` | `stringify(v)` in rule nodes, `parse_json(s)` |

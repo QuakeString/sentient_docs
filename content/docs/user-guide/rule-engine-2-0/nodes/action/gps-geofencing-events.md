@@ -186,7 +186,7 @@ Duration thresholds only apply to `Inside` and `Outside` events. The `Entered` a
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbGpsGeofencingActionNodeConfiguration",
+  "title": "GpsGeofencingActionNodeConfiguration",
   "type": "object",
   "required": [
     "latitudeKeyName",

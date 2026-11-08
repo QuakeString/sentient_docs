@@ -29,7 +29,7 @@ type.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbCheckRelationNodeConfiguration",
+  "title": "CheckRelationNodeConfiguration",
   "type": "object",
   "additionalProperties": false,
   "properties": {

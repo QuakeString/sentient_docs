@@ -161,9 +161,9 @@ Retransmission parameters are configured globally in the `sentient.yml` file and
 mqtt:
   client:
     retransmission:
-      max_attempts: "${TB_MQTT_CLIENT_RETRANSMISSION_MAX_ATTEMPTS:3}"
-      initial_delay_millis: "${TB_MQTT_CLIENT_RETRANSMISSION_INITIAL_DELAY_MILLIS:5000}"
-      jitter_factor: "${TB_MQTT_CLIENT_RETRANSMISSION_JITTER_FACTOR:0.15}"
+      max_attempts: "${SENTIENT_MQTT_CLIENT_RETRANSMISSION_MAX_ATTEMPTS:3}"
+      initial_delay_millis: "${SENTIENT_MQTT_CLIENT_RETRANSMISSION_INITIAL_DELAY_MILLIS:5000}"
+      jitter_factor: "${SENTIENT_MQTT_CLIENT_RETRANSMISSION_JITTER_FACTOR:0.15}"
 ```
 
 ### JSON Schema
@@ -171,7 +171,7 @@ mqtt:
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbAzureIotHubNodeConfiguration",
+  "title": "AzureIotHubNodeConfiguration",
   "type": "object",
   "properties": {
     "topicPattern": {

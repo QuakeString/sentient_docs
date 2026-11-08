@@ -32,13 +32,6 @@ See instructions below on how to configure SSL for certificates stored in PEM fi
 ## SSL configuration using PEM certificates file
 
 
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 3.3.2</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 Configure the following environment variables via [configuration](/docs/user-guide/install/config/) file, docker-compose or kubernetes scripts. 

@@ -34,7 +34,7 @@ The node's configuration allows you to select which tenant details you want to f
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbGetTenantDetailsNodeConfiguration",
+  "title": "GetTenantDetailsNodeConfiguration",
   "type": "object",
   "properties": {
     "detailsList": {

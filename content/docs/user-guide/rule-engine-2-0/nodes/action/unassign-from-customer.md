@@ -20,7 +20,7 @@ Unassigns the message originator from a customer.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbUnassignFromCustomerNodeConfiguration",
+  "title": "UnassignFromCustomerNodeConfiguration",
   "type": "object",
   "properties": {
     "customerNamePattern": {

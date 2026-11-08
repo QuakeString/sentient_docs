@@ -30,7 +30,7 @@ The configuration allows you to specify which data to fetch from the tenant and 
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbGetTenantAttributeNodeConfiguration",
+  "title": "GetTenantAttributeNodeConfiguration",
   "type": "object",
   "properties": {
     "dataToFetch": {

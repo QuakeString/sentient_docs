@@ -37,7 +37,7 @@ At first, lets create and configure "to email" node.
 <div class="st-gallery"><figure><img src="/images/user-guide/rule-engine-2-0/tutorials/html-in-email/add_rule_node_to_email.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/rule-engine-2-0/tutorials/html-in-email/mail_body_type.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/rule-engine-2-0/tutorials/html-in-email/dynamic_body_template.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
 
 
-<div class="tb-content-toggle" id="bodyTemplateExamples">
+<div class="st-content-toggle" id="bodyTemplateExamples">
     <div class="panel panel-default">
         <div class="panel-heading">
             
@@ -119,7 +119,7 @@ To send an image, you just need to specify the name of the image with the file e
 
 Example of HTML with image
 ```html
-<img src="cid:tb.example.png" alt="Example image">
+<img src="cid:st.example.png" alt="Example image">
 ```
 
 
@@ -165,7 +165,7 @@ Example of generator JS code
 ```js
 var encodedImage = 'HERE_YOU_BASE_64_ENCODED_IMAGE';
 var images = {
-    "tb.example.png": encodedImage
+    "st.example.png": encodedImage
 };
 var metadata = { 
     userEmail: 'info@sentient.org', 
@@ -198,7 +198,7 @@ Check destination email to see the result of the “to email” node work.
 We got the next message:
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/rule-engine-2-0/tutorials/html-in-email/message_from_tb_html.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/rule-engine-2-0/tutorials/html-in-email/message_from_tb_image.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/rule-engine-2-0/tutorials/html-in-email/message_from_st_html.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/rule-engine-2-0/tutorials/html-in-email/message_from_st_image.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
 
 
 ## See Also

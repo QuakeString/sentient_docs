@@ -49,16 +49,16 @@ Starting from **SENTIENT 3.9**, the platform stores the full set of debug events
 
 Debug mode settings can be combined or disabled entirely.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 
-![image](/images/user-guide/integrations/http/http-create-data-converters-1-tbel-pe.webp)
+![image](/images/user-guide/integrations/http/http-create-data-converters-1-rhai-pe.webp)
 
 
 **Example for the Uplink converter:**
@@ -102,7 +102,7 @@ You can change the decoder function while creating the converter or after creati
 Copy the configuration example for the converter (or your own configuration) and insert it into the decoder function. Save changes by clicking on the “checkmark” icon.
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/integrations/http/http-create-data-converters-2-tbel-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/http/http-create-data-converters-3-tbel-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/http/http-create-data-converters-4-tbel-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/integrations/http/http-create-data-converters-2-rhai-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/http/http-create-data-converters-3-rhai-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/http/http-create-data-converters-4-rhai-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
 
 
 </div>
@@ -294,11 +294,11 @@ curl -v -X POST -d "{\"deviceName\":\"$DEVICE_NAME\",\"deviceType\":\"$DEVICE_TY
 
 Create downlink converter in the "**Data converters**" page. To see events enable 'Debug mode'.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
-<div class="tb-content-toggle" id="httpdownlinkconverterconfig">
+<div class="st-content-toggle" id="httpdownlinkconverterconfig">
     <div class="panel panel-default">
         <div class="panel-heading">
             
@@ -307,7 +307,7 @@ We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTI
             
             <a class="content-toggle-button" data-target="#accessToken">
                 <div class="content-toggle-button-text">
-                    TBEL<small>Recommended</small>
+                    Rhai<small>Recommended</small>
                 </div>
             </a>
             
@@ -333,7 +333,7 @@ We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTI
                     
 
 
-![image](/images/user-guide/integrations/http/http-create-downlink-tbel-1-pe.webp)
+![image](/images/user-guide/integrations/http/http-create-downlink-rhai-1-pe.webp)
 
 
 <br>
@@ -347,7 +347,7 @@ data: JSON.stringify(msg)
 where **msg** is the message that we receive and send back to the device.
 
 
-![image](/images/user-guide/integrations/http/http-create-downlink-tbel-2-pe.webp)
+![image](/images/user-guide/integrations/http/http-create-downlink-rhai-2-pe.webp)
 
 
 <br>

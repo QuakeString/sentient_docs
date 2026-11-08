@@ -13,7 +13,7 @@ Please see default directory structure below for daemon installation.
 
 ```
 /etc/sentient-gateway/config                   - Configuration folder.
-    tb_gateway.json                               - Main configuration file for Gateway.
+    st_gateway.json                               - Main configuration file for Gateway.
     logs.json                                     - Configuration file for logging.
     modbus.json                                   - Modbus connector configuration.
     mqtt.json                                     - MQTT connector configuration.
@@ -38,7 +38,7 @@ Please see default directory structure below for daemon installation.
     connector.log                                 - Connector logs.
     service.log                                   - Main gateway service logs.
     storage.log                                   - Storage logs.
-    tb_connection.log                             - Logs for connection to the SENTIENT instance.
+    st_connection.log                             - Logs for connection to the SENTIENT instance.
 ```
 
 ## Environmental variables
@@ -63,38 +63,38 @@ environment variables within a Docker Compose file. Here’s how you can achieve
 version: '3.4'
 services:
   # SENTIENT IoT Gateway Service Configuration
-  tb-gateway:
-    image: sentient/tb-gateway
-    container_name: tb-gateway
+  st-gateway:
+    image: sentient/st-gateway
+    container_name: st-gateway
     ...
     # Environment variables
     environment:
-      - TB_GW_HOST=host.docker.internal
-      - TB_GW_PORT=1883
-      - TB_GW_ACCESS_TOKEN=YOUR_ACCESS_TOKEN
+      - ST_GW_HOST=host.docker.internal
+      - ST_GW_PORT=1883
+      - ST_GW_ACCESS_TOKEN=YOUR_ACCESS_TOKEN
     ...
 ```
 
 In the example above, we set the "**host.docker.internal**" as a host, **1883** as a port and "**YOUR_ACCESS_TOKEN**" 
-as an access token for the gateway using the "**TB_GW_HOST**", "**TB_GW_PORT**" and "**TB_GW_ACCESS_TOKEN**" 
+as an access token for the gateway using the "**ST_GW_HOST**", "**ST_GW_PORT**" and "**ST_GW_ACCESS_TOKEN**" 
 environment variables, respectively.
 
 The following environmental variables can be used to configure the SENTIENT IoT Gateway:
 
 | **ENV variable**     | **Default value**             | **Description**                                                                   |
 |----------------------|-------------------------------|-----------------------------------------------------------------------------------|
-| TB_GW_HOST           | **host.docker.internal**      | Hostname or IP address of SENTIENT server.                                     |
-| TB_GW_PORT           | **1883**                      | Port of MQTT service on SENTIENT server.                                       |
-| TB_GW_ACCESS_TOKEN   | **YOUR_ACCESS_TOKEN**         | Access token for the gateway from SENTIENT server.                             |
-| TB_GW_CA_CERT        |                               | Path to CA certificate file.                                                      |
-| TB_GW_PRIVATE_KEY    |                               | Path to private key file.                                                         |
-| TB_GW_CERT           |                               | Path to certificate file.                                                         |
-| TB_GW_CLIENT_ID      |                               | MQTT client id for the gateway form SENTIENT server.                           |
-| TB_GW_USERNAME       |                               | MQTT username for the gateway form SENTIENT server.                            |
-| TB_GW_PASSWORD       |                               | MQTT password for the gateway form SENTIENT server.                            |
-| TB_GW_RATE_LIMITS    | **15:1,300:60,**              | Messages rate limit to SENTIENT server in `MESSSAGE_COUNT:TIME,` format.       |
-| TB_GW_DP_RATE_LIMITS | **15:1,300:60,**              | Data points rate limit to SENTIENT server in `DATA_POINTS_COUNT:TIME,` format. |
-| TB_GW_LOGS_PATH      | **/sentient_gateway/logs** | Path to the logs folder.                                                          |
+| ST_GW_HOST           | **host.docker.internal**      | Hostname or IP address of SENTIENT server.                                     |
+| ST_GW_PORT           | **1883**                      | Port of MQTT service on SENTIENT server.                                       |
+| ST_GW_ACCESS_TOKEN   | **YOUR_ACCESS_TOKEN**         | Access token for the gateway from SENTIENT server.                             |
+| ST_GW_CA_CERT        |                               | Path to CA certificate file.                                                      |
+| ST_GW_PRIVATE_KEY    |                               | Path to private key file.                                                         |
+| ST_GW_CERT           |                               | Path to certificate file.                                                         |
+| ST_GW_CLIENT_ID      |                               | MQTT client id for the gateway form SENTIENT server.                           |
+| ST_GW_USERNAME       |                               | MQTT username for the gateway form SENTIENT server.                            |
+| ST_GW_PASSWORD       |                               | MQTT password for the gateway form SENTIENT server.                            |
+| ST_GW_RATE_LIMITS    | **15:1,300:60,**              | Messages rate limit to SENTIENT server in `MESSSAGE_COUNT:TIME,` format.       |
+| ST_GW_DP_RATE_LIMITS | **15:1,300:60,**              | Data points rate limit to SENTIENT server in `DATA_POINTS_COUNT:TIME,` format. |
+| ST_GW_LOGS_PATH      | **/sentient_gateway/logs** | Path to the logs folder.                                                          |
 
 ## General configuration file
 

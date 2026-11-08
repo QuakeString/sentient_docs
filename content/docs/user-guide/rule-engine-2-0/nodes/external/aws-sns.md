@@ -73,7 +73,7 @@ request.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbSnsNodeConfiguration",
+  "title": "SnsNodeConfiguration",
   "type": "object",
   "properties": {
     "topicArnPattern": {

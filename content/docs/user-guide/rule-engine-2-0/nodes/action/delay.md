@@ -33,7 +33,7 @@ if the server restarts or crashes.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMsgDelayNodeConfiguration",
+  "title": "MsgDelayNodeConfiguration",
   "type": "object",
   "properties": {
     "periodInSeconds": {

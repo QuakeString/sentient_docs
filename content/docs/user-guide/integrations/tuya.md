@@ -108,13 +108,13 @@ Uplink is necessary in order to convert the incoming data from the device into t
 - To view the events, enable debug mode. 
 - In the **Main decoding configuration** section, provide your own script or use the script below.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 
 ```javascript
@@ -243,7 +243,7 @@ You can use our example of Downlink Converter, or write your own according to yo
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 ```javascript
 /** Encoder **/

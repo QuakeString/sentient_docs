@@ -86,7 +86,7 @@ Available statuses:
 ```json
 {
   "$schema": "https://json-schema.org/2020-12/schema",
-  "title": "TbCheckAlarmStatusNodeConfig",
+  "title": "CheckAlarmStatusNodeConfig",
   "type": "object",
   "required": [
     "alarmStatusList"

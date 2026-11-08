@@ -62,7 +62,7 @@ For each of these actions, you can choose from the following **processing strate
 <div class="st-callout info">
 
 
-**Note**: Processing strategies are available since TB version 4.0.
+
 
 
 </div>
@@ -182,7 +182,7 @@ If the message metadata contains an invalid `scope` (e.g. `INVALID_SCOPE`) value
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMsgAttributesNodeConfiguration",
+  "title": "MsgAttributesNodeConfiguration",
   "type": "object",
   "properties": {
     "scope": {

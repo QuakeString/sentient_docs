@@ -137,7 +137,7 @@ For now, we ready to test our integration. To do this, follow these steps:
 
 ```javascript
 var msg = {
-    "devName": "TB-D-01",
+    "devName": "ST-D-01",
     "msg": {
         "temp": 42,
         "humidity": 77
@@ -212,7 +212,7 @@ var result = {
     data: JSON.stringify(msg),
 
     metadata: {
-            deviceId: 'TB-D-01'
+            deviceId: 'ST-D-01'
     }
 
 };
@@ -224,7 +224,7 @@ return result;
 <div class="st-callout info">
 
 
-**NOTE** If you used another name of device (not TB-D-01) you have to specify in the Downlink converter your device name for **deviceId** field.
+**NOTE** If you used another name of device (not ST-D-01) you have to specify in the Downlink converter your device name for **deviceId** field.
 
 
 </div>

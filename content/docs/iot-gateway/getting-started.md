@@ -99,7 +99,7 @@ demo broker with a built-in data generator and send data to the gateway.
 As a demo MQTT broker, we will use docker image, that can be installed and run using the following command:
 
 ```bash
-docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/st-gw-mqtt-broker:latest
 ```
 
 
@@ -256,7 +256,7 @@ created gateway.
 As a demo simulation slave, we will use docker image, that can be installed and run using the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 
@@ -430,7 +430,7 @@ created gateway.
 As a demo simulation server, we will use docker image, that can be installed and run using the following command:
 
 ```bash
-docker run -it -p 4840:4840 sentient/tb-gw-opcua-server:latest
+docker run -it -p 4840:4840 sentient/st-gw-opcua-server:latest
 ```
 
 

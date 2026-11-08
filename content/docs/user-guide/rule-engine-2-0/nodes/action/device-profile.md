@@ -57,7 +57,7 @@ continuity across restarts.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbDeviceProfileNodeConfiguration",
+  "title": "DeviceProfileNodeConfiguration",
   "type": "object",
   "properties": {
     "persistAlarmRulesState": {

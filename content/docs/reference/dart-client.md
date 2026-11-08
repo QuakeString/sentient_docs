@@ -66,21 +66,21 @@ void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(sentientApiEndpoint);
+    var client = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
+    await client.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
-    print('isAuthenticated=${tbClient.isAuthenticated()}');
+    print('isAuthenticated=${client.isAuthenticated()}');
 
-    print('authUser: ${tbClient.getAuthUser()}');
+    print('authUser: ${client.getAuthUser()}');
 
     // Get user details of current logged in user
-    var currentUserDetails = await tbClient.getUserService().getUser();
+    var currentUserDetails = await client.getUserService().getUser();
     print('currentUserDetails: $currentUserDetails');
 
     // Finally perform logout to clear credentials
-    await tbClient.logout();
+    await client.logout();
   } catch (e, s) {
     print('Error: $e');
     print('Stack: $s');
@@ -92,22 +92,22 @@ void main() async {
 ### API key authentication (from SENTIENT 4.3+)
 The following code sample demonstrates how to use API key authentication with SENTIENT REST API.
 Make sure you have created an API key for your user before running the example. Also, ensure to replace
-`'tb_your_api_key'` with your actual API key value and the `sentientApiEndpoint` variable with your SENTIENT instance URL.
+`'stk_your_api_key'` with your actual API key value and the `sentientApiEndpoint` variable with your SENTIENT instance URL.
 ``` dart
 const sentientApiEndpoint = 'http://localhost:8080';
-const apiKey = 'tb_your_api_key';
+const apiKey = 'stk_your_api_key';
 void main() async {
   try {
-    final tbClient = SentientClient(sentientApiEndpoint, apiKey: apiKey);
+    final client = SentientClient(sentientApiEndpoint, apiKey: apiKey);
 
     var deviceName = getRandomString(30);
 
     var device = Device(deviceName, 'default');
     device.additionalInfo = {'description': 'My test device!'};
-    var savedDevice = await tbClient.getDeviceService().saveDevice(device);
+    var savedDevice = await client.getDeviceService().saveDevice(device);
     print('savedDevice: $savedDevice');
     var foundDevice =
-        await tbClient.getDeviceService().getDeviceInfo(savedDevice.id!.id!);
+        await client.getDeviceService().getDeviceInfo(savedDevice.id!.id!);
     print(foundDevice);
   } catch (e, s) {
     print('Error: $e');
@@ -133,22 +133,22 @@ void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(sentientApiEndpoint);
+    var client = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
+    await client.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     var pageLink = PageLink(10);
     PageData<DeviceInfo> devices;
     do {
         // Fetch tenant devices using current page link
-        devices = await tbClient.getDeviceService().getTenantDeviceInfos(pageLink);
+        devices = await client.getDeviceService().getTenantDeviceInfos(pageLink);
         print('devices: $devices');
         pageLink = pageLink.nextPageLink();
     } while (devices.hasNext);
 
     // Finally perform logout to clear credentials
-    await tbClient.logout();
+    await client.logout();
   } catch (e, s) {
     print('Error: $e');
     print('Stack: $s');
@@ -171,22 +171,22 @@ void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(sentientApiEndpoint);
+    var client = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
+    await client.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     var pageLink = PageLink(10);
     PageData<DashboardInfo> dashboards;
     do {
         // Fetch tenant dashboards using current page link
-        dashboards = await tbClient.getDashboardService().getTenantDashboards(pageLink);
+        dashboards = await client.getDashboardService().getTenantDashboards(pageLink);
         print('dashboards: $dashboards');
         pageLink = pageLink.nextPageLink();
     } while (devices.hasNext);
 
     // Finally perform logout to clear credentials
-    await tbClient.logout();
+    await client.logout();
   } catch (e, s) {
     print('Error: $e');
     print('Stack: $s');
@@ -209,24 +209,24 @@ void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(sentientApiEndpoint);
+    var client = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Customer User credentials
-    await tbClient.login(LoginRequest('customer@sentient.org', 'customer'));
+    await client.login(LoginRequest('customer@sentient.org', 'customer'));
 
     var pageLink = PageLink(10);
     PageData<DeviceInfo> devices;
     do {
         // Fetch customer devices using current page link
-        devices = await tbClient
+        devices = await client
                 .getDeviceService()
-                .getCustomerDeviceInfos(tbClient.getAuthUser()!.customerId, pageLink);
+                .getCustomerDeviceInfos(client.getAuthUser()!.customerId, pageLink);
         print('devices: $devices');
         pageLink = pageLink.nextPageLink();
     } while (devices.hasNext);
 
     // Finally perform logout to clear credentials
-    await tbClient.logout();
+    await client.logout();
   } catch (e, s) {
     print('Error: $e');
     print('Stack: $s');
@@ -249,10 +249,10 @@ void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(sentientApiEndpoint);
+    var client = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
+    await client.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     // Create entity filter to get all devices
     var entityFilter = EntityTypeFilter(entityType: EntityType.DEVICE);
@@ -262,7 +262,7 @@ void main() async {
 
     // Execute entity count query and get total devices count
     var totalDevicesCount =
-        await tbClient.getEntityQueryService().countEntitiesByQuery(devicesQuery);
+        await client.getEntityQueryService().countEntitiesByQuery(devicesQuery);
     print('Total devices: $totalDevicesCount');
 
     // Set key filter to existing query to get only active devices
@@ -276,7 +276,7 @@ void main() async {
 
     // Execute entity count query and get total active devices count
     var activeDevicesCount =
-      await tbClient.getEntityQueryService().countEntitiesByQuery(devicesQuery);
+      await client.getEntityQueryService().countEntitiesByQuery(devicesQuery);
     print('Active devices: $activeDevicesCount');
 
     // Set key filter to existing query to get only inactive devices
@@ -290,11 +290,11 @@ void main() async {
 
     // Execute entity count query and get total inactive devices count
     var inactiveDevicesCount =
-      await tbClient.getEntityQueryService().countEntitiesByQuery(devicesQuery);
+      await client.getEntityQueryService().countEntitiesByQuery(devicesQuery);
     print('Inactive devices: $inactiveDevicesCount');
 
     // Finally perform logout to clear credentials
-    await tbClient.logout();
+    await client.logout();
   } catch (e, s) {
     print('Error: $e');
     print('Stack: $s');
@@ -317,10 +317,10 @@ void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(sentientApiEndpoint);
+    var client = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
+    await client.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     // Create entity filter to get only devices
     var entityFilter = EntityTypeFilter(entityType: EntityType.DEVICE);
@@ -361,7 +361,7 @@ void main() async {
       PageData<EntityData> devices;
       do {
         // Fetch active devices using entities query with current page link
-        devices = await tbClient
+        devices = await client
             .getEntityQueryService()
             .findEntityDataByQuery(devicesQuery);
         print('Active devices entities data:');
@@ -373,7 +373,7 @@ void main() async {
       } while (devices.hasNext);
 
     // Finally perform logout to clear credentials
-    await tbClient.logout();
+    await client.logout();
   } catch (e, s) {
     print('Error: $e');
     print('Stack: $s');
@@ -396,10 +396,10 @@ void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(sentientApiEndpoint);
+    var client = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
+    await client.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     var deviceName = 'My test device';
 
@@ -408,33 +408,33 @@ void main() async {
     device.additionalInfo = {'description': 'My test device!'};
 
     // Add device
-    var savedDevice = await tbClient.getDeviceService().saveDevice(device);
+    var savedDevice = await client.getDeviceService().saveDevice(device);
     print('savedDevice: $savedDevice');
 
     // Find device by device id
     var foundDevice =
-       await tbClient.getDeviceService().getDeviceInfo(savedDevice.id!.id!);
+       await client.getDeviceService().getDeviceInfo(savedDevice.id!.id!);
     print('foundDevice: $foundDevice');
 
     // Save device shared attributes
-    var res = await tbClient.getAttributeService().saveEntityAttributesV2(
+    var res = await client.getAttributeService().saveEntityAttributesV2(
       foundDevice!.id!,
       AttributeScope.SHARED_SCOPE.toShortString(),
       {'targetTemperature': 22.4, 'targetHumidity': 57.8});
     print('Save attributes result: $res');
 
     // Get device shared attributes
-    var attributes = await tbClient.getAttributeService().getAttributesByScope(
+    var attributes = await client.getAttributeService().getAttributesByScope(
       foundDevice.id!,
       AttributeScope.SHARED_SCOPE.toShortString(),
       ['targetTemperature', 'targetHumidity']);
     print('Found device attributes: $attributes');
 
     // Delete the device
-    await tbClient.getDeviceService().deleteDevice(savedDevice.id!.id!);
+    await client.getDeviceService().deleteDevice(savedDevice.id!.id!);
 
     // Finally perform logout to clear credentials
-    await tbClient.logout();
+    await client.logout();
   } catch (e, s) {
     print('Error: $e');
     print('Stack: $s');
@@ -461,10 +461,10 @@ void main() async {
   try {
 
     // Create instance of SENTIENT API Client
-    var tbClient = SentientClient(sentientApiEndpoint);
+    var client = SentientClient(sentientApiEndpoint);
 
     // Perform login with default Tenant Administrator credentials
-    await tbClient.login(LoginRequest('tenant@sentient.org', 'tenant'));
+    await client.login(LoginRequest('tenant@sentient.org', 'tenant'));
 
     var deviceName = 'My test device';
 
@@ -473,7 +473,7 @@ void main() async {
     device.additionalInfo = {'description': 'My test device!'};
 
     // Add device
-    var savedDevice = await tbClient.getDeviceService().saveDevice(device);
+    var savedDevice = await client.getDeviceService().saveDevice(device);
     print('savedDevice: $savedDevice');
 
     // Create entity filter to get device by its name
@@ -518,7 +518,7 @@ void main() async {
     var cmd = EntityDataCmd(query: devicesQuery, tsCmd: tsCmd);
 
     // Create subscription with provided subscription command
-    var telemetryService = tbClient.getTelemetryService();
+    var telemetryService = client.getTelemetryService();
     var subscription = TelemetrySubscriber(telemetryService, [cmd]);
 
     // Create listener to get data updates from WebSocket
@@ -537,7 +537,7 @@ void main() async {
       var humidity = 30 + 40 * rng.nextDouble();
       var telemetryRequest = {'temperature': temperature, 'humidity': humidity};
       print('Save telemetry request: $telemetryRequest');
-      var res = await tbClient
+      var res = await client
         .getAttributeService()
         .saveEntityTelemetry(savedDevice.id!, 'TELEMETRY', telemetryRequest);
       print('Save telemetry result: $res');
@@ -550,10 +550,10 @@ void main() async {
     subscription.unsubscribe();
 
     // Delete the device
-    await tbClient.getDeviceService().deleteDevice(savedDevice.id!.id!);
+    await client.getDeviceService().deleteDevice(savedDevice.id!.id!);
 
     // Finally perform logout to clear credentials
-    await tbClient.logout();
+    await client.logout();
   } catch (e, s) {
     print('Error: $e');
     print('Stack: $s');

@@ -22,7 +22,7 @@ UDP Integration allows to stream data from devices which use a UDP protocol to S
 <div class="st-callout info">
 
 
-**Please note** UDP Integration can be started only as [remote integration](/docs/user-guide/integrations/remote-integrations). It could be started on the same machine, where TB instance is running, or you can start in on another machine, that has access over the network to the TB instance.
+**Please note** UDP Integration can be started only as [remote integration](/docs/user-guide/integrations/remote-integrations). It could be started on the same machine, where SENTIENT instance is running, or you can start in on another machine, that has access over the network to the SENTIENT instance.
 
 
 </div>
@@ -144,10 +144,10 @@ An uplink converter that is a script for parsing and transforming the data recei
 
 <div class="st-tab" data-label="Text payload">
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
-Now copy the following **TBEL** script:
+Now copy the following **Rhai** script:
 
 ```javascript
 /** Decoder **/
@@ -215,7 +215,7 @@ return result;
 <br>
 Paste the copied script to the decoder function section. Then, click "**Next**";
 
-![image](/images/user-guide/integrations/udp/udp-integration-setup-2-text-tbel-pe.webp)
+![image](/images/user-guide/integrations/udp/udp-integration-setup-2-text-rhai-pe.webp)
 
 
 <div class="st-callout info">
@@ -233,10 +233,10 @@ Although the Debug mode is very useful for development and troubleshooting, leav
 
 <div class="st-tab" data-label="JSON payload">
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
-Now copy the following **TBEL** script:
+Now copy the following **Rhai** script:
 
 ```javascript
 /** Decoder **/
@@ -310,7 +310,7 @@ return result;
 <br>
 Paste the copied script to the decoder function section. Then, click "**Next**";
 
-![image](/images/user-guide/integrations/udp/udp-integration-setup-2-json-tbel-pe.webp)
+![image](/images/user-guide/integrations/udp/udp-integration-setup-2-json-rhai-pe.webp)
 
 
 <div class="st-callout info">
@@ -328,10 +328,10 @@ Although the Debug mode is very useful for development and troubleshooting, leav
 
 <div class="st-tab" data-label="Binary payload">
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
-Now copy the following **TBEL** script:
+Now copy the following **Rhai** script:
 
 ```javascript
 /** Decoder **/
@@ -410,7 +410,7 @@ return result;
 <br>
 Paste the copied script to the decoder function section. Then, click "**Next**";
 
-![image](/images/user-guide/integrations/udp/udp-integration-setup-2-binary-tbel-pe.webp)
+![image](/images/user-guide/integrations/udp/udp-integration-setup-2-binary-rhai-pe.webp)
 
 
 <div class="st-callout info">
@@ -428,10 +428,10 @@ Although the Debug mode is very useful for development and troubleshooting, leav
 
 <div class="st-tab" data-label="Hex payload">
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
-Now copy the following **TBEL** script:
+Now copy the following **Rhai** script:
 
 ```javascript
 /** Decoder **/
@@ -513,7 +513,7 @@ return result;
 <br>
 Paste the copied script to the decoder function section. Then, click "**Next**";
 
-![image](/images/user-guide/integrations/udp/udp-integration-setup-2-hex-tbel-pe.webp)
+![image](/images/user-guide/integrations/udp/udp-integration-setup-2-hex-rhai-pe.webp)
 
 
 <div class="st-callout info">
@@ -690,13 +690,13 @@ For sending Downlink messages from Sentient to the device, we need to define a d
 
 ### Add downlink converter
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 You can use our example of downlink converter, or write your own according to your configuration:
 
@@ -761,7 +761,7 @@ To add a downlink data converter to the UDP integration, follow these steps:
 1. Apply changes.
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/integrations/udp/udp-add-downlink-converter-tbel-1-pe.webp" alt="Go to the &quot;**Integrations**&quot; page, click UDP integration to open its details, and enter integration editing mode by clicking the &quot;pencil&quot; icon;" loading="lazy"><figcaption>Go to the "**Integrations**" page, click UDP integration to open its details, and enter integration editing mode by clicking the "pencil" icon;</figcaption></figure><figure><img src="/images/user-guide/integrations/udp/udp-add-downlink-converter-tbel-2-pe.webp" alt="Enter a name for the downlink data converter and click &quot;**Create new converter**&quot;;" loading="lazy"><figcaption>Enter a name for the downlink data converter and click "**Create new converter**";</figcaption></figure><figure><img src="/images/user-guide/integrations/udp/udp-add-downlink-converter-tbel-3-pe.webp" alt="Paste the script to the encoder function section, and click &quot;Add&quot;;" loading="lazy"><figcaption>Paste the script to the encoder function section, and click "Add";</figcaption></figure><figure><img src="/images/user-guide/integrations/udp/udp-add-downlink-converter-tbel-4-pe.webp" alt="Apply changes." loading="lazy"><figcaption>Apply changes.</figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/integrations/udp/udp-add-downlink-converter-rhai-1-pe.webp" alt="Go to the &quot;**Integrations**&quot; page, click UDP integration to open its details, and enter integration editing mode by clicking the &quot;pencil&quot; icon;" loading="lazy"><figcaption>Go to the "**Integrations**" page, click UDP integration to open its details, and enter integration editing mode by clicking the "pencil" icon;</figcaption></figure><figure><img src="/images/user-guide/integrations/udp/udp-add-downlink-converter-rhai-2-pe.webp" alt="Enter a name for the downlink data converter and click &quot;**Create new converter**&quot;;" loading="lazy"><figcaption>Enter a name for the downlink data converter and click "**Create new converter**";</figcaption></figure><figure><img src="/images/user-guide/integrations/udp/udp-add-downlink-converter-rhai-3-pe.webp" alt="Paste the script to the encoder function section, and click &quot;Add&quot;;" loading="lazy"><figcaption>Paste the script to the encoder function section, and click "Add";</figcaption></figure><figure><img src="/images/user-guide/integrations/udp/udp-add-downlink-converter-rhai-4-pe.webp" alt="Apply changes." loading="lazy"><figcaption>Apply changes.</figcaption></figure></div>
 
 
 <div class="st-callout info">

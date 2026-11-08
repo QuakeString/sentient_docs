@@ -1,4 +1,5 @@
 +++
+draft = true
 title = "Python REST Client"
 description = "Supported REST API Reference for server-side integration of your python projects"
 
@@ -12,7 +13,7 @@ source = "docs/reference/python-rest-client.md"
 The SENTIENT Python REST API Client helps you interact with SENTIENT REST API from your Python script.
 With Python Rest Client you can programmatically create assets, devices, customers, users and other entities and their relations in SENTIENT.
 
-Source code of the Python REST API Client you can find [here](https://github.com/sentient/python_tb_rest_client).
+Source code of the Python REST API Client you can find [here](https://github.com/sentient/python_st_rest_client).
 
 In order to install the SENTIENT Python REST client, you should use the following command:
 
@@ -24,7 +25,7 @@ pip3 install tb-rest-client
 ## Python REST Client examples
 
 ### Basic usage
-You can find the example script **[here](https://github.com/sentient/python_tb_rest_client/blob/master/examples/example_application.py)**.
+You can find the example script **[here](https://github.com/sentient/python_st_rest_client/blob/master/examples/example_application.py)**.
 
 The example listened below shows basic usage of REST client, namely how to perform a login, create a new Asset and Device instances,
 and how to establish relationships with them.

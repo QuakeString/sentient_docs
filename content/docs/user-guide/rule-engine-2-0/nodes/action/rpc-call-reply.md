@@ -51,7 +51,7 @@ the routing parameters (service ID, session ID, and request ID) in the metadata.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbSendRpcReplyNodeConfiguration",
+  "title": "SendRpcReplyNodeConfiguration",
   "type": "object",
   "properties": {
     "serviceIdMetaDataAttribute": {

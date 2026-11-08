@@ -137,7 +137,7 @@ Example metadata value: `"{\"latitude\":48.1986,\"longitude\":24.6532,\"radius\"
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbGpsGeofencingFilterNodeConfiguration",
+  "title": "GpsGeofencingFilterNodeConfiguration",
   "type": "object",
   "required": [
     "latitudeKeyName",

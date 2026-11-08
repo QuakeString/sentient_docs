@@ -78,13 +78,13 @@ Starting from **SENTIENT 3.9**, the platform stores the full set of debug events
 
 Debug mode settings can be combined or disabled entirely.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 Now copy & paste the following script to the Decoder function section:
 
@@ -117,7 +117,7 @@ return result;
 ``` 
 
 
-![image](/images/user-guide/integrations/mqtt/mqtt-integration-add-uplink-converter-tbel-1-pe.webp)
+![image](/images/user-guide/integrations/mqtt/mqtt-integration-add-uplink-converter-rhai-1-pe.webp)
 
 </div>
 
@@ -192,13 +192,13 @@ Even if you won't send downlink RPC, you still need to create a dummy Downlink c
 
 Create another converter with the name "**MQTT Downlink Converter**" and type **Downlink**. Leave the default script and click **Add**.     
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 Now copy & paste the following script to the Encoder function section:
 
@@ -242,7 +242,7 @@ return result;
 ``` 
 
 
-![image](/images/user-guide/integrations/mqtt/mqtt-integration-add-downlink-converter-tbel-1-pe.webp)
+![image](/images/user-guide/integrations/mqtt/mqtt-integration-add-downlink-converter-rhai-1-pe.webp)
 
 </div>
 
@@ -421,7 +421,7 @@ Go to the **Data converters** page, open your "**MQTT Downlink Converter**" and 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 ```js
 /** Encoder **/
@@ -448,7 +448,7 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/mqtt/mqtt-integration-edit-downlink-converter-tbel-1-pe.webp)
+![image](/images/user-guide/integrations/mqtt/mqtt-integration-edit-downlink-converter-rhai-1-pe.webp)
 
 </div>
 
@@ -529,7 +529,7 @@ Or just paste the following code in the encoder window:
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 ```js
 /** Encoder **/
@@ -556,7 +556,7 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/mqtt/mqtt-rpc-edit-downlink-tbel-3-pe.webp)
+![image](/images/user-guide/integrations/mqtt/mqtt-rpc-edit-downlink-rhai-3-pe.webp)
 
 </div>
 
@@ -599,7 +599,7 @@ Then prepare the uplink converter to receive the response messages. Go to the "*
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 ```js
 /** Decoder **/
@@ -636,7 +636,7 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/mqtt/mqtt-rpc-edit-uplink-tbel-3-pe.webp)
+![image](/images/user-guide/integrations/mqtt/mqtt-rpc-edit-uplink-rhai-3-pe.webp)
 
 </div>
 
@@ -772,9 +772,9 @@ You can configure retransmission parameters globally in the `sentient.yml` file.
 mqtt:
   client:
     retransmission:
-      max_attempts: "${TB_MQTT_CLIENT_RETRANSMISSION_MAX_ATTEMPTS:3}"
-      initial_delay_millis: "${TB_MQTT_CLIENT_RETRANSMISSION_INITIAL_DELAY_MILLIS:5000}"
-      jitter_factor: "${TB_MQTT_CLIENT_RETRANSMISSION_JITTER_FACTOR:0.15}"
+      max_attempts: "${SENTIENT_MQTT_CLIENT_RETRANSMISSION_MAX_ATTEMPTS:3}"
+      initial_delay_millis: "${SENTIENT_MQTT_CLIENT_RETRANSMISSION_INITIAL_DELAY_MILLIS:5000}"
+      jitter_factor: "${SENTIENT_MQTT_CLIENT_RETRANSMISSION_JITTER_FACTOR:0.15}"
 ```
 
 

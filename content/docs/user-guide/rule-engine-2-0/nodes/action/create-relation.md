@@ -46,7 +46,7 @@ Creates relations between the message originator and a specified target entity b
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbCreateRelationNodeConfiguration",
+  "title": "CreateRelationNodeConfiguration",
   "type": "object",
   "properties": {
     "direction": {

@@ -12,7 +12,7 @@ Clears existing active alarms for the message originator.
 ## Configuration
 
 - **Alarm type**: Type of the alarm to clear (e.g., "General Alarm", "High Temperature"). Supports templatization.
-- **Alarm details script**: A script (TBEL or JavaScript) that generates the content for the alarm's `details` field when clearing. The script must return a valid JSON value, which
+- **Alarm details script**: A script (Rhai or JavaScript) that generates the content for the alarm's `details` field when clearing. The script must return a valid JSON value, which
   can be:
     - Primitive values (numbers, booleans, strings)
     - JSON arrays
@@ -29,7 +29,7 @@ Clears existing active alarms for the message originator.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbClearAlarmNodeConfiguration",
+  "title": "ClearAlarmNodeConfiguration",
   "type": "object",
   "properties": {
     "alarmType": {
@@ -39,7 +39,7 @@ Clears existing active alarms for the message originator.
     "scriptLang": {
       "type": "string",
       "enum": [
-        "TBEL",
+        "Rhai",
         "JS"
       ],
       "description": "Script language for details builder"
@@ -50,7 +50,7 @@ Clears existing active alarms for the message originator.
     },
     "alarmDetailsBuildTbel": {
       "type": "string",
-      "description": "TBEL details builder function"
+      "description": "Rhai details builder function"
     }
   }
 }
@@ -112,7 +112,7 @@ Originator: `DEVICE`
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "alarmDetailsBuildTbel": "return {\n    clearedAt: msg.temperature\n};",
   "alarmType": "High Temperature"
 }
@@ -204,7 +204,7 @@ Originator: `DEVICE`
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "alarmDetailsBuildTbel": "return {};",
   "alarmType": "High Temperature"
 }
@@ -236,7 +236,7 @@ Originator: `ALARM` with ID `f66e9b38-6f0e-4dc7-ad57-1cb4e014b6fc`
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "alarmDetailsBuildJs": "return {};",
   "alarmType": "High Temperature"
 }

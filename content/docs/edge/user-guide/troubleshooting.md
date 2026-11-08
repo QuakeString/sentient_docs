@@ -15,21 +15,21 @@ To enable logging for the slowest and most frequently called rule nodes,
 [update your logging configuration](#enable-certain-logs) with the following **logger**:
 
 ```bash
-<logger name="org.sentient.server.service.queue.TbMsgPackProcessingContext" level="DEBUG" />
+<logger name="org.sentient.server.service.queue.MsgPackProcessingContext" level="DEBUG" />
 ```
 
 After this, you can find the following messages in your [logs](#logs):
 
 ```bash
-2021-03-24 17:01:21,023 [tb-rule-engine-consumer-24-thread-3] DEBUG o.t.s.s.q.TbMsgPackProcessingContext - Top Rule Nodes by max execution time:
-2021-03-24 17:01:21,024 [tb-rule-engine-consumer-24-thread-3] DEBUG o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] max execution time: 1102. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,024 [tb-rule-engine-consumer-24-thread-3] DEBUG o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] max execution time: 1. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,024 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - Top Rule Nodes by avg execution time:
-2021-03-24 17:01:21,024 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] avg execution time: 604.0. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,025 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] avg execution time: 1.0. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,025 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - Top Rule Nodes by execution count:
-2021-03-24 17:01:21,025 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] execution count: 2. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,028 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] execution count: 1. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,023 [sentient-rule-engine-consumer-24-thread-3] DEBUG o.s.s.s.q.MsgPackProcessingContext - Top Rule Nodes by max execution time:
+2021-03-24 17:01:21,024 [sentient-rule-engine-consumer-24-thread-3] DEBUG o.s.s.s.q.MsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] max execution time: 1102. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,024 [sentient-rule-engine-consumer-24-thread-3] DEBUG o.s.s.s.q.MsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] max execution time: 1. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,024 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - Top Rule Nodes by avg execution time:
+2021-03-24 17:01:21,024 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] avg execution time: 604.0. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,025 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] avg execution time: 1.0. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,025 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - Top Rule Nodes by execution count:
+2021-03-24 17:01:21,025 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] execution count: 2. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,028 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] execution count: 1. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
 ```
 
 ## Logs
@@ -39,7 +39,7 @@ After this, you can find the following messages in your [logs](#logs):
 Regardless of the deployment type, SENTIENT Edge logs are stored in the following directory:
 
 ```bash
-/var/log/tb-edge
+/var/log/sentient-edge
 ```
 
 Different deployment tools provide different ways to view logs:
@@ -52,14 +52,14 @@ Different deployment tools provide different ways to view logs:
 View last logs in runtime:
  
 ```bash
-tail -f /var/log/tb-edge/tb-edge.log
+tail -f /var/log/sentient-edge/sentient-edge.log
 ```
 
 You can use <b>grep</b> command to show only the output with desired string in it. 
 For example, you can use the following command in order to check if there are any errors on the service side:
 
 ```bash
-cat /var/log/tb-edge/tb-edge.log | grep ERROR
+cat /var/log/sentient-edge/sentient-edge.log | grep ERROR
 ```
 
 </div>
@@ -69,7 +69,7 @@ cat /var/log/tb-edge/tb-edge.log | grep ERROR
 View last logs in runtime:
  
 ```bash
-docker compose logs -f tb-edge
+docker compose logs -f sentient-edge
 ```
 
 
@@ -78,7 +78,7 @@ docker compose logs -f tb-edge
 
 If you still rely on Docker Compose as docker-compose (with a hyphen) execute next command:
 
-**docker-compose logs -f tb-edge**
+**docker-compose logs -f sentient-edge**
 
 
 </div>
@@ -88,7 +88,7 @@ You can use <b>grep</b> command to show only the output with desired string in i
 For example, you can use the following command in order to check if there are any errors on the backend side:
 
 ```bash
-docker compose logs tb-edge | grep ERROR
+docker compose logs sentient-edge | grep ERROR
 ```
 
 
@@ -97,7 +97,7 @@ docker compose logs tb-edge | grep ERROR
 
 If you still rely on Docker Compose as docker-compose (with a hyphen) execute next command:
 
-**docker-compose logs tb-edge \| grep ERROR**
+**docker-compose logs sentient-edge \| grep ERROR**
 
 
 </div>
@@ -106,7 +106,7 @@ If you still rely on Docker Compose as docker-compose (with a hyphen) execute ne
 **Tip:** you can redirect logs to file and then analyze with any text editor:
 
 ```bash
-docker compose logs -f tb-edge > tb-edge.log
+docker compose logs -f sentient-edge > sentient-edge.log
 ```
 
 
@@ -115,7 +115,7 @@ docker compose logs -f tb-edge > tb-edge.log
 
 If you still rely on Docker Compose as docker-compose (with a hyphen) execute next command:
 
-**docker-compose logs -f tb-edge > tb-edge.log**
+**docker-compose logs -f sentient-edge > sentient-edge.log**
 
 
 </div>
@@ -141,7 +141,7 @@ SENTIENT provides the ability to enable/disable logging for specific parts of th
 You can do this by modifying the `logback.xml` file. Like the logs themselves, the file is stored in the following directory:
 
 ```bash
-/usr/share/tb-edge/conf
+/usr/share/sentient-edge/conf
 ```
 
 Here's an example of the `logback.xml` configuration:
@@ -152,10 +152,10 @@ Here's an example of the `logback.xml` configuration:
 
     <appender name="fileLogAppender"
               class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>/var/log/tb-edge/tb-edge.log</file>
+        <file>/var/log/sentient-edge/sentient-edge.log</file>
         <rollingPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>/var/log/tb-edge/tb-edge.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>/var/log/sentient-edge/sentient-edge.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <maxFileSize>100MB</maxFileSize>
             <maxHistory>30</maxHistory>
             <totalSizeCap>3GB</totalSizeCap>
@@ -193,14 +193,14 @@ Different deployment tools provide different ways to update logs:
 
 <div class="st-tab" data-label="Standalone Deployment">
 
-For standalone deployment you need to update <code>/usr/share/tb-edge/conf/logback.xml</code> in order to change logging configuration.
+For standalone deployment you need to update <code>/usr/share/sentient-edge/conf/logback.xml</code> in order to change logging configuration.
 
 </div>
 
 <div class="st-tab" data-label="Docker-Compose Deployment">
 
-For docker-compose deployment we are mapping <code>/config</code> folder to your local system (<code>./tb-edge/conf</code> folder).
-So in order to change logging configuration you need to update <code>./tb-edge/conf/logback.xml</code> file.
+For docker-compose deployment we are mapping <code>/config</code> folder to your local system (<code>./sentient-edge/conf</code> folder).
+So in order to change logging configuration you need to update <code>./sentient-edge/conf/logback.xml</code> file.
 
 </div>
 
@@ -221,7 +221,7 @@ Some internal state metrics can be exposed by the **Spring Boot Actuator** using
 
 Here is the list of stats that **SENTIENT** pushes to **Prometheus**:
 
-### tb-edge metrics:
+### sentient-edge metrics:
 
 - **attributes_queue_${index_of_queue}** (statsNames - **totalMsgs, failedMsgs, successfulMsgs**): The stats that represent **attribute writes** to the database.  
   _Note that several queues (threads) are used to persist attributes for maximum performance._
@@ -330,7 +330,7 @@ Add the following lines to the **"environment"** block in the YAML file:
 
 #### Edge
 
-Stop the currently running. **TB Edge container** before making any changes. Then, edit the docker compose file:
+Stop the currently running. **SENTIENT Edge container** before making any changes. Then, edit the docker compose file:
 
 ```bash
 nano docker-compose.yml
@@ -345,7 +345,7 @@ Add the following lines to the **"environment"** block in the YAML file:
 ```
 
 
-Once all the changes have been made, start the **SENTIENT** and **TB Edge docker containers**.
+Once all the changes have been made, start the **SENTIENT** and **SENTIENT Edge docker containers**.
 
 </div>
 
@@ -371,7 +371,7 @@ export EDGES_RPC_KEEP_ALIVE_TIMEOUT_SEC=25
 
 Then, edit the **SENTIENT Edge configuration file:**
 ```bash
-sudo nano /etc/tb-edge/conf/tb-edge.conf
+sudo nano /etc/sentient-edge/conf/sentient-edge.conf
 ```
 
 
@@ -382,7 +382,7 @@ export CLOUD_RPC_KEEP_ALIVE_TIMEOUT_SEC=25
 ```
 
 
-Once all the changes have been made, restart the **SENTIENT** and **TB Edge services**.
+Once all the changes have been made, restart the **SENTIENT** and **SENTIENT Edge services**.
 
 </div>
 
@@ -392,13 +392,6 @@ Once all the changes have been made, restart the **SENTIENT** and **TB Edge serv
 ## Monitoring message statistics
 
 
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Edge version 4.2</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 To diagnose and resolve issues with message delivery between the Cloud and Edge, you can monitor the state of **uplink** (Edge → Cloud) 

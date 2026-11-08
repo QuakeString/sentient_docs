@@ -9,13 +9,13 @@ source = "docs/user-guide/rule-engine-2-0/nodes/action/log.md"
 +++
 Executes user-defined function to transform an incoming message into a string for logging purposes. The script can access the message data, metadata, and type to create custom log
 entries that are written to the SENTIENT log file.
-Supports **TBEL** and **JavaScript**.
+Supports **Rhai** and **JavaScript**.
 
 ## Configuration
 
 The node provides a choice of scripting language and a code editor to write the logging logic.
 
-- **Language Selector** - choose between **TBEL** (SENTIENT Expression Language) or **JavaScript**.
+- **Language Selector** - choose between **Rhai** (SENTIENT Expression Language) or **JavaScript**.
 - **Script Editor** - a text area where you write the body of the log formatting function.
 
 ### Log formatting function
@@ -34,14 +34,14 @@ The function must **return** a string that will be written to the SENTIENT log f
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbLogNodeConfiguration",
+  "title": "LogNodeConfiguration",
   "type": "object",
   "properties": {
     "scriptLang": {
       "type": "string",
       "enum": [
         "JS",
-        "TBEL"
+        "Rhai"
       ],
       "description": "The scripting language to use."
     },
@@ -51,7 +51,7 @@ The function must **return** a string that will be written to the SENTIENT log f
     },
     "tbelScript": {
       "type": "string",
-      "description": "The TBEL log formatting function body. Used when 'scriptLang' is set to 'TBEL'."
+      "description": "The Rhai log formatting function body. Used when 'scriptLang' is set to 'Rhai'."
     }
   },
   "required": [
@@ -108,7 +108,7 @@ Type: `POST_TELEMETRY_REQUEST`
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "tbelScript": "return 'Message Type: ' + msgType + ' | Device: ' + metadata.deviceName + ' | Temperature: ' + msg.temperature + '°C | Humidity: ' + msg.humidity + '%';"
 }
 ```

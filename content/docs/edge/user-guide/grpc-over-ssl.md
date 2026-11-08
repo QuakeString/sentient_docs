@@ -18,7 +18,7 @@ The instructions are divided into two main parts: configuring the server side (p
 Choose between the built-in mechanism or using a load balancer for SSL termination for gRPC traffic. Use the content toggle below to select and view the instructions for each option.
 
 
-<div class="tb-content-toggle" id="platformOption">
+<div class="st-content-toggle" id="platformOption">
     <div class="panel panel-default">
         <div class="panel-heading">
             
@@ -157,7 +157,7 @@ If you're on a CentOS/RHEL Server, adhere to [these instructions](/docs/user-gui
 To enable SSL communication on the Edge for Ubuntu or CentOS/RHEL installations, execute the following command:
 
 ```bash
-sudo sh -c 'cat <<EOL >> /etc/tb-edge/conf/tb-edge.conf
+sudo sh -c 'cat <<EOL >> /etc/sentient-edge/conf/sentient-edge.conf
 export CLOUD_RPC_SSL_ENABLED=true
 EOL'
 ```
@@ -166,7 +166,7 @@ EOL'
 If you are using self-signed certificates, it is necessary to add the server-side public certificate to the Edge's configuration to verify the server's certificate:
 
 ```bash
-sudo sh -c 'cat <<EOL >> /etc/tb-edge/conf/tb-edge.conf
+sudo sh -c 'cat <<EOL >> /etc/sentient-edge/conf/sentient-edge.conf
 export CLOUD_RPC_SSL_CERT=certFile.crt
 EOL'
 ```
@@ -175,7 +175,7 @@ EOL'
 To apply these changes, restart the Edge:
 
 ```bash
-sudo systemctl restart tb-edge
+sudo systemctl restart sentient-edge
 ```
 
 

@@ -41,7 +41,7 @@ Once message arrives from External Platform to SENTIENT it passes validation acc
 Once message is validated SENTIENT Integration invokes assigned [**Uplink data converter**](#uplink-data-converter) to extract sub-set of meaningful information out of the incoming message.
 The message is basically transformed from device and platform specific payload to the format that SENTIENT uses.
 
-Since TB PE v2.0, Rule Engine is also able to push Downlink messages to the integrations. The example of such message may be:
+The Rule Engine is also able to push Downlink messages to the integrations. The example of such message may be:
  
  - notification about [shared attribute](/docs/user-guide/attributes/#device-specific-attribute-types) (configuration) update;
  - notification about [oneway RPC call](/docs/user-guide/rpc/#server-side-rpc-api) to trigger some action on the device;
@@ -108,8 +108,8 @@ Debug mode settings can be combined or disabled entirely.
 
 - In the **Main decoding configuration** section, define the decoding logic: use the provided default script or enter your custom script to parse and transform the incoming data.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 ![image](/images/user-guide/integrations/overview/adding-uplink-converter-1.webp)
 
@@ -132,8 +132,8 @@ To create the Uplink data converter for an integration that supports the **new u
   > The Entity name field is mandatory, so it cannot be left empty. By default, the entity name follows the pattern **Device $eui** (or **Asset $eui**). Here you need to underline the pattern **$** in the device name. As you type **$**, a list of available keys from the Loriot message will appear. This list is standardized and does not depend on the specific message content. The **$eui** pattern will dynamically fetch the device&#39;s unique identifier from the Loriot message.
 - In the **Main decoding configuration** section, define the decoding logic: use the provided default script or enter your custom script to parse and transform the incoming data.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 ![image](/images/user-guide/integrations/overview/uplink-converter-20-1.webp)
 
@@ -280,8 +280,8 @@ Debug mode settings can be combined or disabled entirely.
 
 - In the **Main encoding configuration** section, define the decoding logic: enter **script** for parsing and transforming the output data.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 - Click the "**Add**" button to create and save your new converter.
 
@@ -337,18 +337,18 @@ you would like to push this update to an external MQTT broker (TTN, Mosquitto, A
 You may also want to include the "firmwareVersion" attribute value that was configured long time ago and is not present in this particular request.
 The topic to push the update should contain the device name.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
-![image](/images/user-guide/integrations/downlink-converter-example-tbel.webp)
+![image](/images/user-guide/integrations/downlink-converter-example-rhai.webp)
 
 
-The full source code of TBEL function used in converter:
+The full source code of Rhai function used in converter:
 
 ```bash
 // Encode downlink data from incoming Rule Engine message
@@ -483,14 +483,14 @@ You can [configure](/docs/user-guide/install/pe/how-to-change-config/) SENTIENT 
 Set new environment variables in SENTIENT configuration file to define your custom repository and branch:
 
 ```
-export TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_URL=https://github.com/my-github-account/my-repo-name.git
-export TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH=my-branch
+export SENTIENT_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_URL=https://github.com/my-github-account/my-repo-name.git
+export SENTIENT_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH=my-branch
 ```
 
 where
 
-ㅤ**&#42; TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_URL** – URL of your GitHub (or other Git-based) repository<br>
-ㅤ**&#42; TB_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH** – The branch name you want SENTIENT to pull the converters from (e.g., main, develop, or any custom branch name)
+ㅤ**&#42; SENTIENT_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_URL** – URL of your GitHub (or other Git-based) repository<br>
+ㅤ**&#42; SENTIENT_INTEGRATIONS_CONVERTERS_LIBRARY_REPO_BRANCH** – The branch name you want SENTIENT to pull the converters from (e.g., main, develop, or any custom branch name)
 
 ![image](/images/user-guide/integrations/overview/terminal-custom-repo-converters-library.webp)
 

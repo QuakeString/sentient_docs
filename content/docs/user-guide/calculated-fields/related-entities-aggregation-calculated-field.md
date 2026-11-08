@@ -1,6 +1,6 @@
 +++
 title = "Related entities aggregation calculated field"
-description = "For complex calculations, TBEL is used. It enables advanced operations such as conditional statements, loops, and access to historical data."
+description = "For complex calculations, Rhai is used. It enables advanced operations such as conditional statements, loops, and access to historical data."
 
 [extra]
 status = "imported"

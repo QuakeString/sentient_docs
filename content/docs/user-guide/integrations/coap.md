@@ -26,7 +26,7 @@ Please review the integration diagram to learn more.
 
 ## Prerequisites
 
-In this tutorial, we will show you how CoAP integration works as part of **tb-core** service with **NO SECURE** security mode selected. In order to do this we will use: 
+In this tutorial, we will show you how CoAP integration works as part of **sentient-core** service with **NO SECURE** security mode selected. In order to do this we will use: 
 
 
 - The instance of [SENTIENT Professional Edition](https://sentient.invenia.in/docs/user-guide/install/pe/installation-options/) installed locally;
@@ -96,13 +96,13 @@ Debug mode settings can be combined or disabled entirely.
 
 - **Text payload**
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 Now copy & paste the following script to the Decoder function section:
 
@@ -134,7 +134,7 @@ return result;
 ``` 
 
 
-![image](/images/user-guide/integrations/coap/coap-uplink-converter-text-tbel-pe.webp)
+![image](/images/user-guide/integrations/coap/coap-uplink-converter-text-rhai-pe.webp)
 
 
 </div>
@@ -185,13 +185,13 @@ return result;
 
 - **JSON payload**
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 Now copy & paste the following script to the Decoder function section:
 
@@ -221,7 +221,7 @@ return result;
 ``` 
 
 
-![image](/images/user-guide/integrations/coap/coap-uplink-converter-json-tbel-pe.webp)
+![image](/images/user-guide/integrations/coap/coap-uplink-converter-json-rhai-pe.webp)
 
 
 </div>
@@ -282,7 +282,7 @@ return result;
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 Now copy & paste the following script to the Decoder function section:
 
@@ -315,7 +315,7 @@ return result;
 ``` 
 
 
-![image](/images/user-guide/integrations/coap/coap-uplink-converter-binary-tbel-pe.webp)
+![image](/images/user-guide/integrations/coap/coap-uplink-converter-binary-rhai-pe.webp)
 
 
 </div>
@@ -414,7 +414,7 @@ export COAP_DTLS_KEY_PASSWORD=server_key_password
 # Key alias
 export COAP_DTLS_KEY_ALIAS=serveralias
 # Skip certificate validity check for client certificates
-export TB_COAP_X509_DTLS_SKIP_VALIDITY_CHECK_FOR_CLIENT_CERT=false
+export SENTIENT_COAP_X509_DTLS_SKIP_VALIDITY_CHECK_FOR_CLIENT_CERT=false
 ```
 
 Please, note, that added above environment variables use default DTLS configuration settings. In order to get the CoAP server launched correctly in the DTLS mode, you need to update at least key store settings. Please refer to the [CoAP over DTLS](/docs/user-guide/coap-over-dtls/) guide in order to learn more about the CoAP DTLS configuration.

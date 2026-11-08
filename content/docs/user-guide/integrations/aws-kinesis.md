@@ -89,12 +89,12 @@ In this demo we will use two AWS Kinesis streams:
 
 Let's create uplink stream with the help of AWS CLI:
 ```bash
-aws kinesis create-stream --stream-name tb-test-uplink --shard-count 1
+aws kinesis create-stream --stream-name st-test-uplink --shard-count 1
 ```
 
 Please verify that stream was created successfully:
 ```bash
-aws kinesis describe-stream --stream-name tb-test-uplink
+aws kinesis describe-stream --stream-name st-test-uplink
 ```
 
 The output should be similar to this:
@@ -103,7 +103,7 @@ The output should be similar to this:
         </span><span class="nl">"KeyId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> 
         </span><span class="nl">"EncryptionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NONE"</span><span class="p">,</span><span class="w"> 
         </span><span class="nl">"StreamStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w"> 
-        </span><span class="nl">"StreamName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tb-test-uplink"</span><span class="p">,</span><span class="w"> 
+        </span><span class="nl">"StreamName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"st-test-uplink"</span><span class="p">,</span><span class="w"> 
         </span><span class="nl">"Shards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"ShardId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shardId-000000000000"</span><span class="p">,</span><span class="w"> 
@@ -116,7 +116,7 @@ The output should be similar to this:
                 </span><span class="p">}</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">],</span><span class="w"> 
-        </span><span class="nl">"StreamARN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arn:aws:kinesis:eu-west-1:XXXXXXXXXX:stream/tb-test-uplink"</span><span class="p">,</span><span class="w"> 
+        </span><span class="nl">"StreamARN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arn:aws:kinesis:eu-west-1:XXXXXXXXXX:stream/st-test-uplink"</span><span class="p">,</span><span class="w"> 
         </span><span class="nl">"EnhancedMonitoring"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"ShardLevelMetrics"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
@@ -129,12 +129,12 @@ The output should be similar to this:
 
 Next step is to create downlink stream:
 ```bash
-aws kinesis create-stream --stream-name tb-test-downlink --shard-count 1
+aws kinesis create-stream --stream-name st-test-downlink --shard-count 1
 ```
 
 Please verify that stream was created successfully:
 ```bash
-aws kinesis describe-stream --stream-name tb-test-downlink
+aws kinesis describe-stream --stream-name st-test-downlink
 ```
 
 The output should be similar to this:
@@ -143,7 +143,7 @@ The output should be similar to this:
         </span><span class="nl">"KeyId"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"> 
         </span><span class="nl">"EncryptionType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NONE"</span><span class="p">,</span><span class="w"> 
         </span><span class="nl">"StreamStatus"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ACTIVE"</span><span class="p">,</span><span class="w"> 
-        </span><span class="nl">"StreamName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tb-test-downlink"</span><span class="p">,</span><span class="w"> 
+        </span><span class="nl">"StreamName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"st-test-downlink"</span><span class="p">,</span><span class="w"> 
         </span><span class="nl">"Shards"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"ShardId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shardId-000000000000"</span><span class="p">,</span><span class="w"> 
@@ -156,7 +156,7 @@ The output should be similar to this:
                 </span><span class="p">}</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">],</span><span class="w"> 
-        </span><span class="nl">"StreamARN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arn:aws:kinesis:eu-west-1:XXXXXXXXXX:stream/tb-test-downlink"</span><span class="p">,</span><span class="w"> 
+        </span><span class="nl">"StreamARN"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arn:aws:kinesis:eu-west-1:XXXXXXXXXX:stream/st-test-downlink"</span><span class="p">,</span><span class="w"> 
         </span><span class="nl">"EnhancedMonitoring"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
             </span><span class="p">{</span><span class="w">
                 </span><span class="nl">"ShardLevelMetrics"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
@@ -219,7 +219,7 @@ In general, output from Downlink converter should have the following structure:
     </span><span class="nl">"contentType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JSON"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">devName</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">kitchen_thermostat</span><span class="se">\"</span><span class="s2">,</span><span class="se">\"</span><span class="s2">version</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">0.11</span><span class="se">\"</span><span class="s2">}"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-        </span><span class="nl">"streamName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tb-test-downlink"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"streamName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"st-test-downlink"</span><span class="p">,</span><span class="w">
         </span><span class="nl">"partitionKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1234"</span><span class="w">
     </span><span class="p">}</span><span class="w">
 </span><span class="p">}</span></code></pre></figure>
@@ -238,7 +238,7 @@ Go to **Data Converters** and create new **downlink** Converter with this functi
     <span class="na">contentType</span><span class="p">:</span> <span class="dl">"</span><span class="s2">JSON</span><span class="dl">"</span><span class="p">,</span>
     <span class="na">data</span><span class="p">:</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">),</span>
     <span class="na">metadata</span><span class="p">:</span> <span class="p">{</span>
-        <span class="na">streamName</span><span class="p">:</span> <span class="dl">"</span><span class="s2">tb-test-downlink</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">streamName</span><span class="p">:</span> <span class="dl">"</span><span class="s2">st-test-downlink</span><span class="dl">"</span><span class="p">,</span>
         <span class="na">partitionKey</span><span class="p">:</span> <span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">,</span>
     <span class="p">}</span>
 
@@ -259,7 +259,7 @@ Next we will create Integration with AWS Kinesis inside the Sentient. Open **Int
 - Type: AWS Kinesis
 - Uplink data converter: kinesis_converter
 - Downlink data converter: kinesis_downlink_version
-- Stream name: tb-test-uplink
+- Stream name: st-test-uplink
 - Region: **AWS_REGION**
 - Access Key Id: **AWS_ACCESS_KEY_ID**
 - Access Key: **SECRET_ACCESS_KEY**
@@ -276,7 +276,7 @@ Next we will create Integration with AWS Kinesis inside the Sentient. Open **Int
 Lets verify our integration. First, lets put message into uplink stream, so Sentient will fetch this message. 
 Type in the console:
 ```bash
-aws kinesis put-record --stream-name tb-test-uplink --partition-key 123 --data '{"devName": "kitchen_thermostat", "devType": "thermostat", "temperature": 22}'
+aws kinesis put-record --stream-name st-test-uplink --partition-key 123 --data '{"devName": "kitchen_thermostat", "devType": "thermostat", "temperature": 22}'
 ```
 
 Go to **Device Group** -> **All** -> **kitchen_thermostat** - you can see that 
@@ -302,11 +302,11 @@ value **v.0.11**
 
 ![image](/images/user-guide/integrations/aws-kinesis/aws-kinesis-shared-attr-updated.webp)
 
-By making this step, we triggered downlink message to the downlink stream **tb-test-downlink** and this message should contains device name and version field value. 
+By making this step, we triggered downlink message to the downlink stream **st-test-downlink** and this message should contains device name and version field value. 
 Let's use command line AWS CLI tool to validate, that we have received the massage in the downlink stream.
 First, we need to get shard iterator for the downlink stream, to get records from the stream:
 ```bash
-aws kinesis get-shard-iterator --shard-id shardId-000000000000 --shard-iterator-type TRIM_HORIZON --stream-name tb-test-downlink
+aws kinesis get-shard-iterator --shard-id shardId-000000000000 --shard-iterator-type TRIM_HORIZON --stream-name st-test-downlink
 ```
 
 In the output you will receive ID of the iterator:

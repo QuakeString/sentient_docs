@@ -21,6 +21,17 @@ for p in pages:
     existing.add(rel.replace("//", "/"))
 files = {"/" + str(p.relative_to(site)) for p in site.rglob("*") if p.is_file()}
 
+# Old product names, in page text and in alt/src/href/title attributes. These fail
+# the build on every page, carried over or not. Real SENTIENT API names that
+# happen to start with "tb" (TbUnit, TbFlot, tb-entity-select, --tb-* theme
+# tokens, tbelScript config keys) are allowed.
+OLD_NAMES = re.compile(
+    r"\bThings[Bb]oard\b|\bTrendz\b|thingsboard\.io"
+    r"|(?<![0-9])(?<![0-9] )\bTB\b|\bTBEL\b|\bTB_[A-Za-z]|[A-Z]_TB_|\bTB[ -]?Edge"
+    r"|\btb-(?:edge|node|core|rule-engine|gateway|gw-|faq|pe-|integration|mqtt-client|rest-client|[a-z0-9-]+-integration)"
+    r"|\btb_(?:device_mqtt|gateway|rest_client|client|edge)\b|\bTBDevice|\bTBGateway|\bTBPublish|\bTbMsg")
+ATTRS = re.compile(r'(?:alt|src|href|title)="([^"]*)"')
+old_fail = set()
 HREF = re.compile(r'href="(/[^"#?]*)')
 SRC = re.compile(r'src="(/images/[^"]+)"')
 BODY = re.compile(r"<article[^>]*>(.*?)</article>", re.S)
@@ -49,8 +60,9 @@ for p in sorted(pages):
         if s not in files:
             found.append(("missing-image", s))
     text = re.sub(r"<[^>]+>", " ", body)
-    for w in re.findall(r"\bThings[Bb]oard\b|\bTrendz\b|thingsboard\.io", text):
+    for w in OLD_NAMES.findall(text) + OLD_NAMES.findall(" ".join(ATTRS.findall(body))):
         found.append(("old-name", w))
+        old_fail.add(url)
     if found:
         problems[url] = found
         if not imported:
@@ -82,5 +94,9 @@ if strict_fail:
     print("\nChecked pages with problems (these fail the build):")
     for u in strict_fail:
         print("  " + u)
-if strict_fail or nav_fail:
+if old_fail:
+    print("\nPages that still use an old product name (these fail the build):")
+    for u in sorted(old_fail):
+        print("  " + u)
+if strict_fail or nav_fail or old_fail:
     sys.exit(1)

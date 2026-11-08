@@ -73,7 +73,7 @@ The Modbus Demo Device has the following structure:
 To up and run the Modbus Demo Device, you can use Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 

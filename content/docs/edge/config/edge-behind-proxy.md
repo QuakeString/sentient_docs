@@ -40,10 +40,10 @@ Beyond security, proxies can cache resources that can substantially reduce overa
 
 #### Step 1. Modify Configuration File
 
-To configure **SENTIENT Edge** behind proxy running on debian-based installation (e.g., Ubuntu), modify the **tb-edge.conf** file:
+To configure **SENTIENT Edge** behind proxy running on debian-based installation (e.g., Ubuntu), modify the **sentient-edge.conf** file:
 
 ```bash
-sudo tee -a /etc/tb-edge/conf/tb-edge.conf > /dev/null <<EOL
+sudo tee -a /etc/sentient-edge/conf/sentient-edge.conf > /dev/null <<EOL
 #Enable the proxy
 export CLOUD_RPC_PROXY_ENABLED=true
 
@@ -75,16 +75,16 @@ export CLOUD_RPC_PROXY_PASSWORD="proxy_password"
 To verify the changes, run the following command:
 
 ```bash
-cat /etc/tb-edge/conf/tb-edge.conf
+cat /etc/sentient-edge/conf/sentient-edge.conf
 ```
 
 
 #### Step 2. Restart SENTIENT Edge
 
-For the changes to take effect, restart the service after modifying the **tb-edge.conf** file:
+For the changes to take effect, restart the service after modifying the **sentient-edge.conf** file:
 
 ```bash
-sudo service tb-edge restart
+sudo service sentient-edge restart
 ```
 
 
@@ -105,19 +105,19 @@ If the Edge HTTP bind port was changed to **18080** during Edge installation, ac
 **SENTIENT Edge** logs stored in the following directory:
 
 ```bash
-/var/log/tb-edge
+/var/log/sentient-edge
 ```
 To check if there are any errors on the service side:
 
 ```bash
-cat /var/log/tb-edge/tb-edge.log | grep ERROR
+cat /var/log/sentient-edge/sentient-edge.log | grep ERROR
 ```
 
 
 Check connectivity:
 
 ```bash
-curl -x http://proxy_host:proxy_port https://your_tb_cloud_url
+curl -x http://proxy_host:proxy_port https://your_st_cloud_url
 ```
 
 
@@ -158,7 +158,7 @@ To proceed with proxy configuration, set the terminal in the directory which con
 
 #### Step 1. Stop Docker Container
 
-Stop the currently running **TB Edge** container (if it’s still running):
+Stop the currently running **SENTIENT Edge** container (if it’s still running):
 
 ```bash
 docker compose stop
@@ -252,7 +252,7 @@ docker logs container_name
 Check connectivity:
 
 ```bash
-curl -x http://proxy_host:proxy_port https://your_tb_cloud_url
+curl -x http://proxy_host:proxy_port https://your_st_cloud_url
 ```
 
 

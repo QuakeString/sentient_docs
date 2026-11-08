@@ -51,13 +51,6 @@ In order to download the REST Client dependency, you should add the following re
 #### Authentication with API Key
 
 
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 4.3</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 You can authenticate using an API key without the need for login/logout operations:
@@ -390,4 +383,4 @@ client.close();
 
 ### More examples
 
-You can find the example to learn how to use SENTIENT REST Client [here](https://github.com/sentient/tb-ce-rest-client-example).
+You can find the example to learn how to use SENTIENT REST Client [here](https://github.com/sentient/sentient-rest-client-example).

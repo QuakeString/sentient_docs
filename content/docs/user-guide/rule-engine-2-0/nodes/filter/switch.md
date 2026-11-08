@@ -11,20 +11,20 @@ Executes a user-defined function that returns a connection label or a list of co
 The message is routed via the specified connection(s).
 If the script returns a single string, it is treated as a one-element list.
 If the script execution fails, the message is routed via the `Failure` connection.
-Supports **TBEL** and **JavaScript**.
+Supports **Rhai** and **JavaScript**.
 
 ## Configuration
 
 ### Field descriptions
 
-* **Script language** — defines which scripting language is used. Can be either *TBEL* or *JavaScript*.
+* **Script language** — defines which scripting language is used. Can be either *Rhai* or *JavaScript*.
 * **Script body** — the body of the function used to evaluate the incoming message.
   This script must return either a single string or an array of strings (each string is a connection label).
   The script can access the following arguments:
     * `msg` — the message data, typically an object or array.
     * `metadata` — the message metadata.
       In JavaScript, this is an object where all values are strings.
-      In TBEL, it is a `java.util.Map<String, String>`.
+      In Rhai, it is a `java.util.Map<String, String>`.
     * `msgType` — the type of the message as a string.
 
 ### JSON Schema
@@ -32,7 +32,7 @@ Supports **TBEL** and **JavaScript**.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbJsSwitchNodeConfiguration",
+  "title": "JsSwitchNodeConfiguration",
   "type": "object",
   "required": [
     "scriptLang"
@@ -42,7 +42,7 @@ Supports **TBEL** and **JavaScript**.
       "type": "string",
       "description": "Scripting language used to execute the function.",
       "enum": [
-        "TBEL",
+        "Rhai",
         "JS"
       ]
     },
@@ -52,7 +52,7 @@ Supports **TBEL** and **JavaScript**.
     },
     "tbelScript": {
       "type": "string",
-      "description": "TBEL function body that must return a string or array of strings. Used when 'scriptLang' is 'TBEL'."
+      "description": "Rhai function body that must return a string or array of strings. Used when 'scriptLang' is 'Rhai'."
     }
   },
   "additionalProperties": false
@@ -63,7 +63,7 @@ Supports **TBEL** and **JavaScript**.
 ## Message processing algorithm
 
 1. Determine which script to execute based on the configured **Script language**:
-    * If *TBEL*, use the configured **TBEL script**.
+    * If *Rhai*, use the configured **Rhai script**.
     * If *JS*, use the configured **JavaScript script**.
 2. Execute the script as a function.
 3. The script must return:
@@ -87,7 +87,7 @@ Supports **TBEL** and **JavaScript**.
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "jsScript": "return 'A';"
 }
 ```
@@ -104,7 +104,7 @@ Supports **TBEL** and **JavaScript**.
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "jsScript": "return ['A'];"
 }
 ```
@@ -121,7 +121,7 @@ Supports **TBEL** and **JavaScript**.
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "jsScript": "return ['A', 'B', 'C'];"
 }
 ```
@@ -148,7 +148,7 @@ Data:
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "jsScript": "var t = msg.temperature;\nif (t > 80) return 'High';\nif (t > 60) return 'Normal';\nreturn 'Low';"
 }
 ```

@@ -44,7 +44,7 @@ Use the instructions below to install the following command-line utilities:
 Select your operating system to continue with the installation steps:
 
 
-<div class="tb-content-toggle" id="connectdevice">
+<div class="st-content-toggle" id="connectdevice">
     <div class="panel panel-default">
         <div class="panel-heading">
             

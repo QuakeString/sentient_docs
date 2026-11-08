@@ -24,13 +24,13 @@ In Sentient UI go to **Rule Chains** page and open **Root Rule Chain**.
 
 Drag and Drop **Script Filter** rule node to the chain. Node configuration window will be opened. 
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 We will use this script for data validation:
 
@@ -40,7 +40,7 @@ return msg.temperature == null
 ```
 
 
-![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-config-tbel-ce.webp)
+![image](/images/user-guide/rule-engine-2-0/tutorials/getting-started/script-config-rhai-ce.webp)
 
 
 </div>

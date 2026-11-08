@@ -18,13 +18,6 @@ See instructions below on how to configure SSL for certificates stored in PEM fi
 ## SSL configuration using PEM certificates file
 
 
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 3.3.2</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 Configure the following environment variables via [configuration](/docs/user-guide/install/config/) file, docker-compose or kubernetes scripts.
@@ -71,9 +64,9 @@ You may configure following additional environment variables via [configuration]
 
 * COAP_DTLS_BIND_ADDRESS - the bind address for the secure CoAP server. Default value *0.0.0.0* indicates all interfaces;
 * COAP_DTLS_BIND_PORT - the bind port for the secure CoAP server. Default value is *5684*;
-* TB_COAP_X509_DTLS_SKIP_VALIDITY_CHECK_FOR_CLIENT_CERT - Skip certificate validity check for client certificates. Default value is *false*.
-* TB_COAP_X509_DTLS_SESSION_INACTIVITY_TIMEOUT - Maximum inactivity time of DTLS session in milliseconds. Default value is *86400000* which corresponds to one day.
-* TB_COAP_X509_DTLS_SESSION_REPORT_TIMEOUT - Frequency of periodic cleanup of inactive sessions. Default value is *1800000* which corresponds to 30 minutes.
+* SENTIENT_COAP_X509_DTLS_SKIP_VALIDITY_CHECK_FOR_CLIENT_CERT - Skip certificate validity check for client certificates. Default value is *false*.
+* SENTIENT_COAP_X509_DTLS_SESSION_INACTIVITY_TIMEOUT - Maximum inactivity time of DTLS session in milliseconds. Default value is *86400000* which corresponds to one day.
+* SENTIENT_COAP_X509_DTLS_SESSION_REPORT_TIMEOUT - Frequency of periodic cleanup of inactive sessions. Default value is *1800000* which corresponds to 30 minutes.
 
 ## Self-signed certificates generation
 

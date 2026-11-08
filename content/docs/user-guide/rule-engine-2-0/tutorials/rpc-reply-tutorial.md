@@ -71,7 +71,7 @@ to the request, so we need to construct proper payload in transformation node.
 Configuration:
 
 - Name: **Build response**
-- ScriptLang: **TBEL**
+- ScriptLang: **Rhai**
 - Script:
   ```javascript 
      return {msg: {"temperature": metadata.roomTemperature}, metadata: metadata, msgType: msgType};
@@ -114,7 +114,7 @@ Please don't remove log node. We will reuse it for logging uknown RPC requests.
 Configuration:
 
 - Name: **Filter getCurrentTemperature RPC**
-- ScriptLang: **TBEL**
+- ScriptLang: **Rhai**
 - Script:
   ```javascript 
      return msg.method == "getCurrentTemperature";
@@ -146,7 +146,7 @@ All incoming RPC requests with method that doesn't equal to the "getCurrentTempe
 Configuration:
 
 - Name: **Log RPC from Device**
-- ScriptLang: **TBEL**
+- ScriptLang: **Rhai**
 - Script:
   ```javascript 
      return '\nIncoming message:\n' + JSON.stringify(msg) + '\nIncoming metadata:\n' + JSON.stringify(metadata);
@@ -215,11 +215,11 @@ we will see message in the SENTIENT log file:
 <br>
 
 ```less
-[rule-dispatcher-0-3] INFO  o.t.rule.engine.action.TbLogNode -
+[rule-dispatcher-0-3] INFO  o.s.rule.engine.action.LogNode -
 Incoming message:
 {"method":"getCurrentHumidity","params":{}}
 Incoming metadata:
-{"deviceType":"Controller","requestId":"1","sessionId":"54c2abd1-6496-4ab3-9036-e044083b1823","serviceId":"tb-core-1","deviceName":"Controller A"}
+{"deviceType":"Controller","requestId":"1","sessionId":"54c2abd1-6496-4ab3-9036-e044083b1823","serviceId":"sentient-core-1","deviceName":"Controller A"}
 ```
 
 

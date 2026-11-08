@@ -181,7 +181,7 @@ We have prepared sparkplug node [emulator](https://github.com/sentient/sparkplug
 Let's launch it and connect to our platform instance. We will use access token credentials from the previous step:
 
 ```bash
-docker run -e SPARKPLUG_SERVER_URL='tcp://localhost:1883' -e SPARKPLUG_CLIENT_MQTT_USERNAME='YOUR_SENTIENT_DEVICE_TOKEN' sentient/tb-sparkplug-emulator:latest
+docker run -e SPARKPLUG_SERVER_URL='tcp://localhost:1883' -e SPARKPLUG_CLIENT_MQTT_USERNAME='YOUR_SENTIENT_DEVICE_TOKEN' sentient/sentient-sparkplug-emulator:latest
 ```
 
 

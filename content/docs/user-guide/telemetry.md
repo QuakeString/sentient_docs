@@ -209,7 +209,7 @@ SENTIENT provides following REST API to fetch entity data:
 
 
 **NOTE:** The API is available via Swagger UI. Please review the general [REST API](/docs/reference/rest-api/) documentation for more details.
-The API is backward compatible with TB v1.0+ and this is the main reason why API call URLs contain "plugin".
+API call URLs contain "plugin" for backward compatibility.
 
 
 </div>

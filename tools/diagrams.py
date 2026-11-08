@@ -705,6 +705,54 @@ def edge_dashboards():
     return d
 
 
+@diagram
+def edge_cluster():
+    d = D("edge-cluster", 960, 450, "SENTIENT Edge cluster: two Edge nodes share one database and queue, serve local devices, and sync with the SENTIENT server")
+    d.box("srv", 360, 24, 240, 64, "SENTIENT server", "central platform", "a", icon="cloud")
+    d.group(40, 128, 880, 168, "Edge cluster", right="one site")
+    d.box("n1", 72, 184, 240, 72, "Edge node 1", "SENTIENT Edge", "s", icon="server")
+    d.box("db", 360, 184, 240, 72, "Shared database", "PostgreSQL · Kafka queue", icon="database")
+    d.box("n2", 648, 184, 240, 72, "Edge node 2", "SENTIENT Edge", "s", icon="server")
+    d.path([(480, 88), (480, 108), (192, 108), (192, 182)], start=True, label="sync", at=(336, 112))
+    d.path([(480, 108), (768, 108), (768, 182)])
+    d.path([(314, 220), (358, 220)], start=True)
+    d.path([(646, 220), (602, 220)], start=True)
+    d.stack("d1", 72, 352, 240, 64, "Devices 1–3", "MQTT · HTTP · CoAP", icon="cpu")
+    d.stack("d2", 648, 352, 240, 64, "Devices 4–6", "MQTT · HTTP · CoAP", icon="cpu")
+    d.path([(192, 350), (192, 258)])
+    d.path([(768, 350), (768, 258)])
+    d.path([(312, 384), (480, 384), (480, 318), (720, 318), (720, 258)], dash=True, label="any node, via load balancer", at=(480, 388))
+    return d
+
+
+def _sync(name, title, src_group, node, service, dst, dst_sub):
+    d = D(name, 1290, 330, title)
+    d.group(20, 30, 990, 270, src_group, k="gd")
+    d.box("dev", 44, 140, 196, 60, "Device", "telemetry, attributes", icon="cpu")
+    d.box("push", 300, 140, 190, 60, node, "rule node", "a", icon="send")
+    d.box("kafka", 560, 74, 200, 60, "Kafka", "Kafka queue type", icon="layers")
+    d.box("local", 560, 206, 200, 60, "Local database", "in-memory queue type", icon="database")
+    d.box("svc", 820, 140, 170, 60, service, icon="refresh")
+    d.box("dst", 1060, 140, 210, 60, dst, dst_sub, "s", icon="workflow")
+    d.link("dev", "push", label="message")
+    d.link("push", "kafka", mid=525).link("push", "local", mid=525)
+    d.link("kafka", "svc", mid=790).link("local", "svc", mid=790)
+    d.link("svc", "dst", label="async")
+    return d
+
+
+@diagram
+def edge_cloud_sync():
+    return _sync("edge-cloud-sync", "Edge to server sync: a device message passes the push to cloud rule node, waits in Kafka or the local database, and the cloud manager service sends it to the SENTIENT server rule chain",
+                 "SENTIENT Edge", "push to cloud", "Cloud manager", "SENTIENT server", "rule chain")
+
+
+@diagram
+def cloud_edge_sync():
+    return _sync("cloud-edge-sync", "Server to edge sync: a message passes the push to edge rule node, waits in Kafka or the local database, and the edge session sends it to the SENTIENT Edge rule chain",
+                 "SENTIENT server", "push to edge", "Edge session", "SENTIENT Edge", "rule chain")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     names = []

@@ -1,4 +1,5 @@
 +++
+draft = true
 title = "CircuitPython Client SDK"
 description = "Software development kit for client-side integration of your CircuitPython project"
 

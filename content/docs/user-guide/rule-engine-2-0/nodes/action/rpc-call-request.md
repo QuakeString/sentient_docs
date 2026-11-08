@@ -42,7 +42,7 @@ The node also processes the following optional parameters from the incoming mess
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbSendRpcRequestNodeConfiguration",
+  "title": "SendRpcRequestNodeConfiguration",
   "type": "object",
   "properties": {
     "timeoutInSeconds": {

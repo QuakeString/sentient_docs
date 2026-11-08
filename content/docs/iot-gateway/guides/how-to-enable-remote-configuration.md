@@ -170,7 +170,7 @@ Logs - a tab for setting local and remote logs, which consists of 3 main section
 - Remote logging - to configure remote logs:
   - Remote logs - enables remote logging and logs reading from the gateway.
   - Log level.
-- Local logging - for configuring local loggers (Service, Connector, Converter, TB Connection, Storage, Extension):
+- Local logging - for configuring local loggers (Service, Connector, Converter, SENTIENT connection, Storage, Extension):
   - Log level - logging level for each local logger: INFO, DEBUG, WARNING, ERROR, CRITICAL, TRACE, NONE.
   - File path - path to the log folder.
   - Log saving period.

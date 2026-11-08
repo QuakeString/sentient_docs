@@ -61,13 +61,6 @@ If both are authorized, **JWT takes priority**.
 ### API key authentication
 
 
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 4.3</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 API keys provide a simpler, automation-friendly alternative to JWT authentication.
@@ -161,6 +154,5 @@ X-Authorization: Bearer $YOUR_JWT_TOKEN
 For easier integration with the SENTIENT API, you can use SENTIENT team client libraries:
 
 - [Java REST API Client](/docs/reference/rest-client/) – client library written in Java to simplify consumption of the REST API.
-- [Python REST API Client](/docs/reference/python-rest-client/) – client library written in Python to simplify the consumption of the REST API.
 
 These clients allow you to create devices, assets, users, and other entities, as well as manage their relationships within SENTIENT.

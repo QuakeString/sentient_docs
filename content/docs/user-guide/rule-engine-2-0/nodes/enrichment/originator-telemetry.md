@@ -36,7 +36,7 @@ The node's configuration is divided into three main sections: selecting the data
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbGetTelemetryNodeConfiguration",
+  "title": "GetTelemetryNodeConfiguration",
   "type": "object",
   "properties": {
     "latestTsKeyNames": {

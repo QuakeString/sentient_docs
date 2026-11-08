@@ -20,7 +20,7 @@ in either a local database or Kafka (depending on the queue type).
 The event is then **asynchronously** pushed to the Cloud. This means the Edge device doesn't wait for a Cloud delivery confirmation before continuing with other tasks.
 Once it reaches the Cloud, it is handled by a corresponding rule chain on the Cloud.
 
-![edge→cloud diagram](/images/edge/user-guide/edge-cloud-telemetry-sync/edge-cloud-diagram.webp)
+{{ diagram(name="edge-cloud-sync") }}
 
 * To propagate attribute changes, connect the **Attributes updated** and **Attributes deleted** relations to the **"push to cloud"** node. 
 This ensures both the **key–values** and the **scope** travel with the event. 
@@ -54,7 +54,7 @@ The node converts the message into an **Edge Event** and stores it in the **Edge
 The event is then **asynchronously** pushed to the target Edge.
 Once it reaches the Edge instance, it is handled by a corresponding rule chain on the Edge.
 
-![cloud→edge diagram](/images/edge/user-guide/edge-cloud-telemetry-sync/cloud-edge-diagram.webp)
+{{ diagram(name="cloud-edge-sync") }}
 
 * To propagate attribute changes, connect the **Attributes updated** and **Attributes deleted** relations to the **"push to edge"** node.
   This ensures both the **key–values** and the **scope** travel with the event. 

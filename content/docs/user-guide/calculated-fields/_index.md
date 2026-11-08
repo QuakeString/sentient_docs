@@ -66,7 +66,7 @@ A **Simple** expression uses the argument names, `+ - * / % ^`, brackets, the fu
 (temperatureF - 32) / 1.8
 ```
 
-A **Script** returns an object with one entry per output key. SENTIENT runs scripts in **Rhai**. Scripts written in TBEL are translated when they run, so this works as it is:
+A **Script** returns an object with one entry per output key. SENTIENT runs scripts in **Rhai**. Scripts written in Rhai are translated when they run, so this works as it is:
 
 ```text
 return {

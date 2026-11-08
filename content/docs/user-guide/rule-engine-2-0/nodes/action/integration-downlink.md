@@ -52,7 +52,7 @@ The configuration specifies which integration should receive the downlink messag
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbIntegrationDownlinkConfiguration",
+  "title": "IntegrationDownlinkConfiguration",
   "type": "object",
   "properties": {
     "integrationId": {

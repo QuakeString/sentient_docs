@@ -247,7 +247,7 @@ class ProvisionClient(Client):
         open("credentials", "w").close()
 
 
-def on_tb_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
+def on_st_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
     if rc == 0:
         print("[SENTIENT client] Connected to SENTIENT with credentials: %s" % client._username.decode())
     else:
@@ -268,11 +268,11 @@ if __name__ == '__main__':
         PROVISION_REQUEST["deviceName"] = config["device_name"]
     provision_client = ProvisionClient(SENTIENT_HOST, SENTIENT_PORT, PROVISION_REQUEST)
     provision_client.provision()  # Request provisioned data
-    tb_client = provision_client.get_new_client()  # Getting client with provisioned data
-    if tb_client:
-        tb_client.on_connect = on_tb_connected  # Setting callback for connect
-        tb_client.connect(SENTIENT_HOST, SENTIENT_PORT, 60)
-        tb_client.loop_forever()  # Starting infinity loop
+    client = provision_client.get_new_client()  # Getting client with provisioned data
+    if client:
+        client.on_connect = on_st_connected  # Setting callback for connect
+        client.connect(SENTIENT_HOST, SENTIENT_PORT, 60)
+        client.loop_forever()  # Starting infinity loop
     else:
         print("Client was not created!")
 
@@ -446,7 +446,7 @@ class ProvisionClient(Client):
         open("credentials", "w").close()
 
 
-def on_tb_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
+def on_st_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
     if rc == 0:
         print("[SENTIENT client] Connected to SENTIENT with credentials: %s" % client._username.decode())
     else:
@@ -469,11 +469,11 @@ if __name__ == '__main__':
         PROVISION_REQUEST["deviceName"] = config["device_name"]
     provision_client = ProvisionClient(SENTIENT_HOST, SENTIENT_PORT, PROVISION_REQUEST)
     provision_client.provision()  # Request provisioned data
-    tb_client = provision_client.get_new_client()  # Getting client with provisioned data
-    if tb_client:
-        tb_client.on_connect = on_tb_connected  # Setting callback for connect
-        tb_client.connect(SENTIENT_HOST, SENTIENT_PORT, 60)
-        tb_client.loop_forever()  # Starting infinity loop
+    client = provision_client.get_new_client()  # Getting client with provisioned data
+    if client:
+        client.on_connect = on_st_connected  # Setting callback for connect
+        client.connect(SENTIENT_HOST, SENTIENT_PORT, 60)
+        client.loop_forever()  # Starting infinity loop
     else:
         print("Client was not created!")
 
@@ -657,7 +657,7 @@ class ProvisionClient(Client):
         open("credentials", "w").close()
 
 
-def on_tb_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
+def on_st_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
     if rc == 0:
         print("[SENTIENT client] Connected to SENTIENT with credentials: username: %s, password: %s, client id: %s" % (client._username.decode(), client._password.decode(), client._client_id.decode()))
     else:
@@ -683,11 +683,11 @@ if __name__ == '__main__':
         PROVISION_REQUEST["deviceName"] = config["device_name"]
     provision_client = ProvisionClient(SENTIENT_HOST, SENTIENT_PORT, PROVISION_REQUEST)
     provision_client.provision()  # Request provisioned data
-    tb_client = provision_client.get_new_client()  # Getting client with provisioned data
-    if tb_client:
-        tb_client.on_connect = on_tb_connected  # Setting callback for connect
-        tb_client.connect(SENTIENT_HOST, SENTIENT_PORT, 60)
-        tb_client.loop_forever()  # Starting infinity loop
+    client = provision_client.get_new_client()  # Getting client with provisioned data
+    if client:
+        client.on_connect = on_st_connected  # Setting callback for connect
+        client.connect(SENTIENT_HOST, SENTIENT_PORT, 60)
+        client.loop_forever()  # Starting infinity loop
     else:
         print("Client was not created!")
 ```
@@ -917,7 +917,7 @@ class ProvisionClient(Client):
         open("credentials", "w").close()
 
 
-def on_tb_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
+def on_st_connected(client, userdata, flags, rc):  # Callback for connect with received credentials
     if rc == 0:
         print("[SENTIENT client] Connected to SENTIENT with credentials: username: %s, password: %s, client id: %s" % (client._username, client._password, client._client_id))
     else:
@@ -943,11 +943,11 @@ if __name__ == '__main__':
     if PROVISION_REQUEST.get("hash") is not None:
         provision_client = ProvisionClient(SENTIENT_HOST, SENTIENT_PORT, PROVISION_REQUEST)
         provision_client.provision()  # Request provisioned data
-        tb_client = provision_client.get_new_client()  # Getting client with provisioned data
-        if tb_client:
-            tb_client.on_connect = on_tb_connected  # Setting callback for connect
-            tb_client.connect(SENTIENT_HOST, SENTIENT_PORT, 60)
-            tb_client.loop_forever()  # Starting infinity loop
+        client = provision_client.get_new_client()  # Getting client with provisioned data
+        if client:
+            client.on_connect = on_st_connected  # Setting callback for connect
+            client.connect(SENTIENT_HOST, SENTIENT_PORT, 60)
+            client.loop_forever()  # Starting infinity loop
         else:
             print("Client was not created!")
     else:

@@ -48,7 +48,7 @@ prepared message is then sent via the `Success` connection and is intended to be
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMsgToEmailNodeConfiguration",
+  "title": "MsgToEmailNodeConfiguration",
   "type": "object",
   "properties": {
     "fromTemplate": {

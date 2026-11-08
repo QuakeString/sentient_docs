@@ -442,7 +442,7 @@ function resetEdgeLoadMore(categoryId) {
                     <div class="edge-faq-question-title" onclick="toggleEdgeFaq(this)">Is there an official Docker image for SENTIENT Edge?</div>
                     <div class="edge-faq-answer">
                         
-                        <p>Yes, the official <a href="https://hub.docker.com/r/sentient/tb-edge" target="_blank">Docker image</a> is available on <b>Docker Hub</b>.</p>
+                        <p>Yes, the official <a href="https://hub.docker.com/r/sentient/sentient-edge" target="_blank">Docker image</a> is available on <b>Docker Hub</b>.</p>
                         
                     </div>
                 </div>

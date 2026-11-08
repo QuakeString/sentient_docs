@@ -72,7 +72,7 @@ Example: _ssh -p 2222 username@ip_address_
 Once connected, create a new directory:
 
 ```bash
-mkdir tb_edge
+mkdir st_edge
 ```
 
 

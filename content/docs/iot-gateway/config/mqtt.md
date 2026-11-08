@@ -142,7 +142,7 @@ The gateway will create a unique identifier.
 
 ![image](/images/gateway/mqtt-connector/generate-clientID-from-UI.webp)
 
-UI form with generated **Client ID** identifier e.g., *tb_gw_rfpev* — this is just an example; your value will be different.
+UI form with generated **Client ID** identifier e.g., *st_gw_rfpev* — this is just an example; your value will be different.
 
 ![image](/images/gateway/mqtt-connector/generated-clientID-from-UI.webp)
 
@@ -346,7 +346,7 @@ The device name and profile can be extracted from the incoming message. In this 
 As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/st-gw-mqtt-broker:latest
 ```
 
 
@@ -454,7 +454,7 @@ The device name and profile can be extracted from the topic. In this example, we
 As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/st-gw-mqtt-broker:latest
 ```
 
 
@@ -557,7 +557,7 @@ The device name and profile can be extracted from the message source and bytes p
 As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/st-gw-mqtt-broker:latest
 ```
 
 
@@ -655,7 +655,7 @@ in the MQTT Connector. This allows to extract the required field(s) from the `JS
 As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/st-gw-mqtt-broker:latest
 ```
 
 
@@ -770,7 +770,7 @@ in the MQTT Connector. This allows to extract the required field(s) from the `BY
 As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/st-gw-mqtt-broker:latest
 ```
 
 
@@ -883,7 +883,7 @@ names for both time-series data directly from the topic using regular expression
 As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/st-gw-mqtt-broker:latest
 ```
 
 
@@ -1804,7 +1804,7 @@ Additionally, we will update the room light level by sending a command without e
 As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/st-gw-mqtt-broker:latest
 ```
 
 
@@ -1953,7 +1953,7 @@ We want to send an RPC command to know the current state of the light level with
 As an example, we will use SENTIENT MQTT Demo Broker, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 1884:1884 sentient/tb-gw-mqtt-broker:latest
+docker run -it -p 1884:1884 sentient/st-gw-mqtt-broker:latest
 ```
 
 

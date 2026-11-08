@@ -51,7 +51,7 @@ SMS Messaging Peer-to-Peer protocol for direct carrier integration. For SMPP con
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbSendSmsNodeConfiguration",
+  "title": "SendSmsNodeConfiguration",
   "type": "object",
   "properties": {
     "numbersToTemplate": {

@@ -108,7 +108,7 @@ Controls how the node handles Lambda function errors.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbAwsLambdaNodeConfiguration",
+  "title": "AwsLambdaNodeConfiguration",
   "type": "object",
   "properties": {
     "accessKey": {

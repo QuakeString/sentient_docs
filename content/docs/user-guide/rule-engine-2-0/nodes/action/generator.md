@@ -75,7 +75,7 @@ The function must **return** an object containing the following keys:
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMsgGeneratorNodeConfiguration",
+  "title": "MsgGeneratorNodeConfiguration",
   "type": "object",
   "properties": {
     "msgCount": {
@@ -114,7 +114,7 @@ The function must **return** an object containing the following keys:
     "scriptLang": {
       "type": "string",
       "enum": [
-        "TBEL",
+        "Rhai",
         "JS"
       ],
       "description": "Script language for generator function"
@@ -125,7 +125,7 @@ The function must **return** an object containing the following keys:
     },
     "tbelScript": {
       "type": "string",
-      "description": "TBEL generator function"
+      "description": "Rhai generator function"
     }
   }
 }
@@ -164,7 +164,7 @@ The processing follows this cycle:
   "msgCount": 0,
   "periodInSeconds": 86400,
   "originatorType": "RULE_NODE",
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "tbelScript": "var msg = {};\nvar metadata = {};\nvar msgType = \"CUSTOM\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };"
 }
 ```
@@ -201,7 +201,7 @@ Once per day (every 86400 seconds), the node generates an empty message, running
   "periodInSeconds": 60,
   "originatorType": "DEVICE",
   "originatorId": "3bc2eb60-8d77-11f0-8a6c-59050cd4204f",
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "tbelScript": "var counter = 1;\nif (!prevMsg.isEmpty()) {\n    counter = prevMsg.counter + 1;\n}\n\nvar msg = {\n    counter: counter\n};\n\nvar metadata = {};\nvar msgType = \"POST_TELEMETRY_REQUEST\";\n\nreturn { msg: msg, metadata: metadata, msgType: msgType };"
 }
 ```

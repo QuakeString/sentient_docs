@@ -23,7 +23,7 @@ The `storage` command provides functionality related to storage operations.
 To retrieve the storage name, use the following command:
 
 ```bash
-tb-gateway-shell storage -n
+st-gateway-shell storage -n
 ```
 
 
@@ -31,7 +31,7 @@ tb-gateway-shell storage -n
 To obtain the count of storage events, use the following command:
 
 ```bash
-tb-gateway-shell storage -c
+st-gateway-shell storage -c
 ```
 
 
@@ -42,7 +42,7 @@ The `connector` command enables actions related to connectors.
 To list the available connectors, use the following command:
 
 ```bash
-tb-gateway-shell connector -l
+st-gateway-shell connector -l
 ```
 
 
@@ -50,7 +50,7 @@ tb-gateway-shell connector -l
 To retrieve the status of a specific connector, provide the connector name as follows:
 
 ```bash
-tb-gateway-shell connector -s <name>
+st-gateway-shell connector -s <name>
 ```
 
 
@@ -58,7 +58,7 @@ tb-gateway-shell connector -s <name>
 To obtain the configuration of a specific connector, provide the connector name as follows:
 
 ```bash
-tb-gateway-shell connector -c <name>
+st-gateway-shell connector -c <name>
 ```
 
 
@@ -69,7 +69,7 @@ The `gateway` command allows operations related to the gateway itself.
 To retrieve the status of the gateway, use the following command:
 
 ```bash
-tb-gateway-shell gateway -s
+st-gateway-shell gateway -s
 ```
 
 

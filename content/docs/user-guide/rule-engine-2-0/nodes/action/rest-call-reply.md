@@ -79,7 +79,7 @@ contains the routing parameters (service ID and request ID) in the metadata.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbSendRestApiCallReplyNodeConfiguration",
+  "title": "SendRestApiCallReplyNodeConfiguration",
   "type": "object",
   "properties": {
     "serviceIdMetaDataAttribute": {

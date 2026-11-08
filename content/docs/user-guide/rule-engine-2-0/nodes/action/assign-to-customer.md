@@ -20,7 +20,7 @@ Assigns the message originator to a specified customer.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbAssignToCustomerNodeConfiguration",
+  "title": "AssignToCustomerNodeConfiguration",
   "type": "object",
   "properties": {
     "customerNamePattern": {

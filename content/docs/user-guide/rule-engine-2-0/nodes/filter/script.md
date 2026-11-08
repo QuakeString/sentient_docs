@@ -10,19 +10,19 @@ source = "docs/user-guide/rule-engine-2-0/nodes/filter/script.md"
 Executes a user-defined function that returns a boolean value.
 The message is routed via the `True` connection if the function returns `true`, and via the `False` connection if it returns `false`.
 If script execution fails, the message is routed via the `Failure` connection.
-Supports **TBEL** and **JavaScript**.
+Supports **Rhai** and **JavaScript**.
 
 ## Configuration
 
 ### Field descriptions
 
-* **Script language** — defines which scripting language is used. Can be either *TBEL* or *JavaScript*.
+* **Script language** — defines which scripting language is used. Can be either *Rhai* or *JavaScript*.
 * **Script body** — the body of the function used to evaluate the incoming message.
   This script must return a boolean (`true` or `false`) and can access the following arguments:
     * `msg` — the message data, typically an object or array.
     * `metadata` — the message metadata.
       In JavaScript, this is an object where all values are strings.
-      In TBEL, it is a `java.util.Map<String, String>`.
+      In Rhai, it is a `java.util.Map<String, String>`.
     * `msgType` — the type of the message as a string.
 
 ### JSON Schema
@@ -30,7 +30,7 @@ Supports **TBEL** and **JavaScript**.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbJsFilterNodeConfiguration",
+  "title": "JsFilterNodeConfiguration",
   "type": "object",
   "required": [
     "scriptLang"
@@ -40,7 +40,7 @@ Supports **TBEL** and **JavaScript**.
       "type": "string",
       "description": "Scripting language used to execute the function.",
       "enum": [
-        "TBEL",
+        "Rhai",
         "JS"
       ]
     },
@@ -50,7 +50,7 @@ Supports **TBEL** and **JavaScript**.
     },
     "tbelScript": {
       "type": "string",
-      "description": "TBEL function body that must return a boolean value. Used when 'scriptLang' is 'TBEL'."
+      "description": "Rhai function body that must return a boolean value. Used when 'scriptLang' is 'Rhai'."
     }
   },
   "additionalProperties": false
@@ -61,7 +61,7 @@ Supports **TBEL** and **JavaScript**.
 ## Message processing algorithm
 
 1. Determine which script to execute based on the configured **Script language**:
-    * If *TBEL*, use the configured **TBEL script**.
+    * If *Rhai*, use the configured **Rhai script**.
     * If *JS*, use the configured **JavaScript script**.
 2. Execute the script as a function.
 3. The script must return a boolean value:
@@ -126,9 +126,9 @@ Message type: `POST_TELEMETRY_REQUEST`
 
 ---
 
-### Example 2 — TBEL script with dynamic threshold check → `True`
+### Example 2 — Rhai script with dynamic threshold check → `True`
 
-Same logic as the previous example, but implemented using TBEL.
+Same logic as the previous example, but implemented using Rhai.
 
 **Incoming message**
 
@@ -157,7 +157,7 @@ Message type: `POST_TELEMETRY_REQUEST`
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "tbelScript": "if (msgType != 'POST_TELEMETRY_REQUEST') {\n    return false;\n}\n\nforeach (key: msg.keySet()) {\n    var thresholdKey = key + 'Threshold';\n    if (metadata.containsKey(thresholdKey)) {\n        var value = msg[key];\n        var threshold = parseDouble(metadata[thresholdKey]);\n        if (value > threshold) {\n            return true;\n        }\n    }\n}\n\nreturn false;"
 }
 ```
@@ -195,7 +195,7 @@ Data:
 
 ---
 
-### Example 4 — TBEL script, runtime error → `Failure`
+### Example 4 — Rhai script, runtime error → `Failure`
 
 **Incoming message**
 
@@ -211,7 +211,7 @@ Data:
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "tbelScript": "// This script expects temperature inside a 'data' object.\nreturn msg.data.temperature > 20;"
 }
 ```

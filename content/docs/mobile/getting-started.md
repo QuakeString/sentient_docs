@@ -375,7 +375,7 @@ If versions are aligned and you&#39;re still stuck:
   - Logs/screenshots 
   - Device details (OS, version)
 
-There&#39;s a compatibility matrix between the TB platform and mobile app versions: [Check it here](/docs//mobile/)
+There&#39;s a compatibility matrix between SENTIENT and mobile app versions: [Check it here](/docs//mobile/)
 
 It&#39;s the most common reason for sign-in issues.
 

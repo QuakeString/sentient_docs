@@ -77,11 +77,11 @@ Starting from **SENTIENT 3.9**, the platform stores the full set of debug events
 
 Debug mode settings can be combined or disabled entirely.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
-<div class="tb-content-toggle" id="particleuplink">
+<div class="st-content-toggle" id="particleuplink">
     <div class="panel panel-default">
         <div class="panel-heading">
             
@@ -90,7 +90,7 @@ We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTI
             
             <a class="content-toggle-button" data-target="#tbel">
                 <div class="content-toggle-button-text">
-                    TBEL<small>Recommended</small>
+                    Rhai<small>Recommended</small>
                 </div>
             </a>
             
@@ -162,7 +162,7 @@ if (data.coreid != "api") {
 ```
 
 
-![image](/images/user-guide/integrations/particle/particle-create-uplink-converter-tbel.webp)
+![image](/images/user-guide/integrations/particle/particle-create-uplink-converter-rhai.webp)
 
                 </td></tr></table>
             </div>
@@ -257,7 +257,7 @@ The Downlink converter transforms outgoing RPC message, and then the Integration
 Create another converter named **"Downlink data converter for Particle Integration"**, and type **Downlink**. To see events - enable Debug.
 
 
-<div class="tb-content-toggle" id="particledownlink">
+<div class="st-content-toggle" id="particledownlink">
     <div class="panel panel-default">
         <div class="panel-heading">
             
@@ -266,7 +266,7 @@ Create another converter named **"Downlink data converter for Particle Integrati
             
             <a class="content-toggle-button" data-target="#tbel">
                 <div class="content-toggle-button-text">
-                    TBEL<small>Recommended</small>
+                    Rhai<small>Recommended</small>
                 </div>
             </a>
             
@@ -324,7 +324,7 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/particle/particle-create-downlink-tbel.webp)
+![image](/images/user-guide/integrations/particle/particle-create-downlink-rhai.webp)
 
                 </td></tr></table>
             </div>
@@ -431,7 +431,7 @@ Now, we should create an integration in SENTIENT. To do this, you can follow nex
 1. If you added a downlink converter and created a token - toggle **Allow downlink** and paste your access token. Click **Add** to create integration.
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/integrations/particle/tb-create-integration.webp" alt="Go to **Integrations** section and click Add new integration button. Name it **Particle Integration**, and select type **Particle**." loading="lazy"><figcaption>Go to **Integrations** section and click Add new integration button. Name it **Particle Integration**, and select type **Particle**.</figcaption></figure><figure><img src="/images/user-guide/integrations/particle/tb-select-uplink.webp" alt="Now, you can select the recently created **Uplink data Converter for Particle Integration**. Click **Next**." loading="lazy"><figcaption>Now, you can select the recently created **Uplink data Converter for Particle Integration**. Click **Next**.</figcaption></figure><figure><img src="/images/user-guide/integrations/particle/tb-select-downlink.webp" alt="If you added a downlink converter, select it. Click **Next**." loading="lazy"><figcaption>If you added a downlink converter, select it. Click **Next**.</figcaption></figure><figure><img src="/images/user-guide/integrations/particle/tb-create-integration-configuration.webp" alt="If you added a downlink converter and created a token - toggle **Allow downlink** and paste your access token. Click **Add** to create integration." loading="lazy"><figcaption>If you added a downlink converter and created a token - toggle **Allow downlink** and paste your access token. Click **Add** to create integration.</figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/integrations/particle/sentient-create-integration.webp" alt="Go to **Integrations** section and click Add new integration button. Name it **Particle Integration**, and select type **Particle**." loading="lazy"><figcaption>Go to **Integrations** section and click Add new integration button. Name it **Particle Integration**, and select type **Particle**.</figcaption></figure><figure><img src="/images/user-guide/integrations/particle/st-select-uplink.webp" alt="Now, you can select the recently created **Uplink data Converter for Particle Integration**. Click **Next**." loading="lazy"><figcaption>Now, you can select the recently created **Uplink data Converter for Particle Integration**. Click **Next**.</figcaption></figure><figure><img src="/images/user-guide/integrations/particle/st-select-downlink.webp" alt="If you added a downlink converter, select it. Click **Next**." loading="lazy"><figcaption>If you added a downlink converter, select it. Click **Next**.</figcaption></figure><figure><img src="/images/user-guide/integrations/particle/sentient-create-integration-configuration.webp" alt="If you added a downlink converter and created a token - toggle **Allow downlink** and paste your access token. Click **Add** to create integration." loading="lazy"><figcaption>If you added a downlink converter and created a token - toggle **Allow downlink** and paste your access token. Click **Add** to create integration.</figcaption></figure></div>
 
 
 ### Integration on particle.io
@@ -456,17 +456,17 @@ To do this, please follow next steps:
 
 Once integration is created and any message arrives to it - you will be able to see a new device in your **Devices**.
 
-![image](/images/user-guide/integrations/particle/tb-new-device-created.webp)
+![image](/images/user-guide/integrations/particle/st-new-device-created.webp)
 
 ### Rule Chain configuration
 
 When integration is configured and ready to use, we need to go to **Rule Chains**, choose **"Root Rule Chain"** and create rule node **Integration Downlink**. Input some name here, choose earlier created Particle integration, and tap **Add**.
 
-![image](/images/user-guide/integrations/particle/tb-create-downlink-rule-node.webp)
+![image](/images/user-guide/integrations/particle/st-create-downlink-rule-node.webp)
 
 After these steps, we need to tap on a right grey square of rule node **message type switch** and drag this square to left side of **Integration Downlink**. In pop-up window, add **"RPC Request to Device"** relation and tap "Add".
 
-![image](/images/user-guide/integrations/particle/tb-root-rule-chain.webp)
+![image](/images/user-guide/integrations/particle/st-root-rule-chain.webp)
 
 Click on check mark in bottom right corner of the screen to save the Root Rule Chain.
 

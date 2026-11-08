@@ -27,7 +27,7 @@ If you're copying from the message **data**, it must be a valid JSON object. If 
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbCopyKeysNodeConfiguration",
+  "title": "CopyKeysNodeConfiguration",
   "type": "object",
   "properties": {
     "copyFrom": {

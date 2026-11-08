@@ -26,7 +26,7 @@ The incoming message **data** must be a valid JSON object or array. If the data 
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbJsonPathNodeConfiguration",
+  "title": "JsonPathNodeConfiguration",
   "type": "object",
   "properties": {
     "jsonPath": {

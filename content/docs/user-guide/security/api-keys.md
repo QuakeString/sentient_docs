@@ -8,13 +8,6 @@ status = "imported"
 checked = ""
 source = "docs/user-guide/security/api-keys.md"
 +++
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 4.3</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 API keys provide a simpler alternative to password-based authentication for the SENTIENT API.   

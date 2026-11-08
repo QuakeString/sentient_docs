@@ -483,7 +483,7 @@ More usage examples can be found in the [Example usage](/docs/iot-gateway/config
 As an example, we will use SENTIENT Modbus Demo Server, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 
@@ -576,7 +576,7 @@ Full configuration for Modbus connector for the example above will look like thi
 As an example, we will use SENTIENT Modbus Demo Server, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 
@@ -670,7 +670,7 @@ Full configuration for Modbus connector for the example above will look like thi
 As an example, we will use SENTIENT Modbus Demo Server, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 
@@ -764,7 +764,7 @@ Full configuration for Modbus connector for the example above will look like thi
 As an example, we will use SENTIENT Modbus Demo Server, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 
@@ -858,7 +858,7 @@ mapping in your Modbus connector configuration.
 As an example, we will use SENTIENT Modbus Demo Server, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 
@@ -1089,7 +1089,7 @@ Attribute updates allow you to update register values in the Modbus server. You 
 As an example, we will use SENTIENT Modbus Demo Server, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 
@@ -1207,7 +1207,7 @@ or via Gateway.
 As an example, we will use SENTIENT Modbus Demo Server, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 
@@ -1315,7 +1315,7 @@ them manually.
 As an example, we will use SENTIENT Modbus Demo Server, which can be run using Docker and the following command:
 
 ```bash
-docker run -it -p 5021:5021 sentient/tb-gw-modbus-server:latest
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
 ```
 
 

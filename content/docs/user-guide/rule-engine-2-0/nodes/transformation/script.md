@@ -1,6 +1,6 @@
 +++
 title = "script"
-description = "Executes user-defined TBEL or JavaScript function to transform messages by modifying their data, metadata, and type to produce single or multiple transformed output messages."
+description = "Executes user-defined Rhai or JavaScript function to transform messages by modifying their data, metadata, and type to produce single or multiple transformed output messages."
 
 [extra]
 status = "imported"
@@ -9,13 +9,13 @@ source = "docs/user-guide/rule-engine-2-0/nodes/transformation/script.md"
 +++
 Executes user-defined function to transform an incoming message. The script can modify the message data, metadata, and type. 
 Based on the script's logic, it can produce a single modified message or multiple new messages, each with a customized content.
-Supports **TBEL** and **JavaScript**.
+Supports **Rhai** and **JavaScript**.
 
 ## Configuration
 
 The node provides a choice of scripting language and a code editor to write the transformation logic.
 
-- **Language Selector** - choose between **TBEL** (SENTIENT Expression Language) or **JavaScript**.
+- **Language Selector** - choose between **Rhai** (SENTIENT Expression Language) or **JavaScript**.
 - **Script Editor** - a text area where you write the body of the transformation function.
 
 ### Transformation function
@@ -38,14 +38,14 @@ The function must **return** an object (for a single output message) or an array
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbTransformMsgNodeConfiguration",
+  "title": "TransformMsgNodeConfiguration",
   "type": "object",
   "properties": {
     "scriptLang": {
       "type": "string",
       "enum": [
         "JS",
-        "TBEL"
+        "Rhai"
       ],
       "description": "The scripting language to use."
     },
@@ -55,7 +55,7 @@ The function must **return** an object (for a single output message) or an array
     },
     "tbelScript": {
       "type": "string",
-      "description": "The TBEL transformation function body. Used when 'scriptLang' is set to 'TBEL'."
+      "description": "The Rhai transformation function body. Used when 'scriptLang' is set to 'Rhai'."
     }
   },
   "required": [
@@ -125,7 +125,7 @@ Metadata:
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "tbelScript": "// This array will hold the outgoing API request messages\nvar outgoingMessages = [];\n\n// Get the required values from the incoming message and metadata\nvar apiKey = metadata.apiKey;\nvar serialId = metadata.serialId;\nvar startTime = msg.startTime;\nvar endTime = msg.endTime;\n\n// Loop through each metric specified in the incoming message's data\nforeach(metric: msg.metrics) {\n    // For each metric, construct the body of the JSON-RPC request\n    var rpcRequestBody = {\n        jsonrpc: \"2.0\",\n        method: \"getData\",\n        version: \"v10.1\",\n        id: 1,\n        params: {\n            apiToken: apiKey,\n            serialId: serialId,\n            metric: metric, // This is the current metric from the array\n            startTime: startTime,\n            endTime: endTime\n        }\n    };\n\n    // Create the final outgoing message object\n    var outgoingMessage = {\n        // The API request body becomes the data of the new message\n        msg: rpcRequestBody,\n        // We can pass along the original metadata\n        metadata: metadata,\n        // Set a new type to indicate this is an API request\n        msgType: 'API_REQUEST'\n    };\n\n    // Add the newly created message to our list of outputs\n    outgoingMessages.push(outgoingMessage);\n}\n\n// Return the array of messages. One message will be sent for each metric\nreturn outgoingMessages;"
 }
 ```
@@ -256,7 +256,7 @@ Data:
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "tbelScript": "// Initialize an object to build the outgoing message\nvar output = {};\n\n// Create an array to store the formatted telemetry\nvar parsedTelemetry = [];\n\n// Loop through each observation in the incoming message\nforeach(observation: msg.observations) {\n    // Create a 'values' object for the current reading\n    var values = {};\n\n    // Set the telemetry key (e.g., \"pressure\") and its value.\n    values.put(msg.metric, observation.value);\n    // Add the formatted data point to the results array\n    parsedTelemetry.add({\n        // 'ts': Parse the time string and convert to a Unix timestamp (ms)\n        ts: new Date(observation.time).getTime(), // 'values': The telemetry key-value pair\n        values: values\n    });\n}\n\n// Set the outgoing message's data to the array of telemetry\noutput.msg = parsedTelemetry;\n\n// Copy the original metadata to the new message\noutput.metadata = metadata;\n\n// Set the message type for telemetry processing\noutput.msgType = \"POST_TELEMETRY_REQUEST\";\n\n// Return the complete outgoing message object\nreturn output;"
 }
 ```

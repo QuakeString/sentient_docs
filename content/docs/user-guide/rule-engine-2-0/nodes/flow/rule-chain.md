@@ -38,7 +38,7 @@ When disabled, all messages are forwarded to the rule chain specified in the con
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbRuleChainInputNodeConfiguration",
+  "title": "RuleChainInputNodeConfiguration",
   "type": "object",
   "properties": {
     "ruleChainId": {

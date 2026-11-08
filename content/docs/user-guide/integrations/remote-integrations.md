@@ -92,24 +92,24 @@ Please use one of the next steps.
 Execute the following command to pull the image:
 
 ```bash
-docker pull sentient/tb-pe-http-integration:
+docker pull sentient/sentient-http-integration:
 ```
 
 
 Execute the following command to create volume for the integration logs (799 is the user id of SENTIENT non-root docker user):
 
 ```bash
-mkdir -p ~/.tb-pe-http-integration-logs && sudo chown -R 799:799 ~/.tb-pe-http-integration-logs
+mkdir -p ~/.sentient-http-integration-logs && sudo chown -R 799:799 ~/.sentient-http-integration-logs
 ```
 
 
 Execute the following command to run the integration:
 
 ```bash
-docker run -it -p 8082:8082 -v ~/.tb-pe-http-integration-logs:/var/log/tb-http-integration \
+docker run -it -p 8082:8082 -v ~/.sentient-http-integration-logs:/var/log/sentient-http-integration \
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
---name my-tb-pe-http-integration --restart always sentient/tb-pe-http-integration:
+--name my-sentient-http-integration --restart always sentient/sentient-http-integration:
 ```
 
 
@@ -121,12 +121,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v ~/.tb-pe-http-integration-logs:/var/log/tb-http-integration`   - mounts the host's dir `~/.tb-pe-http-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-http-integration`             - friendly local name of this machine;
+- `-v ~/.sentient-http-integration-logs:/var/log/sentient-http-integration`   - mounts the host's dir `~/.sentient-http-integration-logs` to SENTIENT logs directory;
+- `--name sentient-http-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-http-integration:`          - docker image.
+- `sentient/sentient-http-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-http-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-http-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -144,21 +144,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-http-integration
+docker attach sentient-http-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-http-integration
+docker stop sentient-http-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-http-integration
+docker start sentient-http-integration
 ```
 
 
@@ -169,24 +169,24 @@ docker start tb-pe-http-integration
 Execute the following command to pull the image:
 
 ```bash
-docker pull sentient/tb-pe-mqtt-integration:
+docker pull sentient/sentient-mqtt-integration:
 ```
 
 
 Execute the following command to create volume for the integration logs (799 is the user id of SENTIENT non-root docker user):
 
 ```bash
-mkdir -p ~/.tb-pe-mqtt-integration-logs && sudo chown -R 799:799 ~/.tb-pe-mqtt-integration-logs
+mkdir -p ~/.sentient-mqtt-integration-logs && sudo chown -R 799:799 ~/.sentient-mqtt-integration-logs
 ```
 
 
 Execute the following command to run the integration:
 
 ```bash
-docker run -it -v ~/.tb-pe-mqtt-integration-logs:/var/log/tb-mqtt-integration \
+docker run -it -v ~/.sentient-mqtt-integration-logs:/var/log/sentient-mqtt-integration \
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
---name my-tb-pe-mqtt-integration --restart always sentient/tb-pe-mqtt-integration:
+--name my-sentient-mqtt-integration --restart always sentient/sentient-mqtt-integration:
 ```
 
 
@@ -198,12 +198,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v ~/.tb-pe-mqtt-integration-logs:/var/log/tb-mqtt-integration`   - mounts the host's dir `~/.tb-pe-mqtt-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-mqtt-integration`             - friendly local name of this machine;
+- `-v ~/.sentient-mqtt-integration-logs:/var/log/sentient-mqtt-integration`   - mounts the host's dir `~/.sentient-mqtt-integration-logs` to SENTIENT logs directory;
+- `--name sentient-mqtt-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-mqtt-integration:`          - docker image.
+- `sentient/sentient-mqtt-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-mqtt-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-mqtt-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -221,21 +221,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-mqtt-integration
+docker attach sentient-mqtt-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-mqtt-integration
+docker stop sentient-mqtt-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-mqtt-integration
+docker start sentient-mqtt-integration
 ```
 
 
@@ -246,24 +246,24 @@ docker start tb-pe-mqtt-integration
 Execute the following command to pull the image:
 
 ```bash
-docker pull sentient/tb-pe-aws-integration:
+docker pull sentient/sentient-aws-integration:
 ```
 
 
 Execute the following command to create volume for the integration logs (799 is the user id of SENTIENT non-root docker user):
 
 ```bash
-mkdir -p ~/.tb-pe-aws-integration-logs && sudo chown -R 799:799 ~/.tb-pe-aws-integration-logs
+mkdir -p ~/.sentient-aws-integration-logs && sudo chown -R 799:799 ~/.sentient-aws-integration-logs
 ```
 
 
 Execute the following command to run the integration:
 
 ```bash
-docker run -it -v ~/.tb-pe-aws-integration-logs:/var/log/tb-aws-integration \
+docker run -it -v ~/.sentient-aws-integration-logs:/var/log/sentient-aws-integration \
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
---name my-tb-pe-aws-integration --restart always sentient/tb-pe-aws-integration:
+--name my-sentient-aws-integration --restart always sentient/sentient-aws-integration:
 ```
 
 
@@ -275,12 +275,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v ~/.tb-pe-aws-integration-logs:/var/log/tb-aws-integration`   - mounts the host's dir `~/.tb-pe-aws-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-aws-integration`             - friendly local name of this machine;
+- `-v ~/.sentient-aws-integration-logs:/var/log/sentient-aws-integration`   - mounts the host's dir `~/.sentient-aws-integration-logs` to SENTIENT logs directory;
+- `--name sentient-aws-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-aws-integration:`          - docker image.
+- `sentient/sentient-aws-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-aws-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-aws-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -298,21 +298,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-aws-integration
+docker attach sentient-aws-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-aws-integration
+docker stop sentient-aws-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-aws-integration
+docker start sentient-aws-integration
 ```
 
 
@@ -323,24 +323,24 @@ docker start tb-pe-aws-integration
 Execute the following command to pull the image:
 
 ```bash
-docker pull sentient/tb-pe-azure-integration:
+docker pull sentient/sentient-azure-integration:
 ```
 
 
 Execute the following command to create volume for the integration logs (799 is the user id of SENTIENT non-root docker user):
 
 ```bash
-mkdir -p ~/.tb-pe-azure-integration-logs && sudo chown -R 799:799 ~/.tb-pe-azure-integration-logs
+mkdir -p ~/.sentient-azure-integration-logs && sudo chown -R 799:799 ~/.sentient-azure-integration-logs
 ```
 
 
 Execute the following command to run the integration:
 
 ```bash
-docker run -it -v ~/.tb-pe-azure-integration-logs:/var/log/tb-azure-integration \
+docker run -it -v ~/.sentient-azure-integration-logs:/var/log/sentient-azure-integration \
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
---name my-tb-pe-azure-integration --restart always sentient/tb-pe-azure-integration:
+--name my-sentient-azure-integration --restart always sentient/sentient-azure-integration:
 ```
 
 
@@ -352,12 +352,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v ~/.tb-pe-azure-integration-logs:/var/log/tb-azure-integration`   - mounts the host's dir `~/.tb-pe-azure-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-azure-integration`             - friendly local name of this machine;
+- `-v ~/.sentient-azure-integration-logs:/var/log/sentient-azure-integration`   - mounts the host's dir `~/.sentient-azure-integration-logs` to SENTIENT logs directory;
+- `--name sentient-azure-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-azure-integration:`          - docker image.
+- `sentient/sentient-azure-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-azure-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-azure-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -375,21 +375,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-azure-integration
+docker attach sentient-azure-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-azure-integration
+docker stop sentient-azure-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-azure-integration
+docker start sentient-azure-integration
 ```
 
 
@@ -400,24 +400,24 @@ docker start tb-pe-azure-integration
 Execute the following command to pull the image:
 
 ```bash
-docker pull sentient/tb-pe-opc-ua-integration:
+docker pull sentient/sentient-opc-ua-integration:
 ```
 
 
 Execute the following command to create volume for the integration logs (799 is the user id of SENTIENT non-root docker user):
 
 ```bash
-mkdir -p ~/.tb-pe-opc-ua-integration-logs && sudo chown -R 799:799 ~/.tb-pe-opc-ua-integration-logs
+mkdir -p ~/.sentient-opc-ua-integration-logs && sudo chown -R 799:799 ~/.sentient-opc-ua-integration-logs
 ```
 
 
 Execute the following command to run the integration:
 
 ```bash
-docker run -it -v ~/.tb-pe-opc-ua-integration-logs:/var/log/tb-opc-ua-integration \
+docker run -it -v ~/.sentient-opc-ua-integration-logs:/var/log/sentient-opc-ua-integration \
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
---name my-tb-pe-opc-ua-integration --restart always sentient/tb-pe-opc-ua-integration:
+--name my-sentient-opc-ua-integration --restart always sentient/sentient-opc-ua-integration:
 ```
 
 
@@ -429,12 +429,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v ~/.tb-pe-opc-ua-integration-logs:/var/log/tb-opc-ua-integration`   - mounts the host's dir `~/.tb-pe-opc-ua-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-opc-ua-integration`             - friendly local name of this machine;
+- `-v ~/.sentient-opc-ua-integration-logs:/var/log/sentient-opc-ua-integration`   - mounts the host's dir `~/.sentient-opc-ua-integration-logs` to SENTIENT logs directory;
+- `--name sentient-opc-ua-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-opc-ua-integration:`          - docker image.
+- `sentient/sentient-opc-ua-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-opc-ua-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-opc-ua-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -452,21 +452,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-opc-ua-integration
+docker attach sentient-opc-ua-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-opc-ua-integration
+docker stop sentient-opc-ua-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-opc-ua-integration
+docker start sentient-opc-ua-integration
 ```
 
 
@@ -477,24 +477,24 @@ docker start tb-pe-opc-ua-integration
 Execute the following command to pull the image:
 
 ```bash
-docker pull sentient/tb-pe-tcp-udp-integration:
+docker pull sentient/sentient-tcp-udp-integration:
 ```
 
 
 Execute the following command to create volume for the integration logs (799 is the user id of SENTIENT non-root docker user):
 
 ```bash
-mkdir -p ~/.tb-pe-tcp-udp-integration-logs && sudo chown -R 799:799 ~/.tb-pe-tcp-udp-integration-logs
+mkdir -p ~/.sentient-tcp-udp-integration-logs && sudo chown -R 799:799 ~/.sentient-tcp-udp-integration-logs
 ```
 
 
 Execute the following command to run the integration:
 
 ```bash
-docker run -it -p 10560:10560 -v ~/.tb-pe-tcp-udp-integration-logs:/var/log/tb-tcp-udp-integration  \
+docker run -it -p 10560:10560 -v ~/.sentient-tcp-udp-integration-logs:/var/log/sentient-tcp-udp-integration  \
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
---name my-tb-pe-tcp-udp-integration --restart always sentient/tb-pe-tcp-udp-integration:
+--name my-sentient-tcp-udp-integration --restart always sentient/sentient-tcp-udp-integration:
 ```
 
 
@@ -507,12 +507,12 @@ Where:
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
 - `-p 10560:10560` - connect local port 10560 to exposed internal 10560 port for the integration. If the exposed port is UDP, add `/udp` at the end, e.g. `-p 11560:11560/udp` 
-- `-v ~/.tb-pe-tcp-udp-integration-logs:/var/log/tb-tcp-udp-integration`   - mounts the host's dir `~/.tb-pe-tcp-udp-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-tcp-udp-integration`             - friendly local name of this machine;
+- `-v ~/.sentient-tcp-udp-integration-logs:/var/log/sentient-tcp-udp-integration`   - mounts the host's dir `~/.sentient-tcp-udp-integration-logs` to SENTIENT logs directory;
+- `--name sentient-tcp-udp-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-tcp-udp-integration:`          - docker image.
+- `sentient/sentient-tcp-udp-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-tcp-udp-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-tcp-udp-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -530,21 +530,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-tcp-udp-integration
+docker attach sentient-tcp-udp-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-tcp-udp-integration
+docker stop sentient-tcp-udp-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-tcp-udp-integration
+docker start sentient-tcp-udp-integration
 ```
 
 
@@ -555,24 +555,24 @@ docker start tb-pe-tcp-udp-integration
 Execute the following command to pull the image:
 
 ```bash
-docker pull sentient/tb-pe-coap-integration:
+docker pull sentient/sentient-coap-integration:
 ```
 
 
 Execute the following command to create volume for the integration logs (799 is the user id of SENTIENT non-root docker user):
 
 ```bash
-mkdir -p ~/.tb-pe-coap-integration-logs && sudo chown -R 799:799 ~/.tb-pe-coap-integration-logs
+mkdir -p ~/.sentient-coap-integration-logs && sudo chown -R 799:799 ~/.sentient-coap-integration-logs
 ```
 
 
 Execute the following command to run the integration:
 
 ```bash
-docker run -it -p 5683:5683/udp -v ~/.tb-pe-coap-integration-logs:/var/log/tb-coap-integration  \
+docker run -it -p 5683:5683/udp -v ~/.sentient-coap-integration-logs:/var/log/sentient-coap-integration  \
 -e "RPC_HOST=localhost" -e "RPC_PORT=9090" \
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" \
---name my-tb-pe-coap-integration --restart always sentient/tb-pe-coap-integration:
+--name my-sentient-coap-integration --restart always sentient/sentient-coap-integration:
 ```
 
 
@@ -585,12 +585,12 @@ Where:
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
 - `-p 5683:5683/udp` - connect local udp port 5683 to exposed internal 5683 udp port for the integration.
-- `-v ~/.tb-pe-coap-integration-logs:/var/log/tb-coap-integration`   - mounts the host's dir `~/.tb-pe-coap-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-coap-integration`             - friendly local name of this machine;
+- `-v ~/.sentient-coap-integration-logs:/var/log/sentient-coap-integration`   - mounts the host's dir `~/.sentient-coap-integration-logs` to SENTIENT logs directory;
+- `--name sentient-coap-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-coap-integration:`          - docker image.
+- `sentient/sentient-coap-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-coap-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-coap-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -608,21 +608,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-coap-integration
+docker attach sentient-coap-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-coap-integration
+docker stop sentient-coap-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-coap-integration
+docker start sentient-coap-integration
 ```
 
 
@@ -704,7 +704,7 @@ js:
     max_errors: "${LOCAL_JS_SANDBOX_MAX_ERRORS:3}"
 
 service:
-  type: "${TB_SERVICE_TYPE:tb-integration}"
+  type: "${SENTIENT_SERVICE_TYPE:sentient-integration}"
 ```  
 
 - **Troubleshooting**
@@ -729,21 +729,21 @@ See corresponding [Linux](https://developers.google.com/speed/public-dns/docs/us
 <div class="st-tab" data-label="HTTP Integrations(HTTP, Sigfox, ThingPark, OceanConnect and  T-Mobile IoT CDP)">
 
 Windows users should use docker managed volume for remote integration logs. 
-Create docker volume (for ex. `tb-http-integration-logs`) before executing docker run command:
+Create docker volume (for ex. `sentient-http-integration-logs`) before executing docker run command:
 Open "Docker Quickstart Terminal". Execute the following command to create docker volume:
 
 ``` 
-docker volume create tb-pe-http-integration-logs
+docker volume create sentient-http-integration-logs
 ```
 
 
 Execute the following command to run this docker directly:
 
 ```bash
-docker run -it -v tb-pe-http-integration-logs:/var/log/tb-http-integration `
+docker run -it -v sentient-http-integration-logs:/var/log/sentient-http-integration `
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" `
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" `
---name my-tb-pe-http-integration --restart always sentient/tb-pe-http-integration:
+--name my-sentient-http-integration --restart always sentient/sentient-http-integration:
 ```
 
 
@@ -755,12 +755,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v tb-pe-http-integration-logs:/var/log/tb-http-integration`   - mounts the host's dir `~/.tb-pe-http-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-http-integration`             - friendly local name of this machine;
+- `-v sentient-http-integration-logs:/var/log/sentient-http-integration`   - mounts the host's dir `~/.sentient-http-integration-logs` to SENTIENT logs directory;
+- `--name sentient-http-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-http-integration:`          - docker image.
+- `sentient/sentient-http-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-http-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-http-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -778,21 +778,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-http-integration
+docker attach sentient-http-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-http-integration
+docker stop sentient-http-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-http-integration
+docker start sentient-http-integration
 ```
 
 
@@ -801,20 +801,20 @@ docker start tb-pe-http-integration
 <div class="st-tab" data-label="MQTT Integrations(MQTT, AWS IoT, IBM Watson, The Things Network)">
 
 Windows users should use docker managed volume for remote integration logs. 
-Create docker volume (for ex. `tb-mqtt-integration-logs`) before executing docker run command:
+Create docker volume (for ex. `sentient-mqtt-integration-logs`) before executing docker run command:
 Open "Docker Quickstart Terminal". Execute the following command to create docker volume:
 
 ``` 
-docker volume create tb-pe-mqtt-integration-logs
+docker volume create sentient-mqtt-integration-logs
 ```
 
 Execute the following command to run this docker directly:
 
 ```bash
-docker run -it -v tb-pe-mqtt-integration-logs:/var/log/tb-mqtt-integration `
+docker run -it -v sentient-mqtt-integration-logs:/var/log/sentient-mqtt-integration `
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" `
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" `
---name my-tb-pe-mqtt-integration --restart always sentient/tb-pe-mqtt-integration:
+--name my-sentient-mqtt-integration --restart always sentient/sentient-mqtt-integration:
 ```
 
 
@@ -826,12 +826,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v tb-pe-mqtt-integration-logs:/var/log/tb-mqtt-integration`   - mounts the host's dir `~/.tb-pe-mqtt-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-mqtt-integration`             - friendly local name of this machine;
+- `-v sentient-mqtt-integration-logs:/var/log/sentient-mqtt-integration`   - mounts the host's dir `~/.sentient-mqtt-integration-logs` to SENTIENT logs directory;
+- `--name sentient-mqtt-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-mqtt-integration:`          - docker image.
+- `sentient/sentient-mqtt-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-mqtt-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-mqtt-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -849,21 +849,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-mqtt-integration
+docker attach sentient-mqtt-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-mqtt-integration
+docker stop sentient-mqtt-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-mqtt-integration
+docker start sentient-mqtt-integration
 ```
 
 
@@ -872,21 +872,21 @@ docker start tb-pe-mqtt-integration
 <div class="st-tab" data-label="AWS SQS Integration">
 
 Windows users should use docker managed volume for remote integration logs. 
-Create docker volume (for ex. `tb-aws-integration-logs`) before executing docker run command:
+Create docker volume (for ex. `sentient-aws-integration-logs`) before executing docker run command:
 Open "Docker Quickstart Terminal". Execute the following command to create docker volume:
 
 ``` 
-docker volume create tb-pe-aws-integration-logs
+docker volume create sentient-aws-integration-logs
 ```
 
 
 Execute the following command to run this docker directly:
 
 ```bash
-docker run -it -v tb-pe-aws-integration-logs:/var/log/tb-aws-integration `
+docker run -it -v sentient-aws-integration-logs:/var/log/sentient-aws-integration `
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" `
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" `
---name my-tb-pe-aws-integration --restart always sentient/tb-pe-aws-integration:
+--name my-sentient-aws-integration --restart always sentient/sentient-aws-integration:
 ```
 
 
@@ -898,12 +898,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v tb-pe-aws-integration-logs:/var/log/tb-aws-integration`   - mounts the host's dir `~/.tb-pe-aws-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-aws-integration`             - friendly local name of this machine;
+- `-v sentient-aws-integration-logs:/var/log/sentient-aws-integration`   - mounts the host's dir `~/.sentient-aws-integration-logs` to SENTIENT logs directory;
+- `--name sentient-aws-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-aws-integration:`          - docker image.
+- `sentient/sentient-aws-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-aws-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-aws-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -921,21 +921,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-aws-integration
+docker attach sentient-aws-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-aws-integration
+docker stop sentient-aws-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-aws-integration
+docker start sentient-aws-integration
 ```
 
 
@@ -944,21 +944,21 @@ docker start tb-pe-aws-integration
 <div class="st-tab" data-label="Azure Event HubIntegration">
 
 Windows users should use docker managed volume for remote integration logs. 
-Create docker volume (for ex. `tb-azure-integration-logs`) before executing docker run command:
+Create docker volume (for ex. `sentient-azure-integration-logs`) before executing docker run command:
 Open "Docker Quickstart Terminal". Execute the following command to create docker volume:
 
 ``` 
-docker volume create tb-pe-azure-integration-logs
+docker volume create sentient-azure-integration-logs
 ```
 
 
 Execute the following command to run this docker directly:
 
 ```bash
-docker run -it -v tb-pe-azure-integration-logs:/var/log/tb-azure-integration `
+docker run -it -v sentient-azure-integration-logs:/var/log/sentient-azure-integration `
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" `
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" `
---name my-tb-pe-azure-integration --restart always sentient/tb-pe-azure-integration:
+--name my-sentient-azure-integration --restart always sentient/sentient-azure-integration:
 ```
 
 
@@ -970,12 +970,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v tb-pe-azure-integration-logs:/var/log/tb-azure-integration`   - mounts the host's dir `~/.tb-pe-azure-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-azure-integration`             - friendly local name of this machine;
+- `-v sentient-azure-integration-logs:/var/log/sentient-azure-integration`   - mounts the host's dir `~/.sentient-azure-integration-logs` to SENTIENT logs directory;
+- `--name sentient-azure-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-azure-integration:`          - docker image.
+- `sentient/sentient-azure-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-azure-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-azure-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -993,21 +993,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-azure-integration
+docker attach sentient-azure-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-azure-integration
+docker stop sentient-azure-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-azure-integration
+docker start sentient-azure-integration
 ```
 
 
@@ -1016,21 +1016,21 @@ docker start tb-pe-azure-integration
 <div class="st-tab" data-label="OPC UA Integration">
 
 Windows users should use docker managed volume for remote integration logs. 
-Create docker volume (for ex. `tb-opc-ua-integration-logs`) before executing docker run command:
+Create docker volume (for ex. `sentient-opc-ua-integration-logs`) before executing docker run command:
 Open "Docker Quickstart Terminal". Execute the following command to create docker volume:
 
 ``` 
-docker volume create tb-pe-opc-ua-integration-logs
+docker volume create sentient-opc-ua-integration-logs
 ```
 
 
 Execute the following command to run this docker directly:
 
 ```bash
-docker run -it -v tb-pe-opc-ua-integration-logs:/var/log/tb-opc-ua-integration `
+docker run -it -v sentient-opc-ua-integration-logs:/var/log/sentient-opc-ua-integration `
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" `
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" `
---name my-tb-pe-opc-ua-integration --restart always sentient/tb-pe-opc-ua-integration:
+--name my-sentient-opc-ua-integration --restart always sentient/sentient-opc-ua-integration:
 ```
 
 
@@ -1042,12 +1042,12 @@ Where:
 - `YOUR_SECRET` - placeholder for your **integration secret** obtained on [create remote integration in SENTIENT](#create-remote-integration-in-sentient);
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
-- `-v tb-pe-opc-ua-integration-logs:/var/log/tb-opc-ua-integration`   - mounts the host's dir `~/.tb-pe-opc-ua-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-opc-ua-integration`             - friendly local name of this machine;
+- `-v sentient-opc-ua-integration-logs:/var/log/sentient-opc-ua-integration`   - mounts the host's dir `~/.sentient-opc-ua-integration-logs` to SENTIENT logs directory;
+- `--name sentient-opc-ua-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-opc-ua-integration:`          - docker image.
+- `sentient/sentient-opc-ua-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-opc-ua-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-opc-ua-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1065,21 +1065,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-opc-ua-integration
+docker attach sentient-opc-ua-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-opc-ua-integration
+docker stop sentient-opc-ua-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-opc-ua-integration
+docker start sentient-opc-ua-integration
 ```
 
 
@@ -1088,21 +1088,21 @@ docker start tb-pe-opc-ua-integration
 <div class="st-tab" data-label="TCP/UDP Integration">
 
 Windows users should use docker managed volume for remote integration logs. 
-Create docker volume (for ex. `tb-tcp-udp-integration-logs`) before executing docker run command:
+Create docker volume (for ex. `sentient-tcp-udp-integration-logs`) before executing docker run command:
 Open "Docker Quickstart Terminal". Execute the following command to create docker volume:
 
 ``` 
-docker volume create tb-pe-tcp-udp-integration-logs
+docker volume create sentient-tcp-udp-integration-logs
 ```
 
 
 Execute the following command to run this docker directly:
 
 ```bash
-docker run -it -p 10560:10560 -v tb-pe-tcp-udp-integration-logs:/var/log/tb-tcp-udp-integration `
+docker run -it -p 10560:10560 -v sentient-tcp-udp-integration-logs:/var/log/sentient-tcp-udp-integration `
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" `
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" `
---name my-tb-pe-tcp-udp-integration --restart always sentient/tb-pe-tcp-udp-integration:
+--name my-sentient-tcp-udp-integration --restart always sentient/sentient-tcp-udp-integration:
 ```
 
 
@@ -1115,12 +1115,12 @@ Where:
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
 - `-p 10560:10560` - connect local port 10560 to exposed internal 10560 port for the integration
-- `-v tb-pe-tcp-udp-integration-logs:/var/log/tb-tcp-udp-integration`   - mounts the host's dir `~/.tb-pe-tcp-udp-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-tcp-udp-integration`             - friendly local name of this machine;
+- `-v sentient-tcp-udp-integration-logs:/var/log/sentient-tcp-udp-integration`   - mounts the host's dir `~/.sentient-tcp-udp-integration-logs` to SENTIENT logs directory;
+- `--name sentient-tcp-udp-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-tcp-udp-integration:`          - docker image.
+- `sentient/sentient-tcp-udp-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-tcp-udp-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-tcp-udp-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1138,21 +1138,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-tcp-udp-integration
+docker attach sentient-tcp-udp-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-tcp-udp-integration
+docker stop sentient-tcp-udp-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-tcp-udp-integration
+docker start sentient-tcp-udp-integration
 ```
 
 
@@ -1161,21 +1161,21 @@ docker start tb-pe-tcp-udp-integration
 <div class="st-tab" data-label="CoAP Integration">
 
 Windows users should use docker managed volume for remote integration logs. 
-Create docker volume (for ex. `tb-coap-integration-logs`) before executing docker run command:
+Create docker volume (for ex. `sentient-coap-integration-logs`) before executing docker run command:
 Open "Docker Quickstart Terminal". Execute the following command to create docker volume:
 
 ``` 
-docker volume create tb-pe-coap-integration-logs
+docker volume create sentient-coap-integration-logs
 ```
 
 
 Execute the following command to run this docker directly:
 
 ```bash
-docker run -it -p 5683:5683/udp -v tb-pe-coap-integration-logs:/var/log/tb-coap-integration `
+docker run -it -p 5683:5683/udp -v sentient-coap-integration-logs:/var/log/sentient-coap-integration `
 -e "RPC_HOST=sentient.cloud" -e "RPC_PORT=9090" `
 -e "INTEGRATION_ROUTING_KEY=YOUR_ROUTING_KEY"  -e "INTEGRATION_SECRET=YOUR_SECRET" `
---name my-tb-pe-coap-integration --restart always sentient/tb-pe-coap-integration:
+--name my-sentient-coap-integration --restart always sentient/sentient-coap-integration:
 ```
 
 
@@ -1188,12 +1188,12 @@ Where:
 - `docker run`              - run this container;
 - `-it`                     - attach a terminal session with current SENTIENT process output;
 - `-p 5683:5683/udp` - connect local udp port 5683 to exposed internal 5683 udp port for the integration.
-- `-v tb-pe-coap-integration-logs:/var/log/tb-coap-integration`   - mounts the host's dir `~/.tb-pe-coap-integration-logs` to SENTIENT logs directory;
-- `--name tb-pe-coap-integration`             - friendly local name of this machine;
+- `-v sentient-coap-integration-logs:/var/log/sentient-coap-integration`   - mounts the host's dir `~/.sentient-coap-integration-logs` to SENTIENT logs directory;
+- `--name sentient-coap-integration`             - friendly local name of this machine;
 - `--restart always`        - automatically start SENTIENT Integration in case of system reboot and restart in case of failure.;
-- `sentient/tb-pe-coap-integration:`          - docker image.
+- `sentient/sentient-coap-integration:`          - docker image.
 
-After executing this command you can open logs which are located here `~/.tb-pe-coap-integration-logs`. 
+After executing this command you can open logs which are located here `~/.sentient-coap-integration-logs`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1211,21 +1211,21 @@ You can detach from session terminal with **`Ctrl-p`**+**`Ctrl-q`** - the contai
 To reattach to the terminal (to see SENTIENT logs) run:
 
 ```
-docker attach tb-pe-coap-integration
+docker attach sentient-coap-integration
 ```
 
 
 To stop the container:
 
 ```
-docker stop tb-pe-coap-integration
+docker stop sentient-coap-integration
 ```
 
 
 To start the container:
 
 ```
-docker start tb-pe-coap-integration
+docker start sentient-coap-integration
 ```
 
 
@@ -1307,7 +1307,7 @@ js:
     max_errors: "${LOCAL_JS_SANDBOX_MAX_ERRORS:3}"
 
 service:
-  type: "${TB_SERVICE_TYPE:tb-integration}"
+  type: "${SENTIENT_SERVICE_TYPE:sentient-integration}"
 ```  
 
 - **Troubleshooting**
@@ -1366,21 +1366,21 @@ OpenJDK 64-Bit Server VM (...)
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-http-integration-.deb
+wget https://dist.sentient.invenia.in/sentient-http-integration-.deb
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo dpkg -i tb-http-integration-.deb
+sudo dpkg -i sentient-http-integration-.deb
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-http-integration/conf/tb-http-integration.conf
+sudo nano /etc/sentient-http-integration/conf/sentient-http-integration.conf
 ``` 
 
 
@@ -1407,7 +1407,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start integration:
 
 ```bash
-sudo service tb-http-integration start
+sudo service sentient-http-integration start
 ```
 
 
@@ -1418,11 +1418,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-http-integration/conf/tb-http-integration.conf
+sudo nano /etc/sentient-http-integration/conf/sentient-http-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-http-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-http-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1433,21 +1433,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-mqtt-integration-.deb
+wget https://dist.sentient.invenia.in/sentient-mqtt-integration-.deb
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo dpkg -i tb-mqtt-integration-.deb
+sudo dpkg -i sentient-mqtt-integration-.deb
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-mqtt-integration/conf/tb-mqtt-integration.conf
+sudo nano /etc/sentient-mqtt-integration/conf/sentient-mqtt-integration.conf
 ``` 
 
 
@@ -1474,7 +1474,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start integration:
 
 ```bash
-sudo service tb-mqtt-integration start
+sudo service sentient-mqtt-integration start
 ```
 
 
@@ -1485,11 +1485,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-mqtt-integration/conf/tb-mqtt-integration.conf
+sudo nano /etc/sentient-mqtt-integration/conf/sentient-mqtt-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-mqtt-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-mqtt-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1500,21 +1500,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-aws-integration-.deb
+wget https://dist.sentient.invenia.in/sentient-aws-integration-.deb
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo dpkg -i tb-aws-integration-.deb
+sudo dpkg -i sentient-aws-integration-.deb
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-aws-integration/conf/tb-aws-integration.conf
+sudo nano /etc/sentient-aws-integration/conf/sentient-aws-integration.conf
 ``` 
 
 
@@ -1541,7 +1541,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start integration:
 
 ```bash
-sudo service tb-aws-integration start
+sudo service sentient-aws-integration start
 ```
 
 
@@ -1552,11 +1552,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-aws-integration/conf/tb-aws-integration.conf
+sudo nano /etc/sentient-aws-integration/conf/sentient-aws-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-aws-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-aws-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1567,21 +1567,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-azure-integration-.deb
+wget https://dist.sentient.invenia.in/sentient-azure-integration-.deb
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo dpkg -i tb-azure-integration-.deb
+sudo dpkg -i sentient-azure-integration-.deb
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-azure-integration/conf/tb-azure-integration.conf
+sudo nano /etc/sentient-azure-integration/conf/sentient-azure-integration.conf
 ``` 
 
 
@@ -1608,7 +1608,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start integration:
 
 ```bash
-sudo service tb-azure-integration start
+sudo service sentient-azure-integration start
 ```
 
 
@@ -1619,11 +1619,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-azure-integration/conf/tb-azure-integration.conf
+sudo nano /etc/sentient-azure-integration/conf/sentient-azure-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-azure-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-azure-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1634,21 +1634,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-opc-ua-integration-.deb
+wget https://dist.sentient.invenia.in/sentient-opc-ua-integration-.deb
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo dpkg -i tb-opc-ua-integration-.deb
+sudo dpkg -i sentient-opc-ua-integration-.deb
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-opc-ua-integration/conf/tb-opc-ua-integration.conf
+sudo nano /etc/sentient-opc-ua-integration/conf/sentient-opc-ua-integration.conf
 ``` 
 
 
@@ -1675,7 +1675,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start integration:
 
 ```bash
-sudo service tb-opc-ua-integration start
+sudo service sentient-opc-ua-integration start
 ```
 
 
@@ -1686,11 +1686,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-opc-ua-integration/conf/tb-opc-ua-integration.conf
+sudo nano /etc/sentient-opc-ua-integration/conf/sentient-opc-ua-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-opc-ua-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-opc-ua-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1701,21 +1701,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-tcp-udp-integration-.deb
+wget https://dist.sentient.invenia.in/sentient-tcp-udp-integration-.deb
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo dpkg -i tb-tcp-udp-integration-.deb
+sudo dpkg -i sentient-tcp-udp-integration-.deb
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-tcp-udp-integration/conf/tb-tcp-udp-integration.conf
+sudo nano /etc/sentient-tcp-udp-integration/conf/sentient-tcp-udp-integration.conf
 ``` 
 
 
@@ -1742,7 +1742,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start integration:
 
 ```bash
-sudo service tb-tcp-udp-integration start
+sudo service sentient-tcp-udp-integration start
 ```
 
 
@@ -1753,11 +1753,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-tcp-udp-integration/conf/tb-tcp-udp-integration.conf
+sudo nano /etc/sentient-tcp-udp-integration/conf/sentient-tcp-udp-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-tcp-udp-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-tcp-udp-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1768,21 +1768,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-coap-integration-.deb
+wget https://dist.sentient.invenia.in/sentient-coap-integration-.deb
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo dpkg -i tb-coap-integration-.deb
+sudo dpkg -i sentient-coap-integration-.deb
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-coap-integration/conf/tb-coap-integration.conf
+sudo nano /etc/sentient-coap-integration/conf/sentient-coap-integration.conf
 ``` 
 
 
@@ -1809,7 +1809,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start integration:
 
 ```bash
-sudo service tb-coap-integration start
+sudo service sentient-coap-integration start
 ```
 
 
@@ -1820,11 +1820,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-coap-integration/conf/tb-coap-integration.conf
+sudo nano /etc/sentient-coap-integration/conf/sentient-coap-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-coap-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-coap-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1880,21 +1880,21 @@ OpenJDK 64-Bit Server VM (build ...)
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-http-integration-.rpm
+wget https://dist.sentient.invenia.in/sentient-http-integration-.rpm
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo rpm -Uvh tb-http-integration-.rpm
+sudo rpm -Uvh sentient-http-integration-.rpm
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-http-integration/conf/tb-http-integration.conf
+sudo nano /etc/sentient-http-integration/conf/sentient-http-integration.conf
 ``` 
 
 
@@ -1921,7 +1921,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start SENTIENT:
 
 ```bash
-sudo service tb-http-integration start
+sudo service sentient-http-integration start
 ```
 
 
@@ -1932,11 +1932,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-http-integration/conf/tb-http-integration.conf
+sudo nano /etc/sentient-http-integration/conf/sentient-http-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-http-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-http-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -1947,21 +1947,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-mqtt-integration-.rpm
+wget https://dist.sentient.invenia.in/sentient-mqtt-integration-.rpm
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo rpm -Uvh tb-mqtt-integration-.rpm
+sudo rpm -Uvh sentient-mqtt-integration-.rpm
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-mqtt-integration/conf/tb-mqtt-integration.conf
+sudo nano /etc/sentient-mqtt-integration/conf/sentient-mqtt-integration.conf
 ``` 
 
 
@@ -1988,7 +1988,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start SENTIENT:
 
 ```bash
-sudo service tb-mqtt-integration start
+sudo service sentient-mqtt-integration start
 ```
 
 
@@ -1999,11 +1999,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-mqtt-integration/conf/tb-mqtt-integration.conf
+sudo nano /etc/sentient-mqtt-integration/conf/sentient-mqtt-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-mqtt-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-mqtt-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -2014,21 +2014,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-aws-integration-.rpm
+wget https://dist.sentient.invenia.in/sentient-aws-integration-.rpm
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo rpm -Uvh tb-aws-integration-.rpm
+sudo rpm -Uvh sentient-aws-integration-.rpm
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-aws-integration/conf/tb-aws-integration.conf
+sudo nano /etc/sentient-aws-integration/conf/sentient-aws-integration.conf
 ``` 
 
 
@@ -2055,7 +2055,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start SENTIENT:
 
 ```bash
-sudo service tb-aws-integration start
+sudo service sentient-aws-integration start
 ```
 
 
@@ -2066,11 +2066,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-aws-integration/conf/tb-aws-integration.conf
+sudo nano /etc/sentient-aws-integration/conf/sentient-aws-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-aws-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-aws-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -2081,21 +2081,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-azure-integration-.rpm
+wget https://dist.sentient.invenia.in/sentient-azure-integration-.rpm
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo rpm -Uvh tb-azure-integration-.rpm
+sudo rpm -Uvh sentient-azure-integration-.rpm
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-azure-integration/conf/tb-azure-integration.conf
+sudo nano /etc/sentient-azure-integration/conf/sentient-azure-integration.conf
 ``` 
 
 
@@ -2122,7 +2122,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start SENTIENT:
 
 ```bash
-sudo service tb-azure-integration start
+sudo service sentient-azure-integration start
 ```
 
 
@@ -2133,11 +2133,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-azure-integration/conf/tb-azure-integration.conf
+sudo nano /etc/sentient-azure-integration/conf/sentient-azure-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-azure-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-azure-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -2148,21 +2148,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-opc-ua-integration-.rpm
+wget https://dist.sentient.invenia.in/sentient-opc-ua-integration-.rpm
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo rpm -Uvh tb-opc-ua-integration-.rpm
+sudo rpm -Uvh sentient-opc-ua-integration-.rpm
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-opc-ua-integration/conf/tb-opc-ua-integration.conf
+sudo nano /etc/sentient-opc-ua-integration/conf/sentient-opc-ua-integration.conf
 ``` 
 
 
@@ -2189,7 +2189,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start SENTIENT:
 
 ```bash
-sudo service tb-opc-ua-integration start
+sudo service sentient-opc-ua-integration start
 ```
 
 
@@ -2200,11 +2200,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-opc-ua-integration/conf/tb-opc-ua-integration.conf
+sudo nano /etc/sentient-opc-ua-integration/conf/sentient-opc-ua-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-opc-ua-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-opc-ua-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -2215,21 +2215,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-tcp-udp-integration-.rpm
+wget https://dist.sentient.invenia.in/sentient-tcp-udp-integration-.rpm
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo rpm -Uvh tb-tcp-udp-integration-.rpm
+sudo rpm -Uvh sentient-tcp-udp-integration-.rpm
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-tcp-udp-integration/conf/tb-tcp-udp-integration.conf
+sudo nano /etc/sentient-tcp-udp-integration/conf/sentient-tcp-udp-integration.conf
 ``` 
 
 
@@ -2256,7 +2256,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start SENTIENT:
 
 ```bash
-sudo service tb-tcp-udp-integration start
+sudo service sentient-tcp-udp-integration start
 ```
 
 
@@ -2267,11 +2267,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-tcp-udp-integration/conf/tb-tcp-udp-integration.conf
+sudo nano /etc/sentient-tcp-udp-integration/conf/sentient-tcp-udp-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-tcp-udp-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-tcp-udp-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 
@@ -2282,21 +2282,21 @@ You should see some INFO log messages with your latest Integration configuration
 Download installation package:
 
 ```bash
-wget https://dist.sentient.invenia.in/tb-coap-integration-.rpm
+wget https://dist.sentient.invenia.in/sentient-coap-integration-.rpm
 ```
 
 
 Install integration as a service:
 
 ```bash
-sudo rpm -Uvh tb-coap-integration-.rpm
+sudo rpm -Uvh sentient-coap-integration-.rpm
 ```
 
 
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-coap-integration/conf/tb-coap-integration.conf
+sudo nano /etc/sentient-coap-integration/conf/sentient-coap-integration.conf
 ``` 
 
 
@@ -2323,7 +2323,7 @@ export INTEGRATION_SECRET=vna**************mik
 Execute the following command to start SENTIENT:
 
 ```bash
-sudo service tb-coap-integration start
+sudo service sentient-coap-integration start
 ```
 
 
@@ -2334,11 +2334,11 @@ Once can lookup additional configuration parameters inside the yml configuration
 Open the file for editing using the following command:
 
 ```bash 
-sudo nano /etc/tb-coap-integration/conf/tb-coap-integration.conf
+sudo nano /etc/sentient-coap-integration/conf/sentient-coap-integration.conf
 ``` 
  
 
-After executing this command you can open logs which are located here `/var/log/tb-coap-integration/`. 
+After executing this command you can open logs which are located here `/var/log/sentient-coap-integration/`. 
 You should see some INFO log messages with your latest Integration configuration that arrived from the server.
 
 

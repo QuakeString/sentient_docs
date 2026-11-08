@@ -7,13 +7,6 @@ status = "imported"
 checked = ""
 source = "docs/user-guide/scada/scada-symbols-dev-guide.md"
 +++
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 3.8.0</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 In SENTIENT, SCADA symbols are crafted using [SVG](https://en.wikipedia.org/wiki/SVG) (Scalable Vector Graphics), 

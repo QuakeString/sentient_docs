@@ -307,7 +307,7 @@ Let’s use an added alias in a widget. In the "Tables" widgets bundle select th
 
 ### API Usage State
 
-There is an API Usage layout in the main menu of the TB platform. API Usage shows full statistics on the platform.  
+There is an API Usage layout in the main menu of SENTIENT. API Usage shows full statistics on the platform.  
 Api Usage State alias allows fetching only the data you need from the user dashboard statistics.
 
 

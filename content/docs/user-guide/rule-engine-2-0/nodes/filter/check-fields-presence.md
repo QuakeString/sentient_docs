@@ -40,7 +40,7 @@ Although each set is optional, at least one of them must be provided with at lea
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbCheckMessageNodeConfiguration",
+  "title": "CheckMessageNodeConfiguration",
   "type": "object",
   "additionalProperties": false,
   "properties": {

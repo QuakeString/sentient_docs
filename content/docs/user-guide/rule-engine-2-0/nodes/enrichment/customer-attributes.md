@@ -33,7 +33,7 @@ The configuration allows you to specify which data to fetch from the customer an
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbGetCustomerAttributeNodeConfiguration",
+  "title": "GetCustomerAttributeNodeConfiguration",
   "type": "object",
   "properties": {
     "dataToFetch": {

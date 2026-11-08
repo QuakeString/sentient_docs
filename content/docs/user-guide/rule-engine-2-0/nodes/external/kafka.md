@@ -57,7 +57,7 @@ Configure additional Kafka producer properties, message headers, and character e
   These properties are passed directly to the Kafka producer client. Common use cases include SSL/TLS configuration (e.g., `ssl.keystore.location`, `ssl.truststore.location`).
 
 - **Add Message metadata key-value pairs to Kafka record headers** – When enabled, all message metadata key-value pairs are added to the Kafka record headers with the prefix
-  `tb_msg_md_`.
+  `msg_md_`.
 
 - **Charset encoding** – The character encoding used when converting message metadata values to byte arrays for Kafka headers.
   Only applies when **Add Message metadata key-value pairs to Kafka record headers** is enabled.
@@ -67,7 +67,7 @@ Configure additional Kafka producer properties, message headers, and character e
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbKafkaNodeConfiguration",
+  "title": "KafkaNodeConfiguration",
   "type": "object",
   "properties": {
     "topicPattern": {
@@ -220,7 +220,7 @@ The node's message acknowledgement behavior is controlled by the `ACTORS_RULE_EX
     - If the **topic pattern** is configured, templates are resolved using values from the incoming message data and metadata to determine the target topic.
     - If the **key pattern** is configured, templates are resolved using values from the incoming message data and metadata to determine the partition key. If empty, no key is
       specified.
-    - If **Add Message metadata key-value pairs to Kafka record headers** is enabled, all metadata entries are added as headers with the prefix `tb_msg_md_`, encoded using the
+    - If **Add Message metadata key-value pairs to Kafka record headers** is enabled, all metadata entries are added as headers with the prefix `msg_md_`, encoded using the
       specified charset.
 2. The message data is used as the record value (sent as a UTF-8 string).
 3. The publish operation is executed asynchronously using the Kafka producer:

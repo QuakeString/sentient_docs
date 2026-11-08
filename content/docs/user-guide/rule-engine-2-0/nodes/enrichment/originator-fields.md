@@ -27,7 +27,7 @@ The node's configuration allows you to define a mapping from the originator's en
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbGetOriginatorFieldsNodeConfiguration",
+  "title": "GetOriginatorFieldsNodeConfiguration",
   "type": "object",
   "properties": {
     "fetchTo": {

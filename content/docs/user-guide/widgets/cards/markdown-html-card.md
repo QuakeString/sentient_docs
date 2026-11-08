@@ -333,7 +333,7 @@ if (data.length) {
             '<div class="attributes">' +
                 '<div class="attribute_container">' +
                     '<div class="icon_wrapper">' +
-                        '<tb-icon class="icon" color="primary" matButtonIcon>place</tb-icon>' +
+                        '<st-icon class="icon" color="primary" matButtonIcon>place</st-icon>' +
                     '</div>' +
                     '<div class="attribute_content">' +
                         `<p class="attribute">${information.buildingAttributesField.address}</p>` +
@@ -342,7 +342,7 @@ if (data.length) {
                 '</div>' +
                 '<div class="attribute_container">' +
                     '<div class="icon_wrapper">' +
-                        '<tb-icon class="icon" color="primary" matButtonIcon>person</tb-icon>' +
+                        '<st-icon class="icon" color="primary" matButtonIcon>person</st-icon>' +
                     '</div>' +
                     '<div class="attribute_content">' +
                         `<p class="attribute">${information.buildingAttributesField.officeManager}</p>` +
@@ -351,7 +351,7 @@ if (data.length) {
                 '</div>' +
                 '<div class="attribute_container">' +
                     '<div class="icon_wrapper">' +
-                        '<tb-icon class="icon" color="primary" matButtonIcon>call</tb-icon>' +
+                        '<st-icon class="icon" color="primary" matButtonIcon>call</st-icon>' +
                     '</div>' +
                     '<div class="attribute_content">' +
                         `<p class="attribute">${information.buildingAttributesField.phone}</p>` +
@@ -360,7 +360,7 @@ if (data.length) {
                 '</div>' +
                 '<div class="attribute_container">' +
                     '<div class="icon_wrapper">' +
-                        '<tb-icon class="icon" color="primary" matButtonIcon>mail_outline</tb-icon>' +
+                        '<st-icon class="icon" color="primary" matButtonIcon>mail_outline</st-icon>' +
                     '</div>' +
                     '<div class="attribute_content">' +
                         `<p class="attribute">${information.buildingAttributesField.email}</p>` +

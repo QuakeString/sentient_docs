@@ -38,7 +38,7 @@ The configuration window allows you to define how to find the related entity and
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbGetRelatedDataNodeConfiguration",
+  "title": "GetRelatedDataNodeConfiguration",
   "type": "object",
   "properties": {
     "relationsQuery": {

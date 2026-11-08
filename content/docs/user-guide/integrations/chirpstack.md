@@ -87,13 +87,13 @@ Starting from **SENTIENT 4.0**, we have simplified the process of writing conver
 </div>
 
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 
 The script used in the example:
@@ -406,13 +406,13 @@ For sending downlink messages from the Sentient to the device, we need to define
 
 Let's consider an example where we send an attribute update message. 
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 You can use our example of downlink converter, or write your own according to your configuration:
 
@@ -459,7 +459,7 @@ To add the downlink converter to the integration, follow this steps:
 1. Apply changes.
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/integrations/chirpstack/add-downlink-converter-1-pe.webp" alt="Go to the &quot;Integrations&quot; page, click ChirpStack integration to open its details, and enter integration editing mode by clicking the &quot;pencil&quot; icon;" loading="lazy"><figcaption>Go to the "Integrations" page, click ChirpStack integration to open its details, and enter integration editing mode by clicking the "pencil" icon;</figcaption></figure><figure><img src="/images/user-guide/integrations/chirpstack/add-downlink-converter-2-pe.webp" alt="Enter a name for the downlink data converter and click &quot;Create new converter&quot;;" loading="lazy"><figcaption>Enter a name for the downlink data converter and click "Create new converter";</figcaption></figure><figure><img src="/images/user-guide/integrations/chirpstack/add-downlink-converter-tbel-3-pe.webp" alt="Paste the script to the encoder function section, and click &quot;Add&quot;;" loading="lazy"><figcaption>Paste the script to the encoder function section, and click "Add";</figcaption></figure><figure><img src="/images/user-guide/integrations/chirpstack/add-downlink-converter-4-pe.webp" alt="Apply changes." loading="lazy"><figcaption>Apply changes.</figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/integrations/chirpstack/add-downlink-converter-1-pe.webp" alt="Go to the &quot;Integrations&quot; page, click ChirpStack integration to open its details, and enter integration editing mode by clicking the &quot;pencil&quot; icon;" loading="lazy"><figcaption>Go to the "Integrations" page, click ChirpStack integration to open its details, and enter integration editing mode by clicking the "pencil" icon;</figcaption></figure><figure><img src="/images/user-guide/integrations/chirpstack/add-downlink-converter-2-pe.webp" alt="Enter a name for the downlink data converter and click &quot;Create new converter&quot;;" loading="lazy"><figcaption>Enter a name for the downlink data converter and click "Create new converter";</figcaption></figure><figure><img src="/images/user-guide/integrations/chirpstack/add-downlink-converter-rhai-3-pe.webp" alt="Paste the script to the encoder function section, and click &quot;Add&quot;;" loading="lazy"><figcaption>Paste the script to the encoder function section, and click "Add";</figcaption></figure><figure><img src="/images/user-guide/integrations/chirpstack/add-downlink-converter-4-pe.webp" alt="Apply changes." loading="lazy"><figcaption>Apply changes.</figcaption></figure></div>
 
 
 </div>

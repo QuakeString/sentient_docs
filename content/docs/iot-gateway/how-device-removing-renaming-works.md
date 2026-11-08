@@ -13,7 +13,7 @@ This is mission critical for the gateway to keep up with actual device entity st
 
 Before certain improvements, there might be cases when the gateway knew nothing about deleting or renaming of the device entity, so the physical device would sent data to non-existing endpoint.  
 
-Starting TB v3.3.3 the platform resolves the issue using Persistent RPC to avoid above data loss scenarios. Below you may find more info on implementation of the solution.
+The platform resolves the issue using Persistent RPC to avoid above data loss scenarios. Below you may find more info on implementation of the solution.
 
 1. Device renaming scenario    
     Gateway uses a device entity name to report telemetry from connected devices. If the entity name was changed on SENTIENT UI, end-user could encounter the re-provisioning of the device entity (by the gateway) with an old name. With to-gateway notification about renaming this is no more the case.  

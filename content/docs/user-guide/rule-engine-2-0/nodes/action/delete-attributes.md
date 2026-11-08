@@ -70,7 +70,7 @@ If provided, value must exactly match one of these constants (case-sensitive).
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMsgDeleteAttributesNodeConfiguration",
+  "title": "MsgDeleteAttributesNodeConfiguration",
   "type": "object",
   "properties": {
     "scope": {

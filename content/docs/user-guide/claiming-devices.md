@@ -51,7 +51,7 @@ SENTIENT server stores Claiming Information for the duration of the validity of 
 
 ![image](/images/user-guide/claiming-devices/device-side-key-diagram.webp)
 
-Device may send Claiming Information to TB using all supported transport protocols. The message body has two parameters: **secretKey** and **durationMs**, which may be optionally specified. 
+Device may send Claiming Information to SENTIENT using all supported transport protocols. The message body has two parameters: **secretKey** and **durationMs**, which may be optionally specified. 
 The **secretKey** parameter adds security to the claiming process.
 The **durationMs** parameter determines the expiration of claiming time.
 In case the **secretKey** is not specified, the empty string as a default value is used.
@@ -178,11 +178,11 @@ You will receive the response like the following one:
 ## Python example scripts
 
 In this section you may get examples of code for claiming device feature.  
-We will use **tb-mqtt-client** python module to connect and claim device.  
+We will use the **paho-mqtt** Python module to connect and claim the device.  
 You are able to install it using the following command:  
 
 ```bash
-pip3 install tb-mqtt-client --user
+pip3 install paho-mqtt --user
 ```
 
 
@@ -214,7 +214,8 @@ We should [download the script](/docs/user-guide/resources/claiming-device/basic
 # limitations under the License.
 #
 
-from tb_device_mqtt import TBDeviceMqttClient
+import json
+import paho.mqtt.client as mqtt
 
 def collect_required_data():
     config = {}
@@ -240,10 +241,16 @@ def collect_required_data():
 
 if __name__ == '__main__':
     config = collect_required_data()
-    client = TBDeviceMqttClient(config["host"], username=config["token"])
-    client.connect()
-    rc = client.claim(secret_key=config["secret_key"], duration=config["duration_ms"]).get()
-    if rc == 0:
+    client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
+    client.username_pw_set(config["token"])
+    client.connect(config["host"], 1883)
+    client.loop_start()
+    claim = {"secretKey": config["secret_key"], "durationMs": config["duration_ms"]}
+    info = client.publish("v1/devices/me/claim", json.dumps(claim), qos=1)
+    info.wait_for_publish()
+    client.loop_stop()
+    client.disconnect()
+    if info.rc == mqtt.MQTT_ERR_SUCCESS:
         print("Claiming request was sent, now you should use claiming device widget to finish the claiming process.")
 
 ```

@@ -50,7 +50,7 @@ selected. The notification system will automatically resolve and deduplicate rec
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbNotificationNodeConfiguration",
+  "title": "NotificationNodeConfiguration",
   "type": "object",
   "properties": {
     "templateId": {

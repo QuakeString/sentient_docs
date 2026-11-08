@@ -155,13 +155,13 @@ Once the [client emulator](https://github.com/sentient/remote-integration-exampl
 , it will start sending auto-generated data to SENTIENT in the following format: **“25,40,94”**. 
 The Integration will pass the incoming message as-is to the [uplink converter](/docs/user-guide/integrations/custom/#uplink-converter) and push data to SENTIENT.
 
-**Note:** starting from SENTIENT version 3.3.1 a new required configuration property was added to tb-remote-integration.yml:
+**Note:** starting from SENTIENT version 3.3.1 a new required configuration property was added to sentient-remote-integration.yml:
 
 ```yml
 service:
-  type: "${TB_SERVICE_TYPE:tb-integration}"
+  type: "${SENTIENT_SERVICE_TYPE:sentient-integration}"
 ```
 
-In case that you are using custom remote integration of the older version, and plan to upgrade your custom integration to the 3.3.1 version be sure that you have that property added to the tb-remote-integration.yml file.
+In case that you are using custom remote integration of the older version, and plan to upgrade your custom integration to the 3.3.1 version be sure that you have that property added to the sentient-remote-integration.yml file.
 
 ## Next steps

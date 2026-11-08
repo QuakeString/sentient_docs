@@ -20,7 +20,7 @@ Checks the incoming message type against the configured set of message types. If
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMsgTypeFilterNodeConfiguration",
+  "title": "MsgTypeFilterNodeConfiguration",
   "type": "object",
   "required": [
     "messageTypes"

@@ -342,7 +342,7 @@ Here is an example configuration snippet for a BACnet device with dynamic device
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "YOUR_HOST",
     "port": 47808,
     "mask": 24,
@@ -424,7 +424,7 @@ configuration. Here is an example configuration snippet:
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "0.0.0.0",
     "port": 47808,
     "mask": 24,
@@ -491,7 +491,7 @@ To configure automatic device discovery, use the following BACnet connector conf
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "YOUR_HOST",
     "port": 47808,
     "objectIdentifier": 599,
@@ -586,7 +586,7 @@ In our case, we will store all objects in time series, so the device configurati
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "YOUR_HOST",
     "port": 47808,
     "objectIdentifier": 599,
@@ -644,7 +644,7 @@ in the attributes/timeseries section as shown below:
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "YOUR_HOST",
     "port": 47808,
     "mask": "24",
@@ -866,7 +866,7 @@ Full configuration for BACnet connector for the examples above will look like th
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "YOUR_HOST",
     "port": 47808,
     "objectIdentifier": 599,
@@ -968,7 +968,7 @@ this (**make sure to use the right device host and port**):
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "YOUR_HOST",
     "port": 47808,
     "objectIdentifier": 599,
@@ -1100,7 +1100,7 @@ Full configuration for BACnet connector for the examples above will look like th
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "YOUR_HOST",
     "port": 47808,
     "objectIdentifier": 599,
@@ -1166,7 +1166,7 @@ connector configuration (**make sure to use the correct path to your EDE file**)
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "YOUR_HOST",
     "port": 47808,
     "objectIdentifier": 599,
@@ -1241,7 +1241,7 @@ Example of the application configuration:
 ```json
 {
   "application": {
-    "objectName": "TB_gateway",
+    "objectName": "ST_gateway",
     "host": "192.168.1.168",
     "port": 47808,
     "objectIdentifier": 599,
@@ -1466,7 +1466,7 @@ Property identifiers depend on type of the BACnet object, provided in camelCase,
 ### Device discovery issues on Linux with Docker Compose
 
 If you are running Gateway via docker compose on Linux, and you have issues with device discovery, make sure that you 
-have set the correct network mode in the docker compose file. So you should add the following line to `tb-gateway` 
+have set the correct network mode in the docker compose file. So you should add the following line to `st-gateway` 
 service in your docker compose file:
 
 ```yaml

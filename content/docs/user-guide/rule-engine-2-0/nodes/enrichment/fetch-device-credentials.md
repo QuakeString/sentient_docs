@@ -22,7 +22,7 @@ The node has a single configuration option to determine where the fetched creden
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbFetchDeviceCredentialsNodeConfiguration",
+  "title": "FetchDeviceCredentialsNodeConfiguration",
   "type": "object",
   "properties": {
     "fetchTo": {

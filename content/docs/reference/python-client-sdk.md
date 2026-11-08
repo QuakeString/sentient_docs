@@ -1,4 +1,5 @@
 +++
+draft = true
 title = "Python Client SDK"
 description = "Software development kit for client-side integration of your Python projects"
 
@@ -42,7 +43,7 @@ client.send_telemetry(telemetry)
 # Sending telemetry and checking the delivery status (QoS = 1 by default)
 result = client.send_telemetry(telemetry)
 # get is a blocking call that awaits delivery status  
-success = result.get() == TBPublishInfo.TB_ERR_SUCCESS
+success = result.get() == TBPublishInfo.ERR_SUCCESS
 # Disconnect from SENTIENT
 client.disconnect()
 
@@ -115,7 +116,7 @@ result = True
 for i in range(0, 100):
     results.append(client.send_telemetry(telemetry_with_ts))
 for tmp_result in results:
-    result &= tmp_result.get() == TBPublishInfo.TB_ERR_SUCCESS
+    result &= tmp_result.get() == TBPublishInfo.ERR_SUCCESS
 print("Result", str(result))
 client.disconnect()
 

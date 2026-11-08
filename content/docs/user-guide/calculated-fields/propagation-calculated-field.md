@@ -1,6 +1,6 @@
 +++
 title = "Propagation calculated field"
-description = "For complex calculations, TBEL is used. It enables advanced operations such as conditional statements, loops, and access to historical data."
+description = "For complex calculations, Rhai is used. It enables advanced operations such as conditional statements, loops, and access to historical data."
 
 [extra]
 status = "imported"
@@ -67,20 +67,20 @@ Two modes are available:
 
 The sequence of actions is as follows:
 - Configure the arguments that will provide input data  from the selected entity for further processing.
-- Provide a [TBEL](/docs/user-guide/rhai/) script that will calculate a new value based on the defined arguments.
+- Provide a [Rhai](/docs/user-guide/rhai/) script that will calculate a new value based on the defined arguments.
 - The computed result is then propagated to the related entity.
 
 > The variable name that stores the computed result must be defined directly in the function body.
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/calculated-fields/propagation/data-to-propagate-3-ce.webp" alt="Switch to **Calculation result** mode (1). Click **Add argument** (2)." loading="lazy"><figcaption>Switch to **Calculation result** mode (1). Click **Add argument** (2).</figcaption></figure><figure><img src="/images/user-guide/calculated-fields/propagation/data-to-propagate-4-ce.webp" alt="The data source will be the **current entity** (3) to which the calculated field is applied.Specify the **argument type** (4), **time series key / attribute key** (5), **output key** (6), and **default value** (7), then click **Add** (8)." loading="lazy"><figcaption>The data source will be the **current entity** (3) to which the calculated field is applied.<br>Specify the **argument type** (4), **time series key / attribute key** (5), **output key** (6), and **default value** (7), then click **Add** (8).</figcaption></figure><figure><img src="/images/user-guide/calculated-fields/propagation/data-to-propagate-5-ce.webp" alt="Provide a TBEL script that will calculate a new value based on the defined arguments." loading="lazy"><figcaption>Provide a TBEL script that will calculate a new value based on the defined arguments.</figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/calculated-fields/propagation/data-to-propagate-3-ce.webp" alt="Switch to **Calculation result** mode (1). Click **Add argument** (2)." loading="lazy"><figcaption>Switch to **Calculation result** mode (1). Click **Add argument** (2).</figcaption></figure><figure><img src="/images/user-guide/calculated-fields/propagation/data-to-propagate-4-ce.webp" alt="The data source will be the **current entity** (3) to which the calculated field is applied.Specify the **argument type** (4), **time series key / attribute key** (5), **output key** (6), and **default value** (7), then click **Add** (8)." loading="lazy"><figcaption>The data source will be the **current entity** (3) to which the calculated field is applied.<br>Specify the **argument type** (4), **time series key / attribute key** (5), **output key** (6), and **default value** (7), then click **Add** (8).</figcaption></figure><figure><img src="/images/user-guide/calculated-fields/propagation/data-to-propagate-5-ce.webp" alt="Provide a Rhai script that will calculate a new value based on the defined arguments." loading="lazy"><figcaption>Provide a Rhai script that will calculate a new value based on the defined arguments.</figcaption></figure></div>
 
 
 <hr>
 
 <b><font size="4">Script</font></b>
 
-Define the calculation logic using a [TBEL](/docs/user-guide/rhai/) function based on the variables configured in [Arguments](/docs/user-guide/calculated-fields/?calculatedfieldsargumenttype=attribute#arguments).
+Define the calculation logic using a [Rhai](/docs/user-guide/rhai/) function based on the variables configured in [Arguments](/docs/user-guide/calculated-fields/?calculatedfieldsargumenttype=attribute#arguments).
 
 Script calculated fields must implement:
 

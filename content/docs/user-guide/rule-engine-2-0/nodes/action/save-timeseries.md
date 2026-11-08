@@ -95,7 +95,7 @@ For each of these actions, you can choose from the following **processing strate
 <div class="st-callout info">
 
 
-**Note**: Processing strategies are available since TB version 4.0. "Skip latest persistence" toggle from earlier TB versions corresponds to "Skip" strategy for Latest values.
+**Note**: The older "Skip latest persistence" toggle corresponds to the "Skip" strategy for Latest values.
 
 
 </div>
@@ -192,7 +192,7 @@ performance optimization rather than a strict processing guarantee.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMsgTimeseriesNodeConfiguration",
+  "title": "MsgTimeseriesNodeConfiguration",
   "type": "object",
   "properties": {
     "defaultTTL": {

@@ -182,9 +182,9 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/ttn/tb-converter_0.webp)
+![image](/images/user-guide/integrations/ttn/st-converter_0.webp)
 
-![image](/images/user-guide/integrations/ttn/tb-converter_1.webp)
+![image](/images/user-guide/integrations/ttn/st-converter_1.webp)
 
 ### Sentient Downlink Data Converter
 For sending Downlink messages from Sentient to the device inside TTS, we need to define a Downlink 
@@ -231,7 +231,7 @@ return result;
 This converter will take the **version** field from the incoming message and add it as a payload field 
 in the outbound message. The destination device is a **thermostat-a** device.
 
-![image](/images/user-guide/integrations/ttn/tb-downlink-converter.webp)
+![image](/images/user-guide/integrations/ttn/st-downlink-converter.webp)
 
 ### TTS Integration
 
@@ -247,12 +247,12 @@ Next we will create the integration with TheThingsStack inside Sentient. Open **
 - Access Key: use **Access Key** from TTS
 - Use API v3: Set **Enable**
 
-![image](/images/user-guide/integrations/ttn/tb-integration_0.webp)
+![image](/images/user-guide/integrations/ttn/st-integration_0.webp)
 
 When adding the integration, you can test the connection between SENTIENT and TheThingsStack. For it, 
 after all required configurations, click the **Check connection** button.
 
-![image](/images/user-guide/integrations/ttn/tb-integration_1.webp)
+![image](/images/user-guide/integrations/ttn/st-integration_1.webp)
 
 ## Validation
 
@@ -267,26 +267,26 @@ In Sentient go to **Device Group** -> **All** -> **thermostat-a** - here you can
 - a new device was registered in Sentient
 - in the **Latest Telemetry** section you will see that the last submitted temperature equals 15.
 
-![image](/images/user-guide/integrations/ttn/tb-device-telemetry.webp)
+![image](/images/user-guide/integrations/ttn/st-device-telemetry.webp)
 
 ### Validate Downlink Messages
 For testing Downlink Messages, we will update our Root Rule Chain to send downlink message when a device attribute is changed.
 Open and edit **Root Rule Chain**. Add **Integration Downlink** Action node and connect it with the **Message Type Switch** Node using the relation 
 **Attributes Updated**
 
-![image](/images/user-guide/integrations/ttn/tb-add-rule-downlink.webp)
+![image](/images/user-guide/integrations/ttn/st-add-rule-downlink.webp)
 
-![image](/images/user-guide/integrations/ttn/tb-route-to-downlink.webp)
+![image](/images/user-guide/integrations/ttn/st-route-to-downlink.webp)
 
 Save Changes.
 
 Go to **Device Group** -> **All** -> **thermostat_a** -> attributes section. We will add **Shared attribute** with the name **version** and
 the value **v.0.11**
 
-![image](/images/user-guide/integrations/ttn/tb-add-version.webp)
+![image](/images/user-guide/integrations/ttn/st-add-version.webp)
 
 By making this step, we triggered a downlink message to the device **thermostat-a** and this message should contain the versions field value. 
-Open TTS Console, navigate to **tb_platform** application, to the section **Data**. And we see that the Downlink message was received.
+Open TTS Console, navigate to **st_platform** application, to the section **Data**. And we see that the Downlink message was received.
 
 ![image](/images/user-guide/integrations/ttn/ttn-downlink-verified.webp)
 

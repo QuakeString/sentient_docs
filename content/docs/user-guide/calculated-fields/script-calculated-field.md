@@ -1,13 +1,13 @@
 +++
 title = "Script calculated field"
-description = "For complex calculations, TBEL is used. It enables advanced operations such as conditional statements, loops, and access to historical data."
+description = "For complex calculations, Rhai is used. It enables advanced operations such as conditional statements, loops, and access to historical data."
 
 [extra]
 status = "imported"
 checked = ""
 source = "docs/user-guide/calculated-fields/script-calculated-field.md"
 +++
-Script calculated fields use [TBEL](/docs/user-guide/rhai/) (SENTIENT Expression Language) to perform advanced, real-time computations on telemetry and attributes. Unlike Simple fields, Script fields support conditional logic, iteration over rolling time-series values, working with historical windows, and returning multiple results in a single execution.
+Script calculated fields use [Rhai](/docs/user-guide/rhai/) (SENTIENT Expression Language) to perform advanced, real-time computations on telemetry and attributes. Unlike Simple fields, Script fields support conditional logic, iteration over rolling time-series values, working with historical windows, and returning multiple results in a single execution.
 
 Use "Script" calculated fields when you need logic that goes beyond a single math expression, such as:
 - Multi-step calculations (e.g., dew point, air density, efficiency metrics)
@@ -39,7 +39,7 @@ For details about argument types and parameters, see the [Arguments](/docs/user-
 
 ### Script
 
-Define the calculation logic using a [TBEL](/docs/user-guide/rhai/) function based on the variables configured in [Arguments](/docs/user-guide/calculated-fields/?calculatedfieldsargumenttype=attribute#arguments).
+Define the calculation logic using a [Rhai](/docs/user-guide/rhai/) function based on the variables configured in [Arguments](/docs/user-guide/calculated-fields/?calculatedfieldsargumenttype=attribute#arguments).
 
 Script calculated fields must implement:
 

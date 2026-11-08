@@ -209,7 +209,7 @@ Consider the typical response time of your chosen model when configuring this va
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbAiNodeConfiguration",
+  "title": "AiNodeConfiguration",
   "type": "object",
   "properties": {
     "modelId": {

@@ -55,7 +55,7 @@ Edit **android/app/src/main/AndroidManifest.xml**, find and set scheme of **TbWe
 ```xml
   ...
         <activity android:name=".TbWebCallbackActivity" >
-            <intent-filter android:label="tb_web_auth">
+            <intent-filter android:label="st_web_auth">
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />

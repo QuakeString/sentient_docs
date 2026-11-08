@@ -88,13 +88,13 @@ Starting from **SENTIENT 3.9**, the platform stores the full set of debug events
 
 Debug mode settings can be combined or disabled entirely.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 Use this function:
 
@@ -136,7 +136,7 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/opc-ua/opc-ua-uplink-converter-tbel.webp)
+![image](/images/user-guide/integrations/opc-ua/opc-ua-uplink-converter-rhai.webp)
 
 </div>
 
@@ -222,13 +222,13 @@ In general, the output from a Downlink converter should have the following struc
 <br>
 Go to the **Integrations center** section -> **Data converters** page and create a new downlink converter.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 Use this function:
 
@@ -265,7 +265,7 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/opc-ua/opc-ua-downlink-converter-tbel.webp)
+![image](/images/user-guide/integrations/opc-ua/opc-ua-downlink-converter-rhai.webp)
 
 </div>
 

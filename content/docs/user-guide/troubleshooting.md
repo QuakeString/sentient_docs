@@ -39,7 +39,7 @@ You can store failed message in DB, send some notification or just <b>log</b> me
 Sometimes you can experience growing latency of message processing inside the rule-engine. Here are the steps you can take to discover the reason for the issue:
 - Check if there are timeouts in [Rule Engine Statistics Dashboard](/docs/user-guide/rule-engine-2-0/overview/#rule-engine-statistics). Timeouts in rule-nodes slow down the processing of the queue and can lead to latency.
 - [Check CPU usage](#cpumemory-usage) for the following services:
-    - SENTIENT services (tb-nodes, tb-rule-engine and tb-core nodes, transport nodes). High CPU load on some services means that you need to scale up that part of the system.
+    - SENTIENT services (sentient-nodes, sentient-rule-engine and sentient-core nodes, transport nodes). High CPU load on some services means that you need to scale up that part of the system.
     - PostgreSQL and pgpool (if you are in <b>high-availability</b> mode). High load on Postgres can lead to slow processing of all Postgres-related rule-nodes (saving attributes, reading attributes etc), and the system in general.
     - Cassandra (if you are using Cassandra as storage for timeseries data). High load on Cassandra can lead to slow processing of all Cassandra-related rule-nodes (saving timeseries etc).
     - Queue. Regardless of the queue type, make sure that it always has enough resources.
@@ -79,21 +79,21 @@ You can enable logging of the slowest and most frequently called rule-nodes.
 To do this you need to [update your logging configuration](#enable-certain-logs) with the following <i>logger</i>:
 
 ```bash
-<logger name="org.sentient.server.service.queue.TbMsgPackProcessingContext" level="DEBUG" />
+<logger name="org.sentient.server.service.queue.MsgPackProcessingContext" level="DEBUG" />
 ```
 
 After this you can find the following messages in your [logs](#logs):
 
 ```bash
-2021-03-24 17:01:21,023 [tb-rule-engine-consumer-24-thread-3] DEBUG o.t.s.s.q.TbMsgPackProcessingContext - Top Rule Nodes by max execution time:
-2021-03-24 17:01:21,024 [tb-rule-engine-consumer-24-thread-3] DEBUG o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] max execution time: 1102. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,024 [tb-rule-engine-consumer-24-thread-3] DEBUG o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] max execution time: 1. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,024 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - Top Rule Nodes by avg execution time:
-2021-03-24 17:01:21,024 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] avg execution time: 604.0. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,025 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] avg execution time: 1.0. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,025 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - Top Rule Nodes by execution count:
-2021-03-24 17:01:21,025 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] execution count: 2. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
-2021-03-24 17:01:21,028 [tb-rule-engine-consumer-24-thread-3] INFO  o.t.s.s.q.TbMsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] execution count: 1. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,023 [sentient-rule-engine-consumer-24-thread-3] DEBUG o.s.s.s.q.MsgPackProcessingContext - Top Rule Nodes by max execution time:
+2021-03-24 17:01:21,024 [sentient-rule-engine-consumer-24-thread-3] DEBUG o.s.s.s.q.MsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] max execution time: 1102. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,024 [sentient-rule-engine-consumer-24-thread-3] DEBUG o.s.s.s.q.MsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] max execution time: 1. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,024 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - Top Rule Nodes by avg execution time:
+2021-03-24 17:01:21,024 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] avg execution time: 604.0. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,025 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] avg execution time: 1.0. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,025 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - Top Rule Nodes by execution count:
+2021-03-24 17:01:21,025 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - [Main][3f740670-8cc0-11eb-bcd9-d343878c0c7f] execution count: 2. [RuleChain: Thermostat|RuleNode: Device Profile Node(3f740670-8cc0-11eb-bcd9-d343878c0c7f)]
+2021-03-24 17:01:21,028 [sentient-rule-engine-consumer-24-thread-3] INFO  o.s.s.s.q.MsgPackProcessingContext - [Main][3f6debf0-8cc0-11eb-bcd9-d343878c0c7f] execution count: 1. [RuleChain: Thermostat|RuleNode: Message Type Switch(3f6debf0-8cc0-11eb-bcd9-d343878c0c7f)]
 ```
 
 ### Clearing Redis/Valkey Cache
@@ -142,7 +142,7 @@ cat /var/log/sentient/sentient.log | grep ERROR
 View last logs in runtime:
  
 ```bash
-docker compose logs -f tb-core1 tb-core2 tb-rule-engine1 tb-rule-engine2
+docker compose logs -f sentient-core1 sentient-core2 sentient-rule-engine1 sentient-rule-engine2
 ```
 
 
@@ -151,7 +151,7 @@ docker compose logs -f tb-core1 tb-core2 tb-rule-engine1 tb-rule-engine2
 
 If you still rely on Docker Compose as docker-compose (with a hyphen) execute next command:
 
-**docker-compose logs -f tb-core1 tb-core2 tb-rule-engine1 tb-rule-engine2**
+**docker-compose logs -f sentient-core1 sentient-core2 sentient-rule-engine1 sentient-rule-engine2**
 
 
 </div>
@@ -160,7 +160,7 @@ If you still rely on Docker Compose as docker-compose (with a hyphen) execute ne
 If you suspect the issue is related only to rule-engine, you can filter and view only the rule-engine logs:
 
 ```bash
-docker compose logs -f tb-rule-engine1 tb-rule-engine2
+docker compose logs -f sentient-rule-engine1 sentient-rule-engine2
 ```
 
 
@@ -169,7 +169,7 @@ docker compose logs -f tb-rule-engine1 tb-rule-engine2
 
 If you still rely on Docker Compose as docker-compose (with a hyphen) execute next command:
 
-**docker-compose logs -f tb-rule-engine1 tb-rule-engine2**
+**docker-compose logs -f sentient-rule-engine1 sentient-rule-engine2**
 
 
 </div>
@@ -179,7 +179,7 @@ You can use <b>grep</b> command to show only the output with desired string in i
 For example you can use the following command in order to check if there are any errors on the backend side:
 
 ```bash
-docker compose logs tb-core1 tb-core2 tb-rule-engine1 tb-rule-engine2 | grep ERROR
+docker compose logs sentient-core1 sentient-core2 sentient-rule-engine1 sentient-rule-engine2 | grep ERROR
 ```
 
 
@@ -188,7 +188,7 @@ docker compose logs tb-core1 tb-core2 tb-rule-engine1 tb-rule-engine2 | grep ERR
 
 If you still rely on Docker Compose as docker-compose (with a hyphen) execute next command:
 
-**docker-compose logs tb-core1 tb-core2 tb-rule-engine1 tb-rule-engine2 \| grep ERROR**
+**docker-compose logs sentient-core1 sentient-core2 sentient-rule-engine1 sentient-rule-engine2 \| grep ERROR**
 
 
 </div>
@@ -197,7 +197,7 @@ If you still rely on Docker Compose as docker-compose (with a hyphen) execute ne
 **Tip:** you can redirect logs to file and then analyze with any text editor:
 
 ```bash
-docker compose logs -f tb-rule-engine1 tb-rule-engine2 > rule-engine.log
+docker compose logs -f sentient-rule-engine1 sentient-rule-engine2 > rule-engine.log
 ```
 
 
@@ -206,7 +206,7 @@ docker compose logs -f tb-rule-engine1 tb-rule-engine2 > rule-engine.log
 
 If you still rely on Docker Compose as docker-compose (with a hyphen) execute next command:
 
-**docker-compose logs -f tb-rule-engine1 tb-rule-engine2 > rule-engine.log**
+**docker-compose logs -f sentient-rule-engine1 sentient-rule-engine2 > rule-engine.log**
 
 
 </div>
@@ -239,29 +239,29 @@ kubectl logs -f POD_NAME
 To view SENTIENT node logs use command:
 
 ```bash
-kubectl logs -f tb-node-0
+kubectl logs -f sentient-node-0
 ```
 
 You can use <b>grep</b> command to show only the output with desired string in it. 
 For example you can use the following command in order to check if there are any errors on the backend side:
 
 ```bash
-kubectl logs -f tb-node-0 | grep ERROR
+kubectl logs -f sentient-node-0 | grep ERROR
 ```
 
 If you have multiple nodes you could redirect logs from all nodes to files on you machine and then analyze them: 
 
 ```bash
-kubectl logs -f tb-node-0 > tb-node-0.log
-kubectl logs -f tb-node-1 > tb-node-1.log
+kubectl logs -f sentient-node-0 > sentient-node-0.log
+kubectl logs -f sentient-node-1 > sentient-node-1.log
 ```
 
 
 **Note:** you can always log into the SENTIENT container and view logs there:
 
 ```bash
-kubectl exec -it tb-node-0 -- bash
-cat /var/log/sentient/tb-node-0/sentient.log
+kubectl exec -it sentient-node-0 -- bash
+cat /var/log/sentient/sentient-node-0/sentient.log
 ```
 
 
@@ -331,19 +331,19 @@ For standalone deployment you need to update <code>/usr/share/sentient/conf/logb
 
 <div class="st-tab" data-label="Docker-Compose Deployment">
 
-For docker-compose deployment we are mapping <code>/config</code> folder to your local system (<code>./tb-node/conf</code> folder).
-So in order to change logging configuration you need to update <code>./tb-node/conf/logback.xml</code> file.
+For docker-compose deployment we are mapping <code>/config</code> folder to your local system (<code>./sentient-node/conf</code> folder).
+So in order to change logging configuration you need to update <code>./sentient-node/conf/logback.xml</code> file.
 
 </div>
 
 <div class="st-tab" data-label="Kubernetes Deployment">
 
-For kubernetes deployment we are using <b>ConfigMap</b> kubernetes entity to provide tb-nodes with logback configuration.
+For kubernetes deployment we are using <b>ConfigMap</b> kubernetes entity to provide sentient-nodes with logback configuration.
 So in order to update <b>logback.xml</b> you need to do the following:
 
  ```bash
-edit common/tb-node-configmap.yml
-kubectl apply -f common/tb-node-configmap.yml
+edit common/sentient-node-configmap.yml
+kubectl apply -f common/sentient-node-configmap.yml
  ```
 
 After 10 seconds the changes should be applied to logging configuration.
@@ -367,7 +367,7 @@ Some internal state metrics can be exposed by the Spring Actuator using Promethe
 
 Here's the list of metrics SENTIENT pushes to Prometheus.
 
-### <b>tb-node</b> metrics
+### <b>sentient-node</b> metrics
 - <i>attributes_queue_${index_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about writing <b>attributes</b> to the database. 
 Note that there are several queues (threads) for persisting attributes in order to reach maximum performance.
 - <i>ruleEngine_${name_of_queue}</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs, tmpFailed, failedIterations, successfulIterations, timeoutMsgs, tmpTimeout</i>): 
@@ -396,10 +396,10 @@ Note that there are several queues (threads) for persisting attributes in order 
 
 
 ### <b>transport</b> metrics
-- <i>transport</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about requests received by Transport from TB nodes 
+- <i>transport</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about requests received by Transport from SENTIENT nodes 
 - <i>ruleEngine_producer</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about pushing messages from Transport to the Rule Engine.
-- <i>core_producer</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about pushing messages from Transport to the TB node Device actor.
-- <i>transport_producer</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about requests from Transport to the TB.
+- <i>core_producer</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about pushing messages from Transport to the SENTIENT node Device actor.
+- <i>transport_producer</i> (statsNames - <i>totalMsgs, failedMsgs, successfulMsgs</i>): stats about requests from Transport to SENTIENT.
 
 
 <b>Some metrics depends on the type of the database you are using to persist timeseries data.</b>
@@ -437,7 +437,7 @@ Make sure that `MONITORING_ENABLED` environment variable is set to `true`. Once 
 Here are the screenshots of the default preconfigured Grafana dashboards:
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/troubleshooting/attributes-cache-grafana.webp" alt="Statistics about Attributes cache efficiency." loading="lazy"><figcaption>Statistics about Attributes cache efficiency.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/core-and-js-metrics-grafana.webp" alt="Statistics about requests to TB Core and JS processors." loading="lazy"><figcaption>Statistics about requests to TB Core and JS processors.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/db-metrics-grafana.webp" alt="Statistics about `attributes` and `timeseries` persistence to the PostgreSQL." loading="lazy"><figcaption>Statistics about `attributes` and `timeseries` persistence to the PostgreSQL.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/rule-engine-latency-grafana.webp" alt="Statistics about time it took to process messages inside of the Rule Engine." loading="lazy"><figcaption>Statistics about time it took to process messages inside of the Rule Engine.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/rule-engine-metrics-grafana.webp" alt="Statistics about processing of the message inside of the Rule Engine." loading="lazy"><figcaption>Statistics about processing of the message inside of the Rule Engine.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/single-service-metrics-grafana.webp" alt="Separate statistics for each service. You can choose the service in the upper left corner." loading="lazy"><figcaption>Separate statistics for each service. You can choose the service in the upper left corner.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/transport-metrics-grafana.webp" alt="Statistics about messages in Transport services." loading="lazy"><figcaption>Statistics about messages in Transport services.</figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/troubleshooting/attributes-cache-grafana.webp" alt="Statistics about Attributes cache efficiency." loading="lazy"><figcaption>Statistics about Attributes cache efficiency.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/core-and-js-metrics-grafana.webp" alt="Statistics about requests to SENTIENT core and JS processors." loading="lazy"><figcaption>Statistics about requests to SENTIENT core and JS processors.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/db-metrics-grafana.webp" alt="Statistics about `attributes` and `timeseries` persistence to the PostgreSQL." loading="lazy"><figcaption>Statistics about `attributes` and `timeseries` persistence to the PostgreSQL.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/rule-engine-latency-grafana.webp" alt="Statistics about time it took to process messages inside of the Rule Engine." loading="lazy"><figcaption>Statistics about time it took to process messages inside of the Rule Engine.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/rule-engine-metrics-grafana.webp" alt="Statistics about processing of the message inside of the Rule Engine." loading="lazy"><figcaption>Statistics about processing of the message inside of the Rule Engine.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/single-service-metrics-grafana.webp" alt="Separate statistics for each service. You can choose the service in the upper left corner." loading="lazy"><figcaption>Separate statistics for each service. You can choose the service in the upper left corner.</figcaption></figure><figure><img src="/images/user-guide/troubleshooting/transport-metrics-grafana.webp" alt="Statistics about messages in Transport services." loading="lazy"><figcaption>Statistics about messages in Transport services.</figcaption></figure></div>
 
 
 ## OAuth2

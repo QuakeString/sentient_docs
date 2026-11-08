@@ -46,7 +46,7 @@ If *Entity by name pattern* is configured for *New originator*, you need to spec
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbChangeOriginatorNodeConfiguration",
+  "title": "ChangeOriginatorNodeConfiguration",
   "type": "object",
   "properties": {
     "originatorSource": {

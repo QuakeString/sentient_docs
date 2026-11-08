@@ -22,13 +22,13 @@ The command is using plain MQTT without TLS:
 
 
 ```bash
-mosquitto_pub -d -q 1 -h "YOUR_TB_HOST" -p "1883" -t "v1/devices/me/telemetry" -i "YOUR_CLIENT_ID" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "YOUR_SENTIENT_HOST" -p "1883" -t "v1/devices/me/telemetry" -i "YOUR_CLIENT_ID" -m {"temperature":25}
 ```
 
 
 where:
 
-* **YOUR_TB_HOST** with the host of your SENTIENT instance;
+* **YOUR_SENTIENT_HOST** with the host of your SENTIENT instance;
 * **YOUR_CLIENT_ID** with your client id.
 
 <br>
@@ -67,13 +67,13 @@ Let's review a simple command to publish telemetry readings using MQTT client us
 
 
 ```bash
-mosquitto_pub -d -q 1 -h "YOUR_TB_HOST" -p "1883" -t "v1/devices/me/telemetry" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "YOUR_SENTIENT_HOST" -p "1883" -t "v1/devices/me/telemetry" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
 ```
 
 
 where:
 
-* **YOUR_TB_HOST** with the host of your SENTIENT instance;
+* **YOUR_SENTIENT_HOST** with the host of your SENTIENT instance;
  * **YOUR_CLIENT_USERNAME**, **YOUR_CLIENT_PASSWORD** with your client username and password.
 
 <br>
@@ -111,13 +111,13 @@ Let's review a simple command to publish telemetry readings using MQTT client ID
 
 
 ```bash
-mosquitto_pub -d -q 1 -h "YOUR_TB_HOST" -p "1883" -t "v1/devices/me/telemetry" -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
+mosquitto_pub -d -q 1 -h "YOUR_SENTIENT_HOST" -p "1883" -t "v1/devices/me/telemetry" -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
 ```
 
 
 where:
 
-* **YOUR_TB_HOST** with the host of your SENTIENT instance;
+* **YOUR_SENTIENT_HOST** with the host of your SENTIENT instance;
 * **YOUR_CLIENT_ID** with your client id;
 * **YOUR_CLIENT_USERNAME**, **YOUR_CLIENT_PASSWORD** with your client username and password.
 
@@ -173,13 +173,13 @@ Once provisioned, use "Check connectivity" feature to download the CA root certi
 Once you have successfully executed the command, you should see the published "temperature" readings.
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/basic-mqtt/authentication-based-on-client-id-username-and-password-2-ce.webp" alt="Click &quot;Check connectivity&quot; button to open the corresponding window;" loading="lazy"><figcaption>Click "Check connectivity" button to open the corresponding window;</figcaption></figure><figure><img src="/images/user-guide/basic-mqtt/mqtt-over-tls-2-ce.webp" alt="In the opened window select your operating system, and install the necessary client tools using the command from the guide. Switch to the &quot;MQTTs&quot; protocol. Copy and run the first command to download the valid CA certificate;" loading="lazy"><figcaption>In the opened window select your operating system, and install the necessary client tools using the command from the guide. Switch to the "MQTTs" protocol. Copy and run the first command to download the valid CA certificate;</figcaption></figure><figure><img src="/images/user-guide/basic-mqtt/mqtt-over-tls-3-ce.webp" alt="Copy and run the second command to publish telemetry using the tb-cloud-root-ca.pem certificate and the device credentials you specified for its authentication;" loading="lazy"><figcaption>Copy and run the second command to publish telemetry using the tb-cloud-root-ca.pem certificate and the device credentials you specified for its authentication;</figcaption></figure><figure><img src="/images/user-guide/basic-mqtt/mqtt-over-tls-4-ce.webp" alt="Once you have successfully executed the command, you should see the published &quot;temperature&quot; readings." loading="lazy"><figcaption>Once you have successfully executed the command, you should see the published "temperature" readings.</figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/basic-mqtt/authentication-based-on-client-id-username-and-password-2-ce.webp" alt="Click &quot;Check connectivity&quot; button to open the corresponding window;" loading="lazy"><figcaption>Click "Check connectivity" button to open the corresponding window;</figcaption></figure><figure><img src="/images/user-guide/basic-mqtt/mqtt-over-tls-2-ce.webp" alt="In the opened window select your operating system, and install the necessary client tools using the command from the guide. Switch to the &quot;MQTTs&quot; protocol. Copy and run the first command to download the valid CA certificate;" loading="lazy"><figcaption>In the opened window select your operating system, and install the necessary client tools using the command from the guide. Switch to the "MQTTs" protocol. Copy and run the first command to download the valid CA certificate;</figcaption></figure><figure><img src="/images/user-guide/basic-mqtt/mqtt-over-tls-3-ce.webp" alt="Copy and run the second command to publish telemetry using the sentient-cloud-root-ca.pem certificate and the device credentials you specified for its authentication;" loading="lazy"><figcaption>Copy and run the second command to publish telemetry using the sentient-cloud-root-ca.pem certificate and the device credentials you specified for its authentication;</figcaption></figure><figure><img src="/images/user-guide/basic-mqtt/mqtt-over-tls-4-ce.webp" alt="Once you have successfully executed the command, you should see the published &quot;temperature&quot; readings." loading="lazy"><figcaption>Once you have successfully executed the command, you should see the published "temperature" readings.</figcaption></figure></div>
 
 
 <br>
-Example of a generated command to publish telemetry using the *root-ca.pem* certificate, host of your SENTIENT instance (YOUR_TB_HOST), client id (YOUR_CLIENT_ID), and client username and password (YOUR_CLIENT_USERNAME / YOUR_CLIENT_PASSWORD) of the selected device:
+Example of a generated command to publish telemetry using the *root-ca.pem* certificate, host of your SENTIENT instance (YOUR_SENTIENT_HOST), client id (YOUR_CLIENT_ID), and client username and password (YOUR_CLIENT_USERNAME / YOUR_CLIENT_PASSWORD) of the selected device:
 
 
 ```bash
-mosquitto_pub -d -q 1 --cafile root-ca.pem -h YOUR_TB_HOST -p 8883 -t v1/devices/me/telemetry -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
+mosquitto_pub -d -q 1 --cafile root-ca.pem -h YOUR_SENTIENT_HOST -p 8883 -t v1/devices/me/telemetry -i "YOUR_CLIENT_ID" -u "YOUR_CLIENT_USERNAME" -P "YOUR_CLIENT_PASSWORD" -m {"temperature":25}
 ```

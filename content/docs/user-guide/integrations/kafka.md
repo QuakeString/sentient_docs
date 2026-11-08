@@ -281,7 +281,7 @@ You can simulate a message from the Confluent cloud to SENTIENT, for this use th
 Navigate to the topics in the cluster, the Messages tab, and select the **Produce a new message to this topic**.
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/integrations/kafka/confluent/create_integration/kafka_confluent_send_payload_to_tb_0.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/kafka/confluent/create_integration/kafka_confluent_send_payload_to_tb_1.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/kafka/confluent/create_integration/kafka_confluent_send_payload_to_tb_2.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/integrations/kafka/confluent/create_integration/kafka_confluent_send_payload_to_st_0.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/kafka/confluent/create_integration/kafka_confluent_send_payload_to_st_1.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/kafka/confluent/create_integration/kafka_confluent_send_payload_to_st_2.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
 
 
 Result matches all keys, timestamps and values:

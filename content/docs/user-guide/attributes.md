@@ -121,7 +121,7 @@ The output will include 'key', 'value' and timestamp of the last update:
 ```
 
 
-As an alternative to curl, you may use [Java](/docs/reference/rest-client/) or [Python](/docs/reference/python-rest-client/) REST clients.
+As an alternative to curl, you may use the [Java REST client](/docs/reference/rest-client/).
 
 ### Shared attributes
 
@@ -215,7 +215,7 @@ The output will include 'key', 'value' and timestamp of the last update:
 ```
 
 
-As an alternative to curl, you may use [Java](/docs/reference/rest-client/) or [Python](/docs/reference/python-rest-client/) REST clients.
+As an alternative to curl, you may use the [Java REST client](/docs/reference/rest-client/).
 
 #### API for device firmware or applications:
 
@@ -285,7 +285,7 @@ The output will include 'key', 'value' and timestamp of the last update:
 ```
 
 
-As an alternative to curl, you may use [Java](/docs/reference/rest-client/) or [Python](/docs/reference/python-rest-client/) REST clients.
+As an alternative to curl, you may use the [Java REST client](/docs/reference/rest-client/).
 
 #### API for device firmware or applications:
 
@@ -308,7 +308,7 @@ Telemetry Controller provides the following REST API to fetch entity data:
 
 
 **NOTE:** The API listed above is available via Swagger UI. Please review the general [REST API](/docs/reference/rest-api/) documentation for more details.
-The API is backward compatible with TB v1.0+ and this is the main reason why API call URLs contain "plugin".
+API call URLs contain "plugin" for backward compatibility.
 
 
 </div>

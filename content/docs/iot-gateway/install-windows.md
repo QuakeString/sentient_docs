@@ -79,7 +79,7 @@ Use `/HOST=… /PORT=… /TOKENFILE=C:\temp\token.txt` instead of `/COMPOSE` to 
 
 Run the setup program of the new version and choose **Keep the current connection**. The configuration, the queue and the local web page password stay.
 
-The old Python gateway must be uninstalled first, in **Settings > Apps**. Its `tb_gateway.json` stays in `C:\ProgramData\Sentient Gateway\config`, and the new gateway reads it.
+The old Python gateway must be uninstalled first, in **Settings > Apps**. Its `st_gateway.json` stays in `C:\ProgramData\Sentient Gateway\config`, and the new gateway reads it.
 
 ## Uninstall
 

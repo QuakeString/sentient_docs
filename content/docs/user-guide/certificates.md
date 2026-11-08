@@ -218,7 +218,7 @@ Execute the following command to upload temperature readings to SENTIENT Cloud u
 
 
 ```bash
-mosquitto_pub --cafile ca-root.pem -d -q 1 -h "YOUR_TB_HOST" -p "8883" \
+mosquitto_pub --cafile ca-root.pem -d -q 1 -h "YOUR_SENTIENT_HOST" -p "8883" \
 -t "v1/devices/me/telemetry" --key deviceKey.pem --cert chain.pem -m {"temperature":25}
 ```
 
@@ -226,14 +226,14 @@ mosquitto_pub --cafile ca-root.pem -d -q 1 -h "YOUR_TB_HOST" -p "8883" \
 Similar command for the [self-signed](/docs/user-guide/mqtt-over-ssl/#self-signed-certificates-generation) server certificate:
 
 ```bash
-mosquitto_pub --insecure --cafile server.pem -d -q 1 -h "YOUR_TB_HOST" -p "8883" \
+mosquitto_pub --insecure --cafile server.pem -d -q 1 -h "YOUR_SENTIENT_HOST" -p "8883" \
 -t "v1/devices/me/telemetry" --key deviceKey.pem --cert chain.pem -m {"temperature":25}
 ```
 
 
  
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your SENTIENT instance.
+Don't forget to replace **YOUR_SENTIENT_HOST** with the host of your SENTIENT instance.
 
 
 </div>
@@ -287,12 +287,12 @@ Execute the following command to upload temperature readings to SENTIENT Cloud u
 
 
 ```bash
-mosquitto_pub --cafile ca-root.pem -d -q 1 -h "YOUR_TB_HOST" -p "8883" \
+mosquitto_pub --cafile ca-root.pem -d -q 1 -h "YOUR_SENTIENT_HOST" -p "8883" \
 -t "v1/devices/me/telemetry" --key key.pem --cert cert.pem -m {"temperature":25}
 ```
 
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your SENTIENT instance.
+Don't forget to replace **YOUR_SENTIENT_HOST** with the host of your SENTIENT instance.
 
 
 </div>

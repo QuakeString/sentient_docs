@@ -55,12 +55,12 @@ one client, no Client ID conflicts can occur.
 **Option 2: Enable Add Service ID as suffix to Client ID** – This allows multiple rule node instances to connect simultaneously. When enabled, the Service ID is automatically
 appended to the specified Client ID as a suffix. Since each rule engine instance has a unique Service ID, each rule node instance creates a client with a unique identifier.
 
-**Example**: If Client ID is `my-client` and three rule engine instances have Service IDs `tb-rule-engine-1`, `tb-rule-engine-2`, and `tb-rule-engine-3`, the final Client IDs
+**Example**: If Client ID is `my-client` and three rule engine instances have Service IDs `sentient-rule-engine-1`, `sentient-rule-engine-2`, and `sentient-rule-engine-3`, the final Client IDs
 become:
 
-- `my-client_tb-rule-engine-1`
-- `my-client_tb-rule-engine-2`
-- `my-client_tb-rule-engine-3`
+- `my-client_st-rule-engine-1`
+- `my-client_st-rule-engine-2`
+- `my-client_st-rule-engine-3`
 
 #### Client ID length restrictions
 
@@ -238,9 +238,9 @@ Retransmission parameters are configured globally in the `sentient.yml` file and
 mqtt:
   client:
     retransmission:
-      max_attempts: "${TB_MQTT_CLIENT_RETRANSMISSION_MAX_ATTEMPTS:3}"
-      initial_delay_millis: "${TB_MQTT_CLIENT_RETRANSMISSION_INITIAL_DELAY_MILLIS:5000}"
-      jitter_factor: "${TB_MQTT_CLIENT_RETRANSMISSION_JITTER_FACTOR:0.15}"
+      max_attempts: "${SENTIENT_MQTT_CLIENT_RETRANSMISSION_MAX_ATTEMPTS:3}"
+      initial_delay_millis: "${SENTIENT_MQTT_CLIENT_RETRANSMISSION_INITIAL_DELAY_MILLIS:5000}"
+      jitter_factor: "${SENTIENT_MQTT_CLIENT_RETRANSMISSION_JITTER_FACTOR:0.15}"
 ```
 
 ### JSON Schema
@@ -248,7 +248,7 @@ mqtt:
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMqttNodeConfiguration",
+  "title": "MqttNodeConfiguration",
   "type": "object",
   "properties": {
     "topicPattern": {

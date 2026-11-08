@@ -1,4 +1,5 @@
 +++
+draft = true
 title = "MicroPython Client SDK"
 description = "Software development kit for client-side integration of your MicroPython project"
 

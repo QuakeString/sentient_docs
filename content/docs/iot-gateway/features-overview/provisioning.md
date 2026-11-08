@@ -39,14 +39,14 @@ You can define them in your `docker-compose.yml` or set them manually in your en
 
 | Variable Name                               | Required | Description |
 |---------------------------------------------|----------|-------------|
-| **`TB_GW_PROVISIONING_DEVICE_KEY`**         | Yes      | Provisioning device key (provided by platform administrator). |
-| **`TB_GW_PROVISIONING_DEVICE_SECRET`**      | Yes      | Provisioning device secret (provided by platform administrator). |
-| **`TB_GW_PROVISIONING_DEVICE_NAME`**        | No       | Name of the provisioned device in SENTIENT. If not set, a random name will be generated. |
-| **`TB_GW_PROVISIONING_DEVICE_ACCESS_TOKEN`**| No       | If set, the platform will assign this token to the device and use **Access Token** authentication. |
-| **`TB_GW_PROVISIONING_DEVICE_USERNAME`**    | No       | MQTT Basic authentication username. Must be used together with password/client ID (credentials type will be **MQTT Basic**). |
-| **`TB_GW_PROVISIONING_DEVICE_PASSWORD`**    | No       | MQTT Basic authentication password. Used together with username/client ID. |
-| **`TB_GW_PROVISIONING_DEVICE_CLIENT_ID`**   | No       | MQTT Basic authentication client ID. |
-| **`TB_GW_PROVISIONING_DEVICE_CA_CERT_FILENAME`** | No  | Name of CA certificate file in the `config/` folder. If set, the gateway will generate a client certificate and use **X.509 Certificate** authentication. |
+| **`ST_GW_PROVISIONING_DEVICE_KEY`**         | Yes      | Provisioning device key (provided by platform administrator). |
+| **`ST_GW_PROVISIONING_DEVICE_SECRET`**      | Yes      | Provisioning device secret (provided by platform administrator). |
+| **`ST_GW_PROVISIONING_DEVICE_NAME`**        | No       | Name of the provisioned device in SENTIENT. If not set, a random name will be generated. |
+| **`ST_GW_PROVISIONING_DEVICE_ACCESS_TOKEN`**| No       | If set, the platform will assign this token to the device and use **Access Token** authentication. |
+| **`ST_GW_PROVISIONING_DEVICE_USERNAME`**    | No       | MQTT Basic authentication username. Must be used together with password/client ID (credentials type will be **MQTT Basic**). |
+| **`ST_GW_PROVISIONING_DEVICE_PASSWORD`**    | No       | MQTT Basic authentication password. Used together with username/client ID. |
+| **`ST_GW_PROVISIONING_DEVICE_CLIENT_ID`**   | No       | MQTT Basic authentication client ID. |
+| **`ST_GW_PROVISIONING_DEVICE_CA_CERT_FILENAME`** | No  | Name of CA certificate file in the `config/` folder. If set, the gateway will generate a client certificate and use **X.509 Certificate** authentication. |
 
 **Note:**  
 The credentials type is determined by which optional parameters you provide.  
@@ -108,9 +108,9 @@ To use the provisioning feature you need to follow next steps:
   environment:
     - host=SENTIENT_HOST
     - port=SENTIENT_PORT
-    - TB_GW_PROVISIONING_DEVICE_KEY=YOUR_PROVISION_KEY
-    - TB_GW_PROVISIONING_DEVICE_SECRET=YOUR_PROVISION_SECRET
-    - TB_GW_PROVISIONING_DEVICE_NAME=Factory-Gateway-01
+    - ST_GW_PROVISIONING_DEVICE_KEY=YOUR_PROVISION_KEY
+    - ST_GW_PROVISIONING_DEVICE_SECRET=YOUR_PROVISION_SECRET
+    - ST_GW_PROVISIONING_DEVICE_NAME=Factory-Gateway-01
 ...
 ```
 

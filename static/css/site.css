@@ -35,8 +35,8 @@
   --tb-text-on-primary: #ffffff;
   --tb-border: rgba(0, 0, 0, 0.12);
   --tb-border-strong: #cccccc;
-  --tb-icon-color: rgba(0, 0, 0, 0.54);
-  --tb-icon-disabled: rgba(0, 0, 0, 0.26);
+  --st-icon-color: rgba(0, 0, 0, 0.54);
+  --st-icon-disabled: rgba(0, 0, 0, 0.26);
   --tb-hint-icon-color: rgba(0, 0, 0, 0.26);
   --tb-hint-icon-hover-color: rgba(0, 0, 0, 0.54);
   --tb-filter-key-color: #305680;
@@ -291,8 +291,8 @@
   --tb-text-on-primary: rgba(0, 0, 0, 0.87);
   --tb-border: rgba(255, 255, 255, 0.12);
   --tb-border-strong: rgba(255, 255, 255, 0.24);
-  --tb-icon-color: rgba(255, 255, 255, 0.7);
-  --tb-icon-disabled: rgba(255, 255, 255, 0.3);
+  --st-icon-color: rgba(255, 255, 255, 0.7);
+  --st-icon-disabled: rgba(255, 255, 255, 0.3);
   --tb-hint-icon-color: rgba(255, 255, 255, 0.38);
   --tb-hint-icon-hover-color: rgba(255, 255, 255, 0.7);
   --tb-filter-key-color: #7fa9d9;
@@ -461,8 +461,8 @@
   --tb-text-on-primary: rgba(0, 0, 0, 0.87);
   --tb-border: rgba(255, 255, 255, 0.12);
   --tb-border-strong: rgba(255, 255, 255, 0.24);
-  --tb-icon-color: rgba(255, 255, 255, 0.7);
-  --tb-icon-disabled: rgba(255, 255, 255, 0.3);
+  --st-icon-color: rgba(255, 255, 255, 0.7);
+  --st-icon-disabled: rgba(255, 255, 255, 0.3);
   --tb-hint-icon-color: rgba(255, 255, 255, 0.38);
   --tb-hint-icon-hover-color: rgba(255, 255, 255, 0.7);
   --tb-filter-key-color: #7fa9d9;

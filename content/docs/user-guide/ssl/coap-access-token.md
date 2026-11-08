@@ -23,11 +23,11 @@ The coap-client example below demonstrates how to connect to [SENTIENT Cloud](ht
 
 Let's
 review a simple command
-to upload temperature readings using Access Token **YOUR_ACCESS_TOKEN** to SENTIENT instance **YOUR_TB_HOST**.
+to upload temperature readings using Access Token **YOUR_ACCESS_TOKEN** to SENTIENT instance **YOUR_SENTIENT_HOST**.
 See [CoAP API](/docs/reference/coap-api/) for more details. The command is using plain CoAP without TLS:
 
 ```bash
-coap-client -v 6 -m POST coap://YOUR_TB_HOST:5683/api/v1/YOUR_ACCESS_TOKEN/telemetry -t json -e "{temperature:25}"
+coap-client -v 6 -m POST coap://YOUR_SENTIENT_HOST:5683/api/v1/YOUR_ACCESS_TOKEN/telemetry -t json -e "{temperature:25}"
 ```
 
 
@@ -36,7 +36,7 @@ The above command requires coap-client library that you can install using the fo
  - **Ubuntu 20.04:** sudo apt install libcoap2-bin
  - **Ubuntu 18.04:** sudo apt install libcoap1-bin
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your SENTIENT instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
+Don't forget to replace **YOUR_SENTIENT_HOST** with the host of your SENTIENT instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
 
 ### DTLS support (One-way TLS)
 
@@ -141,11 +141,11 @@ Follow the [CoAP over DTLS](/docs/user-guide/coap-over-dtls/) guide to provision
 Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by CoAP client to validate the server certificate.
 Save the CA root certificate to your working directory as "**ca-root.pem**".
 
-Now you may use the "**ca.pem**" to setup secure connection to your SENTIENT instance **YOUR_TB_HOST** and Access Token **YOUR_ACCESS_TOKEN** to authenticate the device to upload telemetry:
+Now you may use the "**ca.pem**" to setup secure connection to your SENTIENT instance **YOUR_SENTIENT_HOST** and Access Token **YOUR_ACCESS_TOKEN** to authenticate the device to upload telemetry:
 
 ```bash
-coap-client-openssl -v 6 -m POST  -R ca-root.pem -t "application/json" -e '{"temperature":42}' coaps://YOUR_TB_HOST/api/v1/YOUR_ACCESS_TOKEN/telemetry
+coap-client-openssl -v 6 -m POST  -R ca-root.pem -t "application/json" -e '{"temperature":42}' coaps://YOUR_SENTIENT_HOST/api/v1/YOUR_ACCESS_TOKEN/telemetry
 ```
 
 
-Don't forget to replace **YOUR_TB_HOST** with the host of your SENTIENT instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
+Don't forget to replace **YOUR_SENTIENT_HOST** with the host of your SENTIENT instance and **YOUR_ACCESS_TOKEN** with the access token of your device.

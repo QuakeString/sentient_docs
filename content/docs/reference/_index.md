@@ -28,9 +28,7 @@ Look things up here once you know what you want to do.
 | Page | Use it for |
 |---|---|
 | [REST client](/docs/reference/rest-client/) | Call the REST API from Java |
-| [Python REST client](/docs/reference/python-rest-client/) | Call the REST API from Python |
 | [Dart client](/docs/reference/dart-client/) | Build Flutter and Dart apps |
-| [Python SDK](/docs/reference/python-client-sdk/), [MicroPython](/docs/reference/micropython-client-sdk/), [CircuitPython](/docs/reference/circuitpython-client-sdk/) | Write device firmware and scripts |
 
 ## Widgets
 

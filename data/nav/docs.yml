@@ -483,16 +483,8 @@ toc:
     section:
     - title: REST client
       path: /docs/reference/rest-client/
-    - title: Python REST client
-      path: /docs/reference/python-rest-client/
     - title: Dart client
       path: /docs/reference/dart-client/
-    - title: Python SDK
-      path: /docs/reference/python-client-sdk/
-    - title: MicroPython SDK
-      path: /docs/reference/micropython-client-sdk/
-    - title: CircuitPython SDK
-      path: /docs/reference/circuitpython-client-sdk/
   - title: Widget development
     section:
     - title: Overview

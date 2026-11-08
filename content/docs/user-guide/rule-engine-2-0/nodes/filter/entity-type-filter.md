@@ -21,7 +21,7 @@ Checks the incoming message’s originator entity type against the configured se
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbOriginatorTypeFilterNodeConfiguration",
+  "title": "OriginatorTypeFilterNodeConfiguration",
   "type": "object",
   "required": [
     "originatorTypes"

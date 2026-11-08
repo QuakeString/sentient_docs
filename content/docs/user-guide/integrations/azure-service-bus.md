@@ -65,13 +65,13 @@ Let’s review sample uplink message from Service Bus topic:
 ```
 
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 You can use the following code, copy it to the decoder function section:
 
@@ -97,7 +97,7 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-uplink-converter-tbel-1-pe.webp)
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-uplink-converter-rhai-1-pe.webp)
 
 </div>
 
@@ -222,7 +222,7 @@ Now, create **downlink converter** (You need to do same steps like when was crea
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 You can use our example of downlink converter or write your own according to your configuration:
 
@@ -243,7 +243,7 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-downlink-converter-tbel-1-pe.webp)
+![image](/images/user-guide/integrations/azure-service-bus/azure-service-bus-integration-create-downlink-converter-rhai-1-pe.webp)
 
 </div>
 

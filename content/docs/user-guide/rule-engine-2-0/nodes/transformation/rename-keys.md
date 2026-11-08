@@ -27,7 +27,7 @@ If the current key does not exist, the mapping is skipped.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbRenameKeysNodeConfiguration",
+  "title": "RenameKeysNodeConfiguration",
   "type": "object",
   "properties": {
     "renameIn": {

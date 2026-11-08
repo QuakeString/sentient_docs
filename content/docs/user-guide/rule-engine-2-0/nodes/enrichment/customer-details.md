@@ -34,7 +34,7 @@ The node's configuration allows you to select which customer details you want to
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbGetCustomerDetailsNodeConfiguration",
+  "title": "GetCustomerDetailsNodeConfiguration",
   "type": "object",
   "properties": {
     "detailsList": {

@@ -106,7 +106,7 @@ Your region is listed in the URL when you are signed in to your AWS IoT account.
 <div class="st-gallery"><figure><img src="/images/user-guide/integrations/aws-iot/create_policies_2.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
 
 
-After that, click the **Create** button. The policy will be added to the list, and you will receive the **Successfully created policy tb_policy** message.
+After that, click the **Create** button. The policy will be added to the list, and you will receive the **Successfully created policy st_policy** message.
 
 
 <div class="st-gallery"><figure><img src="/images/user-guide/integrations/aws-iot/create_policies_3.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
@@ -194,13 +194,13 @@ Starting from **SENTIENT 3.9**, the platform stores the full set of debug events
 
 Debug mode settings can be combined or disabled entirely.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 **Example for the Uplink converter:**
 
@@ -228,7 +228,7 @@ return result;
 ```
 
 
-![image](/images/user-guide/integrations/aws-iot/aws-iot-uplink-converter-tbel-pe.webp)
+![image](/images/user-guide/integrations/aws-iot/aws-iot-uplink-converter-rhai-pe.webp)
 
 </div>
 
@@ -361,16 +361,16 @@ To check if the message has arrived at AWS IoT integration open the events tab o
 Let's look at a simple example to test a connection and send a message. For it need to create a downlink
 Data converter. Then set the converter and topic in the AWS IoT integration.
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/integrations/aws-iot/create-downlink-converter-tbel-1-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/aws-iot/downlink_1.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/aws-iot/downlink_1(2).png" alt="" loading="lazy"><figcaption></figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/integrations/aws-iot/create-downlink-converter-rhai-1-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/aws-iot/downlink_1.webp" alt="" loading="lazy"><figcaption></figcaption></figure><figure><img src="/images/user-guide/integrations/aws-iot/downlink_1(2).png" alt="" loading="lazy"><figcaption></figcaption></figure></div>
 
 
 An example of downlink converter:

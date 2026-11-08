@@ -169,7 +169,7 @@ execution. Use this node whenever possible for numeric operations.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMathNodeConfiguration",
+  "title": "MathNodeConfiguration",
   "type": "object",
   "properties": {
     "operation": {

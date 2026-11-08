@@ -287,13 +287,13 @@ The data can be viewed in the Uplink converter. In the "**In**", "**Out**" and "
 
 Create Downlink in **Data converters**. To see events - enable [debug mode](/docs/user-guide/integrations/#debug-mode).
 
-> One can use either [TBEL](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
-We recommend utilizing [TBEL](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
+> One can use either [Rhai](/docs/user-guide/rhai/) (SENTIENT expression language) or JavaScript to develop user defined functions. 
+We recommend utilizing [Rhai](/docs/user-guide/rhai/) as it's execution in SENTIENT is much more efficient compared to JS.
 
 
 <div class="st-tabs">
 
-<div class="st-tab" data-label="TBELRecommended">
+<div class="st-tab" data-label="RhaiRecommended">
 
 You can customize the downlink according to your configuration. Let's consider an example where we send an attribute update message. So we should change code in the downlink encoder function under
 line `//downlink data input`
@@ -385,7 +385,7 @@ return result;
 Add a converter to the integration. You can do this at the stage of creating an integration or editing it.
 
 
-<div class="st-gallery"><figure><img src="/images/user-guide/integrations/loriot/loriot-downlink-converters-1-tbel-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
+<div class="st-gallery"><figure><img src="/images/user-guide/integrations/loriot/loriot-downlink-converters-1-rhai-pe.webp" alt="" loading="lazy"><figcaption></figcaption></figure></div>
 
 
 </div>

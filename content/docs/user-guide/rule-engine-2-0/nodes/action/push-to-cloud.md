@@ -54,7 +54,7 @@ The configuration specifies the default attribute scope for attribute-related me
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbMsgPushToCloudNodeConfiguration",
+  "title": "MsgPushToCloudNodeConfiguration",
   "type": "object",
   "properties": {
     "scope": {

@@ -90,7 +90,7 @@ When the limit is reached, new messages wait until an in-flight request complete
 
 The maximum size of HTTP response body that can be buffered in memory. Responses exceeding this limit will fail with an error. Default: 256 KB
 
-The system enforces a maximum limit through the `tb.http.maxInMemoryBufferSizeInKb` system property (default: 25000 KB). If the configured value exceeds this limit, the node fails
+The system enforces a maximum limit through the `st.http.maxInMemoryBufferSizeInKb` system property (default: 25000 KB). If the configured value exceeds this limit, the node fails
 to initialize.
 
 ### Proxy settings
@@ -129,8 +129,8 @@ SOCKS proxy:
 
 **Authentication properties** (for all proxy types):
 
-- `tb.proxy.user` – Proxy username
-- `tb.proxy.password` – Proxy password
+- `st.proxy.user` – Proxy username
+- `st.proxy.password` – Proxy password
 
 
 <div class="st-callout info">
@@ -226,7 +226,7 @@ nodes including this REST API call node.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbRestApiCallNodeConfiguration",
+  "title": "RestApiCallNodeConfiguration",
   "type": "object",
   "properties": {
     "restEndpointUrlPattern": {
@@ -314,7 +314,7 @@ nodes including this REST API call node.
 ## Rule node initialization
 
 When the rule node is initialized, it creates an HTTP client with the configured settings. The client uses a connection pool with a maximum number of connections that can be
-configured via the `TB_RE_HTTP_CLIENT_POOL_MAX_CONNECTIONS` environment variable (defaults to a value determined by the Reactor Netty library).
+configured via the `SENTIENT_RE_HTTP_CLIENT_POOL_MAX_CONNECTIONS` environment variable (defaults to a value determined by the Reactor Netty library).
 
 Once initialization completes, the client is ready to process messages.
 

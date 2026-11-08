@@ -153,7 +153,7 @@ Go to **Data Converters** and create new **uplink** Converter with this function
 
 <span class="k">return</span> <span class="nx">result</span><span class="p">;</span></code></pre></figure>
 
-![image](/images/user-guide/integrations/tti/tb-uplink.webp)
+![image](/images/user-guide/integrations/tti/st-uplink.webp)
 
 
 ### SENTIENT Downlink Data Converter
@@ -192,7 +192,7 @@ Go to **Data Converters** and create new **downlink** Converter with this functi
 
 This converter will take **version** field from the incoming message and add it is a payload field in the outbound message. Destination device is a **thermostat1** device.
 
-![image](/images/user-guide/integrations/tti/tb-downlink.webp)
+![image](/images/user-guide/integrations/tti/st-downlink.webp)
 
 ### TTI Integration
 
@@ -207,9 +207,9 @@ Next we will create Integration with TheThingsIndustries inside the SENTIENT. Op
 - **Username**: *sentient-integration@sentient* (use ***Username*** from TTI integration)
 - **Password**: use ***Password*** from TTI integration
 
-![image](/images/user-guide/integrations/tti/tb-integration-1.webp)  
+![image](/images/user-guide/integrations/tti/sentient-integration-1.webp)  
 
-![image](/images/user-guide/integrations/tti/tb-integration-2.webp)  
+![image](/images/user-guide/integrations/tti/sentient-integration-2.webp)  
 
 ## Validation
 
@@ -223,23 +223,23 @@ Go to **Device Group** -> **All** -> **thermostat1** - you can see that
 - new device was registered in the Sentient with name "thermostat1"
 - In the **Latest Telemetry** section you will see that last submitted temperature = 2.
 
-![image](/images/user-guide/integrations/tti/tb-device-telemetry.webp)
+![image](/images/user-guide/integrations/tti/st-device-telemetry.webp)
 
 ### Validate Downlink Messages
 For testing Downlink Messages, we will update our Root Rule Chain to send downlink message when device attribute is changed.
 Open and edit **Root Rule Chain**. Add **Integration Downlink** Action node and connect it with the **Message Type Switch** Node using relation 
 **Attributes Updated**
  
-![image](/images/user-guide/integrations/tti/tb-add-rule-downlink.webp)
+![image](/images/user-guide/integrations/tti/st-add-rule-downlink.webp)
 
-![image](/images/user-guide/integrations/tti/tb-route-to-downlink.webp)
+![image](/images/user-guide/integrations/tti/st-route-to-downlink.webp)
 
 Save Changes.
 
 Go to **Device Group** -> **All** -> **thermostat1** -> attributes section. We will add **Shared attribute** with name **version** and
 value **v.0.11** 
 
-![image](/images/user-guide/integrations/tti/tb-add-version.webp)
+![image](/images/user-guide/integrations/tti/st-add-version.webp)
 
 By making this step, we triggered downlink message to the device **thermostat1** and this message should contains version field value.  
 Open TTI Console, navigate to **sentient-integration** application, to the section **Data**.  

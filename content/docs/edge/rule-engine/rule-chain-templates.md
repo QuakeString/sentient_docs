@@ -20,13 +20,6 @@ Starting with **Edge version 4.0**, the **Rule chain** can be created and edited
 ### Creating Rule Chain Template on the Edge
 
 
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Edge version 4.0</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 1. Sign in to your <b>SENTIENT Edge CE</b> instance and go to the <b>Rule chains</b> section. To add a new <b>Rule chain</b>, click the <b>"+"</b> button in the top right corner, and choose the <b>"Create new rule chain"</b> option.

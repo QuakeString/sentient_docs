@@ -28,7 +28,7 @@ The registry enables efficient serialization/deserialization of telemetry data. 
 
 - The default server-side CID length is now 8 bytes
 
-(parameter COAP_DTLS_CONNECTION_ID_LENGTH in tb-lwm2m-transport.yml).
+(parameter COAP_DTLS_CONNECTION_ID_LENGTH in sentient-lwm2m-transport.yml).
 
 - Setting the server CID length to 8 bytes automatically enables the MultiNodeConnectionIdGenerator, which assigns a unique CID to each client session.
 This improves DTLS connection resilience and allows stable operation in multi-node deployments.
@@ -425,7 +425,7 @@ java -jar sentient-lwm2m-demo-client-4.1.0.jar -u coap://localhost -n $UNIQUE_EN
 or
 
 ```bash
-docker run --rm -it sentient/tb-lwm2m-demo-client:latest -u coap://localhost -n $UNIQUE_ENDPOINT_NAME
+docker run --rm -it sentient/sentient-lwm2m-demo-client:latest -u coap://localhost -n $UNIQUE_ENDPOINT_NAME
 ```
 
 
@@ -1753,7 +1753,7 @@ You can find more details about all available in LwM2M Object attributes here: [
 The role of these R-Attributes is to provide parameters to the "Notify" operation, which is used for the resource 
 observation. Any readable Resource can have such R-attributes.
 
-Following NOTIFICATION attributes are available on the TB Platform to configure observation parameters:
+Following NOTIFICATION attributes are available on SENTIENT to configure observation parameters:
 
 * "pmin"  - Minimum period - indicates the minimum time in seconds the LwM2M Client MUST wait between two notifications.
   If a notification of an observed Resource is supposed to be generated but it is before pmin expiry,
@@ -1839,7 +1839,7 @@ java -jar sentient-lwm2m-demo-client-4.1.0.jar -u coaps://localhost -n MyClientP
   or
 
 ```ruby
-docker run --rm -it sentient/tb-lwm2m-demo-client:latest -u coaps://localhost -n 	MyClientPsk -i myIdentity -p 01020304050607080A0B0C0D0F010203
+docker run --rm -it sentient/sentient-lwm2m-demo-client:latest -u coaps://localhost -n 	MyClientPsk -i myIdentity -p 01020304050607080A0B0C0D0F010203
 ```
 
 

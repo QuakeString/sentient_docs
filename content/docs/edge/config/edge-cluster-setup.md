@@ -7,13 +7,6 @@ status = "imported"
 checked = ""
 source = "docs/edge/config/edge-cluster-setup.md"
 +++
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Edge version 4.0.1</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 ### Overview
@@ -27,7 +20,7 @@ Edge-specific considerations:
 * **Edge nodes** share the workload and maintain local failover.
 * The **Edge Cluster** syncs aggregated data to **SENTIENT Cloud**.
 
-![edge-cluster](/images/edge/config/edge-cluster.webp)
+{{ diagram(name="edge-cluster") }}
 
 For more details, see the [microservices architecture](/docs/reference/msa/) page.
 
@@ -57,7 +50,7 @@ Install Docker:
 
 
 ```bash
-docker pull sentient/tb-edge:
+docker pull sentient/sentient-edge:
 ```
 
 
@@ -86,7 +79,7 @@ nano .env
 Check the following lines:
 ```bash
 DATABASE=postgres
-TB_QUEUE_TYPE=kafka
+SENTIENT_QUEUE_TYPE=kafka
 
 CLOUD_ROUTING_KEY=PUT_YOUR_EDGE_KEY_HERE # e.g. 19ea7ee8-5e6d-e642-4f32-05440a529015
 CLOUD_ROUTING_SECRET=PUT_YOUR_EDGE_SECRET_HERE # e.g. bztvkvfqsye7omv9uxlp
@@ -100,12 +93,12 @@ View the full **.env** file:
 CACHE=redis
 
 DOCKER_REPO=sentient
-TB_EDGE_NODE_DOCKER_NAME=tb-edge-node
-TB_EDGE_VERSION=latest# Database used by SENTIENT, can be either postgres (PostgreSQL) or hybrid (PostgreSQL for entities database and Cassandra for timeseries database).
+SENTIENT_EDGE_NODE_DOCKER_NAME=sentient-edge-node
+SENTIENT_EDGE_VERSION=latest# Database used by SENTIENT, can be either postgres (PostgreSQL) or hybrid (PostgreSQL for entities database and Cassandra for timeseries database).
 # According to the database type corresponding docker service will be deployed (see docker-compose.postgres.yml, docker-compose.hybrid.yml for details).
 
 DATABASE=postgres
-TB_QUEUE_TYPE=kafka
+SENTIENT_QUEUE_TYPE=kafka
 
 CLOUD_ROUTING_KEY=PUT_YOUR_EDGE_KEY_HERE # e.g. 19ea7ee8-5e6d-e642-4f32-05440a529015
 CLOUD_ROUTING_SECRET=PUT_YOUR_EDGE_SECRET_HERE # e.g. bztvkvfqsye7omv9uxlp
@@ -127,7 +120,7 @@ JAVA_OPTS="-Xmx2048M -Xms2048M -Xss384k -XX:+AlwaysPreTouch"
 * **DATABASE:** Replace the _database_ value with:
   * **postgres:** Set the _postgres_ value to use the **PostgreSQL** database.
   * **hybrid:** Set the _hybrid_ value to use the **PostgreSQL** database for the entities database and **Cassandra** for the time-series database.
-* **TB_QUEUE_TYPE:** Use _kafka_ as the queue type. The _in-memory_ value is not valid for a cluster deployment.
+* **SENTIENT_QUEUE_TYPE:** Use _kafka_ as the queue type. The _in-memory_ value is not valid for a cluster deployment.
 * **CLOUD_ROUTING_KEY:** Put your edge key.
 * **CLOUD_ROUTING_SECRET:** Put your edge secret.
 * **CLOUD_RPC_HOST:** Use _sentient.cloud_ / _eu.sentient.cloud_ if you connect **Edge** to the [SENTIENT Cloud (North America)](https://sentient.cloud/signup)/[SENTIENT Cloud (Europe)](https://eu.sentient.cloud/signup) correspondingly, or an **IP address** of the machine with the **SENTIENT Professional Edition Platform**.
@@ -186,7 +179,7 @@ In order to check if all required volume folders are available and have correct 
 
 To run the installation, execute the following command:
 ```bash 
-./docker-install-tb.sh
+./docker-install.sh
 ```
 
 
@@ -209,7 +202,7 @@ To log in, use **the credentials** from the **SENTIENT** account.
 
 Examine edge service logs for errors in case of any issues. To see **SENTIENT Edge** node logs, execute the following command:
 ```bash 
-docker-compose logs -f tb-edge1 tb-edge2 tb-edge3
+docker-compose logs -f sentient-edge1 sentient-edge2 sentient-edge3
 ```
 
 
@@ -258,7 +251,7 @@ To upgrade the database, run the following commands:
 
 ```bash
 ./docker-stop-services.sh
-./docker-upgrade-tb.sh
+./docker-upgrade.sh
 ./docker-start-services.sh
 ```
 

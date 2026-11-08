@@ -28,7 +28,7 @@ Creates new alarms or updates existing active alarms.
 
 ### Alarm details script
 
-A script (TBEL or JavaScript) that generates the content for the alarm's `details` field. The script must return a valid JSON value, which can be:
+A script (Rhai or JavaScript) that generates the content for the alarm's `details` field. The script must return a valid JSON value, which can be:
 
 - Primitive values (numbers, booleans, strings)
 - JSON arrays
@@ -55,7 +55,7 @@ The script has access to the following variables:
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbCreateAlarmNodeConfiguration",
+  "title": "CreateAlarmNodeConfiguration",
   "type": "object",
   "properties": {
     "alarmType": {
@@ -65,7 +65,7 @@ The script has access to the following variables:
     "scriptLang": {
       "type": "string",
       "enum": [
-        "TBEL",
+        "Rhai",
         "JS"
       ],
       "description": "Script language for details builder"
@@ -76,7 +76,7 @@ The script has access to the following variables:
     },
     "alarmDetailsBuildTbel": {
       "type": "string",
-      "description": "TBEL details builder function"
+      "description": "Rhai details builder function"
     },
     "severity": {
       "type": "string",
@@ -238,7 +238,7 @@ Originator: `DEVICE`
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "alarmDetailsBuildTbel": "return {\n    temperature: msg.temperature\n};",
   "alarmType": "High Temperature",
   "severity": "CRITICAL"
@@ -340,7 +340,7 @@ Originator: `DEVICE`
 
 ```json
 {
-  "scriptLang": "TBEL",
+  "scriptLang": "Rhai",
   "alarmDetailsBuildTbel": "return {\n    temperature: msg.temperature\n};",
   "alarmType": "High Temperature",
   "severity": "CRITICAL"

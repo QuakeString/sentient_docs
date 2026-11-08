@@ -7,13 +7,6 @@ status = "imported"
 checked = ""
 source = "docs/user-guide/image-gallery.md"
 +++
-<table style="width:auto">
-   <thead>
-     <tr>
-	 <td style="text-align: center"><strong><em>Available since TB Version 3.6.2</em></strong></td>
-     </tr>
-   </thead>
-</table> 
 
 
 The Image gallery serves as a centralized repository for storing and managing images. 

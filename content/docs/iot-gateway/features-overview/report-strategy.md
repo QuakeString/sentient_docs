@@ -15,7 +15,7 @@ The **Report Strategy** feature allows you to configure how the gateway reports 
 The report strategy is applied in the following order of precedence:
 
 1. **Default Configuration**: The default report strategy (`ON_RECEIVED`) is applied if no other configuration is specified.
-2. **General Configuration**: Defined in the `tb_gateway.json` file and applies to all connectors, devices, and datapoints unless overridden.
+2. **General Configuration**: Defined in the `st_gateway.json` file and applies to all connectors, devices, and datapoints unless overridden.
 3. **Connector Configuration**: Defined in the connector's configuration file and applies to all devices and datapoints within the connector unless overridden.
 4. **Device Configuration**: Defined in the device section of the connector configuration file and applies to all datapoints for that device unless overridden.
 5. **Datapoint Configuration**: Defined in the time-series or attributes section for a specific datapoint and takes precedence over all other levels.
@@ -122,7 +122,7 @@ Here are some examples demonstrating how to configure the **Report Strategy** at
 
 - **Scenario**: Use `ON_CHANGE` globally, but for the Modbus connector, report data every 60 seconds to reduce rate limit usage. Data from other connectors should use the global configuration.
 - **Configuration**:
-  - **General Configuration** (`tb_gateway.json`):
+  - **General Configuration** (`st_gateway.json`):
     ```json
     {
       "reportStrategy": {
@@ -152,7 +152,7 @@ Here are some examples demonstrating how to configure the **Report Strategy** at
 
 - **Scenario**: Use `ON_CHANGE` globally, but for a specific MQTT device, report data when it changes or every 60 seconds, whichever comes first.
 - **Configuration**:
-  - **General Configuration** (`tb_gateway.json`):
+  - **General Configuration** (`st_gateway.json`):
     ```json
     {
       "reportStrategy": {
@@ -295,7 +295,7 @@ The **Report Strategy** feature uses a hierarchical approach where configuration
    * The default report strategy (`ON_RECEIVED`) is used when no other strategy is specified at any level.
 
 2. **General Configuration**:
-   * The report strategy defined in the `tb_gateway.json` file applies to all connectors, devices, and datapoints unless overridden at more specific levels.
+   * The report strategy defined in the `st_gateway.json` file applies to all connectors, devices, and datapoints unless overridden at more specific levels.
    * This strategy overrides the default configuration.
 
 3. **Connector-Level Configuration**:

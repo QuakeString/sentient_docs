@@ -27,7 +27,7 @@ If you're deleting from the message **data**, it must be a valid JSON object. If
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbDeleteKeysNodeConfiguration",
+  "title": "DeleteKeysNodeConfiguration",
   "type": "object",
   "properties": {
     "deleteFrom": {

@@ -59,7 +59,7 @@ In **Mode** **Script**, you write a **Rhai** expression over the argument names 
 temperature > maxTemperature && pumpRunning
 ```
 
-**Test script function** runs it with values you type before you save. Scripts written in TBEL are translated when they run.
+**Test script function** runs it with values you type before you save. Scripts written in Rhai are translated when they run.
 
 **Missing for** raises an alarm when an argument has had no new value for a time. Pick the operation **missing for** in a condition filter and set the duration and unit. The server checks it on its own when the time is up, so the alarm fires even though the device sends nothing more. An argument that has never had a value does not count as missing. A clear rule such as "the argument has any value" clears the alarm when data comes back; the next silence then raises a new alarm. It works with **Simple**, **Duration** and **Repeating** conditions and combines with other filters through AND and OR. Example: a **Critical** alarm "temperature missing for 20 seconds".
 

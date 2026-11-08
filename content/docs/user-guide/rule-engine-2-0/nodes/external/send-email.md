@@ -91,7 +91,7 @@ The force acknowledgement mechanism is controlled by the `ACTORS_RULE_EXTERNAL_N
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbSendEmailNodeConfiguration",
+  "title": "SendEmailNodeConfiguration",
   "type": "object",
   "properties": {
     "useSystemSmtpSettings": {

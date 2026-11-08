@@ -51,7 +51,7 @@ The conversation must be accessible by the configured Slack token.
 ```json
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "TbSlackNodeConfiguration",
+  "title": "SlackNodeConfiguration",
   "type": "object",
   "properties": {
     "messageTemplate": {

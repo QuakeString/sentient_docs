@@ -65,7 +65,7 @@ AUTO_ICON = [
     ("translator", "languages"), ("platform manager", "wrench"), ("licence", "key"), ("queue", "layers"),
     ("actor", "activity"), ("web ui", "globe"), ("analytics", "chart"), ("fan", "fan"), ("temperature", "thermo"),
     ("moisture", "gauge"), ("irrigation", "gauge"), ("sensor", "gauge"), ("device", "cpu"), ("region", "box"),
-    ("field", "box"), ("asset", "box"), ("broker", "send"), ("opc ua", "server"), ("sigfox", "cloud"),
+    ("field", "box"), ("lorawan", "globe"), ("network", "globe"), ("nb-iot", "globe"), ("asset", "box"), ("broker", "send"), ("opc ua", "server"), ("sigfox", "cloud"),
     ("thingpark", "cloud"), ("oceanconnect", "cloud"), ("platform", "cloud"), ("checks", "check"), ("creates", "check"),
     ("saves", "lock"), ("filter", "filter"), ("custom", "code"), ("meters", "gauge"), ("databases", "database"),
     ("brokers", "send"), ("local web", "monitor"), ("ask us", "help"),
@@ -82,7 +82,7 @@ def auto_icon(title):
 
 def tw(s, size=14, bold=True):
     """Rough text width for layout."""
-    return len(s) * size * (0.5 if bold else 0.45)
+    return len(s) * size * (0.48 if bold else 0.43)
 
 
 class D:
@@ -115,7 +115,7 @@ class D:
         tile = 32 if h >= 52 else 26
         lh = tsize + 3
         n = len(lines) + (1 if sub else 0)
-        if ic and w >= 30 + tile + max(title_w, sub_w) and h >= 36:
+        if ic and w >= 30 + tile + max(title_w, sub_w) and h >= 40:
             # icon tile on the left, text left-aligned
             tx, ty = x + 12, y + (h - tile) / 2
             self.el.append(f'<rect class="dg-tile dg-tile{k}" x="{tx}" y="{ty}" width="{tile}" height="{tile}" rx="8"/>')
@@ -326,19 +326,19 @@ def connectivity():
     d.box("pr2", 450, 474, 180, 44, "Choose a protocol")
     d.box("ind", 450, 590, 180, 56, "Modbus, OPC UA, S7,\nBACnet, CAN or BLE?")
     O = 820
-    d.box("o1", O, 20, 200, 40, "MQTT Gateway API", k="a", small=True)
-    d.box("o2", O, 72, 200, 40, "MQTT API", k="a", small=True)
-    d.box("o3", O, 124, 200, 40, "HTTP API", k="a", small=True)
-    d.box("o4", O, 176, 200, 40, "CoAP API", k="a", small=True)
-    d.box("o5", O, 228, 200, 40, "MQTT Sparkplug API", k="a", small=True)
-    d.box("o6", O, 282, 200, 52, "Integration", "AWS IoT · Azure · MQTT · OPC UA", "s", small=True)
-    d.box("o7", O, 352, 200, 40, "HTTP integration", k="s", small=True)
-    d.box("o8", O, 404, 200, 40, "SNMP API", k="a", small=True)
-    d.box("o9", O, 456, 200, 40, "CoAP integration", k="s", small=True)
-    d.box("o10", O, 508, 200, 40, "Ask us", k="b", small=True)
-    d.box("o11", O, 560, 200, 40, "Platform integrations", k="s", small=True)
-    d.box("o12", O, 612, 200, 40, "SENTIENT Gateway", k="s", small=True)
-    d.box("o13", O, 652 + 4, 200, 36, "Ask us", k="b", small=True)
+    d.box("o1", O, 20, 200, 40, "MQTT Gateway API", k="a", small=True, icon="router")
+    d.box("o2", O, 72, 200, 40, "MQTT API", k="a", small=True, icon="code")
+    d.box("o3", O, 124, 200, 40, "HTTP API", k="a", small=True, icon="code")
+    d.box("o4", O, 176, 200, 40, "CoAP API", k="a", small=True, icon="code")
+    d.box("o5", O, 228, 200, 40, "MQTT Sparkplug API", k="a", small=True, icon="code")
+    d.box("o6", O, 282, 200, 52, "Integration", "AWS · Azure · OPC UA", "s", small=True, icon="plug")
+    d.box("o7", O, 352, 200, 40, "HTTP integration", k="s", small=True, icon="plug")
+    d.box("o8", O, 404, 200, 40, "SNMP API", k="a", small=True, icon="code")
+    d.box("o9", O, 456, 200, 40, "CoAP integration", k="s", small=True, icon="plug")
+    d.box("o10", O, 508, 200, 40, "Ask us", k="b", small=True, icon="help")
+    d.box("o11", O, 560, 200, 40, "Platform integrations", k="s", small=True, icon="plug")
+    d.box("o12", O, 612, 200, 40, "SENTIENT Gateway", k="s", small=True, icon="router")
+    d.box("o13", O, 654, 200, 40, "Ask us", k="b", small=True, icon="help")
     d.link("ip", "fw", "Yes", mid=210).link("ip", "lp", "No", mid=210)
     d.link("fw", "gwq", "Yes", mid=430).link("fw", "cl", "No", mid=430)
     d.link("gwq", "o1", "Yes", mid=700)
@@ -359,21 +359,21 @@ def connectivity():
 
 # ====================================================================== attributes and RPC
 def three(name, title, left, right, faded_device=False, note=None):
-    """Device - SENTIENT server - server-side application, with labelled arrows.
-    left/right: list of (label, direction) where direction is '>' or '<'."""
-    d = D(name, 900, 230, title)
-    d.box("dev", 20, 70, 150, 90, "Device", "firmware", "o" if faded_device else "b")
-    d.box("srv", 370, 50, 160, 130, "SENTIENT server", None, "a")
-    d.box("app", 730, 70, 150, 90, "Server-side\napplication", "dashboard, script, API")
+    """Device - SENTIENT server - application, with labelled arrows.
+    left/right: list of (label, direction) where direction is '>', '<' or '=' (both ways)."""
+    d = D(name, 960, 240, title)
+    d.box("dev", 20, 84, 210, 72, "Device", "firmware", "o" if faded_device else "b", icon="cpu")
+    d.box("srv", 375, 64, 210, 112, "SENTIENT server", "rule engine · storage", "a", icon="server")
+    d.box("app", 730, 84, 210, 72, "Application", "dashboard, script, API", icon="code")
     for side, items in (("l", left), ("r", right)):
-        x0, x1 = (176, 364) if side == "l" else (536, 724)
+        x0, x1 = (232, 371) if side == "l" else (587, 726)
         n = len(items)
         for i, (lab, dirn) in enumerate(items):
-            y = 115 + (i - (n - 1) / 2) * 44
-            pts = [(x0, y), (x1, y)] if dirn == ">" else [(x1, y), (x0, y)]
-            d.path(pts, start=(dirn == "="), label=lab, at=((x0 + x1) / 2, y - 8))
+            y = 120 + (i - (n - 1) / 2) * 50
+            pts = [(x0, y), (x1, y)] if dirn in ">=" else [(x1, y), (x0, y)]
+            d.path(pts, start=(dirn == "="), label=lab, at=((x0 + x1) / 2, y - 9))
     if note:
-        d.text(95, 196, note, "dg-lbl", "middle")
+        d.text(125, 186, note, "dg-gs", "middle")
     return d
 
 
@@ -416,19 +416,19 @@ def two_way_rpc():
 @diagram
 def device_provisioning():
     d = D("device-provisioning", 900, 380, "Device provisioning: the device sends a provisioning request, SENTIENT checks it and creates credentials, and the device connects with them")
-    d.box("dev", 120, 20, 150, 44, "Device")
-    d.box("srv", 520, 20, 180, 44, "SENTIENT server", k="a")
+    d.box("dev", 110, 18, 170, 48, "Device", icon="cpu")
+    d.box("srv", 515, 18, 190, 48, "SENTIENT server", k="a", icon="server")
     for x in (195, 610):
         d.path([(x, 64), (x, 360)], end=False, dash=True)
     d.path([(198, 120), (606, 120)], label="Provisioning request", at=(400, 100))
     d.text(400, 136, "provision key and secret, device name, credentials", "dg-u", "middle")
-    for i, t in enumerate(["Checks the key and secret against\nthe device profile's provisioning rule", "Checks the device is not\nregistered yet", "Creates the device and\nstores its credentials"]):
+    for i, t in enumerate(["Checks key and secret\nagainst the profile", "Checks the device is\nnot registered yet", "Creates the device\nand its credentials"]):
         y = 96 + i * 66
-        d.box(f"s{i}", 640, y, 240, 54, t, small=True)
+        d.box(f"s{i}", 640, y, 240, 54, t, small=True, icon=["key", "check", "lock"][i])
         d.path([(612, y + 27), (636, y + 27)], end=False)
     d.path([(606, 270), (198, 270)], label="Provisioning response", at=(400, 250))
     d.text(400, 286, "new credentials", "dg-u", "middle")
-    d.box("st", 10, 300, 165, 40, "Saves the credentials", small=True)
+    d.box("st", 4, 298, 176, 44, "Saves credentials", small=True, icon="lock")
     d.path([(178, 320), (193, 320)], end=False)
     d.path([(198, 340), (606, 340)], label="Connects with the new credentials", at=(400, 330))
     return d
@@ -459,7 +459,7 @@ def gateway_overview():
     d.box("srv", 400, 16, 240, 52, "SENTIENT server", k="a")
     d.group(20, 104, 1000, 290, "SENTIENT Gateway", right="Windows, Linux or Docker, next to the equipment")
     d.box("core", 300, 142, 200, 48, "Gateway service", "keeps sending, reconnects", "s", small=True)
-    d.cyl("buf", 540, 140, 180, 52, "Local storage", "holds data while offline")
+    d.cyl("buf", 540, 140, 190, 52, "Local storage", "buffer while offline")
     d.box("web", 760, 142, 200, 48, "Local web page", "setup and status", small=True)
     d.path([(520, 68), (520, 138)], start=True, label="MQTT over TLS", at=(530, 90), anchor="start")
     d.path([(500, 166), (536, 166)], start=True)
@@ -471,33 +471,32 @@ def gateway_overview():
         r, c = divmod(i, 8)
         d.box(f"c{i}", 40 + c * 121, 244 + r * 46, 112, 36, n, k="chip")
     d.path([(400, 190), (400, 240)], start=True)
-    eq = [("PLCs and drives", "Modbus · S7 · EtherNet/IP"), ("OPC UA servers", "SCADA, historians"), ("Meters and sensors", "serial, BLE, CAN"),
+    eq = [("PLCs and drives", "Modbus · S7 · BACnet"), ("OPC UA servers", "SCADA, historians"), ("Meters and sensors", "serial, BLE, CAN"),
           ("Brokers and APIs", "MQTT · HTTP"), ("Databases and files", "ODBC · FTP")]
     for i, (t, s) in enumerate(eq):
         x = 20 + i * 204
-        d.box(f"e{i}", x, 450, 188, 56, t, s, small=True)
-        d.path([(x + 94, 446), (x + 94, 398)], start=True)
+        d.box(f"e{i}", x, 450, 192, 56, t, s, small=True, icon=["factory", "server", "gauge", "send", "database"][i])
+        d.path([(x + 96, 446), (x + 96, 398)], start=True)
     d.heading(20, 540, "Equipment on the local network")
     return d
 
 
 # ====================================================================== integrations
 def integration(name, source, proto, label, payload="JSON · binary · text", source_sub=None):
-    d = D(name, 1000, 250, f"{label}: {source} sends data over {proto}; the integration hands it to the uplink converter, which turns it into telemetry and attributes for the rule engine. Attribute updates and RPC go back through the downlink converter")
-    d.box("src", 20, 95, 170, 60, source, source_sub)
-    d.box("int", 250, 95, 170, 60, label, "integration", "s", small=True)
-    d.box("up", 490, 40, 170, 52, "Uplink converter", "decodes the payload", "s", small=True)
-    d.box("down", 490, 158, 170, 52, "Downlink converter", "encodes commands", "s", small=True)
-    d.group(740, 20, 240, 210, "SENTIENT server")
-    d.box("re", 758, 60, 204, 56, "Rule engine", "rule chains, alarms", "a", small=True)
-    d.box("db", 758, 140, 204, 56, "Dashboards", "live values", "a", small=True)
-    d.path([(190, 125), (246, 125)], start=True, label=proto, at=(218, 117))
-    d.path([(420, 112), (455, 112), (455, 66), (486, 66)], label=payload, at=(455, 125 - 100))
-    d.path([(486, 184), (455, 184), (455, 138), (424, 138)])
-    d.path([(660, 66), (700, 66), (700, 88), (754, 88)])
-    d.text(700, 28, "telemetry,", "dg-lbl", "middle").text(700, 42, "attributes", "dg-lbl", "middle")
-    d.path([(758, 160), (700, 160), (700, 184), (664, 184)])
-    d.text(700, 224, "attribute", "dg-lbl", "middle").text(700, 238, "updates, RPC", "dg-lbl", "middle")
+    d = D(name, 1110, 270, f"{label}: {source} sends data over {proto}; the integration hands it to the uplink converter, which turns it into telemetry and attributes for the rule engine. Attribute updates and RPC go back through the downlink converter")
+    d.box("src", 20, 103, 210, 64, source.replace("\n", " "), source_sub or proto, icon="cpu" if "Devices" in source else ("send" if "broker" in source else ("server" if "server" in source else "cloud")))
+    d.box("int", 290, 103, 210, 64, label, "integration", "s", icon="plug")
+    d.box("up", 560, 44, 230, 64, "Uplink converter", "payload to telemetry", icon="refresh")
+    d.box("down", 560, 162, 230, 64, "Downlink converter", "commands to payload", icon="refresh")
+    d.group(830, 20, 260, 230, "SENTIENT server")
+    d.box("re", 850, 60, 220, 64, "Rule engine", "rule chains, alarms", "a", icon="workflow")
+    d.box("db", 850, 166, 220, 64, "Dashboards", "live values", icon="chart")
+    d.path([(232, 135), (286, 135)], start=True)
+    d.path([(500, 124), (530, 124), (530, 76), (556, 76)])
+    d.path([(556, 194), (530, 194), (530, 146), (504, 146)])
+    d.path([(790, 76), (846, 76)])
+    d.path([(850, 108), (814, 108), (814, 194), (794, 194)])
+    d.path([(960, 124), (960, 162)])
     return d
 
 
@@ -506,7 +505,7 @@ INTEGRATIONS = [
     ("azure-event-hub-integration", "Azure Event Hub", "AMQP", "Azure Event Hub"),
     ("azure-iot-hub-integration", "Azure IoT Hub", "MQTT", "Azure IoT Hub"),
     ("coap-integration", "Devices", "CoAP", "CoAP"),
-    ("http-integration", "Devices or a\nplatform", "HTTP", "HTTP"),
+    ("http-integration", "Devices or platforms", "HTTP", "HTTP"),
     ("mqtt-integration", "MQTT broker", "MQTT", "MQTT"),
     ("ocean-connect-integration", "OceanConnect", "HTTP", "OceanConnect"),
     ("opc-ua-integration", "OPC UA server", "OPC UA", "OPC UA"),
@@ -533,7 +532,7 @@ def integrations_overview():
         for i, it in enumerate(items):
             d.box(f"g{gi}{i}", 206, y + 38 + i * 42, 188, 34, it, small=True)
         d.stack(f"dv{gi}", 20, y + h / 2 - 22, 120, 44, "Devices")
-        d.path([(144, y + h / 2), (186, y + h / 2)], start=True, label=proto, at=(165, y + h / 2 - 8))
+        d.path([(144, y + h / 2), (186, y + h / 2)], start=True)
         ys.append(y + h / 2)
         y += h + 16
     d.group(520, 150, 460, 190, "SENTIENT server")

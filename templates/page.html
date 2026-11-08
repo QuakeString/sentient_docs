@@ -2,8 +2,8 @@
 {% block title %}{{ page.title }} · SENTIENT Docs{% endblock title %}
 {% block description %}{{ page.description | default(value=config.description) }}{% endblock description %}
 {% block content %}
-{% set planned = page.extra.status | default(value="") == "planned" %}
-<article class="article{% if planned %} planned{% endif %}"{% if not planned %} data-pagefind-body data-pagefind-filter="area:{{ area }}"{% endif %}>
+{% set planned = page.extra.status | default(value="") == "planned" %}{% set fallback = page.extra.fallback | default(value=false) %}
+<article class="article{% if planned %} planned{% endif %}"{% if fallback %} lang="en" data-fallback{% endif %}{% if not planned and not fallback %} data-pagefind-body data-pagefind-filter="area:{{ area }}"{% endif %}>
   {% include "partials/crumbs.html" %}
   <h1>{{ page.title }}</h1>
   {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}

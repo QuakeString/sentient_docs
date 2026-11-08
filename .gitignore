@@ -5,3 +5,4 @@ _site/
 .idea/
 /shots/
 __pycache__/
+.i18n-build/

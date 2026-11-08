@@ -17,7 +17,13 @@ while [ $# -gt 0 ]; do
 done
 ZOLA=${ZOLA:-zola} PAGEFIND=${PAGEFIND:-pagefind}
 start=$(date +%s)
-"$ZOLA" build --output-dir "$OUT" --force
+# Every page in every language: tools/i18n.py fills untranslated pages from English
+# in a build copy, so the source tree is never changed.
+BUILD="$PWD/.i18n-build"
+OUT=$(python3 -c 'import os, sys; print(os.path.abspath(sys.argv[1]))' "$OUT")
+python3 tools/i18n.py "$BUILD"
+"$ZOLA" --root "$BUILD" build --output-dir "$OUT" --force
+rm -rf "$BUILD"
 python3 tools/darkimg.py "$OUT"
 if [ -n "$PREFIX" ]; then
   python3 tools/prefix.py "$OUT" "$PREFIX"

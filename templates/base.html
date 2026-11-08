@@ -1,79 +1,104 @@
 {% import "macros.html" as m -%}
+{%- set v = config.extra.version -%}
+{#- lp is the URL prefix of the language ("" for English, "/hi", "/vi"); cur is the path without it -#}
+{%- if lang != config.default_language -%}{%- set lp = "/" ~ lang -%}{%- else -%}{%- set lp = "" -%}{%- endif -%}
 {%- set cur = current_path | default(value="/") -%}
-{%- if cur is starting_with("/docs/edge/") -%}{%- set navfile = "data/nav/edge.yml" -%}{%- set area = "edge" -%}
-{%- elif cur is starting_with("/docs/iot-gateway/") -%}{%- set navfile = "data/nav/gateway.yml" -%}{%- set area = "gateway" -%}
-{%- elif cur is starting_with("/docs/mobile/") or cur is starting_with("/docs/mobile-center/") -%}{%- set navfile = "data/nav/mobile.yml" -%}{%- set area = "mobile" -%}
-{%- else -%}{%- set navfile = "data/nav/docs.yml" -%}{%- set area = "docs" -%}{%- endif -%}
-{%- set nav = load_data(path=navfile) -%}
+{%- if lp and cur is starting_with(lp ~ "/") -%}{%- set cur = cur | trim_start_matches(pat=lp) -%}{%- endif -%}
+{%- if cur is starting_with("/docs/edge/") -%}{%- set area = "edge" -%}
+{%- elif cur is starting_with("/docs/iot-gateway/") -%}{%- set area = "gateway" -%}
+{%- elif cur is starting_with("/docs/mobile/") or cur is starting_with("/docs/mobile-center/") -%}{%- set area = "mobile" -%}
+{%- else -%}{%- set area = "docs" -%}{%- endif -%}
+{%- set nav = load_data(path="data/nav/" ~ area ~ "." ~ lang ~ ".yml", required=false) -%}
+{%- if not nav -%}{%- set nav = load_data(path="data/nav/" ~ area ~ ".yml") -%}{%- endif -%}
+{#- the same page in the other languages (every page exists in every language, see tools/i18n.py) -#}
+{%- if section is defined and section.translations is defined -%}{%- set trs = section.translations -%}
+{%- elif page is defined and page.translations is defined -%}{%- set trs = page.translations -%}
+{%- else -%}{%- set trs = [] -%}{%- endif -%}
 <!doctype html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
-<meta name="st-docs-version" content="{{ config.extra.version }}">
+<meta name="st-docs-version" content="{{ v }}">
 <meta name="st-docs-base" content="">
+{%- for t in trs %}
+<link rel="alternate" hreflang="{{ t.lang }}" href="{{ t.permalink | safe }}">
+{%- endfor %}
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="/css/site.css">
 <script>try{var t=localStorage.getItem("st-docs-theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<script id="st-i18n" type="application/json">{"copy":{{ trans(key="copy", lang=lang) | json_encode | safe }},"copied":{{ trans(key="copied", lang=lang) | json_encode | safe }},"link_copied":{{ trans(key="link_copied", lang=lang) | json_encode | safe }},"video_offline":{{ trans(key="video_offline", lang=lang) | json_encode | safe }},"no_results":{{ trans(key="no_results", lang=lang) | json_encode | safe }},"index_missing":{{ trans(key="index_missing", lang=lang) | json_encode | safe }},"search_hint":{{ trans(key="search_hint", lang=lang) | json_encode | safe }},"option_n":{{ trans(key="option_n", lang=lang) | json_encode | safe }},"home":{{ lp ~ "/docs/" | json_encode | safe }}}</script>
 </head>
 <body data-area="{{ area }}">
 {% include "partials/icons.html" %}
 <header class="top">
   <div class="top-in">
-    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation"><svg class="icon"><use href="#i-menu"/></svg></button>
-    <a class="brand" href="/docs/" aria-label="SENTIENT Docs home">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="{{ trans(key="open_nav", lang=lang) }}"><svg class="icon"><use href="#i-menu"/></svg></button>
+    <a class="brand" href="{{ lp }}/docs/" aria-label="{{ trans(key="home_aria", lang=lang) }}">
       <img class="mark mk-l" src="/images/brand/mark-on-light.svg" alt="">
       <img class="mark mk-d" src="/images/brand/mark-on-dark.svg" alt="">
       <span class="wordmark" role="img" aria-label="SENTIENT"></span> <small>Docs</small>
     </a>
     <nav class="sections" aria-label="Sections">
-      <a href="/docs/"{% if area == "docs" and not cur is starting_with("/docs/troubleshooting/") %} aria-current="page"{% endif %}>Platform</a>
-      <a href="/docs/iot-gateway/"{% if area == "gateway" %} aria-current="page"{% endif %}>Gateway</a>
-      <a href="/docs/edge/"{% if area == "edge" %} aria-current="page"{% endif %}>Edge</a>
-      <a href="/docs/mobile/"{% if area == "mobile" %} aria-current="page"{% endif %}>Mobile</a>
-      <a href="/docs/troubleshooting/"{% if cur is starting_with("/docs/troubleshooting/") %} aria-current="page"{% endif %}>Troubleshooting</a>
+      <a href="{{ lp }}/docs/"{% if area == "docs" and not cur is starting_with("/docs/troubleshooting/") %} aria-current="page"{% endif %}>{{ trans(key="nav_platform", lang=lang) }}</a>
+      <a href="{{ lp }}/docs/iot-gateway/"{% if area == "gateway" %} aria-current="page"{% endif %}>{{ trans(key="nav_gateway", lang=lang) }}</a>
+      <a href="{{ lp }}/docs/edge/"{% if area == "edge" %} aria-current="page"{% endif %}>{{ trans(key="nav_edge", lang=lang) }}</a>
+      <a href="{{ lp }}/docs/mobile/"{% if area == "mobile" %} aria-current="page"{% endif %}>{{ trans(key="nav_mobile", lang=lang) }}</a>
+      <a href="{{ lp }}/docs/troubleshooting/"{% if cur is starting_with("/docs/troubleshooting/") %} aria-current="page"{% endif %}>{{ trans(key="nav_troubleshooting", lang=lang) }}</a>
     </nav>
     <div class="spacer"></div>
-    <button class="search-btn" id="searchBtn" aria-label="Search the docs"><svg class="icon"><use href="#i-search"/></svg><span>Search docs</span><kbd>Ctrl K</kbd></button>
+    <button class="search-btn" id="searchBtn" aria-label="{{ trans(key="search_aria", lang=lang) }}"><svg class="icon"><use href="#i-search"/></svg><span>{{ trans(key="search_docs", lang=lang) }}</span><kbd>Ctrl K</kbd></button>
     <div class="version">
-      <button class="ver-btn" id="verBtn" aria-haspopup="true" aria-expanded="false"><span class="vl">v</span><span id="verLabel">{{ config.extra.version }}</span><svg class="icon" style="width:14px;height:14px"><use href="#i-chev"/></svg></button>
+      <button class="ver-btn" id="verBtn" aria-haspopup="true" aria-expanded="false"><span class="vl">v</span><span id="verLabel">{{ v }}</span><svg class="icon" style="width:14px;height:14px"><use href="#i-chev"/></svg></button>
       <div class="ver-menu" id="verMenu" role="menu">
-        <div class="hint">Showing the manual for release {{ config.extra.version }}</div>
-        <div id="verList"><button disabled><span class="v">{{ config.extra.version }}</span><span class="note">This version</span><span class="sel">✓</span></button></div>
+        <div class="hint">{{ trans(key="ver_hint", lang=lang) | replace(from="{v}", to=v) }}</div>
+        <div id="verList"><button disabled><span class="v">{{ v }}</span><span class="note">{{ trans(key="this_version", lang=lang) }}</span><span class="sel">✓</span></button></div>
       </div>
     </div>
-    <button class="icon-btn" id="themeBtn" aria-label="Switch between light and dark"><svg class="icon"><use href="#i-moon" id="themeIcon"/></svg></button>
+    <div class="version lang">
+      <button class="ver-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="{{ trans(key="language", lang=lang) }}"><svg class="icon" style="width:16px;height:16px"><use href="#i-globe"/></svg><span>{{ config.extra.language_names[lang].short }}</span><svg class="icon" style="width:14px;height:14px"><use href="#i-chev"/></svg></button>
+      <div class="ver-menu" id="langMenu" role="menu">
+        <div class="hint">{{ trans(key="language", lang=lang) }}</div>
+        {%- for code in config.extra.language_order %}
+        {%- set_global href = "" %}
+        {%- for t in trs %}{% if t.lang == code %}{% set_global href = t.permalink %}{% endif %}{% endfor %}
+        {%- if not href %}{% if code == config.default_language %}{% set_global href = "/docs/" %}{% else %}{% set_global href = "/" ~ code ~ "/docs/" %}{% endif %}{% endif %}
+        <a role="menuitem" href="{{ href | safe }}" hreflang="{{ code }}" lang="{{ code }}" data-lang="{{ code }}"><span class="v">{{ config.extra.language_names[code].name }}</span><span class="note"></span><span class="sel">{% if code == lang %}✓{% endif %}</span></a>
+        {%- endfor %}
+      </div>
+    </div>
+    <button class="icon-btn" id="themeBtn" aria-label="{{ trans(key="theme_aria", lang=lang) }}"><svg class="icon"><use href="#i-moon" id="themeIcon"/></svg></button>
   </div>
 </header>
 
 <div class="shell{% block shellclass %}{% endblock shellclass %}">
   <aside class="nav" id="nav" aria-label="Documentation" data-pagefind-ignore>
-    {{ m::nav_items(items=nav.toc, current=cur, depth=0) }}
+    {{ m::nav_items(items=nav.toc, current=cur, depth=0, lp=lp, new=trans(key="new", lang=lang), soon=trans(key="soon", lang=lang) | upper) }}
   </aside>
   <main id="main">
     {% block content %}{% endblock content %}
     <footer class="footer" data-pagefind-ignore>
-      <span>SENTIENT documentation {{ config.extra.version }}</span>
-      <span>Works offline</span>
+      <span>{{ trans(key="footer_docs", lang=lang) | replace(from="{v}", to=v) }}</span>
+      <span>{{ trans(key="works_offline", lang=lang) }}</span>
     </footer>
   </main>
-  <aside class="toc" id="toc" aria-label="On this page" data-pagefind-ignore>{% block toc %}{% endblock toc %}</aside>
+  <aside class="toc" id="toc" aria-label="{{ trans(key="on_this_page", lang=lang) }}" data-pagefind-ignore>{% block toc %}{% endblock toc %}</aside>
 </div>
 
-<div class="scrim" id="scrim" role="dialog" aria-modal="true" aria-label="Search">
+<div class="scrim" id="scrim" role="dialog" aria-modal="true" aria-label="{{ trans(key="search_aria", lang=lang) }}">
   <div class="dlg">
-    <div class="dlg-in"><svg class="icon" style="color:var(--faint)"><use href="#i-search"/></svg><input id="q" placeholder="Search {{ config.extra.version }} docs" autocomplete="off" aria-label="Search"><kbd>Esc</kbd></div>
+    <div class="dlg-in"><svg class="icon" style="color:var(--faint)"><use href="#i-search"/></svg><input id="q" placeholder="{{ trans(key="search_placeholder", lang=lang) | replace(from="{v}", to=v) }}" autocomplete="off" aria-label="{{ trans(key="search_aria", lang=lang) }}"><kbd>Esc</kbd></div>
     <div class="scope" id="scope">
-      <button aria-pressed="true" data-s="">All</button>
-      <button aria-pressed="false" data-s="docs">Platform</button>
-      <button aria-pressed="false" data-s="gateway">Gateway</button>
-      <button aria-pressed="false" data-s="edge">Edge</button>
-      <button aria-pressed="false" data-s="mobile">Mobile</button>
+      <button aria-pressed="true" data-s="">{{ trans(key="scope_all", lang=lang) }}</button>
+      <button aria-pressed="false" data-s="docs">{{ trans(key="nav_platform", lang=lang) }}</button>
+      <button aria-pressed="false" data-s="gateway">{{ trans(key="nav_gateway", lang=lang) }}</button>
+      <button aria-pressed="false" data-s="edge">{{ trans(key="nav_edge", lang=lang) }}</button>
+      <button aria-pressed="false" data-s="mobile">{{ trans(key="nav_mobile", lang=lang) }}</button>
     </div>
-    <div class="results" id="results"><div class="empty">Type to search. Try "modbus", "backup" or "alarm rules".</div></div>
-    <div class="dlg-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span class="off"><svg class="icon" style="width:14px;height:14px"><use href="#i-wifi-off"/></svg>Search runs offline</span></div>
+    <div class="results" id="results"><div class="empty">{{ trans(key="search_hint", lang=lang) }}</div></div>
+    <div class="dlg-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> {{ trans(key="kb_move", lang=lang) }}</span><span><kbd>Enter</kbd> {{ trans(key="kb_open", lang=lang) }}</span><span class="off"><svg class="icon" style="width:14px;height:14px"><use href="#i-wifi-off"/></svg>{{ trans(key="search_offline", lang=lang) }}</span></div>
   </div>
 </div>
 <div class="lightbox" id="lightbox" role="dialog" aria-label="Image"><img alt=""></div>

@@ -57,6 +57,23 @@ changed_in = "4.3.0.57"     # optional: shows a "Changed in" badge
   `<div class="st-tab" data-label="Windows">` blocks. Image galleries:
   `<div class="st-gallery">` with `<figure>` elements.
 
+## Languages
+
+English is the source; Hindi (`hi`) and Vietnamese (`vi`) are served under
+`/hi/docs/` and `/vi/docs/`. The language menu sits next to the version menu.
+
+- A translation is a file next to the English one: `devices.md`,
+  `devices.hi.md`, `devices.vi.md`. Write links as `/docs/...` as in English;
+  the build points them at the same language.
+- A page with no translation yet still exists in every language: `tools/i18n.py`
+  copies the English text with a "not translated yet" note, in a build copy, and
+  leaves it out of that language's search. Nothing generated is committed.
+- Interface labels are in `config.toml` (`[translations]` and
+  `[languages.<code>.translations]`). The home page reads `data/home.<code>.yml`
+  and the sidebar `data/nav/<area>.<code>.yml` when they exist, else English.
+- Fonts for Vietnamese (Roboto) and Hindi (Noto Sans Devanagari) are bundled,
+  so every language works offline.
+
 ## Versions
 
 - `master` is the newest docs version (`versions.json` → `latest`).

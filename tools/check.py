@@ -33,7 +33,9 @@ for p in sorted(pages):
     if not m:
         continue
     body = m.group(1)
-    imported = "This page was carried over" in body
+    if "data-fallback" in m.group(0)[:300]:
+        continue   # an untranslated page shown in English; the English page is checked
+    imported = 'data-status="imported"' in body or "This page was carried over" in body
     imported_pages += imported
     url = "/" + str(p.parent.relative_to(site)).strip(".") + "/"
     found = []

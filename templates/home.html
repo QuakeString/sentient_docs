@@ -2,33 +2,33 @@
 {% block title %}SENTIENT Docs{% endblock title %}
 {% block shellclass %} is-home{% endblock shellclass %}
 {% block content %}
-{% set home = load_data(path="data/home.yml") %}
+{% set home = load_data(path="data/home." ~ lang ~ ".yml", required=false) %}{% if not home %}{% set home = load_data(path="data/home.yml") %}{% endif %}
 <section data-pagefind-ignore>
   <div class="hero">
-    <div class="eyebrow">Manual · {{ config.extra.version }} · works offline</div>
+    <div class="eyebrow">{{ trans(key="manual", lang=lang) }} · {{ config.extra.version }} · {{ trans(key="works_offline_lc", lang=lang) }}</div>
     <h1>{{ home.headline }}</h1>
     <p class="lede">{{ home.lede }}</p>
-    <button class="big-search" id="bigSearch" type="button"><svg class="icon"><use href="#i-search"/></svg><span>Search guides, settings or an error code</span><kbd>Ctrl K</kbd></button>
-    <div class="popular">Popular:
+    <button class="big-search" id="bigSearch" type="button"><svg class="icon"><use href="#i-search"/></svg><span>{{ trans(key="big_search", lang=lang) }}</span><kbd>Ctrl K</kbd></button>
+    <div class="popular">{{ trans(key="popular", lang=lang) }}
       {% for q in home.popular %}<button type="button" data-q="{{ q }}">{{ q }}</button>{% endfor %}
     </div>
   </div>
   <div class="grid">
     {% for t in home.tiles %}
-    <a class="tile" href="{{ t.path | safe }}"><span class="ti"><svg class="icon"><use href="#{{ t.icon }}"/></svg></span><b>{{ t.title }}</b><span>{{ t.text }}</span></a>
+    <a class="tile" href="{{ lp }}{{ t.path | safe }}"><span class="ti"><svg class="icon"><use href="#{{ t.icon }}"/></svg></span><b>{{ t.title }}</b><span>{{ t.text }}</span></a>
     {% endfor %}
   </div>
   <div class="split">
     <div class="panel">
-      <div class="panel-h">{{ home.help.title }} <a href="{{ home.help.path | safe }}">{{ home.help.more }}</a></div>
+      <div class="panel-h">{{ home.help.title }} <a href="{{ lp }}{{ home.help.path | safe }}">{{ home.help.more }}</a></div>
       <div class="err-list">
-        {% for e in home.help.items %}<a href="{{ e.path | safe }}"><code>{{ e.code }}</code><span>{{ e.title }}<small>{{ e.text }}</small></span></a>{% endfor %}
+        {% for e in home.help.items %}<a href="{{ lp }}{{ e.path | safe }}"><code>{{ e.code }}</code><span>{{ e.title }}<small>{{ e.text }}</small></span></a>{% endfor %}
       </div>
     </div>
     <div class="panel">
-      <div class="panel-h">{{ home.changes.title }} <a href="{{ home.changes.path | safe }}">{{ home.changes.more }}</a></div>
+      <div class="panel-h">{{ home.changes.title }} <a href="{{ lp }}{{ home.changes.path | safe }}">{{ home.changes.more }}</a></div>
       <ul class="changes">
-        {% for c in home.changes.items %}<li><a href="{{ c.path | safe }}">{{ c.title }}</a>: {{ c.text }}</li>{% endfor %}
+        {% for c in home.changes.items %}<li><a href="{{ lp }}{{ c.path | safe }}">{{ c.title }}</a>: {{ c.text }}</li>{% endfor %}
       </ul>
     </div>
   </div>

@@ -3,8 +3,8 @@
 {% block description %}{{ section.description | default(value=config.description) }}{% endblock description %}
 {% block content %}
 {% set page = section %}
-{% set planned = section.extra.status | default(value="") == "planned" %}
-<article class="article{% if planned %} planned{% endif %}"{% if not planned %} data-pagefind-body data-pagefind-filter="area:{{ area }}"{% endif %}>
+{% set planned = section.extra.status | default(value="") == "planned" %}{% set fallback = section.extra.fallback | default(value=false) %}
+<article class="article{% if planned %} planned{% endif %}"{% if fallback %} lang="en" data-fallback{% endif %}{% if not planned and not fallback %} data-pagefind-body data-pagefind-filter="area:{{ area }}"{% endif %}>
   {% include "partials/crumbs.html" %}
   <h1>{{ section.title }}</h1>
   {% if section.description %}<p class="lede">{{ section.description }}</p>{% endif %}
@@ -13,8 +13,8 @@
   {% set kids = section.pages %}
   {% if (kids or section.subsections) and not section.extra.hide_children | default(value=false) %}
   <ul class="child-list" data-pagefind-ignore>
-    {% for s in section.subsections %}{% set ss = get_section(path=s, metadata_only=true) %}{% if ss.extra.status | default(value="") != "placeholder" %}<li><a href="{{ ss.permalink | safe }}"><b>{{ ss.title }}{% if ss.extra.status | default(value="") == "planned" %} <span class="soon">Soon</span>{% endif %}</b>{% if ss.description %}<small>{{ ss.description }}</small>{% endif %}</a></li>{% endif %}{% endfor %}
-    {% for p in kids %}<li><a href="{{ p.permalink | safe }}"><b>{{ p.title }}{% if p.extra.status | default(value="") == "planned" %} <span class="soon">Soon</span>{% endif %}</b>{% if p.description %}<small>{{ p.description | truncate(length=120) }}</small>{% endif %}</a></li>{% endfor %}
+    {% for s in section.subsections %}{% set ss = get_section(path=s, metadata_only=true) %}{% if ss.extra.status | default(value="") != "placeholder" %}<li><a href="{{ ss.permalink | safe }}"><b>{{ ss.title }}{% if ss.extra.status | default(value="") == "planned" %} <span class="soon">{{ trans(key="soon", lang=lang) }}</span>{% endif %}</b>{% if ss.description %}<small>{{ ss.description }}</small>{% endif %}</a></li>{% endif %}{% endfor %}
+    {% for p in kids %}<li><a href="{{ p.permalink | safe }}"><b>{{ p.title }}{% if p.extra.status | default(value="") == "planned" %} <span class="soon">{{ trans(key="soon", lang=lang) }}</span>{% endif %}</b>{% if p.description %}<small>{{ p.description | truncate(length=120) }}</small>{% endif %}</a></li>{% endfor %}
   </ul>
   {% endif %}
 </article>

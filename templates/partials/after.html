@@ -1,8 +1,8 @@
-<div class="helpful" data-pagefind-ignore>Was this page helpful? <button type="button" data-helpful="yes">Yes</button><button type="button" data-helpful="no">No</button>
-  {% if page.relative_path %}<a class="edit" href="{{ config.extra.repo_edit_url | safe }}{{ page.relative_path | safe }}" target="_blank" rel="noopener"><svg class="icon" style="width:15px;height:15px;vertical-align:-3px"><use href="#i-pen"/></svg> Suggest an edit</a>{% endif %}</div>
+<div class="helpful" data-pagefind-ignore>{{ trans(key="helpful", lang=lang) }} <button type="button" data-helpful="yes">{{ trans(key="yes", lang=lang) }}</button><button type="button" data-helpful="no">{{ trans(key="no", lang=lang) }}</button>
+  {% if page.relative_path %}<a class="edit" href="{{ config.extra.repo_edit_url | safe }}{% if page.extra.fallback | default(value=false) %}{{ page.relative_path | replace(from="." ~ lang ~ ".md", to=".md") | safe }}{% else %}{{ page.relative_path | safe }}{% endif %}" target="_blank" rel="noopener"><svg class="icon" style="width:15px;height:15px;vertical-align:-3px"><use href="#i-pen"/></svg> {{ trans(key="suggest_edit", lang=lang) }}</a>{% endif %}</div>
 {%- if page.lower or page.higher %}
 <div class="pager" data-pagefind-ignore>
-  {% if page.lower %}<a href="{{ page.lower.permalink | safe }}"><small>Previous</small>{{ page.lower.title }}</a>{% else %}<span></span>{% endif %}
-  {% if page.higher %}<a href="{{ page.higher.permalink | safe }}"><small>Next</small>{{ page.higher.title }}</a>{% endif %}
+  {% if page.lower %}<a href="{{ page.lower.permalink | safe }}"><small>{{ trans(key="previous", lang=lang) }}</small>{{ page.lower.title }}</a>{% else %}<span></span>{% endif %}
+  {% if page.higher %}<a href="{{ page.higher.permalink | safe }}"><small>{{ trans(key="next", lang=lang) }}</small>{{ page.higher.title }}</a>{% endif %}
 </div>
 {%- endif %}

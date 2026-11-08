@@ -6,6 +6,9 @@
   var root = document.documentElement;
   var VERSION = ($('meta[name="st-docs-version"]') || {}).content || "";
   var BASE = ($('meta[name="st-docs-base"]') || {}).content || "";
+  var T = {};
+  try { T = JSON.parse(($("#st-i18n") || {}).textContent || "{}"); } catch (e) {}
+  function t(k, en) { return T[k] || en; }
 
   /* ---------- theme ---------- */
   function isDark() { return root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; }
@@ -44,6 +47,15 @@
   var vb = $("#verBtn"), vm = $("#verMenu");
   vb.addEventListener("click", function (e) { e.stopPropagation(); vm.classList.toggle("open"); vb.setAttribute("aria-expanded", vm.classList.contains("open")); });
   document.addEventListener("click", function () { vm.classList.remove("open"); vb.setAttribute("aria-expanded", "false"); });
+
+  /* ---------- language menu ---------- */
+  var lb = $("#langBtn"), lm = $("#langMenu");
+  if (lb && lm) {
+    lb.addEventListener("click", function (e) { e.stopPropagation(); vm.classList.remove("open"); lm.classList.toggle("open"); lb.setAttribute("aria-expanded", lm.classList.contains("open")); });
+    vb.addEventListener("click", function () { lm.classList.remove("open"); lb.setAttribute("aria-expanded", "false"); });
+    document.addEventListener("click", function () { lm.classList.remove("open"); lb.setAttribute("aria-expanded", "false"); });
+    $$("#langMenu a").forEach(function (a) { a.addEventListener("click", function () { try { localStorage.setItem("st-docs-lang", a.dataset.lang); } catch (e) {} }); });
+  }
   // versions.json: {"latest":"4.3.0.57","versions":[{"version":"4.3.0.57","path":"/","note":"Latest","releases":["4.3.0.57"]}, ...]}
   fetch("/versions.json").then(function (r) { return r.ok ? r.json() : null; }).then(function (data) {
     if (!data || !data.versions) return;
@@ -59,7 +71,7 @@
       a.addEventListener("click", function (e) {
         // fall back to the version's home page when this page does not exist there
         e.preventDefault();
-        var href = a.getAttribute("href"), home = a.dataset.root.replace(/\/$/, "") + "/docs/";
+        var href = a.getAttribute("href"), home = a.dataset.root.replace(/\/$/, "") + t("home", "/docs/");
         fetch(href, { method: "HEAD" }).then(function (r) { location.href = r.ok ? href : home; }, function () { location.href = home; });
       });
     });
@@ -74,7 +86,7 @@
     list.className = "st-tablist"; list.setAttribute("role", "tablist");
     tabs.forEach(function (t, i) {
       var b = document.createElement("button");
-      b.type = "button"; b.setAttribute("role", "tab"); b.textContent = t.dataset.label || ("Option " + (i + 1));
+      b.type = "button"; b.setAttribute("role", "tab"); b.textContent = t.dataset.label || ("" + (T.option_n || "Option {n}")).replace("{n}", i + 1);
       b.setAttribute("aria-selected", i === 0 ? "true" : "false");
       t.hidden = i !== 0; t.setAttribute("role", "tabpanel");
       b.addEventListener("click", function () {
@@ -97,7 +109,7 @@
     b.type = "button"; b.className = "copy"; b.textContent = "Copy";
     b.addEventListener("click", function () {
       var text = (pre.querySelector("code") || pre).innerText;
-      var done = function () { b.textContent = "Copied"; setTimeout(function () { b.textContent = "Copy"; }, 1500); };
+      var done = function () { b.textContent = t("copied", "Copied"); setTimeout(function () { b.textContent = t("copy", "Copy"); }, 1500); };
       if (navigator.clipboard) navigator.clipboard.writeText(text).then(done, function () {});
     });
     pre.appendChild(b);
@@ -111,7 +123,7 @@
   $$(".prose iframe[src*='youtube']").forEach(function (f) {
     if (navigator.onLine) return;
     var d = document.createElement("div"); d.className = "offline-video";
-    d.textContent = "This video needs an internet connection: " + f.src;
+    d.textContent = t("video_offline", "This video needs an internet connection: ") + f.src;
     (f.closest("#video") || f).replaceWith(d);
   });
   // image lightbox
@@ -139,7 +151,7 @@
   var cl = $("#copyLink");
   if (cl) cl.addEventListener("click", function (e) {
     e.preventDefault();
-    if (navigator.clipboard) navigator.clipboard.writeText(location.href.split("#")[0]).then(function () { cl.lastChild.textContent = "Link copied"; });
+    if (navigator.clipboard) navigator.clipboard.writeText(location.href.split("#")[0]).then(function () { cl.lastChild.textContent = t("link_copied", "Link copied"); });
   });
   $$("[data-helpful]").forEach(function (b) {
     b.addEventListener("click", function () { b.parentElement.firstChild.textContent = "Thanks for the feedback. "; });
@@ -151,14 +163,17 @@
     if (pf) return Promise.resolve(pf);
     return import(BASE + "/pagefind/pagefind.js").then(function (m) { pf = m; return pf.options({ excerptLength: 18, baseUrl: BASE + "/" }).then(function () { return pf; }); });
   }
+  // Every page exists in every language, so keep search results in the language being read.
+  var LP = t("home", "/docs/").replace(/\/docs\/$/, "");
+  function inLang(u) { return LP && u.indexOf(BASE + "/docs/") === 0 ? BASE + LP + u.slice(BASE.length) : u; }
   function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
   function render() {
     if (!hits.length) {
-      results.innerHTML = q.value.trim() ? '<div class="empty">No results for "' + esc(q.value) + '".</div>' : '<div class="empty">Type to search. Try "modbus", "backup" or "alarm rules".</div>';
+      results.innerHTML = q.value.trim() ? '<div class="empty">' + esc(t("no_results", 'No results for "{q}".')).replace("{q}", esc(q.value)) + "</div>" : '<div class="empty">' + esc(t("search_hint", 'Type to search. Try "modbus", "backup" or "alarm rules".')) + "</div>";
       return;
     }
     results.innerHTML = hits.map(function (h, i) {
-      return '<a class="res' + (i === sel ? " on" : "") + '" href="' + h.url + '"><svg class="icon"><use href="#i-doc"/></svg><span><b>' + esc(h.meta.title || h.url) + "</b><small>" + h.excerpt + "</small></span></a>";
+      return '<a class="res' + (i === sel ? " on" : "") + '" href="' + inLang(h.url) + '"><svg class="icon"><use href="#i-doc"/></svg><span><b>' + esc(h.meta.title || h.url) + "</b><small>" + h.excerpt + "</small></span></a>";
     }).join("");
   }
   function search() {
@@ -174,7 +189,7 @@
       if (!data || my !== seq) return;
       hits = data; sel = 0; render();
     }).catch(function () {
-      results.innerHTML = '<div class="empty">Search index not found. Build the site with tools/build.sh.</div>';
+      results.innerHTML = '<div class="empty">' + esc(t("index_missing", "Search index not found. Build the site with tools/build.sh.")) + "</div>";
     });
   }
   function open(term) { scrim.classList.add("open"); q.value = term || ""; search(); setTimeout(function () { q.focus(); }, 10); loadPagefind().catch(function () {}); }
@@ -198,6 +213,6 @@
     if (!scrim.classList.contains("open")) return;
     if (e.key === "ArrowDown") { sel = Math.min(sel + 1, hits.length - 1); render(); e.preventDefault(); }
     if (e.key === "ArrowUp") { sel = Math.max(sel - 1, 0); render(); e.preventDefault(); }
-    if (e.key === "Enter" && hits[sel]) { location.href = hits[sel].url; }
+    if (e.key === "Enter" && hits[sel]) { location.href = inLang(hits[sel].url); }
   });
 })();

@@ -1,0 +1,6 @@
+{%- if page.ancestors | length > 1 %}
+<nav class="crumbs" aria-label="Breadcrumb" data-pagefind-ignore>
+  {%- for a in page.ancestors %}{% if not loop.first %}{% set s = get_section(path=a, metadata_only=true) %}<a href="{{ s.permalink | safe }}">{% if s.path == lp ~ "/docs/" %}{{ trans(key="crumb_docs", lang=lang) }}{% else %}{{ s.title }}{% endif %}</a><span>›</span>{% endif %}{% endfor %}
+  <span>{{ page.title }}</span>
+</nav>
+{%- endif %}

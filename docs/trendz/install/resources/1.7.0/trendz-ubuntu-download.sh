@@ -1,1 +1,0 @@
-wget https://dist.thingsboard.io/trendz-1.7.0.deb

@@ -1,1 +1,0 @@
-sudo rpm -Uvh trendz-1.9.2-HF3.rpm

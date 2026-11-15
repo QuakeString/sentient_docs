@@ -1,0 +1,505 @@
+# Main sidebar for /docs/. Order follows the table of contents agreed in
+# SENTIENT docs/analysis/DOCS_OVERHAUL_PLAN.md (section 5).
+# planned: true marks a page that is only an outline so far (shown as SOON).
+toc:
+- title: Getting started
+  section:
+  - title: Introduction
+    path: /docs/
+  - title: What is SENTIENT?
+    path: /docs/getting-started-guides/what-is-sentient/
+  - title: Sign in for the first time
+    path: /docs/getting-started-guides/first-login/
+  - title: First device to dashboard
+    path: /docs/getting-started-guides/helloworld/
+  - title: How to connect your device
+    path: /docs/getting-started-guides/connectivity/
+
+- title: Installation and operations
+  section:
+  - title: Install SENTIENT
+    section:
+    - title: Choose an installation
+      path: /docs/installation/
+    - title: System requirements
+      path: /docs/installation/requirements/
+    - title: Windows with Platform Manager
+      path: /docs/installation/windows/
+    - title: Windows with ClickHouse (WSL2)
+      path: /docs/installation/windows-clickhouse/
+    - title: Docker
+      path: /docs/installation/docker/
+    - title: Linux
+      path: /docs/installation/linux/
+    - title: Activate your licence
+      path: /docs/installation/licence/
+  - title: Operate
+    section:
+    - title: Overview
+      path: /docs/operations/
+    - title: Back up and restore
+      path: /docs/operations/backup-restore/
+    - title: Upgrade and roll back
+      path: /docs/operations/upgrade/
+    - title: Move to a new server
+      path: /docs/operations/move-server/
+    - title: Environment settings
+      path: /docs/operations/settings/
+    - title: Ports and firewall
+      path: /docs/operations/ports/
+    - title: Performance tuning
+      path: /docs/operations/tuning/
+    - title: Uninstall
+      path: /docs/operations/uninstall/
+
+- title: Devices and data
+  section:
+  - title: Entities and relations
+    path: /docs/user-guide/entities-and-relations/
+  - title: Devices
+    path: /docs/user-guide/ui/devices/
+  - title: Assets
+    path: /docs/user-guide/ui/assets/
+  - title: Device profiles
+    path: /docs/user-guide/device-profiles/
+  - title: Asset profiles
+    path: /docs/user-guide/asset-profiles/
+  - title: Attributes
+    path: /docs/user-guide/attributes/
+  - title: Time series data
+    path: /docs/user-guide/telemetry/
+  - title: Calculated fields
+    section:
+    - title: Overview
+      path: /docs/user-guide/calculated-fields/
+    - title: Simple
+      path: /docs/user-guide/calculated-fields/simple-calculated-field/
+    - title: Script
+      path: /docs/user-guide/calculated-fields/script-calculated-field/
+    - title: Geofencing
+      path: /docs/user-guide/calculated-fields/geofencing-calculated-field/
+    - title: Propagation
+      path: /docs/user-guide/calculated-fields/propagation-calculated-field/
+    - title: Related entities aggregation
+      path: /docs/user-guide/calculated-fields/related-entities-aggregation-calculated-field/
+    - title: Time series aggregation
+      path: /docs/user-guide/calculated-fields/time-series-data-aggregation-calculated-field/
+  - title: Remote commands (RPC)
+    path: /docs/user-guide/rpc/
+  - title: Device connectivity status
+    path: /docs/user-guide/device-connectivity-status/
+  - title: Provisioning and claiming
+    section:
+    - title: Device provisioning
+      path: /docs/user-guide/device-provisioning/
+    - title: Bulk provisioning
+      path: /docs/user-guide/bulk-provisioning/
+    - title: Claiming devices
+      path: /docs/user-guide/claiming-devices/
+  - title: OTA updates
+    path: /docs/user-guide/ota-updates/
+  - title: Entity views
+    path: /docs/user-guide/entity-views/
+  - title: Recipes
+    path: /docs/user-guide/recipes/
+  - title: Scheduler
+    path: /docs/user-guide/scheduler/
+  - title: Advanced filters
+    path: /docs/user-guide/advanced-filters/
+  - title: PSM and eDRX
+    path: /docs/user-guide/psm/
+  - title: Device credentials and transports
+    section:
+    - title: Authentication options
+      path: /docs/user-guide/device-credentials/
+    - title: MQTT access token
+      path: /docs/user-guide/access-token/
+    - title: MQTT basic credentials
+      path: /docs/user-guide/basic-mqtt/
+    - title: X.509 certificates
+      path: /docs/user-guide/certificates/
+    - title: MQTT over SSL
+      path: /docs/user-guide/mqtt-over-ssl/
+    - title: HTTP over SSL
+      path: /docs/user-guide/ssl/http-transport-over-ssl/
+    - title: HTTP access token
+      path: /docs/user-guide/ssl/http-access-token/
+    - title: CoAP over DTLS
+      path: /docs/user-guide/coap-over-dtls/
+    - title: CoAP access token
+      path: /docs/user-guide/ssl/coap-access-token/
+    - title: CoAP X.509 certificates
+      path: /docs/user-guide/ssl/coap-x509-certificates/
+
+- title: Gateway
+  section:
+  - title: SENTIENT Gateway
+    path: /docs/iot-gateway/
+
+- title: Dashboards and widgets
+  section:
+  - title: Dashboards
+    path: /docs/user-guide/dashboards/
+  - title: What is new in SENTIENT
+    section:
+    - title: Overview
+      path: /docs/dashboards/
+    - title: Drafts and crash recovery
+      path: /docs/dashboards/crash-recovery/
+    - title: Industrial equipment widgets
+      path: /docs/dashboards/industrial-widgets/
+    - title: Matrix widget
+      path: /docs/dashboards/matrix-widget/
+      planned: true
+  - title: Aliases
+    path: /docs/user-guide/ui/aliases/
+  - title: Layouts
+    path: /docs/user-guide/ui/layouts/
+  - title: Unit conversion
+    path: /docs/user-guide/ui/unit-conversion/
+  - title: Widgets
+    section:
+    - title: Working with widgets
+      path: /docs/user-guide/widgets/
+    - title: Widget library
+      path: /docs/user-guide/ui/widget-library/
+    - title: Widget actions
+      path: /docs/user-guide/ui/widget-actions/
+    - title: Advanced data key configuration
+      path: /docs/user-guide/ui/advanced-data-key-configuration/
+    - title: Chart widgets
+      path: /docs/user-guide/ui/chart-widget/
+    - title: Map widgets
+      path: /docs/user-guide/widgets/map-widgets/
+    - title: Entities table widget
+      path: /docs/user-guide/ui/entity-table-widget/
+    - title: Markdown/HTML card
+      path: /docs/user-guide/widgets/cards/markdown-html-card/
+  - title: SCADA
+    section:
+    - title: SCADA dashboards
+      path: /docs/user-guide/scada/
+    - title: SCADA symbol editor
+      path: /docs/dashboards/scada-editor/
+    - title: Symbol development guide
+      path: /docs/user-guide/scada/scada-symbols-dev-guide/
+  - title: Image gallery
+    path: /docs/user-guide/image-gallery/
+
+- title: Alarms and notifications
+  section:
+  - title: Working with alarms
+    path: /docs/user-guide/alarms/
+  - title: Alarm rules
+    path: /docs/user-guide/alarm-rules/
+  - title: Notification center
+    path: /docs/user-guide/notifications/
+  - title: Notification channels
+    path: /docs/user-guide/notification-channels/
+  - title: Mail server
+    path: /docs/user-guide/ui/mail-settings/
+  - title: SMS provider
+    path: /docs/user-guide/ui/sms-provider-settings/
+  - title: Slack
+    path: /docs/user-guide/ui/slack-settings/
+  - title: Microsoft Teams
+    path: /docs/user-guide/ui/microsoft-teams-settings/
+
+- title: Reports
+  section:
+  - title: Overview
+    path: /docs/reports/
+  - title: Report templates
+    path: /docs/reports/templates/
+  - title: Report builder
+    path: /docs/reports/builder/
+  - title: Schedule and send
+    path: /docs/reports/scheduling/
+  - title: PDF and spreadsheet export
+    path: /docs/reports/export/
+
+- title: Rule engine and solution hub
+  section:
+  - title: Rule engine overview
+    path: /docs/user-guide/rule-engine-2-0/overview/
+  - title: Getting started with rule chains
+    path: /docs/user-guide/rule-engine-2-0/re-getting-started/
+  - title: Rule nodes
+    section:
+    - title: All nodes
+      path: /docs/user-guide/rule-engine-2-0/nodes/
+    - title: Filter nodes
+      path: /docs/user-guide/rule-engine-2-0/nodes/filter/
+    - title: Enrichment nodes
+      path: /docs/user-guide/rule-engine-2-0/nodes/enrichment/
+    - title: Transformation nodes
+      path: /docs/user-guide/rule-engine-2-0/nodes/transformation/
+    - title: Action nodes
+      path: /docs/user-guide/rule-engine-2-0/nodes/action/
+    - title: External nodes
+      path: /docs/user-guide/rule-engine-2-0/nodes/external/
+    - title: Flow nodes
+      path: /docs/user-guide/rule-engine-2-0/nodes/flow/
+  - title: Queues
+    path: /docs/user-guide/rule-engine-2-5/queues/
+  - title: Script language (Rhai)
+    path: /docs/user-guide/rhai/
+  - title: Templatization
+    path: /docs/user-guide/templatization/
+  - title: Tutorials
+    section:
+    - title: Create and clear alarms
+      path: /docs/tutorials/create-clear-alarms/
+    - title: Alarm details
+      path: /docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms-with-details/
+    - title: Alarm when a device is offline
+      path: /docs/user-guide/rule-engine-2-0/tutorials/create-inactivity-alarm/
+    - title: Validate incoming telemetry
+      path: /docs/tutorials/validate-incoming-telemetry/
+    - title: Telemetry delta calculation
+      path: /docs/tutorials/telemetry-delta-calculation/
+    - title: Telemetry delta validation
+      path: /docs/user-guide/rule-engine-2-0/tutorials/telemetry-delta-validation/
+    - title: Transform using the previous record
+      path: /docs/user-guide/rule-engine-2-0/tutorials/transform-telemetry-using-previous-record/
+    - title: Function of two devices
+      path: /docs/user-guide/rule-engine-2-0/tutorials/function-based-on-telemetry-from-two-devices/
+    - title: Check relations
+      path: /docs/user-guide/rule-engine-2-0/tutorials/check-relation-tutorial/
+    - title: RPC request to a related device
+      path: /docs/user-guide/rule-engine-2-0/tutorials/rpc-request-tutorial/
+    - title: RPC reply from a related device
+      path: /docs/user-guide/rule-engine-2-0/tutorials/rpc-reply-tutorial/
+    - title: Send email on alarm
+      path: /docs/tutorials/send-email/
+    - title: Send email to a customer
+      path: /docs/user-guide/rule-engine-2-0/tutorials/send-email-to-customer/
+    - title: HTML or images in email
+      path: /docs/user-guide/rule-engine-2-0/tutorials/send-email-html/
+    - title: Telegram bot
+      path: /docs/user-guide/rule-engine-2-0/tutorials/integration-with-telegram-bot/
+    - title: Call a REST API
+      path: /docs/user-guide/rule-engine-2-0/tutorials/get-weather-using-rest-api-call/
+  - title: Solution hub
+    section:
+    - title: Overview
+      path: /docs/solution-hub/
+    - title: Data pipelines
+      path: /docs/solution-hub/pipelines/
+  - title: Integrations
+    section:
+    - title: Overview
+      path: /docs/user-guide/integrations/
+    - title: AWS IoT
+      path: /docs/user-guide/integrations/aws-iot/
+    - title: AWS Kinesis
+      path: /docs/user-guide/integrations/aws-kinesis/
+    - title: Azure Event Hub
+      path: /docs/user-guide/integrations/azure-event-hub/
+    - title: Azure IoT Hub
+      path: /docs/user-guide/integrations/azure-iot-hub/
+    - title: Azure Service Bus
+      path: /docs/user-guide/integrations/azure-service-bus/
+    - title: ChirpStack
+      path: /docs/user-guide/integrations/chirpstack/
+    - title: CoAP
+      path: /docs/user-guide/integrations/coap/
+    - title: Custom integration
+      path: /docs/user-guide/integrations/custom/
+    - title: "Example: SigFox device parameters"
+      path: /docs/user-guide/integrations/sigfox-example/
+    - title: HTTP
+      path: /docs/user-guide/integrations/http/
+    - title: Kafka
+      path: /docs/user-guide/integrations/kafka/
+    - title: KPN Things
+      path: /docs/user-guide/integrations/kpn-things/
+    - title: Loriot
+      path: /docs/user-guide/integrations/loriot/
+    - title: "Example: Decode DL28"
+      path: /docs/user-guide/integrations/decode/
+    - title: MQTT
+      path: /docs/user-guide/integrations/mqtt/
+    - title: OceanConnect
+      path: /docs/user-guide/integrations/ocean-connect/
+    - title: OPC-UA
+      path: /docs/user-guide/integrations/opc-ua/
+    - title: Particle
+      path: /docs/user-guide/integrations/particle/
+    - title: Remote integrations
+      path: /docs/user-guide/integrations/remote-integrations/
+    - title: Send data to external MQTT brokers
+      path: /docs/user-guide/integrations/send-data-external-mqtt-brokers/
+    - title: SigFox
+      path: /docs/user-guide/integrations/sigfox/
+    - title: TCP
+      path: /docs/user-guide/integrations/tcp/
+    - title: The Things Stack Community
+      path: /docs/user-guide/integrations/ttn/
+    - title: The Things Stack Industries
+      path: /docs/user-guide/integrations/tti/
+    - title: ThingPark
+      path: /docs/user-guide/integrations/thingpark/
+    - title: Tuya
+      path: /docs/user-guide/integrations/tuya/
+    - title: UDP
+      path: /docs/user-guide/integrations/udp/
+
+- title: Asset health
+  section:
+  - title: Overview
+    path: /docs/asset-health/
+  - title: Set up a machine
+    path: /docs/asset-health/machine-setup/
+  - title: Vibration analysis
+    path: /docs/asset-health/vibration-analysis/
+  - title: Waterfall views
+    path: /docs/asset-health/waterfall/
+  - title: Work orders
+    path: /docs/asset-health/work-orders/
+
+- title: AI features
+  section:
+  - title: Overview
+    path: /docs/ai/
+  - title: AI models
+    path: /docs/ai/models/
+  - title: AI assistant
+    path: /docs/ai/assistant/
+  - title: MCP server
+    path: /docs/ai/mcp/
+
+- title: Administration
+  section:
+  - title: Overview
+    path: /docs/administration/
+  - title: Tenants
+    path: /docs/user-guide/ui/tenants/
+  - title: Tenant profiles
+    path: /docs/user-guide/tenant-profiles/
+  - title: Customers
+    path: /docs/user-guide/ui/customers/
+  - title: Users
+    path: /docs/user-guide/ui/users/
+  - title: Roles and permissions
+    path: /docs/administration/roles/
+  - title: Entity groups
+    path: /docs/administration/entity-groups/
+  - title: Security
+    section:
+    - title: Security settings
+      path: /docs/user-guide/ui/security-settings/
+    - title: Two-factor authentication
+      path: /docs/user-guide/two-factor-authentication/
+    - title: OAuth 2.0
+      path: /docs/user-guide/oauth-2-support/
+    - title: Domains
+      path: /docs/administration/domains/
+    - title: API keys
+      path: /docs/user-guide/security/api-keys/
+    - title: Secrets
+      path: /docs/administration/secrets/
+    - title: Enable HTTPS
+      path: /docs/user-guide/ssl/http-over-ssl/
+  - title: Translations
+    path: /docs/administration/translations/
+  - title: Audit log
+    path: /docs/user-guide/audit-log/
+  - title: API usage and limits
+    path: /docs/administration/api-usage/
+  - title: Rate limits
+    path: /docs/user-guide/api-limits/
+  - title: Version control
+    path: /docs/user-guide/version-control/
+  - title: Task manager
+    path: /docs/administration/task-manager/
+  - title: Home page settings
+    path: /docs/administration/home-page/
+  - title: Mobile app QR code
+    path: /docs/user-guide/ui/mobile-qr-code/
+  - title: Customization
+    path: /docs/user-guide/customization/
+
+- title: Mobile app
+  section:
+  - title: SENTIENT mobile app
+    path: /docs/mobile/
+
+- title: Edge
+  section:
+  - title: SENTIENT Edge
+    path: /docs/edge/
+
+- title: Troubleshooting
+  section:
+  - title: Overview
+    path: /docs/troubleshooting/
+  - title: Error catalogue
+    path: /docs/troubleshooting/errors/
+  - title: API error codes
+    path: /docs/troubleshooting/error-codes/
+  - title: Installation and upgrade errors
+    path: /docs/troubleshooting/install-errors/
+  - title: Licence errors
+    path: /docs/troubleshooting/licence-errors/
+  - title: Devices do not connect
+    path: /docs/troubleshooting/device-connection/
+  - title: Gateway errors
+    path: /docs/troubleshooting/gateway-errors/
+  - title: Collect logs for support
+    path: /docs/troubleshooting/logs/
+  - title: Server troubleshooting
+    path: /docs/user-guide/troubleshooting/
+  - title: FAQ
+    path: /docs/faq/
+
+- title: Reference
+  section:
+  - title: API overview
+    path: /docs/api/
+  - title: REST API
+    path: /docs/reference/rest-api/
+  - title: Device APIs
+    section:
+    - title: Protocols
+      path: /docs/reference/protocols/
+    - title: MQTT
+      path: /docs/reference/mqtt-api/
+    - title: MQTT Sparkplug
+      path: /docs/reference/mqtt-sparkplug-api/
+    - title: MQTT v5 error codes
+      path: /docs/reference/mqtt-v5-errors-code/
+    - title: HTTP
+      path: /docs/reference/http-api/
+    - title: CoAP
+      path: /docs/reference/coap-api/
+    - title: LwM2M
+      path: /docs/reference/lwm2m-api/
+    - title: SNMP
+      path: /docs/reference/snmp-api/
+    - title: Gateway MQTT API
+      path: /docs/reference/gateway-mqtt-api/
+  - title: Clients and SDKs
+    section:
+    - title: REST client
+      path: /docs/reference/rest-client/
+    - title: Dart client
+      path: /docs/reference/dart-client/
+  - title: Widget development
+    section:
+    - title: Overview
+      path: /docs/user-guide/contribution/widgets-development/
+    - title: Basic widget API
+      path: /docs/user-guide/contribution/ui/basic-widget-api/
+    - title: Custom subscriptions
+      path: /docs/user-guide/contribution/ui/custom-subscriptions/
+    - title: Advanced development
+      path: /docs/user-guide/contribution/ui/advanced-development/
+  - title: Architecture
+    path: /docs/reference/architecture/
+  - title: Keyboard shortcuts
+    path: /docs/reference/keyboard-shortcuts/
+  - title: Glossary
+    path: /docs/reference/glossary/
+  - title: Release notes
+    path: /docs/reference/release-notes/

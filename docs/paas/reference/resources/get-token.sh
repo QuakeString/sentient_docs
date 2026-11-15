@@ -1,1 +1,0 @@
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{"username":"your_user@company.com", "password":"secret"}' '{{httpsUrl}}/api/auth/login'

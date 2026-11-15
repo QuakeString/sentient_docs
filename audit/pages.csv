@@ -1,0 +1,403 @@
+path,url,title,verdict,wave,ui_help_links,reason
+_index.md,/./,SENTIENT Docs,check,W3,,Review
+docs/_index.md,/docs/,SENTIENT,check,W3,,Review
+docs/administration/_index.md,/docs/administration/,Administration,planned,W3,,New SENTIENT page
+docs/administration/api-usage.md,/docs/administration/api-usage/,API usage and limits,planned,W3,,New SENTIENT page
+docs/administration/domains.md,/docs/administration/domains/,Domains,planned,W3,,New SENTIENT page
+docs/administration/entity-groups.md,/docs/administration/entity-groups/,Entity groups,planned,W3,,New SENTIENT page
+docs/administration/home-page.md,/docs/administration/home-page/,Home page settings,planned,W3,,New SENTIENT page
+docs/administration/roles.md,/docs/administration/roles/,Roles and permissions,planned,W3,,New SENTIENT page
+docs/administration/secrets.md,/docs/administration/secrets/,Secrets,planned,W3,,New SENTIENT page
+docs/administration/task-manager.md,/docs/administration/task-manager/,Task manager,planned,W3,,New SENTIENT page
+docs/administration/translations.md,/docs/administration/translations/,Translations,planned,W3,,New SENTIENT page
+docs/ai/_index.md,/docs/ai/,AI features,planned,W3,,New SENTIENT page
+docs/ai/assistant.md,/docs/ai/assistant/,AI assistant,planned,W3,,New SENTIENT page
+docs/ai/mcp.md,/docs/ai/mcp/,MCP settings,planned,W3,,New SENTIENT page
+docs/ai/models.md,/docs/ai/models/,AI models,planned,W3,,New SENTIENT page
+docs/api.md,/docs/api/,SENTIENT API reference,check,W3,,Review
+docs/asset-health/_index.md,/docs/asset-health/,Asset health,planned,W3,,New SENTIENT page
+docs/asset-health/machine-setup.md,/docs/asset-health/machine-setup/,Set up a machine,planned,W3,,New SENTIENT page
+docs/asset-health/vibration-analysis.md,/docs/asset-health/vibration-analysis/,Vibration analysis,planned,W3,,New SENTIENT page
+docs/asset-health/waterfall.md,/docs/asset-health/waterfall/,Waterfall views,planned,W3,,New SENTIENT page
+docs/asset-health/work-orders.md,/docs/asset-health/work-orders/,Work orders,planned,W3,,New SENTIENT page
+docs/dashboards/_index.md,/docs/dashboards/,Dashboards: what is new in SENTIENT,planned,W2,,New SENTIENT page
+docs/dashboards/crash-recovery.md,/docs/dashboards/crash-recovery/,Drafts and crash recovery,planned,W2,,New SENTIENT page
+docs/dashboards/industrial-widgets.md,/docs/dashboards/industrial-widgets/,Industrial equipment widgets,planned,W2,,New SENTIENT page
+docs/dashboards/matrix-widget.md,/docs/dashboards/matrix-widget/,Matrix widget,planned,W2,,New SENTIENT page
+docs/dashboards/renderer.md,/docs/dashboards/renderer/,New renderer for SCADA symbols,planned,W2,,New SENTIENT page
+docs/dashboards/scada-editor.md,/docs/dashboards/scada-editor/,SCADA symbol editor,planned,W2,,New SENTIENT page
+docs/edge/_index.md,/docs/edge/,SENTIENT Edge,rewrite,W3,,SENTIENT Edge
+docs/edge/api.md,/docs/edge/api/,SENTIENT API reference,rewrite,W3,,SENTIENT Edge
+docs/edge/config/create-device.md,/docs/edge/config/create-device/,Edge Device Management,rewrite,W3,,SENTIENT Edge
+docs/edge/config/deploying-edge-alongside-iot-gateway.md,/docs/edge/config/deploying-edge-alongside-iot-gateway/,Deploying SENTIENT Edge Alongside SENTIENT IoT Gateway,rewrite,W3,,SENTIENT Edge
+docs/edge/config/edge-behind-proxy.md,/docs/edge/config/edge-behind-proxy/,Installing Edge Behind a Proxy,rewrite,W3,,SENTIENT Edge
+docs/edge/config/edge-cluster-setup.md,/docs/edge/config/edge-cluster-setup/,Edge Cluster Setup,rewrite,W3,,SENTIENT Edge
+docs/edge/config/edge-public-dashboard.md,/docs/edge/config/edge-public-dashboard/,Edge Public Dashboard Configuration Guide,rewrite,W3,,SENTIENT Edge
+docs/edge/config/management.md,/docs/edge/config/management/,Edge,rewrite,W3,,SENTIENT Edge
+docs/edge/config/provision-asset.md,/docs/edge/config/provision-asset/,Edge Assets,rewrite,W3,,SENTIENT Edge
+docs/edge/config/provision-customer.md,/docs/edge/config/provision-customer/,Provision Customer from cloud to edge,rewrite,W3,,SENTIENT Edge
+docs/edge/config/provision-dashboard.md,/docs/edge/config/provision-dashboard/,Provision Dashboard from cloud to edge,rewrite,W3,,SENTIENT Edge
+docs/edge/config/provision-device.md,/docs/edge/config/provision-device/,Provision Device from cloud to edge,rewrite,W3,,SENTIENT Edge
+docs/edge/config/provision-entity-view.md,/docs/edge/config/provision-entity-view/,Provision Entity View from cloud to edge,rewrite,W3,,SENTIENT Edge
+docs/edge/config/provision-user.md,/docs/edge/config/provision-user/,User Access management,rewrite,W3,,SENTIENT Edge
+docs/edge/config/subscribe-to-attribute.md,/docs/edge/config/subscribe-to-attribute/,Bidirectional Attribute Subscription And Update with Post-Processing,rewrite,W3,,SENTIENT Edge
+docs/edge/edge-architecture.md,/docs/edge/edge-architecture/,Edge Architecture,rewrite,W3,,SENTIENT Edge
+docs/edge/faq.md,/docs/edge/faq/,Frequently Asked Questions,rewrite,W3,,SENTIENT Edge
+docs/edge/features/cloud-events.md,/docs/edge/features/cloud-events/,Cloud Events,rewrite,W3,,SENTIENT Edge
+docs/edge/features/edge-status.md,/docs/edge/features/edge-status/,Edge Information page,rewrite,W3,,SENTIENT Edge
+docs/edge/getting-started-guides/connectivity.md,/docs/edge/getting-started-guides/connectivity/,Connectivity diagram,rewrite,W3,,SENTIENT Edge
+docs/edge/getting-started-guides/what-is-edge.md,/docs/edge/getting-started-guides/what-is-edge/,What is SENTIENT Edge?,rewrite,W1,edges,SENTIENT Edge
+docs/edge/getting-started.md,/docs/edge/getting-started/,Getting Started with SENTIENT Edge,rewrite,W3,,SENTIENT Edge
+docs/edge/reference/coap-api.md,/docs/edge/reference/coap-api/,CoAP Device API Reference,rewrite,W3,,SENTIENT Edge
+docs/edge/reference/gateway-mqtt-api.md,/docs/edge/reference/gateway-mqtt-api/,MQTT Gateway API Reference,rewrite,W3,,SENTIENT Edge
+docs/edge/reference/http-api.md,/docs/edge/reference/http-api/,HTTP Device API Reference,rewrite,W3,,SENTIENT Edge
+docs/edge/reference/lwm2m-api.md,/docs/edge/reference/lwm2m-api/,LWM2M Device API Reference,rewrite,W3,,SENTIENT Edge
+docs/edge/reference/mcp-server.md,/docs/edge/reference/mcp-server/,MCP Server,rewrite,W3,,SENTIENT Edge
+docs/edge/reference/mqtt-api.md,/docs/edge/reference/mqtt-api/,MQTT Device API Reference,rewrite,W3,,SENTIENT Edge
+docs/edge/reference/protocols.md,/docs/edge/reference/protocols/,Device Connectivity Protocols,rewrite,W3,,SENTIENT Edge
+docs/edge/reference/snmp-api.md,/docs/edge/reference/snmp-api/,SNMP Device API Reference,rewrite,W3,,SENTIENT Edge
+docs/edge/rule-engine/provision-rule-chains.md,/docs/edge/rule-engine/provision-rule-chains/,Provision Rule Chains from cloud to edge,rewrite,W3,,SENTIENT Edge
+docs/edge/rule-engine/queues.md,/docs/edge/rule-engine/queues/,Queues,rewrite,W3,,SENTIENT Edge
+docs/edge/rule-engine/rule-chain-templates.md,/docs/edge/rule-engine/rule-chain-templates/,Rule Chain templates,rewrite,W3,,SENTIENT Edge
+docs/edge/use-cases/data-filtering-traffic-reduce.md,/docs/edge/use-cases/data-filtering-traffic-reduce/,Data filtering and traffic reduce,rewrite,W3,,SENTIENT Edge
+docs/edge/use-cases/manage-alarms-rpc-requests.md,/docs/edge/use-cases/manage-alarms-rpc-requests/,Manage alarms and RPC requests on edge devices,rewrite,W3,,SENTIENT Edge
+docs/edge/use-cases/overview.md,/docs/edge/use-cases/overview/,SENTIENT Edge Use Cases,rewrite,W3,,SENTIENT Edge
+docs/edge/user-guide/alarms.md,/docs/edge/user-guide/alarms/,Edge Alarms,rewrite,W3,,SENTIENT Edge
+docs/edge/user-guide/db-overview.md,/docs/edge/user-guide/db-overview/,Edge Dashboards Overview,rewrite,W3,,SENTIENT Edge
+docs/edge/user-guide/edge-attributes.md,/docs/edge/user-guide/edge-attributes/,Edge Attributes,rewrite,W3,,SENTIENT Edge
+docs/edge/user-guide/entities-and-relations.md,/docs/edge/user-guide/entities-and-relations/,Entities and Relations on Edge,rewrite,W3,,SENTIENT Edge
+docs/edge/user-guide/grpc-over-ssl.md,/docs/edge/user-guide/grpc-over-ssl/,Edge over TLS/SSL,rewrite,W3,,SENTIENT Edge
+docs/edge/user-guide/ota-updates.md,/docs/edge/user-guide/ota-updates/,Edge Over-the-Air Firmware And Software Updates,rewrite,W3,,SENTIENT Edge
+docs/edge/user-guide/telemetry-sync.md,/docs/edge/user-guide/telemetry-sync/,How synchronization works,rewrite,W3,,SENTIENT Edge
+docs/edge/user-guide/troubleshooting.md,/docs/edge/user-guide/troubleshooting/,Troubleshooting,rewrite,W3,,SENTIENT Edge
+docs/faq.md,/docs/faq/,Frequently Asked Questions,check,W3,,Review
+docs/getting-started-guides/connectivity.md,/docs/getting-started-guides/connectivity/,Connectivity diagram,rewrite,W1,,First steps on SENTIENT
+docs/getting-started-guides/first-login.md,/docs/getting-started-guides/first-login/,Sign in for the first time,planned,W1,,New SENTIENT page
+docs/getting-started-guides/helloworld.md,/docs/getting-started-guides/helloworld/,Getting Started with SENTIENT,rewrite,W1,,First steps on SENTIENT
+docs/getting-started-guides/what-is-sentient.md,/docs/getting-started-guides/what-is-sentient/,What is SENTIENT?,rewrite,W1,,First steps on SENTIENT
+docs/installation/_index.md,/docs/installation/,Install SENTIENT,planned,W1,,New SENTIENT page
+docs/installation/docker.md,/docs/installation/docker/,Install with Docker,planned,W1,,New SENTIENT page
+docs/installation/licence.md,/docs/installation/licence/,Activate your licence,planned,W1,,New SENTIENT page
+docs/installation/linux.md,/docs/installation/linux/,Install on Linux,planned,W1,,New SENTIENT page
+docs/installation/requirements.md,/docs/installation/requirements/,System requirements,planned,W1,,New SENTIENT page
+docs/installation/windows-clickhouse.md,/docs/installation/windows-clickhouse/,Windows with ClickHouse (WSL2),planned,W1,,New SENTIENT page
+docs/installation/windows.md,/docs/installation/windows/,Install on Windows with Platform Manager,planned,W1,,New SENTIENT page
+docs/iot-gateway/_index.md,/docs/iot-gateway/,SENTIENT Gateway,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/admin-ui.md,/docs/iot-gateway/admin-ui/,Gateway admin UI,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/ads.md,/docs/iot-gateway/config/ads/,Beckhoff ADS connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/bacnet.md,/docs/iot-gateway/config/bacnet/,BACnet Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/ble.md,/docs/iot-gateway/config/ble/,BLE Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/can.md,/docs/iot-gateway/config/can/,CAN Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/dnp3.md,/docs/iot-gateway/config/dnp3/,DNP3 connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/ethercat.md,/docs/iot-gateway/config/ethercat/,EtherCAT connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/ethernet-ip.md,/docs/iot-gateway/config/ethernet-ip/,EtherNet/IP connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/fins.md,/docs/iot-gateway/config/fins/,Omron FINS connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/ftp.md,/docs/iot-gateway/config/ftp/,FTP Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/iec61850.md,/docs/iot-gateway/config/iec61850/,IEC 61850 connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/knx.md,/docs/iot-gateway/config/knx/,KNX Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/mcprotocol.md,/docs/iot-gateway/config/mcprotocol/,Mitsubishi MC protocol connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/modbus.md,/docs/iot-gateway/config/modbus/,Modbus Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/mqtt.md,/docs/iot-gateway/config/mqtt/,MQTT Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/ocpp.md,/docs/iot-gateway/config/ocpp/,OCPP Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/odbc.md,/docs/iot-gateway/config/odbc/,ODBC Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/opc-ua.md,/docs/iot-gateway/config/opc-ua/,OPC-UA Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/profinet.md,/docs/iot-gateway/config/profinet/,PROFINET connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/request.md,/docs/iot-gateway/config/request/,Request Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/rest.md,/docs/iot-gateway/config/rest/,REST Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/s7.md,/docs/iot-gateway/config/s7/,Siemens S7 connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/serial.md,/docs/iot-gateway/config/serial/,Serial connector,planned,W2,,New SENTIENT page
+docs/iot-gateway/config/snmp.md,/docs/iot-gateway/config/snmp/,SNMP Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/socket.md,/docs/iot-gateway/config/socket/,Socket Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/config/xmpp.md,/docs/iot-gateway/config/xmpp/,XMPP Connector Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/configuration.md,/docs/iot-gateway/configuration/,IoT Gateway Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/features-overview/provisioning.md,/docs/iot-gateway/features-overview/provisioning/,Device Provisioning,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/features-overview/report-strategy.md,/docs/iot-gateway/features-overview/report-strategy/,Report Strategy,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/features.md,/docs/iot-gateway/features/,SENTIENT IoT Gateway Features,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/getting-started.md,/docs/iot-gateway/getting-started/,Getting started with SENTIENT IoT Gateway,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/guides/how-to-connect-modbus-device.md,/docs/iot-gateway/guides/how-to-connect-modbus-device/,How to connect Modbus device to SENTIENT?,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-sentient-ce.md,/docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-sentient-ce/,How to connect OPC-UA device to SENTIENT?,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/guides/how-to-connect-opcua-server.md,/docs/iot-gateway/guides/how-to-connect-opcua-server/,How to connect OPC-UA server,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/guides/how-to-enable-remote-configuration.md,/docs/iot-gateway/guides/how-to-enable-remote-configuration/,IoT Gateway Remote Configuration,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/guides/how-to-enable-remote-logging.md,/docs/iot-gateway/guides/how-to-enable-remote-logging/,How to enable remote logging feature on SENTIENT IoT Gateway,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/guides/how-to-use-gateway-rpc-methods.md,/docs/iot-gateway/guides/how-to-use-gateway-rpc-methods/,Service RPC Methods,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/guides/how-to-use-get-set-rpc-methods.md,/docs/iot-gateway/guides/how-to-use-get-set-rpc-methods/,How to use built-in GET/SET RPC methods,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/guides/how-to-use-rpc-modbus-connector.md,/docs/iot-gateway/guides/how-to-use-rpc-modbus-connector/,How to use RPC in Modbus connector,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/help.md,/docs/iot-gateway/help/,Get Support,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/how-device-removing-renaming-works.md,/docs/iot-gateway/how-device-removing-renaming-works/,Device Renaming/Removing Handling,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/install-linux.md,/docs/iot-gateway/install-linux/,Install the gateway on Linux,planned,W2,,New SENTIENT page
+docs/iot-gateway/install-windows.md,/docs/iot-gateway/install-windows/,Install the gateway on Windows,planned,W2,,New SENTIENT page
+docs/iot-gateway/installation.md,/docs/iot-gateway/installation/,IoT Gateway Installation options,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/iot-gateway/key-sheets.md,/docs/iot-gateway/key-sheets/,Key sheets,planned,W2,,New SENTIENT page
+docs/iot-gateway/rpc-write.md,/docs/iot-gateway/rpc-write/,Write values to devices,planned,W2,,New SENTIENT page
+docs/iot-gateway/what-is-iot-gateway.md,/docs/iot-gateway/what-is-iot-gateway/,What is SENTIENT IoT Gateway?,rewrite,W2,,SENTIENT Gateway is a new Rust gateway with its own admin UI and connectors
+docs/mobile/_index.md,/docs/mobile/,SENTIENT Mobile Application Documentation,rewrite,W3,,SENTIENT mobile app (APK)
+docs/mobile/alarm-dashboard.md,/docs/mobile/alarm-dashboard/,Configure alarm details dashboards in SENTIENT Mobile Application,rewrite,W3,,SENTIENT mobile app (APK)
+docs/mobile/device-dashboard.md,/docs/mobile/device-dashboard/,Configure device details dashboards in SENTIENT Mobile Application,rewrite,W3,,SENTIENT mobile app (APK)
+docs/mobile/getting-started.md,/docs/mobile/getting-started/,Getting started with SENTIENT Mobile Application,rewrite,W3,,SENTIENT mobile app (APK)
+docs/mobile/install-apk.md,/docs/mobile/install-apk/,Install the mobile app,planned,W3,,New SENTIENT page
+docs/mobile/mobile-actions.md,/docs/mobile/mobile-actions/,Configure mobile actions in SENTIENT Mobile Application,rewrite,W3,,SENTIENT mobile app (APK)
+docs/mobile/oauth2.md,/docs/mobile/oauth2/,Configure OAuth 2.0 in SENTIENT Mobile Application,rewrite,W3,,SENTIENT mobile app (APK)
+docs/mobile/qr-code-settings.md,/docs/mobile/qr-code-settings/,Configure mobile application QR code settings,rewrite,W3,,SENTIENT mobile app (APK)
+docs/mobile/sign-in.md,/docs/mobile/sign-in/,Sign in to the mobile app,planned,W3,,New SENTIENT page
+docs/mobile-center/applications.md,/docs/mobile-center/applications/,Applications,check,W1,mobileApplication,Review
+docs/mobile-center/mobile-center.md,/docs/mobile-center/mobile-center/,Mobile center,check,W1,mobileBundle,Review
+docs/operations/_index.md,/docs/operations/,Operations,planned,W1,,New SENTIENT page
+docs/operations/backup-restore.md,/docs/operations/backup-restore/,Back up and restore,planned,W1,,New SENTIENT page
+docs/operations/move-server.md,/docs/operations/move-server/,Move to a new server,planned,W1,,New SENTIENT page
+docs/operations/ports.md,/docs/operations/ports/,Ports and firewall,planned,W1,,New SENTIENT page
+docs/operations/settings.md,/docs/operations/settings/,Environment settings,planned,W1,,New SENTIENT page
+docs/operations/tuning.md,/docs/operations/tuning/,Performance tuning,planned,W1,,New SENTIENT page
+docs/operations/uninstall.md,/docs/operations/uninstall/,Uninstall,planned,W1,,New SENTIENT page
+docs/operations/upgrade.md,/docs/operations/upgrade/,Upgrade and roll back,planned,W1,,New SENTIENT page
+docs/reference/_index.md,/docs/reference/,SENTIENT architecture,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/architecture.md,/docs/reference/architecture/,SENTIENT Architecture,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/circuitpython-client-sdk.md,/docs/reference/circuitpython-client-sdk/,CircuitPython Client SDK,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/coap-api.md,/docs/reference/coap-api/,CoAP Device API Reference,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/dart-client.md,/docs/reference/dart-client/,Dart API Client,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/filters/device-attributes-filter.md,/docs/reference/filters/device-attributes-filter/,Device Attributes Filter,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/filters/device-telemetry-filter.md,/docs/reference/filters/device-telemetry-filter/,Device Telemetry Filter,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/filters/message-type-filter.md,/docs/reference/filters/message-type-filter/,Message Type Filter,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/filters/method-name-filter.md,/docs/reference/filters/method-name-filter/,Method Name Filter,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/gateway-mqtt-api.md,/docs/reference/gateway-mqtt-api/,MQTT Gateway API Reference,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/glossary.md,/docs/reference/glossary/,Glossary,planned,W7,,New SENTIENT page
+docs/reference/http-api.md,/docs/reference/http-api/,HTTP Device API Reference,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/keyboard-shortcuts.md,/docs/reference/keyboard-shortcuts/,Keyboard shortcuts,planned,W7,,New SENTIENT page
+docs/reference/lwm2m-api.md,/docs/reference/lwm2m-api/,LwM2M Device API Reference,check,W1,lwm2mResourceLibrary,Protocol and API reference; verify against SENTIENT
+docs/reference/micropython-client-sdk.md,/docs/reference/micropython-client-sdk/,MicroPython Client SDK,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/mqtt-api.md,/docs/reference/mqtt-api/,MQTT Device API Reference,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/mqtt-sparkplug-api.md,/docs/reference/mqtt-sparkplug-api/,MQTT Sparkplug API,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/mqtt-v5-errors-code.md,/docs/reference/mqtt-v5-errors-code/,Mqtt v5 errors code,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/protocols.md,/docs/reference/protocols/,Device Connectivity Protocols,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/python-client-sdk.md,/docs/reference/python-client-sdk/,Python Client SDK,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/python-rest-client.md,/docs/reference/python-rest-client/,Python REST Client,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/release-notes.md,/docs/reference/release-notes/,Release notes,planned,W7,,New SENTIENT page
+docs/reference/rest-api.md,/docs/reference/rest-api/,REST API,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/rest-client.md,/docs/reference/rest-client/,REST Client,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reference/snmp-api.md,/docs/reference/snmp-api/,SNMP Device API Reference,check,W7,,Protocol and API reference; verify against SENTIENT
+docs/reports/_index.md,/docs/reports/,Reports,planned,W3,,New SENTIENT page
+docs/reports/builder.md,/docs/reports/builder/,Report builder,planned,W3,,New SENTIENT page
+docs/reports/export.md,/docs/reports/export/,PDF and spreadsheet export,planned,W3,,New SENTIENT page
+docs/reports/scheduling.md,/docs/reports/scheduling/,Schedule and send reports,planned,W3,,New SENTIENT page
+docs/reports/templates.md,/docs/reports/templates/,Report templates,planned,W3,,New SENTIENT page
+docs/solution-hub/_index.md,/docs/solution-hub/,Solution hub,planned,W3,,New SENTIENT page
+docs/solution-hub/pipelines.md,/docs/solution-hub/pipelines/,Data pipelines,planned,W3,,New SENTIENT page
+docs/troubleshooting/_index.md,/docs/troubleshooting/,Troubleshooting and error codes,planned,W6,,New SENTIENT page
+docs/troubleshooting/device-connection.md,/docs/troubleshooting/device-connection/,Devices do not connect,planned,W6,,New SENTIENT page
+docs/troubleshooting/error-codes.md,/docs/troubleshooting/error-codes/,API error codes,planned,W6,,New SENTIENT page
+docs/troubleshooting/gateway-errors.md,/docs/troubleshooting/gateway-errors/,Gateway errors,planned,W6,,New SENTIENT page
+docs/troubleshooting/install-errors.md,/docs/troubleshooting/install-errors/,Installation and upgrade errors,planned,W6,,New SENTIENT page
+docs/troubleshooting/licence-errors.md,/docs/troubleshooting/licence-errors/,Licence errors,planned,W6,,New SENTIENT page
+docs/troubleshooting/logs.md,/docs/troubleshooting/logs/,Collect logs for support,planned,W6,,New SENTIENT page
+docs/tutorials/create-clear-alarms.md,/docs/tutorials/create-clear-alarms/,Create and clear alarms,check,W3,,Review
+docs/tutorials/function-based-on-telemetry-from-two-devices.md,/docs/tutorials/function-based-on-telemetry-from-two-devices/,Data function based on telemetry from 2 devices,check,W3,,Review
+docs/tutorials/send-email.md,/docs/tutorials/send-email/,Send email on alarm,check,W3,,Review
+docs/tutorials/telemetry-delta-calculation.md,/docs/tutorials/telemetry-delta-calculation/,Telemetry delta calculation,check,W3,,Review
+docs/tutorials/validate-incoming-telemetry.md,/docs/tutorials/validate-incoming-telemetry/,Validate incoming telemetry,check,W3,,Review
+docs/user-guide/access-token.md,/docs/user-guide/access-token/,Access Token based authentication for MQTT,check,W2,,Concept page; verify against SENTIENT
+docs/user-guide/advanced-filters.md,/docs/user-guide/advanced-filters/,Advanced filters,check,W2,,Concept page; verify against SENTIENT
+docs/user-guide/alarm-rules.md,/docs/user-guide/alarm-rules/,Alarm rules,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/alarms.md,/docs/user-guide/alarms/,Working with alarms,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/api-limits.md,/docs/user-guide/api-limits/,API & Rate Limits,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/asset-profiles.md,/docs/user-guide/asset-profiles/,Asset profiles,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/attributes.md,/docs/user-guide/attributes/,Working with IoT device attributes,check,W2,,Concept page; verify against SENTIENT
+docs/user-guide/audit-log.md,/docs/user-guide/audit-log/,Audit Log,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/basic-mqtt.md,/docs/user-guide/basic-mqtt/,Basic MQTT authentication,check,W2,,Concept page; verify against SENTIENT
+docs/user-guide/bulk-provisioning.md,/docs/user-guide/bulk-provisioning/,Bulk Provisioning,rewrite,W1,entitiesImport,Device and alarm screens differ in SENTIENT
+docs/user-guide/calculated-fields/_index.md,/docs/user-guide/calculated-fields/,Calculated fields,rewrite,W1,calculatedField,Device and alarm screens differ in SENTIENT
+docs/user-guide/calculated-fields/geofencing-calculated-field.md,/docs/user-guide/calculated-fields/geofencing-calculated-field/,Geofencing calculated field,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/calculated-fields/propagation-calculated-field.md,/docs/user-guide/calculated-fields/propagation-calculated-field/,Propagation calculated field,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/calculated-fields/related-entities-aggregation-calculated-field.md,/docs/user-guide/calculated-fields/related-entities-aggregation-calculated-field/,Related entities aggregation calculated field,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/calculated-fields/script-calculated-field.md,/docs/user-guide/calculated-fields/script-calculated-field/,Script calculated field,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/calculated-fields/simple-calculated-field.md,/docs/user-guide/calculated-fields/simple-calculated-field/,Simple calculated field,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/calculated-fields/time-series-data-aggregation-calculated-field.md,/docs/user-guide/calculated-fields/time-series-data-aggregation-calculated-field/,Time series data aggregation calculated field,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/certificates.md,/docs/user-guide/certificates/,X.509 Certificate Based Authentication,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/claiming-devices.md,/docs/user-guide/claiming-devices/,Claiming devices,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/coap-over-dtls.md,/docs/user-guide/coap-over-dtls/,CoAP over DTLS,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/contribution/ui/advanced-development.md,/docs/user-guide/contribution/ui/advanced-development/,Advanced widget development,rewrite,W3,,Widget development against SENTIENT
+docs/user-guide/contribution/ui/basic-widget-api.md,/docs/user-guide/contribution/ui/basic-widget-api/,Basic widget API,rewrite,W3,,Widget development against SENTIENT
+docs/user-guide/contribution/ui/custom-subscriptions.md,/docs/user-guide/contribution/ui/custom-subscriptions/,Custom subscriptions,rewrite,W3,,Widget development against SENTIENT
+docs/user-guide/contribution/widgets-development.md,/docs/user-guide/contribution/widgets-development/,Widgets development guide,rewrite,W3,,Widget development against SENTIENT
+docs/user-guide/customization.md,/docs/user-guide/customization/,Platform Customization,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/dashboards.md,/docs/user-guide/dashboards/,Working with IoT dashboards,rewrite,W1,timewindowSettings,UI and widgets differ in SENTIENT
+docs/user-guide/device-connectivity-status.md,/docs/user-guide/device-connectivity-status/,Device Connectivity Status,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/device-credentials.md,/docs/user-guide/device-credentials/,Device authentication options,check,W2,,Concept page; verify against SENTIENT
+docs/user-guide/device-profiles.md,/docs/user-guide/device-profiles/,Device profiles,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/device-provisioning.md,/docs/user-guide/device-provisioning/,Provisioning devices,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/entities-and-relations.md,/docs/user-guide/entities-and-relations/,Entities and relations,check,W2,,Concept page; verify against SENTIENT
+docs/user-guide/entity-views.md,/docs/user-guide/entity-views/,Entity Views,rewrite,W1,entityViews,Device and alarm screens differ in SENTIENT
+docs/user-guide/image-gallery.md,/docs/user-guide/image-gallery/,Image gallery,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/integrations/_index.md,/docs/user-guide/integrations/,Platform Integrations,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/aws-iot.md,/docs/user-guide/integrations/aws-iot/,AWS IoT Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/aws-kinesis.md,/docs/user-guide/integrations/aws-kinesis/,AWS Kinesis Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/azure-event-hub.md,/docs/user-guide/integrations/azure-event-hub/,Azure Event Hub Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/azure-iot-hub.md,/docs/user-guide/integrations/azure-iot-hub/,Azure IoT Hub Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/azure-service-bus.md,/docs/user-guide/integrations/azure-service-bus/,Azure Service Bus Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/chirpstack.md,/docs/user-guide/integrations/chirpstack/,ChirpStack Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/coap.md,/docs/user-guide/integrations/coap/,CoAP Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/custom.md,/docs/user-guide/integrations/custom/,Custom Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/decode.md,/docs/user-guide/integrations/decode/,Monitoring District Heating Substation facility with SENTIENT using Decode DL28 communication processor,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/http.md,/docs/user-guide/integrations/http/,HTTP Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/kafka.md,/docs/user-guide/integrations/kafka/,Kafka Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/kpn-things.md,/docs/user-guide/integrations/kpn-things/,KPN Things Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/loriot.md,/docs/user-guide/integrations/loriot/,Loriot integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/mqtt.md,/docs/user-guide/integrations/mqtt/,MQTT Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/ocean-connect.md,/docs/user-guide/integrations/ocean-connect/,OceanConnect Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/opc-ua.md,/docs/user-guide/integrations/opc-ua/,OPC-UA Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/particle.md,/docs/user-guide/integrations/particle/,Particle Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/remote-integrations.md,/docs/user-guide/integrations/remote-integrations/,Remote Integrations,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/send-data-external-mqtt-brokers.md,/docs/user-guide/integrations/send-data-external-mqtt-brokers/,Send data to external MQTT brokers,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/sigfox-example.md,/docs/user-guide/integrations/sigfox-example/,Get device parameters using SigFox integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/sigfox.md,/docs/user-guide/integrations/sigfox/,SigFox Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/tcp.md,/docs/user-guide/integrations/tcp/,TCP Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/thingpark.md,/docs/user-guide/integrations/thingpark/,ThingPark Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/tti.md,/docs/user-guide/integrations/tti/,The Things Stack Industries integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/ttn.md,/docs/user-guide/integrations/ttn/,The Things Stack Community integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/tuya.md,/docs/user-guide/integrations/tuya/,Tuya Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/integrations/udp.md,/docs/user-guide/integrations/udp/,UDP Integration,rewrite,W3,,Integration screens differ in SENTIENT
+docs/user-guide/mqtt-over-ssl.md,/docs/user-guide/mqtt-over-ssl/,MQTT over SSL,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/notification-channels.md,/docs/user-guide/notification-channels/,Notification channels,planned,W2,,New SENTIENT page
+docs/user-guide/notifications.md,/docs/user-guide/notifications/,Notification center,rewrite,W1,sentNotification templateNotifications recipientNotifications ruleNotifications,Device and alarm screens differ in SENTIENT
+docs/user-guide/oauth-2-support.md,/docs/user-guide/oauth-2-support/,OAuth 2.0,rewrite,W1,oauth2Settings,Administration features differ in SENTIENT
+docs/user-guide/ota-updates.md,/docs/user-guide/ota-updates/,Over-the-air firmware and software updates,rewrite,W1,otaUpdates,Device and alarm screens differ in SENTIENT
+docs/user-guide/psm.md,/docs/user-guide/psm/,PSM and eDRX support,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/recipes.md,/docs/user-guide/recipes/,Recipes,planned,W3,,New SENTIENT page
+docs/user-guide/rpc.md,/docs/user-guide/rpc/,Using RPC capabilities,check,W2,,Concept page; verify against SENTIENT
+docs/user-guide/rule-engine-2-0/nodes/_index.md,/docs/user-guide/rule-engine-2-0/nodes/,Rule nodes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/_index.md,/docs/user-guide/rule-engine-2-0/nodes/action/,Action nodes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/assign-to-customer.md,/docs/user-guide/rule-engine-2-0/nodes/action/assign-to-customer/,assign to customer,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/calculated-fields.md,/docs/user-guide/rule-engine-2-0/nodes/action/calculated-fields/,calculated fields,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/clear-alarm.md,/docs/user-guide/rule-engine-2-0/nodes/action/clear-alarm/,clear alarm,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/copy-to-view.md,/docs/user-guide/rule-engine-2-0/nodes/action/copy-to-view/,copy to view,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/create-alarm.md,/docs/user-guide/rule-engine-2-0/nodes/action/create-alarm/,create alarm,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/create-relation.md,/docs/user-guide/rule-engine-2-0/nodes/action/create-relation/,create relation,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/delay.md,/docs/user-guide/rule-engine-2-0/nodes/action/delay/,delay (deprecated),rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/delete-attributes.md,/docs/user-guide/rule-engine-2-0/nodes/action/delete-attributes/,delete attributes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/delete-relation.md,/docs/user-guide/rule-engine-2-0/nodes/action/delete-relation/,delete relation,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/device-profile.md,/docs/user-guide/rule-engine-2-0/nodes/action/device-profile/,device profile,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/device-state.md,/docs/user-guide/rule-engine-2-0/nodes/action/device-state/,device state,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/generator.md,/docs/user-guide/rule-engine-2-0/nodes/action/generator/,generator,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/gps-geofencing-events.md,/docs/user-guide/rule-engine-2-0/nodes/action/gps-geofencing-events/,gps geofencing events,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/integration-downlink.md,/docs/user-guide/rule-engine-2-0/nodes/action/integration-downlink/,integration downlink,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/log.md,/docs/user-guide/rule-engine-2-0/nodes/action/log/,log,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/math-function.md,/docs/user-guide/rule-engine-2-0/nodes/action/math-function/,math function,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/message-count.md,/docs/user-guide/rule-engine-2-0/nodes/action/message-count/,message count,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/push-to-cloud.md,/docs/user-guide/rule-engine-2-0/nodes/action/push-to-cloud/,push to cloud,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/push-to-edge.md,/docs/user-guide/rule-engine-2-0/nodes/action/push-to-edge/,push to edge,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/rest-call-reply.md,/docs/user-guide/rule-engine-2-0/nodes/action/rest-call-reply/,rest call reply,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/rpc-call-reply.md,/docs/user-guide/rule-engine-2-0/nodes/action/rpc-call-reply/,rpc call reply,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/rpc-call-request.md,/docs/user-guide/rule-engine-2-0/nodes/action/rpc-call-request/,rpc call request,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/save-attributes.md,/docs/user-guide/rule-engine-2-0/nodes/action/save-attributes/,save attributes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/save-timeseries.md,/docs/user-guide/rule-engine-2-0/nodes/action/save-timeseries/,save time series,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/action/unassign-from-customer.md,/docs/user-guide/rule-engine-2-0/nodes/action/unassign-from-customer/,unassign from customer,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/analytics/_index.md,/docs/user-guide/rule-engine-2-0/nodes/analytics/,Analytics nodes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/_index.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/,Enrichment nodes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/calculate-delta.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/calculate-delta/,calculate delta,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/customer-attributes.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/customer-attributes/,customer attributes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/customer-details.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/customer-details/,customer details,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/fetch-device-credentials.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/fetch-device-credentials/,fetch device credentials,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-attributes.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-attributes/,originator attributes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-fields.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-fields/,originator fields,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-telemetry.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/originator-telemetry/,originator telemetry,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/related-device-attributes.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/related-device-attributes/,related device attributes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/related-entity-data.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/related-entity-data/,related entity data,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/tenant-attributes.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/tenant-attributes/,tenant attributes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/enrichment/tenant-details.md,/docs/user-guide/rule-engine-2-0/nodes/enrichment/tenant-details/,tenant details,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/_index.md,/docs/user-guide/rule-engine-2-0/nodes/external/,External nodes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/ai-request.md,/docs/user-guide/rule-engine-2-0/nodes/external/ai-request/,AI request,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/aws-lambda.md,/docs/user-guide/rule-engine-2-0/nodes/external/aws-lambda/,aws lambda,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/aws-sns.md,/docs/user-guide/rule-engine-2-0/nodes/external/aws-sns/,aws sns,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/aws-sqs.md,/docs/user-guide/rule-engine-2-0/nodes/external/aws-sqs/,aws sqs,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/azure-iot-hub.md,/docs/user-guide/rule-engine-2-0/nodes/external/azure-iot-hub/,azure iot hub,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/kafka.md,/docs/user-guide/rule-engine-2-0/nodes/external/kafka/,kafka,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/mqtt.md,/docs/user-guide/rule-engine-2-0/nodes/external/mqtt/,mqtt,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/rabbitmq.md,/docs/user-guide/rule-engine-2-0/nodes/external/rabbitmq/,rabbitmq,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/rest-api-call.md,/docs/user-guide/rule-engine-2-0/nodes/external/rest-api-call/,rest api call,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/send-email.md,/docs/user-guide/rule-engine-2-0/nodes/external/send-email/,send email,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/send-notification.md,/docs/user-guide/rule-engine-2-0/nodes/external/send-notification/,send notification,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/send-sms.md,/docs/user-guide/rule-engine-2-0/nodes/external/send-sms/,send sms,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/external/send-to-slack.md,/docs/user-guide/rule-engine-2-0/nodes/external/send-to-slack/,send to slack,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/_index.md,/docs/user-guide/rule-engine-2-0/nodes/filter/,Filter nodes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/alarm-status-filter.md,/docs/user-guide/rule-engine-2-0/nodes/filter/alarm-status-filter/,alarm status filter,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/asset-profile-switch.md,/docs/user-guide/rule-engine-2-0/nodes/filter/asset-profile-switch/,asset profile switch,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/check-fields-presence.md,/docs/user-guide/rule-engine-2-0/nodes/filter/check-fields-presence/,check fields presence,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/check-relation-presence.md,/docs/user-guide/rule-engine-2-0/nodes/filter/check-relation-presence/,check relation presence,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/device-profile-switch.md,/docs/user-guide/rule-engine-2-0/nodes/filter/device-profile-switch/,device profile switch,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/entity-type-filter.md,/docs/user-guide/rule-engine-2-0/nodes/filter/entity-type-filter/,entity type filter,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/entity-type-switch.md,/docs/user-guide/rule-engine-2-0/nodes/filter/entity-type-switch/,entity type switch,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/gps-geofencing-filter.md,/docs/user-guide/rule-engine-2-0/nodes/filter/gps-geofencing-filter/,gps geofencing filter,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/message-type-filter.md,/docs/user-guide/rule-engine-2-0/nodes/filter/message-type-filter/,message type filter,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/message-type-switch.md,/docs/user-guide/rule-engine-2-0/nodes/filter/message-type-switch/,message type switch,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/script.md,/docs/user-guide/rule-engine-2-0/nodes/filter/script/,script,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/filter/switch.md,/docs/user-guide/rule-engine-2-0/nodes/filter/switch/,switch,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/flow/_index.md,/docs/user-guide/rule-engine-2-0/nodes/flow/,Flow nodes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/flow/acknowledge.md,/docs/user-guide/rule-engine-2-0/nodes/flow/acknowledge/,acknowledge,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/flow/checkpoint.md,/docs/user-guide/rule-engine-2-0/nodes/flow/checkpoint/,checkpoint,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/flow/output.md,/docs/user-guide/rule-engine-2-0/nodes/flow/output/,output,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/flow/rule-chain.md,/docs/user-guide/rule-engine-2-0/nodes/flow/rule-chain/,rule chain,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/_index.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/,Transformation nodes,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/change-originator.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/change-originator/,change originator,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/copy-key-value-pairs.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/copy-key-value-pairs/,copy key-value pairs,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/deduplication.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/deduplication/,deduplication,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/delete-key-value-pairs.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/delete-key-value-pairs/,delete key-value pairs,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/json-path.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/json-path/,json path,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/rename-keys.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/rename-keys/,rename keys,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/script.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/script/,script,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/split-array-msg.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/split-array-msg/,split array msg,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/nodes/transformation/to-email.md,/docs/user-guide/rule-engine-2-0/nodes/transformation/to-email/,to email,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/overview.md,/docs/user-guide/rule-engine-2-0/overview/,Rule Engine overview,rewrite,W1,ruleEngine,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/re-getting-started.md,/docs/user-guide/rule-engine-2-0/re-getting-started/,Getting Started with Rule Engine,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/add-devices-to-group.md,/docs/user-guide/rule-engine-2-0/tutorials/add-devices-to-group/,Add & remove devices to group dynamically,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/aggregate-incoming-data-stream.md,/docs/user-guide/rule-engine-2-0/tutorials/aggregate-incoming-data-stream/,Aggregate incoming data stream,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/aggregate-latest-data.md,/docs/user-guide/rule-engine-2-0/tutorials/aggregate-latest-data/,Aggregate latest telemetry values periodically,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/check-relation-tutorial.md,/docs/user-guide/rule-engine-2-0/tutorials/check-relation-tutorial/,Check Relation between Entities,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms-with-details.md,/docs/user-guide/rule-engine-2-0/tutorials/create-clear-alarms-with-details/,Working with Alarm details,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/create-inactivity-alarm.md,/docs/user-guide/rule-engine-2-0/tutorials/create-inactivity-alarm/,Create Alarm when the Device is offline,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/function-based-on-telemetry-from-two-devices.md,/docs/user-guide/rule-engine-2-0/tutorials/function-based-on-telemetry-from-two-devices/,Function based on telemetry from two devices,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/get-weather-using-rest-api-call.md,/docs/user-guide/rule-engine-2-0/tutorials/get-weather-using-rest-api-call/,Weather reading using REST API calls,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/integration-with-telegram-bot.md,/docs/user-guide/rule-engine-2-0/tutorials/integration-with-telegram-bot/,Notifications and Alarms on your smartphone using Telegram Bot,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/rpc-reply-tutorial.md,/docs/user-guide/rule-engine-2-0/tutorials/rpc-reply-tutorial/,RPC reply with data from related device,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/rpc-request-tutorial.md,/docs/user-guide/rule-engine-2-0/tutorials/rpc-request-tutorial/,Send RPC Request to the Related Device,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/send-email-html.md,/docs/user-guide/rule-engine-2-0/tutorials/send-email-html/,Send HTML or image inside email,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/send-email-to-customer.md,/docs/user-guide/rule-engine-2-0/tutorials/send-email-to-customer/,Send email to Customer,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/telemetry-delta-validation.md,/docs/user-guide/rule-engine-2-0/tutorials/telemetry-delta-validation/,Telemetry delta validation,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-0/tutorials/transform-telemetry-using-previous-record.md,/docs/user-guide/rule-engine-2-0/tutorials/transform-telemetry-using-previous-record/,Transform telemetry using previous record,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/rule-engine-2-5/queues.md,/docs/user-guide/rule-engine-2-5/queues/,Queues,rewrite,W3,,SENTIENT rule engine (Rust) implements the nodes differently
+docs/user-guide/scada/_index.md,/docs/user-guide/scada/,SCADA dashboards,rewrite,W1,scada,UI and widgets differ in SENTIENT
+docs/user-guide/scada/scada-symbols-dev-guide.md,/docs/user-guide/scada/scada-symbols-dev-guide/,SCADA symbols development guide,rewrite,W1,scadaSymbolDev scadaSymbolDevAnimation scadaSymbolDevConnectorAnimation,UI and widgets differ in SENTIENT
+docs/user-guide/scheduler.md,/docs/user-guide/scheduler/,Scheduler,planned,W3,,New SENTIENT page
+docs/user-guide/security/api-keys.md,/docs/user-guide/security/api-keys/,API keys,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/ssl/coap-access-token.md,/docs/user-guide/ssl/coap-access-token/,Access Token based authentication for CoAP,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/ssl/coap-x509-certificates.md,/docs/user-guide/ssl/coap-x509-certificates/,X.509 Certificate Based Authentication for CoAP over DTLS,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/ssl/http-access-token.md,/docs/user-guide/ssl/http-access-token/,HTTP Access Token based authentication,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/ssl/http-over-ssl.md,/docs/user-guide/ssl/http-over-ssl/,HTTP over SSL,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/ssl/http-transport-over-ssl.md,/docs/user-guide/ssl/http-transport-over-ssl/,HTTP Transport over SSL,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/ssl/lwm2m-over-dtls.md,/docs/user-guide/ssl/lwm2m-over-dtls/,LwM2M over DTLS,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/tbel.md,/docs/user-guide/tbel/,SENTIENT Expression Language (TBEL),rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/telemetry.md,/docs/user-guide/telemetry/,Working with telemetry data,check,W2,,Concept page; verify against SENTIENT
+docs/user-guide/templatization.md,/docs/user-guide/templatization/,Templatization,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/tenant-profiles.md,/docs/user-guide/tenant-profiles/,Tenant Profiles,rewrite,W2,,Device and alarm screens differ in SENTIENT
+docs/user-guide/troubleshooting.md,/docs/user-guide/troubleshooting/,Troubleshooting,rewrite,W3,,Administration features differ in SENTIENT
+docs/user-guide/two-factor-authentication.md,/docs/user-guide/two-factor-authentication/,Two-factor authentication,rewrite,W1,twoFactorAuthentication,Administration features differ in SENTIENT
+docs/user-guide/ui/advanced-data-key-configuration.md,/docs/user-guide/ui/advanced-data-key-configuration/,Advanced data key configuration,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/ui/aliases.md,/docs/user-guide/ui/aliases/,Aliases,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/ui/assets.md,/docs/user-guide/ui/assets/,Assets,rewrite,W1,assets,UI and widgets differ in SENTIENT
+docs/user-guide/ui/chart-widget.md,/docs/user-guide/ui/chart-widget/,Chart Widgets,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/ui/customers.md,/docs/user-guide/ui/customers/,Customers,rewrite,W1,customers,UI and widgets differ in SENTIENT
+docs/user-guide/ui/devices.md,/docs/user-guide/ui/devices/,Devices,rewrite,W1,devices,UI and widgets differ in SENTIENT
+docs/user-guide/ui/entity-table-widget.md,/docs/user-guide/ui/entity-table-widget/,Entities Table Widget,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/ui/layouts.md,/docs/user-guide/ui/layouts/,Layouts,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/ui/mail-settings.md,/docs/user-guide/ui/mail-settings/,Mail server configuration,rewrite,W1,outgoingMailSettings,UI and widgets differ in SENTIENT
+docs/user-guide/ui/microsoft-teams-settings.md,/docs/user-guide/ui/microsoft-teams-settings/,Microsoft Teams Settings,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/ui/mobile-qr-code.md,/docs/user-guide/ui/mobile-qr-code/,Mobile application QR code,rewrite,W1,mobileQrCode,UI and widgets differ in SENTIENT
+docs/user-guide/ui/security-settings.md,/docs/user-guide/ui/security-settings/,Security settings,rewrite,W1,securitySettings,UI and widgets differ in SENTIENT
+docs/user-guide/ui/slack-settings.md,/docs/user-guide/ui/slack-settings/,Slack Settings,rewrite,W1,slackSettings,UI and widgets differ in SENTIENT
+docs/user-guide/ui/sms-provider-settings.md,/docs/user-guide/ui/sms-provider-settings/,SMS Provider Settings,rewrite,W1,smsProviderSettings,UI and widgets differ in SENTIENT
+docs/user-guide/ui/tenants.md,/docs/user-guide/ui/tenants/,Tenants,rewrite,W1,tenants,UI and widgets differ in SENTIENT
+docs/user-guide/ui/unit-conversion.md,/docs/user-guide/ui/unit-conversion/,Unit conversion,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/ui/users.md,/docs/user-guide/ui/users/,Users,rewrite,W1,users,UI and widgets differ in SENTIENT
+docs/user-guide/ui/widget-actions.md,/docs/user-guide/ui/widget-actions/,Widget actions,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/ui/widget-library.md,/docs/user-guide/ui/widget-library/,Widgets Library,rewrite,W1,widgetTypes widgetsBundles widgetsConfigLatest widgetsConfigRpc widgetsConfigAlarm widgetsConfigStatic,UI and widgets differ in SENTIENT
+docs/user-guide/version-control.md,/docs/user-guide/version-control/,Version control,rewrite,W1,repositorySettings autoCommitSettings,Administration features differ in SENTIENT
+docs/user-guide/widgets/_index.md,/docs/user-guide/widgets/,Working with widgets,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/widgets/cards/markdown-html-card.md,/docs/user-guide/widgets/cards/markdown-html-card/,Markdown/HTML Card,rewrite,W2,,UI and widgets differ in SENTIENT
+docs/user-guide/widgets/map-widgets.md,/docs/user-guide/widgets/map-widgets/,Map widgets,rewrite,W2,,UI and widgets differ in SENTIENT

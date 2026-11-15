@@ -1,0 +1,11 @@
+{% assign first_char = include.file | slice: 0 %}{% if first_char == '/' %}{% assign absolute_path = include.file | remove_first: '/' %}{% capture samplecode %}{% include {{ absolute_path }} %}{% endcapture %}{% else %}{% capture samplecode %}{% include_relative {{ include.file }} %}{% endcapture %}{% endif %}{% assign extension = include.file | split: '.' | last %}{% if extension == "md" %}
+
+{{ samplecode }}
+
+{% else %}
+
+```{{include.language}}
+{{ samplecode | strip }}
+```
+
+{% endif %}

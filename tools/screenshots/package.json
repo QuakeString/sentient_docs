@@ -1,0 +1,12 @@
+{
+  "name": "sentient-docs-screenshots",
+  "private": true,
+  "type": "module",
+  "description": "Takes the SENTIENT documentation screenshots from a running instance",
+  "scripts": { "shoot": "node shoot.mjs" },
+  "dependencies": {
+    "playwright": "1.63.0",
+    "sharp": "0.34.4",
+    "yaml": "2.8.1"
+  }
+}

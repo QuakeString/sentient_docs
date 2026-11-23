@@ -2,6 +2,7 @@
 title = "MCP server"
 description = "Let AI tools such as Claude Code work on SENTIENT through the Model Context Protocol, with the permissions of the user whose API key they use."
 weight = 158
+aliases = ["/docs/edge/reference/mcp-server/"]
 
 [extra]
 status = "checked"
@@ -37,6 +38,17 @@ Other MCP clients take the same URL and the header `Authorization: ApiKey <your 
 The keys are also listed under your user's **API keys** tab, with their **Status** and when they were **Last used**.
 
 If the page says **MCP is not available to this tenant**, ask the system administrator to add your tenant profile.
+
+## What an AI tool can do
+
+The MCP server offers the same tools as the AI assistant, about 60 in all:
+
+- **Read:** list devices, assets, profiles, customers, dashboards, widgets, alarms, report templates and calculated fields; read latest values, time series and relations.
+- **Build and check:** build and validate dashboards, reports, SCADA symbols, diagrams and calculated fields; test report and calculated field scripts before saving.
+- **Save:** create and update devices, assets, profiles, relations, report templates, calculated fields, dashboards and solution templates.
+- **Learn:** read the built-in guides, which are also offered as MCP resources.
+
+It cannot delete anything, send commands to devices, or change security settings.
 
 ## Related
 

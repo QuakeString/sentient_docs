@@ -12,7 +12,7 @@ docs/administration/task-manager.md,/docs/administration/task-manager/,Task mana
 docs/administration/translations.md,/docs/administration/translations/,Translations,planned,W3,,New SENTIENT page
 docs/ai/_index.md,/docs/ai/,AI features,planned,W3,,New SENTIENT page
 docs/ai/assistant.md,/docs/ai/assistant/,AI assistant,planned,W3,,New SENTIENT page
-docs/ai/mcp.md,/docs/ai/mcp/,MCP settings,planned,W3,,New SENTIENT page
+docs/ai/mcp.md,/docs/ai/mcp/,MCP settings,checked,W3,,New SENTIENT page
 docs/ai/models.md,/docs/ai/models/,AI models,planned,W3,,New SENTIENT page
 docs/api.md,/docs/api/,SENTIENT API reference,check,W3,,Review
 docs/asset-health/_index.md,/docs/asset-health/,Asset health,planned,W3,,New SENTIENT page
@@ -52,7 +52,7 @@ docs/edge/reference/coap-api.md,/docs/edge/reference/coap-api/,CoAP Device API R
 docs/edge/reference/gateway-mqtt-api.md,/docs/edge/reference/gateway-mqtt-api/,MQTT Gateway API Reference,rewrite,W3,,SENTIENT Edge
 docs/edge/reference/http-api.md,/docs/edge/reference/http-api/,HTTP Device API Reference,rewrite,W3,,SENTIENT Edge
 docs/edge/reference/lwm2m-api.md,/docs/edge/reference/lwm2m-api/,LWM2M Device API Reference,rewrite,W3,,SENTIENT Edge
-docs/edge/reference/mcp-server.md,/docs/edge/reference/mcp-server/,MCP Server,rewrite,W3,,SENTIENT Edge
+docs/edge/reference/mcp-server.md,/docs/edge/reference/mcp-server/,MCP Server,deleted,W3,,Replaced by /docs/ai/mcp/
 docs/edge/reference/mqtt-api.md,/docs/edge/reference/mqtt-api/,MQTT Device API Reference,rewrite,W3,,SENTIENT Edge
 docs/edge/reference/protocols.md,/docs/edge/reference/protocols/,Device Connectivity Protocols,rewrite,W3,,SENTIENT Edge
 docs/edge/reference/snmp-api.md,/docs/edge/reference/snmp-api/,SNMP Device API Reference,rewrite,W3,,SENTIENT Edge

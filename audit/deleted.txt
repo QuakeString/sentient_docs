@@ -336,3 +336,4 @@ docs/user-guide/rule-engine-2-0/nodes/transformation/duplicate-to-related.md
 docs/user-guide/rule-engine-2-5/tutorials/_index.md
 docs/user-guide/rule-engine-2-5/tutorials/queues-for-message-reprocessing.md
 docs/user-guide/rule-engine-2-5/tutorials/queues-for-synchronization.md
+docs/edge/reference/mcp-server.md

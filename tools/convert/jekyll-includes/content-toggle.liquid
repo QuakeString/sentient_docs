@@ -1,0 +1,12 @@
+{% assign toggleraw = include.toggle-spec | split: '%br%' %}
+
+<div class="st-tabs">
+{% for content in toggleraw %}{% assign thisContent = content | split: '%,%' %}{% assign buttonText=thisContent[0] | strip %}{% assign togglePath=thisContent[2] | strip %}
+<div class="st-tab" data-label="{{ buttonText | strip_html | escape }}">
+
+{% include {{togglePath}} %}
+
+</div>
+{% endfor %}
+</div>
+

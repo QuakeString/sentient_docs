@@ -1,0 +1,946 @@
+# Error catalogue. tools/errors.py turns this into one page per error under
+# content/docs/troubleshooting/errors/. Related links are "Title|/path/". IDs are stable: never reuse or renumber
+# an ID, only add new ones. Messages are quoted exactly as SENTIENT shows them.
+checked: "4.3.0.57"
+weight: 184
+intro: |
+  Each error has a stable ID, such as `ST-LIC-002`. Search this site for the ID or for words from the message, or read the ID to support over the phone.
+
+  Each page shows the message as you see it, where it appears, why it happens, how to fix it and how to check the fix. For the REST API's `errorCode` values see [API error codes](/docs/troubleshooting/error-codes/).
+
+areas:
+- title: Licence
+  errors:
+  - id: ST-LIC-001
+    title: No active licence
+    summary: SENTIENT has no licence installed, so nothing can be created or changed.
+    where: A dialog in the web UI; REST API error
+    http: 402
+    code: 50
+    messages:
+    - No active license. Please activate a license to continue.
+    cause: |
+      No licence key is installed. This is normal right after installation, and it also happens after a licence is deactivated, for example before moving the installation to another machine.
+    fix: |
+      1. Sign in as the system administrator.
+      2. Open the **License** page and activate your key. Activation needs internet access once.
+
+      See [Activate your licence](/docs/installation/licence/).
+    check: The **License** page shows the licence as active, and tenants can add devices again.
+    related:
+    - "Licence errors|/docs/troubleshooting/licence-errors/"
+
+  - id: ST-LIC-002
+    title: Licence has expired
+    summary: The licence's expiry date has passed, so nothing can be created or changed until it is renewed.
+    where: A dialog in the web UI; REST API error
+    http: 402
+    code: 50
+    messages:
+    - License has expired. Please renew your license to continue.
+    cause: |
+      The licence's expiry date has passed. The system administrator can still sign in, view, delete and open the licence page, but nobody can create or change anything. The **License** page warns 30 days before expiry.
+    fix: |
+      Ask your supplier for the renewed key and activate it on the **License** page.
+    check: The **License** page shows the new expiry date.
+    related:
+    - "Activate your licence|/docs/installation/licence/"
+
+  - id: ST-LIC-003
+    title: Licence limit exceeded
+    summary: Creating this item would go over a licence limit, so it was not created.
+    where: Red notice in the web UI; REST API error; gateway or provisioning logs when they add devices
+    http: 400
+    code: 51
+    cause: |
+      You tried to create something beyond a licence limit, for example one device more than the licence allows. Nothing was created. Devices that a gateway or provisioning would add are refused the same way.
+    fix: |
+      - Delete what you no longer need, or
+      - ask your supplier for a licence with higher limits and activate it.
+
+      The **License** page lists every limit next to its current use.
+    check: Creating the item works, and the **License** page shows use below the limit.
+    related:
+    - "Licence errors|/docs/troubleshooting/licence-errors/#license-limit-exceeded-code-51"
+
+  - id: ST-LIC-004
+    title: Over the licence limits (grace period)
+    summary: The system holds more than the licence allows, and the grace period before it is blocked is running.
+    where: A warning dialog in the web UI
+    messages:
+    - Your system exceeds the current license limits. Please acquire a license to continue using all features.
+    - Your system has been over license limits for an extended period. The system will stop working soon if a valid license is not acquired.
+    cause: |
+      The system has more of something than the licence allows, for example after a smaller licence was activated. A warning shows for the first 7 days, then a critical warning until day 15. After that the system is blocked ([ST-LIC-005](/docs/troubleshooting/errors/st-lic-005/)).
+    fix: |
+      Before the grace period ends, either delete entities until you are under every limit, or activate a licence with higher limits. The dialog lists what is over the limit.
+    check: The warning no longer shows after you sign in again.
+
+  - id: ST-LIC-005
+    title: System blocked after the grace period
+    summary: The licence grace period ended while the system was over its limits, so nothing can be created or changed.
+    where: A dialog in the web UI; REST API error
+    http: 403
+    code: 52
+    messages:
+    - "System blocked: license grace period has ended. Please acquire a license to continue."
+    cause: |
+      The system stayed over its licence limits for longer than the grace period. The system administrator can still sign in, view, delete and manage the licence.
+    fix: |
+      Delete entities until you are under every limit, or activate a licence with higher limits. The block clears straight away.
+    check: Creating an item works again.
+
+  - id: ST-LIC-006
+    title: Licence bound to other hardware
+    summary: The machine's hardware fingerprint no longer matches the machine where the licence was activated.
+    where: A dialog in the web UI; REST API error; server log
+    http: 403
+    messages:
+    - "License runtime blocked: Hardware fingerprint disagrees with this license (N/6 match). This license was activated on a different machine…"
+    cause: |
+      The licence is bound to six hardware signals of the machine it was activated on. They no longer match, usually because:
+
+      - the installation was copied or moved to other hardware,
+      - a virtual machine was cloned or moved, or
+      - a Docker host's machine identity changed when the container was rebuilt.
+
+      The same message also comes from the licence server when your supplier has revoked the key.
+    fix: |
+      - Moved on purpose: deactivate the key on the old machine, or ask your supplier to release it, then activate it on this one. See [Move to a new server](/docs/operations/move-server/).
+      - Docker on Linux: mount `/etc/machine-id` into the container so the fingerprint survives rebuilds. See [Install with Docker](/docs/installation/docker/#linux-hosts-keep-the-licence-bound).
+      - Windows: install with [Platform Manager](/docs/installation/windows/), which pins the identity.
+      - Key revoked: contact your supplier.
+    check: The **License** page shows the licence as active.
+
+  - id: ST-LIC-007
+    title: Licence key refused at activation
+    summary: Activation failed because the key is incomplete, in the wrong format, already used, or the licence server cannot be reached.
+    where: The **License** page
+    messages:
+    - Failed to activate license. Please check your license key.
+    - Invalid license key format. License key must be in INVE format (INVE-TYPE-XXXX-XXXX-...).
+    cause: |
+      - The key was not pasted completely, or spaces or line breaks were added.
+      - The machine cannot reach the licence server `https://license.invenia.in`.
+      - The key is already active on another machine.
+    fix: |
+      1. Paste the whole key, starting with `INVE-`.
+      2. Check that this machine can open `https://license.invenia.in`. Activation needs internet access once; a proxy or a laptop connection is enough.
+      3. If the key is active on another machine, deactivate it there first.
+    check: The **License** page shows the licence as active.
+    related:
+    - "Activate your licence|/docs/installation/licence/"
+
+- title: Sign-in and access
+  errors:
+  - id: ST-AUTH-001
+    title: Invalid credentials
+    summary: The e-mail address or password is wrong, or the user does not exist.
+    where: Login page; REST API `POST /api/auth/login`
+    http: 401
+    code: 10
+    messages:
+    - Invalid credentials
+    cause: |
+      The e-mail address is not a SENTIENT user, or the password is wrong. For security the message does not say which. Every wrong password counts toward the account lockout ([ST-AUTH-003](/docs/troubleshooting/errors/st-auth-003/)).
+    fix: |
+      - Check the e-mail address, and that Caps Lock is off.
+      - Use **Forgot password?** on the login page to get a reset link by e-mail. This needs a working [mail server](/docs/user-guide/ui/mail-settings/).
+      - An administrator can open the user and use **Resend activation** or set up the account again.
+    check: Sign-in opens the Home page.
+
+  - id: ST-AUTH-002
+    title: User account is disabled
+    summary: The user exists but cannot sign in, because the account was disabled or never activated.
+    where: Login page; REST API
+    http: 401
+    code: 10
+    messages:
+    - User account is disabled
+    cause: |
+      - An administrator disabled the account, or
+      - the user was created but never activated: they did not open the activation link, so no password was set.
+    fix: |
+      An administrator opens **Users**, finds the user and either enables the account or sends the activation link again. If e-mail does not work, the administrator can use **Copy activation link** and pass the link on.
+    check: The user can sign in.
+    related:
+    - "Users|/docs/user-guide/ui/users/"
+
+  - id: ST-AUTH-003
+    title: Account locked after failed sign-ins
+    summary: Too many wrong passwords in a row locked the account for a while.
+    where: Login page; REST API
+    http: 401
+    code: 10
+    messages:
+    - Account locked due to too many failed login attempts. Please try again later.
+    cause: |
+      The account reached the maximum number of failed sign-ins in a row, 5 by default. The lockout protects against password guessing. It ends by itself after 5 minutes.
+
+      In 4.3.0.57 the limit is always 5. From the release after 4.3.0.57, the **Maximum number of failed login attempts** in **Security settings** sets it.
+    fix: |
+      - Wait 5 minutes, then sign in with the right password.
+      - If the password is forgotten, use **Forgot password?**.
+
+      If you did not cause the failed attempts, someone may be guessing the password: check the [audit log](/docs/user-guide/audit-log/) for failed logins.
+    check: Sign-in works after 5 minutes.
+
+  - id: ST-AUTH-004
+    title: Password expired or violates the policy
+    summary: The password was right, but the password policy requires a new one before sign-in.
+    where: Login page, which then opens the "set a new password" page
+    http: 401
+    code: 15
+    messages:
+    - User password expired!
+    - The entered password violates the password policy. Set a new password.
+    cause: |
+      From the release after 4.3.0.57. The password policy under **Security settings** has an expiration period that has passed, or **Force to reset password if not valid** is on and the current password no longer meets the policy, for example after the minimum length was raised. In 4.3.0.57 the policy is not applied, so this error does not occur.
+    fix: |
+      Set a new password on the page that opens. It must meet the policy shown there. For REST clients, the error body carries a `resetToken` to set the new password with.
+    check: You are signed in with the new password.
+    related:
+    - "Security settings|/docs/user-guide/ui/security-settings/"
+
+  - id: ST-AUTH-005
+    title: New password does not meet the rules
+    summary: A new or changed password is refused because it is too short or too simple.
+    where: Change password, reset password and activation pages; an administrator's **Set password**
+    http: 400
+    messages:
+    - Password must be at least 8 characters
+    - "Password must contain at least three of: lowercase letter, uppercase letter, digit, special character"
+    cause: |
+      In 4.3.0.57 every password must have 8 to 72 characters and at least three of: a lowercase letter, an uppercase letter, a digit, a special character. The password policy fields in **Security settings** are not applied yet.
+
+      From the release after 4.3.0.57, the password policy applies instead, with messages such as `Password must be at least N characters long.` or `Password must not contain spaces.`, listing every rule the password breaks.
+    fix: |
+      Choose a password that meets the rules in the message. `Plant2025` meets the 4.3.0.57 rule; `plant2025` does not.
+    check: The password is saved.
+    related:
+    - "Security settings|/docs/user-guide/ui/security-settings/#password-policy"
+
+  - id: ST-AUTH-006
+    title: Session ended
+    summary: You were signed out because the session was ended by a password change, a sign-out elsewhere or an administrator.
+    where: The web UI returns to the login page; REST API
+    http: 401
+    code: 10
+    messages:
+    - Session has been terminated
+    cause: |
+      Your session was ended on purpose: you or an administrator changed the password, the user signed out, or the account was disabled. Sessions also end after a week without use.
+    fix: |
+      Sign in again. If it happens again without a reason, ask an administrator whether your password was reset.
+    check: You stay signed in.
+
+  - id: ST-AUTH-007
+    title: Permission denied
+    summary: You are signed in, but your role does not allow this action.
+    where: Red notice in the web UI; REST API
+    http: 403
+    code: 20
+    cause: |
+      Your user's roles do not include this operation on this item. For example, a customer user tried to change a device, or a tenant administrator opened a system setting.
+    fix: |
+      Ask an administrator to give your user group a role that allows it, or sign in as a user who has it. See [Roles and permissions](/docs/administration/roles/).
+    check: The action works after the administrator changes the role. Sign out and in again if it does not.
+
+  - id: ST-AUTH-008
+    title: Invalid two-factor verification code
+    summary: The code from the authenticator app, e-mail, SMS or backup codes was refused at sign-in.
+    where: The two-factor step of the login page
+    http: 401
+    code: 10
+    messages:
+    - Invalid verification code
+    cause: |
+      - The code was typed wrong, or it expired before it was entered.
+      - The phone's clock is off. Authenticator app codes depend on the time; a phone a minute or more off gives wrong codes.
+      - A code sent by e-mail or SMS was replaced by a newer one.
+      - A backup code was already used.
+    fix: |
+      - Set the phone's time to automatic and try a fresh code.
+      - For e-mail or SMS, use **Resend code** and enter the newest code.
+      - Use one of your backup codes if you have them.
+      - Lost the authenticator and the backup codes: from the release after 4.3.0.57, an administrator can open the user and use **Reset two-factor authentication**. In 4.3.0.57, contact support.
+    check: Sign-in continues to the Home page.
+    related:
+    - "Two-factor authentication|/docs/user-guide/two-factor-authentication/"
+
+- title: Using the REST API
+  errors:
+  - id: ST-API-001
+    title: Name already exists
+    summary: An item with the same name already exists, so it was not created or renamed.
+    where: Red notice in the web UI; REST API
+    http: 400
+    code: 31
+    messages:
+    - Device with such name already exists!
+    - This conflicts with data that already exists.
+    cause: |
+      Names of devices, assets, dashboards and most other items must be unique within the tenant. The item may also be one you cannot see, for example a device assigned to another customer.
+    fix: |
+      Choose another name, or open the existing item instead. As tenant administrator, search **Devices** (or the matching list) for the name to find it.
+    check: The item is saved.
+
+  - id: ST-API-002
+    title: Entity limit reached
+    summary: The tenant profile's limit for this kind of item is reached, so a new one was not created.
+    where: Red notice in the web UI; REST API
+    http: 400
+    code: 31
+    messages:
+    - Devices limit reached
+    - Users limit reached
+    cause: |
+      The tenant profile sets the maximum number of devices, assets, customers, users, dashboards and rule chains. The tenant has reached it. This is a tenant profile limit, not a licence limit ([ST-LIC-003](/docs/troubleshooting/errors/st-lic-003/)).
+    fix: |
+      Delete items you no longer need, or ask the system administrator to raise the limit in the [tenant profile](/docs/user-guide/tenant-profiles/).
+    check: The item is created.
+
+  - id: ST-API-003
+    title: Item not found
+    summary: The device, dashboard or other item does not exist, or belongs to another tenant or customer.
+    where: Red notice in the web UI; REST API
+    http: 404
+    code: 32
+    cause: |
+      - The item was deleted.
+      - The ID belongs to another tenant or customer, which you cannot see.
+      - A dashboard, rule chain or export still refers to an item by an old ID, for example after it was imported from another server.
+    fix: |
+      Check the ID. In a dashboard, open the alias or widget that refers to the item and select it again. In a rule chain, open the node that names it and select it again.
+    check: The page or call works.
+
+  - id: ST-API-004
+    title: Too many requests
+    summary: A rate limit was reached, so the request was refused for now.
+    where: REST API; device HTTP calls
+    http: 429
+    cause: |
+      The tenant profile limits how fast the REST API and devices may be called. The answer has a `retryAfter` field and a `Retry-After` header with the number of seconds to wait.
+    fix: |
+      - Wait the given time and try again.
+      - Send fewer requests, for example read many values in one call, or have devices send less often.
+      - The system administrator can raise the rate limits in the [tenant profile](/docs/user-guide/tenant-profiles/#rate-limits).
+    check: Requests succeed again.
+    related:
+    - "Rate limits|/docs/user-guide/api-limits/"
+
+  - id: ST-API-005
+    title: Internal error
+    summary: Something failed inside SENTIENT, usually in the database; the details are in the server log.
+    where: Red notice in the web UI; REST API
+    http: 500
+    cause: |
+      An unexpected failure inside SENTIENT, most often the database being unreachable, full or overloaded. For security the details are not sent to the browser.
+    fix: |
+      1. Try again. A short database hiccup clears by itself.
+      2. If it repeats, look at the server log at the same time for the real error, for example [ST-DB-001](/docs/troubleshooting/errors/st-db-001/).
+      3. Send the log to support. See [Collect logs for support](/docs/troubleshooting/logs/).
+    check: The action works.
+
+- title: Installation and upgrade
+  errors:
+  - id: ST-INS-001
+    title: Port already in use
+    summary: Another program already listens on a port SENTIENT needs.
+    where: Platform Manager **Network ports** page; Docker start-up
+    messages:
+    - "Already in use: 8080. Choose another port, or stop what is listening on it."
+    cause: |
+      Another program, or an earlier SENTIENT, already listens on the port. Common holders are another web server on 8080 and an earlier PostgreSQL on 5432.
+    fix: |
+      - Platform Manager: choose another port on the **Network ports** page.
+      - Docker: change the left-hand number of the port mapping in the compose file, for example `"8090:8080"`.
+
+      To see what holds the port, run `netstat -ano | findstr :8080` on Windows or `ss -tlnp | grep 8080` on Linux.
+    check: The port shows as free in Platform Manager, or the container starts.
+    related:
+    - "Ports and firewall|/docs/operations/ports/"
+
+  - id: ST-INS-002
+    title: PostgreSQL does not initialise on Windows
+    summary: Setup stops while it creates the PostgreSQL database, because the Visual C++ runtime is too old.
+    where: Platform Manager, while it installs PostgreSQL
+    cause: |
+      PostgreSQL 18 needs the Microsoft Visual C++ runtime 14.44 or newer. On a computer with an older runtime, `initdb` crashes.
+    fix: |
+      - Use Setup 0.8.0-rc9 or later, which installs the runtime itself.
+      - With an older Setup, run `vc_redist.x64.exe` from the SENTIENT release page, then click **Retry**.
+    check: Setup continues past the database step.
+    related:
+    - "Install on Windows|/docs/installation/windows/"
+
+  - id: ST-INS-003
+    title: SENTIENT is not installed in this database
+    summary: The server started on an empty database, so the container keeps restarting.
+    where: Server log (Docker)
+    messages:
+    - "✗ Nothing to upgrade: this database is EMPTY — SENTIENT is not installed."
+    cause: |
+      The installer was not run, or it stopped before it created the database schema. With ClickHouse, the installer sets up ClickHouse first, so a ClickHouse problem stops it early.
+    fix: |
+      Run the installer once, then start again:
+
+      ```bash
+      docker compose -f <compose file> run --rm -e INSTALL_SENTIENT=true sentient
+      docker compose -f <compose file> up -d
+      ```
+
+      If you did run it, scroll up in that run's output for the first error.
+    check: "`docker compose -f <compose file> logs sentient` shows the server listening on port 8080."
+    related:
+    - "Install with Docker|/docs/installation/docker/"
+
+  - id: ST-INS-004
+    title: CPU virtualization or WSL2 missing
+    summary: The ClickHouse option on Windows needs CPU virtualization and WSL2, and one of them is not available.
+    where: Platform Manager **System check**
+    messages:
+    - "Build NNNNN; WSL2 needs Windows 10 2004 (19041) or newer."
+    cause: |
+      On Windows, ClickHouse runs inside WSL2. WSL2 needs Windows 10 version 2004 or later and CPU virtualization (Intel VT-x, AMD-V / SVM) switched on in the BIOS or UEFI. A BIOS update can switch virtualization off again.
+    fix: |
+      - Switch on virtualization in the BIOS or UEFI settings, then run the check again.
+      - Update Windows to version 2004 or later.
+      - Or choose PostgreSQL without ClickHouse, which needs neither.
+    check: The **System check** shows **CPU virtualization** and **Windows version** as passed.
+    related:
+    - "PostgreSQL with ClickHouse on Windows|/docs/installation/windows-clickhouse/"
+
+  - id: ST-INS-005
+    title: Not enough disk space
+    summary: The disk is too full to install, upgrade or keep storing data.
+    where: Platform Manager **System check**; database log
+    messages:
+    - No space left on device
+    cause: |
+      Setup asks for at least 10 GB free. On a running system the database stops writing when the disk is full. Common space users are update copies and history kept after a database change, ClickHouse's own logs on older installations, and old Docker images.
+    fix: |
+      - In Platform Manager, remove what you no longer need under **Kept after earlier changes**.
+      - Empty ClickHouse's own log tables: see [ClickHouse's own logs](/docs/operations/tuning/#clickhouse-s-own-logs).
+      - Remove old Docker images with `docker image prune`.
+      - Shorten telemetry retention in the [tenant profile](/docs/user-guide/tenant-profiles/), or add a disk.
+    check: The **System check** passes, or the database writes again.
+
+  - id: ST-INS-006
+    title: Upgrade stopped halfway
+    summary: An upgrade failed at one of its steps.
+    where: Platform Manager **Update**; Docker logs
+    cause: |
+      One step of the upgrade failed, for example a database migration, a download or a service that would not start.
+    fix: |
+      - **Platform Manager** has already put the previous version and its database copy back. Open **Logs** to see which step failed and send the log to support.
+      - **Docker**: read `docker compose -f <compose file> logs sentient` for the failed step. Go back to the previous image tag and restore the backup you made before the upgrade.
+    check: SENTIENT runs on the previous version, and the **Status** page shows all services running.
+    related:
+    - "Upgrade and roll back|/docs/operations/upgrade/"
+
+- title: Database
+  errors:
+  - id: ST-DB-001
+    title: Database connections exhausted
+    summary: All database connections were busy for too long, so a request failed.
+    where: Server log; requests fail with an internal error
+    messages:
+    - Pool timed out
+    cause: |
+      Every connection in SENTIENT's pool was busy. Usually the database is too slow for the load: it is at full CPU or disk, or a long query blocks others. Less often, the pool is too small for the load.
+    fix: |
+      1. Check the database's CPU and disk at the time of the error.
+      2. If the database is overloaded, give it more resources, shorten retention, or move history to ClickHouse.
+      3. If the database has spare capacity, raise `DB_POOL_PRIMARY_MAX` and PostgreSQL's `max_connections` together.
+
+      See [Performance tuning](/docs/operations/tuning/#database-connections).
+    check: The log shows no new `Pool timed out` lines under the same load.
+
+  - id: ST-DB-002
+    title: Too many database clients
+    summary: SENTIENT and other tools ask for more connections than PostgreSQL allows.
+    where: Server log; PostgreSQL log
+    messages:
+    - "sorry, too many clients already"
+    cause: |
+      The connection pools of SENTIENT, plus backups and other tools, want more connections than PostgreSQL's `max_connections`. PostgreSQL's own default of 25 is smaller than SENTIENT's pools, so a database started without SENTIENT's settings hits this at once.
+    fix: |
+      Set `max_connections` to at least 100 (the compose files do), or lower `DB_POOL_PRIMARY_MAX` and `DATABASE_POOL_MAX` so that together they stay below it. Restart PostgreSQL after changing `max_connections`.
+    check: The error no longer appears after a restart.
+    related:
+    - "Performance tuning|/docs/operations/tuning/#database-connections"
+
+  - id: ST-DB-003
+    title: Secrets master key does not match
+    summary: SENTIENT started with a different master key from the one the database was set up with, so stored secrets cannot be opened.
+    where: Server log at start-up; then errors wherever a secret or stored password is used
+    messages:
+    - "The secrets master key does not match the one this database was set up with: stored secrets cannot be decrypted. Restore the original key (SENTIENT_SECRETS_KEY or the key file …)."
+    - "secret 'NAME': …"
+    cause: |
+      The database was restored or moved without its key file `secrets.key`, so SENTIENT created a new key. Every secret and every password typed into configuration is encrypted with the old key.
+    fix: |
+      1. Stop SENTIENT.
+      2. Put the original key file back (in Docker: `/var/lib/sentient/secrets.key`), or set `SENTIENT_SECRETS_KEY` to the original key.
+      3. Start SENTIENT.
+
+      If the original key is lost, the stored values cannot be recovered. Enter each secret and stored password again.
+    check: The start-up log no longer shows the message, and integrations and rule nodes that use secrets work.
+    related:
+    - "Secrets|/docs/administration/secrets/#the-master-key"
+    - "Back up and restore|/docs/operations/backup-restore/"
+
+  - id: ST-DB-004
+    title: ClickHouse refuses connections
+    summary: ClickHouse runs but clients get "connection refused" or "connection reset".
+    where: Server log; installer output
+    messages:
+    - connection refused
+    - connection reset by peer
+    cause: |
+      - A custom ClickHouse configuration was mounted as the whole `config.d` folder, which hides the file that makes ClickHouse listen on the network. ClickHouse reports healthy but listens only inside its own container.
+      - During a hybrid install or `--backfill-clickhouse`, `DATABASE_URL` uses `localhost`. ClickHouse opens that connection itself, so `localhost` points at ClickHouse's own container, not at PostgreSQL.
+    fix: |
+      - Mount your ClickHouse settings as one file inside `config.d`, as SENTIENT's compose files do, never as the whole folder.
+      - Use an address ClickHouse can reach: in Docker Compose, the service name `postgres:5432`.
+    check: The installer finishes, or the server log shows no ClickHouse connection errors.
+
+- title: Devices
+  intro: |
+    For a step-by-step check of a device that sends nothing, see [Devices do not connect](/docs/troubleshooting/device-connection/).
+  errors:
+  - id: ST-DEV-001
+    title: Invalid access token
+    summary: The device's credentials do not match any device, so its connection or request is refused.
+    where: Device side (MQTT CONNACK or HTTP 401); server log
+    http: 401
+    messages:
+    - '{"error": "Invalid access token"}'
+    - "MQTT CONNECT rejected: auth failed for token …"
+    cause: |
+      - A space or line break was copied with the token.
+      - The token was sent as the MQTT password instead of the user name.
+      - The device was deleted and created again, which gives it a new token.
+      - An MQTT Basic device's client ID differs from the one in its credentials.
+    fix: |
+      Open the device in SENTIENT, click **Manage credentials** and copy the credentials again. For an access token over MQTT, send it as the **user name** with no password. Over HTTP and CoAP it goes in the URL.
+
+      A token that was tried and not found is remembered as invalid for five minutes. Wait that long after correcting it, or restart the server.
+    check: The device shows **Active** and values appear on its **Latest telemetry** tab.
+    related:
+    - "Devices do not connect|/docs/troubleshooting/device-connection/#3-wrong-credentials"
+
+  - id: ST-DEV-002
+    title: MQTT connect without an access token
+    summary: An MQTT client connected without a user name, so it was refused.
+    where: Device side (MQTT CONNACK); server log
+    messages:
+    - "MQTT CONNECT rejected: empty username (access token required)"
+    cause: |
+      The device's MQTT client sends no user name. For access token devices, the token must be the MQTT user name.
+    fix: |
+      Set the MQTT user name to the device's access token and leave the password empty. For MQTT Basic devices, set client ID, user name and password exactly as on the device's **Manage credentials** dialog.
+    check: The device connects and shows **Active**.
+
+  - id: ST-DEV-003
+    title: Payload is not valid JSON
+    summary: The device sent a message SENTIENT could not read, so its values were not stored.
+    where: HTTP 400 to the device; server log for MQTT
+    http: 400
+    messages:
+    - Invalid JSON
+    - "Invalid JSON payload: …"
+    cause: |
+      The message is not valid JSON, for example single quotes or a trailing comma, or the device profile expects Protobuf while the device sends JSON. Over MQTT a bad message is dropped and the connection stays open, so the device does not notice.
+    fix: |
+      Send JSON in one of these forms on `v1/devices/me/telemetry`:
+
+      ```json
+      {"temperature": 21.5, "pressure": 6.1}
+      ```
+
+      ```json
+      {"ts": 1730880000000, "values": {"temperature": 21.5}}
+      ```
+
+      Check the **Transport configuration** of the device profile: its payload type and topics must match what the device sends.
+    check: Values appear on the device's **Latest telemetry** tab.
+    related:
+    - "Devices do not connect|/docs/troubleshooting/device-connection/#4-payload-format-errors"
+
+  - id: ST-DEV-004
+    title: Values stored in 1970
+    summary: The device sends timestamps in seconds instead of milliseconds, so its values land in January 1970.
+    where: Charts look empty; **Latest telemetry** shows a 1970 date
+    cause: |
+      SENTIENT timestamps are milliseconds since 1 January 1970 UTC. A timestamp in seconds, such as `1730880000`, is read as a moment in January 1970, so charts of the last day show nothing.
+    fix: |
+      Multiply the device's `ts` by 1000, or leave `ts` out and let SENTIENT use the time the message arrives.
+    check: New values show today's date on the **Latest telemetry** tab.
+
+  - id: ST-DEV-005
+    title: Transport rate limit exceeded
+    summary: The device, gateway or tenant sent faster than its rate limit, so messages were dropped.
+    where: Server log; HTTP 429 to the device
+    messages:
+    - "Transport rate limit exceeded - message rejected"
+    cause: |
+      The tenant profile limits how many messages the tenant, each device and each gateway may send per second. The log line's `exceeded_by` says which limit was hit.
+    fix: |
+      - Have the device send less often. A value every 100 ms is rarely needed.
+      - Or ask the system administrator to raise the rate limits in the [tenant profile](/docs/user-guide/tenant-profiles/#rate-limits).
+    check: The log shows no new rejections.
+
+  - id: ST-DEV-006
+    title: Transport disabled by the monthly quota
+    summary: The tenant used its monthly message quota, so device messages are refused until the next month.
+    where: Server log; HTTP 429 to the device
+    messages:
+    - "Transport feature disabled for tenant - message rejected (limit exceeded)"
+    cause: |
+      The tenant reached its monthly transport messages or data points quota in the tenant profile. The **API usage** page shows the counter as **Disabled**.
+    fix: |
+      Wait for the next month, or ask the system administrator to raise the quota in the tenant profile.
+    check: The **API usage** page shows **Transport** as **Enabled** again.
+    related:
+    - "API usage and limits|/docs/administration/api-usage/"
+
+  - id: ST-DEV-007
+    title: Device port not reachable
+    summary: The device cannot open a connection to the server's MQTT, HTTP or CoAP port.
+    where: Device side (connection timeout or refused)
+    cause: |
+      A firewall blocks the port, the port is not published in Docker, or the protocol is switched off. The defaults are MQTT 1883, MQTT over TLS 8883, HTTP 8080, CoAP 5683 and CoAP over DTLS 5684 (UDP).
+    fix: |
+      1. From the device's network, test the port: `Test-NetConnection <server> -Port 1883` on Windows or `nc -vz <server> 1883` on Linux.
+      2. Open the port in the server's firewall and any firewall between.
+      3. With Docker, publish the port in the compose file.
+      4. Check the protocol is on under **Settings > General > Device connectivity**.
+    check: The port test succeeds and the device connects.
+    related:
+    - "Ports and firewall|/docs/operations/ports/"
+
+  - id: ST-DEV-008
+    title: MQTT over TLS does not start
+    summary: Port 8883 stays closed because the server certificate or key is missing.
+    where: Device side (connection refused on 8883); server log
+    cause: |
+      MQTT over TLS needs a certificate and key in `MQTT_SSL_PEM_CERT` and `MQTT_SSL_PEM_KEY` (and `MQTT_SSL_PEM_CA` for client certificates). When either file is missing or unreadable, port 8883 stays closed.
+    fix: |
+      Set both variables to readable PEM files and restart the server.
+    check: "`nc -vz <server> 8883` succeeds."
+
+- title: Gateway
+  intro: |
+    The gateway writes these lines to its own log: `journalctl -u sentient-gateway -f` on Linux, `docker logs -f st-gateway` with Docker, or the log on its local web page at port 8642. See [Gateway errors](/docs/troubleshooting/gateway-errors/) for where its files are.
+  errors:
+  - id: ST-GW-001
+    title: Gateway cannot reach SENTIENT
+    summary: The gateway shows offline because it cannot connect to the SENTIENT server.
+    checked: "gateway 4.14.0"
+    where: Gateway log; **Gateways** page shows it offline
+    messages:
+    - "uplink connection error; retrying in …"
+    cause: |
+      The host or port in `st_gateway.json` is wrong, the gateway's access token is wrong, or a firewall blocks the MQTT port.
+    fix: |
+      1. In `st_gateway.json`, check `host` (the SENTIENT server) and `port` (1883, or 8883 with TLS).
+      2. Check the access token: it is the token of the gateway device in SENTIENT.
+      3. From the gateway machine, test the port: `nc -vz <server> 1883`.
+
+      Readings are kept in the gateway's storage queue meanwhile and sent when the connection returns.
+    check: The **Gateways** page shows the gateway as active.
+    related:
+    - "Gateway errors|/docs/troubleshooting/gateway-errors/#the-gateway-shows-offline"
+
+  - id: ST-GW-002
+    title: Gateway not commissioned
+    summary: The gateway was installed without a SENTIENT host and token.
+    checked: "gateway 4.14.0"
+    where: Gateway log
+    messages:
+    - "still not commissioned: …"
+    cause: |
+      The gateway was installed without the server address and access token, so it does not know where to connect.
+    fix: |
+      Add the host and token in `st_gateway.json` or on the gateway's local web page. The gateway commissions itself within seconds; no restart is needed. Values set through environment variables need a restart.
+    check: The gateway appears active on the **Gateways** page.
+    related:
+    - "Install the gateway on Windows|/docs/iot-gateway/install-windows/"
+
+  - id: ST-GW-003
+    title: Modbus read failed
+    summary: A Modbus device does not answer, or answers with an error.
+    checked: "gateway 4.14.0"
+    where: Gateway log; the device shows no values or offline
+    messages:
+    - Modbus read failed
+    - "no read answered; marking the device offline"
+    cause: |
+      Wrong IP address, port or unit ID; wrong serial settings; the PLC is off or unreachable; or the polling period is too short for the device.
+    fix: |
+      Check the connector's IP address, port (502), unit ID and, for serial, port, baud rate, parity and stop bits. Ping the device from the gateway machine. Lengthen the polling period if many reads time out.
+    check: Values arrive on the device's **Latest telemetry** tab.
+
+  - id: ST-GW-004
+    title: Modbus exception from the PLC
+    summary: The PLC answered, but refused the register address or function code.
+    checked: "gateway 4.14.0"
+    where: Gateway log
+    messages:
+    - "the Modbus server cannot serve this value: …"
+    cause: |
+      The register address or function code does not exist on the PLC. The gateway counts addresses from 0, so register 40001 in a PLC manual is address 0 with function code 3.
+    fix: |
+      Correct the address and function code in the connector's key, following the PLC manual. Subtract the 40001, 30001, 10001 or 00001 offset.
+    check: The key's value appears on the device.
+
+  - id: ST-GW-005
+    title: OPC UA connection failed
+    summary: The OPC UA server refused or did not answer the gateway.
+    checked: "gateway 4.14.0"
+    where: Gateway log
+    messages:
+    - OPC-UA connect failed
+    - "the server offers no endpoint with the asked security; trying unsecured"
+    cause: |
+      The endpoint URL is wrong, the security mode or policy is not offered by the server, the user name or password is wrong, or the server does not trust the gateway's certificate.
+    fix: |
+      - Check the endpoint URL, for example `opc.tcp://plc:4840`.
+      - Pick a security policy the server offers.
+      - On the OPC UA server, trust the gateway's certificate (most servers keep it under rejected certificates until you move it).
+    check: The connector shows connected and values arrive.
+
+  - id: ST-GW-006
+    title: OPC UA node not found
+    summary: A node ID in the connector's mapping does not exist on the server.
+    checked: "gateway 4.14.0"
+    where: Gateway log
+    messages:
+    - node not found
+    cause: |
+      The node ID or browse path is wrong, or the namespace index differs from the one on the server.
+    fix: |
+      Browse the server with an OPC UA client and copy the node ID exactly, including `ns=`.
+    check: The key's value appears on the device.
+
+  - id: ST-GW-007
+    title: Siemens S7 connection failed
+    summary: The S7 CPU refused or did not answer the gateway.
+    checked: "gateway 4.14.0"
+    where: Gateway log
+    messages:
+    - S7 connect failed
+    - S7 value decode failed
+    cause: |
+      Wrong IP address, rack or slot, or PUT/GET access is not allowed in the CPU's protection settings. A decode failure means the data block, offset or data type does not match the PLC.
+    fix: |
+      - Check IP address, rack and slot. S7-300: rack 0, slot 2. S7-1200, S7-1500 and LOGO!: rack 0, slot 1.
+      - In the CPU's properties, under **Protection & Security > Connection mechanisms**, tick **Permit access with PUT/GET communication from remote partner**, and clear **Optimized block access** on the data blocks you read.
+      - Check data block number, offset and type for decode failures.
+    check: Values arrive on the device.
+    related:
+    - "Siemens S7 connector|/docs/iot-gateway/config/s7/"
+
+  - id: ST-GW-008
+    title: Write request timed out
+    summary: A write (RPC) to a device behind the gateway got no answer within the timeout.
+    checked: "gateway 4.14.0"
+    where: Widget or RPC debug terminal
+    messages:
+    - '{"error": "Request timeout", "code": 408}'
+    cause: |
+      The device is not connected to the gateway: its connector is stopped or disabled, or the device has not sent its first value yet. The gateway waits 5 seconds by default, longer when the request sets `timeout` (at most 60 seconds).
+    fix: |
+      Start the connector and wait until the device sends a value. Then write again.
+    check: The write returns a result and the PLC shows the new value.
+    related:
+    - "Write values to equipment|/docs/iot-gateway/rpc-write/"
+
+  - id: ST-GW-009
+    title: No connector handles the write
+    summary: A write's method name matches no running connector.
+    checked: "gateway 4.14.0"
+    where: Widget or RPC debug terminal
+    messages:
+    - "Method not found: no running connector handles '…'"
+    - connector not running
+    cause: |
+      The method name in the widget or request does not match any key in a connector's RPC section, or the connector that has it is stopped.
+    fix: |
+      Add the key to the connector's RPC section (you can create it from a read key), check the method name, and start the connector.
+    check: The write returns a result.
+    related:
+    - "Write values to equipment|/docs/iot-gateway/rpc-write/"
+
+  - id: ST-GW-010
+    title: Gateway storage full
+    summary: The gateway's offline queue is full, so new readings are dropped until it drains.
+    checked: "gateway 4.14.0"
+    where: Gateway log
+    messages:
+    - "storage full — dropping new events until the backlog drains"
+    cause: |
+      The gateway stores readings while SENTIENT is unreachable: by default up to 10 files of 10,000 records, 1 GB at most, kept for 7 days. Once full, new readings are dropped; stored ones are kept and sent first.
+    fix: |
+      - Restore the connection to SENTIENT; the queue drains by itself.
+      - For longer outages, raise the storage limits in the gateway's **General** configuration and make sure the disk has room.
+      - Poll slower where fast values are not needed.
+    check: The log no longer shows the message, and the backlog shrinks.
+
+  - id: ST-GW-011
+    title: Local web page refuses the default password
+    summary: The gateway's local web page refuses the default password from another computer.
+    checked: "gateway 4.14.0"
+    where: Gateway's local web page (port 8642); gateway log
+    messages:
+    - "the default password from the network, refused"
+    cause: |
+      The default password works only on the gateway machine itself, so a new gateway is not open to the network.
+    fix: |
+      Sign in once on the gateway machine and set your own password. A forgotten password is reset on the gateway machine with `sentient-gateway --ui-password -` (Docker: `docker exec -it st-gateway sentient-gateway --ui-password -`). The password needs at least 8 characters.
+    check: You can sign in from another computer with the new password.
+    related:
+    - "Gateway local web page|/docs/iot-gateway/admin-ui/"
+
+- title: Dashboards, rules and reports
+  errors:
+  - id: ST-APP-001
+    title: Widget shows no data
+    summary: A widget shows "No data to display" although the device sends values.
+    where: Dashboard widget
+    messages:
+    - No data to display
+    cause: |
+      - The widget's data key does not match the key the device sends (keys are case-sensitive).
+      - The time window holds no values, for example the dashboard shows the last hour and the device sent nothing in that hour, or its timestamps are in seconds ([ST-DEV-004](/docs/troubleshooting/errors/st-dev-004/)).
+      - The alias resolves to no entity, or to another device than you expect.
+      - The user is a customer user who cannot see the device.
+    fix: |
+      1. Open the device's **Latest telemetry** tab and compare the key names with the widget's data keys.
+      2. Widen the dashboard's time window.
+      3. In edit mode, open the widget's data source and check which entity the alias resolves to.
+      4. For customer users, check that the device is assigned to their customer or shared with their user group.
+    check: The widget shows values.
+    related:
+    - "Aliases|/docs/user-guide/ui/aliases/"
+
+  - id: ST-APP-002
+    title: Report generation failed
+    summary: A report run ended with status Failed.
+    where: "**Reporting > Reports** (status **Failed**); notification"
+    messages:
+    - Failed to generate report
+    cause: |
+      - A device, entity view or key the template uses was deleted or renamed.
+      - A script in the template has an error.
+      - The time window holds no data where the template requires it.
+    fix: |
+      1. Open the report in **Reporting > Reports** and read its error.
+      2. Open the template in the builder and run **Generate** with the same time window to see the problem on screen.
+      3. Fix the data source or script, then generate again.
+    check: A new run ends with status **Completed**.
+    related:
+    - "Report templates|/docs/reports/templates/"
+
+  - id: ST-APP-003
+    title: Scheduled report not received by e-mail
+    summary: The report was generated but did not arrive by e-mail.
+    where: Recipient's mailbox; **Reporting > Reports**
+    cause: |
+      - The mail server is not set up or refuses to send.
+      - The recipient group does not contain the person, or their address is wrong.
+      - The report is larger than 15 MB, so it was sent as a download link instead of an attachment, and the link was filtered as spam.
+    fix: |
+      1. Send a test mail from **Settings > Mail server**.
+      2. Check the schedule's recipient group.
+      3. Look in the spam folder. The attachment limit is changed with `REPORT_EMAIL_MAX_ATTACHMENT_MB`.
+    check: The next run arrives. Every run is also listed under **Reporting > Reports** and in the bell.
+    related:
+    - "Schedule and send reports|/docs/reports/scheduling/"
+    - "Mail server|/docs/user-guide/ui/mail-settings/"
+
+  - id: ST-APP-004
+    title: Scheduler event did not run
+    summary: A scheduler event's time passed without the action happening.
+    where: "**Features > Scheduler**"
+    cause: |
+      - **Enable scheduler** is off for the event.
+      - The event's type is **Update Firmware**, which does not run in 4.3.0.57. It runs from the release after.
+      - **Trigger** is on for an event that is not **Generate Report**. In 4.3.0.57 triggers run only reports, and such an event does not run at all. From the release after, triggers run every event type.
+      - In 4.3.0.57 a trigger reacts only to values posted through the REST API, not to values devices send over MQTT, HTTP or CoAP.
+      - The start time is in another timezone than you expect.
+    fix: |
+      - Turn on **Enable scheduler**.
+      - For firmware, use [OTA updates](/docs/user-guide/ota-updates/) on the device or profile.
+      - For other types, switch **Trigger** off and use **Repeat**.
+      - Check the start time and timezone in the event.
+    check: The table's next run time is in the future, and the action happens at that time.
+    related:
+    - "Scheduler|/docs/user-guide/scheduler/"
+
+  - id: ST-APP-005
+    title: Secret not found
+    summary: Configuration refers to a secret that does not exist, so it cannot be used.
+    where: Rule node debug events; integration status; server log
+    messages:
+    - "secret 'NAME' does not exist"
+    cause: |
+      The configuration uses `${secret:NAME}`, but no secret with that name exists for the tenant that owns the configuration. It was renamed, deleted, or created in another tenant.
+    fix: |
+      Add the secret under **Security > Secrets** with exactly that name, or change the reference in the configuration.
+    check: The rule node or integration works again. A changed secret is used within a minute.
+    related:
+    - "Secrets|/docs/administration/secrets/"
+
+  - id: ST-APP-006
+    title: Rule node fails on a message
+    summary: A rule node could not process a message and sent it to its Failure output.
+    where: Rule chain debug events; **API usage > View statistics**
+    cause: |
+      A script in the node has an error, an external call (REST, MQTT, e-mail) failed, or the message lacks a field the node needs.
+    fix: |
+      1. Open the rule chain, turn on debug mode on the node, and send a message.
+      2. Open the node's **Events** to see the incoming message and the error.
+      3. Fix the script or configuration. Connect the node's **Failure** output to a node that logs or alarms, so failures are not silent.
+      4. Switch debug mode off when done.
+    check: New messages leave the node on **Success**.
+    related:
+    - "Rule engine|/docs/user-guide/rule-engine-2-0/re-getting-started/"
+
+  - id: ST-APP-007
+    title: Alarm rule with "missing for" never fires
+    summary: An alarm rule that should fire when data stops arriving never raises an alarm.
+    where: Alarm rules
+    cause: |
+      - In 4.3.0.57 the "missing for" (no data) condition of alarm rules is not evaluated, so it never fires. This is fixed in the release after 4.3.0.57.
+      - From the release after: the argument has never had a value. An argument with no value at all does not count as missing.
+      - From the release after: the alarm is already active and has not been cleared, so no new alarm is raised.
+    fix: |
+      - In 4.3.0.57, raise the alarm from the device's inactivity instead. See [Alarm when a device is offline](/docs/user-guide/rule-engine-2-0/tutorials/create-inactivity-alarm/).
+      - Make sure the device has sent the argument at least once.
+      - Add a clear rule, for example "the argument has any value", so the alarm clears when data comes back and the next silence raises a new one.
+    check: Stopping the device raises the alarm after the timeout.
+    related:
+    - "Alarm rules|/docs/user-guide/alarm-rules/"
+    - "Device connectivity status|/docs/user-guide/device-connectivity-status/"
+
+  - id: ST-APP-008
+    title: Mail server test fails
+    summary: Sending a test e-mail from the mail server settings fails, so SENTIENT cannot send e-mail.
+    where: "**Settings > Mail server** (**Send test mail**)"
+    messages:
+    - "SMTP error: …"
+    - "Failed to create SMTP transport: …"
+    cause: |
+      - Wrong SMTP host, port or security (TLS or STARTTLS) for the mail server.
+      - Wrong user name or password. Many providers need an app password, not the account password.
+      - A firewall blocks the outgoing SMTP port (often 25, 465 or 587).
+    fix: |
+      1. Check host, port and security with your mail provider's settings: port 465 usually uses TLS, port 587 STARTTLS.
+      2. For Gmail and Microsoft 365, create an app password and check that SMTP sign-in is allowed for the mailbox. OAuth 2.0 sign-in to the mail server is not supported in 4.3.0.57.
+      3. From the server, test the port, for example `nc -vz smtp.example.com 587`.
+    check: The test mail arrives.
+    related:
+    - "Mail server|/docs/user-guide/ui/mail-settings/"

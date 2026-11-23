@@ -1,0 +1,31 @@
+{% assign images = "" | split: "," %}
+{% assign imageTitles = "" | split: "," %}
+
+{% if page[include.imageCollection].first %}
+    {% for image in page[include.imageCollection] %}
+        {% assign imageTitles = imageTitles | push: image[1].title %}
+        {% assign images = images | push: image[1].image %}
+    {% endfor %}
+{% else %}
+    {% assign imagePathTitleStringArray = include.imageCollection | strip | replace: "  ", "" | replace: "===", "№" | split: "№" %}
+    {% for imagePathTitleString in imagePathTitleStringArray %}
+        {% if imagePathTitleString.size > 0 %}
+            {% assign parameterArray = imagePathTitleString | replace: "title: ", "№" | strip | split: "№" %}
+            {% assign imagePath = parameterArray[0] | strip | remove: "image: " | remove: ',' %}
+            {% if parameterArray.size > 1 %}
+                {% assign imageTitles = imageTitles | push: parameterArray[1] %}
+            {% endif %}
+            {% assign images = images | push: imagePath %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+
+{% if include.showListImageTitles %}
+{% for title in imageTitles %}
+1. {{ title | strip_newlines }}
+{% endfor %}
+{% endif %}
+
+<div class="st-gallery">{% for image in images %}<figure><img src="{{ image }}" alt="{{ imageTitles[forloop.index0] | strip_html | replace: '"', "&quot;" }}" loading="lazy"><figcaption>{{ imageTitles[forloop.index0] | strip_newlines }}</figcaption></figure>{% endfor %}</div>
+

@@ -1,1 +1,0 @@
-**In Memory** queue is built in and enabled by default. No additional configuration is required.

@@ -1,1 +1,0 @@
-echo -e 'SN-002,default,temperature,25.7' | nc 127.0.0.1 10560

@@ -1,0 +1,114 @@
+toc:
+- title: SENTIENT Gateway
+  section:
+  - title: Overview
+    path: /docs/iot-gateway/
+  - title: What is SENTIENT Gateway?
+    path: /docs/iot-gateway/what-is-iot-gateway/
+  - title: Getting started
+    path: /docs/iot-gateway/getting-started/
+- title: Install
+  section:
+  - title: Installation options
+    path: /docs/iot-gateway/installation/
+  - title: Windows
+    path: /docs/iot-gateway/install-windows/
+  - title: Linux and Docker
+    path: /docs/iot-gateway/install-linux/
+- title: Configure
+  section:
+  - title: Local web page
+    path: /docs/iot-gateway/admin-ui/
+  - title: General configuration
+    path: /docs/iot-gateway/configuration/
+  - title: Key sheets
+    path: /docs/iot-gateway/key-sheets/
+  - title: Write values to devices
+    path: /docs/iot-gateway/rpc-write/
+  - title: Remote configuration
+    path: /docs/iot-gateway/guides/how-to-enable-remote-configuration/
+  - title: Remote logging
+    path: /docs/iot-gateway/guides/how-to-enable-remote-logging/
+  - title: Remote shell
+    path: /docs/iot-gateway/guides/how-to-enable-remote-shell/
+- title: Connectors
+  section:
+  - title: BACnet
+    path: /docs/iot-gateway/config/bacnet/
+  - title: Beckhoff ADS
+    path: /docs/iot-gateway/config/ads/
+  - title: BLE
+    path: /docs/iot-gateway/config/ble/
+  - title: CAN
+    path: /docs/iot-gateway/config/can/
+  - title: DNP3
+    path: /docs/iot-gateway/config/dnp3/
+  - title: EtherCAT
+    path: /docs/iot-gateway/config/ethercat/
+  - title: EtherNet/IP
+    path: /docs/iot-gateway/config/ethernet-ip/
+  - title: FTP
+    path: /docs/iot-gateway/config/ftp/
+  - title: IEC 61850
+    path: /docs/iot-gateway/config/iec61850/
+  - title: KNX
+    path: /docs/iot-gateway/config/knx/
+  - title: Mitsubishi MC protocol
+    path: /docs/iot-gateway/config/mcprotocol/
+  - title: Modbus
+    path: /docs/iot-gateway/config/modbus/
+  - title: MQTT
+    path: /docs/iot-gateway/config/mqtt/
+  - title: OCPP
+    path: /docs/iot-gateway/config/ocpp/
+  - title: ODBC
+    path: /docs/iot-gateway/config/odbc/
+  - title: Omron FINS
+    path: /docs/iot-gateway/config/fins/
+  - title: OPC UA
+    path: /docs/iot-gateway/config/opc-ua/
+  - title: PROFINET
+    path: /docs/iot-gateway/config/profinet/
+  - title: Request
+    path: /docs/iot-gateway/config/request/
+  - title: REST
+    path: /docs/iot-gateway/config/rest/
+  - title: Serial
+    path: /docs/iot-gateway/config/serial/
+  - title: Siemens S7
+    path: /docs/iot-gateway/config/s7/
+  - title: SNMP
+    path: /docs/iot-gateway/config/snmp/
+  - title: Socket
+    path: /docs/iot-gateway/config/socket/
+  - title: XMPP
+    path: /docs/iot-gateway/config/xmpp/
+- title: Features
+  section:
+  - title: Features overview
+    path: /docs/iot-gateway/features/
+  - title: Report strategies
+    path: /docs/iot-gateway/features-overview/report-strategy/
+  - title: Provisioning
+    path: /docs/iot-gateway/features-overview/provisioning/
+  - title: Service RPC methods
+    path: /docs/iot-gateway/guides/how-to-use-gateway-rpc-methods/
+  - title: GET/SET RPC methods
+    path: /docs/iot-gateway/guides/how-to-use-get-set-rpc-methods/
+  - title: Device renaming and removal
+    path: /docs/iot-gateway/how-device-removing-renaming-works/
+- title: Guides
+  section:
+  - title: Connect a Modbus device
+    path: /docs/iot-gateway/guides/how-to-connect-modbus-device/
+  - title: RPC with the Modbus connector
+    path: /docs/iot-gateway/guides/how-to-use-rpc-modbus-connector/
+  - title: Connect an OPC UA device
+    path: /docs/iot-gateway/guides/how-to-connect-opc-ua-device-to-sentient-ce/
+  - title: Connect an OPC UA server
+    path: /docs/iot-gateway/guides/how-to-connect-opcua-server/
+  - title: Gateway errors
+    path: /docs/troubleshooting/gateway-errors/
+    planned: true
+  - title: Get support
+    path: /docs/iot-gateway/help/

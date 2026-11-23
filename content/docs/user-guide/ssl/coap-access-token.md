@@ -1,0 +1,151 @@
++++
+title = "Access Token based authentication for CoAP"
+description = "SENTIENT Access Token based authentication for CoAP transport."
+
+[extra]
+status = "imported"
+checked = ""
+source = "docs/user-guide/ssl/coap-access-token.md"
++++
+Access Token Based Authentication is the default device authentication type. Once the device is created in SENTIENT, the default access token is generated. It can be changed afterwards.
+In order to connect the device to a server using Access Token based authentication, the client must specify the access token as part of CoAP request URL.
+See [CoAP API](/docs/reference/coap-api/) for more details.
+
+CoAP AccessToken based authentication over DTLS is a standard authentication mode, where your client device verifies the identity of a server using server certificate.
+In order to run CoAP AccessToken based authentication over DTLS, the server certificate chain should be signed by authorized CA or client must import the self-signed server certificate (.cer or .pem) to its trust store.
+Otherwise, a connection will fail with the 'Unknown CA' error.
+
+The coap-client example below demonstrates how to connect to [SENTIENT Cloud](https://localhost/signup) or to any other SENTIENT CoAP server that has valid and trusted certificate.
+
+## Connect DTLS CoAP Client using access token 
+
+### Plain CoAP (without TLS)
+
+Let's
+review a simple command
+to upload temperature readings using Access Token **YOUR_ACCESS_TOKEN** to SENTIENT instance **YOUR_SENTIENT_HOST**.
+See [CoAP API](/docs/reference/coap-api/) for more details. The command is using plain CoAP without TLS:
+
+```bash
+coap-client -v 6 -m POST coap://YOUR_SENTIENT_HOST:5683/api/v1/YOUR_ACCESS_TOKEN/telemetry -t json -e "{temperature:25}"
+```
+
+
+The above command requires coap-client library that you can install using the following commands: 
+
+ - **Ubuntu 20.04:** sudo apt install libcoap2-bin
+ - **Ubuntu 18.04:** sudo apt install libcoap1-bin
+
+Don't forget to replace **YOUR_SENTIENT_HOST** with the host of your SENTIENT instance and **YOUR_ACCESS_TOKEN** with the access token of your device.
+
+### DTLS support (One-way TLS)
+
+CoAP access token-based authentication over DTLS is a standard authentication mode where the client device verifies the server’s identity using a server certificate.
+
+> **Note:** "One-way TLS" means the client verifies the server, but the server does not verify the client.
+
+When a CoAP client connects to a server, it ensures the server's authenticity by verifying that the certificate is not expired and is trusted by the client. 
+A certificate is considered trusted if:
+
+ - It is issued by a well-known Certificate Authority (CA), such as [Let’s Encrypt](https://letsencrypt.org/).
+ - It is present in the client’s trust store.
+
+To establish trust, the CoAP client must always provide the CA certificate used to sign the server’s certificate. Unlike some HTTPS implementations that rely on a system trust store, CoAP clients using DTLS require explicit CA certificate configuration.
+
+If the CA certificate is not provided, the connection may still succeed, but certificate verification will be disabled, 
+meaning the client will accept any certificate presented by the server without checking its authenticity. 
+
+```bash
+127.0.0.1:35046 <-> 127.0.0.1:5684 DTLS: unable to get local issuer certificate: overridden: 'localhost' depth=0
+127.0.0.1:35046 <-> 127.0.0.1:5684 DTLS: unable to get certificate CRL: overridden: 'localhost' depth=0
+127.0.0.1:35046 <-> 127.0.0.1:5684 DTLS: unable to verify the first certificate: overridden: 'localhost' depth=0
+```
+
+Despite these warnings, the handshake continues successfully:
+
+```bash
+127.0.0.1:35046 <-> 127.0.0.1:5684 DTLS: Using cipher: ECDHE-ECDSA-AES256-GCM-SHA384
+```
+
+This can expose the connection to man-in-the-middle (MITM) attacks and should be avoided in production environments.
+For enhanced security, consider using [Two-Way DTLS](/docs/user-guide/ssl/coap-x509-certificates/), 
+where both the client and server verify each other’s certificates.
+
+Before we explore usage examples, we need to install a CoAP client that supports DTLS.
+
+#### Install the CoAP client with DTLS support
+
+Install the CoAP client with DTLS support on Linux by following the next steps:
+ 
+- step 1: clone libcoap git repo: 
+
+```bash
+git clone https://github.com/obgm/libcoap --recursive --depth 1
+```
+
+
+- step 2: navigate into libcoap directory:
+
+```bash
+cd libcoap
+```
+
+
+- step 3: execute next commands and then run ./autogen.sh script:
+
+```bash
+sudo apt-get update
+```
+
+
+```bash
+sudo apt-get install autoconf libtool libssl-dev
+```
+
+
+```bash
+./autogen.sh
+```
+
+
+- step 4: run ./configure script with next options:
+
+```bash
+./configure --with-openssl --disable-doxygen --disable-manpages --disable-shared
+```
+
+
+- step 5: execute next command:
+
+```bash
+make
+```
+
+
+- step 6: execute next command:
+
+```bash
+sudo make install
+```
+
+
+#### Example: 
+
+Since the CoAP client must always provide the CA certificate for verification, 
+use the `-R` flag followed by the path to a PEM file containing the trusted root CA certificates.
+
+
+Follow the [CoAP over DTLS](/docs/user-guide/coap-over-dtls/) guide to provision server certificate if you are hosting your own SENTIENT instance.
+
+
+Once provisioned, you should prepare a CA root certificate in pem format. This certificate will be used by CoAP client to validate the server certificate.
+Save the CA root certificate to your working directory as "**ca-root.pem**".
+
+Now you may use the "**ca.pem**" to setup secure connection to your SENTIENT instance **YOUR_SENTIENT_HOST** and Access Token **YOUR_ACCESS_TOKEN** to authenticate the device to upload telemetry:
+
+```bash
+coap-client-openssl -v 6 -m POST  -R ca-root.pem -t "application/json" -e '{"temperature":42}' coaps://YOUR_SENTIENT_HOST/api/v1/YOUR_ACCESS_TOKEN/telemetry
+```
+
+
+Don't forget to replace **YOUR_SENTIENT_HOST** with the host of your SENTIENT instance and **YOUR_ACCESS_TOKEN** with the access token of your device.

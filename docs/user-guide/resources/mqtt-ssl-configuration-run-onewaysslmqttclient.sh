@@ -1,1 +1,0 @@
-python3 one-way-ssl-mqtt-client.py

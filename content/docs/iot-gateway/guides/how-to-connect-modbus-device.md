@@ -1,0 +1,285 @@
++++
+title = "How to connect Modbus device to SENTIENT?"
+description = "Understand how to connect Modbus device to SENTIENT using the SENTIENT IoT Gateway"
+
+[extra]
+status = "imported"
+checked = ""
+source = "docs/iot-gateway/guides/how-to-connect-modbus-device.md"
++++
+## Overview
+
+In this guide, we will describe how to connect an Modbus device to SENTIENT using SENTIENT IoT Gateway.
+Whether you are just starting with Modbus protocol or looking to streamline your existing setup, this guide will
+provide you with the essential knowledge to get up and running quickly.
+
+**What is SENTIENT IoT Gateway?**
+
+The SENTIENT IoT Gateway is an open-source solution that serves as a bridge between IoT devices connected to
+legacy or third-party systems and the SENTIENT platform. It enables seamless integration of devices that cannot
+communicate with SENTIENT directly, ensuring data can be collected, processed, and visualized in real time. With
+the IoT Gateway, you can connect multiple devices, aggregate telemetry, and manage configurations centrally. It
+supports flexible deployment scenarios, making it especially suitable for industrial automation, monitoring, and smart
+energy systems where Modbus is widely used.
+
+**What is Modbus?**
+
+Modbus supports different communication modes, including serial (Modbus RTU and ASCII) and network-based (Modbus
+TCP/IP), making it adaptable to a wide range of industrial environments. Its simplicity and open standard have
+contributed to its widespread adoption, allowing devices from different manufacturers to communicate seamlessly. Despite
+being decades old, Modbus remains relevant today due to its reliability, ease of implementation, and compatibility with
+modern industrial systems. Additionally, it is often used as a backbone protocol for data acquisition, process
+monitoring, and control in applications ranging from manufacturing plants to building automation.
+
+**What will You Learn?**
+
+In this guide, we will walk you through the steps to connect a Modbus device to SENTIENT using the SENTIENT
+IoT Gateway. You will learn how to configure the gateway, set up the Modbus connector and map data points and send them
+to SENTIENT. By the end of this guide, you will have a solid understanding of how to leverage the power of
+SENTIENT IoT Gateway to integrate Modbus devices into your IoT ecosystem. By the end of this guide, you will have a
+working setup that allows you to seamlessly monitor and analyze your Modbus device data in SENTIENT.
+
+## Prerequisites
+
+- Before initiating the Gateway setup, ensure that the SENTIENT server is up and running. You can install SENTIENT
+  CE manually by following the steps outlined in
+  the [Installation Guide](/docs/user-guide/install/installation-options/).
+- Before moving forward, ensure Docker is installed and properly configured on your machine. If you haven't installed
+  Docker yet, you can download it from the [official Docker website](https://docs.docker.com/engine/install/) and follow
+  their installation guide for your specific operating system.
+
+## Modbus Device Structure Overview
+
+For this guide, we will use a SENTIENT Modbus Demo Device, which simulates a Modbus device and provides a
+convenient way to test and demonstrate Modbus communication with SENTIENT. The demo device is pre-configured with a
+set of registers and data points that mimic the behavior of a real Modbus device. It allows users to interact with the
+device, read and write data, and observe how the data is processed and visualized in SENTIENT.
+
+The SENTIENT Modbus Demo Device is designed to help users understand the Modbus protocol and how to integrate
+Modbus devices into their IoT solutions using SENTIENT. It provides a practical and hands-on way to explore
+the capabilities of SENTIENT in the context of Modbus communication.
+
+The Modbus Demo Device has the following structure:
+
+| Variable Name  | Register Type   | Data Type  | Address    |
+|:---------------|:----------------|------------|:-----------|
+| Temperature    | Holding         | 16int      | 0          |
+| Humidity       | Holding         | 16int      | 1          |
+| Power          | Holding         | 16int      | 2          |
+| Pressure       | Holding         | 16int      | 3          |
+| Relay          | Coil            | bits       | 1          |
+| -------------- | --------------- | ---------- | ---------- |
+
+To up and run the Modbus Demo Device, you can use Docker and the following command:
+
+```bash
+docker run -it -p 5021:5021 sentient/st-gw-modbus-server:latest
+```
+
+
+The server will be available at `0.0.0.0:5021`.
+
+
+<div class="st-callout info">
+
+
+We will use `host.docker.internal` instead of `0.0.0.0` in our Gateway connector configuration to allow the Docker 
+container to access another Docker container.
+
+
+</div>
+
+
+By working with the Demo Device and its registers, you'll see how to extract real-time telemetry data and then forward
+it to SENTIENT for monitoring and analysis.
+
+## Step 1. Create a new gateway device on SENTIENT
+
+First, add a gateway device to your SENTIENT instance by following these steps:
+
+
+1. Go to "**Entities**" > "**Gateways**" tab.
+
+1. Click the "**+**" button, enter the gateway device name (e.g., "My Gateway"), and select the device profile. Click on "**Create**" button.
+
+
+<div class="st-gallery"><figure><img src="/images/gateway/dashboard/gateway-getting-started-1-ce.webp" alt="Go to &quot;**Entities**&quot; > &quot;**Gateways**&quot; tab." loading="lazy"><figcaption>Go to "**Entities**" > "**Gateways**" tab.</figcaption></figure><figure><img src="/images/gateway/dashboard/gateway-getting-started-2-ce.webp" alt="Click the &quot;**+**&quot; button, enter the gateway device name (e.g., &quot;My Gateway&quot;), and select the device profile. Click on &quot;**Create**&quot; button." loading="lazy"><figcaption>Click the "**+**" button, enter the gateway device name (e.g., "My Gateway"), and select the device profile. Click on "**Create**" button.</figcaption></figure></div>
+
+ 
+
+To launch the gateway, use the following steps:
+
+
+1. Select and click on newly created gateway, click on **"Launch command"** button in the top right corner.
+
+1. Click to download `docker-compose.yml` file to your PC, copy command and execute it in your terminal.
+
+
+<div class="st-gallery"><figure><img src="/images/gateway/dashboard/gateway-getting-started-3-ce.webp" alt="Select and click on newly created gateway, click on **&quot;Launch command&quot;** button in the top right corner." loading="lazy"><figcaption>Select and click on newly created gateway, click on **"Launch command"** button in the top right corner.</figcaption></figure><figure><img src="/images/gateway/dashboard/gateway-getting-started-4-ce.webp" alt="Click to download `docker-compose.yml` file to your PC, copy command and execute it in your terminal." loading="lazy"><figcaption>Click to download `docker-compose.yml` file to your PC, copy command and execute it in your terminal.</figcaption></figure></div>
+
+
+After running gateway docker image, you can see the following logs in your terminal:
+
+![](/images/gateway/dashboard/launch-gateway-docker.webp)
+
+## Step 2. Add new Modbus connector
+
+Let’s add a Modbus connector, which will read described before data from a simulated Modbus device to the 
+created gateway. To create a connector, follow these steps:
+
+
+1. Click on "**Connectors configuration**" button on the right panel;
+
+1. Click the "**+ Add connector**" button;
+
+1. Choose "**Modbus**" connector type from the dropdown, fill in "**Name**" field, choose "**Logging level**" to "**INFO**", turn off the "**Fill configuration with default values**" option and click on "**Add**" button;
+
+1. Choose “**Advanced**” configuration mode, click on “**Configuration**” tab and paste connector configuration (_you can find it under these steps_).
+
+1. Click on “**Save**” button to apply changes.
+
+
+<div class="st-gallery"><figure><img src="/images/gateway/dashboard/gateway-getting-started-7-ce.webp" alt="Click on &quot;**Connectors configuration**&quot; button on the right panel;" loading="lazy"><figcaption>Click on "**Connectors configuration**" button on the right panel;</figcaption></figure><figure><img src="/images/gateway/dashboard/gateway-getting-started-8-ce.webp" alt="Click the &quot;**+ Add connector**&quot; button;" loading="lazy"><figcaption>Click the "**+ Add connector**" button;</figcaption></figure><figure><img src="/images/gateway/dashboard/gateway-getting-started-modbus-9-ce.webp" alt="Choose &quot;**Modbus**&quot; connector type from the dropdown, fill in &quot;**Name**&quot; field, choose &quot;**Logging level**&quot; to &quot;**INFO**&quot;, turn off the &quot;**Fill configuration with default values**&quot; option and click on &quot;**Add**&quot; button;" loading="lazy"><figcaption>Choose "**Modbus**" connector type from the dropdown, fill in "**Name**" field, choose "**Logging level**" to "**INFO**", turn off the "**Fill configuration with default values**" option and click on "**Add**" button;</figcaption></figure><figure><img src="/images/gateway/modbus-connector/guides/connector-configuration.webp" alt="Choose “**Advanced**” configuration mode, click on “**Configuration**” tab and paste connector configuration (_you can find it under these steps_)." loading="lazy"><figcaption>Choose “**Advanced**” configuration mode, click on “**Configuration**” tab and paste connector configuration (_you can find it under these steps_).</figcaption></figure><figure><img src="/images/gateway/modbus-connector/guides/connector-configuration-save.webp" alt="Click on “**Save**” button to apply changes." loading="lazy"><figcaption>Click on “**Save**” button to apply changes.</figcaption></figure></div>
+
+ 
+
+**Modbus connector configuration:**
+
+```json
+{
+  "master": {
+    "slaves": [
+      {
+        "host": "host.docker.internal",
+        "port": 5021,
+        "type": "tcp",
+        "method": "socket",
+        "timeout": 35,
+        "byteOrder": "BIG",
+        "wordOrder": "LITTLE",
+        "retries": true,
+        "retryOnEmpty": true,
+        "retryOnInvalid": true,
+        "pollPeriod": 1000,
+        "unitId": 1,
+        "deviceName": "Modbus PLC",
+        "deviceType": "default",
+        "connectAttemptTimeMs": 5000,
+        "connectAttemptCount": 5,
+        "waitAfterFailedAttemptsMs": 300000,
+        "attributes": [
+          {
+            "tag": "power",
+            "type": "16int",
+            "functionCode": 3,
+            "objectsCount": 1,
+            "address": 2,
+            "divider": 10
+          }
+        ],
+        "timeseries": [
+          {
+            "tag": "temperature",
+            "type": "16int",
+            "functionCode": 3,
+            "objectsCount": 1,
+            "address": 0,
+            "divider": 10
+          },
+          {
+            "tag": "humidity",
+            "type": "16int",
+            "functionCode": 3,
+            "objectsCount": 1,
+            "address": 1,
+            "divider": 10
+          },
+          {
+            "tag": "pressure",
+            "type": "16int",
+            "functionCode": 3,
+            "objectsCount": 1,
+            "address": 3,
+            "divider": 10
+          },
+          {
+            "tag": "relay",
+            "type": "bits",
+            "functionCode": 1,
+            "objectsCount": 1,
+            "address": 1
+          }
+        ],
+        "attributeUpdates": [],
+        "rpc": []
+      }
+    ]
+  }
+}
+```
+
+
+Let’s break our connector configuration into smaller pieces and provide an explanation:
+
+- `master.slaves` - a list of Modbus “devices” the gateway will talk to. We have just one.
+- `host: "host.docker.internal"` – the IP/hostname of the Modbus server. This value makes a Dockerized gateway reach your host machine.
+- `pollPeriod: 1000` – poll the device every 1000 ms (1 second).
+- `unitId: 1` – the Modbus unit/slave ID on the target (for TCP, this is still used by many gateways).
+- `deviceName: "Modbus PLC"` – the SENTIENT device name that will receive the data.
+- `attributes` - a list of Modbus registers that will be read as device attributes in SENTIENT.
+- `timeseries` - a list of Modbus registers that will be read as device telemetry in SENTIENT.
+- `tag` - the key name that appears in SENTIENT.
+- `type` - how to decode the raw data (e.g., 16int is a signed 16-bit integer; bits is a coil/bitfield).
+- `functionCode` - the Modbus function code to use when reading the data (e.g., 3 is for holding registers, 1 is for coils).
+- `address` - the Modbus address to read from (e.g., 0 for temperature, 1 for humidity, etc.).
+- `divider` - a modifier that divides the read value by 10 to get the actual value.
+
+
+<div class="st-callout info">
+
+
+Additional information about the Modbus connector can be found [here](/docs/iot-gateway/config/modbus).
+
+
+</div>
+
+
+## Step 3. Check device data
+
+To review the data uploaded from your gateway, use the following step:
+
+
+1. Navigate to the **Entities** > **Devices** page and click on the created device "**Modbus PLC**" as we named it in the “**deviceName**” field . This will open the device details page. From there, switch to the **"Latest telemetry"** tab to view the real-time data that were configured in the connector.
+
+
+<div class="st-gallery"><figure><img src="/images/gateway/modbus-connector/guides/review-device-data.webp" alt="Navigate to the **Entities** > **Devices** page and click on the created device &quot;**Modbus PLC**&quot; as we named it in the “**deviceName**” field . This will open the device details page. From there, switch to the **&quot;Latest telemetry&quot;** tab to view the real-time data that were configured in the connector." loading="lazy"><figcaption>Navigate to the **Entities** > **Devices** page and click on the created device "**Modbus PLC**" as we named it in the “**deviceName**” field . This will open the device details page. From there, switch to the **"Latest telemetry"** tab to view the real-time data that were configured in the connector.</figcaption></figure></div>
+
+
+## Conclusion
+
+In this guide, we have walked you through the process of connecting a Modbus device to SENTIENT using the
+SENTIENT IoT Gateway. By following the steps outlined in this guide, you have successfully set up the gateway,
+configured the Modbus connector, and mapped data points to send telemetry and attributes to SENTIENT. You have also
+learned how to monitor and visualize the data from your Modbus device in SENTIENT.
+With the SENTIENT IoT Gateway acting as a bridge between your Modbus device and SENTIENT, you can now leverage
+the powerful features of SENTIENT to analyze and manage your device data effectively. Whether you are monitoring
+environmental conditions, tracking energy consumption, or managing industrial processes, the integration of Modbus
+devices with SENTIENT opens up new possibilities for data-driven decision-making and automation.
+
+As you continue to explore the capabilities of SENTIENT and the SENTIENT IoT Gateway, you can further enhance your
+IoT solutions by adding more devices, implementing advanced data processing, and creating custom dashboards to visualize
+your data. The flexibility and scalability of SENTIENT make it an ideal platform for building robust IoT
+applications.
+
+We encourage you to experiment with different configurations, explore additional features of SENTIENT IoT Gateway,
+and leverage the power of Modbus devices in your IoT projects. With the knowledge gained from this guide, you are
+well-equipped to take your IoT initiatives to the next level.
+
+## Next steps
+
+Explore guides related to main SENTIENT features:
+ - [Data Visualization](/docs/user-guide/dashboards/) - how to visualize collected data.
+ - [Device attributes](/docs/user-guide/attributes/) - how to use device attributes.
+ - [Telemetry data collection](/docs/user-guide/telemetry/) - how to collect telemetry data.
+ - [Using RPC capabilities](/docs/user-guide/rpc/) - how to send commands to/from devices.
+ - [Rule Engine](/docs/user-guide/rule-engine-2-0/overview/) - how to use rule engine to analyze data from devices.

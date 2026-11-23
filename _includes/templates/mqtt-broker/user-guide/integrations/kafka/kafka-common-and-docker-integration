@@ -1,4 +1,0 @@
-
-{% include images-gallery.html imageCollection="kafka-integration-docker" %}
-
-The screenshot shows the basic configuration for establishing a connection between TBMQ and Kafka Broker.

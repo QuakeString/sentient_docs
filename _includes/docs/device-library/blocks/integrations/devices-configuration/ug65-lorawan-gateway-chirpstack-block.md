@@ -1,1 +1,0 @@
-{% include /docs/device-library/blocks/integrations/devices-configuration/milesight-lorawan-gateway-chirpstack-block.md %}
